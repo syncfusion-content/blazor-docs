@@ -19,9 +19,7 @@ The [DataMatrix](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Barcode
 <SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrAWrMTJZbJfybQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Data Matrix Generator in Blazor Barcode](images/blazor-barcode-with-datamatrix.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrAWrMTJZbJfybQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Matrix Generator in Blazor Barcode](images/blazor-barcode-with-datamatrix.png)" %}
 
 ## Customizing the Barcode color
 
@@ -33,9 +31,7 @@ A page or printed media with barcode often appears colorful in the backgrounds a
 <SfDataMatrixGenerator Width="200" ForeColor="red" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrqMVCfzDOMreTm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Blazor Barcode Color in Data Matrix Generator](images/blazor-barcode-datamatrix-color-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrqMVCfzDOMreTm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Barcode Color in Data Matrix Generator](images/blazor-barcode-datamatrix-color-customization.png)" %}
 
 ## Customizing the Barcode dimension
 
@@ -61,9 +57,7 @@ Customize the barcode text by using the display [Text](https://help.syncfusion.c
 </SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUiLMffNOmVTuG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Blazor Barcode Text in Data Matrix Generator](images/blazor-barcode-text-in-datamatrix.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUiLMffNOmVTuG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Barcode Text in Data Matrix Generator](images/blazor-barcode-text-in-datamatrix.png)" %}
 
 ## Event
 

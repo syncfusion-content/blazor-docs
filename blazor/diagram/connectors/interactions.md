@@ -152,8 +152,6 @@ A connector can be programmatically moved at runtime by using the [Drag](https:/
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhyCDNdJVFmTCOP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Drag)
 
 Connectors can also be dragged through user interaction:
@@ -161,7 +159,7 @@ Connectors can also be dragged through user interaction:
 * Drag an object by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
 * While dragging, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events are triggered and allow customization in these events.
 
-![Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhyCDNdJVFmTCOP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.gif)" %}
 
 ## How to Drag Connector Endpoints
 
@@ -217,11 +215,9 @@ The connector can be selected by clicking it. When the connector is selected, ci
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhyWjXRfLkUypIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/EndPointDragging)
 
-![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhyWjXRfLkUypIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)" %}
 
 ## How to Route the Connectors
 
@@ -262,11 +258,9 @@ Routing is the process of adjusting the geometry of connectors to prevent them f
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIsXtHpUjXzHNh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/DefaultRouting).
 
-![Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIsXtHpUjXzHNh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)" %}
 
 **Note:** Routing is applicable only for orthogonal connectors.
 
@@ -424,11 +418,9 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBostDnzqiRDGEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/NodeRoutingObstable).
 
-![Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBostDnzqiRDGEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)" %}
 
 ### How to Enable or Disable Connector Routing
 
@@ -500,11 +492,9 @@ By default, connector routing behavior is inherited based on the value of the di
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCtZRJgLXPLPR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/RoutingConstraints).
 
-![Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCtZRJgLXPLPR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)" %}
 
 ### How to Define Distance Between Nodes and Connectors
 
@@ -964,7 +954,7 @@ For more information, refer to [Connector Flip](../flip#how-to-flip-the-connecto
 
 * [How to customize the connector properties](./customization)
 
-* [How to change the segments](./segments)
+* [How to change the segments](./segments/straight)
 
 * [How to get the connector events](./events)
 

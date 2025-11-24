@@ -1,35 +1,40 @@
 ---
 layout: post
-title: Sorting customization in Blazor DataGrid | Syncfusion
-description: Learn here all about sorting in Syncfusion Blazor DataGrid and more.
+title: Sorting Icon Styling in Blazor DataGrid | Syncfusion
+description: Learn how to style sorting icons in Syncfusion Blazor DataGrid using CSS, with tips on theme icon codes and CSS isolation.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Sorting in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Sorting customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://blazor.syncfusion.com/themestudio/?theme=material3) based on your theme. Here's how to do it:
+The appearance of sorting indicators in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for:
 
-## Customizing the Blazor DataGrid sorting icon
+- **Ascending and descending sort icons:** Show the current sort direction in column headers.
+- **Multi-sorting order indicators:** Display the order of sorting when multiple columns are sorted.
 
-To customize the sorting icon that appears in the Grid header when sorting is applied, you can use the following CSS code:
+## Customize sorting icons
+
+The **.e-icon-ascending** and **.e-icon-descending** classes define the icons shown in the DataGrid header when a column is sorted in `ascending` or `descending` order. Use CSS to adjust its appearance:
 
 ```css
 .e-grid .e-icon-ascending::before {
-    content: '\e7a3'; /* Icon code for ascending order */
+    content: '\e7a3'; /* Ascending icon code */
 }
+
 .e-grid .e-icon-descending::before {
-    content: '\e7b6'; /* Icon code for descending order */
+    content: '\e7b6'; /* Descending icon code */
 }
 ```
-In this example, the **.e-icon-ascending::before** class targets the sorting icon for ascending order, and the **.e-icon-descending::before** class targets the sorting icon for descending order.
+
+Adjust properties such as **content**, **color**, **font-size**, and **margin** to match the grid design. Ensure the correct icon font family is loaded to display the icons properly.
 
 ![Grid sorting icon](../images/style-and-appearance/grid-sorting-icons.png)
 
-## Customizing the Blazor DataGrid multi sorting icon
+## Customize multi-sorting indicators
 
-To customize the multi sorting icon that appears in the Grid header when multiple columns are sorted, you can use the following CSS code:
+The **.e-sortnumber** class styles the numeric indicator shown when multiple columns are sorted. Apply CSS to change their appearance:
 
 ```css
 .e-grid .e-sortnumber {
@@ -38,7 +43,7 @@ To customize the multi sorting icon that appears in the Grid header when multipl
 }
 ```
 
-In this example, the **.e-sortnumber** class targets the background color and font family of the multi sorting icon. You can modify the `background-color` and `font-family` properties to customize the appearance of the multi sorting icon.
+Modify properties such as **background-color**, **font-family**, **font-size**, and **border-radius** to align with the grid layout. Ensure accessibility by maintaining clear contrast and focus styles.
 
 ![Grid multi sorting icon](../images/style-and-appearance/grid-multi-sorting-icon.png)
 
@@ -50,29 +55,56 @@ In this example, the **.e-sortnumber** class targets the background color and fo
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowSorting="true" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="TextAlign.Right"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
+    /* Multi-sorting order badge (e.g., 1, 2, 3) */
     .e-grid .e-sortnumber {
         background-color: #deecf9;
+        color: #0b6aa2;
         font-family: cursive;
+        border-radius: 10px;
+        padding: 0 6px;
+        min-width: 18px;
+        text-align: center;
+        line-height: 18px;
+        height: 18px;
+        display: inline-block;
+        margin-left: 4px;
+    }
+
+    /* Override sorting icons (ensure correct icon font family) */
+    .e-grid .e-icon-ascending::before,
+    .e-grid .e-icon-descending::before {
+        font-family: 'e-icons' !important; /* required for glyphs to render */
+        font-weight: normal;
+        speak: none;
     }
     .e-grid .e-icon-ascending::before {
-        content: '\e7a3'; /* Icon code for ascending order */
+        content: '\e7a3'; /* Ascending icon code (verify for your theme/version) */
     }
     .e-grid .e-icon-descending::before {
-        content: '\e7b6'; /* Icon code for descending order */
+        content: '\e7b6'; /* Descending icon code (verify for your theme/version) */
+    }
+
+    /* Optional: emphasize sorted header and provide better focus visibility */
+    .e-grid .e-headercell[aria-sort] {
+        background-color: #f3f9ff;
+    }
+    .e-grid .e-headercell:focus-visible {
+        outline: 2px solid #005a9e;
+        outline-offset: -2px;
     }
 </style>
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -84,35 +116,35 @@ In this example, the **.e-sortnumber** class targets the background color and fo
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderID;
+        CustomerID = customerID;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -124,4 +156,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBSXoDhUccZrPyZ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXreCDMeBDUtgbSZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

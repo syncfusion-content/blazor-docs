@@ -3,15 +3,15 @@ layout: post
 title: List of Components in Blazor In-place Editor Component | Syncfusion
 description: Checkout and learn here all about List of Components in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
-control: In-place Editor 
+control: In Place Editor 
 documentation: ug
 ---
 
 # List of Components in Blazor In-place Editor Component
 
-The In-place Editor renders different editor components based on the `Type` property. Each editor component must be placed inside the In-place Editor and configured with two-way data binding between the In-place Editor and the embedded editor component to keep values in sync.
+In-place Editor renders various components based on the `Type` property and the Editor components should be rendered inside the In-place Editor. Also, the two-way binding between the In-place Editor and its EditorComponent needs to be configured. It is used to update the EditorComponent value into the In-place Editor component.
 
-The following table lists the supported editor components and their corresponding Type values.
+The following table explains Editor components name and their configurations.
 
 | [AutoComplete](../autocomplete/getting-started)  (`AutoComplete`)        | [TextBox](../textbox/getting-started)  (`Text`)             |
 | [ComboBox](../combobox/getting-started)  (`ComboBox`)              | [DatePicker](../datepicker/getting-started)  (`Date`)        |

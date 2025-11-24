@@ -9,17 +9,17 @@ documentation: ug
 
 # Templates in Blazor ComboBox Component
 
-The ComboBox provides several options to customize the appearance and content of list items, group headers, the selected value, and the popup’s header and footer elements.
+The ComboBox has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 
-To quickly get started with templates in the Blazor ComboBox component, watch the following video.
+To quickly get started with Templates in the Blazor ComboBox component, you can watch the video below.
 
 {% youtube "https://www.youtube.com/watch?v=Powq8aAGeAA" %}
 
 ## Item template
 
-Customize the content of each list item using the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
+The content of each list item within the ComboBox can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
 
-In the following example, each list item is split into two columns to display relevant data.
+In the following sample, each list item is split into two columns to display relevant data.
 
 {% highlight cshtml %}
 
@@ -27,15 +27,13 @@ In the following example, each list item is split into two columns to display re
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVAWhhQgcQzSVPf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with ItemTemplate](./images/blazor-combobox-item-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVAWhhQgcQzSVPf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with ItemTemplate](./images/blazor-combobox-item-template.png)" %}
 
 ## Group template
 
-Customize the group header text under which sub-items are categorized using the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is applied to both inline and floating group headers.
+The group header title under which appropriate sub-items are categorized can also be customized with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
 
-In the following example, employees are grouped by country.
+In the following sample, employees are grouped according to their country.
 
 {% highlight cshtml %}
 
@@ -43,9 +41,7 @@ In the following example, employees are grouped by country.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKWBVmqQwncaKF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with GroupTemplate](./images/blazor-combobox-group-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKWBVmqQwncaKF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with GroupTemplate](./images/blazor-combobox-group-template.png)" %}
 
 ## Header template
 
@@ -59,9 +55,7 @@ In the following sample, the list items and its headers are designed and display
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVUsLhwAcwvaAlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with HeaderTemplate](./images/blazor-combobox-header-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVUsLhwAcwvaAlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with HeaderTemplate](./images/blazor-combobox-header-template.png)" %}
 
 ## Footer template
 
@@ -75,9 +69,7 @@ In the following sample, footer element displays the total number of list items 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBKWVVwAcviULco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with FooterTemplate](./images/blazor-combobox-footer-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBKWVVwAcviULco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with FooterTemplate](./images/blazor-combobox-footer-template.png)" %}
 
 ## No records template
 
@@ -91,9 +83,7 @@ In the following sample, popup list content displays the notification of no data
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVgWBrwUQlgRDZE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox without Data](./images/blazor-combobox-without-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVgWBrwUQlgRDZE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox without Data](./images/blazor-combobox-without-data.png)" %}
 
 ## Action failure template
 
@@ -107,9 +97,7 @@ In the following sample, when the data fetch request fails, the ComboBox display
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBUMrrcqQlwxTci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with Action Failure Template](./images/blazor-combobox-action-failure-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBUMrrcqQlwxTci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Action Failure Template](./images/blazor-combobox-action-failure-template.png)" %}
 
 ## Combine two fields without Templates
 
@@ -125,6 +113,4 @@ In the `GameFields` class, the `Name` property is defined with the `get` and `se
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLKMLBwAQaWEhfL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Text with firstName and lastName](./images/templates/blazor_combobox_firstname-lastname.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLKMLBwAQaWEhfL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Text with firstName and lastName](./images/templates/blazor_combobox_firstname-lastname.png)" %}

@@ -55,11 +55,9 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVeCXZGVWckeFbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNode)
 
-![Adding a node from the nodes collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVeCXZGVWckeFbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding a node from the nodes collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)" %}
 
 >**Note:** Node ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
@@ -321,10 +319,10 @@ public void RemoveNodes()
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLyWXZchiOJEKsq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/CloneNode)
-![Clonning Node](../images/CloneNode.gif)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLyWXZchiOJEKsq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Clonning Node](../images/CloneNode.gif)" %}
+
 ## How to Update Nodes at Runtime
 
 Node properties can be changed at runtime.

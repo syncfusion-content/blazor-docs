@@ -9,7 +9,7 @@ documentation: ug
 
 # Form Validation in ComboBox
 
-This article demonstrates how to use the Syncfusion ComboBox within a Blazor EditForm to validate user input with data annotations. The example shows a form where the user selects an item from the ComboBox, and validation ensures required fields are completed before submission.
+This demonstrates the creation of a form that includes a dropdown list, allowing the user to select an option from a list of items. The form also includes validation, which verifies that all required fields are filled out before the form can be submitted.
 
 ## ComboBox inside edit form
 
@@ -17,11 +17,11 @@ The ComboBox component can be used inside an EditForm to create a form that incl
 
 When the ComboBox input is valid, the form is ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
 
-- The EditForm component wraps the entire form, sets the Model to a view model (for example, Countries), and invokes a submit handler when the form is submitted.
-- The DataAnnotationsValidator component enables validation based on data annotation attributes (such as [Required]) applied to model properties.
-- The ValidationSummary component displays a summary of all validation errors in the form.
-- The ValidationMessage component displays a validation error message for the specific model property bound to the ComboBox (for example, the Name property).
-- The submit button submits the form and invokes the submit handler when clicked.
+* The EditForm component wraps the entire form, has the Model attribute set to the model variable of type Countries, and triggers the handleSubmit() method when the form is submitted.
+* The DataAnnotationsValidator component enables validation based on the Data Annotations attributes applied on the model properties.
+* The ValidationSummary component displays a summary of all validation errors on the form.
+* The ValidationMessage component displays a validation error message for the Name property of the model variable.
+* The submit button submits the form and triggers the handleSubmit() method when clicked.
 
 {% highlight cshtml %}
 
@@ -29,6 +29,4 @@ When the ComboBox input is valid, the form is ready to be submitted. If the inpu
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWVrGUcRBhJQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with validation inside an EditForm](./images/form-validation/blazor_combobox_inside-editform.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWVrGUcRBhJQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox inside editform](./images/form-validation/blazor_combobox_inside-editform.png)" %}

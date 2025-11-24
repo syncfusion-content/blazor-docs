@@ -9,11 +9,9 @@ documentation: ug
 
 # Speech recognition in Blazor SpeechToText component
 
-The Syncfusion Blazor SpeechToText component offers a comprehensive set of features for managing the speech recognition process. You can retrieve transcribed text, configure the recognition language, control interim results, monitor the component's state, and handle errors.
-
 ## Retrieving transcripts
 
-Use the [Transcript](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Transcript) property to retrieve the transcribed text from spoken input. This property allows to display the transcribed text once the speech recognition process is started.
+You can use the [Transcript](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Transcript) property to retrieve the transcribed text from the spoken text. This property allows to display the transcribed text once the speech recognition process is started.
 
 {% tabs %}
 {% highlight razor %}
@@ -44,7 +42,7 @@ Use the [Transcript](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inp
 
 ## Setting language
 
-Specify the recognition language using the [Language](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Language) property. This ensures the recognition engine correctly interprets speech based on the specified locale. The property accepts standard language codes, such as `en-US` for American English, `fr-FR` for French, or `es-ES` for Spanish.
+You can use the [Language](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Language) property to specify the language for speech recognition. Setting this property ensures that the recognition engine interprets the spoken words correctly based on the specified locale such as `en-US` for American `English`, `fr-FR` for `French`, and more.
 
 {% tabs %}
 {% highlight razor %}
@@ -75,7 +73,7 @@ Specify the recognition language using the [Language](https://help.syncfusion.co
 
 ## Allowing interim results
 
-The [AllowInterimResults](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_AllowInterimResults) property controls whether the component displays transcription results as they are being recognized. When `true` (the default), the `Transcript` is updated continuously. When `false`, the `Transcript` is updated only after the speaker pauses and the engine finalizes the result.
+You can use the [AllowInterimResults](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_AllowInterimResults) property to enable or disable interim results. When set to `true`, the recognized speech will be displayed in real time as words are spoken. When set to `false`, only final results will be displayed after recognition is complete. By default, the value is `true`.
 
 {% tabs %}
 {% highlight razor %}
@@ -106,11 +104,19 @@ The [AllowInterimResults](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Managing listening state
 
-Track the component's status using the [ListeningState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ListeningState) property, which returns the current state of the speech recognition process. This is useful for providing visual feedback to the user.
+You can use the [ListeningState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ListeningState) property to manage the listening state of the component. The possible values are `Inactive`, `Listening` and `Stopped`. By default, the value is `Inactive`.
 
-*   **Inactive**: The component is idle and not performing any recognition. This is the default state.
-*   **Listening**: The component is actively capturing audio and transcribing speech.
-*   **Stopped**: The speech recognition process has ended, and the component is no longer capturing audio.
+### Inactive
+
+The component is in idle state with no active speech recognition.
+
+### Listening
+
+It is actively listening which captures and transcribes speech with a stop icon and blinking animation.
+
+### Stopped
+
+Denotes the speech recognition has ended, and no further speech is being processed.
 
 Below sample demonstrates the usage of [ListeningState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ListeningState) property.
 
@@ -245,7 +251,7 @@ Below sample demonstrates the usage of [ListeningState](https://help.syncfusion.
 
 ## Show or hide tooltip
 
-Control the visibility of the tooltip on the component's microphone button using the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ShowTooltip) boolean property. When set to `false`, the default tooltip will not be displayed on hover. The default value is `true`.
+You can use the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ShowTooltip) property to specify the tooltip text to be displayed on hovering the SpeechToText button. By default, the value is `true`.
 
 {% tabs %}
 {% highlight razor %}
@@ -278,7 +284,7 @@ Control the visibility of the tooltip on the component's microphone button using
 
 ## Setting disabled
 
-Disable the SpeechToText component by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Disabled) property to `true`. This prevents all user interaction with the microphone button. By default, this property is `false`.
+You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Disabled) property to disable the SpeechToText component, preventing user interaction when set to `true`. By default, the value is `false`.
 
 {% tabs %}
 {% highlight razor %}
@@ -311,31 +317,31 @@ Disable the SpeechToText component by setting the [Disabled](https://help.syncfu
 
 ## Setting html attributes
 
-The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_HtmlAttributes) property allows you to add custom HTML attributes to the component's root element.
+You can use the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_HtmlAttributes) property to assign custom attributes to the SpeechToText component for the button element.
 
 ## Error handling
 
-The SpeechToText component provides error events to handle various issues during speech recognition. The following table lists common errors and their causes:
+The SpeechToText component handles various errors that may occur during speech recognition. The following table lists the possible errors and their causes:
 
 | Error                | Cause                                                                                        |
 |----------------------|----------------------------------------------------------------------------------------------|
-| `no-speech`            | The microphone did not detect any speech.                                                    |
-| `aborted`              | The recognition process was terminated, either by the user or programmatically.              |
-| `audio-capture`        | No microphone was found, or there was an issue accessing it.                                 |
-| `not-allowed`          | Microphone access was denied by the user or a browser security policy.                       |
-| `service-not-allowed`  | The browser or service denied recognition for security reasons.                              |
-| `network`              | A network connection error prevented communication with the recognition service.             |
-| `unsupported-browser`  | The browser does not support the Web Speech API.                                             |
-| `default`              | An unspecified or unknown error occurred.                                                    |
+| `no-speech`            | The microphone did not detect any speech input.                                              |
+| `aborted`              | The speech recognition process was intentionally terminated.                                 |
+| `audio-capture`        | The system was unable to detect a microphone device.                                         |
+| `not-allowed`          | Access to the microphone was denied by the user or browser settings.                         |
+| `service-not-allowed`  | The current context does not permit the use of the speech recognition service.               |
+| `network`              | A network issue is preventing the speech recognition service from functioning.               |
+| `unsupported-browser`  | The browser being used does not support the SpeechRecognition API.                           |
+| `default`              | An unidentified error occurred during the speech recognition process.                        |
 
 ## Browser support
 
-The SpeechToText component relies on the browser's implementation of the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition). Ensure target browsers support this API.
+The SpeechToText component relies on the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) for processing the speech input. Ensure that the browser supports this API before implementation.
 
-| Browser      | Supported Versions |
-|--------------|--------------------|
-| Chrome       | 25+                |
-| Edge         | 79+                |
-| Safari       | 12+              |
-| Opera        | 30+                |
-| Firefox      | Not Supported      |
+|    Browser    |    Supported versions    |
+|--------------|---------------|
+|    Chrome     |    25+    |
+|    Edge     |    79+    |
+|    Firefox     |    Not Supported    |
+|    Safari     |    12+    |
+|    Opera     |    30+    |

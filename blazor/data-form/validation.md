@@ -9,11 +9,11 @@ documentation: ug
 
 # Validation in DataForm component
 
-DataForm supports standard and custom validation compatible with the[EditForm](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform?view=aspnetcore-7.0) component. Such as [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-7.0) , [ObjectGraphDataAnnotationsValidator ](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-8.0#nested-models-collection-types-and-complex-types) etc...We can specify the required validation inside `FormValidator` RenderFragment of the DataForm component , The following examples illustrate the procedures for setting up the component with various validation.
+DataForm provides the capability to utilize both standard and custom validation that are compatible with the [EditForm](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform?view=aspnetcore-7.0) component. Such as [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-7.0) , [ObjectGraphDataAnnotationsValidator ](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-8.0#nested-models-collection-types-and-complex-types) etc...We can specify the required validation inside `FormValidator` RenderFragment of the DataForm component , The following examples illustrate the procedures for setting up the component with various validation.
 
 ## Data annotations validation
 
-`DataAnnotationsValidator` in the DataForm validates fields based on data annotation attributes applied to the model properties.
+`DataAnnotationsValidator` in DataForm component validates the fields based on the attributes bounded to the model properties. 
 
 {% tabs %}
 {% highlight razor tabtitle="DataAnnotationsValidator"  %}
@@ -23,19 +23,19 @@ DataForm supports standard and custom validation compatible with the[EditForm](h
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm showing validation errors using DataAnnotationsValidator](images/blazor_dataform_dataannotationsvalidator.png)
+![Blazor DataForm DataAnnotationsValidator](images/blazor_dataform_dataannotationsvalidator.png)
 
 ## Validation message display
 
-Validation messages can be displayed inline, via tooltip, or hidden by using [ValidationDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ValidationDisplayMode). With inline display, messages are visible when validation occurs. Tooltip display reveals messages on hover/focus. None hides messages from the UI.
+Within the DataForm component, we have the option to showcase validation messages in two distinct styles: inline or via a tooltip. When applying inline display, the validation messages remain statically visible whenever validation occurs. On the other hand, tooltip display reveals validation messages to users upon request. Additionally, there is functionality to hide the validation messages as desired by using [ValidationDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ValidationDisplayMode) . The classifications of the respective property are outline below 
 
 | FormValidationDisplay | Snapshot |
 | ------------ | ----------------------- |
-|[FormValidationDisplay.Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Inline)|![Blazor DataForm with inline validation messages beneath fields](images/blazor_dataform_validation_display_inline.png)|
-|[FormValidationDisplay.Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Tooltip)|![Blazor DataForm displaying validation messages in tooltips](images/blazor_dataform_validation_display_tooltip.png)|
-|[FormValidationDisplay.None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_None)|![Blazor DataForm with validation messages hidden](images/blazor_dataform_validation_display_none.png)|
+|[FormValidationDisplay.Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Inline)|![DataForm FormValidationDisplay.Inline](images/blazor_dataform_validation_display_inline.png)|
+|[FormValidationDisplay.Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Tooltip)|![DataForm FormValidationDisplay.Tooltip](images/blazor_dataform_validation_display_tooltip.png)|
+|[FormValidationDisplay.None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_None)|![DataForm FormValidationDisplay.None](images/blazor_dataform_validation_display_none.png)|
 
-The following example demonstrates how to configure validation message presentation in the DataForm component.
+The below example demonstrate , how to configure validation message presentation with DataForm component
 
 {% tabs %}
 {% highlight razor tabtitle="Validation Message Display"  %}
@@ -47,9 +47,9 @@ The following example demonstrates how to configure validation message presentat
 
 ## Complex model validation 
 
-The `ObjectGraphDataAnnotationsValidator` within the DataForm validates the entire object graph of the bound model, including collection and complex-type properties. In the following example, the `ValidateComplexType` attribute validates properties declared in nested classes such as `ChildModel` and `GrandChildModel`.
+The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures the validation of the entire object graph of the bound model, including both collection and complex-type properties.In the below example  `ValidateComplexType` attribute is used  to validate the properties declared in the nested classes such as `ChildModel` and `GrandChildModel`.
 
-N> Install the [Microsoft.AspNetCore.Components.DataAnnotations.Validation](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.DataAnnotations.Validation) NuGet package to enable complex model validation.
+N> We need to install the [Microsoft.AspNetCore.Components.DataAnnotations.Validation](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.DataAnnotations.Validation) Nuget package into the DataForm for Complex model validation.
 
 {% tabs %}
 {% highlight razor tabtitle="ObjectGraphDataAnnotationsValidator"  %}
@@ -59,13 +59,13 @@ N> Install the [Microsoft.AspNetCore.Components.DataAnnotations.Validation](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm validating nested and complex types using ObjectGraphDataAnnotationsValidator](images/blazor_dataform_complextypevalidation.png)
+![Blazor DataForm ObjectGraphDataAnnotationsValidator](images/blazor_dataform_complextypevalidation.png)
 
 ## Fluent validation 
 
-[FluentValidator](https://www.nuget.org/packages/Blazored.FluentValidation/) is a custom validator that validates beyond standard data annotations. It supports rules such as credit card format checks, comparisons between fields, and range/threshold validations defined in FluentValidation rule classes.
+[FluentValidator](https://www.nuget.org/packages/Blazored.FluentValidation/) is a custom validator that validates beyond standard validation attributes. It allows for checking if field values conform to the credit card format, match a specific value, exceed or fall below a given value, or are equivalent to the value of another field within the same model.
 
-N> Install the [Blazored.FluentValidation](https://www.nuget.org/packages/Blazored.FluentValidation/) NuGet package to use Fluent validation with the DataForm.
+N> We need to install the [Blazored.FluentValidation](https://www.nuget.org/packages/Blazored.FluentValidation/) Nuget package into the DataForm FluentValidation.
 
 {% tabs %}
 {% highlight razor tabtitle="FluentValidator.razor"  %}
@@ -75,7 +75,7 @@ N> Install the [Blazored.FluentValidation](https://www.nuget.org/packages/Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm showing errors produced by Fluent validation rules](images/blazor_dataform_fluentvalidation.png)
+![Blazor DataForm ObjectGraphDataAnnotationsValidator](images/blazor_dataform_fluentvalidation.png)
 
 ## See also
 

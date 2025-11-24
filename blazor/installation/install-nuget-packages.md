@@ -28,7 +28,7 @@ The NuGet **Package Manager UI** allows you to search, install, uninstall, and u
 
 2. The Manage NuGet Packages window will open. Navigate to the **Browse** tab, then search for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages using a term like **"Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor"** and select the appropriate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package for your development.
 
-    N> The nuget.org package source is selected by default. If Visual Studio does not have nuget.org configured, follow the instructions in the [Microsoft documents](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to set up the nuget.org feed URL.
+    N> The [nuget.org]([nuget.org](https://api.nuget.org/v3/index.json)) package source is selected by default. If Visual Studio does not have nuget.org configured, follow the instructions in the [Microsoft documents](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to set up the nuget.org feed URL.
 
     ![Search for Syncfusion Blazor packages in the Browse tab](images/NuGetsearch.png)
 

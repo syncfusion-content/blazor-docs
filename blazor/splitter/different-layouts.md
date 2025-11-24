@@ -9,9 +9,9 @@ documentation: ug
 
 # Different Layouts in Blazor Splitter Component
 
-Different layouts can be created using the splitter control with multiple and nested panes.
+By using splitter control, the different layouts can be created with multiple and nested panes.
 
-## Code Editor Style Layout
+## Code editor style layout
 
 **Step 1**: Create the element with two child to render the outer splitter.
 
@@ -160,9 +160,9 @@ Different layouts can be created using the splitter control with multiple and ne
 
 ```
 
-After completing the above configurations, the output is displayed as shown [here](https://blazor.syncfusion.com/demos/splitter/code-editor-layout?theme=bootstrap5).
+Once the above configurations has been completed, the output will be displayed like [this](https://blazor.syncfusion.com/demos/splitter/code-editor-layout?theme=bootstrap5)
 
-## Outlook Style Layout
+## Outlook style layout
 
 **Step 1**: Create the element with three panes and place the elements within the pane to render `Treeview`, `Listview` and `RichTextEditor`.
 
@@ -422,7 +422,7 @@ After completing the above configurations, the output is displayed as shown [her
 
 ```
 
-After completing the above configurations, the output is displayed as shown [here](https://blazor.syncfusion.com/demos/splitter/outlook?theme=bootstrap5).
+Once the above configurations has been completed, the output will be displayed like [this](https://blazor.syncfusion.com/demos/splitter/outlook?theme=bootstrap5).
 
 ## See Also
 

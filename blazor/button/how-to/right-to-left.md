@@ -9,9 +9,9 @@ documentation: ug
 
 # Right-To-Left in Blazor Button Component
 
-The Blazor Button component supports right-to-left (RTL) rendering. Enable RTL by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_EnableRtl) property to `true`.
+Button component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_EnableRtl) as true.
 
-The following example illustrates how to enable right-to-left support in the Button component.
+The following example illustrates how to enable right-to-left support in Button component.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -25,7 +25,4 @@ The following example illustrates how to enable right-to-left support in the But
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVgirrrCcOUEMiy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Right to Left in Blazor Button](./../images/blazor-button-in-right-to-left.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVgirrrCcOUEMiy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Right to Left in Blazor Button](./../images/blazor-button-in-right-to-left.png)" %}

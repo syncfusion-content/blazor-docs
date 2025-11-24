@@ -9,7 +9,7 @@ documentation: ug
 
 # Hide control buttons in Blazor Color Picker Component
 
-Render the Color Picker without control buttons (Apply/Cancel) by setting the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property to `false`.
+Color Picker can be rendered without control buttons (Apply/Cancel). In this case, while selecting a color, the Color Picker pop-up is closed and selected color can be applied directly. To hide control buttons, set the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property to `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -17,6 +17,4 @@ Render the Color Picker without control buttons (Apply/Cancel) by setting the [S
 <h4>Choose a color</h4>
 <SfColorPicker ShowButtons="false"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAWLBcqoIBqnae?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Hide control buttons in Blazor Color Picker](./../images/blazor-colorpicker-hide-control.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAWLBcqoIBqnae?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hide Control Buttons in Blazor ColorPicker](./../images/blazor-colorpicker-hide-control.png)" %}

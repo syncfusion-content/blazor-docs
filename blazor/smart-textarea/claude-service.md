@@ -28,7 +28,9 @@ Create a service class to manage interactions with the Claude API, including aut
 2. Add a new file named `ClaudeAIService.cs` in the `Services` folder.
 3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="ClaudeAIService.cs" %}
+
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -93,7 +95,9 @@ public class ClaudeAIService
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Store the Claude API key in `appsettings.json` (e.g., `{ "Claude": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security. Verify the `anthropic-version` header in [Claude API Documentation](https://docs.anthropic.com/claude/docs) for the latest version.
 
@@ -104,7 +108,9 @@ Define C# classes to match the Claude API’s JSON request and response format.
 1. Create a new file named `ClaudeModels.cs` in the `Services` folder.
 2. Add the following model classes:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="ClaudeModels.cs" %}
+
 public class ClaudeChatRequest
 {
     public string Model { get; set; }
@@ -128,7 +134,9 @@ public class ClaudeContentBlock
 {
     public string Text { get; set; }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Create a Custom AI Service
 
@@ -137,7 +145,9 @@ Implement the `IChatInferenceService` interface to connect the Smart TextArea to
 1. Create a new file named `ClaudeInferenceService.cs` in the `Services` folder.
 2. Add the following implementation:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="ClaudeInferenceService.cs" %}
+
 using Syncfusion.Blazor.AI;
 using System.Threading.Tasks;
 
@@ -155,7 +165,9 @@ public class ClaudeInferenceService : IChatInferenceService
         return await _claudeService.CompleteAsync(options.Messages);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure the Blazor App
 
@@ -163,7 +175,9 @@ Register the Claude service and `IChatInferenceService` implementation in the de
 
 Update the **~/Program.cs** file as follows:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 10 11" %}
+
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
@@ -180,13 +194,17 @@ builder.Services.AddSingleton<IChatInferenceService, ClaudeInferenceService>();
 
 var app = builder.Build();
 // ...
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Use Claude AI with Smart TextArea
 
 Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to use Claude AI for autocompletion:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/Pages/Home.razor" %}
+
 @using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">
@@ -203,7 +221,9 @@ Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to
         "We are investigating your issue."
     ];
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Test the Integration
 

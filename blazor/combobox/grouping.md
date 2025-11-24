@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping in Blazor ComboBox Component
 
-The ComboBox supports grouping items by a category field in the data source. Map the category of each list item using the [ComboBoxFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field. Group headers are shown inline and as a fixed (floating) header. The fixed group header updates dynamically while scrolling the popup list to reflect the current group in view.
+The ComboBox supports wrapping of the nested elements into a group based on different categories. The category of each list item can be mapped through the [ComboBoxFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
 
 To get started quickly with grouping in the Blazor ComboBox component, you can check the video below.
 
@@ -23,18 +23,17 @@ In the following sample, vegetables are grouped according to their category usin
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrAsLhwUmUFCjYX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Grouping in Blazor ComboBox](./images/blazor-combobox-grouping.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrAsLhwUmUFCjYX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor ComboBox](./images/blazor-combobox-grouping.png)" %}
 
 ## Fixed group header
 
-Classify items by mapping the [ComboBoxFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field. The headers for grouped items remain fixed at the top of the popup while scrolling, until the last item in that group passes out of view.
+Classify the items based on the [ComboBoxFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field mapped to the control. The headers of group items will be fixed at the top till their belonging items ends up on scrolling.
 
-The group header text, under which the corresponding sub-items are categorized, can be customized using the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template applies to both the inline group headers and the floating (fixed) group [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate).
+The group header title under which appropriate sub-items are categorized is customize with the help of the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate).
+
 ## Limitations of grouping
 
-Grouping has the following limitations:
+Grouping feature has some limitations. These are:
 
-* Only a single level of grouping is supported; hierarchical grouping (as in a TreeView) is not available.
-* Group headers are non-selectable and used for visual categorization only.
+* The component will support only single level of grouping, and you cannot specify it as like TreeView component.
+

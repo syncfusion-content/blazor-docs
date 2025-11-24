@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ranges in Blazor Bullet Chart Component | Syncfusion
-description: Check out and learn how to define and customize ranges in Syncfusion Blazor Bullet Chart component to represent performance thresholds and targets.
+description: Checkout and learn here all about the ranges in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -9,44 +9,38 @@ documentation: ug
 
 # Ranges in Blazor Bullet Chart Component
 
-Ranges in the Bullet Chart visually represent qualitative categories such as **Good**, **Bad**, and **Satisfactory** on the chart scale. The [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_End) property specifies the endpoint of each range. The minimum value of the quantitative scale is used as the starting point for the first range, or the previous range's endpoint for subsequent ranges.
+Ranges represent the quality of a specific range such as **Good**, **Bad** and **Satisfactory** in the Bullet Chart scale. The ending point of a qualitative range is specified in the [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_End) property. The minimum value of a quantitative scale is considered the starting point of the first range or the previous range end point.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
     <BulletChartRangeCollection>
-        <BulletChartRange End=150></BulletChartRange>
+        <BulletChartRange End=150> </BulletChartRange>
         <BulletChartRange End=250></BulletChartRange>
         <BulletChartRange End=300></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double FieldValue { get; set; }
         public double TargetValue { get; set; }
     }
-
     public List<ChartData> BulletChartData = new List<ChartData>
     {
         new ChartData { FieldValue = 270, TargetValue = 250 }
     };
 }
-
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUiLLiTfIkQhfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUiLLiTfIkQhfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.png)" %}
 
-![Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.png)
+## Color customization
 
-## Color Customization
-
-Enhance the readability and interpretation of ranges by customizing their color and opacity. Use the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Color) and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Opacity) properties to visually distinguish each range.
+Enhance the readability of ranges with color and opacity. It can be applied using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Color) and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Opacity) properties respectively.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" CategoryField="CategoryValue" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="10" Title="Sales Rate" Height="400">
@@ -59,14 +53,13 @@ Enhance the readability and interpretation of ranges by customizing their color 
     </BulletChartRangeCollection>
 </SfBulletChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double FieldValue { get; set; }
         public double TargetValue { get; set; }
         public string CategoryValue { get; set; }
     }
-
     public List<ChartData> BulletChartData = new List<ChartData>
     {
         new ChartData { FieldValue = 55, TargetValue = 75, CategoryValue = "Year 1" },
@@ -74,8 +67,5 @@ Enhance the readability and interpretation of ranges by customizing their color 
         new ChartData { FieldValue = 85, TargetValue = 75, CategoryValue = "Year 3" }
     };
 }
-
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBUWBrWJJHrSIXJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Ranges with Color in Blazor Bullet Chart](images/blazor-bullet-chart-range-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBUWBrWJJHrSIXJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Ranges with Color in Blazor Bullet Chart](images/blazor-bullet-chart-range-customization.png)" %}

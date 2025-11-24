@@ -9,9 +9,9 @@ documentation: ug
 
 # Customization in Blazor Numeric TextBox Component
 
-## Read-only input
+## Read only Input
 
-Make the Numeric TextBox non-editable by setting the Readonly property. In read-only mode, users can still focus the field and select its content, but they cannot modify the value. This state maps to aria-readonly for assistive technologies. To completely disable user interaction (including focus), use the Enabled property instead, which maps to aria-disabled.
+You can disable the text box from editing by setting the `readonly` attribute to numeric textbox where textbox is marked as read-only. Still end-users can select text in textbox and only editing is disabled.  
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -19,11 +19,11 @@ Make the Numeric TextBox non-editable by setting the Readonly property. In read-
 </SfNumericTextBox>
 ```
 
-![Blazor Numeric TextBox](./images/blazor-numericte-xtbox-customization.png)
+![Blazor NumericTextBox](./images/blazor-numericte-xtbox-customization.png)
 
 ## Disable interaction in input
 
-Disable cursor focus and selection on the text box by setting `pointer-events` as `none` for input element as below,
+You can disable cursor focus and selection on the text box by setting `pointer-events` as `none` for input element as below,
 
 
 ```cshtml

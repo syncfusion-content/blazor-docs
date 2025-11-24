@@ -86,11 +86,9 @@ The following code illustrates how to configure an automatic layout:
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLyCtNnJqIyRajV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/BasicLayout)
 
-![Blazor Diagram hierarchical layout example](../images/BasicLayout.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLyCtNnJqIyRajV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram hierarchical layout example](../images/BasicLayout.png)" %}
 
 ## How to Update Layout
 

@@ -9,9 +9,9 @@ documentation: ug
 
 # Repeat Button in Blazor Button Component
 
-A repeat button triggers its action at a regular interval while the button remains pressed (mouse or touch) and stops when released.
+The Repeat button is a type of Button in that the click event is triggered at regular time interval from the pressed state till the released state.
 
-The following example demonstrates how to achieve a repeat button using mouse and touch events with a timer that raises a click action at a fixed interval until the press ends.
+The following example explains about how to achieve Repeat Button in mouse and touch events.
 
 ```csharp
 
@@ -57,6 +57,4 @@ The following example demonstrates how to achieve a repeat button using mouse an
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrUCVhhiGkNFPZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor repeat button that triggers repeatedly while pressed](./../images/blazor-button-with-repeat-button.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrUCVhhiGkNFPZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Repeat Button in Blazor Button Component](./../images/blazor-button-with-repeat-button.png)" %}

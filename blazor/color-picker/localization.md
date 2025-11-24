@@ -7,18 +7,19 @@ control: Color Picker
 documentation: ug
 ---
 
+
 # Localization and RTL in Blazor Color Picker Component
 
 ## Localization
 
-Use the localization framework to translate the default text in the Color Picker. The component includes static text for control buttons (Apply/Cancel) and the mode switcher that can be localized for cultures such as Arabic, German, French, and more by setting the app’s locale and providing translated resources. For setup guidance, see [How to enable localization in a Blazor application](https://blazor.syncfusion.com/documentation/common/localization#how-to-enable-localization-in-blazor-application).
+The `Localization` library allows you to localize default text content of the Color Picker. The Color Picker component has static text for control buttons (apply / cancel) and mode switcher that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. You can refer [How to enable Localization in Blazor application](https://blazor.syncfusion.com/documentation/common/localization#how-to-enable-localization-in-blazor-application) page for the introduction and configuring the localization.
 
-Modify the default value in `.res` file added to Resource folder. Enter the key value (Locale Keywords) in the `Name` column and the translated string in the `Value` column. The following list of keys and their values are used in the Color Picker.
+You can modify the default value in `.res` file added to Resource folder. Enter the key value (Locale Keywords) in the `Name` column and the translated string in the `Value` column. The following list of keys and their values are used in the Color Picker.
 
-| Locale key | en-US (default culture) | de (Deutsch culture) |
-| ---------- | ------------------------ | -------------------- |
-| `ColorPicker_Apply` | `Apply` | `Anwenden` |
-| `ColorPicker_Cancel` | `Cancel` | `Abbrechen` |
+| **Locale key** | **en-US (default culture)** | **de (Deutsch culture)** |
+| ------------ | ----------------------- | --------------------|
+| `ColorPicker_Apply`  | `Apply` | `Anwenden` |
+| `ColorPicker_Cancel`  | `Cancel` | `Abbrechen` |
 | `ColorPicker_ModeSwitcher` | `Switch Mode` | `Modus wechseln` |
 
 ```cshtml
@@ -28,15 +29,13 @@ Modify the default value in `.res` file added to Resource folder. Enter the key 
 <SfColorPicker></SfColorPicker>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKsVVwqSUTjofI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Localization in Blazor Color Picker](./images/blazor-colorpicker-localization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKsVVwqSUTjofI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Localization in Blazor ColorPicker](./images/blazor-colorpicker-localization.png)" %}
 
 ## RTL
 
-The Color Picker supports right-to-left (RTL) layout to improve usability for languages such as Arabic, Farsi, and Urdu. Enable RTL by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_EnableRtl) property to `true`. RTL affects layout direction but does not translate text; use localization to provide translated strings.
+Color Picker component has `RTL` support. It helps to render the Color Picker from right-to-left direction. It improves the user experiences and accessibility for users who use right-to-left languages(Arabic, Farsi, Urdu, etc). This can be achieved by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_EnableRtl) property to true.
 
-In the following example, the Color Picker is rendered in RTL mode with an Arabic locale configured at the app level.
+In the following example, Color Picker component is rendered in RTL mode with `arabic` locale.
 
 ```cshtml
 
@@ -45,6 +44,4 @@ In the following example, the Color Picker is rendered in RTL mode with an Arabi
 <SfColorPicker EnableRtl="true"></SfColorPicker>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBUsrLmqSKnHwGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Right to left in Blazor Color Picker](./images/blazor-colorpicker-right-to-left.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBUsrLmqSKnHwGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Right to Left in Blazor ColorPicker](./images/blazor-colorpicker-right-to-left.png)" %}

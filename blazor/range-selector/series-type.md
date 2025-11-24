@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series Type in Blazor Range Selector Component | Syncfusion
-description: Check out and learn here all about Series Types in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Series Type in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Series Type in Blazor Range Selector Component
 
-The Range Selector supports three types of series for rendering data.
+To render the data, the Range Selector supports three types of series.
 
 <!-- markdownlint-disable MD036 -->
 
@@ -17,7 +17,7 @@ The Range Selector supports three types of series for rendering data.
 
 <!-- markdownlint-disable MD036 -->
 
-To render a line series, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) to **Line**. By default, the line series is rendered in the Range Selector.
+To render a line series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Line**. By default, the line series is rendered in the Range Selector.
 
 ```cshtml
 
@@ -31,6 +31,7 @@ To render a line series, set the series [Type](https://help.syncfusion.com/cr/bl
 </SfRangeNavigator>
 
 @code {
+
     public class StockDetails
     {
         public DateTime Date { get; set; }
@@ -57,7 +58,7 @@ To render a line series, set the series [Type](https://help.syncfusion.com/cr/bl
 
 ## Area
 
-To render an area series, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) to **Area**.
+To render an area series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Area**.
 
 ```cshtml
 
@@ -71,6 +72,7 @@ To render an area series, set the series [Type](https://help.syncfusion.com/cr/b
 </SfRangeNavigator>
 
 @code {
+
     public class StockDetails
     {
         public DateTime Date { get; set; }
@@ -97,7 +99,7 @@ To render an area series, set the series [Type](https://help.syncfusion.com/cr/b
 
 ## Step Line
 
-To render a step line series, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) to **Step Line**.
+To render a Step line series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Step Line**.
 
 ```cshtml
 

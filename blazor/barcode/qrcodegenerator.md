@@ -19,9 +19,7 @@ The [Blazor QR Code](https://www.syncfusion.com/blazor-components/blazor-barcode
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBqsLMJfZxnCqnf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![QR Code in Blazor Barcode Component](images/blazor-barcode-with-qrcode.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBqsLMJfZxnCqnf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[QR Code in Blazor Barcode Component](images/blazor-barcode-with-qrcode.png)" %}
 
 ## Customizing the Barcode color
 
@@ -33,9 +31,7 @@ A page or printed media containing a barcode often appears colorful in the backg
 <SfQRCodeGenerator Width="200px" Height="150px" ForeColor="red" Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBUiVMzfXduXXET?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing QR Code Color in Blazor Barcode](images/blazor-barcode-qrcode-color-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBUiVMzfXduXXET?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing QR Code Color in Blazor Barcode](images/blazor-barcode-qrcode-color-customization.png)" %}
 
 ## Customizing the Barcode dimension
 
@@ -61,9 +57,7 @@ In barcode generators, customize the barcode text by using the display [Text](ht
 </SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKMVCTTXGflLco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing the Text for QR Code in Blazor Barcode](images/blazor-barcode-qrcode-text-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKMVCTTXGflLco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing the Text for QR Code in Blazor Barcode](images/blazor-barcode-qrcode-text-customization.png)" %}
 
 ## Error Correction Level
 

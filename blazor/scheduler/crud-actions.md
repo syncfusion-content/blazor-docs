@@ -1,33 +1,32 @@
 ---
 layout: post
-title: CRUD Actions in Blazor Scheduler Component | Syncfusion
+title: CRUD actions in Blazor Scheduler Component | Syncfusion
 description: Learn here all about possible methods available on Syncfusion Blazor Scheduler component to perform CRUD actions on the events.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# CRUD Actions in Blazor Scheduler Component
+# CRUD actions in Blazor Scheduler Component
 
-Appointments, also known as events, are central to user interaction within the Scheduler. The component provides intuitive ways to manipulate these appointments (add, edit, delete) either through its interactive editor, quick popups, inline editing, or via drag-and-resize actions.
+Events, a.k.a. Appointments, play an important role in Scheduler with which the users mostly interact. You can easily manipulate (add/edit/delete) the desired appointments as and when required either using the editor window or through the drag and resize action.
 
 ## Add
 
-Appointments of any type—normal, all-day, spanned, or recurring events—can be easily added to the Scheduler using one of the following methods:
+Any kind of appointments such as normal, all-day, spanned or recurring events can be easily added on Scheduler using any one of the following ways.
 
-* [Creation using Editor Window](#creation-using-editor-window)
-* [Creation using AddEventAsync Method](#creation-using-addeventasync-method)
-* [Inline Creation](#inline-creation)
+* [Creation using editor window](#creation-using-editor-window)
+* [Creation using AddEventAsync method](#creation-using-addeventasync-method)
 
-### Creation using Editor Window
+### Creation using editor window
 
-The default editor window opens when a user double-clicks on an empty cell in the Scheduler. This comprehensive editor provides various event-related options such as Subject, Location, Start and End time, All-day status, Timezone, Description, and recurrence options. Users can provide detailed information for the event through these fields. After filling in the appropriate values, clicking the `Save` button adds the event.
+The default editor window opens when you double click on the Scheduler cells. It provides with event related options such as Subject, Location, Start and End time, All-day, Timezone, Description and other recurrence options. With these available fields, you can choose to provide detailed information to the events. Once the fields are filled with proper values, enter the `Save` button to add an event.
 
-Alternatively, a single click on a Scheduler cell opens a quick popup, allowing the user to simply enter a subject and save the appointment. For a selected time range (e.g., multiple cells selected by dragging), pressing the <kbd>Enter</kbd> key can also open this quick popup to save an appointment for that duration.
+In case, if you want to simply provide the Subject alone for appointments, just single click on the required cells which will open the quick popup expecting you to enter subject alone and save it. You can also select multiple cells and press `Enter` key to open the quick popup for selected time range and save the appointment for that time range.
 
-### Creation using AddEventAsync Method
+### Creation using AddEventAsync method
 
-Appointments can be dynamically created and added to the Scheduler programmatically using the [`AddEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AddEventAsync__0_) method.
+The appointments can be created dynamically by using [`AddEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AddEventAsync__0_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -79,13 +78,10 @@ Appointments can be dynamically created and added to the Scheduler programmatica
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLSsNXHgvMUdWcA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Scheduler](images/add-appointment.png)
+### Inline creation
 
-### Inline Creation
-
-Another convenient way to create appointments is by enabling the [`AllowInline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowInline) property. This allows users to single-click on Scheduler cells or press the <kbd>Enter</kbd> key on selected cells to display an appointment-like textbox. Users can then type the event's `Subject` directly. Pressing <kbd>Enter</kbd> or clicking outside the textbox will save the new appointment.
+Another easier way to create the appointments is enabling the [`AllowInline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowInline) property. By single clicking on the scheduler cells or pressing `enter` key on selected cells, the appointment like textbox will be displayed in which you can enter the Subject of the appointment. Pressing enter key or clicking out of the text box will create the appointment in the scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -122,11 +118,10 @@ Another convenient way to create appointments is by enabling the [`AllowInline`]
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthosXXnAbVuftBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Inserting Events into a Database at Server-Side
+### Inserting events into database at server-side
 
-When adding normal or recurring events to the Scheduler, an `insert` action is triggered. The following code example illustrates how to handle a new event persisting to a database on the server side.
+While adding the normal or recurring events to the Scheduler, `insert` action takes place and the following code example describes how to add a new event into database at server side.
 
 ```sh
 if (param.action == "insert" || (param.action == "batch" && param.added != null)) // this block of code will execute while inserting the appointments
@@ -155,11 +150,11 @@ if (param.action == "insert" || (param.action == "batch" && param.added != null)
 
 ![Adding Events in Blazor Scheduler](images/blazor-scheduler-add-events.png)
 
-### Restricting Add Action Based on Specific Criteria
+### Restricting add action based on specific criteria
 
 In the following example, the specific fields of Scheduler editor window such as Subject and Location are made to undergo validation such that if it is left as blank, then the default `required` validation message will be displayed, while clicking on a save button.
 
-Additionally, a regular expression (regex) condition can be applied to the `Location` field to prevent special characters, displaying a custom validation message if violated.
+Additionally, the regex condition has been added to the Location field, so that if any special characters are typed into it, then the custom validation message will be displayed.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -209,11 +204,8 @@ Additionally, a regular expression (regex) condition can be applied to the `Loca
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLSMjNxqlqPOxhL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Scheduler](images/validation.png)
-
-The creation of appointments can also be dynamically prevented based on runtime conditions. For example, to prevent appointment creation on weekend days, the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionBegin) event can be used to check the start date of the proposed appointment.
+You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionBegin) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -265,27 +257,25 @@ The creation of appointments can also be dynamically prevented based on runtime 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhSsDXdqbzuctqm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Edit
 
-Appointments (normal, all-day, spanned, or recurring events) can be easily edited using any of the following methods:
+The same way the appointments such as normal, all-day, spanned or recurring events are created, it can be easily edited using any of the following ways.
 
-*   [Update using Editor Window](#update-using-editor-window)
-*   [Update using `SaveEventAsync` Method](#update-using-saveeventasync-method)
-*   [Inline Editing](#inline-editing)
+* [Update using editor window](#update-using-editor-window)
+* [Update using SaveEventAsync method](#update-using-saveeventasync-method)
 
-### Update using Editor Window
+### Update using editor window
 
-The default editor window, pre-filled with appointment details, can be opened by double-clicking on the desired event. This editor provides event options such as Subject, Location, Start and End time, All-day status, Timezone, Description, and recurrence options. Users can edit the desired field values and then click the `Save` button to update the event.
+The default editor window filled with appointment details can be opened by double clicking on the required events. It gets pre-filled with event options such as Subject, Location, Start and End time, All-day, timezone, description and other recurrence options, from which you can edit the desired field values and, then enter the `Save` button to update it.
 
-N> A single click on an appointment opens a quick info popup with "Edit" and "Delete" options. Clicking "Edit" opens the default editor pre-filled with event details. "Delete" prompts for delete confirmation.
+N> You can also single click on appointments, which opens the quick info popup with edit and delete options. Clicking on the `Edit` option will open the default editor filled with event details and `Delete` option will prompt for delete confirmation.
 
-### Update using SaveEventAsync Method
+### Update using SaveEventAsync method
 
-Appointments can be programmatically edited and updated using the [`SaveEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SaveEventAsync__0_Syncfusion_Blazor_Schedule_CurrentAction__0_) method.
+The appointments can be edited and updated manually using the [`SaveEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SaveEventAsync__0_Syncfusion_Blazor_Schedule_CurrentAction__0_) method.
 
-In the following example, an event with a specific `Id` (e.g., `1`) is edited, and its subject is changed with new text. When the modified data object is passed to the `SaveEventAsync` method, the changes are reflected in the original event. The `Id` field is mandatory in this process, as the modified event object must hold a valid `Id` value that exists in the Scheduler's data source.
+Here, an event with ID `1` is edited and its subject is changed with a new text. When the modified data object is passed onto the [`SaveEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SaveEventAsync__0_Syncfusion_Blazor_Schedule_CurrentAction__0_) method, the changes gets reflected onto the original event. The `Id` field is mandatory in this edit process, where the modified event object should hold the valid `Id` value that exists in the Scheduler data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -337,13 +327,10 @@ In the following example, an event with a specific `Id` (e.g., `1`) is edited, a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeMZZdgPeRVAmz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Scheduler](images/edit-event.png)
+### Inline editing
 
-### Inline Editing
-
-Another convenient way to edit appointments is by enabling the [`AllowInline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowInline) property. This allows users to single-click on an appointment to directly edit its `Subject`. Pressing <kbd>Enter</kbd> or clicking outside the appointment will update the existing appointment.
+Another easier way to edit the appointments is enabling the [`AllowInline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowInline) property. By single clicking on the appointments, you can edit the Subject of the appointment. Pressing enter key or clicking out of the appointment will edit the existing appointment.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -380,9 +367,8 @@ Another convenient way to edit appointments is by enabling the [`AllowInline`](h
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLSiZZRgbHIWEOC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Updating Events in a Database at Server-Side
+### Updating events in database at server-side
 
 While editing the normal events in the Scheduler, `update` action takes place and the following code example describes how to update event into database at server side.
 
@@ -412,23 +398,22 @@ if (param.action == "update" || (param.action == "batch" && param.changed != nul
 
 ![Updating Blazor Scheduler Events](images/blazor-scheduler-updating-events.png)
 
-### How to Edit a Single Occurrence or Entire Series and Update it in a Database at Server-Side
+### How to edit a single occurrence or entire series and update it in database at server-side
 
-Recurring appointments can be edited in two distinct ways:
+The recurring appointments can be edited in either of the following two ways.
 
 * Single occurrence
 * Entire series
 
-*   **Editing a Single Occurrence:** When a recurring event is double-clicked, a popup prompts the user to choose between editing the single event or the entire series. Selecting the "EDIT EVENT" option will edit only that specific occurrence of the recurring appointment.
-    
-    This process involves:
-    *   A new event being created from the parent event's data and added to the Scheduler's data source. Its fields are overwritten with the newly modified data.
-    *   A [`RecurrenceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceId.html) field is added to the new event, holding the `Id` value of the parent recurring event. A new `Id` is also generated for this specific occurrence.
-    *   The parent recurring event is updated with an appropriate [`RecurrenceException`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceException.html) field to store the date of the edited occurrence.
+**Editing single occurrence** - When a recurring event is double clicked, a popup prompts to choose either to edit the single event or entire series. From this, if you choose to select **EDIT EVENT** option, a single occurrence of the recurring appointment alone will be edited. The following process takes place while editing a single occurrence,
 
-    Therefore, editing a single occurrence from a recurring event typically involves a batch action, encompassing both `Add` (for the new occurrence) and `Edit` (for the parent's `RecurrenceException`) actions.
+* A new event will be created from the parent event data and added to the Scheduler dataSource, with all its default field values overwritten with the newly modified data and additionally, the [`RecurrenceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceId.html) field will be added to it, that holds the `id` value of the parent recurring event. Also, a new `Id` will be generated for this event in the dataSource.
 
-    N> If an existing edited occurrence of a recurring event is modified, only that individual event object in the database is updated. In this case, only an `update` action occurs on the edited occurrence.
+* The parent recurring event needs to be updated with appropriate [`RecurrenceException`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceException.html) field to hold the edited occurrence appointment's date collection.
+
+Therefore, when a single occurrence is edited from a recurring event, the batch action takes place by allowing both the `Add` and `Edit` action requests to take place together.
+
+N> In case, if you edit an existing edited occurrence of a recurring event, only those edited occurrence which present in the database as an individual event object will get updated. In this case, `update` action alone takes place on the edited occurrence object on the database.
 
 ```sh
 if (param.action == "insert" || (param.action == "batch" && param.added != null)) // this block of code will execute while inserting the appointments
@@ -476,9 +461,9 @@ if (param.action == "update" || (param.action == "batch" && param.changed != nul
 }
 ```
 
-*   **Editing Entire Series:** When the "EDIT SERIES" option is selected from the popup (after double-clicking a recurring event), the entire recurring series is updated with the new values. If the parent event has any previously edited occurrences, those child occurrences will be removed from the data source, and only the single parent data will be updated.
-    
-    Editing an entire series also typically involves a batch process, combining both `Delete` (for existing edited occurrences) and `Edit` (for the master series event) actions.
+**Editing entire series** - When an option **EDIT SERIES** is selected from the popup that opens on double clicking the recurring event, the whole recurring series will be updated with the newly provided value. When this option is chosen explicitly, if a parent event holds any edited occurrences - then all its child occurrences will be removed from the dataSource and simply the single parent data will be updated.
+
+This action of editing entire series also leads to the batch process, as both the `Delete` and `Edit` action takes place together.
 
 ```sh
 if (param.action == "update" || (param.action == "batch" && param.changed != null)) // this block of code will execute while updating the appointment
@@ -522,11 +507,11 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-N> For more details on handling recurrence exceptions, refer to the [Adding exceptions](https://blazor.syncfusion.com/documentation/scheduler/recurring-events#adding-exceptions) topic.
+N> To know more about handling recurrence exceptions, refer the [Adding exceptions](https://blazor.syncfusion.com/documentation/scheduler/recurring-events#adding-exceptions) topic.
 
-### Restricting Edit Action Based on Specific Criteria
+### Restricting edit action based on specific criteria
 
-The editing of appointments can be dynamically prevented based on runtime conditions. For example, to prevent appointments from being updated outside of defined working hours, the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionBegin) event can be used to check the proposed new time range.
+You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionBegin) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -593,30 +578,27 @@ The editing of appointments can be dynamically prevented based on runtime condit
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLyiDtdKlchXNgv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Delete
 
 The appointments can be deleted in either of the following ways,
 
-*   Selecting an appointment and clicking the delete icon from the quick popup.
-*   Selecting an appointment and pressing the <kbd>Delete</kbd> key.
-*   Selecting multiple appointments (e.g., by holding <kbd>Ctrl</kbd> and clicking) and then pressing the <kbd>Delete</kbd> key.
-*   Double-clicking an event to open the default event editor, then choosing the `Delete` button within the editor.
+* Selecting an appointment and clicking the delete icon from the quick popup that opens.
+* Selecting an appointment and pressing `Delete` key.
+* Selecting multiple appointments by tap holding an event and then continuously single clicking on other consecutive events and then clicking the `Delete` key.
+* Double clicking on an event which opens the default event editor pre-filled with event details, and then choosing `Delete` button in it.
 
-For most of these actions, a pop-up with a delete confirmation message will be displayed, prompting the user to confirm the deletion.
+While performing all these above mentioned actions, a pop-up with a delete confirmation message will be displayed prompting either to proceed with deleting an appointment.
 
-### Deletion Using Editor Window
+### Deletion using editor window
 
-When an event is double-clicked, the default editor window opens. This window includes a `Delete` button, typically at the bottom-left, which allows for the deletion of that specific appointment. When an appointment is deleted through this editor, the delete confirmation alert is usually bypassed, and the event is deleted immediately.
+When you double click an event, the default editor window will be opened which includes a `Delete` button at the bottom left position which allows to delete that particular appointment. When deleting an appointment through this editor window, the delete alert confirmation will not be asked and the event will be deleted immediately.
 
-### Deletion Using DeleteEventAsync Method
+### Deletion using DeleteEventAsync method
 
-Appointments can be programmatically removed using the [`DeleteEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) method. This method supports deleting both normal and recurring events.
+The appointments can be removed manually using the [`DeleteEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) method. The following code examples shows how to edit the normal and recurring events.
 
-#### Deleting a Normal Event
-
-A normal appointment can be deleted from the Scheduler by simply passing its `Id` value or the entire event object collection to the [`DeleteEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) method.
+**Normal event** - You can delete the normal appointments of Scheduler by simply passing its `Id` value or the entire event object collection to the [`DeleteEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -661,11 +643,8 @@ A normal appointment can be deleted from the Scheduler by simply passing its `Id
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLIWjZdKvmmBHUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-#### Deleting a Recurring Event
-
-Recurring events can be removed either as an entire series or by deleting a single occurrence. The [`DeleteEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) method supports this by accepting `CurrentAction.DeleteSeries` or `CurrentAction.DeleteOccurrence` parameters.
+**Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the [`DeleteEventAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -721,9 +700,8 @@ Recurring events can be removed either as an entire series or by deleting a sing
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhyWXZHqlvhAoqQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Removing Events from a Database at Server-Side
+### Removing events from database at server-side
 
 While deleting the event from the Scheduler, `remove` action takes place and the following code example describes how to delete event from database at server side.
 
@@ -750,22 +728,21 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 ![Removing Blazor Scheduler Event](images/blazor-scheduler-remove-events.png)
 
-### How to Delete a Single Occurrence or Entire Series from Scheduler and Update it in a Database at Server-Side
+### How to delete a single occurrence or entire series from Scheduler and update it in database at server-side
 
 The recurring events can be deleted in either of the following two ways.
 
 * Single occurrence
 * Entire series
 
-**Single occurrence** - When attempting to delete a recurring event, a popup prompts users to choose between deleting the single event or the entire series. Selecting the "DELETE EVENT" option removes only that specific occurrence from the Scheduler UI.
-    
-    This process involves:
-    *   The selected occurrence being removed from the Scheduler user interface.
-    *   The parent recurring event object being updated with an appropriate  [`RecurrenceException`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceException.html) field, which stores the date of the deleted occurrence.
+**Single occurrence** - When you attempt to delete the recurring events, a popup prompts you to choose either to delete the single event or entire series. From this, if you choose to select **DELETE EVENT** option, a single occurrence of the recurring appointment alone will be removed. The following process takes place while removing a single occurrence,
 
-    Therefore, deleting a single occurrence from a recurring event results in an `update` action on the parent recurring event in the database.
-    
-N> If an existing edited occurrence of a recurring event is deleted, only that individual edited occurrence (present in the database as a separate event object) is removed. In this case, a `delete` action occurs instead of an `update` action on the parent, and the parent recurring event object remains unchanged.
+* The selected occurrence will be deleted from the Scheduler user interface.
+* In code, the parent recurring event object will be updated with appropriate [`RecurrenceException`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceException.html) field, to hold the deleted occurrence appointment's date collection.
+
+Therefore, when a single occurrence is deleted from a recurring event, the `update` action takes place on the parent recurring event as shown in the following code example.
+
+N> In case, if you delete an existing edited occurrence of a recurring event, only those edited occurrence which present in the database as an individual event object will get removed. In this case, `delete` action takes place instead of `update` action and the parent recurring event object remains same with no changes.
 
 ```sh
 if (param.action == "update" || (param.action == "batch" && param.changed != null)) // this block of code will execute while updating the appointment
@@ -791,7 +768,7 @@ if (param.action == "update" || (param.action == "batch" && param.changed != nul
 }
 ```
 
-**Entire series** When the "DELETE SERIES" option is selected from the popup, the entire recurring series is deleted. If the parent event has any previously edited occurrences (maintained as separate event objects), those child occurrences will also be removed from the data source. This action leads to a `remove` operation, deleting one or more event objects simultaneously.
+**Entire series** - When you select an option **DELETE SERIES** from the popup, the whole recurring series will be deleted. When this option is chosen explicitly, if a parent event holds any edited occurrences - then all its child occurrences which are maintained as separate event objects will also be removed from the dataSource. This action of deleting entire series leads to `remove` action and removes one or more event objects at the same time.
 
 ```sh
 if (param.action == "remove" || (param.action == "batch" && param.deleted != null)) // this block of code will execute while removing the appointment
@@ -814,11 +791,11 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-## Drag and Drop
+## Drag and drop
 
-When a normal event is dragged and dropped in the Scheduler, an event editing action is performed. If a recurring event instance is dragged and dropped to a new time range, a batch action occurs, similar to the "Editing a single occurrence" process. This will involve both an `Add` (for the new occurrence) and an `Edit` (for the parent's `RecurrenceException`) action.
+When you drag and drop a normal event on the Scheduler, the event editing action takes place. When a recurring event is drag and dropped on a desired time range, the batch action explained in `Editing a single occurrence` process will take place - thus allowing both the `Add` and `Edit` action to take place together.
 
-N> By default, dragging a recurring instance only edits that specific occurrence and does not affect the entire series.
+N> By default, when you drag a recurring instance, only the occurrence of the event gets edited and not a whole series.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -857,9 +834,9 @@ N> By default, dragging a recurring instance only edits that specific occurrence
 
 ## Resize
 
-When a normal event is resized in the Scheduler, an event editing action is performed. If a recurring event instance is resized to a new duration, a batch action occurs, similar to the "Editing a single occurrence" process. This will involve both an `Add` (for the new occurrence) and an `Edit` (for the parent's `RecurrenceException`) action.
+When you resize a normal event on the Scheduler, the event editing action takes place. When a recurring event is resized to a new desired time, the batch action explained in `Editing a single occurrence` process will takes place - thus allowing both the `Add` and `Edit` action to take place together.
 
-N> By default, resizing a recurring instance only edits that specific occurrence and does not affect the entire series.
+N> By default, when you resize a recurring instance, only the occurrence of the event gets edited and not a whole series.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

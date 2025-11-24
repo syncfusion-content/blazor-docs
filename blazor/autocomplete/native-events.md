@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native events in Blazor AutoComplete component | Syncfusion
-description: Check out how to use native events with the Syncfusion Blazor AutoComplete component, including @on{event} binding and passing event argument data.
+title: Native Events in Blazor AutoComplete Component | Syncfusion
+description: Checkout and learn here all about Native Events in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Native Events in Blazor AutoComplete Component
 
-The following section explains how to include native DOM events and pass data to an event handler in the [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component. Native events are bound using the `@on{event}` attribute syntax, and the attribute value is the event handler.
+The following section explains the steps to include native events and pass data to event handler in the [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) component.
 
 ## Bind native events to AutoComplete
 
-Bind any native event by adding the corresponding `@on{event}` attribute to the component. The event is attached to the component’s input element, and the attribute’s value is treated as an event handler.
+You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
 
-In the following example, the `KeyPressed` method is called each time a key is pressed in the input.
+In the following example, the keyPressed method is called every time the key is pressed on input.
 
 ```cshtml
 <SfAutoComplete TValue="string" TItem="Country" @onkeypress="@KeyPressed" DataSource="@LocalData">
@@ -46,26 +46,24 @@ In the following example, the `KeyPressed` method is called each time a key is p
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVUMrifgyJMzUUB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The same behavior can be written using a lambda expression. The following example prints a message when a key is pressed.
+Also, you can rewrite the above example code as follows using Lambda expressions.
 
 ```cshtml
 <SfAutoComplete TValue="string" DataSource="@LocalData" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfAutoComplete>
 ```
 
-Note: Handlers can be synchronous or asynchronous. Event modifiers such as `:preventDefault` and `:stopPropagation` can be appended to native events (for example, `@onkeydown:preventDefault`).
-
 ## Pass event data to event handler
 
-Blazor provides strongly typed event argument classes that map to native events. Common event types and corresponding argument classes include:
+Blazor provides set of argument types to map to native events. The list of event types and event arguments are:
 
-- Focus events – FocusEventArgs
-- Mouse events – MouseEventArgs
-- Keyboard events – KeyboardEventArgs
-- Input/change events – ChangeEventArgs/EventArgs
-- Touch events – TouchEventArgs
-- Pointer events – PointerEventArgs
+* Focus Events - FocusEventArgs
+* Mouse Events - MouseEventArgs
+* Keyboard Events - KeyboardEventArgs
+* Input Events - ChangeEventArgs/EventArgs
+* Touch Events – TouchEventArgs
+* Pointer Events – PointerEventArgs
 
-In the following example, the keypress handler receives `KeyboardEventArgs`. The message is printed only when the “a” key is pressed.
+In the following example, the on keypress method is called every time any key is pressed inside input. But the message will print when you press "a" key.
 
 ```cshtml
 <SfAutoComplete TValue="string" TItem="Country" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">
@@ -96,11 +94,9 @@ In the following example, the keypress handler receives `KeyboardEventArgs`. The
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgCVWTAdxsbIip?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Lambda expressions can also pass event data to the event handler as shown above. Native events can be used alongside Syncfusion component events (such as `ValueChange`), depending on the use case.
+Using Lambda expression also, you can pass the event data to the event handler.
 
 ## List of native events supported
-
-Common native events that can be bound to the component include:
 
 | List of Native events |  |  | |
 | --- | --- | --- | --- |

@@ -1,67 +1,61 @@
 ---
 layout: post
 title: Events in Blazor Bullet Chart Component | Syncfusion
-description: Check out and learn about available events and event handling in Syncfusion Blazor Bullet Chart component.
+description: Checkout and learn here all about available Events in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
-control: Bullet Chart
+control: Bullet Chart 
 documentation: ug
 ---
 
 # Events in Blazor Bullet Chart Component
 
-This section describes the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component's events, which are triggered by user actions or chart updates. Events are provided to the Bullet Chart through the [BulletChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html) property.
+This section describes about the [Blazor Bullet](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [BulletChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
 
 ## Loaded
 
-The `Loaded` event is triggered after the Bullet Chart component has loaded.
+The `Loaded` event triggers after the Bullet Chart component has been loaded.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
     <BulletChartEvents Loaded="LoadedHandler"></BulletChartEvents>
 </SfBulletChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double FieldValue { get; set; }
         public double TargetValue { get; set; }
     }
-
     public List<ChartData> BulletChartData = new List<ChartData>
     {
         new ChartData { FieldValue = 270, TargetValue = 250 }
     };
-
     public void LoadedHandler(System.EventArgs args)
     {
-        // Custom code here.
+        // Here, you can customize the code.
     }
 }
-
 ```
 
 ## OnPrintComplete
 
-The [OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_OnPrintComplete) event is triggered before the rendered Bullet Chart starts printing.
+The [OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_OnPrintComplete) event triggers before the rendered Bullet Chart starts printing.
 
-| Argument name | Description |
-|--------------|-------------|
-| Cancel | Specifies the event cancel status. |
+|   Argument name    |   Description                                          |
+|--------------------| -------------------------------------------------------|
+|   Cancel               |   Specifies the event cancel status. |
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <button @onclick="PrintCall">OnPrint</button>
-
 <SfBulletChart @ref="@BulletChart" DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
     <BulletChartEvents OnPrintComplete="PrintCompleteHandler"></BulletChartEvents>
 </SfBulletChart>
 
-@code {
+@code{
     public SfBulletChart<ChartData> BulletChart { get; set; }
 
     public class ChartData
@@ -82,25 +76,23 @@ The [OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public void PrintCompleteHandler(PrintEventArgs args)
     {
-        // Custom code here.
+        // Here, you can customize the code.
     }
 }
-
 ```
 
 ## TooltipRender
 
-The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_TooltipRender) event is triggered before the tooltip is rendered.
+The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_TooltipRender) event triggers before the tooltip rendering.
 
-| Argument name | Description |
-|--------------|-------------|
-| Target | Specifies the target bar values. |
-| Text | Specifies the content of the tooltip. |
-| Value | Specifies the value bar data. |
-| Cancel | Specifies the event cancel status. |
+|   Argument name    |   Description                                          |
+|--------------------| -------------------------------------------------------|
+|   Target            |    Specifies the Target Bar values.           |
+|   Text     |    Specifies the content of the tooltip.       |
+|   Value               |   Specifies the Value Bar data. |
+|   Cancel               |   Specifies the event cancel status. |
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
@@ -108,13 +100,13 @@ The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     <BulletChartTooltip TValue="ChartData" Enable="true"></BulletChartTooltip>
 </SfBulletChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double FieldValue { get; set; }
         public double TargetValue { get; set; }
     }
-
+    
     public List<ChartData> BulletChartData = new List<ChartData>
     {
         new ChartData { FieldValue = 270, TargetValue = 250 }
@@ -122,22 +114,21 @@ The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
     public void TooltipRenderHandler(BulletChartTooltipEventArgs args)
     {
-        // Custom code here.
+        // Here, you can customize the code.
     }
 }
-
 ```
 
 ## LegendRender
 
-The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event is triggered before each legend item is rendered.
+The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event triggers before each legend item rendering.
 
-| Argument name | Description |
-|--------------|-------------|
-| Fill | Specifies the fill of the legend item. |
-| Shape | Specifies the shape of the legend item. |
-| Text | Specifies the text of the legend item. |
-| Cancel | Specifies the event cancel status. |
+|   Argument name    |   Description                                          |
+|--------------------| -------------------------------------------------------|
+|   Fill     |    Specifies the fill of the legend item.      |
+|   Shape     |    Specifies the shape of the legend item.      |
+|   Text     |    Specifies the text of the legend item.      |
+|   Cancel             |   Specifies the event cancel status. |
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -152,40 +143,37 @@ The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     </BulletChartRangeCollection>
 </SfBulletChart>
 
-@code {
+@code{
     public class ChartData
     {
         public double FieldValue { get; set; }
         public double TargetValue { get; set; }
     }
-
     public List<ChartData> BulletChartData = new List<ChartData>
     {
         new ChartData { FieldValue = 55, TargetValue = 75 },
         new ChartData { FieldValue = 45, TargetValue = 15 },
         new ChartData { FieldValue = 75, TargetValue = 35 }
     };
-
     public void LegendRenderHandler(BulletChartLegendRenderEventArgs args)
     {
-        // Custom code here.
+        // Here, you can customize the code.
     }
 }
 
 ```
 ## PointerClick
 
-The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event is triggered when the mouse or touch pointer is clicked on the target element or feature measure value.
+The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event is triggered when the mouse pointer or touch pointer is clicked on the target element or on the feature measure value.
 
-| Argument name | Description |
-|--------------|-------------|
-| Target | Specifies the target bar values. |
-| Value | Specifies the value bar data. |
-| CategoryName | Specifies the category name of the selected point. |
-| Cancel | Specifies whether the event should continue or be cancelled. |
+|   Argument name    |   Description                                          |
+|--------------------| -------------------------------------------------------|
+|   Target     |    Specifies the target bar values.
+|   Value     |    Specifies the value bar data. 
+|   CategoryName     |    Specifies the category name of the selected point.  
+|   Cancel             |   Specifies whether the event should continue or be cancelled.|
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" Height="300px" Title="Sales Rate" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
@@ -211,10 +199,10 @@ The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
         new ChartData { FieldValue = 45, TargetValue = 15 },
         new ChartData { FieldValue = 75, TargetValue = 35 }
     };
-
+    
     public void PointClickEvent(BulletChartPointEventArgs args)
     {
-        // Custom code here.
+        // Here, you can customize the code.         
     }
 }
 

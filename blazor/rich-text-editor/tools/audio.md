@@ -415,5 +415,5 @@ namespace AudioUpload.Controllers
 
 ## See also
 
-* [How to configuring the toolbar position](../toolbar#configuring-the-toolbar-position)
+* [How to configuring the toolbar position](https://blazor.syncfusion.com/documentation/rich-text-editor/toolbar#configuring-the-toolbar-position)
 * [How to use link editing option in the toolbar items](../tools#insert-link)

@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Styling Tools in Rich Text Editor
+# Styling Tools in Blazor Rich Text Editor Component
 
 ## Font family
 
@@ -145,52 +145,9 @@ The Rich Text Editor provides support for customizing the font size with the exi
 
 ![Blazor RichTextEditor with custom font size](../images/blazor-richtexteditor-custom-font-size.png)
 
-## Formats
+## Font and background color
 
-By default, the editor is initialized with default items of formats. To change it, select a different format from the drop-down in the editor’s toolbar.
-
-To apply different format styles for sections of the content, select the required format from the drop-down and then apply the changes to the selection.
-
-### Built-in formats
-
-The following table list the default format name and width of the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#properties) dropdown and the available list of format names.
-
-| Default Key | Default Value |
-|-----|--------------------------------------|
-| [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Width) | 65px|
-| [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Code", Value = "Pre" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" }<br>}; |
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/built-in-formats.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.png)
-
-### Custom format
-
-The Rich Text Editor provides support for custom formats with an existing list. If you want to add additional formats to the format drop-down, pass the format information as `List<DropDownItemModel>` data to the [RichTextEditorFormat.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) property.
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/custom-formats.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.png)
-
-## Applying font and background colors
-
-To apply the font color or background color for a selected content of RTE, use the font color and background color tools.
-
-The Rich Text Editor supports providing custom font color and background color with an existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of the [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
-
-The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two modes of `Picker` and `Palette`. The `Palette` mode has a predefined set of the `ColorCode`, and in the `Picker` mode, more colors have been provided. Through the `ModeSwitcher`, switch between these two options.
+You can add the `FontColor` and `BackgroundColor` tool in the Rich Text Editor toolbar using the [RichTextEditorFontSize.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFontSize_Items) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -201,6 +158,24 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 {% endtabs %}
 
 ![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
+
+### Custom font and background colors
+
+To apply font or background colors to selected content in the Rich Text Editor, use the Font Color and Background Color tools available in the toolbar.
+
+The Rich Text Editor supports providing custom font color and background color with an existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of the [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
+
+The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two modes of `Picker` and `Palette`. The `Palette` mode has a predefined set of the `ColorCode`, and in the `Picker` mode, more colors have been provided. Through the `ModeSwitcher`, switch between these two options.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/custom-font-background-color.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-custom-background-color.png)
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZQirgNPpWyUH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
@@ -217,6 +192,23 @@ This feature can be enabled separately for the [RichTextEditorFontColor](https:/
 
 {% endhighlight %}
 {% endtabs %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Built-in editor content styles
 
@@ -458,43 +450,6 @@ This feature allows users to change the appearance of the numbered and bulleted 
 ![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.png)
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
-### Checklist
-
-The `Checklist` feature lets you create interactive task lists with clickable checkboxes. You can configure checkbox behavior, customize the visual appearance, manage item states, and enable keyboard interactions. This makes it perfect for project management, note-taking, and task tracking within your content. You can easily toggle between checked and unchecked states, giving you an intuitive way to manage the completion status of your list items—making it a simple and effective to-do list solution.
-
-#### Inserting a checklist
-You can embed interactive task lists directly within the Rich Text Editor. Here’s how you can insert a checklist:
-- **Using the toolbar**: Click the checklist button in the editor toolbar, usually represented by a checkbox icon.
-- **Using the shortcut**: Press `Ctrl+Shift+9` (or `Cmd+Shift+9` on macOS) to insert a checklist at your cursor’s position.
-- **Converting existing lists**: Select an existing bullet or numbered list and click the checklist button to convert it into an interactive checklist.
-- **Toggling checklist items**: You can toggle the state of checklist items between checked and unchecked by clicking the checkbox. If you prefer using the keyboard, press `Ctrl+Enter` (or `Cmd+Enter` on macOS) to toggle the check marks based on your selection or cursor position in the editor.
-
-#### Configuring checklist
-To enable the checklist feature in your editor, add the `Checklist` toolbar item to the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.Items) property. This feature supports customizable behavior and can be easily integrated into your Rich Text Editor toolbar for quick access.
-
-Here’s an example of how you can configure the checklist in your Rich Text Editor:
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.RichTextEditor
-
-<SfRichTextEditor>
-  <RichTextEditorToolbarSettings Items="@Items" />
-  <p>The Rich Text Editor component is the WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update content. Users can format their content using standard toolbar commands.</p>
-</SfRichTextEditor>
-@code {
-    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Checklist }
-    };
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor Checklist](../images/checklist.png)
 
 ## Formatting code blocks
 

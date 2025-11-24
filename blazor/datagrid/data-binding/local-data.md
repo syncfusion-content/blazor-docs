@@ -611,6 +611,7 @@ Below is an example showing how to implement grouping and aggregates in a custom
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using System.Data
 @using System.Dynamic
@@ -1209,9 +1210,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIXeCHJywphWgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Datasource Dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIXeCHJywphWgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Datasource Dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.gif)" %}
 
 ## Data binding with SignalR 
 
@@ -1851,5 +1850,4 @@ The following screenshot represents the Grid with **Observable Collection**.
 
 ## See also
 
-* [How to import data from Excel sheet and bind to Blazor Grid](https://support.syncfusion.com/kb/article/11560/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
 * [How to clear all Data from Grid](https://www.syncfusion.com/forums/150965/how-to-clear-all-data-from-grid)

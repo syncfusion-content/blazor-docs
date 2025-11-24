@@ -9,18 +9,18 @@ documentation: ug
 
 # Styles and Appearances in Blazor Button Component
 
-To modify the Button appearance, override the default CSS of the Button component. The following table lists common CSS classes and their purposes in the Button component. A custom theme can also be created using the Syncfusion [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the Button appearance, you need to override the default CSS of Button component. Find the list of CSS classes and its corresponding section in Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
-| CSS class | Purpose of class |
+|CSS Class | Purpose of Class |
 |-----|----- |
-| .e-btn | Customize the button. |
-| .e-btn:hover | Customize the button on hover. |
-| .e-btn:focus | Customize the button on focus. |
-| .e-btn:active | Customize the button in the active (pressed) state. |
+|.e-btn|To customize the button.|
+|.e-btn:hover|To customize the button on hover.|
+|.e-btn:focus|To customize the button on focus.|
+|.e-btn:active|To customize the button on active.|
 
 ## Customizing the appearance of button
 
-Use the following CSS to customize the button’s background color when clicking, hovering, and focusing.
+Use the following CSS to customize the background color of button while clicking, hovering and focusing.
 
 ```cshtml
 
@@ -44,6 +44,4 @@ Use the following CSS to customize the button’s background color when clicking
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLKMVhVimxEUqsl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Button with style and appearance customization](./images/blazor-button-style-and-appearance.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLKMVhVimxEUqsl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button with Style and Appearance](./images/blazor-button-style-and-appearance.gif)" %}

@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection and Nesting in Blazor ButtonGroup Component
 
-The Blazor ButtonGroup component supports two-way binding in both single and multiple selection modes through the `Selected` property of each `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the selected state of each button to stay synchronized between the UI and backing properties.
+Blazor ButtonGroup component provided two-way binding support in both single and multiple selection modes through the `Selected` property of `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the state of each button (selected or not) to synchronize between the UI and the backing properties.
 
 ## Single selection
 
-ButtonGroup supports a single selection mode in which only one button can be selected at a time.
+ButtonGroup supports single selection type in which only one button can be selected.
 
 The following example illustrates the single selection behavior in ButtonGroup.
 
@@ -46,13 +46,11 @@ The following example illustrates the single selection behavior in ButtonGroup.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBzsDVOTbttngcl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ButtonGroup with Single Selection](./images/blazor-buttongroup-single-selection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBzsDVOTbttngcl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ButtonGroup with Single Selection](./images/blazor-buttongroup-single-selection.png)" %}
 
 ## Multiple selection
 
-ButtonGroup supports a multiple selection mode in which multiple buttons can be selected.
+ButtonGroup supports multiple selection type in which multiple button can be selected.
 
 The following example illustrates the multiple selection behavior in ButtonGroup.
 
@@ -85,19 +83,17 @@ The following example illustrates the multiple selection behavior in ButtonGroup
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLfitrYfutrvLMs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ButtonGroup with Multiple Selection](./images/blazor-buttongroup-multiple-selection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLfitrYfutrvLMs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ButtonGroup with Multiple Selection](./images/blazor-buttongroup-multiple-selection.png)" %}
 
 ## Nesting
 
-Nesting other components inside ButtonGroup is supported. The following components can be nested within ButtonGroup:
+Nesting with other components can be possible in ButtonGroup. The following components can be nested in ButtonGroup.
 * DropDownButton
 * SplitButton
 
 ### DropDownButton
 
-In the following example, the `DropDownButton` component is added inside the ButtonGroup.
+In the following example, the DropDownButton component can be added in ButtonGroup tag.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -116,13 +112,11 @@ In the following example, the `DropDownButton` component is added inside the But
 </SfButtonGroup>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUsLVrClyyBbnb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ButtonGroup with DropDown Button](./images/blazor-buttongroup-with-dropdown.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUsLVrClyyBbnb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ButtonGroup with DropDown Button](./images/blazor-buttongroup-with-dropdown.png)" %}
 
 ### SplitButton
 
-In the following example, the `SplitButton` component is added inside the ButtonGroup.
+In the following example, SplitButton component can be added in ButtonGroup tag.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -140,6 +134,4 @@ In the following example, the `SplitButton` component is added inside the Button
         </SfSplitButton>
 </SfButtonGroup>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBgMhVLilSvoAeu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ButtonGroup with SplitButton](./images/blazor-buttongroup-with-splitbutton.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBgMhVLilSvoAeu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ButtonGroup with SplitButton](./images/blazor-buttongroup-with-splitbutton.png)" %}

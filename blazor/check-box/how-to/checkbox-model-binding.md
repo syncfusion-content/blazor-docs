@@ -3,24 +3,20 @@ layout: post
 title: Model Binding in Blazor CheckBox Component | Syncfusion
 description: Check out and learn here all about Model Binding in Syncfusion Blazor CheckBox component and much more.
 platform: Blazor
-control: CheckBox
+control: Checkbox
 documentation: ug
 ---
 
 # Model Binding in Blazor CheckBox Component
 
-To get started quickly with model binding in the Blazor CheckBox component, watch the following video:
+To get start quickly with Model Binding in Blazor CheckBox Component, you can check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=4vMuReo0Hz4"%}
 
-This section demonstrates model binding with EditForm and DataAnnotations using the Syncfusion SfCheckBox component. In Blazor, a form is strongly typed when an EditForm is bound to a model instance, allowing component parameters to bind to model properties and participate in validation. For an overview of the component, see the CheckBox documentation (https://blazor.syncfusion.com/documentation/checkbox/).
+This section demonstrates the strongly typed extension support in Checkbox. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view, access model properties on that view, and use data associated with model to render the component.
 
-In this example, the Checked property of SfCheckBox is two-way bound with @bind-Checked to a bool property on the model. The form uses DataAnnotationsValidator and displays a ValidationMessage when validation fails. Learn more in the following Microsoft articles: EditForm (https://learn.microsoft.com/aspnet/core/blazor/forms-and-input-components), DataAnnotationsValidator (https://learn.microsoft.com/aspnet/core/blazor/forms-and-input-components#data-annotations-validation), and ValidationMessage (https://learn.microsoft.com/aspnet/core/blazor/forms-and-input-components#validation-support).
-
-Because Required does not validate bool values, the Range(true, true) attribute is used to require a checked state—commonly used for “Terms and Conditions” acceptance. See RequiredAttribute (https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.requiredattribute) and data annotations validation in Blazor forms (https://learn.microsoft.com/aspnet/core/blazor/forms-and-input-components#data-annotations-validation).
-
-In this sample, select the option and select Submit to post the selected value in the CheckBox. When the value is not checked, a validation message appears below the CheckBox.
+In this sample, first check the option and click the submit button to post the selected value in the Checkbox. When the value is not checked, validation error message will be shown below the Checkbox.
 
 ```csharp
 
@@ -50,6 +46,4 @@ In this sample, select the option and select Submit to post the selected value i
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKMVrmrJkahhmZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor CheckBox model binding with validation message](./../images/blazor-checkbox-model-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKMVrmrJkahhmZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Model Binding in Blazor CheckBox](./../images/blazor-checkbox-model-binding.png)" %}

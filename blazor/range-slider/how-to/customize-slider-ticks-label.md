@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the tick label in Blazor Range Slider Component
 
-The slider’s tick appearance can be customized with CSS. By overriding the slider’s CSS classes, the tick marks (icons) and their styles can be tailored. Ticks help users identify current values on the slider. Tick generation is controlled by the [`SmallStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_SmallStep) and [`LargeStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_LargeStep) settings. By default, the slider uses the `e-tick` class for ticks. The example below appends a custom class during the `TicksRendering` event and injects a glyph via CSS to render custom tick icons.
+Slider can be customized via CSS. By overriding the slider CSS classes, you can customize the ticks. The ticks in slider allows to easily identify the current value/values of the slider. It contains [`SmallStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_SmallStep) and [`LargeStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_LargeStep). By default, slider has class `e-tick` for slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
@@ -19,7 +19,7 @@ The slider’s tick appearance can be customized with CSS. By overriding the sli
 
 ```
 
-In this example, individual tick colors are applied using the `:nth-child(child_number)` selector to target each tick element.
+Here, the color for rendered ticks has been applied through nth-child(`child_number`). The color is applied to the value of the `child_number` in the slider.
 
 ```css
 #ticks_slider .e-scale :nth-child(1)::before {
@@ -165,4 +165,4 @@ In this example, individual tick colors are applied using the `:nth-child(child_
 </style>
 ```
 
-![Customizing TicksLabel in the Blazor Range Slider](./../images/blazor-rangeslider-ticks-label.gif)
+![Customizing TicksLabel in Blazor RangeSlider](./../images/blazor-rangeslider-ticks-label.gif)

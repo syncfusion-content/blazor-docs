@@ -9,9 +9,9 @@ documentation: ug
 
 # Customize the UI Appearance of the Blazor Input Mask Component
 
-The appearance of the MaskedTextBox can be customized by assigning a custom CssClass to the component and defining CSS rules for that class. The CssClass is applied to the component wrapper, allowing targeted styling of the wrapper, floating label, and input elements. For reference, see CssClass, Mask, Placeholder, and FloatLabelType properties in the API.
+The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) to the component and enabling styles.
 
-The following example demonstrates how to change the appearance of the MaskedTextBox.
+Refer to the following example to change the appearance of the MaskedTextBox.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -42,4 +42,4 @@ The following example demonstrates how to change the appearance of the MaskedTex
 </style>
 ```
 
-![Blazor Input Mask with custom CSS applied](../images/customCss.png)
+![MaskedTextBox Sample](../images/customCss.png)

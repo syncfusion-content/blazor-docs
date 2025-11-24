@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Upgrading Syncfusion® Blazor application
+# Upgrading Syncfusion® Blazor application to new version
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for Visual Studio Code enables upgrading an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another.
 
