@@ -372,9 +372,9 @@ Using `Clear Format` makes it easy to undo styling changes and keep your text lo
 
 ## Markdown Auto Format
 
-The Rich Text Editor enables users to automatically format Markdown syntax into HTML content using the `EnableMarkdownAutoFormat` property. This feature helps streamline content creation by converting Markdown elements into their corresponding HTML tags, enhancing efficiency and consistency.
+The Rich Text Editor supports automatic conversion of Markdown syntax into HTML using the `EnableMarkdownAutoFormat` property. This feature simplifies content creation by transforming Markdown elements into their corresponding HTML tags, ensuring consistency and improving efficiency.
 
-Markdown auto-formatting is enabled by default. When using the editor, Markdown syntax will automatically convert into HTML elements as you type, creating a smooth and efficient editing experience.
+By default, Markdown Auto-Format is enabled. The editor supports both inline formatting and block-level elements. As you type, Markdown syntax is automatically converted into semantic HTML tags, ensuring a smooth and efficient editing experience.
 
 Use the `EnableMarkdownAutoFormat` tool in the editor below to see the feature in action.
 
