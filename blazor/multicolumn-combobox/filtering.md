@@ -21,9 +21,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLpXkVggODahmWg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with local data filtering](./images/filtering/blazor_combobox_local-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLpXkVggODahmWg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with local data filtering](./images/filtering/blazor_combobox_local-data.png)" %}
 
 ## Remote data
 
@@ -57,9 +55,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpjaVqKYrUJqyJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Filter Type](./images/filtering/blazor_combobox_filter-type.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpjaVqKYrUJqyJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Filter Type](./images/filtering/blazor_combobox_filter-type.png)" %}
 
 <!-- ## Minimum filter length
 
