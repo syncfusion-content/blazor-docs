@@ -7,27 +7,21 @@ control: Breadcrumb
 documentation: ug
 ---
 
-# Styles and Appearance in Blazor Breadcrumb Component
+# Styles and Appearances in Blazor Breadcrumb Component
 
-To modify the visual presentation of the Blazor Breadcrumb component, override its default CSS styles. The component provides a set of predefined CSS classes, each corresponding to specific sections of the Breadcrumb. These classes can be customized to achieve the desired appearance.
-
-Additionally, a custom theme for Syncfusion controls can be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
-
-### Common CSS Classes for Customization
-
-The following table lists key CSS classes and their corresponding sections within the Breadcrumb component, which you can target for styling:
+To modify the Breadcrumb appearance, you need to override the default CSS of Breadcrumb component. Find the list of CSS classes and its corresponding section in Breadcrumb component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class |
 |-----|----- |
-|.e-breadcrumb .e-breadcrumb-item|To customize the background of a breadcrumb item.|
+|.e-breadcrumb .e-breadcrumb-item|To customize the background of breadcrumb item.|
 |.e-breadcrumb .e-breadcrumb-text|To customize the color of breadcrumb text.|
 |.e-breadcrumb .e-breadcrumb-icon|To customize the color of breadcrumb icon.|
 |.e-breadcrumb .e-breadcrumb-separator|To customize the breadcrumb separator.|
 |.e-breadcrumb |To customize the entire background of breadcrumb.|
 
-## Customizing the Appearance of the Breadcrumb
+## Customizing the appearance of Breadcrumb
 
-The following example demonstrates how to apply custom styles to change the background and text color of Breadcrumb items, as well as the icon and separator colors:
+Use the following CSS to customize the background and text color of Breadcrumb.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -59,6 +53,4 @@ The following example demonstrates how to apply custom styles to change the back
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBotEhApRPLLBoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb with Style and Appearance](./images/blazor-breadcrumb-style-and-appearance.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhoZsCXAGIEezKH?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb with Style and Appearance](./images/blazor-breadcrumb-style-and-appearance.png)" %}

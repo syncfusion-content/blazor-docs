@@ -18,14 +18,14 @@ This section explains the supported display modes of the Toolbar when the conten
 
 ## Scrollable
 
-The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_OverflowMode) of the Toolbar is `Scrollable`. Scrollable display mode supports display of commands in a single line with horizontal scrolling enabled when commands overflow to available space.
+The default [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_OverflowMode) of the Toolbar is `Scrollable`. This mode displays toolbar items in a single line with horizontal scrolling enabled when items overflow the available space.
 
-* The right and left navigation arrows are added to the start and end of the Toolbar to navigate to hidden commands.
-* The hidden commands can also be seen using touch swipe action.
-* By default, if navigation icon in the `left` side is disabled, see the hidden commands by moving to the `right`.
-* By clicking the arrow or by holding the arrow continuously,  hidden commands will become visible.
-* If device navigation icons are not available, touch swipe to see the hidden commands of the Toolbar.
-* Once the Toolbar reaches the last or first command, the  corresponding navigation icon will be disabled and it can be moved to the opposite direction.
+*   Right and left navigation arrows are added to the start and end of the Toolbar to navigate to hidden items.
+*   Hidden items are also viewable using touch swipe actions.
+*   By default, the left navigation icon is disabled. View hidden items by moving to the `right`.
+*   Clicking an arrow or holding it continuously makes hidden items visible.
+*   On devices, if navigation icons are not available, utilize touch swipe gestures to view hidden Toolbar items.
+*   Once the Toolbar reaches the last or first item, the corresponding navigation icon is disabled, restricting further movement in that direction.
 
 ![Blazor Toolbar with Touch Scroll](images/blazor-toolbar-scrolling-touch.gif)
 
@@ -67,17 +67,17 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </SfToolbar>
 ```
 
-![Scrolling in Blazor Toolbar](./images/blazor-toolbar-scrolling.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhoitCZzVqTpUBZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scrolling in Blazor Toolbar](./images/blazor-toolbar-scrolling.png)" %}
 
 ## Popup
 
-`Popup` is another type of `OverflowMode` in which the Toolbar container holds the commands that can be placed in the available space. The rest of the overflowing commands that do not fit within the viewing area moves to the overflow popup container.
+`Popup` is another [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_OverflowMode) where the Toolbar container holds items that fit in the available space. The remaining overflowing items, which do not fit within the viewing area, are moved to an overflow popup container.
 
-The commands placed in the popup can be viewed by opening the popup using the drop down icon given at the end of the Toolbar.
+Items within the popup can be viewed by opening the popup via the dropdown icon located at the end of the Toolbar.
 
 ![Blazor Toolbar with Overflow Dropdown Popup](./images/blazor-toolbar-with-overflow-dropdown-popup.png)
 
-N> If the popup content overflows the height of the page, then the rest of the commands will be hidden.
+N> If the popup content exceeds the height of the page, overflowing items will not be visible.
 
 ```cshtml
 
@@ -100,30 +100,29 @@ N> If the popup content overflows the height of the page, then the rest of the c
     </ToolbarItems>
 </SfToolbar>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoijsXzLKbvuYU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item in Popup Mode](./images/blazor-toolbar-item-popup-mode.png)" %}
 
-![Blazor Toolbar Item in Popup Mode](./images/blazor-toolbar-item-popup-mode.png)
+### Priority of Items
 
-### Priority of commands
+Default popup priority is `None`. When Toolbar items overflow, those listed last are moved to the popup.
 
-Default popup priority is set as `None`, and when the commands of the Toolbar overflow, the ones listed last will be moved to the popup.
-
-The priority of commands can be customized to be displayed on the Toolbar and popup by using the `Overflow` property.
+The priority of items for display on the Toolbar and in the popup can be customized using the `Overflow` property.
 
 Property     | Description
 ------------ | -------------
   Show       | Always shows items on the `Toolbar with primary` priority.
   Hide       | Always shows items in the `popup with secondary` priority.
-  None       | No priority display, and as per the `normal order` commands are moved to popup when content exceeds viewing area.
+  None       | No priority display, and as per the `normal order` Items are moved to popup when content exceeds viewing area.
 
-If primary priority commands also exceed the available space, they are moved to the popup container at the top order position and placed before the secondary priority commands.
+If primary priority Items also exceed the available space, they are moved to the popup container at the top order position and placed before the secondary priority Items.
 
 N> The toolbar item can be maintained on popup always by using the [ShowAlwaysInPopup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowAlwaysInPopup) property, and this behavior is not applicable for toolbar items with [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Overflow) property as 'Show'.
 
 ### Text mode for buttons
 
-The `ShowTextOn` property is used to decide button text display area on the Toolbar, popup, or both. This is useful for customization of both text and image representation of commands.
+The `ShowTextOn` property is used to decide button text display area on the Toolbar, popup, or both. This is useful for customization of both text and image representation of Items.
 
-For example, you can show icon only button on the Toolbar, and in the popup container display more information about the commands with icon and text.
+For example, display icon-only buttons on the Toolbar, and in the popup container, display more information about the items, including both icon and text.
 
 Possible values are,
 
@@ -157,11 +156,11 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-![Displaying Blazor Toolbar Item in Overflow](./images/blazor-toolbar-item-in-overflow.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLeCXijTVTcokhS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Blazor Toolbar Item in Overflow](./images/blazor-toolbar-item-in-overflow.png)" %}
 
 ## MultiRow
 
-`MultiRow` is another type of `OverflowMode` in which the Toolbar container holds the commands that can be placed in the available space. The rest of the overflowing commands that do not fit within the viewing area will be displayed as an in-line of a toolbar.
+`MultiRow` is another [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_OverflowMode) where the Toolbar container holds items that fit in the available space. The remaining overflowing items, which do not fit within the viewing area, are displayed as an inline row within the toolbar itself.
 
 ```cshtml
 
@@ -185,11 +184,11 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-![Blazor Toolbar Item with MultiRow](./images/blazor-toolbar-item-with-multirow.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLSijMXTVoswbPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with MultiRow](./images/blazor-toolbar-item-with-multirow.png)" %}
 
 ## Extended
 
-`Extended` is another type of `OverflowMode` in which the Toolbar container holds the commands that can be placed in the available space. The rest of the overflowing commands that do not fit within the viewing area will be displayed in the next row.
+`Extended` is another [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_OverflowMode) where the Toolbar container holds items that fit in the available space. The remaining overflowing items, which do not fit within the viewing area, are displayed in the next row.
 
 ```cshtml
 
@@ -212,5 +211,4 @@ In the following code sample, text is only visible in the popup container and no
     </ToolbarItems>
 </SfToolbar>
 ```
-
-![Blazor Toolbar Item with Extended Mode](./images/blazor-toolbar-item-extended-mode.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNroCNiZJhSGdfxr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Extended Mode](./images/blazor-toolbar-item-extended-mode.gif)" %}

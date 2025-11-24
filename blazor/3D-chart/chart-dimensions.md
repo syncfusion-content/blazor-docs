@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart Dimensions in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn about configuring Chart Dimensions in Syncfusion Blazor 3D Chart component and much more.
+description: Checkout and learn here all about Chart Dimensions in Syncfusion Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size for container
 
-The 3D Chart renders to fit its container. The container size can be set using inline styles or CSS, as shown below.
+The 3D chart can be rendered to its container size and it can be set via inline or CSS as demonstrated below.
 
 ```cshtml
 
@@ -28,7 +28,7 @@ The 3D Chart renders to fit its container. The container size can be set using i
     </SfChart3D>
 </div>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -49,17 +49,15 @@ The 3D Chart renders to fit its container. The container size can be set using i
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrJtdsrpsPezXYL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor 3D Chart Size as Fit to Container](images/chart-dimensions/blazor-chart-size-for-container.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrJtdsrpsPezXYL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size as Fit to Container](images/chart-dimensions/blazor-chart-size-for-container.png)" %}
 
 ## Size for chart
 
-The size of the 3D Chart can be set directly using the `Width` and `Height` properties.
+The size of the 3D chart can be set directly through `Width` and `Height` properties.
 
-### In Pixels
+### In Pixel
 
-Set the chart size in pixels as shown below.
+The size of the 3D chart can be set in pixel as demonstrated below.
 
 ```cshtml
 
@@ -74,7 +72,7 @@ Set the chart size in pixels as shown below.
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -82,7 +80,7 @@ Set the chart size in pixels as shown below.
     }
 	
     public List<Chart3DData> ConsumerDetails = new List<Chart3DData>
-    {
+	{
         new Chart3DData { X = "USA", YValue = 46 },
         new Chart3DData { X = "GBR", YValue = 27 },
         new Chart3DData { X = "CHN", YValue = 26 },
@@ -95,13 +93,11 @@ Set the chart size in pixels as shown below.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLTZdCrpWvYfGmi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor 3D Chart Size in Pixel](images/chart-dimensions/blazor-chart-size-in-pixel.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLTZdCrpWvYfGmi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size in Pixel](images/chart-dimensions/blazor-chart-size-in-pixel.png)" %}
 
 ### In Percentage
 
-When the value is set in percentage, the 3D Chart dimensions are relative to its container. For example, setting `Height` to **50%** renders the chart at half the container height.
+By setting the value in percentage, the 3D Chart gets its dimension with respect to its container. For example, when the `Height` is set to **50%**, the 3D Chart renders to half of the container height.
 
 ```cshtml
 
@@ -116,7 +112,7 @@ When the value is set in percentage, the 3D Chart dimensions are relative to its
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -124,7 +120,7 @@ When the value is set in percentage, the 3D Chart dimensions are relative to its
     }
 	
     public List<Chart3DData> ConsumerDetails = new List<Chart3DData>
-    {
+	{
         new Chart3DData { X = "USA", YValue = 46 },
         new Chart3DData { X = "GBR", YValue = 27 },
         new Chart3DData { X = "CHN", YValue = 26 },
@@ -137,6 +133,4 @@ When the value is set in percentage, the 3D Chart dimensions are relative to its
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVJDxMrpsargarf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor 3D Chart Size in Percentage](images/chart-dimensions/blazor-chart-size-in-percentage.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVJDxMrpsargarf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size in Percentage](images/chart-dimensions/blazor-chart-size-in-percentage.png)" %}

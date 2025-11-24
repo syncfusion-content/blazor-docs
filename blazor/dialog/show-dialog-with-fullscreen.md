@@ -45,5 +45,4 @@ You can show the dialog in full screen by passing `true` as argument to the dial
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVejlWlClMfIggp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor FullScreen Dialog](./images/blazor-fullscreen-dialog.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVejlWlClMfIggp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FullScreen Dialog](./images/blazor-fullscreen-dialog.gif)" %}

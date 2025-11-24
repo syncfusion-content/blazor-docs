@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Icons Library in Blazor - Syncfusion
-description: Checkout and learn here all about how to use Icons in the Syncfusion Blazor Component and its type of icons.
+title: Blazor icons library - Syncfusion
+description: Learn how to use the Syncfusion Blazor icons with SfIcon and e-icons, set sizes and tooltips, customize appearance, and integrate third-party icon fonts.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Blazor Icons Library
+# Blazor icons library
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. These icons can be utilized in the web applications using `SfIcon` component or `e-icons` class.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library provides a set of base64-formatted font icons used across Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. Icons can be used via the `SfIcon` component or the `e-icons` CSS class.
 
-Check out the video to quickly get started with the Blazor Icon component:
+Watch a quick-start video for the Blazor Icon component:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=H1nQCAHzKZ0"%}
@@ -20,7 +20,7 @@ Check out the video to quickly get started with the Blazor Icon component:
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Icon component provides support to render predefined Syncfusion<sup style="font-size:70%">&reg;</sup> icons or custom font icons.
 
-You can refer [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-side in Visual Studio page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) for the introduction and configuring the common specifications.
+Refer to the [Getting started with Syncfusion Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide for installation and common configuration.
 
 The following code example shows the rendering of built-in Syncfusion<sup style="font-size:70%">&reg;</sup> icons from predefined [IconName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.IconName.html) options using [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Name) property by defining them in `SfIcon` tag.
 
@@ -39,7 +39,7 @@ The following code example shows the rendering of built-in Syncfusion<sup style=
 
 ### Icon size
 
-The font size of the icon can be changed using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Size) property. The icon displays `Medium` size by default. 
+The font size of the icon can be changed using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Size) property. The default size is `Medium`.
 
 * When IconSize set to Small, the font size will be `8px`.
 * When IconSize set to Medium, the font size will be `16px`.
@@ -95,7 +95,7 @@ N> The `Size` property is applicable only when defining the icon using `Name` pr
 
 ### Icon appearance customization 
 
-The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to customize color and size by overriding the `e-icons` class. 
+The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports customizing color and size by overriding the `e-icons` class.
 
 The following example code demonstrates the custom font-size and color for icons.
 
@@ -119,13 +119,15 @@ The following example code demonstrates the custom font-size and color for icons
 
 ![Blazor Icon Component Customization](./images/icons/custom-icon.png)
 
-### Third party icons integration
+### Third‑party icons integration
 
 The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to render custom font icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property. To render custom font icons define the required font CSS that provides the required font name, font size, and content for the icon.
 
 The following code explains how to render `open-iconic` icons using `IconCss` property.
 
 Include the stylesheet reference in the `<head>` section of the **~/App.razor** file as shown below:
+
+Example link tag:
 
 ```html
 <head>
@@ -183,9 +185,9 @@ The following example shows how to integrate the icons with Syncfusion<sup style
 ![Using Icons with Blazor Button Component](./images/icons/button-integration.png)
 
 
-## Using icons directly in HTML element
+## Use icons directly in an HTML element
 
-The built-in Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be rendered directly in the HTML element by defining `e-icons` class that contains the font-family and common property of font icons, and defining the [available icon's](#icons-list) class with `e-` prefix. 
+Built-in Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be rendered directly in an HTML element by adding the `e-icons` class (font family and common properties) and the [available icon](#icons-list) class with the `e-` prefix.
 
 The following code example explains the direct rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> `search` icon in the span element.
 
@@ -199,38 +201,48 @@ The complete pack of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ico
 
 <!-- markdownlint-disable MD033 -->
 
-### Material 3
-
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material3/demo.html" style="height:1000px;width:100%;"></iframe>
+<!-- markdownlint-disable MD033 -->
 
 ### Bootstrap 5
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap5/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/bootstrap5/demo.html" style="height:1000px;width:100%;"></iframe>
+
+### Fluent 2
+
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/fluent2/demo.html" style="height:1000px;width:100%;"></iframe>
+
+### Material 3
+
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/material3/demo.html" style="height:1000px;width:100%;"></iframe>
+
+### Tailwind 3
+
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/tailwind3/demo.html" style="height:1000px;width:100%;"></iframe>
 
 ### Bootstrap 4
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap4/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/bootstrap4/demo.html" style="height:1000px;width:100%;"></iframe>
 
 ### Bootstrap
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap/demo.html" style="height:1000px;width:100%;"></iframe>
-
-### Material
-
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material/demo.html" style="height:1000px;width:100%;"></iframe>
-
-### Tailwind CSS
-
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind/demo.html" style="height:1000px;width:100%;"></iframe>
-
-### Office Fabric
-
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fabric/demo.html" style="height:1000px;width:100%;"></iframe>
-
-### High Contrast
-
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/highcontrast/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/bootstrap/demo.html" style="height:1000px;width:100%;"></iframe>
 
 ### Fluent
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fluent/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/fluent/demo.html" style="height:1000px;width:100%;"></iframe>
+
+### Material
+
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/material/demo.html" style="height:1000px;width:100%;"></iframe>
+
+### Tailwind CSS
+
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/tailwind/demo.html" style="height:1000px;width:100%;"></iframe>
+
+### Office Fabric
+
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/fabric/demo.html" style="height:1000px;width:100%;"></iframe>
+
+### High Contrast
+
+<iframe class="doc-sample-frame" src="https://blazor.syncfusion.com/icons/highcontrast/demo.html" style="height:1000px;width:100%;"></iframe>

@@ -1,25 +1,24 @@
 ---
 layout: post
-title: "Bind data from RESTful web services to Syncfusion Blazor components"
-component: "General"
-description: "Learn how to retrieve data from RESTful service, bind it to Syncfusion DataGrid component using ODataV4Adaptor of SfDataManager, and perform CRUD operations."
+title: Bind data from web services to Syncfusion Blazor components
+description: Learn how to retrieve data from a RESTful service, bind it to Syncfusion Blazor DataGrid using SfDataManager with ODataV4Adaptor, and perform CRUD operations.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Bind Data from RESTful Web Services to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Bind data from RESTful web services to Syncfusion® Blazor components
 
-In this topic, you can learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, data is fetched from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) of `SfDataManger`.
+This article shows how to retrieve data from a RESTful web services, bind it to the Grid component, and perform CRUD operations. Data is fetched from an ODatav4 service using the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) of `SfDataManager`.
 
-It is recommended to choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component. Refer to the following documentation to know about the available Adaptors of SfDataManager.
+Choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component. Refer to the following documentation to know about the available Adaptors of SfDataManager.
  * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors)
 
 ## Prerequisite software
 
-The following software are needed
-* Visual Studio 2022.
-* .NET 6.0 or later.
+The following software are required:
+* Visual Studio 2022
+* .NET 6.0 or later
 
 ## Create the database
 
@@ -53,7 +52,7 @@ Now, click on **Update Database**.
 
 ## Create OData service project
 
-Open Visual Studio 2022 and create an empty ASP.NET Core Web Application and name it as ODataServiceProject. After creating the application, install [Microsoft.AspNetCore.OData](https://www.nuget.org/packages/Microsoft.AspNetCore.OData/) package by running the following command in the Package Manager Console.
+Open Visual Studio 2022 and create an empty ASP.NET Core Web Application named ODataServiceProject. After creating the application, install the [Microsoft.AspNetCore.OData](https://www.nuget.org/packages/Microsoft.AspNetCore.OData/) package by running the following command in the Package Manager Console.
 
 ```
 Install-Package Microsoft.AspNetCore.OData
@@ -322,19 +321,19 @@ app.Run();
 
 ## Create Blazor Web App
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling#interactivity-location) when creating the Blazor Web App.
 
 ## Create Blazor Server Application
 
-You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Server App** using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in Blazor App
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If using `WebAssembly` or `Auto` render modes in a Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -380,12 +379,11 @@ Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</s
 * High Contrast
 * Fluent
 
-In this demo application, the latest theme will be used.
+In this demo application, the latest theme is used.
 
-  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 and .NET 8.
-
-  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
-  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
+  * For **Blazor Web App**, reference the stylesheet inside the `<head>` of **~/Pages/_Layout.cshtml**.
+  * For **Blazor WebAssembly App**, reference the stylesheet inside the `<head>` of **~/wwwroot/index.html**.
+  * For **Blazor Server App**, reference the stylesheet inside the `<head>` of 
     * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** file for .NET 6.
 
@@ -431,7 +429,7 @@ If you have set the interactivity location to `Per page/component` in the web ap
 
 ## Binding data to Blazor DataGrid component using ODataV4Adaptor
 
-To consume data from the OData Controller, you need to add the **SfDataManager** with **ODataV4Adaptor**. Refer to the following documentation for more details on ODataV4Adaptor.
+To consume data from the OData controller, add **SfDataManager** with **ODataV4Adaptor**. Refer to the following documentation for more details on ODataV4Adaptor.
 
 [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor)
 
@@ -445,7 +443,7 @@ To consume data from the OData Controller, you need to add the **SfDataManager**
 {% endhighlight %}
 {% endtabs %}
 
-N> In the above code example, we have used our localhost address from our application. Instead of localhost, you can give the exact URL of your OData service.
+N> In the example above, a localhost URL is used. Replace it with the actual URL of your OData service.
 
 Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
@@ -505,9 +503,9 @@ public class OrdersController : ODataController
 
 ## Handling CRUD operations with our Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing.
+Enable editing in the grid component using [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). The Grid supports several editing modes: [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
 
-Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
+Here, Inline edit mode is used with the Toolbar to show editing actions.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
 {% tabs %}
@@ -540,7 +538,7 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
 {% endhighlight %}
 {% endtabs %}
 
-N> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
+N> Normal editing is the default mode. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for the column that holds a unique key.
 
 ### Insert a row
 
@@ -609,4 +607,4 @@ public long Delete([FromODataUri] long key)
 {% endhighlight %}
 {% endtabs %}
 
-N> Find the sample from this [Github](https://github.com/SyncfusionExamples/binding-odata-services-and-perform-crud) location.
+N> Find the sample at this [GitHub repository](https://github.com/SyncfusionExamples/binding-odata-services-and-perform-crud).

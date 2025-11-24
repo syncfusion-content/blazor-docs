@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Chart in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn how to configure and customize the Column Chart in Syncfusion Blazor 3D Chart component.
+description: Checkout and learn here all about the Column Chart in Syncfusion Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,14 +11,14 @@ documentation: ug
 
 ## Column
 
-To render a column chart, set the series `Type` property to `Column`.
+To render a `Column Chart`, use series `Type` as `Column`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="Chart3DSeriesType.Column">
@@ -26,7 +26,7 @@ To render a column chart, set the series `Type` property to `Column`.
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -49,20 +49,19 @@ To render a column chart, set the series `Type` property to `Column`.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpNRCqCFqsFuka?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart](../images/chart-types-images/blazor-column-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpNRCqCFqsFuka?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart](../images/chart-types-images/blazor-column-chart.png)" %}
 
 ## Column space and width
 
-The `ColumnSpacing` and `ColumnWidth` properties customize the space and width between columns.
+The `ColumnSpacing` and `ColumnWidth` properties are used to customize the space between columns.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+    </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column" />
@@ -70,7 +69,7 @@ The `ColumnSpacing` and `ColumnWidth` properties customize the space and width b
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -92,21 +91,19 @@ The `ColumnSpacing` and `ColumnWidth` properties customize the space and width b
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhTZxMgMPqSWDMz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Space and Width](../images/chart-types-images/blazor-column-chart-space-and-width.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhTZxMgMPqSWDMz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Space and Width](../images/chart-types-images/blazor-column-chart-space-and-width.png) %}
 
 ## Grouped column
 
-Data points can be grouped in column charts using the `GroupName` property. Data points with the same group name are grouped together.
+The data points can be grouped in the column type charts by using the `GroupName` property. Data points with same group name are grouped together.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D EnableSideBySidePlacement="false" RotationAngle="20" Depth="300">
-    <Chart3DPrimaryXAxis ValueType="@Syncfusion.Blazor.Chart3D.ValueType.Category" />
-
+    <Chart3DPrimaryXAxis ValueType="@Syncfusion.Blazor.Chart3D.ValueType.Category">
+    </Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="USA_Total" GroupName="USA" ColumnWidth="0.2" Fill="#CB3587"></Chart3DSeries>
         <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="USA_Gold" GroupName="USA" ColumnWidth="0.2"></Chart3DSeries>
@@ -115,7 +112,7 @@ Data points can be grouped in column charts using the `GroupName` property. Data
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class ColumnData
     {
         public string Year { get; set; }
@@ -126,7 +123,6 @@ Data points can be grouped in column charts using the `GroupName` property. Data
         public double China_Total { get; set; }
         public double China_Gold { get; set; }
     }
-
     public List<ColumnData> Chart3DPoints { get; set; } = new List<ColumnData>
     {
         new ColumnData { Year = "2012", USA_Total = 104, USA_Gold = 46, UK_Total = 65, UK_Gold = 29, China_Total = 91, China_Gold = 38},
@@ -136,9 +132,7 @@ Data points can be grouped in column charts using the `GroupName` property. Data
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthTjHsUWvUFSkhR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Grouping in Blazor Grouped Column 3D Chart](../images/chart-types-images/blazor-column-chart-grouped-column.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthTjHsUWvUFSkhR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Grouped Column 3D Chart](../images/chart-types-images/blazor-column-chart-grouped-column.png)" %}
 
 ## Cylindrical column chart
 
@@ -149,22 +143,14 @@ To render a cylindrical column chart, set the `ColumnFacet` property to `Cylinde
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" RotationAngle="7" TiltAngle="10" Depth="100" Title="Passenger Car Production in Selected Countries – 2021">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Interval="1" />
-    <Chart3DPrimaryYAxis Maximum="4" Interval="1" />
-
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Interval="1"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryYAxis Maximum="4" Interval="1"></Chart3DPrimaryYAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Chart3DPoints" XName="X" YName="Y" ColumnWidth="0.9" Type="Chart3DSeriesType.Column" ColumnFacet="Chart3DShapeType.Cylinder"></Chart3DSeries>
     </Chart3DSeriesCollection>
     <Chart3DTooltipSettings Enable="true" Header="${point.x}" Format="Car Production : <b>${point.y}M"></Chart3DTooltipSettings>
 </SfChart3D>
-
 @code {
-    public class ColumnChart3DData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-    }
-
     public List<ColumnChart3DData> Chart3DPoints { get; set; } = new List<ColumnChart3DData>
     {
         new ColumnChart3DData { X = "Czechia", Y = 1.11 },
@@ -176,33 +162,37 @@ To render a cylindrical column chart, set the `ColumnFacet` property to `Cylinde
         new ColumnChart3DData { X = "South Korea", Y = 3.16 },
         new ColumnChart3DData { X = "France", Y = 0.92 }
     };
+    public class ColumnChart3DData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBJNxiAslpiKcOw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Cylindrical Column 3D Chart](../images/chart-types-images/blazor-cylindricaal-column-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBJNxiAslpiKcOw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Cylindrical Column 3D Chart](../images/chart-types-images/blazor-cylindricaal-column-chart.png)" %}
 
 ## Series customization
 
-The following properties are available to customize the `Column` series:
+The following properties can be used to customize the `Column` series.
 
 * `Fill` – Specifies the color of the series.
-* `Opacity` – Specifies the opacity of the fill color.
+* `Opacity` – Specifies the opacity of the `Fill` color.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+    </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Fill="#0364DE" Type="Chart3DSeriesType.Column" />
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -224,6 +214,4 @@ The following properties are available to customize the `Column` series:
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthztRMgWFpfyYWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Custom Series](../images/chart-types-images/blazor-column-chart-custom-series.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthztRMgWFpfyYWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Series](../images/chart-types-images/blazor-column-chart-custom-series.png) %}

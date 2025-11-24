@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Accordion in Blazor Web App
 
-This section provides a concise guide on how to seamlessly integrate the Syncfusion  [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This section briefly explains about how to include [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -243,7 +243,7 @@ The following code explains how to initialize Blazor Accordion using header and 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZroNEVLAafNNVqB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVoisjQKaKacVAK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
 
 ## See also
 

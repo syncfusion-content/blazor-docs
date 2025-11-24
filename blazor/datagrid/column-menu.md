@@ -270,7 +270,7 @@ The following sample, **Filter** item was hidden in column menu when opens for t
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true">
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true">
     <GridEvents OnColumnMenuOpen="OnColumnMenuOpenHandler" TValue="OrderData"></GridEvents>
     <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
@@ -365,7 +365,7 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
 @using Syncfusion.Blazor.Navigations
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" Height="315" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true" AllowFiltering="true" ColumnMenuItems=@menuItem>
-    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
+    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="OrderData"></GridEvents>
     <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>

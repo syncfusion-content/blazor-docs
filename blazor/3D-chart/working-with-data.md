@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn how to work with data in the Syncfusion Blazor 3D Chart component, it's elements and more.
+description: Checkout and learn here all about working with data in Syncfusion Blazor 3D Chart component, it's elements and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -11,30 +11,30 @@ documentation: ug
 
 # Working with Data in Blazor 3D Chart Component
 
-The Blazor 3D Chart supports flexible data binding using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which enables both RESTful JSON data services and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart3D.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property can be set using either SfDataManager or a list of business objects.
+The 3D Chart uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart3D.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects.
 
-Supported data binding methods include:
-- List binding
-- Remote data
+It supports the following data binding methods:
+* List binding
+* Remote data
 
-## List Binding
+## List binding
 
-An IEnumerable object can be assigned to the `DataSource` property. Alternatively, an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) may be used. Data fields must be mapped to the `XName` and `YName` properties.
+An IEnumerable object can be assigned to the `DataSource` property. The list data source can alternatively be given as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or as a component of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The data fields should now be mapped to the `XName` and `YName` properties.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Inflation - Consumer Price" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Inflation - Consumer Price" Width="60%" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis LabelFormat="yyyy" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime" LabelRotationAngle="-45" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks">
     </Chart3DPrimaryXAxis>
-    <Chart3DSeriesCollection>
+	<Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@ConsumerReports" XName="XValue" YName="YValue" Type="Chart3DSeriesType.Column">
         </Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
@@ -43,26 +43,24 @@ An IEnumerable object can be assigned to the `DataSource` property. Alternativel
 
     public List<Chart3DData> ConsumerReports = new List<Chart3DData>
     {
-        new Chart3DData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
-        new Chart3DData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
-        new Chart3DData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
-        new Chart3DData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
-        new Chart3DData { XValue = new DateTime(2009, 01, 01), YValue = 54 },
-        new Chart3DData { XValue = new DateTime(2010, 01, 01), YValue = 57 },
-        new Chart3DData { XValue = new DateTime(2011, 01, 01), YValue = 70 }
-    };
+		new Chart3DData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+		new Chart3DData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+		new Chart3DData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+		new Chart3DData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+		new Chart3DData { XValue = new DateTime(2009, 01, 01), YValue = 54 },
+		new Chart3DData { XValue = new DateTime(2010, 01, 01), YValue = 57 },
+		new Chart3DData { XValue = new DateTime(2011, 01, 01), YValue = 70 },
+	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByCDDxquPSqbcY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrJDdCgiIrsmTGI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Colum 3D Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)" %}
 
-![Blazor Colum 3D Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)
-
-N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data binding.
+N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
 ### ExpandoObject binding
 
-When the model type is unknown at compile time, a list of **ExpandoObject** instances can be bound to the chart by assigning it to the `DataSource` property.
+Blazor 3D Chart is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the chart as a list of **ExpandoObjects**. The **ExpandoObject** can be bound to 3D Chart by assigning to the `DataSource` property.
 
 ```cshtml
 
@@ -77,13 +75,10 @@ When the model type is unknown at compile time, a list of **ExpandoObject** inst
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     private List<string> countries = new List<string> { "South Korea", "India", "Germany", "Italy", "Russia" };
-
     private Random randomNum = new Random();
-
     public List<ExpandoObject> MedalDetails { get; set; } = new List<ExpandoObject>();
-
     protected override void OnInitialized()
     {
         MedalDetails = Enumerable.Range(0, 5).Select((x) =>
@@ -100,9 +95,9 @@ When the model type is unknown at compile time, a list of **ExpandoObject** inst
 
 ![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.png)
 
-### DynamicObject Binding
+### DynamicObject binding
 
-Blazor 3D Chart also supports **DynamicObject** as a data source when the model type is unknown. A list of DynamicObject instances can be assigned to the `DataSource` property.
+Blazor 3D Chart supports **DynamicObject** data source when the model type is unknown. The **DynamicObject** can be bound to chart by assigning to the `DataSource` property.
 
 ```cshtml
 
@@ -117,14 +112,12 @@ Blazor 3D Chart also supports **DynamicObject** as a data source when the model 
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     private List<DateTime> Dates = new List<DateTime> { new DateTime(2005, 01, 01), new DateTime(2006, 01, 01), 
         new DateTime(2007, 01, 01), new DateTime(2008, 01, 01), new DateTime(2009, 01, 01), new DateTime(2010, 01, 01), new DateTime(2011, 01, 01) };
     public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
-
     private Random randomNum = new Random();
     public List<DynamicDictionary> MedalDetails = new List<DynamicDictionary>() { };
-
     protected override void OnInitialized()
     {
         MedalDetails = Enumerable.Range(0, 5).Select((x) =>
@@ -135,7 +128,6 @@ Blazor 3D Chart also supports **DynamicObject** as a data source when the model 
             return d;
         }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
     }
-
     public class DynamicDictionary : DynamicObject
     {
         Dictionary<string, object> dictionary = new Dictionary<string, object>();
@@ -145,13 +137,11 @@ Blazor 3D Chart also supports **DynamicObject** as a data source when the model 
             string name = binder.Name;
             return dictionary.TryGetValue(name, out result);
         }
-    
         public override bool TrySetMember(SetMemberBinder binder, object value)
         {
             dictionary[binder.Name] = value;
             return true;
         }
-    
         public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
         {
             return this.dictionary?.Keys;
@@ -163,9 +153,9 @@ Blazor 3D Chart also supports **DynamicObject** as a data source when the model 
 
 ![Blazor 3D Chart with DynamicObject Binding](images/working-data/blazor-chart-dynamic-object.png)
 
-## Remote Data
+## Remote data
 
-Remote data is bound to the 3D Chart using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The DataManager requires information such as the web service URL, adaptor, and cross-domain settings. Assign the DataManager instance to the `DataSource` property and map the data fields to `XName` and `YName`.
+The remote data can be bound to the 3D chart using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `DataManager` requires minimal information like web service URL, adaptor and cross domain to interact with service endpoint properly. Assign the instance of the `DataManager` to the `DataSource` property in series and map the fields of data to `XName` and `YName` properties.
 
 ```cshtml
 
@@ -185,16 +175,13 @@ Remote data is bound to the 3D Chart using [SfDataManager](https://help.syncfusi
 </SfChart3D>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVfjxsgWyogzTfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Remote Data Binding in Blazor 3D Chart](images/working-data/blazor-chart-remote-data-binding.png)" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyMjZnJtcqffcX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+### Binding with OData services
 
-![Remote Data Binding in Blazor 3D Chart](images/working-data/blazor-chart-remote-data-binding.png)
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized data creation and consumption protocol. The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used to retrieve data from an [OData](https://www.odata.org/documentation/odata-version-3-0/) service. For remote data binding using the [OData](https://www.odata.org/documentation/odata-version-3-0/) service, see the code below.
 
-### Binding with OData Services
-
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for data creation and consumption. The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) retrieves data from OData services.
-
-**Binding with OData v4 services**
+### Binding with OData v4 services
 
 The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services, which is an upgraded version of OData protocols. Refer to the [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197) for additional information on OData v4 services. To bind an OData v4 service, use the **ODataV4Adaptor**.
 
@@ -221,7 +208,7 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ### Web API
 
-The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) enables binding to a Web API endpoint.
+The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a chart to a Web API created using an [OData](https://www.odata.org/documentation/odata-version-3-0/) endpoint.
 
 ```cshtml
 
@@ -240,16 +227,15 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 </SfChart3D>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLztdMKsxBTngfW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLztdMKsxBTngfW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with WebApiAdaptor Binding](images/working-data/blazor-chart-webapi-adaptor-binding.png)" %}
 
-![Blazor 3D Chart with WebApiAdaptor Binding](images/working-data/blazor-chart-webapi-adaptor-binding.png)
+### Sending additional parameters to the server
 
-### Sending Additional Parameters to the Server
+To create a data request with a custom parameter, add additional parameters to the `Query` object and assign it to the chart's Query property.
 
-To send custom parameters with a data request, add them to a `Query` object and assign the object to the chart's `Query` property.
+The following sample code shows how to send parameters using the Query property in the series.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Chart3D
 
@@ -270,13 +256,13 @@ To send custom parameters with a data request, add them to a `Query` object and 
     {
         ChartQuery = new Query().Take(10).Where("Freight", "GreaterThan", 300, false);
     }
-}
 
+}
 ```
 
-## Empty Points
+## Empty points
 
-Data points with `null` or `undefined` values are considered empty points. These points are ignored and not plotted. The appearance of empty points can be customized using the `Chart3DEmptyPointSettings` property in the series. The default `Mode` is **Gap**.
+The data points that uses the `null` or `undefined` as value are considered as empty points. The empty data points are ignored and is not plotted in the chart. When the data is provided by using the points property, by using `Chart3DEmptyPointSettings` property in series, the empty can be customized. The default `Mode` of the empty point is **Gap**.
 
 ```cshtml
 
@@ -294,7 +280,7 @@ Data points with `null` or `undefined` values are considered empty points. These
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string Month { get; set; }
@@ -319,13 +305,11 @@ Data points with `null` or `undefined` values are considered empty points. These
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLJZHMgMnsEADrH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLJZHMgMnsEADrH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)" %}
 
-![Blazor Column 3D Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
+**Customizing empty point**
 
-### Customizing Empty Points
-
-A specific color for empty points can be set using the `Fill` property in `Chart3DEmptyPointSettings`.
+The specific color for empty point can be set by the `Fill` property in `Chart3DEmptyPointSettings`.
 
 ```cshtml
 
@@ -368,6 +352,4 @@ A specific color for empty points can be set using the `Fill` property in `Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhzXxiUsnqLRyNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart with Customized Empty Points](images/working-data/blazor-chart-custom-empty-point.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhzXxiUsnqLRyNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Customized Empty Points](images/working-data/blazor-chart-custom-empty-point.png)" %}

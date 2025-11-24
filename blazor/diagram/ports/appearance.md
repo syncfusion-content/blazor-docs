@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Port Appearance in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Appearance in Syncfusion Blazor Diagram component and much more details.
+title: Port Appearance in Syncfusion Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Port Appearance in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Port Appearance in Blazor Diagram Component
+# Port Appearance in Diagram Component
 
 ## How to Customize Port Appearance
 
-* The shape of a port can be changed by using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Shape) property. To explore the different types of port shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape to path and define path using the path data property.
+* Change the port shape by using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Shape) property. For available shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape to path and define path using the path data property.
 
-* The appearance of the ports can be customized by using the [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), and [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill) properties.
+* Customize port style using the [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), and [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill) properties.
 
-* Customize the port size by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Height) properties of port.
+* Customize the port size using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Height) properties of port.
 
-* The port's [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) property allows you to define when the port should be visible.
+* Control when a port is visible using the  [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) property.
 
-The following code explains how to change the appearance of the port.
+The following code shows how to change the appearance of the port.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -69,19 +69,19 @@ The following code explains how to change the appearance of the port.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance/Appearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance/Appearance)
 
-![Changing Port Appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBesjXcLLVeqypd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing port appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)" %}
 
 ## How to Control the Port Visibility
 
-The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of the ports depends upon the properties of [Connect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Connect), [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hidden), [Hover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hover), and [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Visible). By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to Hidden.
+The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of ports depends upon the properties of [Connect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Connect), [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hidden), [Hover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hover), and [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Visible). By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to **Hidden**.
 
 | Property | Definition |
 |---|---|
-| [Hover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hover) | Port is visible when mousehover the DiagramElement. |
-| [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hidden) | Port is not visible for the DiagramElement. |
-| [Connect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Connect) | Specifies to visible the port when mousehover the DiagramElement and enable the PortConstraints as InConnect and OutConnect. |
+| [Hover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hover) | Port is visible when the mouse hovers over the diagram element. |
+| [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Hidden) | Port is not visible for the diagram element. |
+| [Connect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Connect) | Specifies to visible the port when mouse hovers the diagram element and enable the port constraints as `InConnect` and `OutConnect`. |
 | [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html#Syncfusion_Blazor_Diagram_PortVisibility_Visible) | Port is always visible for the DiagramElement. |
 
 ## How to Use Different Port Shapes 
@@ -95,7 +95,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 
 ### How to Customize Port Shape
 
- Custom shape support has been provided for port. You can able to add the custom path data instead of build-in shapes. Find the code example that explains how to change the custom shape for port.
+ Custom shapes are supported for ports. Provide custom path data instead of build-in shapes. The code example that explains how to change the custom shape for port.
 
  ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -142,28 +142,28 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance/CustomShape)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance/CustomShape)
 
-![Blazor Diagram Port with Custom Shape](../images/blazor-diagram-port-custom-shape.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVyMXtmLrqCMsyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Port rendered with a custom path shape in Blazor Diagram](../images/blazor-diagram-port-custom-shape.png)" %}
 
 ## How to Enable or Disable Port Behaviors Using Constraints
 
-The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). You can verify the [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) to learn how to enable or disable the port constraints.
+The constraints property allows enabling or disabling certain behaviors of ports. For more information about port constraints, refer to [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) for enabling or disabling port-related constraints.
 
-The PortConstraints may have multiple behaviors like listed below:
+The `PortConstraints` may have multiple behaviors like listed below:
 
-| Constraints | Usages |
+| Constraints | Usage |
 |---|---|
-| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None) |Disables all behaviors of Port. |
-| [Draw](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_Draw) |Enables or disables to draw a connector. |
-| [InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_InConnect) |Enables or disables connecting to the incoming Connector.  |
-| [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_OutConnect) | Enables or disables connecting the outgoing Connector. |
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None) |Disables all port behaviors. |
+| [Draw](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_Draw) |Enables or disables drawing a connector from the port. |
+| [InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_InConnect) |Enables or disables connecting incoming connectors to the port. |
+| [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_OutConnect) | Enables or disables connecting outgoing connectors from the port. |
 
 ## How to Add Additional Information for Port
 
-The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property of the port allows you to maintain additional information for the port.
+The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property allows you to maintain additional information for a port.
 
-The following code shows how to set the AdditionalInfo value for a port.
+The following code shows how to set the `AdditionalInfo` value for a port.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -203,10 +203,12 @@ The following code shows how to set the AdditionalInfo value for a port.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrSMtZmVLKcHHTs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
 
 
-**Note:** Like AdditionalInfo for nodes, you can set any type of value for the AdditionalInfo property of a port.
+**Note:** Like `AdditionalInfo` for Nodes, you can set any type of value for the `AdditionalInfo` property of a port.
 
 ## See also
 

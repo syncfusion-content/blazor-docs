@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Live Chart in Blazor Charts Component | Syncfusion
-description: Learn to implement live updating charts in Syncfusion Blazor Charts using real time data binding and refresh logic.
+description: Checkout and learn here all about Live Chart in Syncfusion Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,14 +11,13 @@ documentation: ug
 
 # Live Chart in Blazor Charts Component
 
-Live updates in a chart can be achieved using a timer to refresh the data source with real-time values. Follow these steps to update a chart with live data.
+Live update in a chart can be achieved using the timer to update the datasource with real-time data and refresh the chart. Follow the steps below to update a chart with real-time data.
 
-## Step 1: Render the Chart Series
+**Step 1:**
 
 Render a chart with the required series using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
 ```cshtml
-
 <SfChart @ref="liveChart" Title="CPU Usage" Width="100%" >
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" Title="Time (s)">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
@@ -33,15 +32,13 @@ Render a chart with the required series using [ChartSeriesCollection](https://he
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
-
 ```
 
-## Step 2: Format Axis Labels
+**Step 2:**
 
-Format axis labels using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) property. For real-time updates, set the X-axis format to **mm:ss** and the Y-axis format as needed.
+Labels of the axes can be formatted based on our need using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) property of the [ChartAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html). Since the chart will be updated in seconds, the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) has been set as **mm:ss** for the [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html) to display minutes and second in the axis labels. Similarly [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html) labels can also be formatted as shown below using its [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) property.
 
 ```cshtml
-
 <SfChart @ref="liveChart" Title="CPU Usage" Width="100%" >
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" LabelFormat="mm:ss" Title="Time (s)">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
@@ -56,15 +53,13 @@ Format axis labels using the [LabelFormat](https://help.syncfusion.com/cr/blazor
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
-
 ```
 
-## Step 3: Add a Timer for Live Updates
+**Step 3:**
 
-Use a timer to update the chart every 500 milliseconds by calling a function that removes the first data point and adds a new one to the collection. The `ObservableCollection` type triggers updates in the chart when its data changes.
+Add a timer to automatically update the chart every 500 milliseconds by calling the **AddData** function, which removes the first data from the data points collection, which is of the `ObservableCollection` type, and adds a new data to it. Since this `ObservableCollection` type is used as the data source, it is triggered whenever there is a data update within it.
 
 ```cshtml
-
 protected override void OnInitialized()
 {
     // Provide the chart with initial data during page load.
@@ -92,10 +87,9 @@ private void AddData(Object source, ElapsedEventArgs e)
         CPU_Usage = randomNum.Next(30, 80)
     });
 }
-
 ```
 
-The following code demonstrates how to implement a live updating chart in Blazor.
+The complete code snippet for the preceding steps is available below.
 
 ```cshtml
 
@@ -120,7 +114,8 @@ The following code demonstrates how to implement a live updating chart in Blazor
     </SfChart>
 </div>
 
-@code {
+@code{
+
     private static Timer timer;
     private SfChart liveChart;
     private double dataLength = 100;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Bullet Chart Component | Syncfusion
-description: Check out and learn how to bind data, configure value and target fields, and display multiple measures in Syncfusion Blazor Bullet Chart component.
+description: Checkout and learn here all about working with data in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -9,10 +9,9 @@ documentation: ug
 
 # Working with Data in Blazor Bullet Chart Component
 
-The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property allows you to bind a collection of data to the Bullet Chart, enabling the visualization of actual and target measures. To display the actual and target bars, assign the appropriate properties from your data source to the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and [TargetField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) properties. The component also supports multiple comparative measures for each data point.
+The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of values as input that helps to display measures, and compares them to a target bar. To display the actual and target bar, specify the property from the datasource into the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and [TargetField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) respectively.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@InputData" ValueField="FieldValue" TargetField="ComparativeMeasureValue" CategoryField="Category" Height="400" Minimum="0" Maximum="20" Interval="5" Title="Profit in %">
@@ -24,14 +23,13 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     </BulletChartRangeCollection>
 </SfBulletChart>
 
-@code {
+@code{
     public class BulletChartData
     {
         public double FieldValue { get; set; }
         public double[] ComparativeMeasureValue { get; set; }
         public string Category { get; set; }
     }
-
     public List<BulletChartData> InputData = new List<BulletChartData>
     {
         new BulletChartData { FieldValue = 5, ComparativeMeasureValue = new double[] { 7.5 }, Category = "2001" },
@@ -42,8 +40,5 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
         new BulletChartData { FieldValue = 8, ComparativeMeasureValue = new double[] { 6, 7 }, Category = "2006" }
     };
 }
-
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVKshVizpSfJRvO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Data Binding in Blazor Bullet Chart](images/blazor-bullet-chart-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVKshVizpSfJRvO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor Bullet Chart](images/blazor-bullet-chart-data-binding.png)" %}

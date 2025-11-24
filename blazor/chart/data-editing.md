@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Editing in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and utilize Data Editing functionality in Syncfusion Blazor Charts component.
+description: Checkout and learn here all about the Data Editing in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,18 +9,14 @@ documentation: ug
 
 # Data Editing in Blazor Charts Component
 
-Data editing in Blazor Charts enables users to drag and drop points at runtime, allowing direct adjustment of point positions or values based on their y-values.
-
-To enable data editing, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_Enable) property in [ChartDataEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ChartDataEditSettings) to **true**. Use the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_Fill) property to specify the color, and [MinY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_MinY) and [MaxY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_MaxY) to define the minimum and maximum range for editing.
+Data editing allows the rendered points to be dragged and dropped at run-time. End user can adjust the points position or value based on its y-value. To enable data editing, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_Enable) property in the [ChartDataEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ChartDataEditSettings) to **true**. One can also use the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_Fill) property to specify the color, and the [MinY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_MinY) and [MaxY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_MaxY) properties to determine data editing's minimum and maximum range.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Inflation - Consumer Price">
-    <ChartArea>
-        <ChartAreaBorder Width="0" />
-    </ChartArea>
+    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
 
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" LabelFormat="y"
                        IntervalType="IntervalType.Years" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
@@ -33,7 +29,7 @@ To enable data editing, set the [Enable](https://help.syncfusion.com/cr/blazor/S
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
     </ChartPrimaryYAxis>
 
-    <ChartTooltipSettings Enable="true" />
+    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerDetails" XName="XValue" Width="2"
@@ -51,7 +47,7 @@ To enable data editing, set the [Enable](https://help.syncfusion.com/cr/blazor/S
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
         public DateTime XValue { get; set; }
@@ -67,12 +63,11 @@ To enable data editing, set the [Enable](https://help.syncfusion.com/cr/blazor/S
         new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38, YValue1 = 50 },
         new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 54, YValue1 = 66 },
         new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 57, YValue1 = 78 },
-        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70, YValue1 = 84 }
+        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70, YValue1 = 84 },
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBeXarRCvPrmELy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Data Editing in Blazor Chart](images/data-editing/blazor-chart-data-editing.png)
 

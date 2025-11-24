@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Custom Toolbar with Drop-Down List in Blazor TreeGrid | Syncfusion.
-description: Learn how to create a custom toolbar with a drop-down list in the Syncfusion Blazor TreeGrid component and more.
+title: Custom toolbar with drop-down list in Blazor TreeGrid | Syncfusion
+description: Learn here all about how to create custom toolbar with drop-down list in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Create Custom Toolbar with Drop-Down List in Blazor TreeGrid Component
+# Create custom toolbar with drop-down list in Blazor TreeGrid Component
 
-Custom toolbar items can be added to the TreeGrid using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property. Actions for these toolbar template items can be defined using the `ToolbarClick` event.
+ ToolBar items can be created in the Tree Grid. It can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar). Actions for this ToolBar template items are defined in the [ToolbarClick`]
 
 **Step 1**:
 
-Initialize the template for the custom component. The following code adds a `DropDownList` component to the ToolBar.
+Initialize the template for the custom component. Using the following code add the DropDownList component to the ToolBar.
 
 ```cshtml
 <SfToolbar>
@@ -32,7 +32,7 @@ Initialize the template for the custom component. The following code adds a `Dro
 
 **Step 2**:
 
-To render the `DropDownList` component, use the [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html). The TreeGrid row index can be selected based on the selected value in the Drop-Down List.
+To render the DropDownList component, use the [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html). The Tree Grid row index can be selected based on the selected data in the DropDownList.
 
 {% tabs %}
 

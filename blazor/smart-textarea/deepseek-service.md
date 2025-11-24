@@ -26,7 +26,9 @@ Create a service class to manage interactions with the DeepSeek API, including a
 2. Add a new file named `DeepSeekAIService.cs` in the `Services` folder.
 3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="DeepSeekAIService.cs" %}
+
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -89,7 +91,9 @@ public class DeepSeekAIService
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Store the DeepSeek API key in `appsettings.json` (e.g., `{ "DeepSeek": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security.
 
@@ -100,7 +104,9 @@ Define C# classes to match the DeepSeek API’s JSON request and response format
 1. Create a new file named `DeepSeekModels.cs` in the `Services` folder.
 2. Add the following model classes:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="DeepSeekModels.cs" %}
+
 public class DeepSeekMessage
 {
     public string Role { get; set; }
@@ -123,7 +129,9 @@ public class DeepSeekChoice
 {
     public DeepSeekMessage Message { get; set; }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Create a Custom AI Service
 
@@ -132,7 +140,9 @@ Implement the `IChatInferenceService` interface to connect the Smart TextArea to
 1. Create a new file named `DeepSeekInferenceService.cs` in the `Services` folder.
 2. Add the following implementation:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="DeepSeekInferenceService.cs" %}
+
 using Syncfusion.Blazor.AI;
 using System.Threading.Tasks;
 
@@ -150,7 +160,9 @@ public class DeepSeekInferenceService : IChatInferenceService
         return await _deepSeekService.CompleteAsync(options.Messages);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure the Blazor App
 
@@ -158,7 +170,9 @@ Register the DeepSeek service and `IChatInferenceService` implementation in the 
 
 Update the **~/Program.cs** file as follows:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 10 11" %}
+
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
@@ -175,13 +189,17 @@ builder.Services.AddSingleton<IChatInferenceService, DeepSeekInferenceService>()
 
 var app = builder.Build();
 // ...
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Use DeepSeek AI with Smart TextArea
 
 Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to use DeepSeek AI for autocompletion:
 
-```razor
+{% tabs %}
+{% highlight c# tabtitle="~/Pages/Home.razor" %}
+
 @using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">
@@ -198,7 +216,9 @@ Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to
         "We are investigating your issue."
     ];
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Test the Integration
 

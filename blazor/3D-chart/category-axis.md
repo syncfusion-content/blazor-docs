@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Category Axis in Blazor 3D Chart Component | Syncfusion
-description: Check out and learn about configuring Category Axis in Syncfusion Blazor 3D Chart component and much more.
+description: Checkout and learn here all about Category Axis in Syncfusion Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Category Axis in Blazor 3D Chart Component
 
-The category axis is the horizontal axis of a 3D chart that displays text values instead of numerical values. Compared to the vertical axis, the category axis typically has fewer labels. The following example demonstrates rendering a 3D chart using a category axis.
+The category axis is the horizontal axis of a 3D chart that shows text values rather than numerical values. Compared to the vertical axis, this axis has fewer labels. The following sample shows to render the 3D chart using category axis.
 
 ```cshtml
 
@@ -25,7 +25,7 @@ The category axis is the horizontal axis of a 3D chart that displays text values
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -33,7 +33,7 @@ The category axis is the horizontal axis of a 3D chart that displays text values
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-    {
+	{
         new Chart3DData { X = "USA", YValue = 46 },
         new Chart3DData { X = "GBR", YValue = 27 },
         new Chart3DData { X = "CHN", YValue = 26 },
@@ -46,20 +46,18 @@ The category axis is the horizontal axis of a 3D chart that displays text values
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTZdMLTMTKyfTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTZdMLTMTKyfTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)" %}
 
-![Blazor Column 3D Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)
+## Labels placement
 
-## Label Placement
-
-By default, category axis labels are placed on ticks. Labels can also be placed between ticks using the `LabelPlacement` property.
+By default, category axis labels are placed between ticks in an axis. It can also be placed on ticks using the `LabelPlacement` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis LabelPlacement="LabelPlacement.BetweenTicks" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+    <Chart3DPrimaryXAxis LabelPlacement="LabelPlacement.OnTicks" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -68,7 +66,7 @@ By default, category axis labels are placed on ticks. Labels can also be placed 
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -76,7 +74,7 @@ By default, category axis labels are placed on ticks. Labels can also be placed 
     }
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-    {
+	{
         new Chart3DData { X = "USA", YValue = 46 },
         new Chart3DData { X = "GBR", YValue = 27 },
         new Chart3DData { X = "CHN", YValue = 26 },
@@ -89,13 +87,11 @@ By default, category axis labels are placed on ticks. Labels can also be placed 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVyCNZnzAjxZcLw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Labels Position in Blazor 3D Chart](images/category-axis/blazor-diagram-label-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJjHsLTWRHhqRc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Labels Position in Blazor 3D Chart](images/category-axis/blazor-diagram-label-position.png)" %}
 
 ## Range
 
-The range of the category axis can be customized using the `Minimum`, `Maximum`, and `Interval` properties.
+The range of the category axis can be customized using `Minimum`, `Maximum`, and `Interval` properties of the axis.
 
 ```cshtml
 
@@ -111,7 +107,7 @@ The range of the category axis can be customized using the `Minimum`, `Maximum`,
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class Chart3DData
     {
         public string X { get; set; }
@@ -119,7 +115,7 @@ The range of the category axis can be customized using the `Minimum`, `Maximum`,
     }
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-    {
+	{
         new Chart3DData { X = "USA", YValue = 46 },
         new Chart3DData { X = "GBR", YValue = 27 },
         new Chart3DData { X = "CHN", YValue = 26 },
@@ -132,13 +128,11 @@ The range of the category axis can be customized using the `Minimum`, `Maximum`,
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNxMLficgvSbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNxMLficgvSbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)" %}
 
-![Changing Blazor Column 3D Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)
+## Indexed category axis
 
-## Indexed Category Axis
-
-The category axis can also be rendered based on the index values of the data source. This is achieved by setting the `IsIndexed` property to **true** on the axis.
+The category axis can also be rendered based on the index values of the data source. This can be achieved by defining the `IsIndexed` property to **true** in the axis.
 
 ```cshtml
 
@@ -155,7 +149,7 @@ The category axis can also be rendered based on the index values of the data sou
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code{
     public class WeatherData
     {
         public string X { get; set; }
@@ -163,7 +157,7 @@ The category axis can also be rendered based on the index values of the data sou
     }
 
     public List<WeatherData> WeatherReports1 = new List<WeatherData>
-    {
+	{
         new WeatherData { X = "Myanmar", Y = 7.3 },
         new WeatherData { X = "India", Y = 7.9 },
         new WeatherData { X = "Bangladesh", Y = 6.8 },
@@ -172,7 +166,7 @@ The category axis can also be rendered based on the index values of the data sou
     };
 
     public List<WeatherData> WeatherReports2 = new List<WeatherData>
-    {
+	{
         new WeatherData { X = "Poland", Y = 2.7 },
         new WeatherData { X = "Australia", Y = 2.5 },
         new WeatherData { X = "Singapore", Y = 2.0 },
@@ -182,6 +176,4 @@ The category axis can also be rendered based on the index values of the data sou
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBTjniVJWQPizAl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor 3D Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBTjniVJWQPizAl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)" %}

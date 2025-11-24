@@ -50,9 +50,7 @@ You can learn how to customize the category axis by watching the video below.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLgWrhVAEwCkOWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLgWrhVAEwCkOWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)" %}
 
 ## Labels placement
 
@@ -93,13 +91,11 @@ The category labels are positioned between ticks by default, but the [LabelPlace
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgWVrBgOQpAjdB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Labels Position in Blazor Chart](images/category-axis/blazor-diagram-label-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgWVrBgOQpAjdB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Labels Position in Blazor Chart](images/category-axis/blazor-diagram-label-position.png)" %}
 
 ## Range and interval
 
-Customize the category axis range using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties of the [Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
+The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties can be used to customize the range of the [Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
 
 ```cshtml
 
@@ -136,13 +132,11 @@ Customize the category axis range using the [Minimum](https://help.syncfusion.co
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLqWrrhTtLJCSXT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Column Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLqWrrhTtLJCSXT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)" %}
 
 ## Indexed category axis
 
-Render the category axis using data source index values by setting the [IsIndexed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_IsIndexed) property to **true**. This aligns category positions based on index rather than distinct category text.
+The category axis can also be rendered using the data source index values. This can be achieved by setting the [IsIndexed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_IsIndexed) property in the axis to **true**.
 
 ```cshtml
 
@@ -187,14 +181,13 @@ Render the category axis using data source index values by setting the [IsIndexe
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAiVrVTDrcDBLL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAiVrVTDrcDBLL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)" %}
 
-![Blazor Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)
-
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its feature highlights, and explore the [Blazor Chart example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know the various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See also
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)
+* [Sort Series Points on Category Axis](https://support.syncfusion.com/kb/article/21383/how-to-sort-series-points-on-category-axis-in-blazor-chart-component)
