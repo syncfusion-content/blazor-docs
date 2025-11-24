@@ -13,7 +13,7 @@ This article provides step-by-step instructions to build a Blazor WebAssembly Ap
 
 ## Using playground
 
-[Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
+[Blazor Playground](https://blazorplayground.syncfusion.com) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
@@ -202,7 +202,7 @@ Once the app starts, navigate to `http://localhost:<port number>` in your browse
 
 ![Blazor DataGrid](../images/blazor-datagrid-component.png)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIZoWghZXnoxDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhIWCMzVFSVldRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Defining row data
 
@@ -269,7 +269,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrotoiKCoYkHoHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDryiCiJLuWPDPgb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Defining columns
 
@@ -361,7 +361,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLyNosqiEMHcPrL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBeMCMphaKYPIIv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Enable paging
 
@@ -437,7 +437,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrejSMgCdnGAijD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreMCsphaeEIWIs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Enable sorting
 
@@ -512,7 +512,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSXosACxQRZrki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLSsiWzraQhXjUp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Enable filtering
 
@@ -588,7 +588,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrIDoMqsHPeUEtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNheCsMprYbBcBYH?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ### Enable grouping
 
@@ -664,7 +664,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoZosUMRYBBVqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjreCCWJhYaWRaJd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor DataGrid](../images/blazor-datagrid.gif)
 

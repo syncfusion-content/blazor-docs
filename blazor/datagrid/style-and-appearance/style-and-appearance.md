@@ -1,57 +1,59 @@
 ---
 layout: post
-title: Style and appearance in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about style and appearance in Syncfusion Blazor DataGrid and more details.
+title: Syncfusion Blazor DataGrid Styling Guide with CSS and Theme Studio
+description: Learn to customize the Syncfusion Blazor DataGrid using CSS and Theme Studio, including headers, rows, alternate rows, and grid lines.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Style and appearance in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Style and appearance in Syncfusion Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
 
-**Default CSS overrides:**
+- **DataGrid root element:** Defines the overall appearance of the grid container.
+- **Alternate rows with frozen columns:** Applies styles to alternate rows when frozen columns are enabled.
+- **Grid lines:** Controls the color and visibility of horizontal and vertical lines between cells.
 
-You can use custom CSS to override the default styles of the Grid. This allows you to change colors, fonts, paddings, and more. You can inspect the generated HTML of the Grid using browser developer tools to identify the relevant CSS classes and styles.
+**Override Default Styles:**
 
-Here's a basic example of how you can override the header background color of the Grid:
+Default styles such as **colors**, **typography**, **spacing**, and **borders** can be customized using CSS. Use browser developer tools to inspect the rendered HTML and identify relevant selectors. Where possible, use CSS variables or theme tokens to maintain consistency across components.
 
 ```css
-/* In your control's CSS file */
 .e-grid .e-headercell {
     background-color: #333; /* Override the header background color */
     color: #fff;
 }
 ```
 
+Properties like **background-color**, **color**, **font-family**, and **padding** can be changed to match the grid layout design and improve visual consistency.
+
 ![Change header background](../images/style-and-appearance/header-background.png)
 
-**Using theme studio:**
+**Using Theme Studio:**
 
-Syncfusion's Theme Studio tool allows you to create custom themes for all their controls, including the Grid. This is a more advanced approach that lets you define a comprehensive set of styles to achieve a consistent look and feel throughout your application.
+Syncfusion Theme Studio provides a unified approach to style all components, including the Blazor DataGrid.
 
-1. Visit the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
-2. Select the Grid from the left panel.
-3. Customize various aspects of the control's appearance, such as colors, typography, and spacing.
-4. Once done, you can download the generated CSS file and include it in your Blazor project.
+1. Open the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
+2. Select **Grid** in the left panel.
+3. Customize colors, typography, spacing, and other visual tokens.
+4. Download the generated CSS and include it in the Blazor project’s site stylesheet or theme bundle.
 
-## Customizing the Blazor DataGrid root element
+## Customize the DataGrid root element
 
-To customize the appearance of the root element of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid, you can use CSS. Here's an example of how to modify the font family and row colors using CSS:
+The **.e-grid** class styles the root container of the Blazor DataGrid. Apply CSS to modify its appearance:
 
 ```css
 .e-grid {
-      font-family: cursive;
+    font-family: cursive;
 }
-
 ```
+
+Properties such as f **font-family**,**background-color**, and spacing-related styles can be adjusted to align with the grid design.
 
 ![Grid root element](../images/style-and-appearance/style-font-family.png)
 
-The above code snippet, the **.e-grid** class targets the root element of the Grid, and the `font-family` property is set to cursive to change the font family of Grid.
-
-In the following sample, the font family of Grid content is changed to **cursive**, and the background color of rows, selected rows, alternate rows, and row hovering color is modified using the below CSS styles.
+This customization applies a `cursive` font to the grid content. Additional styling can be applied to rows, alternate rows, selected rows, and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -59,7 +61,7 @@ In the following sample, the font family of Grid content is changed to **cursive
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
-   <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
@@ -70,33 +72,39 @@ In the following sample, the font family of Grid content is changed to **cursive
 </SfGrid>
 
 <style>
-
     .e-grid {
         font-family: cursive;
+        /* Optional: set a base background for the grid area */
+        /* background-color: #fafafa; */
     }
 
-    .e-grid .e-row:hover .e-rowcell {
-        background-color: rgb(204, 229, 255) !important;
+    /* Prefer specificity over !important for hover */
+    .e-grid .e-content .e-row:hover .e-rowcell {
+        background-color: rgb(204, 229, 255);
     }
 
     .e-grid .e-rowcell.e-selectionbackground {
         background-color: rgb(230, 230, 250);
-     }
+    }
 
     .e-grid .e-row.e-altrow {
         background-color: rgb(150, 212, 212);
-     }
+    }
 
     .e-grid .e-row {
         background-color: rgb(180, 180, 180);
     }
-    
+
+    /* Optional: keyboard focus visibility */
+    .e-grid .e-row:focus-visible .e-rowcell {
+        outline: 2px solid #005a9e;
+        outline-offset: -2px;
+    }
 </style>
 
 @code {
     private SfGrid<OrderData> Grid;
-    public bool IsEncode { get; set; } = true;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -108,69 +116,59 @@ In the following sample, the font family of Grid content is changed to **cursive
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
-    public OrderData()
+    private static readonly List<OrderData> Data = new();
+    public OrderData(int orderId, string customerId, double freight, string shipCity)
     {
-
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        ShipCity = shipCity;
     }
 
-    public OrderData(int? OrderID, string CustomerId, double? Freight, string ShipCity)
+    internal static List<OrderData> GetAllRecords()
     {
-        this.OrderID = OrderID;
-        this.CustomerID = CustomerId;
-        this.Freight = Freight;
-        this.ShipCity= ShipCity;
-    }
-
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count() == 0)
+        if (Data.Count == 0)
         {
-            int code = 10;
-            for (int i = 1; i < 2; i++)
-            {
-                Orders.Add(new OrderData(10248, "VINET",32.38, "Reims"));
-                Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
-                Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
-                Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
-                Orders.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
-                Orders.Add(new OrderData(10253, "CHOPS", 58.17, "Bern"));
-                Orders.Add(new OrderData(10254, "RICSU", 22.98, "Genève"));
-                Orders.Add(new OrderData(10255, "WELLI", 13.97, "San Cristóbal"));
-                Orders.Add(new OrderData(10256, "HILAA", 81.91, "Graz"));
-                code += 5;
-            }
+            Data.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Data.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
+            Data.Add(new OrderData(10253, "CHOPS", 58.17, "Bern"));
+            Data.Add(new OrderData(10254, "RICSU", 22.98, "Genève"));
+            Data.Add(new OrderData(10255, "WELLI", 13.97, "San Cristóbal"));
+            Data.Add(new OrderData(10256, "HILAA", 81.91, "Graz"));
         }
-        return Orders;
+
+        return Data;
     }
 
-    public int? OrderID { get; set; }
+    public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public string ShipCity { get; set; }
 }
- 
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrStpWnJrFIGhRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLoCDCeBCPXKind?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing alternate row with Frozen columns
+## Customize alternate rows with frozen columns
 
-To customize the alternate row style in the Grid when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled, you can use the following CSS code:
+The **.e-altrow .e-rowcell** selector styles cells in alternate rows when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled in the Blazor DataGrid.
 
 ```css
 .e-grid .e-altrow .e-rowcell {
     background-color: #E8EEFA;
 }
-
 ```
 
-In this example, the **.e-altrow .e-rowcell** class targets the cells in alternate rows and applies a custom background color. 
+Adjust properties like **background-color**,**font-family**, and **border** to maintain consistent styling across frozen and movable sections.
 
-![Grid root element](../images/style-and-appearance/style-frozon.png)
+![Alternate row styling with frozen columns](../images/style-and-appearance/style-frozon.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -188,17 +186,15 @@ In this example, the **.e-altrow .e-rowcell** class targets the cells in alterna
 </SfGrid>
 
 <style>
-
+    /* Applies to alt rows across frozen and movable sections */
     .e-grid .e-altrow .e-rowcell {
         background-color: #E8EEFA;
     }
-    
 </style>
 
 @code {
     private SfGrid<OrderData> Grid;
-    public bool IsEncode { get; set; } = true;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -207,63 +203,54 @@ In this example, the **.e-altrow .e-rowcell** class targets the cells in alterna
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
-    public OrderData()
-    {
+    private static readonly List<OrderData> Data = new();
 
+    public OrderData(int orderId, string customerId, double freight, string shipCity)
+    {
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        ShipCity = shipCity;
     }
 
-    public OrderData(int? OrderID, string CustomerId, double? Freight, string ShipCity)
+    internal static List<OrderData> GetAllRecords()
     {
-        this.OrderID = OrderID;
-        this.CustomerID = CustomerId;
-        this.Freight = Freight;
-        this.ShipCity= ShipCity;
-    }
-
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count() == 0)
+        if (Data.Count == 0)
         {
-            int code = 10;
-            for (int i = 1; i < 2; i++)
-            {
-                Orders.Add(new OrderData(10248, "VINET",32.38, "Reims"));
-                Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
-                Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
-                Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
-                Orders.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
-                Orders.Add(new OrderData(10253, "CHOPS", 58.17, "Bern"));
-                Orders.Add(new OrderData(10254, "RICSU", 22.98, "Genève"));
-                Orders.Add(new OrderData(10255, "WELLI", 13.97, "San Cristóbal"));
-                Orders.Add(new OrderData(10256, "HILAA", 81.91, "Graz"));
-                code += 5;
-            }
+            Data.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Data.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
+            Data.Add(new OrderData(10253, "CHOPS", 58.17, "Bern"));
+            Data.Add(new OrderData(10254, "RICSU", 22.98, "Genève"));
+            Data.Add(new OrderData(10255, "WELLI", 13.97, "San Cristóbal"));
+            Data.Add(new OrderData(10256, "HILAA", 81.91, "Graz"));
         }
-        return Orders;
+
+        return Data;
     }
 
-    public int? OrderID { get; set; }
+    public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public string ShipCity { get; set; }
 }
  
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSNetLzivgmRSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLysNWSLBgVRXGC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize the color of Grid lines
+## Customize the color of grid lines
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to personalize the appearance of Grid lines to match your application's design.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
 
-To customize the color of Grid lines, you can apply CSS styles directly to the Grid’s structural elements such as header cells and row cells. This approach gives you full control over the color, thickness, and style of the borders between cells.
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property defines border visibility and supports options for `Horizontal`, `Vertical`, `Both`, or `None`.
 
 ```css
     /* Customize the color of Grid lines */
@@ -275,90 +262,88 @@ To customize the color of Grid lines, you can apply CSS styles directly to the G
 
 ```
 
-![Grid Line](../images/style-and-appearance/grid-line.png)
-
-The following example demonstrates how to customize the color of Grid lines while using [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in Grid:
+![Grid lines with custom borders](../images/style-and-appearance/grid-line.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315" GridLines="Syncfusion.Blazor.Grids.GridLine.Both">
+<SfGrid DataSource="@Orders" Height="315" GridLines="GridLine.Both">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Format="C2" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
-    /* Customize the color of Grid lines */
-    .e-grid .e-gridheader, .e-grid .e-headercell, .e-grid .e-rowcell, .e-grid {
+    /* Customize the color and thickness of grid lines */
+    .e-grid .e-gridheader,
+    .e-grid .e-headercell,
+    .e-grid .e-rowcell,
+    .e-grid {
         border-color: yellow;
         border-style: solid;
         border-width: 2px;
-        
+    }
+
+    /* Optional: ensure header divider lines are visible */
+    .e-grid .e-headercell {
+        border-right-width: 2px;
     }
 </style>
 
 @code {
-    public List<OrderData> Orders { get; set; }
-   
+    private List<OrderData> Orders { get; set; }
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }    
+    }
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
-    public OrderData()
-    {
+    private static readonly List<OrderData> Data = new();
 
-    }
-    public OrderData(int? OrderID, string CustomerID, double Freight,DateTime? OrderDate)
+    public OrderData(int orderId, string customerId, double freight, DateTime orderDate)
     {
-        this.OrderID = OrderID;
-        this.CustomerID = CustomerID;   
-        this.Freight = Freight;  
-        this.OrderDate = OrderDate;           
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Data.Count == 0)
         {
-            int code = 10;
-            for (int i = 1; i < 2; i++)
-            {
-                Orders.Add(new OrderData(10248, "VINET", 32.38,new DateTime(1996,7,4)));
-                Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(1996, 7, 5)));
-                Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(1996, 7, 6)));
-                Orders.Add(new OrderData(10251, "VINET", 41.34, new DateTime(1996, 7, 7)));
-                Orders.Add(new OrderData(10252, "SUPRD", 51.30, new DateTime(1996, 7, 8)));
-                Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(1996, 7, 9)));
-                Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(1996, 7, 10)));
-                Orders.Add(new OrderData(10255, "VINET", 148.33, new DateTime(1996, 7, 11)));
-                Orders.Add(new OrderData(10256, "HANAR", 13.97, new DateTime(1996, 7, 12)));
-                code += 5;
-            }
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(1996, 7, 4)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(1996, 7, 5)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(1996, 7, 6)));
+            Data.Add(new OrderData(10251, "VINET", 41.34, new DateTime(1996, 7, 7)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.30, new DateTime(1996, 7, 8)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(1996, 7, 9)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(1996, 7, 10)));
+            Data.Add(new OrderData(10255, "VINET", 148.33, new DateTime(1996, 7, 11)));
+            Data.Add(new OrderData(10256, "HANAR", 13.97, new DateTime(1996, 7, 12)));
         }
-        return Orders;
+
+        return Data;
     }
-    public int? OrderID { get; set; }
+
+    public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
-    public DateTime? OrderDate { get; set; }       
+    public double Freight { get; set; }
+    public DateTime OrderDate { get; set; }
 }
  
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVeXGhOqfxsRDrR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheCtiyVBIDLkTf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

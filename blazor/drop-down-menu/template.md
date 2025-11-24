@@ -63,6 +63,4 @@ The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Split
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBfMhWTscHCszCa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor DropDownMenu Item template](./images/blazor-dropdown-menu-template.png);
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBfMhWTscHCszCa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor DropDownMenu Item template](./images/blazor-dropdown-menu-template.png)" %}

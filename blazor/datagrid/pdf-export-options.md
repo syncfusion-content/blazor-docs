@@ -124,7 +124,7 @@ The following example demonstrates how to export current page to a PDF document 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBeNzMWgoxPClQM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBoMCWpJoymdQwT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Export selected records
 
@@ -227,7 +227,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLyZJWignXqmlaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVoMMiTTyQGDFmR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Export filtered records
 
@@ -334,7 +334,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVINzMpVxeuzFVM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLIiWspzSPHasWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Export with hidden columns
 
@@ -444,7 +444,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhoNJWiAnvCslzK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBIMsMJJHchjkvo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Show or hide columns while exporting
 
@@ -557,7 +557,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByZTBaJDQfXHAZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhyWMMpJHvsWrKy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change page orientation
 
@@ -686,7 +686,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeNzVKUaStvZne?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLSMWMffHkMjQYa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change page size
 
@@ -853,7 +853,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhoNIXoheMzaxjw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBeiWMJpGNzmrjS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Define file name
 
@@ -1167,7 +1167,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLeNzWspWvjNiOp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVSiWspfPtudNvi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customize column width in exported PDF document
 
@@ -1254,7 +1254,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVetyXEWnovmFoM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLysisJpPMlgQGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Font and color customization
 
@@ -1400,7 +1400,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrIjIjeLyPqfijX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLIsWsfTlAsQpnR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Add custom font
 
@@ -1529,7 +1529,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjByXSXoVxArjAFT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBIssipzPfjJDDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Rotate a header text in the exported PDF document
 
