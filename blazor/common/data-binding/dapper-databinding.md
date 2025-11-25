@@ -10,180 +10,230 @@ platform: Blazor
 
 # How to Bind Data Using Dapper and Perform CRUD Operations
 
-In this section, you can learn how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a `Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid` Component, and perform CRUD operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) component supports integration with [Dapper](https://github.com/DapperLib/Dapper) for efficient data access and manipulation. This integration enables binding data from a SQL Server database to the DataGrid and performing **create**, **read**, **update**, and **delete** (**CRUD**) operations with minimal overhead.
+
+**Dapper** is a lightweight object-relational mapper (**ORM**) that provides high-performance data access by mapping query results to strongly typed models without the complexity of full-featured ORMs.
 
 ## Prerequisite software
 
-* Visual Studio 2022.
-* MS SQL Server.
+The following software components are required to implement data binding with Dapper and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid:
 
-## Creating Blazor application
+* [Visual Studio 2022 or later](https://visualstudio.microsoft.com/downloads/) (latest version with .NET 10 support)
+* [.NET 8 or later](https://dotnet.microsoft.com/en-us/download/dotnet)
+* [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
-* Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
+Ensure that the development environment is configured with the latest updates for Visual Studio and SQL Server, and install .NET 8.0 or a newer version for compatibility with current features.
+
+## Creating the Blazor application
+
+Create a Blazor Web App using Visual Studio 2022 with [Microsoft Blazor templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) for streamlined project creation.
+
+1. Open **Visual Studio 2022**.
+2. Select Create a new project.
+3. Choose the **Blazor Web App** template.
+4. Configure project options such as **name**, **location**, and **.NET version**.
+5. Set [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) to **Auto**.
+6. Define [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs#interactivity-location) as **Per page/component** or **Global** based on requirements.
+
+N> **Recommendation**: Use **Auto** render mode for hybrid interactivity and flexibility. This configuration allows components to switch seamlessly between **server** and **client** rendering..
 
 ## Creating the database
 
-First, create a database named `BugTracker` and a table named `Bugs` to hold the list of bugs.
+Create a SQL Server database to store bug tracking information:
 
-1. Open SQL Server 2017 / latest version.
-2. Now, create a new database named `BugTracker`.
-3. Right-click on the created database and select New Query.
-4. Use the following SQL query to create a table named Bugs.
+**Launch SQL Server Management Studio (SSMS)**
+
+1. Open the **Windows Start Menu** and search for **SQL Server Management Studio**.
+2. Click the **SSMS icon** to launch the application.
+3. In the Connect to Server dialog:
+
+    * **Server type**: Database Engine
+    * **Server name**: Enter your SQL Server instance name (e.g., localhost or .\SQLEXPRESS).
+    * **Authentication**: Choose **Windows Authentication** or **SQL Server Authentication**.
+
+4. Click Connect.
+
+If SSMS is not installed, download it from [Download SQL Server Management Studio](https://learn.microsoft.com/en-us/ssms/install/install).
+
+**Create Database and Table**
+
+1. In **SSMS**, right-click **Databases** in Object Explorer and select **New Database**.
+2. Enter **BugTracker** as the database name and click **OK**.
+3. Expand the BugTracker database, right-click **Tables**, and select **New Query**.
+4. Paste and execute the following SQL script to create the Bugs table:
 
 ```
-Create Table Bugs(
-Id BigInt Identity(1,1) Primary Key Not Null,
-Summary Varchar(400) Not Null,
-BugPriority Varchar(100) Not Null,
-Assignee Varchar(100),
-BugStatus Varchar(100) Not Null)
-```
 
-Now, the table design will look like below.
+CREATE TABLE Bugs (
+    Id BIGINT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    Summary VARCHAR(400) NOT NULL,
+    BugPriority VARCHAR(100) NOT NULL,
+    Assignee VARCHAR(100),
+    BugStatus VARCHAR(100) NOT NULL
+);
+
+```
 
 ![Bug Table Design in Blazor](../images/bug-table-design.png)
 
-## Adding Dapper package and creating a model class
+The Bugs table stores details such as **summary**, **priority**, **assignee**, and **status** for each bug record.
 
-To use Dapper and access database in the application, you need to install the following `NuGet` packages.
+For SQL Server installation, refer to[ Microsoft SQL Server Downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 
-Run the following commands in the Package Manager Console.
+## Adding Dapper package and creating the model class
 
-* The following command enable us to use Dapper in our application.
+1. **Install Required NuGet Packages**
 
-    ```
+In the server-side project, install:
+
+* [Dapper](https://www.nuget.org/packages/Dapper/) – Provides lightweight object mapping for SQL queries.
+*  [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/) – Enables SQL Server connectivity.
+
+**Options to install**:
+
+
+* **Using NuGet Package Manager in Visual Studio**:
+
+Navigate to: Tools → NuGet Package Manager → Manage NuGet Packages for Solution.
+
+* **Using Package Manager Console**:
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
     Install-Package Dapper -Version 2.1.24
-
-    ```
-
-* The following command provide database access classes such as  `SqlConnection`, `SqlCommand`, etc. Also provides data provider for MS SQL Server.
-
-    ```
     Install-Package Microsoft.Data.SqlClient
-    ```
 
-Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, you need to create model class manually. Here, you are creating a class named `Bug.cs` in the `Data` folder as follows.
+{% endhighlight %}
+{% endtabs %}
+
+The **Microsoft.Data.SqlClient** package provides classes such as **SqlConnection** and **SqlCommand** for database access.
+
+2. **Creating the Model Class**
+
+Dapper does not include scaffolding for model generation. Create a model manually to represent the database table. For example, create a class named **Bug.cs** in the **Data** folder:
+
 
 ```c#
 
-namespace {Your namespace}
+
+namespace YourNamespace
 {
     public class Bug
     {
         public int Id { get; set; }
-
         public string Summary { get; set; }
-
         public string BugPriority { get; set; }
-
         public string Assignee { get; set; }
-
         public string BugStatus { get; set; }
     }
 }
 
+
 ```
+This class defines strongly typed properties corresponding to the columns in the **Bugs** table.
 
 ![Bug Model Class in Blazor](../images/bug-model-class.png)
 
-## Creating data access layer
+## Creating the data access layer
 
-Before creating a data access layer, you need to set the connection string of our database in the `appsettings.json` file as follows.
+1. Configure the Connection String
+
+Add the connection string in **appsettings.json**:
 
 ```cshtml
 
+
 "ConnectionStrings": {
-  "BugTrackerDatabase": "Server= {Your Server Name};Database=BugTracker;Integrated Security=True"
+    "BugTrackerDatabase": "Server={Your Server Name};Database=BugTracker;Integrated Security=True"
 }
+
 
 ```
 ![Connection String in appsettings](../images/connection-string-appsettings.png)
 
-Now, right-click the `Data` folder and select `Class` to create a new class named `BugDataAccessLayer.cs`. Replace this class with the following code, which contains code to handle CRUD in the `Bugs` table.
+2. **Create the Data Access Layer Class**
 
-In the following example,
+In the **Data** folder, create a class named **BugDataAccessLayer.cs** to handle CRUD operations using **Dapper**.
 
-* In the constructor of the `BugDataAccessLayer`, `IConfiguration` is injected, which helps us to get the connection string provided in the `appsettings.json`.
-* `GetBugsAsync` method performs select operation and returns a list of bugs from the Bugs table.
-* `AddBugAsync` method inserts a new bug into the Bugs table.
-* `UpdateBugAsync` method updates the given bug object in the table.
-* `RemoveBugAsync` method removes the given bug by Id.
+
+3. **Implement CRUD Methods**
+
+Add the following code in **BugDataAccessLayer.cs**:
 
 {% highlight c# %}
 
+p
 public class BugDataAccessLayer
 {
-    public IConfiguration Configuration;
-    private const string BUGTRACKER_DATABASE = "BugTrackerDatabase";
-    private const string SELECT_BUG = "select * from bugs";
+    private readonly IConfiguration _configuration;
+    private const string BugTrackerDatabase = "BugTrackerDatabase";
+    private const string SelectBugQuery = "SELECT * FROM Bugs";
+
     public BugDataAccessLayer(IConfiguration configuration)
     {
-        Configuration = configuration; //Inject configuration to access Connection string from appsettings.json.
+        _configuration = configuration;
     }
 
     public async Task<List<Bug>> GetBugsAsync()
     {
-        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-        {
-            db.Open();
-            IEnumerable<Bug> result = await db.QueryAsync<Bug>(SELECT_BUG);
-            return result.ToList();
-        }
+        using IDbConnection db = new SqlConnection(_configuration.GetConnectionString(BugTrackerDatabase));
+        IEnumerable<Bug> result = await db.QueryAsync<Bug>(SelectBugQuery);
+        return result.ToList();
     }
 
     public async Task<int> GetBugCountAsync()
     {
-        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-        {
-            db.Open();
-            int result = await db.ExecuteScalarAsync<int>("select count(*) from bugs");
-            return result;
-        }
+        using IDbConnection db = new SqlConnection(_configuration.GetConnectionString(BugTrackerDatabase));
+        return await db.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM Bugs");
     }
 
     public async Task AddBugAsync(Bug bug)
     {
-        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-        {
-            db.Open();
-            await db.ExecuteAsync("insert into bugs (Summary, BugPriority, Assignee, BugStatus) values (@Summary, @BugPriority, @Assignee, @BugStatus)", bug);
-        }
+        using IDbConnection db = new SqlConnection(_configuration.GetConnectionString(BugTrackerDatabase));
+        await db.ExecuteAsync("INSERT INTO Bugs (Summary, BugPriority, Assignee, BugStatus) VALUES (@Summary, @BugPriority, @Assignee, @BugStatus)", bug);
     }
 
     public async Task UpdateBugAsync(Bug bug)
     {
-        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-        {
-            db.Open();
-            await db.ExecuteAsync("update bugs set Summary=@Summary, BugPriority=@BugPriority, Assignee=@Assignee, BugStatus=@BugStatus where id=@Id", bug);
-        }
+        using IDbConnection db = new SqlConnection(_configuration.GetConnectionString(BugTrackerDatabase));
+        await db.ExecuteAsync("UPDATE Bugs SET Summary=@Summary, BugPriority=@BugPriority, Assignee=@Assignee, BugStatus=@BugStatus WHERE Id=@Id", bug);
     }
 
-    public async Task RemoveBugAsync(int bugid)
+    public async Task RemoveBugAsync(int bugId)
     {
-        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-        {
-            db.Open();
-            await db.ExecuteAsync("delete from bugs Where id=@BugId", new { BugId = bugid });
-        }
+        using IDbConnection db = new SqlConnection(_configuration.GetConnectionString(BugTrackerDatabase));
+        await db.ExecuteAsync("DELETE FROM Bugs WHERE Id=@BugId", new { BugId = bugId });
     }
 }
 
+
 {% endhighlight %}
 
-Now, register `BugDataAccessLayer` as scoped service in the `Program.cs` file as follows.
+3. Register the Service
 
-```cshtml
-....
+Add the following line in **Program.cs**:
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
 builder.Services.AddScoped<BugDataAccessLayer>();
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+**Steps**:
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+1. **Install Required NuGet Packages**
+
+* Use **NuGet Package Manager** in Visual Studio or Package Manager Console to install:
+
+    * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+    * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+* Package Manager Console commands:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -194,133 +244,119 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a complete list.
 
-Open `_Import.razor` file and add the following namespaces which are required to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid Component in this application.
+2. **Add Required Namespaces**
 
-{% highlight razor %}
+Add the required namespaces in **_Imports.razor**:
+
+{% tabs %}
+{% highlight C# tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 
 {% endhighlight %}
+{% endtabs %}
 
-Open `Program.cs` file in your application and register the Syncfusion<sup style="font-size:70%">&reg;</sup> service.
-
-```cshtml
-
-....
-using Syncfusion.Blazor;
-....
-builder.Services.AddSyncfusionBlazor();
-....
-
-```
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides different themes. They are:
-
-* Bootstrap4
-* Material
-* Fabric
-* Bootstrap
-* High Contrast
-
-In this demo application, the Bootstrap4 theme will be used.
-
-* For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
-
-* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
-
-
-{% highlight cshtml %}
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-</head>
-
-{% endhighlight %}
-
-Also, include the script reference in the following files
-
-* For **.NET 7** app, add script reference at end of the `<body>` section of the **~/Pages/_Host.cshtml** file.
-
-* For **.NET 6** app, add script reference at end of the `<body>` section of the **~/Pages/_Layout.cshtml** file.
-
-{% highlight cshtml %}
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-{% endhighlight %}
-
-In previous steps, you have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, you can add the DataGrid Component to the `index.razor` page of your app.
-
-{% highlight cshtml %}
-
-<SfGrid>
-</SfGrid>
-
-{% endhighlight %}
-
-## Binding data to the DataGrid component
-
-Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) here.
-
-The following points must be considered for creating a custom adaptor.
-
-* Our custom adaptor must extend the `DataAdaptor` class.
-* Override available CRUD methods to handle data querying and manipulation.
-* Register our custom adaptor class as a service in the `Program.cs`.
-
-Now, create a new class named `BugDataAdaptor.cs` under the `Data` folder and replace the following code in that class.
-
-In the following code example,
-
-* Extended `BugDataAdaptor` class with `DataAdaptor` base class.
-* Injected `BugDataAccessLayer` instance to perform data operations.
-
-{% highlight c# %}
-
-public class BugDataAdaptor: DataAdaptor
-{
-    private BugDataAccessLayer _dataLayer;
-    public BugDataAdaptor(BugDataAccessLayer bugDataAccessLayer)
-    {
-        _dataLayer = bugDataAccessLayer;
-    }
-
-    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
-    {
-        List<Bug> bugs = await _dataLayer.GetBugsAsync();
-        int count = await _dataLayer.GetBugCountAsync();
-        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = bugs, Count = count } : (object)bugs;
-    }
-}
-
-{% endhighlight %}
-
-Now, Open the `Program.cs` file in the application and register the `BugDataAdaptor` class.
+Register Syncfusion<sup style="font-size:70%">&reg;</sup> services in **Program.cs**:
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
+{% highlight C# tabtitle="Program.cs" %}
 
-....
-builder.Services.AddScoped<BugDataAccessLayer>();
+using Syncfusion.Blazor;
+
 builder.Services.AddSyncfusionBlazor();
-builder.Services.AddScoped<BugDataAdaptor>();
-.....
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, you need to add the `SfDataManager` in Grid for binding the data to the Grid and added column definition.
+3. **Add Theme Stylesheet**
 
-In the following code example,
+Include the Syncfusion theme in the <head> section:
 
-* Defined `SfDataManager` component to provide data source to the grid. You can see that we have specified the `AdaptorInstance` property with the type of the custom adaptor we created in the previous step and mentioned the `Adaptor` property as `Adaptors.CustomAdaptor`.
+{% highlight cshtml %}
 
-* `TValue` is specified as `Bug` class.
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+
+{% endhighlight %}
+
+Add this stylesheet in the following locations based on the project type:
+
+* **Blazor Web App**: **~/Components/App.razor**
+* **Blazor WebAssembly**: **wwwroot/index.html**
+* **Blazor Server**: **~/Pages/_Host.cshtml**
+
+4. **Add Script Reference**
+
+Include the Syncfusion script at the end of the <body>:
+
+{% highlight cshtml %}
+
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+{% endhighlight %}
+
+5. **Add DataGrid Component**
+
+Insert the [DataGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component in **Index.razor**:
+
+{% tabs %}
+{% highlight razor %}
+<SfGrid>
+
+</SfGrid>
+{% endhighlight %}
+{% endtabs %}
+
+## Binding data to the DataGrid component
+
+To bind SQL Server data retrieved via Dapper to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, implement a custom data adaptor.
+
+1. **Create a Custom Adaptor Class**
+
+In the **Data** folder, create a class named **BugDataAdaptor.cs** and extend the **DataAdaptor** base class:
+
+{% highlight c# %}
+
+
+public class BugDataAdaptor : DataAdaptor
+{
+    private readonly BugDataAccessLayer _dataLayer;
+
+    public BugDataAdaptor(BugDataAccessLayer dataLayer)
+    {
+        _dataLayer = dataLayer;
+    }
+
+    public override async Task<object> ReadAsync(DataManagerRequest request, string key = null)
+    {
+        List<Bug> bugs = await _dataLayer.GetBugsAsync();
+        int count = await _dataLayer.GetBugCountAsync();
+        return request.RequiresCounts ? new DataResult { Result = bugs, Count = count } : (object)bugs;
+    }
+}
+
+
+{% endhighlight %}
+
+2. **Register the Custom Adaptor**
+
+In **Program.cs**, register the adaptor as a scoped service:
+
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
+
+builder.Services.AddScoped<BugDataAdaptor>();
+
+{% endhighlight %}
+{% endtabs %}
+
+3. **Add SfDataManager in the Grid**
+
+In **Index.razor**, configure the DataGrid to use the custom adaptor:
+
 
 {% highlight razor %}
 
@@ -330,7 +366,9 @@ In the following code example,
 
 {% endhighlight %}
 
-Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Next, you can create columns using the following code. Let's explore the properties used and their applications.
+4. **Define Grid Columns**
+
+Configure columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component:
 
 {% highlight razor %}
 
@@ -338,28 +376,24 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridColumns>
         <GridColumn Field="@nameof(Bug.Id)" IsPrimaryKey="true" Visible="false"></GridColumn>
-        <GridColumn Field="@nameof(Bug.Summary)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Bug.BugPriority)" HeaderText="Priority" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Bug.Assignee)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Bug.BugStatus)" HeaderText="Status" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Bug.Summary)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Bug.BugPriority)" HeaderText="Priority" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Bug.Assignee)" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Bug.BugStatus)" HeaderText="Status" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 {% endhighlight %}
 
-Now, the DataGrid will look like this while running the application. The displayed records are fetched from the database.
-
 ![Bug Grid Data in Blazor](../images/bug-grid-data.png)
 
-## Handling CRUD operations with our Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
+## Handling CRUD operations in the DataGrid
 
-You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
+Enable [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component and implement CRUD logic in the custom adaptor.
 
-[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing#editing)
+**Enable Editing**
 
-N> Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
-
-Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property to show toolbar items for editing.
+Configure editing in the grid using `GridEditSettings`. The grid supports multiple editing modes such as [Inline](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing). The example below uses Inline mode with the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property to show toolbar items for editing.
 
 {% highlight razor %}
 
@@ -368,20 +402,20 @@ Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field="@nameof(Bug.Id)" IsPrimaryKey="true" Visible="false"></GridColumn>
-        <GridColumn Field="@nameof(Bug.Summary)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Bug.BugPriority)" HeaderText="Priority" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Bug.Assignee)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Bug.BugStatus)" HeaderText="Status" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Bug.Summary)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Bug.BugPriority)" HeaderText="Priority" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Bug.Assignee)" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Bug.BugStatus)" HeaderText="Status" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 {% endhighlight %}
 
-You have already created CRUD operations methods in the data access layer section itself. Now, you are going to call those methods while performing CRUD actions in DataGrid.
+## Insert a record
 
-## Insert a row
+When the **Add** button is clicked and the form is submitted, the **InsertAsync** method is executed. This method inserts a new bug record into the database:
 
-Add the following codes(`InsertAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform insert operation.
+![Insert a row in Grid](../images/insert-a-row.png)
 
 {% highlight c# %}
 
@@ -393,17 +427,13 @@ public override async Task<object> InsertAsync(DataManager dataManager, object d
 
 {% endhighlight %}
 
-To insert a new row, click the `Add` toolbar button. The new record edit form will look like below.
-
-![Insert a row in Grid](../images/insert-a-row.png)
-
-Clicking the `Update` toolbar button will call the `InsertAsync` method of our `BugDataAdaptor` to insert the record in the `Bug` table. Now, the successfully inserted record in the grid will look like below.
-
 ![After inserting a row in Grid](../images/after-inserting-a-row.png)
 
-## Update a row
+## Update a record
 
-Add the following codes (`UpdateAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
+When the **Edit** button is used and changes are saved, the **UpdateAsync** method updates the selected bug record:
+
+![Updating a row in Grid](../images/updating-a-row.png)
 
 {% highlight c# %}
 
@@ -415,17 +445,11 @@ public override async Task<object> UpdateAsync(DataManager dataManager, object d
 
 {% endhighlight %}
 
-To edit a row, select any row and click the `Edit` toolbar button. The edit form will look like below.
-
-![Updating a row in Grid](../images/updating-a-row.png)
-
-Here, the `Status` field value is changed from `Not started` to `In progress`. Clicking the `Update` toolbar button will call the `UpdateAsync` method of `BugDataAdaptor` to update the record in the `Bug` table. Now, the successfully updated record in the grid will look like below.
-
 ![After updating a row in Grid](../images/after-updating.png)
 
 ## Delete a row
 
-Add the following codes(`RemoveAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
+When the **Delete** button is clicked, the **RemoveAsync** method deletes the selected bug record by its primary key:
 
 {% highlight c# %}
 
@@ -437,10 +461,10 @@ public override async Task<object> RemoveAsync(DataManager dataManager, object p
 
 {% endhighlight %}
 
-To delete a row, select any row and click the `Delete` toolbar button. Clicking the `Delete` toolbar button will call the `RemoveAsync` method of our `BugDataAdaptor` to update the record in the `Bug` table.
-
-N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud) location.
+N> Find the sample at this [GitHub repository](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud).
 
 ## See also
 
 * [Create Blazor CRUD Application with PostgreSQL and Dapper](https://www.syncfusion.com/blogs/post/create-blazor-crud-application-with-postgresql-and-dapper.aspx)
+* [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid Documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Custom Data Binding in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor)
