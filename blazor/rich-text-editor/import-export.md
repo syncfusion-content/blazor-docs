@@ -424,7 +424,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-tex
 
 ## Securely Export Word or PDF Documents with Authentication
 
-You can include custom data when exporting Word or PDF documents, such as authentication tokens or other parameters. Use the `OnExport` event with its `CurrentRequest` and `CustomFormData` properties to send these values to the server. On the server side, the authentication token can be read from the request headers, and the custom data can be accessed from the request body, which contains the values sent via a POST request.
+You can include custom data when exporting Word or PDF documents, such as authentication tokens or other parameters. Use the `OnExport` event with its `RequestHeader` and `CustomFormData` properties to send these values to the server. On the server side, the authentication token can be read from the request headers, and the custom data can be accessed from the request body, which contains the values sent via a POST request.
 
 The following example demonstrates how to pass authentication tokens and custom data during export:
 
@@ -450,7 +450,7 @@ The following example demonstrates how to pass authentication tokens and custom 
     {
         // Assign different authentication tokens depending on the export type (Pdf or Word)
         var token = (args.ExportType == "Pdf" ? "Pdf Bearer token" : "Word Bearer token");
-        args.CurrentRequest = new Dictionary<string, string>
+        args.RequestHeader = new Dictionary<string, string>
         {
             { "Authorization", token }
         };
