@@ -9,33 +9,9 @@ documentation: ug
 
 # Cell in Blazor DataGrid
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, a cell represents a single unit of data at the intersection of a row and a column. Each cell displays specific content associated with its corresponding data record and column definition. Cells can contain text, numbers, or templated content, depending on the configuration.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, a cell is a single data unit formed at the intersection of a row and a column. Each cell displays content based on its data record and column settings. Depending on configuration, cells can show text, numbers, or custom templated content.
 
-The DataGrid provides extensive options to customize the appearance and behavior of cells. These include:
-
-**Template rendering**
-
-Define custom layouts using [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template), [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/template-editing), or [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) properties to display rich content such as images, buttons, or formatted text.
-
-**Value formatting**
-
-Use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property to apply numeric, currency, date, or custom formats to cell values.
-
-**Editing behavior**
-
-Enable or disable editing for specific cells using the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) property in the column definition.
-
-**Conditional styling**
-
-Apply styles dynamically based on cell value or row context using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) or [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) events.
-
-**Tooltip and Alignment**
-
-Configure [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign), [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip) properties to control text alignment and overflow behavior.
-
-**Interactive features**
-
-Include clickable elements, **dropdowns**, or **checkboxes** within cells to support interactive workflows.
+The Grid offers extensive options to customize cell appearance and functionality. Templates can be applied, cell values can be formatted, editing can be enabled or disabled, and various operations can be performed to build interactive and visually informative data grids for web applications.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=6H90a5tz7bE"%}
 
@@ -147,7 +123,7 @@ The auto wrap feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Bl
 
 Enable auto wrap by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrapping behavior using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.
 
-Set the `WrapMode` property in `TextWrapSettings` to one of these values:
+Set the **WrapMode** property in `TextWrapSettings` to one of these values:
 
 * **Both** - Wraps text in both header and content cells. This is the default value.
 * **Header** - Wraps text only in header cells.
@@ -270,7 +246,7 @@ Cell customization can be achieved through these approaches:
 
 To customize the appearance of cells, use the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event. This event is triggered during the rendering of each cell and provides access to cell-specific information.
 
-In this configuration, a check is performed to determine whether the current column is the **Freight** field, and a CSS class is applied based on the cell value.
+In this setup, the column is checked to confirm if it corresponds to the **Freight** field, and a CSS class is applied based on the cell’s value.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
