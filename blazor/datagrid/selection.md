@@ -728,4 +728,4 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLejIZoMcsYDjdk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> When using the Select All option, only the records visible in the current view are selected. The SelectedRecords property reflects the selection count for the current page. As you navigate to subsequent pages, new records are loaded on demand, and SelectedRecords will include selections from each visited page. This behavior is by design to support efficient data retrieval with paging. Therefore, selecting all records across the entire dataset and retrieving them simultaneously is not supported when Select All is enabled.
+> When Select All is used, only records visible in the current view are selected. The SelectedRecords property shows the count for the current page. As navigation continues to other pages, new records load on demand, and SelectedRecords includes selections from each visited page. This design ensures efficient data retrieval with paging. Selecting all records across the entire dataset and retrieving them at once is not supported when Select All is enabled.
