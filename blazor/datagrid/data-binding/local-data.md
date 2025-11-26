@@ -1567,8 +1567,6 @@ To import Excel data into Grid:
 {% endhighlight %}
 {% endtabs %}
 
-![Binding data from Excel document](../images/excel-import-data.gif)
-
 > Find the complete sample on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Binding_data_from_excel/Excel_Export).
 
 ## Observable collection
@@ -1885,8 +1883,6 @@ namespace ObservableCollection.Components.Data
 
 {% endhighlight %}
 {% endtabs %}
-
-![Blazor DataGrid with ObservableCollection](../images/Observable-collection-range.gif)
 
 > Find the complete sample on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/add_range_items_observableCollection/ObservableCollection).
 
