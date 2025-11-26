@@ -51,6 +51,4 @@ This example demonstrates how to filter Syncfusion<sup style="font-size:70%">&re
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthJMjgtfQYiRtee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Adding Items in Blazor ListBox](./../images/blazor-listbox-filter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthJMjgtfQYiRtee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Items in Blazor ListBox](./../images/blazor-listbox-filter.png)" %}

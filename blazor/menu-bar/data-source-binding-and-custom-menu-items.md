@@ -69,9 +69,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLIsZrssHctKuMX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLIsZrssHctKuMX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)" %}
 
 N> In the above example, `TValue` is specified as `MenuItemModel` because the menu is rendered using the `Items` property.
 
@@ -197,9 +195,7 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBeMjBiMnvjKgoI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBeMjBiMnvjKgoI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.png)" %}
 
 ## Custom Menu Bar Items
 
@@ -378,6 +374,4 @@ To customize Menu Bar items in your application, set your customized template us
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryiDLMBRagHDoZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MenuBar with Custom Item](./images/blazor-menubar-custom-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryiDLMBRagHDoZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MenuBar with Custom Item](./images/blazor-menubar-custom-item.png)" %}

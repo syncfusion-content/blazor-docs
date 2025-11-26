@@ -556,7 +556,6 @@ The following code example shows how to flip the connector.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiDXPgupyReCL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 | FlipDirection | Output|
 | -------- | -------- |
@@ -564,6 +563,6 @@ The following code example shows how to flip the connector.
 |Vertical|![VerticalDirection](./images/blazor-diagram-flip-direction-as-vertical.png)|
 |Both|![BothDirection](./images/blazor-diagram-flip-direction-as-both.png)|
 
-![Flip Connector](./images/blazor-diagram-connector-flip-direction.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiDXPgupyReCL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Flip Connector](./images/blazor-diagram-connector-flip-direction.gif)" %}
 
 For more information about node interaction, refer to [Connector Interaction](./connectors/interactions).

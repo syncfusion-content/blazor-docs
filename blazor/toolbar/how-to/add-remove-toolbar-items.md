@@ -91,6 +91,4 @@ In the following demo, the `ToolbarItems` collection initially contains five ite
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDheWZitquTDHMDs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Adding or Removing Blazor Toolbar Items](../images/blazor-toolbar-add-or-remove-item.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDheWZitquTDHMDs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding or Removing Blazor Toolbar Items](../images/blazor-toolbar-add-or-remove-item.gif)" %}

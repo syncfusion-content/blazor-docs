@@ -7,9 +7,11 @@ control: TreeView
 documentation: ug
 ---
 
-# Customize the tree nodes based on levels in Blazor TreeView Component
+# Customize Tree Nodes Based on Levels in Blazor TreeView Component
 
-The tree nodes can be customized level wise by adding custom [**CssClass**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) to the component and enabling styles.
+The tree nodes can be customized level wise by adding custom [**CssClass**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) to the component and enabling styles. The Syncfusion Blazor TreeView automatically applies CSS classes like `e-level-0`, `e-level-1`, `e-level-2`, and so on, to nodes at different depths, allowing for precise styling.
+
+The following example demonstrates customizing node appearance at various levels.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -137,4 +139,4 @@ The tree nodes can be customized level wise by adding custom [**CssClass**](http
 
 ```
 
-![Customizing Nodes based on Levels in Blazor TreeView](../images/blazor-treeview-with-custom-nodes.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhIWNihKvBuqmZc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Nodes based on Levels in Blazor TreeView](../images/blazor-treeview-with-custom-nodes.png)" %}

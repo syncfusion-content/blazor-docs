@@ -19,6 +19,4 @@ In the following sample, the product names are grouped according to their catego
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLftOhUpZaoRSjs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Grouping](./images/grouping/blazor_multicolumn_combobox_grouping.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLftOhUpZaoRSjs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Grouping](./images/grouping/blazor_multicolumn_combobox_grouping.gif)" %}

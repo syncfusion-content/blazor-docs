@@ -21,9 +21,7 @@ In the following sample, the `PopupWidth` is set as `600px`.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVpjuVgTiMSUiaN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Popup Width](./images/popup-setting/blazor_multicolumn_combobox_popup_width.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVpjuVgTiMSUiaN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Popup Width](./images/popup-setting/blazor_multicolumn_combobox_popup_width.gif)" %}
 
 ## Change the popup height
 
@@ -37,9 +35,7 @@ In the following sample, the `PopupHeight` is set as `500px`.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBpDYVqfsBWhhbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Popup Height](./images/popup-setting/blazor_multicolumn_combobox_popup_height.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBpDYVqfsBWhhbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Popup Height](./images/popup-setting/blazor_multicolumn_combobox_popup_height.gif)" %}
 
 ## Change the popup z-index
 
@@ -69,9 +65,7 @@ Prevent the popup open and close in the event argument like [PopupOpeningEventAr
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthpZaLATiBxZOUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Preventing opening and closing](./images/popup-setting/blazor_multicolumn_combobox_preventing_opening_closing.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthpZaLATiBxZOUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Preventing opening and closing](./images/popup-setting/blazor_multicolumn_combobox_preventing_opening_closing.gif)" %}
 
 The following events are used to trigger when opening and closing popup.
 
@@ -85,9 +79,7 @@ The [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Multi
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVTjaLqTCKWriug?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with PopupOpening event](./images/popup-setting/blazor_multicolumn_combobox_popupopening_event.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVTjaLqTCKWriug?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with PopupOpening event](./images/popup-setting/blazor_multicolumn_combobox_popupopening_event.gif)" %}
 
 ### PopupOpened event
 
@@ -103,9 +95,7 @@ The [PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Multi
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrztOrApMUzEyWp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Popup Closing event](./images/popup-setting/blazor_multicolumn_combobox_popupclosing_event.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrztOrApMUzEyWp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Popup Closing event](./images/popup-setting/blazor_multicolumn_combobox_popupclosing_event.gif)" %}
 
 ### PopupClosed event
 
@@ -117,9 +107,7 @@ The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiC
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVTZaBATiKbyovf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with PopupClosed event](./images/popup-setting/blazor_multicolumn_combobox_popupclosed_event.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVTZaBATiKbyovf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with PopupClosed event](./images/popup-setting/blazor_multicolumn_combobox_popupclosed_event.gif)" %}
 
 ## Popup height based on available space
 
@@ -131,9 +119,7 @@ You can achieve this by binding the `resize` event in window and update the heig
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVpDEhUJMTfqTjg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Popup resize](./images/popup-setting/blazor_multicolumn_combobox_popup_resize.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVpDEhUJMTfqTjg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Popup resize](./images/popup-setting/blazor_multicolumn_combobox_popup_resize.gif)" %}
 
 {% tabs %}
 {% highlight razor tabtitle="Layout.razor" %}

@@ -47,7 +47,7 @@ N> When downloading Material or Tailwind themes (alone or with other themes), th
 
 1. Copy and paste the downloaded custom resources into the application's `~/wwwroot` folder.
 2. Manually add the custom interop script and styles:
-    * For **.NET 8 and .NET 9** Blazor Web App (any render mode: Server, WebAssembly, or Auto), reference the custom interop script in `~/Components/App.razor` file.
+    * For **.NET 8, .NET 9 and .NET 10** Blazor Web App (any render mode: Server, WebAssembly, or Auto), reference the custom interop script in `~/Components/App.razor` file.
     * For a **Blazor WebAssembly (standalone) app**, reference the custom interop script in `~/wwwroot/index.html` file.
 
     ```html

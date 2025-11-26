@@ -65,11 +65,9 @@ The following code explains how to draw a connector by using port constraints.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLICXZwLBSpDDeI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraints)
 
-![Drawing a connector from a node port in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLICXZwLBSpDDeI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drawing a connector from a node port in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)" %}
 
 ## How to Draw Connector from Connector Port
 Draw connectors from a connector port by enabling the **Draw** constraint on the port’s `Constraints` property. By default, the connector segment type is **Orthogonal**.
@@ -114,11 +112,9 @@ The following code explains how to draw a connector by using port constraints.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyMZtwBrIugdQz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/ConnectorPortDraw)
 
-![Drawing a connector from a connector port in Blazor Diagram](../images/ConnectorPort/ConnectorPortDraw.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyMZtwBrIugdQz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drawing a connector from a connector port in Blazor Diagram](../images/ConnectorPort/ConnectorPortDraw.gif)" %}
 
 ## How to Draw Different Connector Types from Port
 
@@ -208,11 +204,10 @@ The following code explains how to draw the connector by using port constraints.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBSMjZcVLxvdKSU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraintsWithDrawingObject).
 
-![Drawing a Bezier connector from a port in Blazor Diagram](../images/blazor-diagram-draw-port-connection-bezier.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBSMjZcVLxvdKSU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drawing a Bezier connector from a port in Blazor Diagram](../images/blazor-diagram-draw-port-connection-bezier.gif)" %}
+
 ## See also
 
 * [How to create a node](../nodes/nodes)
