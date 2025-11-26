@@ -45,11 +45,11 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 After referencing the RCL from a Blazor Server application, register the license key in Program.cs.
 
-* For .NET 8 and .NET 9 apps, open **~/Program.cs** and register the Syncfusion license key.
+* For .NET 8, .NET 9 and .NET 10 apps, open **~/Program.cs** and register the Syncfusion license key.
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 8 & .NET 9 (~/Program.cs)" hl_lines="2 3" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" hl_lines="2 3" %}
 
 var app = builder.Build();
 // Register the Syncfusion license

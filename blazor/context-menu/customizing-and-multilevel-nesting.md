@@ -55,9 +55,7 @@ To customize [Blazor Context Menu](https://www.syncfusion.com/blazor-components/
 ```
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVACVVcUYeycxMc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-items.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVACVVcUYeycxMc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-items.png)" %}
 
 ### Customizing Context Menu items using CssClass
 
@@ -95,9 +93,7 @@ The Context Menu items can be customized by using the `CssClass` property. In th
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqMLhwAOylWmij?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-item-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqMLhwAOylWmij?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-item-customization.png)" %}
 
 ## Multilevel nesting
 
@@ -138,6 +134,4 @@ The Multiple level nesting supports in Context Menu. It can be achieved by mappi
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgsrhQganDCPmC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Multilevel Nesting in Blazor ContextMenu](./images/blazor-contextmenu-with-multilevel.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgsrhQganDCPmC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Multilevel Nesting in Blazor ContextMenu](./images/blazor-contextmenu-with-multilevel.png)" %}

@@ -75,11 +75,9 @@ The following code example explains how to define a swimlane with lane.
     }
 }
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoCNNwLozzxYUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneCreation).
 
-![Lane](../Swimlane-images/Swimlane_Lane.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoCNNwLozzxYUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane](../Swimlane-images/Swimlane_Lane.PNG)" %}
 
 ## How to Create and Customize Lane Header
 
@@ -146,11 +144,9 @@ The following code example shows how to define and customize a lane header.
     }
 }
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoCjjQVyzOTpIw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeader).
 
-![Lane Header](../Swimlane-images/Swimlane_Lane_Header.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoCjjQVyzOTpIw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Header](../Swimlane-images/Swimlane_Lane_Header.PNG)" %}
 
 Lane header annotations also support templates. Define HTML content at the tag level and enable template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per lane, differentiate annotations by the `ID` property.
 
@@ -225,11 +221,9 @@ The following code example explains how to define a lane header annotation templ
     }
 }
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBSiDDQVIyJbNWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeaderTemplate)
 
-![Lane Header](../Swimlane-images/Swimlane_Lane_Header_Template.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBSiDDQVIyJbNWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Header](../Swimlane-images/Swimlane_Lane_Header_Template.PNG)" %}
 
 ## How to Add and Remove the Lane at Runtime
 
@@ -316,11 +310,9 @@ Add and remove a lane at runtime by using the `Add` and `Remove` methods of the 
     }
 }
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoMZXmhexDADSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/AddRemoveLaneAtRuntime).
 
-![Lane Add Remove](../Swimlane-images/Lane_Add_Remove.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoMZXmhexDADSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Add Remove](../Swimlane-images/Lane_Add_Remove.gif)" %}
 
 ## How to Add Children to Lane
 
@@ -406,11 +398,9 @@ The following code example shows how to add nodes to a lane.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeWjtmhSRGTRbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneChildren).
 
-![Lane Children](../Swimlane-images/Lane_Children.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeWjtmhSRGTRbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Children](../Swimlane-images/Lane_Children.PNG)" %}
 
 ## How to Set the Orientation of a Lane
 
@@ -496,11 +486,9 @@ Below is an example demonstrating how to set the orientation for lanes in an SfS
       }
     }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjheCXNmVyYiGoHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneOrientation).
 
-![Lane](../Swimlane-images/LaneOrientation.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjheCXNmVyYiGoHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane](../Swimlane-images/LaneOrientation.PNG)" %}
 
 ## Header Selection and Resize
 

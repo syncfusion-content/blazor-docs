@@ -39,6 +39,4 @@ The `Disabled` property of a Toolbar item enables or disables the item by settin
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrIMDCZUEcssLph?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Enabling or Disabling Blazor Toolbar Item](../images/blazor-toolbar-disable-item.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrIMDCZUEcssLph?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling or Disabling Blazor Toolbar Item](../images/blazor-toolbar-disable-item.gif)" %}

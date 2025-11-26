@@ -1,17 +1,17 @@
 ---
 layout: post
-title: BPMN Shapes in Blazor Diagram Component | Syncfusion
+title: BPMN Shapes in Syncfusion Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create various BPMN Shapes in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Shapes in Blazor Diagram Component
+# BPMN Shapes in Diagram Component
 
 BPMN (Business Process Model and Notation) shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, the node property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) should be set as any one of the built-in shapes.
 
-The following code example explains how to create a simple business process.
+The following code example demonstrates how to create a simple BPMN Task shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -47,14 +47,16 @@ The following code example explains how to create a simple business process.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnShape/BpmnShape)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLIMZDRqphwEgmr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnShape/BpmnShape)
 
 
 >**Note:** Node's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
 ![Activity Shape](../images/Task.png) 
 
-The list of supported BPMN shapes are as follows:
+The following table describes the available BPMN shapes.
 
 | Shape | Image | Description|
 | -------- | -------- | -------- |

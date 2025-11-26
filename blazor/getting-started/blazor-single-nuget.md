@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion.Blazor Single NuGet in Visual Studio
-description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Syncfusion Blazor Web App and and explore here to more details.
+description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Syncfusion Blazor Application and and explore here to more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -88,9 +88,9 @@ await builder.Build().RunAsync();
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 
-* For **.NET 8 and .NET 9 WebAssembly Standalone app** , include it in **wwwroot/index.html** file.
+* For **.NET 8, .NET 9 and .NET 10 WebAssembly Standalone app** , include it in **wwwroot/index.html** file.
 
-* For **.NET 8 and .NET 9 Blazor WebApp Server Interactive Mode**, include it in **~/Components/App.razor**.
+* For **.NET 8, .NET 9 and .NET 10 Blazor WebApp Server Interactive Mode**, include it in **~/Components/App.razor**.
 
 ```html
 <head>
