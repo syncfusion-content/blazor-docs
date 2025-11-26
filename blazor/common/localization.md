@@ -102,7 +102,7 @@ In Blazor Web App and Blazor WebAssembly (WASM) apps, set culture either in Blaz
 
 Set the app’s culture in JavaScript by configuring `applicationCulture` in Blazor’s start options:
 
-* For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), prevent Blazor autostart by adding `autostart="false"` to the Blazor `<script>` tag in **~/Components/App.razor**.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), prevent Blazor autostart by adding `autostart="false"` to the Blazor `<script>` tag in **~/Components/App.razor**.
 * For a `Blazor WebAssembly Standalone app`, prevent Blazor autostart by adding `autostart="false"` to the Blazor `<script>` tag in **wwwroot/index.html**.
 
 {% tabs %}
@@ -222,7 +222,7 @@ For Blazor Web App and Blazor WASM Standalone apps, set the `BlazorWebAssemblyLo
 
 {% endtabs %}
 
-* For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), add JavaScript in **~/Components/App.razor** (after the Blazor `<script>` tag and before `</body>`) to get and set the user’s selected culture in browser local storage.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), add JavaScript in **~/Components/App.razor** (after the Blazor `<script>` tag and before `</body>`) to get and set the user’s selected culture in browser local storage.
 * For a Blazor WASM Standalone app, add the JavaScript in **wwwroot/index.html** (after the Blazor `<script>` tag and before `</body>`).
 
 {% tabs %}
@@ -379,7 +379,7 @@ For a Blazor Web App using the **Interactive render mode** of `Server`, register
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
 
 builder.Services.AddControllers();
 
@@ -413,11 +413,11 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-For .NET 9 and .NET 8, set the current culture in a cookie in the App component file.
+For .NET 10, .NET 9 and .NET 8, set the current culture in a cookie in the App component file.
 
 {% tabs %}
 
-{% highlight C# tabtitle=".NET 9 & .NET 8 (App.razor)" %}
+{% highlight C# tabtitle=".NET 10, .NET 9 & .NET 8 (App.razor)" %}
 
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization
@@ -473,7 +473,7 @@ Create a `CultureSwitcher` component and place it inside the shared folder to pe
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 9 & .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
+{% highlight razor tabtitle=".NET 10, .NET 9 & .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
 
 @using  System.Globalization
 @inject NavigationManager NavigationManager
@@ -535,7 +535,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 9 & .NET 8 (Components/Layout/MainLayout.razor)" %}
+{% highlight razor tabtitle=".NET 10, .NET 9 & .NET 8 (Components/Layout/MainLayout.razor)" %}
 
  <div class="page">
     <div class="sidebar">

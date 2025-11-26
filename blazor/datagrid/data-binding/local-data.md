@@ -1210,9 +1210,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIXeCHJywphWgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Datasource Dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIXeCHJywphWgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Datasource Dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.gif)" %}
 
 ## Data binding with SignalR 
 

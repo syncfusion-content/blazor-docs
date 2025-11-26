@@ -13,7 +13,7 @@ This section explains how to reference fallback [scripts](https://blazor.syncfus
 
 ## Blazor Web App
 
-For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference script and stylesheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) as shown below.
+For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference script and stylesheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) as shown below.
 
 ### Script fallback
 

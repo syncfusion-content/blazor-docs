@@ -757,8 +757,6 @@ It is important to note that the Material 3 theme uses CSS variables. To overrid
 }
 ```
 
-N> If you are using **Visual Studio 2019**, please use the `includePath` property instead of `loadPaths` as the latter does not support the Web Compiler for VS 2019. However, we highly recommend using the **Web Compiler 2022+** for **Visual Studio 2022**. For more information, please refer to the [discussion link here](https://github.com/failwyn/WebCompiler/issues/24).
-
 N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
 
 The following shows the importing theme path for the overall theme.
@@ -1051,7 +1049,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 * For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, the theme is changed based on query string at the **~/Components/App.razor** file
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/App.razor)" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/App.razor)" %}
 
 @using Microsoft.AspNetCore.WebUtilities;
 @inject NavigationManager UrlHelper;
@@ -1168,7 +1166,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 1. For **Blazor Server application**, the theme is changed based on query string at the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/App.razor)" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/App.razor)" %}
 
 @page "/"
 @namespace BlazorThemeSwitcher.Pages
