@@ -15,7 +15,7 @@ Validation is essential for maintaining data integrity in applications. The Sync
 
 Column validation ensures that edited or newly added row data meets specific criteria before being saved. This feature helps enforce rules or constraints on individual columns to maintain data integrity.
 
-Validation rules are defined using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property, which specifies the conditions for validating column values. The validation mechanism uses the **Form Validator** library.
+Validation rules are defined using the [GridColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property, which specifies the conditions for validating column values. The validation mechanism uses the **Form Validator** library.
 
 > Validation in the DataGrid is based on the Microsoft Blazor EditForm behavior. Once a validation message is displayed, the field is revalidated only during form submission or when focus is moved away from the field. Refer to the [Microsoft Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) documentation for additional details.
 

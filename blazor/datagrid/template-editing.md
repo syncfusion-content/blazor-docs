@@ -1165,7 +1165,7 @@ public class EmployeeInfo
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public SalaryDetails salarydetails { get; set; }
+    public SalaryDetails SalaryDetails { get; set; }
 }
 public class SalaryDetails
 {
