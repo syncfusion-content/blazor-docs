@@ -91,7 +91,7 @@ builder.Services.AddSyncfusionBlazor();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` section and the script at the end of the `<body>` of the main page as follows:
 
-* For **.NET 9 and .NET 8** Blazor WebAssembly Standalone app, include it in the **~/Components/App.razor** file.
+* For **.NET 10, .NET 9 and .NET 8** Blazor WebAssembly Standalone app, include it in the **~/Components/App.razor** file.
 
 ```html
 <head>

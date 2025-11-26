@@ -249,31 +249,31 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
     <SfCarousel>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/bridge.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                <img src="https://cdn.syncfusion.com/blazor/images/carousel/bridge.png" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/trees.jpg" alt="Spring Flower Trees" style="height:100%;width:100%;" />
+                <img src="https://cdn.syncfusion.com/blazor/images/carousel/trees.png" alt="Spring Flower Trees" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Spring Flower Trees</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/waterfall.jpg" alt="Oddadalen Waterfalls, Norway" style="height:100%;width:100%;" />
+                <img src="https://cdn.syncfusion.com/blazor/images/carousel/waterfall.png" alt="Oddadalen Waterfalls, Norway" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Oddadalen Waterfalls, Norway</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/sea.jpg" alt="Anse Source d'Argent, Seychelles" style="height:100%;width:100%;" />
+                <img src="https://cdn.syncfusion.com/blazor/images/carousel/sea.png" alt="Anse Source d'Argent, Seychelles" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Anse Source d'Argent, Seychelles</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/rocks.jpg" alt="Stonehenge, England" style="height:100%;width:100%;" />
+                <img src="https://cdn.syncfusion.com/blazor/images/carousel/rocks.png" alt="Stonehenge, England" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Stonehenge, England</figcaption>
             </figure>
         </CarouselItem>
@@ -309,7 +309,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Carousel component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVTXWhIpyDoMAim?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Carousel Component.](images/blazor-carousel-getting-started.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthSMMhiVkQbevAP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Carousel Component.](images/blazor-carousel-getting-started.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
 
