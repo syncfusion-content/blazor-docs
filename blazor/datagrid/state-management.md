@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Management in Blazor DataGrid | Syncfusion
-description: Learn how to persist, restore, and manage state in the Syncfusion Blazor DataGrid, including saving grid settings, resetting state, and working with versioned persistence.
+description: Learn how to persist, restore, and manage state in Syncfusion Blazor DataGrid, including saving, resetting, and versioned persistence.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 State management in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables preserving the grid’s configuration across browser reloads and page navigation within the same browser context. This includes settings such as paging, sorting, filtering, grouping, column visibility, and more. State persistence applies to the grid configuration, not the underlying data source; ensure the data is provided again on reload.
 
-To enable state persistence, use the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property. When set to true, the grid saves its state to the browser’s [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage), so the settings are retained across reloads until cleared.
+To enable state persistence, use the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property. When set to true, the grid saves its state to the browser’s [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), so the settings are retained across reloads until cleared.
 
 ```cs
 <SfGrid DataSource="@Orders" EnablePersistence="true">
