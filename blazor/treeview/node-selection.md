@@ -102,9 +102,7 @@ The Blazor TreeView component enables the selection of specific nodes during ini
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthIWNWKhiiVUngi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Select nodes through data binding](./images/data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthIWNWKhiiVUngi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Select nodes through data binding](./images/data-binding.png)" %}
 
 ## Select Nodes through API
 
@@ -193,8 +191,7 @@ The Blazor TreeView component provides the capability to select specific nodes d
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVysDiALMMnYUXd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Select nodes through API](./images/data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVysDiALMMnYUXd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Select nodes through API](./images/data-binding.png)" %}
 
 ## Select all Nodes Programmatically
 
@@ -304,9 +301,7 @@ Here, selected all TreeView parent nodes by clicking a button. If the nodes have
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtByCjMABihnMnxr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Parent nodes](./images/blazor-treeview-parent-node-selection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtByCjMABihnMnxr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Parent nodes](./images/blazor-treeview-parent-node-selection.png)" %}
 
 ### Child Nodes
 
@@ -412,9 +407,7 @@ To select only child nodes in the TreeView, retrieve all nodes and add the IDs o
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLIMjCUrigsqVBH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Child nodes](./images/child-nodes.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLIMjCUrigsqVBH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Child nodes](./images/child-nodes.png)" %}
 
 ## Get Selected Nodes
 
@@ -570,9 +563,7 @@ The Blazor TreeView component provides the capability to select specific nodes d
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVyCZsALsQJGdJR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Get selected nodes](./images/blazor-treeview-get-selected-nodes.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVyCZsALsQJGdJR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Get selected nodes](./images/blazor-treeview-get-selected-nodes.png)" %}
 
 ## Select all nodes on load
 
@@ -674,8 +665,7 @@ In the Blazor TreeView component, you can select all TreeView nodes on initial r
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSCtsqhCFWilwv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Select all nodes on load](./images/select-allnode.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSCtsqhCFWilwv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Select all nodes on load](./images/select-allnode.png)" %}
 
 ## Select all Nodes Programmatically
 
@@ -779,8 +769,7 @@ To select all TreeView nodes on initial rendering, utilize the TreeView componen
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLesjiUBBWsNrVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Select all nodes programmatically](./images/select-allnode.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLesjiUBBWsNrVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Select all nodes programmatically](./images/select-allnode.png)" %}
 
 ## Select Individual Node Programmatically
 
@@ -875,9 +864,7 @@ To select a specific TreeView node programmatically, use a button click or other
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBoWXiAhhWdEIWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Select individual node programmatically](./images/blazor-treeview-select-individual-node-programmatically.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBoWXiAhhWdEIWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Select individual node programmatically](./images/blazor-treeview-select-individual-node-programmatically.png)" %}
 
 ## Retrieve Indices of Selected Nodes
 
@@ -1048,9 +1035,7 @@ In the Blazor TreeView component, you can display the index value of selected Tr
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLysNiqrLVLrOLk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Retrieve indices of selected nodes](./images/blazor-treeview-retrieve-indices-of-selected-nodes.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLysNiqrLVLrOLk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Retrieve indices of selected nodes](./images/blazor-treeview-retrieve-indices-of-selected-nodes.png)" %}
 
 ## Disable Full Row Selection
 
