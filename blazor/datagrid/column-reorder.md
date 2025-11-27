@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows columns to be reordered by dragging and dropping a column header from one position to another within the Grid.
 
-To enable column reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
+To enable column reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -156,7 +156,7 @@ public class OrderDetails
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows columns to be reordered programmatically using built-in methods. Columns can be moved based on index or field name, enabling dynamic layout control through external UI elements such as buttons.
 
-> To reorder columns externally, set the  [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
+> To reorder columns externally, set the  [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 
 ### Reorder column by index
 
@@ -250,7 +250,7 @@ To reorder a column by its field name and target index, use the [ReorderColumnBy
 
 | Parameter   | Type   | Description                                      |
 |-------------|--------|--------------------------------------------------|
-| FieldName   | string | Field name of the column to be moved.           |
+| fieldName   | string | Field name of the column to be moved.           |
 | toIndex     | int    | Target index where the column should be placed. |
 
 
