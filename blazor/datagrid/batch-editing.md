@@ -301,10 +301,8 @@ public class EmployeeDetails
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding new rows at the bottom of the Grid. This feature allows new records to be inserted at the end of the existing dataset, improving usability when working with large data collections or when scrolling is enabled.
 To enable this behavior, set the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property in [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) to **Bottom**.
 
->* When `NewRowPosition` is set to **Bottom**, pressing the **TAB** key in edit mode automatically creates new rows below the current row, allowing continuous data entry.
 >* When set to **Top**, a blank row appears at the top, but the saved record is inserted at the bottom of the Grid.
 >* If **paging** is enabled, the newly added row is moved to the last page based on the page size.
->* If **scrolling** is enabled, new rows can be added beyond the visible area using the **TAB** key.
 >* The `NewRowPosition` property is supported in both **Normal** and **Batch** editing modes.
 
 {% tabs %}
@@ -593,7 +591,6 @@ public class OrderDetails
 
 Editing can be restricted for specific cells based on defined conditions in the Syncfusion® Blazor DataGrid. This capability is useful for protecting read-only data, calculated values, or sensitive information. Restricting cell edits helps preserve data integrity and ensures that only authorized modifications are permitted.
 To disable editing for a particular cell in Batch mode, configure the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event of the Grid. Within the event handler, set the **args.Cancel** property to **true** to prevent editing for the targeted cell.
-The following example demonstrates how to disable editing for cells where the value is **France**, using the `OnCellEdit` event:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -677,9 +674,6 @@ The `CellSaved` event is triggered when a cell is saved in the Grid and allows e
 
 
 To disable the confirmation dialog when using the `EndEditAsync` method, set [GridEditSettings.ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) to **false**. This property is applicable only when [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is set to **Batch**. This configuration enables immediate saving or updating of changes without confirmation prompts.
-
-
-The following example demonstrates how to implement immediate saving or updating of changes using the `CellSaved` event and the `EndEditAsync` method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

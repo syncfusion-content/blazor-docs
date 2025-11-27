@@ -197,9 +197,9 @@ public class ProductDetails
 
 ## Cancel edit based on condition
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to cancel edit operations for a particular row or cell based on specific conditions. This feature allows you to control whether editing should be allowed or prevented for certain rows or cells in the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid canceling edit operations for specific rows or cells based on defined conditions. This functionality provides control over whether editing is permitted or restricted for particular rows or cells within the Grid.
 
-To cancel an edit operation based on a specific condition, you can handle the following Grid events. These events are triggered when a CRUD (Create, Read, Update, and Delete) operation is performed in the Grid:
+To cancel an edit operation based on a specific condition, handle the following Grid events. These events are triggered during CRUD (Create, Read, Update, and Delete) operations in the Grid:
 
 1. [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating): Triggered before an add action is executed in the Grid.
 
@@ -207,9 +207,9 @@ To cancel an edit operation based on a specific condition, you can handle the fo
 
 3. [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing): Triggered before an edit action is executed in the Grid.
 
-By applying your desired condition, you can cancel the edit, delete, or add operation by setting the `args.Cancel` property to **true**.
+To cancel an edit, delete, or add operation based on a specific condition, set the **args.Cancel** property to **true** within the corresponding event handler.
 
-In the demo below, CRUD operations are prevented based on the **Role** column value. If the Role column is **Admin**, then edit and delete actions are prevented for that row.
+In the following example, CRUD operations are restricted based on the value in the Role column. When the Role column contains the value Admin, edit and delete actions for that row are disabled.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -534,8 +534,6 @@ public class OrderDetails
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports assigning default values to columns when adding a new record. This functionality streamlines data entry by pre-filling specific fields with predefined values.
 To configure default values, set the [DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DefaultValue) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) configuration. When a new row is added, the Grid automatically populates the specified default value in the corresponding column.
 
-The following example demonstrates how to assign a default value to a column.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -771,8 +769,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports ad
 
 By default, new rows are inserted at the **top**. To change this behavior, set the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **Bottom**. This property determines the position where new rows are inserted.
 
-The following example demonstrates how to enable bottom-positioned row insertion.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -932,8 +928,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports co
 
 To enable this behavior, set the  [ShowAddNewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowAddNewRow) property to **true** in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration. The position of the add new row can be controlled using the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property. By default, the new row is displayed at the top of the Grid content.
 
-The following example demonstrates how to enable continuous record addition using the `ShowAddNewRow` property.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -1011,8 +1005,6 @@ public class OrderDetails
 Single-click editing in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows a row to enter edit mode with a single click in **Normal** editing mode. This behavior can be configured using the [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) and [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) methods.
 
 To implement single-click editing, bind the [OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) event. Within the event handler, invoke `StartEditAsync` to begin editing the clicked row and `EndEditAsync` to finalize or cancel editing for the previously edited row.
-
-The following example demonstrates how to enable single-click editing using the `OnRecordClick` event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1100,8 +1092,6 @@ public class OrderDetails
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports conditional editing restrictions for specific rows. This feature ensures data integrity by preventing modifications to rows containing read-only, calculated, or protected information.
 
 To disable editing for a particular row, handle the [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) event of the Grid. Within the event handler, set the **args.Cancel** property to **true** to prevent editing for the targeted row.
-
-The following example demonstrates how to restrict editing for rows where the **ShipCountry** column value is **France**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
