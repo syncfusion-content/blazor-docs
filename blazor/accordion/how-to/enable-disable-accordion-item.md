@@ -37,6 +37,4 @@ In the following example, the first accordion item is enabled or disabled dynami
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLgiLiUUImofYGa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Enabling or Disabling Item in Blazor Accordion](../images/blazor-accordion-enable-disable-item.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLgiLiUUImofYGa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling or Disabling Item in Blazor Accordion](../images/blazor-accordion-enable-disable-item.gif)" %}

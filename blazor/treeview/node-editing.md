@@ -9,9 +9,9 @@ documentation: ug
 
 # Node Editing in Blazor TreeView Component
 
-The Blazor TreeView allows to edit nodes by setting the [`AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowEditing) property to **true**. To directly edit the nodes in place, **double click** the TreeView node or **select** the node and press **F2** key.
+The Blazor TreeView allows node editing by setting the [`AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowEditing) property to `true`. Nodes are directly edited in place by **double-clicking** the TreeView node or by **selecting** the node and pressing the <kbd>F2</kbd> key.
 
-When editing is completed by focus out or by pressing the **Enter** key, the modified node’s text saves automatically. If you do not want to save the modified node’s text in TreeView node, press **Escape** key. It does not save the edited text to the TreeView node.
+When editing is completed by focusing out or by pressing the <kbd>Enter</kbd> key, the modified node’s text saves automatically. To discard changes, press the <kbd>Escape</kbd> key, which prevents saving the edited text to the TreeView node.
 
 * Node editing can also be performed programmatically by using the [BeginEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_BeginEditAsync_System_String_) method. On passing the node ID or element through this method, the edit textbox will be created for the particular node thus allowing us to edit it.
 
@@ -124,14 +124,13 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByiDWqMuupOrPJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node Editing in Blazor TreeView](./images/blazor-treeview-node-editing.png)" %}
 
-![Node Editing in Blazor TreeView](./images/blazor-treeview-node-editing.png)
-
-## CRUD operations
+## CRUD Operations
 
 The Blazor TreeView component provides dynamic options for adding, removing, and renaming nodes.
 
-To perform CRUD operations on the Blazor TreeView component, you can check on this video.
+A video demonstrating CRUD operations on the Blazor TreeView component is available:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=b0rTqUIhAhc" %}
@@ -376,10 +375,9 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyMtMKLDjzDfze?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[CRUD operation using list in Blazor TreeView](./images/blazor-treeview-node-with-context-menu.png)" %}
 
-![CRUD operation using list in Blazor TreeView](./images/blazor-treeview-node-with-context-menu.png)
-
-### Add or remove node programmatically
+### Add or Remove Node Programmatically
 
 The Blazor TreeView component allows for the dynamic addition or removal of specific nodes by manipulating the data source. This can be achieved by using appropriate methods to update the data source.
 
@@ -581,8 +579,9 @@ The Blazor TreeView component allows for the dynamic addition or removal of spec
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLeWtCULXCrLgvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Add or Remove node in Blazor TreeView](./images/add-remove-node.png)" %}
 
-### Add or remove node Programmatically with template
+### Add or Remove Node Programmatically with Template
 
 The Blazor TreeView component with template support also allows for the dynamic addition or removal of specific nodes by manipulating the data source. This can be achieved by using appropriate methods to update the data source.
 
@@ -794,8 +793,9 @@ The Blazor TreeView component with template support also allows for the dynamic 
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyWXCUrtVeSfmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/template-add-remove-node.png)" %}
 
-### Add node through popup
+### Add Node through Popup
 
 In the Blazor TreeView component, it is possible to add a new tree node using a Dialog popup window. This can be done by using appropriate methods to add new items to the data source in the popup. 
 
@@ -999,8 +999,9 @@ In the Blazor TreeView component, it is possible to add a new tree node using a 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBoijiALtpvzYks?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Edit a node programmatically
+### Edit a Node Programmatically
 
 The Blazor TreeView component enables dynamic editing of specific nodes. This can be accomplished by passing the selected node's ID to the [BeginEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_BeginEditAsync_System_String_) method of the TreeView component. 
 
@@ -1182,10 +1183,11 @@ The Blazor TreeView component enables dynamic editing of specific nodes. This ca
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoCtCgrNyGxtWK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Edit node in Blazor TreeView](./images/edit-node.png)" %}
 
-### Edit a node with template
+### Edit a Node with Template
 
-The Blazor TreeView component with template enables dynamic editing of specific nodes. This can be accomplished by passing the selected node's ID to the [BeginEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_BeginEditAsync_System_String_) method of the TreeView component. 
+The Blazor TreeView component, when using a `NodeTemplate`, enables dynamic editing of specific nodes. This is accomplished by passing the selected node's ID to the [`BeginEditAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_BeginEditAsync_System_String_) method of the TreeView component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1375,10 +1377,11 @@ The Blazor TreeView component with template enables dynamic editing of specific 
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNryMNCgLXnwolsg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Read-only TreeView
+## Read-Only TreeView
 
-The Blazor TreeView component can be set to read-only mode by disabling certain features or handling events that trigger actions, such as disabling the context menu, handling item selected, item expand, and item collapse events, and disabling the editable property of the TreeView component, which will prevent for adding, removing, or editing nodes.
+A Blazor TreeView component is set to read-only mode by disabling specific features or handling events that typically trigger actions. This includes disabling the context menu, handling item selection, and managing item expand/collapse events. Disabling the `AllowEditing` property of the TreeView component prevents adding, removing, or editing nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1454,10 +1457,11 @@ The Blazor TreeView component can be set to read-only mode by disabling certain 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheMXWgVjmRLeoY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Restrict Node Editing for Specific Node
 
-In the Blazor TreeView component, it is possible to prevent editing of a specific node by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeEditEventArgs.html#Syncfusion_Blazor_Navigations_NodeEditEventArgs_Cancel) argument to true in the [NodeEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event. 
+Node editing for a specific node is prevented by setting the [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeEditEventArgs.html#Syncfusion_Blazor_Navigations_NodeEditEventArgs_Cancel) argument to `true` within the [`NodeEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event.
 
 An example of this can be seen in the provided code snippet, where the node editing is prevented for the **Johnson** TreeView node.
 
@@ -1666,10 +1670,11 @@ An example of this can be seen in the provided code snippet, where the node edit
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDroiXsUBDlpeMwA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Get index of editing node
+## Get Index of Editing Node
 
-In the Blazor TreeView component, you can obtain the index value of the editing node by using the [NodeEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event. To access the TreeView data, you can use the [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method and store it in a variable. Then, you can use a for loop to check if the id of the current data item matches the id of the node being edited. If it does, it is the index of the edited node.
+The index value of an editing node is obtained using the [`NodeEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event. To access the TreeView data, utilize the [`GetTreeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method and store it in a variable. Then, iterate through the data to find the matching node ID, which provides the index of the edited node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1881,7 +1886,7 @@ In the Blazor TreeView component, you can obtain the index value of the editing 
 
 ```
 
-## Prevent node editing on node double-click
+## Prevent Node Editing on Node Double-Click
 
 In the Blazor TreeView component, you have the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowEditing) property, which enables editing a node's text by either double-clicking on the TreeView node or pressing the F2 key. When the `AllowEditing` property is set to true, the TreeView allows for editing a node by either double-clicking on the node or navigating to the node and pressing the F2 key. However, when the property is set to false, the TreeView only allows for reading the node's text.
 
@@ -1948,12 +1953,13 @@ The default value of `AllowEditing` property is false.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVIMDigVDOtuNue?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Cancel the edit action
+## Cancel the Edit Action
 
-In the Blazor TreeView component, it is possible to cancel the edit action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeEditEventArgs.html#Syncfusion_Blazor_Navigations_NodeEditEventArgs_Cancel) argument to true in the [NodeEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event. 
+The edit action is canceled by setting the [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeEditEventArgs.html#Syncfusion_Blazor_Navigations_NodeEditEventArgs_Cancel) argument to `true` within the [`NodeEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event.
 
-An example of this can be seen in the provided code snippet, where the node editing is canceled for all the TreeView nodes.
+An example of this can be seen in the provided code snippet, where node editing is canceled for all TreeView nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -2155,3 +2161,4 @@ An example of this can be seen in the provided code snippet, where the node edit
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLysZCUVjEueZbk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

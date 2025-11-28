@@ -68,9 +68,7 @@ In the following example, `StartsWith` filter type has been mapped to the `Filte
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBKMhipBzHIgAvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBKMhipBzHIgAvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.png)" %}
 
 ## Minimum length
 
@@ -84,9 +82,7 @@ In the following example, the remote request does not fetch the search data unti
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUsBsJhzbSDGTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUsBsJhzbSDGTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)" %}
 
 ## Multi column filtering
 
@@ -148,9 +144,7 @@ Refer to the following example to restrict the suggestion list item counts as 3.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMVWTLTmOENnq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMVWTLTmOENnq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.png)" %}
 
 ## AutoComplete with google search result
 
@@ -174,9 +168,7 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)" %}
 
 ### Highlighting Search character using method
 
@@ -193,6 +185,4 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 {% endhighlight %} 
 
-![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)" %}

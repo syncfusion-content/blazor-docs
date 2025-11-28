@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Pivot Table in Blazor Web App
 
-This section briefly explains about how to include [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), Visual Studio Code and .NET CLI.
+This section explains how to add a [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), Visual Studio Code, or .NET CLI. Follow these steps to set up and display data in the Pivot Table with ease.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -19,23 +19,25 @@ This section briefly explains about how to include [Blazor Pivot Table](https://
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+- [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+To create a Blazor Web App in Visual Studio 2022, use [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed steps, see the [Blazor Web App Getting Started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+When creating the app, select the appropriate interactive render mode and interactivity location. For more information, refer to the [interactive render mode documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 ![Create Blazor Web App](images/blazor-create-web-app.png)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the App
 
-To add **Blazor Pivot Table** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor Pivot Table component, install the required NuGet packages in your project.
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+1. Open the NuGet Package Manager in Visual Studio by navigating to *Tools > NuGet Package Manager > Manage NuGet Packages for Solution*.
+2. Search for and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes).
+3. If your Blazor Web App uses `WebAssembly` or `Auto` render modes, ensure these packages are installed in the client project.
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, run the following commands in the Package Manager Console:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -46,7 +48,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+> **Note**: Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). For a complete list of available NuGet packages, see the [NuGet packages documentation](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 {% endtabcontent %}
 
@@ -54,15 +56,15 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+- [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor Web App in Visual Studio Code
 
-You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
+To create a Blazor Web App, use Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed steps, see the [Blazor Web App Getting Started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code).
 
-Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web Application. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+When creating the app, select the appropriate interactive render mode and interactivity location. For more details, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+For example, to create a Blazor Web App with the `Auto` interactive render mode, run these commands in the terminal:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -76,14 +78,13 @@ cd BlazorWebApp.Client
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the App
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install Syncfusion Blazor NuGet packages in the client project.
 
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+1. Open the integrated terminal in Visual Studio Code by pressing <kbd>Ctrl</kbd>+<kbd>`</kbd>.
+2. Ensure you are in the project root directory where the `.csproj` file is located.
+3. Run the following commands to install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet packages:
 
 {% tabs %}
-
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.Blazor.PivotTable -v {{ site.releaseversion }}
@@ -91,10 +92,9 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
-
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). For a complete list of available NuGet packages, see the [NuGet packages documentation](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 {% endtabcontent %}
 
@@ -102,7 +102,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+- Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). To check the installed version, run the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux):
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -114,11 +114,11 @@ dotnet --version
 
 ## Create a Blazor Web App using .NET CLI
 
-Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
+To create a new Blazor Web App, run the following commands in a command prompt (Windows), terminal (macOS), or command shell (Linux). For detailed steps, see the [Blazor Web App Getting Started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli).
 
-Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web Application. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+Select the appropriate interactive render mode and interactivity location when setting up the app. For more details, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-For example, in a Blazor Web App with `Auto` interactive render mode, use the following commands:
+For example, to create a Blazor Web App with the `Auto` interactive render mode, run these commands:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -156,7 +156,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespace.
+To use the Blazor Pivot Table, add the required namespaces to the **~/_Imports.razor** file in your client project. Include `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` to access the pivot table functionality.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -169,9 +169,7 @@ Open the **~/_Imports.razor** file from the client project and import the `Syncf
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
-
-If your Blazor Web App uses `WebAssembly` or `Auto` interactive render modes, you must register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** files of the main `server` project and associated `.Client` project.
+Next, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file. This step enables the pivot table component in your Blazor Web App. If your app uses `WebAssembly` or `Auto` interactive render modes, register the service in both the main `server` project and the associated `.Client` project.
 
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
@@ -207,7 +205,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+Include the Syncfusion theme stylesheet and script in your Blazor Web App to style and enable the pivot table. Add the stylesheet in the `<head>` section and the script at the end of the `<body>` in the **~/Components/App.razor** file, as shown below:
 
 ```html
 <head>
@@ -224,19 +222,21 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to learn about referencing themes using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). Visit the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different ways to add script references.
 
 ## Initializing Blazor pivot Table component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
+To display the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) in your app, add the component to a Razor page, such as **Pages/Home.razor**, in either the Server or Client project. If your app uses per-page or per-component interactivity, specify the render mode at the top of the Razor file. Choose the appropriate render mode based on your app’s setup:
 
-| Interactivity location | RenderMode | Code |
+| Interactivity Location | Render Mode | Code |
 | --- | --- | --- |
-| Per page/component | Auto | @rendermode InteractiveAuto |
-|  | WebAssembly | @rendermode InteractiveWebAssembly |
-|  | None | --- |
+| Per page/component | Auto | `@rendermode InteractiveAuto` |
+| Per page/component | WebAssembly | `@rendermode InteractiveWebAssembly` |
+| Per page/component | None | --- |
 
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default.
+N> If your app uses global interactivity with Auto or WebAssembly render modes, the render mode is already set in the **App.razor** file.
+
+Add the following code to your Razor page to include the Pivot Table component:
 
 {% tabs %}
 {% highlight razor %}
@@ -257,7 +257,9 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ## Assigning sample data to the Blazor pivot table
 
-The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component further needs to be populated with an appropriate data source. For illustration purpose, a collection of objects mentioning the sales details of certain products over a period and region has been prepared. This sample data is assigned to the pivot table component through [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
+To enable users to perform meaningful analysis and generate actionable insights, the Pivot Table component requires a well-structured data source. This data source contains the information you want to analyze and visualize.
+
+For demonstration purposes, a collection of objects containing sales details for various products across different periods and regions has been prepared. This sample data is assigned to the Pivot Table component through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
 
 {% tabs %}
 {% highlight razor %}
@@ -369,44 +371,45 @@ The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-piv
 {% endhighlight %}
 {% endtabs %}
 
-## Adding fields to row, column, value and filter axes
+## Adding fields to row, column, value, and filter axes
 
-Now that pivot table is initialized and assigned with sample data, will further move to showcase the component by organizing appropriate fields in row, column, value and filter axes.
+Organizing fields into appropriate axes transforms raw data into a structured, meaningful Pivot Table that enables users to analyze patterns and trends effectively. With the Pivot Table now initialized and populated with sample data, the next logical step involves organizing the appropriate fields into row, column, value, and filter axes to create a functional data analysis tool.
 
-In [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class, four major axes -  [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) plays a vital role in defining and organizing fields from the bound data source, to render the entire pivot table component in a desired format.
+In the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class, four primary axes play a crucial role in defining and organizing fields from the bound data source to render the Pivot Table component in the desired format.
 
-[PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html) – Collection of fields that needs to be displayed in row axis of the pivot table.
+**Understanding the four axes:**
 
-[PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) – Collection of fields that needs to be displayed in column axis of the pivot table.
+- [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html) – Collection of fields that will be displayed along the row axis of the Pivot Table.
+- [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) – Collection of fields that will be displayed along the column axis of the Pivot Table.
+- [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) – Collection of fields that will be displayed as aggregated numeric values within the Pivot Table.
+- [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) – Collection of fields that act as master filters over the data bound to the row, column, and value axes of the Pivot Table.
 
-[PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) – Collection of fields that needs to be displayed as aggregated numeric values in the pivot table.
+**Essential field properties:**
 
-[PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) - Collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table.
+To define each field in its respective axis, configure the following basic properties:
 
-In-order to define each field in the respective axis, the following basic properties should be set.
-
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_Name): It allows to set the field name from the bound data source. It’s casing should match exactly like in the data source and if not set properly, the pivot table will not be rendered.
-* [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_Caption): It allows to set the field caption, which is the alias name of the field that needs to be displayed in the pivot table.
-* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_Type): It allows to set the summary type of the field. By default, [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html) is applied.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_Name): Sets the field name from the bound data source. The casing must match exactly as it appears in the data source, otherwise the Pivot Table will not render correctly.
+* [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_Caption): Sets the field caption, which serves as the display name for the field in the Pivot Table.
+* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_Type): Sets the summary type for the field. By default, the [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) aggregation is applied.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfPivotView TValue="ProductDetails" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
+     <PivotViewDataSourceSettings DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-    </PivotViewDataSourceSettings>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
 </SfPivotView>
 
 @code{
@@ -421,13 +424,15 @@ In-order to define each field in the respective axis, the following basic proper
 {% endhighlight %}
 {% endtabs %}
 
-
-
 ## Applying formatting to a value field
 
-Formatting defines a way in which values should be displayed. For example, format **"C"** denotes the values should be displayed in currency pattern. To do so, define the [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) class with its [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) and [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) properties and add it to [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings). In this illustration, the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) property is set as **Amount**, a field from value section and its format is set as currency. Likewise, we can set format for other value fields as well and add it to [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings).
+Formatting enhances the readability and presentation of numerical data in a Pivot Table, making it more user-friendly and professional. For example, you can display values with currency symbols or adjust the number of decimal places for greater clarity.
 
-N> Only fields from value section, which is in the form of numeric data values are applicable for formatting.
+To apply formatting to value fields in a Pivot Table, use the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) class. This class accepts a list of [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html) objects, each defining formatting rules for a specific field in your data.
+
+Within each [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html) object, set the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFormatSetting.html#Syncfusion_Blazor_PivotView_PivotFormatSetting_Name) property to match the exact field name from your value section. Then, specify the desired display format using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFormatSetting.html#Syncfusion_Blazor_PivotView_PivotFormatSetting_Format) property. In the example below, the **Amount** field is configured to display values in currency format using the "C" pattern, which includes currency symbols.
+
+N> Formatting can only be applied to numeric fields in the value section of the Pivot Table.
 
 {% tabs %}
 {% highlight razor %}
@@ -470,29 +475,31 @@ N> Only fields from value section, which is in the form of numeric data values a
 
 ## Enable Field List
 
-The field list allows to add or remove fields and also rearrange the fields between different axes, including column, row, value, and filter along with filter and sort options dynamically at runtime. It can be enabled by setting the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property to **true**. To know more about field list, [refer](./field-list) here.
+The field list enhances user interaction by allowing you to dynamically add, remove, and rearrange fields across different axes, including column, row, value, and filter axes. This user-friendly interface also provides sorting and filtering options that can be applied at runtime without requiring code changes.
+
+To enable the field list, set the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. This activates the field list interface, making it accessible to users to modify Pivot Table report settings. For comprehensive details about field list functionality, [refer](./field-list) to the dedicated field list documentation.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
+     <PivotViewDataSourceSettings DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
         <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
 </SfPivotView>
 
 @code{
@@ -511,7 +518,9 @@ The field list allows to add or remove fields and also rearrange the fields betw
 
 ## Enable Grouping Bar
 
-The grouping bar feature automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and alter pivot table at runtime. It also provides option to sort, filter and remove fields. It can be enabled by setting the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property to **true**. To know more about grouping bar, [refer](./grouping-bar) here.
+The grouping bar allows users to easily manage and modify the report settings of the Pivot Table directly through the user interface. With the grouping bar, users can instantly move fields between columns, rows, values, and filters by dragging them, allowing for quick arrangement and analysis of the data.
+
+Users can also use the grouping bar to sort, filter, or remove fields quickly without needing to write any code. To enable the grouping bar, set the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. For more details about using the grouping bar, see the [Grouping Bar documentation](./grouping-bar).
 
 {% tabs %}
 {% highlight razor %}
@@ -552,7 +561,9 @@ The grouping bar feature automatically populates fields from the bound data sour
 
 ## Exploring Filter Axis
 
-The filter axis contains collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table. The fields along with filter members could be set to filter axis either through report via code behind or by dragging and dropping fields from other axes to filter axis via grouping bar or field list at runtime.
+The filter axis lets you show only the data you need in the Blazor Pivot Table, making analysis simpler. You can add fields to the filter axis to control what data appears in the [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), and [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) axes. You can set up these fields in two ways: by adding them to the [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) collection in your code, or by dragging and dropping fields from other axes to the filter axis using the grouping bar or field list during runtime. This helps you focus on specific data without changing the Pivot Table’s structure.
+
+The following example shows how to add a field to the filter axis in a Blazor Pivot Table:
 
 {% tabs %}
 {% highlight razor %}
@@ -595,9 +606,15 @@ The filter axis contains collection of fields that would act as master filter ov
 
 ## Calculated Field
 
-The calculated field feature allows user to insert or add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. The calculated field can be included in pivot table using the [PivotViewCalculatedFieldSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class from code behind. Or else, calculated fields can be added at run time through the built-in dialog by just setting the [AllowCalculatedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowCalculatedField) property to **true** in pivot table. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation. To know more about calculated field, [refer](./calculated-field) here.
+The calculated field feature enables users to create custom value fields using mathematical formulas and existing fields from their data source. Users can perform complex calculations with basic arithmetic operators and seamlessly integrate these custom fields into their Pivot Table for enhanced data visualization and reporting.
 
-> By default, the calculated fields created through code-behind are only added to the field list and calculated field dialog UI. To display the calculated field in the pivot table UI, it must be added to the [`PivotViewValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) class, as shown in the code below. Additionally, calculated fields can only be added to the value axis.
+Users can add calculated fields in two ways:
+- **Using code:** Set up calculated fields through the [PivotViewCalculatedFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class when configuring the Pivot Table.
+- **Using the user interface:** Alternatively, calculated fields can be added at runtime through a built-in dialog by setting the [AllowCalculatedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowCalculatedField) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. When enabled, a button appears in the Field List UI. Clicking this button opens a dialog that allows users to create, edit, or remove calculated fields at runtime. To learn more about calculated fields, [refer](./calculated-field) here.
+
+N> By default, the calculated fields created through code-behind are only added to the field list and calculated field dialog UI. To display the calculated field in the Pivot Table UI, it must be added to the [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) class, as shown in the code below. Additionally, calculated fields can only be added to the value axis.
+
+Below is a sample code that shows how to set up calculated fields both through code-behind and using the popup dialog:
 
 {% tabs %}
 {% highlight razor %}
@@ -644,13 +661,9 @@ The calculated field feature allows user to insert or add a new calculated field
 
 ## Handling exceptions
 
-Exceptions occurred during pivot table actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event.
+You can handle errors that occur during Pivot Table actions without stopping your application. Use the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event to capture error messages or details from the server. We recommend binding this event while building your app, as it helps you identify issues early. You can share these error details with our support team to get help quickly.
 
-The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event contains the error details returned from the server.
-
-N> Recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
-
-The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
+The following code example shows how to display a server-side error message to the user when a data operation fails:
 
 {% tabs %}
 {% highlight razor %}

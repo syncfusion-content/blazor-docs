@@ -42,6 +42,4 @@ The `Reverse` property reverses the order of the Timeline items as defined in th
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVoMXMZryaiFxsB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Timeline Component with Common Customized Connector](./images/Blazor-reverse.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVoMXMZryaiFxsB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Common Customized Connector](./images/Blazor-reverse.png)" %}

@@ -67,9 +67,7 @@ The default [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 </SfToolbar>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhoitCZzVqTpUBZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Scrolling in Blazor Toolbar](./images/blazor-toolbar-scrolling.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhoitCZzVqTpUBZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scrolling in Blazor Toolbar](./images/blazor-toolbar-scrolling.png)" %}
 
 ## Popup
 
@@ -102,9 +100,7 @@ N> If the popup content exceeds the height of the page, overflowing items will n
     </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoijsXzLKbvuYU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar Item in Popup Mode](./images/blazor-toolbar-item-popup-mode.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoijsXzLKbvuYU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item in Popup Mode](./images/blazor-toolbar-item-popup-mode.png)" %}
 
 ### Priority of Items
 
@@ -160,9 +156,7 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLeCXijTVTcokhS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Displaying Blazor Toolbar Item in Overflow](./images/blazor-toolbar-item-in-overflow.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLeCXijTVTcokhS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Blazor Toolbar Item in Overflow](./images/blazor-toolbar-item-in-overflow.png)" %}
 
 ## MultiRow
 
@@ -190,9 +184,7 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLSijMXTVoswbPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar Item with MultiRow](./images/blazor-toolbar-item-with-multirow.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLSijMXTVoswbPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with MultiRow](./images/blazor-toolbar-item-with-multirow.png)" %}
 
 ## Extended
 
@@ -219,6 +211,4 @@ In the following code sample, text is only visible in the popup container and no
     </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNroCNiZJhSGdfxr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar Item with Extended Mode](./images/blazor-toolbar-item-extended-mode.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNroCNiZJhSGdfxr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Extended Mode](./images/blazor-toolbar-item-extended-mode.gif)" %}

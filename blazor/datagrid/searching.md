@@ -213,6 +213,7 @@ The following example demonstrates how to set the `SearchSettings.Operator` prop
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -223,6 +224,7 @@ The following example demonstrates how to set the `SearchSettings.Operator` prop
 </SfDropDownList>
 
 <SfGrid DataSource="@Orders" Toolbar=@ToolbarItems>
+    <GridSearchSettings Operator="@SearchOperator"></GridSearchSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
@@ -244,14 +246,6 @@ The following example demonstrates how to set the `SearchSettings.Operator` prop
     {
         public string Text { get; set; }
         public Operator Value { get; set; }
-    }
-
-     public enum Operator
-    {
-        StartsWith,
-        EndsWith,
-        Contains,
-        Equal
     }
 
     List<DropDownOrder> DropDownData = new List<DropDownOrder>
@@ -316,7 +310,7 @@ The following example demonstrates how to set the `SearchSettings.Operator` prop
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBgCXKXMPQpCngI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheMWibUKtkPFVK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Search by external button
 

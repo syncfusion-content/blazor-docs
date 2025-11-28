@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Customize the expand & collapse icons in Blazor TreeView | Syncfusion
+title: Customize TreeView expand & collapse icons in Blazor | Syncfusion
 description: Learn here all about how to customize the expand and collapse icons in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Customize the expand and collapse icons in Blazor TreeView Component
+# Customize Expand and Collapse Icons in Blazor TreeView Component
 
-TreeView expand and collapse icons could be customized by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) property of TreeView. Refer to the sample to customize expand or collapse icons.
+TreeView expand and collapse icons are customized using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) property of the TreeView component.
+
+The following example demonstrates how to customize the expand and collapse icons.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -137,11 +139,11 @@ TreeView expand and collapse icons could be customized by using the [`CssClass`]
 
 ```
 
-![Customizing Expand and Collapse Icon in Blazor TreeView](../images/blazor-treeview-customize-expand-collapse-icon.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhSsjMrKbjcuFLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Expand and Collapse Icon in Blazor TreeView](../images/blazor-treeview-customize-expand-collapse-icon.png)" %}
 
-## Customize expand/collapse icon's position and color
+## Customize Expand/Collapse Icon Position and Color
 
-The expand or collapse icon's position and color can also customized using following CSS.
+The position and color of the expand or collapse icons are customized using CSS. Additionally, custom icons for nodes are added using the `IconCss` property of `TreeViewFieldsSettings`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -336,11 +338,11 @@ The expand or collapse icon's position and color can also customized using follo
 </style>
 ```
 
-![Customizing Icon Position and Color in Blazor TreeView](../images/blazor-treeview-custom-icons-position-and-color.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIMDMrKbiQKRCm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Icon Position and Color in Blazor TreeView](../images/blazor-treeview-custom-icons-position-and-color.png)" %}
 
-## Increase the padding between the text, expand/collapse icon and custom icons
+## Increase Padding Between Text, Expand/Collapse Icons, and Custom Icons
 
-The padding between the text, expand or collapse icon and custom icons can be increased using the following CSS in the above sample.
+The spacing between the text, expand/collapse icons, and custom element icons is increased by adjusting the following CSS properties within the previous sample's style block.
 
 ```csharp
 
