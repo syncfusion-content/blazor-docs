@@ -433,6 +433,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLpZirLweUEtUYL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> The AllowFiltering property at the column level governs only the built-in filtering mechanism provided by the grid. This default behavior is overridden when a custom FilterTemplate is defined. In such cases, the grid renders the custom UI instead of the default filter, and the AllowFiltering setting no longer influences the column's filter visibility or functionality.
+
+
 ## Hide filter bar for template column
 
 By default, the filter bar is set to a disabled mode for template columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. However, in certain cases, you may want to hide the filter bar for a template column to provide a customized filtering experience.
