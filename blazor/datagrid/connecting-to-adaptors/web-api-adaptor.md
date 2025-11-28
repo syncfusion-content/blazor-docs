@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with WebApiAdaptor in Syncfusion Blazor DataGrid
+title: Bind Data and Perform CRUD with WebApiAdaptor in Blazor DataGrid
 description: Learn about bind data and performing CRUD operations using WebApiAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
