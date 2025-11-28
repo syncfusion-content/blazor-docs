@@ -1,7 +1,7 @@
 ---
 title: "MySQL Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a MySQL in the Syncfusion Blazor Pivot Table and more."
+description: Checkout and learn here all about how to bind data from a MySQL in the Syncfusion Blazor Pivot Table and more.
 ---
 
 # MySQL Data Binding
