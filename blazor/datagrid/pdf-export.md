@@ -90,7 +90,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIDpZEKtBzeKSd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVoiCizffjbcCqs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Show spinner while exporting
 
@@ -186,7 +186,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVetptuKCqkceUU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBoisWJzprvZZFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding custom data source while exporting
 
@@ -328,7 +328,7 @@ public class ChangeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryXfDOqaghyKye?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthesMWTJfTcRbBO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exporting with custom aggregate
 
@@ -550,7 +550,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVSNfWZIXZQsIfM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLeMisJTSCqNUAj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Passing additional parameters to the server when exporting
 
@@ -666,4 +666,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLoZogDqknpIKBk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLIsWWTJohXtFyS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

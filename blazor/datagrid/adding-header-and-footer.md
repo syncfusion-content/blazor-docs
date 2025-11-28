@@ -160,7 +160,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBStoZvKaemjUsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhoMCCpJlwMDtUW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Draw a line in header and footer
 
@@ -363,7 +363,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLetytPqYKdmets?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBSWMWfzvaADrfe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add page number in header and footer
 
@@ -531,7 +531,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLojkCeTOdnSgCJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSiCWzTEtZVJVn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Insert an image in header and footer
 
@@ -662,7 +662,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLeXINbTSiCxMZL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMMCpTuXlBLxH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Repeat column header on every page
 
@@ -760,4 +760,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVINuLIyMVDkBoc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMMCpTuXlBLxH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

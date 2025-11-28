@@ -200,7 +200,9 @@ dotnet run
 
 Once the app starts, navigate to `http://localhost:<port number>` in your browser to view the Grid.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIZoWghZXnoxDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](../images/blazor-datagrid-component.png)" %}
+![Blazor DataGrid](../images/blazor-datagrid-component.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhIWCMzVFSVldRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Defining row data
 
@@ -267,7 +269,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrotoiKCoYkHoHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDryiCiJLuWPDPgb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Defining columns
 
@@ -359,7 +361,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLyNosqiEMHcPrL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBeMCMphaKYPIIv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Enable paging
 
@@ -435,7 +437,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrejSMgCdnGAijD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreMCsphaeEIWIs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Enable sorting
 
@@ -510,7 +512,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSXosACxQRZrki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLSsiWzraQhXjUp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Enable filtering
 
@@ -586,7 +588,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrIDoMqsHPeUEtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNheCsMprYbBcBYH?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ### Enable grouping
 
@@ -662,7 +664,9 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoZosUMRYBBVqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](../images/blazor-datagrid.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjreCCWJhYaWRaJd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor DataGrid](../images/blazor-datagrid.gif)
 
 > Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/BlazorApp).
 
