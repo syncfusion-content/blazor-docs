@@ -10,7 +10,7 @@ documentation: ug
 
 # Custom Binding in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports custom data operations through the [CustomAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding) in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This adaptor allows complete control over data handling by overriding methods in the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class. It is designed for scenarios where data operations such as **create**, **read**, **update**, and **delete** must be implemented manually or integrated with custom logic.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports custom data operations through the [CustomAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding) in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This adaptor allows complete control over data handling by overriding methods in the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class. It is designed for scenarios where data operations such as **read**, **insert**, **update**, and **delete** must be implemented manually or integrated with custom logic.
 
 The `CustomAdaptor` is ideal for applications that require:
 
@@ -497,8 +497,6 @@ The [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 * [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Collections_Generic_IEnumerable___0__System_Int32_) - Applies **take** value from `DataManagerRequest` to retrieve a specified number of records for paging.
 
 * [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) -  Applies **aggregate** details from `DataManagerRequest` to the data source using the `DataUtil` class to calculate summary values such as **Sum**, **Average**, **Min**, and **Max**.
-
-These methods enable efficient client-side data handling in a custom adaptor implementation.
 
 N> To enable these operations, install the **Syncfusion.Blazor.Data** package using NuGet Package Manager in Visual Studio:
 
@@ -1123,7 +1121,7 @@ CRUD operations for custom-bound data in the Syncfusion<sup style="font-size:70%
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows sending custom parameters with each data request. This is useful for scenarios where additional information such as user role, authentication token, or custom filters must be passed to the server for processing.
 
-Custom parameters can be added using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) along with the [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) method of the `Query` class.
+Custom parameters can be added using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) along with the [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) method of the `Query` class.
 
 To enable custom parameters in data requests for the Grid, follow these steps:
 

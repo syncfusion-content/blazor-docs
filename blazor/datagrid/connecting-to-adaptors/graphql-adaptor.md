@@ -557,11 +557,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports se
 
 **Key Operations**
 
-* **Searching**: Uses **Search** property to filter records based on keywords and fields.
-* **Filtering**: Uses **Where** property to apply conditional filters on columns.
-* **Sorting**: Uses **Sorted** property to define sort fields and directions.
-* **Paging**: Uses **Skip** and **Take** properties to retrieve paged data.
-* **CRUD**: Uses GraphQL mutations for **Insert**, **Update**, **Delete**, and **Batch** operations.
+* **Searching**: Uses the **Search** property to filter records based on keywords and fields.
+* **Filtering**: Uses the **Where** property to apply conditional filters on columns.
+* **Sorting**: Uses the **Sorted** property to define sort fields and sort directions.
+* **Paging**: Uses the **Skip** and **Take** properties to retrieve paged data.
+* **CRUD**: Uses GraphQL mutations to perform **Insert, Update, Delete**, and **Batch** operations.
 
 Each operation is handled on the server by parsing these parameters and applying the logic to the data source before returning the result to the DataGrid.
 
@@ -998,7 +998,7 @@ public class OrdersDataResponse
 **Sorting** parameters are sent through the **Sorted** property of `DataManagerRequestInput`. Each sorting instruction includes:
 
 * **Name**: The column name to sort.
-* **Direction**: The sort order (ascending or descending).
+* **Direction**: The sort order (**ascending** or **descending**).
 
 When a sort action is triggered in the DataGrid, these parameters are passed to the GraphQL server. The server applies the sorting logic and returns the sorted collection along with the total record count.
 
@@ -1275,7 +1275,7 @@ Mutation = new GraphQLMutation
 },
 ```
 
-**Parameters Sent to the Server**
+**Parameters sent to the Server**
 
 These parameters are passed to the mutation method for the `Insert` operation on the server:
 
@@ -1338,7 +1338,7 @@ Mutation = new GraphQLMutation
 },
 ```
 
-**Parameters Sent to the Server**
+**Parameters sent to the Server**
 
 These parameters are passed to the mutation method for the `Update` operation on the server:
 
@@ -1400,7 +1400,7 @@ Mutation = new GraphQLMutation
 },
 ```
 
-**Parameters Sent to the Server**
+**Parameters sent to the Server**
 
 These parameters are passed to the mutation method for the **Delete** operation on the server:
 
@@ -1602,7 +1602,7 @@ Mutation = new GraphQLMutation
 
 ```
 
-**Parameters Sent to the Server**
+**Parameters sent to the Server**
 
 These parameters are passed to the mutation method for the **Batch** operation on the server:
 

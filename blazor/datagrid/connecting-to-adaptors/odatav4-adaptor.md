@@ -285,7 +285,7 @@ When the application runs, the DataGrid displays data retrieved from the OData V
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports server-side operations such as **searching**, **sorting**, **filtering**, **paging**, and **CRUD** when connected to an **OData V4** service through the `ODataV4Adaptor`. These operations are executed on the server using **OData** query options:
 
 * **$filter** – Applies **filter** conditions and **search** criteria from [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data source.
-* **$orderby** – Applies **sort** descriptors from `DataManagerRequest` for ascending or descending order.
+* **$orderby** – Applies **sort** descriptors from `DataManagerRequest` for **ascending** or **descending** order.
 * **$skip, $top** – Applies **paging** details from `DataManagerRequest` to skip and retrieve records.
 * **$count** – Requests the total record count for **paging** and **aggregation**.
 
@@ -356,7 +356,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling filtering operation
 
-Enable filtering by adding the **Filter** method in the OData configuration and setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** in [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$filter** query option retrieves records based on specified criteria.
+Enable filtering by adding the **Filter** method in the OData configuration and setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** in [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$filter** query option retrieves records based on specified criteria.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -409,7 +409,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling sorting operation
 
-Enable sorting by adding the **OrderBy** method in the OData configuration and setting [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$orderby** query option sorts records based on specified fields.
+Enable sorting by adding the **OrderBy** method in the OData configuration and setting [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$orderby** query option sorts records based on specified fields.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -463,7 +463,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling paging operation
 
-Paging can be enabled using the **SetMaxTop** method in the OData configuration and setting [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true** in [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$skip** and **$top** query options implement paging by skipping a specified number of records and retrieving the required count.
+Paging can be enabled using the **SetMaxTop** method in the OData configuration and setting [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true** in [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$skip** and **$top** query options implement paging by skipping a specified number of records and retrieving the required count.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
