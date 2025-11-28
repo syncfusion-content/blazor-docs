@@ -98,6 +98,4 @@ bound `IconCss` class dynamically. Using the [`GetTreeData`](https://help.syncfu
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMNCBAPAkNGNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView with Dynamic Icon](../images/blazor-treeview-dynamic-icon.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMNCBAPAkNGNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Dynamic Icon](../images/blazor-treeview-dynamic-icon.png)" %}

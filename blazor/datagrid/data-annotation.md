@@ -194,8 +194,8 @@ The `Display` attribute can be used to show user-friendly labels for enum values
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLIijigsHQsZoWd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+The following image shows how Data Annotations are applied to Grid columns in a Blazor application:
 
-![Data annotations in DataGrid](./images/blazor-datagrid-data-annotation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthIZotuimdZMRyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Annotation in Grid](./images/blazor-datagrid-data-annotation.png)" %}
 
 N> Refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to see how data is presented and managed within an application.
