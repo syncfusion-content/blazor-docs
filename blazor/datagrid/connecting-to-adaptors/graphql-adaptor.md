@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind GraphQL Data in Blazor DataGrid | Syncfusion
+title: GraphQL Data Binding in Syncfusion Blazor DataGrid
 description: Learn how to bind data from a GraphQL API to the Syncfusion Blazor DataGrid, including querying, mutation, and integration techniques.
 platform: Blazor
 control: DataGrid
@@ -836,7 +836,7 @@ public class OrdersDataResponse
 **Filtering** parameters are sent through the **Where** property of `DataManagerRequestInput`. Each filter condition includes:
 
 * **Field**: The column name to apply the filter.
-* **Operator**: The comparison operator (e.g., equal, contains, greaterthan).
+* **Operator**: The comparison operator (e.g., equal, contains, greater than).
 * **Value**: The value to compare against.
 * **IgnoreCase**: Indicates whether the comparison should be case-insensitive.
 * **Predicates**: Nested conditions for complex filtering.

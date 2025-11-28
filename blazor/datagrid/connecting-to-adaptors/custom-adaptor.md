@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind Data and Perform CRUD with Syncfusion Blazor DataGrid CustomAdaptor
+title: Bind Data and Perform CRUD Using Syncfusion Blazor DataGrid CustomAdaptor
 description: Learn how to implement custom data binding and enable full CRUD operations using CustomAdaptor in the Syncfusion Blazor DataGrid for flexible data handling.
 platform: Blazor
 control: DataGrid
