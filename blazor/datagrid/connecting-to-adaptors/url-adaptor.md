@@ -10,7 +10,7 @@ documentation: ug
 
 # UrlAdaptor in Syncfusion Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports integration with remote data services through the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. This adaptor enables communication between the DataGrid and custom API endpoints using HTTP requests. It is designed for scenarios where server-side logic handles data operations such as read, create, update, and delete. The API response must return data in the format **{ result, count }** to ensure proper binding and paging within the DataGrid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports integration with remote data services through the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. This adaptor is especially useful when working with custom APIs that include unique logic for handling data and performing CRUD operations. The API response must return data in the format **{ result, count }** to ensure proper binding and paging within the DataGrid.
 
 The `UrlAdaptor` is ideal for applications that require:
 
@@ -703,8 +703,6 @@ public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
 **Single method for performing all CRUD operations:**
 
 To handle all CRUD operations in a single endpoint, specify the API endpoint using the [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl) property. The request object includes the action type (insert, update, or remove) and the corresponding record details.
-
-The following code example illustrates this behavior.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}

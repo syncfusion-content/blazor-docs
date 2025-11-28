@@ -494,7 +494,7 @@ public object GetOrderData()
 
 ## Handling sorting operation
 
-When sorting is applied in the Blazor DataGrid, the `WebApiAdaptor` sends the **$orderby** query parameter to the server. This parameter specifies the fields to sort by and the sort direction (ascending or descending).
+When sorting is applied in the Blazor DataGrid, the `WebApiAdaptor` sends the **$orderby** query parameter to the server. This parameter specifies the fields to sort by and the sort direction (**ascending** or **descending**).
 
 ***Ascending Sorting***
 
