@@ -11,23 +11,9 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides options to customize and manage headers for better data organization and presentation. 
 
-**Key properties for header customization:**
-
-* **HeaderText** – Displays custom text in the column header instead of the default field name.
-* **HeaderTemplate** – Renders custom HTML or Blazor components in the header cell.
-* **HeaderTextAlign** – Aligns header text horizontally using **Left**, **Center**, **Right**, or **Justify**.
-* **Stacked Headers** – Groups multiple columns under a single header for better organization.
-* **Auto-Wrap Header Text** – Wraps header text when it exceeds column width using `AllowTextWrap` and `TextWrapSettings.WrapMode`.
-* **Header Height** – Customizes header height using CSS.
-* **Dynamic Header Text** – Updates header text at runtime using event or methods.
-* **Orientation** – Changes header text orientation (vertical, diagonal, or custom angle) using CSS and `CustomAttributes`.
-* **Tooltip for Header** – Adds custom tooltips to header cells using `HeaderTemplate` and `SfTooltip`.
-* **Customize Header Text Style** – Applies styles such as font, color, and background using CSS, `CustomAttributes`, or `HeaderCellInfo` event.
-
 ## Header text
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid displays the header text of a column from its [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value by default.
-
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid displays the header text of a column from its [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value by default. 
 To override this and provide a custom header title, define the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 {% tabs %}
@@ -438,9 +424,7 @@ The alignment can be changed by setting `HeaderTextAlign` to one of the followin
 
 ## Autowrap the header text
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports wrapping header text when it exceeds the column width.
-
-Enable this feature by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrap mode using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_TextWrapSettings) property.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports wrapping header text when it exceeds the column width. Enable this feature by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrap mode using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_TextWrapSettings) property.
 
 Specify appropriate column widths using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property to ensure proper wrapping.
 
@@ -453,8 +437,6 @@ Wrap modes determine whether header text, content, or both are wrapped:
 > * If column width is not specified, wrapping adjusts based on the grid’s width.
 > * Header text without white space does not wrap.
 > * For cells containing HTML tags, use [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) properties for customization.
-
-The following example demonstrates how to dynamically change the auto-wrap of the header text based on DropDown change:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1068,6 +1050,8 @@ public class OrderDetails
 }    
 {% endhighlight %}
 {% endtabs %}
+
+> The Syncfusion Blazor DataGrid component includes a built-in feature to customize tooltip content for both header cells and content cells. For more information, refer to the documentation [here](https://blazor.syncfusion.com/documentation/datagrid/cell#show-tooltip).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrJirtAJDjvaNlx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

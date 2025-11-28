@@ -13,18 +13,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides fl
 
 Column definitions act as the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) schema for the Grid. Operations such as sorting, filtering, and grouping are performed based on these definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property is essential for mapping `DataSource` values to Grid columns.
 
-**Ways to render columns in Blazor DataGrid**
-
-* **Manually defined columns:** Columns are explicitly declared using [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) for complete control over properties such as [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText), [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width).
-
-* **Auto-generated columns:** When no column definitions are provided or AutoGenerateColumns is enabled, the Grid automatically creates columns based on the properties of the bound data model.
-
-* **Dynamic columns:** Columns can be generated or modified at **runtime** based on requirements or dynamic data sources. This includes scenarios where columns are created using reflection or dynamic objects such as **ExpandoObject** for flexible data structures.
-
-* **Complex data binding:** Dot notation in the `Field` property allows binding to nested object values for hierarchical or complex data structures.
-
-* **Foreign key columns:** Related data from a [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) can be displayed based on the value of a complex column using [GridForeignColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html) configuration.
-
 > * If the column `Field` is not present in the `DataSource`, the column will display **empty** values.
 > * If the `Field` name contains a **dot** operator, it is treated as complex binding.
 > * The `Field` property must be defined for a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) column to enable CRUD and data operations such as filtering and searching.
@@ -468,11 +456,11 @@ Columns can be generated dynamically at runtime by binding data as a list of [Ex
 
 ## Complex data generation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports complex data binding using the dot (.) operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property. This feature is useful for displaying nested or hierarchical data structures.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports complex data binding using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property. This feature is useful for displaying nested or hierarchical data structures.
 
 ### Using local data
 
-To bind local data to the Grid using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, use the dot (.) operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+To bind local data to the Grid using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, use the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 This approach is helpful for binding nested properties like **Employee.FirstName** and **Employee.LastName** from a nested **Employee** object.
 
@@ -577,7 +565,7 @@ Complex data binding can be enabled by adding the [Expand](https://help.syncfusi
 
 [ExpandoObject](https://blazor.syncfusion.com/documentation/datagrid/data-binding/data-binding#expandoobject-binding) is used when properties need to be added dynamically at runtime. This is suitable for scenarios where the data structure is not fixed.
 
-Complex data binding can be achieved by using the dot (.) operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property when working with ExpandoObject.
+Complex data binding can be achieved by using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property when working with ExpandoObject.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -632,7 +620,7 @@ Complex data binding can be achieved by using the dot (.) operator in the [Field
 
 [DynamicObject](https://blazor.syncfusion.com/documentation/datagrid/data-binding#dynamicobject-binding) is used when custom logic for property access or dynamic behavior is required.
 
-Complex data binding can be achieved by using the dot (.) operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field)  property when working with DynamicObject.
+Complex data binding can be achieved by using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field)  property when working with DynamicObject.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -694,7 +682,7 @@ Complex data binding can be achieved by using the dot (.) operator in the [Field
 {% endhighlight %}
 {% endtabs %}
 
-> * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
+> * Data operations and CRUD operations can also be performed on complex DynamicObject binding fields.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBgNdrjLuIpsnpS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
