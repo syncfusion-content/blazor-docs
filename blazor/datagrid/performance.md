@@ -51,7 +51,6 @@ For more information on implementing row virtualization, refer to the [documenta
 **2. Infinite scrolling**
 
 Infinite scrolling loads additional data blocks as the user scrolls vertically. This **“load-on-demand”** approach prevents rendering all rows at once and ensures smooth scrolling.
-Reference: Infinite scrolling documentation
 
 For more information on implementing infinite scrolling, refer to the [documentation](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling).
 
@@ -139,7 +138,7 @@ For detailed guidance, refer to:
 
 To optimize the initial rendering and improve performance during interactions, use the individual NuGet package (**Syncfusion.Blazor.Grid**) along with its corresponding script and CSS files instead of the consolidated package (**Syncfusion.Blazor**).
 
-The consolidated package includes resources for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, which increases the overall package size and script load time. By referencing only the required Grid resources, you reduce payload size and improve rendering speed.
+The consolidated package includes resources for all Syncfusion Blazor components, which increases overall package size and script load time. Referencing only the required Grid resources reduces payload size and improves rendering performance.
 
 For more details, refer to:
 
