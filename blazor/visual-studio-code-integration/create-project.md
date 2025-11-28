@@ -29,8 +29,8 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
     | .NET SDK version | Supported Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Application Type |
     | ---------------- | -------------------------------------------- |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App |
+    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App |
+    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App |
     
     In the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App** application type, the following options are available:
 
@@ -79,7 +79,7 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
     ![FeaturesSection](images/FeaturesSection.png)
 
-6. Select **Next** or the **Configuration** tab to open the Configuration section. Configure the target .NET version (.NET 9.0 or .NET 8.0), theme, HTTPS configuration, localization, authentication type, and options specific to Blazor Web App or Blazor WebAssembly App types.
+6. Select **Next** or the **Configuration** tab to open the Configuration section. Configure the target .NET version (.NET 10.0, .NET 9.0 or .NET 8.0), theme, HTTPS configuration, localization, authentication type, and options specific to Blazor Web App or Blazor WebAssembly App types.
 
      Depending on the selected Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application type, the following authentication options are supported:
 
@@ -150,3 +150,5 @@ The Syncfusion Blazor Calendar, Button, and DataGrid component render code is ad
 | `~/Pages/Home.razor or Index.razor`  | ![Index page updated with Syncfusion components](images/IndexFileChange.png) |
 | `~/Pages/Counter.razor` | ![Counter page updated with Syncfusion components](images/CounterPageChange.png) |
 | `~/Pages/FetchData.razor`  | ![FetchData page updated with Syncfusion DataGrid](images/FetchDataPageChange.png) |
+
+
