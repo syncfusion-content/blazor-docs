@@ -113,7 +113,7 @@ The following example demonstrates, how to render the custom Toolbar using `Temp
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBUsZBuSRVoiYtS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhyWChngaryhJXi?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Render image with text in custom Toolbar
 
@@ -351,7 +351,7 @@ In the **OnChange** method, the text of the selected item is checked to determin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVgWDUiLWIJdsVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDreCMLRKkzmjRdG?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Render SfAutoComplete in custom toolbar
 
@@ -470,7 +470,7 @@ The following example demonstrates how to render the `SfAutoComplete` inside the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthoNTLFzGxGrdMg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBysCBdJXXyIRKP?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Render a component or element using the Toolbar Template
 
@@ -576,4 +576,4 @@ The following example demonstrates how to render a **SfButton** in the Toolbar u
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLUCtDUyMhZgqEX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrSMMhxJXWJIerL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
