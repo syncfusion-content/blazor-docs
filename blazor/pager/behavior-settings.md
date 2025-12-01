@@ -7,7 +7,7 @@ control: Pager
 documentation: ug
 ---
 
-# Behaviour Settings in Pager Component
+# Behavior Settings in Pager Component
 
 This section briefly explains how the Pager API's are helped to render the elements (numeric items and navigation buttons) of the Pager component. The total pages of the Pager component is calculated based on the defined [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) and [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) property.
 
