@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Getting started with Syncfusion Pager Component in Blazor Web App
-description: Documentation for configuring the Syncfusion Blazor Pager component in a Blazor Web App.
+description: Documentation for configuring the Syncfusion Blazor Pager component in a
+ Blazor Web App.
 platform: Blazor
 control: Pager
 documentation: ug
