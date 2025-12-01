@@ -25,9 +25,7 @@ In the following example, selecting a country in the first ComboBox loads its st
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLUsVBmKweKQSWe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Cascading in Blazor ComboBox](./images/cascading/blazor_combobox_cascading.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLUsVBmKweKQSWe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Cascading in Blazor ComboBox](./images/cascading/blazor_combobox_cascading.gif)" %}
 
 ## Cascading with other form field 
 
@@ -41,8 +39,6 @@ In the following example, the ComboBox lists countries, and textboxes display th
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthKWhhGKcenJwTt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Cascading with other form field in Blazor ComboBox](./images/cascading/blazor_combobox_cascading-with-other-form-field.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthKWhhGKcenJwTt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Cascading with other form field in Blazor ComboBox](./images/cascading/blazor_combobox_cascading-with-other-form-field.png)" %}
 
 N> [View the cascading ComboBox demo](https://blazor.syncfusion.com/demos/combobox/cascading?theme=bootstrap5).

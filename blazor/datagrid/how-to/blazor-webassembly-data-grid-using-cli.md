@@ -200,9 +200,7 @@ dotnet run
 
 Once the app starts, navigate to `http://localhost:<port number>` in your browser to view the Grid.
 
-![Blazor DataGrid](../images/blazor-datagrid-component.png)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIZoWghZXnoxDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIZoWghZXnoxDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](../images/blazor-datagrid-component.png)" %}
 
 ### Defining row data
 
@@ -664,9 +662,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoZosUMRYBBVqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor DataGrid](../images/blazor-datagrid.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoZosUMRYBBVqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](../images/blazor-datagrid.gif)" %}
 
 > Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/BlazorApp).
 

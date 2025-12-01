@@ -840,8 +840,6 @@ By default, the CheckBox/Excel filter can only filter the selected items. If fil
 
 The following image describes the above mentioned behavior.
 
-![Add current selection to filter in Blazor DataGrid.](./images/blazor-datagrid-add-current-selection-to-filter.png)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNLDBsuTLPqvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNLDBsuTLPqvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Add current selection to filter in Blazor DataGrid.](./images/blazor-datagrid-add-current-selection-to-filter.png)" %}
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

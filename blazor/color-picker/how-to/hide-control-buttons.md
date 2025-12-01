@@ -17,6 +17,4 @@ Render the Color Picker without control buttons (Apply/Cancel) by setting the [S
 <h4>Choose a color</h4>
 <SfColorPicker ShowButtons="false"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAWLBcqoIBqnae?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Hide control buttons in Blazor Color Picker](./../images/blazor-colorpicker-hide-control.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAWLBcqoIBqnae?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hide Control Buttons in Blazor ColorPicker](./../images/blazor-colorpicker-hide-control.png)" %}

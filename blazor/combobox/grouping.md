@@ -23,9 +23,7 @@ In the following sample, vegetables are grouped according to their category usin
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrAsLhwUmUFCjYX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Grouping in Blazor ComboBox](./images/blazor-combobox-grouping.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrAsLhwUmUFCjYX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor ComboBox](./images/blazor-combobox-grouping.png)" %}
 
 ## Fixed group header
 

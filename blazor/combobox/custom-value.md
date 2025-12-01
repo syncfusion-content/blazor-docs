@@ -13,6 +13,4 @@ Enable users to enter values that are not present in the data by using the [Allo
 
 To persist the new entry to the underlying data source, handle application logic (for example, in value change handling) to add the custom value to the collection. Users can also commit a custom value with the keyboard (such as pressing Enter) when appropriate.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBACVLQKFyiyoKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with add custom value option](./images/blazor-combobox-custom-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBACVLQKFyiyoKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.png)" %}

@@ -187,7 +187,7 @@ You can create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAsse
 
     * For Blazor WebAssembly standalone app, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/wwwroot/index.html** file.
 
-    * For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/Pages/App.razor** file.
+    * For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/Pages/App.razor** file.
 
     ```html
     <head>

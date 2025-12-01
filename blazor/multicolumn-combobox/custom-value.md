@@ -49,6 +49,4 @@ Custom values can be added to the Blazor MultiColumn ComboBox when the typed val
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrzNaLUIDqNTtMS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with custom value](./images/blazor-multicolumn-custom-value.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrzNaLUIDqNTtMS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with custom value](./images/blazor-multicolumn-custom-value.gif)" %}

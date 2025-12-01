@@ -1,26 +1,30 @@
 ---
 layout: post
-title: Selection customization in Blazor DataGrid | Syncfusion
-description: Learn here all about selection in Syncfusion Blazor DataGrid and more.
+title: Selection styling with CSS in Blazor DataGrid | Syncfusion
+description: Learn how to style row and cell selection in Syncfusion Blazor DataGrid using CSS, with tips on isolation and selector specificity.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Selection in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Selection customization in Syncfusion Blazor DataGrid
 
-You can customize the appearance of the selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
+The appearance of selection elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for:
 
-## Customizing the row selection background
+- **Row selection background:** Highlights the entire row when selected.
+- **Cell selection background:** Highlights individual cells when selected.
 
-To customize the appearance of row selection, you can use the following CSS code:
+## Customize row selection background
+
+The **.e-selectionbackground** class styles the background of selected rows in the DataGrid. Use CSS to modify its appearance:
 
 ```css
 .e-grid td.e-selectionbackground {
     background-color: #00b7ea;
 }
 ```
-In this example, the **.e-selectionbackground** class targets the background color of the row selection. You can modify the `background-color` property to change the background color of the selected rows.
+
+Properties such as **background-color**, **color**, and **font-weight** can be adjusted to match the grid’s design.
 
 ![Row selection](../images/style-and-appearance/row-selection.png)
 
@@ -33,10 +37,10 @@ In this example, the **.e-selectionbackground** class targets the background col
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridSelectionSettings  Mode="SelectionMode.Row" Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="TextAlign.Right"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -48,7 +52,7 @@ In this example, the **.e-selectionbackground** class targets the background col
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -60,35 +64,35 @@ In this example, the **.e-selectionbackground** class targets the background col
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
+    public OrderData(int orderId, string customerId, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -100,11 +104,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLoDeNVAaPnabCX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXreMNsoWGPYQGPH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing the cell selection background
+## Customize cell selection background
 
-To customize the appearance of cell selection, you can use the following CSS code:
+The **.e-cellselectionbackground** class styles the background of selected cells in the DataGrid. Apply CSS to customize its appearance:
 
 ```css
 .e-grid td.e-cellselectionbackground {
@@ -112,7 +116,7 @@ To customize the appearance of cell selection, you can use the following CSS cod
 }
 ```
 
-In this example, the **.e-cellselectionbackground** class targets the background color of the cell selection. You can modify the `background-color` property to change the background color of the selected cells.
+Modify visual properties to align with the overall layout and improve clarity.
 
 ![Cell selection](../images/style-and-appearance/cell-selection.png)
 
@@ -121,14 +125,14 @@ In this example, the **.e-cellselectionbackground** class targets the background
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315"  AllowPaging="true">
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridSelectionSettings  Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridSelectionSettings Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="TextAlign.Right"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -136,11 +140,16 @@ In this example, the **.e-cellselectionbackground** class targets the background
     .e-grid td.e-cellselectionbackground {
         background-color: #00b7ea;
     }
+    /* Optional: visible focus for cell mode */
+    .e-grid td.e-focused {
+        outline: 2px solid #005a9e;
+        outline-offset: -2px;
+    }
 </style>
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
@@ -152,35 +161,35 @@ In this example, the **.e-cellselectionbackground** class targets the background
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
+internal sealed class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    private static readonly List<OrderData> Data = new();
 
     public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.OrderDate = orderDate;
+        OrderID = orderID;
+        CustomerID = customerID;
+        Freight = freight;
+        OrderDate = orderDate;
     }
 
-    public static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Data.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
         }
 
-        return Orders;
+        return Data;
     }
 
     public int OrderID { get; set; }
@@ -192,4 +201,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtByjeXBpZNiRnBQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIWDsoivLIZrXK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

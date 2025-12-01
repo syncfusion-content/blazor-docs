@@ -727,3 +727,5 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLejIZoMcsYDjdk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> When **Select All** is used, only records visible in the current view are selected. The **SelectedRecords** property shows the count for the current page. As navigation continues to other pages, new records load on demand, and **SelectedRecords** includes selections from each visited page. This design ensures efficient data retrieval with paging. Selecting all records across the entire dataset and retrieving them at once is not supported when **Select All** is enabled.

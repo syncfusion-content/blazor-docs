@@ -21,9 +21,7 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhJZahKTtSnegNR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with local data virtualization](./images/blazor_multicolumn_combobox_virtualization.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhJZahKTtSnegNR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with virtualization](./images/blazor_multicolumn_combobox_virtualization.gif)" %}
 
 ## Remote data
 
@@ -33,6 +31,4 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLfjurUfXpSdkUp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with remote data virtualization](./images/blazor_multicolumn_combobox_remote-data-virtualization.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLfjurUfXpSdkUp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with virtualization](./images/blazor_multicolumn_combobox_remote-data-virtualization.gif)" %}

@@ -40,9 +40,7 @@ Enable the built-in no color tile by setting the [NoColor](https://help.syncfusi
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUsLLGKoIFoxSv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Color Picker with default no color](./../images/blazor-colorpicker-nocolor.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUsLLGKoIFoxSv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker with Default No Color](./../images/blazor-colorpicker-nocolor.png)" %}
 
 > If the [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property is enabled, make sure to disable the [ModeSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ModeSwitcher) property.
 
@@ -130,6 +128,4 @@ The following example demonstrates a custom no color option alongside a palette 
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthAsLLwAyxsVKHl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Color Picker with custom no color](./../images/blazor-colorpicker-custom-nocolor.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthAsLLwAyxsVKHl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker with Custom No Color](./../images/blazor-colorpicker-custom-nocolor.png)" %}

@@ -28,9 +28,7 @@ Modify the default value in `.res` file added to Resource folder. Enter the key 
 <SfColorPicker></SfColorPicker>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKsVVwqSUTjofI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Localization in Blazor Color Picker](./images/blazor-colorpicker-localization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKsVVwqSUTjofI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Localization in Blazor ColorPicker](./images/blazor-colorpicker-localization.png)" %}
 
 ## RTL
 
@@ -45,6 +43,4 @@ In the following example, the Color Picker is rendered in RTL mode with an Arabi
 <SfColorPicker EnableRtl="true"></SfColorPicker>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBUsrLmqSKnHwGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Right to left in Blazor Color Picker](./images/blazor-colorpicker-right-to-left.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBUsrLmqSKnHwGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Right to Left in Blazor ColorPicker](./images/blazor-colorpicker-right-to-left.png)" %}

@@ -19,8 +19,6 @@ In the following sample, the [ShowButtons](https://help.syncfusion.com/cr/blazor
 <h4>Choose a color</h4>
 <SfColorPicker Mode="ColorPickerMode.Palette" ModeSwitcher="false" ShowButtons="false"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKiLLGUoxTFJzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Render palette alone in Blazor Color Picker](./../images/blazor-colorpicker-with-palette-alone.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKiLLGUoxTFJzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Rendering Palette Alone in Blazor ColorPicker](./../images/blazor-colorpicker-with-palette-alone.png)" %}
 
 N> To display the palette embedded in the page instead of in a popup, set `Inline="true"`. To render `Picker` alone, specify the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property as 'Picker'.

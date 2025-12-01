@@ -20,8 +20,6 @@ The following sample shows inline rendering of the Color Picker.
 <SfColorPicker Value="035a" Inline="true" ShowButtons="false"></SfColorPicker>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKsVrQgIVKJnGz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Inline rendering in Blazor Color Picker](./images/blazor-colorpicker-inline-rendering.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKsVrQgIVKJnGz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Inline Rendering in Blazor ColorPicker](./images/blazor-colorpicker-inline-rendering.png)" %}
 
 N> The `ShowButtons` property is disabled in this sample because control buttons are not needed for inline rendering. For details about control buttons functionality, see [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons).

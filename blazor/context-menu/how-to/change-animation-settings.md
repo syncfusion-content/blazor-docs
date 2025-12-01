@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change animation settings in Blazor ContextMenu Component | Syncfusion
-description: Checkout and learn here all about Change animation settings in Syncfusion Blazor ContextMenu component and more.
+description: Learn how to customize animation settings in Syncfusion Blazor ContextMenu and explore advanced options for smooth, interactive menus and more actions.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -48,6 +48,4 @@ The following sample illustrates how to open Context Menu with `FadeIn` effect w
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLAirrwgacxYkyN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ContextMenu with Animation](./../images/blazor-contextmenu-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLAirrwgacxYkyN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu with Animation](./../images/blazor-contextmenu-component.png)" %}

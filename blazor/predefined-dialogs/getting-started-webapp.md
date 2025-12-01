@@ -201,7 +201,7 @@ N> See [Blazor themes](https://blazor.syncfusion.com/documentation/appearance/th
 * Add `SfDialogProvider` in the **~/Components/Layout/MainLayout.razor** file.
 
 {% tabs %}
-{% highlight razor tabtitle=".NET 9 & .NET 8 (~/MainLayout.razor)" %}
+{% highlight razor tabtitle=".NET 10, .NET 9 & .NET 8 (~/MainLayout.razor)" %}
 
 <Syncfusion.Blazor.Popups.SfDialogProvider/>
 

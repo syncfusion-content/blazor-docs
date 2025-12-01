@@ -21,6 +21,4 @@ In the following sample, the [ShowRecentColors](https://help.syncfusion.com/cr/b
 <h4>Choose a color</h4>
 <SfColorPicker ShowRecentColors="true"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKiLLGUoxTFJzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Show recent colors in Blazor Color Picker](./../images/blazor-colorpicker-show-recent-color.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKiLLGUoxTFJzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Rendering Show Recent color in Blazor ColorPicker](./../images/blazor-colorpicker-show-recent-color.png)" %}

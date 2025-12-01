@@ -29,6 +29,4 @@ When the ComboBox input is valid, the form is ready to be submitted. If the inpu
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWVrGUcRBhJQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with validation inside an EditForm](./images/form-validation/blazor_combobox_inside-editform.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWVrGUcRBhJQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox inside editform](./images/form-validation/blazor_combobox_inside-editform.png)" %}
