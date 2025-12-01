@@ -101,9 +101,7 @@ For independent checked states, allowing child nodes to be checked or unchecked 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSitCBUvmzMcKy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSitCBUvmzMcKy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)" %}
 
 ## Check Nodes through Data Binding
 
@@ -277,9 +275,7 @@ The Blazor TreeView component enables checking specific nodes upon initial rende
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSMZsVqvvPrMXI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView](./images/checkednodes.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSMZsVqvvPrMXI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/checkednodes.png)" %}
 
 ## Check and Uncheck All Nodes
 
@@ -384,9 +380,7 @@ The example demonstrates the usage of these methods within the context of a butt
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrICXiVgusUIOKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor TreeView](./images/check-uncheck.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrICXiVgusUIOKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/check-uncheck.png)" %}
 
 ## Get Checked Nodes
 
@@ -541,9 +535,7 @@ The Blazor TreeView component provides the capability to pre-select specific nod
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVyCtMrKkBdTNdz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Get checked nodes](./images/blazor-treeview-get-checked-nodes.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVyCtMrKkBdTNdz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Get checked nodes](./images/blazor-treeview-get-checked-nodes.png)" %}
 
 ## Single Selection with CheckBox
 
@@ -748,9 +740,7 @@ The Blazor TreeView component can render checkboxes before each node when [`Show
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLosZWBgaTqlQtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Hide CheckBox for parent nodes](./images/blazor-treeview-remove-parent-checkbox.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLosZWBgaTqlQtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hide CheckBox for parent nodes](./images/blazor-treeview-remove-parent-checkbox.png)" %}
 
 ## Cancel the Check Action
 

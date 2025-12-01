@@ -139,6 +139,4 @@ The following example demonstrates customizing node appearance at various levels
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhIWNihKvBuqmZc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Nodes based on Levels in Blazor TreeView](../images/blazor-treeview-with-custom-nodes.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhIWNihKvBuqmZc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Nodes based on Levels in Blazor TreeView](../images/blazor-treeview-with-custom-nodes.png)" %}

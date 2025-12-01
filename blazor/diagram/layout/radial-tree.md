@@ -141,11 +141,9 @@ Create a radial tree layout with a `DataSource`. The following code example illu
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhSMjjRTccRZEwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/RadialTreeWithDataSource).
 
-![Blazor Radial Tree Diagram](../images/RadialTreeUG.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhSMjjRTccRZEwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Radial Tree Diagram](../images/RadialTreeUG.png)" %}
 
 >**Note:** In `DataSourceSettings`, the `ID` and `ParentID` properties are string. The provided `DataSource` should have a parent-child relationship. It is necessary for at least one node to have an empty `ParentID`.
 

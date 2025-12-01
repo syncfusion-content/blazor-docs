@@ -1049,7 +1049,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 * For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, the theme is changed based on query string at the **~/Components/App.razor** file
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/App.razor)" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/App.razor)" %}
 
 @using Microsoft.AspNetCore.WebUtilities;
 @inject NavigationManager UrlHelper;
@@ -1166,7 +1166,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 1. For **Blazor Server application**, the theme is changed based on query string at the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/App.razor)" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/App.razor)" %}
 
 @page "/"
 @namespace BlazorThemeSwitcher.Pages

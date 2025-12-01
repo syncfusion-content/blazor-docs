@@ -19,9 +19,7 @@ Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVTNaLAqYKlJFoq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVTNaLAqYKlJFoq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)" %}
 
 <!-- ## Color of the placeholder text
 
@@ -43,9 +41,7 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBfDurAqkybkRoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png) 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBfDurAqkybkRoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png)" %}
 
 ## Floating label
 
@@ -67,9 +63,7 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrzXarAUYxRzqxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with float label](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrzXarAUYxRzqxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with float label](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel.gif)" %}
 
 <!-- ## Customizing the float label element’s focusing color
 

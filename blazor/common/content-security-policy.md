@@ -22,7 +22,7 @@ Include the following directives in the CSP policy for Syncfusion<sup style="fon
 
 These directives should be included in the `<head>` tag of the application's webpage, typically
 
-* For **.NET 8 and .NET 9** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), inside the `<head>` of the **~/Components/App.razor** file.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), inside the `<head>` of the **~/Components/App.razor** file.
 
 * For **Blazor WebAssembly Standalone App**, inside the `<head>` of the **wwwroot/index.html** file.
 
