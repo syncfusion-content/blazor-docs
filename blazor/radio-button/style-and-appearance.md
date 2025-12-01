@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor RadioButton Component
 
-To modify the RadioButton appearance, you need to override the default CSS of RadioButton component. Find the list of CSS classes and its corresponding section in RadioButton. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the RadioButton appearance, override the component’s default CSS. The following table lists common CSS selectors and their purposes within the RadioButton. Ensure custom CSS is loaded after the Syncfusion theme so overrides take effect. A custom theme for all controls can also be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |

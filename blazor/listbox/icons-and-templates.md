@@ -11,9 +11,9 @@ documentation: ug
 
 ## Icons
 
-To place the icon on a listbox, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the list.
+To display an icon for each ListBox item, map the [IconCss field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_IconCss) to a CSS class name. By default, the icon is positioned on the left side of the item text. Icon glyphs are provided by the Syncfusion theme CSS; custom icons can also be supplied via user-defined CSS classes.
 
-In the following sample, icon classes are mapped with `IconCss` field.
+In the following example, icon classes are mapped to the `IconCss` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -66,7 +66,7 @@ In the following sample, icon classes are mapped with `IconCss` field.
 </style>
 ```
 
-![Blazor ListBox with Icons](./images/blazor-listbox-icons.png)
+![Blazor ListBox with item icons](./images/blazor-listbox-icons.png)
 
 ## Templates
 
@@ -172,4 +172,4 @@ ListBox items can be customized according to the requirement using [ItemTemplate
 
 ```
 
-![Blazor ListBox with Icon](./images/blazor-listbox-icon-template.png)
+![Blazor ListBox with icon](./images/blazor-listbox-icon-template.png)
