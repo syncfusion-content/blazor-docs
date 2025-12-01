@@ -529,7 +529,9 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVSNTCGsQlftohG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting with detail template](./images/exporting-pdf-detail-template.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLSWWizfuSJpYel?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Exporting with detail template](./images/exporting-pdf-detail-template.gif)
 
 > If [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_ColumnCount) is not provided or is less than the number of cells in the first row of Headers/Rows, the columns in the detail row of the PDF Grid will be generated based on the count of cells in the first row of Headers/Rows.
 
@@ -809,4 +811,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtByZTscrNDihvvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiMszfOvlznUh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.gif)
