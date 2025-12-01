@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Pager Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enables navigation through large collections by dividing content into multiple pages. This guide explains how to integrate the [SfPager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor WebAssembly** application using [Visual Studio](https://visualstudio.microsoft.com/vs/) or **Visual Studio Code**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enables navigation through large collections by dividing content into multiple pages. This guide explains how to integrate the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor WebAssembly** application using [Visual Studio](https://visualstudio.microsoft.com/vs/) or **Visual Studio Code**.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Nfg8b_bbIfI" %}
@@ -239,7 +239,7 @@ Add the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-
 
 **2. Add Pager component**
 
-Add the [SfPager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in the same file (**Pages/Index.razor**) below the **ListView**. Configure the essential properties:
+Add the `Pager` component in the same file (**Pages/Index.razor**) below the **ListView**. Configure the essential properties:
 
 * [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) – defines the number of items displayed per page.
 * [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemsCount) – specifies the count of numeric pager buttons.
@@ -252,7 +252,7 @@ Add the [SfPager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
 </SfPager>
 ```
 
-> For additional properties of [SfPager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html), refer to the API Reference.
+> For additional properties of [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html), refer to the API Reference.
 
 **3. Integrate Pager with ListView**
 
