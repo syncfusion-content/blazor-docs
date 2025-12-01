@@ -1,27 +1,19 @@
 ---
 layout: post
-title: Behavior Settings in Blazor Pager Component | Syncfusion
-description: Learn how to configure core behavior settings page size, numeric item count, total item count, and more in the Syncfusion Blazor Pager component.
+title: Behaviour Settings in Blazor Pager Component | Syncfusion
+description: Checkout here and learn about all the basic functionalities of rendering the Syncfusion Blazor Pager component and much more.
 platform: Blazor
 control: Pager
 documentation: ug
 ---
 
-# Behavior Settings in Pager Component
+# Behaviour Settings in Pager Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component includes properties that control its rendering behavior, such as numeric items and navigation buttons. The total number of pages is determined by the values of the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) and [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) properties.
-
-**Core properties of the pager component**
-
-* [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) – Specifies the number of items displayed per page.
-* [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemsCount) – Defines the number of numeric items shown for navigation.
-* [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) – Indicates the total number of items in the data collection.
-* [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_CurrentPage) – Sets the page to display initially.
-* [ShowPagerMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ShowPagerMessage) – Controls the visibility of the pager information message.
+This section briefly explains how the Pager API's are helped to render the elements (numeric items and navigation buttons) of the Pager component. The total pages of the Pager component is calculated based on the defined [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) and [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) property.
 
 ## Page size
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property to define the number of items displayed per page. The default value is **12**.
+The Pager component provides an option to define the number of items to be displayed per page. This can be achieved by using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property. The default value of the `PageSize` property is "12."
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -33,7 +25,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component prov
 
 ## Numeric items count
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides the [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemsCount) property to define how many numeric navigation items are displayed in the pager. The default value is **10**.
+The Pager component provides an option to define the number of numeric items to be displayed in the Pager for navigation. This can be achieved by using the [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemsCount) property. The default value of the `NumericItemsCount` property is "10."
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -45,7 +37,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component prov
 
 ## Total items count
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides the [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) property to specify the total number of items in the data collection. This value is used to calculate the total number of pages and render numeric items and navigation buttons.
+The Pager component provides an option to define the total number of items available in the assigned data collection, which is used to render the elements(numeric items, navigation buttons) of Pager component. This can be achieved by using the [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) property of the Pager.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -57,7 +49,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component prov
 
 ## Current page
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides the [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_CurrentPage) property to specify which page is displayed initially when the pager is rendered. The default value is **1**.
+Blazor Pager component support to define which page to be displayed currently in the Pager using the [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_CurrentPage) property. The default value of the `CurrentPage` property is "1".
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -69,7 +61,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component prov
 
 ## Show pager message
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides the [ShowPagerMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ShowPagerMessage) property to control the visibility of the pager information message. The default value is **true**. Setting this property to **false** hides the message from the pager container.
+The Pager component provides an option to show or hide the Pager information in the Pager container. This can be achieved by using the [ShowPagerMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ShowPagerMessage) property. The default value of the `ShowPagerMessage` is **true**. Setting `ShowPagerMessage` to **false** hides the Pager information.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
