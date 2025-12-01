@@ -11,11 +11,11 @@ documentation: ug
 
 ## Types
 
-This section explains the the various types of OTP (One-Time Password) input component, explaining their default behaviors and appropriate use cases.
+This section explains the available types of the OTP (one-time password) input component, their default behaviors, and appropriate use cases.
 
 ### Number type
 
-You can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Type) property to [Number](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputType.html#Syncfusion_Blazor_Inputs_OtpInputType_Number) to use this input type as number. This is ideal for OTP input scenarios with numeric-only codes. By default `Type` property is `Number`.
+Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Type) property to [Number](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputType.html#Syncfusion_Blazor_Inputs_OtpInputType_Number) to accept only numeric characters. This is ideal for OTP scenarios with digit-only codes. The default `Type` is `Number`.
 
 ```cshtml
 
@@ -25,11 +25,11 @@ You can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor OTP Input Component with Number Type](images/blazor-otp-number.png)
+![Blazor OTP input component with number type](images/blazor-otp-number.png)
 
 ### Text type
 
-You can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Type) property to [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputType.html#Syncfusion_Blazor_Inputs_OtpInputType_Text) to use this input type as text. This is suitable when the OTP input need to include both letters and numbers.
+Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Type) property to [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputType.html#Syncfusion_Blazor_Inputs_OtpInputType_Text) to allow alphanumeric input. Use this when the OTP may include both letters and numbers.
 
 ```cshtml
 
@@ -39,11 +39,11 @@ You can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor OTP Input Component with Text Type](images/blazor-otp-text.png)
+![Blazor OTP input component with text type](images/blazor-otp-text.png)
 
 ### Password type
 
-You can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Type) property to [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputType.html#Syncfusion_Blazor_Inputs_OtpInputType_Password) to use this input type as password in the OTP Input.
+Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Type) property to [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputType.html#Syncfusion_Blazor_Inputs_OtpInputType_Password) to mask entered characters for privacy while typing. The underlying value remains the same; only the display is obscured.
 
 ```cshtml
 
@@ -53,11 +53,11 @@ You can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor OTP Input Component with Password Type](images/blazor-otp-password.png)
+![Blazor OTP input component with password type](images/blazor-otp-password.png)
 
 ## Value
 
-You can specify the value of OTP Input by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Value) property.
+Specify the initial OTP value by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Value) property. 
 
 ```cshtml
 
@@ -67,4 +67,4 @@ You can specify the value of OTP Input by using the [Value](https://help.syncfus
 
 ```
 
-![Blazor OTP Input Component with Value](images/blazor-otp-number.png)
+![Blazor OTP input component with value](images/blazor-otp-number.png)

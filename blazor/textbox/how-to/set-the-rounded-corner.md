@@ -9,7 +9,7 @@ documentation: ug
 
 # Set the Rounded Corner in Blazor TextBox Component
 
-Render the TextBox with `rounded corner` by adding the `e-corner` class to the input parent element.
+Render the TextBox with rounded corners by applying a custom CSS class via the component’s [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_CssClass) property and styling the input wrapper.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

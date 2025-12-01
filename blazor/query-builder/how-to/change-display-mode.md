@@ -9,7 +9,7 @@ documentation: ug
 
 # Change Display Mode in Blazor QueryBuilder Component
 
-The QueryBuilder allows to view Vertically or Horizontally. To enable this feature, you can set the [DisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DisplayMode) property.
+Query Builder can render in a horizontal or vertical layout. Configure the layout by setting the [DisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DisplayMode) property.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder

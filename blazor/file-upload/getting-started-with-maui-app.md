@@ -3,13 +3,13 @@ layout: post
 title: Getting Started with FileUpload in Blazor MAUI App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor FileUpload Component in Blazor MAUI App.
 platform: Blazor
-control: FileUpload
+control: File Upload
 documentation: ug
 ---
 
 # Getting Started with Blazor File Upload Component
 
-This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
+This guide describes how to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component into a .NET MAUI Blazor application. It covers setup using Visual Studio and Visual Studio Code, adding required packages, registering resources, and rendering the component.
 
 {% tabcontents %}
 
@@ -17,15 +17,21 @@ This section explains you through the step-by-step process of integrating the Sy
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+To use .NET MAUI project templates, install the Mobile development with .NET workload for Visual Studio. For details, refer to the .NET MAUI installation instructions or the Syncfusion Blazor extension documentation.
+
+- .NET MAUI installation: https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin
+- Syncfusion Blazor Extension: https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs and Themes NuGet in the app
 
-To add **Blazor File Upload**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To use the Blazor File Upload component, install the following packages via the NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Packages for Solution):
+
+- Syncfusion.Blazor.Inputs
+- Syncfusion.Blazor.Themes
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -44,11 +50,14 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Ensure the .NET MAUI workload is installed. Visual Studio Code uses the .NET CLI to create and manage projects. For details, see the .NET MAUI installation guide and the Syncfusion Blazor extension documentation for VS Code.
+
+- .NET MAUI installation: https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code
+- Syncfusion Blazor Extension (VS Code): https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio Code via [Microsoft templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs and Themes NuGet in the App
 
@@ -74,7 +83,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespace.
+Open **~/_Imports.razor** and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -125,7 +134,7 @@ namespace MauiBlazorWindow;
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and scripts are provided via Static Web Assets from NuGet. Add the references to the head section of ~/wwwroot/index.html in the MAUI project.
 
 ```html
 <head>
@@ -159,26 +168,20 @@ The most basic way to render the File Upload component is by adding the `<SfUplo
 
 ### How to Run the Sample on Windows
 
-Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+Run the sample in Windows Machine mode to host the .NET MAUI Blazor app on Windows.
 
 ![Blazor FileUpload Component](./images/blazor-fileupload-maui-app.png)
 
 ### How to Run the Sample on Android
 
-To run the Blazor DataGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the Blazor File Upload component in an Android .NET MAUI app using the Android emulator, follow these steps:
 
-Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
+- Install and launch the Android emulator: https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows
 
-N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
+N> If issues occur with the Android Emulator, see Troubleshooting Android Emulator for guidance: https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting.
 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component in your default web browser.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.png)" %}
-
-*   Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component in your default web browser.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.png)" %}
 
 ![Blazor File Upload Basic Component](images/blazor-fileupload-basic.gif)
 
@@ -239,10 +242,7 @@ This example demonstrates how to use the [`ValueChange`](https://help.syncfusion
 
 N> When saving files directly in a Blazor Server application using [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) and [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload), the files are saved on the server where the Blazor Server app is running, not on the client's machine. You need appropriate file system permissions for the server process to write to the specified directory. Also, ensure the target directory (`wwwroot/uploads` in this example) exists or is created programmatically. In a production environment, consider secure storage solutions for uploaded files.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVyZkrqBvaSlvht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor File Upload ValueChange Event](images/blazor-fileupload-valuechange.gif)
-
 
 ## Memory stream
 
@@ -311,8 +311,6 @@ This example demonstrates how to read the content of an uploaded file into a [Me
 
 N> When using `MemoryStream` for large files, be mindful of server memory consumption. If you expect very large files, consider processing them in chunks or saving them to temporary storage before processing to avoid out-of-memory exceptions. The `long.MaxValue` in `OpenReadStream` indicates the maximum buffer size. In a Blazor Server app, `Stream` operations occur on the server.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreNaLUhdwxzvHS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor File Upload Memory Stream Example](images/blazor-fileupload-memorystream.gif)
 
 
@@ -351,8 +349,6 @@ This example shows how to use the [`Created`](https://help.syncfusion.com/cr/bla
 {% endtabs %}
 
 N> The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Created) event is useful for client-side JavaScript interop if you need to manipulate the DOM elements of the uploader component immediately after it's ready. However, for most Blazor-specific customizations (like custom templates), you should use the built-in Blazor features.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLyNuVUBGtPZrdo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor File Upload Created Example](images/blazor-fileupload-created.gif)
 
@@ -407,8 +403,6 @@ This example demonstrates how to use the [FileSelected Event](https://help.syncf
 
 N> Setting `args.Cancel = true` in the `FileSelected` event will prevent the file (or files if `args.Files` contains multiple) from being added to the uploader's internal file list. This is a client-side validation and should be complemented with server-side validation for robust security and data integrity.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLIZuBUVwEJoJpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor File Upload File Selected Example](images/blazor-fileupload-fileselected.gif)
 
 
@@ -441,7 +435,7 @@ This example demonstrates how to use [`OnFileListRender`](https://help.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload).
+N> View the sample on GitHub for a complete getting-started example: https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload.
 
 ## See also
 
