@@ -18,7 +18,7 @@ Before integrating `Speech-to-Text`, ensure the following:
 1. The Syncfusion AI AssistView component is properly set up in your Blazor application.
     - [Blazor Getting Started Guide](../getting-started)
 
-2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
+2. The AI AssistView component is integrated with Azure OpenAI
     - [Integration of Azure OpenAI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
 
 ## Configure Speech-to-Text
