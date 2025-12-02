@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can display values from a dictionary by using a column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). Because a dictionary is not a scalar field, the column cannot bind directly to it. Instead, the template accesses the dictionary via the row item and renders the corresponding value by matching the row’s key with the dictionary key.
 
-In the following example, the ShipName data is stored as a Dictionary and accessed inside the GridColumn template using the KeyValuePair type. The row’s OrderID is compared with the dictionary key, and the matching value is displayed. This approach lets each row retrieve and render the appropriate dictionary value from a shared lookup at runtime. For efficiency, ensure that a consistent key (such as the primary key) is used for the lookup, and consider a direct lookup pattern when rendering complex templates.
+In the following example, the **ShipName** data is stored as a **Dictionary** and accessed inside the GridColumn template using the KeyValuePair type. The row’s **OrderID** is compared with the dictionary key, and the matching value is displayed. This approach lets each row retrieve and render the appropriate dictionary value from a shared lookup at runtime. For efficiency, ensure that a consistent key (such as the primary key) is used for the lookup, and consider a direct lookup pattern when rendering complex templates.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

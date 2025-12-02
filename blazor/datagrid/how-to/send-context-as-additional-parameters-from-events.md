@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Sending context as additional parameters in Blazor DataGrid events
+# Sending Context as additional Parameters in Blazor DataGrid Events
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports passing the current row context to event handlers. This approach is useful for updating Grid fields based on interactions inside the edit dialog, enabling immediate, in-place updates to the bound data.
 
@@ -22,8 +22,6 @@ To implement this, follow these steps:
       * context: The template context cast to the row type (Order) and stored in a local variable (order).
 
    4. Inside the handler, update properties of the current row (for example, ShipCity and ShipCountry) based on the selected ComboBox value. Because the Grid is bound to the same data object instance, changes are reflected immediately in the Grid UI.
-
-The following example demonstrates this approach:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
