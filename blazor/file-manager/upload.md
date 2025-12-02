@@ -39,6 +39,32 @@ The screenshot below shows after successfully selecting a directory it uploads a
 
 ![Blazor File Manager with DirectoryUpload](images/blazor-filemanager-directoryupload.png)
 
+## Sequential Upload
+
+The [SequentialUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_SequentialUpload) property controls whether users can upload files one by one in a sequential manner. 
+
+To enable sequential upload, set the `SequentialUpload` property to `true` in the [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) configuration.
+
+When set to `true`, the selected files will process sequentially (one after the other) to the server. If the file uploaded successfully or failed, the next file will upload automatically in this sequential upload. This feature helps to reduce the upload traffic and reduce the failure of file upload.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerUploadSettings SequentialUpload  = "true"></FileManagerUploadSettings>
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/test/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+```
+The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `SequentialUpload` property works in the Blazor File Manager component.
+
+![Blazor File Manager with SequentialUpload](images/blazor-filemanager-sequentialupload.png)
+
 ## Chunk Upload
 
 The [ChunkSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_ChunkSize) property specifies the size of each chunk when uploading large files. It divides the file into smaller parts, which are uploaded sequentially to the server
