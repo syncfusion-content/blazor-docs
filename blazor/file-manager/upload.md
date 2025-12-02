@@ -61,7 +61,7 @@ When set to `true`, the selected files will process sequentially (one after th
 </SfFileManager>
 
 ```
-The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `SequentialUpload` property works in the Blazor File Manager component.
+The screenshot below shows that each file begins uploading only after the previous one completes. This demonstrates how the `SequentialUpload` property works in the Blazor File Manager component.
 
 ![Blazor File Manager with SequentialUpload](images/blazor-filemanager-sequentialupload.png)
 
