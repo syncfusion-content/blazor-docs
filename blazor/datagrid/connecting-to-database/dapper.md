@@ -45,7 +45,7 @@ Dapper simplifies database operations by:
 * Mapping query results to strongly typed C# models without manual data transformation.
 * Reducing boilerplate code compared to traditional ADO.NET approaches.
 
-When combined with S**ystem.Data.SqlClient**, Dapper offers a streamlined way to interact with SQL Server in Blazor applications.
+When combined with **System.Data.SqlClient**, Dapper offers a streamlined way to interact with SQL Server in Blazor applications.
 
 ## Binding data using Dapper from Microsoft SQL Server via an API service.
 
@@ -85,10 +85,10 @@ Create a controller named **GridController.cs** under the Controllers folder.
 
 **Step 4: Implement Data Retrieval Logic**
 
-In the controller, establish a connection to SQL Server using **SqlConnection** which implements IDbConnection interfface. Execute the query using **Dapper** and map the results to a strongly typed collection.
+In the controller, establish a connection to SQL Server using **SqlConnection** which implements IDbConnection interface. Execute the query using **Dapper** and map the results to a strongly typed collection.
 
 {% tabs %}
-{% highlight razor tabtitle="GridController.cs"%}
+{% highlight razor tabtitle="GridController.cs" %}
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Syncfusion.Blazor.Data;
@@ -210,7 +210,7 @@ Access the theme stylesheet and script from NuGet using [Static Web Assets](http
 The [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component supports multiple adaptors for remote data binding. For API services, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor) and specify the service endpoint in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
@@ -272,7 +272,7 @@ The [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.S
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
     public class GridController : ControllerBase
     {
         /// <summary>
@@ -646,7 +646,7 @@ Follow the procedure described in [Connecting Blazor DataGrid to an API service]
 
 > * Set the rendermode to **InteractiveServer** or **InteractiveAuto** based on application configuration.
 
-**Step 2: Install MySql NuGet Package**
+**Step 2: Install MySQL NuGet Package**
 
 Add the following packages to the Blazor application:
 
@@ -716,7 +716,7 @@ Inject a custom service into the `CustomAdaptor` and configure the component as 
     SfGrid<Order> Grid { get; set; }
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
   public class Order
   {
       public int? OrderID { get; set; }
@@ -1128,7 +1128,7 @@ Each method can be customized to execute SQL commands against the Microsoft SQL 
 To enable insertion in a Blazor DataGrid using a custom data binding approach, override the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) or [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) method of the `CustomAdaptor` class. This method is invoked when a new record is added to the grid.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Inserts a new data item into the data collection.
 /// </summary>
@@ -1144,7 +1144,7 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task AddOrderAsync(Order Value)
 {
     //Create query to insert the specific into the database by accessing its properties
@@ -1164,7 +1164,7 @@ public async Task AddOrderAsync(Order Value)
 To enable record updates in a Blazor DataGrid using a custom data binding approach, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the `CustomAdaptor` class. This method is triggered when an existing record is modified in the grid.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Updates an existing data item in the data collection.
 /// </summary>
@@ -1181,7 +1181,7 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task UpdateOrderAsync(Order Value)
 {
     //Create query to update the changes into the database by accessing its properties
@@ -1201,7 +1201,7 @@ public async Task UpdateOrderAsync(Order Value)
 To enable deletion in a Blazor DataGrid using a custom data binding approach, override the [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_)  method of the `CustomAdaptor` class. This method is invoked when a record is removed from the grid.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Removes a data item from the data collection.
 /// </summary>
@@ -1218,7 +1218,7 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task RemoveOrderAsync(int? Key)
 {
     //Create query to remove the specific from database by passing the primary key column value.
