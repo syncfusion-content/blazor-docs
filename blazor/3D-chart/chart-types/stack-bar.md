@@ -50,9 +50,7 @@ To render a `100% Stacked Bar Chart` series, use series `Type` as `StackingBar10
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTtxCUBNtIGBRY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Stacked Bar100 3D Chart](../images/chart-types-images/blazor-stacked-bar-100-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTtxCUBNtIGBRY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Bar100 3D Chart](../images/chart-types-images/blazor-stacked-bar-100-chart.png)" %}
 
 ## 100% Cylindrical Stacked Bar chart
 
@@ -95,9 +93,7 @@ To render a 100% cylindrical Stacked Bar chart, set the `ColumnFacet`  property 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBTtdiqrXMpthaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Cylindrical Column100 3D Chart](../images/chart-types-images/blazor-cylindricaal-stacked-bar-100-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBTtdiqrXMpthaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Cylindrical Column100 3D Chart](../images/chart-types-images/blazor-cylindricaal-stacked-bar-100-chart.png)" %}
 
 ## Series customization
 
@@ -143,6 +139,4 @@ The following properties can be used to customize the `100% Stacked Bar` series.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJNnsqhNsRoHio?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Stacked Bar100 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-bar-100-chart-custom-series.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJNnsqhNsRoHio?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Bar100 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-bar-100-chart-custom-series.png)" %}

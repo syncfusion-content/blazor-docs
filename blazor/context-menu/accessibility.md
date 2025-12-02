@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor ContextMenu Component | Syncfusion
-description: Explore Syncfusion Blazor ContextMenu's WAI-ARIA support, keyboard interaction, and compliance with WCAG, Section 508, and ADA accessibility standards.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor ContextMenu Component
 
-The Blazor ContextMenu component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) to ensure a high level of accessibility.
+The Blazor ContextMenu component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The component's accessibility compliance can be summarized as follows:
+The accessibility compliance for the Blazor ContextMenu component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -37,9 +37,9 @@ The component's accessibility compliance can be summarized as follows:
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA Attributes
+## WAI-ARIA attributes
 
-The Blazor ContextMenu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to ensure accessibility. The following ARIA attributes are applied to the Blazor ContextMenu component and its elements:
+The Blazor ContextMenu component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor ContextMenu component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -48,9 +48,9 @@ The Blazor ContextMenu component follows the [WAI-ARIA](https://www.w3.org/WAI/A
 | `aria-expanded` | Indicates whether the subtree can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
 | `aria-label` | Indicates the menu item text. |
 
-## Keyboard Interaction
+## Keyboard interaction
 
-The Blazor ContextMenu component adheres to [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) ensuring ease of use for individuals utilizing assistive technologies (AT) and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ContextMenu component:
+The Blazor ContextMenu component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ContextMenu component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -61,11 +61,11 @@ The Blazor ContextMenu component adheres to [keyboard interaction](https://www.w
 | <kbd>←</kbd> | <kbd>←</kbd> | Close the current sub menu and navigates to the parent menu. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Navigates and open the next sub menu. |
 
-## Ensuring Accessibility
+## Ensuring accessibility
 
-The accessibility levels of the Blazor ContextMenu component are rigorously validated through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
+The Blazor ContextMenu component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The following sample demonstrates the accessibility compliance of the Blazor ContextMenu component. Open the [sample](https://blazor.syncfusion.com/accessibility/context-menu) in a new window for evaluation with accessibility tools.
+The accessibility compliance of the Blazor ContextMenu component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/context-menu) in a new window to evaluate the accessibility of the Blazor ContextMenu component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/context-menu.html" %}
 

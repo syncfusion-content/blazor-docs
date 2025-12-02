@@ -47,8 +47,7 @@ Data points that contain **NaN** or **null** value are considered as empty point
 
 ```
 
-![Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-with-empty-point.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLUZQhRVOciwQQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLUZQhRVOciwQQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-with-empty-point.png)" %}
 
 ## Customization
 
@@ -93,8 +92,7 @@ The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ```
 
-![Customizing Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-empty-point-customization.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqiLMqfySLYAVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqiLMqfySLYAVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-empty-point-customization.png)" %}
 
 ## Handling No Data
 
@@ -147,8 +145,7 @@ When no data is available to render in the accumulation chart, the [NoDataTempla
 
 ```
 
-![No Data Template in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-no-data-template.gif)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVojONbrgWPsFkS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVojONbrgWPsFkS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[No Data Template in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-no-data-template.gif)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

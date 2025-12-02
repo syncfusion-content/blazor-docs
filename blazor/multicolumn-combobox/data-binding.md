@@ -23,9 +23,7 @@ The MultiColumn ComboBox loads the data from local data sources through the [Dat
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBftYVqKvgHmaAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBftYVqKvgHmaAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)" %}
 
 ## Index value binding
 
@@ -125,7 +123,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVTXahAKvxlOgaH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVeMZjQHJYqdimB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### OnActionFailure event
 
@@ -137,7 +135,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mu
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLpZkrKqPQmofLv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVoWNZwRIdKNBsr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### OData v4 services
 
@@ -149,9 +147,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJZkBKUbFJULBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJZkBKUbFJULBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)" %}
 
 ### Web API adaptor
 
@@ -163,9 +159,8 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTDaLKUlkAUjhM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhIWjjwnRBWAlvb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor MultiColumn ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
 
 ### Offline mode
 

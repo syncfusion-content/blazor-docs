@@ -9,7 +9,7 @@ documentation: ug
 
 # Positioning in Blazor AppBar Component
 
-The AppBar component offers flexible control over its placement and behavior within your application's layout. You can configure its position and whether it remains visible during scrolling using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
+The position of the AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
 
 * Top AppBar
 * Bottom AppBar
@@ -17,7 +17,7 @@ The AppBar component offers flexible control over its placement and behavior wit
 
 ### Top AppBar
 
-A top AppBar is the most common configuration, positioning the AppBar at the top of its parent container or the viewport. This is the default behavior if the `Position` property is not explicitly set.
+The top AppBar is the default one in which it positions the AppBar at the top of the content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -58,12 +58,11 @@ A top AppBar is the most common configuration, positioning the AppBar at the top
 </style>
 ```
 
-![Blazor AppBar with Top Position](./images/top_appbar.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAsrWpLhLkmLRh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAsrWpLhLkmLRh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Top Position](./images/top_appbar.png)" %}
 
 ### Bottom AppBar
 
-A bottom AppBar positions the component at the bottom of its parent container. This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position).
+This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position). The bottom AppBar positions the AppBar at the bottom of the content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -104,12 +103,11 @@ A bottom AppBar positions the component at the bottom of its parent container. T
 </style>
 ```
 
-![Blazor AppBar with Bottom Position](./images/bottom_appbar.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBAMLMfLVArWgxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBAMLMfLVArWgxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Bottom Position](./images/bottom_appbar.png)" %}
 
 ### Sticky AppBar
 
-A sticky AppBar remains visible at the top of the viewport even when the page content is scrolled.This position can be set to the AppBar by setting `true` to the property [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky).
+This position can be set to the AppBar by setting `true` to the property [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky). AppBar will be sticky while scrolling the AppBar content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -150,5 +148,4 @@ A sticky AppBar remains visible at the top of the viewport even when the page co
 </style>
 ```
 
-![Blazor AppBar with Sticky Position](./images/sticky_appbar.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKWVWzrBKSTUvH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKWVWzrBKSTUvH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Sticky Position](./images/sticky_appbar.png)" %}

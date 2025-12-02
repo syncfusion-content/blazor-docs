@@ -9,7 +9,7 @@ documentation: ug
 
 # Sequence Diagram Model in Blazor diagram component
 
-A sequence diagram is a type of interaction diagram that visually represents how objects communicate with each other in a particular sequence over time. The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html)  in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor suite supports the creation and visualization of Uml sequence diagrams through the dedicated [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html) class.
+A sequence diagram is a type of interaction diagram that visually represents how objects communicate with each other in a particular sequence over time. The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html)  in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor suite supports the creation and visualization of UML sequence diagrams through the dedicated [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html) class.
 
 To enable this functionality, assign an instance of `UmlSequenceDiagramModel` to the `Model` property of the SfDiagramComponent. This model encapsulates all necessary elements—such as lifelines, messages, activation boxes, and fragments—required to render a complete sequence diagram.
 
@@ -17,14 +17,14 @@ To enable this functionality, assign an instance of `UmlSequenceDiagramModel` to
 
 A sequence diagram consists of several key elements, including participants, messages, activation boxes, and fragments. Each of these components plays a crucial role in representing the flow of interaction between objects over time.
 
-The diagram component allows you to define and manage these elements through the `UmlSequenceDiagramModel`. Below is an overview of how each element can be implemented:
+The diagram component allows to define and manage these elements through the `UmlSequenceDiagramModel`. Below is an overview of how each element can be implemented:
 
 * [Participants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Participants): Represent the lifelines (such as actors or systems) involved in the interaction.
 * [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Messages): Indicate the communication between participants, including synchronous and asynchronous calls, returns, and self-messages.
 * [Activation Boxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceParticipant.html#Syncfusion_Blazor_Diagram_UmlSequenceParticipant_ActivationBoxes): Represent the time during which a participant is active or performing an operation.
 * [Fragments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Participants): Define conditional or parallel behavior using constructs like alt, opt, and loop.
 
-Each of these elements can be programmatically configured and customized to suit your application's interaction flow.
+Each of these elements can be programmatically configured and customized to suit the application's interaction flow.
 
 ### Participants
 
@@ -32,7 +32,7 @@ The [UmlSequenceParticipant](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 Each participant serves as the source or target of messages and is essential for illustrating the communication between different components in the system.
 
-You can define participants by adding instances of [UmlSequenceParticipant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceParticipant.html) to the [Participants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Participants) collection in the [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html).
+Define participants by adding instances of [UmlSequenceParticipant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceParticipant.html) to the [Participants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Participants) collection in the [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html).
 
 The following code example explains how to create participants in sequence diagram.
 
@@ -74,10 +74,9 @@ The following code example explains how to create participants in sequence diagr
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UMLSequenceDiagram/CreateParticipant).
 
-You can download a complete working sample from [GitHub]().
-
-![ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheWXZlzknCroPu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)" %}
 
 #### UmlSequenceParticipant Properties
 
@@ -224,9 +223,9 @@ The following code example explains how to create messages in sequence diagram.
 }
 
 ```
-You can download a complete working sample from [GitHub]().
+A complete working sample can be downloaded from [GitHub]().
 
-![Message Example](./images/UmlSequenceDiagram/MessageExample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Message Example](./images/UmlSequenceDiagram/MessageExample.png)" %}
 
 #### UmlSequenceMessage Properties
 
@@ -317,9 +316,9 @@ The following code example explains how to create activation boxes in sequence d
     }
 }
 ```
-You can download a complete working sample from [GitHub]().
+A complete working sample can be downloaded from [GitHub]().
 
-![Activations Example](./images/UmlSequenceDiagram/ActivationsExample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCjDFpkHYndWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Activations Example](./images/UmlSequenceDiagram/ActivationsExample.png)" %}
 
 #### UmlSequenceActivationBox Properties
 
@@ -337,7 +336,7 @@ The [UmlSequenceFragment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 * Optional interactions (opt)
 * Loops (loop)
 
-You can configure fragments by adding them to the [Fragments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Fragments) collection of the [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html), specifying the type of fragment, condition labels, and the associated messages or nested fragments it encompasses.
+Configure fragments by adding them to the [Fragments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Fragments) collection of the [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html), specifying the type of fragment, condition labels, and the associated messages or nested fragments it encompasses.
 
 #### Types of Fragments
 
@@ -351,7 +350,7 @@ The [UmlSequenceFragmentType](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 #### Creating Fragments
 
-To create fragments in your sequence diagram, you will need to use the [UmlSequenceFragment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragment.html) to define fragments and the [UmlSequenceFragmentCondition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentCondition.html) to specify each condition block within those fragments.
+Create fragments in the sequence diagram, need to use the [UmlSequenceFragment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragment.html) to define fragments and the [UmlSequenceFragmentCondition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentCondition.html) to specify each condition block within those fragments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -448,10 +447,9 @@ To create fragments in your sequence diagram, you will need to use the [UmlSeque
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UMLSequenceDiagram/CreateFragments).
 
-You can download a complete working sample from [GitHub]().
-
-![Fragment Example](images/UmlSequenceDiagram/FragmentExample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSCNZbzkGgSlhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Fragment Example](images/UmlSequenceDiagram/FragmentExample.png)" %}
 
 #### UmlSequenceFragment Properties
 
@@ -473,7 +471,7 @@ You can download a complete working sample from [GitHub]().
 
 The [SpaceBetweenParticipants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_SpaceBetweenParticipants) property of the [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html) controls the horizontal spacing between participants in the sequence diagram. By default, this value is set to 100, ensuring a uniform gap between lifelines.
 
-You can customize this value to increase or decrease the spacing based on your diagram’s layout requirements or to accommodate longer participant names and message labels.
+Customize this value to increase or decrease the spacing based on the diagram’s layout requirements or to accommodate longer participant names and message labels.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -582,5 +580,6 @@ You can customize this value to increase or decrease the spacing based on your d
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBIsXNFJamPossc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub]().
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UMLSequenceDiagram/SpaceBetweenParticipants).

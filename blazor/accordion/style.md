@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and Appearance in Blazor Accordion Component
 
-The Syncfusion Blazor Accordion component is highly customizable, allowing you to tailor its visual style to match your application's design language. This document provides CSS classes and examples to modify the control's appearance, focusing on various parts of the Accordion.
+The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 
 ## Customizing accordion
 
@@ -144,7 +144,4 @@ You can customize each accordion item header by setting [AccordionItem.CssClass]
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqWBsAATytYBFq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqWBsAATytYBFq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.png)" %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # Paste Clean-up in Blazor Rich Text Editor
 
-The Rich Text Editor provides built-in option to paste content from Microsoft Word, Microsoft Outlook, Microsoft Excel, and other websites by filtering out tags, attributes, and styles. Copy content from Microsoft Office or other websites and paste it into the editor, where it is cleaned up and pasted based on the settings in the [PasteCleanupSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html) property values.
+The Rich Text Editor provides built-in option to paste content from Microsoft Word, Microsoft Outlook, Microsoft Excel, and other websites by filtering out tags, attributes, and styles. Copy content from Microsoft Office or other websites and paste it into the editor, where it is cleaned up and pasted based on the settings in the [PasteCleanupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html) property values.
 
 ## Paste cleanup settings
 
@@ -17,22 +17,24 @@ When pasting content into the editor, you can control the formatting and styles 
 
 | API | Description | Default Value | Type |
 |:----------------:|:---------:|:-----------------------------:|:---------:|
-| [Prompt](#prompt-dialog) | To invoke prompt dialog with paste options on pasting the content in editor. | false | boolean |
-| [PlainText](#paste-as-plain-text) | To paste the content as plain text. | false | boolean |
-| [KeepFormat](#keep-format) | To keep the same format with copied content. | true | boolean |
-| [DeniedTags](#denied-tags) | To ignore the tags when pasting HTML content. | null | string[] |
-| [DeniedAttributes](#denied-attributes) | To paste the content by filtering out these attributes from the content. | null | string[] |
-| [AllowedStyleProperties](#allowed-style-properties) | To paste the content by accepting these style attributes and removing other style attributes. | [background, background-color, border, border-bottom, border-left, border-radius, border-right, border-style, border-top, border-width, clear, color, cursor, direction, display, float, font, font-family, font-size, font-weight, font-style, height, left, line-height, margin, margin-top, margin-left, margin-right, margin-bottom, max-height, max-width, min-height, min-width, overflow, overflow-x, overflow-y, padding, padding-bottom, padding-left, padding-right, padding-top, position, right, table-layout, text-align, text-decoration, text-indent, top, vertical-align, visibility, white-space, width] | string[] |
+| [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) | Displays a dialog box when content is pasted, allowing users to choose how the content should be inserted—either as plain text, with formatting, or cleaned HTML. | false | boolean |
+| [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_PlainText) | To paste the content as plain text. | false | boolean |
+| [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_KeepFormat) | To keep the same format with copied content. | true | boolean |
+| [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedTags) | Specifies a list of HTML tags to be removed from the pasted content, such as `<script>`, `<iframe>`, or `<style>`. Helps eliminate unwanted or unsafe elements. | null | string[] |
+| [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedAttributes) | Filters out specified attributes from the pasted content | null | string[] |
+| [AllowedStyleProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_AllowedStyleProperties) | To paste the content by accepting these style attributes and removing other style attributes. | [background, background-color, border, border-bottom, border-left, border-radius, border-right, border-style, border-top, border-width, clear, color, cursor, direction, display, float, font, font-family, font-size, font-weight, font-style, height, left, line-height, margin, margin-top, margin-left, margin-right, margin-bottom, max-height, max-width, min-height, min-width, overflow, overflow-x, overflow-y, padding, padding-bottom, padding-left, padding-right, padding-top, position, right, table-layout, text-align, text-decoration, text-indent, top, vertical-align, visibility, white-space, width] | string[] |
 
 ## Prompt dialog options
 
 When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor opens a dialog box with three options as radio buttons: keep, clean, and plain text.
 
+![Blazor RichTextEditor with prompt](./images/blazor-richtexteditor-paste-prompt.png)
+
 1. `Keep`: To keep the same format with copied content.
 2. `Clean`: To clear all the style formats with copied content.
 3. `Plain Text`: To paste the copied content as plain text without any formatting or style (including the removal of all tags).
 
-N> When the `Prompt` value is set to true, the API properties [PlainText](#paste-as-plain-text) and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
+N> When the `Prompt` value is set to true, the API properties [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_PlainText) and [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_KeepFormat) will not be considered for processing when pasting the content.
 
 {% tabs %}
 {% highlight razor %}
@@ -42,13 +44,11 @@ N> When the `Prompt` value is set to true, the API properties [PlainText](#paste
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with prompt](./images/blazor-richtexteditor-paste-prompt.png)
-
 ## Paste as plain text
 
 When [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_PlainText) is set to true, the copied content will be converted to plain text by removing all the HTML tags and styles applied to it, and only the plain text is pasted in the editor.
 
-N> When `PlainText` value is set true, the API property [Prompt](#prompt-dialog) should be set to false, and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
+N> When `PlainText` value is set true, the API property [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) should be set to false, and [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_KeepFormat) will not be considered for processing when pasting the content.
 
 {% tabs %}
 {% highlight razor %}
@@ -62,11 +62,13 @@ N> When `PlainText` value is set true, the API property [Prompt](#prompt-dialog)
 
 ## Keep format
 
-When [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_KeepFormat) is set to true, the copied content will maintain all the style formatting allowed in the [AllowedStyleProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_AllowedStyleProperties) when pasting the content in the editor.
+When [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_KeepFormat) is set to `true`, the pasted content retains its original formatting, including styles, fonts, and structure. However, the formatting is still subject to filtering based on the `AllowedStyleProperties`, `DeniedTags`, and `DeniedAttrs` settings:
 
-When `KeepFormat` is set to false, the style in the copied content will be removed without considering the allowed styles in the `AllowedStyleProperties` when pasting the content in the editor.
+* Only the style properties listed in `AllowedStyleProperties` will be preserved.
+* Any HTML tags listed in `DeniedTags` will be removed.
+* Any attributes listed in `DeniedAttrs` will be stripped from the pasted content.
 
-N> When the `KeepFormat` value is set to true, the API properties [Prompt](#prompt-dialog) and [PlainText](#paste-as-plain-text) should be set to false.
+This ensures that while the formatting is retained, it remains clean, safe, and consistent with your application's styling rules.
 
 {% tabs %}
 {% highlight razor %}
@@ -77,6 +79,19 @@ N> When the `KeepFormat` value is set to true, the API properties [Prompt](#prom
 {% endtabs %}
 
 ![Blazor RichTextEditor with keep format](./images/blazor-richtexteditor-paste-keep-format.gif)
+
+>When `KeepFormat` is set to true, set both `Prompt` and `PlainText` to false.
+
+## Clean formating
+
+When the `Prompt`, `PlainText`, and `KeepFormat` options are all set to false, the Rich Text Editor performs clean format paste cleanup. In this mode, all inline styles from the pasted content are removed, eliminating any custom or external styling. This ensures a consistent and uniform appearance within the editor.
+
+Despite the removal of styling, essential structural HTML tags such as `<p>`, `<ul>`, `<table>`, and others are preserved. This maintains the original layout and semantic integrity of the content, allowing it to remain well-structured and readable.However, the formatting is still subject to filtering based on the `DeniedTags`, and `DeniedAttrs` settings:
+
+- **`DeniedTags`**: Tags listed here will still be removed from the pasted content.
+- **`DeniedAttrs`**: Attributes listed here will also be stripped from the pasted content.
+
+> The `AllowedStyleProps` setting only applies if `KeepFormat` is enabled.
 
 ## Denied tags
 
@@ -96,6 +111,9 @@ The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTe
 
 ![Blazor RichTextEditor with denied tags](./images/blazor-richtexteditor-paste-denied-tag.gif)
 
+> This setting is ignored when `PlainText` is set to `true`. <br>
+It only works when either `KeepFormat` is set to `true`, or when `Prompt`, `PlainText`, and `KeepFormat` are all set to `false`, which triggers clean format behavior.
+
 ## Denied attributes
 
 The [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedAttributes) property specifies the attributes to restrict when pasting the content into the Rich Text Editor.
@@ -110,7 +128,12 @@ The [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 
 ![Blazor RichTextEditor with denied attribute](./images/blazor-richtexteditor-paste-denied-attribute.png)
 
+> This setting is ignored when `PlainText` is set to `true`. <br>
+It only works when either `KeepFormat` is set to `true`, or when `Prompt`, `PlainText`, and `KeepFormat` are all set to `false`, which triggers clean format behavior.
+
 ## Allowed style properties
+
+By default, a predefined set of basic style properties are allowed when content is pasted into the Rich Text Editor.
 
 When you configure `AllowedStyleProperties`, only the styles that match the allowed style properties list are allowed. All other style properties will be removed on pasting the content into the editor.
 
@@ -125,6 +148,8 @@ For Example, **public string[] AllowedStyles = new string[] { "color", "margin" 
 {% endtabs %}
 
 ![Blazor RichTextEditor with allowed styles](./images/blazor-richtexteditor-paste-allowed-style.png)
+
+> This setting works only when `KeepFormat` is set to true. If `KeepFormat` is `false` or `PlainText` is `true`, style filtering via `AllowedStyleProperties` will not be applied.
 
 ## Pasting large text content
 

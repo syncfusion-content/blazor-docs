@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Change Animation Settings in Blazor ContextMenu Component | Syncfusion
-description: Customize animation settings for Syncfusion Blazor ContextMenu, including effect types (SlideDown, ZoomIn, FadeIn) and duration for opening and closing.
+title: Change animation settings in Blazor ContextMenu Component | Syncfusion
+description: Learn how to customize animation settings in Syncfusion Blazor ContextMenu and explore advanced options for smooth, interactive menus and more actions.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Configure Animation Settings in Blazor ContextMenu Component
+# Change Animation Settings in Blazor ContextMenu Component
 
-To configure the animation of the Context Menu, [MenuAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) child component is used to define animation properties such as effect and duration.
-
-The supported animation effects for the Context Menu are:
+To change the animation of the Context Menu, [MenuAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) component is used to initialize the animation properties.
+The supported effects for Context Menu are,
 
 | Effect | Functionality |
 | ------------ | ----------------------- |
@@ -20,7 +19,7 @@ The supported animation effects for the Context Menu are:
 | ZoomIn | Specifies the sub menu transform with zoom in effect. |
 | FadeIn | Specifies the sub menu transform with fade in effect. |
 
-The following sample illustrates how to open the Context Menu with a `FadeIn` effect and a `Duration` of `800ms`.
+The following sample illustrates how to open Context Menu with `FadeIn` effect with the `Duration` of `800ms`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -49,6 +48,4 @@ The following sample illustrates how to open the Context Menu with a `FadeIn` ef
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLAirrwgacxYkyN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ContextMenu with Animation](./../images/blazor-contextmenu-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLAirrwgacxYkyN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu with Animation](./../images/blazor-contextmenu-component.png)" %}

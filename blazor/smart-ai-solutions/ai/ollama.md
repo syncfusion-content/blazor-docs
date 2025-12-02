@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ollama Integration with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use Syncfusion Blazor AI with Ollama for AI-driven features like data restructuring in Blazor applications.
+description: Learn how to configure and use Syncfusion Blazor AI with Ollama for AI-driven features like data restructuring in Blazor applications. Explore to more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Ollama Integration with Syncfusion® Blazor AI
 
-The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables seamless integration with [Ollama](https://ollama.com/) to add AI-driven features to Blazor applications using locally hosted AI models. These features include data restructuring (organizing data into hierarchical formats), content analysis (evaluating text or data patterns), and hierarchical organization (assigning parent-child relationships). 
+The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables integration with [Ollama](https://ollama.com/) to add AI-driven features to Blazor applications using locally hosted AI models. These features include data restructuring (organizing data into hierarchical formats), content analysis (evaluating text or data patterns), and hierarchical organization (assigning parent–child relationships).
 
 ## Prerequisites
 
@@ -24,13 +24,13 @@ Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
-- [Ollama](https://ollama.com/docs) is installed on your local system (no virtual machines required).
-- An Ollama model (e.g., `llama2`) is downloaded using the command:
+- [Ollama](https://ollama.com/docs) is installed on the local system (no virtual machines required).
+- An Ollama model (for example, `llama2`) is downloaded using the command:
   ```bash
   ollama run llama2
   ```
 - The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
-- Sufficient hardware resources (e.g., CPU/GPU, memory) are available for local model performance.
+- Sufficient hardware resources (for example, CPU/GPU and memory) are available for local model performance.
 
 ## Configuration Steps
 
@@ -53,6 +53,10 @@ builder.Services.AddChatClient(chatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 ```
 
+- The example targets the default Ollama endpoint at http://localhost:11434. If Ollama runs on a different host or port, update the base URL accordingly.
+- Ensure the registered client implements or adapts to `Microsoft.Extensions.AI.IChatClient`. If using a third‑party client, provide an adapter that conforms to `IChatClient` so the dependency injection registration succeeds.
+- `SyncfusionAIService` provides an implementation of `IChatInferenceService` that integrates with the configured chat client.
+
 ## Smart Data Restructuring with Ollama and TreeGrid
 
 This example demonstrates using the Syncfusion Blazor AI library with Ollama to perform intelligent data restructuring in a Syncfusion Blazor TreeGrid component. The application organizes hierarchical data by leveraging Ollama to assign appropriate `ParentId` values based on `CategoryName` relationships, updating the TreeGrid to reflect the corrected hierarchical structure.
@@ -70,6 +74,7 @@ Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
+
 - Ensure the Blazor application meets the [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
@@ -85,7 +90,7 @@ Install-Package OllamaSharp
 </body>
 ```
 
-### Register Syncfusion Blazor Service
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Register the Syncfusion Blazor service in the `~/Program.cs` file based on the interactive render mode.
 
@@ -124,7 +129,7 @@ await builder.Build().RunAsync();
 {% endtabs %}
 
 **For Server Render Mode**:
-If the **Interactive Render Mode** is set to `Server`, the project will contain a single **~/Program.cs** file. In this case, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service should be registered within that `~/Program.cs` file.
+If the **Interactive Render Mode** is set to `Server`, the project will contain a single **~/Program.cs** file. In this case, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service should be registered within that `~/Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -284,21 +289,21 @@ namespace OllamaExample.Components.Pages
 
 This example illustrates how the Syncfusion Blazor AI library integrates with Ollama to reorganize hierarchical data in a TreeGrid:
 
-1. **Setup**: Configure the Ollama service in `Program.cs` with a local endpoint and a downloaded model (e.g., `llama2`).
-2. **Component Integration**: Inject `IChatInferenceService` to process TreeGrid data for restructuring.
-3. **Prompt Engineering**: Craft a detailed prompt to instruct Ollama to analyze `CategoryName` relationships and assign appropriate `ParentId` values.
-4. **Response Processing**: Parse the JSON response from Ollama and update the TreeGrid to reflect the corrected hierarchy.
+1. **Setup**: Configure the Ollama service in `Program.cs` with a local endpoint and a downloaded model (for example, `llama2`).
+2. **Component integration**: Inject `IChatInferenceService` to process TreeGrid data for restructuring.
+3. **Prompt engineering**: Provide instructions for analyzing `CategoryName` relationships and assigning appropriate `ParentId` values.
+4. **Response processing**: Parse the JSON response from Ollama and update the TreeGrid to reflect the corrected hierarchy.
 
 ### Key Components
-- **IChatInferenceService**: Injected service for interacting with Ollama models.
+- **IChatInferenceService**: Injected service for interacting with Ollama models via the configured chat client.
 - **ChatParameters**: Configures the AI request with prompts and user messages.
 - **GenerateResponseAsync**: Sends asynchronous requests to Ollama and retrieves responses.
 - **UI Components**: Syncfusion TreeGrid and Button components integrate with the AI service for dynamic updates.
 
 ## Error Handling
-- **Model Not Found**: Ensure the specified Ollama model (e.g., `llama2`) is downloaded and available.
-- **JSON Parsing Errors**: Handle invalid JSON responses by logging errors or displaying user-friendly messages, as shown in the `OpenAIHandler` method.
-- **Resource Limitations**: Local models require sufficient hardware (e.g., 8GB RAM for `llama2`). Check [Ollama documentation](https://ollama.com/docs) for model-specific requirements.
+- **Model not found**: Ensure the specified Ollama model (for example, `llama2`) is downloaded and available.
+- **JSON parsing errors**: Handle invalid JSON responses by logging errors or displaying user-friendly messages, as shown in the `OpenAIHandler` method.
+- **Resource limitations**: Local models require sufficient hardware (e.g., 8GB RAM for `llama2`). Check [Ollama documentation](https://ollama.com/docs) for model-specific requirements.
 
 ## See Also
 - [Syncfusion Blazor TreeGrid Documentation](https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp)

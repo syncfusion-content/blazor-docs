@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resources in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Resources in Syncfusion Blazor Gantt Chart component and much more.
+description: Learn how to configure resources in the Syncfusion Blazor Gantt Chart component for task allocation and utilization visualization.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,22 +9,33 @@ documentation: ug
 
 # Resources in Blazor Gantt Chart Component
 
-In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment, materials, and so on. It allows for the allocation of resources, such as human resources, to each task.
+Resources in the Angular Gantt component represent people, equipment, or materials allocated to tasks, visualized in taskbars and labels for clear utilization tracking. Assigned via the [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html) property, resources map to tasks using [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) for ID, name, unit, and group. This enables display of resource names in columns or labels with [GanttLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html), highlighting workloads and overallocation. Resources include ARIA labels for accessibility, ensuring screen reader compatibility, and adapt to responsive designs, though narrow screens may truncate names for multiple assignments. By default, resources allocate 100% unit if unspecified.
 
-## Binding data source for resource collection and assigning resource to tasks
+## Configure Resource Collection
 
-Resources are a list of `TResources` objects, mapped to the Gantt Chart component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_DataSource) property in [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html). To link the resource collection with task collection, the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_DataSource) property of the [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) component is essential to use. It is crucial to structure this collection thoughtfully to establish a strong foreign key relationship. This involves linking the [TaskID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_TaskID) and [ResourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceID) properties of `GanttAssignmentFields` with the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property value of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) for tasks and the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Id) property of `GanttResource` for resources.
+The resource collection in Blazor Gantt Chart defines available resources as a list of objects with fields such as ID, Name, MaxUnits, and Group. These fields are mapped using the [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html) property:
 
-Also, the following properties of `GanttResource` component needs to be configured
-1. [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Name) - Maps the resource name
-2. [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits) - resource’s maximum capacity or availability per day.
+* [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Id): Maps to a unique identifier for resource assignment.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Name): Maps to the resource name displayed in labels or columns.
+* [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits): Maps to the work capacity percentage (0–100%) per day.
+* [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Group): Maps to categories for grouping resources.
 
-The following code snippets show resource collection and how it is assigned to the Gantt Chart component. 
+The following code demonstrates resource collection setup:
+
+```cs
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+```
+
+This configuration maps resources for assignment and display.
+
+## Assign resources to tasks
+
+Resources are represented as a list of `TResources` objects and mapped to the Gantt Chart component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_DataSource) property in [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html). To link the resource collection with the task collection, you must configure the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_DataSource) property of the [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) component. It is important to structure this collection carefully to establish a strong foreign key relationship. This involves mapping the [TaskID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_TaskID) and [ResourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceID) properties of `GanttAssignmentFields` to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) for tasks and the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Id) property of `GanttResource` for resources.
+
+The following code snippets show the resource collection and how it is assigned to the Gantt Chart component.
 
 {% tabs %}
-
-{% highlight razor %}
-
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -32,10 +43,10 @@ The following code snippets show resource collection and how it is assigned to t
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
     <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
-                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentID)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
     <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskID)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
     </GanttAssignmentFields>
     <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
@@ -68,7 +79,6 @@ The following code snippets show resource collection and how it is assigned to t
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -78,27 +88,27 @@ namespace BlazorGanttChart.Data
         public class ResourceInfoModel
         {
             public int Id { get; set; }
-            public string? Name { get; set; }
+            public string Name { get; set; }
             public double MaxUnit { get; set; }
         }
 
         public class TaskInfoModel
         {
             public int Id { get; set; }
-            public string? Name { get; set; }
-            public string? TaskType { get; set; }
+            public string Name { get; set; }
+            public string TaskType { get; set; }
             public DateTime StartDate { get; set; }
             public DateTime? EndDate { get; set; }
-            public string? Duration { get; set; }
+            public string Duration { get; set; }
             public int Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int? ParentID { get; set; }
             public double? Work { get; set; }
         }
 
         public class AssignmentModel
         {
             public int PrimaryId { get; set; }
-            public int TaskId { get; set; }
+            public int TaskID { get; set; }
             public int ResourceId { get; set; }
             public double? Unit { get; set; }
         }
@@ -123,20 +133,20 @@ namespace BlazorGanttChart.Data
         {
             List<AssignmentModel> assignments = new List<AssignmentModel>()
             {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+                new AssignmentModel(){ PrimaryId=1, TaskID = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskID = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskID = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskID = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskID = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskID = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskID = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskID = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskID = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskID = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskID = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskID = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskID = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskID = 9 , ResourceId=5}
             };
             return assignments;
         }
@@ -146,13 +156,13 @@ namespace BlazorGanttChart.Data
             return new List<TaskInfoModel>()
             {
                 new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
-                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
-                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentID = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentID = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentID = 1, Work=16, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
-                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
-                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentID = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentID = 5, Work=60, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
             };
         }
@@ -160,21 +170,23 @@ namespace BlazorGanttChart.Data
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![Resource allocation](images/blazor-gantt-chart-resource.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrSWXXApVRHrrBk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Resource unit
 
+When defining the resource unit within the resource collection, it specifies the amount of work a resource performs per day for a task. This concept is represented by the [Units](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_Units) property in [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) and the [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits) property in `GanttResource`.
+
+* **Units**: Defines the work amount done per day by a resource for a specific task.
+* **MaxUnits**: Sets the resources maximum capacity or availability for any task.
+
 When defining the resource unit within the resource collection, it indicates the amount of work that a specific resource will perform per day for a task. This concept is reflected in both the [Units](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_Units) property in `GanttAssignmentFields` and the [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_MaxUnits) property in `GanttResource`. The `Units` property specifies the work amount done per day by a resource for a task, while `MaxUnits` sets the resource's maximum capacity or availability for any task.
 
-To illustrate this concept, the following code snippet demonstrates how to assign resources to specific tasks and map them in the Gantt chart, providing a clear overview of how resource units and maximum capacities are managed in task allocation. For more detailed information about work and resource units, you can refer to the [link](https://blazor.syncfusion.com/documentation/gantt-chart/work).
+The following code snippet demonstrates how to assign resources to tasks and map them in the Gantt Chart, providing a clear overview of how resource units and maximum capacities are managed in task allocation. For more details about work and resource units, refer to the [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/work).
 
 {% tabs %}
-
-{% highlight razor %}
-
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -182,10 +194,10 @@ To illustrate this concept, the following code snippet demonstrates how to assig
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
     <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
-                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentID)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
     <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskID)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
     </GanttAssignmentFields>
     <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
@@ -218,7 +230,6 @@ To illustrate this concept, the following code snippet demonstrates how to assig
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -228,27 +239,27 @@ namespace BlazorGanttChart.Data
         public class ResourceInfoModel
         {
             public int Id { get; set; }
-            public string? Name { get; set; }
+            public string Name { get; set; }
             public double MaxUnit { get; set; }
         }
 
         public class TaskInfoModel
         {
             public int Id { get; set; }
-            public string? Name { get; set; }
-            public string? TaskType { get; set; }
+            public string Name { get; set; }
+            public string TaskType { get; set; }
             public DateTime StartDate { get; set; }
             public DateTime? EndDate { get; set; }
-            public string? Duration { get; set; }
+            public string Duration { get; set; }
             public int Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int? ParentID { get; set; }
             public double? Work { get; set; }
         }
 
         public class AssignmentModel
         {
             public int PrimaryId { get; set; }
-            public int TaskId { get; set; }
+            public int TaskID { get; set; }
             public int ResourceId { get; set; }
             public double? Unit { get; set; }
         }
@@ -273,20 +284,20 @@ namespace BlazorGanttChart.Data
         {
             List<AssignmentModel> assignments = new List<AssignmentModel>()
             {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+                new AssignmentModel(){ PrimaryId=1, TaskID = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskID = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskID = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskID = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskID = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskID = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskID = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskID = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskID = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskID = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskID = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskID = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskID = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskID = 9 , ResourceId=5}
             };
             return assignments;
         }
@@ -296,13 +307,13 @@ namespace BlazorGanttChart.Data
             return new List<TaskInfoModel>()
             {
                 new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
-                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
-                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentID = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentID = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentID = 1, Work=16, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
-                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
-                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentID = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentID = 5, Work=60, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
             };
         }
@@ -310,24 +321,20 @@ namespace BlazorGanttChart.Data
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![Resource unit](images/blazor-gantt-chart-resource.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLoMttgpUetgLEW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Managing resources assignments in project view
 
-In the Gantt Chart, you can enable dynamic resources assignments by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) properties to **true** in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. These actions can be performed using the following three methods:
+In the Gantt Chart, you can enable dynamic resource assignments by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) property to **true** in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. These actions can be performed using the following three methods:
 
 ### Through cell edit
 
 To edit resources directly through [cell editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#cell-editing), you can use the [GanttResourceColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) within the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) of the Blazor Gantt Chart. The following code snippet demonstrates the cell edit functionality in the Gantt chart.
 
-
 {% tabs %}
-
-{% highlight razor %}
-
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -335,10 +342,10 @@ To edit resources directly through [cell editing](https://blazor.syncfusion.com/
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
     <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
-                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentID)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
     <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskID)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
     </GanttAssignmentFields>
     <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
@@ -371,7 +378,6 @@ To edit resources directly through [cell editing](https://blazor.syncfusion.com/
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -381,27 +387,27 @@ namespace BlazorGanttChart.Data
         public class ResourceInfoModel
         {
             public int Id { get; set; }
-            public string? Name { get; set; }
+            public string Name { get; set; }
             public double MaxUnit { get; set; }
         }
 
         public class TaskInfoModel
         {
             public int Id { get; set; }
-            public string? Name { get; set; }
-            public string? TaskType { get; set; }
+            public string Name { get; set; }
+            public string TaskType { get; set; }
             public DateTime StartDate { get; set; }
             public DateTime? EndDate { get; set; }
-            public string? Duration { get; set; }
+            public string Duration { get; set; }
             public int Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int? ParentID { get; set; }
             public double? Work { get; set; }
         }
 
         public class AssignmentModel
         {
             public int PrimaryId { get; set; }
-            public int TaskId { get; set; }
+            public int TaskID { get; set; }
             public int ResourceId { get; set; }
             public double? Unit { get; set; }
         }
@@ -426,20 +432,20 @@ namespace BlazorGanttChart.Data
         {
             List<AssignmentModel> assignments = new List<AssignmentModel>()
             {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+                new AssignmentModel(){ PrimaryId=1, TaskID = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskID = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskID = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskID = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskID = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskID = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskID = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskID = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskID = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskID = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskID = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskID = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskID = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskID = 9 , ResourceId=5}
             };
             return assignments;
         }
@@ -449,13 +455,13 @@ namespace BlazorGanttChart.Data
             return new List<TaskInfoModel>()
             {
                 new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
-                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
-                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentID = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentID = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentID = 1, Work=16, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
-                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
-                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentID = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentID = 5, Work=60, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
             };
         }
@@ -463,31 +469,27 @@ namespace BlazorGanttChart.Data
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-
-![Resource edit in cell editing](images/blazor-gantt-chart-resource-cell-edit.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrIMDtbHGXirMzL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Through dialog box
 
-In the resource tab of the [add/edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) within the Gantt chart, resources can be conveniently added or removed using the checkboxes provided in the grid rows of the resource tab. Clicking on a checkbox item in a grid row adds the corresponding resource to the task, while unchecking it removes the resource. Also, the resource tab allows editing the unit value for individual resources.
+In the resource tab of the [Add/Edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) within the Gantt chart, resources can be conveniently added or removed using the checkboxes provided in the grid rows of the resource tab. Selecting a checkbox item in a grid row adds the corresponding resource to the task, while unchecking it removes the resource. Additionally, the resource tab allows editing the unit value for individual resources.
 
 {% tabs %}
-
-{% highlight razor %}
-
-
+{% highlight razor tabtitle="Index.razor" %}
+ 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
     <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
-                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentID)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
     <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskID)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
     </GanttAssignmentFields>
     <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
@@ -520,7 +522,6 @@ In the resource tab of the [add/edit dialog box](https://blazor.syncfusion.com/d
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 using System.ComponentModel.DataAnnotations;
@@ -548,14 +549,14 @@ namespace BlazorGanttChart.Data
             public DateTime? EndDate { get; set; }
             public string? Duration { get; set; }
             public int Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int? ParentID { get; set; }
             public double? Work { get; set; }
         }
 
         public class AssignmentModel
         {
             public int PrimaryId { get; set; }
-            public int TaskId { get; set; }
+            public int TaskID { get; set; }
             public int ResourceId { get; set; }
             public double? Unit { get; set; }
         }
@@ -580,20 +581,20 @@ namespace BlazorGanttChart.Data
         {
             List<AssignmentModel> assignments = new List<AssignmentModel>()
             {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+                new AssignmentModel(){ PrimaryId=1, TaskID = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskID = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskID = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskID = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskID = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskID = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskID = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskID = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskID = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskID = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskID = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskID = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskID = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskID = 9 , ResourceId=5}
             };
             return assignments;
         }
@@ -603,13 +604,13 @@ namespace BlazorGanttChart.Data
             return new List<TaskInfoModel>()
             {
                 new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
-                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
-                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentID = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentID = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentID = 1, Work=16, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
-                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
-                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentID = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentID = 5, Work=60, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
             };
         }
@@ -617,14 +618,13 @@ namespace BlazorGanttChart.Data
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![Resource edit in dialogbox](images/blazor-gantt-chart-resource-dialogbox.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrIitXbHGgBFGPd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Through method
 
-You can manipulate task resources programmatically by using the following methods:
+You can manage task resources programmatically by using the following methods:
 
 * [AddResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddResourceAssignmentAsync__1___0_): This method adds a new resource to a specific task in the Gantt chart.
 * [DeleteResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteResourceAssignmentAsync__1___0_): Use this method to remove a resource from an existing task in the Gantt chart.
@@ -633,9 +633,10 @@ You can manipulate task resources programmatically by using the following method
 Additionally, you can retrieve assigned resources and resource assignments through the following methods:
 
 * [GetResources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetResources__1__0_): Retrieves the list of resources.
+
 * [GetResourceAssignments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetResourceAssignments__1__0_): Retrieves the list of resource assignments.
 
-* [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Int32__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__System_Object_) - This method is utilized to add a new task to the Gantt chart. The fourth argument in this method is used for adding resources to the task.
+* [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Int32__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__System_Object_) - This method is used to add a new task to the Gantt chart. The fourth argument in this method is used for adding resources to the task.
 
 These methods offer a convenient way to add, remove, and update task resources in your Gantt chart efficiently. In the code snippet below, upon clicking an external button, the following actions are performed:
 
@@ -646,8 +647,7 @@ These methods offer a convenient way to add, remove, and update task resources i
 * Retrieve the resource assignments of the 1st index record.
 
 {% tabs %}
-
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -662,10 +662,10 @@ These methods offer a convenient way to add, remove, and update task resources i
 <SfGantt @ref="ganttInstance" DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
     <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
-                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentID)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
     <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskID)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
     </GanttAssignmentFields>
     <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
@@ -698,17 +698,17 @@ These methods offer a convenient way to add, remove, and update task resources i
     }
     private async void AddAssignment()
     {
-        var record = new GanttModel.AssignmentModel() { PrimaryId = 15, TaskId = 8, ResourceId = 8 };
+        var record = new GanttModel.AssignmentModel() { PrimaryId = 15, TaskID = 8, ResourceId = 8 };
         await ganttInstance.AddResourceAssignmentAsync(record);
     }
     private async void UpdateAssignment()
     {
-        var record = new GanttModel.AssignmentModel() { PrimaryId = 7, TaskId = 4, ResourceId = 3, Unit = 50 };
+        var record = new GanttModel.AssignmentModel() { PrimaryId = 7, TaskID = 4, ResourceId = 3, Unit = 50 };
         await ganttInstance.UpdateResourceAssignmentAsync(record);
     }
     private async void DeleteAssignment()
     {
-        var record = new GanttModel.AssignmentModel() { TaskId = 2, ResourceId = 6 };
+        var record = new GanttModel.AssignmentModel() { TaskID = 2, ResourceId = 6 };
         await ganttInstance.DeleteResourceAssignmentAsync(record);
     }
 
@@ -716,22 +716,23 @@ These methods offer a convenient way to add, remove, and update task resources i
     {
         GanttModel.TaskInfoModel data = new GanttModel.TaskInfoModel() { Id = 2 };
         var resources = ganttInstance.GetResources<GanttModel.ResourceInfoModel>(data);
+        Console.WriteLine(resources);
     }
     private void GetAssignment()
     {
         GanttModel.TaskInfoModel data = new GanttModel.TaskInfoModel() { Id = 2 };
         var assignments = ganttInstance.GetResourceAssignments<GanttModel.AssignmentModel>(data);
+        Console.WriteLine(assignments);
     }
     private async void AddNewRecord()
     {
-        var record = new GanttModel.AssignmentModel() { PrimaryId = 19, TaskId = 10, ResourceId = 8 };
+        var record = new GanttModel.AssignmentModel() { PrimaryId = 19, TaskID = 10, ResourceId = 8 };
         GanttModel.TaskInfoModel data = new GanttModel.TaskInfoModel() { Id = 10, Name = "NewRecord", StartDate = new DateTime(2021, 03, 29), Duration = "2", TaskType="FixedDuration" };
         await ganttInstance.AddRecordAsync(data, 0, null, record);
     }
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -741,27 +742,27 @@ namespace BlazorGanttChart.Data
         public class ResourceInfoModel
         {
             public int Id { get; set; }
-            public string? Name { get; set; }
+            public string Name { get; set; }
             public double MaxUnit { get; set; }
         }
 
         public class TaskInfoModel
         {
             public int Id { get; set; }
-            public string? Name { get; set; }
-            public string? TaskType { get; set; }
+            public string Name { get; set; }
+            public string TaskType { get; set; }
             public DateTime StartDate { get; set; }
             public DateTime? EndDate { get; set; }
-            public string? Duration { get; set; }
+            public string Duration { get; set; }
             public int Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int? ParentID { get; set; }
             public double? Work { get; set; }
         }
 
         public class AssignmentModel
         {
             public int PrimaryId { get; set; }
-            public int TaskId { get; set; }
+            public int TaskID { get; set; }
             public int ResourceId { get; set; }
             public double? Unit { get; set; }
         }
@@ -786,20 +787,20 @@ namespace BlazorGanttChart.Data
         {
             List<AssignmentModel> assignments = new List<AssignmentModel>()
             {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+                new AssignmentModel(){ PrimaryId=1, TaskID = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskID = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskID = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskID = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskID = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskID = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskID = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskID = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskID = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskID = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskID = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskID = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskID = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskID = 9 , ResourceId=5}
             };
             return assignments;
         }
@@ -809,34 +810,33 @@ namespace BlazorGanttChart.Data
             return new List<TaskInfoModel>()
             {
                 new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
-                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
-                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentID = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentID = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentID = 1, Work=16, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
-                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
-                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentID = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentID = 5, Work=60, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
             };
         }
     }
 }
 
-{% endhighlight %}
 
+{% endhighlight %}
 {% endtabs %}
 
-![Resource method in Gantt Chart](images/blazor-gantt-chart-resource-method.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVoCDDbxmwrcIuF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Resource event
 
-The [ResourceAssignmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceAssignmentChanging) event is triggered in the Blazor Gantt chart when resource add, remove, and update actions occur. This event allows for custom actions to be performed, and it also provides the ability to cancel add, remove, or update actions by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ResourceAssignmentChangeEventArgs-1.html#Syncfusion_Blazor_Gantt_ResourceAssignmentChangeEventArgs_1_Cancel) property of the event argument to **true**.
+The [ResourceAssignmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceAssignmentChanging) event is triggered in the Blazor Gantt Chart when resources are added, removed, or updated. This event allows you to perform custom actions and provides the ability to cancel these operations by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ResourceAssignmentChangeEventArgs-1.html#Syncfusion_Blazor_Gantt_ResourceAssignmentChangeEventArgs_1_Cancel) property of the event argument to **true**.
 
-In the code snippet below, the `ResourceAssignmentChanging` event is used to display a customized message when performing resource add, remove, and update actions. Additionally, it prevents resource deletion for the 1st index task.
+In the following code snippet, the `ResourceAssignmentChanging` event is used to display a custom message when adding, removing, or updating resources. Additionally, it prevents resource deletion for the 1st index task.
 
 {% tabs %}
-
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -845,10 +845,10 @@ In the code snippet below, the `ResourceAssignmentChanging` event is used to dis
 <SfGantt @ref="ganttInstance" DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
     <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)"
-                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)">
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentID)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)">
     </GanttTaskFields>
     <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" ResourceAssignmentChanging="AssignmentHandler" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel"></GanttAssignmentFields>
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskID)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" ResourceAssignmentChanging="AssignmentHandler" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel"></GanttAssignmentFields>
     <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
                        ShowDeleteConfirmDialog="true"></GanttEditSettings>
@@ -891,7 +891,7 @@ In the code snippet below, the `ResourceAssignmentChanging` event is used to dis
         {
             foreach(GanttModel.AssignmentModel assignment in args.DeletedResources)
             {
-                if (assignment.TaskId == 2)
+                if (assignment.TaskID == 2)
                 {
                     assignmentEventMessage = "The deleted resource action is canceled!";
                     args.Cancel = true;
@@ -903,7 +903,6 @@ In the code snippet below, the `ResourceAssignmentChanging` event is used to dis
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -926,14 +925,14 @@ namespace BlazorGanttChart.Data
             public DateTime? EndDate { get; set; }
             public string? Duration { get; set; }
             public int Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int? ParentID { get; set; }
             public double? Work { get; set; }
         }
 
         public class AssignmentModel
         {
             public int PrimaryId { get; set; }
-            public int TaskId { get; set; }
+            public int TaskID { get; set; }
             public int ResourceId { get; set; }
             public double? Unit { get; set; }
         }
@@ -958,20 +957,20 @@ namespace BlazorGanttChart.Data
         {
             List<AssignmentModel> assignments = new List<AssignmentModel>()
             {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+                new AssignmentModel(){ PrimaryId=1, TaskID = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskID = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskID = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskID = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskID = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskID = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskID = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskID = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskID = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskID = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskID = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskID = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskID = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskID = 9 , ResourceId=5}
             };
             return assignments;
         }
@@ -981,13 +980,13 @@ namespace BlazorGanttChart.Data
             return new List<TaskInfoModel>()
             {
                 new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
-                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="3", TaskType ="FixedDuration", Work=16 },
-                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "4", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentID = 1, Duration="3", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentID = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "4", Progress = 30, ParentID = 1, Work=16, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
-                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
-                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "4", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentID = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "4", ParentID = 5, Work=60, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="4", TaskType="FixedWork", Work=24 },
             };
         }
@@ -995,18 +994,16 @@ namespace BlazorGanttChart.Data
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-![Resource event in Gantt Chart](images/blazor-gantt-chart-resource-event.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLSWXXbwXBuUvBu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom taskbar styling using template
 
-The taskbar appearance can be customized by using the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. In the code snippet below, the child tasks are customized based on template context data, with the resource name added inside each child taskbar, and the taskbar colors are changed based on task resources.
+The taskbar appearance can be customized by using the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. In the following code snippet, child tasks are customized based on the template context data. The resource name is added inside each child taskbar, and the taskbar colors are changed based on the assigned resources.
 
 {% tabs %}
-
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -1014,10 +1011,10 @@ The taskbar appearance can be customized by using the [TaskbarTemplate](https://
 <SfGantt @ref="ganttInstance" DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
     <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)"
-                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentID)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
     <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskID)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
     </GanttAssignmentFields>
     <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
@@ -1108,7 +1105,6 @@ The taskbar appearance can be customized by using the [TaskbarTemplate](https://
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="GanttModel.cs" %}
 
 namespace BlazorGanttChart.Data
@@ -1131,14 +1127,14 @@ namespace BlazorGanttChart.Data
             public DateTime? EndDate { get; set; }
             public string? Duration { get; set; }
             public int Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int? ParentID { get; set; }
             public double? Work { get; set; }
         }
 
         public class AssignmentModel
         {
             public int PrimaryId { get; set; }
-            public int TaskId { get; set; }
+            public int TaskID { get; set; }
             public int ResourceId { get; set; }
             public double? Unit { get; set; }
         }
@@ -1163,20 +1159,20 @@ namespace BlazorGanttChart.Data
         {
             List<AssignmentModel> assignments = new List<AssignmentModel>()
             {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+                new AssignmentModel(){ PrimaryId=1, TaskID = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskID = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskID = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskID = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskID = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskID = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskID = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskID = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskID = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskID = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskID = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskID = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskID = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskID = 9 , ResourceId=5}
             };
             return assignments;
         }
@@ -1186,13 +1182,13 @@ namespace BlazorGanttChart.Data
             return new List<TaskInfoModel>()
             {
                 new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
-                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="3", TaskType ="FixedDuration", Work=16 },
-                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "4", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentID = 1, Duration="3", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentID = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "4", Progress = 30, ParentID = 1, Work=16, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
-                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
-                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
-                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "4", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentID = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "4", ParentID = 5, Work=60, TaskType="FixedWork" },
                 new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="4", TaskType="FixedWork", Work=24 },
             };
         }
@@ -1200,11 +1196,9 @@ namespace BlazorGanttChart.Data
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-
-![Custom taskbar styling in Gantt Chart](images/blazor-gantt-chart-resource-taskbar-custom.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htByMZNFcjMMJqxC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 

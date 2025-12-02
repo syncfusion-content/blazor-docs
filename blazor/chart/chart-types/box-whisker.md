@@ -53,9 +53,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzjFVZSMTofoJN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Box and Whisker Charts](../images/othertypes/blazor-box-whisker-charts.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzjFVZSMTofoJN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Box and Whisker Charts](../images/othertypes/blazor-box-whisker-charts.png)" %}
 
 N> Refer to our [Blazor Box and Whisker Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/box-and-whisker-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Box and Whisker Chart Example](https://blazor.syncfusion.com/demos/chart/box-and-whisker) to know how to render and configure the box and whisker type charts.
 
