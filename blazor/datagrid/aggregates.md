@@ -297,7 +297,7 @@ The available built-in aggregate types are :
 
 ## See also
 
-* [Handling aggregates in custom adaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#handling-aggregates-in-custom-adaptor)
+* [Handling aggregates in custom adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor#handling-aggregates-operation)
 * [AggregateTemplateContext API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html)
 * [AggregateType enumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
 * [Grouping in DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
