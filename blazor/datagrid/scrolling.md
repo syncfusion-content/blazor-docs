@@ -9,13 +9,13 @@ documentation: ug
 
 # Scrolling in Blazor DataGrid
 
-The scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables navigation through content that extends beyond the visible area of the Grid. Scrollbars appear automatically when content exceeds the specified `Width` or `Height` of the Grid element. This is useful for large datasets or when the Grid must fit within a constrained layout. The vertical and horizontal scrollbars are displayed based on the following criteria:
+The scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables navigation through content that extends beyond the visible area of the Grid. Scrollbars appear automatically when content exceeds the specified **Width** or **Height** of the Grid element. This is useful for large datasets or when the Grid must fit within a constrained layout. The vertical and horizontal scrollbars are displayed based on the following criteria:
 
 * The vertical scrollbar appears when the total height of rows exceeds the Grid element’s height.
 * The horizontal scrollbar appears when the total width of columns exceeds the Grid element’s width.
 * The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties define the Grid’s height and width.
 
-> The default values for `Height` and `Width` are `auto`.
+> The default values for `Height` and `Width` are **auto**.
 
 ## Set width and height
 
@@ -102,8 +102,6 @@ public class OrderDetails
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can fill its parent container and automatically adjust to available space. This supports responsive layouts across various screen sizes.
 
 To enable this, set the Grid’s [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) to 100%. The Grid’s parent element must have an explicit height; otherwise, a vertical scrollbar will not appear.
-
-In the following example, the parent container has explicit height and width, and the Grid container is set to 100% for both dimensions to size responsively with its parent:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

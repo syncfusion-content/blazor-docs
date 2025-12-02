@@ -11,12 +11,10 @@ documentation: ug
 
 The infinite scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides load-on-demand data retrieval to handle large datasets without degrading performance. In default infinite scrolling, the Grid fetches the next block of data when the vertical scrollbar reaches the end of the scroller, creating a seamless browsing experience across extensive data.
 
-In this feature, a block is equivalent to the Grid’s [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize). If `PageSize` is not set, the Grid calculates it from the viewport height and row height. To enable infinite scrolling, set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to true and define a content [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height).
+In this feature, a block is equivalent to the Grid’s [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize). If `PageSize` is not set, the Grid calculates it from the viewport height and row height. To enable infinite scrolling, set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to **true** and define a content [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height).
 
 > - With this feature, the Grid does not issue a new data request when revisiting a previously loaded page.
 > - The `Height` property must be specified when `EnableInfiniteScrolling` is enabled (a fixed container height is required).
-
-The following is an example that demonstrates how to enable infinite scroll in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -87,8 +85,6 @@ public class TaskDetails
 At initial load, the Grid renders a specified number of data blocks (pages), which equates to the `InitialBlocks` value multiplied by the page size.
 
 Configure this using [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html). By default, three pages are rendered initially. Afterwards, additional data is buffered and loaded based on page size or the number of rows that fit within the given height.
-
-The following example shows how to set the `initial blocks `based on a `DropDownList` selection:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -189,11 +185,9 @@ public class TaskDetails
 
 In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid cache mode, previously loaded blocks are reused when revisited, reducing repeat data requests. The Grid manages the number of rendered DOM row elements using [GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks). When this limit is reached, the Grid removes an older block of row elements to render new ones.
 
-Enable cache mode by setting [EnableCache](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_EnableCache) to true on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html).
+Enable cache mode by setting [EnableCache](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_EnableCache) to **true** on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html).
 
-Configure the maximum cached blocks with `MaximumBlocks` (default: 3).
-
-The following example toggles cache mode using a Switch component and updates the Grid accordingly:
+Configure the maximum cached blocks with `MaximumBlocks` (**default: 3**).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
