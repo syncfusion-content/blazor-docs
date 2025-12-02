@@ -227,9 +227,6 @@ To change the background color of the selected row, add the following CSS:
     background-color: #f9920b;
 }
 ```
-
-The following example uses the `.e-selectionbackground` class to style the selected row:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -316,8 +313,6 @@ public class OrderData
 ## Row height
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports customizing row height to display more or less content as needed. Use the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property to change the height of all rows in the Grid.
-
-The following example demonstrates dynamically changing the row height using the `RowHeight` property:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -425,8 +420,6 @@ public class OrderData
 
 Customize the row height for a specific row when a single record needs additional space or emphasis. Use the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in combination with the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event to apply a CSS class conditionally.
 
-In the following example, the row with `OrderID` '10249' is assigned a custom height via a CSS class in the `RowDataBound` event:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -524,9 +517,7 @@ public class OrderData
 
 The row hover feature applies a visual effect when the mouse pointer is over a row, improving readability and helping to identify the focused record. Enable or disable the effect using the [EnableHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableHover) property.
 
-By default, `EnableHover` is `true`. Set it to `false` to disable row hover.
-
-The following example enables or disables row hover using a [Switch](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) component:
+By default, `EnableHover` is **true**. Set it to **false** to disable row hover.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -617,9 +608,7 @@ The following example enables or disables row hover using a [Switch](https://bla
 
 ## Row pinning (Frozen)
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can freeze rows to keep them visible while scrolling vertically through large datasets. This maintains important context as users navigate data.
-
-To know about frozen rows in Grid, you can check this video.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides an option to freeze rows, keeping them visible while scrolling vertically through large datasets. This feature helps maintain important information in view for better readability.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=L2NvKyBomhM"%}
 
@@ -746,8 +735,6 @@ Apply the following CSS to change the default line color:
 }
 ```
 
-The following example demonstrates changing the frozen rows’ line color using CSS:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -851,10 +838,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports pr
 
 The `AddRecordAsync` method takes two parameters:
 
-> The **data** object representing the new row to be added  
-> The **index** at which the new row should be inserted. If no index is specified, the new row is added at the end.
+ - The **data** object representing the new row to be added  
+ - The **index** at which the new row should be inserted. If no index is specified, the new row is added at the end.
 
-The following example shows how to add a new row using `AddRecordAsync`:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1031,8 +1017,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid exposes met
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can display related details in another Grid using a master-detail layout. Selecting a row in the master Grid loads related records in the detail Grid.
 
 Use the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event on the master Grid to obtain the selected record. Apply a filter through the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the detail Grid and bind the resulting collection to its [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
-
-In the following sample, selecting a row in the master Grid displays the corresponding orders in the detail Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

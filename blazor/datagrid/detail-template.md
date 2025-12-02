@@ -21,10 +21,8 @@ For an overview of the `detail template` in the grid, watch the following video.
 To integrate the detail template in the grid:
 
 1. Add the <DetailTemplate> element within the <GridTemplates> component to define the detail row content.
-2. Use any HTML structure or Blazor components inside the DetailTemplate to render custom content for each expanded row.
+2. Use any HTML structure or Blazor components inside the **DetailTemplate** to render custom content for each expanded row.
 3. Optionally, bind data to the template to display information corresponding to the expanded row.
-
-The following example demonstrates using `DetailTemplate` to display additional details for each row:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -182,8 +180,6 @@ Use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syn
 
 > Alternatively, call `ExpandCollapseDetailRowAsync` with the row data object in the `DataBound` event.
 
-The following example expands the record with `EmployeeID` equal to 1 by invoking `ExpandCollapseDetailRowAsync` in the `DataBound` event:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -309,7 +305,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can render 
 
 To render a custom component or build a hierarchical grid inside the detail row, define the template in the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) within the `GridTemplates` section. The hierarchical DataGrid displays data in expandable or collapsible levels using the expand or collapse button, or custom content such as HTML elements.
 
-The following example uses the detail template to display parent–child data in a hierarchical structure with multiple levels (Employee → Orders → Customers):
+The following example uses the detail template to display parent–child data in a hierarchical structure with multiple levels (**Employee → Orders → Customers**):
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -479,8 +475,6 @@ public class CustomerDetails
 A template column in a detail grid within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful for customizing the appearance and behavior of specific columns. It enables the inclusion of interactive elements, custom formatting, or complex data representations within the detail grid.
 
 Use the `Template` property of a column to display custom content instead of the field value.
-
-The following example shows a custom image in the `Employee Image` column of the detail grid using the column `Template`:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -840,8 +834,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 ## Expand or collapse specific detail template row
 
 To expand or collapse a specific detail row programmatically, use [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) and pass the corresponding row data object.
-
-The following example expands or collapses a specific employee’s detail row when the button is clicked.
 
 In the example, the `Expand` method validates the row index and then invokes `ExpandCollapseDetailRowAsync` with the selected row’s data:
 
@@ -1438,8 +1430,6 @@ Use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ```
 
-The following example hides the expand/collapse icon for the row with `EmployeeID` equal to `1` when no child records exist:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -1576,8 +1566,6 @@ public class OrderData
 ## Render aggregates in detail DataGrid
 
 Aggregates display summary values in the footer, group footer, or group caption of the detail grid. Use this feature to calculate and show summary information.
-
-The following example renders aggregates in a detail grid to display the sum and maximum values of the `Freight` column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2082,7 +2070,7 @@ To customize the appearance of the group expand/collapse icons in the detail Gri
 }
 ```
 
-In this example, the `.e-icon-gdownarrow` and `.e-icon-grightarrow` classes target the expand and collapse icons, respectively. Modify the `content` property to change the icon displayed. You can use the available [Syncfusion<sup style="font-size:70%">&reg;</sup> icons](https://blazor.syncfusion.com/documentation/appearance/icons) based on your theme.
+In this example, the `.e-icon-gdownarrow` and `.e-icon-grightarrow` classes target the expand and collapse icons, respectively. Modify the `content` property to change the icon displayed. [Syncfusion<sup style="font-size:70%">&reg;</sup> icons](https://blazor.syncfusion.com/documentation/appearance/icons) sets can be used based on the selected theme.
 
 ![Detail Grid group expand or collapse icons in Blazor](images/hierarchy-grid/grid-child-group-expand-or-collapse-icons.png)
 
@@ -2282,13 +2270,11 @@ In this example, the `.e-cellselectionbackground` class targets the background c
 
 Detail template is not supported with the following features:
 
-* Frozen rows and columns
 * Immutable mode
 * Infinite scrolling
 * Virtual scrolling
 * Print
 * Row template
-* Row spanning
-* Column spanning
 * Lazy load grouping
 * State persistence
+* Row and Column Spanning

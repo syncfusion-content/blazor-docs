@@ -18,9 +18,7 @@ Enable row drag and drop by setting [AllowRowDragAndDrop](https://help.syncfusio
 
 ## Drag and drop within DataGrid
 
-The drag and drop feature enables reordering of rows within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the drag handle. Set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to `true` to enable this feature. By default, the value is `false`.
-
-Here is an example that enables row drag and drop within the grid:
+The drag and drop feature enables reordering of rows within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the drag handle. Set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to **true** to enable this feature. By default, the value is **false**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -106,9 +104,7 @@ Here is an example that enables row drag and drop within the grid:
 ## Drag and drop to DataGrid
 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dragging rows from one grid and dropping them into another. Enable this feature by setting the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to `true` on both grids. To specify the target grid, configure the [RowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property with the target grid's ID.
-
-The following example enables row drag and drop between two grids:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dragging rows from one grid and dropping them into another. Enable this feature by setting the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to **true** on both grids. To specify the target grid, configure the [RowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property with the target grid's ID.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -287,7 +283,7 @@ public class OrdersDetails
 
 ## Drag and drop to custom component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dragging rows into custom components. Enable [AllowRowDragAndDrop] and set [RowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) to the `ID` of the target component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dragging rows into custom components. Enable [AllowRowDragAndDrop] and set [RowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) to the **ID** of the target component.
 
 In the following example, selected grid rows are dropped into a TreeGrid using the [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) event. After the drop, the corresponding rows are removed from the source grid and added to the target:
 
@@ -795,4 +791,4 @@ public class OrderData
 - A single row can be dragged and dropped within the same grid even if multiple selection is not enabled.
 - Row drag and drop does not have built-in support when combined with sorting, filtering, hierarchy grid, or row template features.
 - Row drag and drop with grouping does not support lazy-load grouping.
-- Drag and drop within the same group key is not supported. Dragging multiple rows from different grouped collections is not supported.
+- Dragging and dropping within the same group key is not supported. The grid does not allow drag-and-drop for multiple rows that belong to different grouped collections.

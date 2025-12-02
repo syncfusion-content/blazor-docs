@@ -21,8 +21,6 @@ For an overview of `row templates` in the Grid, watch the following video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ" %}
 
-The following example demonstrates a row template that displays employee information with a photo in the first column and details such as name, address, and other fields in the second column for each row.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -196,8 +194,6 @@ public class EmployeeData
 Typically, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format). When using row templates, values rendered inside the template are not affected by `Columns.Format`.
 
 To format values inside a row template, apply .NET formatting in the template (for example, using `ToString` with a format string) or invoke a helper method to produce the desired output such as dates, currency, or custom text.
-
-The following example formats the hire date within the template using a custom date format:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -517,8 +513,6 @@ public class OrderData
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports embedding other Syncfusion<sup style="font-size:70%">&reg;</sup> components, such as Charts, in row templates to visualize data directly within rows.
 
 To render a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart in a row template, use the [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) property to define the row layout and include the chart markup within the template.
-
-The following example renders a Syncfusion<sup style="font-size:70%">&reg;</sup> chart alongside order details in each row:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
