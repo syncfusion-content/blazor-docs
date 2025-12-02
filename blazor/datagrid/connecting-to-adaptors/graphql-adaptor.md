@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind GraphQL Data in Blazor DataGrid | Syncfusion
+title: GraphQL Data Binding in Syncfusion Blazor DataGrid
 description: Learn how to bind data from a GraphQL API to the Syncfusion Blazor DataGrid, including querying, mutation, and integration techniques.
 platform: Blazor
 control: DataGrid
@@ -9,21 +9,25 @@ documentation: ug
 
 # GraphQL Adaptor in Blazor DataGrid
 
-GraphQL is a powerful query language for APIs, designed to provide a more efficient alternative to traditional REST APIs. It allows you to precisely fetch the data you need, reducing over-fetching and under-fetching of data. GraphQL provides a flexible and expressive syntax for querying, enabling clients to request only the specific data they require.
+[GraphQL](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding) is a query language for APIs that enables precise data retrieval, reducing issues such as over-fetching and under-fetching. It provides a flexible syntax for defining queries, allowing clients to request only the required fields.
 
-Syncfusion’s Blazor DataGrid  seamlessly integrates with GraphQL servers using the GraphQLAdaptor in the [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app). This specialized adaptor simplifies the interaction between the Grid and GraphQL servers, allowing efficient data retrieval with support for various operations like CRUD (Create, Read, Update and Delete), paging, sorting, and filtering.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid integrates with `GraphQL` services through the [GraphQLAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_GraphQLAdaptor) in [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
-This section describes a step-by-step process for retrieving data from a GraphQL service using GraphQLAdaptor, then binding it to the Grid to facilitate data and CRUD operations.
+The following guide explains how to:
+
+* Configure a `GraphQL` server with [Hot Chocolate](https://chillicream.com/docs/hotchocolate/v14)  
+* Connect the Blazor DataGrid to the server  
+* Perform data operations, including **paging**, **sorting**, **filtering**, **searching**, and **CRUD** actions.
 
 ## Configure a GraphQL server
 
-To configure a GraphQL server using Hot Chocolate with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
+To set up a `GraphQL` server using **Hot Chocolate** for integration with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
 
-**Step 1: Create a new ASP.NET Core application**
+**Step 1: Create an ASP.NET Core application**
 
-- Open Visual Studio and select **Create a new project**.
-- Choose **ASP.NET Core Web App** and name the project `GraphQLServer`.
-- Alternatively, you can use a terminal or command prompt to create the project:
+- In Visual Studio, select **Create a new project** and choose **ASP.NET Core Web App**.
+- Name the project **GraphQLServer**.
+- Alternatively, use the .NET CLI:
     ```bash
     dotnet new web -n GraphQLServer
     ```
@@ -32,13 +36,11 @@ To configure a GraphQL server using Hot Chocolate with the Syncfusion<sup style=
     cd GraphQLServer
     ```
 
-**Step 2: Add the Hot Chocolate NuGet package**
+**Step 2: Install Hot Chocolate NuGet package**
 
-- Open the **NuGet Package Manager** by right-clicking on the project in the **Solution Explorer** and selecting **Manage NuGet Packages**.
-- Go to the **Browse** tab, search for `HotChocolate.AspNetCore`, and select the package.
-- Click **Install** to add it to your project.
+- Install the **HotChocolate.AspNetCore** package using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install.
 
-Alternatively, you can use the **Package Manager Console** to install the package by running the following command:
+- Alternatively, use the Package Manager Console:
 
 ```powershell
 Install-Package HotChocolate.AspNetCore
@@ -46,7 +48,7 @@ Install-Package HotChocolate.AspNetCore
 
 **Step 3: Create a model class**
 
-Add a new folder named **Models**. Then, add a model class named **OrderData.cs** in the **Models** folder to represent the order data.
+Add a **Models** folder and create **OrderData.cs** to represent order details:
 
 {% tabs %}
 {% highlight cs tabtitle="OrderData.cs" %}
@@ -137,7 +139,9 @@ namespace GraphQLServer.Models
 
 **Step 4: Define the GraphQL query**
 
-Create a `GraphQLQuery` class to define the query resolver for fetching order data. This class will handle the logic for retrieving data from the `OrderData` model. The following code demonstrates the `DataManagerRequestInput` class, which is passed as an argument to the resolver function.
+Create a `GraphQLQuery` class to implement the resolver logic for fetching order data from the OrderData model. This resolver processes requests from the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and returns the required data along with the total record count.
+
+The **resolver** method accepts an instance of [DataManagerRequestInput](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html), which encapsulates query parameters such as paging, sorting, filtering, and search options. These parameters are used to shape the response sent back to the DataGrid.
 
 {% tabs %}
 {% highlight cs tabtitle="GraphQLQuery.cs" %}
@@ -339,7 +343,7 @@ namespace GraphQLServer.Models
 
 **Step 5: Configure the GraphQL server**
 
-Update the `Program.cs` file to configure the GraphQL server. This configuration ensures that the server can handle GraphQL requests effectively.
+Update the **Program.cs** file to register `GraphQL` services and map the `GraphQL` endpoint. This configuration ensures that the server can process `GraphQL` queries efficiently.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -366,7 +370,7 @@ app.Run();
 
 **Step 6: Test the GraphQL endpoint**
 
-To verify that the GraphQL server is functioning correctly, use the following example query in a GraphQL client or playground:
+Verify that the `GraphQL` server is running and accessible at **http://localhost:xxxx/graphql**, where **xxxx** represents the port number. Use a GraphQL client or playground to execute the following query:
 
 ```
 {
@@ -382,28 +386,31 @@ To verify that the GraphQL server is functioning correctly, use the following ex
 }
 ```
 
-This query will return the total count of orders and a list of order details. Ensure the server is running and accessible at `http://localhost:xxxx/graphql` before testing. Here, `xxxx` represents the port number.
+This query returns the total count of orders and a collection of order details.
 
-For more details, refer to the [Hot Chocolate documentation](https://chillicream.com/docs/hotchocolate).
+> For additional configuration and advanced features, refer to the [Hot Chocolate documentation](https://chillicream.com/docs/hotchocolate/v14).
 
-## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to an GraphQL service
+## Connecting Syncfusion Blazor DataGrid to an GraphQL service
  
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid into your project using Visual Studio, follow the below steps:
+To bind the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to a remote API using the [GraphQLAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_GraphQLAdaptor), configure the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component with the API endpoint and adaptor type. The following steps outline the integration process:
 
-**Step 1: Create a Blazor Web App**
+**1.Create a Blazor Web App**
 
-Create a **Blazor Web App** named **BlazorGrid** using Visual Studio 2022. You can use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Ensure you configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+1. Open Visual Studio 2022.  
+2. Choose **Blazor Web App** and name the project **BlazorGrid**.
+3. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension to create the project.
+4. Select the preferred [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
 
-**Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet packages**
+**2. Install Required NuGet Packages**
 
-To add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to your app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search for and install the following packages:
+* Install the following packages using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install:
 
-- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
-- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+    - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install these packages in the client project.
+> * For projects using **WebAssembly** or **Auto** render modes, install these packages in the client project.
 
-Alternatively, use the following Package Manager commands:
+* Alternatively, use the Package Manager Console:
 
 ```powershell
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
@@ -412,9 +419,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 > Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
 
-**Step 3: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
+**3. Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
 
-- Open the **~/_Imports.razor** file and import the required namespaces:
+- Add the required namespaces in **~/_Imports.razor**:
 
 ```cs
 @using Syncfusion.Blazor
@@ -422,7 +429,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.Data
 ```
 
-- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file:
+- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **Program.cs**:
 
 ```csharp
 using Syncfusion.Blazor;
@@ -432,9 +439,9 @@ builder.Services.AddSyncfusionBlazor();
 
 For apps using `WebAssembly` or `Auto (Server and WebAssembly)` render modes, register the service in both **~/Program.cs** files.
 
-**Step 4: Add stylesheet and script resources**
+**4. Add stylesheet and script references**
 
-Include the theme stylesheet and script references in the **~/Components/App.razor** file:
+Include the theme and script references in **App.razor**:
 
 ```html
 <head>
@@ -448,12 +455,13 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 </body>
 ```
 
-> - Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
-> - Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for available methods to include themes, such as Static Web Assets, CDN, or CRG.
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in the Blazor Web App configuration.
 
-**Step 5: Add Blazor DataGrid and Configure with server**
+**5. Configure DataGrid with GraphQLAdaptor**
 
-To bind GraphQL service data to the Grid, provide the GraphQL query string using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Query) property of the [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html). Additionally, set the [ResolverName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_ResolverName) property to map the response. The GraphQLAdaptor expects the response as a JSON object with properties `Result`, `Count`, and `Aggregates`, which contain the collection of entities, total number of records, and aggregate values, respectively. The GraphQL response should be returned in JSON format like `{ "data": { ... } }` with the query name as the field.
+To bind the DataGrid to the [GraphQLAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_GraphQLAdaptor) using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_GraphQLAdaptorOptions).
+Set the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Query) property to define the GraphQL query and [ResolverName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_ResolverName) to map the response.
 
 {% tabs %}
 {% highlight cs tabtitle="Home.razor" %}
@@ -511,11 +519,11 @@ To bind GraphQL service data to the Grid, provide the GraphQL query string using
 {% endhighlight %}
 {% endtabs %}
 
-> Replace `https://localhost:xxxx/graphql` with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+> Replace **https://localhost:xxxx/graphql** with the actual GraphQL endpoint URL.
 
-**Step 6: Enable CORS Policy**
+**6: Enable CORS Policy**
 
-To allow your Blazor application to access the GraphQL server, you need to enable Cross-Origin Resource Sharing (CORS) in your server application. Add the following code to your `Program.cs` file:
+Add a CORS policy in **Program.cs** to allow the Blazor app to access the GraphQL server:
 
 ```csharp
 // Add CORS policy
@@ -535,19 +543,27 @@ builder.Services.AddCors(options =>
 app.UseCors("AllowSpecificOrigin");
 ```
 
-This configuration ensures that your Blazor application can communicate with the GraphQL server without encountering CORS-related issues.
+This configuration ensures that the Blazor application can communicate with the GraphQL server without CORS-related restrictions.
 
-**Step 7: Run the Application**
+**7: Run the Application**
 
-After completing the setup, run your application. The Grid will fetch and display data from the configured GraphQL API. Ensure that both the Blazor application and the GraphQL server are running and accessible.
+Start both the Blazor application and the GraphQL server. The DataGrid will fetch and display data from the configured GraphQL API.
  
 ![GraphQL Adaptor Data](../images/blazor-datagrid-graphql-adaptor-data.gif)
 
-**Understanding DataManagerRequestInput Class**
+## Perform data operations in GraphQLAdaptor
 
-Before you dive into specific data operations like search, sorting, or filtering, it's essential to understand the request structure that the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid sends to the GraphQL server.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports server-side operations such as **searching**, **filtering**, **sorting**, **paging**, and **CRUD** through the `GraphQLAdaptor`. These operations are executed by passing parameters from the DataGrid to the GraphQL server using the [DataManagerRequestInput](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) structure.
 
-The following code demonstrates the `DataManagerRequestInput` class, which encapsulates parameters such as pagination (Skip, Take), search filters (Search), sorting (Sorted), and more. These parameters are passed as arguments to the resolver function for processing.
+**Key Operations**
+
+* **Searching**: Uses the **Search** property to filter records based on keywords and fields.
+* **Filtering**: Uses the **Where** property to apply conditional filters on columns.
+* **Sorting**: Uses the **Sorted** property to define sort fields and sort directions.
+* **Paging**: Uses the **Skip** and **Take** properties to retrieve paged data.
+* **CRUD**: Uses GraphQL mutations to perform **Insert, Update, Delete**, and **Batch** operations.
+
+Each operation is handled on the server by parsing these parameters and applying the logic to the data source before returning the result to the DataGrid.
 
 {% tabs %}
 {% highlight cs tabtitle="DataManagerRequest.cs" %}
@@ -700,9 +716,14 @@ namespace GraphQLServer.Models
 
 ## Handling searching operation
 
-To handle search operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the GraphQLAdaptor, you can make use of the `dataManager.Search` parameters and apply the search logic on the server side. This allows users to efficiently filter and retrieve relevant records from the Grid based on the provided search criteria.
+**Searching** parameters are sent through the **Search** property of `DataManagerRequestInput`. These parameters include:
 
-When a search is performed in the Grid, the DataManager sends the search parameters to the server, which include the search keyword and the list of fields to search against. The server then processes these parameters and filters the data accordingly.
+* **Key**: The search keyword.
+* **Fields**: The collection of fields to search against.
+* **Operator**: The comparison operator (e.g., contains, startswith).
+* **IgnoreCase**: Indicates whether the search should be case-insensitive.
+
+When a search is performed, the DataGrid sends these parameters to the GraphQL server. The server applies the search logic and returns the filtered collection along with the total record count.
 
 ![GraphqlAdaptor - Searching](../images/blazor-datagrid-graphql-adaptor-searching.png)
 
@@ -812,11 +833,15 @@ public class OrdersDataResponse
 
 ## Handling filtering operation
 
-To handle filtering operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the GraphQLAdaptor, you can make use of the `dataManager.Where` parameters and apply the filter logic on the server side. This enables users to refine the Grid data by specifying one or more filter conditions based on column values.
+**Filtering** parameters are sent through the **Where** property of `DataManagerRequestInput`. Each filter condition includes:
 
-When a filter is applied in the Grid, the DataManager sends the filtering criteria to the server through the `Where` property. Each filter condition includes the target field, operator, filter value, and other optional settings such as case sensitivity or nested predicates.
+* **Field**: The column name to apply the filter.
+* **Operator**: The comparison operator (e.g., equal, contains, greater than).
+* **Value**: The value to compare against.
+* **IgnoreCase**: Indicates whether the comparison should be case-insensitive.
+* **Predicates**: Nested conditions for complex filtering.
 
-On the server, these parameters are parsed and used to filter the data source accordingly before returning the results to the Grid.
+When a filter is applied in the DataGrid, these parameters are passed to the GraphQL server. The server processes the conditions and returns the filtered collection along with the total record count.
 
 ![GraphqlAdaptor - Filtering](../images/blazor-datagrid-graphql-adaptor-filtering.png)
 
@@ -970,9 +995,12 @@ public class OrdersDataResponse
 
 ## Handling sorting operation
 
-To handle sorting operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the GraphQLAdaptor, the sorting logic can be implemented on the server side by utilizing the `dataManager.Sorted` parameter. This enables the Grid to send sorting instructions to the server, specifying the fields and sort directions to apply.
+**Sorting** parameters are sent through the **Sorted** property of `DataManagerRequestInput`. Each sorting instruction includes:
 
-When a sort action is triggered in the Grid, the DataManager sends the sorting configuration in the `Sorted` property. This includes the field name to sort and the direction (Ascending or Descending). The server processes this parameter and sorts the data accordingly before returning it to the Grid.
+* **Name**: The column name to sort.
+* **Direction**: The sort order (**ascending** or **descending**).
+
+When a sort action is triggered in the DataGrid, these parameters are passed to the GraphQL server. The server applies the sorting logic and returns the sorted collection along with the total record count.
 
 ![GraphqlAdaptor - Sorting](../images/blazor-datagrid-graphql-adaptor-sorting.png)
 
@@ -1079,11 +1107,12 @@ public class OrdersDataResponse
 
 ## Handling paging operation
 
-To handle paging operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using the GraphQLAdaptor, you can make use of the `dataManager.Skip` and `dataManager.Take` parameters. These parameters allow you to retrieve data in pages, helping to manage large datasets efficiently by loading only a subset of records at a time.
+**Paging** parameters are sent through the **Skip** and **Take** properties of `DataManagerRequestInput`:
 
-When paging is applied, the DataManager sends the **Skip** and **Take** values to the server. The **Skip** parameter specifies the number of records to be skipped, while the **Take** parameter defines how many records to retrieve in the current page.
+* **Skip**: The number of records to **skip**.
+* **Take**: The number of records to **retrieve** for the current page.
 
-On the server side, the data is sliced based on the **Skip** and **Take** values, and the total record count is returned to enable proper pagination in the Grid.
+When paging is applied, these parameters are passed to the GraphQL server. The server slices the data accordingly and returns the paged collection along with the total record count.
 
 ![GraphQLAdaptor - Paging](../images/blazor-datagrid-graphql-adaptor-paging.png)
 
@@ -1182,25 +1211,20 @@ public class OrdersDataResponse
 
 ## Handling CRUD operation using mutation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid integrates seamlessly with GraphQL APIs using the GraphQLAdaptor, enabling support for CRUD (Create, Read, Update, and Delete) and Batch operations. This adaptor maps Grid actions to GraphQL queries and mutations for real-time data interaction.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid integrates with GraphQL APIs using the `GraphQLAdaptor` to support **Create**, **Read**, **Update**, **Delete**, and **Batch** operations. These operations are mapped to GraphQL mutations for real-time data interaction.
 
-This section demonstrates how to configure the Grid with actual code to bind data and perform CRUD actions using the GraphQLAdaptor.
+**Configure Mutation Queries**
 
-**Set Up Mutation Queries**
+Define mutation queries in the [GraphQLAdaptorOptions.Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property. Each operation requires a specific mutation:
 
-Define GraphQL mutation queries for Insert, Update, Delete, and Batch operations in the [GraphQLAdaptorOptions.Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property. Below are the required queries for each operation:
-
-* **Insert Mutation:** A GraphQL mutation that allows adding new records.
-
-* **Update Mutation:** A GraphQL mutation for updating existing records.
-
-* **Delete Mutation:** A GraphQL mutation that removes records.
-
-* **Batch Mutation:** Handles multiple operations (Insert, Update, and Delete) in a single request.
+* [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert): Adds a new record.
+* [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update): Modifies an existing record.
+* [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete): Removes a record.
+* [Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Batch): Handles multiple operations(Insert, Update, and Delete) in a single request.
 
 **Configuration in GraphQL server application**
 
-The following code is the configuration in GraphQL server application to set GraphQL query and mutation type and to enable CORS.
+This configuration sets up the GraphQL server to handle queries and mutations and enables **CORS** for cross-origin requests from the Blazor application:
 
 ```cshtml
 
@@ -1223,17 +1247,19 @@ builder.Services.AddCors(options =>
 
 ```
 
-The following steps outline how to set up these operations in the Grid.
+This configuration ensures:
+
+* **GraphQLQuery** handles data retrieval.
+* **GraphQLMutation** handles insert, update, delete, and batch operations.
+* **CORS policy** allows secure communication between the Blazor app and the GraphQL server.
 
 **1. Insert Operation:**
 
-To insert a new record into the GraphQL server, define the mutation query in the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object within [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
+To insert a new record into the GraphQL server, configure the mutation query in the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of the `GraphQLAdaptorOptions.Mutation` object.
 
-This mutation query is executed when a new row is added to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. The adaptor sends the necessary parameters to the GraphQL server to perform the insertion.
+This mutation is executed when a new row is added to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. The adaptor sends the required parameters to the GraphQL server for processing.
 
 **Mutation query configuration**
-
-The `Insert` mutation should be configured as shown below:
 
 ```cs
 Mutation = new GraphQLMutation
@@ -1249,20 +1275,20 @@ Mutation = new GraphQLMutation
 },
 ```
 
-**Parameters Sent to the Server**
+**Parameters sent to the Server**
 
-The following variables are passed as a parameter to the mutation method written for **Insert** operation in server side.
+These parameters are passed to the mutation method for the `Insert` operation on the server:
 
-| Properties | Description |
+| Parameter | Description |
 |--------|----------------|
-| record | The new record which is need to be inserted. |
-| index | Specifies the index at which the newly added record will be inserted.  |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
-| additionalParameters | An optional parameter that can be used to perform any operations.   |
+| record | Represents the new record to be inserted. |
+| index | Specifies the position at which the record should be inserted.  |
+| action | Indicates the type of operation (e.g., Add, Delete, Update).  |
+| additionalParameters | Optional parameter for custom logic during the operation.  |
 
 **Server-Side Mutation Implementation**
 
-The following example demonstrates how to implement the insert logic on the GraphQL server using C# with HotChocolate:
+This example demonstrates how to implement the insert logic on the GraphQL server using C# with the **HotChocolate**:
 
 ```cs
 
@@ -1292,13 +1318,11 @@ namespace GraphQLServer.GraphQL
 
 **2. Update Operation:**
 
-To update an existing record on the GraphQL server, define the mutation query in the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) property of the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object within [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
+To update an existing record on the GraphQL server, configure the mutation query in the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) property of the [GraphQLAdaptorOptions.Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object.
 
-This mutation query is triggered when an existing row in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is modified. The adaptor sends the updated data and relevant parameters to the GraphQL server for processing.
+This mutation is triggered when a row in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is modified. The adaptor sends the updated record and related parameters to the GraphQL server for processing.
 
 **Mutation query configuration**
-
-The Update mutation should be configured as shown below:
 
 ```cs
 Mutation = new GraphQLMutation
@@ -1314,21 +1338,21 @@ Mutation = new GraphQLMutation
 },
 ```
 
-**Parameters Sent to the Server**
+**Parameters sent to the Server**
 
-The following variables are passed as a parameter to the mutation method written for **Update** operation in server side.
+These parameters are passed to the mutation method for the `Update` operation on the server:
 
-| Properties | Description |
+| Parameter | Description |
 |--------|----------------|
-| record | The new record which is need to be updated. |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
-| primaryColumnName | Specifies the field name of the primary column. |
-| primaryColumnValue | Specifies the primary column value which is needs to be updated in the collection.   |
-| additionalParameters | An optional parameter that can be used to perform any operations.   |
+| record | Represents the updated record. |
+| action | Indicates the type of operation (e.g., Add, Delete, Update). |
+| primaryColumnName | Specifies the name of the primary key column. |
+| primaryColumnValue | Specifies the value of the primary key for the record to update.   |
+| additionalParameters | Optional parameter for custom logic during the operation.   |
 
 **Server-Side Mutation Implementation**
 
-The following example demonstrates how to implement the update logic on the GraphQL server using C# with HotChocolate:
+This example demonstrates how to implement the update logic on the GraphQL server using C# with the **HotChocolate**:
 
 ```cs
 using GraphQLServer.Models;
@@ -1356,13 +1380,11 @@ namespace GraphQLServer.GraphQL
 
 **3. Delete Operation:**
 
-To delete an existing record from the GraphQL server, define the mutation query in the [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) property of the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object within [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
+To remove an existing record from the GraphQL server, configure the mutation query in the [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) property of the [GraphQLAdaptorOptions.Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object.
 
-This mutation query is executed when a row is removed from the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. The adaptor passes the required parameters to the GraphQL server to process the deletion.
+This mutation is executed when a row is deleted in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. The adaptor sends the primary key and related parameters to the GraphQL server for processing.
 
 **Mutation query configuration**
-
-The Delete mutation should be configured as shown below:
 
 ```cs
 Mutation = new GraphQLMutation
@@ -1378,20 +1400,20 @@ Mutation = new GraphQLMutation
 },
 ```
 
-**Parameters Sent to the Server**
+**Parameters sent to the Server**
 
-The following variables are passed as a parameter to the mutation method written for **Delete** operation in server side.
+These parameters are passed to the mutation method for the **Delete** operation on the server:
 
-| Properties | Description |
+| Parameter | Description |
 |--------|----------------|
-| primaryColumnValue | Specifies the primary column value which is needs to be removed from the collection. |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
-| primaryColumnName | specifies the field name of the primary column.  |
-| additionalParameters | An optional parameter that can be used to perform any operations.   |
+| primaryColumnValue | Specifies the primary key value of the record to delete. |
+| action | Indicates the type of operation (e.g., Add, Delete, Update).  |
+| primaryColumnName | Specifies the name of the primary key column.  |
+| additionalParameters | Optional parameter for custom logic during the operation.   |
 
 **Server-Side Mutation Implementation**
 
-The following example demonstrates how to implement the delete logic on the GraphQL server using C# with HotChocolate:
+This example demonstrates how to implement the delete logic on the GraphQL server using C# with the **HotChocolate**:
 
 ```cs
 using GraphQLServer.Models;
@@ -1414,8 +1436,6 @@ namespace GraphQLServer.GraphQL
 }
 
 ```
-
-The following code shows how to bind the Grid with a GraphQL service and enable CRUD operations.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -1559,13 +1579,11 @@ namespace GraphQLServer.GraphQL
 
 **Batch operation:**
 
-To perform multiple data operations in a single request to the GraphQL server, define the mutation query in the [Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Batch) property of the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object within [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
+To enable multiple data operations such as insert, update, and delete in a single request, configure the mutation query in the [Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Batch) property of the [GraphQLAdaptorOptions.Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object.
 
-This `Batch` mutation is triggered when multiple changes (add, edit, delete) are made in batch editing mode of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and then committed using the Update toolbar button.
+This `Batch` mutation executes when multiple changes such as **add**, **edit**, and **delete** are performed in [Batch Edit Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditMode.html#Syncfusion_Blazor_Grids_EditMode_Batch) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and committed using the **Update** toolbar button.
 
 **Mutation query configuration**
-
-The Batch mutation should be configured as shown below:
 
 ```cs
 
@@ -1584,23 +1602,23 @@ Mutation = new GraphQLMutation
 
 ```
 
-**Parameters Sent to the Server**
+**Parameters sent to the Server**
 
-The following variables are passed as a parameter to the mutation method written for **Batch** operation in server side.
+These parameters are passed to the mutation method for the **Batch** operation on the server:
 
-| Properties | Description |
+| Parameter | Description |
 |--------|----------------|
-| changed | Specifies the collection of record to be updated. |
-| added | Specifies the collection of record to be inserted.  |
-| deleted | Specifies the collection of record to be removed.   |
+| changed | Collection of records to update. |
+| added | Collection of records to insert.  |
+| deleted | Collection of records to remove.   |
 | action | Indicates the type of operation being performed. |
-| primaryColumnName | Specifies the field name of the primary column.  |
-| additionalParameters | An optional parameter that can be used to perform any operations.   |
-| dropIndex | Specifies the record position, from which new records will be added while performing drag and drop.   |
+| primaryColumnName | Specifies the name of the primary key column.  |
+| additionalParameters | Optional parameter for custom logic during the operation.   |
+| dropIndex | Position where new records should be inserted during drag-and-drop.   |
 
 **Server-Side Mutation Implementation**
 
-The following example demonstrates how to implement batch logic on the GraphQL server using C# with HotChocolate:
+This example demonstrates how to implement the batch logic on the GraphQL server using C# with the **HotChocolate**:
 
 ```cs
 using GraphQLServer.Models;
@@ -1662,8 +1680,6 @@ namespace GraphQLServer.GraphQL
 }
 
 ```
-
-The following sections explain how to configure each CRUD and batch operation in the Grid using GraphQL.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -1797,4 +1813,4 @@ namespace GraphQLServer.GraphQL
 {% endhighlight %}
 {% endtabs %}
 
-You can get the entire code in the [github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/GraphQLAdaptor) sample.
+> The complete implementation is available in the [GitHub](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/GraphQLAdaptor) sample.
