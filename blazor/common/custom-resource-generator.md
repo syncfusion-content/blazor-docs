@@ -1,54 +1,54 @@
 ---
 layout: post
-title: Custom Resource Generator (CRG) in Blazor | Syncfusion
-description: Learn here about that how to using the custom resource generator in the Syncfusion Blazor Components
+title: Custom Resource Generator (CRG) for Syncfusion Blazor
+description: Generate custom Syncfusion Blazor script and style bundles with CRG to optimize load time and include only required components.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
 # Custom Resource Generator
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides an option to generate a component's interop script and styles using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool for Blazor components from v19.2.0.44. This tool empowers users by generating precise interop scripts and styles specifically for their components. By leveraging the CRG, you can optimize loading times and enhance responsiveness compared to loading overall script and style resources.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool to generate component-specific interop scripts and styles for Blazor. Using CRG reduces bundle size and improves load performance by including only the required resources instead of the full library.
 
-![Custom resource generator preview for Blazor](images/custom-resource-generator-preview.png)
+![CRG preview showing component and theme selection](images/custom-resource-generator-preview.png)
 
 ## Search and select the component list
 
-Search and select the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components from the CRG to generate a specific set of component resources.
+Select the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in CRG to generate a specific set of resources.
 
-Refer to the following steps to search and select the components in CRG:
+Follow these steps to choose components in CRG:
 
-1. Open [Syncfusion<sup style="font-size:70%">&reg;</sup> Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) application.
-2. Type the required component name in the search bar, and then select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
-![Search and select Syncfusion Blazor UI components](images/search-non-injectable.png)
-3. Select the required built-in themes from the **Select Themes** option. This provides an option to select more than one theme.
-![Select the built-in themes in Blazor](images/select-inbuilt-themes.png)
+1. Open the [Syncfusion<sup style="font-size:70%">&reg;</sup> Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) app.
+2. Type the component name in the search box, then select its checkbox. CRG automatically resolves dependencies; manual selection of dependent components is not required.
+![CRG search with component selection](images/search-non-injectable.png)
+3. Select one or more built-in themes from **Select Themes**.
+![Theme selection options in CRG](images/select-inbuilt-themes.png)
 
 ## Download the selected component resources
 
-After selecting the required component resources, download the custom interop script and styles from CRG.
+After selecting the required components, download the custom interop script and styles from CRG.
 
-Refer to the following steps to download the custom resources in CRG:
+Follow these steps to download the custom resources:
 
-1. Once components are selected, select the **Minified** option to generate the minified file output for production. Then Click the **DOWNLOAD** button.
-![Download option in Blazor](images/download-option.png)
-2. Change the file name as needed. After that, enter an valid email address and then click **GENERATE** button in the pop-up.
-![Export popup for generation custom resources](images/export-popup.png)
-3. Now, the export request has been initiated for the selected component(s). You will receive an email with a download link within a minute( Depending on the selected component counts and bundle type minified or unminified ).
-![Blazor Bundle custom resources](images/mail-with-download-link.png)
-4. The final output contains the custom interop script and styles for the selected components and an **import.json** file, which stores the current settings.
+1. Select the **Minified** option to generate the minified file output for production, then click **DOWNLOAD**.
+![CRG download options](images/download-option.png)
+2. Rename the file if needed, enter a valid email address, and click **GENERATE** in the pop-up.
+![CRG export pop-up for generating resources](images/export-popup.png)
+3. The export request starts for the selected components. An email with a download link will arrive shortly (timing depends on the number of components and bundle type minified or unminified).
+![Email with download link to the custom bundle](images/mail-with-download-link.png)
+4. The output includes the custom interop script, styles, and an **import.json** file that stores the current settings.
 
-   ![Final output of customized resources in Blazor](images/customized-resources.png)
+   ![Example of downloaded custom scripts and styles](images/customized-resources.png)
 
-N> When you download the resources of Material and Tailwind themes, either separately or with other themes, you will find a 'styles' folder that contains CSS files along with a 'customized' folder. The CSS files within the 'customized' folder do not include the online Google font dependencies associated with the Material and Tailwind themes. For more details, please refer to [this](https://blazor.syncfusion.com/documentation/appearance/themes#render-syncfusion-components-in-offline-with-material-and-tailwind-themes) resource.
+N> When downloading Material or Tailwind themes (alone or with other themes), the package includes a 'styles' folder with CSS files and a 'customized' folder. The CSS files within the 'customized' folder do not include the online Google font dependencies associated with the Material and Tailwind themes. See [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes#render-syncfusion-components-in-offline-with-material-and-tailwind-themes) for details.
 
 ## How to use custom resources in the Blazor application
 
-1. Copy and paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
-2. Now, manually add the custom interop script and styles in the Blazor App.
-    * For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference custom interop script in `~/Components/App.razor` file.
-    * For **Blazor WASM Standalone App**, reference custom interop script in `~/wwwroot/index.html` file.
+1. Copy and paste the downloaded custom resources into the application's `~/wwwroot` folder.
+2. Manually add the custom interop script and styles:
+    * For **.NET 8, .NET 9 and .NET 10** Blazor Web App (any render mode: Server, WebAssembly, or Auto), reference the custom interop script in `~/Components/App.razor` file.
+    * For a **Blazor WebAssembly (standalone) app**, reference the custom interop script in `~/wwwroot/index.html` file.
 
     ```html
     <head>
@@ -58,15 +58,17 @@ N> When you download the resources of Material and Tailwind themes, either separ
         <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
-3. Run the application and it will load the resources with application required components.
+3. Run the application. The resources will load only the required components.
+
+N> Ensure the generated bundle version matches the installed Syncfusion Blazor NuGet package version. After upgrading packages, regenerate the CRG bundle. For reference on where to place script references, see [Reference script files for Syncfusion Blazor](https://blazor.syncfusion.com/documentation/common/adding-script-references).
 
 ## Import previously generated settings into CRG
 
-To add more components or upgrade the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library resources, it is not necessary to generate from the scratch in the CRG. Just import the old **import.json** file, make the changes, and then download it again from the CRG application.
+To add more components or update to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor resources, it is not necessary to start from scratch. Import the existing **import.json**, make changes, and download it again from the CRG application.
 
-Refer to the following steps to import previous settings in CRG:
+Follow these steps to import previous settings in CRG:
 
-1. Click the **IMPORT SETTINGS** button at the bottom of the page.
-![Import option in CRG](images/import-option.png)
-2. Upload the **import.json** file, so that the previously stored data will be restored in the CRG application. Now, add more components and export the resources again.
-![blazor Previous changes restored](images/previous-changes-restored.png)
+1. Click **IMPORT SETTINGS** at the bottom of the page.
+![CRG import settings action](images/import-option.png)
+2. Upload the **import.json** file to restore the previous configuration. Add components as needed and export the resources again.
+![CRG with previously restored selections](images/previous-changes-restored.png)

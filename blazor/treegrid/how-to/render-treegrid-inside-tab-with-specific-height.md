@@ -1,25 +1,23 @@
 ---
 layout: post
 title: Blazor TreeGrid Component inside the Tab | Syncfusion
-description: Learn how to render the Blazor TreeGrid component inside a Tab with a specific height and avoid layout issues.
+description: Learn here all about rendering Blazor TreeGrid component inside the Tab with specific height and more.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Render Blazor TreeGrid Component inside the Tab with Specific Height
+# Render Blazor TreeGrid Component inside the Tab with specific height
 
-By default, the TreeGrid occupies the full space of its parent element when the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) properties are set to `100%`. However, when the TreeGrid is rendered inside a Tab control, it may incorrectly calculate its dimensions based on the entire page, resulting in layout issues such as the absence of a horizontal scrollbar.
-
-To resolve this, ensure that the parent container of the TreeGrid (inside the Tab) has a defined height. This allows the TreeGrid to correctly render with scrollbars and proper layout.
+By default, Tree Grid will occupy the entire space of the parent element when the Tree Grid [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) property is defined as 100%. But if the similar Tree Grid is rendered inside the Tab control, it will consider the entire page and render the Tree Grid without horizontal scroller.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using Syncfusion.Blazor.Grids;
-@using Syncfusion.Blazor.TreeGrid;
+@using  Syncfusion.Blazor.Grids;
+@using  Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Navigations
 
 <div style="height:300px">
@@ -113,7 +111,7 @@ namespace TreeGridComponent.Data {
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public int? Duration { get; set; }
-        public string Progress { get; set; }
+        public String Progress { get; set; }
         public string Priority { get; set; }
         public bool Approved { get; set; }
         public int Resources { get; set; }

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Blazor Client Resources in Production Environment - Syncfusion
-description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
+title: Use the Blazor Report Viewer (Bold Reports) | Syncfusion
+description: Learn here about how to use the Blazor Report Viewer from Bold Reports in Blazor WebAssembly (WASM) and Blazor Server Apps. Explore here to more details.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# How to Use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ReportViewer
+# How to use the Blazor Report Viewer (Bold Reports)
 
-This section contains the references of how to use Syncfusion<sup style="font-size:70%">&reg;</sup> ReportViewer in Blazor application.
+The Blazor Report Viewer is provided through the Bold Reports product. Use the following resources to integrate the Report Viewer into Blazor applications.
 
-* [How to Use Syncfusion<sup style="font-size:70%">&reg;</sup> ReportViewer in Blazor WebAssembly Application](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-web-assembly-application/)
-* [How to Use Syncfusion<sup style="font-size:70%">&reg;</sup> ReportViewer in Blazor Server Application](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-server-application/)
-* [Blazor Reporting Components](https://www.boldreports.com/blog/blazor-reporting-components)
+* [How to use the Bold Reports Report Viewer in a Blazor WebAssembly App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-web-assembly-application/)
+* [How to use the Bold Reports Report Viewer in a Blazor Server App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-server-application/)
+* [Learn about Blazor reporting components in Bold Reports](https://www.boldreports.com/blog/blazor-reporting-components)

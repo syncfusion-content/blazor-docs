@@ -50,9 +50,7 @@ documentation: ug
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLTNYsqpkzRkDLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Bar Chart](../images/chart-types-images/blazor-bar-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLTNYsqpkzRkDLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bar Chart](../images/chart-types-images/blazor-bar-chart.png)" %}
 
 N> Refer to our [Blazor Bar Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Bar Chart Example](https://blazor.syncfusion.com/demos/chart/bar?theme=bootstrap5) to compare values across categories by using horizontal bars.
 
@@ -370,8 +368,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Bar Chart with corner radius](../images/chart-types-images/blazor-bar-chart-corner-radius.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBINTjfrHKsRaBF?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBINTjfrHKsRaBF?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Bar Chart with corner radius](../images/chart-types-images/blazor-bar-chart-corner-radius.png)" %}
 
 We can customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -421,8 +418,7 @@ We can customize the corner radius for individual points in the chart series usi
 }
 
 ```
-![Blazor bar chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-bar-chart-corner-radius-using_onPointRenderEvent.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBejJXJVPrWIMKc?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBejJXJVPrWIMKc?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor bar chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-bar-chart-corner-radius-using_onPointRenderEvent.png)" %}
 
 ## Bar space and width
 
@@ -508,8 +504,7 @@ The [ColumnWidthInPixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     };
 }
 ```
-![Blazor Bar Chart with column width set in pixel](../images/chart-types-images/blazor-bar-chart-width-in-pixels.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDreDxhnJqkknbxM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDreDxhnJqkknbxM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bar Chart with column width set in pixel](../images/chart-types-images/blazor-bar-chart-width-in-pixels.png)" %}
 
 ## Grouped bar
 

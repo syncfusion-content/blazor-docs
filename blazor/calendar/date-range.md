@@ -29,6 +29,4 @@ The following code allows you to select a date within the range of 7th to 27th d
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgMhBLLyBEcqBn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![DataRange in Blazor Calendar Component](./images/blazor-calendar-date-range.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgMhBLLyBEcqBn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[DataRange in Blazor Calendar Component](./images/blazor-calendar-date-range.png)" %}

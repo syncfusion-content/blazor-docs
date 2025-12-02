@@ -9,20 +9,22 @@ documentation: ug
 
 # Virtualization in Blazor Gantt Chart Component
 
-Gantt Chart allows you to load a large amount of data without performance degradation.
+Virtual scrolling in the Blazor Gantt Chart improves performance by rendering only visible rows, columns, and timeline segments, reducing DOM operations for large datasets or extended timelines. Row virtualization handles large task volumes (e.g. displaying 10,000 tasks in a project), timeline virtualization loads timeline cells on-demand during horizontal scrolling (e.g. navigating multi-year timelines), and column virtualization renders only the columns currently in view. These techniques enable efficient and scalable project management.
 
-## Row virtualization
+## Configure row virtualization
 
-The `EnableRowVirtualization` property allows you to render only the rows that are visible in the content viewport at load time. Rows are loaded while scrolling vertically, which optimizing memory usage by rendering only the rows that are visible, resulting in faster rendering and scrolling and efficiently handling large datasets in your Gantt chart without sacrificing performance or user experience. To enable row virtualization using this API, simply set [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) to true.
+Row virtualization, enabled by setting [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) to **true**, renders only tasks visible in the Gantt’s viewport, determined by the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Height) property in pixels (e.g., “450px”). All tasks are fetched initially but rendered on-demand during vertical scrolling, reducing load times for large datasets. For example, a project with 10,000 tasks renders only the 50 visible tasks, improving performance. Ensure the `Height` property is set explicitly to control the viewport size.
 
-The number of records displayed in the Gantt chart is determined implicitly by the height of the content area.
+The following example enables row virtualization for a large dataset:
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" AutoCalculateDateScheduling="@autoCalculateDateScheduling" TreeColumnIndex="1" EnableRowVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate" Toolbar="@(new List<string>() { "Add", "Delete", "Edit", "ZoomIn", "ZoomOut" })" ScrollToTaskbarOnClick="true">
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-    <GanttTaskFields ParentID="ParentId" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    <GanttTaskFields ParentID="ParentID" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttColumns>
     <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
@@ -34,13 +36,12 @@ The number of records displayed in the Gantt chart is determined implicitly by t
     <GanttColumn Field="Reporter" HeaderText="Reporter"></GanttColumn>
     <GanttColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
     </GanttColumns>
-    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Auto" ShowDeleteConfirmDialog="true">
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto" ShowDeleteConfirmDialog="true">
     </GanttEditSettings>
     <GanttSplitterSettings Position="40%"></GanttSplitterSettings>
 </SfGantt>
 @code {
     private SfGantt<TaskData> Obj { get; set; }
-    private string DateFormat = "MM/dd/yyyy";
     private DateTime ProjectStartDate = new DateTime(2000, 1, 1);
     private DateTime ProjectEndDate = new DateTime(2025, 12, 31);
     private bool autoCalculateDateScheduling = false;
@@ -91,7 +92,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
                             Assignee = assignee[j - 1],
                             Reporter = reporter[j - 1],
                             Progress = 50,
-                            ParentId = Parent.ID,
+                            ParentID = Parent.ID,
                         });
                 }
             }
@@ -108,13 +109,19 @@ The number of records displayed in the Gantt chart is determined implicitly by t
         public string Assignee { get; set; }
         public string Reporter { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBeDasmfrkOvUON?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Managing records count
+
+<!-- Having doubt paging supported or not -->
 
 By default, the number of records rendered per page will be twice the Gantt chart's height. You can customize the row rendering count using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) and [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) properties. Here's an explanation of these properties:
 
@@ -125,13 +132,15 @@ By default, the number of records rendered per page will be twice the Gantt char
     •	The `OverscanCount` property is used to render additional rows before and after the Gantt Chart's current page rows.
     •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the current page area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt @ref="GanttChart" PageSize="15" OverscanCount="5" ID="GanttContainer" EnableContextMenu="true" AllowFiltering="true" AllowSorting="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" EnableRowVirtualization="true" EnableTimelineVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate"
          Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Cancel","ExpandAll","CollapseAll" })" ScrollToTaskbarOnClick="true">
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-    <GanttTaskFields ParentID="ParentId" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    <GanttTaskFields ParentID="ParentID" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
@@ -201,7 +210,7 @@ By default, the number of records rendered per page will be twice the Gantt char
                             Assignee = assignee[j - 1],
                             Reporter = reporter[j - 1],
                             Progress = rand.Next(100),
-                            ParentId = Parent.ID,
+                            ParentID = Parent.ID,
                             Predecessor = j > 1 ? (x - 1) + "FS" : ""
                         });
                 }
@@ -219,27 +228,28 @@ By default, the number of records rendered per page will be twice the Gantt char
         public string Assignee { get; set; }
         public string Reporter { get; set; }
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
     }
 }
-```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLKWMBZrKaVXJhQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% endtabs %}
 
-## Column virtualization
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBSjuWwppImKWKv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Column virtualization allows you to load more columns with high performance. It renders only the columns in the viewport, while other columns render on-demand during horizontal scrolling.
+## Configure column virtualization
 
-To enable the column virtualization, set the [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**.
+Column virtualization, enabled by setting [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) to **true**, renders only the columns visible in the viewport while other columns are loaded on-demand during horizontal scrolling. This approach ensures high-performance rendering when working with a large number of columns.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt ID="Gantt" DataSource="@TaskCollection" 
     EnableRowVirtualization="true" EnableColumnVirtualization="true"  Height="450px" Width="1000px">
-    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate" Duration="ProjectDuration" Progress="ProjectProgress" Dependency="Predecessor" ParentID="ParentId">
+    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate" Duration="ProjectDuration" Progress="ProjectProgress" Dependency="Predecessor" ParentID="ParentID">
     </GanttTaskFields>
      <GanttColumns>
         <GanttColumn Field="ProjectId" HeaderText="Task ID"></GanttColumn>
@@ -285,7 +295,7 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
                     ProjectEndDate = new DateTime(2022, 1, 13),
                     ProjectDuration = "10",
                     ProjectProgress = 50,
-                    ParentId = null,
+                    ParentID = null,
                     Predecessor = null,
                 };
                 DataCollection.Add(Parent);
@@ -300,7 +310,7 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
                         ProjectEndDate = new DateTime(2022, 1, 13),
                         ProjectDuration = "10",
                         ProjectProgress = 50,
-                        ParentId = Parent.ProjectId,
+                        ParentID = Parent.ProjectId,
                         Predecessor = i + "FS",
                         Field1 = Names[name],
                         FIELD2 = 1967 + 10,
@@ -328,7 +338,7 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
         public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
         public string Field1 { get; set; }
         public int FIELD2 { get; set; }
@@ -344,23 +354,28 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
         public int Field12 { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDryXYCmpzdIEKPs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) is required for column virtualization. If the column's width is not defined, then the Gantt Chart will consider its value as **150px**.
 
-![Blazor GanttChart with cloumn virtualization](./images/Column_Virtual.gif)
+## Configure Timeline Virtualization
 
-## Timeline virtualization
+Timeline virtualization, enabled by setting [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to **true**, initially renders twice times the width of the Gantt element and loads additional timeline cells on demand during horizontal scrolling. This improves performance for wide timelines, such as multi-year projects, by rendering only the visible segments. The rendering behavior depends on `TimelineSettings`, which defines the scale (e.g., monthly or daily tiers).
 
-Timeline virtualization allows you to load data sources having a large timespan with high performance. Initially, it renders the timeline with twice the width of the gantt element, while other timeline cells render on-demand during horizontal scrolling. To enable timeline virtualization using this API, simply set [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to true.
+The following example enables timeline virtualization for a wide timeline:
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt @ref="Gantt" Width="480px" Height="350px" ID="Gantt" DataSource="@TaskCollection"  Toolbar="@(new  List<string>() { "ZoomIn", "ZoomOut", "ZoomToFit"})" GridLines="Syncfusion.Blazor.Gantt.GridLine.Both" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd"
         EnableTimelineVirtualization="true" EnableColumnVirtualization="true">
-    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate"     Duration="ProjectDuration" Progress="ProjectProgress"  Dependency="Predecessor" ParentID="ParentId">
+    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate"     Duration="ProjectDuration" Progress="ProjectProgress"  Dependency="Predecessor" ParentID="ParentID">
     </GanttTaskFields>
       <GanttEditSettings 
         AllowTaskbarEditing="true" 
@@ -420,7 +435,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
                     ProjectEndDate = new DateTime(2017, 1, 13),
                     ProjectDuration = "10",
                     ProjectProgress = 50,
-                    ParentId = null,
+                    ParentID = null,
                     Predecessor = null,
                 };
                 DataCollection.Add(Parent);
@@ -435,7 +450,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
                         ProjectEndDate = new DateTime(2021, 1, 13),
                         ProjectDuration = "10650",
                         ProjectProgress = 50,
-                        ParentId = Parent.ProjectId,
+                        ParentID = Parent.ProjectId,
                         Field1 = Names[name],
                         FIELD2 = 1967 + 10,
                         FIELD3 = 395 + 600,
@@ -462,7 +477,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
         public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
         public string Field1 { get; set; }
         public int FIELD2 { get; set; }
@@ -478,15 +493,17 @@ Timeline virtualization allows you to load data sources having a large timespan 
         public int Field12 { get; set; }
     }
 }
-```
 
-![Blazor GanttChart with timeline virtualization](./images/timeline_virtual.gif)
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSZYsmJzvPFSdf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Limitations for virtualization
 
 * Due to the element height limitation in browsers, the maximum number of records loaded by the Gantt chart is limited by the browser capability.
-* It is necessary to mention the height of the Gantt in pixels when enabling Virtual Scrolling.
+* It is necessary to mention the height of the Gantt in pixels when enabling virtual scrolling.
 * Cell selection will not be persisted in a row.
-* Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
+* Programmatic selection using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SelectRowsAsync_System_Int32___) method is not supported in virtual scrolling.
 * Collapse all and expand all actions are performed only for the current view-port data in virtual scrolling.
 * While using column virtualization, column width should be in the pixel. Percentage values are not accepted.

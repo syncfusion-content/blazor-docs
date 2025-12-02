@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization in Blazor RichTextEditor Component | Syncfusion
+title: Globalization in Blazor Rich Text Editor Component | Syncfusion
 description: Checkout and learn here all about Globalization in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) supports localization. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to localize Syncfusion Blazor components.
 
 ## Globalization
 
@@ -19,7 +19,7 @@ The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-
 
 Specify the direction of the Rich Text Editor component using the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableRtl) property. Writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
-N> The `EnableRtl` property will not change based on the current culture.
+N> The `EnableRtl` property does not change automatically based on the current culture. Enable it explicitly when RTL is required.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -31,6 +31,6 @@ N> The `EnableRtl` property will not change based on the current culture.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor right to left toolbar](./images/blazor-richtexteditor-right-to-left.png)
+![Blazor Rich Text Editor right to left toolbar](./images/blazor-richtexteditor-right-to-left.png)
 
-N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
+N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour for an overview of its capabilities. Explore the [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.

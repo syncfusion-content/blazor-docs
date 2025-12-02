@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# How to use Radio Button Instead of Checkbox in Blazor DataGrid
+# How to use radio button instead of checkbox in Blazor DataGrid
 
 By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides checkbox selection for multiple row selection. When only one row should be selectable at a time, a radio button can be used instead of checkbox selection. This is achieved by using the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature to render an [SfRadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) in each row. Assign the same radio group name for all rows so only one radio button can be selected at a time, and bind each radio button to a unique value from the data source (typically the primary key field).
 
@@ -29,14 +29,14 @@ The following example demonstrates how to handle row selection in the Grid using
     <GridSelectionSettings CheckboxOnly="true"></GridSelectionSettings>
     <GridColumns>
         <GridColumn>
-            <Template>
+             <Template>
                 @{
                     var PrimaryVal = (context as Order);
-                    <SfRadioButton @ref="RadioButtonInstance" Name="RadioBtn " Value="@PrimaryVal?.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
+                    <SfRadioButton @ref="RadioButtonInstance" Name="RadioBtn" Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
                 }
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" IsPrimaryKey="true">
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name"  IsPrimaryKey="true">
         </GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"></GridColumn>

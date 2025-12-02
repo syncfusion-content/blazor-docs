@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Frame with Blazor Image Editor Component | Syncfusion
-description: Checkout the Frame available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Explore the Frame feature in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
@@ -9,35 +9,35 @@ documentation: ug
 
 # Frames in the Blazor Image Editor component
 
-The frame feature in an Image Editor provides users with the capability to add decorative borders or frames around their images. Frames are a visual design element that can enhance the overall appearance and appeal of an image.
+The frame feature in the Image Editor enables adding decorative borders around images. Frames enhance visual appeal and can be styled to match the image context or design requirements.
 
 ## Apply frame to the Image
 
-The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Int32_System_Int32_System_Int32_Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Int32_) method is a function designed to enable the application of various frame options to an image. This method simplifies the process of adding decorative frames, such as mat, bevel, line, hook, and inset, to an image by allowing users to specify their desired frame type.
+The [DrawFrameAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Int32_System_Int32_System_Int32_Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Int32_) method applies a frame to an image with options such as mat, bevel, line, hook, and inset.
 
-Depending on the frame type selected, users may have additional customization options, such as adjusting the frame's thickness, color, texture, or other attributes. This allows for fine-tuning the appearance of the frame to match the image's theme or the user's preferences
+Depending on the selected frame type, additional customization options may be available, such as thickness, color, gradient, and other styling attributes.
 
-The `DrawFrameAsync` method in the Image Editor control takes nine parameters to define the properties of the frame to the image:
+The `DrawFrameAsync` method accepts nine parameters that define the frame properties:
 
-* frameType - Specified the image data or url of the image to be inserted.
+- `frameType` - Specifies the type of frame to apply.
 
-* color - Specifies the color for the frame.
+- `color` - Specifies the frame color.
 
-* gradientColor - Specifies the gradient color for the frame.
+- `gradientColor` - Specifies the gradient color for the frame.
 
-* size - Specifies the size of the frame.
+- `size` - Specifies the frame size.
 
-* inset - Specifies the inset value for line, hook, and inset type frames.
+- `inset` - Specifies the inset value for line, hook, and inset frame types.
 
-* offset - Specifies the offset value for line and inset type frames.
+- `offset` - Specifies the offset value for line and inset frame types.
 
-* borderRadius - Specifies the border radius for line type frame.
+- `borderRadius` - Specifies the border radius for the line frame type.
 
-* frameLineStyle - Specifies the frame line style for line type frame.
+- `frameLineStyle` - Specifies the frame line style for the line frame type.
 
-* lineCount - Specifies the line count for the line type frame.
+- `lineCount` - Specifies the line count for the line frame type.
 
-Here is an example of Frame using the `DrawFrameAsync` method.
+Here is an example of applying frames using the `DrawFrameAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -91,20 +91,20 @@ Here is an example of Frame using the `DrawFrameAsync` method.
 }
 ```
 
-![Blazor Image Editor with Frame an image](./images/blazor-image-editor-frame.png)
+![Blazor Image Editor with a frame applied](./images/blazor-image-editor-frame.jpg)
 
 ## Frame changing event
 
-The [`FrameChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_FrameChanging) event is triggered when applying frame on the image. This event provides information encapsulated within an object, which includes details about the frame applied in an image. This information encompasses:
+The [FrameChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_FrameChanging) event is triggered while applying a frame. The event object provides details about the frame settings involved in the change.
 
-Frame Type: This indicates the specific type of frame being applied, whether it's a mat, bevel, line, or hook.
+- Frame type: Specifies the type of frame applied, such as mat, bevel, line, hook, or inset.
 
-Customization Values: These values contain information about any adjustments or modifications made to the frame. For instance, if the frame can be customized with attributes like color, size, or style, these details are conveyed within the event object.
+- Customization values: Includes attributes such as color, size, style, inset, offset, gradient color, and related settings.
 
-The parameter available in the [`FrameChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html) is
+Parameters available in [FrameChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html):
 
-* [`FrameChangeEventArgs.PreviousFrameSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_PreviousFrameSetting) - The frame settings including size, color, inset, offset, gradient color which is applied before changing the frame.
+- [FrameChangeEventArgs.PreviousFrameSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_PreviousFrameSetting) - Frame settings (size, color, inset, offset, gradient color) applied before the change.
 
-* [`FrameChangeEventArgs.CurrentFrameSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_CurrentFrameSetting) - The frame settings including size, color, inset, offset, gradient color which is going to apply after changing the frame.
+- [FrameChangeEventArgs.CurrentFrameSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_CurrentFrameSetting) - Frame settings (size, color, inset, offset, gradient color) to be applied after the change.
 
-* [`FrameChangeEventArgs.Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_Cancel) - Specifies a boolean value to cancel the frame changing action.
+- [FrameChangeEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_Cancel) - Indicates whether to cancel the frame-changing action.

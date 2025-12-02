@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Bind Data from SQL Server to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Bind Data from SQL Server to Syncfusion® Blazor Components
 
 In this section, you can learn how to retrieve data from SQL database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.
 Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft. Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion<sup style="font-size:70%">&reg;</sup> component to perform CRUD operations in a Blazor Server Application.
@@ -508,7 +508,7 @@ Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</s
 
 In this demo application, the latest theme will be used.
 
-  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 and .NET 8.
+  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 10, .NET 9 and .NET 8.
 
   * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
   * For **Blazor Server application**, refer stylesheet inside the `<head>` element of

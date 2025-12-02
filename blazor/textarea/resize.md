@@ -3,20 +3,22 @@ layout: post
 title: Resize in Blazor TextArea Component | Syncfusion
 description: Check out and learn about the Resize feature of the Syncfusion Blazor TextArea component and explore much more functionality.
 platform: Blazor
-control: Textarea
+control: TextArea
 documentation: ug
 ---
 
 # Resize in Blazor TextArea Component
 
-The TextArea allows users to input and edit large amounts of text. Resizing this component effectively can enhance the user experience and accommodate varying content needs. This resizing behavior can be enabled and configured using the [ResizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ResizeMode) API, which offers several options for resizing the TextArea:
+The TextArea supports resizing so users can adjust the control to fit varying content lengths. Configure resizing behavior using the [ResizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ResizeMode) property:
 
 | Type  | Description |
 | -- | -- |
-| Vertical  | Allows users to adjust the height of the TextArea vertically. It is suitable when users want to resize the TextArea only along the vertical axis, accommodating varying amounts of text input. |
-| Horizontal | Users can adjust the width of the TextArea horizontally. This option is helpful for accommodating longer lines of text without altering the height of the control. |
-| Both | Allows users to adjust both the height and width of the TextArea, offering maximum flexibility in resizing. It is ideal for situations where users need precise control over the dimensions of the TextArea. |
-| None | Disables the resizing in the TextArea. This option is ideal for situations where maintaining a consistent layout is critical, and resizing by users is unnecessary. |
+| Vertical  | Enables vertical resizing to adjust the height of the TextArea. |
+| Horizontal | Enables horizontal resizing to adjust the width of the TextArea. |
+| Both | Enables both vertical and horizontal resizing. |
+| None | Disables resizing and hides the resize handle to maintain a fixed layout. |
+
+N> In Razor, enums are typically referenced with the @ prefix (for example, @Resize.Both).
 
 {% tabs %}
 {% highlight razor %}
@@ -26,11 +28,11 @@ The TextArea allows users to input and edit large amounts of text. Resizing this
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhTjHsgMqknhFJF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-resize.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhTjHsgMqknhFJF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Resize](./images/blazor-textarea-resize.png)" %}
 
 ## Width
 
-You can easily customize the width of the TextArea using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Width) property. This property allows precise adjustment of the TextArea's width according to the specific layout requirements of the application.
+Customize the width of the TextArea using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Width) property. This property allows precise adjustment of the TextArea's width according to the specific layout requirements of the application.
 
 {% tabs %}
 {% highlight razor %}
@@ -40,4 +42,4 @@ You can easily customize the width of the TextArea using the [Width](https://hel
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLTjRCACTsLJegK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Resize](./images/blazor-textarea-resize-width.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLTjRCACTsLJegK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Custom Width and Resize](./images/blazor-textarea-resize-width.png)" %}

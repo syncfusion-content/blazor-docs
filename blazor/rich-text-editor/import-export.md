@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import and Export in RichTextEditor | Syncfusion
+title: Import and Export in Rich Text Editor | Syncfusion
 description: Checkout and learn here all about import and export in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Import and Export in Blazor RichTextEditor
+# Import and Export in Blazor Rich Text Editor
 
 ## Import to HTML file
 
@@ -50,7 +50,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-html-fil
 
 ## Import to RTF file
 
-Import the RTF file into the editor by using the file uploader component and get the RTF file content from the uploader success event. Then, import the RTF values into the editor.
+To import an RTF file into the editor, use the file uploader component and retrieve the file content from the uploader's success event. Then, import the RTF values into the editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -131,7 +131,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-text-fil
 
 ## Importing content from Microsoft Word
 
-The Rich Text Editor provides functionality to import content directly from Microsoft Word documents, preserving the original formatting and structure. This feature ensures a smooth transition of content from Word to the editor, maintaining elements such as headings, lists, tables, and text styles.
+The Rich Text Editor provides functionality to import content directly from Microsoft Word documents, while preserving the original formatting, structure, and styles. This feature ensures a smooth transition of content from Word to the editor, maintaining elements such as headings, lists, tables, and text styles.
 
 To integrate an `ImportWord` option into the Rich Text Editor toolbar, you can add it as a custom toolbar [items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) using the items property in toolbarSettings.
 
@@ -303,7 +303,7 @@ namespace WordUpload.Controllers
 
 ## Export to RTF file
 
-Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to the RTF format.
+Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to the RTF format. Ensure the Syncfusion.DocIO.NET NuGet package is installed in your project.
 
 Click **Export**, and use **Syncfusion.DocIO** libraries to convert the RTE content to an RTF file. Use the following code to export the RTF file.
 
@@ -346,7 +346,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-tex
 
 ## Export to HTML file
 
-Use [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format.
+Use [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format. Make sure the required NuGet package is referenced in your project.
 
 While clicking on the export button, it makes a call to the Export to HTML service.
 
@@ -421,3 +421,93 @@ public WordDocument GetDocument(string htmlText)
 {% endtabs %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-text-editor-export-to-html).
+
+## Securely Export Word or PDF Documents with Authentication
+
+You can include custom data when exporting Word or PDF documents, such as authentication tokens or other parameters. Use the `OnExport` event with its `RequestHeader` and `CustomFormData` properties to send these values to the server. On the server side, the authentication token can be read from the request headers, and the custom data can be accessed from the request body, which contains the values sent via a POST request.
+
+The following example demonstrates how to pass authentication tokens and custom data during export:
+
+{% tabs %}
+{% highlight razor %}
+@using Syncfusion.Blazor.RichTextEditor
+<SfRichTextEditor>
+    <RichTextEditorEvents OnExport="@Export" />
+    <RichTextEditorToolbarSettings Items="@Items" />
+    <RichTextEditorExportPdf ServiceUrl="@exportPdfServiceUrl" />
+    <RichTextEditorExportWord ServiceUrl="@exportWordServiceUrl" />
+    Rich Text Editor
+</SfRichTextEditor>
+@code {
+    private string exportWordServiceUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToDocx";
+    private string exportPdfServiceUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToPdf";
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.ExportPdf },
+        new ToolbarItemModel() { Command = ToolbarCommand.ExportWord },
+    };
+    private void Export(ExportingEventArgs args)
+    {
+        // Assign different authentication tokens depending on the export type (Pdf or Word)
+        var token = (args.ExportType == "Pdf" ? "Pdf Bearer token" : "Word Bearer token");
+        args.RequestHeader = new Dictionary<string, string>
+        {
+            { "Authorization", token }
+        };
+        args.CustomFormData = new Dictionary<string, string>
+        {
+            { "userId", "12345" }
+        };
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight controller %}
+
+using System;
+using System.IO;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
+
+namespace ExportService.Controllers
+{
+    [ApiController]
+    public class ExportController : ControllerBase
+    {
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public ExportController(IWebHostEnvironment env)
+        {
+            this.hostingEnv = env;
+        }
+        public class ExportParam
+        {
+            public string? Html { get; set; }
+            public object? FormData { get; set; }
+        }
+        [AcceptVerbs("Post")]
+        [EnableCors("AllowAllOrigins")]
+        [Route("api/RichTextEditor/ExportToPdf")]
+        public async Task<ActionResult> ExportToPdf([FromBody] ExportParam args)
+        {
+            // Fetch authentication token from request headers
+            var authorization = Request.Headers["Authorization"].ToString();
+            // Access custom form data from the request body
+            Console.WriteLine("Authorization: " + authorization);
+            Console.WriteLine("Form Data: " + args.FormData);
+            Console.WriteLine("HTML Content: " + args.Html);
+            // Your export logic here
+            // Validate token, process formData, generate PDF, etc.
+            return Ok();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}

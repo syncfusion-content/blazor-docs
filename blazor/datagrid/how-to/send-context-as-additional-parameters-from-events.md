@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Sending Context as additional Parameters in Blazor DataGrid Events
+# Sending context as additional parameters in Blazor DataGrid events
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports passing the current row context to event handlers. This approach is useful for updating Grid fields based on interactions inside the edit dialog, enabling immediate, in-place updates to the bound data.
 
@@ -49,7 +49,7 @@ Height="600" @ref="Grid">
           <SfComboBox TValue="string" TItem="Customer" DataSource="@Customers" @bind-Value="order.CustomerID"
           Placeholder="Select Customer" FloatLabelType="FloatLabelType.Always" AllowFiltering="true">
             <ComboBoxFieldSettings Value="CustomerID" Text="CustomerName"></ComboBoxFieldSettings>
-            <ComboBoxEvents TValue="string" TItem="Customer" ValueChange="args => OnCustomerChange(args, order)"></ComboBoxEvents>
+           <ComboBoxEvents TValue="string" TItem="Customer" ValueChange="args => OnCustomerChange(args, order)"></ComboBoxEvents>
           </SfComboBox>
         </div>
       </div>
