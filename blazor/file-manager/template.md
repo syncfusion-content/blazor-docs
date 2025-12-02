@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Support in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about template support in Syncfusion Blazor File Manager component and more.
+description: Learn how to use template support in Syncfusion Blazor File Manager to customize the navigation pane, large icon view, and details view with dropdown actions.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -9,13 +9,7 @@ documentation: ug
 
 # Template Support in Blazor File Manager Component
 
-The File Manager component provides extensive template support for customizing the appearance of the Navigation pane, Large icons view, and Details view. This allows you to create a personalized file management experience by defining custom layouts for file and folder displays.
-
-This File Manager sample demonstrates the following templates:
-
-* **NavigationPaneTemplate** - Customizes the appearance of nodes in the navigation tree with icons based on folder names.
-* **LargeIconsTemplate** - Displays files and folders with styled backgrounds and action menus in the large icons view.
-* **FileManagerDetailsViewSettings Template** - Customizes column content such as file name, size, and modified date in the details view.
+The File Manager component provides extensive template support for customizing the appearance of the **Navigation pane**, **Large icons view**, and **Details view**. This allows you to create a personalized file management experience by defining custom layouts for file and folder displays.
 
 File operations such as Open, Delete, Download, and Refresh can be handled through a dropdown menu displayed in each item. The `ItemSelected` event initiates each action by calling the corresponding File Manager methods:
 
@@ -23,6 +17,125 @@ File operations such as Open, Delete, Download, and Refresh can be handled throu
 * [DeleteFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_DeleteFilesAsync_System_String___) - Deletes the selected files or folders.
 * [DownloadFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_DownloadFilesAsync_System_String___) - Downloads the selected files.
 * [RefreshFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_RefreshFilesAsync) - Refreshes the current directory.
+
+This article demonstrates how to:
+
+- Customize folder icons using [`NavigationPaneTemplate`](#navigation-template)
+- Show visual tiles using [`LargeIconsTemplate`](#large-icons-template)
+- Format grid rows in [`DetailsView Template`](#details-view-template)
+- Add dropdown actions like Open, Delete, Refresh and Download
+
+## Navigation Template
+
+The navigation pane supports templates through the `NavigationPaneTemplate`, enabling you to show folder icons based on folder-specific names.
+
+```cshtml
+
+<NavigationPaneTemplate>
+    <div class="e-nav-pane-node" style="display: inline-flex; align-items: center;">
+        @if (context is FileManagerDirectoryContent item)
+        {
+            <span class="e-icons @GetIconsForFolders(item)"></span>
+            <span class="folder-name" style="margin-left:8px;">@item.Name</span>
+        }
+    </div>
+</NavigationPaneTemplate>
+
+```
+
+## Large Icons Template
+
+The `LargeIconsTemplate` allows full customization of how folders and files are displayed in the large tiles/grid view. You can add background images, file-type icons, and dropdown menu actions.
+
+```cshtml
+
+<LargeIconsTemplate Context="item">
+    @if (item is not null)
+    {
+        <div class="custom-icon-card">
+            <div class="file-header">
+                <div class="left-info">
+                    @if (item.IsFile)
+                    {
+                        <div class="@GetFileTypeCssClass(item)"></div>
+                    }
+                    <div class="file-name" title="@item.Name">@item.Name</div>
+                </div>
+                <SfDropDownButton CssClass="e-caret-hide filemanager-dropdown-button" IconCss="e-icons e-more-vertical-1">
+                    <DropDownButtonEvents ItemSelected="args => OnDropDownItemSelected(args, item)" />
+                    <DropDownMenuItems>
+                        @foreach (var (text, iconCss) in MenuItems)
+                        {
+                            <DropDownMenuItem Text="@text" IconCss="@iconCss" />
+                        }
+                        @if (!item.IsFile)
+                        {
+                            <DropDownMenuItem Text="Open" IconCss="e-icons e-folder-open" />
+                        }
+                    </DropDownMenuItems>
+                </SfDropDownButton>
+            </div>
+            <div class="@GetBackgroundCss(item)" title="@item.Name"></div>
+            <div class="file-formattedDate">Created on @item.DateCreated.ToString("MMMM d, yyyy")</div>
+        </div>
+    }
+</LargeIconsTemplate>
+
+```
+
+## Details View Template
+
+Details view uses `FileManagerDetailsViewSettings` to customize the grid layout of file data. With templates, you can format file names, sizes, and even render action menus per row.
+
+```cshtml
+
+<FileManagerDetailsViewSettings>
+    <FileManagerColumns>
+        <FileManagerColumn Field="Name" HeaderText="Name">
+            <Template Context="context">
+                @if (context is FileManagerDirectoryContent item)
+                {
+                    <div class="details-name-template-vertical" title="@item.Name">
+                        <div>@item.Name</div>
+                    </div>
+                }
+            </Template>
+        </FileManagerColumn>
+        <FileManagerColumn Field="Size" HeaderText="Size">
+            <Template Context="context">
+                @if (context is FileManagerDirectoryContent item)
+                {
+                    <div>@(item.IsFile ? FormatSize(item.Size) : "-")</div>
+                }
+            </Template>
+        </FileManagerColumn>
+        <FileManagerColumn Field="DateModified" HeaderText="Date Modified" />
+        <FileManagerColumn HeaderText="Actions">
+            <Template Context="context">
+                @if (context is FileManagerDirectoryContent item)
+                {
+                    <SfDropDownButton CssClass="e-caret-hide filemanager-dropdown-button" IconCss="e-icons e-more-vertical-1">
+                        <DropDownButtonEvents ItemSelected="args => OnDropDownItemSelected(args, item)" />
+                        <DropDownMenuItems>
+                            @foreach (var (text, iconCss) in MenuItems)
+                            {
+                                <DropDownMenuItem Text="@text" IconCss="@iconCss" />
+                            }
+                            @if (!item.IsFile)
+                            {
+                                <DropDownMenuItem Text="Open" IconCss="e-icons e-folder-open" />
+                            }
+                        </DropDownMenuItems>
+                    </SfDropDownButton>
+                }
+            </Template>
+        </FileManagerColumn>
+    </FileManagerColumns>
+</FileManagerDetailsViewSettings>
+
+```
+
+The following code demonstrates a complete working example.
 
 ```cshtml
 
@@ -368,6 +481,6 @@ File operations such as Open, Delete, Download, and Refresh can be handled throu
 
 ```
 
-![Blazor FileManager Template with Large Icon View](./images/blazor-filemanager-template-large-icons-view.png)
+![Blazor FileManager Large Icon View Template Output](./images/blazor-filemanager-template-large-icons-view.png)
 
-![Blazor FileManager Template with Details View](./images/blazor-filemanager-template-details-view.png)
+![Blazor FileManager Details View Template Output](./images/blazor-filemanager-template-details-view.png)
