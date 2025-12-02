@@ -12,7 +12,7 @@ documentation: ug
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports binding data from a [PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) Server database using multiple approaches. Common methods include:
 
 - Using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property for local binding.
-- Implementing a [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) for custom logic.
+- Implementing a [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for custom logic.
 - Configuring remote data binding through adaptors such as [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor).
 
 This section explains how to connect and retrieve data from a PostgreSQL Server database using [Npgsql EntityFrameworkCore PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) and bind the data to a Blazor DataGrid component through the following methods:
@@ -50,7 +50,7 @@ Add a controller named **GridController.cs** under the **Controllers** folder. T
 Use **NpgsqlConnection**, **NpgsqlCommand**, and **NpgsqlDataAdapter** to execute queries and fetch data from **PostgreSQL**. Populate the data into a DataTable and convert it into a strongly typed collection.
 
 {% tabs %}
-{% highlight razor tabtitle="GridController.cs"%}
+{% highlight razor tabtitle="GridController.cs" %}
 using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 using System.Data;
@@ -186,7 +186,7 @@ Access the theme stylesheet and script from NuGet using [Static Web Assets](http
 The [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component supports multiple adaptors for remote data binding. For API services, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor) and specify the service endpoint in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
@@ -246,7 +246,7 @@ The [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.S
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
 [ApiController]
 public class GridController : ControllerBase
 { 
@@ -683,7 +683,7 @@ Inject a custom service into the `CustomAdaptor` and configure the component as 
     SfGrid<Order> Grid { get; set; }
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
  public class Order
  {
      public int? OrderID { get; set; }
@@ -1094,7 +1094,7 @@ Each method can be customized to execute SQL commands against the **PostgreSQL**
 To implement record insertion, override the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) or [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) method in the `CustomAdaptor` class.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Inserts a new data item into the data collection.
 /// </summary>
@@ -1110,7 +1110,7 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task AddOrderAsync(Order Value)
 {
     // Create query to insert the specific into the database by accessing its properties 
@@ -1131,7 +1131,7 @@ public async Task AddOrderAsync(Order Value)
 To implement record updates, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method in the `CustomAdaptor` class.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Updates an existing data item in the data collection.
 /// </summary>
@@ -1148,7 +1148,7 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task UpdateOrderAsync(Order Value)
 {
     //Create query to update the changes into the database by accessing its properties
@@ -1169,7 +1169,7 @@ public async Task UpdateOrderAsync(Order Value)
 To perform record deletion, override the [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method in the `CustomAdaptor` class.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Removes a data item from the data collection.
 /// </summary>
@@ -1186,7 +1186,7 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task RemoveOrderAsync(int? Key)
 {
     //Create query to remove the specific from database by passing the primary key column value.
