@@ -19,8 +19,6 @@ The custom aggregate function is invoked differently based on the context:
 - **Total Aggregation:** The function receives the entire dataset and the current aggregate column object.
 - **Group Aggregation:** The function receives the current group details and the aggregate column object.
 
-Here’s an example that demonstrates how to use the custom aggregate feature in the DataGrid:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -110,13 +108,11 @@ Here’s an example that demonstrates how to use the custom aggregate feature in
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVIXkVRertPQOeX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> To access a custom aggregate value inside a template, use the `Custom` key (AggregateTemplateContext.Custom).
+> To access a custom aggregate value inside a template, use the **Custom** key (**AggregateTemplateContext.Custom**).
 
 **Show the count of distinct values in aggregate row**
 
-Custom aggregate functions can also compute distinct counts or other domain-specific summaries. Specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) as Custom and provide a function via the [CustomAggregate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_CustomAggregate) property. The result can be rendered in the footer, group footer, or group caption by using the corresponding template and accessing AggregateTemplateContext.Custom.
-
-Here’s an example that shows the count of distinct values for the ShipCountry column using a custom aggregate:
+Custom aggregate functions can also compute distinct counts or other domain-specific summaries. Specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) as Custom and provide a function via the [CustomAggregate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_CustomAggregate) property. The result can be rendered in the footer, group footer, or group caption by using the corresponding template and accessing **AggregateTemplateContext.Custom**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

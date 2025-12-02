@@ -12,7 +12,7 @@ documentation: ug
 
 The aggregates feature in the Syncfusion Blazor DataGrid displays summary values in the footer, group footer, and group caption. It enables computing summary information for specific columns and presenting it at key locations in the DataGrid. Configure aggregates with the GridAggregates component. For each aggregate column, specify at least the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) properties.
 
-For customized rendering, use aggregate templates and access values via AggregateTemplateContext (for example, Sum, Average, Min, Max, Count, TrueCount, and FalseCount). See: [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) and [AggregateType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html).
+For customized rendering, use aggregate templates and access values via AggregateTemplateContext (for example, **Sum, Average, Min, Max, Count, TrueCount**, and **FalseCount**). See: [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) and [AggregateType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html).
 
 **Displaying aggregate values**
 
@@ -139,15 +139,13 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides se
 
 The available built-in aggregate types are :
 
-* Sum: Calculates the sum of values in the column.
-* Average: Calculates the average of values in the column.
-* Min: Finds the minimum value in the column.
-* Max: Finds the maximum value in the column.
-* Count: Counts the number of values in the column.
-* TrueCount: Counts the number of true values in the column.
-* FalseCount: Counts the number of false values in the column.
-
-The following example demonstrates built-in aggregate types with footer templates. Access aggregate values through AggregateTemplateContext using the matching type property (for example, Max, Min, TrueCount):
+* **Sum**: Calculates the sum of values in the column.
+* **Average**: Calculates the average of values in the column.
+* **Min**: Finds the minimum value in the column.
+* **Max**: Finds the maximum value in the column.
+* **Count**: Counts the number of values in the column.
+* **TrueCount**: Counts the number of true values in the column.
+* **FalseCount**: Counts the number of false values in the column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
