@@ -306,7 +306,7 @@ The Calendars package contains date and time components such as Calendar, DatePi
 <li><a href="https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app">DatePicker</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started-with-web-app">DateRangePicker</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app">DateTime Picker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp">TimePicker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp">Time Picker</a></li>
 </ul>
 </td>
 <td>
@@ -1085,7 +1085,7 @@ The layout package contains Splitter and Dashboard Layout components. The Blazor
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/dashboard-layout">Dashboard Layout</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started-with-web-app">Dashboard Layout</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/splitter/getting-started-webapp">Splitter</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/timeline/getting-started-webapp">Timeline</a></li>
 </ul>
@@ -1256,7 +1256,7 @@ SfMaps
 
 ## Syncfusion.Blazor.Navigations
 
-A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, Toolbar, TreeView, and Sidebar.
+A package of Blazor navigation components such as Accordion, Context Menu, Tabs, Toolbar, TreeView, and Sidebar.
 
 <table>
 <tr>
@@ -1282,7 +1282,7 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <li><a href="https://blazor.syncfusion.com/documentation/accordion/getting-started-with-web-app">Accordion</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/appbar/getting-started-with-web-app">AppBar</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started-with-web-app">Breadcrumb</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/context-menu">ContextMenu</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/context-menu/getting-started-with-web-app">ContextMenu</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/dropdown-tree/getting-started-with-web-app">DropDown Tree</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/menu-bar/getting-started-webapp">Menu Bar</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/sidebar/getting-started-webapp">Sidebar</a></li>
@@ -1588,7 +1588,7 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/dialog">Dialog</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app">Dialog</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp">Predefined Dialog</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/tooltip/getting-started-webapp">Tooltip</a></li>
 </ul>

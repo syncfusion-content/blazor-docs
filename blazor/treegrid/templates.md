@@ -3,15 +3,15 @@ layout: post
 title: Templates in Blazor TreeGrid Component | Syncfusion
 description: Checkout and learn here all about templates in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Templates in Syncfusion Blazor TreeGrid Component
+# Templates in Blazor TreeGrid Component
 
-Blazor provides templated components that accept one or more UI fragments to render during component execution. The TreeGrid is a templated Razor component that enables customizing multiple parts of the UI through template parameters. It supports rendering custom content or components based on application logic.
+Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Tree Grid is a templated razor component, that allows to customize various part of the UI using template parameters. It allows to render custom components or content based on own logic.
 
-The available template options in TreeGrid are as follows,
+The available template options in tree grid are as follows,
 
 * [Column template](./columns/column-template) - Used to customize cell content.
 * [Header template](./columns/columns#header-template) - Used to customize header cell content.
@@ -20,7 +20,7 @@ The available template options in TreeGrid are as follows,
 
 ## Template ModelType
 
-To use templates, bind the TreeGrid to a named model. Specify the model type using the `ModelType` property of the TreeGrid component. This informs the template about the underlying data type, enabling strong typing and IntelliSense within templates.
+To use templates, the tree grid must be bound with named model. This can be done by specifying the model type using the `ModelType` property of the tree grid component as follows.
 
 {% tabs %}
 
@@ -102,9 +102,9 @@ public class Employee
 
 ## Template Context
 
-Most templates used by the TreeGrid are of type `RenderFragment<T>` and receive parameters at runtime. Access these parameters through the implicit `context` parameter within the template. The implicit parameter name can be customized using the `Context` attribute when needed.
+Most of the templates used by tree grid are of type `RenderFragment<T>` and they will be passed with parameters. The parameters passed can be accessed to the templates using implicit parameter named `context`. This implicit parameter name can also be changed using the `Context` attribute.
 
-For example, access column template data through `context` as shown below.
+For example, the data of the column template can be accessed using `context` as follows.
 
 {% tabs %}
 
@@ -184,9 +184,9 @@ public class Employee
 
 ## TreeGridTemplates component
 
-If a component contains any RenderFragment type property, it does not allow arbitrary child components other than the render fragment property, which is [by design in Blazor](https://github.com/dotnet/aspnetcore/issues/10836). This restriction prevents directly specifying templates such as RowTemplate and DetailTemplate as descendants of the TreeGrid root.
+If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/dotnet/aspnetcore/issues/10836).
 
-Wrap such templates in the TreeGridTemplates component to define `RowTemplate` and `DetailTemplate`, as shown below.
+This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendant of the Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
 
 {% tabs %}
 
@@ -283,9 +283,9 @@ public class Employee
 
 The empty record template feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows displaying custom content such as images, text, or other components when the TreeGrid has no records to show. It replaces the default message of **No records to display.**
 
-To enable this, set the `EmptyRecordTemplate` of the TreeGrid. The EmptyRecordTemplate accepts an HTML element or a function that returns an HTML element.
+To activate this feature, set the `EmptyRecordTemplate` feature of the TreeGrid. The `EmptyRecordTemplate` feature expects the HTML element or a function that returns the HTML element.
 
-The following example demonstrates rendering an image and descriptive text as the empty record template:
+The following example demonstrates how an image and text can be rendered as a template to indicate that the TreeGrid has no data to display:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -320,7 +320,7 @@ The following example demonstrates rendering an image and descriptive text as th
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    public string ImageUrl = "data:image/svg+xml;base64...."
+	public string ImageUrl = "data:image/svg+xml;base64...."
    
 }
 

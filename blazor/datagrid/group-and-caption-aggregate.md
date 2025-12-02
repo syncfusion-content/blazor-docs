@@ -110,7 +110,7 @@ The following example demonstrates group footer aggregates in the DataGrid:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDheZEVxysGhsjjP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKCXUDfMsXaMrj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Group caption aggregates
 

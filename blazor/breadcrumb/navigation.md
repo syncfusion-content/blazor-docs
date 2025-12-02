@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Navigation in Blazor Breadcrumb component | Syncfusion
+title: Navigation with Blazor Breadcrumb component | Syncfusion
 description: Checkout and learn here all about Navigation with Blazor Breadcrumb component of Syncfusion and more.
 platform: Blazor
 control: Breadcrumb
@@ -9,13 +9,11 @@ documentation: ug
 
 # Navigation in Blazor Breadcrumb Component
 
-By default, [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) items support navigation using both relative and absolute URLs. Custom navigation logic can be implemented by setting the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property to `false`.
+By default, [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) items support navigation for relative or absolute URL. You can handle the custom navigation by setting [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property as `false`.
 
 ## Relative URL
 
-Relative URLs can be specified using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) property of a [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html). This allows navigation within the same application or website structure. 
-
-The following example demonstrates Breadcrumb items configured with relative URLs:
+You can specify relative URL in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) property of the [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html). In the following example, the items contains the relative URL.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -31,15 +29,11 @@ The following example demonstrates Breadcrumb items configured with relative URL
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUCBsJJKhvVXTj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUCBsJJKhvVXTj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-relative-url.png)" %}
 
-![Blazor Breadcrumb with Relative URLs](./images/blazor-Breadcrumb-relative-url.png)
+## Absolute URL
 
-## Absolute URLs
-
-Absolute URLs can be specified using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) property of a [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html). This enables navigation to external websites or specific, full paths within an application.
-
-The following example demonstrates Breadcrumb items configured with absolute URLs:
+You can specify absolute URL in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) property of the [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html). In the following example, the items contains the absolute URL.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -54,15 +48,11 @@ The following example demonstrates Breadcrumb items configured with absolute URL
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKsrifpggirdDv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKsrifpggirdDv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-absolute-url.png)" %}
 
-![Blazor Breadcrumb with Absolute URLs](./images/blazor-Breadcrumb-absolute-url.png)
+## Enable navigation for last Breadcrumb item
 
-## Enable Navigation for the Last Breadcrumb Item
-
-By default, the last item in a breadcrumb trail represents the current page and is typically not navigable. Navigation for the last Breadcrumb item can be enabled by setting the [EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property to `true`. This can be useful in specific scenarios where the "current page" link should also be clickable.
-
-The following example demonstrates enabling navigation for the last Breadcrumb item:
+Breadcrumb enables the navigation for the last item by setting the [EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property as `true`. In the following example, the navigation is enabled for last Breadcrumb item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -77,6 +67,4 @@ The following example demonstrates enabling navigation for the last Breadcrumb i
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKWhMpfqgKOtmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Breadcrumb with Last Item Navigation Enabled](./images/blazor-Breadcrumb-enable-navigation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKWhMpfqgKOtmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-enable-navigation.png)" %}

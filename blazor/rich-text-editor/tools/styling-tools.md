@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styling tools in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Styling tools in Syncfusion Blazor RichTextEditor component and more.
+title: Styling tools in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about Styling tools in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Styling Tools in RichTextEditor
+# Styling Tools in Blazor Rich Text Editor Component
 
 ## Font family
 
@@ -145,52 +145,9 @@ The Rich Text Editor provides support for customizing the font size with the exi
 
 ![Blazor RichTextEditor with custom font size](../images/blazor-richtexteditor-custom-font-size.png)
 
-## Formats
-
-By default, the editor is initialized with default items of formats. To change it, select a different format from the drop-down in the editor’s toolbar.
-
-To apply different format styles for sections of the content, select the required format from the drop-down and then apply the changes to the selection.
-
-### Built-in formats
-
-The following table list the default format name and width of the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#properties) dropdown and the available list of format names.
-
-| Default Key | Default Value |
-|-----|--------------------------------------|
-| [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Width) | 65px|
-| [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Code", Value = "Pre" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" }<br>}; |
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/built-in-formats.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.png)
-
-### Custom format
-
-The Rich Text Editor provides support for custom formats with an existing list. If you want to add additional formats to the format drop-down, pass the format information as `List<DropDownItemModel>` data to the [RichTextEditorFormat.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) property.
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/custom-formats.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.png)
-
 ## Font and background color
 
-To apply the font color or background color for a selected content of RTE, use the font color and background color tools.
-
-The Rich Text Editor supports providing custom font color and background color with an existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of the [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
-
-The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two modes of `Picker` and `Palette`. The `Palette` mode has a predefined set of the `ColorCode`, and in the `Picker` mode, more colors have been provided. Through the `ModeSwitcher`, switch between these two options.
+You can add the `FontColor` and `BackgroundColor` tool in the Rich Text Editor toolbar using the [RichTextEditorFontSize.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFontSize_Items) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -201,6 +158,24 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 {% endtabs %}
 
 ![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
+
+### Custom font and background colors
+
+To apply font or background colors to selected content in the Rich Text Editor, use the Font Color and Background Color tools available in the toolbar.
+
+The Rich Text Editor supports providing custom font color and background color with an existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of the [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
+
+The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two modes of `Picker` and `Palette`. The `Palette` mode has a predefined set of the `ColorCode`, and in the `Picker` mode, more colors have been provided. Through the `ModeSwitcher`, switch between these two options.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/custom-font-background-color.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-custom-background-color.png)
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZQirgNPpWyUH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
@@ -217,6 +192,23 @@ This feature can be enabled separately for the [RichTextEditorFontColor](https:/
 
 {% endhighlight %}
 {% endtabs %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Built-in editor content styles
 
@@ -443,7 +435,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
 }
 
 ```
-## Number and bullet format lists
+## Customizing numbered and bulleted lists
 
 This feature allows users to change the appearance of the numbered and bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
 
@@ -459,7 +451,7 @@ This feature allows users to change the appearance of the numbered and bulleted 
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-## Code block
+## Formatting code blocks
 
 Configure code block formatting as a separate toolbar button by adding the `InsertCode` Command within the  [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property. The `InsertCode` button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
 

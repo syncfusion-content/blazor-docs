@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Column Resizing in Blazor TreeGrid Component | Syncfusion
-description: Learn how to enable and use column resizing in the Syncfusion Blazor TreeGrid component and much more details.
+title: Column Resizing in Blazor Tree Grid Component | Syncfusion
+description: Checkout and learn here all about column resizing in the Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Column Resizing in Blazor TreeGrid
+# Column Resizing in Blazor Tree Grid
 
-Column width can be adjusted by clicking and dragging the right edge of a column header. While dragging, the column width updates immediately. A column can be auto-fitted by double-clicking the right edge of its header to match the widest cell content. To enable column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property to true.
+Column width can be resized by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resize, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property to true.
 
 {% tabs %}
 
@@ -73,16 +73,16 @@ public class TreeData
 
 {% endtabs %}
 
-![Resizing Column in Blazor TreeGrid](../images/blazor-treegrid-column-resizing.gif)
+![Resizing Column in Blazor Tree Grid](../images/blazor-treegrid-column-resizing.gif)
 
 N> You can disable resizing for a particular column by setting the `AllowResizing` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to false.
 <br/> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
 
 ## Min and max width
 
-Column resizing can be restricted between a minimum and maximum width by setting the [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_MaxWidth) properties on the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
+Column resize can be restricted between minimum and maximum width by defining the [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_MaxWidth) properties in [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
 
-In the following sample, minimum and maximum widths are defined for the **TaskName** and **Duration** columns.
+In the following sample, minimum and maximum width are defined for **TaskName** and **Duration** columns.
 
 {% tabs %}
 
@@ -148,7 +148,7 @@ public class TreeData
 
 ## Resize stacked column
 
-Stacked columns can be resized by dragging the right edge of the stacked header. While dragging, the widths of the corresponding child columns are adjusted simultaneously. To disable resizing for a specific stacked column, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to false on its child columns.
+Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for any particular stacked column by setting [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html)as **false** to its columns.
 
 {% tabs %}
 
@@ -237,13 +237,13 @@ public class ShipmentData
 
 {% endtabs %}
 
-Resizing of a stacked header is shown below.
-![Resizing Stacked Column in Blazor TreeGrid](../images/blazor-treegrid-resize-stacked-column.gif)
+Resizing of stacked header is shown below
+![Resizing Stacked Column in Blazor Tree Grid](../images/blazor-treegrid-resize-stacked-column.gif)
 
 ## Touch interaction
 
-When the right edge of a header cell is tapped, a floating handler appears over the column’s right border. To resize the column, tap and drag the floating handler. Auto-fit can be applied using the column menu of the TreeGrid.
+When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can AutoFit a column by using the Column menu of the tree grid.
 
-The following screenshot shows column resizing on a touch device.
+The following screenshot represents the column resizing in touch device.
 
-![Blazor TreeGrid Column Resizing in Touch Interaction](../images/blazor-treegrid-column-resizing-touch.png)
+![Blazor Tree Grid Column Resizing in Touch Interaction](../images/blazor-treegrid-column-resizing-touch.png)

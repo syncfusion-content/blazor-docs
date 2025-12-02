@@ -56,9 +56,7 @@ To render a [Line](https://www.syncfusion.com/blazor-components/blazor-charts/ch
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLfNkWrgrqqRINz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Line Chart.](../images/chart-types-images/blazor-line-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLfNkWrgrqqRINz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart.](../images/chart-types-images/blazor-line-chart.png)" %}
 
 N> Refer to our [Blazor Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Line Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know how to represent time-dependent data, showing trends at equal intervals.
 
