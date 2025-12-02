@@ -47,8 +47,7 @@ One-way binding sets a fixed visibility state for the dialog. This approach is u
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeDbCbJHIqvGPG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with One-way Binding showing dynamic visibility control](./images/blazor-dialog-one-way-visible.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeDbCbJHIqvGPG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with One-way Binding showing dynamic visibility control](./images/blazor-dialog-one-way-visible.gif)" %}
 
 ### Two-Way Binding
 
@@ -85,8 +84,7 @@ Two-way binding using the @bind-Visible syntax enables dynamic visibility contro
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLeDlCbpcEqNPSV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with Two-way Binding showing dynamic visibility control](./images/blazor-dialog-two-way-visible.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLeDlCbpcEqNPSV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Two-way Binding showing dynamic visibility control](./images/blazor-dialog-two-way-visible.gif)" %}
 
 ## ShowAsync Method
 
@@ -129,8 +127,7 @@ The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLeZbWPTFjcKrLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog opened using ShowAsync method demonstrating programmatic control](./images/blazor-dialog-showAsync.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLeZbWPTFjcKrLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog opened using ShowAsync method demonstrating programmatic control](./images/blazor-dialog-showAsync.gif)" %}
 
 ## HideAsync Method
 
@@ -187,8 +184,7 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVyNvCFJlgUWdtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog closed using HideAsync method with custom close logic](./images/blazor-dialog-hideasync.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVyNvCFJlgUWdtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog closed using HideAsync method with custom close logic](./images/blazor-dialog-hideasync.gif)" %}
 
 ## CloseOnEscape Action
 
@@ -317,7 +313,6 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhytPsFpFydyWNt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![BBlazor Dialog demonstrating all visibility events in sequence](./images/blazor-dialog-visible-events.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhytPsFpFydyWNt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog demonstrating all visibility events in sequence](./images/blazor-dialog-visible-events.gif)" %}
 
 N> Use property binding for simple visibility control and programmatic methods (ShowAsync/HideAsync) when you need to implement complex logic, validation, or asynchronous operations before showing or hiding the dialog.

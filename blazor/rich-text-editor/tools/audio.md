@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Audio in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about insert audio in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about insert audio in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Insert Audio in Blazor RichTextEditor Component
+# Insert Audio in Blazor Rich Text Editor Component
 
 The Rich Text Editor allows inserting audio files from online sources and the local computer where you want to insert the audio in your content. For inserting audio into the Rich Text Editor, the following list of options has been provided in the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html).
 
@@ -15,7 +15,7 @@ The Rich Text Editor allows inserting audio files from online sources and the lo
 |----------------|---------|
 | [AllowedTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorAudioSettings_AllowedTypes) |Specifies the extensions of the audio types allowed to insert on bowering and passing the extensions with comma separators. For example, pass allowedTypes as `.mp3,` `.wav,` `.m4a,` and `.wma.`|
 | [LayoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) | Sets the default display for audio when it is inserted into the Rich Text Editor. Possible options are `Inline` and `Break.`|
-| [SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) | Sets the default save format of the video element when inserted. Possible options are `Blob` and `Base64.`|
+| [SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) | Sets the default save format of the audio element when inserted. Possible options are `Blob` and `Base64.`|
 | [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) | Provides URL to map the action result method to save the audio.|
 | [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) | Specifies the location to store the audio.|
 
@@ -35,9 +35,9 @@ To configure `Audio` toolbar item, refer to the below code.
 
 ## Insert audio from web
 
-To insert audio from the hosted link or local machine, you should enable the audio tool on in the editor’s toolbar.
+To insert audio from the hosted link or local machine, you should enable the audio tool in the editor's toolbar.
 
-## Insert from web URL
+## Insert audio from web URL
 
 By default, the audio tool opens the audio dialog, allowing you to insert audio from an online source. Inserting the URL will be added to the `src` attribute of the `<source>` tag.
 
@@ -96,7 +96,7 @@ namespace AudioUpload.Controllers
                     {
                         string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Audio";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                        // Create a new directory, if it does not exists
+                        // Create a new directory if it does not exist
                         if (!Directory.Exists(targetPath))
                         {
                             Directory.CreateDirectory(targetPath);
@@ -106,7 +106,7 @@ namespace AudioUpload.Controllers
                         filename = targetPath + $@"\{filename}";
                         if (!System.IO.File.Exists(filename))
                         {
-                            // Upload a audio, if the same file name does not exist in the directory
+                            // Upload an audio, if the same file name does not exist in the directory
                             using (FileStream fs = System.IO.File.Create(filename))
                             {
                                 file.CopyTo(fs);
@@ -169,7 +169,7 @@ In the following illustration, the audio size has been validated before uploadin
 
 Once an audio file has been inserted, you can change it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) “Replace” option. You can replace the audio file using the web URL or the browse option in the audio dialog.
 
-![Blazor RIchTextEditor replace audio](../images/blazor-richtexteditor-audio-replace.png)
+![Blazor Rich Text Editor replace audio](../images/blazor-richtexteditor-audio-replace.png)
 
 ## Delete audio
 
@@ -193,6 +193,35 @@ N> The default `layoutOption` property is set to `Inline`.
 {% endhighlight %}
 {% endtabs %}
 
+## Drag and drop audio insertion
+
+Default upload: Insert audio directly from your local file system (e.g., File Explorer, Finder) into the editor.
+
+Server upload: Use the `SaveUrl` property to upload audio files to your server before inserting them into the editor.
+
+{% tabs %}
+{% highlight cshtml %}
+
+{% include_relative code-snippet/audio-drag-and-drop.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Disabling audio drag and drop
+
+You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+
+```
+<RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
+@code{
+    private void OnMediaDrop(MediaDropEventArgs args)
+    {
+        if (args.MediaType == "Audio") {
+            args.Cancel = true;
+        }
+    }
+}
+```
 ## Rename audio before inserting
 
 Using the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html) property, specify the server handler to upload the selected audio. Then, by binding the `FileUploadSuccess` event, you will receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
@@ -246,7 +275,7 @@ namespace RenameAudio.Controllers
                         string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Audio";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
 
-                        // Create a new directory, if it does not exists
+                        // Create a new directory if it does not exist
                         if (!Directory.Exists(targetPath))
                         {
                             Directory.CreateDirectory(targetPath);
@@ -345,7 +374,7 @@ namespace AudioUpload.Controllers
                         string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Audio";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
 
-                        // Create a new directory, if it does not exists
+                        // Create a new directory if it does not exist
                         if (!Directory.Exists(targetPath))
                         {
                             Directory.CreateDirectory(targetPath);
@@ -356,7 +385,7 @@ namespace AudioUpload.Controllers
 
                         if (!System.IO.File.Exists(filename))
                         {
-                            // Upload a audio, if the same file name does not exist in the directory
+                            // Upload an audio, if the same file name does not exist in the directory
                             using (FileStream fs = System.IO.File.Create(filename))
                             {
                                 file.CopyTo(fs);
@@ -386,5 +415,5 @@ namespace AudioUpload.Controllers
 
 ## See also
 
-* [How to edit the quick toolbar settings](../toolbar#audio-quick-toolbar)
+* [How to configuring the toolbar position](https://blazor.syncfusion.com/documentation/rich-text-editor/toolbar#configuring-the-toolbar-position)
 * [How to use link editing option in the toolbar items](../tools#insert-link)

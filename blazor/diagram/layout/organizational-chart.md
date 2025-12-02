@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Organizational chart in Blazor Diagram Component | Syncfusion
+title: Organizational chart in Diagram Component | Syncfusion
 description: Learn here all about how to create organization chart in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Organizational Chart in Blazor Diagram Component
+# Organizational Chart in Diagram Component
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart).
+An [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart) is a diagram that displays the structure of an organization and the relationships. To create an organizational chart, set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) to **OrganizationalChart**.
 
 To create and position the Organizational Chart Using Blazor Diagram, you can check the video below.
 
@@ -101,35 +101,35 @@ The following code example illustrates how to create an organizational chart.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout1)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout1)
 
-![Blazor Organization Chart Diagram](../images/blazor-organization-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVIstZxJweMEFvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Chart example](../images/blazor-organization-chart.png)" %}
 
-Organizational chart layout starts parsing from root and iterates through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides necessary information about a node’s children and the way to arrange them(direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained.
+Organizational chart layout starts parsing from the root and iterates through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides information about a node’s children and the way to arrange them (direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained below.
 
-**GetLayoutInfo** sets chart orientations, chart types, and offset to be left between parent and child nodes. The GetLayoutInfo event callback method is called to configure every subtree of the organizational chart. It takes the following arguments.
+`GetLayoutInfo` configures chart orientations, chart types, and offset to be left between parent and child nodes. The `GetLayoutInfo` event callback method is called to configure every subtree of the organizational chart. It uses the following parameters and return value:
 
 1. **IDiagramObject**: Parent node to that options are to be customized.
-2. **TreeInfo**: Object to set the customizable properties.
+2. **TreeInfo**: Object to set customizable properties.
 3. **TreeInfo**: Returns an object value to be customized.
 
->**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+>**Note:** In `DataSourceSettings`, the types of the `ID` and `ParentID` properties are string. The provided `DataSource` should have a parent-child relationship. At least one node must have an empty `ParentID` to serve as the root.
 
 ## How to Customize Layout
 
-Orientation, spacings, and position of the layout can be customized with a set of properties.
+Orientation, spacing, and position of the layout can be customized with a set of properties.
 
 To explore layout properties, refer to `Layout Properties`.
 
 ### How to Update Layout Bounds
 
-Diagram provides support to align the layout within any custom rectangular area. For more information about bounds, refer to [Bounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Bounds).
+The layout can be aligned within any custom rectangular area. For more information about bounds, refer to [Bounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Bounds).
 
 ### How to Align Layout 
 
-The layout can be aligned anywhere over the layout bounds/viewport using the [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) properties of the layout.
+The layout can be aligned anywhere within the layout bounds or viewport using the [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) properties of the layout.
 
-The following code illustrates how to align the layout at the top-left of the layout bounds.
+The following code illustrates how to align the layout at the bottom within the layout bounds.
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
@@ -153,7 +153,7 @@ The following table illustrates the different chart orientations and chart types
 ||Right|Arranges the children vertically at the right side of the parent.|![Blazor Organization Chart Diagram ChildNode in Vertical Right Position](../images/blazor-diagram-childnode-at-vertical-right-side.png)|
 ||Alternate|Arranges the children vertically at both left and right sides of the parent.|![Blazor Organization Chart Diagram ChildNode in Vertical Alternate Position](../images/blazor-diagram-childnode-at-vertical-both-side.png)|
 
-The following code example illustrates how to set the vertical right arrangement to the leaf level trees.
+The following code example illustrates how to set the vertical right arrangement for leaf-level trees.
 
 ```csharp
 @using Syncfusion.Blazor.Inputs
@@ -223,17 +223,17 @@ The following code example illustrates how to set the vertical right arrangement
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
 
-![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrIsNDxzGyEpDVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)" %}
 
 ### How to Update Layout Spacing
 
-Layout provides support to add space horizontally and vertically between the nodes. The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout allow you to set the space between the nodes horizontally and vertically.
+The layout supports adding space horizontally and vertically between nodes. Use [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout allow you to set the space between nodes horizontally and vertically.
 
 ### How to Update Layout Margin
 
-Layout provides support to add some blank space between the layout bounds/viewport and the layout. The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property of the layout allows you to set the blank space.
+The layout supports adding some blank space between the layout bounds (or viewport) and the layout. The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property of the layout allows you to set the blank space.
 
 ```csharp
 //Initialize the organizational chart layout with Margin.
@@ -252,9 +252,9 @@ Layout provides support to add some blank space between the layout bounds/viewpo
 
 ### How to Change Orientation
 
-Diagram provides support to customize the `Orientation` of the layout. You can set the desired orientation using `LayoutOrientation`.
+The layout supports customizing the `Orientation`. Set the desired orientation using `LayoutOrientation`.
 
-The following code illustrates how to arrange the nodes in a BottomToTop orientation.
+The following code illustrates arranging nodes in a **TopToBottom** orientation.
 
 ```csharp
 //Initialize the layout with layout orientation as BottomToTop in page.
@@ -270,7 +270,7 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
 
 ### How to Set a Fixed Node Position
 
-Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [FixedNode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FixedNode) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
+The layout supports arranging nodes with reference to the position of a fixed node and set it to the [FixedNode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FixedNode) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
 ```csharp
 //Initialize the organizational chart layout with FixedNode.
@@ -290,9 +290,9 @@ Layout provides support to arrange the nodes with reference to the position of a
 
 ## How to Add Assistant
 
-[Assistants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TreeInfo.html#Syncfusion_Blazor_Diagram_TreeInfo_Assistants) are child items that have a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
+[Assistants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TreeInfo.html#Syncfusion_Blazor_Diagram_TreeInfo_Assistants) are child items that use a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
 
-In the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
+Use the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the `LayoutInfo` property.
 
 The following code example illustrates how to add assistants to the layout.
 
@@ -367,10 +367,11 @@ The following code example illustrates how to add assistants to the layout.
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrIiZZHJcdHxLdP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to Refresh the Layout
 
-Diagram allows you to refresh the layout at runtime by using the [DoLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayoutAsync) method. Use the following code example to refresh the layout.
+The layout can be refreshed at runtime by calling [DoLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayoutAsync) method. Use the following code example to refresh the layout.
 
 ```csharp
 //Update the layout at runtime.

@@ -323,11 +323,11 @@ By default, custom Toolbar Items are positioned on the **left** side of the Tool
     {
         if (args.Item.Text == "Expand all")
         {
-            await this.Grid.GroupExpandAll();
+            await this.Grid.ExpandAllGroupAsync();
         }
         if (args.Item.Text == "Collapse all")
         {
-            await this.Grid.GroupCollapseAll();
+            await this.Grid.CollapseAllGroupAsync();
         }
     }
 }
@@ -379,7 +379,7 @@ By default, custom Toolbar Items are positioned on the **left** side of the Tool
 {% endtabs %}
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVqiNBEKnOsnFxm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLIDOgtGItGVQpJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Both built-in and custom items in Toolbar
 
@@ -496,7 +496,7 @@ In the following sample, the **Collapse All** Toolbar item is positioned on the 
     <GridGroupSettings Columns=@GroupOption></GridGroupSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules { Required = true })" Type="ColumnType.Number" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules { Required = true })" Type="ColumnType.Integer" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.FirstName) HeaderText="First Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Country) HeaderText="Country" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(OrderData.PostalCode) HeaderText="PostalCode" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
@@ -518,11 +518,11 @@ In the following sample, the **Collapse All** Toolbar item is positioned on the 
     {
         if (args.Item.Text == "Expand all")
         {
-            await this.Grid.GroupExpandAll();
+            await this.Grid.ExpandAllGroupAsync();
         }
         if (args.Item.Text == "Collapse all")
         {
-            await this.Grid.GroupCollapseAll();
+            await this.Grid.CollapseAllGroupAsync();
         }
     }
 }
@@ -628,27 +628,27 @@ This is demonstrated in the following sample code where there are custom toolbar
         }).ToList();
     }
 
-    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Text == "Add")
         {
-            Grid.AddRecord();
+            await Grid.AddRecordAsync();
         }
         if (args.Item.Text == "Edit")
         {
-            Grid.StartEdit();
+            await Grid.StartEditAsync();
         }
         if (args.Item.Text == "Delete")
         {
-            Grid.DeleteRecord();
+            await Grid.DeleteRecordAsync();
         }
         if (args.Item.Text == "Update")
         {
-            Grid.EndEdit();
+            await Grid.EndEditAsync();
         }
         if (args.Item.Text == "Cancel")
         {
-            Grid.CloseEdit();
+            await Grid.CloseEditAsync();
         }
     }
 
@@ -674,8 +674,9 @@ You can customize the toolbar items tooltip text by adding toolbar items externa
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" Toolbar=@ToolbarItems>
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" Toolbar=@ToolbarItems AllowExcelExport="true" AllowPdfExport="true">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) IsPrimaryKey="true" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -683,16 +684,30 @@ You can customize the toolbar items tooltip text by adding toolbar items externa
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 @code {
     private SfGrid<OrderData> Grid;
-
     public List<OrderData> Orders { get; set; }
     private List<object> ToolbarItems = new List<object>() {
         new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"}, //Here Grid is SfGrid ID.
         new ItemModel(){ Text = "Pdf",TooltipText="Export to PDF", PrefixIcon= "e-pdfexport", Id="Grid_pdfexport"},
         new ItemModel(){ Text = "CSV",TooltipText="Export to CSV", PrefixIcon= "e-csvexport", Id="Grid_csvexport"},
     };
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        {
+            await this.Grid.ExportToPdfAsync();
+        }
+        else if (args.Item.Id == "Grid_excelexport")
+        {
+            await Grid.ExportToExcelAsync();
+        }
+        else if (args.Item.Id == "Grid_csvexport")
+        {
+            await Grid.ExportToCsvAsync();
+        }
+    }
 
     protected override void OnInitialized()
     {
@@ -746,4 +761,4 @@ You can customize the toolbar items tooltip text by adding toolbar items externa
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVACXLuoSzCcoOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVIiXZMiFpezqWu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

@@ -403,9 +403,7 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSZkicrHnxtFdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Circular Gauge inside Dialog component](../images/blazor-circulargauge-with-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSZkicrHnxtFdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge inside Dialog component](../images/blazor-circulargauge-with-dialog.png)" %}
 
 
 ## Circular Gauge component inside Accordion
@@ -497,10 +495,12 @@ When you expand the Accordion component, the Circular Gauge component is not not
                                     <CircularGaugeAxisMajorTicks Height="0" />
                                     <CircularGaugeAxisMinorTicks Height="0" />
                                     <CircularGaugeRanges>
-                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
+                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" 
+RoundedCornerRadius="20" />
                                     </CircularGaugeRanges>
                                     <CircularGaugePointers>
-                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
+                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" 
+Color="#e5ce20" PointerWidth="30">
                                             <CircularGaugePointerAnimation Enable="false" />
                                             <CircularGaugePointerBorder Width="0" />
                                         </CircularGaugePointer>

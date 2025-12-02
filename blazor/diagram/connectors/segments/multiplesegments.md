@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Create Connectors with Multiple Segments
 
-Multiple segments can be defined sequentially. To create a connector with multiple segments, define and add the segments to the [connector.Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) collection. The following code example illustrates how to create a connector with multiple segments.
+Connectors can include a sequence of segment objects. To create a connector with multiple segments, define and add the segments to the [connector.Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) collection. The following code example illustrates how to create a connector with multiple segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -53,14 +53,14 @@ Multiple segments can be defined sequentially. To create a connector with multip
                 }
             },
         };
-        //Add the connector into connectors's collection.
+        //Add the connector into connectors' collection.
         connectors.Add(connector1);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/MultipleSegments)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/MultipleSegments)
 
-![Blazor Diagram with Multiple Segment](../../images/blazor-diagram-multiple-segment.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMXDnKoKLrXqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Multiple Segment](../../images/blazor-diagram-multiple-segment.png)" %}
 
 * Similarly, you can create multiple segments for all the connector type.
 

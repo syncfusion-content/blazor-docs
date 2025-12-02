@@ -56,9 +56,7 @@ When using offset values, positive numbers move the dialog away from the top-lef
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhStvikfNHgUxWv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Dialog with Dialog Position Data](./images/blazor-dialog-position-data.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhStvikfNHgUxWv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Dialog Position Data](./images/blazor-dialog-position-data.gif)" %}
 
 ## RefreshPositionAsync Method
 
@@ -110,9 +108,7 @@ The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoDviafDQdSdeA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Dialog position with RefreshPositionAsync method](./images/blazor-dialog-position-refresh-method.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoDviafDQdSdeA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog position with RefreshPositionAsync method](./images/blazor-dialog-position-refresh-method.gif)" %}
 
 ## Position the Blazor Dialog in center of the page on scrolling
 
@@ -166,9 +162,7 @@ By default, when scrolling the page or container, the Dialog scrolls along with 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVoXlMEpViDbZCj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Dialog position center with scrollable area](./images/blazor-dialog-position-center-scrollable.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVoXlMEpViDbZCj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog position center with scrollable area](./images/blazor-dialog-position-center-scrollable.gif)" %}
 
 ## See also
 

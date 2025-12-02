@@ -56,9 +56,7 @@ By using the `Position` property, the legend can be positioned at left, right,
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVzNnMVpznHbBmn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Legend Position in Blazor Column Chart](images/legend/blazor-column-chart-legend-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVzNnMVpznHbBmn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Legend Position in Blazor Column Chart](images/legend/blazor-column-chart-legend-position.png)" %}
 
 The custom position helps you to position the legend anywhere in the 3D chart using x and y coordinates.
 
@@ -105,9 +103,7 @@ The custom position helps you to position the legend anywhere in the 3D chart us
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBJXHiLpzGiRrpE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart Legend in Custom Position](images/legend/blazor-column-chart-legend-in-custom-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBJXHiLpzGiRrpE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Legend in Custom Position](images/legend/blazor-column-chart-legend-in-custom-position.png)" %}
 
 <!-- markdownlint-disable MD036 -->
 
@@ -156,9 +152,7 @@ The order of the legend items can be reversed by using the `Reverse` property. B
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpXnsLpIMZlkTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Column 3D Chart Legend Reverse](images/legend/blazor-column-chart-legend-reverse.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpXnsLpIMZlkTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart Legend Reverse](images/legend/blazor-column-chart-legend-reverse.png)" %}
 
 **Legend alignment**
 
@@ -208,9 +202,7 @@ The legend can be aligned at near, far or center to the 3D chart using the `Alig
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLpDRsrTICojdGV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Blazor Column 3D Chart Legend Alignment Position](images/legend/blazor-column-chart-legend-alignment-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLpDRsrTICojdGV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart Legend Alignment Position](images/legend/blazor-column-chart-legend-alignment-position.png)" %}
 
 ## Legend customization
 
@@ -257,9 +249,7 @@ To change the legend icon shape, `LegendShape` property in the `Series` can be
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLTNRiBpyVrMjeP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Changing Legend Shape in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-shape.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLTNRiBpyVrMjeP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Legend Shape in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-shape.png)" %}
 
 ### Legend size
 
@@ -308,9 +298,7 @@ By default, legend takes 20% - 25% of the 3D chart's height horizontally, when i
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrfDHMLpeVFwoRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart Legend with Custom Size](images/legend/blazor-column-chart-legend-custom-size.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrfDHMLpeVFwoRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Legend with Custom Size](images/legend/blazor-column-chart-legend-custom-size.png)" %}
 
 ### Legend item Size
 
@@ -358,9 +346,7 @@ The size of the legend items can be customized by using the `ShapeHeight` and `S
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthftHMLpyqztChS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column Chart Legend Shape with Custom Size](images/legend/blazor-column-chart-custom-legend-shape-size.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthftHMLpyqztChS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart Legend Shape with Custom Size](images/legend/blazor-column-chart-custom-legend-shape-size.png)" %}
 
 ### Paging for legend
 
@@ -408,9 +394,7 @@ Paging will be enabled by default, when the legend items exceeds the legend boun
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVTDnChfygYhRAJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart Legend with Paging](images/legend/blazor-column-chart-legend-paging.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVTDnChfygYhRAJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Legend with Paging](images/legend/blazor-column-chart-legend-paging.png)" %}
 
 ### Legend text wrap
 
@@ -458,9 +442,7 @@ When the legend text exceeds the container, the text can be wrapped by using the
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVpXRsLJoJxytCf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor 3D Chart Legend with Wrap](images/legend/blazor-column-chart-legend-text-wrap.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVpXRsLJoJxytCf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart Legend with Wrap](images/legend/blazor-column-chart-legend-text-wrap.png)" %}
 
 ## Series selection through legend
 
@@ -508,9 +490,7 @@ By default, you can collapse the series visibility by clicking the legend. On th
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhzNHiLfoSHNKph?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart Legend with Series Selection](images/legend/blazor-column-chart-legend-series-selection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhzNHiLfoSHNKph?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Legend with Series Selection](images/legend/blazor-column-chart-legend-series-selection.png)" %}
 
 ## Collapsing legend item
 
@@ -557,9 +537,7 @@ By default, series `Name` will be displayed as legend. To skip the legend for a 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJDxWLfeYGOxOB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Hiding Legend Item in Blazor Column 3D Chart](images/legend/blazor-column-chart-hide-legend-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJDxWLfeYGOxOB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hiding Legend Item in Blazor Column 3D Chart](images/legend/blazor-column-chart-hide-legend-item.png)" %}
 
 ## Legend title
 
@@ -606,9 +584,7 @@ You can set title for legend using `Title` property in `LegendSettings`. The `Si
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhztRiBfnXfzkzm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Legend Title in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhztRiBfnXfzkzm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Legend Title in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-title.png)" %}
 
 ## Arrow page navigation
 
@@ -656,9 +632,7 @@ The page number will always be visible while using legend paging. It is now poss
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLfjxChpxNYlHvV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Enabling legend pages in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-with-page-navigation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLfjxChpxNYlHvV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling legend pages in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-with-page-navigation.png)" %}
 
 ### Legend Item Padding
 
@@ -706,6 +680,4 @@ The `ItemPadding` property can be used to adjust the space between the legend it
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhTjnsVpdCodgcy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column 3D Chart Legend Shape with Item Padding](images/legend/blazor-column-chart-legend-item-padding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhTjnsVpdCodgcy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Legend Shape with Item Padding](images/legend/blazor-column-chart-legend-item-padding.png)" %}

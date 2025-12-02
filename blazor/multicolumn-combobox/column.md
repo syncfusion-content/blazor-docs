@@ -40,9 +40,7 @@ The MultiColumn ComboBox supports auto-generating columns, which simplifies the 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVpjYVATVHVEqlS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Text align](./images/column/blazor_multicolumn_combobox_column-text-align.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVpjYVATVHVEqlS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Text align](./images/column/blazor_multicolumn_combobox_column-text-align.gif)" %}
 
 ## Setting the column template
 
@@ -82,9 +80,7 @@ To enable the rendering of boolean values as checkboxes, you need to set the `Di
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhzXOLgTUyFLZUG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Check Box](./images/column/blazor_multicolumn_combobox_column-checkbox.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhzXOLgTUyFLZUG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Check Box](./images/column/blazor_multicolumn_combobox_column-checkbox.gif)" %}
 
 ## Setting custom attributes
 
@@ -104,9 +100,7 @@ The following example demonstrates how to customize the appearance of the Multic
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLpZOLApKBUYqMm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with custom attributes](./images/column/blazor_multicolumn_combobox_column-custom-attributes.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLpZOLApKBUYqMm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with custom attributes](./images/column/blazor_multicolumn_combobox_column-custom-attributes.gif)" %}
 
 ## Setting the format
 

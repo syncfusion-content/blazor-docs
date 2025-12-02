@@ -1,41 +1,38 @@
 ---
 layout: post
-title: Syncfusion Blazor Components Compatibility with .NET Versions
-description: Learn here all about supported .NET and .NET Core versions by Syncfusion Blazor Components and much more.
+title: Version compatibility for Syncfusion Blazor components
+description: Supported .NET and .NET Core versions for Syncfusion Blazor components, with minimum package versions and compatibility guidance.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Version Compatibility of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Version compatibility for Syncfusion® Blazor components
 
-The following table represents the supported .NET and .NET Core versions by different Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components releases.
+The following table shows the supported .NET and .NET Core versions for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component releases.
 
 | Version | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components Version |
 | ------------- | ------------- |
+| [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) | 31.2.10 and above |
 | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |
 | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.1.36 and above |
-| [.NET 7.0](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7/) | 20.4.0.38 to 28.2.12 |
-| [.NET 6.0](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-6/) | 19.3.0.43 to 28.2.12 |
-| [.NET 5.0](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-5/) | 18.4.0.30 to 20.1.0.61  |
-| [.NET Core 3.1.3](https://devblogs.microsoft.com/dotnet/blazor-webassembly-3-2-0-release-candidate-now-available/) | 18.1.0.52 to 20.3.0.61 |
-| [.NET Core 3.1.2](https://devblogs.microsoft.com/dotnet/net-core-february-2020/) | 18.1.0.42 to 20.3.0.61 |
-| [.NET Core 3.1.1](https://devblogs.microsoft.com/dotnet/net-core-january-2020/) | 17.4.0.46 to 20.3.0.61 |
-| [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.39 to 20.3.0.61 |
+| [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) | 20.4.0.38 to 28.2.12 |
+| [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | 19.3.0.43 to 28.2.12 |
+| [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) | 18.4.0.30 to 20.1.0.61  |
+| [.NET Core 3.1](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) | 17.4.0.39 to 20.3.0.61 |
 
-## Syncfusion<sup style="font-size:70%">&reg;</sup> Version Information
+## Syncfusion<sup style="font-size:70%">&reg;</sup> versioning
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
+Syncfusion<sup style="font-size:70%">&reg;</sup> follows a quarterly release cadence. Blazor component packages use a semantic-style version format: Major.Minor.Revision.
 
-For example, if the release package version is `23.1.36`, the version number can be interpreted as follows:
+Example: for version `31.1.23`:
 
-* **23** represents the `major release` version. This number changes every three months and encompasses significant updates, new features, as well as bug fixes and breaking changes.
-
-* **1** corresponds to the `minor release` version. This number signifies releases primarily focused on new features and addressing bugs, without introducing breaking changes.
-
-* **36** denotes the `revision number`, also referred to as the `patch number`. This number increases for weekly patch releases, which predominantly consist of bug fixes and do not introduce new features or breaking changes.
+* 31 — major release number; updated quarterly and may include new features and breaking changes.
+* 1 — minor release number; adds features and fixes without breaking changes.
+* 23 — revision (patch); weekly patches with bug fixes and no breaking changes.
 
 ## See also
 
-* [Syncfusion<sup style="font-size:70%">&reg;</sup> Product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
+* [Syncfusion<sup style="font-size:70%">&reg;</sup> product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 * [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)
+* [System requirements](https://blazor.syncfusion.com/documentation/system-requirements)

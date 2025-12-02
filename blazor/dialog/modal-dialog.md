@@ -40,8 +40,7 @@ A modal dialog prevents users from interacting with the rest of the application 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrotFCppdZxjRFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Modal in Blazor Dialog](./images/blazor-modal-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrotFCppdZxjRFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Modal in Blazor Dialog](./images/blazor-modal-dialog.png)" %}
 
 ## Handling Overlay Click Events
 
@@ -88,5 +87,4 @@ The following example demonstrates how to close a modal dialog when the user cli
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLetFiJJHqtzBdm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
-![Blazor Dialog with Modal Overlay](./images/blazor-dialog-modal-closes.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLetFiJJHqtzBdm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Modal Overlay](./images/blazor-dialog-modal-closes.gif)" %}

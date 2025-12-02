@@ -9,9 +9,9 @@ documentation: ug
 
 # Responsive and Adaptive Layout in Blazor Dashboard Layout Component
 
-The component is provided with built-in responsive support, where panels within the layout get adjusted based on their parent element's dimensions to accommodate any resolution, which relieves the burden of building responsive dashboards.
+The Blazor Dashboard Layout component offers built-in responsive support, automatically adjusting panels based on their parent element's dimensions. This eliminates the need for manual configuration of responsive dashboards across various resolutions.
 
-The Dashboard Layout is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one. So that, the panels will be displayed in a vertical column. By default, whenever the screen resolution meets **600px or lower** resolutions this layout transformation occurs. This transformation can be modified for any user defined resolution by defining the [`MediaQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_MediaQuery) property of the component.
+The Dashboard Layout is designed to adapt to lower resolutions by transforming itself into a stacked layout, where panels are displayed in a single vertical column. By default, this layout transformation occurs when the screen resolution is **600px or lower**. You can customize this breakpoint for any desired resolution by defining the [`MediaQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_MediaQuery) property of the component.
 
 ```cshtml
 
@@ -43,8 +43,6 @@ The Dashboard Layout is designed to automatically adapt with lower resolutions b
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrUsLBmpAKBpXmY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrUsLBmpAKBpXmY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Responsive and Adaptive Layout in Blazor DashboardLayout](images/blazor-dashboard-layout-cell-space.png)" %}
 
-![Responsive and Adaptive Layout in Blazor DashboardLayout](images/blazor-dashboard-layout-cell-space.png)
-
-The above sample demonstrates usage of the `MediaQuery` property to turn out the layout into a stacked one in user defined resolution. Here, whenever the window size reaches 700px or lesser, the layout becomes a stacked layout.
+The sample above demonstrates the usage of the `MediaQuery` property to transform the layout into a stacked view at a user-defined resolution. Here, when the window size reaches 700px or less, the layout automatically switches to a stacked arrangement.

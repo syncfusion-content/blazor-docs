@@ -9,7 +9,7 @@ documentation: ug
 
 # Complex Hierarchical Layout in Blazor Diagram Component
 
-Complex hierarchical tree layout arranges nodes in a tree-like structure, where a child node can have more than one parent. This layout is an extended version of the hierarchical tree layout. To create a complex hierarchical tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property of layout should be set to [ComplexHierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_ComplexHierarchicalTree).
+The complex hierarchical tree layout arranges nodes in a tree-like structure in which a child node can have more than one parent. This layout is an extended version of the hierarchical tree layout. To create a complex hierarchical tree, set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property to [ComplexHierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_ComplexHierarchicalTree).
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -73,15 +73,15 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ComplexHierarchicalTree)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ComplexHierarchicalTree)
 
-![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-complex.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheCZtRzgdyOSbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with multi-parent support](../images/blazor-diagram-complex.png)" %}
 
 ### How to Enable or Disable Line Distribution
 
-Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So, the user can decide whether the segment of each connector from a single parent node should be at the same point or a different point. The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property of the layout is used to enable or disable the line distribution in the layout. By default the value is true.
+Line distribution arranges connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So, the user can decide whether the segment of each connector from a single parent node should be at the same point or a different point. The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property enables or disables line distribution in the layout. By default the value is **true**.
 
-The following code example illustrates how to create a complex hierarchical tree with line distribution.
+The following code example shows how to create a complex hierarchical tree with line distribution.
 
 ```csharp
 
@@ -146,16 +146,16 @@ The following code example illustrates how to create a complex hierarchical tree
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LineDistribution)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LineDistribution)
 
-![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-samepoint.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIWNtHfKwJNZDP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with SamePoint disabled](../images/blazor-diagram-samepoint.png) %}
 
->**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+>**Note:** In `DataSourceSettings`, the type of the `ID` and `ParentID` properties are **string**. The provided `DataSource` should have a parent-child relationship. It is necessary for at least one node to have an empty `ParentID`.
 
 ### How to Enable or Disable Linear Arrangement
 
-Linear arrangement  is used to arrange the child nodes in a linear manner in the layout, where the parent node is placed in the center, corresponding to its children. When line distribution is enabled, the linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of the layout is used to enable or disable the linear arrangement in the layout. By default, the value is false.
-The following code illustrates how to arrange the nodes in non linear manner.
+Linear arrangement arranges child nodes in a linear manner in the layout, where the parent node is placed in the center, corresponding to its children. When line distribution is enabled, linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of the layout is used to enable or disable the linear arrangement in the layout. By default, the value is **false**.
+The following code illustrates how to arrange the nodes in a non linear manner.
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
@@ -217,11 +217,11 @@ The following code illustrates how to arrange the nodes in non linear manner.
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementNonLinear)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementNonLinear)
 
-![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-non-linear.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrSCXNxzKPCTjys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with nonlinear child arrangemen](../images/blazor-diagram-non-linear.png)" %}
 
-The following code illustrates how to arrange the nodes in  linear manner.
+The following code illustrates how to arrange the nodes in  linear manner by enabling linear arrangement.
 
 ```csharp
  @using Syncfusion.Blazor.Diagram
@@ -283,6 +283,6 @@ The following code illustrates how to arrange the nodes in  linear manner.
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementLinear)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementLinear)
 
-![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-lineararrangement.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBICjjHfqEiCuMb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with linear child arrangement](../images/blazor-diagram-lineararrangement.png)" %}

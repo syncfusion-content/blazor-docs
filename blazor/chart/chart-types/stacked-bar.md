@@ -56,9 +56,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTtEsUyZmdwAXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Stacked Bar Chart](../images/chart-types-images/blazor-stacked-bar-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTtEsUyZmdwAXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Bar Chart](../images/chart-types-images/blazor-stacked-bar-chart.png)" %}
 
 N> Refer to our [Blazor Stacked Bar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Bar Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap5) to know how to to render and configure the Stacked Bar type chart.
 
@@ -453,8 +451,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Stacked bar chart with corner radius](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLIXzXpqbHxThSx?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLIXzXpqbHxThSx?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Stacked bar chart with corner radius](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius.png)" %}
 
 We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -510,8 +507,7 @@ We can also customize the corner radius for individual points in the chart serie
     }
 }
 ```
-![Blazor Stacked bar chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius-onPointRender.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVIjTXJKkhNeecS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVIjTXJKkhNeecS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Stacked bar chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius-onPointRender.png)" %}
 
 ## Stacking group
 
