@@ -7,9 +7,9 @@ control: Pager
 documentation: ug
 ---
 
-# Behaviour Settings in Pager Component
+# Behavior Settings in Pager Component
 
-This section briefly explains how the Pager APIS are helped to render the elements (numeric items and navigation buttons) of the Pager component. The total pages of the Pager component is calculated based on the defined [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) and [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) property.
+This section briefly explains how the Pager API's are helped to render the elements (numeric items and navigation buttons) of the Pager component. The total pages of the Pager component is calculated based on the defined [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) and [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) property.
 
 ## Page size
 
@@ -61,7 +61,7 @@ Blazor Pager component support to define which page to be displayed currently in
 
 ## Show pager message
 
-The Pager component provides an option to show or hide the Pager information in the Pager container. This can be achieved by using the [ShowPagerMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ShowPagerMessage) property. The default value of the `ShowPagerMessage` is "true". If you set the `ShowPagerMessage` to false, then the Pager information will be hidden.
+The Pager component provides an option to show or hide the Pager information in the Pager container. This can be achieved by using the [ShowPagerMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ShowPagerMessage) property. The default value of the `ShowPagerMessage` is **true**. Setting `ShowPagerMessage` to **false** hides the Pager information.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
