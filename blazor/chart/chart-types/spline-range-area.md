@@ -50,9 +50,7 @@ documentation: ug
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqMVBdfdNOtUiF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Spline Range Area Chart](../images/chart-types-images/blazor-spline-range-area-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqMVBdfdNOtUiF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spline Range Area Chart](../images/chart-types-images/blazor-spline-range-area-chart.png)" %}
 
 > Refer to our [Blazor Spline Range Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Range Area Chart Example](https://blazor.syncfusion.com/demos/chart/range-area?theme=bootstrap5) to know how to show variations in the data values for a given time.
 

@@ -10,15 +10,15 @@ documentation: ug
 
 # Lane in Blazor Diagram Component
 
-A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) is a functional unit or a responsible department of a business process that helps to map a process within the functional unit or between other functional units.
+A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) is a functional unit or responsible department in a business process that helps to map a process within the functional unit or between other functional units.
 
-The number of lanes can be added to a swimlane and rendered in the diagram. The lanes are automatically stacked inside the swimlane based on the order they are added.
+Multiple lanes can be added to a swimlane and rendered in the diagram. Lanes are automatically stacked inside the swimlane in the order they are added.
 
 ## How to Create an Empty Lane
 
-* You can create a [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and add it to the [Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) collection of the Swimlane.
+* Create a [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and add it to the [Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) collection of the swimlane.
 
-> Note: For a Horizontal Swimlane, you must set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the Lane. For a Vertical Swimlane, you must set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the Lane.
+> Note: For a horizontal swimlane, set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the lane. For a vertical swimlane, set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the lane.
 
 The following code example explains how to define a swimlane with lane.
 
@@ -75,17 +75,17 @@ The following code example explains how to define a swimlane with lane.
     }
 }
 ``` 
-![Lane](../Swimlane-images/Swimlane_Lane.PNG)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneCreation).
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneCreation).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoCNNwLozzxYUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane](../Swimlane-images/Swimlane_Lane.PNG)" %}
 
 ## How to Create and Customize Lane Header
 
-* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Header) property of a lane allows you to textually describe the lane and customize the appearance of the description.
-* The size of the lane header can be controlled using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties of the header.
-* The appearance of the lane header can be set using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
+* Use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Header) property to describe the lane and customize the header appearance.
+* Control the size of the lane header using the header [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties.
+* Set the header appearance using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
 
-The following code example explains how to define a lane header and its customization.
+The following code example shows how to define and customize a lane header.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -144,12 +144,11 @@ The following code example explains how to define a lane header and its customiz
     }
 }
 ``` 
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeader).
 
-![Lane Header](../Swimlane-images/Swimlane_Lane_Header.PNG).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoCjjQVyzOTpIw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Header](../Swimlane-images/Swimlane_Lane_Header.PNG)" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeader)
-
-The Lane header annotations also support templates. You can define HTML content at the tag level and specify the use of a template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. If you want to define a separate template for each lane, differentiate the annotation by using the ID property.
+Lane header annotations also support templates. Define HTML content at the tag level and enable template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per lane, differentiate annotations by the `ID` property.
 
 The following code example explains how to define a lane header annotation template:
 
@@ -222,14 +221,13 @@ The following code example explains how to define a lane header annotation templ
     }
 }
 ``` 
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeaderTemplate)
 
-![Lane Header](../Swimlane-images/Swimlane_Lane_Header_Template.PNG).
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeaderTemplate)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBSiDDQVIyJbNWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Header](../Swimlane-images/Swimlane_Lane_Header_Template.PNG)" %}
 
 ## How to Add and Remove the Lane at Runtime
 
- You can add and remove the lane at runtime by using the `Add` and `Remove` methods of the [Swimlane.Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) Collection. The following code explains how to dynamically add and remove the lane in a swimlane.
+Add and remove a lane at runtime by using the `Add` and `Remove` methods of the [Swimlane.Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) Collection. The following code shows how to dynamically add and remove a lane in a swimlane.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -312,20 +310,19 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ``` 
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/AddRemoveLaneAtRuntime).
 
-![Lane Add Remove](../Swimlane-images/Lane_Add_Remove.gif)
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/AddRemoveLaneAtRuntime).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoMZXmhexDADSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Add Remove](../Swimlane-images/Lane_Add_Remove.gif)" %}
 
 ## How to Add Children to Lane
 
- To add nodes to the lane, you should add a node collection to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Children) collection of the lane.
+ Add nodes to the lane by adding a node collection to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Children) collection of the lane.
 
- The [LaneOffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetX) and [LaneOffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetY) property of the node will position the element in the lane canvas.
+ The node [LaneOffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetX) and [LaneOffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetY) properties position the element within the lane canvas.
 
->Note: By default, lane children will maintain a 20px padding from the lane canvas.
+>Note: By default, lane children maintain a **20** pixels padding from the lane canvas.
 
-The following code example explains how to add nodes to lane.
+The following code example shows how to add nodes to a lane.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -401,25 +398,24 @@ The following code example explains how to add nodes to lane.
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneChildren).
 
-![Lane Children](../Swimlane-images/Lane_Children.PNG).
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneChildren).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeWjtmhSRGTRbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Children](../Swimlane-images/Lane_Children.PNG)" %}
 
 ## How to Set the Orientation of a Lane
 
-  The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Orientation) property in the Symbol Palette allows you to define whether a lane is displayed horizontally or vertically. This property is particularly relevant when the lane is part of a SymbolPalette.
+The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Orientation) property in the symbol palette defines whether a lane is displayed horizontally or vertically. This property is particularly relevant when the lane is part of a symbol palette.
 
-   * Horizontal Orientation: The lane will be aligned horizontally.
-   * Vertical Orientation: The lane will be aligned vertically.
+* **Horizontal orientation**: The lane is aligned horizontally.
+* **Vertical orientation**: The lane is aligned vertically.
 
-   Below is an example demonstrating how to set the orientation for Lanes in a SfSymbolPaletteComponent:
+Below is an example demonstrating how to set the orientation for lanes in an SfSymbolPaletteComponent:
 
 ```cshtml
    @using Syncfusion.Blazor.Diagram
    @using Syncfusion.Blazor.Diagram.SymbolPalette
 <div class="control-section">
-    <div style="width:20%;">
+    <div style="width:80%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
             <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
@@ -490,26 +486,25 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
       }
     }
 ```
-   ![Lane](../Swimlane-images/LaneOrientation.PNG).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneOrientation).
 
-   You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneOrientation).
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjheCXNmVyYiGoHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane](../Swimlane-images/LaneOrientation.PNG)" %}
 
 ## Header Selection and Resize
 
- * You can select the individual lane header by clicking on the header twice. On the first click, the respective lane can be selected.
+* Select an individual lane header by clicking the header twice. The first click selects the lane, and the second click selects the header.
 
- * You can resize the individual lane header. While resizing lane, it will maintain 20px distances from the Lane children.
+* Resize an individual lane header. While resizing a lane, a 20 pixels distance is maintained from the lane children.
 
- * When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
+* When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events are triggered.
 
- The following image shows how to select and resize the lane header.
+The following image shows how to select and resize the lane header.
 
-![Header Select and Resize](../Swimlane-images/Header_Selection_Resize.gif).
+![Header Select and Resize](../Swimlane-images/Header_Selection_Resize.gif)
   
 ## How to Edit Lane Header
 
-The diagram provides support for editing Lane headers at runtime. You can achieve header editing by using the double-click event. Double-clicking the header label enables the editing of that specific header. 
+Lane headers can be edited at runtime. Double-click the header label to enable in-place editing of that specific header.
 
 The following image demonstrates how to edit the lane header.
 

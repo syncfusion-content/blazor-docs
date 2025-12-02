@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Accordion component, including WAI-ARIA support, keyboard interaction, and compliance with WCAG, Section 508, and ADA standards.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -41,20 +41,18 @@ The accessibility compliance for the Blazor Accordion component is outlined belo
 
 ## WAI-ARIA attributes
 
-The Syncfusion Blazor Accordion component automatically applies the following WAI-ARIA attributes to its elements to enhance accessibility:
-
 | Attributes             | Purpose |
 |----------------------|---------------|
-| role                 | **Button:** Applied to the Accordion header elements, indicating they function as interactive buttons that toggle the visibility of their associated content sections. <br> **Region**: Applied to the Accordion panel elements, defining them as landmark regions that contain the currently expanded content, making them discoverable by assistive technologies.        |
-| aria-labelledby      | This attribute is set on the Accordion content (panel) and points to the `id` of its corresponding Accordion header. This establishes a programmatic relationship, allowing screen readers to announce the header as the label for the content.   |
-| aria-controls        | This attribute is set on the Accordion header and points to the `id` of its corresponding Accordion content. This indicates that the header controls the visibility of the specified content panel.  |
-| aria-expanded        | Applied to the Accordion header elements, this attribute communicates the current expansion state of the Accordion item to assistive technologies. It has a default value of `false` (collapsed). When an item expands, its value programmatically changes to `true`. |
-| aria-hidden          | Applied to the Accordion panel elements, this attribute indicates whether the content is visible or hidden. A value of `true` means the content is hidden and not exposed to assistive technologies. Conversely, `false` means the content is visible. The default value is `true` for collapsed content, changing to `false` when the content becomes visible. |
+| role                 | **Button:** Attribute is set to the Accordion header elements to indicate that the element can be used to toggle the visibility of the associated content section, describing the actual role of the element.<br> **Region:** Attribute is set to the Accordion panel elements to create a landmark region that contains the currently expanded accordion panel, describing the actual role of the element.  |
+| aria-labelledby      | Attribute is set to content (panel) and it points to the corresponding Accordion header.|
+| aria-controls        | Attribute is set to the header and it points to the corresponding Accordion content.  |
+| aria-expanded        | Attribute is set to the Accordion header elements to indicates the expand state of the Accordion Item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to ‘true’. |
+| aria-hidden          | Attribute is set to the Accordion panel elements to indicates the content visible state of the Accordion Item. Default value of this attribute is `true`. If an item content is visible, the attribute value changes to `false`. |
 | aria-disabled        | It indicates the disabled state of the Accordion and its items.  |
 
 ## Keyboard interaction
 
-Keyboard navigation is a fundamental aspect of accessibility and comes enabled by default in the Blazor Accordion. Users can navigate and interact with the Accordion items using the following keys:
+Keyboard navigation is enabled by default. The possible keys are:
 
 | Windows | Mac | Description |
 |---------------|-----------|--------|

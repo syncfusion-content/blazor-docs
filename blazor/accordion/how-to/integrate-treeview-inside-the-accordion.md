@@ -7,11 +7,11 @@ control: Accordion
 documentation: ug
 ---
 
-# TreeView Integration in Blazor Accordion Component
+# Treeview Integration in Blazor Accordion Component
 
-The Syncfusion Blazor Accordion component is highly flexible, allowing you to embed other Blazor components within its panels using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property of an `AccordionItem`. This powerful capability enables you to create rich, nested UI structures that efficiently organize complex information and enhance user experience.
+The Accordion component allows you to embed other Blazor components within its panels using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property. This capability enables you to create rich, nested UI structures that help organize complex information.
 
-Integrating a TreeView component inside an Accordion panel is a common and effective way to present hierarchical data contextually. You achieve this by simply placing the `SfTreeView` component within the `ContentTemplate` of your desired `AccordionItem`, as shown in the snippet below:
+You can integrate a TreeView component inside an Accordion panel by placing the TreeView component within the ContentTemplate as shown below:
 
 ```cshtml
 <ContentTemplate>
@@ -19,7 +19,7 @@ Integrating a TreeView component inside an Accordion panel is a common and effec
 </ContentTemplate>
 ```
 
-The following example demonstrates how to render multiple TreeView components, each within a separate Accordion panel, to categorize and display different sets of hierarchical data like document folders, download lists, and picture galleries.
+The following example shows how to render a TreeView within the Accordion.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -181,6 +181,4 @@ The following example demonstrates how to render multiple TreeView components, e
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthqWrMKgwYXnecX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthqWrMKgwYXnecX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.png)" %}

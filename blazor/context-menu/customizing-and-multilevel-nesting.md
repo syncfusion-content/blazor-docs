@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizing and Multilevel Nesting in Blazor ContextMenu | Syncfusion
+title: Customizing and Multilevel nesting in Blazor ContextMenu | Syncfusion
 description: Learn here all about Customizing and Multilevel nesting in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
@@ -11,10 +11,7 @@ documentation: ug
 
 ## Customizing Context Menu Items
 
-The appearance of Blazor Context Menu items can be customized by defining a template using [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-context-menu) items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). This allows for rich, custom rendering of each menu item.
-
-In the following example, the Context Menu items are rendered with customized content, including keyboard shortcuts displayed alongside the item text.
-
+To customize [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-context-menu) items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). In the following example, the Context Menu has been rendered with customized Context Menu items.
 
 ```cshtml
 
@@ -58,15 +55,11 @@ In the following example, the Context Menu items are rendered with customized co
 ```
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVACVVcUYeycxMc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVACVVcUYeycxMc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-items.png)" %}
 
-![Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-items.png)
+### Customizing Context Menu items using CssClass
 
-### Customizing Context Menu Items Using CssClass
-
-Individual Context Menu items, or the entire menu, can be customized using the `CssClass` property. This property allows for applying custom CSS styles directly to the component or its items.
-
-In the following sample, custom CSS is applied to modify the font style and size of the menu items.
+The Context Menu items can be customized by using the `CssClass` property. In the following sample, the menu items are customized by adding new styles.
 
 ```cshtml
 
@@ -100,15 +93,11 @@ In the following sample, custom CSS is applied to modify the font style and size
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqMLhwAOylWmij?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqMLhwAOylWmij?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-item-customization.png)" %}
 
-![Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-item-customization.png)
+## Multilevel nesting
 
-## Multilevel Nesting
-
-Multilevel nesting is supported in the Context Menu, allowing the creation of hierarchical menu structures. This is achieved by defining a [`MenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItems.html) collection within a parent [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html).
-
-The following sample demonstrates a three-level nested Context Menu.
+The Multiple level nesting supports in Context Menu. It can be achieved by mapping the [MenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItems.html) property inside the parent [MenuItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html). In the below sample, three level nesting of Context Menu is provided.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -145,6 +134,4 @@ The following sample demonstrates a three-level nested Context Menu.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgsrhQganDCPmC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Multilevel Nesting in Blazor ContextMenu](./images/blazor-contextmenu-with-multilevel.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgsrhQganDCPmC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Multilevel Nesting in Blazor ContextMenu](./images/blazor-contextmenu-with-multilevel.png)" %}

@@ -570,3 +570,7 @@ The following example demonstrates how to add a data label template for JSON cel
 ```
 
 ![Data label template with JSON cell binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-cell-binding.png)
+
+## See Also
+
+* [Minimize White Borders in SVG-Based HeatMap Charts](https://support.syncfusion.com/kb/article/20964/how-to-minimize-white-borders-in-svg-based-blazor-heatmap-charts)

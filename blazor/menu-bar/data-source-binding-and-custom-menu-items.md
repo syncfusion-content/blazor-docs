@@ -34,8 +34,8 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
         new CustomMenuItem{ Id = "parent1", Text = "Events" },
         new CustomMenuItem{ Id = "parent2", Text = "Movies" },
         new CustomMenuItem{ Id = "parent3", Text = "Directory" },
-        new CustomMenuItem{ Id = "parent4", Text = "Queries", ParentId = "null"  },
-        new CustomMenuItem{ Id = "parent5", Text = "Services", ParentId = "null" },
+        new CustomMenuItem{ Id = "parent4", Text = "Queries", ParentId = null  },
+        new CustomMenuItem{ Id = "parent5", Text = "Services", ParentId = null },
         new CustomMenuItem{ Id = "parent6", Text = "Conferences", ParentId = "parent1" },
         new CustomMenuItem{ Id = "parent7", Text = "Music", ParentId = "parent1" },
         new CustomMenuItem{ Id = "parent8", Text = "Workshops", ParentId = "parent1" },
@@ -69,8 +69,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 
 ```
-
-![Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLIsZrssHctKuMX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)" %}
 
 N> In the above example, `TValue` is specified as `MenuItemModel` because the menu is rendered using the `Items` property.
 
@@ -103,8 +102,8 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
         new CustomMenuItem{ Id = "parent1", Text = "Events"},
         new CustomMenuItem{ Id = "parent2", Text = "Movies" },
         new CustomMenuItem { Id = "parent3", Text = "Directory" },
-        new CustomMenuItem { Id = "parent4", Text = "Queries", ParentId = "null" },
-        new CustomMenuItem { Id = "parent5", Text = "Services", ParentId = "null" },
+        new CustomMenuItem { Id = "parent4", Text = "Queries", ParentId = null },
+        new CustomMenuItem { Id = "parent5", Text = "Services", ParentId = null },
         new CustomMenuItem { Id = "parent6", Text = "Conferences", ParentId = "parent1" },
         new CustomMenuItem { Id = "parent7", Text = "Music", ParentId = "parent1" },
         new CustomMenuItem { Id = "parent8", Text = "Workshops", ParentId = "parent1" },
@@ -136,7 +135,7 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
         foreach (var item in menuItems)
         {
             var clonedItem = menuDict[item.Id];
-            if (!string.IsNullOrEmpty(item.ParentId) && item.ParentId != "null")
+            if (!string.IsNullOrEmpty(item.ParentId) && item.ParentId != null)
             {
                 if (menuDict.ContainsKey(item.ParentId))
                 {
@@ -196,8 +195,7 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
     }
 }
 ```
-
-![Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBeMjBiMnvjKgoI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.png)" %}
 
 ## Custom Menu Bar Items
 
@@ -225,7 +223,7 @@ To customize Menu Bar items in your application, set your customized template us
                             @{
                                 if (MenuItems.Url != null)
                                 {
-                                    <img class="e-avatar e-avatar-small" src="@UriHelper.ToAbsoluteUri($"images/menu-bar/{MenuItems.Url}.png")" />
+                                    <img class="e-avatar e-avatar-small" src="@MenuItems.Url" />
                                 }
                                 <span style="width:100%;">@MenuItems.Value</span>
                                 if (MenuItems.Count != null)
@@ -263,10 +261,10 @@ To customize Menu Bar items in your application, set your customized template us
             Value = "Products",
             Options = new List<CategoryModel>
         {
-                new CategoryModel { Value= "JavaScript", Url= "javascript" },
-                new CategoryModel { Value= "Angular", Url= "angular" },
-                new CategoryModel { Value= "ASP.NET Core", Url= "core" },
-                new CategoryModel { Value= "ASP.NET MVC", Url= "mvc" }
+                new CategoryModel { Value= "JavaScript", Url= "https://ej2.syncfusion.com/demos/src/menu/images/javascript.png" },
+                new CategoryModel { Value= "Angular", Url= "https://ej2.syncfusion.com/demos/src/menu/images/angular.png" },
+                new CategoryModel { Value= "ASP.NET Core", Url= "https://ej2.syncfusion.com/demos/src/menu/images/core.png" },
+                new CategoryModel { Value= "ASP.NET MVC", Url= "https://ej2.syncfusion.com/demos/src/menu/images/mvc.png" }
             }
         },
         new CategoryModel {
@@ -376,5 +374,4 @@ To customize Menu Bar items in your application, set your customized template us
 </style>
 
 ```
-
-![Blazor MenuBar with Custom Item](./images/blazor-menubar-custom-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryiDLMBRagHDoZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MenuBar with Custom Item](./images/blazor-menubar-custom-item.png)" %}

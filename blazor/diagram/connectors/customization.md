@@ -11,15 +11,15 @@ documentation: ug
 
 ## How to Customize Connector Decorators
 
-Diagram allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
+Diagram allows you to customize the connector appearances. The following topics describe how to customize several properties of connectors.
 
-* Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamonds, or paths. The connection end points can be decorated with the [SourceDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceDecorator) and [TargetDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetDecorator) properties of the connector.
+* The starting and ending points of a connector can be decorated with shapes such as arrows, circles, diamonds, or custom paths. The connection end points can be decorated with the [SourceDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceDecorator) and [TargetDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetDecorator) properties of the connector.
 
-* The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Shape) property of SourceDecorator allows you to define the shape of the source decorator. Similarly, the Shape property of TargetDecorator allows to define the shape of the target decorator.
+* The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Shape) property of `SourceDecorator` allows you to define the shape of the source decorator. Similarly, the `Shape` property of `TargetDecorator` allows to define the shape of the target decorator.
 
-* To create custom shape for source decorator, use the [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_PathData) property. Similarly, to create custom shape for the target decorator, use the PathData property.
+* To create custom shape for source decorator, use the [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_PathData) property. Similarly, to create custom shape for the target decorator, use the `PathData` property.
 
-To learn more about customization of connectors, refer to the below video link.
+To learn more about connector customization, watch the following video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=iKuBSy8mOpE&t=519s" %}
 
@@ -70,17 +70,19 @@ To learn more about customization of connectors, refer to the below video link.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Decorator)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhSsZDdUmUzCzAM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Decorator)
 
 ### How to Customize Connector Decorator Appearance
 
-* The source decorator’s [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), and [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
+* The source decorator’s [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), and [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties customize the border color, width, and stroke pattern.
 
-* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use StrokeColor, StrokeWidth, and StrokeDashArray.
+* For the target decorator, configure the same properties (StrokeColor, StrokeWidth, and StrokeDashArray) to achieve the desired appearance.
 
-* To set the size for source and target decorator, use [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) properties.
+* Set decorator [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) to control size.
 
-The following code example illustrates how to customize the appearance of the decorator.
+The following code example illustrates how to customize the decorator appearance.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -139,19 +141,19 @@ The following code example illustrates how to customize the appearance of the de
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/DecoratorAppearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/DecoratorAppearance)
 
-![Blazor Diagram Connector with Decorator](../images/blazor-diagram-decorator.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiZNHqcgvBDIK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with customized decorators in Blazor Diagram](../images/blazor-diagram-decorator.png)" %}
 
 ## How to Set Padding for Connector
 
-Padding is used to leave the space between the Connector's end point and the object to where it is connected.
+Padding adds space between the connector’s end point and the object to where it is connected.
 
-* The [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of connector defines space between the source point and the source node of the connector.
+* The connector’s [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) defines the space between the source point and the source node of the connector.
 
-* The [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of connector defines space between the end point and the target node of the connector.
+* The connector’s [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) defines the space between the end point and the target node of the connector.
 
-* The following code example illustrates how to leave space between the connection end points and source, target nodes.
+* The following code example shows how to set padding between connection endpoints and the connected nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -215,15 +217,15 @@ Padding is used to leave the space between the Connector's end point and the obj
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Padding)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Padding)
 
-![Blazor Diagram Connector with Padding](../images/blazor-diagram-connector-padding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVeWZtdqQzoBYft?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector demonstrating source and target padding in Blazor Diagram](../images/blazor-diagram-connector-padding.png)" %}
 
 ## How to Enable Bridging
 
-Line bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. By default, [BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BridgeDirection) is set to [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top). Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [Connector.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) or [Diagram.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html). 
+Line bridging draws a small arc where one connector crosses another to visually indicate the crossing. By default, [BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BridgeDirection) is **Top**. Depending upon the direction given bridging direction appears. Bridging can be enabled or disabled either with the [Connector.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) on a connector or [Diagram.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html) on the diagram. 
 
-To learn more about connector bridging, refer to the below video link,
+To learn more about connector bridging, watch the following segment:
 
 {% youtube "https://www.youtube.com/watch?v=iKuBSy8mOpE&t=732s" %}
 
@@ -310,19 +312,19 @@ The following code example illustrates how to enable line bridging.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Bridging)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Bridging)
 
->**Note:** Bridging support is not applicable for the layout.
+>**Note:** Bridging support is not applicable for layout.
 
-The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors can be used to define the width for line bridging. By default, the BridgeSpace value is 10px.
+The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors define the width of the line bridging. The default value is **10** pixels.
 
-Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html) do not support bridging.
+Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html) does not support bridging.
 
-![Blazor Diagram Connector with Line Bridge](../images/blazor-diagram-connector-with-bridging.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLoiDNdqGSjrURl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Connector with Line Bridge](../images/blazor-diagram-connector-with-bridging.png)" %}
 
 ## How to Update Corner Radius for Connector
 
-Corner radius allows you to create connectors with rounded corners. The radius of the rounded corner is set with the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_CornerRadius) property.
+Corner radius rounds the corners of connectors. Set the radius using the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_CornerRadius) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -373,17 +375,19 @@ Corner radius allows you to create connectors with rounded corners. The radius o
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/CornerRadius)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/CornerRadius)
 
-![Blazor Diagram Connector with Corner Radius](../images/blazor-diagram-connector-with-corner-radious.png)
+Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html) does not support corner radius.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVoCjXHAGooRosb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Connector with Corner Radius](../images/blazor-diagram-connector-with-corner-radious.png)" %}
 
 ## How to Customize Connector Appearance
 
-* The connector’s [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray), and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Opacity) properties are used to customize the appearance of the connector segments.
+* The connector’s [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray), and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Opacity) properties customize the segment appearance.
 
-* The [IsVisible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_IsVisible) property of the connector indicates whether the connector is visible in the user interface or not.
+* The [IsVisible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_IsVisible) property determines whether the connector is visible.
 
-* Default values for all the [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set by using the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event callback method. For example, if all connectors have the same type or property, then such properties can be moved into ConnectorCreating.
+* Default values for all [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set using the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event callback method. For example, if all connectors have the same type or property, then such properties can be moved into `ConnectorCreating`.
 
 ### How to Customize Connector Segment Appearance
 
@@ -436,13 +440,15 @@ The following code example illustrates how to customize the segment appearance.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SegmentAppearance)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhoCNNxAmxqeFTF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SegmentAppearance)
 
 ## How to Enable or Disable Connector Behavior
 
-* The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) property of a connector allows you to enable/disable certain features of connectors.
+* The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) property of a connector enables or disables certain features of connectors.
 
-* To enable or disable the constraints, refer [Connector Constraints](../constraints).
+* For detailed information, see [Connector Constraints](../constraints).
 
 The following code illustrates how to disable selection.
 
@@ -494,11 +500,13 @@ The following code illustrates how to disable selection.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Constraints)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIMXjnqwHvfxiD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Constraints)
 
 ## How to Add Additional Information for Connector
 
-* The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of a connector allows you to maintain additional information for the connectors.
+* Use the [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of a connector allows you to maintain additional information for the connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -550,14 +558,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/CustomProperty)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhysDZxAQmzMPsc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/CustomProperty)
 
 ## How to Set Connector Z-Index 
 
-* The connector's  [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ZIndex) property specifies the stack order of the connector. A connector with a greater stack order is always in front of a connector with a lower stack order. By default, the value is -1.
+* The connector's  [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ZIndex) property specifies the stack order of the connector. A connector with a higher `ZIndex` is rendered above one with a lower `ZIndex`. The default value is **-1**.
 
 
-The following code illustrates how to render connector based on the stack order.
+The following code illustrates how to render a connector based on stack order.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -590,17 +600,19 @@ The following code illustrates how to render connector based on the stack order.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ZIndexProperty)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBIsZDnUcmuZCJG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ZIndexProperty)
 
 ## How to Set Hit Padding for Connector
 
-* The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The HitPadding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
+* The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The `HitPadding` property allows you to customize the vicinity area while selecting. The default value is **10** pixels. Within the hit padding region, the connector can be selected and deselected.
 
-To learn more about connector HitPadding, refer to the below video link,
+To learn more about connector hit padding, watch the following segment:
 
 {% youtube "https://www.youtube.com/watch?v=iKuBSy8mOpE&t=651s" %}
 
-The following code illustrates how to set the HitPadding for the connector.
+The following code illustrates how to set hit padding for a connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -633,14 +645,15 @@ The following code illustrates how to set the HitPadding for the connector.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLoCDXHUmlpTCKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to Set Source Padding and Target Padding for Connector
 
-* The [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of a connector defines space between the source point and the source node of the connector.
+* The connector’s [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) defines the space between the source point and the source node.
 
-* The [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of a connector defines space between the endpoint and the target node of the connector.
+* The connector’s [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) defines the space between the end point and target node.
 
-The following code example illustrates how to leave space between the connection endpoints and source and target nodes.
+The following code example illustrates how to leave space between the connection endpoints and the source and target nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -685,13 +698,15 @@ The following code example illustrates how to leave space between the connection
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SourcePaddingAndTargetPadding)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLSiZjRUwPlqeJk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SourcePaddingAndTargetPadding)
 
 ## How to Set Connection Padding for Connector
 
-* The [ConnectionPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_ConnectionPadding) property of a connector defines the connection padding value of the connector.
+* The connector’s [ConnectionPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_ConnectionPadding) defines the connection padding value of the connector.
 
-The following code example illustrates how to set the connection padding value for the connector.
+The following code example illustrates how to set connection padding for a connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -735,13 +750,14 @@ The following code example illustrates how to set the connection padding value f
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ConnectionPadding)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBIMZZHAQYodScU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ConnectionPadding)
 
 ## How to enable Connector Split
 
-Connectors are used to create links between two points, ports, or nodes to represent the relationships between them. By enabling the [EnableConnectorSplitting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableConnectorSplitting) property, you can split a connector between two nodes when a new node is dropped onto the existing connector. This action creates a connection between the new node and the existing nodes.
-When a node is dropped on a point-to-point connection, it connects as the source for the target connector. Dropping another node on the target connector with only a source connection will connect the dropped node as its target, creating a complete connection. If a node is dropped on an existing node-to-node connection, the connector between the two nodes splits, creating a connection between the new node and the existing nodes.
-By default, [EnableConnectorSplitting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableConnectorSplitting) is set to false.
+Connectors create links between points, ports, or nodes to represent the relationships between them. When [EnableConnectorSplitting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableConnectorSplitting) property is enabled, you can split a connector between two nodes when a new node is dropped onto the existing connector. This action creates a connection between the new node and the existing nodes.
+When a node is dropped on a point-to-point connection, it connects as the source for the target connector. Dropping another node on the target connector with only a source connection will connect the dropped node as its target, creating a complete connection. If a node is dropped on an existing node-to-node connection, the connector between the two nodes splits, creating a connection between the new node and the existing nodes. The default value is **false**.
 
 The following code illustrates how to enable connector splitting and create connections with a new node.
 ```cshtml
@@ -815,15 +831,15 @@ The following code illustrates how to enable connector splitting and create conn
     }
 }
 ```
-![ConnectorSplitting](../images/ConnectorSplitDemo.gif)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSsNXnqvDymRvy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ConnectorSplitting](../images/ConnectorSplitDemo.gif)" %}
 
->**Note:** The [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) constraints must be enabled for the connector to allow dropping a node.
+>**Note:** Enable [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) in the connector constraints to allow dropping a node.
 
 ## How to Limit Segment Thumbs in a Connector
 
- The [`MaxSegmentThumbs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property of the connector is used to limit the number of segment thumbs displayed on a connector. Segment thumbs are interactive handles that allow users to modify the connector's path. By setting this property, you can limit how many thumbs appear, helping to simplify the user interface and reduce visual complexity.
+ The [`MaxSegmentThumbs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property limits the number of segment thumbs displayed on a connector. Segment thumbs are interactive handles that allow users to modify the connector's path. By setting this property, you can limit how many thumbs appear, helping to simplify the user interface and reduce visual complexity.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -873,11 +889,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb).
 
-![MaxSegmentThumbs](../images/MaxSegmentThumb.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSMXDnAFShGTba?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[MaxSegmentThumbs](../images/MaxSegmentThumb.png)" %}
 
-The example below demonstrates how to dynamically update the `MaxSegmentThumbs` value at runtime for both selected connectors and all connectors in the diagram.
+The following example demonstrates how to update the `MaxSegmentThumbs` value at runtime for both selected connectors and all connectors in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -964,16 +980,17 @@ The example below demonstrates how to dynamically update the `MaxSegmentThumbs` 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoCDtRUlyaTMHD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumbRuntime).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumbRuntime).
 
->**Note:** The `MaxSegmentThumbs` property is applicable only when the connector type is set to [`Orthogonal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal).
+>**Note:** The `MaxSegmentThumbs` property is applicable only when the connector type is set to **Orthogonal**.
 
 ## See also
 
 * [How to interact with the connector](./interactions)
 
-* [How to change the segments](./segments)
+* [How to change the segments](./segments/straight)
 
 * [How to get the connector events](./events)
 

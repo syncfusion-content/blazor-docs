@@ -9,11 +9,11 @@ documentation: ug
 
 # Design User Interface with Blazor AppBar Component
 
-## AppBarSpacer
+## Spacer
 
-[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html) is used to introduce flexible spacing between items within the AppBar. It is particularly useful for pushing content to the left or right, or for creating balanced layouts.
+[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html)  is used to provide spacing between the AppBar contents which gives additional space to the content layout.
 
-The following example demonstrates how to use `AppBarSpacer` to provide dynamic spacing between buttons:
+The following example depicts the code to provide spacing between the home and pan buttons in the AppBar:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -30,14 +30,13 @@ The following example demonstrates how to use `AppBarSpacer` to provide dynamic 
 </div>
 ```
 
-![Blazor AppBar with Spacer.](./images/blazor-appbar-spacer.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLKWVizhrJGeHZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLKWVizhrJGeHZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Spacer.](./images/blazor-appbar-spacer.png)" %}
 
-## AppBarSeparator
+## Separator
 
-[AppBarSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSeparator.html) visually divides AppBar contents with a vertical line. This is useful for grouping related actions or types of navigation items.
+[AppBarSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSeparator.html) shows a vertical line to visually group or separate the AppBar contents.
 
-The following example shows how to use `AppBarSeparator` to visually group action buttons:
+The following example depicts the code to provide a vertical line between a group of buttons in the AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -66,14 +65,11 @@ The following example shows how to use `AppBarSeparator` to visually group actio
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUWhizrrSDjGWv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUWhizrrSDjGWv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Separator.](./images/blazor-appbar-separator.png)" %}
 
-![Blazor AppBar with Separator.](./images/blazor-appbar-separator.png)
+## Media Query
 
-## Responsive AppBar with Media Queries
-
-CSS media queries can be used to create responsive layouts, allowing the AppBar to remain functional and visually consistent across both desktop and mobile devices.
-The following example demonstrates how CSS media queries can adjust the AppBar's layout to wrap its content and resize for smaller screens:
+Media Query is used to adjusting the AppBar for different screen sizes. Resize the screen to observe the responsive layout of the AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -115,11 +111,10 @@ The following example demonstrates how CSS media queries can adjust the AppBar's
 </style>
 ```
 
-![Blazor AppBar with Media Query.](./images/blazor-appbar-media-quary.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVUWBsJrBofaJVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-## Designing AppBar with Menu Component
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVUWBsJrBofaJVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Media Query.](./images/blazor-appbar-media-quary.png)" %}
+## Designing AppBar with Menu
 
-**SfMenu** can be rendered as a child of the `SfAppBar` to create complex navigation structures directly within the application bar. By setting `CssClass="e-inherit"` on the `SfMenu`, it adopts the AppBar's styling.
+**SfMenu** component can be rendered as a child content of AppBar. You can inherit the AppBar component styles by setting CSS class as `e-inherit` to SfMenu component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -174,10 +169,9 @@ The following example demonstrates how CSS media queries can adjust the AppBar's
 </style>
 ```
 
-![Blazor AppBar with Menu.](./images/blazor-appbar-menu.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgCrsfhVRDMsdT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgCrsfhVRDMsdT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Menu.](./images/blazor-appbar-menu.png)" %}
 
-## Designing AppBar with Buttons and Dropdown Buttons
+## Designing AppBar with Buttons
 
 **SfButton** and **SfDropDownButton** component can be rendered as a child content of AppBar. You can inherit the AppBar component styles by setting CSS class as `e-inherit` to SfButton and SfDropDownButton component.
 
@@ -209,8 +203,8 @@ The following example demonstrates how CSS media queries can adjust the AppBar's
     }
 </style>
 ```
-![Blazor AppBar with Buttons.](./images/blazor-appbar-button&dropdownbutton.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVgMBMTLrdehyCb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVgMBMTLrdehyCb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Buttons.](./images/blazor-appbar-buttons.png)" %}
 
 ## Designing AppBar with SideBar
 
@@ -370,6 +364,4 @@ AppBar toggle button used to control the expand and collapse state of **SfSideba
     }
 </style>
 ```
-![Blazor AppBar with SideBar.](./images/blazor-appbar-sidebar.png)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVKirMTrrRbKrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVKirMTrrRbKrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with SideBar.](./images/blazor-appbar-sidebar.png)" %}

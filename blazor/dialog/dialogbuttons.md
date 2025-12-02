@@ -77,8 +77,7 @@ The following example demonstrates how to define basic action buttons in the Bla
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoXlMPsGLAcGWZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog buttons](./images/blazor-dialog-buttons.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoXlMPsGLAcGWZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog buttons](./images/blazor-dialog-buttons.gif)" %}
 
 ## Add Icons to Dialog Buttons in Blazor Dialog Component
 
@@ -141,8 +140,7 @@ The DialogButton element allows you to define action buttons in the dialog foote
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBINlibCGKtcBPW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor Dialog buttons with icon](./images/blazor-dialog-button-with-icon.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBINlibCGKtcBPW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog buttons with icon](./images/blazor-dialog-button-with-icon.gif)" %}
 
 ## Using FooterTemplate Property
 
@@ -201,5 +199,4 @@ Alternatively, you can use the [FooterTemplate](https://help.syncfusion.com/cr/b
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLoZPilWGKFKFYH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Preview showing icons in Blazor Dialog footer buttons using FooterTemplate](./images/blazor-dialog-button-with-icon.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLoZPilWGKFKFYH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Preview showing icons in Blazor Dialog footer buttons using FooterTemplate](./images/blazor-dialog-button-with-icon.gif)" %}

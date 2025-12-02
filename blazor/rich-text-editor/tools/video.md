@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Video in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about insert video in Syncfusion Blazor RichTextEditor component and more.
+title: Video in Blazor Rich Text Editor Component | Syncfusion
+description: Checkout and learn here all about insert video in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Insert Video in Blazor RichTextEditor Component
+# Insert Video in Blazor Rich Text Editor Component
 
-Once a video file has been inserted, replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
+After inserting a video file, you can replace it using the Rich Text Editor[RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
 
 | Options | Description |
 |----------------|---------|
@@ -55,7 +55,7 @@ By default, the video tool opens the video dialog, allowing you to insert an emb
 
 In the video dialog, by using the `browse` option, select the video from the local machine and insert it into the Rich Text Editor content.
 
-If the path field is not specified in the [RichTextEditorVideoSettings]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html), the video will be converted into `Blob` url or `Base64` and inserted inside the Rich Text Editor.
+If the path field is not specified in the [RichTextEditorVideoSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html), the video will be converted into `Blob` url or `Base64` and inserted inside the Rich Text Editor.
 
 ### Server-side action
 
@@ -179,7 +179,7 @@ In the following example, the video size has been validated before uploading and
 
 ## Replacing video
 
-Once a video file has been inserted, replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
+After inserting a video file, you can replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
 
 ![Blazor RichTextEditor embed video replace](../images/blazor-richtexteditor-video-replace-embed.png)
 
@@ -203,7 +203,7 @@ Change the width and height of the [RichTextEditorQuickToolbarSettings](https://
 
 ## Display Position
 
-Sets the default display for an video when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption). It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
+Sets the default display for a video when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption). It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
 
 N> The default `layoutOption` property is set to `Inline`.
 
@@ -214,6 +214,36 @@ N> The default `layoutOption` property is set to `Inline`.
 
 {% endhighlight %}
 {% endtabs %}
+
+## Drag and drop video insertion
+
+Default upload: Insert video directly from your local file system (e.g., File Explorer, Finder) into the editor.
+
+Server upload: Use the `SaveUrl` property to upload video files to your server before inserting them into the editor.
+
+{% tabs %}
+{% highlight cshtml %}
+
+{% include_relative code-snippet/video-drag-and-drop.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Disabling videos drag and drop
+
+You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cancel value to true. The following code shows how to prevent the drag-and-drop.
+
+```
+<RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
+@code{
+    private void OnMediaDrop(MediaDropEventArgs args)
+    {
+        if (args.MediaType == "Video") {
+            args.Cancel = true;
+        }
+    }
+}
+```
 
 ## Resize video
 

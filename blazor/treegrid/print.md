@@ -256,4 +256,6 @@ In the below example, we have **Duration** as a hidden column in the TreeGrid. W
 
 ## Limitations of printing large data
 
+When tree grid contains large number of data, printing all the data at once is not a best option for the browser performance. Because to render all the DOM elements in one page will produce performance issues in the browser. It leads to browser slow down or browser hang.
+
 Printing large datasets directly from the browser may lead to performance issues such as slow rendering or browser hang. For better performance, consider exporting the TreeGrid to **Excel**, **CSV**, or **PDF**, and print using a desktop application.

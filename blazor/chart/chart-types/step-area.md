@@ -47,9 +47,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUsBhHTngrkaFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Step Area Chart](../images/chart-types-images/blazor-step-area-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUsBhHTngrkaFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Step Area Chart](../images/chart-types-images/blazor-step-area-chart.png)" %}
 
 N> Refer to our [Blazor Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Step Area Chart Example](https://blazor.syncfusion.com/demos/chart/step-area?theme=bootstrap5) to know how to render and configure the Step Area type chart.
 
