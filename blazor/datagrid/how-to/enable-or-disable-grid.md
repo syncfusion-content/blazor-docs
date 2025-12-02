@@ -26,8 +26,6 @@ To implement this:
 * Bind a boolean flag (`isGridDisabled`) to update the wrapper class and an attribute (for example, `aria-disabled`) on the Grid or wrapper.
 * Use a button to toggle the flag and control the Grid state.
 
-The following example demonstrates how to enable or disable the Grid and its actions using a button:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids

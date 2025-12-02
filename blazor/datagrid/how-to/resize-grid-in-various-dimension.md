@@ -14,8 +14,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid fills its p
 > - When using `Height="100%"` for the Grid, ensure the parent container has an explicit height (pixels or a resolved flex height).
 > - Setting `Width="100%"` on the Grid ensures it follows the parent width exactly.
 
-The following example demonstrates resizing the Grid on an external button click based on the provided inputs:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 

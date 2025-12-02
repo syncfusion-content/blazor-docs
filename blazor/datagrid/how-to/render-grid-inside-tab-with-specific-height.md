@@ -17,8 +17,6 @@ To ensure the Grid scrolls within the Tab content area (keeping the tab header f
 - The parent container of the Tab must have an explicit height (for example, a fixed pixel height or a flex container with a resolved height).
 - The value used to subtract the tab header (36px below) is theme-dependent and may need adjustment based on the chosen theme and device density.
 
-This can be demonstrated in the following sample:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor

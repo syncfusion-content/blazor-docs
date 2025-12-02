@@ -9,17 +9,15 @@ documentation: ug
 
 # Define Grid events programmatically in Blazor DataGrid
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, events are typically defined using the `GridEvents` child Razor component. As an alternative, Grid events can also be configured programmatically by accessing the Grid instance through a component reference. This approach is useful when events need to be assigned dynamically during the application lifecycle.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, events are typically defined using the [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#) child Razor component. As an alternative, Grid events can also be configured programmatically by accessing the Grid instance through a component reference. This approach is useful when events need to be assigned dynamically during the application lifecycle.
 
-> Note: Assigning `Grid.GridEvents` programmatically replaces any events declared via the `<GridEvents>` markup for that Grid instance.
+> Note: Assigning **Grid.GridEvents** programmatically replaces any events declared via the `<GridEvents>` markup for that Grid instance.
 
 To define events programmatically:
 
-- Set a reference to the Grid using the `@ref` directive.
-- After the Grid is rendered, assign the `GridEvents` property within the `OnAfterRenderAsync` lifecycle method (guarded by `firstRender`).
-- Use the `EventCallbackFactory` to create event handlers bound to the component context.
-
-The following example demonstrates configuring the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event programmatically to perform custom logic after the Grid's data has been populated:
+- Set a reference to the Grid using the **@ref** directive.
+- After the Grid is rendered, assign the **GridEvents** property within the **OnAfterRenderAsync** lifecycle method (guarded by **firstRender**).
+- Use the **EventCallbackFactory** to create event handlers bound to the component context.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
