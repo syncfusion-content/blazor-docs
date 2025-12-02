@@ -11,7 +11,7 @@ documentation: ug
 
 The detail template in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Syncfusion<sup style="font-size:70%">&reg;</sup> components, or custom Blazor components.
 
-> Review the [templates](https://blazor.syncfusion.com/documentation/datagrid/templates) topic before adding a detail template to configure required settings.
+> Review the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) topic before adding a detail template to configure required settings.
 
 For an overview of the `detail template` in the grid, watch the following video.
 
@@ -2111,7 +2111,7 @@ In this example, the **.e-indentcell** class targets the grouping indent cell el
 
 Customize the toolbar appearance in the detail grid using CSS. The following examples style the toolbar root and button elements.
 
-**Customizing the Detail Grid toolbar Root Rlement**
+**Customizing the Detail Grid toolbar Root Element**
 
 To customize the appearance of the detail Grid's toolbar root element, use the following CSS code:
 

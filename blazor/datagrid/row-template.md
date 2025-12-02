@@ -14,8 +14,8 @@ The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 To enable and configure the `RowTemplate` feature in the Grid, follow these steps:
 
 1. **Set up the row template:** Define a custom row layout using the `RowTemplate`.
-2. **Define row layout using the GridTemplates component:** Wrap the `RowTemplate` content inside [GridTemplates](https://blazor.syncfusion.com/documentation/datagrid/templates#gridtemplates-component). Each row template must contain the same number of `<td>` elements as the Grid’s column count to ensure alignment.
-3. **Template configuration:** For more guidance on configuring templates, see the [templates](https://blazor.syncfusion.com/documentation/datagrid/templates#templates) documentation.
+2. **Define row layout using the GridTemplates component:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the Grid’s column count to ensure alignment.
+3. **Template configuration:** For more guidance on configuring templates, see the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) documentation.
 
 For an overview of `row templates` in the Grid, watch the following video.
 
@@ -644,7 +644,7 @@ The row template feature is not compatible with all Grid features and has limite
 - Column chooser
 - Column menu
 - Detail Row
-- Foreignkey column
+- Foreign key column
 - Resizing
 - Reordering
 - Aggregates
