@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQL data to a Blazor DataGrid Component using Dapper
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports binding data from Microsoft SQL Server using [Dapper](https://github.com/DapperLib/Dapper) and [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template). **Dapper** is a lightweight object-relational mapper (ORM) that simplifies executing SQL queries and mapping results to C# domain models.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports binding data from Microsoft SQL Server using [Dapper](https://github.com/DapperLib/Dapper) and [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template).**Dapper** is a lightweight object-relational mapper (ORM) that simplifies executing SQL queries and mapping results to C# domain models.
 
 Data from SQL Server can be integrated into the Blazor DataGrid using multiple approaches:
 
@@ -19,11 +19,11 @@ Data from SQL Server can be integrated into the Blazor DataGrid using multiple a
 
 This guide demonstrates two approaches for integrating SQL Server data with the Blazor DataGrid using **Dapper**:
 
-* **Remote binding via API service using UrlAdaptor**
+**Using UrlAdaptor**
 
 This approach connects the DataGrid to a REST API endpoint that returns data in the required format. The [UrlAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor) handles communication between the component and the API, enabling server-side operations such as **paging**, **sorting**, and **filtering**.
 
-* **Custom binding using CustomAdaptor**
+**Using CustomAdaptor**
 
 This approach provides complete control over data operations by implementing a [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) class. It allows overriding methods for reading, updating, inserting, and deleting data, making it suitable for scenarios requiring custom business logic or complex queries.
 
@@ -207,7 +207,7 @@ Access the theme stylesheet and script from NuGet using [Static Web Assets](http
 
 5. **Configure DataGrid with UrlAdaptor**
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component supports multiple adaptors for remote data binding. For API services, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor) and specify the service endpoint in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
+The [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component supports multiple adaptors for remote data binding. For API services, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor) and specify the service endpoint in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}

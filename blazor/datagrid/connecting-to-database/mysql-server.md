@@ -15,11 +15,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component s
 - Implementing a [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for custom logic.
 - Configuring remote data binding through adaptors such as [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor).
 
-* **Remote Data Binding using UrlAdaptor**
+**Using UrlAdaptor**
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) enables communication between the DataGrid and a remote API service connected to **MySQL** Server. This approach is suitable when the API implements custom logic for data operations and returns results in the **result** and **count** format.
 
-* **Custom Data Binding using CustomAdaptor**
+**Using CustomAdaptor**
 
 The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) provides full control over data operations and CRUD functionality. It allows implementing custom logic for **searching**, **filtering**, **sorting**, **paging**, and **grouping** directly in the server-side code.
 
@@ -467,7 +467,7 @@ public void Insert([FromBody] CRUDModel<Order> Value)
 
 **Update Operation:**
 
-To edit a row, first select desired row and click the **Edit** toolbar button. The edit form will be displayed and proceed to modify any column value as per your requirement. Clicking the **Update** toolbar button will update the edit record in the Orders table by involving the following **Post** method of an API.
+To edit a row, select the required row and click the **Edit** button in the toolbar. An edit form will appear, allowing changes to any column value. After making the changes, click the **Update** button in the toolbar to save the record in the Orders table. This action triggers the following **POST** method in the API.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -529,7 +529,7 @@ public void Delete([FromBody] CRUDModel<Order> Value)
 
 **Batch Operation:**
 
-To perform batch updates, set the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) to **Batch** in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component and configure the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+To perform batch updates, set the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) to **Batch** in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component and configure the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 In batch mode:
 
 - Use the **Add** toolbar button to insert new rows.

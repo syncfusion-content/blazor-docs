@@ -17,11 +17,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component s
 
 This guide explains two primary approaches for integrating Microsoft SQL Server data with the Blazor DataGrid:
 
-* **Remote Data Binding using UrlAdaptor**: Enables communication between the DataGrid and a remote API service connected to SQL Server. This approach is suitable when the API implements custom logic for data operations and returns results in the **result** and **count** format.
+**Using UrlAdaptor**: Enables communication between the DataGrid and a remote API service connected to SQL Server. This approach is suitable when the API implements custom logic for data operations and returns results in the **result** and **count** format.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Y3grzt0ZdLk" %}
 
-* **Custom Data Binding using CustomAdaptor**: Provides full control over data operations and CRUD functionality. It allows implementing custom logic for **searching**, **filtering**, **sorting**, **paging**, and **grouping** directly in server-side code.
+**Using CustomAdaptor**: Provides full control over data operations and CRUD functionality. It allows implementing custom logic for **searching**, **filtering**, **sorting**, **paging**, and **grouping** directly in server-side code.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=8yLpSCJLcXI" %}
 
@@ -33,12 +33,12 @@ Microsoft SQL Server is a relational database management system (**RDBMS**) deve
 
 **Key Features**
 
-**Relational Database Model**: Organizes data into tables with rows and columns.
-**T-SQL Support**: Provides **Transact-SQL** for advanced querying and procedural programming.
-**High Availability**: Features like Always On Availability Groups for failover and disaster recovery.
-**Security**: Includes **encryption**, **authentication**, and **role-based access** control.
-**Integration**: Works with .NET applications, Azure services, and supports REST APIs.
-**Scalability**: Handles large datasets and supports both on-premises and cloud deployments.
+- **Relational Database Model**: Organizes data into tables with rows and columns.
+- **T-SQL Support**: Provides **Transact-SQL** for advanced querying and procedural programming.
+- **High Availability**: Features like Always On Availability Groups for failover and disaster recovery.
+- **Security**: Includes **encryption**, **authentication**, and **role-based access** control.
+- **Integration**: Works with .NET applications, Azure services, and supports REST APIs.
+- **Scalability**: Handles large datasets and supports both on-premises and cloud deployments.
 
 For more details, refer to the official [Microsoft documentation](https://learn.microsoft.com/en-us/sql/sql-server/what-is-sql-server?view=sql-server-ver17).
 
@@ -216,7 +216,7 @@ N>
 
 **Step 5: Configure DataGrid with UrlAdaptor**
 
-Use [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to connect the DataGrid to the API endpoint and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor).
+Use [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to connect the DataGrid to the API endpoint and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -492,20 +492,18 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 **Key Points**
 
-* `request.Skip` specifies the number of records to skip.
-* `request.Take` specifies the number of records to retrieve.
-* `PerformSkip` and `PerformTake` enable efficient server-side paging.
+* **request.Skip** specifies the number of records to skip.
+* **request.Take** specifies the number of records to retrieve.
+* **PerformSkip** and **PerformTake** enable efficient server-side paging.
 * Custom paging logic can be added before or after applying these methods.
 
 > **Best Practice**:
-
 For optimal performance, apply operations in the following sequence on the server side:
-
 **Searching → Filtering → Sorting → Aggregation → Paging**
 
 ### Handling CRUD operations Using UrlAdaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports **Create**, **Read**, **Update**, and **Delete** (**CRUD**) operations through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. API endpoints for these operations are mapped using properties such as:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports **Create**, **Read**, **Update**, and **Delete** (**CRUD**) operations through the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. API endpoints for these operations are mapped using properties such as:
 
 * [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl) – API endpoint for inserting new records.
 * [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) – API endpoint for updating existing records.
@@ -628,7 +626,7 @@ public void Delete([FromBody] CRUDModel<Order> Value)
 
 **Batch Operation:**
 
-To perform batch updates, set the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) to **Batch** in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component and configure the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+To perform batch updates, set the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) to **Batch** in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component and configure the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 In batch mode:
 
 - Use the **Add** toolbar button to insert new rows.
