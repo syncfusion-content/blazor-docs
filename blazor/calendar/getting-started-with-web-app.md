@@ -25,13 +25,15 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App.
 
+![Create Blazor Web App](images/blazor-create-web-app.png)
+
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the Blazor Web App
 
 To add the **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 If using the `WebAssembly or Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
-Alternatively, use the Package Manager console commands shown below.
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -74,9 +76,9 @@ cd BlazorWebApp.Client
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
-- Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-- Ensure you are in the project directory containing the target `.csproj`.
-- Run the following commands to install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -203,7 +205,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script are provided via NuGet [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` section in **~/Components/App.razor** as shown:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at end of the `<body>` section in **~/Components/App.razor** file as shown below:
 
 ```html
 <head>
@@ -217,7 +219,7 @@ The theme stylesheet and script are provided via NuGet [Static Web Assets](https
 </body>
 ```
 
-N> See [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for available themes and reference options ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). For script references, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references).
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Calendar component
 
@@ -252,7 +254,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzjMLSzUEDfIGE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)" %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
 
 ## See also
 
@@ -260,3 +262,5 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
 
 N> Explore the [Blazor Calendar example](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=bootstrap5) to learn how to render and configure the Calendar.
+
+

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Blazor DropDownList in Web App | Syncfusion
+title: Getting Started with Blazor DropDown List in Web App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor DropDown List Component in Blazor Web App.
 platform: Blazor
-component: DropDownList
+component: DropDown List
 documentation: ug
 ---
 
 # Getting Started with Blazor DropDown List Component in Web App
 
-This section explains how to include the [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in a Blazor Web App using Visual Studio, Visual Studio Code, and the .NET CLI.
+This section briefly explains about how to include [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -21,19 +21,19 @@ This section explains how to include the [Blazor DropDownList](https://www.syncf
 
 ## Create a new Blazor Web App in Visual Studio
 
-Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) when creating the Blazor Web App.
+Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App.
 
 ![Create Blazor Web App](images/blazor-create-web-app.png)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the Blazor Web App
 
-To add the **Blazor DropDownList** component, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the **Blazor DropDown List** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If using `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the Client project of the Blazor Web App.
+If using the `WebAssembly or Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
-Alternatively, use the following Package Manager commands:
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -44,7 +44,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) page for the full list of packages and component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -56,11 +56,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a new Blazor Web App in Visual Studio Code
 
-Create a **Blazor Web App** using Visual Studio Code via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
+You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Configure the appropriate interactive render mode and interactivity location. For more information, see the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-For example, for a Blazor Web App with the `Auto` interactive render mode, run:
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -74,11 +74,11 @@ cd BlazorWebApp.Client
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the App
 
-If using `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the Client project.
+If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure the terminal path is the project directory that contains the target `.csproj` file.
-* Run the following commands to install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and restore dependencies.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -92,7 +92,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) page for the full list of packages and component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -100,7 +100,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If the SDK is already installed, determine the version by running the following command in a command prompt (Windows), terminal (macOS), or shell (Linux).
+Latest version of the [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -112,11 +112,11 @@ dotnet --version
 
 ## Create a Blazor Web App using .NET CLI
 
-Run the following command to create a new Blazor Web App. For detailed instructions, see the [Blazor Web App getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
+Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
 
-Configure the appropriate interactive render mode and interactivity location. For more information, see the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web Application. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-For example, for a Blazor Web App with `Auto` interactive render mode, run:
+For example, in a Blazor Web App with `Auto` interactive render mode, use the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -128,13 +128,13 @@ cd BlazorApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a new Blazor Web App and places it in a directory named `BlazorApp` under the current location. See the [Create Blazor app](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=linux-macos&view=aspnetcore-8.0) topics for more details.
+This command creates a new Blazor Web App and places it in a new directory called `BlazorWebApp` inside your current location. See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) topics for more details.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the App
 
-Use the following commands to add the Blazor DropDownList component by installing [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). For more information, see [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli).
+Here's an example of how to add **Blazor DropDown List** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
-If using `WebAssembly` or `Auto` render modes, install the packages in the Client project.
+If using the `WebAssembly or Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -146,7 +146,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) page for the full list of packages and component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -154,7 +154,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the **~/_Imports.razor** file from the Client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
+Open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespace.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -167,9 +167,9 @@ Open the **~/_Imports.razor** file from the Client project and import the `Syncf
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor Web App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-If the app uses `WebAssembly` or `Auto` interactive render modes, register the Syncfusion Blazor service in both the main Server project and the associated `.Client` project.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** files of the main `server` project and associated `.Client` project.
 
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
@@ -205,7 +205,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script are available via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the stylesheet in the `<head>` and the script at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
 ```html
 <head>
@@ -222,11 +222,11 @@ The theme stylesheet and script are available via [Static Web Assets](https://bl
 </body>
 ```
 
-N> See the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for theme reference methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). For script references, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references).
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown List component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown List component to a Razor page under the Pages folder (for example, Pages/Home.razor) in either the **Server** or **Client** project. If the interactivity location is `Per page/component`, define a render mode at the top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown List component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -234,7 +234,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown List co
 |  | WebAssembly | @rendermode InteractiveWebAssembly |
 |  | None | --- |
 
-N> If the **Interactivity Location** is set to `Global` and the **Render Mode** is `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default.
+N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
@@ -253,7 +253,7 @@ N> If the **Interactivity Location** is set to `Global` and the **Render Mode** 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDownList component renders in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown List component in the default web browser.
 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)" %}
@@ -332,7 +332,7 @@ By default, the popup list width adjusts to the DropDownList input width, and th
 
 ## Get selected value
 
-Get the selected value of the DropDownList component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using the [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
+Get the selected value of the DropDownList component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
 
 
 {% highlight cshtml %}
@@ -356,3 +356,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+
