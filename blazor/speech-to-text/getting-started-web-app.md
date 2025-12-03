@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor SpeechToText | Syncfusion
+title: Getting Stared with Blazor SpeechToText Component | Syncfusion
 description: Checkout and learn about getting started with Blazor SpeechToText in Blazor Web App using Visual Studio and more.
 platform: Blazor
 control: SpeechToText
