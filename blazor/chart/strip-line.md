@@ -248,6 +248,86 @@ To create a stripline in a specific region with respect to a segment (segmented 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMVhHrJGZtGLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart With Segmented Stripline](../chart/images/strip-line/blazor-chart-segmented-stripline.png)" %}
 
+## Stripline tooltip
+
+To enable the stripline tooltip add **ChartStriplineTooltip** inside the target Stripline and set **Enable** property to **true**. Use **Header** and **Content** properties to customize the tooltip's content, adjust visual emphasis with **Fill** and **Opacity** properties and style the tooltip's text and border with **ChartStriplineTooltipTextStyle** and **ChartStriplineTooltipBorder** properties.
+
+- Enable - Enables the stripline tooltip.
+- Header - Sets the tooltip title text.
+- Fill - Sets background color of the tooltip.
+- Opacity - Sets transparency of the tooltip (0 to 1).
+- Content - Template string for tooltip body content.
+- ShowHeaderLine - Shows or hides the header separator line.
+- ChartStriplineTooltipTextStyle - Configures the tooltip text (size, color, weight, family).
+- ChartStriplineTooltipBorder - Configures the tooltip border (color, width).
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Department Revenue by Quarter">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+    </ChartPrimaryXAxis>
+
+    <ChartPrimaryYAxis Minimum="65" Maximum="110" Interval="5" LabelFormat="${value}k" RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.None">
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        <ChartStriplines>
+            <ChartStripline Start="95" End="110" Text="Target Exceeded" Color="#FFE3B3" HorizontalAlignment="Anchor.Middle" Visible="true">
+                <ChartStriplineTextStyle Size="12px" Color="#0b3a66" FontWeight="600"></ChartStriplineTextStyle>
+                <ChartStriplineBorder Width="0"></ChartStriplineBorder>
+                <ChartStriplineTooltip Enable="true" Header="Target Exceeded">
+                    <ChartStriplineTooltipTextStyle Size="12px" FontWeight="500"></ChartStriplineTooltipTextStyle>
+                    <ChartStriplineTooltipBorder Width="0"></ChartStriplineTooltipBorder>
+                </ChartStriplineTooltip>
+            </ChartStripline>
+        </ChartStriplines>
+    </ChartPrimaryYAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries Name="Sales" Type="ChartSeriesType.Column" DataSource="@SalesData" XName="Quarter" YName="Revenue" ColumnSpacing="0.2" Width="2" Fill="#ef4444">
+            <ChartMarker Visible="false"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries Name="Support" Type="ChartSeriesType.Spline" DataSource="@SupportData" XName="Quarter" YName="Revenue" Width="2" Fill="#3b82f6">
+            <ChartMarker Visible="true">
+                <ChartDataLabel Visible="true"></ChartDataLabel>
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+
+    <ChartLegendSettings Visible="true" EnableHighlight="true">
+    </ChartLegendSettings>
+</SfChart>
+
+@code {
+    public class RevenuePoint
+    {
+        public string Quarter { get; set; }
+        public double Revenue { get; set; }
+    }
+
+    public List<RevenuePoint> SalesData = new()
+    {
+        new RevenuePoint { Quarter = "Q1", Revenue = 78 },
+        new RevenuePoint { Quarter = "Q2", Revenue = 88 },
+        new RevenuePoint { Quarter = "Q3", Revenue = 99 },
+        new RevenuePoint { Quarter = "Q4", Revenue = 92 }
+    };
+
+    public List<RevenuePoint> SupportData = new()
+    {
+        new RevenuePoint { Quarter = "Q1", Revenue = 70 },
+        new RevenuePoint { Quarter = "Q2", Revenue = 83 },
+        new RevenuePoint { Quarter = "Q3", Revenue = 90 },
+        new RevenuePoint { Quarter = "Q4", Revenue = 85 }
+    };
+}
+
+```
+
+![Blazor Chart with Stripline Tooltip](images/strip-line/blazor-chart-stripline-tooltip.png)
+
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
