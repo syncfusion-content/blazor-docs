@@ -9,8 +9,9 @@ documentation: ug
 
 # Virtualization in Blazor TreeView Component
 
-The TreeView supports UI Virtualization to improve the performance for a large amount of data. This feature initially gathers all the data, but doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the Virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and TreeView container height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
+The Blazor TreeView component supports UI virtualization to enhance performance when handling a large amount of data. This feature optimizes rendering by initially gathering all data but only rendering a subset of it (a specific number of items, N) during the initial load. The remaining items are then loaded dynamically as the user scrolls within the TreeView container.
 
+To enable virtualization, set the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) property to `true` and define a fixed [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) for the TreeView container.
 The following sample shows the example of Virtualization.
 
 ```cshtml
@@ -78,7 +79,6 @@ The following sample shows the example of Virtualization.
     }
 }
 ```
-
-![Blazor TreeView with Virtualization](./images/virtualization.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVSCNsUVVQcEAYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Virtualization](./images/virtualization.gif)" %}
 
 N> Virtualization is not compatible with expand and collapse animation. Select all action will select only visible items in UI.

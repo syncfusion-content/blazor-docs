@@ -1,25 +1,25 @@
 ---
 layout: post
 title: Prevent default Grid action in Blazor TreeGrid Component | Syncfusion
-description: Learn how to prevent default actions such as Add in the Syncfusion Blazor TreeGrid component using the RowCreating event.
+description: Learn here all about how to prevent default Tree Grid action in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Prevent Default TreeGrid Action in Blazor TreeGrid Component
+# Prevent default Tree Grid action in Blazor TreeGrid Component
 
-Default actions in the Blazor TreeGrid component can be prevented by canceling them within the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event
+The default Tree Grid actions can be prevented by canceling them in the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event.
 
-The following example demonstrates how to prevent the `Add` operation by setting the `Cancel` argument of the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event to `true`.
+This is demonstrated in the below sample code where the `Add` operation is prevented by setting `Cancel` argument value of the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event to **false**.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using Syncfusion.Blazor.Grids;
-@using Syncfusion.Blazor.TreeGrid;
+@using  Syncfusion.Blazor.Grids;
+@using  Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId"
             TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Update", "Cancel" })">

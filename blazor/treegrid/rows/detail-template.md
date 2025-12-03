@@ -1,22 +1,15 @@
 ---
 layout: post
-title: Detail Template in Blazor TreeGrid Component | Syncfusion
-description: Learn how to use the Detail Template in the Syncfusion Blazor TreeGrid to display additional row information with custom content such as images and components.
+title: Detail Template in Blazor Tree Grid Component | Syncfusion
+description: Check out here and learn more details about the Detail Template in the Syncfusion Blazor Tree Grid component.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Detail Template in Blazor TreeGrid Component
+# Detail Template in Blazor Tree Grid Component
 
-The detail template displays additional information for a specific row when it is expanded. Each row’s detail template expands independently; expanding a parent row does not automatically expand child rows or their detail templates. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DetailTemplate) property accepts template content (for example, HTML elements or a RenderFragment) and is bound to the current row context.
-
-Typical use cases include:
-- Displaying profile or summary information (e.g., employee details, order lines).
-- Rendering images, text, and other Blazor components within the expanded area.
-- Creating custom layouts tailored to each record.
-
-N> Operations such as sorting, filtering, and searching act on column Field values. Content rendered in the detail template is for display purposes and is not used for data operations.
+The detail template provides additional information about a particular row. By expanding the parent row, the child rows are expanded along with their detail template. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DetailTemplate) property accepts either the template string or HTML elements.
 
 {% tabs %}
 
@@ -98,4 +91,4 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor Tree Grid with DetailTemplate](../images/blazor-treegrid-detail-template.png)
+![Blazor Tree Grid with Detail Template](../images/blazor-treegrid-detail-template.png)

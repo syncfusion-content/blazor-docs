@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Hide TreeGrid Header in Blazor TreeGrid Component | Syncfusion
-description: Learn how to hide the header in the Syncfusion Blazor TreeGrid component using custom styles and more.
+title: Hide Tree Grid Header in Blazor TreeGrid Component | Syncfusion
+description: Checkout and learn here all about hiding Tree Grid Header in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Hide TreeGrid Header in Syncfusion Blazor TreeGrid Component
+# Hide Tree Grid Header in Blazor TreeGrid Component
 
-The TreeGrid header can be hidden by applying custom CSS styles to the component. This approach is useful for presenting a cleaner layout or embedding the TreeGrid within a minimal user interface.
+ The Tree Grid header can be hidden by applying the below styles to Tree Grid component.
 
 ```html
 <style>
@@ -19,11 +19,6 @@ The TreeGrid header can be hidden by applying custom CSS styles to the component
 </style>
 ```
 
-N> To hide the header for a specific TreeGrid instance, apply the above styles using its unique ID selector. For example:
-```css
-#TreeGrid.e-treegrid .e-gridheader .e-columnheader {
-    display: none;
-}
-```
+N> If you want to hide the header for particular Tree Grid, then apply the above styles to that Tree Grid using the ID (#TreeGrid.e-treegrid .e-gridheader .e-columnheader) property value.
 
 ![Hiding Header in Blazor TreeGrid](../images/blazor-treegrid-hide-header.PNG)

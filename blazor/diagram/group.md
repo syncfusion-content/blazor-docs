@@ -100,8 +100,9 @@ To create a group using Nodes and Connectors in the Blazor Diagram, refer to the
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
-![Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLeWZjlTtUfyBOf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)" %}
 
 The following code illustrates how to ungroup at runtime.
 
@@ -168,13 +169,15 @@ The following code illustrates how to ungroup at runtime.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/UnGroup)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBoWZZvfZpAdhre?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/UnGroup)
 
 
->**Note:** NodeGroup's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+>**Note:** A NodeGroup ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
 ### How to Clone a Group of Nodes at Runtime
-[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node that is used to create a copy of a diagram object. After cloning, you need to set the ID for the cloned nodes. The following code demonstrates how to clone a group of nodes during runtime.
+[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node that creates a copy of a diagram object. After cloning, assign unique IDs to the cloned nodes. The following code demonstrates how to clone a group of nodes during runtime.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
@@ -183,7 +186,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 
 <SfButton Content="CloneGroup" OnClick="@CloneGroup" />
-<SfDiagramComponent @ref="diagram" Width="50%" Height="500px" @bind-Nodes="NodeCollection"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="80%" Height="500px" @bind-Nodes="NodeCollection"></SfDiagramComponent>
 
 @functions
 {
@@ -255,15 +258,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CloneNodeGroup)
-![Grouping in Blazor Diagram](images/CloneGroup.gif)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CloneNodeGroup)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVeCDNPfjyioMFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Diagram](images/CloneGroup.gif)" %}
 
 ### How to Add Padding to a Node Group
 
-The [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Padding) property of a group node defines the spacing between the group node’s edges and its children.
+The [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Padding) property of a node group defines the spacing between the group node’s edges and its children.
 
-The following code illustrates how to add Padding to the node group.
+The following code illustrates how to add padding to a node group.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -318,13 +321,13 @@ The following code illustrates how to add Padding to the node group.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
 
-![Padding in Blazor Diagram](images/GroupPadding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjryCDZlzjyxnaIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Padding in Blazor Diagram](images/GroupPadding.png)" %}
 
 ## How to Add a Node Group at Runtime
 
-A node group can be added at runtime by using Nodes collection of diagram.
+A node group can be added at runtime by using the `Nodes` collection of the diagram.
 
 The following code illustrates how a node group is added at runtime.
 
@@ -387,8 +390,9 @@ The following code illustrates how a node group is added at runtime.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddGroupAtRunTime)
-* Also, you can add the child to the node group through the [AddChildAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChildAsync_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through the AddChildAsync method.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeWtNPpDntLeoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddGroupAtRunTime)
+* Also, Add the child to the node group through the [AddChildAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChildAsync_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through the AddChildAsync method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -474,11 +478,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddChildMethod)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLysNDlpXdPhsab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddChildMethod)
 
 ## How to Update Node Group Position at Runtime
 
-You can change the position of the node group similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram/nodes/positioning).
+Change the position of the node group similar to a node. For more information about node positioning, refer to the [Positioning](https://blazor.syncfusion.com/documentation/diagram/nodes/positioning).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -542,19 +548,21 @@ You can change the position of the node group similar to node. For more informat
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/UpdatePositionForGroup)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLIiDZbzDGhrbJg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/UpdatePositionForGroup)
 
 ## How to Customize Node Group Appearance
 
-You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram/nodes/customization).
+Change the appearance of the node group similar to a node. For more information about node appearance, refer to the [Appearance](https://blazor.syncfusion.com/documentation/diagram/nodes/customization).
 
 ## How to Interact with Node Group at Runtime
 
-You can edit the node group and its children at runtime. You can interact with the node group similar to node interactions like resize, rotate, and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction).
+Edit the node group and its children at runtime. Interact with the node group similar to node interactions like resize, rotate, and drag. For more information about node interaction, refer to the [Interaction](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction).
 
 ### How to Select Node Group
 
-When a child element of any node group is clicked, its contained node group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent nodegroup to its children.
+When a child element of a node group is clicked, its contained node group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent nodegroup to its children.
 
 ## How to Flip Node Group
 
