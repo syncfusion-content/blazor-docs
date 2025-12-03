@@ -13,9 +13,7 @@ In Blazor, lazy loading refers to loading data dynamically only when needed, rat
 
 Lazy load grouping in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the DataGrid initially renders only top-level group caption rows in a collapsed state. The child rows for each group are fetched on demand and rendered when the corresponding caption row is expanded.
 
-To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) to `true` in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings). Ensure grouping is enabled by setting AllowGrouping to true.
-
-The following example demonstrates how to enable the lazy load grouping feature by setting the `EnableLazyLoading` to `true` in `GridGroupSettings`:
+To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) to **true** in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings). Ensure grouping is enabled by setting AllowGrouping to true.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -126,9 +124,7 @@ Lazy load grouping with infinite scrolling is useful when presenting grouped dat
 
 3. Infinite scrolling loads additional data as the user reaches the end of the scrollbar.
 
-To enable this feature, set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to `true` and set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to `true`.
-
-The following example demonstrates how to enable the lazy load grouping with infinite scrolling feature using the `EnableLazyLoading` property of the `GridGroupSettings` and `EnableInfiniteScrolling` property.
+To enable this feature, set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to **true** and set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -244,8 +240,6 @@ The lazy load grouping with virtual scrolling feature in the Syncfusion<sup styl
 
 To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to true and set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to true.
 
-The following example demonstrates how to enable the lazy load grouping with virtual scrolling feature using the `EnableLazyLoading` property of the `GridGroupSettings` and `EnableVirtualization` property.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -336,7 +330,6 @@ Use a Custom Adaptor of DataManager when binding remote data. Along with the def
 | LazyLoad | Differentiates between default grouping and lazy load grouping. |
 | LazyExpandAllGroup | Handles Expand All support for lazy load grouping. |
 
-The following code example describes how lazy load grouping is processed at the server side along with other DataGrid actions.
 
 ```csharp
 // Implementing custom adaptor by extending the DataAdaptor class.

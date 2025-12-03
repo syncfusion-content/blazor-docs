@@ -17,8 +17,6 @@ Use the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 - **Key**: grouped value
 - **Count**: number of records in the group
 
-The following example demonstrates customizing the group caption using `CaptionTemplate`. It displays the `HeaderText`, `Key`, and `Count` of the grouped column:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -102,9 +100,7 @@ public class OrderData
 
 ## Adding custom text in group caption
 
-The DataGrid supports adding custom text to group captions for clearer context. Use the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property to output any text or markup, combined with values from [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html) such as `Key`, `Count`, and `HeaderText`.
-
-The following example adds a custom string along with the group key, record count, and header text:
+The DataGrid supports adding custom text to group captions for clearer context. Use the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property to output any text or markup, combined with values from [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html) such as **Key**, **Count**, and **HeaderText**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -189,8 +185,6 @@ public class OrderData
 ## Customize group caption text using locale
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports customization of group caption text based on locale settings. This feature enables the display of localized or translated content in group captions, allowing the DataGrid to adapt to different languages and regional formats.
-
-The following example demonstrates customizing group caption text for the **ar** locale:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -363,7 +357,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers flex
 
 Define the custom UI in the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) and use `CaptionTemplateContext` to access the current group’s details. This feature enables the replacement of plain text with a custom component in the group caption, enhancing both customization and interactivity.
 
-The following example shows rendering a chip with the group key using the Syncfusion Blazor [Chips](https://blazor.syncfusion.com/documentation/chips/getting-started) component:
+The sample below shows how to render a chip with the group key in the Syncfusion Blazor [Chips](https://blazor.syncfusion.com/documentation/chips/getting-started) component.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
