@@ -357,7 +357,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers flex
 
 Define the custom UI in the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) and use `CaptionTemplateContext` to access the current group’s details. This feature enables the replacement of plain text with a custom component in the group caption, enhancing both customization and interactivity.
 
-The sample below shows how to render a chip with the group key in the Syncfusion Blazor [Chips](https://blazor.syncfusion.com/documentation/chips/getting-started) component.
+The sample below shows how to render a chip with the group key in the Syncfusion Blazor [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) component.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
