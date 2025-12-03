@@ -19,7 +19,7 @@ Paging options can be configured through the [GridPageSettings](https://help.syn
 
 ## Customize the pager options
 
-Customizing pager options in  Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGri helps adjust pagination to specific needs. The **PageCount** property sets the number of numeric buttons. The **CurrentPage** property defines the active page. The **PageSize** property specifies the number of records displayed per page. The **PageSizes** property provides a dropdown for selecting different page sizes.
+Customizing pager options in  Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid helps adjust pagination to specific needs. The **PageCount** property sets the number of numeric buttons. The **CurrentPage** property defines the active page. The **PageSize** property specifies the number of records displayed per page. The **PageSizes** property provides a dropdown for selecting different page sizes.
 
 ### Change the page size
 
