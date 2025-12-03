@@ -115,9 +115,6 @@ The Syncfusion Blazor Chart suite offers versatile visualization tools across va
 The Syncfusion Blazor Schedule component helps manage events, resources, and timelines with powerful views and customization.
 
 {% promptcards %}
-{% promptcard Module Injection %}
-#SyncfusionBlazorAssistant How do I inject required modules into the Syncfusion Blazor Schedule component?
-{% endpromptcard %}
 {% promptcard Remote Data Binding %}
 #SyncfusionBlazorAssistant Bind the Schedule component to a remote API for dynamic event loading.
 {% endpromptcard %}
@@ -136,9 +133,6 @@ The Syncfusion Blazor Schedule component helps manage events, resources, and tim
 {% promptcard Timeline Header Rows %}
 #SyncfusionBlazorAssistant How do I customize timeline header rows in the Schedule component?
 {% endpromptcard %}
-{% promptcard Multiple Module Injection %}
-#SyncfusionBlazorAssistant Inject multiple modules like Day, Week, and Timeline views into Schedule.
-{% endpromptcard %}
 {% promptcard Troubleshooting Schedule CRUD %}
 #SyncfusionBlazorAssistant Why aren’t my CRUD actions working correctly in the Schedule component?
 {% endpromptcard %}
@@ -147,9 +141,6 @@ The Syncfusion Blazor Schedule component helps manage events, resources, and tim
 {% endpromptcard %}
 {% promptcard Export and Timezone %}
 #SyncfusionBlazorAssistant Configure timezone-aware exporting for the Schedule view.
-{% endpromptcard %}
-{% promptcard Advanced Schedule Setup %}
-#SyncfusionBlazorAssistant Create a Schedule with module injection, CRUD, virtual scrolling, and exporting.
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -210,9 +201,6 @@ The Syncfusion Blazor RichTextEditor offers a modern WYSIWYG editor with extensi
 {% promptcard Iframe Mode %}
 #SyncfusionBlazorAssistant How can I render the RichTextEditor inside an iframe for isolated styling?
 {% endpromptcard %}
-{% promptcard Module Injection %}
-#SyncfusionBlazorAssistant Inject feature modules like toolbar, link, and image into RichTextEditor.
-{% endpromptcard %}
 {% promptcard Undo and Redo %}
 #SyncfusionBlazorAssistant Enable undo and redo functionality in the RichTextEditor toolbar.
 {% endpromptcard %}
@@ -230,9 +218,6 @@ The Syncfusion Blazor RichTextEditor offers a modern WYSIWYG editor with extensi
 {% endpromptcard %}
 {% promptcard Undo/Redo and Export %}
 #SyncfusionBlazorAssistant Enable undo/redo and export content to HTML in RichTextEditor.
-{% endpromptcard %}
-{% promptcard Module Injection and Link Editing %}
-#SyncfusionBlazorAssistant Inject toolbar and link modules to enable rich link editing in the editor.
 {% endpromptcard %}
 {% endpromptcards %}
 
