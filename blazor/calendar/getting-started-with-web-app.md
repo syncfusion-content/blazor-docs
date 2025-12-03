@@ -261,6 +261,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
 
-N> You can also explore our [Blazor Calendar Example](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Calendar.
+N> Explore the [Blazor Calendar example](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=bootstrap5) to learn how to render and configure the Calendar.
 
 
