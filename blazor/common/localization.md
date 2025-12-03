@@ -1,43 +1,43 @@
 ---
 layout: post
 title: Localization (Multi-Language) in Blazor components | Syncfusion
-description: Localization of Syncfusion Blazor UI components in Blazor Server and WebAssembly (WASM) apps and much more.
+description: Learn how to localize Syncfusion Blazor UI components in Blazor Web App, WASM, Server, and .NET MAUI apps using resource files and dynamic culture switching.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
 # Localization of Blazor Components
 
-[Localization](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-8.0) is the process of translating the application resources into different languages for specific cultures. You can localize the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by adding a resource file for each language.
+[Localization](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-8.0) is the process of translating application resources into different languages for specific cultures. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can be localized by adding a resource file for each language.
 
 ## Localization of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
 
-The following two steps can be used to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components based on culture. You can find the example codes in the below repository,
+Use the following steps to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components based on culture. Example code is available in the repository below.
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
+N> [View sample on GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 
-### Adding culture based resx files
+### Adding culture-based .resx files
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> components can be localized using the Resource `.resx` files. You can find the default and culture based localization files in the following GitHub repository.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components can be localized using Resource `.resx` files. Default and culture-specific localization files are available in the following GitHub repository.
 
-N> You can get default and culture based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
+N> Download default and culture-based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
 
-Copy the default resx file (`SfResources.resx`) and the other required resx files based on the culture to be localized and add them to the **Resources** folder. If you are implementing in a .NET MAUI Blazor app, create a **LocalizationResources** folder and add them into it.
+Copy the default `.resx` file (`SfResources.resx`) and any required culture-specific `.resx` files to the **Resources** folder. For a .NET MAUI Blazor app, create a **LocalizationResources** folder and add them there.
 
 ![Adding Resource Files in Blazor](images/localization-resource.png)
 
-N> Update the localization files whenever you upgrade the Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages in the application to avoid the issues occur due to localization strings.
+N> Update the localization files whenever upgrading Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages to prevent mismatches in localization strings.
 
-After adding the resource file in the application, double click default resx (`SfResources.resx`) file and open **Resource Editor**. In the Resource Editor, change **Access Modifier** option as **Public** .
+After adding the resource files, open the default resource file (`SfResources.resx`) in the **Resource Editor** and set **Access Modifier** to **Public**.
 
 ![Changing Access Modifier](images/localization-resource-file.png)
 
 ### Create and register localization service
 
-[ISyncfusionStringLocalizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html) which acts as a middleware to connect the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components and resource files, uses [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) to provide culture specific resources at runtime. Create a class implementing `ISyncfusionStringLocalizer`. In the newly created class, return the `ResourceManager` created in the above step for [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) property and change [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_GetText_System_String_) method to return localized string using resource manager.
+[ISyncfusionStringLocalizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html) acts as middleware between Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components and resource files and uses the [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) to provide culture-specific resources at runtime. Create a class that implements `ISyncfusionStringLocalizer`. In the class, return the `ResourceManager` created in the previous step for the [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) property and update [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_GetText_System_String_) to return the localized string.
 
-In the following code, `SyncfusionLocalizer` class implements `ISyncfusionStringLocalizer` interface and `ResourceManager` configured to return the cached ResourceManager instance of default resource file created in **Adding culture based resx files** step.
+In the following code, the `SyncfusionLocalizer` class implements the `ISyncfusionStringLocalizer` interface, and the `ResourceManager` is configured to return the cached `ResourceManager` instance of the default resource file created in the “Adding culture-based .resx files” step.
 
 {% tabs %}
 
@@ -70,11 +70,10 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 {% endtabs %}
 
-Register the `ISyncfusionStringLocalizer` and `Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service` in the **~/Program.cs** file of your app.
+Register `ISyncfusionStringLocalizer` and the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your app.
 
-* If you create a Blazor Web App with an **Interactive render mode** such as `WebAssembly or Auto`, you need to ensure the registration of the `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **~/Program.cs** files.
-
-* For **MAUI Blazor App**, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
+* For a Blazor Web App using an **Interactive render mode** (WebAssembly or Auto), register `SyncfusionLocalizer` and the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **Server** and **Client** `~/Program.cs` files.
+* For a **.NET MAUI Blazor** app, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **~/MauiProgram.cs**.
 
 {% tabs %}
 
@@ -93,19 +92,18 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 ## Statically set the culture
 
-If you don't want to change culture dynamically, you can set it statically by following the procedures below.
+If culture changes are not required at runtime, set the culture statically using the options below.
 
 ### Blazor Web App and Blazor WASM App
 
-In Blazor Web App and Blazor WASM app, you can set culture statically in Blazor's start option or in C# code.
+In Blazor Web App and Blazor WebAssembly (WASM) apps, set culture either in Blazor’s start options or in C# code.
 
-#### Setting the culture Blazor's start option
+#### Setting the culture in Blazor’s start option
 
-The app's culture can be set in JavaScript by setting `applicationCulture` in Blazor's start option by following the steps below,
+Set the app’s culture in JavaScript by configuring `applicationCulture` in Blazor’s start options:
 
-* For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), prevent Blazor autostart by adding `autostart="false"` attribute to the Blazor `<script>` tag in the **~/Components/App.razor** file.
-
-* For `Blazor WebAssembly Standalone App` , prevent Blazor autostart by adding `autostart="false"` attribute to Blazor's `<script>` tag in the **wwwroot/index.html** file.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), prevent Blazor autostart by adding `autostart="false"` to the Blazor `<script>` tag in **~/Components/App.razor**.
+* For a `Blazor WebAssembly Standalone app`, prevent Blazor autostart by adding `autostart="false"` to the Blazor `<script>` tag in **wwwroot/index.html**.
 
 {% tabs %}
 
@@ -131,7 +129,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
 
 {% endtabs %}
 
-* Add the script block below Blazor's `<script>` tag and before the closing </body> tag to start blazor with specific culture.
+* Add the script block below the Blazor `<script>` tag and before the closing </body> tag to start Blazor with a specific culture.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Blazor Web App" hl_lines="4 5 6 7 8 9 10" %}
@@ -169,7 +167,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
 
 #### Setting the culture in C# code
 
-For `Blazor Web App & Blazor WASM App`, you can set culture in C# code alternative for setting the culture Blazor's start option. Set the `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `Program.cs` to the same culture before line that builds and runs the `WebAssemblyHostBuilder` (`await builder.Build().RunAsync();`).
+For Blazor Web App and Blazor WASM apps, set culture in C# as an alternative to Blazor’s start option. Set `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `Program.cs` to the same culture before the call that builds and runs the `WebAssemblyHostBuilder` (`await builder.Build().RunAsync();`).
 
 {% tabs %}
 
@@ -187,7 +185,7 @@ CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
 
 ### MAUI Blazor App
 
-In a MAUI Blazor app, you can set the culture in C# code by configuring the `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `MauiProgram.cs` to the same culture. Ensure that this configuration is done before the line that builds and runs the `MauiApp.CreateBuilder()` (i.e., `return builder.Build();`).
+In a .NET MAUI Blazor app, set culture in C# by configuring `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `MauiProgram.cs` to the same culture. Ensure this configuration occurs before returning from `MauiApp.CreateBuilder()` (that is, before `return builder.Build();`).
 
 {% tabs %}
 
@@ -206,11 +204,11 @@ CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
 
 ## Dynamically set the culture
 
-The culture can be set dynamically based on user's preference. The following example demonstrates how to use a localization cookie to store user's localization preference.
+Set culture dynamically based on user preference. The following example uses a localization cookie or local storage to persist the user’s selection.
 
 ### Blazor Web App and Blazor Standalone WASM App
 
-For `Blazor Web App and Blazor WASM Standalone App`, set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
+For Blazor Web App and Blazor WASM Standalone apps, set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
 
 {% tabs %}
 
@@ -224,9 +222,8 @@ For `Blazor Web App and Blazor WASM Standalone App`, set the `BlazorWebAssemblyL
 
 {% endtabs %}
 
-* For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), add JS function in `~/Components/App.razor` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
-
-* For Blazor WASM Standalone App, add JS function in `wwwroot/index.html` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), add JavaScript in **~/Components/App.razor** (after the Blazor `<script>` tag and before `</body>`) to get and set the user’s selected culture in browser local storage.
+* For a Blazor WASM Standalone app, add the JavaScript in **wwwroot/index.html** (after the Blazor `<script>` tag and before `</body>`).
 
 {% tabs %}
 {% highlight cshtml tabtitle="Blazor Web App" hl_lines="2 3 4 5 6 7" %}
@@ -254,9 +251,9 @@ For `Blazor Web App and Blazor WASM Standalone App`, set the `BlazorWebAssemblyL
 
 {% endtabs %}
 
-In `Program.cs` use JS interop to call above function and retrieve the user's culture selection from local storage. If local storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
+In `Program.cs`, use JS interop to call the functions above and retrieve the user’s culture selection from local storage. If local storage doesn’t contain a culture, a default of United States English (`en-US`) is set.
 
-If you create a Blazor Web App with an **Interactive render mode** such as `WebAssembly or Auto`, you need to ensure the registration of the `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **~/Program.cs** files.
+For a Blazor Web App using an **Interactive render mode** (WebAssembly or Auto), register `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **Server** and **Client** `~/Program.cs` files.
 
 {% tabs %}
 
@@ -295,7 +292,7 @@ await builder.Build().RunAsync();
 
 {% endtabs %}
 
-Create `CultureSwitcher` component to set the user's culture selection into browser local storage via JS interop and to force reload the page using the updated culture.
+Create a `CultureSwitcher` component to store the user’s culture selection in browser local storage via JS interop and force a page reload to apply the updated culture.
 
 {% tabs %}
 
@@ -342,7 +339,7 @@ Create `CultureSwitcher` component to set the user's culture selection into brow
 
 {% endtabs %}
 
-Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the culture switcher in all pages. If you create a Blazor Web App with an interactivity location as `Per page/component`, you need to ensure the set a render mode at the `CultureSwitcher` component instance in the `~/MainLayout.razor` file.
+Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the culture switcher on all pages. For a Blazor Web App with interactivity location set to `Per page/component`, specify a render mode on the `CultureSwitcher` component instance in `~/MainLayout.razor`.
 
 {% tabs %}
 {% highlight razor tabtitle="Blazor Web App" %}
@@ -376,13 +373,13 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
 
 ### Blazor Server App and Blazor Web App (Interactive Server)
 
-Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`.
+Configure supported cultures and ensure the app processes controller actions by calling `AddControllers` and `MapControllers`.
 
-If you create a Blazor Web App with an **Interactive render mode** as `Server` make sure to include the registration of SyncfusionLocalizer and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in the ~/Program.cs files.
+For a Blazor Web App using the **Interactive render mode** of `Server`, register `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in the `~/Program.cs` files.
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
 
 builder.Services.AddControllers();
 
@@ -416,11 +413,11 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-For .NET 9 and .NET 8 set the current culture in a cookie in App component file
+For .NET 10, .NET 9 and .NET 8, set the current culture in a cookie in the App component file.
 
 {% tabs %}
 
-{% highlight C# tabtitle=".NET 9 & .NET 8 (App.razor)" %}
+{% highlight C# tabtitle=".NET 10, .NET 9 & .NET 8 (App.razor)" %}
 
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization
@@ -443,7 +440,7 @@ For .NET 9 and .NET 8 set the current culture in a cookie in App component file
 
 {% endtabs %}
 
-To provide UI to allow a user to select a culture, use a redirect-based approach with a localization cookie. The app persists the user's selected culture via a redirect to a controller. The controller sets the user's selected culture into a cookie and redirects the user back to the original URI.
+Provide a UI to allow the user to select a culture using a redirect-based approach with a localization cookie. The controller sets the user’s selected culture into a cookie and redirects back to the original URI.
 
 {% tabs %}
 
@@ -472,11 +469,11 @@ public class CultureController : Controller
 
 {% endtabs %}
 
-Create `CultureSwitcher` component and place it inside shared folder to perform the initial redirection when the user selects a culture.
+Create a `CultureSwitcher` component and place it inside the shared folder to perform the initial redirection when the user selects a culture.
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 9 & .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
+{% highlight razor tabtitle=".NET 10, .NET 9 & .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
 
 @using  System.Globalization
 @inject NavigationManager NavigationManager
@@ -534,11 +531,11 @@ Create `CultureSwitcher` component and place it inside shared folder to perform 
 
 {% endtabs %}
 
-Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the culture switcher in all pages.
+Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the culture switcher on all pages.
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 9 & .NET 8 (Components/Layout/MainLayout.razor)" %}
+{% highlight razor tabtitle=".NET 10, .NET 9 & .NET 8 (Components/Layout/MainLayout.razor)" %}
 
  <div class="page">
     <div class="sidebar">
@@ -563,7 +560,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 ### MAUI Blazor App
 
-In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences?view=net-maui-8.0&tabs=windows) to retrieve the user's stored culture selection. If the storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
+In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences?view=net-maui-9.0&viewFallbackFrom=net-maui-8.0&tabs=windows) to retrieve the user’s stored culture selection. If storage doesn’t contain a culture, default to United States English (`en-US`).
 
 {% tabs %}
 
@@ -591,7 +588,7 @@ namespace LocalizationMauiBlazor
 
 {% endtabs %}
 
-Create `CultureSwitcher` component to store the user's culture selection via [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences?view=net-maui-8.0&tabs=windows) and to force reload the page using the updated culture.
+Create a `CultureSwitcher` component to store the user’s culture selection via [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences?view=net-maui-9.0&viewFallbackFrom=net-maui-8.0&tabs=windows) and force a page reload to apply the updated culture.
 
 {% tabs %}
 
@@ -668,14 +665,14 @@ Add the `CultureSwitcher` component to `Layout/MainLayout.razor` to enable the c
 
 ![Dynamically set the culture in Blazor](images/blazor-localization-dynamic-change.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
+N> [View sample on GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 
 ## Localization using database in Blazor
 
 * [How to perform localization using database instead of resource files in Blazor?](https://support.syncfusion.com/kb/article/11465/how-to-perform-localization-using-database-instead-of-resource-files-in-blazor)
 
 ## See also
-* [Statically set the culture in Blazor WASM App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#statically-set-the-culture)
-* [Statically set the culture in Blazor Server App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#statically-set-the-culture)
-* [Dynamically set the culture by user preference in WASM App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
-* [Dynamically set the culture by user preference in Server App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
+* [Statically set the culture in Blazor WebAssembly app](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-8.0#statically-set-the-culture)
+* [Statically set the culture in Blazor Server app](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-8.0#statically-set-the-culture)
+* [Dynamically set the culture by user preference in WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-8.0#dynamically-set-the-culture-by-user-preference)
+* [Dynamically set the culture by user preference in Server](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-8.0#dynamically-set-the-culture-by-user-preference)

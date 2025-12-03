@@ -1,30 +1,30 @@
 ---
 layout: post
 title: Content Security Policy (CSP) - Syncfusion
-description: Learn here about that how use Syncfusion Blazor Components with strict Content Security Policy (CSP).
+description: Learn how to use Syncfusion Blazor components with a strict Content Security Policy (CSP) in Blazor Web App, Blazor WebAssembly (WASM), and Blazor Server.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components with Strict Content Security Policy (CSP)
+# Syncfusion® Blazor components with a strict Content Security Policy
 
-Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It does this by limiting the sources from which certain types of content can be loaded on a webpage.
+Content Security Policy (CSP) is a browser security feature that helps protect against cross-site scripting (XSS) and data injection by limiting the allowed sources for scripts, styles, images, fonts, and other resources.
 
-When enabling strict Content Security Policy (CSP), some browser features are disabled by default. In order to use Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components with strict CSP mode, certain directives must be included in the CSP meta tag. These directives allow to use certain features that are necessary for Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components to function properly.
+When enforcing a strict CSP, some browser features are blocked by default. To use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components under a strict CSP, include specific directives in the CSP policy so required runtime behaviors continue to work.
 
-To use Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components with strict CSP mode, the following directives must be included in the CSP meta tag:
+Include the following directives in the CSP policy for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components:
 
-* `font-src data:` - This directive allows for the use of `base64` encoded font icons.
-* `style-src 'self' unsafe-inline` - This directive permits the use of inline styles, allowing components to apply parameters such as Width, Height, positioning, etc. Additionally, certain components depend on inline styling to render dynamic behaviors and responsive UI design.
-* `connect-src 'self' https: wss:` - This directive enables web sockets.
-* `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+* `font-src data:` – Allows `base64`-encoded font icons.
+* `style-src 'self' 'unsafe-inline'` – Permits inline styles. Some components use inline styling for sizing, positioning, and dynamic UI behavior.
+* `connect-src 'self' https: wss:` – Enables WebSockets and HTTPS connections.
+* `script-src 'self' 'unsafe-eval'` – Permits dynamic code evaluation required by certain features (for example, animation logic).
 
 These directives should be included in the `<head>` tag of the application's webpage, typically
 
-* For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), inside the `<head>` of **~/Components/App.razor** file.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), inside the `<head>` of the **~/Components/App.razor** file.
 
-* For **Blazor WebAssembly Standalone App**, inside the `<head>` of **wwwroot/index.html** file.
+* For **Blazor WebAssembly Standalone App**, inside the `<head>` of the **wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight c# hl_lines="9 10" %}
@@ -47,7 +47,7 @@ These directives should be included in the `<head>` tag of the application's web
 {% endhighlight %}
 {% endtabs %}
 
-if you are referencing script and style references from CDN, then add CDN domain reference in CSP meta tag.
+If referencing scripts and styles from a CDN, add the CDN domain to the CSP policy (for example, include the Syncfusion CDN under `script-src` and `style-src`).
 
 {% tabs %}
 {% highlight c# hl_lines="9 10" %}

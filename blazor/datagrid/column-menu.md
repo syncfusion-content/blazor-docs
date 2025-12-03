@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Menu in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about column menu in the Syncfusion Blazor DataGrid component and much more details.
+description: Learn how to use and customize the column menu in Syncfusion Blazor DataGrid, including events, actions, and advanced options for better control.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,20 +9,22 @@ documentation: ug
 
 # Column Menu in Blazor DataGrid
 
-The column menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to true in the Grid configuration.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports a column menu that provides quick access to features such as sorting, grouping, filtering, column chooser, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options.
 
-The default menu items are displayed in the following table:
+To enable the column menu, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnMenu) property to **true** in the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) configuration.
+
+The default column menu items are listed in the table:
 
 | Item | Description |
 |-----|-----|
 | **SortAscending** | Sort the current column in ascending order. |
 | **SortDescending** | Sort the current column in descending order. |
-| **Group** | Group the current column. |
-| **Ungroup** | Ungroup the current column. |
-| **AutoFit** | Auto fit the current column. |
-| **AutoFitAll** | Auto fit all columns. |
-| **ColumnChooser** | Choose the column visibility. |
-| **Filter** | Show the filter option as given in filterSettings [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property |
+| **Group** | Groups the current column. |
+| **Ungroup** | Ungroups the current column. |
+| **AutoFit** | Adjusts the width of the current column to fit its content. |
+| **AutoFitAll** | Adjusts the width of all columns to fit their content. |
+| **ColumnChooser** | Opens the column chooser to manage column visibility. |
+| **Filter** | Displays the filter option as defined in the [FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -89,16 +91,16 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzMLWLKTPWHQcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> *  You can disable column menu for a particular column by defining the column's [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
-> * You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) with the required items.
+> * To disable the column menu for a specific column, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
+> * To customize the menu items, define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property with the required options.
 
-## Prevent column menu for particular column
+## Disable column menu for specific column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent the appearance of the column menu for specific columns. This feature is useful when you want to restrict certain columns from being customizable through the column menu.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent the column menu from appearing for specific columns. This is useful when certain columns should not be customizable through the column menu.
 
-To prevent the column menu for a particular column, you can set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to **false** for that specific column configuration. This will disable the column menu options specifically for the designated column, while other columns will have the column menu enabled.
+To disable the column menu for a specific column, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
-The following example demonstrates how to prevent the column menu for a specific column. In this example, the column menu is disabled for the **OrderID** column by setting the `ShowColumnMenu` property to **false**:
+The column menu is disabled for the **OrderID** column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -167,9 +169,11 @@ public class OrderData
 
 ## Add custom column menu item
 
-The custom column menu item feature allows you to add additional menu items to the column menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. These custom menu items can be defined using the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property, which accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class.You can define the actions for these custom items in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding custom items to the column menu using the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property. This property accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) objects.
 
-Consider the following example, which demonstrates how to add a custom column menu item to clear the sorting and grouping of the Grid using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__)  and [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) method in the `ColumnMenuItemClicked` event:
+Custom actions for these items can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event.
+
+In this configuration, two custom column menu items are added to clear sorting and grouping using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) and [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) methods:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -260,11 +264,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVJMrMgCLBDWpXz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize menu items for particular columns
+## Customize menu items for specific columns
 
-Sometimes, you have a scenario that to hide an item from column menu for particular columns. In that case, you need to define the [MenuItem.Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property as **true** in the [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the visibility of column menu items for specific columns. This is useful when certain actions, such as filtering or grouping, should not be available for specific columns.
 
-The following sample, **Filter** item was hidden in column menu when opens for the **OrderID** column:
+To hide a menu item for a specific column, set the [MenuItem.Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property to **true** in the [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event.
+
+The **Filter** item is hidden when the column menu is opened for the **OrderID** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -353,11 +359,9 @@ public class OrderData
 
 ## Render nested column menu
 
-The nested column menu feature provides an extended menu option in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid column headers, allows you to access additional actions and options related to the columns.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a nested column menu that provides extended options within the column header menu. This feature allows organizing related actions under submenus for better usability.
 
-To enable the nested column menu feature, you need to define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property in your component. The `ColumnMenuItems` property is an array that contains the items for the column menu. Each item can be a string representing a built-in menu item or an object defining a custom menu item.
-
-Here is an example of how to configure the `ColumnMenuItems` property to include a nested menu:
+To enable a nested column menu, define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property. This property accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) objects, where each item can include a submenu by specifying its [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html#Syncfusion_Blazor_Grids_ColumnMenuItemModel_Items) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -453,22 +457,23 @@ public class OrderData
 
 ## Customize the icon of column menu
 
-To customize the column menu icon, you need to override the default Grid class `.e-icons.e-columnmenu` with a custom CSS property called **content**. By specifying a Unicode character or an icon font’s CSS class, you can change the icon displayed in the column menu.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the column menu icon by overriding the default CSS class **.e-icons.e-columnmenu**. This is achieved by applying a custom CSS rule with the **content** property to display a different icon or Unicode character.
 
-1. Add the necessary CSS code to override the default Grid class:
+**Steps to customize the icon:**
+
+1. Override the default CSS class:
 
 ```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
    content: "\e99a";
 }
 ```
-2. Import the required icon stylesheets. You can use either the material or bootstrap5 style, depending on your preference. Add the following code to import the stylesheets:
+2. Import the icon stylesheet based on the selected theme preference:
 
 ```css
 <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet" />
 <link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
 ```
-Here is an example that demonstrates how to customize the column menu icon in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -539,11 +544,44 @@ public class OrderData
 
 ## Column menu events
 
-The column menu in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a set of events that allow customization of behavior and performing actions when the column menu is opened or clicked. The below events are helpful for adding additional functionality or implementing specific actions based on user interactions with the column menu.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides events that are triggered during column menu interactions. These events allow execution of custom logic before the menu opens and after an item is clicked, enabling customization and UI updates.
 
-1. The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event triggers before the column menu opens.
+1. [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen): Triggered before the column menu opens.
+2. [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked): Triggered when a column menu item is clicked.
 
-2. The [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event triggers when the user clicks the column menu of the Grid.
+### OnColumnMenuOpen
+
+The `OnColumnMenuOpen` event is triggered before the column menu opens. This event can be used to inspect or modify the menu or cancel its opening based on custom logic.
+
+**Event Arguments**
+
+The event uses the [ColumnMenuOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuOpenEventArgs.html) class, which includes:
+
+| Property          | Type                                | Description                                                                                     |
+|-------------------|-------------------------------------|-------------------------------------------------------------------------------------------------|
+| Cancel          | bool                             | Indicates whether to prevent the column menu from opening. Set to **true** to cancel opening. |
+| Column          | GridColumn                       | Represents the grid column where the column menu is currently open.                           |
+| ColumnMenuIndex | int                              | Indicates the level of the menu item within the menu hierarchy. Starts from 0 for top-level. |
+| Items           | List&lt;MenuItem&gt;                   | The list of menu items displayed in the column menu.                                          |
+| Left            | double                           | The left position of the column menu relative to the document or container.                  |
+| ParentItem`      | MenuItem                         | The parent menu item of the currently clicked sub-menu item. Null if no parent exists.       |
+| Top             | double                           | The top position of the column menu relative to the document or container.                   |
+
+### ColumnMenuItemClicked
+
+The `ColumnMenuItemClicked` event is triggered when a column menu item is clicked. This event can be used to perform actions based on the selected menu item.
+
+**Event Arguments**
+
+The event uses the [ColumnMenuClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuClickEventArgs.html) class, which includes:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| Column   | GridColumn | The grid column associated with the column menu popup. |
+| Element  | ElementReference | The DOM element that triggered the event. |
+| Event    | System.EventArgs | Provides event details for the column menu interaction. |
+| Item     | Navigations.MenuItemModel | The menu item that was clicked in the column menu. |
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -623,182 +661,3 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthfMhiKzNimycPe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-<!-- Column spanning
-
-The grid has option to span the adjacent cells. To achieve this, define the [`ColSpan`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_QueryCellInfoEventArgs_1_ColSpan) attribute in the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event.
-
-In the following demo, the cells have been spanned based on the employees schedule
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@MergeData" GridLines=GridLine.Both AllowTextWrap="true">
-        <GridEvents TValue="@Merge" QueryCellInfo="QueryCellEvent"></GridEvents>
-    <GridColumns>
-        <GridColumn Field=@nameof(Merge.EmployeeID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Merge.EmployeeName) HeaderText="Employee Name" Width="200"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time900) HeaderText="9.00 AM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time930) HeaderText="9.30 AM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time1000) HeaderText="10.00 AM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time1030) HeaderText="10.30 AM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time1100) HeaderText="11.00 AM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time1130) HeaderText="11.30 AM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time1200) HeaderText="12.00 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time1230) HeaderText="12.30 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time100) HeaderText="1.00 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time130) HeaderText="1.30 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time200) HeaderText="2.00 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time230) HeaderText="2.30 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time300) HeaderText="3.00 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time330) HeaderText="3.30 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time400) HeaderText="4.00 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time430) HeaderText="4.30 PM" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Merge.Time500) HeaderText="5.00 PM" Width="100"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    List<Merge> MergeData = new List<Merge>
-    {
-        new Merge() { Time900 = "Analysis Tasks", Time930 = "Analysis Tasks", Time1000 = "Team Meeting", Time1030 = "Testing", Time1100 = "Development", Time1130 = "Development", Time1200 = "Development", Time1230 = "Support", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Testing", Time300 = "Testing", Time330 = "Development", Time400 = "Conference", Time430 = "Team Meeting", Time500 = "Team Meeting", EmployeeID = 10001, EmployeeName = "Davolio" },
-        new Merge() { Time900 = "Task Assign", Time930 = "Support", Time1000 = "Support", Time1030 = "Support", Time1100 = "Testing", Time1130 = "Testing", Time1200 = "Testing", Time1230 = "Testing", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Development", Time300 = "Development", Time330 = "Check Mail", Time400 = "Check Mail", Time430 = "Team Meeting", Time500 = "Team Meeting", EmployeeID = 10002, EmployeeName = "Buchanan" },
-        new Merge() { Time900 = "Check Mail", Time930 = "Check Mail", Time1000 = "Check Mail", Time1030 = "Analysis Tasks", Time1100 = "Analysis Tasks", Time1130 = "Support", Time1200 = "Support", Time1230 = "Support", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Development", Time300 = "Development", Time330 = "Team Meeting", Time400 = "Team Meeting", Time430 = "Development", Time500 = "Development", EmployeeID = 10003, EmployeeName = "Fuller" },
-        new Merge() { Time900 = "Testing", Time930 = "Check Mail", Time1000 = "Check Mail", Time1030 = "Support", Time1100 = "Testing", Time1130 = "Testing", Time1200 = "Testing", Time1230 = "Testing", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Development", Time300 = "Development", Time330 = "Check Mail", Time400 = "Conference", Time430 = "Conference", Time500 = "Team Meeting", EmployeeID = 10004, EmployeeName = "Leverling" },
-        new Merge() { Time900 = "Task Assign", Time930 = "Task Assign", Time1000 = "Task Assign", Time1030 = "Task Assign", Time1100 = "Check Mail", Time1130 = "Support", Time1200 = "Support", Time1230 = "Support", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Development", Time300 = "Development", Time330 = "Team Meeting", Time400 = "Team Meeting", Time430 = "Testing", Time500 = "Testing", EmployeeID = 10005, EmployeeName = "Peacock" },
-        new Merge() { Time900 = "Testing", Time930 = "Testing", Time1000 = "Support", Time1030 = "Support", Time1100 = "Support", Time1130 = "Team Meeting", Time1200 = "Team Meeting", Time1230 = "Team Meeting", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Development", Time300 = "Development", Time330 = "Team Meeting", Time400 = "Team Meeting", Time430 = "Development", Time500 = "Development", EmployeeID = 10006, EmployeeName = "Janet" },
-        new Merge() { Time900 = "Analysis Tasks", Time930 = "Analysis Tasks", Time1000 = "Testing", Time1030 = "Development", Time1100 = "Development", Time1130 = "Testing", Time1200 = "Testing", Time1230 = "Testing", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Support", Time300 = "Build", Time330 = "Build", Time400 = "Check Mail", Time430 = "Check Mail", Time500 = "Check Mail", EmployeeID = 10007, EmployeeName = "Suyama" },
-        new Merge() { Time900 = "Task Assign", Time930 = "Task Assign", Time1000 = "Task Assign", Time1030 = "Development", Time1100 = "Development", Time1130 = "Development", Time1200 = "Testing", Time1230 = "Support", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Check Mail", Time300 = "Check Mail", Time330 = "Check Mail", Time400 = "Team Meeting", Time430 = "Team Meeting", Time500 = "Build", EmployeeID = 10008, EmployeeName = "Robert" },
-        new Merge() { Time900 = "Check Mail", Time930 = "Team Meeting", Time1000 = "Team Meeting", Time1030 = "Support", Time1100 = "Testing", Time1130 = "Development", Time1200 = "Development", Time1230 = "Development", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Check Mail", Time300 = "Check Mail", Time330 = "Check Mail", Time400 = "Team Meeting", Time430 = "Development", Time500 = "Development", EmployeeID = 10009, EmployeeName = "Andrew" },
-        new Merge() { Time900 = "Task Assign", Time930 = "Task Assign", Time1000 = "Task Assign", Time1030 = "Analysis Tasks", Time1100 = "Analysis Tasks", Time1130 = "Development", Time1200 = "Development", Time1230 = "Development", Time100 = "Lunch Break", Time130 = "Lunch Break", Time200 = "Lunch Break", Time230 = "Testing", Time300 = "Testing", Time330 = "Testing", Time400 = "Build", Time430 = "Build", Time500 = "Build", EmployeeID = 10010, EmployeeName = "Michael" }
-    };
-
-    public class Merge
-    {
-        public int EmployeeID { get; set; }
-        public string EmployeeName { get; set; }
-        public string Time900 { get; set; }
-        public string Time930 { get; set; }
-        public string Time1000 { get; set; }
-        public string Time1030 { get; set; }
-        public string Time1100 { get; set; }
-        public string Time1130 { get; set; }
-        public string Time1200 { get; set; }
-        public string Time1230 { get; set; }
-        public string Time100 { get; set; }
-        public string Time130 { get; set; }
-        public string Time200 { get; set; }
-        public string Time230 { get; set; }
-        public string Time300 { get; set; }
-        public string Time330 { get; set; }
-        public string Time400 { get; set; }
-        public string Time430 { get; set; }
-        public string Time500 { get; set; }
-    }
-
-    public void QueryCellEvent(QueryCellInfoEventArgs<Merge> args)
-    {
-        var Data = args.Data;
-        switch (Data.EmployeeID) {
-            case 10001:
-                if(args.Column.Field == "Time900" || args.Column.Field == "Time230" || args.Column.Field == "Time430") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time1100") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                }
-                break;
-            case 10002:
-                if(args.Column.Field == "Time930" || args.Column.Field == "Time230" || args.Column.Field == "Time430") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time1100") {
-                    args.ColSpan = 4;
-                    StateHasChanged();
-                }
-                break;
-            case 10003:
-                if(args.Column.Field == "Time900" || args.Column.Field == "Time1130") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time1030" || args.Column.Field == "Time230" || args.Column.Field == "Time330" || args.Column.Field == "Time430") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                }
-                break;
-            case 10004:
-                if(args.Column.Field == "Time900") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time1100") {
-                    args.ColSpan = 4;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time230" || args.Column.Field == "Time400") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                }
-                break;
-            case 10005:
-                if(args.Column.Field == "Time900") {
-                    args.ColSpan = 4;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time1130") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time230" || args.Column.Field == "Time330" || args.Column.Field == "Time430") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                }
-                break;
-            case 10006:
-                if(args.Column.Field == "Time900" || args.Column.Field == "Time230" || args.Column.Field == "Time330" || args.Column.Field == "Time430") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time1000" || args.Column.Field == "Time1130") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                }
-                break;
-            case 10007:
-                if(args.Column.Field == "Time900" || args.Column.Field == "Time1030" || args.Column.Field == "Time300") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time1130" || args.Column.Field == "Time400") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                }
-                break;
-            case 10008:
-                if(args.Column.Field == "Time900" || args.Column.Field == "Time1030" || args.Column.Field == "Time230") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time400") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                }
-                break;
-            case 10009:
-                if(args.Column.Field == "Time900" || args.Column.Field == "Time1130") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time230" || args.Column.Field == "Time430") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                }
-                break;
-            case 100010:
-                if(args.Column.Field == "Time900" || args.Column.Field == "Time1130" || args.Column.Field == "Time230" || args.Column.Field == "Time400") {
-                    args.ColSpan = 3;
-                    StateHasChanged();
-                } else if(args.Column.Field == "Time1030") {
-                    args.ColSpan = 2;
-                    StateHasChanged();
-                }
-                break;
-        }
-    }
-}
-``` 
-
-The following GIF shows the column spanning in Grid -->
