@@ -13,7 +13,7 @@ This article provides step-by-step instructions to build a standalone Blazor Web
 
 ## Using the Playground
 
-[Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows interacting with Syncfusion Blazor components directly in a web browser without installing any NuGet packages locally. By default, the `Syncfusion.Blazor` package is included.
+[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows interacting with Syncfusion Blazor components directly in a web browser without installing any NuGet packages locally. By default, the `Syncfusion.Blazor` package is included.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
