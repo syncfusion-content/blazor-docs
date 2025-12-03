@@ -136,13 +136,13 @@ Mouse events fire when the user interacts with the Toggle Switch Button using th
 
 **Event Types:**| Event | Behavior |
 |---|---|
-| **onclick** | Fires when the component is clicked |
-| **ondblclick** | Fires when the component is double-clicked |
-| **onmousedown** | Fires when a mouse button is pressed down |
-| **onmouseup** | Fires when a mouse button is released |
-| **onmousemove** | Fires as the mouse pointer moves over the component |
-| **onmouseenter** | Fires when the mouse pointer enters the component area |
-| **onmouseleave** | Fires when the mouse pointer leaves the component area |
+| **OnClick** | Fires when the component is clicked |
+| **OnDoubleClick** | Fires when the component is double-clicked |
+| **OnMouseDown** | Fires when a mouse button is pressed down |
+| **OnMouseUp** | Fires when a mouse button is released |
+| **OnMouseMove** | Fires as the mouse pointer moves over the component |
+| **OnMouseEnter** | Fires when the mouse pointer enters the component area |
+| **OnMouseLeave** | Fires when the mouse pointer leaves the component area |
 
 The following example demonstrates handling mouse events:
 
@@ -198,7 +198,7 @@ The following example demonstrates handling mouse events:
 
 ### Touch Events
 
-Touch events fire when the user interacts with the Toggle Switch Button using touch input on touch-enabled devices (tablets, smartphones, etc.). The `TouchEventArgs` parameter provides information about touch points and their positions.
+Touch events fire when the user interacts with the Toggle Switch Button using touch input on touch-enabled devices (tablets, smart phones, etc.). The `TouchEventArgs` parameter provides information about touch points and their positions.
 
 | Event | Behavior |
 |---|---|
