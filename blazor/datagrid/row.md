@@ -1,25 +1,24 @@
 ---
 layout: post
 title: Row in Blazor DataGrid | Syncfusion
-description: Check out this page to learn all about setting row styles, heights, hovering, pinning, and more in the Syncfusion Blazor DataGrid component.
-platform: Blazor
+description: Learn how to set row styles, heights, hover effects, pinning, and more in the Syncfusion Blazor DataGrid component for enhanced row customization.
 control: DataGrid
 documentation: ug
 ---
 
 # Row in Blazor DataGrid
 
-Each row typically represents a single record or item from a data source. Rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid are used to present data in a tabular format. Each row displays a set of values the fields of an individual data record. Rows allow users to interact with the data in the Grid. Users can select rows, edit cell values, perform sorting or filtering operations, and trigger events based on actions.
+Each row represents a single record from a data source and displays values for the fields of that record in a tabular format. Rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid support interaction such as selection, editing, sorting, filtering, and event-driven behaviors.
 
 ## Customize row styles
 
-Customizing the styles of rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to modify the appearance of rows to meet your design requirements. This feature is useful when you want to highlight certain rows or change the font style, background color, and other properties of the row to enhance the visual appeal of the Grid. To customize the row styles in the Grid, you can use CSS, properties, methods, or event support provided by the Grid.
+Customizing row styles helps emphasize important data, align with application themes, and improve readability. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports styling through CSS, properties, methods, and events.
 
 ### Using event
 
-You can customize the appearance of the rows by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event. This event triggers for every row when it is bound to the data source. In the event handler, you can get the [RowDataBoundEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) object, which contains details of the row. You can use this object to modify the row’s appearance, add custom elements, or perform any other customization.
+Customize row appearance using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, which triggers for each row when it is bound to data. The [RowDataBoundEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) provides access to row details for applying custom classes, adding elements, or other styling.
 
-Here’s an example of how you can use the `RowDataBound` event to customize the styles of rows based on the value of the **Freight** column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes **below-30**, **below-80**, and **above-80** can then be defined in your stylesheet to apply the desired styles to the rows:
+The following example applies CSS classes to rows based on the value of the `Freight` column. Define the CSS classes `below-30`, `below-80`, and `above-80` in the stylesheet to apply the corresponding styles:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -124,17 +123,17 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLpWjrbKtniHxws?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event can also be used to customize cells and is triggered for every cell in the Grid. It can be useful when you need to customize cells based on certain conditions or criteria.
+> The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event customizes individual cells and triggers for every cell. Use it when styling is required at the cell level based on conditions.
 
 ### Using CSS
 
-You can apply styles to the rows using CSS selectors. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a class name for each row element, which you can use to apply styles to that specific row.
+Apply styles to rows using CSS selectors. Each row element exposes class names that can be targeted for customization.
 
 **Customize alternate rows**
 
-You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Grid provides the CSS class **.e-altrow** to style the alternate rows. You can customize this default style by overriding the **.e-altrow** class with your custom CSS styles.
+Alternate rows can be styled to enhance readability. The Grid applies the CSS class `.e-altrow` to alternate rows. Override this class to apply custom styles.
 
-To change the background color of the alternate rows, you can add the following CSS code to your application’s stylesheet:
+To change the background color of alternate rows, add the following CSS:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -219,18 +218,15 @@ public class OrderData
 
 **Customize selected row**
 
-You can customize the appearance of the selected row using CSS. This is useful when you want to highlight the currently selected row for improve the visual appeal of the Grid. By default, the Grid provides the CSS class **.e-selectionbackground** to style the selected row. You can customize this default style by overriding the **.e-selectionbackground** class with your own custom CSS styles.
+Customize the selected row using CSS to clearly highlight the active selection. Override the default `.e-selectionbackground` class to apply custom styles.
 
-To change the background color of the selected row, you can add the following CSS code to your application:
+To change the background color of the selected row, add the following CSS:
 
 ```css
 #CustomGrid .e-selectionbackground {
     background-color: #f9920b;
 }
 ```
-
-Here’s an example of how to use the **.e-selectionbackground** class to style the selected row:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -316,9 +312,7 @@ public class OrderData
 
 ## Row height
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the height of rows based on your needs. This feature can be useful when you need to display more content in a row or when you want to reduce the height of rows to fit its content. You can achieve this by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property of the Grid. This property allows you to change the height of the entire Grid row to your desired value.
-
-In the below example, we will demonstrate how to dynamically change the height of the rows using the `RowHeight` property:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports customizing row height to display more or less content as needed. Use the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property to change the height of all rows in the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -418,17 +412,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJWDgtqYsIJUYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The `RowHeight` property can only be used to set the height of the entire Grid row. It cannot be used to set the height of individual cells within a row.
-> The `RowHeight` property applies the height to all rows in the Grid, including the header and footer rows.
-> You can also set the height for a specific row using the `RowHeight` property of the corresponding row object in the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event.
+> The `RowHeight` property sets the height for all Grid rows. It does not configure individual cell heights.
+> The `RowHeight` setting applies to header and footer rows as well.
+> Row height for a specific row can be customized by adding a row-level CSS class in the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event.
 
 ### Customize row height for particular row
 
-Customizing the row height for a particular row can be useful when you want to display more content in a particular row, reduce the height of a row to fit its content, or make a specific row stand out from the other rows in the Grid. This can be achieved by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight)  property of the Grid along with the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event.
-
-The `RowHeight` property of the Grid allows you to set the height of all rows in the Grid to a specific value. However, if you want to customize the row height for a specific row based on the row data, you can use the `RowDataBound` event. This event is triggered every time a request is made to access row information, element, or data, and before the row element is appended to the Grid element.
-
-In the below example, the row height for the row with **OrderID** as ‘10249’ is set as ‘90px’ using the `RowDataBound` event.
+Customize the row height for a specific row when a single record needs additional space or emphasis. Use the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in combination with the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event to apply a CSS class conditionally.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -525,11 +515,9 @@ public class OrderData
 
 ## Row hover
 
-The Row Hover feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid  provides a visual effect when the mouse pointer hovers over the rows, making it easy to highlight and identify the selected row. This feature can also improve the readability of data in the Grid. The row hover effect can be enabled or disabled using the [EnableHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableHover) property of the Grid.
+The row hover feature applies a visual effect when the mouse pointer is over a row, improving readability and helping to identify the focused record. Enable or disable the effect using the [EnableHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableHover) property.
 
-By default, the `EnableHover` property is set to **true**, which means that the row hovering effect is enabled. To disable the row hover effect, set the `EnableHover` property to **false**.
-
-Here is an example that demonstrates how to enable/disable row hover based on the [Switch](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp):
+By default, `EnableHover` is **true**. Set it to **false** to disable row hover.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -616,17 +604,15 @@ Here is an example that demonstrates how to enable/disable row hover based on th
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhpiDUZpjrcFKJP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The enableHover property applies to the entire Grid, not individual rows or columns.
+> The `EnableHover` property applies to the entire Grid rather than to specific rows or columns.
 
 ## Row pinning (Frozen)
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to freeze rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
-
-To know about frozen rows in Grid, you can check this video.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides an option to freeze rows, keeping them visible while scrolling vertically through large datasets. This feature helps maintain important information in view for better readability.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=L2NvKyBomhM"%}
 
-In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to **2**. This configuration freezes the top two rows of the Grid, and they will remain fixed in their positions while the rest of the Grid can be scrolled vertically:
+In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to `2`. The top two rows remain fixed while the rest of the Grid scrolls vertically:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -732,24 +718,22 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrTMjUtTMnyFhpX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Frozen rows should not be set outside the Grid view port.
-> Frozen Grid will support row virtualization feature, which helps to improve the Grid performance while loading a large dataset.
-> The frozen feature is supported only for the rows that are visible in the current view.
-> You can use both [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property in the same application.
+> Frozen rows should remain within the Grid viewport.
+> Frozen Grid supports row virtualization to improve performance with large datasets.
+> The frozen feature applies to rows visible in the current view.
+> [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) can be used together in the same Grid.
 
 ### Change default frozen rows line color
 
-You can easily customize the frozen line background color of frozen rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by applying custom CSS styles to the specific frozen row. This allows you to change the background color of frozen rows to match your application’s design and theme.
+The frozen row background color in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized by applying CSS styles, allowing alignment with the application's theme.
 
-To change the default frozen rows line color, you can use the following CSS class:
+Apply the following CSS to change the default line color:
 
 ```css
 .e-grid .e-frozenrow-border {
     background-color: rgb(5, 114, 47);
 }
 ```
-
-By applying this CSS class, you can set the background color of frozen rows to the specified RGB color. The following example demonstrates how to change the default frozen rows line color using CSS.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -842,7 +826,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVpWNgjTWFRHyLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> When a validation message is displayed in the frozen part (Left, Right, Fixed) of the table, scrolling is prevented until the validation message is cleared.
+> When a validation message is displayed in the frozen area (Left, Right, or Fixed), scrolling is blocked until the message is cleared.
 
 ### Limitations
 
@@ -850,14 +834,13 @@ Frozen row is not compatible with the Autofill feature.
 
 ## Adding a new row programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a way to add a new row to the Grid programmatically. This feature is useful when you want to add a new record to the Grid without having the manually enter data in the Grid.This can be done using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method of the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports programmatically adding new rows using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method. This is useful when inserting records without manual entry through the UI.
 
 The `AddRecordAsync` method takes two parameters:
 
-> The **data** object representing the new row to be added
-> The **index** at which the new row should be inserted. If no index is specified, the new row will be added at the end of the Grid.
+ - The **data** object representing the new row to be added  
+ - The **index** at which the new row should be inserted. If no index is specified, the new row is added at the end.
 
-Here’s an example of how to add a new row using the `AddRecordAsync` method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -989,15 +972,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhzsZKZJLyoxcEx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> When working with remote data, it is impossible to add a new row between the existing rows.
-> If you want to add a new record to the beginning of the data source, you can pass 0 as the second parameter to the `AddRecordAsync` method.
-> If you do not specify an index, the new row will be added at the end of the Grid.
+> When working with remote data, adding a new row between existing rows is not supported.
+> To insert a new record at the beginning, pass 0 as the second parameter to `AddRecordAsync`.
+> If no index is specified, the new row is added at the end.
 
 ## How to get the row data and element
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides several methods to retrieve row data and elements. This feature is useful when you need to access specific rows, perform custom operations, or manipulate the data displayed in the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid exposes methods to retrieve row data and elements for custom operations.
 
-1. [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): The method allows you to retrieve the row index based on a specific primary key value or row data.
+1. [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): Retrieves the row index based on a primary key value or row data.
 
 ```cs
 <SfButton id="GetRowIndexByPrimaryKey" @onclick="GetDataHandler">GetRowIndexByPrimaryKey</SfButton>
@@ -1013,7 +996,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides se
 }
 ```
 
-2. [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync): This methods allows you to get the collection of selected row indexes.
+2. [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync): Returns the collection of selected row indexes.
 
 ```cs
 <SfButton id="GetSelectedRowIndexes " @onclick="GetDataHandler">GetSelectedRowIndexes </SfButton>
@@ -1031,11 +1014,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides se
 
 ## Master Detail DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid has an option to visualize details of a record in another Grid in a master and detail manner. By clicking the master Grid row, the detail Grid will be populated with the corresponding data. This can be achieved as follows:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can display related details in another Grid using a master-detail layout. Selecting a row in the master Grid loads related records in the detail Grid.
 
-Using the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event of the Master Grid, get the selected record details. Based on these selected record details, filter the data using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the Detail Grid and bind the resultant data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Detail Grid.
-
-In the following sample, click the row in the master Grid, which shows the details in another(detail) Grid.
+Use the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event on the master Grid to obtain the selected record. Apply a filter through the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the detail Grid and bind the resulting collection to its [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
