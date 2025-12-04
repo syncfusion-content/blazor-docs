@@ -11,9 +11,9 @@ documentation: ug
 
 ## Sorting
 
-The ListBox supports sorting of available items in the alphabetical order that can be either ascending or descending. This can be achieved using [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) property. Sort order can be `None`, `Ascending` or `Descending`.
+The ListBox can sort items alphabetically in ascending or descending order by using the [SortOrder enum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html). Sorting applies to the text mapped via the Text field in ListBoxFieldSettings. The default sort order is `None`.
 
-In the following example, the `SortOrder` is set as `Descending`.
+In the following example, `SortOrder` is set to `Descending`.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -42,11 +42,12 @@ In the following example, the `SortOrder` is set as `Descending`.
 
 ```
 
-![Sorting in Blazor ListBox](images/blazor-listbox-sorting.png)
+![Blazor ListBox with items sorted in descending order](images/blazor-listbox-sorting.png)
+
 
 ## Grouping
 
-The ListBox supports to wrap the nested element into a group based on its category. The category of each list item can be mapped with [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_GroupBy) field in the data table.
+The ListBox can group items by a category using the [GroupBy field in ListBoxFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_GroupBy). Each item is assigned to a group based on the value of the mapped field, and group headers act as visual categories (not selectable items).
 
 To get started quickly with grouping in the Blazor ListBox component, you can check the video below.
 
@@ -82,4 +83,4 @@ To get started quickly with grouping in the Blazor ListBox component, you can ch
 }
 ```
 
-![Grouping in Blazor ListBox](images/blazor-listbox-grouping.png)
+![Blazor ListBox with items grouped by category](images/blazor-listbox-grouping.png)

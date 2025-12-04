@@ -13,9 +13,9 @@ The following section explains the steps to include native events and pass data 
 
 ## Bind native events to ComboBox
 
-You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
+Bind any native event by adding the corresponding `@on<event>` attribute to the component and assigning an event handler. The attribute’s value is treated as the handler to invoke when the event occurs.
 
-In the following example, the keyPressed method is called every time the key is pressed on input.
+In the following example, the `KeyPressed` method is invoked whenever a key is pressed inside the ComboBox input.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -48,7 +48,7 @@ In the following example, the keyPressed method is called every time the key is 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVgiLrGUlddXtaX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Also, you can rewrite the previous code example as follows using Lambda expressions.
+Also, rewrite the previous code example as follows using Lambda expressions.
 
 ```cshtml
 <SfComboBox TValue="string" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfComboBox>
@@ -56,16 +56,16 @@ Also, you can rewrite the previous code example as follows using Lambda expressi
 
 ## Pass event data to event handler
 
-Blazor provides set of argument types to map to native events. The list of event types and event arguments are:
+Blazor maps native events to strongly typed argument classes. Choose the handler parameter type that matches the event being handled:
 
-* Focus Events - FocusEventArgs
-* Mouse Events - MouseEventArgs
-* Keyboard Events - KeyboardEventArgs
-* Input Events - ChangeEventArgs/EventArgs
-* Touch Events – TouchEventArgs
-* Pointer Events – PointerEventArgs
+- Focus events: FocusEventArgs
+- Mouse events: MouseEventArgs
+- Keyboard events: KeyboardEventArgs
+- Input/change events: ChangeEventArgs or EventArgs
+- Touch events: TouchEventArgs
+- Pointer events: PointerEventArgs
 
-In the following example, the keyPressed method is called every time any key is pressed inside input. But the message will print when you press "c" key.
+In the following example, the `KeyPressed` method receives `KeyboardEventArgs` and conditionally processes only when the “c” key is pressed.
 
 ```cshtml
 <SfComboBox TValue="string" TItem="Country" @onkeypress="@(e => KeyPressed(e))" DataSource="@Countries">

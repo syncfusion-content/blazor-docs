@@ -9,11 +9,11 @@ documentation: ug
 
 # Dimension in Predefined Dialogs in Blazor
 
-Customize the predefined dialogs dimensions using the [DialogOptions.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Height) and [DialogOptions.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Width) properties.
+Customize predefined dialog dimensions using the [DialogOptions.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Height) and [DialogOptions.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Width) properties.
 
-By default, the predefined dialogs `Width` and `Height` property value is set as `auto`. Depends on the dialog content the width and height values are automatically adjust. You can specify the dimension values in both pixels and percentage format to change the default dialog width and height values.
+By default, the `Width` and `Height` properties are set to `auto`. The dialog size adapts to its content when these values are not specified. Dimensions can be provided in pixels (for example, `300px`) or percentages (for example, `50%`) to override the default sizing.
 
-Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the dialog dimensions.
+Use the following code snippet for **alert.razor**, **confirm.razor**, and **prompt.razor** to customize dialog dimensions.
 
 {% tabs %}
 
@@ -35,21 +35,21 @@ Use the following code snippet for **alert.razor**, **confirm.razor** and **prom
 
 **Alert**
 
-![Alert dimension Dialog](./images/blazor-alert-dimension.png)
+![Alert dialog with custom width and height](./images/blazor-alert-dimension.png)
 
 **Confirm**
 
-![confirm dimension Dialog](./images/blazor-confirm-dimension.png)
+![Confirm dialog with custom width and height](./images/blazor-confirm-dimension.png)
 
 **Prompt**
 
-![prompt dimension Dialog](./images/blazor-prompt-dimension.png)
+![Prompt dialog with custom width and height](./images/blazor-prompt-dimension.png)
 
 ## Max-width and max-height
 
-To have a restricted max-width and max-height dialog dimension, you need to specify the max-width, max-height CSS properties for the component’s container element by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CssClass) property. The max-height value is calculated in source level and set to the dialog. so, need to override the max-height property.
+To constrain the dialog’s maximum size, specify `max-width` and `max-height` CSS properties for the component’s container using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CssClass) property. The component may apply an inline `max-height`; to override it, use a higher-specificity selector (or `!important` if necessary).
 
-Use the following code to customize the max-width and max-height for alert dialog:
+Use the following code to customize the max-width and max-height for the alert dialog:
 
 {% tabs %}
 {% highlight razor %}
@@ -59,13 +59,13 @@ Use the following code to customize the max-width and max-height for alert dialo
 {% endhighlight %}
 {% endtabs %}
 
-![Max width and height](./images/blazor-max-width-height.png)
+![Dialog constrained with max width and max height](./images/blazor-max-width-height.png)
 
 ## Min-width and min-height
 
-To have a restricted min-width and min-height dialog dimension, you need to specify the min-width, min-height CSS properties for the component’s container element by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CssClass) property.
+To ensure a minimum dialog size (for example, to keep action buttons visible), specify `min-width` and `min-height` CSS properties for the component’s container using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CssClass) property.
 
-Use the following code to customize the min-width and min-height for alert dialog:
+Use the following code to customize the min-width and min-height for the alert dialog:
 
 {% tabs %}
 {% highlight razor %}
@@ -75,4 +75,4 @@ Use the following code to customize the min-width and min-height for alert dialo
 {% endhighlight %}
 {% endtabs %}
 
-![Min width and height](./images/blazor-min-width-height.png)
+![Dialog constrained with min width and min height](./images/blazor-min-width-height.png)
