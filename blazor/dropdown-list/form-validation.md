@@ -1,27 +1,25 @@
 ---
 layout: post
-title: Form validtion in Blazor DropDown List Component | Syncfusion
+title: Form validation in Blazor DropDown List component | Syncfusion
 description: Checkout and learn here all about Form Validation in Syncfusion Blazor DropDown List component and much more.
 platform: Blazor
-control: DropDown List
+control: DropDownList
 documentation: ug
 ---
 
 # Form Validation in Dropdown List
 
-This demonstrates the creation of a form that includes a dropdown list, allowing the user to select an option from a list of items. The form also includes validation, which verifies that all required fields are filled out before the form can be submitted.
+This article explains how to use the Syncfusion Blazor DropDownList component in a validated form. It shows how to bind to a model, apply data annotations, and display validation errors so the form can be submitted only when required fields are valid.
 
 ## Dropdown List inside edit form
 
-The DropDownList component can be used inside an EditForm to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.
+The `DropDownList` component can be placed inside an `EditForm` to enable data annotation–based validation through the `DataAnnotationsValidator` component. When the input is valid, the form can be submitted; if invalid, the corresponding validation message is shown until a valid value is selected.
 
-When the DropDownList input is valid, the form is ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
-
-* The EditForm component wraps the entire form, has the Model attribute set to the model variable of type Countries, and triggers the handleSubmit() method when the form is submitted.
-* The DataAnnotationsValidator component enables validation based on the Data Annotations attributes applied on the model properties.
-* The ValidationSummary component displays a summary of all validation errors on the form.
-* The ValidationMessage component displays a validation error message for the Name property of the model variable.
-* The submit button submits the form and triggers the handleSubmit() method when clicked.
+- The `EditForm` component wraps the form, sets the `Model` to an instance of the model type (for example, `Countries`), and invokes the form’s submit handler on submission.
+- The `DataAnnotationsValidator` component enables validation based on the data annotation attributes applied to the model’s properties (for example, `[Required]` on the bound field).
+- The `ValidationSummary` component displays a summary of all validation errors in the form.
+- The `ValidationMessage` component displays a validation error message for the specific bound property associated with the `DropDownList`.
+- The submit button triggers form submission and executes the configured submit handler when clicked.
 
 {% highlight cshtml %}
 
@@ -29,4 +27,4 @@ When the DropDownList input is valid, the form is ready to be submitted. If the 
 
 {% endhighlight %}
 
-![Blazor DropdownList inside editform](./images/form-validation/blazor_dropodown_with-editform.png)
+![Blazor DropDownList inside EditForm with validation](./images/form-validation/blazor_dropodown_with-editform.png)
