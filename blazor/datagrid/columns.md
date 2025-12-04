@@ -1386,91 +1386,92 @@ public class OrderDetails
 
 ### AutoFit on Column Visibility Change
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can automatically adjust column widths when column visibility changes through the column chooser. This behavior is implemented by invoking the [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync) method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. Use the **RequestType** property in the event arguments to identify the action and call `AutoFitColumnsAsync` when the request type is **ColumnState**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can automatically adjust column widths when column visibility changes through the column chooser. This behavior is implemented by invoking [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync) from the [ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) event, which is raised after the column chooser applies visibility updates. The [ColumnVisibilityChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnVisibilityChangedEventArgs.html) class provides context for the columns that became visible or hidden.
 
 The example demonstrates autofitting columns after changing visibility using the [Column Chooser](https://blazor.syncfusion.com/documentation/datagrid/column-chooser):
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@using Syncfusion.Blazor.Grids;
 
-<SfGrid @ref="Grid" DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
-    <GridEvents OnActionComplete="OnActionComplete" TValue="OrderData"></GridEvents>
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" ShowColumnChooser="true" Toolbar="@ToolbarItems">
+    <GridEvents ColumnVisibilityChanged="OnColumnVisibilityChanged" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) TextAlign="TextAlign.Center" HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipAddress) HeaderText="Ship Address" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-    public string[] ToolbarItems = new string[] { "ColumnChooser" };
-   
+@code
+{
+    private SfGrid<OrderData> Grid { get; set; }
+    public List<OrderData> Orders { get; private set; } = new();
+    public string[] ToolbarItems { get; } = new[] { "ColumnChooser" };
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }     
-    public async Task OnActionComplete(ActionEventArgs<OrderData> Args)
+    }
+
+    public async Task OnColumnVisibilityChanged(ColumnVisibilityChangedEventArgs args)
     {
-        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.ColumnState)
-        {
-            await Grid.AutoFitColumnsAsync();
-        }
+        await Grid.AutoFitColumnsAsync();
     }
 }
+
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+
+
+using System.Collections.Generic;
+using System.Linq;
+
+public class OrderData
+{
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public string ShipAddress { get; set; }
+    public string ShipCity { get; set; }
+
+    private static readonly List<OrderData> Orders = new();
+
+    public OrderData(int? orderID, string customerID, string shipName, string shipAddress, string shipCity)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipName = shipName;
+        ShipAddress = shipAddress;
+        ShipCity = shipCity;
+    }
 
-        }
-        public OrderData(int? OrderID, string CustomerID,string ShipName, string ShipAddress, string ShipCity)
+    public static List<OrderData> GetAllRecords()
+    {
+        if (!Orders.Any())
         {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;   
-            this.ShipName = ShipName;
-            this.ShipAddress = ShipAddress;           
-            this.ShipCity = ShipCity;          
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", "2, rue du Commerce", "Reims"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", "Boulevard Tirou, 255", "Charleroi"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", "Rua do Paço, 67", "Rio de Janeiro"));
-                    Orders.Add(new OrderData(10251, "VINET", "Victuailles en stock", "Hauptstr. 31", "Bern"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", "Starenweg 5", "Genève"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", "Rua do Mercado, 12", "Resende"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", "Carrera 22 con Ave. Carlos Soublette #8-35", "San Cristóbal"));
-                    Orders.Add(new OrderData(10255, "VINET", "Richter Supermarkt", "Kirchgasse 6", "Graz"));
-                    Orders.Add(new OrderData(10256, "HANAR", "Wellington Importadora", "Sierras de Granada 9993", "México D.F."));
-                    code += 5;
-                }
-            }
-            return Orders;
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", "2, rue du Commerce", "Reims"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", "Boulevard Tirou, 255", "Charleroi"));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", "Rua do Paço, 67", "Rio de Janeiro"));
+            Orders.Add(new OrderData(10251, "VINET", "Victuailles en stock", "Hauptstr. 31", "Bern"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", "Starenweg 5", "Genève"));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", "Rua do Mercado, 12", "Resende"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", "Carrera 22 con Ave. Carlos Soublette #8-35", "San Cristóbal"));
+            Orders.Add(new OrderData(10255, "VINET", "Richter Supermarkt", "Kirchgasse 6", "Graz"));
+            Orders.Add(new OrderData(10256, "HANAR", "Wellington Importadora", "Sierras de Granada 9993", "México D.F."));
         }
 
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipAddress { get; set; }       
-    }  
+        return Orders;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUWCZmBqLMLrUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLICrNzRDbCTmVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Fixed columns
 
