@@ -1809,9 +1809,8 @@ To merge two Excel memory streams and export the combined file as a single Excel
 
 In this configuration, two memory streams are used:
 
-**streamDoc1:** Represents the default Grid export.
-**streamDoc2:** Represents a customized Grid export using [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
-
+- **streamDoc1:** Represents the default Grid export.
+- **streamDoc2:** Represents a customized Grid export using [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
 The merging process combines the contents of both streams into a single workbook, which is then exported as a memory stream and downloaded via JavaScript interop.
 
 {% tabs %}
