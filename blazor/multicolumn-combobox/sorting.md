@@ -9,9 +9,9 @@ documentation: ug
 
 # Sorting in Blazor MultiColumn ComboBox Component
 
-The MultiColumn ComboBox component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the MultiColumn ComboBox, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true**.
+The Blazor MultiColumn ComboBox provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowSorting) property to `true`.
 
-To sort a particular column in the MultiColumn ComboBox, click on its column header. Each time you click the header, the order of the column will switch between **Ascending** and **Descending**.
+To sort a column, click its header. Each click toggles the sort direction between ascending and descending. Sort indicators on the headers reflect the current sort direction. In remote binding scenarios, sorting can be applied on the server via DataManager queries.
 
 {% tabs %}
 {% highlight razor %}
@@ -57,10 +57,10 @@ To sort a particular column in the MultiColumn ComboBox, click on its column hea
 
 ## Multi-column sorting
 
-The MultiColumn ComboBox component allows to sort more than one column at a time using multi-column sorting. To enable multi-column sorting in the MultiColumn ComboBox, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true**, and set the [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) property to **true** which enable the user to sort multiple columns by holding the **CTRL** key and click on the column headers. This feature is useful when you want to sort your data based on multiple criteria to analyze it in various ways.
+The Blazor MultiColumn ComboBox allows sorting more than one column at a time. Enable multi-column sorting by setting both [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowSorting) and [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowMultiSorting) to `true`. Then hold Ctrl and click additional column headers to add or modify sort levels.
 
-> * The `AllowSorting` must be **true** while enabling multi-column sort.
-> * Set `AllowMultiSorting` property as **false** to disable multi-column sorting.
+> - `AllowSorting` must be `true` to enable multi-column sorting.
+> - Set `AllowMultiSorting` to `false` to disable multi-column sorting.
 
 {% tabs %}
 {% highlight razor %}

@@ -11,9 +11,9 @@ documentation: ug
 
 ## Dropdown Menu icons
 
-Dropdown Menu can have an icon to provide the visual representation of the action. To place the icon on a Dropdown Menu, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Dropdown Menu. You can customize the icon's position using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconPosition) property.
+Icons help communicate each action in the Dropdown Menu more effectively. Apply an icon by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to the required CSS class (for example, `e-icons e-message`). Syncfusion’s built-in icon font is added automatically when the Syncfusion theme stylesheet is referenced. By default, the icon appears on the left side of the button (IconPosition = `Left`). Change the placement using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconPosition) property.
 
-In the following example, the Dropdown Menu with default iconPosition and iconPosition as `Top` is showcased:
+The following example renders one Dropdown Menu with the default icon position and another with the icon positioned above the content:
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -43,15 +43,13 @@ In the following example, the Dropdown Menu with default iconPosition and iconPo
 
 ```
 
+![Blazor dropdown menu with icon](./images/blazor-dropdownmenu-icon.png)
 
-
-![Blazor DropDownMenu with Icon](./images/blazor-dropdownmenu-icon.png)
-
-You can also use third party icons on the Dropdown Menu using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property.
+The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property also supports third-party icon libraries. Ensure the corresponding icon font or stylesheet is available in the application.
 
 ### Vertical button
 
-Vertical button in Dropdown Menu can be achieved by adding `e-vertical` class using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property.
+Create a vertical layout by applying the `e-vertical` class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. This stacks the icon above the text without changing the default IconPosition.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -72,11 +70,9 @@ Vertical button in Dropdown Menu can be achieved by adding `e-vertical` class us
 
 ```
 
+![Blazor dropdown menu with vertical button](./images/blazor-dropdownmenu-in-vertical.png)
 
-
-![Changing Blazor DropDownMenu Position in Vertical](./images/blazor-dropdownmenu-in-vertical.png)
-
-## See Also
+## See also
 
 * [Dropdown popup with icons](./popup-items#icons)
 * [Customized icon size](./how-to/customize-icon-and-width)

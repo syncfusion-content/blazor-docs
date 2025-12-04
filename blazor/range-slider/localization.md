@@ -9,4 +9,4 @@ documentation: ug
 
 # Localization in Blazor Range Slider Component
 
-[Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component supports localization. Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.

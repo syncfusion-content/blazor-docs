@@ -225,7 +225,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Dialog Provider
 
-`SfDialogProvider` allows to open predefined dialogs based on `SfDialogService` settings from any where in application. You can add `SfDialogProvider` in `MainLayout.razor` or any page. But it should be added only once in the app. If you add in `MainLayout.razor`, you can open predefined dialogs from any where in application. If you add in particular page, you can open dialogs only within the page.
+`SfDialogProvider` opens predefined dialogs based on `SfDialogService` settings from anywhere in the application. Add `SfDialogProvider` in `MainLayout.razor` or in a specific page, but include it only once in the app. When added to `MainLayout.razor`, predefined dialogs are available throughout the application; when added to a specific page, dialogs are available only within that page.
 
 * Now, add `SfDialogProvider` in the **~/Components/Layout/MainLayout.razor** file.
 
@@ -239,11 +239,11 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Open Predefined Dialog
 
-Once you added `SfDialogService` and `SfDialogProvider`, you can open predefined dialogs from any where in application using [AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_),[ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) or [PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) methods in [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
+After adding `SfDialogService` and `SfDialogProvider`, open predefined dialogs from anywhere in the application using the [AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_), [ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) or [PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) methods in [DialogService](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
 
 ### Show alert dialog
 
-An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alert dialog will get closed. If an interactivity location as `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` component, as follows:
+An alert dialog box is used to display errors, warnings, or informational messages that require user acknowledgment. This is achieved using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog displays an `OK` button. When the user selects `OK`, the alert dialog closes. If the interactivity location is `Per page/component`, define a render mode at the top of the `~Pages/*.razor` component as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -262,7 +262,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-In the code example below, an alert dialog is displayed upon clicking the button using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) Component.
+In the following example, an alert dialog is displayed upon clicking a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component.
 
 {% tabs %}
 {% highlight razor %}
@@ -276,9 +276,9 @@ In the code example below, an alert dialog is displayed upon clicking the button
 
 ### Show confirm dialog
 
-A confirm dialog box used to displays a specified message along with the `OK` and `Cancel` buttons, which returns a boolean value according to the user's click action. When the user clicks the `OK` button, the `true` value is returned otherwise it will returns the `false` value. This can be achieved by using the [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. It is used to get approval from the user, and it appears before any critical action. After get approval from the user the dialog will disappear automatically.
+A confirm dialog displays a specified message with `OK` and `Cancel` buttons and returns a boolean value based on the user action. Selecting `OK` returns `true`; selecting `Cancel` returns `false`. Use the [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method to show a confirm dialog, typically before a critical action. After the user responds, the dialog closes automatically.
 
-In the below code example, the confirm dialog displayed on `OK` and `Cancel` button click action.
+In the following example, the confirm dialog is displayed and returns a value based on the `OK` or `Cancel` button click.
 
 {% tabs %}
 {% highlight razor %}
@@ -292,9 +292,9 @@ In the below code example, the confirm dialog displayed on `OK` and `Cancel` but
 
 ### Show prompt dialog
 
-A prompt dialog is used to get the input from the user by using the [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user clicks the `OK` button the input value from the dialog is returned. If the user clicks the `Cancel` button the `null` value is returned. After getting the input from the user the dialog will disappear automatically.
+A prompt dialog is used to collect input from the user using the [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user selects `OK`, the input value is returned; selecting `Cancel` returns `null`. After the user responds, the dialog closes automatically.
 
-In the below code example, the prompt dialog displayed on `OK` and `Cancel` button click action.
+In the following example, the prompt dialog is displayed and returns a value based on the `OK` or `Cancel` button click.
 
 {% tabs %}
 {% highlight razor %}

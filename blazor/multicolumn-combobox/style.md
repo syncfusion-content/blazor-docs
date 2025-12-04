@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and appearance in Blazor MultiColumn ComboBox Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+Use the following options and CSS hooks to customize the appearance and interaction states of the Blazor MultiColumn ComboBox. Add styles in a global stylesheet (or scoped CSS for the page/component) based on your project setup.
 
 ## Read-only mode
 
-Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ReadOnly) whether the MultiColumn ComboBox allows the user to change the value or not.
+Set the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ReadOnly) property to `true` to prevent users from changing the value while keeping the component focusable and interactive (for example, users can still focus and open the popup to view items).
 
 {% highlight cshtml %}
 
@@ -25,7 +25,7 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 
 ## Disabled state
 
-Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Disabled) property that indicates whether the component is disabled or not.
+Set the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Disabled) property to `true` to make the component non-interactive and inaccessible via keyboard (removed from tab order). Disabled components do not trigger UI events.
 
 {% highlight cshtml %}
 
@@ -35,14 +35,13 @@ Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazo
 
 ## Applying custom CSS classes
 
-Specifies the CSS class name that can be appended to the root element of the MultiColumn ComboBox. One or more custom CSS classes can be added to a MultiColumn ComboBox.
+Apply one or more custom CSS classes to the root element using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_CssClass) property. These classes can be used to convey visual states or brand styling.
 
-Some of the possible values are:
-
-* `e-success`: Denotes the component in a success state, adding a green color to the ComboBox input field.
-* `e-warning`: Denotes the component in a warning state, adding an orange color to the ComboBox input field.
-* `e-error`: Denotes the component in an error state, adding a red color to the ComboBox input field.
-* `e-outline`: Supports only the material theme.
+Common examples:
+- `e-success`: Renders a success state (typically green accent) on the input.
+- `e-warning`: Renders a warning state (typically orange accent) on the input.
+- `e-error`: Renders an error state (typically red accent) on the input.
+- `e-outline`: Outline style support is specific to the Material theme.
 
 {% highlight Razor %}
 
@@ -52,7 +51,7 @@ Some of the possible values are:
 
 ## Customizing the disabled component’s text color
 
-You can customize the text color of a disabled component by targeting its CSS class `.e-input[disabled]`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
+Customize the text color for disabled inputs by targeting the `.e-input[disabled]` selector and setting the `-webkit-text-fill-color` (and related properties as needed) to your desired color.
 
 {% highlight cshtml %}
 

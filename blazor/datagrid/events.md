@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor DataGrid | Syncfusion
-description: Learn all about the events triggered by grid actions in the Syncfusion Blazor DataGrid component here.
+description: Learn how to configure and handle Syncfusion Blazor DataGrid events, including lifecycle, data binding, selection, editing, exporting, and menu interactions.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Events in Blazor DataGrid
 
-In this section, we have provided the list of events of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid which will be triggered for appropriate Grid actions.
+This section lists the events available in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and when they are triggered for various Grid actions.
 
-The events should be provided to the Grid using **GridEvents**. When using events of Grid, **TValue** must be provided in the **GridEvents**.
+Events are assigned to the Grid by using a single **GridEvents** component. When configuring Grid events, specify the generic type via the **TValue** parameter to match the Grid’s data model.
 
-N> All the events should be provided in a single **GridEvents**.
+N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event triggers when Grid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing) etc., starts.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts (sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), and more). Use this to inspect or adjust action parameters before execution.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -49,7 +49,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ActionBeginHandler(ActionEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Inspect args.RequestType to handle specific actions.
     }
 
     public class Order
@@ -64,7 +64,7 @@ N> All the events should be provided in a single **GridEvents**.
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event triggers when Grid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), etc. are completed.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions (sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), etc.) finish. Use it for post-processing or UI updates.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -102,14 +102,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ActionCompletedHandler(ActionEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Evaluate args to adjust the UI after the action completes.
     }
 }
 ```
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event triggers when any Grid action failed to achieve the desired results. By using this event you can get the error details and its cause. In the below sample we have provided the wrong url so that it will throw the `OnActionFailure` event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) triggers when a Grid action fails. Use it to log or display error details. In the following example, an invalid URL is configured to demonstrate the failure event.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -130,7 +130,7 @@ N> All the events should be provided in a single **GridEvents**.
 @code{
     public void ActionFailureHandler(FailureEventArgs args)
     {
-        // Here, you can get the error details in the args.
+        // Handle args.Exception/args.Message to diagnose the failure.
     }
 
     public class Order {
@@ -144,7 +144,7 @@ N> All the events should be provided in a single **GridEvents**.
 
 ## BeforeOpenColumnChooser
 
-[BeforeOpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeOpenColumnChooser) event triggers before ColumnChooser gets opened.
+[BeforeOpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeOpenColumnChooser) triggers before the Column Chooser dialog opens. Use it to customize behavior or cancel opening.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -188,14 +188,14 @@ N> All the events should be provided in a single **GridEvents**.
     }
     public void BeforeOpenColumnChooserHandler(ColumnChooserEventArgs Args)
     {
-        //Customize your code here.
+        // Customize or prevent opening based on Args if required.
     }
 }
 ```
 
 ## Created
 
-[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event triggers when the Grid is created.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) triggers once the Grid is created. Use it for one-time initialization that depends on the Grid being ready.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -233,14 +233,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void CreatedHandler(object args)
     {
-        // Here, you can customize your code.
+        // Perform setup that requires the Grid DOM or instance to exist.
     }
 }
 ```
 
 ## OnLoad
 
-[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) event triggers before the rendering process starts which allows customization of Grid properties before the Grid rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) triggers before the Grid rendering starts, allowing customization of Grid properties prior to rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -278,15 +278,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void LoadHandler(object args)
     {
-        // Here, you can customize your code.
+        // Configure initial state before the Grid renders.
     }
 }
 ```
 
 ## Destroyed
 
-[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Grid is destroyed. By using this event you can confirm that the Grid gets completely destroyed.
-
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Grid is destroyed. Use it to confirm that the Grid gets completely destroyed.
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
@@ -323,14 +322,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void DestroyHandler(object args)
     {
-        // Here, you can customize your code.
+        // Confirm disposal and clean up subscriptions or timers.
     }
 }
 ```
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) event triggers before data is bound to Grid.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) triggers before data is bound to the Grid. Use it to adjust query/columns based on incoming data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -368,14 +367,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void DataBoundHandler(BeforeDataBoundArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Modify binding behavior using args if needed.
     }
 }
 ```
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event triggers when data source is populated in the Grid.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) triggers after the data source is populated in the Grid. Use it for final UI adjustments after binding.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -413,14 +412,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void DataBoundHandler()
     {
-        // Here, you can customize your code.
+        // Update UI based on the bound data.
     }
 }
 ```
 
 ## RowDataBound
 
-[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the Grid element.
+[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) triggers before each row element is appended to the Grid. Use it to style or transform row content.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -458,14 +457,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void RowDataBoundHandler(RowDataBoundEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Access args.Data/Row and apply row-level customizations.
     }
 }
 ```
 
 ## DetailDataBound
 
-[DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound) event triggers after detail row expands.
+[DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound) triggers after a detail row expands. Use it to modify the expanded content or perform related actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -571,14 +570,14 @@ N> All the events should be provided in a single **GridEvents**.
     }
     public void DetailDataBoundHandler(DetailDataBoundEventArgs<EmployeeData> args)
     {
-    // Here you can customize your code.
+        // Access args.Data (expanded row data) and args.DetailElement to inject content, apply styles, or initialize child components.
     }
 }
 ```
 
 ## QueryCellInfo
 
-[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the Grid element.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) triggers before a cell element is appended to the Grid. Use it to customize cell content, attributes, or styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -616,14 +615,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void QueryCellInfoHandler(QueryCellInfoEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Customize args.Cell or args.Data for per-cell logic.
     }
 }
 ```
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) event triggers before the record is to be edited.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) triggers before a record enters edit mode. Use it to set defaults or cancel editing.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -662,14 +661,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void BeginEditHandler(BeginEditArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Inspect args.RowData/args.ColumnName and optionally cancel editing.
     }
 }
 ```
 
 ## OnBatchAdd
 
-[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) event triggers before records are added in batch mode.
+[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) triggers before records are added in batch mode. Use it to validate or preset values.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -708,14 +707,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void BatchAddHandler(BeforeBatchAddArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Validate or modify added records in args.DefaultData/args.RowData.
     }
 }
 ```
 
 ## OnBatchSave
 
-[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) event triggers before records are saved in batch mode.
+[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) triggers before batch changes are committed. Use it to validate or cancel save.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -755,14 +754,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void BatchSaveHandler(BeforeBatchSaveArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Access args.BatchChanges to review added/changed/deleted records.
     }
 }
 ```
 
 ## OnBatchDelete
 
-[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) event triggers before records are deleted in batch mode.
+[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) triggers before records are deleted in batch mode. Use it to confirm or cancel deletion.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -801,14 +800,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void BatchDeleteHandler(BeforeBatchDeleteArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Review args.Data before confirming deletion.
     }
 }
 ```
 
 ## OnCellEdit
 
-[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event triggers when the cell is being edited.
+[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) triggers when a cell enters edit mode. Use it to configure the editor or apply validation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -848,14 +847,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void CellEditHandler(CellEditArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Use args.Field/args.RowData to configure the editor.
     }
 }
 ```
 
 ## OnCellSave
 
-[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) event triggers before saving the cell.
+[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) triggers before a cell value is saved. Use it to validate and optionally cancel the save.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -895,14 +894,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void CellSaveHandler(CellSaveArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Validate args.Value and set args.Cancel to prevent saving if needed.
     }
 }
 ```
 
 ## CellSaved
 
-[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) event triggers when cell is saved.
+[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) triggers after a cell value is saved. Use it to perform follow-up actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -941,14 +940,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void CellSavedHandler(CellSavedArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // React to the saved value or update dependent UI.
     }
 }
 ```
 
 ## RowSelecting
 
-[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event triggers before row selection occurs.
+[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) triggers before a row is selected. Use it to control selection or prevent it in specific cases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -986,14 +985,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void RowSelectingHandler(RowSelectingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Use args.Data/args.Cancel to control selection.
     }
 }
 ```
 
 ## RowSelected
 
-[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event triggers when a row is selected.
+[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) triggers after a row is selected. Use it to respond to selection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1031,14 +1030,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void RowSelectHandler(RowSelectEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Access args.Data to react to selection.
     }
 }
 ```
 
 ## RowDeselecting
 
-[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting) event triggers before a selected row is being deselected.
+[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting) triggers before a selected row is deselected. Use it to prevent deselection in specific scenarios.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1077,14 +1076,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void RowDeselectingHandler(RowDeselectEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Set args.Cancel to true to keep the row selected if needed.
     }
 }
 ```
 
 ## RowDeselected
 
-[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselected) event triggers when a selected row is deselected.
+[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselected) triggers after a selected row is deselected. Use it to handle deselection logic.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1122,14 +1121,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void RowDeselectHandler(RowDeselectEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Handle post-deselection behavior here.
     }
 }
 ```
 
 ## CellSelecting
 
-[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting) event triggers before cell selection occurs.
+[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting) triggers before a cell is selected. Use it to control or cancel cell selection.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1169,14 +1168,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void CellSelectingHandler(CellSelectingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Examine args.Cell/args.Data and cancel when required.
     }
 }
 ```
 
 ## CellSelected
 
-[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) event triggers after a cell is selected.
+[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) triggers after a cell is selected. Use it for responding to cell-level selection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1215,14 +1214,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void CellSelectedHandler(CellSelectEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Access args.Cell/args.Data to respond to selection.
     }
 }
 ```
 
 ## CellDeselecting
 
-[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselecting) event triggers before cell is deselected.
+[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselecting) triggers before a selected cell is deselected. Use it to prevent deselection when needed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1263,14 +1262,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void CellDeselectingHandler(CellDeselectEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Set args.Cancel to keep the cell selected.
     }
 }
 ```
 
 ## CellDeselected
 
-[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselected) event triggers after a cell is deselected.
+[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselected) triggers after a cell is deselected. Use it to react to deselection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1311,14 +1310,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void CellDeselectHandler(CellDeselectEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Handle UI updates after deselection.
     }
 }
 ```
 
 ## OnRecordClick
 
-[OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) event triggers when record is clicked.
+[OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) triggers when a record is clicked. Use it for row-level navigation or actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1358,14 +1357,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void RecordClickHandler(RecordClickEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // args.RowData contains the clicked record.
     }
 }
 ```
 
 ## OnRecordDoubleClick
 
-[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordDoubleClick) event triggers when record is double clicked.
+[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordDoubleClick) triggers when a record is double-clicked. Use it to open detail views or toggle editing.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1404,14 +1403,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void RecordDoubleClickHandler(RecordDoubleClickEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Handle double-click behavior using args.RowData.
     }
 }
 ```
 
 ## OnToolbarClick
 
-[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event triggers when toolbar item is clicked.
+[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) triggers when a toolbar item is clicked. Use it to perform corresponding actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1450,14 +1449,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        // Here, you can customize your code.
+        // Identify args.Item.Text or args.Item.Id and execute an action.
     }
 }
 ```
 
 ## CommandClicked
 
-[CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) event triggers when command button is clicked. It provides the row data of the currently clicked row.
+[CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) triggers when a command button is clicked. It provides the row data for the clicked row.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1507,14 +1506,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void OnCommandClicked(CommandClickEventArgs<Order> args)
     {
-        // Perform required operations here.
+        // Use args.RowData to perform record-specific actions.
     }
 }
 ```
 
 ## ColumnMenuItemClicked
 
-[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event triggers when clicking on the column menu.
+[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) triggers when a column menu item is clicked. Use it to intercept and customize menu actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1555,14 +1554,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
     {
-        // Here, you can customize your code.
+        // Inspect args.ItemId/args.Field to handle the selected menu action.
     }
 }
 ```
 
 ## ContextMenuItemClicked
 
-[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuItemClicked) event triggers when clicking on the context menu.
+[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuItemClicked) triggers when a context menu item is clicked. Use it to customize context menu actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1603,14 +1602,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<Order> args)
     {
-        // Here you can customize your code.
+        // Handle item click based on args.ItemId/args.Element information.
     }
 }
 ```
 
 ## ContextMenuOpen
 
-[ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) event triggers before opening the context menu.
+[ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) triggers before the context menu opens. Use it to customize items or cancel opening dynamically.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1651,14 +1650,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ContextMenuOpenHandler(ContextMenuOpenEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Add/remove items or cancel opening using args.
     }
 }
 ```
 
 ## OnPdfExport
 
-[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) event triggers before Grid data is exported to PDF document.
+[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) triggers before Grid data is exported to a PDF document. Use it to customize export settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1704,14 +1703,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void PdfExportHandler(object args)
     {
-        // Here, you can customize your code.
+        // Override export settings or metadata here.
     }
 }
 ```
 
 ## PdfHeaderQueryCellInfoEvent
 
-[PdfHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) event triggers before Grid data is exported to PDF document. It can be used to customize the header content in PDF document.
+[PdfHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) triggers before exporting to PDF to customize header cells in the exported document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1757,14 +1756,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void PdfHeaderQueryCellInfoHandler(PdfHeaderQueryCellInfoEventArgs args)
     {
-        // Here, you can customize your code.
+        // Customize header cell appearance/content for PDF export.
     }
 }
 ```
 
 ## PdfQueryCellInfoEvent
 
-[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event triggers before Grid data is exported to PDF document. It can be used to customize the Grid content in PDF document.
+[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) triggers before exporting to PDF to customize data cells in the exported document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1810,14 +1809,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Modify cell content/style in the exported PDF using args.
     }
 }
 ```
 
 ## PdfAggregateTemplateInfo
 
-[PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfAggregateTemplateInfo) event triggers before Grid data is exported to PDF document. It can be used to customize the Grid aggregate content in PDF document.
+[PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfAggregateTemplateInfo) triggers before exporting to PDF to customize aggregate template content in the exported document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1893,14 +1892,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void PdfAggregateTemplateInfoHandler(PdfAggregateEventArgs args)
     {
-        // Here, you can customize your code.
+        // Customize aggregate template values for PDF export.
     }
 }
 ```
 
 ## PdfGroupCaptionTemplateInfo
 
-[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) event triggers when exporting the group caption template of the PDF document. It can be used to customize the Grid group caption content in a PDF document.
+[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) triggers when exporting the group caption template to PDF. Use it to customize group caption content in the exported document.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -1930,7 +1929,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void PdfGroupCaptionHandler(PdfCaptionTemplateArgs Args)
     {
-        // Here, you can customize your code.
+        // Customize group caption cell values for PDF export.
         Args.Cell.Value = Args.Field + " - " + Args.Key;
     }
 
@@ -1964,7 +1963,7 @@ N> All the events should be provided in a single **GridEvents**.
 
 ## OnExcelExport
 
-[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) event triggers before Grid data is exported to Excel document.
+[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) triggers before Grid data is exported to an Excel document. Use this event to modify export settings (such as file name, columns, or formatting) before the export begins.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2010,14 +2009,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ExcelExportHandler(object args)
     {
-        // Here, you can customize your code.
+        // Access and customize export settings before the export starts.
     }
 }
 ```
 
 ## ExcelHeaderQueryCellInfoEvent
 
-[ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelHeaderQueryCellInfoEvent) event triggers before Grid data is exported to Excel document. It can be used to customize the header content in Excel document.
+[ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelHeaderQueryCellInfoEvent) triggers before exporting to Excel to customize header cells. Use it to modify header text, alignment, styles, or to merge cells when creating grouped headings.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2063,14 +2062,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ExcelHeaderQueryCellInfoHandler(ExcelHeaderQueryCellInfoEventArgs args)
     {
-        // Here, you can customize your code.
+        // Customize header cell text, style, or alignment using args.
     }
 }
 ```
 
 ## ExcelQueryCellInfoEvent
 
-[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event triggers before Grid data is exported to Excel document. It can be used to customize the Grid content in Excel document.
+[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) triggers before exporting to Excel to customize data cells. Use it to apply number/date formats, conditional formatting, custom values, or styling per cell or column.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2116,14 +2115,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Apply conditional formatting or customize cell values/styles using args.
     }
 }
 ```
 
 ## ExcelAggregateTemplateInfo
 
-[ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) event triggers before Grid data is exported to Excel document. It can be used to customize the Grid aggregate content in Excel document.
+[ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) triggers before Excel export to customize aggregate footer template content. Use it to format summary values, change labels, or adjust footer styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2199,14 +2198,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs args)
     {
-        // Here, you can customize your code.
+        // Customize aggregate footer labels or styles in the exported Excel file.
     }
 }
 ```
 
 ## ExcelGroupCaptionTemplateInfo
 
-[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event triggers when exporting the group caption template of the Excel document. It can be used to customize the Grid group caption content in Excel document.
+[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) triggers when exporting group caption templates to Excel. Use it to customize group caption text, apply formatting, or include aggregate details in caption rows.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -2236,7 +2235,7 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ExcelGroupCaptionHandler(ExcelCaptionTemplateArgs Args)
     {
-        // Here, you can customize your code.
+        // Set the group caption value or style for Excel export.
         Args.Cell.Value = Args.Field + " - " + Args.Key;
     }
 
@@ -2271,7 +2270,7 @@ N> All the events should be provided in a single **GridEvents**.
 
 ## ExportComplete
 
-[ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event triggers once Grid data is exported to file formats (PDF, Excel and CSV).
+[ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) triggers after a file export (PDF, Excel, or CSV) finishes. Use it to display notifications, log analytics, or trigger follow-up workflows.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2328,14 +2327,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ExportCompleteHandler(object args)
     {
-        // Here, you can customize your code.
+        // Trigger post-export actions such as a toast notification or telemetry logging.
     }
 }
 ```
 
 ## OnResizeStart
 
-[OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) event triggers when column resize starts.
+[OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) triggers when column resizing begins. Use it to capture initial widths, toggle resize behavior, or conditionally cancel via event arguments (if supported).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2374,14 +2373,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void OnResizeStartHanlder(ResizeArgs args)
     {
-        // Here, you can customize your code.
+        // Record current column widths or decide whether to proceed with resizing.
     }
 }
 ```
 
 ## ResizeStopped
 
-[ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ResizeStopped) event triggers when column resize ends.
+[ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ResizeStopped) triggers when column resizing ends. Use it to persist new widths, update responsive layouts, or store preferences.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2420,14 +2419,14 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void ResizeStoppedHanlder(ResizeArgs args)
     {
-        // Here, you can customize your code.
+        // Save or apply the final column widths after resizing completes.
     }
 }
 ```
 
 ## RowDragStarting
 
-`RowDragStarting` event triggers when the row drag starts.
+`RowDragStarting` triggers when a row drag action begins. Use it to validate the drag operation, set drag metadata, or restrict which rows can be dragged.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2466,16 +2465,16 @@ N> All the events should be provided in a single **GridEvents**.
 
     public void RowDragStartHandler(RowDragStartingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Validate the row being dragged and set metadata in args if required.
     }
 }
 ```
 
 ## RowDropped
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) event triggers when row is dropped.
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) triggers when a dragged row is dropped on a valid target. Use it to finalize reordering, update the data source, or take actions based on the drop position.
 
-N> We are not going to limit Grid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> The DataGrid continues to evolve with new events. If an event is missing, submit a request on the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2514,16 +2513,16 @@ N> We are not going to limit Grid with these events, we will be adding new event
 
     public void RowDropHandler(RowDroppedEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Reorder records or commit changes based on args drop details.
     }
 }
 ```
 
 ## RowDropping
 
-`RowDropping` event triggers when the row elements are being dropped on to the target element.
+RowDropping triggers while a row is being dropped over a target. Use it to validate the drop target or to prevent dropping on invalid locations.
 
-> The dropping action can be cancelled by setting the `Cancel` argument of the `RowDropping` event to true.
+> To cancel the drop, set args.Cancel to true in the RowDropping event handler.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2562,14 +2561,14 @@ N> We are not going to limit Grid with these events, we will be adding new event
 
     public void RowDroppingHandler(RowDroppingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Validate the target and set args.Cancel = true to block invalid drops.
     }
 }
 ```
 
 ## OnBatchCancel
 
-The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchCancel) event is triggered when the cancel operation is initiated in batch mode.
+The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchCancel) event triggers when the cancel action is initiated in batch mode. Use it to revert local state, clear validation messages, or notify that pending edits were discarded.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2611,14 +2610,15 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
     }
     public void OnBatchCancel(BeforeBatchCancelArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Revert local state or notify users about the cancellation.
     }
 }
 ```
 ## OnColumnMenuOpen
 
-The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuOpenEventArgs.html) event triggers before opening the column menu and its submenu items.
-> The column menu rendering action can be cancelled by setting the `Cancel` argument of the `OnColumnMenuOpen` event to true.
+The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event triggers before opening the column menu and any submenu items. Use it to add, remove, or disable items dynamically, or to cancel menu opening.
+
+> To cancel column menu rendering, set args.Cancel to true in the OnColumnMenuOpen event handler.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2660,14 +2660,14 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void ColumnMenuOpenHandler(ColumnMenuOpenEventArgs args)
     {
-        // Here, you can customize your code.
+        // Add, remove, disable items, or cancel menu opening using args.
     }
 }
 ```
 
 ## PageChanging
 
-[PageChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanging) event is raised before navigating from one page to another or when changing the page size using the pager dropdown in the Grid.
+[PageChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanging) triggers before navigating to a new page or changing page size. Use it to validate navigation, synchronize external state, or log user actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2708,7 +2708,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void PageChangingHandler(GridPageChangingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Validate or track the requested page change; cancel if supported.
     }
 
     public class Order
@@ -2723,7 +2723,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## PageChanged
 
-[PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanged) event is raised after navigating from one page to another or when changing the page size using the pager dropdown in the Grid.
+[PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanged) triggers after page navigation or page size changes. Use it to update UI state, lazy-load related data, or record analytics.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2765,7 +2765,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void PageChangedHandler(GridPageChangedEventArgs args) 
     {
-        // Here, you can customize your code.
+        // React to the active page (e.g., update external UI or telemetry).
     }
 
     public class Order
@@ -2780,7 +2780,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Sorting
 
-[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) event is raised before a sorting action is performed or a column is removed from sorting in the Grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
+[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) triggers before a sort is applied, removed, or its direction changes. Use it to validate sort rules, customize sort descriptors, or cancel sorting via event args.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2822,7 +2822,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void SortingHandler(SortingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Inspect or modify sort descriptors; optionally cancel the operation.
     }
 
     public class Order
@@ -2837,7 +2837,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Sorted
 
-[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorted) event is raised after a sorting action is performed or a column is removed from sorting in the Grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
+[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorted) triggers after sorting completes. Use it to persist sort preferences, update UI indicators, or re-query dependent data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2879,7 +2879,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void SortedHandler(SortedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Respond to the final sort state (e.g., save preferences).
     }
 
     public class Order
@@ -2894,7 +2894,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Grouping
 
-[Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) event is raised before grouping action or un-grouping action is performed in the Grid.
+[Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) triggers before a group or ungroup action is applied. Use it to validate grouping rules, adjust descriptors, or cancel via event args.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2936,7 +2936,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void GroupingHandler(GroupingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Allow, modify, or cancel the grouping action using args.
     }
 
     public class Order
@@ -2951,7 +2951,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Grouped
 
-[Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped) event is raised after grouping or ungrouping action is performed in the Grid.
+[Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped) triggers after a column is grouped or ungrouped. Use it to refresh summaries or update UI dependent on grouping.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2993,7 +2993,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void GroupedHandler(GroupedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Update UI or summaries based on grouped state.
     }
 
     public class Order
@@ -3008,7 +3008,8 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Searching
 
-[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searching) event is raised before the search action is performed in the Grid.
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searching) triggers before a search is applied. Use it to validate or adjust search settings, or cancel via event args.
+
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
@@ -3049,7 +3050,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void SearchingHandler(SearchingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Validate or modify the search request; cancel if necessary.
     }
 
     public class Order
@@ -3064,7 +3065,8 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Searched
 
-[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searched) event is raised after the search action is performed in the Grid.
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searched) triggers after a search is applied. Use it to reflect search results in the UI or analytics.
+
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
@@ -3105,7 +3107,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void SearchedHandler(SearchedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Update UI or log based on the applied search.
     }
 
     public class Order
@@ -3120,7 +3122,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## RowCreating
 
-[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) event triggers before the add action is performed in the Grid.
+[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) triggers before a new record is added. Use it to preset default values or cancel the add operation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3163,7 +3165,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
     public void RowCreatingHandler(RowCreatingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Initialize default values or cancel adding using args.Cancel.
     }
 
     public class Order
@@ -3179,7 +3181,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowCreated
 
-[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreated) event is raised after the add action is performed in the Grid.
+[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreated) triggers after a record is added. Use it to run post-add logic such as notifications or focus management.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3222,7 +3224,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void RowCreatedHandler(RowCreatedEventArgs<Order> args) 
     {
-        // Here, you can customize your code.
+        // Execute post-add logic such as focusing a cell or showing a message.
     }
 
     public class Order
@@ -3238,7 +3240,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowUpdating
 
-[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event is raised before the edited or added data is saved in the Grid.
+[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) triggers before edited or newly added data is saved. Use it to validate, transform values, or cancel saving via event args.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3281,7 +3283,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void RowUpdatingHandler(RowUpdatingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Validate or transform data; set args.Cancel to true to prevent saving.
     }
 
     public class Order
@@ -3297,7 +3299,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowUpdated
 
-[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated) event is raised after edited or added data is saved in the Grid.
+[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated) triggers after edited or newly added data is saved. Use it to perform post-save actions such as refreshing related data or showing a confirmation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3340,7 +3342,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void RowUpdatedHandler(RowUpdatedEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Perform post-save actions such as notifying the user.
     }
 
     public class Order
@@ -3352,11 +3354,10 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     }
 }
 ```
-N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode).
 
 ## RowDeleting
 
-[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting) event is raised before the record is deleted in the Grid.
+[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting) triggers before a record is deleted. Use it to confirm deletion or cancel based on custom rules.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3399,7 +3400,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void RowDeletingHandler(RowDeletingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Confirm or cancel deletion based on business rules.
     }
 
     public class Order
@@ -3415,7 +3416,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowDeleted
 
-[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleted) event is raised after a record is deleted in the Grid.
+[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleted) triggers after a record is deleted. Use it to update UI, refresh dependencies, or log the deletion.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3458,7 +3459,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void RowDeletedHandler(RowDeletedEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Handle follow-up actions after deletion completes.
     }
 
     public class Order
@@ -3474,7 +3475,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## EditCanceling
 
-[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling) event is raised before canceling the update of edited or added data in the Grid.
+[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling) triggers before canceling the update of edited or added data. Use it to confirm cancellation or revert temporary state.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3517,7 +3518,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void EditCancelingHandler(EditCancelingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Confirm cancel or clean up temporary edit state.
     }
 
     public class Order
@@ -3533,7 +3534,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## EditCanceled
 
-[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceled) event is raised after canceling the update of edited or added data in the Grid.
+[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceled) triggers after canceling the update of edited or added data. Use it to restore UI state or notify users.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3576,7 +3577,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void EditCanceledHandler(EditCanceledEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Restore UI or inform users that edits were canceled.
     }
 
     public class Order
@@ -3592,7 +3593,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## OnRowEditStart
 
-[OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRowEditStart) event is raised before when the editing action of a row begins in the Grid.
+[OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRowEditStart) triggers before a row enters edit mode. Use it to prepare the editor UI or to prevent editing based on conditions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3635,7 +3636,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void OnRowEditStartHandler(OnRowEditStartEventArgs args)
     {
-        // Here, you can customize your code.    
+        // Prepare or conditionally prevent row editing.    
     }
 
     public class Order
@@ -3651,7 +3652,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowEditing
 
-[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) event is raised before the edit action is performed in the Grid.
+[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) triggers before the edit action is performed. Use it to configure editors, load reference data, or cancel editing based on rules.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3694,7 +3695,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void RowEditingHandler(RowEditingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Configure editors or cancel editing using args as needed.
     }
 
     public class Order
@@ -3710,7 +3711,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowEdited
 
-[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) event is raised after the edit action is performed in the Grid.
+[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) triggers after the edit action completes. Use it to commit changes to external stores or inform users.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3753,7 +3754,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void RowEditedHandler(RowEditedEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Commit changes or notify users after editing.
     }
 
     public class Order
@@ -3769,7 +3770,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## Filtering
 
-[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) event is raised before the filtering or clear filtering action is performed in the Grid.
+[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) triggers before filtering or clearing filters. Use it to validate filter predicates, modify operators, or cancel the operation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3787,7 +3788,6 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 @code{
 
     public List<Order> Orders { get; set; }
-
     protected override void OnInitialized()
     {
         Orders = GetAllRecords();
@@ -3811,7 +3811,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void FilteringHandler(FilteringEventArgs args)
     {
-        // Here, you can customize your code.   
+        // Inspect/modify predicates or operators; set args.Cancel = true to block filtering.
     }
 
     public class Order
@@ -3826,7 +3826,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## Filtered
 
-[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) event is raised after the filtering or clear filtering action is performed in the Grid.
+[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) triggers after filtering or clearing filters. Use it to update UI or perform analytics based on the applied filters.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3868,7 +3868,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void FilteredHandler(FilteredEventArgs args)
     {
-        // Here, you can customize your code.
+        // Read applied filters from args and update UI/telemetry accordingly.
     }
 
     public class Order
@@ -3883,7 +3883,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## FilterDialogOpening
 
-[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event triggers before the filter dialog is opened in the Grid.
+[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) triggers before the filter dialog opens. Use it to configure dialog content or cancel opening.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3926,7 +3926,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
     public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
-        // Here, you can customize your code.
+        // Customize dialog options or set args.Cancel = true to prevent opening.
     }
 
     public class Order
@@ -3942,7 +3942,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## FilterDialogOpened
 
-[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened) event is raised after the filter dialog is opened in the Grid.
+[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened) triggers after the filter dialog opens. Use it to adjust UI or focus elements within the dialog.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3985,7 +3985,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
     public void FilterDialogOpeneHandler(FilterDialogOpenedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Focus a control or tweak dialog UI after it renders.
     }
 
     public class Order
@@ -4001,7 +4001,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## CheckboxFilterSearching
 
-[CheckboxFilterSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CheckboxFilterSearching) event is raised when values get filtered using search bar in [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) and [Excel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) filter.
+[CheckboxFilterSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CheckboxFilterSearching) triggers when values are filtered using the search bar in [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) and [Excel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) filter dialogs. Use it to tune search behavior or pre-filter items.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4044,7 +4044,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
     public void CheckboxFilterSearchingHandler(CheckboxFilterSearchingEventArgs args)
     {
-        // Here, you can customize your code.       
+        // Use args.Text to refine items or override items via args.DataSource.
     }
 
     public class Order
@@ -4059,7 +4059,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## ColumnReordering
 
-[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering) event is raised before when columns reordering action is performed in the Grid.
+[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering) triggers before columns are reordered. Use it to enforce ordering rules or cancel the operation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4101,7 +4101,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
     public void ColumnReorderingHandler(ColumnReorderingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Validate source/target columns; set args.Cancel = true to block reordering.
     }
 
     public class Order
@@ -4116,7 +4116,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## ColumnReordered
 
-[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered) event is raised after when columns are reordered in the Grid.
+[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered) triggers after columns are reordered. Use it to persist layout preferences or update dependent UI.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4158,7 +4158,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
     public void ColumnReorderedHandler(ColumnReorderedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Persist the new column order or refresh dependent layouts.
     }
 
     public class Order
@@ -4173,7 +4173,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## ColumnVisibilityChanging
 
-[ColumnVisibilityChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanging) event is raised before the Grid's column visibility is changing.
+[ColumnVisibilityChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanging) triggers before a column’s visibility changes. Use it to control toggling or cancel the change.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4216,7 +4216,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
     public void ColumnVisibilityChangingHandler(ColumnVisibilityChangingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Check args.Column and set args.Cancel = true to block show/hide.
     }
 
     public class Order
@@ -4231,7 +4231,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## ColumnVisibilityChanged
 
-[ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) event is raised after the Grid's column visibility is changed.
+[ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) triggers after a column’s visibility changes. Use it to store preferences or refresh dependent UI.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4273,7 +4273,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
     public void ColumnVisibilityChangedHandler(ColumnVisibilityChangedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Store visibility state or trigger UI/layout refresh as needed.
     }
 
     public class Order
@@ -4286,5 +4286,4 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 }
 ```
 
-N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
-
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for key capabilities and explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data effectively.

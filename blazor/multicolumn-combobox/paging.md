@@ -9,13 +9,13 @@ documentation: ug
 
 # Paging in Blazor MultiColumn ComboBox component
 
-Paging provides an option to display data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive data sets.
-
-To enable paging, you need to set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowPaging) property to **true**. This property determines whether paging is enabled or disabled for the MultiColumn ComboBox. When paging is enabled, a pager component rendered at the bottom of the MultiColumn ComboBox popup, allowing you to navigate through different pages of data.
+Paging provides an option to display data in segmented pages, making it easier to navigate large datasets. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowPaging) property to `true` (default is `false`). When paging is enabled, a pager component is rendered at the bottom of the MultiColumn ComboBox popup to navigate between pages. If the total records fit on a single page, the pager is hidden. Paging works with both local and remote data sources; when used with remote data, queries can be shaped to request only the current page of data.
 
 ## Customize the pager options
 
-Customizing the pager options in the Syncfusion<sup style="font-size:70%">&reg;</sup> MultiColumn ComboBox allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the  [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageCount)  property and display the number of records in the MultiColumn ComboBox using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageSize) property.
+Customize the pager to meet specific requirements using the following properties:
+- [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageCount): Number of page links displayed in the pager (default is `8`).
+- [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageSize): Number of records displayed per page (default is `12`).
 
 ### Change the page size
 
@@ -33,11 +33,11 @@ The following example demonstrates how to change the page size of a MultiColumn 
 
 ### Change the page count
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> MultiColumn ComboBox allows you to adjust the number of pages displayed in the pager container. This is useful when you want to manage the number of pages you see while navigating through extensive datasets. The default value of **PageCount** property is 8.
+Adjust how many page links are visible in the pager using the `PageCount` property (default is `8`). Increasing the page count shows more page links at once; decreasing it shows fewer links and may require more navigation.
 
-To change the page count in the Syncfusion<sup style="font-size:70%">&reg;</sup> MultiColumn ComboBox, you can utilize the [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageCount) property, which defines the number of pages displayed in the pager container.
+To change the page count in the Blazor MultiColumn ComboBox, use the [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageCount) property.
 
-The following example demonstrates how to change the page count of a Grid using an external button click based on **NumericTextBox** input.
+The following example demonstrates how to change the page count of a MultiColumn ComboBox using an external button click based on NumericTextBox input.
 
 {% highlight cshtml %}
 
