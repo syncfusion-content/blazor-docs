@@ -151,6 +151,6 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ![Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)
 
 >**Note:**
-* Apply NodeConstraints.AllowDragWithinSwimlane to each node you want confined to its lane.
-* If you want all child nodes inside lanes to be restricted, you can set this constraint in the NodeCreating event for applicable nodes.
+* To confine a node to its owning lane, add NodeConstraints.AllowDragWithinSwimlane to the node’s Constraints property.
+* To apply this restriction to all child nodes within lanes, set the constraint during node initialization in the NodeCreating event.
 
