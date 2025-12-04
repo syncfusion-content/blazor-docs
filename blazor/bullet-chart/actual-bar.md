@@ -33,9 +33,7 @@ To display the primary data or the current value of the data being measured know
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVyXuBzBauPiECo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Actual Bar in Blazor Bullet Chart](images/blazor-bullet-chart-actual-bar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVyXuBzBauPiECo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Actual Bar in Blazor Bullet Chart](images/blazor-bullet-chart-actual-bar.png)" %}
 
 ## Types of actual bar
 
@@ -55,9 +53,7 @@ The shape of the actual bar can be customized using the [Type](https://help.sync
 
 N> Refer to the [code block](#actual-bar-in-blazor-bullet-chart-component) to know more about the property value of the **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVSZuLfKNDhZQsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Bullet Chart with Dot Actual Bar](images/blazor-bullet-chart-dot-actual-bar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVSZuLfKNDhZQsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Dot Actual Bar](images/blazor-bullet-chart-dot-actual-bar.png)" %}
 
 ## Actual bar customization
 
@@ -82,6 +78,4 @@ The following properties will be used to customize the actual bar.
 
 N> Refer to the [code block](#actual-bar-in-blazor-bullet-chart-component) to know more about the property value of the **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVIDEVTKZNwIDPb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Actual Bar in Blazor Bullet Chart](images/blazor-bullet-chart-actual-bar-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVIDEVTKZNwIDPb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Actual Bar in Blazor Bullet Chart](images/blazor-bullet-chart-actual-bar-customization.png)" %}

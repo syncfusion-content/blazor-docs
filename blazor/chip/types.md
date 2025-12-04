@@ -33,9 +33,7 @@ Input Chip holds information in compact form. It converts user input into chips.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhotaWuJwkKgwBO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Chip with Input Items](./images/blazor-chip-input-items.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhotaWuJwkKgwBO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip with Input Items](./images/blazor-chip-input-items.png)" %}
 
 ## Choice Chip
 
@@ -54,9 +52,7 @@ Choice Chip allows you to select a single chip from the set of Chip/ChipItems. I
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgihLQrIIaiZzR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Single Selection in Blazor Chip](./images/blazor-chip-single-selection.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgihLQrIIaiZzR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Single Selection in Blazor Chip](./images/blazor-chip-single-selection.gif)" %}
 
 ## Filter Chip
 
@@ -75,10 +71,7 @@ Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVUChLGrodMJCaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVUChLGrodMJCaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.gif)" %}
 
 ## Action Chip
 
@@ -109,10 +102,7 @@ The Action Chip triggers the event like [`OnClick`](https://help.syncfusion.com/
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgCrLGBSnHjcxB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Blazor Action Chip](./images/blazor-action-chip.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgCrLGBSnHjcxB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Action Chip](./images/blazor-action-chip.gif)" %}
 
 ### Deletable Chip
 

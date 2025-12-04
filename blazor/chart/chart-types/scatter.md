@@ -50,9 +50,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfXFhZrfpVHHMy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Scatter Chart](../images/chart-types-images/blazor-scatter-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfXFhZrfpVHHMy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scatter Chart](../images/chart-types-images/blazor-scatter-chart.png)" %}
 
 N> Refer to our [Blazor Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Scatter Chart Example](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap5) to know how to plot data with two numeric parameters.
 

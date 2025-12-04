@@ -77,11 +77,9 @@ The following code example illustrates how to create a mind map layout using a d
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSiDNxJQsQKecM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample1)
 
-![Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSiDNxJQsQKecM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)" %}
 
 You can also control the branch for a mind map using the [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following example demonstrates how to configure all branches to appear on the right side using this method.
 
@@ -162,11 +160,9 @@ You can also control the branch for a mind map using the [GetBranch](https://hel
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrIiDXHJGLCZNgi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample2)
 
-![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrIiDXHJGLCZNgi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)" %}
 
 >**Note:** In `DataSourceSettings`, the `ID` and `ParentID` properties are string, and the provided `DataSource` should have a parent-child relationship. At least one node must have an empty `ParentID` to act as the root.
 
@@ -527,11 +523,9 @@ The following example demonstrates configuring the mind map layout with a vertic
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBeWNXxpmANjEaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapOrientation).
 
-![Blazor mind map with vertical orientation](../images/blazor-mind-map-diagram-with-orientation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBeWNXxpmANjEaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor mind map with vertical orientation](../images/blazor-mind-map-diagram-with-orientation.png)" %}
 
 The following example demonstrates how to update the layout orientation dynamically at runtime using both data binding and direct method calls.
 

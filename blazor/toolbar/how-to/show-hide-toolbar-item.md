@@ -40,6 +40,4 @@ The `Visible` property of a Toolbar item controls its visibility by setting its 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhSsXCXqYOTHppI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Showing or Hiding Blazor Toolbar Items](../images/blazor-toolbar-show-or-hide-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhSsXCXqYOTHppI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Showing or Hiding Blazor Toolbar Items](../images/blazor-toolbar-show-or-hide-item.png)" %}

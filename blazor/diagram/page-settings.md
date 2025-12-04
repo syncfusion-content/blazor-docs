@@ -114,11 +114,9 @@ Based on the diagramming element position, the size of the page dynamically incr
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjheCNNvpCCugjmh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/MultiplePage)
 
-![Multiple Page](./images/MultiplePage.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjheCNNvpCCugjmh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Multiple Page](./images/MultiplePage.png)" %}
 
 ## How to Customize Page Appearance
 
@@ -171,11 +169,9 @@ Customize page appearance using the `PageSettings` properties:
     public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSCXXlzWrgqfQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageAppearance)
 
-![PageBackground Color](./images/PageBackground.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSCXXlzWrgqfQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[PageBackground Color](./images/PageBackground.png)" %}
 
 ### How to Customize Page Break Appearance
 
@@ -206,11 +202,9 @@ Refer to the following code example on how to change the stroke, stroke-dasharra
     </PageSettings>
 </SfDiagramComponent>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSMtXvJMhbUAKv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageBreak)
 
-![Pagebreak Color](./images/Pagebreak.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSMtXvJMhbUAKv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Pagebreak Color](./images/Pagebreak.png)" %}
 
 ## How to Change Page Margins
 

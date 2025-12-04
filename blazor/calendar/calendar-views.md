@@ -19,7 +19,7 @@ A [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar
 
 ## Set the initial view
 
-When view is defined to the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Start) property of the Calendar, it allows you to set the initial view on rendering.
+Use the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Start) property to set the initial (top) view when the Calendar renders. The Start view also acts as the upper limit for drill-up navigation.
 
 The following example demonstrates how to set the `Year` as the start view of the Calendar.
 
@@ -33,18 +33,15 @@ The following example demonstrates how to set the `Year` as the start view of th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLUsVVVhopruWLg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Changing Blazor Calendar View](./images/blazor-full-calendar-view.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLUsVVVhopruWLg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Calendar View](./images/blazor-full-calendar-view.png)" %}
 
 ## View restriction
 
-By defining the Start and Depth property with the different view, drill-down and drill-up views navigation can be limited to the users. Calendar views will be drill-down upto the view which is set in [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property and drill-up upto the view which is set in [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html) property.
+By defining the Start and Depth property with different views, drill-down and drill-up navigation can be limited. Calendar views will drill down to the view set in the [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property and drill up to the view set in the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html) property. Start represents a broader view and Depth represents a more detailed view within the hierarchy (Month < Year < Decade).
 
-The following example displays the Calendar in `Decade` view, and allows you to select a date in `Month` view.
+The following example displays the Calendar in `Decade` view and allows selecting a date by drilling down to the `Month` view.
 
-N> Depth view should always be smaller than the Start view. If the `Depth` and `Start` views are the same, then the Calendar view remains unchanged.
+N> The Depth view must be “smaller” (more detailed) than the Start view. If the `Depth` and `Start` views are the same, the Calendar view remains unchanged and navigation between views is disabled.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -57,7 +54,4 @@ N> Depth view should always be smaller than the Start view. If the `Depth` and `
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgsLhhhofIigEl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Restriction in Blazor Calendar](./images/blazor-calendar-restriction.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgsLhhhofIigEl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Restriction in Blazor Calendar](./images/blazor-calendar-restriction.png)" %}

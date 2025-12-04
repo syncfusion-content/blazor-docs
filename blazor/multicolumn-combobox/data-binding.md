@@ -9,13 +9,22 @@ documentation: ug
 
 # Data Binding in Blazor MultiColumn ComboBox Component
 
-The MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. For remote data binding, utilize the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+The MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property with an IEnumerable-compatible source. For remote data, create a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) instance configured with an adaptor and assign it to DataSource.
 
-* **TItem** - Specifies the type of the datasource of the MultiColumn ComboBox component.
+* **TItem** - Specifies the data model type for items in the MultiColumn ComboBox.
 
 ## Binding local data
 
-The MultiColumn ComboBox loads the data from local data sources through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. It supports the data type of `Array of primitive type`, `Array of object`, `List of primitive type`,`List of object`, `Observable Collection`, `ExpandoObject`, `DynamicObject`.
+The MultiColumn ComboBox loads data from local sources through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. Supported types include:
+- Array of primitive type
+- Array of object
+- List of primitive type
+- List of object
+- ObservableCollection
+- ExpandoObject
+- DynamicObject
+
+Ensure [TextField] and [ValueField] are set appropriately for your data model so display text and values are mapped correctly.
 
 {% highlight cshtml %}
 
@@ -23,13 +32,11 @@ The MultiColumn ComboBox loads the data from local data sources through the [Dat
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBftYVqKvgHmaAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBftYVqKvgHmaAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)" %}
 
 ## Index value binding
 
-Index value binding can be accomplished with the `bind-Index` attribute, which supports both integer and nullable integer types. This attribute allows you to bind values according to their corresponding index.
+Index value binding can be accomplished with the `bind-Index` attribute, which supports both integer and nullable integer types. This binds the selected item by its zero-based index in the current view. Sorting or filtering may change indices, which affects the bound value.
 
 ```cshtml
 
@@ -71,7 +78,7 @@ Index value binding can be accomplished with the `bind-Index` attribute, which s
 
 ### Expando object binding
 
-Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the MultiColumn ComboBox component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
+Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the MultiColumn ComboBox component. In the following example, an `ExpandoObject` collection of vehicles is bound. Set TextField and ValueField to the corresponding dynamic property names.
 
 {% highlight cshtml %}
 
@@ -83,7 +90,7 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the MultiColumn ComboBox component. In the following example, the `DynamicObject` is bound to the collection of customer data.
+Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the MultiColumn ComboBox component. In the following example, a `DynamicObject` collection of customers is bound. Ensure TextField and ValueField map to the dynamic members exposed at runtime.
 
 {% highlight cshtml %}
 
@@ -95,7 +102,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 ### ValueTuple data binding
 
-Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the MultiColumn ComboBox component. The following code helps you to get a string value from the enumeration data by using `ValueTuple`
+Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the MultiColumn ComboBox component. The following example retrieves a string value from enumeration data using `ValueTuple`. Map TextField/ValueField to the tuple members (for example, `Item1`, `Item2`) as used in the sample.
 
 {% highlight cshtml %}
 
@@ -107,17 +114,17 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 
 ## Binding remote data 
 
-The MultiColumn ComboBox loads the data from remote data services through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. 
+The MultiColumn ComboBox loads the data from remote data services through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property when it is assigned a [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) instance.
 
-The MultiColumn ComboBox supports the retrieval of data from the remote data services with the help of the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) control. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the MultiColumn ComboBox.
+The MultiColumn ComboBox supports retrieving data from remote services with the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started). Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property to shape requests and fetch data, then bind the results to the component.
 
 * [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Defines the service endpoint to fetch data.
-* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor option. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. The adaptor is responsible for processing responses and requests from or to the service endpoint. 
-* [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides some predefined adaptors that are designed to interact with particular service endpoints.
+* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor used to communicate with the service. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. Choose the adaptor based on your API (for example, ODataV4Adaptor, WebApiAdaptor, UrlAdaptor).
+* [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides predefined adaptors designed to interact with specific service endpoints.
 
 ### OnActionBegin event
 
-The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionBegin) event triggers before fetching data from the remote server.
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionBegin) event triggers before fetching data from the remote server. Use it to adjust the query, show a loading indicator, or log outgoing requests.
 
 {% highlight cshtml %}
 
@@ -129,7 +136,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 
 ### OnActionFailure event
 
-The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionFailure) event triggers when the data fetch request from the remote server fails. Handle this event to log errors, display user-friendly messages, or retry operations.
 
 {% highlight cshtml %}
 
@@ -141,7 +148,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mu
 
 ### OData v4 services
 
-The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides the ability to consume and manipulate data from OData v4 services. The following sample displays the first six customer details from `Customers` table of the `Northwind` Data Service.
+The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides the ability to consume and manipulate data from OData v4 services. The following sample displays the first six customer details from the `Customers` table of the `Northwind` data service.
 
 {% highlight cshtml %}
 
@@ -149,13 +156,11 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJZkBKUbFJULBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJZkBKUbFJULBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)" %}
 
 ### Web API adaptor
 
-The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
+The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API endpoints that follow OData conventions. The `WebApiAdaptor` extends the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). The endpoint must recognize OData-formatted queries sent with the request.
 
 {% highlight cshtml %}
 
@@ -168,9 +173,9 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 ### Offline mode
 
-To avoid post back for every action, set the MultiColumn ComboBox to load all data on initialization and make the actions process on the client-side. To enable this behavior, use the `Offline` property of `DataManager`.
+To avoid a postback for every action, load all data on initialization and process actions on the client side. Enable this behavior by setting the `Offline` property of `DataManager`. In offline mode, data is fetched once; filtering and searching then occur client side.
 
-The following example is for remote data binding and enabled offline mode.
+The following example demonstrates remote data binding with offline mode enabled.
 
 {% highlight cshtml %}
 

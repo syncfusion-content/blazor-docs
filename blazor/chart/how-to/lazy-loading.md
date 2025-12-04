@@ -98,9 +98,7 @@ else
 
 ### Line 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpZhLxzguqSeHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![LazyLoad Column](../images/lazyload-column.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpZhLxzguqSeHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[LazyLoad Column](../images/lazyload-column.png)" %}
 
 ### Column 
 

@@ -32,6 +32,4 @@ Initialize the Tooltip with the Toolbar target.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBIsZMNAavbcYAH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Toolbar with Tooltip](../images/blazor-toolbar-with-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBIsZMNAavbcYAH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar with Tooltip](../images/blazor-toolbar-with-tooltip.png)" %}

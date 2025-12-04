@@ -195,6 +195,4 @@ You can add custom icons to the Accordion header by using the [IconCss](https://
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLKihigqyvhnutf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Accordion Component with Header Icon](../images/blazor-accordion-header-icon.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLKihigqyvhnutf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Component with Header Icon](../images/blazor-accordion-header-icon.png)" %}

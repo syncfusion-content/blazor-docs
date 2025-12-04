@@ -46,6 +46,4 @@ In this sample, first check the option and click the submit button to post the s
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKMVrmrJkahhmZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Model Binding in Blazor CheckBox](./../images/blazor-checkbox-model-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKMVrmrJkahhmZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Model Binding in Blazor CheckBox](./../images/blazor-checkbox-model-binding.png)" %}

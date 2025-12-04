@@ -77,13 +77,13 @@ If the **Tailwind CSS** theme is selected, follow these steps to configure it.
    - For **light mode**:
 
      ```html
-     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/tailwind.css" rel="stylesheet"/>
+     <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css" rel="stylesheet"/>
      ```
 
    - For **dark mode**:
 
      ```html
-     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/tailwind.css" rel="stylesheet" />
+     <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css" rel="stylesheet" />
      ```
 
 4. **Optional**: To use the font icons prepared for **Tailwind CSS**, include the following CDN link:
@@ -127,13 +127,13 @@ If the **Bootstrap 5.3** theme is selected, follow these steps to configure it.
    - For **light mode**:
 
      ```html
-     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/bootstrap5.3.css" rel="stylesheet">
+     <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3.css" rel="stylesheet">
      ```
 
    - For **dark mode**:
 
      ```html
-     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/bootstrap5.3-dark.css" rel="stylesheet" />
+     <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3-dark.css" rel="stylesheet" />
      ```
 
 4. **Optional**: To use the font icons prepared for **Bootstrap 5.3**, include the following CDN link:

@@ -139,9 +139,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Exporting with column template](./images/column-template.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting with column template](./images/column-template.gif)" %}
 
 ## Exporting with group caption template
 
@@ -256,9 +254,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Exporting with group caption template](./images/group-caption.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting with group caption template](./images/group-caption.gif)" %}
 
 ## Exporting with detail template
 
@@ -594,9 +590,7 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Exporting with detail template](./images/detail-template.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting with detail template](./images/detail-template.gif)" %}
 
 ## Exporting hierarchical Grid using detail template
 
@@ -892,6 +886,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.gif)" %}
