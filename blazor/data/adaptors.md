@@ -11,138 +11,136 @@ documentation: ug
 
 # Adaptors in Blazor DataManager Component
 
-Each data source or remote service uses different way for accepting request and sending back the response. The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) cannot anticipate every way a data source works. To tackle this problem the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses adaptor concept to communicate with the particular data source.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component provides a unified approach for interacting with diverse data sources in Blazor applications. Each data source or remote service may define unique **request** and **response** formats. To manage these variations, the `SfDataManager` uses an **adaptor** mechanism that translates data operations into a format compatible with the target service.
 
-* For local data sources, the role of the data adaptor is to query the object array based on the Query object and manipulate them.
 
-* For remote data source, the data adaptor is used to send the request that the server can understand which then processes the server response.
+* **Local data sources**: An adaptor applies query operations such as **sorting**, **filtering**, and **paging** directly on an **in-memory collection**.
+* **Remote data sources**: An adaptor generates the required H**TTP requests** and processes the corresponding server **responses**.
 
-The adaptor can be assigned using the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+The adaptor is configured using the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
-## Json adaptor
+**Supported Adaptors**
 
-The `JsonAdaptor` is used to query and manipulate object array. 
+The `SfDataManager` component provides several built-in adaptors for integrating remote data services.
 
-The following sample code demonstrates binding data to the DataGrid component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using `JsonAdaptor`,
+* **UrlAdaptor** – Base adaptor for remote data services.
+* **ODataAdaptor** – Integrates with services implementing the OData protocol.
+* **ODataV4Adaptor** – Supports OData v4 protocol for advanced query capabilities.
+* **WebApiAdaptor** – Works with Web API endpoints that support OData query options.
+* **GraphQLAdaptor** – Enables interaction with GraphQL services for queries and mutations.
+* **CustomAdaptor** – Allows custom implementations when built-in adaptors do not meet requirements.
 
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Grids
+N> `ODataAdaptor` is the default adaptor used by `SfDataManager`.
 
-<SfGrid TValue="EmployeeData" ID="Grid">
-    <SfDataManager Json=@Employees Adaptor="Adaptors.JsonAdaptor"></SfDataManager>
-    <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Name) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
+## UrlAdaptor
 
-@code{
-    public class EmployeeData
-    {
-        public int EmployeeID { get; set; }
-        public string Name { get; set; }
-        public string Title { get; set; }
-    }
+The **UrlAdaptor** is the base adaptor for remote data services. It converts query operations into **HTTP requests** and processes the corresponding server **responses**. This adaptor is suitable for endpoints that do not implement specialized protocols such as **OData** or **GraphQL**.
+To configure the `UrlAdaptor`, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor) and specify the service endpoint in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
 
-    public EmployeeData[] Employees = new EmployeeData[]
-    {
-        new EmployeeData { EmployeeID = 1, Name = "Nancy Fuller", Title = "Vice President" },
-        new EmployeeData { EmployeeID = 2, Name = "Steven Buchanan", Title = "Sales Manager" },
-        new EmployeeData { EmployeeID = 3, Name = "Janet Leverling", Title = "Sales Representative" },
-        new EmployeeData { EmployeeID = 4, Name = "Andrew Davolio", Title = "Inside Sales Coordinator" },
-        new EmployeeData { EmployeeID = 5, Name = "Steven Peacock", Title = "Inside Sales Coordinator" },
-        new EmployeeData { EmployeeID = 6, Name = "Janet Buchanan", Title = "Sales Representative" },
-        new EmployeeData { EmployeeID = 7, Name = "Andrew Fuller", Title = "Inside Sales Coordinator" },
-        new EmployeeData { EmployeeID = 8, Name = "Steven Davolio", Title = "Inside Sales Coordinato" },
-        new EmployeeData { EmployeeID = 9, Name = "Janet Davolio", Title = "Sales Representative" },
-        new EmployeeData { EmployeeID = 10, Name = "Andrew Buchanan", Title = "Sales Representative" }
-    };
-}
-```
+**Key Points**
 
-## Url adaptor
-
-The `UrlAdaptor` acts as the base adaptor for interacting with remote data services. Most of the built-in adaptors are derived from the `UrlAdaptor`.
-
-The following sample code demonstrates binding data to the DataGrid component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using `UrlAdaptor`,
+* Acts as the **base adaptor** for most remote adaptors.
+* Converts query operations into **HTTP requests**.
+* Requires the server to return a **JSON** object with **result** and **count** properties.
+* Supports operations such as **paging**, **sorting**, and **filtering** through `query` parameters.
 
 ```cshtml
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
 <SfGrid TValue="EmployeeData" ID="Grid" AllowPaging="true">
-    <SfDataManager Url="http://controller.com/actions" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://service-endpoint/api/employees" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Name) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.EmployeeID)" HeaderText="Employee ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.Name)" HeaderText="First Name" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.Title)" HeaderText="Title" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
+    
     public class EmployeeData
     {
         public int EmployeeID { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
     }
+
 }
+
 ```
 
-N> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
+N> Replace sample URL with the actual service endpoint URL.
 
-`UrlAdaptor` expects response as a JSON object with properties `result` and `count` which contains the collection of entities and the total number of records respectively.
+The server response must include two properties:
 
-The sample response object should be as follows,
+* **result** – A collection of entities.
+* **count** – The total number of records.
+
+**Sample Response**
 
 ```
 {
-    "result": [{..}, {..}, {..}, ...],
+    "result": [{...}, {...}, {...}],
     "count": 67
 }
 ```
 
 ## OData adaptor
 
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `ODataAdaptor` helps you to interact with OData service.
+The `ODataAdaptor` is designed for services that implement the [OData](https://www.odata.org/documentation/) protocol. It enables the `SfDataManager` component to send OData-compliant queries and process responses from an **OData** service.
 
-The following sample code demonstrates binding remote data to the DataGrid component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using OData service,
+Use this adaptor when integrating with endpoints that follow **OData** standards for data querying and manipulation. It automatically generates query parameters for operations such as **paging**, **sorting**, **filtering**, and **grouping**.
+
+To configure, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to `Adaptors.ODataAdaptor` and provide the OData service URL in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of the `SfDataManager` component.
+
+**Key Points**
+
+* Implements the **OData** protocol for standardized data access.
+* Automatically generates **OData** query parameters for supported operations.
+* Requires the server to return a **JSON** object with **result** and **count** properties.
+* Ideal for services exposing **OData** endpoints.
 
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
-
-<SfGrid TValue="EmployeeData" ID="Grid" AllowPaging="true">
-    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor"></SfDataManager>
+<SfGrid TValue="OrderData" ID="OrdersGrid" AllowPaging="true">
+    <SfDataManager Url="https://services.odata.org/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor"></SfDataManager>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.OrderID) TextAlign="TextAlign.Center" HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.CustomerID) TextAlign="TextAlign.Center" HeaderText="Customer Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer Name" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.EmployeeID)" HeaderText="Employee ID" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public class EmployeeData
+@code {
+
+    public class OrderData
     {
         public int OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public int EmployeeID { get; set; }
     }
 }
 ```
 
-N> By default, `ODataAdaptor` is used by DataManager.
+N> `ODataAdaptor` is the default adaptor used by `SfDataManager`.
 
 ## ODataV4 adaptor
 
-The ODataV4 is an improved version of OData protocols and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 Services, refer the [odata documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). You can use the `ODataV4Adaptor` to interact with ODataV4 service.
+The `ODataV4Adaptor` enables integration with services that implement the OData v4 protocol. It provides standardized communication between the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component and OData v4-compliant endpoints. This adaptor automatically generates query parameters for common data operations, reducing manual configuration.
+Use this adaptor when the remote service supports **OData v4** and requires advanced query capabilities such as **filtering**, **sorting**, and **paging**.
 
-The following sample code demonstrates binding remote data to the DataGrid component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using ODataV4 service,
+To configure, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to [Adaptors.ODataV4Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_ODataV4Adaptor) and provide the service URL in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of the `SfDataManager` component.
+
+**Key Points**
+
+* Implements OData v4 protocol for standardized data access.
+* Automatically generates query parameters for supported operations.
+* Requires the server to return a **JSON** object with **result** and **count** properties.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -170,11 +168,11 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 ## Web API adaptor
 
-You can use the `WebApiAdaptor` to interact with Web APIs created with OData endpoint. The `WebApiAdaptor` is extended from the `ODataAdaptor`. Hence to use `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with request.
+The `WebApiAdaptor` is used to interact with Web API endpoints that support **OData query options**. It extends the functionality of the **ODataAdaptor**, enabling the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component to send OData-formatted queries and process responses from Web API services.
 
-To enable OData query option for Web API, refer to this [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
+Use this adaptor when the endpoint understands **OData** queries and returns data in a compatible format.
 
-The following sample code demonstrates binding remote data to the DataGrid component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using Web API service,
+To configure, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to [Adaptors.WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor) and provide the service URL in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of the `SfDataManager` component.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -184,14 +182,15 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 <SfGrid TValue="Order" AllowPaging="true">
     <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders/" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
+
     public class Order
     {
         public int? OrderID { get; set; }
@@ -199,65 +198,78 @@ The following sample code demonstrates binding remote data to the DataGrid compo
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
+
 }
 ```
 
-`WebApiAdaptor` expects JSON response from the server and the response object should contain properties `Items` and `Count` whose values are collection of entities and total count of the entities respectively.
-
-The sample response object should look like below.
+**Expected Server Response**
 
 ```csharp
+
 {
-    "Items": [{..}, {..}, {..}, ...],
-    "Count": 830
+    "result": [{...}, {...}, {...}],
+    "count": 830
 }
+
 ```
 
 ## GraphQL service binding
 
-GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. You can also perform CRUD and data operations like paging, sorting, filtering etc by sending the required arguments to the server.
+The `GraphQLAdaptor` enables integration with GraphQL services, allowing precise data retrieval and efficient operations. It supports **queries**, **mutations**, and common data operations such as **paging**, **sorting**, and **filtering** by sending the required arguments to the server.
 
 ### Fetching data from GraphQL service
 
-To bind GraphQL service data to grid, you have to provide the GraphQL query string by using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Query) property of the [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html). Also you need to set the [ResolverName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_ResolverName) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html) to map the response. The GraphQLAdaptor expects response as a JSON object with properties of Result, Count and Aggregates which contains the collection of entities, total number of records and value of aggregates respectively. The GraphQL response should be returned in JSON format like { “data”: { … }} with query name as field.
+To bind data from a GraphQL service to the DataGrid:
+
+* Configure the [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html) with:
+
+    * [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Query) – Defines the GraphQL query string.
+    * [ResolverName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_ResolverName) – Maps the response to the query.
+
+* Set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to [Adaptors.GraphQLAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_GraphQLAdaptor).
+
+The GraphQL response must return a JSON-formatted response with properties:
+
+* **Result** – A collection of entities.
+* **Count** – Total number of records.
+* **Aggregates** – Aggregate values, if applicable.
 
 ```cshtml
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
 
-<SfDataManager @ref=DataManager Url="https://xxxxxx" GraphQLAdaptorOptions=@adaptorOptions Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+<SfGrid TValue="Order" AllowPaging="true" PageSettings="new PageSettings { PageSize = 10 }">
+    <SfDataManager Url="https://your-graphql-endpoint"
+                   GraphQLAdaptorOptions="@adaptorOptions"
+                   Adaptor="Adaptors.GraphQLAdaptor">
+    </SfDataManager>
 
-<SfButton @onclick="ClickHandler" CssClass="e-info" Content="@Content"></SfButton>
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" TextAlign="TextAlign.Center"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Type="ColumnType.Date" Format="d" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
-@code{
+@code {
 
-    SfDataManager DataManager { get; set; }
-    public string Content = "Get Data";
-
-    Query query = new Query().Skip(0).Take(10).RequiresCount();
-
-    private async Task ClickHandler()
+    private GraphQLAdaptorOptions adaptorOptions = new GraphQLAdaptorOptions
     {
-        // You can obtain the response here
-        var data = await DataManager.ExecuteQueryAsync<Order>(query);
-
-        //You can obtain collection from Result property
-        var result = (data as DataResult).Result;
-
-        //You can obtain count from Count property
-        var count = (data as DataResult).Count;
-    }
-
-    private GraphQLAdaptorOptions adaptorOptions { get; set; } = new GraphQLAdaptorOptions
-    {
+        // GraphQL query that accepts the DataManager request as an input variable
         Query = @"
-            query ordersData($dataManager: DataManagerRequestInput!){
+            query ordersData($dataManager: DataManagerRequestInput!) {
                 ordersData(dataManager: $dataManager) {
-                    count, result { OrderID, CustomerID, OrderDate, Freight } , aggregates
+                    count,
+                    result { OrderID, CustomerID, OrderDate, Freight },
+                    aggregates
                 }
             }",
+        // Resolver field name used in the GraphQL response under data.{ResolverName}
         ResolverName = "OrdersData"
+
     };
 
     public class Order
@@ -268,11 +280,12 @@ To bind GraphQL service data to grid, you have to provide the GraphQL query stri
         public double? Freight { get; set; }
     }
 }
+
 ```
 
 ### Performing data operations
 
-The following code demonstrates the resolver function used in the GraphQL server to bind data and to perform data operations like paging, sorting, filtering etc.
+The `GraphQLAdaptor` translates DataManager operations into a GraphQL request using [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html). Operations such as **paging**, **sorting**, **filtering**, and **searching** can be triggered through Grid UI interactions or programmatically using the `Query` API. The server resolver must consume `DataManagerRequest` and return a JSON-formatted response with **count**, **result**, and optionally **aggregates**.
 
 ```cshtml
     public class GraphQLQuery
@@ -345,54 +358,77 @@ The following code demonstrates the resolver function used in the GraphQL server
 
 ### Performing CRUD operation using mutation
 
-You can perform the CRUD operations by setting the mutation queries in the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid integrates with GraphQL services through `GraphQLAdaptor` to perform **Create**, **Update**, **Delete**, and optional **Batch** operations. Mutations are defined in `GraphQLAdaptorOptions.Mutation` and invoked automatically by Grid editing. The server must expose resolvers that accept mutation variables and return a JSON formatted response with properties representing the updated entity or collection.
 
-You have to set the Insert mutation query in [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of Mutation in GraphQLAdaptorOptions. Similarly, you have to set the Update and Delete mutation queries in [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) and [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) properties of Mutation in `GraphQLAdaptorOptions` respectively.
+**Mutation Queries**
 
-The following variables are passed as a parameter to the mutation method written for **Insert** operation in server side.
+Each CRUD operation requires a specific mutation query:
 
-| Properties | Description |
+* [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert): Adds a new record.
+* [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update): Modifies an existing record.
+* [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete): Removes a record.
+* [Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Batch): Handles multiple operations (Insert, Update, and Delete) in a single request.
+
+**Insert mutation parameters**
+
+These parameters are passed to the mutation method for the `Insert` operation on the server:
+
+| Parameter | Description |
 |--------|----------------|
-| record | The new record which is need to be inserted. |
-| index | Specifies the index at which the newly added record will be inserted.  |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
-| additionalParameters | An optional parameter that can be used to perform any operations.   |
+| record | Represents the new record to be inserted. |
+| index | Specifies the position at which the record should be inserted.  |
+| action | Indicates the type of operation (e.g., Add, Delete, Update).  |
+| additionalParameters | Optional parameter for custom logic during the operation.  |
 
-The following variables are passed as a parameter to the mutation method written for **Update** operation in server side.
+**Update mutation parameters**
 
-| Properties | Description |
+These parameters are passed to the mutation method for the `Update` operation on the server:
+
+| Parameter | Description |
 |--------|----------------|
-| record | The new record which is need to be updated. |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
-| primaryColumnName | Specifies the field name of the primary column. |
-| primaryColumnValue | Specifies the primary column value which is needs to be updated in the collection.   |
-| additionalParameters | An optional parameter that can be used to perform any operations.   |
+| record | Represents the updated record. |
+| action | Indicates the type of operation (e.g., Add, Delete, Update). |
+| primaryColumnName | Specifies the name of the primary key column. |
+| primaryColumnValue | Specifies the value of the primary key for the record to update.   |
+| additionalParameters | Optional parameter for custom logic during the operation.   |
 
-The following variables are passed as a parameter to the mutation method written for **Delete** operation in server side.
+**Delete mutation parameters**
 
-| Properties | Description |
+These parameters are passed to the mutation method for the **Delete** operation on the server:
+
+| Parameter | Description |
 |--------|----------------|
-| primaryColumnValue | Specifies the primary column value which is needs to be removed from the collection. |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
-| primaryColumnName | specifies the field name of the primary column.  |
-| additionalParameters | An optional parameter that can be used to perform any operations.   |
+| primaryColumnValue | Specifies the primary key value of the record to delete. |
+| action | Indicates the type of operation (e.g., Add, Delete, Update).  |
+| primaryColumnName | Specifies the name of the primary key column.  |
+| additionalParameters | Optional parameter for custom logic during the operation.   |
 
 
 ```cshtml
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 
-<SfDataManager Url="https://xxxxxx" GraphQLAdaptorOptions=@adaptorOptions Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+<SfDataManager Url="https://xxxxxx"
+               GraphQLAdaptorOptions="@_adaptorOptions"
+               Adaptor="Adaptors.GraphQLAdaptor">
+</SfDataManager>
 
-@code{
-    private GraphQLAdaptorOptions adaptorOptions { get; set; } = new GraphQLAdaptorOptions
+@code {
+    // GraphQL adaptor configuration
+    private GraphQLAdaptorOptions _adaptorOptions { get; set; } = new GraphQLAdaptorOptions
     {
+        // Data query: passes DataManagerRequestInput ($dataManager) to the resolver
         Query = @"
-            query ordersData($dataManager: DataManagerRequestInput!){
+            query ordersData($dataManager: DataManagerRequestInput!) {
                 ordersData(dataManager: $dataManager) {
-                    count, result { OrderID, CustomerID, OrderDate, Freight } , aggregates
+                    count,
+                    result { OrderID, CustomerID, OrderDate, Freight },
+                    aggregates
                 }
             }",
+
+        // CRUD mutations: Insert, Update, Delete (Batch can be added if required)
         Mutation = new GraphQLMutation
         {
             Insert = @"
@@ -401,12 +437,14 @@ The following variables are passed as a parameter to the mutation method written
                     OrderID, CustomerID, OrderDate, Freight
                   }
                 }",
+
             Update = @"
-                mutation update($record: OrderInput!, $action: String!, $primaryColumnName: String! , $primaryColumnValue: Int!, $additionalParameters: Any) {
+                mutation update($record: OrderInput!, $action: String!, $primaryColumnName: String!, $primaryColumnValue: Int!, $additionalParameters: Any) {
                   updateOrder(order: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
                     OrderID, CustomerID, OrderDate, Freight
                   }
                 }",
+
             Delete = @"
                 mutation delete($primaryColumnValue: Int!, $action: String!, $primaryColumnName: String!, $additionalParameters: Any) {
                   deleteOrder(primaryColumnValue: $primaryColumnValue, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters) {
@@ -414,6 +452,8 @@ The following variables are passed as a parameter to the mutation method written
                   }
                 }"
         },
+
+        // Resolver mapping name used under data.{ResolverName}
         ResolverName = "OrdersData"
     };
 
@@ -425,75 +465,130 @@ The following variables are passed as a parameter to the mutation method written
         public double? Freight { get; set; }
     }
 }
+
 ```
 
-The following code demonstrates the mutation methods used in the GraphQL server for CRUD operation.
+This configuration demonstrates the mutation methods implemented on the GraphQL server for performing CRUD operations.
 
 ```cshtml
-    public class GraphQLMutation
+   
+public class GraphQLMutation
+{
+    public Order CreateOrder(
+        Order order,
+        int index,
+        string action,
+        [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
     {
-        public Order CreateOrder(Order order, int index, string action,
-            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+        // Defensive insert: clamp index within bounds
+        var list = GraphQLQuery.Orders;
+        var safeIndex = Math.Clamp(index, 0, list.Count);
+        list.Insert(safeIndex, order);
+        return order;
+    }
+
+    public Order UpdateOrder(
+        Order order,
+        string action,
+        string primaryColumnName,
+        int primaryColumnValue,
+        [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+    {
+        var updatedOrder = GraphQLQuery.Orders.FirstOrDefault(x => x.OrderID == primaryColumnValue);
+        if (updatedOrder == null)
         {
-            GraphQLQuery.Orders.Insert(index, order);
+            // No matching entity; return the input or handle as needed (e.g., throw graph error)
             return order;
         }
-        public Order UpdateOrder(Order order, string action, string primaryColumnName, int primaryColumnValue,
-            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
-        {
-            Order updatedOrder = GraphQLQuery.Orders.Where(x => x.OrderID == primaryColumnValue).FirstOrDefault();
-            updatedOrder.OrderID = order.OrderID;
-            updatedOrder.CustomerID = order.CustomerID;
-            updatedOrder.Freight = order.Freight;
-            updatedOrder.OrderDate = order.OrderDate;
-            return updatedOrder;
-        }
-        public Order DeleteOrder(int primaryColumnValue, string action, string primaryColumnName,
-            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
-        {
-            Order deletedOrder = GraphQLQuery.Orders.Where(x => x.OrderID == primaryColumnValue).FirstOrDefault();
-            GraphQLQuery.Orders.Remove(deletedOrder);
-            return deletedOrder;
-        }
+
+        // Apply updates
+        updatedOrder.OrderID = order.OrderID;
+        updatedOrder.CustomerID = order.CustomerID;
+        updatedOrder.Freight = order.Freight;
+        updatedOrder.OrderDate = order.OrderDate;
+
+        return updatedOrder;
     }
+
+    public Order DeleteOrder(
+        int primaryColumnValue,
+        string action,
+        string primaryColumnName,
+        [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+    {
+        var deletedOrder = GraphQLQuery.Orders.FirstOrDefault(x => x.OrderID == primaryColumnValue);
+        if (deletedOrder != null)
+        {
+            GraphQLQuery.Orders.Remove(deletedOrder);
+        }
+        return deletedOrder;
+    }
+}
+
 ```
 
 #### Batch editing
 
-The following sample code demonstrates performing **Batch** operation. You have to set the Batch mutation query in [Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Batch) property of Mutation in `GraphQLAdaptorOptions`.
+Batch editing performs **Insert**, **Update**, and **Delete** operations in a single GraphQL request. Configuration is defined in the [Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Batch) property of Mutation in [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html), and the server must expose a **batchUpdate** resolver that accepts the batch parameters and returns the updated collection.
 
-The following variables are passed as a parameter to the mutation method written for **Batch** operation in server side.
+**Batch mutation parameters**
 
-| Properties | Description |
+These parameters are passed to the mutation method for the **Batch** operation on the server:
+
+| Parameter | Description |
 |--------|----------------|
-| changed | Specifies the collection of record to be updated. |
-| added | Specifies the collection of record to be inserted.  |
-| deleted | Specifies the collection of record to be removed.   |
+| changed | Collection of records to update. |
+| added | Collection of records to insert.  |
+| deleted | Collection of records to remove.   |
 | action | Indicates the type of operation being performed. |
-| primaryColumnName | Specifies the field name of the primary column.  |
-| additionalParameters | An optional parameter that can be used to perform any operations.   |
-| dropIndex | Specifies the record position, from which new records will be added while performing drag and drop.   |
+| primaryColumnName | Specifies the name of the primary key column.  |
+| additionalParameters | Optional parameter for custom logic during the operation.   |
+| dropIndex | Position where new records should be inserted during drag-and-drop.   |
+
 
 ```cshtml
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 
-<SfDataManager Url="https://xxxxxx" GraphQLAdaptorOptions=@adaptorOptions Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+<SfDataManager Url="https://xxxxxx"
+               GraphQLAdaptorOptions="@_adaptorOptions"
+               Adaptor="Adaptors.GraphQLAdaptor">
+</SfDataManager>
 
-@code{
-    private GraphQLAdaptorOptions adaptorOptions { get; set; } = new GraphQLAdaptorOptions
+@code {
+    // GraphQL adaptor configuration
+    private GraphQLAdaptorOptions _adaptorOptions { get; set; } = new GraphQLAdaptorOptions
     {
         Query = @"
-            query ordersData($dataManager: DataManagerRequestInput!){
+            query ordersData($dataManager: DataManagerRequestInput!) {
                 ordersData(dataManager: $dataManager) {
-                    count, result { OrderID, CustomerID, OrderDate, Freight } , aggregates
+                    count,
+                    result { OrderID, CustomerID, OrderDate, Freight },
+                    aggregates
                 }
             }",
         Mutation = new GraphQLMutation
         {
             Batch = @"
-                mutation batch($changed: [OrderInput!], $added: [OrderInput!], $deleted: [OrderInput!], $action: String!, $primaryColumnName: String!, $additionalParameters: Any, $dropIndex: Int) {
-                  batchUpdate(changed: $changed, added: $added, deleted: $deleted, action: $action, primaryColumnName :$primaryColumnName, additionalParameters: $additionalParameters, dropIndex: $dropIndex) {
+                mutation batch(
+                    $changed: [OrderInput!],
+                    $added: [OrderInput!],
+                    $deleted: [OrderInput!],
+                    $action: String!,
+                    $primaryColumnName: String!,
+                    $additionalParameters: Any,
+                    $dropIndex: Int
+                ) {
+                  batchUpdate(
+                    changed: $changed,
+                    added: $added,
+                    deleted: $deleted,
+                    action: $action,
+                    primaryColumnName: $primaryColumnName,
+                    additionalParameters: $additionalParameters,
+                    dropIndex: $dropIndex
+                  ) {
                     OrderID, CustomerID, OrderDate, Freight
                   }
                 }"
@@ -501,6 +596,7 @@ The following variables are passed as a parameter to the mutation method written
         ResolverName = "OrdersData"
     };
 
+    // Entity model
     public class Order
     {
         public int? OrderID { get; set; }
@@ -509,84 +605,115 @@ The following variables are passed as a parameter to the mutation method written
         public double? Freight { get; set; }
     }
 }
+
 ```
 
-The following code demonstrates the mutation method used in the GraphQL server for **Batch** operation.
+This example shows how to implement the batch logic on the GraphQL server.
 
 ```cshtml
-    public class GraphQLMutation
+    
+public class GraphQLMutation
+{
+    public List<Order> BatchUpdate(
+        List<Order>? changed,
+        List<Order>? added,
+        List<Order>? deleted,
+        string action,
+        string primaryColumnName,
+        [GraphQLType(typeof(AnyType))] IDictionary<string, object>? additionalParameters,
+        int? dropIndex)
     {
-        public List<Order> BatchUpdate(List<Order>? changed, List<Order>? added,
-            List<Order>? deleted, string action, String primaryColumnName,
-            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters, int? dropIndex)
+        // Update existing records
+        if (changed != null && changed.Count > 0)
         {
-            if (changed != null && changed.Count > 0)
+            foreach (var changedOrder in changed)
             {
-                foreach (var changedOrder in (IEnumerable<Order>)changed)
+                var target = GraphQLQuery.Orders.FirstOrDefault(e => e.OrderID == changedOrder.OrderID);
+                if (target != null)
                 {
-                    Order order = GraphQLQuery.Orders.Where(e => e.OrderID == changedOrder.OrderID).FirstOrDefault();
-                    order.OrderID = changedOrder.OrderID;
-                    order.CustomerID = changedOrder.CustomerID;
-                    order.OrderDate = changedOrder.OrderDate;
-                    order.Freight = changedOrder.Freight;
+                    // Primary key updates are typically avoided; update non-key fields
+                    target.CustomerID = changedOrder.CustomerID;
+                    target.OrderDate = changedOrder.OrderDate;
+                    target.Freight = changedOrder.Freight;
                 }
             }
-            if (added != null && added.Count > 0)
-            {
-                if (dropIndex != null)
-                {
-                    //for Drag and Drop feature
-                    GraphQLQuery.Orders.InsertRange((int)dropIndex, added);
-                }
-                else {
-                    foreach (var newOrder in (IEnumerable<Order>)added)
-                    {
-                        GraphQLQuery.Orders.Add(newOrder);
-                    }
-                }                
-            }
-            if (deleted != null && deleted.Count > 0)
-            {
-                foreach (var deletedOrder in (IEnumerable<Order>)deleted)
-                {
-                    GraphQLQuery.Orders.Remove(GraphQLQuery.Orders.Where(e => e.OrderID == deletedOrder.OrderID).FirstOrDefault());
-                }
-            }
-            return GraphQLQuery.Orders;
         }
+
+        // Insert new records
+        if (added != null && added.Count > 0)
+        {
+            if (dropIndex.HasValue)
+            {
+                var index = Math.Clamp(dropIndex.Value, 0, GraphQLQuery.Orders.Count);
+                GraphQLQuery.Orders.InsertRange(index, added);
+            }
+            else
+            {
+                GraphQLQuery.Orders.AddRange(added);
+            }
+        }
+
+        // Delete records
+        if (deleted != null && deleted.Count > 0)
+        {
+            foreach (var deletedOrder in deleted)
+            {
+                var target = GraphQLQuery.Orders.FirstOrDefault(e => e.OrderID == deletedOrder.OrderID);
+                if (target != null)
+                {
+                    GraphQLQuery.Orders.Remove(target);
+                }
+            }
+        }
+
+        return GraphQLQuery.Orders;
     }
+}
+
 ```
 
 ### Configuration in GraphQL server application
 
-The following code is the configuration in GraphQL server application to set GraphQL query, mutation type and to enable CORS.
+The following configuration sets the GraphQL query and mutation types and enables CORS for a specific client origin in **Program.cs**.
 
-Program.cs
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" %}
 
-```cshtml
+
+// Program.cs
 
 var builder = WebApplication.CreateBuilder(args);
 
-//GraphQL resolver is defined in GraphQLQuery class and mutation methods are defined in GraphQLMutation class
-builder.Services.AddGraphQLServer().AddQueryType<GraphQLQuery>().AddMutationType<GraphQLMutation>();
+// GraphQL schema: register query and mutation types
+builder.Services
+    .AddGraphQLServer()
+    .AddQueryType<GraphQLQuery>()
+    .AddMutationType<GraphQLMutation>();
 
-//CORS is enabled to access the GraphQL server from the client application
+// CORS: allow a specific client origin to access this server
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin", builder =>
+    options.AddPolicy("AllowSpecificOrigin", cors =>
     {
-        builder.WithOrigins("https://xxxxxx")
-        .AllowAnyHeader()
-        .AllowAnyMethod()
-        .AllowCredentials().Build();
+        cors.WithOrigins("https://xxxxxx")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
 
-```
+var app = builder.Build();
 
-The following code demonstrates the **DataManagerRequest** class which is passed as an argument to the resolver function.
+app.UseCors("AllowSpecificOrigin");
+app.MapGraphQL();
 
-```cshtml
+{% endhighlight %}
+{% endtabs %}
+
+The **resolver** method accepts an instance of [DataManagerRequestInput](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html), which encapsulates query parameters from the DataManager request. These parameters are used to shape the response returned to the client application.
+
+{% tabs %}
+{% highlight cs tabtitle="DataManagerRequest.cs" %}
     public class DataManagerRequest
     {
         [GraphQLName("Skip")]
@@ -712,69 +839,19 @@ The following code demonstrates the **DataManagerRequest** class which is passed
         public List<WhereFilter>? predicates { get; set; }
     }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-### Note
-
-You can get the entire code in the [github](https://github.com/SyncfusionExamples/GraphQLAdaptor-Binding-Blazor-DataGrid) sample.
-
-## WebMethod adaptor
-
-You can use the `WebApiAdaptor` to interact with Web APIs created with OData endpoint. The `WebApiAdaptor` is extended from the `ODataAdaptor`. Hence to use `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with request.
-
-To enable OData query option for Web API, refer to this [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
-
-The following sample code demonstrates binding remote data to the DataGrid component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using Web method service,
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Grids
-
-<SfGrid TValue="EmployeeData" ID="Grid">
-    <SfDataManager Url="https://demoUrl/action" Adaptor="Adaptors.WebMethodAdaptor"></SfDataManager>
-    <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Designation) HeaderText="Designation" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public class EmployeeData
-    {
-        public int EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string Designation { get; set; }
-        public string Country { get; set; }
-    }
-}
-```
-
-N> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
-
-`WebMethodAdaptor` expects JSON response from the server and the response object should contain properties `result` and `count` whose values are collection of entities and total count of the entities respectively.
-
-The sample response object should look like below.
-
-```csharp
-{
-    "result": [{..}, {..}, {..}, ...],
-    "count": 830
-}
-```
-
-N> The controller method’s data parameter name must be `value`.
+N> The complete implementation is available in the [GitHub](https://github.com/SyncfusionExamples/GraphQLAdaptor-Binding-Blazor-DataGrid) sample.
 
 ## Writing custom adaptor
 
-Sometimes the built-in adaptors do not meet your requirements and in such cases you can create your own adaptor.
+When the built-in adaptors do not meet specific requirements, a **custom adaptor** can be implemented.
 
-To create and use custom adaptor, follow the following steps,
+Steps to create and use a custom adaptor:
 
-* Create a class which extended from DataAdaptor class. DataAdaptor class will act as base class for your custom adaptor.
-* Override the desired method to achieve your requirement.
-* Assign the custom adaptor class to the **AdaptorInstance** property of SfDataManager component.
+1. Create a class that inherits from the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class.
+2. Override the required methods to implement the desired functionality.
+3. Assign the custom adaptor instance to the [AdaptorInstance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_AdaptorInstance) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to [CustomAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor).
 
-You can refer to this [link](custom-binding) for more details on the working of custom adaptor.
+For detailed implementation guidance, refer to the [custom binding documentation](custom-binding).
