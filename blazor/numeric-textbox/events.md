@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Numeric TextBox Component
 
-This section explains the list of events of the Numeric TextBox component which will be triggered for appropriate Numeric TextBox actions.
+This section lists the events raised by the Numeric TextBox component and when they occur. Events are wired using the nested NumericTextBoxEvents tag inside the SfNumericTextBox.
 
 ## Blur
 
-`Blur` event triggers when the NumericTextBox got focus out.
+The `Blur` event occurs when the NumericTextBox loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -32,7 +32,7 @@ This section explains the list of events of the Numeric TextBox component which 
 
 ## Created
 
-`Created` event triggers when the NumericTextBox component is created.
+The `Created` event fires after the NumericTextBox component has been initialized and rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -51,7 +51,7 @@ This section explains the list of events of the Numeric TextBox component which 
 
 ## Destroyed
 
-`Destroyed` event triggers when the NumericTextBox component is destroyed.
+The `Destroyed` event fires when the NumericTextBox component is disposed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -70,7 +70,7 @@ This section explains the list of events of the Numeric TextBox component which 
 
 ## Focus 
 
-`Focus` event triggers when the NumericTextBox got focus in.
+The `Focus` event occurs when the NumericTextBox receives focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -106,4 +106,4 @@ The `ValueChange` event triggers when the value changes or the component loses f
 }
 ```
 
-N> Numeric TextBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> Numeric TextBox is limited to these events. Additional events may be added in the future based on user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

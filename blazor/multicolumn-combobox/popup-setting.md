@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Popup Setting in Syncfusion Blazor MultiColumn ComboBox
+title: Popup settings in Syncfusion Blazor MultiColumn ComboBox
 description: Checkout and learn here all about Popup Setting in Syncfusion Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
@@ -11,9 +11,9 @@ documentation: ug
 
 ## Change the popup width
 
-Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupWidth) property. If popup width unspecified, it sets based on the width of the MultiColumn ComboBox component.
+Customize the popup width using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupWidth) property. If `PopupWidth` is not specified, the popup width matches the MultiColumn ComboBox input width.
 
-In the following sample, the `PopupWidth` is set as `600px`.
+In the following example, `PopupWidth` is set to `600px`.
 
 {% highlight cshtml %}
 
@@ -25,9 +25,9 @@ In the following sample, the `PopupWidth` is set as `600px`.
 
 ## Change the popup height
 
-Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupHeight) property.
+Customize the popup height using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupHeight) property.
 
-In the following sample, the `PopupHeight` is set as `500px`.
+In the following example, `PopupHeight` is set to `500px`.
 
 {% highlight cshtml %}
 
@@ -39,13 +39,11 @@ In the following sample, the `PopupHeight` is set as `500px`.
 
 ## Change the popup z-index
 
-Customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ZIndex) value of the component popup element.
-
-Defaults to `1000`
+Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ZIndex) value to control the popup’s stacking order relative to other overlays. The default `ZIndex` is `1000`. Increase it if the popup needs to appear above dialogs or other positioned elements.
 
 ## Show popup on initial loading
 
-You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Created) Event.
+Show the popup automatically when the component is initialized by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ShowPopupAsync) in the [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Created) event. Use a component reference to access the method.
 
 {% highlight Razor %}
 
@@ -53,11 +51,11 @@ You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/
 
 {% endhighlight %}
 
-![Blazor MultiColumn ComboBox with Show popup on initial loading](./images/popup-setting/blazor_multicolumn_combobox_show-popup-on-initial-loading.gif)
+![Blazor MultiColumn ComboBox showing popup on initial load](./images/popup-setting/blazor_multicolumn_combobox_show-popup-on-initial-loading.gif)
 
-## Preventing opening and closing
+## Prevent opening and closing
 
-Prevent the popup open and close in the event argument like [PopupOpeningEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupOpeningEventArgs_Cancel) and [PopupClosingEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupClosingEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupClosingEventArgs_Cancel) as `true`. It is achieved by the [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpening) and [PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupClosing) events. 
+Prevent the popup from opening or closing by setting the event argument properties [PopupOpeningEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupOpeningEventArgs_Cancel) and [PopupClosingEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupClosingEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupClosingEventArgs_Cancel) to `true` in the corresponding [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpening) and [PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupClosing) events. This is useful to enforce conditions (for example, read-only state or validation in progress).
 
 {% highlight Razor %}
 
@@ -71,7 +69,7 @@ The following events are used to trigger when opening and closing popup.
 
 ### PopupOpening event
 
-The [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpening) event triggers when the popup is opened. If you cancel this event, the popup remains closed.
+The [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpening) event triggers just before the popup opens. Cancel this event to keep the popup closed.
 
 {% highlight Razor %}
 
@@ -83,11 +81,11 @@ The [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Multi
 
 ### PopupOpened event
 
-The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpened) event triggers when the popup opens.
+The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpened) event triggers after the popup has opened.
 
 ### PopupClosing event
 
-The [PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupClosing) event triggers before the popup is closed. If you cancel this event, the popup will remain open.
+The [PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupClosing) event triggers just before the popup closes. Cancel this event to keep the popup open.
 
 {% highlight Razor %}
 
@@ -99,7 +97,7 @@ The [PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Multi
 
 ### PopupClosed event
 
-The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupClosed) event triggers after the popup has been closed.
+The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupClosed) event triggers after the popup has closed.
 
 {% highlight Razor %}
 
@@ -111,7 +109,7 @@ The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiC
 
 ## Popup height based on available space
 
-You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
+Adjust the popup height dynamically based on available viewport space by handling the window `resize` event and updating the popup height accordingly. Place the script in a layout or host page and ensure the element IDs in the script match the component instance.
 
 {% highlight Razor %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor MultiColumn ComboBox Component
 
-The MultiColumn ComboBox offers built-in functionality for filtering data items when the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowFiltering) option is enabled. The filtering action starts as soon as you begin typing in the search box. By default, the AllowFiltering property is set to `false`.
+The MultiColumn ComboBox offers built-in functionality for filtering data items when the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowFiltering) option is enabled. Filtering begins as the user types in the input field. By default, the AllowFiltering property is set to `false`.
 
 ## Local data
 
@@ -39,15 +39,15 @@ The following code illustrates the filtering capabilities using the [ODataAdapto
 
 ## Filter type
 
-You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
+Use the [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_FilterType) property to specify how the input text is matched during filtering. The available filter types are:
 
 FilterType     | Description
 ------------ | -------------
-  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilterType.html#Syncfusion_Blazor_MultiColumnComboBox_FilterType_StartsWith)       | Checks whether a value begins with the specified value.
-  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilterType.html#Syncfusion_Blazor_MultiColumnComboBox_FilterType_EndsWith)     | Checks whether a value ends with specified value.
-  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilterType.html#Syncfusion_Blazor_MultiColumnComboBox_FilterType_Contains)      | Checks whether a value contained with specified value.
+  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilterType.html#Syncfusion_Blazor_MultiColumnComboBox_FilterType_StartsWith)       | Checks whether a value begins with the specified text.
+  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilterType.html#Syncfusion_Blazor_MultiColumnComboBox_FilterType_EndsWith)     | Checks whether a value ends with the specified text.
+  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilterType.html#Syncfusion_Blazor_MultiColumnComboBox_FilterType_Contains)      | Checks whether a value contains the specified text.
 
-In the following example, `EndsWith` filter type has been mapped to the `FilterType` property.
+In the following example, the `EndsWith` filter type is assigned to the `FilterType` property.
 
 {% highlight cshtml %}
 
@@ -102,7 +102,7 @@ The following example shows how to perform case-sensitive filter.
 
 ## Custom filtering
 
-The MultiColumn ComboBox dropdown component allows you to customize filter queries using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event. You can also filter data in multiple columns using the `FilterAsync` method in combination with the `Filtering` event.
+The MultiColumn ComboBox allows you to customize filter queries using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event. Multiple-column filtering can be implemented by composing predicates and applying them with the `FilterAsync` method in combination with the `Filtering` event.
 
 In the following example, the filter is configured to search based on both the `Name` and `Category` fields. The `Filtering` event uses a [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) with an `or` condition to allow filtering across these fields.
 
@@ -120,11 +120,11 @@ For instance, if a data source item has a `Name` of "Smartwatch" and a `Category
 
 ## Prevent popup opening when filtering
 
-To prevent the MultiColumn ComboBox dropdown from opening when filtering is applied, you can use the [PopupOpeningEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupOpeningEventArgs_Cancel) argument in the [PopupOpeningEventArgs](hhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#properties). The `PopupOpeningEventArgs.Cancel` argument is a boolean value that can be set to true to cancel the dropdown opening, or false to allow the dropdown to open.
+To prevent the MultiColumn ComboBox popup from opening while filtering is in progress, use the [PopupOpeningEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupOpeningEventArgs_Cancel) argument exposed in the [PopupOpeningEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#properties). Set `Cancel` to `true` to stop the popup from opening, or `false` to allow it.
 
-In the following example, the isTyped flag is used to track whether the filtering action is taking place. The `OnFiltering` method sets the flag to true when the filtering action starts, and the `OnBeforeOpen` method cancels the dropdown opening if the flag is set to true. Finally, the `OnBeforeOpen` method resets the flag to false to prepare for the next filtering action.
+In the following example, the `isTyped` flag tracks whether filtering is occurring. The `OnFiltering` method sets the flag to `true` when filtering starts, and the popup-opening handler (for example, `OnBeforeOpen`) cancels opening if the flag is `true`. The handler then resets the flag to `false` for the next interaction.
 
-> This will prevent the MultiColumn ComboBox dropdown from opening when filtering is applied, while still allowing the user to filter the items using the input field in the MultiColumn ComboBox.
+> This approach prevents the popup from opening during filtering while still allowing users to filter items through the input field.
 
 {% highlight cshtml %}
 
