@@ -13,7 +13,6 @@ documentation: ug
 
 The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component provides a unified approach for interacting with diverse data sources in Blazor applications. Each data source or remote service may define unique **request** and **response** formats. To manage these variations, the `SfDataManager` uses an **adaptor** mechanism that translates data operations into a format compatible with the target service.
 
-
 * **Local data sources**: An adaptor applies query operations such as **sorting**, **filtering**, and **paging** directly on an **in-memory collection**.
 * **Remote data sources**: An adaptor generates the required H**TTP requests** and processes the corresponding server **responses**.
 
@@ -29,8 +28,6 @@ The `SfDataManager` component provides several built-in adaptors for integrating
 * **WebApiAdaptor** – Works with Web API endpoints that support OData query options.
 * **GraphQLAdaptor** – Enables interaction with GraphQL services for queries and mutations.
 * **CustomAdaptor** – Allows custom implementations when built-in adaptors do not meet requirements.
-
-N> `ODataAdaptor` is the default adaptor used by `SfDataManager`.
 
 ## UrlAdaptor
 
@@ -51,11 +48,11 @@ To configure the `UrlAdaptor`, set the [Adaptor](https://help.syncfusion.com/cr/
 @using Syncfusion.Blazor.Grids
 
 <SfGrid TValue="EmployeeData" ID="Grid" AllowPaging="true">
-    <SfDataManager Url="https://service-endpoint/api/employees" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/development/api/gridurldata" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridColumns>
-        <GridColumn Field="@nameof(EmployeeData.EmployeeID)" HeaderText="Employee ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field="@nameof(EmployeeData.Name)" HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field="@nameof(EmployeeData.Title)" HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.EmployeeID)" HeaderText="Employee ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.EmployeeName)" HeaderText="First Name" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.Designation)" HeaderText="Title" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -64,22 +61,17 @@ To configure the `UrlAdaptor`, set the [Adaptor](https://help.syncfusion.com/cr/
     public class EmployeeData
     {
         public int EmployeeID { get; set; }
-        public string Name { get; set; }
-        public string Title { get; set; }
+        public string EmployeeName { get; set; }
+        public string Designation { get; set; }
     }
-
 }
 
 ```
-
-N> Replace sample URL with the actual service endpoint URL.
 
 The server response must include two properties:
 
 * **result** – A collection of entities.
 * **count** – The total number of records.
-
-**Sample Response**
 
 ```
 {
@@ -126,8 +118,6 @@ To configure, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion
     }
 }
 ```
-
-N> `ODataAdaptor` is the default adaptor used by `SfDataManager`.
 
 ## ODataV4 adaptor
 
@@ -241,7 +231,7 @@ The GraphQL response must return a JSON-formatted response with properties:
 @using Syncfusion.Blazor.Grids
 
 <SfGrid TValue="Order" AllowPaging="true" PageSettings="new PageSettings { PageSize = 10 }">
-    <SfDataManager Url="https://your-graphql-endpoint"
+    <SfDataManager Url="https://api.example.com/graphql"
                    GraphQLAdaptorOptions="@adaptorOptions"
                    Adaptor="Adaptors.GraphQLAdaptor">
     </SfDataManager>
@@ -282,6 +272,7 @@ The GraphQL response must return a JSON-formatted response with properties:
 }
 
 ```
+N> Replace sample URL with the actual service endpoint URL.
 
 ### Performing data operations
 
@@ -848,7 +839,7 @@ N> The complete implementation is available in the [GitHub](https://github.com/S
 
 When the built-in adaptors do not meet specific requirements, a **custom adaptor** can be implemented.
 
-Steps to create and use a custom adaptor:
+**Steps to create and use a custom adaptor**:
 
 1. Create a class that inherits from the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class.
 2. Override the required methods to implement the desired functionality.
