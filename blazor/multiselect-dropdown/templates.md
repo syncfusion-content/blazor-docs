@@ -9,17 +9,16 @@ documentation: ug
 
 # Templates in Blazor MultiSelect Dropdown Component
 
-The MultiSelect has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
+The MultiSelect provides template options to customize the selected value, list items, group headers, header, and footer elements.
 
-To get started quickly with Templates in the Blazor MultiSelect Dropdown component, you can check the video below.
-
+To get started quickly with templates in the Blazor MultiSelect Dropdown component, watch the following video:
 {% youtube "https://www.youtube.com/watch?v=6A61PDatD0s" %}
 
 ## Value template
 
-The currently selected value that is displayed by default on the MultiSelect input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_ValueTemplate) property.
+Customize how the currently selected value is displayed in the input by using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_ValueTemplate) property.
 
-In the following sample, the selected value is displayed as a combined text of both `FirstName` and `Designation` in the MultiSelect input, which is separated by a hyphen.
+In the following sample, the selected value displays combined text from `FirstName` and `Designation`, separated by a hyphen.
 
 {% highlight cshtml %}
 
@@ -27,13 +26,13 @@ In the following sample, the selected value is displayed as a combined text of b
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with Value Template](./images/blazor-multiselect-dropdown-value-template.png)
+![Blazor MultiSelect Dropdown with value template](./images/blazor-multiselect-dropdown-value-template.png)
 
 ## Item template
 
-The content of each list item within the MultiSelect can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
+Customize the content of each list item by using the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
 
-In the following sample, each list item is split into two columns to display relevant data.
+In the following sample, each list item is split into two columns to display related data.
 
 {% highlight cshtml %}
 
@@ -41,13 +40,13 @@ In the following sample, each list item is split into two columns to display rel
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with Item Template](./images/blazor-multiselect-dropdown-item-template.png)
+![Blazor MultiSelect Dropdown with item template](./images/blazor-multiselect-dropdown-item-template.png)
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customized with the help of the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
+Customize the group header title (used for both inline and floating headers) by using the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property.
 
-In the following sample, employees are grouped according to their cities.
+In the following sample, employees are grouped by city.
 
 {% highlight cshtml %}
 
@@ -59,9 +58,9 @@ In the following sample, employees are grouped according to their cities.
 
 ## Header template
 
-The header element is shown statically at the top of the popup list items within the MultiSelect, and any custom element can be placed as a header element using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_HeaderTemplate) property.
+Render a custom header at the top of the popup by using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_HeaderTemplate) property.
 
-In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
+In the following sample, the header and list items are presented in two columns similar to a grid layout.
 
 {% highlight cshtml %}
 
@@ -69,13 +68,13 @@ In the following sample, the list items and its headers are designed and display
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with Header Template](./images/blazor-multiselect-dropdown-header-template.png)
+![Blazor MultiSelect Dropdown with header template](./images/blazor-multiselect-dropdown-header-template.png)
 
 ## Footer template
 
-The MultiSelect has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_FooterTemplate) property.
+Render a custom footer at the bottom of the popup list by using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_FooterTemplate) property.
 
-In the following sample, footer element displays the total number of list items present in the MultiSelect.
+In the following sample, the footer displays the total number of list items.
 
 {% highlight cshtml %}
 
@@ -83,13 +82,13 @@ In the following sample, footer element displays the total number of list items 
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with Footer Template](./images/blazor-multiselect-dropdown-footer-template.png)
+![Blazor MultiSelect Dropdown with footer template](./images/blazor-multiselect-dropdown-footer-template.png)
 
 ## No records template
 
-The MultiSelect is provided with support to custom design the popup list content when no data is found and no matches are found on search with the help of [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property.
+Customize the popup content when no items are available or when search yields no matches by using the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property.
 
-In the following sample, popup list content displays the notification of no data available.
+In the following sample, the popup displays a “no data available” message.
 
 {% highlight cshtml %}
 
@@ -97,13 +96,13 @@ In the following sample, popup list content displays the notification of no data
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown without Data](./images/blazor-multiselect-dropdown-without-data.png)
+![Blazor MultiSelect Dropdown without data](./images/blazor-multiselect-dropdown-without-data.png)
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
+Customize the popup content displayed when a remote data request fails by using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
 
-In the following sample, when the data fetch request fails, the MultiSelect displays the notification.
+In the following sample, the component shows a notification when data retrieval fails.
 
 {% highlight cshtml %}
 
@@ -111,4 +110,4 @@ In the following sample, when the data fetch request fails, the MultiSelect disp
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with Action Template](./images/blazor-multiselect-dropdown-action-template.png)
+![Blazor MultiSelect Dropdown with action failure template](./images/blazor-multiselect-dropdown-action-template.png)

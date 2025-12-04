@@ -271,7 +271,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-N> The type of component editor must be configured in the 'Type' Editor In-place property. Also, the two-way binding between the In-place Editor and its EditorComponent should be configured. It's used to update the editor component value into the In-place Editor component.
+N> Specify the editor [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) when using non-default editors (for example, `DropDownList`, `Date`, or `AutoComplete`). Configure two-way binding between the In-place Editor and its editor component to synchronize values.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor In-place Editor component in the default web browser.
 
@@ -335,7 +335,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 
 ## Configuring DropDownList
 
-You can render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property as `DropDownList` and configuring the `DropDownList` component inside the Editor component.
+Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property to `DropDownList` and configuring the `DropDownList` component inside the editor component.
 
 {% tabs %}
 {% highlight razor %}
@@ -378,7 +378,7 @@ You can render the Blazor DropDownList by changing the [Type](https://help.syncf
 
 ## Integrate DatePicker
 
-You can render the Blazor `DatePicker` by changing the `Type` property as `Date` and configuring the `DatePicker` component inside the Editor component. Also, configure its properties directly in the `Datepicker` component.
+Render the Blazor `DatePicker` by changing the `Type` property to `Date` and configuring the `DatePicker` component inside the editor component. Also configure its properties directly on the `DatePicker` component.
 
 {% tabs %}
 {% highlight razor %}
@@ -493,19 +493,18 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 
 ## Submitting data to the server (save)
 
-You can submit editor value to the server by configuring the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_SaveUrl), [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Adaptor) and [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_PrimaryKey) properties.
+Submit the editor value to the server by configuring the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_SaveUrl), [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Adaptor), and [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_PrimaryKey) properties.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|
-| **`SaveUrl`**        | Gets the URL for server submit action.        |
-| **`Adaptor`**    | Specifies the adaptor type that is used by DataManager to communicate with DataSource.                |
-| **`PrimaryKey`** | Defines the unique primary key of editable field which can be used for saving data in the data-base.|
+| **`SaveUrl`**        | Gets the URL for the server submit action.        |
+| **`Adaptor`**    | Specifies the adaptor type used by DataManager to communicate with the data source.                |
+| **`PrimaryKey`** | Defines the unique primary key of the editable field used for saving data in the database. |
 
-> The `PrimaryKey` property is mandatory. If it is not set, edited data are not sent to the server.
-
+> The `PrimaryKey` property is mandatory. If it is not set, edited data are not sent to the server.
 ## Refresh Blazor In-place Editor with modified value
 
-The edited data is submitted to the server and you can see the new values getting reflected in the In-place Editor.
+After submit, the edited data is sent to the server, and the updated value is reflected in the In-place Editor.
 
 {% tabs %}
 {% highlight razor %}

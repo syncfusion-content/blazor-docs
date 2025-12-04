@@ -9,11 +9,11 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor Dropdown Menu Component
+# Getting started with Blazor Dropdown Menu component
 
-This section briefly explains about how to include [Blazor DropDown Menu](https://www.syncfusion.com/blazor-components/blazor-dropdown-menu) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This guide explains how to integrate the [Blazor Dropdown Menu](https://www.syncfusion.com/blazor-components/blazor-dropdown-menu) component into a Blazor WebAssembly app using Visual Studio or Visual Studio Code.
 
-To get start quickly with Dropdown Menu Component using Blazor, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownMenu) sample:
+Watch the [Dropdown Menu getting started video tutorial](https://www.youtube.com/watch?v=LKszhsAVuHc) or explore the [GitHub sample project](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownMenu) to see the completed application.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=LKszhsAVuHc"%}
@@ -26,13 +26,13 @@ To get start quickly with Dropdown Menu Component using Blazor, you can check on
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio
+## Create a new Blazor app in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SplitButtons and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SplitButtons and Themes NuGet packages
 
-To add **Blazor DropDown Menu** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SplitButtons](https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add the **Blazor Dropdown Menu** component, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install [Syncfusion.Blazor.SplitButtons](https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, install them with the Package Manager console:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -43,7 +43,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [NuGet.org](https://www.nuget.org/packages?q=syncfusion.blazor). For the list of available packages and component details, see [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 {% endtabcontent %}
 
@@ -53,11 +53,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio Code
+## Create a new Blazor app in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a WebAssembly app from the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>) using the following commands:
 
 {% tabs %}
 
@@ -70,11 +70,11 @@ cd BlazorApp
 
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SplitButtons and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SplitButtons and Themes NuGet packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.SplitButtons](https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+* Ensure in the project root directory that contains the `.csproj` file.
+* Run the following commands to install the [Syncfusion.Blazor.SplitButtons](https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages and restore dependencies.
 
 {% tabs %}
 
@@ -88,15 +88,15 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [NuGet.org](https://www.nuget.org/packages?q=syncfusion.blazor). For the list of available packages and component details, see [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SplitButtons` namespace.
+Open **~/_Imports.razor** and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SplitButtons` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -107,7 +107,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Next, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **~/Program.cs**.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
@@ -131,7 +131,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script are provided via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the references in the `<head>` section of **~/wwwroot/index.html**:
 
 ```html
 <head>
@@ -144,7 +144,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Dropdown Menu component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown Menu component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dropdown Menu component to **~/Pages/Index.razor**.
 
 {% tabs %}
 {% highlight razor %}
@@ -160,14 +160,14 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown Menu co
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown Menu component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dropdown Menu component renders in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTjshOAyMLHrtb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownMenu Component](./images/blazor-dropdownmenu-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTjshOAyMLHrtb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Menu component](./images/blazor-dropdownmenu-component.png)" %}
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-N> You can also explore our [Blazor Dropdown Menu example](https://blazor.syncfusion.com/demos/buttons/dropdown-menu?theme=bootstrap5) that shows you how to render and configure the dropdown menu.
+N> Explore the [Blazor Dropdown Menu example](https://blazor.syncfusion.com/demos/buttons/dropdown-menu?theme=bootstrap5) to learn how to render and configure the dropdown menu.

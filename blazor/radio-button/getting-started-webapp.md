@@ -267,4 +267,4 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-N> You can also explore our [Blazor Radio Button Example](https://blazor.syncfusion.com/demos/buttons/radio-button) that shows you how to render and configure the Radio Button.
+N> Explore the [Blazor Radio Button Example](https://blazor.syncfusion.com/demos/buttons/radio-button) that that shows how to render and configure the Radio Button.
