@@ -13,7 +13,8 @@ The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://w
 
 This guide provides detailed instructions for integrating the DataGrid into a **Blazor Server application** using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), or the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). It includes setup steps, configuration details, and usage examples to assist in building robust applications.
 
-> For advanced integration assistance, refer to [AI Coding Assistant Overview](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview).
+> Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?
+Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 {% tabcontents %}
 
@@ -94,7 +95,7 @@ cd BlazorApp
 
 N> For other **interactive render modes** and **interactivity locations**, refer to Render Modes [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-## ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes in Visual Studio Code
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes in Visual Studio Code
 
 To integrate the Blazor DataGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages using the **integrated terminal**:
 
@@ -155,7 +156,7 @@ cd BlazorApp
 >* [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
 >* [Create Blazor App Tutorial](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create)
 
-## ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes using .NET CLI
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes using .NET CLI
 
 To integrate the Blazor DataGrid component in a **Blazor Server App** using the **.NET CLI**:
 

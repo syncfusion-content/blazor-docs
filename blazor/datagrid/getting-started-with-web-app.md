@@ -13,7 +13,8 @@ The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://w
 
 This guide provides detailed instructions for integrating the DataGrid into a **Blazor Web App** using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), or the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). It includes setup steps, configuration details, and usage examples to assist in building robust applications.
 
-> For advanced integration assistance, refer to [AI Coding Assistant Overview](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview).
+> Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?
+Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 {% tabcontents %}
 

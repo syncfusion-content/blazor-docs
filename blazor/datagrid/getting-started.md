@@ -11,7 +11,8 @@ documentation: ug
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in your Blazor webAssembly app using Visual Studio, Visual Studio code and .NET CLI.
 
-> For advanced integration assistance, refer to [AI Coding Assistant Overview](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview).
+> Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?
+Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 {% tabcontents %}
 
@@ -88,7 +89,7 @@ cd BlazorApp
 
 {% endtabs %}
 
-## ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes in Visual Studio Code
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes in Visual Studio Code
 
 To integrate the Blazor DataGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages using the **integrated terminal**:
 
@@ -151,7 +152,7 @@ cd BlazorApp
 >* [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
 >* [Create Blazor App Tutorial](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create)
 
-## ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes using .NET CLI
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes using .NET CLI
 
 To integrate the Blazor DataGrid component in a **Blazor WebAssembly App** using the **.NET CLI**:
 
