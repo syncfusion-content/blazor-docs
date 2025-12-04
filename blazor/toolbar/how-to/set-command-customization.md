@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Set command customization in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about how to set command customization in Syncfusion Blazor Toolbar component and more.
+title: Set Items Customization in Blazor Toolbar Component | Syncfusion
+description: Checkout and learn here all about how to set Items customization in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Set command customization in Blazor Toolbar Component
+# Set Items Customization in Blazor Toolbar Component
 
-The `HtmlAttributes` property of the Toolbar item is used to set the HTML attributes ('ID', 'class', 'style' ,'role') for the commands.
+The `HtmlAttributes` property of a Toolbar item sets HTML attributes (such as `id`, `class`, `style`, and `role`) for its associated elements.
 
-When style attributes are added, if the same attributes were already present, they will be replaced. This is not so in the case of `class` attribute. Classes will be added to the element instead of replacing the existing ones.
+When `style` attributes are added, if existing `style` attributes are present, the new ones will replace them. This behavior differs for the `class` attribute; new classes are added to the element without replacing existing ones.
 
-Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property.
+Single or multiple CSS classes can be applied to Toolbar items using the `ToolbarItem`'s `CssClass` property.
 
 ```csharp
 
@@ -49,4 +49,4 @@ Single or multiple CSS classes can be added to the Toolbar commands using the To
 
 ```
 
-![Blazor Toolbar with Custom Command](../images/blazor-toolbar-custom-command.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLeWXiDguQHpcdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar with Custom Items](../images/blazor-toolbar-custom-command.png)" %}

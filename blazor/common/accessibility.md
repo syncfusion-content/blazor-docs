@@ -252,7 +252,7 @@ AI AssistView
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
----
+<a href="https://blazor.syncfusion.com/accessibility/ai-assistview" target="_blank">Demo</a>
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/ai-assistview/accessibility" target="_blank">Documentation</a>
@@ -536,6 +536,41 @@ Chart
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/chart/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Chat UI
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/chat-ui" target="_blank">Demo</a>
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/chat-ui/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1004,7 +1039,7 @@ DocumentEditor
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">

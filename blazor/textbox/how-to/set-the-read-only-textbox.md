@@ -9,7 +9,7 @@ documentation: ug
 
 # Set the Read-only TextBox in Blazor TextBox Component
 
-The following example demonstrates how to set `Readonly` in TextBox Component. This can be achieved by using [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property.
+Set the TextBox to read-only to prevent editing while still allowing focus and selection. This can be achieved using the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Readonly) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

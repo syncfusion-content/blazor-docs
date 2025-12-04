@@ -9,17 +9,15 @@ documentation: ug
 
 # Contextual tabs in Blazor Ribbon component
 
-Contextual tabs in the Blazor Ribbon are dynamic tabs that appear only when needed, based on the user's context—such as selecting a specific element like an image, table, or chart. Once displayed, they provide a set of relevant tools and commands. These tabs support all built-in and custom Ribbon items.
+The Ribbon Contextual tabs are similar to the Ribbon tabs that are displayed on demand based on their needs, such as an image or a table tabs. It supports adding all built-in and custom Ribbon items to perform specific actions.
 
 ## Controlling tab visibility 
 
 You can utilize the `Visible` property to control the visibility of each contextual tab. By default the value is `false`.
 
-## Adding Contextual Tabs
+## Adding contextual tabs
 
-Define contextual tabs within the `<RibbonContextualTabs>` tag directive. Inside, each `<RibbonContextualTab>` group can contain a collection of one or more `RibbonTab` components that will be displayed together when the contextual group becomes active.
-
-The following example demonstrates how to add a "Shape Format" contextual tab, which is initially hidden.
+You can utilize the `RibbonContextualTabs` tag directive to define contextual tabs within the Ribbon. This allows you to group collection of Ribbon tabs and display them only when required.
 
 {% tabs %}
 {% highlight razor %}
@@ -121,7 +119,7 @@ The following example demonstrates how to add a "Shape Format" contextual tab, w
 
 ## Selected tabs
 
-Use the `IsSelected` property to specify which `RibbonContextualTab` group is active. When a contextual group is visible, setting `IsSelected` to `true` for a specific tab within that group brings it into focus. By default, its value is `false`.
+By using the `IsSelected` property you can control the selected state of each contextual tab and indicates which tab is currently active when set to `true`. By default the value is `false`.
 
 {% tabs %}
 {% highlight razor %}
@@ -194,17 +192,15 @@ Use the `IsSelected` property to specify which `RibbonContextualTab` group is ac
 
 ![Ribbon Selected Tabs](./images/contextual-tabs/selected-tabs.png)
 
-## Controlling Visibility and Selection
+## Methods
 
-The visibility and selection state of contextual tabs can be managed both declaratively through markup and programmatically
+### Show tab
 
-### Visibility
+You can use the `ShowTabAsync` method to programmatically display a specific contextual tab in the Ribbon.
 
-The visibility of a `RibbonContextualTab` can be controlled in two ways:
+### Hide tab
 
-*   **`ShowTabAsync` and `HideTabAsync` Methods**: To programmatically show or hide a specific tab within any contextual group, use the `ShowTabAsync` and `HideTabAsync` methods. These methods require the `ID` of the target `RibbonTab`.
-
-The example below demonstrates how to use these methods to control a tab's visibility.
+You can use the `HideTabAsync` method allows you to hide the specific contextual tab in the Ribbon.
 
 {% tabs %}
 {% highlight razor %}

@@ -9,14 +9,14 @@ documentation: ug
 
 # Resizing in Blazor Ribbon component
 
-The Ribbon dynamically adjusts item sizes when the available width changes. As space increases, items expand; as space decreases, items reduce in size. Resizing is supported in both Classic mode and Simplified mode. The sizes that an item can take during resizing can be constrained using the AllowedSizes property.
+The Ribbon dynamically adjusts its elements during resizing. When the ribbon's size increases, elements expand, and when it decreases, elements collapse. Resizing is supported in both Classic and Simplified modes, with the flexibility to customize the order in which elements resize.
 
-- **Classic mode**: During resizing, item sizes adjust sequentially based on the available width of the tab content in the order: Large → Medium → Small (and vice versa).
-- **Simplified mode**: During resizing, item sizes adjust sequentially in the order: Medium → Small (and vice versa). In Simplified mode, the Large size is not used.
+- **Classic Mode**: During resizing, the size of items adjusts sequentially based on the available width of the tab content in the order: `Large → Medium → Small` (and vice versa).  
+- **Simplified Mode**: During resizing, the size of items adjusts sequentially in the order: `Medium → Small` (and vice versa).
 
 ## Defining items allowed size
 
-Use the [AllowedSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_AllowedSizes) property on a [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) to restrict the sizes that the item can take during resizing. When set, the item only switches among the specified sizes, regardless of overall Ribbon resizing.
+You can use the [AllowedSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_AllowedSizes) property within [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) to specify the sizes that an item can maintain during resizing. When set, the item's size remains constant within the defined value, irrespective of resizing.
 
 {% tabs %}
 {% highlight razor %}
@@ -53,4 +53,4 @@ Use the [AllowedSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 
 ## Defining items active size
 
-The [ActiveSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ActiveSize) property on a [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) indicates the current size of the rendered item. By default, the value is Medium. This property is read-only and reflects the item’s current state during resizing.
+The [ActiveSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_ActiveSize) property within [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) indicates the current size of the rendered item. By default, the value is `Medium`. It is a read-only property.

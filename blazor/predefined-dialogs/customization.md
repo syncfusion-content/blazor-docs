@@ -11,17 +11,17 @@ documentation: ug
 
 ## Customize action buttons
 
-You can customize the predefined dialogs buttons by using below properties.
-* [DialogOptions.PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_PrimaryButtonOptions) - Use this property to customize **OK** button text and appearence.
-* [DialogOptions.CancelButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CancelButtonOptions) - Use this property to customize **Cancel** button text and appearence.
+Customize predefined dialog buttons using the following properties:
+* [DialogOptions.PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_PrimaryButtonOptions) - Customizes the primary (OK) button text and appearance.
+* [DialogOptions.CancelButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CancelButtonOptions) - Customizes the secondary (Cancel) button text and appearance.
 
-Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the predefined dialog action buttons.
+Use the following code snippet for **alert.razor**, **confirm.razor**, and **prompt.razor** to customize predefined dialog action buttons.
 
-For alert dialog , customized the default dialog button content as `Okay` by using the [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
+For the alert dialog, the default button content is customized to `Okay` using the [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
 
-For confirm dialog, customized the default dialog buttons content as `Yes` and `No` by using the `DialogButtonOptions.Content` property and also customized the dialog button icons by using [DialogButtonOptions.IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_IconCss) property.
+For the confirm dialog, the default button content is customized to `Yes` and `No` using the `DialogButtonOptions.Content` property, and the button icons are customized using the [DialogButtonOptions.IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_IconCss) property (provide CSS class names for icons).
 
-For prompt dialog , customized the default dialog buttons content as `Connect` and `Close` by using [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
+For the prompt dialog, the default button content is customized to `Connect` and `Close` using the [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
 
 {% tabs %}
 
@@ -43,21 +43,21 @@ For prompt dialog , customized the default dialog buttons content as `Connect` a
 
 **Alert**
 
-![Alert action buttons Dialog](./images/blazor-alert-action-button.png)
+![Alert dialog with customized action button](./images/blazor-alert-action-button.png)
 
 **Confirm**
 
-![Confirm action buttons Dialog](./images/blazor-confirm-action-button.png)
+![Confirm dialog with customized buttons](./images/blazor-confirm-action-button.png)
 
 **Prompt**
 
-![Prompt action buttons Dialog](./images/blazor-prompt-action-button.png)
+![Prompt dialog with customized Connect and Close buttons](./images/blazor-prompt-action-button.png)
 
 ## Show or hide dialog close button 
 
-You can show or hide close button in dialog using the [DialogOptions.ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ShowCloseIcon) property.The default value is `false`.
+Show or hide the close button in predefined dialogs using the [DialogOptions.ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ShowCloseIcon) property. The default value is `false`.
 
-Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the show or hide dialog close button.
+Use the following code snippet for **alert.razor**, **confirm.razor**, and **prompt.razor** to show or hide the dialog close button.
 
 {% tabs %}
 
@@ -79,21 +79,21 @@ Use the following code snippet for **alert.razor**, **confirm.razor** and **prom
 
 **Alert**
 
-![Alert close icon Dialog](./images/blazor-alert-close-button.png)
+![Alert dialog showing the close icon](./images/blazor-alert-close-button.png)
 
 **Confirm**
 
-![Confirm close icon Dialog](./images/blazor-confirm-close-button.png)
+![Confirm dialog showing the close icon](./images/blazor-confirm-close-button.png)
 
 **Prompt**
 
-![Prompt close icon Dialog](./images/blazor-prompt-close-button.png)
+![Prompt dialog showing the close icon](./images/blazor-prompt-close-button.png)
 
 ### Customize dialog content
 
-You can load custom content in predefined dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property. 
+Load custom content in predefined dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property.
 
-Use the following code to customize the dialog content and render the custom TextBox component inside the prompt dialog to obtain the username from the user using the `@bind-Value` property.
+Use the following code to customize the dialog content and render a custom TextBox component inside the prompt dialog to obtain a username from the user using the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -103,4 +103,4 @@ Use the following code to customize the dialog content and render the custom Tex
 {% endhighlight %}
 {% endtabs %}
 
-![Customize Prompt Dialog](./images/blazor-customize-dialog.png)
+![Prompt dialog with custom content for username input](./images/blazor-customize-dialog.png)

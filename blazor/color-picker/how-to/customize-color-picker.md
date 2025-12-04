@@ -11,7 +11,7 @@ documentation: ug
 
 ## Custom palette
 
-By default, the Palette will be rendered with default colors. To load custom colors in the palette, specify the colors in the [PresetColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_PresetColors) property. To customize the color palette, add a custom class to palette tiles using [OnTileRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_OnTileRender) event.
+By default, the palette renders with a set of predefined colors. To load custom colors, set the [PresetColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_PresetColors) property. To further customize palette tiles (for example, to add a class for styling), use the [OnTileRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_OnTileRender) event.
 
 ```cshtml
 
@@ -76,15 +76,14 @@ By default, the Palette will be rendered with default colors. To load custom col
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrKsLhcASTCtgHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ColorPicker with Custom Palette](./../images/blazor-colorpicker-with-custom-palette.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrKsLhcASTCtgHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker with Custom Palette](./../images/blazor-colorpicker-with-custom-palette.png)" %}
 
 ## Hide input area from picker
 
-By default, the input area will be rendered in Color Picker. To hide the input area from it, add `e-hide-value` class to Color Picker using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_CssClass) property.
+By default, the input area is rendered in the Color Picker. To hide the input area, add the built-in class `e-hide-value` via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_CssClass) property. This hides the input field visually while retaining core picker functionality.
 
-In the following sample, the Color Picker is rendered without input area.
+In the following sample, the Color Picker is rendered without the input area.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -92,13 +91,11 @@ In the following sample, the Color Picker is rendered without input area.
 <h4>Choose a color</h4>
 <SfColorPicker ModeSwitcher="false" CssClass="e-hide-value"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKMLLwqoJqULKi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Hide Input Area in Blazor ColorPicker](./../images/blazor-colorpicker-hide-input.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKMLLwqoJqULKi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hide Input Area in Blazor ColorPicker](./../images/blazor-colorpicker-hide-input.png)" %}
 
 ## Custom handle
 
-Color Picker handle shape and UI can be customized. Here, we have customized the handle as svg icon. Similarly, you can customize the handle based on your requirement.
+Customize the Color Picker handle shape and UI with CSS. In this example, the handle is replaced with an SVG icon encoded as a data URL. Similar techniques can be used to style the handle to match application branding. For broad compatibility, verify styles across themes and consider contrast and focus visibility.
 
 The following sample shows the customized Color Picker handle.
 
@@ -126,6 +123,4 @@ The following sample shows the customized Color Picker handle.
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKWrLGKyTIhQGO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Blazor ColorPicker Handle Shape](./../images/blazor-colorpicker-handle-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKWrLGKyTIhQGO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor ColorPicker Handle Shape](./../images/blazor-colorpicker-handle-customization.png)" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Labels in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and customize Data Labels in Syncfusion Blazor Charts component.
+description: Checkout and learn here all about the Data Labels in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,14 +9,14 @@ documentation: ug
 
 # Data Labels in Blazor Charts Component
 
-[Data labels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html) can be added to a [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) by enabling the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) option in the data label settings. Labels automatically organize themselves to avoid overlap.
+[Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html) can be added to a [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) by enabling the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) option in the data label settings. By default, the labels will organize themselves intelligently without overlapping.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column">
@@ -27,7 +27,7 @@ documentation: ug
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -36,21 +36,20 @@ documentation: ug
 	
     public List<Data> WeatherReports = new List<Data>
 	{
-        new Data { X = "Jan", Y = 3 },
-        new Data { X = "Feb", Y = 3.5 },
-        new Data { X = "Mar", Y = 7 },
-        new Data { X = "Apr", Y = 13.5 }
+        new Data{ X= "Jan", Y= 3 },
+        new Data{ X= "Feb", Y= 3.5 },
+        new Data{ X= "Mar", Y= 7 },
+        new Data{ X= "Apr", Y= 13.5 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVIZYrIfXsIMOJL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Chart with Data Label](images/data-label/blazor-chart-data-label.png)
 
 ## Position
 
-Set the label position using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Position) property: [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPosition.html#Syncfusion_Blazor_Charts_LabelPosition_Top), [Middle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPosition.html#Syncfusion_Blazor_Charts_LabelPosition_Middle), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPosition.html#Syncfusion_Blazor_Charts_LabelPosition_Bottom), or [Outer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPosition.html#Syncfusion_Blazor_Charts_LabelPosition_Outer). The `Outer` position applies only to column and bar series.
+Using [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Position) property, the label can be placed either on [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPosition.html#Syncfusion_Blazor_Charts_LabelPosition_Top), [Middle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPosition.html#Syncfusion_Blazor_Charts_LabelPosition_Middle), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPosition.html#Syncfusion_Blazor_Charts_LabelPosition_Bottom) or [Outer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPosition.html#Syncfusion_Blazor_Charts_LabelPosition_Outer).
 
 ```cshtml
 
@@ -77,10 +76,10 @@ Set the label position using the [Position](https://help.syncfusion.com/cr/blazo
 	
     public List<Data> WeatherReports = new List<Data>
     {
-        new Data { X = "Jan", Y = 3 },
-        new Data { X = "Feb", Y = 3.5 },
-        new Data { X = "Mar", Y = 7 },
-        new Data { X = "Apr", Y = 13.5 }
+        new Data{ X= "Jan", Y= 3 },
+        new Data{ X= "Feb", Y= 3.5 },
+        new Data{ X= "Mar", Y= 7 },
+        new Data{ X= "Apr", Y= 13.5 }
     };
 }
 
@@ -92,18 +91,18 @@ N> The position `Outer` is applicable only for column and bar series.
 
 ## Template
 
-Format label content using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template) option. Use placeholders like **${point.x}** and **${point.y}** to display data point values.
+Label content can be formatted by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template) option. Inside the template, one can add the placeholder text **${point.x}** and **${point.y}** to display the corresponding data point value.
 
 ## Text mapping
 
-Map text from a datasource to a data label using the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Name) property.
+The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Name) property can be used to map text from a datasource to a data label.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column">
@@ -114,7 +113,7 @@ Map text from a datasource to a data label using the [Name](https://help.syncfus
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -124,10 +123,10 @@ Map text from a datasource to a data label using the [Name](https://help.syncfus
 
     public List<Data> WeatherReports = new List<Data> 
 	{
-	   new Data { X = "Jan", Y = 3, Text = "January" },
-	   new Data { X = "Feb", Y = 3.5, Text = "February" },
-	   new Data { X = "Mar", Y = 7, Text = "March" },
-	   new Data { X = "Apr", Y = 13.5, Text = "April" }
+	   new Data{ X= "Jan", Y= 3, Text= "January" },
+	   new Data{ X= "Feb", Y= 3.5, Text= "February" },
+	   new Data{ X= "Mar", Y= 7, Text= "March" },
+	   new Data{ X= "Apr", Y= 13.5, Text= "April" }
 	};
 }
 
@@ -137,14 +136,15 @@ Map text from a datasource to a data label using the [Name](https://help.syncfus
 
 ## Format
 
-Format data labels using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. Supported formats include 'N1', 'P1', and 'C1'.
+Data label for the chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
     
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Line" >
@@ -155,7 +155,7 @@ Format data labels using the [Format](https://help.syncfusion.com/cr/blazor/Sync
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -165,10 +165,10 @@ Format data labels using the [Format](https://help.syncfusion.com/cr/blazor/Sync
 
     public List<Data> WeatherReports = new List<Data>
     {
-        new Data { X = "Jan", Y = 3, Text = "January" },
-        new Data { X = "Feb", Y = 3.5, Text = "February" },
-        new Data { X = "Mar", Y = 7, Text = "March" },
-        new Data { X = "Apr", Y = 13.5, Text = "April" }
+        new Data{ X= "Jan", Y= 3, Text= "January" },
+        new Data{ X= "Feb", Y= 3.5, Text= "February" },
+        new Data{ X= "Mar", Y= 7, Text= "March" },
+        new Data{ X= "Apr", Y= 13.5, Text= "April" }
     };
 }
 
@@ -178,14 +178,14 @@ Format data labels using the [Format](https://help.syncfusion.com/cr/blazor/Sync
 
 ## Margin
 
-Apply [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Margin) to create space around the data label.
+The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Margin) option can be applied to the data label to create space around the element.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column">
@@ -222,14 +222,14 @@ Apply [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 
 ## Customization
 
-Customize data label color using the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Fill) property. Adjust border color and width with [ChartDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabelBorder.html). Apply rounded corners using [Rx](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Rx) and [Ry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Ry).
+Data label can be customized using [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Fill) property and the color and width of data label border can be customized based on the specified value in [ChartDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabelBorder.html). Rounded corners can also be applied using [Rx](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Rx) and [Ry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Ry) properties.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />   
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>   
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" >
@@ -242,7 +242,7 @@ Customize data label color using the [Fill](https://help.syncfusion.com/cr/blazo
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class Data
     {
         public string X { get; set; }
@@ -252,10 +252,10 @@ Customize data label color using the [Fill](https://help.syncfusion.com/cr/blazo
 
     public List<Data> WeatherReports = new List<Data> 
 	{
-	   new Data { X = "Jan", Y = 3, Text = "January" },
-	   new Data { X = "Feb", Y = 3.5, Text = "February" },
-	   new Data { X = "Mar", Y = 7, Text = "March" },
-	   new Data { X = "Apr", Y = 13.5, Text = "April" }
+	   new Data{ X= "Jan", Y= 3, Text= "January" },
+	   new Data{ X= "Feb", Y= 3.5, Text= "February" },
+	   new Data{ X= "Mar", Y= 7, Text= "March" },
+	   new Data{ X= "Apr", Y= 13.5, Text= "April" }
 	};
 }
 

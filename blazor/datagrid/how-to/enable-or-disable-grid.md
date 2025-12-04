@@ -9,11 +9,11 @@ documentation: ug
 
 # Enable or disable Blazor DataGrid and its actions
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be dynamically enabled or disabled by toggling a button. This feature is useful to restrict user interaction with the Grid during certain application states or processes. This is achieved by applying a CSS class to restrict interaction and setting a `attribute` for styling.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be dynamically enabled or disabled by toggling a button. This is useful to restrict user interaction with the Grid during certain application states or processes. The approach below disables interaction at the UI level by applying a CSS class to a wrapper and setting an attribute for styling or accessibility.
 
 To implement this:
 
-* Define a CSS class `(.disabled)` to visually and functionally disable the Grid.
+* Define a CSS class on the wrapper (`.grid-wrapper.disabled`) to visually and functionally disable the Grid.
 
 ```css
 .grid-wrapper.disabled {
@@ -23,22 +23,19 @@ To implement this:
     cursor: not-allowed;
 }
 ```
-* Bind a boolean flag `isGridDisabled` to update the wrapper class and Grid attributes.
-
+* Bind a boolean flag (`isGridDisabled`) to update the wrapper class and an attribute (for example, `aria-disabled`) on the Grid or wrapper.
 * Use a button to toggle the flag and control the Grid state.
-
-The following example demonstrates how to enable or disable the Grid and its actions using a button:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfButton CssClass="e-flat" @onclick="ToggleGrid">
-    @(isGridDisabled? "Enable Grid" : "Disable Grid")
+<SfButton CssClass="e-flat" OnClick="ToggleGrid">
+    @(isGridDisabled ? "Enable Grid" : "Disable Grid")
 </SfButton>
 
-<div class="@(isGridDisabled? "grid-wrapper disabled" : "grid-wrapper")">
+<div class="@(isGridDisabled ? "grid-wrapper disabled" : "grid-wrapper")">
     <SfGrid DataSource="@Orders" @attributes="@GridAttributes" AllowPaging="true" Height="273px" Toolbar="@Toolbar">
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
         <GridColumns>
@@ -60,21 +57,21 @@ The following example demonstrates how to enable or disable the Grid and its act
 </style>
 
 @code {
-    private bool isGridDisabled= false;
+    private bool isGridDisabled = false;
     private Dictionary<string, object> GridAttributes { get; set; } = new();
     public List<OrderDetails> Orders { get; set; }
     private List<string> Toolbar = new() { "Add", "Edit", "Delete", "Update", "Cancel" };
 
     protected override void OnInitialized()
     {
-        GridAttributes.Add("disable", "no");
+        GridAttributes.Add("aria-disabled", "false");
         Orders = OrderDetails.GetAllRecords();
     }
 
     private void ToggleGrid()
     {
-        isGridDisabled= !IsGridDisabled;
-        GridAttributes["disable"] = isGridDisabled? "yes" : "no";
+        isGridDisabled = !isGridDisabled;
+        GridAttributes["aria-disabled"] = isGridDisabled ? "true" : "false";
     }
 
     public class Order
@@ -85,7 +82,6 @@ The following example demonstrates how to enable or disable the Grid and its act
         public double? Freight { get; set; }
     }
 }
-
 {% endhighlight %}
 {% highlight c# tabtitle="OrderDetails.cs" %}
 
@@ -130,8 +126,7 @@ public class OrderDetails
     public DateTime OrderDate { get; set; }
     public string ShipCountry { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjheZIiyqvGbDYvc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLoXYBJqYHSSFBl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

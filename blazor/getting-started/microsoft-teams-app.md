@@ -9,51 +9,51 @@ documentation: ug
 
 # Getting Started with Microsoft Teams Application
 
-This section explains how to create and run the first Microsoft Teams application (Tab App) with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to create and run a Microsoft Teams application (Tab App) with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Prerequisites
 
-* Visual Studio 2022 [> 17.13 version] with the required work loads (Visual studio Installer -> Workloads -> ASP.NET and web development -> Select Microsoft 365 Agents development tools from Installation details).
+* Visual Studio 2022 (version 17.13 or later) with the required workloads. In Visual Studio Installer, select Workloads → ASP.NET and web development, then enable Microsoft 365 Agents development tools under Installation details.
 
 
-    ![workload installation](images\MSTeams\workload-installation.png)
+    ![Visual Studio workloads installation for Microsoft 365 Agents](images/MSTeams/workload-installation.png)
 
-* Microsoft Teams Application
+* Microsoft Teams application
 
-* Microsoft Edge or Google Chrome browser with developer tools.
+* Microsoft Edge or Google Chrome with developer tools
 
-* In the Teams client, go to the Apps icon > Manage your apps > Upload an app, and check for the "Upload a custom app" option to confirm if custom app upload is enabled. Contact Teams administrator, if you don't have the option to upload a custom app.
+* In the Teams client, go to Apps icon → Manage your apps → Upload an app, and confirm that "Upload a custom app" is available. Contact a Teams administrator if the option is not available.
 
-    ![custom upload](images\MSTeams\custom-upload.png)
+    ![Verify Teams custom app upload permission](images/MSTeams/custom-upload.png)
 
 ## Create a new Microsoft Team Application with Tab using Visual Studio
 
 1. Launch Visual Studio 2022, and in the start window click **Create a new project**.
 2. Search for Microsoft 365 Agents app in Visual Studio template. Select **Microsoft 365 Agents** and click on Next.
 
-    ![Create Microsoft Teams App](images\MSTeams\create-msteams-app.png)
+    ![Create Microsoft Teams App](images/MSTeams/create-msteams-app.png)
 3. Configure the project with required project name, select the location to save the application and click on Create.
 
-    ![Configure Microsoft Teams App](images\MSTeams\configure-msteams-app.png)
+    ![Configure Microsoft Teams App](images/MSTeams/configure-msteams-app.png)
 4. Select the type of Microsoft 365 Agent application to create. In this example, **Microsoft application with Tab** is selected.
-![Select type of Microsoft Teams Application](images\MSTeams\select-type-msteams-app.png)
+![Select type of Microsoft Teams Application](images/MSTeams/select-type-msteams-app.png)
 5. Wait for the project to be created, and its dependencies to be restored, then the project structure looks like below.
 
-    ![Microsoft Teams project structure](images\MSTeams\msteams-project-structure.png)
+    ![Microsoft Teams project structure](images/MSTeams/msteams-project-structure.png)
 
 ## Build and run the first Microsoft Teams Application
 
 1. To configure the project with the Microsoft teams application, right Click on the M365 Agent Project and Select Microsoft M365 Account.
 
-    ![Configure dependecies with MS Teams Application](images\MSTeams\configure-teams-dependencies.png)
-2. After configuring successfully, it displays the window with Microsoft 365 Account. If you already have an account Select the available Office 365 account and click on continue. If you dont have account, create a new account and add the newly created account and click on continue.
+    ![Configure dependencies with Microsoft Teams application](images/MSTeams/configure-teams-dependencies.png)
+2. After configuration completes, a Microsoft 365 Account window appears. If an account exists, select the Office 365 account and click Continue. If you don't have an account, create a new account, add it, and then click Continue.
 
-    ![Select the MS365 account to SignIn](images\MSTeams\ms365-account-select.png)
-3. After successful login. Click on Debug -> Start Debugging or click on F5 to run the application.
-4. Once the application is build successfully, prompts the output window with create My365Agent application. Click on Add in the created application
-![Newly created teams application](images\MSTeams\new-teams-app.png)
-5. On clicking on "Open" the new Microsoft application with personal Tab is created.
-![New Teams application with Personal Tab](images\MSTeams\new-app-personal-tab.png)
+    ![Select a Microsoft 365 account to sign in](images/MSTeams/ms365-account-select.png)
+3. After successful sign-in, select Debug → Start Debugging or press F5 to run the application.
+4. After a successful build, the output window prompts to create the My365Agent application. Click Add to add the created application.
+![Newly created Teams application](images/MSTeams/new-teams-app.png)
+5. Click Open to create the new Microsoft application with a personal tab.
+![New Teams application with a personal tab](images/MSTeams/new-app-personal-tab.png)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban and Themes NuGet in the App
 
@@ -68,7 +68,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
@@ -117,7 +117,7 @@ var app = builder.Build();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-* For **.NET 8 and .NET 9** Microsoft Teams tab app, include it in the **~/Components/Pages/App.razor** file.
+* For **.NET 8, .NET 9 and .NET 10** Microsoft Teams tab app, include it in the **~/Components/Pages/App.razor** file.
 
 ```html
 <head>
@@ -208,6 +208,6 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban comp
 {% endhighlight %}
 {% endtabs %}
 
-![Microsoft Teams Application with Syncfusion Blazor controls](images\MSTeams\output-msteams-syncfusion.png)
+![Microsoft Teams application with Syncfusion Blazor controls](images/MSTeams/output-msteams-syncfusion.png)
 
-N> [View the complete Microsoft Teams Application with Blazor Syncfusion<sup style="font-size:70%">&reg;</sup> Controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
+N> [View the complete Microsoft Teams application with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
