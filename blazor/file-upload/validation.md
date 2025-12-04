@@ -9,11 +9,11 @@ documentation: ug
 
 # Validation in Blazor File Upload Component
 
-The uploader component validate the selected files size and extension using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions), [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize) and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) properties. The files can be validated before uploading to the server and can be ignored on uploading. Also, you can validate the files by setting the HTML attributes to the original input element. The validation process occurs on drag-and-drop the files also.
+The File Upload component validates selected files by type and size using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions), [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize), and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) properties. Validation is applied when files are selected or dragged and dropped. Files that do not meet the criteria can be prevented from uploading. In addition, file type filtering can be reinforced by setting the accept attribute on the underlying input element. Always perform server-side validation as a defense-in-depth measure.
 
 ## File type
 
-You can allow the specific files alone to upload using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files to match against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute to accept the original input element.
+Allow only specific file types by setting the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions) property to a comma-separated list of extensions (typically with leading dots). The Uploader filters selected or dropped files against the specified types and proceeds only with matches. Client-side filtering can also be aligned by setting the input’s accept attribute to the same extensions. Matching is case-insensitive.
 
 `SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
@@ -26,12 +26,11 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 </SfUploader>
 ```
 
-
 ![Validation in Blazor FileUpload](./images/blazor-fileupload-validation.png)
 
 ## File size
 
-The uploader component allows you to validate the files based on its size. The validation helps to restrict uploading large files or empty files to the server. The size can be represented in `bytes`. By default, the uploader component allows you to upload **minimum file size** as 0 byte and **maximum file size** as 28.4 MB using the [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize) and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) properties.
+Validate files based on size (in bytes) to prevent empty or very large uploads. By default, the minimum file size is 0 bytes and the maximum is 28.4 MB, which can be overridden using [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize) and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize). Be aware that server infrastructure (for example, Kestrel/IIS/request limits) can impose additional caps, so align client-side limits with server-side configuration.
 
 `SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
@@ -43,7 +42,6 @@ The uploader component allows you to validate the files based on its size. The v
     </UploaderAsyncSettings>
 </SfUploader>
 ```
-
 
 ![Validating File Size in Blazor FileUpload](./images/blazor-fileupload-size-validation.png)
 

@@ -7,8 +7,10 @@ control: ComboBox
 documentation: ug
 ---
 
-# Adding Custom Value to Blazor ComboBox Component
+# Add a custom value to Blazor ComboBox component
 
-You can add custom value to the ComboBox component. When the typed character(s) is not present in the list, a button will be shown in the popup list. By clicking on this button, the custom value character(s) get added to the existing list as a new item. Default value of [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) is `true`.
+Enable users to enter values that are not present in the data by using the [AllowCustom property on SfComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom). When the typed text does not match any items, an “Add” option appears in the popup. Selecting this option commits the custom value. The default value of AllowCustom is `true`.
+
+To persist the new entry to the underlying data source, handle application logic (for example, in value change handling) to add the custom value to the collection. Users can also commit a custom value with the keyboard (such as pressing Enter) when appropriate.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBACVLQKFyiyoKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.png)" %}

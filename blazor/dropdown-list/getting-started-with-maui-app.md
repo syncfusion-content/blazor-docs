@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DropDownList Component
 
-This section explains you through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDownList component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
+This section guides through integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDownList component into a .NET MAUI Blazor application using both Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -17,15 +17,19 @@ This section explains you through the step-by-step process of integrating the Sy
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Install the Mobile development with .NET workload for Visual Studio to use .NET MAUI project templates. For details, refer to the .NET MAUI installation guide and the Syncfusion Blazor extension documentation:
+- https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin
+- https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the app
 
-To add **Blazor DropDownList**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor DropDownList component, open the NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then install Syncfusion.Blazor.DropDowns and Syncfusion.Blazor.Themes:
+- https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns
+- https://www.nuget.org/packages/Syncfusion.Blazor.Themes
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -36,7 +40,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on NuGet. See the NuGet packages list for available components and details:
+- https://www.nuget.org/packages?q=syncfusion.blazor
+- https://blazor.syncfusion.com/documentation/nuget-packages
 
 {% endtabcontent %}
 
@@ -44,11 +50,13 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Ensure the .NET SDK is installed and the .NET MAUI workloads are added via the .NET CLI. For setup guidance, refer to:
+- https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code
+- https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Blazor DropDowns and Themes NuGet in the App
 
@@ -66,7 +74,9 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on NuGet. See the NuGet packages list for available components and details:
+- https://www.nuget.org/packages?q=syncfusion.blazor
+- https://blazor.syncfusion.com/documentation/nuget-packages
 
 {% endtabcontent %}
 
@@ -74,7 +84,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -141,7 +151,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor DropDown List component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown List component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown List component in the ~/Pages/Index.razor file.
 
 {% tabs %}
 {% highlight razor %}
@@ -153,7 +163,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDown List co
 
 ### How to Run the Sample on Windows
 
-Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+Run the sample in Windows Machine mode to launch the .NET MAUI Blazor app on Windows.
 
 ![Blazor DropDownList Component](./images/blazor-dropdownlist-maui-app.png)
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Floating Action Button Component
 
-This section explains the available events in Floating Action Button Component.
+This section explains the events available in the Floating Action Button component. The following events are covered: Created and OnClick.
 
 ## Created
 
-Event triggers after the creation of Floating Action Button.
+Raised after the Floating Action Button has been created and its initial rendering is complete. Use this event to run setup logic or access the component once it is available in the UI.
 
 ```cshtml
 
@@ -32,7 +32,7 @@ Event triggers after the creation of Floating Action Button.
 
 ## OnClick
 
-Event triggers when the Floating Action Button is clicked. Below example shows the Click event of the Floating Action Button.
+Raised when the Floating Action Button is activated by a user action, including mouse click, keyboard activation (Enter/Space), or touch. The example below demonstrates handling the click event.
 
 ```cshtml
 
@@ -53,6 +53,3 @@ Event triggers when the Floating Action Button is clicked. Below example shows t
 }
 
 ```
-
-
-
