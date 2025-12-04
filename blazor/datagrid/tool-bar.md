@@ -15,8 +15,6 @@ The toolbar can be configured with built-in toolbar items or custom items using 
 - An array of strings for built-in items
 - An array of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects for custom items (text, icon, id, tooltip)
 
-The following example demonstrates how to configure toolbar items in the Grid:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -90,9 +88,7 @@ The following example demonstrates how to configure toolbar items in the Grid:
 
 Enable or disable toolbar items dynamically to control which actions are available based on application logic or user interactions.
 
-Toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs. For built-in toolbar items specified with strings, the Grid generates IDs (for example, Grid_Add, Grid_Edit). For custom items created with ItemModel, set the Id property explicitly and use it when enabling or disabling items.
-
-In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) toggles toolbar item availability via a Grid method. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event executes and updates the toolbar items. Verify that the IDs passed match the toolbar item IDs generated for the Grid in the target version.
+Toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs. For built-in toolbar items specified with strings, the Grid generates IDs (for example, **Grid_Add, Grid_Edit**). For custom items created with ItemModel, set the Id property explicitly and use it when enabling or disabling items.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -134,7 +130,7 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
         }
 
     }
-    
+
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Text == "Expand")
@@ -210,8 +206,6 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
 Enable or disable toolbar items based on the selected row so that actions are available only when relevant to the current selection.
 
 Use the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event with the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method to toggle specific items by id during selection. For built-in items, refer to the generated toolbar item IDs (for example, Grid_Add, Grid_Edit, Grid_Delete). For custom items, use the ItemModel Id value. Ensure that the IDs used match the rendered toolbar item IDs in the target version.
-
-The following code example demonstrates enabling or disabling toolbar items based on the selected row data:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -405,4 +399,4 @@ The following example demonstrates changing the background color of the `Add`, `
 
 N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
 
-N> Styling tips: when using CSS isolation, place styles in the component’s .razor.css file. To target inner elements from isolated CSS, use the ::deep selector where appropriate. Consider additional state styles (hover, active, focus-visible, disabled) and high-contrast themes to improve accessibility.
+N> Styling tips: when using CSS isolation, place styles in the component’s **.razor.css** file. To target inner elements from isolated CSS, use the **::deep** selector where appropriate. Consider additional state styles (hover, active, focus-visible, disabled) and high-contrast themes to improve accessibility.

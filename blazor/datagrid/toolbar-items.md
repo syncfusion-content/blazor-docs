@@ -33,8 +33,6 @@ Add them by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfus
 
 N> Built-in item IDs are typically prefixed with the grid ID (for example, Grid_add). Use these IDs in event handlers for robust detection.
 
-The following example demonstrates how to enable built-in toolbar items such as `Print` and `Search` in the DataGrid:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -111,7 +109,7 @@ The following example demonstrates how to enable built-in toolbar items such as 
 
 Showing only icons in the built-in toolbar items allows a compact toolbar layout.
 
-To display only icons, hide the text portion of the buttons using CSS. Consider accessibility: keep an accessible name by providing TooltipText or aria-labels so screen readers still announce the action.
+To show only icons, hide the text part of the buttons using CSS. For accessibility, provide an accessible name by using **TooltipText** or **aria-label** so screen readers can announce the action correctly.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -195,9 +193,7 @@ To display only icons, hide the text portion of the buttons using CSS. Consider 
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing built-in toolbar items, including disabling default actions and executing custom logic when a button is clicked.
 
-Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to intercept actions. Prefer checking args.Item.Id for reliability (IDs are stable and not affected by localization), although Text is also available.
-
-The following example demonstrates disabling and canceling the `Add` button functionality and showing a custom message when the `Add` button is clicked:
+Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to intercept actions. Prefer checking **args.Item.Id** for reliability (IDs are stable and not affected by localization), although Text is also available.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -289,7 +285,7 @@ Adding custom toolbar items to the Syncfusion<sup style="font-size:70%">&reg;</s
 
 Define custom items by setting the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property to a collection of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects, and handle actions in the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
 
-By default, custom toolbar items are positioned on the `left` side. Change the position using the [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel_Align) property of ItemModel. The following example positions **Collapse All** on the `right`:
+By default, custom toolbar items are positioned on the **left** side. Change the position using the [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel_Align) property of ItemModel.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -389,8 +385,6 @@ Combining built-in and custom items provides flexibility to create a toolbar wit
 
 Define the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property as an array that contains both built-in item names (strings) and custom items (objects with properties such as [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Text), [PrefixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_PrefixIcon), and [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Id)).
 
-The following example demonstrates how to use both built-in and custom toolbar items in the DataGrid. Built-in items include **Add**, **Edit**, **Delete**, **Update**, and **Cancel**, and the custom item Click triggers a custom message:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -483,8 +477,6 @@ The following example demonstrates how to use both built-in and custom toolbar i
 Customizing the position of a custom toolbar item modifies its default placement, allowing precise control over layout.
 
 By default, custom toolbar items are aligned on the left. Modify the position by setting the [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel_Align) property of the [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor).
-
-In the following sample, the `Collapse All` item is positioned on the **right**, the `Expand All` item on the **left**, and the `Search` item in the **center**:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -581,11 +573,9 @@ When creating custom toolbar items using the same text as default items (such as
 
 To avoid this behavior and ensure proper functionality:
 
-- Assign a unique `Id` to each custom toolbar item to distinguish it from default items.
-- Use the `Text`, `PrefixIcon`, and `TooltipText` properties of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) to define appearance.
+- Assign a unique **Id** to each custom toolbar item to distinguish it from default items.
+- Use the **Text**, **PrefixIcon**, and **TooltipText** properties of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) to define appearance.
 - Handle actions in `OnToolbarClick` using the Id (or Text, if necessary).
-
-The following sample shows custom toolbar items with text matching default items. These may be disabled when `GridEditSettings` is present because they are considered default items without unique IDs.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -684,8 +674,10 @@ Customize a toolbar item’s tooltip text by adding items externally and setting
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
+
 @code {
     private SfGrid<OrderData> Grid;
+
     public List<OrderData> Orders { get; set; }
     private List<object> ToolbarItems = new List<object>() {
         new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"}, //Here Grid is SfGrid ID.
