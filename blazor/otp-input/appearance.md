@@ -9,11 +9,11 @@ documentation: ug
 
 # Appearance in Blazor OTP Input component
 
-You can also customize the appearance of OTP Input component.
+Customize the appearance of the OTP input component, including input length, disabled state, and visual styles.
 
 ## Setting input length
 
-You can specify the length of OTP by using the [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Length) property. The default value is `4`.
+Specify the length of the OTP by using the [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Length) property. The default value is `4`. This value determines the number of input fields rendered for the OTP.
 
 ```cshtml
 
@@ -27,7 +27,7 @@ You can specify the length of OTP by using the [Length](https://help.syncfusion.
 
 ## Disable inputs
 
-You can disable the OTP Input component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Disabled) property. By default the value is `false`.
+Disable the OTP Input component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Disabled) property. By default, the value is `false`. When disabled, the input fields are non-interactive and display the disabled visual style.
 
 ```cshtml
 
@@ -41,9 +41,9 @@ You can disable the OTP Input component by using the [Disabled](https://help.syn
 
 ## CssClass
 
-You can customize the appearance of the OTP Input component, such as by changing its colors, fonts, sizes or other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_CssClass) property.
+Customize the appearance of the OTP Input component by changing colors, fonts, sizes, and other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_CssClass) property.
 
-The OTP input component supports the following predefined styles that can be defined using the `CssClass` property. You can customize by replacing the `CssClass` property with the below defined class names.
+The OTP input component supports the following predefined styles that can be applied using the `CssClass` property. Replace the `CssClass` value with one of the following class names to apply the corresponding style.
 
 | cssClass | Description |
 | -------- | -------- |

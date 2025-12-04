@@ -9,21 +9,21 @@ documentation: ug
 
 # Styles and Appearances in Blazor ListBox Component
 
-To modify the ListBox appearance, you need to override the default CSS of ListBox component. Find the list of CSS classes and its corresponding section in ListBox component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the ListBox appearance, override the component’s default CSS. The following table lists key CSS classes and the parts of the ListBox they affect. A custom theme can also be generated using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
-|.e-listbox-container | To customize the listbox container |
-|.e-listbox-container .e-list-item | To customize the listbox list items |
-|.e-listbox-container .e-list-item:hover:not(.e-selected):not(.e-disabled) | To customize the listbox list items on hover |
-|.e-listbox-container .e-list-item.e-selected | To customize the listbox selected list item |
-|.e-listboxtool-container .e-listbox-tool | To customize the listbox toolbar |
-|.e-listboxtool-container .e-listbox-tool .e-btn | To customize the listbox toolbar button |
-|.e-listboxtool-container .e-listbox-tool .e-btn .e-btn-icon.e-icons::before | To customize the listbox toolbar icon |
+| `.e-listbox-container` | Customize the ListBox container. |
+| `.e-listbox-container .e-list-item` | Customize ListBox items. |
+| `.e-listbox-container .e-list-item:hover:not(.e-selected):not(.e-disabled)` | Customize ListBox items on hover. |
+| `.e-listbox-container .e-list-item.e-selected` | Customize the selected item. |
+| `.e-listboxtool-container .e-listbox-tool` | Customize the ListBox toolbar (dual ListBox scenarios). |
+| `.e-listboxtool-container .e-listbox-tool .e-btn` | Customize toolbar buttons. |
+| `.e-listboxtool-container .e-listbox-tool .e-btn .e-btn-icon.e-icons::before` | Customize toolbar icons. |
 
 ## Horizontal ListBox
 
-You can use [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_CssClass) property to display the Listbox horizontally.
+Use the [CssClass property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_CssClass) to apply a custom CSS class and display the ListBox horizontally. The sample below applies layout styles via the e-horizontal-listbox class to render items in a single horizontal row.
 
 {% tabs %}
 {% highlight razor %}
@@ -80,6 +80,6 @@ You can use [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Horizontal ListBox](./images/blazor-horizontal-listbox.png)
+![Blazor ListBox displayed horizontally with custom CSS](./images/blazor-horizontal-listbox.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/how-to-set-the-blazor-list-box-items-as-horizontal-list)
+N> [View sample on GitHub](https://github.com/SyncfusionExamples/how-to-set-the-blazor-list-box-items-as-horizontal-list)

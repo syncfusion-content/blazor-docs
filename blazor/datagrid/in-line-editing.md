@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Inline Editing in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Inline Editing in Syncfusion Blazor DataGrid and much more details.
+description: Learn about Inline Editing in Syncfusion Blazor DataGrid, including supported events, configuration options, and customization techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Inline editing in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a powerful in-line editing feature that allows you to edit the cell values of a row directly within the Grid. This feature is especially useful when you want to quickly modify data without the need for a separate edit form. In normal edit mode, the selected record is switched to an editable state, allowing you to modify the cell values and save the changes to the data source.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides in-line editing functionality, enabling direct modification of cell values within the Grid. This approach supports efficient data updates without requiring a separate edit form.
 
-To enable in-line editing in the Grid, set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property of the Grid's configuration to **Normal**. This property determines the editing mode of the Grid.
+To activate in-line editing, set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal**. This property defines the editing mode used by the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -78,16 +78,16 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhTWVWxfiLoTefJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * Normal edit mode is default mode of editing.
-> * When enabling editing, it is necessary to set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property value to **true** for the unique column.
+> * **Normal** is the default editing mode.
+> * To enable editing, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property must be set to **true** for the unique column.
 
 ## Automatically update a specific column based on another column edited value
 
-You can automatically update the value of a column based on the edited value of another column using the Cell Edit Template feature. This is useful when you want to dynamically calculate and update a column's value in real time based on changes made to another related column.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports automatic updates to a column value based on changes made to another related column during in-line editing. This behavior is enabled using the Cell Edit Template feature.
 
-You can update a column value based on another column’s edited value in normal mode by using the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) and [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) events, along with the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the Grid.
+To configure this functionality in normal edit mode, use the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) and [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) events, along with the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the Grid.
 
-In the following example, the **TotalCost** column value is updated based on changes to the **UnitPrice** and **UnitsInStock** columns during normal editing.
+In the following example, the **TotalCost** column value is calculated based on the **UnitPrice** and **UnitsInStock** column values during normal editing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -197,9 +197,9 @@ public class ProductDetails
 
 ## Cancel edit based on condition
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to cancel edit operations for a particular row or cell based on specific conditions. This feature allows you to control whether editing should be allowed or prevented for certain rows or cells in the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid canceling edit operations for specific rows or cells based on defined conditions. This functionality provides control over whether editing is permitted or restricted for particular rows or cells within the Grid.
 
-To cancel an edit operation based on a specific condition, you can handle the following Grid events. These events are triggered when a CRUD (Create, Read, Update, and Delete) operation is performed in the Grid:
+To cancel an edit operation based on a specific condition, handle the following Grid events. These events are triggered during CRUD (Create, Read, Update, and Delete) operations in the Grid:
 
 1. [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating): Triggered before an add action is executed in the Grid.
 
@@ -207,9 +207,9 @@ To cancel an edit operation based on a specific condition, you can handle the fo
 
 3. [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing): Triggered before an edit action is executed in the Grid.
 
-By applying your desired condition, you can cancel the edit, delete, or add operation by setting the `args.Cancel` property to **true**.
+To cancel an edit, delete, or add operation based on a specific condition, set the **args.Cancel** property to **true** within the corresponding event handler.
 
-In the demo below, CRUD operations are prevented based on the **Role** column value. If the Role column is **Admin**, then edit and delete actions are prevented for that row.
+In the following example, CRUD operations are restricted based on the value in the Role column. When the Role column contains the value Admin, edit and delete actions for that row are disabled.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -308,19 +308,19 @@ public class EmployeeDetails
 
 ## Perform CRUD action programmatically
 
-Performing CRUD actions programmatically means creating, reading, updating, and deleting data in a system or application using code instead of manual user interaction.
+CRUD operations—Create, Read, Update, and Delete—can be executed programmatically in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using built-in methods, without manual interaction.
 
-* To add a new record to the Grid, use the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method. You can pass the **data** parameter to add a new record, and the **index** parameter to add a record at a specific position. If you call this method without any parameters, it will create an empty row in the Grid. If an index is not specified, the new record will be displayed at the zeroth index.
+* To add a new record, use the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method. Pass the **data** parameter to insert a new record and the **index** parameter to specify the position. If no parameters are provided, an empty row is created at index **0**.
 
-* To change the selected row to the edit state, use the [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) method. Before invoking this method, you must select a row in the Grid.
+* To switch a selected row to edit mode, use the [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) method. A row must be selected before invoking this method.
 
-* To update the row data in the Grid’s data source, use the [UpdateRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateRowAsync_System_Int32__0_) method. Pass the **index** of the row to be updated along with the updated **data**.
+* To update row data in the Grid’s data source, use the [UpdateRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateRowAsync_System_Int32__0_) method. Provide the **index** of the row and the updated **data**.
 
-* To update a particular cell in a row, use the [SetCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetCellValueAsync_System_Object_System_String_System_Object_) method. Pass the primary key value, field name, and new value for the cell. Changes made using this method are only reflected visually in the Grid UI and are not persisted in the underlying data source. This method is commonly used for unbound columns, such as auto-calculated or formula columns, where values are derived from other data within the Grid or external calculations.
+* To update a specific cell value, use the [SetCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetCellValueAsync_System_Object_System_String_System_Object_) method. Specify the primary key value, field name, and new value. This method updates the Grid UI but does not persist changes to the underlying data source. Commonly used for unbound columns such as calculated or formula-based fields.
 
-* To remove a selected row from the Grid, use the [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) method. For both edit and delete operations, you must select a row first.
+* To delete a selected row, use the [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) method. A row must be selected before performing delete operations.
 
-> These methods can be used in both normal and dialog editing modes.
+> These methods are supported in both normal and dialog editing modes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -448,9 +448,9 @@ public class OrderDetails
 
 ## Show confirmation dialog while deleting
 
-Displaying a confirmation dialog adds an extra layer of safety when deleting a record from the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. This dialog prompts the user for confirmation before proceeding with the deletion, helping to prevent accidental or unintended deletions. The deletion will only proceed if the user confirms the action. The Grid provides a built-in confirmation dialog for this purpose.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports displaying a confirmation dialog before deleting a record. This dialog provides an additional safeguard to prevent accidental or unintended deletions. Deletion proceeds only after confirmation is received.
 
-To enable the confirmation dialog for delete operations in the Grid, set the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the `GridEditSettings` configuration to **true**. By default, this property is set to **false**.
+To enable the confirmation dialog for delete operations, set the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **true**. The default value of this property is **false**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -527,15 +527,12 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBfiLsFpKplAfEA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The `ShowDeleteConfirmDialog` property supports all type of edit modes.
+> The `ShowDeleteConfirmDialog` property supports all types of edit modes.
 
 ## Display default value for columns while adding
 
-This feature is useful when you want to pre-fill certain column values with default values to streamline the data entry process. The Grid allows you to set default values for columns when adding a new record.
-
-To set a default value for a specific column in the Grid, use the [DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DefaultValue) property of the `GridColumns` configuration. When a new row is added, the Grid will automatically populate the specified default value in the corresponding column.
-
-Here's an example of how to set a default value for a column:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports assigning default values to columns when adding a new record. This functionality streamlines data entry by pre-filling specific fields with predefined values.
+To configure default values, set the [DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DefaultValue) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) configuration. When a new row is added, the Grid automatically populates the specified default value in the corresponding column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -607,13 +604,13 @@ public class OrderDetails
 
 ## Delete multiple rows
 
-The delete multiple rows feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to easily remove several rows at once. This is useful when you need to delete multiple records simultaneously. There are two ways to implement this feature: using the built-in toolbar delete option or by calling a method.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports deletion of multiple rows simultaneously. This functionality can be implemented using either the built-in toolbar or programmatically through method invocation.
 
-**Using the built-in toolbar delete option**
+**1. Using the built-in toolbar delete option**
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a user-friendly interface for performing actions such as deleting rows through the built-in toolbar. To enable deleting multiple rows using the toolbar, configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property and set the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Multiple** to allow multiple row selection.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a toolbar interface for performing actions such as deleting rows. To enable deletion of multiple rows using the toolbar, configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property and set the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Multiple**.
 
-To delete multiple selected records, first select the desired rows in the Grid by highlighting or checking their checkboxes. Then, click the delete icon in the toolbar. This will remove the selected records from the Grid.
+After selecting rows using checkboxes or row highlighting, clicking the delete icon in the toolbar removes the selected records from the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -681,18 +678,18 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLpiBMkLcuVmJPN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> You can also delete the selected records using the **Delete** keyboard shortcut.
+> The **Delete** keyboard shortcut can also be used to remove selected records.
 
 **Using method**
 
-You can delete multiple rows programmatically by using the [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) method. This method allows you to delete records with the given options. If the **fieldName** (the field name of the primary key column) and **data** parameters are not provided, the Grid will delete the selected records.
+Multiple rows can be deleted programmatically using the [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) method. If the **fieldName** (primary key column name) and **data** parameters are not provided, the method deletes the currently selected records.
 
-```ts
+```cs
 Grid.DeleteRecordAsync();
 ```
 
-> * The `GridSelectionSettings.Type` property must be set to **Multiple** to enable multiple row selection.
-> * To prevent accidental or undesired deletions, it is recommended to enable the `ShowDeleteConfirmDialog` property in the `GridEditSettings` configuration.
+> * The [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property must be set to **Multiple** to enable multiple row selection.
+> * To prevent accidental deletions, enable the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -768,11 +765,9 @@ public class OrderDetails
 
 ## Adding a new row at the bottom of the Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to add a new row at the bottom, enabling you to insert a new record at the end of the existing data set. This feature is especially useful when you want to conveniently add new records without scrolling up or manually repositioning the newly added row.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding new rows at the bottom of the data set. This configuration simplifies record insertion by placing new entries at the end of the Grid.
 
-By default, when adding a new row, the Grid inserts it at the top. However, you can change this behavior by setting the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of the `GridEditSettings` configuration to **Bottom**. This property determines where the new row will be inserted.
-
-Here's an example of how to enable adding new rows at the bottom of the Grid:
+By default, new rows are inserted at the **top**. To change this behavior, set the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **Bottom**. This property determines the position where new rows are inserted.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -868,11 +863,11 @@ public class OrderDetails
 
 ## Saving a new row at a particular index
 
-By default, when a new row is added to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, it is inserted and saved at the top of the Grid’s data source. However, certain use cases may require saving the newly added row at a different position. For example, at the end of the current page or a custom index based on business logic.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports saving newly added rows at a specific index within the data source. By default, new rows are inserted and saved at the top of the Grid’s data source. Certain scenarios may require saving the new row at a custom position, such as at the end of the current page or a specific index based on business logic.
 
-To achieve this customization, the `args.Index` property can be set during the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the Grid. This allows the developer to define the exact position where the new row should be saved in the underlying data source.
+To configure a custom save position, set the **args.Index** property during the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the Grid. This property defines the index at which the new row is saved in the underlying data source.
 
-The following sample code demonstrates changing the save index of the new row that gets added in the Grid. Using `ActionBegin` event, `args.Index` property can be used to set the custom index for the saved new row. This allows the users to define the exact position where the new row should be saved in the underlying data source. 
+The following example demonstrates how to use the `ActionBegin` event and **args.Index** property to specify a custom save index for a newly added row.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -929,9 +924,9 @@ The following sample code demonstrates changing the save index of the new row th
 
 ## Show add new row always in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid simplifies the addition of new records by consistently presenting a blank "add new row" form within the Grid. To enable this feature, set the [ShowAddNewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowAddNewRow) property within the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **true**. This allows for continuous addition of new records. You can display the add new row at either the top or bottom of the Grid content, depending on the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of `GridEditSettings`. By default, the add new row is displayed at the top of the Grid content.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports continuous record addition by displaying a persistent blank "add new row" form within the Grid. This feature simplifies data entry by keeping the new row interface visible at all times.
 
-The following sample demonstrates how to add a new record continuously using the `ShowAddNewRow` property.
+To enable this behavior, set the  [ShowAddNewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowAddNewRow) property to **true** in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration. The position of the add new row can be controlled using the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property. By default, the new row is displayed at the top of the Grid content.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -996,21 +991,20 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLfiLskTTrNxaux?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-> To save newly added records, you can either press the **Enter** key or click the **Update** button on the toolbar after filling in the new add form.
+
+> To save newly added records, press the **Enter** key or click the **Update** button on the toolbar after filling in the add new row form.
 
 ### Limitations
 
-* This feature is supported only in Inline/Normal editing mode and is not compatible with other edit modes.
-* The new blank add row form will always be displayed at the top, even if you set the new row position to bottom for Grids with Virtual Scrolling or Infinite Scrolling enabled.
-* This feature is not compatible with the column virtualization feature.
+* Supported only in **Inline/Normal** editing mode; not compatible with other edit modes.
+*  When **Virtual Scrolling** or **Infinite Scrolling** is enabled, the blank add row form is always displayed at the **top**, regardless of the `NewRowPosition` setting.
+* Not compatible with **Column Virtualization**.
 
 ## Enable editing in single click
 
-Enabling single-click editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid's **Normal** editing mode is a valuable feature that allows you to make a row editable with just one click. This can be achieved by using the [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) and [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) methods.
+Single-click editing in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows a row to enter edit mode with a single click in **Normal** editing mode. This behavior can be configured using the [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) and [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) methods.
 
-To implement this feature, bind the [OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) event of the Grid. Within the event handler, call the `StartEditAsync` method to begin editing the clicked row and the `EndEditAsync` method to save or cancel editing for a previously edited row. This ensures that editing mode is triggered when a specific record in the Grid is clicked.
-
-The following sample demonstrates how to enable editing with a single click using the `OnRecordClick` event:
+To implement single-click editing, bind the [OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) event. Within the event handler, invoke `StartEditAsync` to begin editing the clicked row and `EndEditAsync` to finalize or cancel editing for the previously edited row.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1095,11 +1089,9 @@ public class OrderDetails
 
 ## Disable editing for a particular row
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can prevent editing of specific rows based on certain conditions. This feature is useful when you want to restrict editing for certain rows, such as those containing read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports conditional editing restrictions for specific rows. This feature ensures data integrity by preventing modifications to rows containing read-only, calculated, or protected information.
 
-To disable editing for a particular row, use the [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) event of the Grid. You can set the **args.Cancel** property to **true** within this event to prevent editing for that row.
-
-In the demo below, rows with the value **France** in the **ShipCountry** column are prevented from being edited.
+To disable editing for a particular row, handle the [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) event of the Grid. Within the event handler, set the **args.Cancel** property to **true** to prevent editing for the targeted row.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1177,18 +1169,18 @@ public class OrderDetails
 
 ## Provide new item or edited item using events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid uses `Activator.CreateInstance<TValue>()` to create or clone a new record instance during add and edit operations, so the model class and any referenced complex type classes must have parameterless constructors defined.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid uses **Activator.CreateInstance<TValue>()** to create or clone a new record instance during add and edit operations. To support this behavior, the model class and any referenced complex type classes must include parameterless constructors.
 
-However, there are cases where custom logic is required to create a new object, or a new object instance cannot be created using `Activator.CreateInstance<TValue>()`. In such cases, you can manually provide the model object instance using events.
+In scenarios where custom logic is required to create a new object, or when an object instance cannot be created using **Activator.CreateInstance<TValue>()**, a model object instance can be manually provided using Grid events.
 
-You can use the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) and [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) events to provide a new object instance during creation and editing operations. The new object should be assigned to the `RowCreating<TValue>.Data` and `OnBeginEdit<TValue>.RowData` properties.
+Use the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) and [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) events to supply a new object instance during creation and editing operations. Assign the new object to the **RowCreating<TValue>.Data** and **OnBeginEdit<TValue>.RowData** properties.
 
-In the following example:
+The following example demonstrates:
 
-* A model class without a parameterless constructor is bound to the Grid.
-* Inline editing is enabled in the Grid.
-* The `RowCreating` event is used to assign default values for new rows.
-* The `OnBeginEdit` event is used to clone the current row's data when editing an existing item.
+* A model class without a parameterless constructor bound to the Grid
+Inline editing enabled
+* `RowCreating` event used to assign default values for new rows
+* `OnBeginEdit` event used to clone the current row’s data during edit operations
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1272,7 +1264,7 @@ public class OrderDetails
 
 ## Supported events for inline and dialog editing
 
-Inline and dialog editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provide flexible ways to modify records, catering to various user needs. This section outlines the key events triggered during the editing operations, including adding, editing, updating, deleting, and canceling, to help you effectively implement and customize the Grid’s behavior for enhanced user interaction.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports a range of events during inline and dialog editing operations. These events provide control over add, edit, update, delete, and cancel actions, enabling customization of Grid behavior.
 
 **Sequence of events**
 
@@ -1280,37 +1272,37 @@ Inline and dialog editing in the Syncfusion<sup style="font-size:70%">&reg;</sup
 
 | Event | Description |
 |-------|-------------|
-| [RowCreating](https://blazor.syncfusion.com/documentation/datagrid/events#rowcreating) | Triggers before a new row is added to the Grid. This event is useful for initializing default values or conditionally preventing the add operation. |
-| [RowCreated](https://blazor.syncfusion.com/documentation/datagrid/events#rowcreated) | Triggers after a new row is added to the Grid. |
+| [RowCreating](https://blazor.syncfusion.com/documentation/datagrid/events#rowcreating) | Triggered before a new row is added. Used for initializing default values or conditionally preventing the add operation. |
+| [RowCreated](https://blazor.syncfusion.com/documentation/datagrid/events#rowcreated) | Triggered after a new row is added. |
 
 * **Editing a record**
 
 | Event | Description |
 |-------|-------------|
-| [OnRowEditStart](https://blazor.syncfusion.com/documentation/datagrid/events#onroweditstart) | Triggers before a row enters edit mode. Enables control over data cloning behavior and can be used to prepare the row for editing. |
-| [OnBeginEdit](https://blazor.syncfusion.com/documentation/datagrid/events#onbeginedit) | Triggers before a row enters edit mode in the UI, such as on double-click or pressing F2. This event is useful for conditional editing logic. |
-| [RowEditing](https://blazor.syncfusion.com/documentation/datagrid/events#rowediting) | Triggers before the edit action is performed. This event is useful for validation or dynamic configuration of the editing interface. |
-| [RowEdited](https://blazor.syncfusion.com/documentation/datagrid/events#rowedited) | Triggers after the edit action is completed. |
+| [OnRowEditStart](https://blazor.syncfusion.com/documentation/datagrid/events#onroweditstart) | Triggered before a row enters edit mode. Enables control over data cloning behavior and preparation for editing. |
+| [OnBeginEdit](https://blazor.syncfusion.com/documentation/datagrid/events#onbeginedit) | Triggered before a row enters edit mode in the UI (e.g., double-click or F2). Used for conditional editing logic. |
+| [RowEditing](https://blazor.syncfusion.com/documentation/datagrid/events#rowediting) | Triggered before the edit action is performed. Used for validation or dynamic configuration of the editing interface. |
+| [RowEdited](https://blazor.syncfusion.com/documentation/datagrid/events#rowedited) | Triggered after the edit action is completed. |
 
 * **Saving (Updating) a record**
 
 | Event | Description |
 |-------|-------------|
-| [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) | Triggers before the edited or newly added data is saved. Used for validating or modifying data before it is committed to the data source. |
-| [RowUpdated](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdated) | Triggers after the edited or newly added data is saved to the data source. |
+| [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) | Triggered before edited or newly added data is saved. Used for validation or data modification before committing to the data source. |
+| [RowUpdated](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdated) | Triggered after data is saved to the data source. |
 
 * **Deleting a record**
 
 | Event | Description |
 |-------|-------------|
-| [RowDeleting](https://blazor.syncfusion.com/documentation/datagrid/events#rowdeleting) | Triggers before a row is deleted from the Grid. This event is used to confirm deletion or cancel the operation based on custom logic. |
-| [RowDeleted](https://blazor.syncfusion.com/documentation/datagrid/events#rowdeleted) | Triggers after a row is deleted from the Grid. |
+| [RowDeleting](https://blazor.syncfusion.com/documentation/datagrid/events#rowdeleting) | Triggered before a row is deleted. Used to confirm deletion or cancel the operation based on custom logic. |
+| [RowDeleted](https://blazor.syncfusion.com/documentation/datagrid/events#rowdeleted) | Triggered after a row is deleted. |
 
 * **Canceling an edit operation**
 
 | Event | Description |
 |-------|-------------|
-| [EditCanceling](https://blazor.syncfusion.com/documentation/datagrid/events#editcanceling) | Triggers before the cancellation of an edit operation. This event is useful for confirmation prompts or rollback logic before discarding changes. |
-| [EditCanceled](https://blazor.syncfusion.com/documentation/datagrid/events#editcanceled) | Triggers after the cancellation of an edit operation. |
+| [EditCanceling](https://blazor.syncfusion.com/documentation/datagrid/events#editcanceling) | Triggered before cancellation of an edit operation. Used for confirmation prompts or rollback logic. |
+| [EditCanceled](https://blazor.syncfusion.com/documentation/datagrid/events#editcanceled) | Triggered after cancellation of an edit operation. |
 
-> The same events are also applicable when using **Dialog** editing mode.
+> All listed events are applicable in both **Inline** and **Dialog** editing modes.

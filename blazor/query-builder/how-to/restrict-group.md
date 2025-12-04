@@ -9,9 +9,9 @@ documentation: ug
 
 # Restrict the Groups in Blazor QueryBuilder Component
 
-The QueryBuilder allows to restrict the groups from creation based on group count. You can enable this feature by setting the [MaxGroupCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_MaxGroupCount) property.
+Limit how many condition groups users can create in the Query Builder by setting the [`MaxGroupCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_MaxGroupCount) property.
 
-N> By default, MaxGroupCount is set as 5.
+N> By default, `MaxGroupCount` is set to 5.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -54,4 +54,4 @@ N> By default, MaxGroupCount is set as 5.
 
 ```
 
-N> You can use this property in the mobile mode to restrict the nested group creation.
+N> This property can also be used in mobile mode to restrict nested group creation.
