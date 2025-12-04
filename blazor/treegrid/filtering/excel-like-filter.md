@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Excel Like Filter in Blazor TreeGrid Component | Syncfusion
-description: Learn how to enable and use the Excel like filter in the Syncfusion Blazor TreeGrid component and much more details.
+title: Excel Like Filter in Blazor Tree Grid Component | Syncfusion
+description: Checkout and learn here all about Excel like filter in Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Excel Like Filter in Blazor TreeGrid Component
+# Excel Like Filter in Blazor Tree Grid Component
 
-Enable Excel like filtering by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Type.html) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) to **Excel**. The Excel-style menu provides options such as sorting, clearing filters, a search box with a checkbox list, and an advanced filtering submenu.
+Excel like filter can be enabled by defining the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Type.html) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Excel**. The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
 {% tabs %}
 
@@ -60,7 +60,7 @@ namespace TreeGridComponent.Data {
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,,Progress = 80,Priority = "Low",ParentId = 1 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
@@ -77,11 +77,11 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Displaying Excel like filter in Blazor TreeGrid](../images/blazor-treegrid-excel-filter.png)
+![Displaying Excel Filter in Blazor Tree Grid](../images/blazor-treegrid-excel-filter.png)
 
 ## Filter item template
 
-The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterItemTemplate) customizes how each value in the Excel-style checkbox list is displayed. Inside the `FilterItemTemplate`, use the implicit **context** parameter of type [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to access the list item value and format it for display.
+The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterItemTemplate) helps to customize each excel list element or value for display purposes. To access the excel list values inside the `FilterItemTemplate`, you can use the implicit named parameter **context** of [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) type to get list values inside template.
 
 {% tabs %}
 
@@ -158,13 +158,15 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Blazor TreeGrid Filter with Item Template](../images/blazor-treegrid-filter-item-template.png)
+![Blazor Tree Grid Filter with Item Template](../images/blazor-treegrid-filter-item-template.png)
 
 ## Customize the height and width of filter popup
 
-Customize the height and width of each column’s filter dialog using CSS in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event. The event is triggered before opening the filter dialog, allowing dynamic sizing based on the target column. The styles below are scoped to the current grid by ID.
+You can customize the height and width of each column’s filter dialog using the CSS style in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event of the tree grid.
 
-In the following example, different sizes are applied for the TaskId and TaskName column filter dialogs.
+Before opening a filter dialog for each column, the `FilterDialogOpening` event will be triggered. At that point, we can set the height and width of filter popup dynamically using CSS.
+
+In the following sample we have set the height and width of the TaskId and TaskName column's filter dialog using the CSS style.
 
 {% tabs %}
 
@@ -215,12 +217,12 @@ In the following example, different sizes are applied for the TaskId and TaskNam
 
     public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
-        if(args.ColumnName == "TaskName")
+        if(Args.ColumnName == "TaskName")
         {
             IsLarge = true;
             IsSmall = false;
         }
-        else if(args.ColumnName == "TaskId")
+        else if(Args.ColumnName == "TaskId")
         {
             IsSmall = true;
             IsLarge = false;
@@ -277,13 +279,13 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Customize the Height and Width of Filter Popup in Blazor TreeGrid](../images/blazor-treegrid-customize-filter-popup.gif)
+![Customize the Height and Width of Filter Popup in Blazor Tree Grid](../images/blazor-treegrid-customize-filter-popup.gif)
 
 ## Add current selection option to filter checkbox in excel filter dialog
 
-By default, the Excel filter applies only the items selected in the current dialog interaction. When filtering multiple times on the same column, earlier selections may be cleared. To preserve earlier selections and combine them with new ones, an **Add current selection to filter** option can be provided in the Excel filter dialog.
+The Excel filter currently filters only the selected items by default. However, when filtering is applied multiple times on the same column, previously filtered values are cleared. To change this behavior and retain previous filter values, we propose adding the **Add Current Selection to Filter** checkbox to the excel filter dialog.
 
-In the following example, the **Add current selection to filter** checkbox appears when values are searched in the Excel filter dialog, allowing the new selection to be added to existing filtered values.
+In the following sample, the **Add current selection to filter** checkbox is displayed when data is searched in the search bar of the excel filter dialog.
 
 {% tabs %}
 
@@ -798,6 +800,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-The following image illustrates adding the current selection to the existing filter:
+The following image describes the above mentioned behavior:
 
-![Add current selection option to filter checkbox in Blazor TreeGrid](../images/blazor-treegrid-current-selection-filter.gif)
+![Add current selection option to filter checkbox in Blazor Tree Grid](../images/blazor-treegrid-current-selection-filter.gif)
+

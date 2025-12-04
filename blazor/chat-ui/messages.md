@@ -7,13 +7,13 @@ control: Chat UI
 documentation: ug
 ---
 
-# Messages in Blazor Chat UI component
+# Messages in the Blazor Chat UI Component
 
-The Chat UI allows to add messages using the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Messages) property. The message collection stores all the messages being sent and received.
+The Blazor Chat UI component manages and displays a collection of messages through its [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Messages) property. This collection stores all messages sent and received in the conversation.
 
-## Configure messages
+## Configuring Messages
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property to add message content for the user. Each message can be configured with options such as id, text, author, timestamp, and more.
+Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property to add message content for the user. Each message can be configured with options such as id, text, author, timestamp, and more.
 
 ```cshtml
 
@@ -39,11 +39,11 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ![Blazor Chat UI Text](./images/width.png)
 
-### Define current user
+### Defining the Current User
 
-You can use the [Author](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Author) property to identify the current user of the chat. Each user can be configured with options such as id, user, avatarUrl, and more.
+The [Author](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Author) property identifies the sender of a message. Each user is represented by a `UserModel` object, which includes properties like `ID`, `User`, and `AvatarUrl`.
 
-> You can use the [User](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_User) property to display the user name and [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_ID) property is necessary to differentiate between the multiple users.
+> The [User](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_User) property specifies the user's display name, while the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_ID) property serves as a unique identifier to differentiate between users.
 
 ```cshtml
 
@@ -69,9 +69,9 @@ You can use the [Author](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ![Blazor Chat UI User](./images/width.png)
 
-#### Setting avatar URL
+#### Setting the Avatar URL
 
-You can use the [AvatarUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_AvatarUrl) property to define the image URL’s for the user avatar. If no URL is provided, fallback initials of the first and last name from the user’s name will be used.
+The [AvatarUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_AvatarUrl) property defines the image URL for a user's avatar. When a URL is not provided, the component displays fallback initials derived from the user's name.
 
 ```cshtml
 
@@ -96,9 +96,9 @@ You can use the [AvatarUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Blazor Chat UI AvatarUrl](./images/avatarurl.png)
 
-#### Setting avatar background color
+#### Customizing the Avatar Background Color
 
-You can use the [AvatarBgColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_AvatarBgColor) property to set a specific background color for user avatars using hexadecimal values. If no color is set, a custom background color is set based on specified theme.
+The [AvatarBgColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_AvatarBgColor) property sets a specific background color for a user's avatar using hexadecimal values. If a color is not specified, a default color from the current theme is applied.
 
 ```cshtml
 
@@ -123,9 +123,9 @@ You can use the [AvatarBgColor](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ![Blazor Chat UI AvatarUrl](./images/avatarbgcolor.png)
 
-#### Setting CSS class
+#### Applying a Custom CSS Class
 
-You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_CssClass) property to customize the appearance of the chat user.
+The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_CssClass) property allows for custom styling of a user's avatar and message bubble.
 
 ```cshtml
 
@@ -161,16 +161,16 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 #### Setting status icon css
 
-You can use the [StatusIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_StatusIconCss) property to identify the user's presence, including online, offline, busy, and away status in the Chat UI.
+To indicate a user's presence (e.g., online, offline, busy, or away), assign a predefined CSS class to the [StatusIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html#Syncfusion_Blazor_InteractiveChat_UserModel_StatusIconCss) property.
 
 The following are the predefined status styles that can be defined using the `StatusIconCss` property.
 
-| Status | Icon class |
-| ------------ | -------------- |
-| `Available` | `e-user-online` |
-| `Away` | `e-user-away` |
-| `Busy` | `e-user-busy` |
-| `Offline` | `e-user-offline` |
+| Status      | Icon Class     |
+|-------------|----------------|
+| `Available` | `e-user-online`|
+| `Away`      | `e-user-away`  |
+| `Busy`      | `e-user-busy`  |
+| `Offline`   | `e-user-offline`|
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -195,9 +195,9 @@ The following are the predefined status styles that can be defined using the `St
 
 ![Blazor Chat UI StatusIconCss](./images/message-statusicon.png)
 
-### Define timestamp
+### Configuring the Timestamp
 
-You can use the [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Timestamp) property to indicate the date and time of each message being sent. By default it is set to the current date and time when the message is sent.
+The [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Timestamp) property specifies the date and time a message was sent. If not set, it defaults to the current system time.
 
 ```cshtml
 
@@ -223,9 +223,9 @@ You can use the [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Blazor Chat UI Timestamp](./images/timestamp.png)
 
-#### Setting timestamp format
+#### Setting the Timestamp Format
 
-You can use the [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_TimestampFormat) to display specific time format for the timestamp. The default format is `dd/MM/yyyy hh:mm tt`, but this can be customized to meet different localization and display needs.
+The [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TimestampFormat) property customizes the display format for the timestamp. The default format is `dd/MM/yyyy hh:mm tt`.
 
 ```cshtml
 
@@ -251,13 +251,13 @@ You can use the [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ![Blazor Chat UI TimestampFormat](./images/timestamp-format.png)
 
-### Define message status
+### Defining Message Status
 
-You can use the status property to update the status for the message(e.g., sent, received, read). It helps in managing message delivery and read receipts within the chat interface. 
+The `Status` property of a message helps manage delivery and read receipts. It can be configured with an icon, text, and tooltip to visually indicate the state of a message (e.g., Sent, Delivered, Read).
 
-#### Setting icon CSS
+#### Setting the Status Icon CSS
 
-You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.MessageStatusModel.html#Syncfusion_Blazor_InteractiveChat_MessageStatusModel_IconCss) property to update the styling of status icons associated with messages, aiding visual differentiation between statuses.
+The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.MessageStatusModel.html#Syncfusion_Blazor_InteractiveChat_MessageStatusModel_IconCss) property applies a CSS class to the status indicator, allowing for visual differentiation between message statuses.
 
 ```cshtml
 
@@ -289,9 +289,9 @@ You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ![Blazor Chat UI IconCss](./images/status-icon.png)
 
-#### Setting text
+#### Setting the text
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.MessageStatusModel.html#Syncfusion_Blazor_InteractiveChat_MessageStatusModel_Text) property to provide information about the messages through descriptive text, providing users with the context of the message.
+The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.MessageStatusModel.html#Syncfusion_Blazor_InteractiveChat_MessageStatusModel_Text) property provides descriptive text next to the status icon, giving users clear context about the message status.
 
 ```cshtml
 
@@ -323,9 +323,9 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ![Blazor Chat UI Text](./images/status-text.png)
 
-#### Setting tooltip
+#### Setting the tooltip
 
-You can use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.MessageStatusModel.html#Syncfusion_Blazor_InteractiveChat_MessageStatusModel_Tooltip) property to provide information about the messages by tooltips while hovering the status icon, providing users with additional data upon hovering.
+The [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.MessageStatusModel.html#Syncfusion_Blazor_InteractiveChat_MessageStatusModel_Tooltip) property displays additional information when a user hovers over the status icon.
 
 ```cshtml
 
@@ -356,9 +356,9 @@ You can use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-### Setting pinned
+### Pinning a Message
 
-You can use the [IsPinned](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_IsPinned) property to highlight the important message in the chat. Once a message is pinned, you can access the options menu to continue the chat or unpin it.
+Set the [IsPinned](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_IsPinned) property to `true` to highlight an important message at the top of the chat. Pinned messages can be unpinned or interacted with via the message options menu.
 
 ```cshtml
 
@@ -384,9 +384,9 @@ You can use the [IsPinned](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ![Blazor Chat UI IsPinned](./images/isPinned.png)
 
-### Setting reply to
+### Replying to a Message
 
-You can use the [RepliedTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_RepliedTo) property to respond to the original message preserving context and creating a threaded conversation.
+The [RepliedTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_RepliedTo) property links a message to a previous one, creating a threaded conversation that preserves context. It references the original message's ID, author, and content.
 
 ```cshtml
 
@@ -422,9 +422,9 @@ You can use the [RepliedTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Blazor Chat UI RepliedTo](./images/repliedTo.png)
 
-### Setting forward
+### Forwarding a Message
 
-You can use the [IsForwarded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_IsForwarded) property to specify the user when the message is forwarded.
+The [IsForwarded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_IsForwarded) property, when set to `true`, adds a visual indicator to a message, clarifying that it has been forwarded from another conversation.
 
 ```cshtml
 
@@ -450,9 +450,9 @@ You can use the [IsForwarded](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ![Blazor Chat UI IsForwarded](./images/isForwarded.png)
 
-### Setting auto scroll
+### Enabling Auto-Scroll
 
-You can use the [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AutoScrollToBottom) property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view. 
+The [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AutoScrollToBottom) property automatically scrolls the conversation to the latest message when set to true. This helps maintain focus on the most recent activity. By default, the property is set to `false`.
 
 - By default, it scrolls to bottom for each message being sent or when the scroll is maintained at the bottom in the chat, in order to prevent the automatic scroll for different user messages you can use the `AutoScrollToBottom` property.
 
@@ -483,9 +483,9 @@ You can use the [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncf
 
 ![Blazor Chat UI AutoScrollToBottom](./images/auto-scroll-bottom.png)
 
-### Setting suggestions 
+### Adding Reply Suggestions
 
-You can use the [Suggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Suggestions) property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field.
+The [Suggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Suggestions) property provides a list of quick-reply options above the input field, which can be displayed initially or on-demand.
 
 ```cshtml
 
@@ -511,9 +511,9 @@ You can use the [Suggestions](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ![Blazor Chat UI Suggestions](./images/suggestions.png)
 
-## Setting compact mode
+## Enabling Compact Mode
 
-You can use the `EnableCompactMode` property to align all messages to the left in the chat for creating a streamlined layout ideal for group conversations or space-constrained interfaces. By default, the value is `false`.
+Setting the `EnableCompactMode` property to `true` aligns all messages to the left, creating a streamlined and compact layout. This is ideal for group conversations or interfaces where space is limited. By default, this property is `false`.
 
 ```cshtml
 
@@ -539,19 +539,19 @@ You can use the `EnableCompactMode` property to align all messages to the left i
 
 ![Blazor Chat UI EnableCompactMode](./images/enableCompactMode.png)
 
-## Configure message options
+## Configuring Message Options
 
-You can customize the message toolbar items by using the `MessageToolbar`, `MessageToolbarItem` tag directives for richer chat experience in the Chat UI. By default, the message options available are `Copy`, `Reply`, `Pin`, and `Delete`.
+The message toolbar can be customized using the `MessageToolbar` and `MessageToolbarItem` tag directives. By default, the toolbar includes `Copy`, `Reply`, `Pin`, and `Delete` options.
 
-### Copying a message
+### Copying a Message
 
-You can copy the message item to quickly duplicate the message, by using the toolbar copy icon in the message options.
+A message can be quickly duplicated by clicking the copy icon in the message options toolbar.
 
-### Deleting a message
+### Deleting a Message
 
-You can delete a message item to remove it from the chat conversation, by using the toolbar trash icon in the message options.
+A message can be removed from the conversation by clicking the trash icon in the message options toolbar.
 
-### Setting width
+### Setting Toolbar Width
 
 You can use the `Width` property to set width of the `MessageToolbar` tag directive of Chat UI. By default, the value is `100%`.
 
@@ -582,9 +582,9 @@ You can use the `Width` property to set width of the `MessageToolbar` tag direct
 
 ```
 
-### Setting items
+### Customizing Items
 
-You can use the `MessageToolbarItem` tag directive to specify the toolbar item in the `MessageToolbar` of Chat UI.
+Define custom toolbar actions using the `MessageToolbarItem` tag directive within the `MessageToolbar`.
 
 ```cshtml
 
@@ -620,9 +620,9 @@ You can use the `MessageToolbarItem` tag directive to specify the toolbar item i
 
 ![Blazor Chat UI MessageToolbarItem](./images/messageToolbarItems.png)
 
-### Setting itemClick
+### Handling Toolbar Item Clicks
 
-You can use the `itemClicked` event when the toolbar item is clicked in the `MessageToolbar` of Chat UI.
+The `ItemClicked` event is triggered when a user clicks an item in the `MessageToolbar`.
 
 ```cshtml
 
@@ -676,33 +676,30 @@ You can use the `itemClicked` event when the toolbar item is clicked in the `Mes
 
 ```
 
-## Displaying the markdown content
+## Displaying Markdown Content
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ChatUI supports `Markdown` formatting for messages, enabling rich text capabilities such as bold, italic, links, and more.
+The Chat UI supports `Markdown` formatting for messages, enabling rich text capabilities such as bold, italics, links, and more.
 
 ### Prerequisites
 
-- `Markdig` for parsing Markdown (installed via NuGet):
+Install the `Markdig` library from NuGet to parse Markdown content.
 
   ```bash
-  
   dotnet add package Markdig
-
   ```
 
-### Supported markdown formats
+### Supported Markdown Formats
 
-The ChatUI leverages the `Markdig` library to support the following Markdown formats:
+The Chat UI leverages the `Markdig` library and supports common Markdown syntax, including:
+- **Bold**: `**text**` or `__text__`
+- *Italic*: `*text*` or `_text_`
+- [Links](url): `[Link text](url)`
+- Lists: `- Item` or `1. Item`
+- Code: `` `code` `` or ```` ```code``` ````
 
-- **Bold**: ** text ** or __ text __ 
-- *Italic*: * text * or _ text _ 
-- [Links](url): [Link text] (url)
-- Lists: - Item or 1. item
-- Code: 'code' or code 
+For a full list of supported formats, refer to the [Markdig documentation](https://www.nuget.org/packages/Markdig).
 
-For full list refer to the  [Markdig documentation](https://www.nuget.org/packages/Markdig).
-
-### Configuring Markdown
+### Configuring Markdown in Chat
 
 By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, you can parse Markdown text to enhance the chat experience. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Text) property of each message can accept HTML generated from Markdown, allowing for formatted text display.
 

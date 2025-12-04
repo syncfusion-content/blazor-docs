@@ -518,7 +518,7 @@ In the following sample, the `Collapse All` item is positioned on the **right**,
     {
         if (args.Item.Text == "Expand all")
         {
-            await this.Grid.CollapseAllGroupAsync();
+            await this.Grid.ExpandAllGroupAsync();
         }
         if (args.Item.Text == "Collapse all")
         {
@@ -684,10 +684,8 @@ Customize a toolbar item’s tooltip text by adding items externally and setting
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 @code {
     private SfGrid<OrderData> Grid;
-
     public List<OrderData> Orders { get; set; }
     private List<object> ToolbarItems = new List<object>() {
         new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"}, //Here Grid is SfGrid ID.

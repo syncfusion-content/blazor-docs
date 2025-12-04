@@ -16,3 +16,10 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea compo
 * [Events](https://blazor.syncfusion.com/documentation/textarea/events)
 * [Methods](https://blazor.syncfusion.com/documentation/textarea/methods)
 * [Style and Appearance](https://blazor.syncfusion.com/documentation/textarea/styles-appearance)
+
+## See also
+
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextArea in Blazor App](https://blazor.syncfusion.com/documentation/textarea/getting-started)

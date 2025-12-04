@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Web App with Authentication
 
-This guide demonstrates how to build a **Blazor Web App with authentication** using **.NET 9**. It uses the built-in `AuthenticationStateProvider` to retrieve and manage user identity details from the application's authentication context, enabling secure and consistent user state handling across components.
+This guide demonstrates how to build a **Blazor Web App with authentication** using **.NET 9** or **.NET 10**. It uses the built-in `AuthenticationStateProvider` to retrieve and manage user identity details from the application's authentication context, enabling secure and consistent user state handling across components.
 
 ## Prerequisites
 
@@ -23,47 +23,47 @@ This guide demonstrates how to build a **Blazor Web App with authentication** us
 
 ## Choose Project Template
 
-* Select the **Blazor Web App** template using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) and click **Next**.
+* Select the **Blazor Web App** template using Visual Studio via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), and then click **Next**.
 
 ![Create-blazor-web-app-template](images/blazor-web-template.jpeg)
 
 ## Configure Project Settings
 
-* In the project configuration settings, choose **Blazor Server, WebAssembly, or Auto** as the render mode. Ensure the Configure for **HTTPS option is enabled**, and select **Individual Accounts** as the authentication type before clicking **Create**. This setup enables authentication support without persisting user data in a local database.
+* In the project configuration settings, choose **Blazor Server, WebAssembly, or Auto** as the render mode. Ensure the **Configure for HTTPS** option is enabled, and select **Individual Accounts** as the authentication type before clicking **Create**. This enables authentication support without persisting user data in a local database.
 
 ![Project-setting](images/project-setting.png)
 
 ## Finalize Project Creation
 
-Click the **Create** button to generate the Blazor Web App. Once created, run the project and locate the **Register** button.
+Click **Create** to generate the Blazor Web App. After the project is created, run the app and locate the **Register** button.
 
 ![Click-register](images/register-button.png)
 
 ## Register a User
 
-* Enter the necessary details, such as your **email address and password** into the registration form, then click **Register** to complete the account creation process.
+* Enter the required details, such as **email address** and **password**, in the registration form, and then click **Register** to complete account creation.
 
 ![Enter-register-details](images/register-details.jpg)
 
 ## Apply Database Migrations
 
-After completing registration, click **Apply Migrations** to set up the database schema and configure it with the necessary account-related tables and settings.
+After registration completes, click **Apply Migrations** to create the database schema and configure account-related tables and settings.
 
 ![Apply-migration](images/apply-migration.jpg)
 
 ## Verify Login
 
-Once migrations are applied, refresh the page. The home page will now display the logged-in user's email address along with a **Logout** option.
+After migrations are applied, refresh the page. The home page displays the signed-in user’s email address and a **Logout** option.
 
 ![Verify-login](images/verify-login.png)
 
-You can also integrate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components within the **AuthorizeView** component by following these steps:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can be integrated within the **AuthorizeView** component as shown in the following steps.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
 To add the **Blazor Calendar** component to your application, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search and install the [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages.
 
-Alternatively, you can install the packages using the following command in the **Package Manager Console**:
+Alternatively, install the packages by using the following command in the **Package Manager Console**:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -74,11 +74,11 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces.
 
 ```cshtml
 
@@ -87,7 +87,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Then, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly Standalone App.
+Then, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor Web App.
 
 ```cshtml
 
@@ -101,9 +101,9 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script are available via NuGet as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). To include them in your application, add the stylesheet reference within the <head> section and the script reference just before the closing </body> tag, as shown below:
+The theme stylesheet and script are available via NuGet as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). To include them in the application, add the stylesheet reference within the <head> section and the script reference just before the closing </body> tag, as shown below.
 
-* For **.NET 9 and .NET 8** Blazor Web app, include it in the **~/Components/App.razor** file.
+* For **.NET 10, .NET 9 and .NET 8** Blazor Web App, include these references in the **~/Components/App.razor** file.
 
 ```html
 <head>
@@ -119,11 +119,11 @@ The theme stylesheet and script are available via NuGet as [Static Web Assets](h
 ```
 N> For more information on theming options, refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) documentation, which covers various methods such as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) for referencing themes in your Blazor application.
 
-Additionally, explore the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn about different approaches for including script references in your Blazor project.
+Additionally, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different approaches for including script references in a Blazor project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Pages/Home.razor** file under `AuthorizeView`.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Pages/Home.razor** file within an `AuthorizeView`.
 
 {% tabs %}
 {% highlight razor %}
@@ -141,12 +141,12 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will launch your default web browser and display the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component within the app interface.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This opens the default web browser and displays the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component within the app interface.
 
 
 ![Blazor Calendar Component](images/sync-components-auth.jpg)
 
-N> For detailed implementation, The demo project can be downloaded from the [GitHub](https://github.com/SyncfusionExamples/blazor-authentication) repository.
+N> For a complete implementation, download the demo project from the [GitHub repository](https://github.com/SyncfusionExamples/blazor-authentication).
 
 ## See Also
 

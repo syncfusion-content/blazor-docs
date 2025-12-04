@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Access Public Methods in Blazor TreeGrid Component | Syncfusion
-description: Learn how to access and invoke public methods of the Syncfusion Blazor TreeGrid by using a component reference, including a Print example.
+title: Access public methods in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about accessing public methods in Tree Grid in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Access Public Methods in Syncfusion Blazor TreeGrid Component
+# Access public methods in Tree Grid in Blazor TreeGrid Component
 
-Public methods of the TreeGrid component can be accessed by using the component reference defined during initialization.
+The public methods available in the Tree Grid component can be accessed by using its reference defined in the component initialization.
 
 The following example shows how to invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method on button click using the TreeGrid reference.
 
@@ -87,4 +87,4 @@ public class TreeData
 
 {% endtabs %}
 
-N> All public methods of the TreeGrid can be invoked similarly through the component reference. For the complete list of public methods, see the [TreeGrid public API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html).
+N> Similarly all the public methods of the Tree Grid can be invoked. The available public methods can be found in this [link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html).

@@ -44,9 +44,7 @@ One can draw a vertical chart by changing the axis orientation, and all series t
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrzXFhjSvWwRZBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
-
-![Blazor Vertical Spline Chart](../images/othertypes/blazor-vertical-spline-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrzXFhjSvWwRZBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Vertical Spline Chart](../images/othertypes/blazor-vertical-spline-chart.png)" %}
 
 ## Binding data with series
 

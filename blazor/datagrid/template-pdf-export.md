@@ -132,9 +132,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVItzhpzpJHfBYo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Exporting with column template](./images/exporting-pdf-column-template.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVItzhpzpJHfBYo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting with column template](./images/exporting-pdf-column-template.gif)" %}
 
 ## Exporting with group caption template
 
@@ -242,9 +240,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyjfMHqkQMUKqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Exporting with group caption template](./images/exporting-pdf-group-caption-template.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyjfMHqkQMUKqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting with group caption template](./images/exporting-pdf-group-caption-template.gif)" %}
 
 ## Exporting with detail template
 
@@ -353,17 +349,21 @@ In the following example:
         <GridColumn Field=@nameof(ProductData.Status) HeaderText="Status" Width="180"></GridColumn>
     </GridColumns>
 </SfGrid>
-<style type="text/css" class="cssStyles">.detailtable td {
-  font-size: 13px;
-  padding: 4px;
-  max-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: normal;
-}
 
-</style>@code {
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: normal;
+    }
+
+</style>
+
+@code {
 
   SfGrid<ProductData>DefaultGrid;
 
@@ -529,9 +529,7 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVSNTCGsQlftohG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Exporting with detail template](./images/exporting-pdf-detail-template.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVSNTCGsQlftohG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting with detail template](./images/exporting-pdf-detail-template.gif)" %}
 
 > If [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_ColumnCount) is not provided or is less than the number of cells in the first row of Headers/Rows, the columns in the detail row of the PDF Grid will be generated based on the count of cells in the first row of Headers/Rows.
 
@@ -811,6 +809,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtByZTscrNDihvvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtByZTscrNDihvvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.gif)" %}

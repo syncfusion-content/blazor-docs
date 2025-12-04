@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Create a Blazor WebAssembly Application with Prerendering | Syncfusion
-description: Checkout and learn here all about creating a Blazor WebAssembly Application with Prerendering and much more.
-platform: Blazor
-component: Common
+title: Create a Blazor WebAssembly App with prerendering | Syncfusion
+description: Learn how to enable prerendering for a hosted Blazor WebAssembly app, resolve HttpClient issues, and configure routing.
+platform: blazor
+control: Common
 documentation: ug
 ---
 
 # How to Create a Blazor WebAssembly Application with Prerendering
 
-This section explains how to enable prerendering to a Blazor WebAssembly application.
+This section explains how to enable prerendering for a hosted Blazor WebAssembly application.
 
 ## Prerequisites
 
-[.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+Install the [.NET SDK](https://dotnet.microsoft.com/en-us/download) (7.0 or later).
 
 ## Create a new project for Blazor WebAssembly ASP.NET Core Hosted application
 
@@ -21,7 +21,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 2. Delete `~/wwwroot/index.html` file in the Client project.
 
-3. Remove the below line from Client project's `~/Program.cs` file.
+3. Remove the following line from the Client project's `~/Program.cs` file.
 
     ```c#
     // builder.RootComponents.Add<App>("#app");
@@ -29,7 +29,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 4. Add `~/Pages/_Host.cshtml` file in the Server project.
 
-    ![Add Host.cshtml file in Server app](images/wasm-prerender-host-file.png)
+![Add the _Host.cshtml file to the Server App](images/wasm-prerender-host-file.png)
 
 5. Copy and paste the below code content in the `~/Server/Pages/_Host.cshtml` file.
 
@@ -66,7 +66,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
     </html>
     ```
 
-6. Open `Program.cs` file in the Server project and change endpoint of `MapFallbackToFile` configuration from `index.html` to `/_Host`.
+6. Open the `Program.cs` file in the Server project and change the endpoint of the `MapFallbackToFile` configuration from `index.html` to `/_Host`.
 
     ```c#
         ....
@@ -78,7 +78,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
             });
     ```
 
-7. Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Server/Program.cs` file.
+7. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Server/Program.cs` file.
 
     ```c#
     using Syncfusion.Blazor;
@@ -87,17 +87,17 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
     ```
 
-8. If you don't inject and use `HttpClient` DI on your index page, you can run the application and the component will render in the web browser with prerendering mode.
+8. If `HttpClient` is not injected and used on the index page, you can run the application and the component will render in the web browser with prerendering mode.
 
-    The created [Blazor WebAssembly ASP.NET Core Hosted application](../introduction#create-a-new-project-for-blazor-webassembly-aspnet-core-hosted-application) has injected the `HttpClient` DI and fetch the data from server for SfGrid component data source. So, refer to the next topic to resolve the `HttpClient` error on prerendering mode.
+    The created [Blazor WebAssembly ASP.NET Core Hosted application](../introduction#create-a-new-project-for-blazor-webassembly-aspnet-core-hosted-application) injects `HttpClient` to fetch data for the Grid component. Refer to the next section to resolve `HttpClient` errors during prerendering.
 
 ### Resolving HttpClient errors on WebAssembly prerendering
 
-When the index page is injected with the `HttpClient` and tried to prerender on the server, the client will not establish its connection at that time. So, it will throw the runtime exceptions.
+When the index page injects `HttpClient` and prerender on the server, the client has not yet established a connection, which can result in runtime exceptions.
 
 E> ***InvalidOperationException***: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service has registered the HttpClient service itself by default. When you run the `WebAssemblyPrerendered` mode application, it tries to get the WebAPI with its absolute URI or BaseAddress.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service registers the HttpClient by default. In `WebAssemblyPrerendered` mode, requests require an absolute URI or a configured BaseAddress.
 
 If you configure with absolute URI in the `~/Client/Pages/Index.razor` file, you will face another runtime error.
 
@@ -112,9 +112,9 @@ E> ***SocketException***: An existing connection was forcibly closed by the remo
 ***IOException***: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host <br />
 ***HttpRequestException***: An error occurred while sending the request.
 
-We are trying to use HTTP from Server to get the fetch data. But, it is also not possible in the prerender mode because of the client is not yet established.
+Fetching data over HTTP from the client is not possible during prerendering because the client has not initialized.
 
-Refer to the below steps to resolve these issues and make the app running with HttpClient in the prerendering mode.
+Follow these steps to resolve these issues and enable HttpClient usage during prerendering:
 
 1. Create a public interface in the `~/Shared/WeatherForecast.cs` file on the Shared project to abstract the API call.
 
@@ -154,7 +154,7 @@ Refer to the below steps to resolve these issues and make the app running with H
     }
     ```
 
-3. create a new class file with same class name on the Server project and inherit with the interface `IWeatherForecastService`. Here, the existing API `~/Server/Controller/WeatherForecastController.cs` data creation process moved into the override method `GetForecastAsync`.
+3. Create a new class file with the same class name in the Server project and implement the `IWeatherForecastService` interface. Move the data creation logic from the existing API to the `GetForecastAsync` method. The existing controller is at `~/Server/Controllers/WeatherForecastController.cs`.
 
     ```c#
     using System;
@@ -185,7 +185,7 @@ Refer to the below steps to resolve these issues and make the app running with H
     }
     ```
 
-4. Now, the API controller will have the below changes on `~/Server/Controller/WeatherForecastController.cs` file.
+4. Update the API controller in the `~/Server/Controllers/WeatherForecastController.cs` file as follows.
 
     ```c#
     using System.Threading.Tasks;
@@ -215,7 +215,7 @@ Refer to the below steps to resolve these issues and make the app running with H
     }
     ```
 
-5. Register the services in both Client and Server project `~/Program.cs`file.
+5. Register the services in both the Client and Server project `~/Program.cs` files.
 
     ```c#
     ....
@@ -245,9 +245,9 @@ Refer to the below steps to resolve these issues and make the app running with H
     }
     ```
 
-7. Run the application by pressing `F5` key. The Server prerendering will get the data from its local service, and when it renders on the Client, the HTTP Get request will be sent to get the data.
+7. Run the application (for example, press `F5`). During server prerendering, data is provided by the server-side service; after client-side hydration, the client sends the HTTP GET request to retrieve data.
 
 ## See Also
 
-* [Prerender on ASP.NET Core Razor Component](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/prerendering-and-integration?view=aspnetcore-7.0&pivots=webassembly)
-* [Stateful Reconnection After Prerendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#stateful-reconnection-after-prerendering)
+* [Prerender on ASP.NET Core Razor components](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/integration)
+* [Stateful reconnection after prerendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle#stateful-reconnection-after-prerendering)

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Command Column Editing in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Command Column Editing in Syncfusion Blazor TreeGrid component and much more details.
+title: Command Column Editing in Blazor Tree Grid Component | Syncfusion
+description: Checkout and learn here all about Command Column Editing in Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
-# Command Column Editing in Blazor TreeGrid Component
+# Command Column Editing in Blazor Tree Grid Component
 
-The command column provides built-in CRUD action buttons within a column. Configure it using the [TreeGridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Commands) property.
+The command column provides an option to add CRUD action buttons in a column. This can be defined by the [TreeGridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Commands) property.
 
 The available built-in command buttons are:
 
@@ -96,9 +96,9 @@ public class TreeData
 
 ## Custom command
 
-Add custom command buttons using the [TreeGridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Commands) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component, and handle actions in the [CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CommandClicked) event.
+The custom command buttons can be added in a column by using the [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Commands) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component and the action for the custom buttons can be defined in the [CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CommandClicked) event.
 
-The following example adds a custom Details button in the **Manage Records** column and handles the action in the **CommandClicked** event.
+The following sample code demonstrates adding custom command in the **Manage Records** column and the `CommandClicked` event which triggers when the command is clicked,
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -160,7 +160,5 @@ The following example adds a custom Details button in the **Manage Records** col
 }
 ```
 
-The following image shows a custom command button in the **Manage Records** column of the TreeGrid.
-
+The following image represents the custom command added in the **Manage Records** column of the Tree Grid component,
 ![Blazor TreeGrid with Custom Command](../images/blazor-treegrid-custom-command.png)
-

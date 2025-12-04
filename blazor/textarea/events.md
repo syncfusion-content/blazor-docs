@@ -3,17 +3,17 @@ layout: post
 title: Events in Blazor TextArea Component | Syncfusion
 description: Handling events triggered by user interactions or changes of the Syncfusion Blazor Textarea component and much more.
 platform: Blazor
-control: Textarea
+control: TextArea
 documentation: ug
 ---
 
 # Events in Blazor TextArea Component
 
-This section describes the TextArea events that will be triggered when appropriate actions are performed. The following events are available in the TextArea component.
+This topic describes the TextArea events raised during user interaction and component lifecycle. The following events are available: Created, Input, ValueChange, Focus, Blur, and Destroyed.
 
 ## Created event
 
-The TextArea component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Created) event when the TextArea component is created. This event provides users with an opportunity to perform actions immediately after the TextArea has been created and initialized.
+The TextArea triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Created) event after the component is created and initialized. Use this event for one-time initialization or configuration logic. This event does not provide event arguments.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -30,8 +30,7 @@ The TextArea component triggers the [Created](https://help.syncfusion.com/cr/bla
 
 ## Input event
 
-The TextArea component triggers the [Input](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Input) each time when the value of TextArea has changed. This event provides users with an opportunity to perform actions in response to real-time changes in the TextArea's content.
-The [TextAreaInputEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaInputEventArgs.html) passed as an event argument provides the details about the input event in the TextArea.
+The TextArea triggers the [Input](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Input) event on every keystroke as the user types, reflecting real-time changes to the content. The [TextAreaInputEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaInputEventArgs.html) argument provides details about the input event.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -48,8 +47,7 @@ The [TextAreaInputEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## ValueChange event
 
-The TextArea component triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ValueChange) event when the content of TextArea has changed and gets focus-out. This event provides users with an opportunity to execute specific actions in response to changes made by the user.
-The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaValueChangeEventArgs.html) passed as an event argument provides the details about the changes in the TextArea's value.
+The TextArea triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ValueChange) event when the content is committed (typically when the component loses focus). Use this event to react to finalized value changes rather than per-keystroke updates. The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaValueChangeEventArgs.html) argument provides details about the change.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -65,8 +63,7 @@ The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## Focus event
 
-The TextArea component triggers the [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Focus ) when the TextArea gains focus. This event allows developers to execute specific actions when the user interacts with the TextArea by focusing on it.
-The [TextAreaFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaFocusInEventArgs.html) passed as an argument provides details about the focus event in the TextArea.
+The TextArea triggers the [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Focus) event when the component gains focus. Use this event to run logic when the user focuses the control. The [TextAreaFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaFocusInEventArgs.html) argument provides details about the focus-in event.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -83,8 +80,7 @@ The [TextAreaFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Blur event
 
-The TextArea component triggers the [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Blur) when the TextArea loses focus. This event allows users to execute specific actions when the user interacts with the TextArea by moving focus away from it.
-The [TextAreaFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaFocusOutEventArgs.html) passed as an argument provides details about the blur event in the TextArea.
+The TextArea triggers the [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Blur) event when focus leaves the component. Use this event to handle actions when focus moves away. The [TextAreaFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextAreaFocusOutEventArgs.html) argument provides details about the blur event.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -101,7 +97,7 @@ The [TextAreaFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ## Destroyed event
 
-The TextArea component triggers the [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Destroyed) when the TextArea component is destroyed.
+The TextArea triggers the [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Destroyed) event when the component is disposed. Use this lifecycle event to release resources or perform cleanup. This event does not provide event arguments.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

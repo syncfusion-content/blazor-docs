@@ -113,7 +113,7 @@ The following example demonstrates how to render a custom toolbar using `Templat
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBUsZBuSRVoiYtS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhyWChngaryhJXi?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Render image with text in custom Toolbar
 
@@ -470,7 +470,7 @@ The following example shows how to render `SfAutoComplete` inside the Grid toolb
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthoNTLFzGxGrdMg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBysCBdJXXyIRKP?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Render a component or element using the Toolbar Template
 

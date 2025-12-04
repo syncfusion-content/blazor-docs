@@ -1,14 +1,15 @@
 ---
 layout: post
 title: Bind data to Blazor components using WebApiAdaptor | CRUD | Syncfusion
-description: Learn how to retrieve data from WebApi controller, bind it to the Syncfusion DataGrid component using WebApiAdaptor of DataManager, and perform CRUD operations.
-component: General
+description: Learn how to retrieve data from a Web API, bind it to the Syncfusion Blazor DataGrid using SfDataManager with WebApiAdaptor, and perform CRUD operations.
 platform: Blazor
+control: Common
+documentation: ug
 ---
 
 # Bind data to Blazor components using WebApiAdaptor and perform CRUD
 
-In this topic, you can learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
+This article shows how to retrieve data from a WebAPI controller, bind it to the DataGrid using the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) of `SfDataManager`, and perform CRUD operations.
 
 You can use the WebApiAdaptor of SfDataManager to interact with Web APIs created with OData endpoint. The WebApiAdaptor is extended from the ODataAdaptor. Hence, to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with the request.
 
@@ -16,9 +17,9 @@ To enable the OData query option for Web API, Refer to this [documentation](http
 
 ## Prerequisite software
 
-The following software are needed
+The following software are required:
 * Visual Studio 2022
-* .NET 7.0 or .NET 8.0 or .NET 9.0.
+* .NET 7.0 or .NET 8.0 or .NET 9.0 or .NET 10
 
 ## Create the database
 
@@ -52,9 +53,9 @@ Now, click on **Update Database**.
 
 ## Create a new Blazor Web App
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling#interactivity-location) when creating the Blazor Web App.
 
 ### Generate DbContext and model class from the database
 
@@ -217,7 +218,7 @@ namespace WebAPICRUDServerApp
 * Now, open **Program.cs** file and add **AddControllers & MapControllers** method as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" %}
 
 ......
 builder.Services.AddControllers();
@@ -424,7 +425,7 @@ app.Run();
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If using `WebAssembly` or `Auto` render modes in a Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -469,12 +470,11 @@ Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</s
 * Material
 * High Contrast
 
-In this demo application, the latest theme will be used.
+In this demo application, the latest theme is used.
 
-  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 and .NET 8.
-
-  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
-  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
+* For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 10, .NET 9 and .NET 8.
+* For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
+* For **Blazor Server application**, refer stylesheet inside the `<head>` element of
     * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** file for .NET 6.
 
@@ -516,7 +516,7 @@ If you have set the interactivity location to `Per page/component` in the web ap
 {% endhighlight %}
 {% endtabs %}
 
-## Binding data to Blazor DataGrid component using WebApiAdaptor
+## Bind data to the Blazor DataGrid using WebApiAdaptor
 
 To consume data from the WebApi Controller, you need to add the **SfDataManager** with **WebApiAdaptor**. Refer to the following documentation for more details on [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 
@@ -617,7 +617,7 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
 {% endhighlight %}
 {% endtabs %}
 
-N> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
+N> Normal editing is the default mode. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for the column that holds a unique key.
 
 ### Insert a row
 
@@ -683,4 +683,4 @@ public void Delete(long id)
 {% endhighlight %}
 {% endtabs %}
 
-N> Find the sample from this [Github](https://github.com/SyncfusionExamples/binding-webapi-services-and-perform-crud) location.
+N> Find the sample at this [GitHub repository](https://github.com/SyncfusionExamples/binding-webapi-services-and-perform-crud).

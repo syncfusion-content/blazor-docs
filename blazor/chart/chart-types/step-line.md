@@ -50,9 +50,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhfXairAFPdRAGd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Step Line Chart](../images/chart-types-images/blazor-step-line-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhfXairAFPdRAGd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Step Line Chart](../images/chart-types-images/blazor-step-line-chart.png)" %}
 
 ## Binding data with series
 

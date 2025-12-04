@@ -9,9 +9,9 @@ documentation: ug
 
 # Apply custom style to pivot cells in Blazor Pivot Table Component
 
-The [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulated) event within the [PivotViewEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html), which is triggered whenever the report is modified and the engine is populated, allows you to apply custom styling to row, column and value cells in the pivot table.
+The [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulated) event in the [PivotViewEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html) triggers each time the report changes and the engine updates. This event lets you add your own styles to row, column, and value cells in the Pivot Table.
 
-In the following example, a custom style has been applied to the column header **"FY 2015"** and to the row header **"Germany"** and its aggregated value via the [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulated) event by adding the **"e-custom"** class to the `cellData.CssClass` property.
+In the following example, a custom style is applied to the column header **FY 2015** the row header **Germany** and the corresponding value cell for **Amount** under **FY 2016** via the [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulated) event by adding the **e-custom** class to the `cellData.CssClass` property.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -68,7 +68,7 @@ In the following example, a custom style has been applied to the column header *
                     {
                         cellData.CssClass = "e-custom";
                     }
-                    if ((cellData.Axis == "column" && cellData.FormattedText == "FY 2017"))
+                    if ((cellData.Axis == "column" && cellData.FormattedText == "FY 2015"))
                     {
                         cellData.CssClass = "e-custom";
                     }

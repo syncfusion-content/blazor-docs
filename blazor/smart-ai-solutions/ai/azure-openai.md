@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure OpenAI Integration with Syncfusion Blazor AI | Syncfusion
-description: Learn how to set up and use Syncfusion.Blazor.AI with Azure OpenAI for AI-powered features in your Blazor apps, including configuration and examples.
+description: Learn here about how to set up and use Syncfusion.Blazor.AI with Azure OpenAI for AI-powered features in your Blazor apps, including configuration and examples.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Azure OpenAI Integration with Syncfusion® Blazor AI
 
-The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables seamless integration with [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) to add AI-driven features to Blazor applications. These features include natural language querying (converting plain English queries to structured data filters), data analysis (processing and summarizing datasets), and content processing (generating or refining text). 
+The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library integrates with [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) to add AI-driven features to Blazor applications. These features include natural language querying (converting plain English queries to structured data filters), data analysis (processing and summarizing datasets), and content processing (generating or refining text).
 
 ## Prerequisites
 
-To integrate Azure OpenAI with a Blazor WebApp Server, ensure the following:
+To integrate Azure OpenAI with a Blazor Web App (Server), ensure the following:
 - The following NuGet packages are installed:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -25,15 +25,16 @@ Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+
 - An [Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource) is deployed to obtain `apiKey`, `deploymentName`, and `endpoint` values.
 - The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
-- Credentials are stored securely using Azure Key Vault or environment variables (see [Microsoft’s guide on secure storage](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)).
+- Credentials are stored securely using Azure Key Vault or environment variables (see the [Microsoft guide on secure storage](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)).
 
 ## Configuration Steps
 
 ### Register AI Services in Program.cs
 
-To configure Azure OpenAI in a Blazor WebApp Server, update the `Program.cs` file as follows:
+To configure Azure OpenAI in a Blazor Web App (Server), update the `Program.cs` file as follows:
 
 ```csharp
 // Add required namespaces
@@ -76,6 +77,7 @@ Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+
 - Ensure the Blazor application meets the [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
@@ -91,7 +93,7 @@ Install-Package Azure.AI.OpenAI
 </body>
 ```
 
-### Register Syncfusion Blazor Service
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Register the Syncfusion Blazor service in the `~/Program.cs` file based on the interactive render mode.
 
@@ -368,8 +370,8 @@ This example illustrates how the Syncfusion Blazor AI library integrates with Az
 - **UI Components**: Syncfusion Tab, QueryBuilder, and Grid components integrate with the AI service for dynamic query processing.
 
 ## Error Handling
-- **Invalid Credentials**: Ensure the API key, endpoint, and model are valid and correctly configured in environment variables or Azure Key Vault.
-- **Rate Limits**: Azure OpenAI usage may be limited based on your subscription. Check [Azure OpenAI pricing documentation](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/) for details.
+- **Invalid credentials**: Ensure the API key, endpoint, and model are valid and correctly configured in environment variables or Azure Key Vault.
+- **Rate limits**: Azure OpenAI usage may be limited based on your subscription. See the [Azure OpenAI pricing documentation](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/) for details.
 
 ## See Also
 - [Syncfusion Blazor QueryBuilder Documentation](https://blazor.syncfusion.com/documentation/query-builder/getting-started-webapp)

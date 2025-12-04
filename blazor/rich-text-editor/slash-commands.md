@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Slash Commands in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about Slash Commands in Syncfusion Blazor RichTextEditor component and much more.
+title: Slash Commands in Blazor Rich Text Editor | Syncfusion
+description: Checkout and learn here all about Slash Commands in Syncfusion Blazor Rich Text Editor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Slash Commands in Blazor RichTextEditor
+# Slash Commands in Blazor Rich Text Editor
 
-The slash menu in the Rich Text Editor provides users with an efficient way to apply formatting, insert elements, and execute custom commands by simply typing the “/” character. This feature enhances the user experience by offering quick access to common editing actions within the editor.
+The slash menu in the Rich Text Editor offers users a streamlined way to apply formatting, insert elements, and execute custom commands by simply typing the “/” character. This feature enhances the user experience by offering quick access to common editing actions within the editor.
 
 ## Enabling the slash menu
 
@@ -20,8 +20,6 @@ N> The SlashMenu feature is currently not supported in iframe mode of the Rich T
 ## Configure the slash menu items
 
 The [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html) property allows customization of the `Items` displayed in the slash menu. By setting the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property with a list of [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel), you can define which commands are available when a user types a slash (/) in the Rich Text Editor.
-
-
 
 This list can include various formatting options such as paragraph and heading levels. Here’s an code snippet of configuring the slash menu items:
 
@@ -37,7 +35,7 @@ This list can include various formatting options such as paragraph and heading l
 
 The size of the slash menu popup can be customized using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_PopupHeight) properties within [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html). Adjusting these values allows for control over the dimensions of the menu.
 
-Below is an code snippet showing how to customize both the width and height of the popup:
+Below is a code snippet showing how to customize both the width and height of the popup:
 
 {% tabs %}
 {% highlight cshtml %}
@@ -49,10 +47,9 @@ Below is an code snippet showing how to customize both the width and height of t
 
 ## Adding custom slash menu items
 
-Custom items can be added by defining the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property within the [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html). This property should be a list of [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel) objects, which represent custom menu items. Each [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel) can be configured to include details such as text labels, icons, descriptions, and grouping information, providing users with a tailored set of commands when they use the slash (/) functionality in the Rich Text Editor.
+Custom items can be added by defining the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property within the [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html). This property should be a list of [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel) objects, which represent custom menu items. Each [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel) can be configured to include details such as text labels, icons, descriptions, and grouping information, allowing users to access tailored commands quickly using the slash (/) functionality in the Rich Text Editor.
 
-
-Each custom item object can include the following properties:
+Each custom slash menu item can include the following properties:
 
 | API | Description | 
 |:----------------:|:---------:|

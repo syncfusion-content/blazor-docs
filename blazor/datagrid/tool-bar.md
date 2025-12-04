@@ -134,7 +134,7 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
         }
 
     }
-
+    
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Text == "Expand")

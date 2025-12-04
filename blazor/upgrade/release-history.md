@@ -1,30 +1,30 @@
 ---
 layout: post
 title: Release history of Blazor components - Syncfusion
-description: Learn here about the release history of Syncfusion Blazor components for new features, bug fixes, breaking changes and others.
+description: Explore the release history of Blazor components, including new features, bug fixes, breaking changes, guidance on main, service pack, weekly releases.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Release History
+# Syncfusion® Release History
 
-Every new release of Syncfusion<sup style="font-size:70%">&reg;</sup> includes exciting new features. Refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [release notes](https://blazor.syncfusion.com/documentation/release-notes/19.4.47?type=all) to know more about the changes in each releases.
+Every new release of Syncfusion<sup style="font-size:70%">&reg;</sup> includes new features and improvements. Refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [release notes](https://blazor.syncfusion.com/documentation/release-notes/31.1.23?type=all) to learn about changes in each releases.
 
-See our [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for Blazor to learn more about the following.
+See the [Blazor Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-components) to learn more about the following.
 
-* Breaking Changes
-* Bug Fixes
+* Breaking changes
+* Bug fixes
 * Features
-* Known issues between your current version and the latest version you are trying to upgrade.
+* Known issues between your current version and the target version
 
-## What's the difference between main, service pack and weekly releases 
+## What's the difference between main, service pack and weekly releases?
 
-**Main Release:** - Includes the new features and bug fixes. Update to this when needed for planned upgrades. Check out [upgrade guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before update.
+**Main release:** Includes new features and bug fixes. Use for planned upgrades. Review the [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before updating.
 
-**Service Pack Release:** - Includes minor features and bug fixes. Update to this when needed for planned upgrades. Check out [upgrade guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before update.
+**Service pack release:** Includes minor features and bug fixes. Use for scheduled maintenance upgrades. Review the [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for any breaking changes.
 
-**Weekly Releases:** - Bug fix release. Update to this only when specific fixes are needed. 
+**Weekly releases:** Delivers targeted bug fixes. Update to this only when specific fixes are needed.
 
 ## See also
 
