@@ -11,7 +11,7 @@ documentation: ug
 
 ## Get selected value
 
-Get the selected value of the MultiSelect component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) event using the [MultiSelectChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectChangeEventArgs-1.html#Syncfusion_Blazor_DropDowns_MultiSelectChangeEventArgs_1_Value) property.
+Get the selected values of the MultiSelect component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) event by using the [MultiSelectChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectChangeEventArgs-1.html#Syncfusion_Blazor_DropDowns_MultiSelectChangeEventArgs_1_Value) property.
 
 {% highlight cshtml %}
 
@@ -33,7 +33,7 @@ Bind the pre-selected value to the MultiSelect component using the [@bind-Value]
 
 ## Programmatically change the selected value
 
-Change the component value programmatically or externally by the component instance using the [@ref](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute of the component. The following sample shows how to change the value of the component using click event of the button component.
+Change the component’s value programmatically by referencing the component instance via the [@ref](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute. The following example updates the value in a button click handler.
 
 {% highlight cshtml %}
 
@@ -45,7 +45,7 @@ Change the component value programmatically or externally by the component insta
 
 ### ValueChange event
 
-The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) event is triggered when the value of the MultiSelect component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) event is raised when the value of the MultiSelect changes. The event args include the current value and the previously selected value.
 
 {% highlight cshtml %}
 
@@ -55,7 +55,7 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 ### OnValueSelect event
 
-The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnValueSelect) event is triggered when you select any value in the MultiSelect component. Get the necessary arguments including the [SelectEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SelectEventArgs-1.html). Also,  prevent the selection of items by setting the [SelectEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SelectEventArgs-1.html#Syncfusion_Blazor_DropDowns_SelectEventArgs_1_Cancel) property as `true` provided by the event arguments. 
+The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnValueSelect) event is raised when an item is selected in the popup. Access item data via [SelectEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SelectEventArgs-1.html). Prevent selection by setting [SelectEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SelectEventArgs-1.html#Syncfusion_Blazor_DropDowns_SelectEventArgs_1_Cancel) to `true`.
 
 {% highlight cshtml %}
 
@@ -65,7 +65,7 @@ The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ## Get selected item by value
 
-Get the entire object belonging to the value selected in the component using the [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_GetDataByValueAsync__0_) method.
+Retrieve the full data item for a given value by using [GetDataByValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_GetDataByValueAsync__0_).
 
 {% highlight cshtml %}
 
@@ -75,7 +75,7 @@ Get the entire object belonging to the value selected in the component using the
 
 ## Focus the next component on selection
 
-Focus the component programmatically using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FocusAsync) public method. It will set focus instantly to the MultiSelect component when invoking it. 
+Programmatically set focus by using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FocusAsync) method. This immediately moves focus to the MultiSelect when invoked.
 
 {% highlight cshtml %}
 
@@ -85,7 +85,7 @@ Focus the component programmatically using the [FocusAsync](https://help.syncfus
 
 ## Programmatically clear the selected value
 
-To clear the MultiSelect value programmatically, use the [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ClearAsync) method. This method clears out the selected values from the SfMultiSelect<TValue, TItem> component and sets the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) property to null.
+Clear the MultiSelect selection by using [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ClearAsync). This removes the selected values and sets [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) to `null`.
 
 {% highlight cshtml %}
 
@@ -95,7 +95,7 @@ To clear the MultiSelect value programmatically, use the [ClearAsync](https://he
 
 ## Prevent reload on form submit
 
-To prevent the page from reloading when using the MultiSelect component inside a form, you can specify the type of the button as "button" by utilizing the `HTMLAttributes` property. This will prevent the page from reloading when the button is clicked.
+When the MultiSelect is used inside a form, prevent page reloads by setting the button’s `type="button"` (instead of the default `type="submit"`). This avoids form submission when the button is clicked.
 
 {% highlight cshtml %}
 
@@ -115,7 +115,7 @@ Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Programmatically focus in and focus out the component
 
-In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the combobox, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the combobox.
+Use buttons to invoke the `FocusAsync()` and `FocusOutAsync()` methods on the MultiSelect instance to move focus in and out programmatically.
 
 {% highlight Razor %}
 
@@ -127,7 +127,7 @@ While focusing and focus out the following event get triggered.
 
 ### Focus event
 
-The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Focus) event will trigger when the component gets focused. 
+The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Focus) event is raised when the component receives focus. 
 
 {% highlight cshtml %}
 
@@ -137,7 +137,7 @@ The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Mu
 
 ### Blur event
 
-The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Blur) event will trigger when focus moves out from the component. 
+The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Blur) event is raised when the component loses focus. 
 
 {% highlight cshtml %}
 
