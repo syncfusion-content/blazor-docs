@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Export Options in Blazor DataGrid | Syncfusion
-description: Learn how to customize PDF export in the Syncfusion Blazor DataGrid, including current/filtered/selected rows, hidden columns, page size/orientation, themes, and more.
+description: Learn how to customize PDF export in Syncfusion Blazor DataGrid with filtered rows, hidden columns, page settings, and themes.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1380,7 +1380,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports em
 
 **Steps to configure**
 
-1. Encode the font file (e.g., .ttf or .otf) as a **Base64 string**.
+1. Encode the font file as a **Base64 string**.
 2. Assign the **Base64 string** to [PdfGridFont.FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfGridFont.html).
 3. Define **font** **size**, **color**, and **style** using [PdfThemeStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfThemeStyle.html).
 4. Pass the [theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Theme) configuration to [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_).
