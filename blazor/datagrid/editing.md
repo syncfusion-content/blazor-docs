@@ -1334,7 +1334,7 @@ Editing operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazo
  
 ## How to make a Blazor DataGrid column always editable
 
-To configure a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid column for continuous editability, use the column template feature. This approach is particularly effective for enabling direct editing of specific column values within the Grid.
+To configure a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid column for continuous editing, use the column template feature. This approach is particularly effective for enabling direct editing of specific column values within the Grid.
 In the following example, the [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) component is rendered in the **Freight** column using a column template. Edited changes are saved to the data source using two-way binding (**@bind-Value**) of the `SfTextBox`.
 
 {% tabs %}
