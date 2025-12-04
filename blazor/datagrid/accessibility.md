@@ -61,12 +61,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid implements 
 | `aria-rowindex` | Specifies the row index relative to the total number of rows. |
 | `aria-rowspan` | Indicates the number of rows spanned by a cell. |
 | `aria-colspan` | Indicates the number of columns spanned by a cell. |
-| `aria-rowcount` | Specifies the total number of rows in the grid. |
-| `aria-colcount` | Specifies the total number of columns in the grid. |
 | `aria-selected` | Indicates the selection state of rows or cells. |
 | `aria-expanded` | Shows whether expand/collapse icons are expanded in hierarchical or grouped grids. |
 | `aria-sort` | Indicates sorting order (ascending or descending) for columns. |
-| `aria-busy` | Signals that the grid is being updated, deferring assistive technology announcements. |
 | `aria-owns` | Defines relationships between elements for visual or functional context. |
 | `aria-hidden` | Hides elements from assistive technologies. |
 | `aria-labelledby` | Provides accessible names for elements like checkboxes in filters or dialogs. |
