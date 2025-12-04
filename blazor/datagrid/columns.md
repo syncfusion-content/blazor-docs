@@ -1426,10 +1426,6 @@ The example demonstrates autofitting columns after changing visibility using the
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
-
-using System.Collections.Generic;
-using System.Linq;
-
 public class OrderData
 {
     public int? OrderID { get; set; }
