@@ -9,22 +9,28 @@ documentation: ug
 
 # Adding header and footer in Blazor DataGrid 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports customized header and footer sections in exported PDF documents. Use these regions to add text, page numbers, lines, adjust page size, and change orientation.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports customizing header and footer sections in PDF exports. These regions can include:
+
+* **Text** – Titles, dates, or disclaimers.
+* **Page Numbers** – For easy navigation.
+* **Lines** – To visually separate sections.
+* **Images** – Such as logos or branding elements.
+* **Layout Adjustments** – Page size and orientation.
 
 ## Adding text in header and footer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can add custom text to the header and footer of the exported PDF.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding custom text to header and footer regions in PDF exports.
 
-- The header appears at the top of each page and typically contains information such as a logo, document title, or date.
-- The footer appears at the bottom of each page and commonly contains page numbers, copyright text, or disclaimers.
+* The **header** appears at the top of each page and can include elements such as a document title, company logo, or date and metadata. This section is typically used for branding and document identification.
+
+* The **footer** appears at the bottom of each page and commonly contains page numbers, copyright text, or disclaimers. This section is useful for navigation and compliance information.
 
 To add text in the header and footer of the exported PDF:
 
-- Access `[PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
-- Assign [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) using `PdfHeader`/`PdfFooter`, and provide one or more `PdfHeaderFooterContent` entries in their `Contents` collections.
-- Call [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) to export with the configured header and footer.
-
-The following example demonstrates adding text in the header and footer:
+1. Access `[PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
+2. Assign [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) using [PdfHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeader.html) and [PdfFooter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfFooter.html) objects.
+3. Add one or more [PdfHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html) items to the `Contents` collection for each region.
+4. Call [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) to export with the configured header and footer.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -163,9 +169,11 @@ public class OrderData
 
 ## Draw a line in header and footer
 
-When exporting to PDF, lines can be drawn in the header and footer to visually separate those regions from the main content.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports drawing lines in header and footer regions when exporting to PDF. **Lines** are commonly used to visually separate these regions from the main content.
 
-Use the [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html) enumeration to control the line style. Supported styles include:
+**Supported Line Styles**
+
+The line style is controlled using the [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html) enumeration. Available styles include:
 
 - Dash
 - Dot
@@ -175,10 +183,10 @@ Use the [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 To draw a line in the header and footer:
 
-- Access `Header.Contents` and `Footer.Contents` in [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) and add content items with `Type = ContentType.Line`.
-- Set the `Style` with `DashStyle`, `PenColor`, and `PenSize`, and define the line coordinates with `Points`.
-
-The following example shows dynamically selecting a line style with a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app):
+1. Access Header.Contents and Footer.Contents in [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
+2. Add [PdfHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html) items and set the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType) to [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType_Line).
+3. Configure Style properties such as `DashStyle`, `PenColor`, and `PenSize`.
+4. Define line coordinates using `Points`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -365,23 +373,25 @@ public class OrderData
 
 ## Add page number in header and footer
 
-When exporting to PDF, page numbers can be included in header and footer regions to enhance document navigation.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding page numbers to header and footer regions when exporting to PDF. This feature improves document navigation and readability.
 
-This is configured using [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) with [PdfHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html) items whose `Type` is [ContentType.PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType_PageNumber). The display format is controlled by [PageNumberType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageNumberType.html#fields):
+Page numbers are configured using [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html). Set the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType) to [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType_PageNumber) when adding page numbers to the header or footer.
 
-- LowerLatin – a, b, c
-- UpperLatin – A, B, C
-- LowerRoman – i, ii, iii
-- UpperRoman – I, II, III
-- Number – 1, 2, 3
-- Arabic – 1, 2, 3
+The display format is controlled by [PageNumberType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageNumberType.html#fields), which supports:
+
+* Arabic – 1, 2, 3
+* Number – 1, 2, 3
+* LowerLatin – a, b, c
+* UpperLatin – A, B, C
+* LowerRoman – i, ii, iii
+* UpperRoman – I, II, III
 
 To add page numbers:
 
-- Add [PdfHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html) with `Type = ContentType.PageNumber` to `Header.Contents` and/or `Footer.Contents`.
-- Set `PageNumberType`, `Position`, and `Style` as needed.
-
-The following example demonstrates adding page numbers with a DropDownList to choose the format:
+1. Add content items to the header and/or footer and set the content type to `PageNumber`.
+2. Specify the page number format using `PageNumberType`.
+3. Define position and style properties as needed.
+4. Call [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) to generate the PDF with page numbers.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -530,16 +540,15 @@ public class OrderData
 
 ## Insert an image in header and footer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to include images—such as logos—in the header and footer sections when exporting the grid to a PDF document.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding images, such as company logos, to header and footer regions when exporting to PDF. This feature is useful for branding and document personalization.
 
-Images can be added using a Base64-encoded string in .jpeg format. This is done through the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property of the Grid.
+To insert an image:
 
-To insert an image in the header or footer of the exported PDF:
-
-- Convert the desired image to a Base64 string in .jpeg format.
-- Use the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) and assign the Base64 string or image file path to the `Src` property within the `Header.Contents` or `Footer.Contents` collections.
-
-The following example demonstrates inserting an image in the header and footer:
+1. Convert the image to a **Base64 string** in **JPEG** format.
+2. Access [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) and add content items to the [header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and/or [footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer).
+3. Set the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType) to [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType_Image) and assign the **Base64 string** to the `Src` property.
+4. Define the image position and size using `Position` and `Size` properties.
+5. Call [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) to generate the PDF with the configured image.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -660,9 +669,12 @@ public class OrderData
 
 ## Repeat column header on every page
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports repeating column headers on every page of a PDF document during export, ensuring visibility when content spans multiple pages. By default, column headers appear only on the first page. To display them on every page, enable the [IsRepeatHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IsRepeatHeader) property of the PdfExportProperties class. Optionally, use the [PdfHeaderQueryCellInfo](https://ej2.syncfusion.com/angular/documentation/api/grid/#pdfheaderquerycellinfo) event to customize header appearance, such as styling or formatting.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports repeating column headers on every page of a PDF export. This ensures headers remain visible when the content spans multiple pages. By default, headers appear only on the first page.
 
-The following example repeats the column headers on every page in the exported PDF:
+To enable this feature:
+
+1. Set the [IsRepeatHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IsRepeatHeader) property in [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) to **true**.
+2. Optionally, customize header appearance using the [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
