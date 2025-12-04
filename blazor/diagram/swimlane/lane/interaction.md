@@ -47,3 +47,110 @@ The following image shows how to swap lanes.
 The following image shows children interaction in lane.
 
 ![Lane Children Interaction](../Swimlane-images/Child_Interaction.gif)
+
+## How to restricts nodes from being dragged or repositioned outside their assigned swimlane
+
+To keep child nodes confined to their lane, set their Constraints to include AllowDragWithinSwimlane. By default, nodes can move freely. When AllowDragWithinSwimlane is applied, a node can be dragged only within the bounds of its owning lane; attempts to move it across lane or swimlane boundaries are blocked.
+
+The following example shows one node is restricted to its lane, while another remains unrestricted for comparison.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" >
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+
+@code
+{
+    //Define diagram's swimlane collection
+    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+
+    protected override void OnInitialized()
+    {
+        // A swimlane is created and stored in the swimlanes collection.
+        Swimlane swimlane = new Swimlane()
+            {
+                Header = new SwimlaneHeader()
+                {
+                    Annotation = new ShapeAnnotation()
+                    {
+                        Content = "SALES PROCESS FLOW CHART"
+                    },
+                    Height = 50,
+                },
+                OffsetX = 400,
+                OffsetY = 200,
+                Height = 120,
+                Width = 450,
+                Lanes = new DiagramObjectCollection<Lane>()
+                {
+                    new Lane(){Height = 100,
+                    Header = new SwimlaneHeader(){
+                        Width = 30,
+                        Annotation = new ShapeAnnotation(){ Content = "Consumer" }
+                    },
+                    Children = new DiagramObjectCollection<Node>()
+                    {
+                        new Node()
+                        {
+                            Height = 50, Width = 50, LaneOffsetX = 100, LaneOffsetY = 30, Constraints = NodeConstraints.Default | NodeConstraints.AllowDragWithinSwimlane , 
+                            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+                            { 
+                                new ShapeAnnotation() 
+                                { 
+                                    Content="AllowDrag Within Swimlane",
+                                    Style= new  TextStyle()
+                                    {
+                                        TextOverflow = TextOverflow.Wrap, TextWrapping = TextWrap.WrapWithOverflow
+                                    }
+                                } 
+                            } 
+                        },
+                        new Node(){Height = 50, Width = 50, LaneOffsetX = 250, LaneOffsetY = 30},
+                    }
+                    },
+                }
+            };
+        // Add swimlane
+        SwimlaneCollections.Add(swimlane);
+    }
+
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+            swimlane.Header.Style = new TextStyle()
+                {
+                    Fill = "#5b9bd5",
+                    StrokeColor = "#5b9bd5"
+                };
+            foreach (Phase phase in swimlane.Phases)
+            {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+        }
+        else if (obj is Node node)
+        {
+            node.Style = new ShapeStyle()
+                {
+                    Fill = "#5b9bd5",
+                    StrokeColor = "#5b9bd5"
+                };
+        }
+    }
+}
+
+``` 
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNode)
+
+![Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)
+
+>**Note:**
+* Apply NodeConstraints.AllowDragWithinSwimlane to each node you want confined to its lane.
+* If you want all child nodes inside lanes to be restricted, you can set this constraint in the NodeCreating event for applicable nodes.
+
