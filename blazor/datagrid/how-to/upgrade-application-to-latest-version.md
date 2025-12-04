@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upgrade Application To Latest Version in Blazor DataGrid | Syncfusion
-description: Learn here all about Upgrade Application To Latest Version in Syncfusion Blazor DataGrid component and more.
+title: Upgrade Blazor DataGrid App to Latest Syncfusion Version
+description: Learn how to upgrade a Blazor DataGrid application to the latest Syncfusion version, update resource links, and resolve NuGet cache issues.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,38 +9,41 @@ documentation: ug
 
 # Upgrade application To latest version in Blazor DataGrid
 
-**Step 1:** Update the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) from NuGet package manager in your application.
+**Step 1:** Update to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) package using the NuGet Package Manager in the application.
 
 ![Updating Blazor NuGet Package](../images/blazor-datagrid-update-nuget-package.PNG)
 
 ## Compatible .NET version
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of .NET Core 9.0. So, we suggest you to upgrade the .NET Core 9.0 SDK in your machine before upgrading to the latest version.
+The latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are compatible with the latest .NET (for example, .NET 9). It is recommended to upgrade the .NET SDK on the machine before updating to the latest Syncfusion version.
 
 ## Client resource file references
 
-Ensure our CSS files have been properly configured in your application.
+Ensure Syncfusion CSS resources are properly referenced in the application.
 
-* If you use the Blazor server app, add the following style file references in **~/Pages/_Host.cshtml**.
+* For a Blazor Server app, add the following style file reference in **~/Pages/_Host.cshtml**.
 
-* If you use the Blazor WebAssembly app, add the following style file references in **~/wwwroot/index.html**.
+* For a Blazor WebAssembly app, add the following style file reference in **~/wwwroot/index.html**.
 
 ```html
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <head>
+        ....
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    </head>
 ```
 
-N> For production purpose and minimal requirement, Syncfusion<sup style="font-size:70%">&reg;</sup> provides an option to generate scripts and styles of selective control by using the Custom Resource Generator (CRG) web tool. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
+N> For production scenarios and minimal footprint, Syncfusion<sup style="font-size:70%">&reg;</sup> provides the Custom Resource Generator (CRG) web tool to generate scripts and styles for selected controls. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
 
 ## Breaking changes
 
-Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/19.4.47?type=all) for our Blazor components.
+Some changes may occur across releases that affect existing applications. Review the breaking changes and notes for the target version before upgrading. Refer to the Blazor components [release notes](https://blazor.syncfusion.com/documentation/release-notes) for details.
 
 ## Cache problem
 
-Before restoring the NuGet packages, clean the old version Syncfusion.Blazor NuGet package.
+Before restoring NuGet packages, clear any cached versions of the Syncfusion.Blazor package to avoid conflicts.
 
 The following steps explain how to clean the cache:
 
-1. Delete/clear the package Syncfusion.Blazor from the installed location `{System-driver}/Users/{user-name}/.nuget/packages/syncfusion.blazor`. In Windows, the installed location of Syncfusion.Blazor package can be found using `%userprofile%/.nuget/packages/syncfusion.blazor`.
+1. Delete/clear the `Syncfusion.Blazor` package from the installed location `{System drive}/Users/{user-name}/.nuget/packages/syncfusion.blazor`. On Windows, the installed location can also be accessed using `%userprofile%/.nuget/packages/syncfusion.blazor`.
 
-2. Update the latest version of Syncfusion.Blazor NuGet package.
+2. Update to the latest version of the `Syncfusion.Blazor` NuGet package.

@@ -30,7 +30,7 @@ Ensure the following NuGet packages are installed based on your chosen AI servic
 - **OllamaSharp**
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight csharp tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Kanban -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -48,7 +48,7 @@ Install-Package OllamaSharp  # For Ollama
 Include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of your main page:
 
 - For **.NET 6** Blazor Server apps, add to **~/Pages/_Layout.cshtml**.
-- For **.NET 8 or .NET 9** Blazor Server apps, add to **~/Components/App.razor**.
+- For **.NET 8 or .NET 9 or .NET 10** Blazor Server apps, add to **~/Components/App.razor**.
 
 ```html
 <head>
@@ -77,7 +77,7 @@ Generate an API key from OpenAI and set `openAIApiKey`. Specify the desired mode
 - Install the required NuGet packages:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight csharp tabtitle="Package Manager" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
@@ -88,7 +88,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 - Add the following to the **~/Program.cs** file in your Blazor WebApp:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight csharp tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
@@ -115,7 +115,7 @@ Deploy an Azure OpenAI Service resource and model as described in [Microsoft's d
 - Install the required NuGet packages:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight csharp tabtitle="Package Manager" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
@@ -127,7 +127,7 @@ Install-Package Azure.AI.OpenAI
 - Add the following to the **~/Program.cs** file in your Blazor WebApp:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight csharp tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
@@ -163,7 +163,7 @@ To use Ollama for self-hosted AI models:
 - Install the required NuGet packages:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight csharp tabtitle="Package Manager" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package OllamaSharp
@@ -174,7 +174,7 @@ Install-Package OllamaSharp
 - Add the following to the **~/Program.cs** file in your Blazor WebApp:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight csharp tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
@@ -202,7 +202,7 @@ Add the Syncfusion Blazor service to your **~/Program.cs** file. The configurati
 - **WebAssembly or Auto Mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
 
 {% tabs %}
-{% highlight C# tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
+{% highlight csharp tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
 
 using Syncfusion.Blazor;
 
@@ -216,7 +216,7 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 
 {% endhighlight %}
-{% highlight C# tabtitle="Client (~/_Program.cs)" hl_lines="2 5" %}
+{% highlight csharp tabtitle="Client (~/_Program.cs)" hl_lines="2 5" %}
 
 using Syncfusion.Blazor;
 
@@ -445,4 +445,3 @@ If the AI service fails to return a valid response, the Kanban will display an e
 - **Model Unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Prompts**: Processing large text inputs may cause timeouts. Consider reducing the prompt size or optimizing the request for efficiency.
-

@@ -299,7 +299,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 9 and .NET 8** Blazor Server app, include it in the **~/Components/App.razor** file.
+* For **.NET 10, .NET 9 and .NET 8** Blazor Server app, include it in the **~/Components/App.razor** file.
 
 ```html
 <head>

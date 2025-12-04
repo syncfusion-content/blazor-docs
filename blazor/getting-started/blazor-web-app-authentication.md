@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Web App with Authentication
 
-This guide demonstrates how to build a **Blazor Web App with authentication** using **.NET 9**. It uses the built-in `AuthenticationStateProvider` to retrieve and manage user identity details from the application's authentication context, enabling secure and consistent user state handling across components.
+This guide demonstrates how to build a **Blazor Web App with authentication** using **.NET 9** or **.NET 10**. It uses the built-in `AuthenticationStateProvider` to retrieve and manage user identity details from the application's authentication context, enabling secure and consistent user state handling across components.
 
 ## Prerequisites
 
@@ -103,7 +103,7 @@ builder.Services.AddSyncfusionBlazor();
 
 The theme stylesheet and script are available via NuGet as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). To include them in the application, add the stylesheet reference within the <head> section and the script reference just before the closing </body> tag, as shown below.
 
-* For **.NET 9 and .NET 8** Blazor Web App, include these references in the **~/Components/App.razor** file.
+* For **.NET 10, .NET 9 and .NET 8** Blazor Web App, include these references in the **~/Components/App.razor** file.
 
 ```html
 <head>
