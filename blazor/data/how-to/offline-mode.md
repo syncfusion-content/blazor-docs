@@ -50,4 +50,4 @@ Enabling the `Offline` property modifies the behavior of the `DataManager` compo
 }
 ```
 
-N> * Ensure that the remote endpoint returns the full data collection when the `Offline` property is enabled.
+N> Ensure that the remote endpoint returns the full data collection when the `Offline` property is enabled.
