@@ -24,7 +24,7 @@ By default, HTML content is encoded to prevent security vulnerabilities. To rend
 To configure:
 
 - Set `DisableHtmlEncode` to **false** in the column definition.
-- Insert HTML tags such as &lt;img&gt;, &lt;a&gt;, or &lt;table&gt; directly into the cell content.
+- Insert HTML tags such as `<img>`, `<a>`, or `<table>` directly into the cell content.
 - Use a [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button)  to dynamically control the encoding behavior.
 - Handle the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event to update the column setting.
 - Call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method to apply the changes and re-render the Grid.
