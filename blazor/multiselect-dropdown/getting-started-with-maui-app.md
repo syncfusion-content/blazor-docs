@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor MultiSelect DropDown Component
 
-This section explains you through the step-by-step process of integrating the Syncfusion® Blazor MultiSelect DropDown component into your Blazor Maui app using both Visual Studio and Visual Studio Code.
+This guide walks through integrating the Syncfusion Blazor MultiSelect Dropdown component into a .NET MAUI Blazor app using Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -17,15 +17,18 @@ This section explains you through the step-by-step process of integrating the Sy
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+To use the .NET MAUI project templates, install the Mobile development with .NET workload for Visual Studio. For details, see the .NET MAUI installation guide for Visual Studio or use the Syncfusion Blazor Extension.
+
+- .NET MAUI installation for Visual Studio: https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin
+- Syncfusion Blazor Extension: https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the app
 
-To add **Blazor MultiSelect DropDown**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor MultiSelect Dropdown component, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -36,7 +39,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion Blazor components are available in NuGet. See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the complete list of packages and component details.
 
 {% endtabcontent %}
 
@@ -44,11 +47,14 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+To use the .NET MAUI project templates, install the Mobile development with .NET workload for Visual Studio Code/.NET CLI. For details, see the .NET MAUI installation guide for Visual Studio Code or use the Syncfusion Blazor Extension.
+
+- .NET MAUI installation for VS Code: https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code
+- Syncfusion Blazor Extension: https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio Code via [Microsoft templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Blazor DropDowns and Themes NuGet in the App
 
@@ -74,7 +80,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespace.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -125,7 +131,7 @@ namespace MauiBlazorWindow;
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html**.
 
 ```html
 <head>
@@ -141,7 +147,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor MultiSelect DropDown component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect DropDown component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect DropDown component in the **~/Pages/Index.razor**.
 
 {% tabs %}
 {% highlight razor %}
@@ -153,23 +159,23 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect Drop
 
 ### How to Run the Sample on Windows
 
-Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+Run the sample on Windows to launch the .NET MAUI Blazor app.
 
-![Blazor MultiSelect DropDown Component](./images/blazor-multiselect-dropdown-maui-app.png)
+![Blazor MultiSelect Dropdown Component](./images/blazor-multiselect-dropdown-maui-app.png)
 
 ### How to Run the Sample on Android
 
-To run the Blazor DataGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the Blazor MultiSelect Dropdown in a .NET MAUI Android app using the Android Emulator, follow these steps:
 
-Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
+- Install and launch the Android emulator: https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows
 
-N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
+N> If any errors occur while using the Android Emulator, see Troubleshooting Android Emulator: https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting.
 
-![Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)
+![Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)
 
 ## Binding data source
 
-After initialization, populate the MultiSelect with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, an array of string values is passed to the MultiSelect component. `TItem` specifies the type of the Datasource in MultiSelect.
+After initialization, populate the MultiSelect using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. In the following example, a list of objects is bound to the component and `TItem` specifies the data type. Display and value fields are mapped via `MultiSelectFieldSettings`.
 
 {% tabs %}
 {% highlight razor %}
@@ -202,7 +208,7 @@ After initialization, populate the MultiSelect with data using the [DataSource](
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.png)
+![Data Binding in Blazor MultiSelect Dropdown](./images/blazing-fast-multiselect-dropdown-data-binding.png)
 
 ## Configure the popup list
 
@@ -220,11 +226,11 @@ The height and width of the popup list can also be customized using the [PopupHe
 {% endhighlight %}
 {% endtabs %}
 
-![Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
+![Configuring Popup List in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
 
 ## Get selected value
 
-Get the selected value of the MultiSelect component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectChangeEventArgs-1.html#Syncfusion_Blazor_DropDowns_MultiSelectChangeEventArgs_1_Value) property.
+Get the selected value of the MultiSelect component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) event using the [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectChangeEventArgs-1.html#Syncfusion_Blazor_DropDowns_MultiSelectChangeEventArgs_1_Value) property.
 
 {% highlight cshtml %}
 
