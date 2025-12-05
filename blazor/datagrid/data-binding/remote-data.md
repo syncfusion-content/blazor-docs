@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remote Data in Blazor DataGrid | Syncfusion
-description: Learn all about remote data in Syncfusion Blazor DataGrid and much more.
+description: Explore remote data integration in Syncfusion® Blazor DataGrid, including setup, binding options, and advanced features.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -288,7 +288,7 @@ When remote data binding is enabled, all grid actions such as **paging**, **sort
 This behavior is enabled by setting the [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to **true**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -306,7 +306,7 @@ This behavior is enabled by setting the [Offline](https://help.syncfusion.com/cr
  
 {% endhighlight %}
  
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;
