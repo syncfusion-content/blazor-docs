@@ -51,7 +51,7 @@ To configure remote data binding:
 
 ## Binding with OData services
 
-[OData](https://www.odata.org/documentation/) (Open Data Protocol) is a standardized protocol that simplifies data sharing across different systems by enabling querying and updating data through RESTful APIs. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for OData v3 and v4 services using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+[OData](https://www.odata.org/documentation/) (Open Data Protocol) is a standardized protocol that simplifies data sharing across different systems by enabling querying and updating data through RESTful APIs. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for **OData v3** and **v4** services using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 The `DataManager` communicates with the remote OData service using either [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) or [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/odatav4-adaptor), depending on the protocol version.
 
@@ -92,13 +92,13 @@ The `DataManager` communicates with the remote OData service using either [OData
 
 ## Enable SfDataManager after initial rendering
 
-In certain scenarios, remote data should not be loaded during the initial page render. Instead, data can be fetched dynamically based on specific conditions or application events. This approach improves performance by reducing initial load time and avoiding unnecessary network requests.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can defer remote loading by rendering the grid with an empty data source initially and adding [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) only after a condition is met. When `SfDataManager` is rendered, the grid automatically requests data from the configured remote endpoint using the specified adaptor.
 
 To implement this behavior:
 
-1. Render the grid with an empty data source.
-2. Conditionally assign an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the grid’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property when the condition is met.
-3. When `SfDataManager` is added dynamically, the grid immediately requests data from the configured remote endpoint.
+1. Render the grid with an empty data source during initial load.
+2. Use a flag to control whether `SfDataManager` is rendered.
+3. Adding `SfDataManager` after the initial render triggers remote data retrieval.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -152,7 +152,7 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 **Key Configuration Steps**
 
-1. Register a custom `HttpClient` before calling **AddSyncfusionBlazor()** in **Program.cs**. This ensures `SfDataManager` uses the preconfigured instance with base address, authentication, and default headers.
+1. Register a custom `HttpClient` before calling `AddSyncfusionBlazor()` in **Program.cs**. This ensures `SfDataManager` uses the preconfigured instance with **base address**, **authentication**, and **default headers**.
 2. Pass a specific `HttpClient` instance directly to `SfDataManager` using the [HttpClientInstance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_HttpClientInstance) property when multiple named or preconfigured clients are required.
 3. Use a custom [HTTP message handler](https://learn.microsoft.com/en-us/aspnet/web-api/overview/advanced/httpclient-message-handlers) for advanced scenarios such as logging or request modification.
 For details on registering a custom handler, see the [Microsoft ASP.NET Core documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-10.0).
