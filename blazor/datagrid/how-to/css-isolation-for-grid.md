@@ -15,8 +15,8 @@ To enable CSS isolation for the Grid, it is recommended to wrap the `SfGrid` ins
 
 Below is an example of implementing a simple Grid inside the **Index.razor** file:
 
-```razor
-Index.razor
+{% tabs %}
+{% highlight C# tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -57,7 +57,9 @@ Index.razor
         public string ShipCountry { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ```css
 Index.razor.css
