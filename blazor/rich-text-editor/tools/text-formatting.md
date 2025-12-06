@@ -378,6 +378,27 @@ By default, Markdown Auto-Format is enabled. The editor supports both inline for
 
 Use the `EnableMarkdownAutoFormat` tool in the editor below to see the feature in action.
 
+## Inline Formatting
+
+The following inline formatting options are available:
+
+- Bold – Use `**text**` or `__text__`.
+- Italic – Use `*text*` or `_text_`.
+- Code – Use `text`.
+- Strikethrough – Use `~~text~~`.
+
+## Block formatting
+
+The following block formatting options are available:
+
+- **Bulleted list** – Start a line with `*` or `-` followed by a space.
+- **Numbered list** – Start a line with `1.` followed by a space.
+- **To-do list** – Start a line with `[ ]` or `[x]` followed by a space to insert an unchecked or checked list item, respectively.
+- **Headings** – Start a line with `#`, `##`, or `###` followed by a space to create Heading 1, Heading 2, or Heading 3. You can use up to six levels of headings
+- **Block quote** – Start a line with `>` followed by a space.
+- **Code block** – Start a line with ` ``` ` followed by a space.
+- **Horizontal line** – Start a line with `---` followed by a space.
+
 {% tabs %}
 {% highlight razor %}
 
@@ -386,4 +407,4 @@ Use the `EnableMarkdownAutoFormat` tool in the editor below to see the feature i
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor Markdown Auto Format behaviour](../images/blazor-richtexteditor-using-markdown-auto-format.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrSWBtRLLeUPqQj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
