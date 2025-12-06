@@ -9,7 +9,7 @@ documentation: ug
 
 # Hide Spinner in Blazor ProgressButton Component
 
-You can hide spinner in the Progress Button by setting the `e-hide-spinner` property to [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass).
+Hide the spinner in the ProgressButton by applying the built-in e-hide-spinner CSS class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) parameter. This hides only the spinner while keeping the progress fill visible. Multiple CSS classes can be combined in CssClass as needed.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

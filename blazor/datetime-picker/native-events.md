@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Native Events in Blazor Datetime Picker Component | Syncfusion
+title: Native Events in Blazor DateTimePicker Component | Syncfusion
 description: Checkout and learn here all about Native Events in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
-control: Datetime Picker 
+control: DateTimePicker
 documentation: ug
 ---
 
-# Native Events in Blazor Datetime Picker Component
+# Native Events in Blazor DateTimePicker Component
 
-The following section explains steps to include native events and pass data to event handler in DateTimePicker component.
+The following section explains how to attach native DOM events to the DateTimePicker component and pass event data to the handler.
 
 ## Bind native events to DateTimePicker
 
-You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
+Native events can be attached by using the `@on<event>` attribute on the component. The attribute value is treated as the event handler.
 
-In the following example, the KeyPressed method is called every time the key is pressed on input.
+In the following example, the `KeyPressed` method is called every time a key is pressed in the input.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -29,7 +29,7 @@ In the following example, the KeyPressed method is called every time the key is 
 }
 ```
 
-Also, you can rewrite the previous example code as follows using Lambda expressions.
+The previous example can also be written using a lambda expression.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -39,16 +39,16 @@ Also, you can rewrite the previous example code as follows using Lambda expressi
 
 ## Pass event data to event handler
 
-Blazor provides a set of argument types to map to native events. The following is the list of event types and event arguments:
+Blazor provides argument types that map to native DOM events. Common event categories and argument types include:
 
-* Focus Events - FocusEventArgs
-* Mouse Events - MouseEventArgs
-* Keyboard Events - KeyboardEventArgs
-* Input Events - ChangeEventArgs/EventArgs
-* Touch Events – TouchEventArgs
-* Pointer Events – PointerEventArgs
+* Focus events - FocusEventArgs
+* Mouse events - MouseEventArgs
+* Keyboard events - KeyboardEventArgs
+* Input events - ChangeEventArgs/EventArgs
+* Touch events – TouchEventArgs
+* Pointer events – PointerEventArgs
 
-In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "5" key.
+In the following example, the `KeyPressed` method is invoked on each key press, and a message is written only when the "5" key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -66,7 +66,7 @@ In the following example, the KeyPressed method is called every time any key is 
 }
 ```
 
-Using Lambda expression also, you can pass the event data to the event handler.
+Lambda expressions can also be used to pass the event data to the handler.
 
 ## List of native events supported
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor RadioButton component
 
-The Blazor RadioButton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor RadioButton component follows established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It also adheres to applicable [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) used to evaluate accessibility.
 
 The accessibility compliance for the Blazor RadioButton component is outlined below.
 
@@ -46,16 +46,16 @@ The Blazor RadioButton component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 ## Keyboard interaction
 
-The Blazor RadioButton component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/radio/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor RadioButton component.
+The Blazor RadioButton component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/radio/#keyboardinteraction) guideline, supporting users of assistive technologies and keyboard-only navigation. The following keyboard shortcuts are supported:
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>↑</kbd> or <kbd>←</kbd> | <kbd>↑</kbd> or <kbd>←</kbd> | Move and select the previous options. |
-| <kbd>↓</kbd> or <kbd>→</kbd> | <kbd>↓</kbd> or <kbd>→</kbd> | Move and select the next options. |
+| <kbd>↑</kbd> or <kbd>←</kbd> | <kbd>↑</kbd> or <kbd>←</kbd> | Move focus to and select the previous option. |
+| <kbd>↓</kbd> or <kbd>→</kbd> | <kbd>↓</kbd> or <kbd>→</kbd> | Move focus to and select the next option. |
 
 ## Ensuring accessibility
 
-The Blazor RadioButton component component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor RadioButton component's accessibility levels are validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Blazor RadioButton component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/radio-button) in a new window to evaluate the accessibility of the Blazor RadioButton component with accessibility tools.
 
