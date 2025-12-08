@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Last Data Label in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Last Data Label in Syncfusion Blazor Stock Chart component and much more.
+description: Check out and learn how to enable and customize the Last Data Label in the Syncfusion Blazor Stock Chart component.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Last Data Label in Blazor Stock Chart Component
 
-The last data label feature highlights the most recent data point in a series by displaying a label along with an indicator line. This enhancement improves visibility and makes it easier to identify the latest value in the stock chart. The label can be enabled and customized using the [StockChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html) property.
+The last data label highlights the most recent data point in a series by displaying a label with an indicator line. This improves readability and makes the latest value easy to identify in the stock chart. The label is enabled and customized using the [StockChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html) configuration.
 
 ## Enable last data label
 
-To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_ShowLabel) property of the `StockChartLastDataLabel` configuration to **true** within the series settings.
+To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_ShowLabel) property of `StockChartLastDataLabel` to **true** in the series settings.
 
 ```cshtml
 
@@ -29,7 +29,6 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
 </SfStockChart>
 
 @code {
-
     public class ChartData
     {
         public DateTime Date { get; set; }
@@ -60,21 +59,21 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
 
 ## Customization
 
-The appearance of the last data label can be customized using various properties defined across different settings.
+The appearance of the last data label can be customized using properties available in the following settings.
 
-In the `StockChartLastDataLabel`:
-* [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_Background): Sets the background color of the last data label container.
+In `StockChartLastDataLabel`:
+* [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_Background): Sets the background color of the label container.
 * [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_LineColor): Sets the color of the indicator line.
 * [LineWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_LineWidth): Sets the width of the indicator line.
 * [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_DashArray): Defines the dash pattern of the indicator line.
 * [Rx](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_Rx): Sets the horizontal corner radius of the label container.
 * [Ry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_Ry): Sets the vertical corner radius of the label container.
 
-In the [StockChartLastDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelBorder.html):
+In [StockChartLastDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelBorder.html):
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelBorder.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelBorder_Color): Sets the border color of the label container.
 * [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelBorder.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelBorder_Width): Sets the border width of the label container.
 
-In the [StockChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html):
+In [StockChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html):
 * [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelFont_Size): Sets the font size of the label text.
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelFont_Color): Sets the font color of the label text.
 * [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabelFont.html#Syncfusion_Blazor_Charts_StockChartLastDataLabelFont_FontFamily): Specifies the font family of the label text.
@@ -98,7 +97,6 @@ In the [StockChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncf
 </SfStockChart>
 
 @code {
-
     public class ChartData
     {
         public DateTime Date { get; set; }

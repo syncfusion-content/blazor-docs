@@ -252,7 +252,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ## Binding data source
 
-After initializing, populate the ListBox with data using the `DataSource` property. Here, an array of object values is passed to the ListBox component.
+After initialization, populate the ListBox using the `DataSource` property. The following uses an array of objects.
 
 {% tabs %}
 {% highlight razor %}
@@ -281,7 +281,7 @@ After initializing, populate the ListBox with data using the `DataSource` proper
 {% endhighlight %}
 {% endtabs %}
 
-N> `TValue` is the type of value in the datasource to resolve type inference. It is generic type and can be given as string[], int[].
+N> `TValue` is the type of the value in the data source used for type inference. It is a generic type and can be specified as string[], int[], etc.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListBox component in the default web browser.
 

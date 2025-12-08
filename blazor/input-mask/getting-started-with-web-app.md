@@ -256,9 +256,9 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ## Set the mask
 
-You can set the mask to the MaskedTextBox to validate the user input by using the [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Mask) property.
+Set a mask on the MaskedTextBox to validate user input using the [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Mask) property.
 
-The following example demonstrates the usage of mask element `0` that allows any single digit from `0` to `9`.
+The following example demonstrates the mask element `0`, which allows any single digit from `0` to `9`.
 
 {% tabs %}
 {% highlight razor %}
