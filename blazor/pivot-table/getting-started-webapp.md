@@ -719,7 +719,7 @@ The following code example shows how to display a server-side error message to t
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable/BlazorWebApp)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable)
 
 ## See also
 

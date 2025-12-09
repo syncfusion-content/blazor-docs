@@ -255,7 +255,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVzNiAXLOxVFFXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.png)" %}
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar/BlazorWebApp)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar)
 
 ## Circular Progress Bar Type
 
