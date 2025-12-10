@@ -9,9 +9,9 @@ documentation: ug
 
 # Disabled Items in Blazor ComboBox Component
 
-The [ComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Disabled) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `ComboBoxFieldSettings.Disabled` property.
+The [ComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) allows individual items to be enabled or disabled based on application logic. Map a boolean field from the data source to the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Disabled) property in field settings to mark specific items as disabled. Disabled items remain visible but cannot be selected as the value of the component.
 
-In the following sample, State are grouped according on its category using `Disabled` field.
+In the following sample, items are disabled based on a data field mapped to Disabled.
 
 {% highlight cshtml %}
 
@@ -27,11 +27,11 @@ The disableItem method can be used to handle dynamic changing in disable state o
 
 | Parameter | Type | Description |
 |------|------|------|
-| itemValue | <code>string</code> \| <code>number</code> \| <code>boolean</code> \| <code>object</code> | It accepts the string, number, boolean and object type value of the item to be removed. |
-| itemIndex | <code>number</code> | It accepts the index of the item to be removed. |
+| itemValue | <code>string</code> \| <code>number</code> \| <code>boolean</code> \| <code>object</code> | Not applicable for Blazor ComboBox; update the data-bound Disabled field instead. |
+| itemIndex | <code>number</code> | Not applicable for Blazor ComboBox; update the data-bound Disabled field instead. |
 
 ## Enabled
 
-If you want to disabled the overall component to set the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Enabled) property to false.
+To disable the entire component, set the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Enabled) property to false.
 
 ![Disabled ComboBox Component](./images/combobox-disable.png)

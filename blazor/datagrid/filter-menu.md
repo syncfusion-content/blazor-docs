@@ -9,11 +9,9 @@ documentation: ug
 
 # Filter menu in Blazor DataGrid
 
-The filter menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to enable filtering and provides a user-friendly interface for filtering data based on column types and operators.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid filter menu provides an intuitive interface for filtering data on a per-column basis. It utilizes a pop-up menu that contains a range of filter operators, offering precise control over the displayed data.
 
-To enable the filter menu, you need to set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) as **Menu**. This property determines the type of filter UI that will be rendered. The filter menu UI allows you to apply filters using different operators.
-
-Here is an example that demonstrates the usage of the filter menu in the Grid:
+To enable the filter menu, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** and the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property of the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) to **Menu**. When enabled, a filter icon appears in the column header, allowing for interactive filtering.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -92,18 +90,19 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVJXMVKpLxfzxZN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
-> * By setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object as **false** will prevent filter menu rendering for a particular column.
+> * Setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object to **false** prevents the filter menu from rendering for that specific column.
 
 ## Custom component in filter menu
 
-You can enhance the filtering experience in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by customizing the filter menu with custom components. This allows you to replace the default search box with custom components like dropdowns or textboxes. By default, the filter menu provides an [Autocomplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) for string type columns, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for number type columns, and a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for boolean type columns, making it easy to search for values.
+The filter menu can be customized by replacing its default input component with a custom one. This is achieved by defining a template within the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
-To customize the filter menu, you can make use the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property. This property allows you to integrate your desired custom filter component into a specific column of the Grid. To implement a custom filter UI, you need to define the following functions:
+The default component rendered in the filter menu is determined by the column's data type:
 
-For example, you can replace the standard search box in the filter menu with a `DropDownList`. This enables you to perform filtering operations by selecting values from the dropdown list, rather than manually typing in search queries.
+*   **String**: [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app)
+*   **Numeric**: [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)
+*   **Boolean**: [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
 
-Here is a sample code demonstrating how to render a `DropDownList` for the **OrderID** column:
+For example, the following code demonstrates how to replace the default `NumericTextBox` with a `DropDownList` for the numeric **OrderID** column. This customization allows filtering based on a selection from the dropdown list instead of manual input.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -116,7 +115,7 @@ Here is a sample code demonstrating how to render a `DropDownList` for the **Ord
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100">
              <FilterTemplate>
-                <SfDropDownList Placeholder="OrderID" ID="OrderID" @bind-Value="@((context as PredicateModel<int?>).Value)" TItem="OrderData" TValue="int?" DataSource="@(GridData)">
+                <SfDropDownList Placeholder="OrderID" ID="OrderID" @bind-Value="@((context as PredicateModel<int?>).Value)" TItem="OrderData" TValue="int?" DataSource="@GridData">
                     <DropDownListFieldSettings Value="OrderID" Text="OrderID"></DropDownListFieldSettings>
                 </SfDropDownList>
             </FilterTemplate>
@@ -187,21 +186,21 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTDsVFcbVkxSol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVSWMhnrOEBQtDs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Default filter input for OrderID column**
 
-![Default filter input OrderID column.](images/Blazor-default-filter-input-datagrid.gif)
+![Default filter input for OrderID column](images/Blazor-default-filter-input-datagrid.gif)
 
 **Custom dropdown filter for OrderID column**
 
-backgroundimage "[Custom dropdown filter for OrderID column.](images/blazor-custom-dropdown-filter-datagrid.gif)
+![Custom dropdown filter for OrderID column.](images/blazor-custom-dropdown-filter-datagrid.gif)
 
 ## Show 24 hours time format in filter dialog
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a feature to display the time in a 24-hour format in the date or datetime column filter dialog. By default, the filter dialog displays the time in a 12-hour format (AM/PM) for the date or datetime column. However, you can customize the default format by setting the type as **DateTime** and the format as **MM/dd/yyyy HH:mm**. To enable the 24-hour time format in the filter dialog, you need to handle the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property is used to add custom components to a particular column and set the `TimeFormat` of the `DateTimepicker` to **HH:mm**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports displaying time in 24-hour format within the filter dialog for date or datetime columns. For `DateTime` columns, the filter dialog's time picker defaults to a **12-hour (AM/PM)** format. This can be customized to a 24-hour format.
 
-Here is an example that demonstrates how to show 24 hours time format in filter dialog:
+To implement this, define a [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) for the desired [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). Inside the template, use a [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) component and set its `TimeFormat` property to **HH:mm**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -214,13 +213,13 @@ Here is an example that demonstrates how to show 24 hours time format in filter 
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Type =ColumnType.DateTime Format="MM/dd/yyyy HH:mm" Width="180">
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Type =ColumnType.DateTime Format="MM/dd/yyyy HH:mm" Width="180">
             <FilterTemplate>
                 <SfDateTimePicker Placeholder="OrderDate" ID="OrderDate" TimeFormat="HH:mm" Format="MM/dd/yyyy HH:mm" @bind-Value="@((context as PredicateModel<DateTime?>).Value)" TValue="DateTime?">
                 </SfDateTimePicker>
             </FilterTemplate>
         </GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText=" Shipped Date" Type=ColumnType.DateTime Format="MM/dd/yyyy HH:mm" Width="180">
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Type=ColumnType.DateTime Format="MM/dd/yyyy HH:mm" Width="180">
             <FilterTemplate>
                 <SfDateTimePicker Placeholder="ShippedDate" ID="ShippedDate" TimeFormat="HH:mm" Format="MM/dd/yyyy HH:mm" @bind-Value="@((context as PredicateModel<DateTime?>).Value)" TValue="DateTime?">
                 </SfDateTimePicker>
@@ -293,19 +292,18 @@ public class OrderData
 
 ## Customizing filter menu operators list
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables you to customize the default filter operator list by utilizing the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event of the Grid. You can customize operators for string, number, date, and boolean data types.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of the default filter operator list using the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event. This customization is supported for the following data types:
+- String
+- Number
+- Date
+- Boolean
 
-The available options for customization are:
+Provide a custom list by assigning one of the following collections to **args.FilterOperators** based on the column:
 
-* **StringOperator**- defines customized string operator list.
-
-* **NumberOperator** - defines customized number operator list.
-
-* **DateOperator** - defines customized date operator list.
-
-* **BooleanOperator** - defines customized boolean operator list.
-
-Here is an example of how to customize the filter operators list in the Grid:
+* **StringOperator** - Defines a custom list of string operators.
+* **NumberOperator** - Defines a custom list of number operators.
+* **DateOperator** - Defines a custom list of date operators.
+* **BooleanOperator** - Defines a custom list of boolean operators.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -313,12 +311,12 @@ Here is an example of how to customize the filter operators list in the Grid:
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" Height="273px">
-    <GridFilterSettings Type=" Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Verified) HeaderText="Verified" Width="100" DisplayAsCheckBox="true" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
     </GridColumns>
@@ -441,7 +439,9 @@ public class OrderData
 
 ## Customize filter input editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the built-in filter dialog editor components. You can achieve this customization by setting the `FilterEditorSettings` property on [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). In the following example, we have customized the following component configurations:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of the built-in filter dialog editor components using the [FilterEditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterEditorSettings) property on the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+
+The following table outlines component configurations customized for specific columns:
 
 | Column         | Filter Component                                                                 | Customization                                         |
 | -------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------- |
@@ -557,19 +557,18 @@ public class Orders
 
 ## Customize the default input component of filter menu dialog
 
-You have the flexibility to customize the default settings of input components within the menu filter by utilizing the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property  of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property is used to add custom components to a particular column, allowing you to modify the behavior of specific filter components to better suit your needs.
+Customize the default input components in the filter menu dialog using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
-| Column Type | Default component  |Customization  | API Reference     |
+| Column Type | Default component  |Customization Example  | API Reference     |
 | ----------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| String      | [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started)    | Eg: Autofill="false" | [AutoComplete API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) |
-| Number      | [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) | Eg: ShowSpinButton="false" | [NumericTextBox API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html)                 |
-| Boolean     | [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)   | Eg: SortOrder="SortOrder.Ascending"  | [DropDownList API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html)                   |
-| Date        | [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started)         | Eg: WeekNumber="true"    | [DatePicker API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html)                         |
-| DateTime    | [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) | Eg: ShowClearButton="true"  | [DateTimePicker API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html)                 |
+| String      | [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started)    |  Autofill="false" | [AutoComplete API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) |
+| Number      | [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) | ShowSpinButton="false" | [NumericTextBox API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html)                 |
+| Boolean     | [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)   | SortOrder="SortOrder.Ascending"  | [DropDownList API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html)                   |
+| Date        | [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started)         | WeekNumber="true"    | [DatePicker API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html)                         |
+| DateTime    | [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) | ShowClearButton="true"  | [DateTimePicker API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html)                 |
 
-> To know more about the feature, refer to the Getting Started documentation and API Reference
 
-In the example provided below, the **OrderID** and **Freight** columns are numeric columns. When you open the filter dialog for these columns, you will notice that a `NumericTextBox` with a spin button is displayed to change or set the filter value. However, using the `FilterTemplate` property of the GridColumn. This property is used to add custom components to a particular column, you can hide the spin button specifically for the **OrderID** column:
+In the following example, the **OrderID** and **Freight** columns are numeric. By default, the filter dialog displays a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) with a spin button. Using the `FilterTemplate` property of the `GridColumn`, the spin button can be hidden specifically for the **OrderID** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -653,9 +652,9 @@ public class OrderData
 
 ### Prevent autofill option in autocomplete of menu filter
 
-By default, the [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) component in the filter menu dialog is set to automatically fill suggestions as you type. However, there might be scenarios where you want to prevent this autofill behavior to provide a more customized and controlled user experience.
+By default, the [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) component in the filter menu dialog is configured to automatically fill suggestions while typing. In scenarios requiring a more controlled user experience, this autofill behavior can be disabled.
 
-You can prevent autofill feature by setting the [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) parameter to **false** using the `FilterTemplate` property of the GridColumn. This property is used to add custom components to a particular column.
+To prevent autofill, set the [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) parameter to **false** using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property enables the use of custom components for specific columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -741,15 +740,13 @@ You can prevent autofill feature by setting the [Autofill](https://help.syncfusi
 
 ### Hide the filter operator dropdownlist in the filter menu dialog
 
-To hide the operator dropdown in the menu filter dialog of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the following CSS can be used to override the styling of the **.e-flm_optrdiv** class. Using this customization logic, the interface becomes more focused, allowing a default filter behavior to be applied automatically.
+To hide the operator dropdown in the menu filter dialog of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, apply the following CSS to override the styling of the **.e-flm_optrdiv** class. This customization simplifies the interface by applying a default filter behavior without displaying the operator selection.
 
 ```css
     .e-flm_optrdiv {
         display: none;
     }
 ```
-
-The following example demonstrates how to enable menu filtering and hide the operator dropdown in the filter popup:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -835,9 +832,9 @@ public class OrderData
 
 ## Filter by multiple keywords using filter menu
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to perform filtering actions based on multiple keywords, rather than a single keyword, using the filter menu dialog. To enable this feature, you can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) as **Menu** and render the `MultiSelect` as a custom component in the filter menu dialog.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports filtering based on multiple keywords using the filter menu dialog. This feature allows users to select multiple values for a column, enhancing filtering flexibility.
 
-Here is an example that demonstrates how to perform filtering by multiple keywords using the filter menu in the Grid:
+To enable this functionality, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property of the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) to **Menu**, and integrate the [MultiSelect](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started-webapp) component as a custom UI element within the filter menu dialog.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1055,9 +1052,9 @@ public class OrderData
 
 ## Hide default filter icons while perform filtering through method
 
-When performing filtering programmatically using methods in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the default filter icons in the column headers can be hidden to simplify the user interface.
+When performing filtering programmatically using methods in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the default filter icons in the column headers can be hidden to simplify the interface.
 
-To customize the filter icon in the Grid, use the display property of the filter menu as mentioned below:
+To hide the filter icon in the Grid, apply the CSS style to the filter menu element as shown below:
 
 ```cshtml
 <style>
@@ -1066,9 +1063,6 @@ To customize the filter icon in the Grid, use the display property of the filter
     }
 </style>
 ```
-
-The following example demonstrates how to filter the **CustomerID** column programmatically and hide the default filter icons:
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -1130,18 +1124,12 @@ The following example demonstrates how to filter the **CustomerID** column progr
 
 ## Filter menu events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering), [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered), [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) and [FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened) events, which provide information about the actions being performed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the following events to monitor and customize filter menu interactions:
 
-1. **Filtering event**: `Filtering` event is triggered before the filtering or clear filtering action is performed in the Grid. It provides a way to perform any necessary operations before the Filtering action takes place.
-
-2. **Filtered event**: `Filtered` event is triggered after the filtering or clear filtering action is performed in the Grid. It provides a way to perform any necessary operations after the Filtering action has taken place.
-
-3. **FilterDialogOpening event**: `FilterDialogOpening` event is triggered before the filter dialog is opened in the Grid. It provides a way to perform any necessary operations before the filter dialog opened.
-
-4. **FilterDialogOpened event**: `FilterDialogOpened` event is triggered after the filter dialog is opened in the Grid. It provides a way to perform any necessary operations after the filter dialog opened.
-
-
-Here’s an example of how to use these events to handle filter menu action in the Grid:
+1. [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering): Triggered before a filtering or clear filtering action is executed. This event allows pre-processing logic.
+2. [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered): Triggered after the filtering action is completed. Useful for post-processing tasks.
+3. [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening): Occurs before the filter dialog opens, enabling pre-opening customization.
+4. [FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened): Occurs after the filter dialog has opened, allowing post-opening adjustments.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1300,13 +1288,13 @@ public class OrderData
 
 ## Limitations of using different filter types in different columns
 
-The different filter types such as Excel, Menu, and Checkbox can be defined in different columns of the same Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. However, you cannot use these filter types along with filterBar type (default filter type). Because the filterbar type requires UI level changes with other filter types. For all other filter types, icons will be rendered in the column header.
+Different filter types such as Excel, Menu, and Checkbox can be defined in different columns of the same Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. However, you cannot use these filter types along with filterBar type (default filter type). Because the filterbar type requires UI level changes with other filter types. For all other filter types, icons will be rendered in the column header.
 
 ## Filtering using DateRangePicker
 
-By default, for the date column in the filter menu, filtering action is performed based on a single date value selected from the `SfDatePicker`. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid also can perform the filtering action between the range of date values by rendering the `SfDateRangePicker`  in the filter menu. This can be achieved by the filter template feature of the Grid.
+By default, for the date column in the filter menu, filtering action is performed based on a single date value selected from the `SfDatePicker`. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid also can perform the filtering action between the range of date values by rendering the [SfDateRangePicker](https://blazor.syncfusion.com/documentation/daterangepicker/getting-started-with-web-app) in the filter menu. This can be achieved by the filter template feature of the Grid.
 
-In the following sample, the `SfDateRangePicker` is rendered in the filter template. Using the `ValueChange` event of the `SfDateRangePicker`, get the start and end date values needed to perform the filtering action. In the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid, the default filter action is prevented by setting the `args.Cancel` as true. Then, perform the filtering action by setting the custom predicate values.
+In this configuration, the `SfDateRangePicker` is rendered in the filter template of the **OrderDate** column. The [ValueChange](https://blazor.syncfusion.com/documentation/daterangepicker/events#valuechange) event captures the selected start and end dates. The filtering logic is handled in the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) event, where the default filter action is canceled and custom predicates are applied using the selected date range.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1449,10 +1437,9 @@ public class OrderData
 
 ## Troubleshoot filter menu operator issue
 
-When using the filter menu, the UI displays operators for all columns based on the data type of the first data it encounters. If the first data is empty or null, it may not work correctly. To overcome this issue, follow these steps to troubleshoot and resolve it:
+When using the filter menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, the UI may display filter operators for all columns based on the data type of the first record it encounters. If the first record contains null or empty values, the filter menu may not function as expected. To resolve this issue, follow these steps:
 
-**Explicitly Define Data Type**: When defining columns in your Grid, make sure to explicitly specify the data type for each column. You can do this using the type property within the columns configuration. For example:
-
+**Explicitly define data types:** Specify the data type for each column using the Type property in the column definition. This ensures consistent operator rendering regardless of the initial data.
 
 ```cshtml
 <SfGrid AllowFiltering="true" DataSource="@GridData">
@@ -1464,6 +1451,7 @@ When using the filter menu, the UI displays operators for all columns based on t
 </SfGrid>
 
 ```
-**Handle Null or Empty Data**: If your data source contains null or empty values, make sure that these values are appropriately handled within your data source or by preprocessing your data to ensure consistency.
 
-**Check Data Types in Data Source**: Ensure that the data types specified in the column definitions match the actual data types in your data source. Mismatched data types can lead to unexpected behavior.
+**Handle null or empty values:** Ensure that null or empty values in the data source are handled appropriately, either within the data itself or by applying preprocessing steps to maintain consistency.
+
+**Verify data type alignment:** Confirm that the data types defined in the column configuration match the actual data types in the data source. Mismatches can lead to unexpected filter behavior.

@@ -19,7 +19,7 @@ Get the selected value of the ComboBox component in the [ValueChange](https://he
 
 {% endhighlight %}
 
-Get the complete object list of the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
+Get the complete data item for the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event using the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
 
 {% highlight cshtml %}
 
@@ -29,7 +29,7 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 ## Preselected value on OnInitializedAsync
 
-Bind the pre-selected value to the ComboBox component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value property inside the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The following sample shows how to bind the value on the initial rendering of the component.
+Bind the preselected value to the ComboBox component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Value) attribute. Assign the bound value in the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle so the component renders with the initial selection.
 
 {% highlight cshtml %}
 
@@ -37,11 +37,11 @@ Bind the pre-selected value to the ComboBox component using the [@bind-Value](ht
 
 {% endhighlight %}
 
-![Blazor ComboBox with pre-select value](./images/selection/blazor_combobox_preselect-value.png)
+![Blazor ComboBox with preselect value](./images/selection/blazor_combobox_preselect-value.png)
 
 ## Programmatically change the selected value
 
-Change the component value programmatically or externally by the component instance using the [@ref](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute of the component. The following sample shows how to change the value of the component using click event of the button component.
+Change the component value programmatically or externally by using the component instance with the [@ref](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute. The following sample shows how to set the value in a button click handler.
 
 {% highlight cshtml %}
 
@@ -49,11 +49,11 @@ Change the component value programmatically or externally by the component insta
 
 {% endhighlight %}
 
-![Blazor ComboBox with pre-select value before](./images/selection/blazor_combobox_changing-selected-value.gif)
+![Blazor ComboBox changing selected value](./images/selection/blazor_combobox_changing-selected-value.gif)
 
 ### ValueChange event
 
-The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event is triggered when the value of the ComboBox component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event triggers when the value of the ComboBox is changed. The event provides arguments that include the current and previous values.
 
 {% highlight cshtml %}
 
@@ -63,7 +63,7 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 ### OnValueSelect event
 
-The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnValueSelect) event is triggered when you select any value in the ComboBox component. Get the necessary arguments including the [SelectEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SelectEventArgs-1.html#Syncfusion_Blazor_DropDowns_SelectEventArgs_1_ItemData). Also,  prevent the selection of items by setting the [SelectEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SelectEventArgs-1.html#Syncfusion_Blazor_DropDowns_SelectEventArgs_1_Cancel) property as `true` provided by the event arguments. 
+The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnValueSelect) event triggers when a value is selected from the popup. Access the selected item via [SelectEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SelectEventArgs-1.html#Syncfusion_Blazor_DropDowns_SelectEventArgs_1_ItemData). To prevent selection, set [SelectEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SelectEventArgs-1.html#Syncfusion_Blazor_DropDowns_SelectEventArgs_1_Cancel) to `true`.
 
 {% highlight cshtml %}
 
@@ -73,11 +73,11 @@ The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ## Preselect value with index
 
-Bind the pre-selected value to the component using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute. It binds the respective value present in the specified index position of the datasource.
+Bind the preselected item by index using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Index) attribute. The item at the specified index in the data source will be selected.
 
-N> It will be dependent on the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) type. It will bind the value to the component with the sorted data if the corresponding property is defined.
+N> The selection depends on the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) setting. If sorting is applied, the index refers to the sorted data.
 
-The following sample shows how to bind the index on the initial rendering.
+The following sample shows how to bind the index on initial rendering.
 
 {% highlight cshtml %}
 
@@ -89,7 +89,7 @@ The following sample shows how to bind the index on the initial rendering.
 
 ## Autofill the selected value
 
-The [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) property specifies whether the input field of the component automatically suggests and fills in the first matched item as the user types, based on the items in the component's data source. If no matches are found, the input field will not be filled, and no action will occur. The default value of `Autofill` is `false`.
+The [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) property enables the input to suggest and fill the first matched item as the user types, based on the data source. If no matches are found, the input remains unchanged. The default value is `false`.
 
 {% highlight Razor %}
 
@@ -101,7 +101,7 @@ The [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns
 
 ## Get selected item by value
 
-Get the entire object belonging to the value selected in the component using the [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_GetDataByValue__0_) method.
+Retrieve the full data item corresponding to a selected value by using the [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_GetDataByValue__0_) method.
 
 {% highlight cshtml %}
 
@@ -129,11 +129,11 @@ To clear the ComboBox value programmatically, use the [ClearAsync](https://help.
 
 {% endhighlight %}
 
-![Blazor ComboBox with programatically clear value](./images/selection/blazor_combobox_with-programmatically-clear-value.gif)
+![Blazor ComboBox with programmatically clear value](./images/selection/blazor_combobox_with-programmatically-clear-value.gif)
 
 ## Prevent reload on form submit
 
-To prevent the page from reloading when using the ComboBox component inside a form, you can specify the type of the button as "button" by utilizing the `HTMLAttributes` property. This will prevent the page from reloading when the button is clicked.
+To prevent page reload when using the ComboBox inside a form, specify the button type as "button" via the `HTMLAttributes` property so the button does not submit the form.
 
 {% highlight cshtml %}
 
@@ -143,7 +143,7 @@ To prevent the page from reloading when using the ComboBox component inside a fo
 
 ## Programmatically trigger onChange event
 
-Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event manually by using the instance (taken from @ref attribute) of the [ComboBoxEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html). In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
+Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event manually using the instance (from the @ref attribute) of [ComboBoxEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html). In the following example, `ValueChange` is invoked inside the `Created` event handler and runs when the component is rendered.
 
 {% highlight cshtml %}
 
@@ -153,7 +153,7 @@ Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Programmatically focus in and focus out the component
 
-In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the combobox, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the combobox.
+Use buttons to invoke the `FocusAsync()` and `FocusOutAsync()` methods on the ComboBox instance for programmatic focus management.
 
 {% highlight Razor %}
 
@@ -161,11 +161,11 @@ In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the i
 
 {% endhighlight %}
 
-While focusing and focus out the following event get triggered.
+While focusing in and out, the following events are triggered.
 
 ### Focus event
 
-The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Focus) event will trigger when the component gets focused. 
+The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Focus) event triggers when the component receives focus. 
 
 {% highlight cshtml %}
 
@@ -175,7 +175,7 @@ The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Co
 
 ### Blur event
 
-The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Blur) event will trigger when focus moves out from the component. 
+The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Blur) event triggers when focus moves out from the component. 
 
 {% highlight cshtml %}
 
