@@ -282,7 +282,7 @@ While the toolbar does not provide a direct method to apply blockquote formattin
 
 ## LineHeight
 
-The Rich Text Editor supports applying line-height to block elements such as paragraphs, list items, headings, and table cells. It can be configured through a dedicated LineHeight dropdown in the toolbar and is saved as inline style on the affected blocks.
+The Rich Text Editor supports applying line-height to block elements such as paragraphs, list items, headings, and table cells. It can be configured through a dedicated `LineHeight` dropdown in the toolbar and is saved as inline style on the affected blocks.
 
 ### Key behaviors:
 - Applies to full blocks. If a partial inline selection is made, the line height is applied to the parent block element.
