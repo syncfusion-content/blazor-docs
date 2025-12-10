@@ -391,7 +391,7 @@ The following block formatting options are available:
 
 - **Bulleted list** – Start a line with `*` or `-` followed by a space.
 - **Numbered list** – Start a line with `1.` followed by a space.
-- **To-do list** – Start a line with `[ ]` or `[x]` followed by a space to insert an unchecked or checked list item, respectively.
+- **Check List** – Start a line with `[ ]` or `[x]` followed by a space to insert an unchecked or checked list item, respectively.
 - **Headings** – Start a line with `#`, `##`, or `###` followed by a space to create Heading 1, Heading 2, or Heading 3. You can use up to six levels of headings
 - **Block quote** – Start a line with `>` followed by a space.
 - **Code block** – Start a line with ` ``` ` followed by a space.
