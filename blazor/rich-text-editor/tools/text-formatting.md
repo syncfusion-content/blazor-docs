@@ -407,4 +407,4 @@ The following block formatting options are available:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrSWBtRLLeUPqQj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLyiLWtWPuHotIn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
