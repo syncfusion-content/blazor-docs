@@ -63,7 +63,7 @@ Configure the appropriate interactive render mode and interactivity location whe
 For example, to create a Blazor Web App with the `Auto` interactive render mode, use the following commands.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".Blazor Web App" %}
 
 dotnet new blazor -o BlazorWebApp -int Auto
 cd BlazorWebApp
