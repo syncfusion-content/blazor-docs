@@ -13,7 +13,9 @@ The Rich Text Editor component in Blazor enables you to utilize the `HttpClientI
 
 The following example illustrates how to configure the Rich Text Editor component with HttpClient in a Blazor application.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.RichTextEditor
 @inject HttpClient httpClient
 
@@ -34,11 +36,15 @@ The following example illustrates how to configure the Rich Text Editor componen
         await base.OnInitializedAsync();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Program.cs
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -60,4 +66,5 @@ builder.Services.AddScoped(sp =>
 });
 var app = builder.Build();
 
-```
+{% endhighlight %}
+{% endtabs %}

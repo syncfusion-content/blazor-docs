@@ -280,7 +280,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ![Blazor QueryBuilder Component](./images/blazor-querybuilder-component.png)
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/QueryBuilder/BlazorWebApp)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/QueryBuilder)
 
 ## See also
 
