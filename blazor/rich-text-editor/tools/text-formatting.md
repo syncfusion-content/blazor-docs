@@ -382,7 +382,7 @@ The following inline formatting options are available:
 
 - Bold – Use `**text**` or `__text__`.
 - Italic – Use `*text*` or `_text_`.
-- Code – Use `text`.
+- Inline Code – Use `text`.
 - Strikethrough – Use `~~text~~`.
 
 ## Block formatting
