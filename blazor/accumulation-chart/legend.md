@@ -389,6 +389,61 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLqsrMJWRuPUEHB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart Legend with Wrap](images/legend/blazor-accumulation-chart-legend-wrap.png)" %}
 
+## Legend Template
+
+Legend templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
+
+To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ToggleVisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+
+```
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser" PointColorMapping="Color">
+            <LegendItemTemplate>
+                @{
+                    var info = context as AccumulationChartLegendInfo;
+                    var browser = info?.Data?["Browser"]?.ToString() ?? "";
+                }
+                <div style="display:flex; align-items:center; gap:8px; padding:4px 0;">
+                    <span style="font-weight:600; color:@info.Data["Color"];">@browser</span>
+                </div>
+            </LegendItemTemplate>
+            <ChildContent>
+                <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Inside">
+                    <AccumulationChartDataLabelFont Size="12px" Color="white"></AccumulationChartDataLabelFont>
+                </AccumulationDataLabelSettings>
+            </ChildContent>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="true" >
+    </AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code {
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+        public string Color { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new()
+    {
+    new Statistics { Browser = "Chrome", Users = 37, Color = "#f55a65" },
+    new Statistics { Browser = "UC Browser", Users = 17, Color = "#fcce2c" },
+    new Statistics { Browser = "iPhone", Users = 19, Color = "#78d6e2" },
+    new Statistics { Browser = "Others", Users = 4,  Color = "#bbd848" },
+    new Statistics { Browser = "Opera", Users = 11, Color = "#a97bdc" },
+    new Statistics { Browser = "Android", Users = 12, Color = "#57b879" },
+    };
+
+}
+```
+![Legend Template in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-template.png)
+
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 * [Grouping](./grouping)
