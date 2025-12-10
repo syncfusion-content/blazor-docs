@@ -259,6 +259,7 @@ In this TreeGrid example, custom sorting enhances project management by allowing
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations

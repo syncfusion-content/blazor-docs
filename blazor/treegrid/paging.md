@@ -82,7 +82,7 @@ public class TreeData
 
 N> Better performance can be achieved by using tree grid paging to fetch only a pre-defined number of records from the data source.
 
-## Page Size Mode
+## Page size mode
 
 Two behaviors are available in TreeGrid paging to display a specific number of records on the current page. The following are the two types of [`PageSizeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property of [`TreeGridPageSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html).
 
