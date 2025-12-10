@@ -280,6 +280,40 @@ While the toolbar does not provide a direct method to apply blockquote formattin
 
 ![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-nested-quotation-formatting.png)
 
+## LineHeight
+
+The Rich Text Editor supports applying line-height to block elements such as paragraphs, list items, headings, and table cells. It can be configured through a dedicated `LineHeight` dropdown in the toolbar and is saved as inline style on the affected blocks.
+
+### Key behaviors:
+- Applies to full blocks. If a partial inline selection is made, the line height is applied to the parent block element.
+- Works with undo/redo. Each change is tracked as a single history step.
+- Saved HTML persists line-height via inline styles (for example, style="line-height: 1.5").
+- Mixed selection shows the first block’s value in the dropdown.
+
+### Configure LineHeight in the toolbar
+
+The `LineHeight` tool can be configured in the Rich Text Editor using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+
+### Built-in LineHeight items
+
+The following table lists the default LineHeight items.
+
+| Default Key | Default Value |
+|-----|--------------------------------------|
+| [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorLineHeight.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorLineHeight_Items) | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Default", Value = "" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "1", Value = "1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "1.15", Value = "1.15" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "1.5", Value = "1.5" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "2", Value = "2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "2.5", Value = "2.5" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "3", Value = "3"}<br>}; |
+
+Example: Add the LineHeight tool and configure items
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/line-height.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor with LineHeight](../images/blazor-richtexteditor-line-height.png)
+
 ## Horizontal line
 
 The Rich Text Editor enables users to insert horizontal dividers using the `HorizontalLine` tool available in the toolbar. Horizontal lines (<hr>) help visually separate sections of content, enhancing readability and structural clarity.
