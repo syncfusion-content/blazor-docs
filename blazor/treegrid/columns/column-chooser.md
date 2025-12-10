@@ -161,6 +161,85 @@ public class TreeData
 
 N> The column names in column chooser can be hidden by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
 
+## Text wrapping in column chooser
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid includes a feature that improves readability within the column chooser dialog by allowing long column names to wrap across multiple lines. This behavior is enabled by setting the [`TreeGridColumnChooserSettings.AllowTextWrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowTextWrap) property to **true**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Buttons
+<SfTreeGrid @ref="TreeGrid" IdMapping="ShipmentId" ParentIdMapping="ParentId" DataSource="@Shipments" TreeColumnIndex="1" ShowColumnChooser="true" Toolbar="@ToolbarItems" Locale="en-US">
+    <TreeGridColumnChooserSettings AllowTextWrap="true"></TreeGridColumnChooserSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="ShipmentId" HeaderText="Shipment ID" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+        <TreeGridColumn Field="Description" HeaderText="Description of Shipment" Width="160" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+        <TreeGridColumn Field="Origin" HeaderText="Origin Location of Shipment" Width="120" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+        <TreeGridColumn Field="Destination" HeaderText="Destination Location of Shipment" Width="120" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+        <TreeGridColumn Field="Weight" HeaderText="Total Weight of Shipment (lbs)" Width="120" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+        <TreeGridColumn Field="DeliveryDate" HeaderText="Delivery Date for Shipment" Width="110" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Format="MM/dd/yyyy" Type="Syncfusion.Blazor.Grids.ColumnType.Date" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+        <TreeGridColumn Field="Status" HeaderText="Current Status of Shipment" Width="120" ShowInColumnChooser="false" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+    private SfTreeGrid<Shipment> TreeGrid;
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    public List<Shipment> Shipments { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.Shipments = Shipment.GetShipments().ToList();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="Shipment.cs" %}
+
+namespace TreeGridComponent.Data {
+    public class Shipment
+    {
+        public string ShipmentId { get; set; }
+        public string Description { get; set; }
+        public string Origin { get; set; }
+        public string Destination { get; set; }
+        public double? Weight { get; set; } // Weight in pounds=
+        public DateTime? DeliveryDate { get; set; }
+        public string Status { get; set; }
+        public string ParentId { get; set; }
+
+        public static List<Shipment> GetShipments()
+        {
+            var shipments = new List<Shipment>
+            {
+                // Parent 1: North America Shipment
+                new Shipment { ShipmentId = "SH001", Description = "North America Shipment", Origin = null, Destination = null, Weight = null, DeliveryDate = null, Status = null, ParentId = null },
+                new Shipment { ShipmentId = "SH002", Description = "Dell XPS 13 Laptops", Origin = "Los Angeles", Destination = "Houston", Weight = 132.28, DeliveryDate = new DateTime(2025, 10, 20), Status = "In Transit", ParentId = "SH001" }, // 50 laptops at ~2.65 lbs each
+                new Shipment { ShipmentId = "SH003", Description = "Samsung QLED Monitors", Origin = "New York", Destination = "Houston", Weight = 1102.31, DeliveryDate = new DateTime(2025, 10, 21), Status = "In Transit", ParentId = "SH001" }, // 50 monitors at ~22 lbs each
+                new Shipment { ShipmentId = "SH004", Description = "Logitech Keyboards", Origin = "San Francisco", Destination = "Miami", Weight = 99.21, DeliveryDate = new DateTime(2025, 10, 22), Status = "Pending", ParentId = "SH001" }, // 50 keyboards at ~1.98 lbs each
+                new Shipment { ShipmentId = "SH005", Description = "Logitech MX Master Mice", Origin = "Boston", Destination = "Seattle", Weight = 15.43, DeliveryDate = new DateTime(2025, 10, 23), Status = "Pending", ParentId = "SH001" }, // 50 mice at ~0.31 lbs each
+                new Shipment { ShipmentId = "SH006", Description = "Anker USB-C Cables", Origin = "Dallas", Destination = "Denver", Weight = 11.02, DeliveryDate = new DateTime(2025, 10, 24), Status = "Pending", ParentId = "SH001" }, // 100 cables at ~0.11 lbs each
+                new Shipment { ShipmentId = "SH007", Description = "Bose Bluetooth Speakers", Origin = "Atlanta", Destination = "Phoenix", Weight = 220.46, DeliveryDate = new DateTime(2025, 10, 25), Status = "Pending", ParentId = "SH001" }, // 50 speakers at ~4.41 lbs each
+                // Parent 2: Europe Shipment
+                new Shipment { ShipmentId = "SH008", Description = "Europe Shipment", Origin = null, Destination = null, Weight = null, DeliveryDate = null, Status = null, ParentId = null },
+                new Shipment { ShipmentId = "SH009", Description = "iPhone 14 Smartphones", Origin = "Munich", Destination = "Madrid", Weight = 30.42, DeliveryDate = new DateTime(2025, 10, 28), Status = "In Transit", ParentId = "SH008" }, // 50 smartphones at ~0.61 lbs each
+                new Shipment { ShipmentId = "SH010", Description = "Samsung Galaxy Tab S9 Tablets", Origin = "Hamburg", Destination = "Rome", Weight = 55.56, DeliveryDate = new DateTime(2025, 10, 29), Status = "In Transit", ParentId = "SH008" }, // 50 tablets at ~1.11 lbs each
+                new Shipment { ShipmentId = "SH011", Description = "Jabra Elite Headsets", Origin = "Frankfurt", Destination = "Paris", Weight = 33.07, DeliveryDate = new DateTime(2025, 10, 30), Status = "Delivered", ParentId = "SH008" }, // 50 headsets at ~0.66 lbs each
+                new Shipment { ShipmentId = "SH012", Description = "Anker PowerPort Chargers", Origin = "Cologne", Destination = "Amsterdam", Weight = 22.05, DeliveryDate = new DateTime(2025, 11, 1), Status = "Pending", ParentId = "SH008" }, // 50 chargers at ~0.44 lbs each
+                new Shipment { ShipmentId = "SH013", Description = "Canon EOS R Cameras", Origin = "Stuttgart", Destination = "Lisbon", Weight = 72.75, DeliveryDate = new DateTime(2025, 11, 2), Status = "Pending", ParentId = "SH008" }, // 50 cameras at ~1.46 lbs each
+                new Shipment { ShipmentId = "SH014", Description = "Nikon 50mm Lenses", Origin = "Dresden", Destination = "Vienna", Weight = 46.30, DeliveryDate = new DateTime(2025, 11, 3), Status = "Pending", ParentId = "SH008" }, // 50 lenses at ~0.93 lbs each
+            };
+            return shipments;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVeCDLJCycwyswR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Template support in column chooser
 
 Template can be rendered in column chooser of tree grid by customizing the column chooser using **Template** and **FooterTemplate** of the [TreeGridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) Component.
