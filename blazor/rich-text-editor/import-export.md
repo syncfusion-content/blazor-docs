@@ -266,7 +266,7 @@ You can add additional data with the word file uploaded from the Rich Text Edito
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml tabtitle="controller.cs" %}
+{% highlight cs tabtitle="controller.cs" %}
 
 using System;
 using System.IO;
@@ -386,7 +386,7 @@ While clicking on the export button, it makes a call to the Export to HTML servi
 Here, the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) values are converted into document type and then converted to HTML format.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/ExportService.cs" %}
+{% highlight cs tabtitle="~/ExportService.cs" %}
 
 public void ExportToHtml(string value)
 {
@@ -464,7 +464,7 @@ The following example demonstrates how to pass authentication tokens and custom 
 {% endtabs %}
 
 {% tabs %}
-{% highlight controller %}
+{% highlight cs tabtitle="controller.cs" %}
 
 using System;
 using System.IO;
