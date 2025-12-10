@@ -9,9 +9,9 @@ documentation: ug
 
 # Events in Blazor Calendar Component
 
-This section explains the list of events of the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component which will be triggered for appropriate Calendar actions.
+This section lists the events of the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component and describes when they are triggered during user interaction and rendering.
 
-N> From `v17.2.*` added only the limited number of events for the Calendar component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
+N> Starting with `v17.2.*`, only a limited set of events are available for the Calendar component. Event names differ from previous releases, and several events were removed. The following table summarizes event name changes from `v17.1.*` to `v17.2.*`.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -20,7 +20,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## OnRenderDayCell
 
-`onRenderDayCellHandler` event triggers when each day cell of the Calendar is rendered.
+The `OnRenderDayCell` event is triggered as each day cell is rendered, enabling customization of cell content and state.  
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -40,7 +40,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## ValueChange
 
-`ValueChange` event triggers when the Calendar value is changed.
+The `ValueChange` event is triggered after the selected date value changes in the Calendar.  
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -60,7 +60,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Created
 
-`Created` event triggers when Calendar is created.
+The `Created` event is triggered after the Calendar is initialized and rendered.  
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -80,7 +80,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Destroyed
 
-`OnOpen` event triggers when Calendar is destroyed.
+The `Destroyed` event is triggered when the Calendar is disposed.  
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -100,7 +100,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Navigated
 
-`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
+The `Navigated` event is triggered after navigating to another view level or within the same level (for example, changing month, year, or decade).  
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -118,4 +118,4 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 }
 ```
 
-N> Calendar will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> The Calendar is currently limited to these events. Additional events may be introduced in future versions based on user feedback. If a required event is missing, submit a request on the Syncfusion feedback portal: [Request a feature](https://www.syncfusion.com/feedback/blazor-components).

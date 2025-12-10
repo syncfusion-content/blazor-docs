@@ -98,7 +98,7 @@ When the user selects an item from the dropdown:
         if (args.Item.Text != null)
         {
             var value = _mergeData.FirstOrDefault(md => md.Text == args.Item.Text)?.Value;
-           string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{{{{value}}}}}</span></span> 
+           string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{{{{value}}}}}</span></span>";
             var undoOption = new ExecuteCommandOption { Undo = true };
             this._mailMergeEditor.ExecuteCommandAsync(CommandName.InsertHTML, htmlContent, undoOption);
             await this._mailMergeEditor.SaveSelectionAsync();

@@ -332,7 +332,7 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 
 ![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-horizontal-line.png)
 
-# Format Painter in Blazor Rich Text Editor
+## Format Painter in Blazor Rich Text Editor
 
 The format painter tool enables users to replicate formatting from one text segment and apply it to another. It can be accessed through the toolbar or via keyboard shortcuts, allowing the transfer of styles from individual words to entire paragraphs. Customization options are available through the Rich Text Editor[FormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormatPainterSettings.html) property.
 
@@ -403,3 +403,42 @@ Using `Clear Format` makes it easy to undo styling changes and keep your text lo
 {% endtabs %}
 
 ![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-using-clear-format.gif)
+
+## Markdown Auto Format
+
+The Rich Text Editor supports automatic conversion of Markdown syntax into HTML using the `EnableMarkdownAutoFormat` property. This feature simplifies content creation by transforming Markdown elements into their corresponding HTML tags, ensuring consistency and improving efficiency.
+
+By default, Markdown Auto-Format is enabled. The editor supports both inline formatting and block-level elements. As you type, Markdown syntax is automatically converted into semantic HTML tags, ensuring a smooth and efficient editing experience.
+
+## Inline Formatting
+
+The following inline formatting options are available:
+
+- Bold – Use `**text**` or `__text__`.
+- Italic – Use `*text*` or `_text_`.
+- Inline Code – Use `text`.
+- Strikethrough – Use `~~text~~`.
+
+## Block formatting
+
+The following block formatting options are available:
+
+- **Bulleted list** – Start a line with `*` or `-` followed by a space.
+- **Numbered list** – Start a line with `1.` followed by a space.
+- **Check List** – Start a line with `[ ]` or `[x]` followed by a space to insert an unchecked or checked list item, respectively.
+- **Headings** – Start a line with `#`, `##`, or `###` followed by a space to create Heading 1, Heading 2, or Heading 3. You can use up to six levels of headings
+- **Block quote** – Start a line with `>` followed by a space.
+- **Code block** – Start a line with ` ``` ` followed by a space.
+- **Horizontal line** – Start a line with `---` followed by a space.
+
+Use the `EnableMarkdownAutoFormat` tool in the editor below to see the feature in action.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/markdown-auto-format.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLyiLWtWPuHotIn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

@@ -11,7 +11,9 @@ documentation: ug
 
 This guide walks through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component into a Blazor MAUI application using either Visual Studio or Visual Studio Code.
 
-A complete working example is available in the [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
+> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+
+Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
 {% tabcontents %}
 
@@ -249,7 +251,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
 ## How to Run the Sample on Windows
 
@@ -513,7 +515,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyCjDPUkdgrQsk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> [View the Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
+N> [View the Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
 ## How to Run the Sample on Windows
 
