@@ -678,6 +678,70 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ![Hiding Legend Item in Blazor Column Chart](images/legend/blazor-column-chart-hide-legend-item.png)
 
+## Legend Template
+
+Legend templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
+
+To use, add a `LegendItemTemplate` inside any `ChartSeries` you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless `ToggleVisibility` is set to false. Templates work with all legend positions, alignments, and paging.
+
+```
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Fill="#FFD700" Type="ChartSeriesType.Column">
+            <LegendItemTemplate>
+                <div style="font-family:'Segoe UI'; font-size:14px; font-weight:600; padding-right: 5px; color: #FFD700">
+                    <span>Gold</span>
+                </div>
+            </LegendItemTemplate>
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Width="2" Opacity="1" YName="Silver" Fill="#666666" Type="ChartSeriesType.Column">
+            <LegendItemTemplate>
+                <div style="font-family:'Segoe UI'; font-size:14px; font-weight:600; padding-right: 5px; color: #666666">
+                    <span>Silver</span>
+                </div>
+            </LegendItemTemplate>
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Width="2" Opacity="1" YName="Bronze" Fill="#CD7F32" Type="ChartSeriesType.Column">
+            <LegendItemTemplate>
+                <div style="font-family:'Segoe UI'; font-size:14px; font-weight:600; padding-right: 5px; color: #CD7F32">
+                    <span>Bronze</span>
+                </div>
+            </LegendItemTemplate>
+        </ChartSeries>
+    </ChartSeriesCollection>
+
+    <ChartLegendSettings Visible="true" />
+</SfChart>
+
+@code {
+
+    public class ChartData
+    {
+        public string Country { get; set; }
+        public double Gold { get; set; }
+        public double Silver { get; set; }
+        public double Bronze { get; set; }
+    }
+
+    public List<ChartData> MedalDetails = new List<ChartData>
+    {
+        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
+        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
+        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
+        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
+        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
+        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
+        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
+        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+    };
+}
+```
+![Legend Template in Blazor Column Chart](images/legend/blazor-column-chart-legend-template.png)
+
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
