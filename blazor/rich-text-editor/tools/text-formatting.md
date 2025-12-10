@@ -376,8 +376,6 @@ The Rich Text Editor supports automatic conversion of Markdown syntax into HTML 
 
 By default, Markdown Auto-Format is enabled. The editor supports both inline formatting and block-level elements. As you type, Markdown syntax is automatically converted into semantic HTML tags, ensuring a smooth and efficient editing experience.
 
-Use the `EnableMarkdownAutoFormat` tool in the editor below to see the feature in action.
-
 ## Inline Formatting
 
 The following inline formatting options are available:
@@ -398,6 +396,8 @@ The following block formatting options are available:
 - **Block quote** – Start a line with `>` followed by a space.
 - **Code block** – Start a line with ` ``` ` followed by a space.
 - **Horizontal line** – Start a line with `---` followed by a space.
+
+Use the `EnableMarkdownAutoFormat` tool in the editor below to see the feature in action.
 
 {% tabs %}
 {% highlight razor %}
