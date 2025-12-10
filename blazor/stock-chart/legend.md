@@ -561,3 +561,58 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 ```
 
 ![Blazor Stock Chart hiding legend item](images/blazor-stock-chart-hidding-legend.png)
+
+## Legend Template
+
+Legend templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
+
+To use, add a `LegendItemTemplate` inside any `ChartSeries` you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless `ToggleVisibility` is set to false. Templates work with all legend positions, alignments, and paging.
+
+```
+@using Syncfusion.Blazor.Charts
+
+<SfStockChart Title="AAPL Stock Price" SelectionMode="SelectionMode.Series">
+    <StockChartLegendSettings Visible="true"  ToggleVisibility="true">
+    </StockChartLegendSettings>
+    <StockChartSeriesCollection>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price" Fill="red">
+            <LegendItemTemplate>
+                <div style="font-weight:800; font-family:'Segoe UI'; color: red">
+                    <span>Apple Stock Price</span>
+                </div>
+            </LegendItemTemplate>
+        </StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google Stock Price" Fill="cornflowerblue">
+            <LegendItemTemplate>
+                <div style="font-weight:800; font-family:'Segoe UI'; color: cornflowerblue">
+                    <span>Google Stock Price</span>
+                </div>
+            </LegendItemTemplate>
+        </StockChartSeries>
+    </StockChartSeriesCollection>
+</SfStockChart>
+
+@code {
+    public class ChartData
+    {
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
+    }
+
+    public List<ChartData> StockDetails = new List<ChartData>
+    {
+        new ChartData { Date = new DateTime(2012, 04, 02), Open = 85.9757, High = 90.6657, Low = 85.7685, Close = 90.5257, Volume = 660187068 },
+        new ChartData { Date = new DateTime(2012, 04, 09), Open = 89.4471, High = 92, Low = 86.2157, Close = 86.4614, Volume = 912634864 },
+        new ChartData { Date = new DateTime(2012, 04, 16), Open = 87.1514, High = 88.6071, Low = 81.4885, Close = 81.8543, Volume = 1221746066 },
+        new ChartData { Date = new DateTime(2012, 04, 23), Open = 81.5157, High = 88.2857, Low = 79.2857, Close = 86.1428, Volume = 965935749 },
+        new ChartData { Date = new DateTime(2012, 04, 30), Open = 85.4, High = 85.4857, Low = 80.7385, Close = 80.75, Volume = 615249365 }
+   };
+}
+```
+![Blazor Stock Chart legend template](images/blazor-stock-chart-legend-template.png)
+
+
