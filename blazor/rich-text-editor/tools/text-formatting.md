@@ -280,6 +280,40 @@ While the toolbar does not provide a direct method to apply blockquote formattin
 
 ![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-nested-quotation-formatting.png)
 
+## LineHeight
+
+The Rich Text Editor supports applying line-height to block elements such as paragraphs, list items, headings, and table cells. It can be configured through a dedicated `LineHeight` dropdown in the toolbar and is saved as inline style on the affected blocks.
+
+### Key behaviors:
+- Applies to full blocks. If a partial inline selection is made, the line height is applied to the parent block element.
+- Works with undo/redo. Each change is tracked as a single history step.
+- Saved HTML persists line-height via inline styles (for example, style="line-height: 1.5").
+- Mixed selection shows the first block’s value in the dropdown.
+
+### Configure LineHeight in the toolbar
+
+The `LineHeight` tool can be configured in the Rich Text Editor using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+
+### Built-in LineHeight items
+
+The following table lists the default LineHeight items.
+
+| Default Key | Default Value |
+|-----|--------------------------------------|
+| [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorLineHeight.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorLineHeight_Items) | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Default", Value = "" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "1", Value = "1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "1.15", Value = "1.15" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "1.5", Value = "1.5" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "2", Value = "2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "2.5", Value = "2.5" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "3", Value = "3"}<br>}; |
+
+Example: Add the LineHeight tool and configure items
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/line-height.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor with LineHeight](../images/blazor-richtexteditor-line-height.png)
+
 ## Horizontal line
 
 The Rich Text Editor enables users to insert horizontal dividers using the `HorizontalLine` tool available in the toolbar. Horizontal lines (<hr>) help visually separate sections of content, enhancing readability and structural clarity.
@@ -298,7 +332,7 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 
 ![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-horizontal-line.png)
 
-# Format Painter in Blazor Rich Text Editor
+## Format Painter in Blazor Rich Text Editor
 
 The format painter tool enables users to replicate formatting from one text segment and apply it to another. It can be accessed through the toolbar or via keyboard shortcuts, allowing the transfer of styles from individual words to entire paragraphs. Customization options are available through the Rich Text Editor[FormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormatPainterSettings.html) property.
 
@@ -369,3 +403,42 @@ Using `Clear Format` makes it easy to undo styling changes and keep your text lo
 {% endtabs %}
 
 ![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-using-clear-format.gif)
+
+## Markdown Auto Format
+
+The Rich Text Editor supports automatic conversion of Markdown syntax into HTML using the `EnableMarkdownAutoFormat` property. This feature simplifies content creation by transforming Markdown elements into their corresponding HTML tags, ensuring consistency and improving efficiency.
+
+By default, Markdown Auto-Format is enabled. The editor supports both inline formatting and block-level elements. As you type, Markdown syntax is automatically converted into semantic HTML tags, ensuring a smooth and efficient editing experience.
+
+## Inline Formatting
+
+The following inline formatting options are available:
+
+- Bold – Use `**text**` or `__text__`.
+- Italic – Use `*text*` or `_text_`.
+- Inline Code – Use `text`.
+- Strikethrough – Use `~~text~~`.
+
+## Block formatting
+
+The following block formatting options are available:
+
+- **Bulleted list** – Start a line with `*` or `-` followed by a space.
+- **Numbered list** – Start a line with `1.` followed by a space.
+- **Check List** – Start a line with `[ ]` or `[x]` followed by a space to insert an unchecked or checked list item, respectively.
+- **Headings** – Start a line with `#`, `##`, or `###` followed by a space to create Heading 1, Heading 2, or Heading 3. You can use up to six levels of headings
+- **Block quote** – Start a line with `>` followed by a space.
+- **Code block** – Start a line with ` ``` ` followed by a space.
+- **Horizontal line** – Start a line with `---` followed by a space.
+
+Use the `EnableMarkdownAutoFormat` tool in the editor below to see the feature in action.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/markdown-auto-format.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLyiLWtWPuHotIn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

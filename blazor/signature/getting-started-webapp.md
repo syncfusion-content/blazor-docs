@@ -256,7 +256,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 N> The Signature component will render default height and width of canvas (300 * 150), when the Signature height and width are not specified.
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Signature/BlazorWebApp).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Signature).
 
 ## See Also
 

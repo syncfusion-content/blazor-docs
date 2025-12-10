@@ -268,4 +268,4 @@ Set the rating using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLTXiKDggXVnBqJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Rating/BlazorWebApp).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Rating).
