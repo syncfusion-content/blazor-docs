@@ -405,9 +405,13 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
                 @{
                     var info = context as AccumulationChartLegendInfo;
                     var browser = info?.Data?["Browser"]?.ToString() ?? "";
+                    var users = info?.Data?["Users"] is null ? 0 : Convert.ToDouble(info.Data["Users"]);
                 }
                 <div style="display:flex; align-items:center; gap:8px; padding:4px 0;">
-                    <span style="font-weight:600; color:@info.Data["Color"];">@browser</span>
+                    <div style="display:flex; flex-direction:column; line-height:1.1;">
+                        <span style="font-weight:800; font-size:14px; color: @info.Data["Color"]">@browser</span>
+                        <span style="font-size:12px; opacity:0.8;"><b>@users million</b> people use @browser</span>
+                    </div>
                 </div>
             </LegendItemTemplate>
             <ChildContent>
