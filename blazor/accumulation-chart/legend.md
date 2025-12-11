@@ -414,11 +414,6 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
                     </div>
                 </div>
             </LegendItemTemplate>
-            <ChildContent>
-                <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Inside">
-                    <AccumulationChartDataLabelFont Size="12px" Color="white"></AccumulationChartDataLabelFont>
-                </AccumulationDataLabelSettings>
-            </ChildContent>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 
@@ -436,12 +431,12 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
 
     public List<Statistics> StatisticsDetails = new()
     {
-    new Statistics { Browser = "Chrome", Users = 37, Color = "#f55a65" },
-    new Statistics { Browser = "UC Browser", Users = 17, Color = "#fcce2c" },
-    new Statistics { Browser = "iPhone", Users = 19, Color = "#78d6e2" },
-    new Statistics { Browser = "Others", Users = 4,  Color = "#bbd848" },
-    new Statistics { Browser = "Opera", Users = 11, Color = "#a97bdc" },
-    new Statistics { Browser = "Android", Users = 12, Color = "#57b879" },
+    new Statistics { Browser = "Chrome", Users = 37, Color = "#a16ee5" },
+    new Statistics { Browser = "UC Browser", Users = 17, Color = "#f7ce69" },
+    new Statistics { Browser = "iPhone", Users = 19, Color = "#55a5c2" },
+    new Statistics { Browser = "Others", Users = 4,  Color = "#7ddf1e" },
+    new Statistics { Browser = "Opera", Users = 11, Color = "#ff6ea6" },
+    new Statistics { Browser = "Android", Users = 12, Color = "#7953ac" },
     };
 
 }
