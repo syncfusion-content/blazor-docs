@@ -693,22 +693,39 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Fill="#FFD700" Type="ChartSeriesType.Column">
             <LegendItemTemplate>
-                <div style="font-family:'Segoe UI'; font-size:14px; font-weight:600; padding-right: 5px; color: #FFD700">
-                    <span>Gold</span>
+                <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
+                    <span style="font-size:18px;">🥇</span>
+                    <div style="display:flex; flex-direction:column; line-height:1.15;">
+                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:#FFD700;">Gold</span>
+                        <span style="font-size:12px; opacity:0.85;">Awarded for first place finishes</span>
+                        <span style="font-size:12px; opacity:0.75;">Total: @GoldTotal</span>
+                    </div>
                 </div>
             </LegendItemTemplate>
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Width="2" Opacity="1" YName="Silver" Fill="#666666" Type="ChartSeriesType.Column">
+
+        <ChartSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Width="2" Opacity="1" YName="Silver" Fill="#898989" Type="ChartSeriesType.Column">
             <LegendItemTemplate>
-                <div style="font-family:'Segoe UI'; font-size:14px; font-weight:600; padding-right: 5px; color: #666666">
-                    <span>Silver</span>
+                <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
+                    <span style="font-size:18px;">🥈</span>
+                    <div style="display:flex; flex-direction:column; line-height:1.15;">
+                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:#898989;">Silver</span>
+                        <span style="font-size:12px; opacity:0.85;">Awarded for second place finishes</span>
+                        <span style="font-size:12px; opacity:0.75;">Total: @SilverTotal</span>
+                    </div>
                 </div>
             </LegendItemTemplate>
         </ChartSeries>
+
         <ChartSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Width="2" Opacity="1" YName="Bronze" Fill="#CD7F32" Type="ChartSeriesType.Column">
             <LegendItemTemplate>
-                <div style="font-family:'Segoe UI'; font-size:14px; font-weight:600; padding-right: 5px; color: #CD7F32">
-                    <span>Bronze</span>
+                <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
+                    <span style="font-size:18px;">🥉</span>
+                    <div style="display:flex; flex-direction:column; line-height:1.15;">
+                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:#CD7F32;">Bronze</span>
+                        <span style="font-size:12px; opacity:0.85;">Awarded for third place finishes</span>
+                        <span style="font-size:12px; opacity:0.75;">Total: @BronzeTotal</span>
+                    </div>
                 </div>
             </LegendItemTemplate>
         </ChartSeries>
@@ -727,17 +744,21 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
         public double Bronze { get; set; }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> MedalDetails = new()
     {
-        new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new ChartData{ Country= "USA",      Gold=50, Silver=70, Bronze=45 },
+        new ChartData{ Country= "China",    Gold=40, Silver=60, Bronze=55 },
+        new ChartData{ Country= "Japan",    Gold=70, Silver=60, Bronze=50 },
+        new ChartData{ Country= "Australia",Gold=60, Silver=56, Bronze=40 },
+        new ChartData{ Country= "France",   Gold=50, Silver=45, Bronze=35 },
+        new ChartData{ Country= "Germany",  Gold=40, Silver=30, Bronze=22 },
+        new ChartData{ Country= "Italy",    Gold=40, Silver=35, Bronze=37 },
+        new ChartData{ Country= "Sweden",   Gold=30, Silver=25, Bronze=27 }
     };
+
+    public int GoldTotal => (int)MedalDetails.Sum(m => m.Gold);
+    public int SilverTotal => (int)MedalDetails.Sum(m => m.Silver);
+    public int BronzeTotal => (int)MedalDetails.Sum(m => m.Bronze);
 }
 ```
 ![Legend Template in Blazor Column Chart](images/legend/blazor-column-chart-legend-template.png)
