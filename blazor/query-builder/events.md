@@ -57,26 +57,6 @@ The RuleChanged event is triggered whenever a rule or group is added, removed, o
 }
 ```
 
-## Destroyed
-
-The Destroyed event is triggered when the component is disposed. Use it to perform reliable cleanup, detach external resources, or finalize logging.
-
-- Exposed via QueryBuilderEvents<TValue>.Destroyed
-- Raised during the Dispose lifecycle
-
-```cshtml
-<SfQueryBuilder TValue="Order" DataSource="@Data">
-    <QueryBuilderEvents TValue="Order" Destroyed="OnDestroyed"></QueryBuilderEvents>
-</SfQueryBuilder>
-
-@code {
-    public void OnDestroyed(object args)
-    {
-        // Here, you can customize your code.
-    }
-}
-```
-
 ## OnValueChange
 
 Raised before a condition (And/Or), field, operator, or value is changed. Use this to validate or react before committing a change.
@@ -177,6 +157,23 @@ Raised after a successful drop is completed.
 
 @code {
     private void OnRuleDropped(RuleDroppedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+```
+
+## Destroyed
+
+The Destroyed event is triggered when the component is disposed. Use it to perform reliable cleanup, detach external resources, or finalize logging.
+
+```cshtml
+<SfQueryBuilder TValue="Order" DataSource="@Data">
+    <QueryBuilderEvents TValue="Order" Destroyed="OnDestroyed"></QueryBuilderEvents>
+</SfQueryBuilder>
+
+@code {
+    public void OnDestroyed(object args)
     {
         // Here, you can customize your code.
     }
