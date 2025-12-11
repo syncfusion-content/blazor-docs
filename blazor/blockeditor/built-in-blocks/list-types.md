@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Lists in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about List Blocks in Syncfusion Blazor BlockEditor component and more.
+title: Lists in Blazor Block Editor Component | Syncfusion
+description: Checkout and learn about List Blocks in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: BlockEditor
+control: Block Editor
 documentation: ug
 ---
 
-# Lists in Blazor BlockEditor component
+# Lists in Blazor Block Editor component
 
 The Syncfusion Blazor Block Editor component uses list blocks to organize content into structured lists. To render a specific list type, set the `BlockType` property of the `BlockModel` to `BulletList`, `NumberedList`, or `Checklist`. Bullet lists are ideal for unordered items, numbered lists for ordered items, and checklists for interactive to-do lists.
 
@@ -89,7 +89,7 @@ By default, the `IsChecked` property is set to `false`.
 ```cshtml
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="paste-blockeditor">
+<div class="wrapper">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
@@ -130,7 +130,7 @@ By default, the `IsChecked` property is set to `false`.
 
 ```
 
-![Blazor BlockEditor Block IsChecked](./images/is-checked.png)
+![Blazor Block Editor Block IsChecked](./images/is-checked.png)
 
 ### Configure placeholder
 
@@ -154,7 +154,7 @@ The following example demonstrates how to render the different types of list blo
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="paste-blockeditor">
+<div class="wrapper">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
@@ -188,4 +188,4 @@ The following example demonstrates how to render the different types of list blo
 
 ```
 
-![Blazor BlockEditor List Blocks](./images/list-blocks.png)
+![Blazor Block Editor List Blocks](./images/list-blocks.png)

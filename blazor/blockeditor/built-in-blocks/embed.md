@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Embed in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Embed in Syncfusion Blazor BlockEditor component and more.
+title: Embed in Blazor Block Editor Component | Syncfusion
+description: Checkout and learn about Embed in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: BlockEditor
+control: Block Editor
 documentation: ug
 ---
 
-# Embed Blocks in Blazor BlockEditor component
+# Embed Blocks in Blazor Block Editor component
 
 The Block Editor supports the addition of embeds to help you organize and showcase visual content effectively.
 
@@ -21,21 +21,21 @@ You can render an `Image` block by setting the `BlockType` property to `Image` i
 
 #### Global Image Settings
 
-You can configure global settings for image blocks using the `ImageBlockSettings` property in the Block Editor root configuration. This ensures consistent behavior for image uploads, resizing, and display.
+You can configure global settings for image blocks using the `ImageBlockSettings` property in the Block Editor root configuration. This ensures consistent behavior for all images in the editor.
 
 The `ImageBlockSettings` property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
-| saveFormat | Specifies the format to save the image. | `Base64` |
-| allowedTypes | Specifies allowed image file types for upload. | `['.jpg', '.jpeg', '.png']` |
-| width | Specifies the default display width of the image. | `auto` |
-| height | Specifies the default display height of the image. | `auto` |
-| enableResize | Enables or disables image resizing. | `true` |
-| minWidth | Minimum width allowed for resizing. | `''` |
-| maxWidth | Maximum width allowed for resizing. | `''` |
-| minHeight | Minimum height allowed for resizing. | `''` |
-| maxHeight | Maximum height allowed for resizing. | `''` |
+| SaveFormat | Specifies the format to save the image. | `Base64` |
+| AllowedTypes | Specifies allowed image file types for upload. | `['.jpg', '.jpeg', '.png']` |
+| Width | Specifies the default display width of the image. | `auto` |
+| Height | Specifies the default display height of the image. | `auto` |
+| EnableResize | Enables or disables image resizing. | `true` |
+| MinWidth | Minimum width allowed for resizing. | `''` |
+| MaxWidth | Maximum width allowed for resizing. | `''` |
+| MinHeight | Minimum height allowed for resizing. | `''` |
+| MaxHeight | Maximum height allowed for resizing. | `''` |
 
 #### Configure Image Block Properties
 
@@ -43,16 +43,16 @@ The `Image` block `Properties` property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
-| src | Specifies the image path. | `''` |
-| width | Specifies the display width of the image. | `''` |
-| height | Specifies the display height of the image. | `''` |
-| altText | Specifies the alternative text to display when the image cannot be loaded. | `''` |
+| Src | Specifies the image path. | `''` |
+| Width | Specifies the display width of the image. | `''` |
+| Height | Specifies the display height of the image. | `''` |
+| AltText | Specifies the alternative text to display when the image cannot be loaded. | `''` |
 
 ```cshtml
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="paste-blockeditor">
+<div class="wrapper">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
@@ -74,4 +74,4 @@ The `Image` block `Properties` property supports the following options:
 
 ```
 
-![Blazor BlockEditor Image Block](./images/image-block.png)
+![Blazor Block Editor Image Block](./images/image-block.png)

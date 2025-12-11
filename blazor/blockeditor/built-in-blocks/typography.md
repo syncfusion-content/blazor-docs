@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Typography Blocks in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Typography Blocks in Syncfusion Blazor BlockEditor component and more.
+title: Typography Blocks in Blazor Block Editor Component | Syncfusion
+description: Checkout and learn about Typography Blocks in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: BlockEditor
+control: Block Editor
 documentation: ug
 ---
 
-# Typography Blocks in Blazor BlockEditor component
+# Typography Blocks in Blazor Block Editor component
 
 Typography blocks are essential for organizing and presenting text-based content. The Block Editor component supports various structural blocks—such as Paragraph, Heading, Collapsible (CollapsibleParagraph and CollapsibleHeading), Divider, Quote, and Callout—to help you format and structure content effectively.
 
@@ -45,7 +45,7 @@ The below sample demonstrates the configuration of paragraph block in the Block 
 }
 ```
 
-![Blazor BlockEditor Paragraph Block](./images/paragraph-block.png)
+![Blazor Block Editor Paragraph Block](./images/paragraph-block.png)
 
 
 ### Configure placeholder
@@ -87,7 +87,7 @@ The below sample demonstrates the configuration of placeholder in the Block Edit
 }
 ```
 
-![Blazor BlockEditor Paragraph placeholder](./images/paragraph-placeholder.png)
+![Blazor Block Editor Paragraph placeholder](./images/paragraph-placeholder.png)
 
 ## Configure heading block
 
@@ -146,7 +146,7 @@ The following sample demonstrates the configuration of a heading block in the Bl
 }
 ```
 
-![Blazor BlockEditor Heading Blocks](./images/heading-block.png)
+![Blazor Block Editor Heading Blocks](./images/heading-block.png)
 
 ### Configure placeholder
 
@@ -234,7 +234,7 @@ This example shows how to configure `CollapsibleHeading` and `CollapsibleParagra
 }
 ```
 
-![Blazor BlockEditor Toggle Blocks](./images/toggle-blocks.png)
+![Blazor Block Editor Toggle Blocks](./images/toggle-blocks.png)
 
 ### Configure placeholder
 
@@ -287,7 +287,7 @@ This sample shows how to place a divider between two blocks.
 }
 ```
 
-![Blazor BlockEditor Divider Block](./images/divider-block.png)
+![Blazor Block Editor Divider Block](./images/divider-block.png)
 
 ## Configure quote block
 
@@ -312,7 +312,7 @@ The following sample shows how to configure a quote block.
 }
 ```
 
-![Blazor BlockEditor Quote Block](./images/quote-block.png)
+![Blazor Block Editor Quote Block](./images/quote-block.png)
 
 ### Configure placeholder
 
@@ -360,7 +360,7 @@ The following sample adds a callout block to the editor.
 }
 ```
 
-![Blazor BlockEditor Callout Block](./images/callout-block.png)
+![Blazor Block Editor Callout Block](./images/callout-block.png)
 
 ### Configure children
 
@@ -436,4 +436,4 @@ This structure is essential for maintaining nested relationships within the edit
 }
 ```
 
-![Blazor BlockEditor Children](./images/children.png)
+![Blazor Block Editor Children](./images/children.png)

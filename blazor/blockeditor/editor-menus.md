@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Editor Menus in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Editor Menus with Blazor BlockEditor component in Blazor WebAssembly App.
+title: Editor Menus in Blazor Block Editor Component | Syncfusion
+description: Checkout and learn about Editor Menus with Blazor Block Editor component in Blazor WebAssembly App.
 platform: Blazor
-control: BlockEditor
+control: Block Editor
 documentation: ug
 ---
 

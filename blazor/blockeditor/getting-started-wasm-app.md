@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting Started | Syncfusion BlockEditor Component | Blazor WASM App
-description: Check out and learn here about the documentation for getting started with Blazor BlockEditor Component in Blazor WASM App. Explore here to more details.
+title: Getting Started | Syncfusion Block Editor Component | Blazor WASM App
+description: Check out and learn here about the documentation for getting started with Blazor Block Editor Component in Blazor WASM App. Explore here to more details.
 platform: Blazor
-component: BlockEditor
+control: Block Editor
 documentation: ug
 ---
 

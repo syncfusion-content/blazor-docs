@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Blocks in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Blocks in Syncfusion Blazor BlockEditor component and more.
+title: Blocks in Blazor Block Editor Component | Syncfusion
+description: Checkout and learn about Blocks in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: BlockEditor
+control: Block Editor
 documentation: ug
 ---
 
-# Blocks in Blazor BlockEditor component
+# Blocks in Blazor Block Editor component
 
 The Syncfusion Block Editor uses **Blocks** as the fundamental units for creating and managing content. The entire editor content is structured as a collection of these blocks, which are configured and managed through the `Blocks` property.
 
 ## Blocks
 
-Blocks are the core building elements of the editor, where each block represents a distinct content unit, such as a `Paragraph`, `Heading`, `List`, or specialized content like a `Code snippet` or `Image`. This block-based architecture makes it easy for users to rearrange, format, and manage discrete pieces of content independently.
+Blocks are the core building elements of the editor, where each block represents a distinct content unit, such as a `Paragraph`, `Heading`, `List`, or specialized content like a `Callout` or `Image`. This block-based architecture makes it easy for users to rearrange, format, and manage discrete pieces of content independently.
 
-You can configure blocks with various properties such as `ID`, `BlockType`, `Content`to create a rich, structured editor.
+You can configure blocks with various properties such as `ID`, `BlockType`, `Content` to create a rich, structured editor.
 
 ## Block types
 
@@ -45,7 +45,7 @@ By default, the `Indent` property is set to `0`.
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="paste-blockeditor">
+<div class="wrapper">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 @code {
@@ -80,7 +80,7 @@ By default, the `Indent` property is set to `0`.
 
 ```
 
-![Blazor BlockEditor Blocks Indent](./images/indent.png)
+![Blazor Block Editor Blocks Indent](./images/indent.png)
 
 ## Configure CSS Class
 
@@ -92,7 +92,7 @@ Custom CSS classes allow you to define specialized styling for specific blocks i
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="paste-blockeditor">
+<div class="wrapper">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
@@ -143,6 +143,50 @@ Custom CSS classes allow you to define specialized styling for specific blocks i
     };
 }
 
+<style>
+/* Custom CSS for blocks  */
+.e-block.info-block, .e-block.warning-block, .e-block.success-block, .e-block.error-block {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    border-left: 4px solid;
+}
+
+.e-block.info-block {
+    background-color: #e6f3ff;
+    border-left-color: #007bff;
+    color: #004085;
+}
+
+.e-block.warning-block {
+    background-color: #fff8e1;
+    border-left-color: #ffc107;
+    color: #856404;
+}
+
+.e-block.success-block {
+    background-color: #e8f5e9;
+    border-left-color: #28a745;
+    color: #155724;
+}
+
+.e-block.error-block {
+    background-color: #fdecea;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+.e-block.custom-font {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #4a4a4a;
+    border-bottom: 2px dotted #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+<style>
+
 ```
 
-![Blazor BlockEditor Blocks CssClass](./images/cssClass.png)
+![Blazor Block Editor Blocks CssClass](./images/cssClass.png)

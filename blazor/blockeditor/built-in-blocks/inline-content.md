@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Inline content in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Inline content in Syncfusion Blazor BlockEditor component and more.
+title: Inline content in Blazor Block Editor Component | Syncfusion
+description: Checkout and learn about Inline content in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: BlockEditor
+control: Block Editor
 documentation: ug
 ---
 
-# Inline Content in Blazor BlockEditor component
+# Inline Content in Blazor Block Editor component
 
 In the Syncfusion Block Editor, all content is organized within blocks. Each block contains a `Content` property, which is an array of inline elements that define the text and functionality within that block.
 
@@ -21,7 +21,6 @@ The Block Editor supports several inline content types through the `ContentType`
 |------------------------|-------------------------------------|
 | Text                   | Represents plain text content.      |
 | Link                   | Represents a hyperlink.             |
-| Code                   | Represents a code snippet.          |
 | Mention                | Represents a user mention.          |
 | Label                  | Represents a label or tag.          |
 
@@ -31,7 +30,7 @@ By default, the content type is set to `Text`.
 
 To configure text content, set the `ContentType` property to `Text`. This is the default content type if none is specified.
 
-### Type 
+### Type
 
 ```cshtml
 // Adding inline text
@@ -52,9 +51,9 @@ Link settings control the behavior and properties of hyperlinks in your content.
 
 Link settings are configured through the `Properties` property, which accepts the following options:
 
-| Option                                                                      | Description                                                       | Default Value |
-| --------------------------------------------------------------------------- | ----------------------------------------------------------------- | ------------- |
-| [url]                            | Specifies the destination URL of the link.                        | `''`          |
+| Property | Description | Default Value |
+|----------|-------------|---------------|
+| Url | Specifies the destination URL of the link. | `''` |
 
 ### Type & Props
 
@@ -68,18 +67,18 @@ Link settings are configured through the `Properties` property, which accepts th
 
 ## Configure Label
 
-To render labels, set the `ContentType` property to `Label`. The `Properties` property allows you to specify which label to display.
+To render labels, set the `ContentType` property to `Label`. Specify the `LabelID` of the particular label in `Properties` to render a label.
 
 ### Built-in items
 
-The Block Editor comes with offers different built-in options. These include:
+The Block Editor comes with different built-in label items. These includes:
 
 -   **Progress**: In-progress, On-hold, Done
 -   **Priority**: High, Medium, Low
 
 ### Customize label
 
-You can customize the labels by using the `Properties` property with contentType `Label`.
+You can customize the labels by using the `Properties` property along with contentType `Label`.
 
 ### Type & Props
 
@@ -88,7 +87,9 @@ You can customize the labels by using the `Properties` property with contentType
     new BlockModel
     {
         BlockType = BlockType.Paragraph,
-        Content = {new ContentModel{ContentType = ContentType.label, Content = "Name of the label"}}
+        Content = {new ContentModel{ContentType = ContentType.Label, Properties = new LabelContentSettings {
+            LabelID = "progress"
+        }}}
     }
 ```
 
@@ -121,7 +122,7 @@ The below sample demonstrates the customization of labels in the Block Editor.
 
 ## Configure mention
 
-Mentions are references to users or entities that can be inserted into your content. You can configure mention content by setting the type property to `Mention`.
+Mentions are references to users or entities that can be inserted into your content. You can configure mention content by setting the type property to `Mention`. Specify the `UserID` of particular user in `Properties` to render a mention.
 
 Mentions are typically triggered by the `@` character and are linked to the `Users` collection defined in the Block Editor.
 
@@ -129,7 +130,7 @@ Mentions are typically triggered by the `@` character and are linked to the `Use
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="paste-blockeditor">
+<div class="wrapper">
     <SfBlockEditor Blocks="BlockData" Users="@BlockUser"></SfBlockEditor>
 </div>
 
@@ -143,7 +144,7 @@ Mentions are typically triggered by the `@` character and are linked to the `Use
         new BlockModel
         {
             BlockType = BlockType.Heading,
-            Properties= new HeadingBlockSettings {Level = 2},
+            Properties = new HeadingBlockSettings {Level = 2},
             Content = {new ContentModel {ContentType = ContentType.Text, Content = "Different Content Types"}}
         },
         new BlockModel
@@ -154,9 +155,9 @@ Mentions are typically triggered by the `@` character and are linked to the `Use
                 new ContentModel{ContentType = ContentType.Link, Content = "hyperlinks", Properties = new LinkContentSettings { Url = "https://ej2.syncfusion.com/documentation/"} },
                 new ContentModel{ContentType = ContentType.Text, Content = ", inline "},
                 new ContentModel{ContentType = ContentType.Text, Content = "\nUser mentions like"},
-                new ContentModel{ContentType = ContentType.Mention, Content = "user1"},
+                new ContentModel{ContentType = ContentType.Mention, Properties = new MentionContentSettings() { UserID = "user1" } },
                 new ContentModel{ContentType = ContentType.Text, Content = ", and labels such as"},
-                new ContentModel{ContentType = ContentType.Label, Properties = new LabelContentSettings {LabelID = "label1" } },
+                new ContentModel{ContentType = ContentType.Label, Properties = new LabelContentSettings {LabelID = "progress" } },
                 new ContentModel{ContentType = ContentType.Text, Content = "."},
             ]
         }
@@ -169,21 +170,21 @@ Mentions are typically triggered by the `@` character and are linked to the `Use
 
 The Block Editor allows you to apply rich formatting to `Text`, `Link`, and `Code` elements using the `Styles` property.
 
-The `styles` property supports the following options:
+The `Styles` property supports the following options:
 
 | Style Property            | Description                                | Default Value |
 | ------------------------- | ------------------------------------------ | ------------- |
 | `Bold`                    | Makes the text bold.                       | `false`       |
-| `italic`                  | Makes the text italicized.                 | `false`       |
-| `underline`               | Adds an underline to the text.             | `false`       |
-| `strikethrough`           | Adds a line through the text.              | `false`       |
-| `color`                   | Sets the text color (HEX or RGBA format).  | `''`          |
-| `backgroundColor`         | Sets the background color for the text.    | `''`          |
-| `superscript`             | Renders the text as superscript.           | `false`       |
-| `subscript`               | Renders the text as subscript.             | `false`       |
-| `uppercase`               | Converts the text to uppercase.            | `false`       |
-| `lowercase`               | Converts the text to lowercase.            | `false`       |
-| `inlineCode`              | Converts the text to InlineCode.           | `''`          |
+| `Italic`                  | Makes the text italicized.                 | `false`       |
+| `Underline`               | Adds an underline to the text.             | `false`       |
+| `Strikethrough`           | Adds a line through the text.              | `false`       |
+| `Color`                   | Sets the text color (HEX or RGBA format).  | `''`          |
+| `BackgroundColor`         | Sets the background color for the text.    | `''`          |
+| `Superscript`             | Renders the text as superscript.           | `false`       |
+| `Subscript`               | Renders the text as subscript.             | `false`       |
+| `Uppercase`               | Converts the text to uppercase.            | `false`       |
+| `Lowercase`               | Converts the text to lowercase.            | `false`       |
+| `InlineCode`              | Converts the text to inline code.           | `false`       |
 
 You can apply one or more of these styles to any supported content element for rich text formatting.
 
@@ -191,7 +192,7 @@ You can apply one or more of these styles to any supported content element for r
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="paste-blockeditor">
+<div class="wrapper">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
@@ -249,4 +250,4 @@ You can apply one or more of these styles to any supported content element for r
 
 ```
 
-![Blazor BlockEditor Content Styles](./images/content-styles.png)
+![Blazor Block Editor Content Styles](./images/content-styles.png)

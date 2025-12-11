@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Undo redo in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Undo redo with Blazor BlockEditor component in Blazor WebAssembly App.
+title: Undo redo in Blazor Block Editor Component | Syncfusion
+description: Checkout and learn about Undo redo with Blazor Block Editor component in Blazor WebAssembly App.
 platform: Blazor
-control: BlockEditor
+control: Block Editor
 documentation: ug
 ---
 
@@ -91,4 +91,4 @@ The example below sets the undo/redo history limit to `20` actions.
 
 ```
 
-![Blazor BlockEditor Undo Redo](./images/undo-redo.png)
+![Blazor Block Editor Undo Redo](./images/undo-redo.png)
