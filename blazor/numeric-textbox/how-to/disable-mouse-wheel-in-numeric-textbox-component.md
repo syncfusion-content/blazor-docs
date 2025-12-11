@@ -1,0 +1,27 @@
+---
+layout: post
+title: Disable Mouse Wheel Scroll in Blazor Numeric TextBox Component | Syncfusion
+description: Learn how to enable or disable mouse wheel scrolling in the Syncfusion Blazor Numeric TextBox component using the AllowMouseWheel property.
+platform: Blazor
+control: Numeric TextBox
+documentation: ug
+---
+
+# Disable Mouse Wheel Scroll in Blazor Numeric TextBox Component
+
+The Blazor Numeric TextBox component supports controlling mouse wheel scrolling via the `AllowMouseWheel` property. This lets you prevent accidental value changes when the input has focus and the user scrolls the mouse wheel.
+
+## Enable/disable mouse wheel interaction
+
+- Default: `AllowMouseWheel` is `true`, so the value increments/decrements based on the `Step` while scrolling the mouse wheel when the input is focused.
+- Disable: Set `AllowMouseWheel` to `false` to ignore mouse wheel scrolling. Other input methods (typing and spin buttons) continue to work.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<h4>Mouse wheel disabled</h4>
+<SfNumericTextBox TValue="double?" Value=10 Step=1 AllowMouseWheel="false" Placeholder="Enter a value"></SfNumericTextBox>
+
+<h4>Mouse wheel enabled (default)</h4>
+<SfNumericTextBox TValue="double?" Value=10 Step=1 Placeholder="Enter a value"></SfNumericTextBox>
+```
