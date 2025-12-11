@@ -17,7 +17,7 @@ You can use the `Image` block to showcase an image content within your editor.
 
 ### Configure Image Block
 
-You can render an `Image` block by setting the [BlockType] property to `Image` in the block model. The `Properties` property allows you to configure the image source, allowed file types, display dimensions, and more.
+You can render an `Image` block by setting the `BlockType` property to `Image` in the block model. The `Properties` property allows you to configure the image source, allowed file types, display dimensions, and more.
 
 #### Global Image Settings
 
@@ -39,7 +39,7 @@ The `ImageBlockSettings` property supports the following options:
 
 #### Configure Image Block Properties
 
-The `Image` block [Properties] property supports the following options:
+The `Image` block `Properties` property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|

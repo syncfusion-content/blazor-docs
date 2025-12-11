@@ -9,13 +9,13 @@ documentation: ug
 
 # Blocks in Blazor BlockEditor component
 
-The Syncfusion Block Editor uses **Blocks** as the fundamental units for creating and managing content. The entire editor content is structured as a collection of these blocks, which are configured and managed through the [Blocks] property.
+The Syncfusion Block Editor uses **Blocks** as the fundamental units for creating and managing content. The entire editor content is structured as a collection of these blocks, which are configured and managed through the `Blocks` property.
 
 ## Blocks
 
 Blocks are the core building elements of the editor, where each block represents a distinct content unit, such as a `Paragraph`, `Heading`, `List`, or specialized content like a `Code snippet` or `Image`. This block-based architecture makes it easy for users to rearrange, format, and manage discrete pieces of content independently.
 
-You can configure blocks with various properties such as [ID], [BlockType], [Content] to create a rich, structured editor.
+You can configure blocks with various properties such as `ID`, `BlockType`, `Content`to create a rich, structured editor.
 
 ## Block types
 
@@ -37,9 +37,9 @@ The Block Editor supports multiple block types, each offering different formatti
 
 ## Configure indent
 
-You can specify the indentation level of a block using the [Indent] property. This property accepts a numeric value that determines how deeply a block is nested from the left margin.
+You can specify the indentation level of a block using the `Indent` property. This property accepts a numeric value that determines how deeply a block is nested from the left margin.
 
-By default, the [Indent] property is set to `0`.
+By default, the `Indent` property is set to `0`.
 
 ```cshtml
 
@@ -84,7 +84,7 @@ By default, the [Indent] property is set to `0`.
 
 ## Configure CSS Class
 
-You can apply custom styling to individual blocks using the [CssClass] property. This property accepts a string containing one or more CSS class names.
+You can apply custom styling to individual blocks using the `CssClass` property. This property accepts a string containing one or more CSS class names.
 
 Custom CSS classes allow you to define specialized styling for specific blocks in your editor.
 
