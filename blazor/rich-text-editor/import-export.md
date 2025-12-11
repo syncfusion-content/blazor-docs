@@ -464,7 +464,7 @@ The following example demonstrates how to pass authentication tokens and custom 
 {% endtabs %}
 
 {% tabs %}
-{% highlight controller %}
+{% highlight cshtml %}
 
 using System;
 using System.IO;
