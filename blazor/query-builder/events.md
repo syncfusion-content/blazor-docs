@@ -95,7 +95,7 @@ Triggered after the data source is populated and bound to the Query Builder.
 
 ## OnActionFailure
 
-Raised when a remote data fetch or action fails.
+The OnActionFailure event is triggered whenever a remote data request or action fails in the QueryBuilder.
 
 ```cshtml
 <SfQueryBuilder TValue="Order" DataSource="@RemoteData">
