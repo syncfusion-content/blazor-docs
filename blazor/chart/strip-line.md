@@ -250,16 +250,49 @@ To create a stripline in a specific region with respect to a segment (segmented 
 
 ## Stripline tooltip
 
-To enable the stripline tooltip add **ChartStriplineTooltip** inside the target Stripline and set **Enable** property to **true**. Use **Header** and **Content** properties to customize the tooltip's content, adjust visual emphasis with **Fill** and **Opacity** properties and style the tooltip's text and border with **ChartStriplineTooltipTextStyle** and **ChartStriplineTooltipBorder** properties.
+Stripline tooltips provide additional contextual information on interaction with striplines in the chart. To display a tooltip on a stripline, add the **ChartStriplineTooltip** component inside the desired **ChartStripline** and set the **Enable** property to **true**. This feature is particularly useful for explaining the significance of specific ranges or thresholds marked by striplines.
 
-- Enable - Enables the stripline tooltip.
-- Header - Sets the tooltip title text.
-- Fill - Sets background color of the tooltip.
-- Opacity - Sets transparency of the tooltip (0 to 1).
-- Content - Template string for tooltip body content.
-- ShowHeaderLine - Shows or hides the header separator line.
-- ChartStriplineTooltipTextStyle - Configures the tooltip text (size, color, weight, family).
-- ChartStriplineTooltipBorder - Configures the tooltip border (color, width).
+### Tooltip customization properties
+
+The stripline tooltip offers comprehensive customization options through the following properties:
+
+- **Enable** - A boolean property that enables or disables the stripline tooltip. Default value is **false**.
+
+- **Header** - Defines the title text displayed at the top of the tooltip.
+
+- **Content** - Allows you to specify custom content for the tooltip body using a format string. The format supports token placeholders that are replaced with corresponding values at runtime. Supported tokens:
+  - **${stripline.text}** – The stripline label.
+  - **${stripline.start}** – The stripline start value.
+  - **${stripline.end}** – The stripline end value.
+  - **${axis.name}** – The axis name.
+  - **${stripline.segmentStart}** – The stripline segment start value (if applicable).
+  - **${stripline.segmentEnd}** – The stripline segment end value (if applicable).
+  - **${stripline.segmentAxisName}** – The stripline segment axis name (if applicable).
+  - **${stripline.size}** – The stripline size (if applicable).
+  
+  This property also supports HTML content, enabling rich formatting and detailed information display. If not specified, the tooltip will display the default stripline information.
+
+- **Fill** - Sets the background color of the tooltip. Accepts any valid CSS color value (hex, rgb, rgba, named colors).
+
+- **Opacity** - Controls the transparency level of the tooltip background. Accepts numeric values between 0 (completely transparent) and 1 (completely opaque). The default value is 0.75.
+
+- **ShowHeaderLine** - A boolean property that controls the visibility of the horizontal separator line between the tooltip header and content. Set to **true** to display the line or **false** to hide it.
+
+The **ChartStriplineTooltipTextStyle** component allows you to customize the appearance of text within the tooltip:
+
+- **Size** - Specifies the font size of the tooltip text. Accepts pixel values (e.g., "12px").
+
+- **Color** - Defines the text color. Accepts any valid CSS color value.
+
+- **FontFamily** - Sets the font family for the tooltip text. Accepts standard CSS font family values (e.g., "Arial", "Segoe UI", "Roboto").
+
+- **FontWeight** - Controls the thickness of the text.
+
+The **ChartStriplineTooltipBorder** component enables you to add and customize borders around the tooltip:
+
+- **Width** - Specifies the thickness of the tooltip border in pixels. Accepts numeric values. Default value is **0**.
+
+- **Color** - Defines the color of the tooltip border. Accepts any valid CSS color value.
 
 ```cshtml
 
@@ -277,7 +310,7 @@ To enable the stripline tooltip add **ChartStriplineTooltip** inside the target 
             <ChartStripline Start="95" End="110" Text="Target Exceeded" Color="#FFE3B3" HorizontalAlignment="Anchor.Middle" Visible="true">
                 <ChartStriplineTextStyle Size="12px" Color="#0b3a66" FontWeight="600"></ChartStriplineTextStyle>
                 <ChartStriplineBorder Width="0"></ChartStriplineBorder>
-                <ChartStriplineTooltip Enable="true" Header="Target Exceeded">
+                <ChartStriplineTooltip Enable="true" Header="🎯 Target Exceeded">
                     <ChartStriplineTooltipTextStyle Size="12px" FontWeight="500"></ChartStriplineTooltipTextStyle>
                     <ChartStriplineTooltipBorder Width="0"></ChartStriplineTooltipBorder>
                 </ChartStriplineTooltip>
