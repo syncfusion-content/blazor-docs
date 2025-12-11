@@ -21,7 +21,4 @@ The Blazor Numeric TextBox component supports controlling mouse wheel scrolling 
 
 <h4>Mouse wheel disabled</h4>
 <SfNumericTextBox TValue="double?" Value=10 Step=1 AllowMouseWheel="false" Placeholder="Enter a value"></SfNumericTextBox>
-
-<h4>Mouse wheel enabled (default)</h4>
-<SfNumericTextBox TValue="double?" Value=10 Step=1 Placeholder="Enter a value"></SfNumericTextBox>
 ```
