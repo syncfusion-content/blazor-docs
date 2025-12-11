@@ -9,32 +9,31 @@ documentation: ug
 
 # Blocks in Blazor BlockEditor component
 
-The Block Editor component enables you to create block-based content editing solution using various types of blocks. The [Blocks] property allows you to define and manage the content structure of your editor.
+The Syncfusion Block Editor uses **Blocks** as the fundamental units for creating and managing content. The entire editor content is structured as a collection of these blocks, which are configured and managed through the [Blocks] property.
 
 ## Blocks
 
-Blocks are the fundamental building elements of the Block Editor. Each block represents a distinct content unit such as a `paragraph`, `heading`, `list`, or specialized content like `code snippets` or `images`. The Block Editor organizes content as a collection of `blocks`, allowing for better structure and formatting options.
+Blocks are the core building elements of the editor, where each block represents a distinct content unit, such as a `Paragraph`, `Heading`, `List`, or specialized content like a `Code snippet` or `Image`. This block-based architecture makes it easy for users to rearrange, format, and manage discrete pieces of content independently.
 
-You can configure blocks with various properties such as [ID], [Type], [Content], [Children] and more to create rich, structured editor.
+You can configure blocks with various properties such as [ID], [BlockType], [Content] to create a rich, structured editor.
 
 ## Block types
 
-The Block Editor supports multiple block types. Each block type offers different formatting and functionality options:
+The Block Editor supports multiple block types, each offering different formatting options and functionality:
 
-| Built-in Block Types                    | Description                                       |
-|-----------------------------------------|---------------------------------------------------|
-| Paragraph                               | Default block type for regular text content.      |
-| Heading1 to Heading4                    | Different levels of headings for document structure.|
-| Checklist                               | Interactive to-do lists with checkable items.     |
-| BulletList                              | Unordered lists with bullet points.               |
-| NumberedList                            | Ordered lists with sequential numbering.          |
-| Code                                    | Formatted code blocks with syntax highlighting.   |
-| Quote                                   | Styled block for quotations.                      |
-| Callout                                 | Highlighted block for important information.      |
-| Divider                                 | Horizontal separator line.                        |
-| CollapsibleParagraph and CollapsibleHeading1-4    | Collapsible content blocks.                       |
-| Image                                   | Block for displaying images.                      |
-| Template                                | Predefined custom templates.                      |
+| Built-in Block Types                    | Description                                                                 |
+|-----------------------------------------|-----------------------------------------------------------------------------|
+| Paragraph                               | Default block type for regular text content.                                |
+| Heading1 to Heading4                    | Different levels of headings for document structure.                        |
+| Table                                   | Block for displaying data in a tabular format with rows and columns.        |
+| Checklist                               | Interactive to-do lists with checkable items.                               |
+| BulletList                              | Unordered lists with bullet points.                                         |
+| NumberedList                            | Ordered lists with sequential numbering.                                    |
+| Quote                                   | Styled block for quotations.                                                |
+| Callout                                 | Highlighted block for important information.                                |
+| Divider                                 | Horizontal separator line.                                                  |
+| CollapsibleParagraph and CollapsibleHeading1-4    | Content blocks that can be expanded or collapsed to show or hide their children. |
+| Image                                   | Block for displaying images.                                                |
 
 ## Configure indent
 

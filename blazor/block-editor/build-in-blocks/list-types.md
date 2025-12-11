@@ -7,13 +7,13 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Lists in Blazor blockEditor component
+# Lists in Blazor BlockEditor component
 
-List blocks in the BlockEditor component are used to organize content into structured lists. You can render List blocks by setting the [BlockType] property as `BulletList`, `NumberedList`, or `Checklist`. Bullet lists and numbered lists are ideal for unordered and ordered items, respectively, while checklist blocks enable interactive to-do lists with checkable items.
+The Syncfusion Blazor Block Editor component uses list blocks to organize content into structured lists. To render a specific list type, set the [BlockType] property of the `BlockModel` to `BulletList`, `NumberedList`, or `Checklist`. Bullet lists are ideal for unordered items, numbered lists for ordered items, and checklists for interactive to-do lists.
 
 ## Configure bullet list 
 
-You can render Bullet List block by setting the [BlockType] property as `BulletList`. This block type is used for unordered lists.
+You can render a Bullet List block by setting the [BlockType] property to `BulletList`. This block type is used to display unordered lists.
 
 ### Type
 
@@ -28,7 +28,7 @@ You can render Bullet List block by setting the [BlockType] property as `BulletL
 
 ### Configure placeholder
 
-You can configure placeholder text for block using the [Placeholder] property. This text appears when the block is empty. The default placeholder for bullet list is  `Add item`.
+The [Placeholder] property sets the text that appears when the block is empty. The default placeholder for a bullet list is `Add item`.
 
 ```cshtml
 // Adding placeholder value
@@ -42,7 +42,7 @@ You can configure placeholder text for block using the [Placeholder] property. T
 
 ## Configure numbered list
 
-You can render Numbered List block by setting the [BlockType] property as  `NumberedList`.This block type is used for ordered lists.
+You can render a Numbered List block by setting the [BlockType] property to `NumberedList`. This block type is used to display ordered lists.
 
 ```cshtml
 // Adding numberedlist block
@@ -55,7 +55,7 @@ You can render Numbered List block by setting the [BlockType] property as  `Numb
 
 ### Configure placeholder
 
-You can configure placeholder text for block using the [Placeholder] property. This text appears when the block is empty. The default placeholder for numbered list is  `Add item`.
+The [Placeholder] property sets the text that appears when the block is empty. The default placeholder for a numbered list is `Add item`.
 
 ```cshtml
 // Adding placeholder value
@@ -69,7 +69,7 @@ You can configure placeholder text for block using the [Placeholder] property. T
 
 ## Configure checklist
 
-You can render Check List block by setting the [BlockType] property as `Checklist`. This block type is used for creating interactive to-do lists.
+You can render a Checklist block by setting the [BlockType] property to `Checklist`. This block type is used for creating interactive to-do lists.
 
 ```cshtml
 // Adding checklist block 
@@ -82,7 +82,7 @@ You can render Check List block by setting the [BlockType] property as `Checklis
 
 ### Configure checked state
 
-For blocks that support selection states such as `CheckList`, you can configure the checked state using the `Properties` property with [IsChecked].
+For blocks that support selection states, such as a `Checklist`, you can configure the checked state using the `properties` property with [IsChecked].
 
 By default, the [IsChecked] property is set to `false`.
 
@@ -134,7 +134,7 @@ By default, the [IsChecked] property is set to `false`.
 
 ### Configure placeholder
 
-You can configure placeholder text for block using the [Placeholder] property. This text appears when the block is empty. The default placeholder for check list is  `To Do`.
+The [Placeholder] property sets the text that appears when the block is empty. The default placeholder for a checklist is `To Do`.
 
 ```cshtml
 // Adding placeholder value
@@ -148,7 +148,7 @@ You can configure placeholder text for block using the [Placeholder] property. T
 
 ## Configure list blocks
 
-Below example illustrates how to render the different types of list blocks in the Block Editor.
+The following example demonstrates how to render the different types of list blocks in the Block Editor.
 
 ```cshtml
 

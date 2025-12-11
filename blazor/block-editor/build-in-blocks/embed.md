@@ -9,32 +9,44 @@ documentation: ug
 
 # Embed Blocks in Blazor BlockEditor component
 
-Block Editor supports addition of embeds to help you organize, showcase contents and format your content effectively.
+The Block Editor supports the addition of embeds to help you organize and showcase visual content effectively.
 
-## Image Block
+## Adding an Image Block
 
 You can use the `Image` block to showcase an image content within your editor.
 
-### Configure image block
+### Configure Image Block
 
-You can render Image blocks by setting the [BlockType] property as `Image`. By setting the `Properties` property, you can configure the image source, allowed file types, and display dimensions etc.
+You can render an `Image` block by setting the [BlockType] property to `Image` in the block model. The `Properties` property allows you to configure the image source, allowed file types, display dimensions, and more.
 
-The image [Properties] property supports the following options:
+#### Global Image Settings
+
+You can configure global settings for image blocks using the `ImageBlockSettings` property in the Block Editor root configuration. This ensures consistent behavior for image uploads, resizing, and display.
+
+The `ImageBlockSettings` property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
-| SaveFormat | Specifies the format to save the image | Base64 |
-| Src | Specifies the image path | ' '|
-| AllowedTypes | Specifies the allowed image file types that can be uploaded | ['.jpg', '.jpeg', '.png'] |
-| Width | Specifies the display width of the image | ' ' |
-| Height | Specifies the display height of the image | ' '|
-| MinWidth | Specifies the minimum width of the image in pixels or as a string unit | 40|
-| MaxWidth | Specifies the maximum width of the image in pixels or as a string unit | ' '|
-| MinHeight | Specifies the minimum height of the image in pixels or as a string unit | 40|
-| MaxHeight | Specifies the maximum height of the image in pixels or as a string unit | ' '|
-| AltText | Specifies the alternative text to be displayed when the image cannot be loaded | ' '|
-| CssClass | Specifies one or more CSS classes to be applied to the image element | ' ' |
-| ReadOnly | Specifies whether the image is in read-only mode | false
+| saveFormat | Specifies the format to save the image. | `Base64` |
+| allowedTypes | Specifies allowed image file types for upload. | `['.jpg', '.jpeg', '.png']` |
+| width | Specifies the default display width of the image. | `auto` |
+| height | Specifies the default display height of the image. | `auto` |
+| enableResize | Enables or disables image resizing. | `true` |
+| minWidth | Minimum width allowed for resizing. | `''` |
+| maxWidth | Maximum width allowed for resizing. | `''` |
+| minHeight | Minimum height allowed for resizing. | `''` |
+| maxHeight | Maximum height allowed for resizing. | `''` |
+
+#### Configure Image Block Properties
+
+The `Image` block [Properties] property supports the following options:
+
+| Property | Description | Default Value |
+|----------|-------------|---------------|
+| src | Specifies the image path. | `''` |
+| width | Specifies the display width of the image. | `''` |
+| height | Specifies the display height of the image. | `''` |
+| altText | Specifies the alternative text to display when the image cannot be loaded. | `''` |
 
 ```cshtml
 
