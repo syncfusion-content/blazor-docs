@@ -44,6 +44,8 @@ The RuleChanged event is triggered whenever a rule or group is added, removed, o
 ```
 ## Changed
 
+The Changed event is an EventCallback raised after a condition (And/Or), field, operator, or value change is applied in the Query Builder.
+
 ```cshtml
 <SfQueryBuilder TValue="Order" DataSource="@Data">
     <QueryBuilderEvents TValue="Order" Changed="OnChanged"></QueryBuilderEvents>
