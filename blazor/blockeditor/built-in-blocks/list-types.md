@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lists in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about List Blocks with Blazor BlockEditor component in Blazor WebAssembly App.
+description: Checkout and learn about List Blocks in Syncfusion Blazor BlockEditor component and more.
 platform: Blazor
 control: BlockEditor
 documentation: ug
