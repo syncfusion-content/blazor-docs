@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Typography Blocks in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Typography Blocks with Blazor BlockEditor component in Blazor WebAssembly App.
+description: Checkout and learn about Typography Blocks in Syncfusion Blazor BlockEditor component and more.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -50,7 +50,7 @@ The below sample demonstrates the configuration of paragraph block in the Block 
 
 ### Configure placeholder
 
-You can configure placeholder text for block using the [placeholder](../api/blockeditor/blockModel/#placeholder) property. This text appears when the block is empty. The default placeholder for the paragraph block is `Write something or ‘/’ for commands.`.
+You can configure placeholder text for block using the [placeholder] property. This text appears when the block is empty. The default placeholder for the paragraph block is `Write something or ‘/’ for commands.`.
 
 ### Type & Props
 
@@ -319,7 +319,7 @@ The following sample shows how to configure a quote block.
 You can configure placeholder text for block using the [Placeholder] property. This text appears when the block is empty. The default placeholder for quote block is `Write a quote`.
 
 ```cshtml
-// Adding placeholder value to blocktype
+// Adding placeholder value to block type
 new BlockModel
 {
     BlockType = BlockType.Quote,

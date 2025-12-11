@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Table Blocks in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Table Blocks with Blazor BlockEditor component in Blazor WebAssembly App.
+description: Checkout and learn about Table Blocks in Syncfusion Blazor BlockEditor component and more.
 platform: Blazor
 control: BlockEditor
 documentation: ug

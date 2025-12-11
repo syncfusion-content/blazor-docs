@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Inline content in Blazor BlockEditor Component | Syncfusion
-description: Checkout and learn about Inline content with Blazor BlockEditor component in Blazor WebAssembly App.
+description: Checkout and learn about Inline content in Syncfusion Blazor BlockEditor component and more.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -54,7 +54,7 @@ Link settings are configured through the [Properties] property, which accepts th
 
 | Option                                                                      | Description                                                       | Default Value |
 | --------------------------------------------------------------------------- | ----------------------------------------------------------------- | ------------- |
-| [url](../api/blockeditor/linkSettingsModel/#url)                            | Specifies the destination URL of the link.                        | `''`          |
+| [url]                            | Specifies the destination URL of the link.                        | `''`          |
 
 ### Type & Props
 
