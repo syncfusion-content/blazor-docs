@@ -269,8 +269,6 @@ The stripline tooltip offers comprehensive customization options through the fol
   - **${stripline.segmentEnd}** – The stripline segment end value (if applicable).
   - **${stripline.segmentAxisName}** – The stripline segment axis name (if applicable).
   - **${stripline.size}** – The stripline size (if applicable).
-  
-  This property also supports HTML content, enabling rich formatting and detailed information display. If not specified, the tooltip will display the default stripline information.
 
 - **Fill** - Sets the background color of the tooltip. Accepts any valid CSS color value (hex, rgb, rgba, named colors).
 
@@ -310,7 +308,7 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
             <ChartStripline Start="95" End="110" Text="Target Exceeded" Color="#FFE3B3" HorizontalAlignment="Anchor.Middle" Visible="true">
                 <ChartStriplineTextStyle Size="12px" Color="#0b3a66" FontWeight="600"></ChartStriplineTextStyle>
                 <ChartStriplineBorder Width="0"></ChartStriplineBorder>
-                <ChartStriplineTooltip Enable="true" Header="🎯 Target Exceeded">
+                <ChartStriplineTooltip Enable="true" Header="Target Exceeded">
                     <ChartStriplineTooltipTextStyle Size="12px" FontWeight="500"></ChartStriplineTooltipTextStyle>
                     <ChartStriplineTooltipBorder Width="0"></ChartStriplineTooltipBorder>
                 </ChartStriplineTooltip>
