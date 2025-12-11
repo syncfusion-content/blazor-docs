@@ -181,7 +181,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 </head>
 ```
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
 
 ## Add Blazor 3D Chart Component
 
