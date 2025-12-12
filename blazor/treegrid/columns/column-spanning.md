@@ -11,7 +11,7 @@ documentation: ug
 
 The column spanning feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Tree Grid allows automatically merging cells with identical values in the same row across consecutive columns. This significantly enhances readability and delivers a clean, professional look by eliminating repetitive data.
 
-To enable column spanning, set the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property to **AutoSpanMode.Column** in the Tree Grid configuration.
+To enable column spanning, set the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property to `AutoSpanMode.Column` in the Tree Grid configuration.
 
 In the following example, cells in rows are automatically merged when they have identical values in consecutive columns. The `AutoSpan` mode in this example can be dynamically changed using the dropdown selector. It is initially set to **Column** mode, allowing you to easily switch between different spanning modes to understand how row and column spanning work in practice.
 
