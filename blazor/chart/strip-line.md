@@ -250,7 +250,67 @@ To create a stripline in a specific region with respect to a segment (segmented 
 
 ## Stripline tooltip
 
-Stripline tooltips provide additional contextual information on interaction with striplines in the chart. To display a tooltip on a stripline, add the **ChartStriplineTooltip** component inside the desired **ChartStripline** and set the **Enable** property to **true**. This feature is particularly useful for explaining the significance of specific ranges or thresholds marked by striplines.
+Stripline tooltips provide additional contextual information on interaction with striplines in the chart. To display a tooltip on a stripline, add the **ChartStriplineTooltip** component inside the desired **ChartStripline** and set the **Enable** property to **true**. It is particularly useful for explaining the significance of specific ranges or thresholds marked by striplines.
+
+### Default stripline tooltip code example:
+
+Below is the simplest way to enable a stripline tooltip using default settings. The tooltip will display on interaction with the stripline.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Vehicle Traffic by Time">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"
+                       IntervalType="IntervalType.Hours"
+                       LabelFormat="h tt">
+        <ChartStriplines>
+            <ChartStripline Start="new DateTime(2024, 01, 01, 07, 00, 00)"
+                            End="new DateTime(2024, 01, 01, 09, 00, 00)"
+                            Text="Rush Hour"
+                            Color="#FFED4A"
+                            Visible="true">
+                <ChartStriplineTooltip Enable="true"></ChartStriplineTooltip>
+            </ChartStripline>
+        </ChartStriplines>
+    </ChartPrimaryXAxis>
+
+    <ChartPrimaryYAxis Minimum="0" Maximum="1400" Interval="200" Title="Number of vehicles">
+    </ChartPrimaryYAxis>
+
+    <ChartSeriesCollection>
+        <!-- Vibrant spline series color -->
+        <ChartSeries Type="ChartSeriesType.Spline"
+                     DataSource="@Traffic"
+                     XName="Time"
+                     YName="Vehicles"
+                     Width="2"
+                     Fill="#F43F5E">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class TrafficPoint
+    {
+        public DateTime Time { get; set; }
+        public double Vehicles { get; set; }
+    }
+
+    public List<TrafficPoint> Traffic = new ()
+    {
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 06, 00, 00), Vehicles = 380 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 07, 00, 00), Vehicles = 820 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 08, 00, 00), Vehicles = 1200 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 09, 00, 00), Vehicles = 980 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 10, 00, 00), Vehicles = 650 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 11, 00, 00), Vehicles = 520 }
+    };
+}
+
+```
+
+![Blazor Chart with Default Stripline Tooltip](images/strip-line/blazor-chart-stripline-tooltip-default.png)
 
 ### Tooltip customization properties
 
@@ -291,6 +351,8 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
 - **Width** - Specifies the thickness of the tooltip border in pixels. Accepts numeric values. Default value is **0**.
 
 - **Color** - Defines the color of the tooltip border. Accepts any valid CSS color value.
+
+### Customized stripline tooltip code example:
 
 ```cshtml
 
@@ -338,7 +400,7 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
         public double Revenue { get; set; }
     }
 
-    public List<RevenuePoint> SalesData = new()
+    public List<RevenuePoint> SalesData = new ()
     {
         new RevenuePoint { Quarter = "Q1", Revenue = 78 },
         new RevenuePoint { Quarter = "Q2", Revenue = 88 },
@@ -346,7 +408,7 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
         new RevenuePoint { Quarter = "Q4", Revenue = 92 }
     };
 
-    public List<RevenuePoint> SupportData = new()
+    public List<RevenuePoint> SupportData = new ()
     {
         new RevenuePoint { Quarter = "Q1", Revenue = 70 },
         new RevenuePoint { Quarter = "Q2", Revenue = 83 },
@@ -357,7 +419,7 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
 
 ```
 
-![Blazor Chart with Stripline Tooltip](images/strip-line/blazor-chart-stripline-tooltip.png)
+![Blazor Chart with Customized Stripline Tooltip](images/strip-line/blazor-chart-stripline-tooltip-customized.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
