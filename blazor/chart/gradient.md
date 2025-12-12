@@ -45,12 +45,14 @@ Apply a linear gradient to a series by adding `ChartLinearGradient` inside the t
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Chart to display monthly sales revenue by month using Column series *@
 <SfChart Title="Monthly Sales Performance">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartPrimaryYAxis LabelFormat="${value}k" />
 
     <ChartSeriesCollection>
         <ChartSeries Name="Sales" Type="ChartSeriesType.Column" DataSource="@SalesData" XName="Month" YName="Amount">
+            @* Series Linear Gradient: defines color stops for the entire series *@
             <ChartLinearGradient X1="0" Y1="0" X2="0" Y2="1">
                 <ChartGradientColorStops>
                     <ChartGradientColorStop Offset="0" Color="#4F46E5" Opacity="1" Lighten="0" Brighten="1" />
@@ -99,6 +101,7 @@ Apply a linear gradient to a trendline by adding `ChartLinearGradient` inside th
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Chart to display orders processed by month using Spline series *@
 <SfChart Title="Retail Orders Processed">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
@@ -113,6 +116,7 @@ Apply a linear gradient to a trendline by adding `ChartLinearGradient` inside th
             <ChartMarker Visible="true"></ChartMarker>
             <ChartTrendlines>
                 <ChartTrendline Type="TrendlineTypes.Linear" Width="3" Name="Trend">
+                    @* Trendline Linear Gradient: applied to trendline stroke *@
                     <ChartLinearGradient X1="0" Y1="0" X2="1" Y2="0">
                         <ChartGradientColorStops>
                             <ChartGradientColorStop Offset="0" Color="#F97316" Opacity="1" />
@@ -162,6 +166,7 @@ Apply a linear gradient to a technical indicator by adding `ChartLinearGradient`
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Chart to display equity price by month using Candle series and EMA indicator *@
 <SfChart Title="Equity Price - Jan-Nov 2025">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" LabelFormat="MMM yyyy" IntervalType="IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
@@ -178,6 +183,7 @@ Apply a linear gradient to a technical indicator by adding `ChartLinearGradient`
 
     <ChartIndicators>
         <ChartIndicator Type="TechnicalIndicators.Ema" Field="FinancialDataFields.Close" SeriesName="Equity Price" XName="Date" Period="3" Width="2">
+            @* Indicator Linear Gradient: applied to the EMA indicator line *@
             <ChartLinearGradient X1="0" Y1="0" X2="1" Y2="0">
                 <ChartGradientColorStops>
                     <ChartGradientColorStop Offset="0" Color="#7C3AED" Opacity="1" />
@@ -247,12 +253,14 @@ Apply a radial gradient to a series by adding `ChartRadialGradient` inside the t
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Chart to display monthly sales revenue by month using Column series *@
 <SfChart Title="Monthly Sales Performance">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartPrimaryYAxis LabelFormat="${value}k" />
 
     <ChartSeriesCollection>
         <ChartSeries Name="Sales" Type="ChartSeriesType.Column" DataSource="@SalesData" XName="Month" YName="Amount">
+            @* Series Radial Gradient: defines color stops for the entire series *@
             <ChartRadialGradient Cx="0.5" Cy="0.5" Fx="0.5" Fy="0.5" R="0.5">
                 <ChartGradientColorStops>
                     <ChartGradientColorStop Offset="0" Color="#FFFF00" Opacity="1" Lighten="0" Brighten="1" />

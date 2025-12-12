@@ -39,6 +39,7 @@ A linear gradient may be applied directly at the series level. The same gradient
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the AccumulationChart to display orders by category using a Pie series *@
 <SfAccumulationChart Title="Orders by Category" Width="100%">
     <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartTooltipSettings Enable="true" />
@@ -52,6 +53,7 @@ A linear gradient may be applied directly at the series level. The same gradient
                 <AccumulationChartDataLabelFont Size="12px" />
             </AccumulationDataLabelSettings>
 
+            @* Series Linear Gradient: defines color stops for the entire series *@
             <AccumulationChartLinearGradient X1="0.1" Y1="0.0" X2="0.9" Y2="1.0">
                 <AccumulationChartGradientColorStops>
                     <AccumulationChartGradientColorStop Offset="0"   Color="#4F46E5" Opacity="1"    Brighten="0.55" />
@@ -95,7 +97,9 @@ A diagonal linear gradient can be applied per data point using the `OnPointRende
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the AccumulationChart to display share of e-commerce orders by category using a Pie series *@
 <SfAccumulationChart Title="Share of E-commerce Orders by Category" Width="100%">
+    @* Point Render: applies a diagonal linear gradient per point *@
     <AccumulationChartEvents OnPointRender="OnPointRender" />
     <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartTooltipSettings Enable="true" />
@@ -183,6 +187,7 @@ A radial gradient can be applied directly at the series level. The same gradient
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the AccumulationChart to display orders by category using a Pie series *@
 <SfAccumulationChart Title="Orders by Category" Width="100%">
     <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartTooltipSettings Enable="true" />
@@ -196,6 +201,7 @@ A radial gradient can be applied directly at the series level. The same gradient
                 <AccumulationChartDataLabelFont Size="12px" />
             </AccumulationDataLabelSettings>
 
+            @* Series Radial Gradient: defines color stops for the entire series *@
             <AccumulationChartRadialGradient Cx="0.22" Cy="0.22" Fx="0.12" Fy="0.12" R="0.96">
                 <AccumulationChartGradientColorStops>
                     <AccumulationChartGradientColorStop Offset="0" Color="#10B981" Opacity="1"  Brighten="0.85" />
@@ -241,7 +247,9 @@ The following example uses a distinct color palette and an off-center radial gra
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the AccumulationChart to display share of e-commerce orders by category using a Pie series *@
 <SfAccumulationChart Title="Share of E-commerce Orders by Category" Width="100%">
+    @* Point Render: applies an off-center radial gradient per point *@
     <AccumulationChartEvents OnPointRender="OnPointRender" />
     <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartTooltipSettings Enable="true" />

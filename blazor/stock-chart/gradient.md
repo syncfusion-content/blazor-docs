@@ -45,12 +45,14 @@ Apply a linear gradient to a series by adding `StockChartLinearGradient` inside 
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Stock Chart to display AAPL stock price using a Candle series *@
 <SfStockChart Title="AAPL Stock Price">
     <StockChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
     <StockChartPrimaryYAxis Interval="10" />
 
     <StockChartSeriesCollection>
         <StockChartSeries Name="AAPL" DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume">
+            @* Series Linear Gradient: defines color stops for the entire series *@
             <StockChartLinearGradient X1="0" Y1="0" X2="1" Y2="1">
                 <StockChartGradientColorStops>
                     <StockChartGradientColorStop Offset="0" Color="#FF7E5F" Opacity="1" Lighten="0" Brighten="1" />
@@ -97,6 +99,7 @@ Apply a linear gradient to a stock chart trendline by adding `StockChartLinearGr
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Stock Chart to display AAPL stock price using a Candle series *@
 <SfStockChart Title="AAPL Stock Price">
     <StockChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
     <StockChartPrimaryYAxis Interval="10" />
@@ -104,6 +107,7 @@ Apply a linear gradient to a stock chart trendline by adding `StockChartLinearGr
         <StockChartSeries Name="Series1" DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume">
             <StockChartTrendlines>
                 <StockChartTrendline Type="TrendlineTypes.Linear" Width="4">
+                    @* Trendline Linear Gradient: applied to the trendline stroke *@
                     <StockChartLinearGradient X1="0" Y1="0" X2="1" Y2="0">
                         <StockChartGradientColorStops>
                             <StockChartGradientColorStop Offset="0" Color="#6A0DAD" Opacity="1" />
@@ -151,6 +155,7 @@ Apply a linear gradient to a technical indicator by adding `StockChartLinearGrad
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Stock Chart to display AAPL stock price using a Candle series *@
 <SfStockChart Title="AAPL Stock Price">
     <StockChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
     <StockChartPrimaryYAxis Interval="10" />
@@ -161,6 +166,7 @@ Apply a linear gradient to a technical indicator by adding `StockChartLinearGrad
 
     <StockChartIndicators>
         <StockChartIndicator Type="TechnicalIndicators.Ema" Field="FinancialDataFields.High" SeriesName="Series1" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume" Period="1" Width="4">
+            @* Indicator Linear Gradient: applied to the EMA indicator line *@
             <StockChartLinearGradient X1="0" Y1="0" X2="1" Y2="1">
                 <StockChartGradientColorStops>
                     <StockChartGradientColorStop Offset="0" Color="#FFFF00" Opacity="1" Lighten="0.2" Brighten="1" />
@@ -224,12 +230,14 @@ Apply a radial gradient to a series by adding `StockChartRadialGradient` inside 
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Stock Chart to display AAPL stock price using a Candle series *@
 <SfStockChart Title="AAPL Stock Price">
     <StockChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
     <StockChartPrimaryYAxis Interval="10" />
 
     <StockChartSeriesCollection>
         <StockChartSeries Name="AAPL" DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume">
+            @* Series Radial Gradient: defines color stops for the entire series *@
             <StockChartRadialGradient Cx="0.5" Cy="0.5" Fx="0.5" Fy="0.5" R="0.5">
                 <StockChartGradientColorStops>
                     <StockChartGradientColorStop Offset="0" Color="#FFFF00" Opacity="1" Lighten="0" Brighten="1" />
