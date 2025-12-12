@@ -9,25 +9,23 @@ documentation: ug
 
 # Undo and redo in Blazor Gantt Chart Component
 
-## Overview
-
 The Syncfusion® Blazor Gantt component includes built-in undo and redo functionality to revert or restore recent changes. This feature improves editing efficiency, reduces errors, and supports quick recovery from accidental modifications.
 
 ## Enable undo and redo
 
-The Undo feature reverts the most recent action performed in the Blazor Gantt Chart, including changes to tasks, dependencies, and other supported operations.
+* The Undo feature reverts the most recent action performed in the Blazor Gantt Chart, including changes to tasks, dependencies, and other supported operations.
 
-The Redo feature can reapply an action that was previously undone using the Undo feature.
+* The Redo feature can reapply an action that was previously undone using the Undo feature.
 
-The undo redo feature can be enabled in Gantt by using the [EnableUndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableUndoRedo) property.
+* The undo redo feature can be enabled in Gantt by using the [EnableUndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableUndoRedo) property.
 
-Use the built-in toolbar items to perform undo and redo actions.
+* Use the built-in toolbar items to perform undo and redo actions.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-<SfGantt ID="GanttChart" DataSource="@TaskCollection" Height="500px"        Width="100%" HighlightWeekends="true" EnableUndoRedo="true" UndoRedoActions="@undoRedoActions"
+<SfGantt ID="GanttChart" DataSource="@TaskCollection" Height="500px" Width="100%" HighlightWeekends="true" EnableUndoRedo="true" UndoRedoActions="@undoRedoActions"
             Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
         TreeColumnIndex="1" EnableContextMenu="true" AllowSorting="true" ShowColumnMenu="true" AllowResizing="true" AllowReordering="true" AllowFiltering="true">
         <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
@@ -193,7 +191,7 @@ The following table shows built-in undo/redo actions:
 
 The Syncfusion® Blazor Gantt component allows limiting the number of undo and redo actions stored in the history of the Gantt chart. Control the number of stored history entries using [MaxUndoRedoSteps](
 https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MaxUndoRedoSteps).
-The default capacity is 20. When the count exceeds this value, the oldest entry is discarded and the newest action is appended, maintaining consistent memory usage.
+The default capacity is `20`. When the count exceeds this value, the first entry is discarded and the newest action is appended, maintaining consistent memory usage.
 
 The following example demonstrates configuring the maximum number of undo and redo steps.
 
@@ -263,7 +261,7 @@ The following example demonstrates configuring the maximum number of undo and re
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrSMrMVVXPqZxza?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
-## Programmatic undo and redo
+## Performing Undo and Redo Actions via methods
 
 Undo Redo actions can be triggered dynamically or through external controls using the following methods:
 
@@ -277,9 +275,10 @@ The following example demonstrates configuring the undo redo public methods.
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Buttons
 
-<button @onclick="@UndoMethod">Undo</button>
-<button @onclick="@RedoMethod">Redo</button>
+<SfButton onclick="@UndoHandler">Undo</SfButton>
+<SfButton onclick="@RedoHandler">Redo</SfButton>
 <SfGantt ID="GanttChart" @ref="GanttInstance" DataSource="@TaskCollection" Height="500px" Width="100%" HighlightWeekends="true" EnableUndoRedo="true" UndoRedoActions="@undoRedoActions"
             Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
          TreeColumnIndex="1" EnableContextMenu="true" AllowFiltering="true" MaxUndoRedoSteps="5">
@@ -308,11 +307,19 @@ The following example demonstrates configuring the undo redo public methods.
     {
         this.TaskCollection = GetUndoRedoData();
     }
-    private async Task UndoMethod()
+
+    /// <summary>
+    /// Handles the undo action by invoking the Gantt component's asynchronous undo logic.
+    /// </summary>
+    private async Task UndoHandler()
     {
         await GanttInstance.UndoAsync();
     }
-    private async Task RedoMethod()
+
+    /// <summary>
+    /// Handles the redo action by invoking the Gantt component's asynchronous redo logic.
+    /// </summary>
+    private async Task RedoHandler()
     {
         await GanttInstance.RedoAsync();
     }
@@ -349,15 +356,14 @@ The following example demonstrates configuring the undo redo public methods.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLyiBMhrNQxdzjs?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDroWBCrUEUVmsZF?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Notes
 
->* `EnableUndoRedo` must be set to **true** for keyboard shortcuts and programmatic APIs to operate.
->* Only actions listed in `UndoRedoActions` are recorded in history.
->* History length is constrained by `MaxUndoRedoSteps`; older entries are discarded when the limit is exceeded.
+>* `EnableUndoRedo` must be set to **true** for keyboard shortcuts and method-based operations to function.
+>* Only actions specified in `UndoRedoActions` are recorded in the undo/redo history.
+>* History length is constrained by `MaxUndoRedoSteps`; the first entries are discarded when the limit is exceeded.
 
 ## See Also
-
-* [How to add undo/redo events?]()
-* [What are the keys used for undo/redo?]()
+- [How to add undo/redo events?](https://blazor.syncfusion.com/documentation/gantt-chart/events##onundoredo)
+- [What are the keys used for undo/redo?](https://blazor.syncfusion.com/documentation/gantt-chart/accessibility#undo-redo)
