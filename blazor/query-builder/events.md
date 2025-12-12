@@ -116,7 +116,7 @@ Enable drag-and-drop by setting the [`AllowDragAndDrop`](https://help.syncfusion
 
 ### RuleDragStarting
 
-Invoked before a rule or group drag starts. You can cancel the drag by setting args.Cancel = true.
+This event is triggered **before** a rule or an entire group starts being dragged.The event arguments contain information about the dragged element.
 
 ```cshtml
 <SfQueryBuilder TValue="Order" DataSource="@Data" AllowDragAndDrop="true">
@@ -133,7 +133,7 @@ Invoked before a rule or group drag starts. You can cancel the drag by setting a
 
 ### RuleDropping
 
-Invoked before a rule or group is dropped on another. You can cancel the drop by setting args.Cancel = true.
+The RuleDropping event fires just before the dragged rule or group is dropped onto a target location. You can use this event to validate the drop target or modify the drop behavior dynamically.
 
 ```cshtml
 <SfQueryBuilder TValue="Order" DataSource="@Data" AllowDragAndDrop="true">
@@ -150,7 +150,7 @@ Invoked before a rule or group is dropped on another. You can cancel the drop by
 
 ### RuleDropped
 
-Raised after a successful drop is completed.
+This event is raised after a drag-and-drop operation has successfully completed and the query model has been updated.
 
 ```cshtml
 <SfQueryBuilder TValue="Order" DataSource="@Data" AllowDragAndDrop="true">
