@@ -3,7 +3,7 @@ layout: post
 title: Editor Menus in Blazor Block Editor Component | Syncfusion
 description: Checkout and learn about Editor Menus with Blazor Block Editor component in Blazor WebAssembly App.
 platform: Blazor
-control: Block Editor
+control: BlockEditor
 documentation: ug
 ---
 
@@ -318,6 +318,7 @@ The following example demonstrates how to customize the Block action menu.
         {
             ID = "block-info-action",
             Label = "Block Info",
+            IconCss = "e-icons e-circle-info",
             Tooltip = "Show block information"
         }
     };
