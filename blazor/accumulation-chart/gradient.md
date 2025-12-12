@@ -7,6 +7,8 @@ control: Accumulation Chart
 documentation: ug
 ---
 
+<!-- cSpell:ignore Cx Cy Fx Fy -->
+
 # Gradient in Blazor Accumulation Chart Component
 
 Gradients add depth and modern styling to charts by smoothly blending multiple colors. The Charts component supports two gradient types:

@@ -7,6 +7,8 @@ control: Stock Chart
 documentation: ug
 ---
 
+<!-- cSpell:ignore Cx Cy Fx Fy -->
+
 # Gradient in Blazor Stock Chart Component
 
 Gradients add depth and modern styling to stock charts by smoothly blending multiple colors. The Stock Chart component supports two gradient types:
