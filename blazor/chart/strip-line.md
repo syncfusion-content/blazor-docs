@@ -260,16 +260,21 @@ Below is the simplest way to enable a stripline tooltip using default settings. 
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Chart to display vehicle traffic by time using a Spline series. *@
 <SfChart Title="Vehicle Traffic by Time">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"
                        IntervalType="IntervalType.Hours"
                        LabelFormat="h tt">
         <ChartStriplines>
+
+            @* Stripline: visual band marking Rush Hour on the X axis *@
             <ChartStripline Start="new DateTime(2024, 01, 01, 07, 00, 00)"
                             End="new DateTime(2024, 01, 01, 09, 00, 00)"
                             Text="Rush Hour"
                             Color="#FFED4A"
                             Visible="true">
+
+                @* Stripline Tooltip: shows 'Rush Hour' with band hover/tap *@
                 <ChartStriplineTooltip Enable="true"></ChartStriplineTooltip>
             </ChartStripline>
         </ChartStriplines>
@@ -357,6 +362,7 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
 
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the Chart to display department revenue by quarter using Column and Spline series. *@
 <SfChart Title="Department Revenue by Quarter">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
@@ -366,10 +372,13 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
     <ChartPrimaryYAxis Minimum="65" Maximum="110" Interval="5" LabelFormat="${value}k" RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.None">
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
         <ChartStriplines>
+
+            @* Stripline: Highlights the upper revenue target range from 95k to 110k with text style and border customization. *@
             <ChartStripline Start="95" End="110" Color="#FFF59E" HorizontalAlignment="Anchor.Middle" Visible="true">
                 <ChartStriplineTextStyle Size="12px" Color="#0b3a66" FontWeight="600"></ChartStriplineTextStyle>
                 <ChartStriplineBorder Width="0"></ChartStriplineBorder>
 
+                @* Stripline Tooltip: providing interactive context with customizatioon for the target bands over hover/tap *@
                 <ChartStriplineTooltip Enable="true"
                                        Header="Target"
                                        Content="Range: ${stripline.start} - ${stripline.end}<br/>Axis: ${axis.name}"
