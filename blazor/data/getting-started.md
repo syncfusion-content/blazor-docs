@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor DataManager Component | Syncfusion
-description: Checkout and learn about getting started with Blazor DataManager component in Blazor WebAssembly Application.
+description: Learn how to configure and use the Syncfusion Blazor DataManager component in a Blazor WebAssembly application.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -9,7 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor DataManager Component
 
-This section briefly explains about how to include [Blazor DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component provides a robust data access layer for Blazor applications. It enables seamless interaction with both **local** and **remote** data sources and supports essential operations such as **querying**, **sorting**, **filtering**, and **CRUD** actions. The component is designed to work in conjunction with Syncfusion<sup style="font-size:70%">&reg;</sup> data-bound controls, ensuring efficient data management across the application.
+
+This guide explains how to configure and use the `DataManager` component in a **Blazor WebAssembly** application using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -17,15 +19,35 @@ This section briefly explains about how to include [Blazor DataManager](https://
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* Ensure the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/system-requirements) before proceeding with the setup.
 
-## Create a new Blazor App in Visual Studio
+## Create a new Blazor WebAssembly App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+A **Blazor WebAssembly App** can be created using **Visual Studio** with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Data and Themes NuGet in the App
+1. Open **Visual Studio 2022** (v17.8 or later).
+2. Select **Create a new project**.
+3. Choose **Blazor WebAssembly Standalone App** from the list of templates and click **Next**.
+4. Configure the **project name**, **location**, and **solution settings**, then click **Next**.
+5. Select the **target framework** as **.NET 9.0 or later** (choose the latest installed version available on the system).
+6. Click **Create** to generate the project.
 
-To add **Blazor DataManager** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+N> For detailed steps, refer to [Microsoft Blazor tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet Packages
+
+To integrate the Blazor **DataManager** component, install the required NuGet packages in the **Blazor WebAssembly** project:
+
+1. Open **NuGet Package Manager** in Visual Studio:
+
+    *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+
+2. Search and install the following packages:
+
+    - [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data)
+    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+3. Alternatively, use the **Package Manager Console**:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -36,7 +58,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). For a complete list of packages, refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 {% endtabcontent %}
 
@@ -44,13 +66,15 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* Ensure the development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/system-requirements) before proceeding with the setup.
 
 ## Create a new Blazor App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+A **Blazor WebAssembly App** can be created using **Visual Studio Code** with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+1. Open **Visual Studio Code**.
+2. Open the **integrated terminal** (**Ctrl + `**).
+3. Run the following commands to create a new **Blazor WebAssembly** project:
 
 {% tabs %}
 
@@ -63,11 +87,16 @@ cd BlazorApp
 
 {% endtabs %}
 
+4. Open the **project folder** in **Visual Studio Code**.
+
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Data and Themes NuGet in the App
 
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+1. Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+2. Ensure the terminal is in the project root directory where the **.csproj** file is located.
+3. Run the following commands to install the required NuGet packages:
+
+    - [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data)
+    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 {% tabs %}
 
@@ -89,7 +118,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Data` namespace.
+2. Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -100,7 +129,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+2. Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file:
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
@@ -124,7 +153,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script files are provided through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-asset) in the NuGet packages. Include these references in the **<head>** section of the **~/wwwroot/index.html** file:
 
 ```html
 <head>
@@ -133,35 +162,40 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+
+N>
+* Refer to [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for various methods to reference themes in a Blazor application:
+
+    * [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)
+    * [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference)
+    * [Custom Resource Generator (CRG)](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
+
+* For script reference options, see [Adding Script References](https://blazor.syncfusion.com/documentation/common/adding-script-references).
 
 ## Add Blazor DataManager component
 
-[SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component should be used in conjunction with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components that supports data binding.
-
-In the following example, `SfDataManager` is used with Blazor DataGrid component to depict the usage of DataManager. The DataManager acts as a gateway for both local and remote data to interact with the data source based on the provided query.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component is designed to work with Syncfusion<sup style="font-size:70%">&reg;</sup> data-bound components that support data operations. It serves as a gateway for both local and remote data, enabling interaction with the data source based on the configured query.
 
 ### Binding to JSON data
 
-Local JSON data can be bound to the DataGrid component by assigning the array of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
-
-Explore the provided sample code below, which illustrates how to bind local data to the DataGrid component using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). To get started with Blazor DataGrid, please refer to this [link](https://blazor.syncfusion.com/documentation/datagrid/getting-started) for more information.
+Local **JSON** data can be bound to the [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) component by assigning a collection of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
 <SfGrid TValue="EmployeeData" ID="Grid">
-    <SfDataManager Json=@Employees></SfDataManager>
+    <SfDataManager Json="@Employees"></SfDataManager>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Name) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.EmployeeID)" TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.Name)" HeaderText="First Name" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeData.Title)" HeaderText="Title" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public class EmployeeData
     {
         public int EmployeeID { get; set; }
@@ -169,7 +203,7 @@ Explore the provided sample code below, which illustrates how to bind local data
         public string Title { get; set; }
     }
 
-    public EmployeeData[] Employees = new EmployeeData[]
+    public List<EmployeeData> Employees = new()
     {
         new EmployeeData { EmployeeID = 1, Name = "Nancy Fuller", Title = "Vice President" },
         new EmployeeData { EmployeeID = 2, Name = "Steven Buchanan", Title = "Sales Manager" },
@@ -189,27 +223,36 @@ Explore the provided sample code below, which illustrates how to bind local data
 
 ### Binding to OData
 
-Remote data can be bound to the DataGrid component by binding the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component to it and then assigning the service end point URL to the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
-
-The following sample code demonstrates binding OData through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DataGrid component,
+Remote data can be bound to the [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) component by configuring the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property and specifying the appropriate adaptor using the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
 <SfGrid TValue="Order" ID="Grid" AllowPaging="true">
-    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor"></SfDataManager>
+    <SfDataManager Url="https://services.odata.org/Northwind/Northwind.svc/Orders"
+                   Adaptor="Adaptors.ODataAdaptor">
+    </SfDataManager>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true"
+                    TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Format="d"
+                    Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2"
+                    TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public class Order {
+@code {
+
+    public class Order
+    {
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
@@ -220,74 +263,74 @@ The following sample code demonstrates binding OData through the [SfDataManager]
 
 ## Component binding
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used with Syncfusion<sup style="font-size:70%">&reg;</sup> components which supports data binding.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component can be integrated with any Syncfusion<sup style="font-size:70%">&reg;</sup> data-bound component to manage local or remote data operations.
 
-In the below example, the `SfDataManager` is bound with DropDownList component to demonstrate data binding for the components. In the same way, you can use `DataManager` with any other data-bound components of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This configuration demonstrates how the `DataManager` is bound to the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to enable consistent interaction with local or remote data sources.
 
 ### Local data binding
 
-Local data can be bound to the DropDownList component by assigning the array of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
-
-The following sample code demonstrates binding local data through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component,
+Local data can be bound to components such as `SfDropDownList` by assigning a collection of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the `SfDataManager` component.
 
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList Placeholder="e.g. Australia" TItem="Countries" TValue="string">
-    <SfDataManager Json=@Country></SfDataManager>
+<SfDropDownList Placeholder="e.g. Australia" TItem="Country" TValue="string">
+    <SfDataManager Json="@Countries"></SfDataManager>
     <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
 </SfDropDownList>
 
-@code{
-    public class Countries
+@code {
+    public class Country
     {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
+        public string? Name { get; set; }
+        public string? Code { get; set; }
     }
 
-    public Countries[] Country = new Countries[]
+    public List<Country> Countries = new()
     {
-        new Countries { Name = "Australia", Code = "AU" },
-        new Countries { Name = "Bermuda", Code = "BM" },
-        new Countries { Name = "Canada", Code = "CA" },
-        new Countries { Name = "Cameroon", Code = "CM" }
+        new Country { Name = "Australia", Code = "AU" },
+        new Country { Name = "Bermuda", Code = "BM" },
+        new Country { Name = "Canada", Code = "CA" },
+        new Country { Name = "Cameroon", Code = "CM" }
     };
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLztCVEBpQxSKZU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCWWaPtlNQoPM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)" %}
 
 ### Remote data binding
 
-Remote data can be bound to the DropDownList component by binding the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component to it and then assigning the service end point URL to the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
-
-The following sample code demonstrates binding remote data through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DropDownList component,
+Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property and specifying the appropriate adaptor using the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property of the `SfDataManager` component.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfDropDownList Placeholder="Name" TValue="string" TItem="Contact">
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList Placeholder="Name" TItem="Contact" TValue="Contact">
     <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Customers" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
     <DropDownListFieldSettings Value="CustomerID" Text="ContactName"></DropDownListFieldSettings>
 </SfDropDownList>
 
-@code{
+@code {
+    
     public class Contact
     {
-        public string ContactName { get; set; }
-
-        public string CustomerID { get; set; }
+        public string? ContactName { get; set; }
+        public string? CustomerID { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthpNMhYLzkEUBiB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVyMWMEFjOIhipK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).
+N> [View Sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).

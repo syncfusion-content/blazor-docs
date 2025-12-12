@@ -141,6 +141,16 @@ Refer to the [Toolbar](https://blazor.syncfusion.com/documentation/file-manager/
 
 ![Download a file in Blazor FileManger](./images/blazor-filemanager-download-operation.png)
 
+### Upload Files or Folders via context menu
+
+In the Blazor File Manager component, you can perform the files or folder [upload](https://blazor.syncfusion.com/documentation/file-manager/file-operations#uploading-files) operations with the help of Context Menu items by switching between the Files or Folder from Upload menu item.
+
+Refer to the [Context Menu](https://blazor.syncfusion.com/documentation/file-manager/context-menu) sections to learn more about the items that are present in Context Menu.
+
+![Upload a file in Blazor FileManger](./images/blazor-filemanager-fileupload.png)
+
+![Download a folder in Blazor FileManger](./images/blazor-filemanager-folderupload.png)
+
 ### Searching Files and Folders
 
 In the Blazor File Manager component, you are able to [search](https://blazor.syncfusion.com/documentation/file-manager/file-operations#searching-files-and-folders) for the wanted files and folders using the default input search functionality option.

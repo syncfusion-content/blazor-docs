@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  Footer aggregate in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Footer aggregate in Syncfusion Blazor DataGrid component and much more details.
+title:  Footer aggregates in Blazor DataGrid Component | Syncfusion
+description: Learn how to configure and display footer aggregates in the Syncfusion Blazor DataGrid using FooterTemplate, AggregateTemplateContext, and formatting options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Footer aggregate in Blazor DataGrid
+# Footer aggregates in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the Grid. You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render the aggregate value in the footer cells.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports calculating and displaying aggregate values in footer cells. Footer aggregates summarize column values across rows and render in the DataGrid footer. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render aggregate values in footer cells.
 
-To access the aggregate values inside the **FooterTemplate**, you can use the implicit named parameter **context**. You can type cast the **context** as **AggregateTemplateContext** to get aggregate values inside template. 
+Access aggregate values inside `FooterTemplate` through the implicit template parameter **context**. Cast **context** to [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) to read properties such as **Sum, Average, Min, Max, Count, TrueCount,** and **FalseCount**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -113,11 +113,15 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLAMWXqUpZEyoPc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtByDEqjMQrYOURq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Format the aggregate value
+> Data source behavior:
+> - With local data, footer aggregates are calculated over the entire bound dataset.
+> - With remote data and paging, footer aggregates typically reflect only the current page unless the adaptor or server provides total summaries.
 
-To format the aggregate value result in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you can use the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the **AggregateColumn**. The `Format` property allows you to specify a format string that determines how the aggregate value will be displayed.
+## Format aggregate values
+
+To format footer aggregate results in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the aggregate column. The Format string determines how the aggregate value is displayed and supports culture-aware currency, numeric, and date formats.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -219,4 +223,4 @@ To format the aggregate value result in the Syncfusion<sup style="font-size:70%"
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrKCDKNfjjLuHGA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSZuqDsvUzzuGd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

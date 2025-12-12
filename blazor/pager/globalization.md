@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about globalization and RTL in Syncfusion Blazor Pager component and much more details.
+description: Learn how to configure localization and right-to-left (RTL) rendering in the Syncfusion Blazor Pager component.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -9,16 +9,32 @@ documentation: ug
 
 # Globalization in Blazor Pager Component
 
+This article explains how to **localize** the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component and how to enable **right-to-left (RTL)** rendering.
+
 ## Localization
 
-Blazor Pager component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component supports localization, allowing text and UI elements to adapt to various languages and cultural formats.
+
+> Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) guide for detailed configuration steps.
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Pager component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the following sample, [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_EnableRtl) property is used to enable RTL in the Pager.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component supports right-to-left (RTL) rendering for languages such as **Arabic**, **Farsi**, and **Urdu**. **RTL** can be enabled by configuring the **Syncfusion Blazor service** during application startup.
+
+**Register the `EnableRtl` option in Program.cs**:
+
+{% tabs %}
+{% highlight C# tabtitle="~/_Program.cs" %}
+
+builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
+
+{% endhighlight %}
+{% endtabs %}
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfPager TotalItemsCount=20 NumericItemsCount=5 PageSize=5 EnableRtl=true></SfPager>
+<SfPager TotalItemsCount="20" NumericItemsCount="5" PageSize="5"></SfPager>
 ```
+
+> For more details, refer to the [Right-to-Left](https://blazor.syncfusion.com/documentation/common/right-to-left) guide for detailed configuration steps.

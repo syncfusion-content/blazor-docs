@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create custom Grid component in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Create custom Grid component in Syncfusion Blazor DataGrid component and more.
+title: Create a custom Grid component in Blazor DataGrid | Syncfusion
+description: Learn how to build a reusable custom Grid component that wraps SfGrid in Blazor to share default paging, sorting, and layout settings across the application.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,26 +9,38 @@ documentation: ug
 
 # Create custom Blazor DataGrid
 
-You can create a custom DataGrid by rendering the `SfGrid` as a new razor component. It helps to create your own custom component when you want to create multiple Grids with same configuration or with default configuration throughout your application.
+Create a reusable custom Grid component by wrapping the `SfGrid` in a Razor component. This approach helps apply consistent defaults (for example, paging and sorting) and common settings across multiple Grids without repeating configuration.
 
-This is demonstrated in the following example by creating a custom Grid called CustomGrid, where `SfGrid` is rendered with some basic default properties such as `GridPageSettings` etc., which will be reflected in all the Grids rendered using the CustomGrid:
+The following example creates a `CustomGrid` wrapper that renders `SfGrid` with default properties such as `GridPageSettings`. Any unmatched attributes passed to `CustomGrid` are forwarded to the inner `SfGrid`, and content placed inside `CustomGrid` is projected as columns via `ChildContent`.
 
-CustomGrid.razor
+**CustomGrid.razor:**
 
-```cshtml
+{% tabs %}
+{% highlight C# tabtitle="CustomGrid.razor" %}
+
 @using Syncfusion.Blazor.Grids
-@typeparam TValue
-@inherits SfGrid<TValue>
+@typeparam TItem
 
-<SfGrid TValue="TValue" AllowSorting="AllowSorting" AllowPaging="AllowPaging" @attributes="props">
+<SfGrid TItem="TItem"
+        DataSource="DataSource"
+        AllowSorting="AllowSorting"
+        AllowPaging="AllowPaging"
+        @attributes="AdditionalAttributes">
+    <GridPageSettings PageCount="@PAGE_COUNT"
+                      PageSize="@DEFAULT_PAGE_SIZE"
+                      PageSizes="PageSizes">
+    </GridPageSettings>
     @ChildContent
-    <GridPageSettings PageCount="PAGE_COUNT" PageSize="DEFAULT_PAGE_SIZE" PageSizes="PageSizes"></GridPageSettings>
 </SfGrid>
-```
 
-CustomGrid.razor.cs
+{% endhighlight %}
+{% endtabs %}
 
-```csharp
+**CustomGrid.razor.cs:**
+
+{% tabs %}
+{% highlight C# tabtitle="CustomGrid.razor.cs" %}
+
 using Microsoft.AspNetCore.Components;
 using Syncfusion.Blazor.Grids;
 using System;
@@ -38,46 +50,58 @@ using System.Threading.Tasks;
 
 namespace SF_Grid_Inheritance.Shared
 {
-    public partial class CustomGrid<TValue> : SfGrid<TValue>
+    public partial class CustomGrid<TItem> : ComponentBase
     {
         public const int PAGE_COUNT = 5;
         public const int DEFAULT_PAGE_SIZE = 10;
-        public string[] PageSizes = new string[] { "10", "20", "50" };
-        IReadOnlyDictionary<string, object> props { get; set; }
-        public override Task SetParametersAsync(ParameterView parameters)
-        {
-            //Assign the additional parameters
-            props = parameters.ToDictionary();
-            return base.SetParametersAsync(parameters);
-        }
-        protected async override Task OnParametersSetAsync()
-        {
-            AllowPaging = true;
-            AllowSorting = true;
-            await base.OnParametersSetAsync();
-        }
+
+        [Parameter] public IEnumerable<TItem>? DataSource { get; set; }
+        [Parameter] public bool AllowPaging { get; set; } = true;
+        [Parameter] public bool AllowSorting { get; set; } = true;
+        [Parameter] public string[] PageSizes { get; set; } = new[] { "10", "20", "50" };
+        [Parameter] public RenderFragment? ChildContent { get; set; }
+
+        // Forwards any additional attributes/events to the inner SfGrid
+        [Parameter(CaptureUnmatchedValues = true)]
+        public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
     }
 }
-```
 
-Index.razor
+{% endhighlight %}
+{% endtabs %}
 
-```csharp
+**Index.razor:**
 
-<CustomGrid DataSource="Orders" TValue="Order"></CustomGrid>
+{% tabs %}
+{% highlight C# tabtitle="Index.razor" %}
+
+@using SF_Grid_Inheritance.Shared
+@using Syncfusion.Blazor.Grids
+
+<CustomGrid DataSource="Orders" TItem="Order">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
+</CustomGrid>
 
 @code{
-    public List<Order> Orders { get; set; }
+    public List<Order> Orders { get; set; } = new();
+    private static readonly Random _random = new Random();
+
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[_random.Next(5)],
+            Freight = Math.Round(2.1 * x, 2),
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
+
     public class Order
     {
         public int? OrderID { get; set; }
@@ -86,4 +110,6 @@ Index.razor
         public double? Freight { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
