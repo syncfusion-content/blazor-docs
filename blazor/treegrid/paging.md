@@ -84,10 +84,12 @@ N> Better performance can be achieved by using tree grid paging to fetch only a 
 
 ## Page size mode
 
-Two behaviors are available in TreeGrid paging to display a specific number of records on the current page. The following are the two types of [`PageSizeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property of [`TreeGridPageSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html).
+## Page size mode
+
+The [`PageSizeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property of [`TreeGridPageSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) defines two behaviors in TreeGrid paging to display a specific number of records on the current page.
 
 * **All** : Page size is calculated using the entire hierarchy, including both root and child records. 
-* **Root** : This is the default mode. The number of root nodes or the **0th-level** records to be displayed per page is based on [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property. With [PageSizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property as **Root**, only the root level or the 0th level records are considered in records count.
+* **Root** : This is the default mode. The number of root nodes or the **0th-level** records to be displayed per page is based on [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property. With `PageSizeMode` property as **Root**, only the root level or the 0th level records are considered in records count.
 
 N> The **ALL** mode of **PageSizeMode** is not supported with remote data binding in the Tree Grid.
 
