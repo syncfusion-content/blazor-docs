@@ -687,11 +687,18 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
 ```
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the chart and configure essential features *@
 <SfChart Title="Olympic Medals">
+    @* Set category axis for country names *@
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
+    @* Show the legend and enable series toggle *@
+    <ChartLegendSettings Visible="true" />
+
     <ChartSeriesCollection>
+        @* Gold column series *@
         <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Fill="#FFD700" Type="ChartSeriesType.Column">
+            @* Custom legend with icon, label, and total count *@
             <LegendItemTemplate>
                 <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
                     <span style="font-size:18px;">🥇</span>
@@ -704,7 +711,9 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
             </LegendItemTemplate>
         </ChartSeries>
 
+        @* Silver column series *@
         <ChartSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Width="2" Opacity="1" YName="Silver" Fill="#898989" Type="ChartSeriesType.Column">
+            @* Custom legend with icon, label, and total count *@
             <LegendItemTemplate>
                 <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
                     <span style="font-size:18px;">🥈</span>
@@ -717,7 +726,9 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
             </LegendItemTemplate>
         </ChartSeries>
 
+        @* Bronze column series *@
         <ChartSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Width="2" Opacity="1" YName="Bronze" Fill="#CD7F32" Type="ChartSeriesType.Column">
+            @* Custom legend with icon, label, and total count *@
             <LegendItemTemplate>
                 <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
                     <span style="font-size:18px;">🥉</span>
@@ -731,7 +742,6 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
         </ChartSeries>
     </ChartSeriesCollection>
 
-    <ChartLegendSettings Visible="true" />
 </SfChart>
 
 @code {
