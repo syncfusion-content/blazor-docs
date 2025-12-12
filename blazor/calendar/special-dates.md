@@ -9,7 +9,7 @@ documentation: ug
 
 # Special Dates in Blazor Calendar Component
 
-You can customize specific dates in a [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) by using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarEvents-1.html#Syncfusion_Blazor_Calendars_CalendarEvents_1_OnRenderDayCell) event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific dates in the calendar. Here, list of dates in the current month are customized with custom styles by adding the personal-appointment and official-appointment class.
+Customize specific dates in a [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) by handling the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarEvents-1.html#Syncfusion_Blazor_Calendars_CalendarEvents_1_OnRenderDayCell) event. This event fires for each day cell as it is created, allowing the addition of CSS classes and, if needed, disabling particular dates. The following example highlights two sets of days in the current month with custom styles using the personal-appointment and official-appointment classes, and updates a label on selection via ValueChange.
 
 ```cshtml
 
@@ -29,13 +29,15 @@ You can customize specific dates in a [Blazor Calendar](https://www.syncfusion.c
     public DateTime? CurrentDate { get; set; } = DateTime.Now;
     public void CustomDates(RenderDayCellEventArgs args)
     {
-        var CurrentMonth = CurrentDate.Value.Month;
-        if (args.Date.Month == CurrentMonth && (args.Date.Day == 7 || args.Date.Day == 14 || args.Date.Day == 24 || args.Date.Day == 29)) {
-            args.CellData.ClassList += " personal-appointment";
-        }
-        if (args.Date.Month == CurrentMonth && (args.Date.Day == 3 || args.Date.Day == 11 || args.Date.Day == 17 || args.Date.Day == 22))
-        {
-            args.CellData.ClassList += " official-appointment";
+        if (args.CurrentView == "Month") {
+            var CurrentMonth = CurrentDate.Value.Month;
+            if (args.Date.Month == CurrentMonth && (args.Date.Day == 7 || args.Date.Day == 14 || args.Date.Day == 24 || args.Date.Day == 29)) {
+                args.CellData.ClassList += " personal-appointment";
+            }
+            if (args.Date.Month == CurrentMonth && (args.Date.Day == 3 || args.Date.Day == 11 || args.Date.Day == 17 || args.Date.Day == 22))
+            {
+                args.CellData.ClassList += " official-appointment";
+            }
         }
     }
     public void OnChange(ChangedEventArgs<DateTime?> args)
@@ -90,3 +92,5 @@ You can customize specific dates in a [Blazor Calendar](https://www.syncfusion.c
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVAMBLBLyofGefV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Calendar with special dates](./images/blazor_calendar_special_dates.png)" %}
+
+N> The `RenderDayCellEventArgs` includes a `CurrentView` property that identifies the active calendar view during rendering. Possible values are `Month`, `Year`, and `Decade`. Use this to apply view-specific logic and diagnostics within the `OnRenderDayCell` handler. This property is useful for customizing the rendering of day cells based on the calendar's current view.

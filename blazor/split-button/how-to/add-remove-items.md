@@ -9,7 +9,9 @@ documentation: ug
 
 # Add and Remove Items in Blazor SplitButton Component
 
-Split Button component can dynamically add or remove items using  [AddItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_AddItems_System_Collections_Generic_List_Syncfusion_Blazor_SplitButtons_DropDownMenuItem__System_String_System_Boolean_), [RemoveItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_RemoveItems_System_Collections_Generic_List_System_String__System_Boolean_) method.
+The SplitButton component supports dynamically adding or removing dropdown menu items using the AddItems and RemoveItems methods. The following example adds new items at runtime and removes the item matching the Text value "Paste" using a component reference obtained with @ref in button click handlers.
+
+[AddItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_AddItems_System_Collections_Generic_List_Syncfusion_Blazor_SplitButtons_DropDownMenuItem__System_String_System_Boolean_), [RemoveItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_RemoveItems_System_Collections_Generic_List_System_String__System_Boolean_)
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -54,4 +56,4 @@ Split Button component can dynamically add or remove items using  [AddItems](htt
   
 ```
 
-![Adding or Removing Blazor SplitButton Items](./../images/blazor-splitbutton-add-remove-items.png)
+![Adding or removing menu items in the Blazor SplitButton](./../images/blazor-splitbutton-add-remove-items.png)

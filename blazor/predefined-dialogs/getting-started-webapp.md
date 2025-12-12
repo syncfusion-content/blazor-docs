@@ -21,7 +21,7 @@ This section briefly explains about how to include `Blazor Predefined Dialogs` c
 
 ## Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App.
 
@@ -33,7 +33,7 @@ To add the **Blazor predefined dialog** component in the app, open the NuGet pac
 
 If using the `WebAssembly or Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -56,11 +56,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Create a new Blazor Web App in Visual Studio Code
 
-You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
 
 Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+For example, to create a Blazor Web App with the `Auto` interactive render mode, use the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -100,7 +100,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-Latest version of the [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -112,11 +112,11 @@ dotnet --version
 
 ## Create a Blazor Web App using .NET CLI
 
-Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
 
 Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web Application. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+For example, to create a Blazor Web App with the `Auto` interactive render mode, use the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -225,7 +225,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Dialog Provider
 
-`SfDialogProvider` allows to open predefined dialogs based on `SfDialogService` settings from any where in application. You can add `SfDialogProvider` in `MainLayout.razor` or any page. But it should be added only once in the app. If you add in `MainLayout.razor`, you can open predefined dialogs from any where in application. If you add in particular page, you can open dialogs only within the page.
+`SfDialogProvider` opens predefined dialogs based on `SfDialogService` settings from anywhere in the application. Add `SfDialogProvider` in `MainLayout.razor` or in a specific page, but include it only once in the app. When added to `MainLayout.razor`, predefined dialogs are available throughout the application; when added to a specific page, dialogs are available only within that page.
 
 * Now, add `SfDialogProvider` in the **~/Components/Layout/MainLayout.razor** file.
 
@@ -239,11 +239,11 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Open Predefined Dialog
 
-Once you added `SfDialogService` and `SfDialogProvider`, you can open predefined dialogs from any where in application using [AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_),[ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) or [PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) methods in [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
+After adding `SfDialogService` and `SfDialogProvider`, open predefined dialogs from anywhere in the application using the [AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_), [ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) or [PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) methods in [DialogService](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
 
 ### Show alert dialog
 
-An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alert dialog will get closed. If an interactivity location as `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` component, as follows:
+An alert dialog box is used to display errors, warnings, or informational messages that require user acknowledgment. This is achieved using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog displays an `OK` button. When the user selects `OK`, the alert dialog closes. If the interactivity location is `Per page/component`, define a render mode at the top of the `~Pages/*.razor` component as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -262,7 +262,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-In the code example below, an alert dialog is displayed upon clicking the button using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) Component.
+In the following example, an alert dialog is displayed upon clicking a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component.
 
 {% tabs %}
 {% highlight razor %}
@@ -276,9 +276,9 @@ In the code example below, an alert dialog is displayed upon clicking the button
 
 ### Show confirm dialog
 
-A confirm dialog box used to displays a specified message along with the `OK` and `Cancel` buttons, which returns a boolean value according to the user's click action. When the user clicks the `OK` button, the `true` value is returned otherwise it will returns the `false` value. This can be achieved by using the [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. It is used to get approval from the user, and it appears before any critical action. After get approval from the user the dialog will disappear automatically.
+A confirm dialog displays a specified message with `OK` and `Cancel` buttons and returns a boolean value based on the user action. Selecting `OK` returns `true`; selecting `Cancel` returns `false`. Use the [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method to show a confirm dialog, typically before a critical action. After the user responds, the dialog closes automatically.
 
-In the below code example, the confirm dialog displayed on `OK` and `Cancel` button click action.
+In the following example, the confirm dialog is displayed and returns a value based on the `OK` or `Cancel` button click.
 
 {% tabs %}
 {% highlight razor %}
@@ -292,9 +292,9 @@ In the below code example, the confirm dialog displayed on `OK` and `Cancel` but
 
 ### Show prompt dialog
 
-A prompt dialog is used to get the input from the user by using the [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user clicks the `OK` button the input value from the dialog is returned. If the user clicks the `Cancel` button the `null` value is returned. After getting the input from the user the dialog will disappear automatically.
+A prompt dialog is used to collect input from the user using the [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user selects `OK`, the input value is returned; selecting `Cancel` returns `null`. After the user responds, the dialog closes automatically.
 
-In the below code example, the prompt dialog displayed on `OK` and `Cancel` button click action.
+In the following example, the prompt dialog is displayed and returns a value based on the `OK` or `Cancel` button click.
 
 {% tabs %}
 {% highlight razor %}
