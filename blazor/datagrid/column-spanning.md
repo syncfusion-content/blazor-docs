@@ -704,7 +704,7 @@ The following examples demonstrate how to use both overloads of `UnmergeCellsAsy
 
 ## Limitations
 
-- The Column spanning is not compatible with the following features:
+The Column spanning is not compatible with the following features:
 
 1. AutoFill
 2. Hierarchy-Grid.

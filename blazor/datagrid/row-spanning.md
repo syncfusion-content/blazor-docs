@@ -964,7 +964,7 @@ The following examples demonstrate how to use both overloads of `UnmergeCellsAsy
 
 ## Limitations
 
-- The Row spanning is not compatible with the following features:
+The Row spanning is not compatible with the following features:
 
 1. Autofill 
 2. Inline Editing 
