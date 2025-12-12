@@ -93,4 +93,4 @@ You can customize specific dates in a DatePicker by using the [OnRenderDayCell](
 
 ![Blazor DatePicker with special dates](./images/blazor_datepicker_special_dates.png)
 
-N> The `RenderDayCellEventArgs` includes a `CurrentView` property that identifies the active calendar view during rendering. Possible values are `Month`, `Year`, and `Decade`. Use this to apply view-specific logic and diagnostics within the `OnRenderDayCell` handler. This property is useful for customizing the rendering of day cells based on the calendar's current view.
+N> The `RenderDayCellEventArgs` includes a `CurrentView` property that identifies the active calendar view during rendering. Possible values are `Month`, `Year`, and `Decade`. Use this to apply view-specific logic within the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_OnRenderDayCell) handler. This property is useful for customizing the rendering of day cells based on the calendar's current view.
