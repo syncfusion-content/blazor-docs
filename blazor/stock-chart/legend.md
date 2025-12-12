@@ -571,15 +571,23 @@ To use, add a `LegendItemTemplate` inside any [StockChartSeries](https://help.sy
 ```
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL vs GOOGL Stock Price" SelectionMode="SelectionMode.Series">
+@* Initialize the stock chart component and configure its essential features *@
+<SfStockChart Title="AAPL vs GOOGL Stock Price"
+              SelectionMode="SelectionMode.Series">
+
+    @* Display the legend and allow toggling series visibility on interaction *@
     <StockChartLegendSettings Visible="true" ToggleVisibility="true" />
+
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price" Fill="red">
+
+        @* Define the first series using OHLC fields and render it as a line to show trend *@
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price" Fill="@AppleColor">
+            @* This legend item contains an emoji indicator, a color swatch, a descriptive label, and a dynamic point count *@
             <LegendItemTemplate>
-                <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
+                <div style="display:flex; align-items:center; gap:10px; padding:6px 0;">
                     <span style="font-size:18px;">🍎</span>
-                    <div style="display:flex; flex-direction:column; line-height:1.15;">
-                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:red;">
+                    <div style="display:flex; flex-direction:column; line-height:1.2;">
+                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:@AppleColor;">
                             Apple Stock Price
                         </span>
                         <span style="font-size:12px; opacity:0.85;">
@@ -593,12 +601,14 @@ To use, add a `LegendItemTemplate` inside any [StockChartSeries](https://help.sy
             </LegendItemTemplate>
         </StockChartSeries>
 
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google Stock Price" Fill="cornflowerblue">
+        @* Define the second series using the same OHLC fields and render it as a spline for a smoothed trend *@
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google Stock Price" Fill="@GoogleColor">
+            @* This legend item presents an emoji indicator, a color swatch, a descriptive label, and a dynamic point count *@
             <LegendItemTemplate>
-                <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
+                <div style="display:flex; align-items:center; gap:10px; padding:6px 0;">
                     <span style="font-size:18px;">🔍</span>
-                    <div style="display:flex; flex-direction:column; line-height:1.15;">
-                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:cornflowerblue;">
+                    <div style="display:flex; flex-direction:column; line-height:1.2;">
+                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:@GoogleColor;">
                             Google Stock Price
                         </span>
                         <span style="font-size:12px; opacity:0.85;">
@@ -611,10 +621,14 @@ To use, add a `LegendItemTemplate` inside any [StockChartSeries](https://help.sy
                 </div>
             </LegendItemTemplate>
         </StockChartSeries>
+
     </StockChartSeriesCollection>
 </SfStockChart>
 
 @code {
+    private string AppleColor => "#16a34a";
+    private string GoogleColor => "#2563eb";
+
     public class ChartData
     {
         public DateTime Date { get; set; }
@@ -628,11 +642,11 @@ To use, add a `LegendItemTemplate` inside any [StockChartSeries](https://help.sy
     public List<ChartData> StockDetails = new List<ChartData>
     {
         new ChartData { Date = new DateTime(2012, 04, 02), Open = 85.9757, High = 90.6657, Low = 85.7685, Close = 90.5257, Volume = 660187068 },
-        new ChartData { Date = new DateTime(2012, 04, 09), Open = 89.4471, High = 92, Low = 86.2157, Close = 86.4614, Volume = 912634864 },
+        new ChartData { Date = new DateTime(2012, 04, 09), Open = 89.4471, High = 92,       Low = 86.2157, Close = 86.4614, Volume = 912634864 },
         new ChartData { Date = new DateTime(2012, 04, 16), Open = 87.1514, High = 88.6071, Low = 81.4885, Close = 81.8543, Volume = 1221746066 },
         new ChartData { Date = new DateTime(2012, 04, 23), Open = 81.5157, High = 88.2857, Low = 79.2857, Close = 86.1428, Volume = 965935749 },
-        new ChartData { Date = new DateTime(2012, 04, 30), Open = 85.4, High = 85.4857, Low = 80.7385, Close = 80.75, Volume = 615249365 }
-   };
+        new ChartData { Date = new DateTime(2012, 04, 30), Open = 85.4,    High = 85.4857, Low = 80.7385, Close = 80.75,   Volume = 615249365 }
+    };
 }
 ```
 ![Blazor Stock Chart legend template](images/blazor-stock-chart-legend-template.png)
