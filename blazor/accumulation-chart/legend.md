@@ -404,6 +404,11 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
 
 @* Initialize the accumulation chart component and configure its essential features *@
 <SfAccumulationChart Title="Mobile Browser Statistics">
+
+    @* Display the legend and allow toggling visibility on interaction *@
+    <AccumulationChartLegendSettings Visible="true" >
+    </AccumulationChartLegendSettings>
+
     <AccumulationChartSeriesCollection>
         @* Define a pie series with X and Y mappings and color mapping *@
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser" PointColorMapping="Color">
@@ -424,9 +429,6 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 
-    @* Display the legend and allow toggling visibility on interaction *@
-    <AccumulationChartLegendSettings Visible="true" >
-    </AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
 @code {
