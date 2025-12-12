@@ -279,7 +279,6 @@ Below is the simplest way to enable a stripline tooltip using default settings. 
     </ChartPrimaryYAxis>
 
     <ChartSeriesCollection>
-        <!-- Vibrant spline series color -->
         <ChartSeries Type="ChartSeriesType.Spline"
                      DataSource="@Traffic"
                      XName="Time"
@@ -367,30 +366,35 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
     <ChartPrimaryYAxis Minimum="65" Maximum="110" Interval="5" LabelFormat="${value}k" RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.None">
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
         <ChartStriplines>
-            <ChartStripline Start="95" End="110" Text="Target Exceeded" Color="#FFE3B3" HorizontalAlignment="Anchor.Middle" Visible="true">
+            <ChartStripline Start="95" End="110" Color="#FFF59E" HorizontalAlignment="Anchor.Middle" Visible="true">
                 <ChartStriplineTextStyle Size="12px" Color="#0b3a66" FontWeight="600"></ChartStriplineTextStyle>
                 <ChartStriplineBorder Width="0"></ChartStriplineBorder>
-                <ChartStriplineTooltip Enable="true" Header="Target Exceeded">
-                    <ChartStriplineTooltipTextStyle Size="12px" FontWeight="500"></ChartStriplineTooltipTextStyle>
-                    <ChartStriplineTooltipBorder Width="0"></ChartStriplineTooltipBorder>
+
+                <ChartStriplineTooltip Enable="true"
+                                       Header="Target"
+                                       Content="Range: ${stripline.start} - ${stripline.end}<br/>Axis: ${axis.name}"
+                                       Fill="#F43F5E"
+                                       Opacity="0.95"
+                                       ShowHeaderLine="true">
+                    <ChartStriplineTooltipTextStyle Size="14px" Color="#FFFFFF" FontWeight="600" FontFamily="Segoe UI"></ChartStriplineTooltipTextStyle>
+                    <ChartStriplineTooltipBorder Width="2" Color="#1F2937"></ChartStriplineTooltipBorder>
                 </ChartStriplineTooltip>
             </ChartStripline>
         </ChartStriplines>
     </ChartPrimaryYAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries Name="Sales" Type="ChartSeriesType.Column" DataSource="@SalesData" XName="Quarter" YName="Revenue" ColumnSpacing="0.2" Width="2" Fill="#ef4444">
+        <ChartSeries Name="Sales" Type="ChartSeriesType.Column" DataSource="@SalesData" XName="Quarter" YName="Revenue" ColumnSpacing="0.2" Width="2" Fill="#FB923C">
             <ChartMarker Visible="false"></ChartMarker>
         </ChartSeries>
-        <ChartSeries Name="Support" Type="ChartSeriesType.Spline" DataSource="@SupportData" XName="Quarter" YName="Revenue" Width="2" Fill="#3b82f6">
+        <ChartSeries Name="Support" Type="ChartSeriesType.Spline" DataSource="@SupportData" XName="Quarter" YName="Revenue" Width="2" Fill="#22C55E">
             <ChartMarker Visible="true">
                 <ChartDataLabel Visible="true"></ChartDataLabel>
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 
-    <ChartLegendSettings Visible="true" EnableHighlight="true">
-    </ChartLegendSettings>
+    <ChartLegendSettings Visible="true" EnableHighlight="true"></ChartLegendSettings>
 </SfChart>
 
 @code {
