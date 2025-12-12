@@ -517,48 +517,71 @@ The following examples demonstrate how to use both overloads of MergeCellsAsync 
 
     protected override void OnInitialized()
     {
-        Orders = new List<Order>()
-        {
-            new Order { OrderID = 1, CustomerID = "ALFKI", Freight = 23.45 },
-            new Order { OrderID = 2, CustomerID = "ANATR", Freight = 15.60 },
-            new Order { OrderID = 3, CustomerID = "ANTON", Freight = 42.10 },
-            new Order { OrderID = 4, CustomerID = "AROUT", Freight = 18.75 },
-            new Order { OrderID = 5, CustomerID = "BERGS", Freight = 33.20 },
-            new Order { OrderID = 6, CustomerID = "BLAUS", Freight = 27.50 },
-            new Order { OrderID = 7, CustomerID = "BLONP", Freight = 12.90 },
-            new Order { OrderID = 8, CustomerID = "BOLID", Freight = 25.00 },
-            new Order { OrderID = 9, CustomerID = "BONAP", Freight = 19.40 },
-            new Order { OrderID = 10, CustomerID = "BOTTM", Freight = 30.10 },
-            new Order { OrderID = 11, CustomerID = "BSBEV", Freight = 22.80 },
-            new Order { OrderID = 12, CustomerID = "CACTU", Freight = 14.60 },
-            new Order { OrderID = 13, CustomerID = "CENTC", Freight = 28.90 },
-            new Order { OrderID = 14, CustomerID = "CHOPS", Freight = 35.25 },
-            new Order { OrderID = 15, CustomerID = "COMMI", Freight = 40.00 },
-            new Order { OrderID = 16, CustomerID = "CONSH", Freight = 21.70 },
-            new Order { OrderID = 17, CustomerID = "DRACD", Freight = 17.30 },
-            new Order { OrderID = 18, CustomerID = "DUMON", Freight = 29.50 },
-            new Order { OrderID = 19, CustomerID = "EASTC", Freight = 24.80 },
-            new Order { OrderID = 20, CustomerID = "ERNSH", Freight = 31.60 },
-            new Order { OrderID = 21, CustomerID = "FAMIA", Freight = 26.40 },
-            new Order { OrderID = 22, CustomerID = "FISSA", Freight = 13.75 },
-            new Order { OrderID = 23, CustomerID = "FOLKO", Freight = 36.90 },
-            new Order { OrderID = 24, CustomerID = "FRANK", Freight = 20.50 },
-            new Order { OrderID = 25, CustomerID = "FRANR", Freight = 27.80 },
-            new Order { OrderID = 26, CustomerID = "FRANS", Freight = 32.40 },
-            new Order { OrderID = 27, CustomerID = "FURIB", Freight = 15.90 },
-            new Order { OrderID = 28, CustomerID = "GALED", Freight = 23.70 },
-            new Order { OrderID = 29, CustomerID = "GODOS", Freight = 38.20 },
-            new Order { OrderID = 30, CustomerID = "GOURL", Freight = 19.95 }
-        };
+        Orders = Order.GetAllRecords();
     }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="Order.cs" %}
 
-    public class Order
+public class Order
+{
+    public static List<Order> OrdersList = new List<Order>();
+
+    public Order() { }
+
+    public Order(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double Freight { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
     }
 
+    public static List<Order> GetAllRecords()
+    {
+        if (OrdersList.Count == 0)
+        {
+            OrdersList = new List<Order>()
+            {
+                new Order { OrderID = 1, CustomerID = "ALFKI", Freight = 23.45 },
+                new Order { OrderID = 2, CustomerID = "ANATR", Freight = 15.60 },
+                new Order { OrderID = 3, CustomerID = "ANTON", Freight = 42.10 },
+                new Order { OrderID = 4, CustomerID = "AROUT", Freight = 18.75 },
+                new Order { OrderID = 5, CustomerID = "BERGS", Freight = 33.20 },
+                new Order { OrderID = 6, CustomerID = "BLAUS", Freight = 27.50 },
+                new Order { OrderID = 7, CustomerID = "BLONP", Freight = 12.90 },
+                new Order { OrderID = 8, CustomerID = "BOLID", Freight = 25.00 },
+                new Order { OrderID = 9, CustomerID = "BONAP", Freight = 19.40 },
+                new Order { OrderID = 10, CustomerID = "BOTTM", Freight = 30.10 },
+                new Order { OrderID = 11, CustomerID = "BSBEV", Freight = 22.80 },
+                new Order { OrderID = 12, CustomerID = "CACTU", Freight = 14.60 },
+                new Order { OrderID = 13, CustomerID = "CENTC", Freight = 28.90 },
+                new Order { OrderID = 14, CustomerID = "CHOPS", Freight = 35.25 },
+                new Order { OrderID = 15, CustomerID = "COMMI", Freight = 40.00 },
+                new Order { OrderID = 16, CustomerID = "CONSH", Freight = 21.70 },
+                new Order { OrderID = 17, CustomerID = "DRACD", Freight = 17.30 },
+                new Order { OrderID = 18, CustomerID = "DUMON", Freight = 29.50 },
+                new Order { OrderID = 19, CustomerID = "EASTC", Freight = 24.80 },
+                new Order { OrderID = 20, CustomerID = "ERNSH", Freight = 31.60 },
+                new Order { OrderID = 21, CustomerID = "FAMIA", Freight = 26.40 },
+                new Order { OrderID = 22, CustomerID = "FISSA", Freight = 13.75 },
+                new Order { OrderID = 23, CustomerID = "FOLKO", Freight = 36.90 },
+                new Order { OrderID = 24, CustomerID = "FRANK", Freight = 20.50 },
+                new Order { OrderID = 25, CustomerID = "FRANR", Freight = 27.80 },
+                new Order { OrderID = 26, CustomerID = "FRANS", Freight = 32.40 },
+                new Order { OrderID = 27, CustomerID = "FURIB", Freight = 15.90 },
+                new Order { OrderID = 28, CustomerID = "GALED", Freight = 23.70 },
+                new Order { OrderID = 29, CustomerID = "GODOS", Freight = 38.20 },
+                new Order { OrderID = 30, CustomerID = "GOURL", Freight = 19.95 }
+            };
+        }
+        return OrdersList;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
 }
 
 {% endhighlight %}
@@ -656,47 +679,71 @@ The following examples demonstrate how to use both overloads of `UnmergeCellsAsy
 
     protected override void OnInitialized()
     {
-        Orders = new List<Order>()
-        {
-            new Order { OrderID = 1, CustomerID = "ALFKI", Freight = 23.45 },
-            new Order { OrderID = 2, CustomerID = "ANATR", Freight = 15.60 },
-            new Order { OrderID = 3, CustomerID = "ANTON", Freight = 42.10 },
-            new Order { OrderID = 4, CustomerID = "AROUT", Freight = 18.75 },
-            new Order { OrderID = 5, CustomerID = "BERGS", Freight = 33.20 },
-            new Order { OrderID = 6, CustomerID = "BLAUS", Freight = 27.50 },
-            new Order { OrderID = 7, CustomerID = "BLONP", Freight = 12.90 },
-            new Order { OrderID = 8, CustomerID = "BOLID", Freight = 25.00 },
-            new Order { OrderID = 9, CustomerID = "BONAP", Freight = 19.40 },
-            new Order { OrderID = 10, CustomerID = "BOTTM", Freight = 30.10 },
-            new Order { OrderID = 11, CustomerID = "BSBEV", Freight = 22.80 },
-            new Order { OrderID = 12, CustomerID = "CACTU", Freight = 14.60 },
-            new Order { OrderID = 13, CustomerID = "CENTC", Freight = 28.90 },
-            new Order { OrderID = 14, CustomerID = "CHOPS", Freight = 35.25 },
-            new Order { OrderID = 15, CustomerID = "COMMI", Freight = 40.00 },
-            new Order { OrderID = 16, CustomerID = "CONSH", Freight = 21.70 },
-            new Order { OrderID = 17, CustomerID = "DRACD", Freight = 17.30 },
-            new Order { OrderID = 18, CustomerID = "DUMON", Freight = 29.50 },
-            new Order { OrderID = 19, CustomerID = "EASTC", Freight = 24.80 },
-            new Order { OrderID = 20, CustomerID = "ERNSH", Freight = 31.60 },
-            new Order { OrderID = 21, CustomerID = "FAMIA", Freight = 26.40 },
-            new Order { OrderID = 22, CustomerID = "FISSA", Freight = 13.75 },
-            new Order { OrderID = 23, CustomerID = "FOLKO", Freight = 36.90 },
-            new Order { OrderID = 24, CustomerID = "FRANK", Freight = 20.50 },
-            new Order { OrderID = 25, CustomerID = "FRANR", Freight = 27.80 },
-            new Order { OrderID = 26, CustomerID = "FRANS", Freight = 32.40 },
-            new Order { OrderID = 27, CustomerID = "FURIB", Freight = 15.90 },
-            new Order { OrderID = 28, CustomerID = "GALED", Freight = 23.70 },
-            new Order { OrderID = 29, CustomerID = "GODOS", Freight = 38.20 },
-            new Order { OrderID = 30, CustomerID = "GOURL", Freight = 19.95 }
-        };
+        Orders = Order.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="Order.cs" %}
+
+public class Order
+{
+    public static List<Order> OrdersList = new List<Order>();
+
+    public Order() { }
+
+    public Order(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
     }
 
-    public class Order
+    public static List<Order> GetAllRecords()
     {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double Freight { get; set; }
+        if (OrdersList.Count == 0)
+        {
+            OrdersList = new List<Order>()
+            {
+                new Order { OrderID = 1, CustomerID = "ALFKI", Freight = 23.45 },
+                new Order { OrderID = 2, CustomerID = "ANATR", Freight = 15.60 },
+                new Order { OrderID = 3, CustomerID = "ANTON", Freight = 42.10 },
+                new Order { OrderID = 4, CustomerID = "AROUT", Freight = 18.75 },
+                new Order { OrderID = 5, CustomerID = "BERGS", Freight = 33.20 },
+                new Order { OrderID = 6, CustomerID = "BLAUS", Freight = 27.50 },
+                new Order { OrderID = 7, CustomerID = "BLONP", Freight = 12.90 },
+                new Order { OrderID = 8, CustomerID = "BOLID", Freight = 25.00 },
+                new Order { OrderID = 9, CustomerID = "BONAP", Freight = 19.40 },
+                new Order { OrderID = 10, CustomerID = "BOTTM", Freight = 30.10 },
+                new Order { OrderID = 11, CustomerID = "BSBEV", Freight = 22.80 },
+                new Order { OrderID = 12, CustomerID = "CACTU", Freight = 14.60 },
+                new Order { OrderID = 13, CustomerID = "CENTC", Freight = 28.90 },
+                new Order { OrderID = 14, CustomerID = "CHOPS", Freight = 35.25 },
+                new Order { OrderID = 15, CustomerID = "COMMI", Freight = 40.00 },
+                new Order { OrderID = 16, CustomerID = "CONSH", Freight = 21.70 },
+                new Order { OrderID = 17, CustomerID = "DRACD", Freight = 17.30 },
+                new Order { OrderID = 18, CustomerID = "DUMON", Freight = 29.50 },
+                new Order { OrderID = 19, CustomerID = "EASTC", Freight = 24.80 },
+                new Order { OrderID = 20, CustomerID = "ERNSH", Freight = 31.60 },
+                new Order { OrderID = 21, CustomerID = "FAMIA", Freight = 26.40 },
+                new Order { OrderID = 22, CustomerID = "FISSA", Freight = 13.75 },
+                new Order { OrderID = 23, CustomerID = "FOLKO", Freight = 36.90 },
+                new Order { OrderID = 24, CustomerID = "FRANK", Freight = 20.50 },
+                new Order { OrderID = 25, CustomerID = "FRANR", Freight = 27.80 },
+                new Order { OrderID = 26, CustomerID = "FRANS", Freight = 32.40 },
+                new Order { OrderID = 27, CustomerID = "FURIB", Freight = 15.90 },
+                new Order { OrderID = 28, CustomerID = "GALED", Freight = 23.70 },
+                new Order { OrderID = 29, CustomerID = "GODOS", Freight = 38.20 },
+                new Order { OrderID = 30, CustomerID = "GOURL", Freight = 19.95 }
+            };
+        }
+        return OrdersList;
     }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
 }
 
 {% endhighlight %}
