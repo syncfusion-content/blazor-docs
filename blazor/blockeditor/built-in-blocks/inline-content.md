@@ -128,7 +128,7 @@ The below sample demonstrates the usage of Mention and Label types in the Block 
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="wrapper">
+<div id="container">
     <SfBlockEditor Blocks="BlockData" Users="@BlockUser"></SfBlockEditor>
 </div>
 
@@ -166,7 +166,7 @@ The below sample demonstrates the usage of Mention and Label types in the Block 
 
 ## Applying Inline Styles
 
-The Block Editor allows you to apply rich formatting to `Text`, `Link`, and `Code` elements using the `Styles` property.
+The Block Editor allows you to apply rich formatting to block contents using the `Styles` property.
 
 The `Styles` property supports the following options:
 
@@ -190,7 +190,7 @@ You can apply one or more of these styles to any supported content element for r
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="wrapper">
+<div id="container">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
