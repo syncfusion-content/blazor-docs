@@ -134,4 +134,4 @@ Row spanning feature is not compatible with all the features which are available
 
 ## See Also
 
-* [Column spanning in Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid](https://ej2.syncfusion.com/blazor/documentation/treegrid/columns/column-spanning)
+* [Column spanning in Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/columns/column-spanning)
