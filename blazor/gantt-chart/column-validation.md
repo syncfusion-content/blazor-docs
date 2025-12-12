@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-### Column validation in Blazor Gantt Chart
+## Column validation in Blazor Gantt Chart
 
 Column validation allows validating edited or newly added row data before saving it. This feature is particularly useful for enforcing specific rules or constraints on individual columns to maintain data integrity. By applying validation rules to columns, error messages are displayed for invalid fields, and saving is prevented until all validations succeed.
 
@@ -145,17 +145,15 @@ The Syncfusion® Blazor Gantt Chart component leverages the Form Validator libra
 {% endhighlight %}
 {% endtabs %}
 
-### Custom validation
+## Custom validation
 Custom validation enables logic beyond built-in rules, including business constraints, dependent-field checks, and conditional validations during Add and Edit operations.
 
-## How it works
+### To implement custom validation in Blazor Gantt Chart:
 
-## To implement custom validation in Blazor Gantt Chart:
-
-Create a class that inherits from `ValidationAttribute`.
+* Create a class that inherits from `ValidationAttribute`.
 Override the `IsValid` method to include custom logic.
-Apply the custom attribute to the model property that needs validation.
-The Gantt Chart will automatically enforce these rules during Add and Edit operations.
+* Apply the custom attribute to the model property that needs validation.
+* The Gantt Chart will automatically enforce these rules during Add and Edit operations.
 
 The following sample code demonstrates how to implement custom validation for the ActivityName and Progress fields.
 
@@ -307,12 +305,12 @@ The following sample code demonstrates how to implement custom validation for th
 {% endhighlight %}
 {% endtabs %}
 
-### Custom validator component 
+## Custom validator component 
 Custom validator components provide flexible validation beyond built‑in ValidationRules and ValidationAttribute classes.There are scenarios where these options are not enough. 
 For example: Complex business logic
 You may need to validate multiple fields together (e.g., EndDate must be after StartDate, or Duration must match Progress).
 
-## How does it work in Gantt Chart?
+### How does it work in Gantt Chart?
 
 The Syncfusion® Blazor Gantt Chart supports injecting a custom validator component into its internal EditForm using the `Validator` property of [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html).
 
