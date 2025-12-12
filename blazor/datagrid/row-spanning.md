@@ -824,7 +824,7 @@ The following examples demonstrate how to use both overloads of MergeCellsAsync 
 {% endhighlight %}
 {% endtabs %}
 
-## Clearing Spanning via progammatically
+## Clearing Spanning via programmatically
 
 The Syncfusion Blazor DataGrid provides API support to manually remove merged regions when you need to restore individual cells. This is achieved using the `UnmergeCellsAsync` methods, which allow developers to unmerge specific areas. To reset all merges in the current view, the `UnmergeAllAsync` method can be used.
 
