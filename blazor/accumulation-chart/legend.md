@@ -395,12 +395,19 @@ Legend templates allow you to replace default legend icons and text with custom 
 
 To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ToggleVisibility) is set to false. Templates work with all legend positions, alignments, and paging.
 
+**Text** : Gets or sets the text to render for the current legend item in the template. Defaults to the value from the field mapped by AccumulationChartSeries.XName.
+
+**Data** : Gets the data item from AccumulationChartSeries.DataSource bound to the current legend item. Use this to access additional fields (for example, images, badges, or localized text) inside the template.
+
 ```
 @using Syncfusion.Blazor.Charts
 
+@* Initialize the accumulation chart component and configure its essential features *@
 <SfAccumulationChart Title="Mobile Browser Statistics">
     <AccumulationChartSeriesCollection>
+        @* Define a pie series with X and Y mappings and color mapping *@
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser" PointColorMapping="Color">
+            @* Render a custom legend item using the template context *@
             <LegendItemTemplate>
                 @{
                     var info = context as AccumulationChartLegendInfo;
@@ -417,6 +424,7 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 
+    @* Display the legend and allow toggling visibility on interaction *@
     <AccumulationChartLegendSettings Visible="true" >
     </AccumulationChartLegendSettings>
 </SfAccumulationChart>
