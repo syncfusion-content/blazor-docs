@@ -559,7 +559,7 @@ namespace GanttChart.Components.Model
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 using GanttChart.Components;
 using GanttChart.Components.Service;
