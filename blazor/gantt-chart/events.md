@@ -4550,5 +4550,62 @@ The [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 }
 ```
+## OnUndoRedo
+[OnUndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnUndoRedo) event triggers after an undo or redo operation completes. Event arguments provide the operation type (undo/redo), the action performed, and affected data such as modified records, deleted records, and an added record reference.
+
+``` cshtml
+
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px"
+         EnableUndoRedo="true"
+         UndoRedoActions="@(new List<GanttUndoRedoAction>{ GanttUndoRedoAction.Edit, GanttUndoRedoAction.Add, GanttUndoRedoAction.Delete })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents TValue="TaskData" OnUndoRedo="UndoRedoHandler"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TaskCollection = GetTaskCollection();
+    }
+
+    private void UndoRedoHandler(GanttUndoRedoEventArgs<TaskData> args)
+    {
+        // args.IsRedo indicates redo (true) or undo (false)
+        // args.Action indicates the action type (e.g., Edit, Add, Delete, Sort)
+        // args.ModifiedRecords contains modified records, if any
+        // args.DeletedRecords contains deleted records, if any
+        // args.AddRecord contains the added record, if present
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; } = string.Empty;
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string? Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        return new List<TaskData>()
+        {
+            new TaskData { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023,01,04), EndDate = new DateTime(2023,01,23) },
+            new TaskData { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023,01,04), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023,01,04), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023,01,04), Duration = "0", Progress = 30, ParentId = 1 }
+        };
+    }
+}
+```
 
 N> We are not going to limit Gantt Chart with these events, we will be adding new events in the future based on the user requests. If the event, you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
