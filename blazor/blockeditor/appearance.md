@@ -19,10 +19,10 @@ You can specify the width and height for the Block Editor component using the `W
 
 @using Syncfusion.Blazor.BlockEditor;
 
-<SfBlock Editor ID="blockeditor" Width="100%" Height="80vh"></SfBlock Editor>
+<SfBlockEditor Width="100%" Height="80vh"></SfBlockEditor>
 
 // Or with specific pixel values
-<SfBlock Editor ID="blockeditor" Width="800px" Height="500px"></SfBlock Editor>
+<SfBlockEditor Width="800px" Height="500px"></SfBlockEditor>
 
 ```
 
@@ -34,7 +34,7 @@ You can utilize the `ReadOnly` property to control whether the editor is in read
 
 @using Syncfusion.Blazor.BlockEditor;
 
-<SfBlock Editor ID="blockeditor" ReadOnly=true></SfBlock Editor>
+<SfBlockEditor ReadOnly=true></SfBlockEditor>
 
 ```
 
@@ -46,7 +46,7 @@ You can use the `CssClass` property to customize the appearance of the Block Edi
 
 @using Syncfusion.Blazor.BlockEditor;
 
-<SfBlock Editor ID="blockeditor" Width="600px" Height="400px" CssClass="custom-editor-theme"></SfBlock Editor>
+<SfBlockEditor Width="600px" Height="400px" CssClass="custom-editor-theme"></SfBlockEditor>
 
 ```
 
@@ -59,7 +59,6 @@ The following example demonstrates the usage of `Readonly` and `CssClass` proper
 
 <div id="container">
     <SfBlockEditor @ref="BlockEditorRef"
-                   ID="blockeditor"
                    CssClass="@CssClasses"
                    ReadOnly="@IsReadonly"
                    Blocks="@Blocks"
@@ -94,7 +93,6 @@ The following example demonstrates the usage of `Readonly` and `CssClass` proper
     {
         new BlockModel
         {
-            ID = "title-block",
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings { Level = 1 },
             Content = new List<ContentModel>
@@ -104,7 +102,6 @@ The following example demonstrates the usage of `Readonly` and `CssClass` proper
         },
         new BlockModel
         {
-            ID = "intro-block",
             BlockType = BlockType.Paragraph,
             Content = new List<ContentModel>
             {
@@ -113,7 +110,6 @@ The following example demonstrates the usage of `Readonly` and `CssClass` proper
         },
         new BlockModel
         {
-            ID = "features-heading",
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings { Level = 2 },
             Content = new List<ContentModel>
@@ -123,7 +119,6 @@ The following example demonstrates the usage of `Readonly` and `CssClass` proper
         },
         new BlockModel
         {
-            ID = "theme-list-1",
             BlockType = BlockType.BulletList,
             Content = new List<ContentModel>
             {
@@ -132,7 +127,6 @@ The following example demonstrates the usage of `Readonly` and `CssClass` proper
         },
         new BlockModel
         {
-            ID = "readonly-info",
             BlockType = BlockType.Paragraph,
             Content = new List<ContentModel>
             {
@@ -263,11 +257,12 @@ The following example demonstrates the usage of `Readonly` and `CssClass` proper
         transition: all 0.3s ease;
     }
 
-    .custom-theme .e-block-content {
-        color: #2d3748;
+    .custom-theme .e-block-content,
+    .custom-theme .e-floating-icon {
+        color: #fff;
         font-weight: 500;
     }
-
+ 
     /* Readonly Mode Styling */
     .readonly-mode {
         opacity: 0.8;

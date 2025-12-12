@@ -20,8 +20,7 @@ The `Created` event is triggered when the Block Editor component is successfully
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlock Editor ID="blockeditor" Created="@OnCreated">
-    </SfBlock Editor>
+    <SfBlockEditor Created="@OnCreated"></SfBlockEditor>
 </div>
 @code {
 
@@ -42,8 +41,7 @@ The `BlockChanged` event is triggered whenever the editor blocks are changed. Th
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlock Editor ID="blockeditor" BlockChanged="@BlockChanged">
-    </SfBlock Editor>
+    <SfBlockEditor BlockChanged="@BlockChanged"></SfBlockEditor>
 </div>
 @code {
 
@@ -64,8 +62,7 @@ The `SelectionChanged` event is triggered when the user's text selection changes
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlock Editor ID="blockeditor" SelectionChanged="@SelectionChanged">
-    </SfBlock Editor>
+    <SfBlockEditor SelectionChanged="@SelectionChanged"></SfBlockEditor>
 </div>
 @code {
 
@@ -86,8 +83,7 @@ The `Focus` event is triggered when the editor gains focus. This is useful for u
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlock Editor ID="blockeditor" Focus="@Focus">
-    </SfBlock Editor>
+    <SfBlockEditor Focus="@Focus"></SfBlockEditor>
 </div>
 @code {
 
@@ -108,8 +104,7 @@ The `Blur` event is triggered when the editor loses focus. This is commonly used
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlock Editor ID="blockeditor" Blur="@Blur">
-    </SfBlock Editor>
+    <SfBlockEditor Blur="@Blur"></SfBlockEditor>
 </div>
 @code {
 
@@ -130,8 +125,7 @@ The `PasteCleanupStarting` event is triggered before content is pasted into the 
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlock Editor ID="blockeditor" PasteCleanupStarting="@PasteCleanupStarting">
-    </SfBlock Editor>
+    <SfBlockEditor PasteCleanupStarting="@PasteCleanupStarting"></SfBlockEditor>
 </div>
 @code {
 
@@ -152,8 +146,7 @@ The `PasteCleanupCompleted` event is triggered after content has been successful
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlock Editor ID="blockeditor" PasteCleanupCompleted="@PasteCleanupCompleted">
-    </SfBlock Editor>
+    <SfBlockEditor PasteCleanupCompleted="@PasteCleanupCompleted"></SfBlockEditor>
 </div>
 @code {
 

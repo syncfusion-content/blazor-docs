@@ -24,7 +24,7 @@ The following example demonstrates how to enable read-only mode in the Block Edi
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor ID="blockeditor" Blocks="@BlocksData" ReadOnly=true></SfBlockEditor>
+    <SfBlockEditor Blocks="@BlocksData" ReadOnly=true></SfBlockEditor>
 </div>
 @code {
     private List<BlockModel> BlocksData = new List<BlockModel>

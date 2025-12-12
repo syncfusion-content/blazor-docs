@@ -30,15 +30,13 @@ The example below sets the undo/redo history limit to `20` actions.
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor ID="blockeditor" Blocks="@BlocksData" UndoRedoStack=20>
-    </SfBlockEditor>
+    <SfBlockEditor Blocks="@BlocksData" UndoRedoStack=20></SfBlockEditor>
 </div>
 @code {
     private List<BlockModel> BlocksData = new List<BlockModel>
     {
         new BlockModel
         {
-            ID = "block-1",
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings { Level = 1 },
             Content = new List<ContentModel>
@@ -52,7 +50,6 @@ The example below sets the undo/redo history limit to `20` actions.
         },
         new BlockModel
         {
-            ID = "block-2",
             BlockType = BlockType.Paragraph,
             Content = new List<ContentModel>
             {
@@ -65,7 +62,6 @@ The example below sets the undo/redo history limit to `20` actions.
         },
         new BlockModel
         {
-            ID = "block-3",
             BlockType = BlockType.Paragraph,
             Content = new List<ContentModel>
             {
@@ -87,7 +83,6 @@ The example below sets the undo/redo history limit to `20` actions.
         align-items: center;
     }
 </style>
-
 
 ```
 

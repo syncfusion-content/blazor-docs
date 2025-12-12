@@ -47,7 +47,7 @@ The following example demonstrates how to customize the Slash Command menu.
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor ID="blockeditor" Blocks="@BlocksData">
+    <SfBlockEditor Blocks="@BlocksData">
         <BlockEditorCommandMenu PopupHeight="400px" PopupWidth="350px" Commands="@Commands" ItemSelect="@ItemSelect" Filtering="@Filtering"></BlockEditorCommandMenu>
     </SfBlockEditor>
 </div>
@@ -57,7 +57,6 @@ The following example demonstrates how to customize the Slash Command menu.
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            ID = "demo-block",
             Content = new List<ContentModel>
             {
                 new ContentModel
@@ -135,7 +134,7 @@ The following example demonstrates how to customize the Context menu.
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor ID="blockeditor" Blocks="@BlocksData">
+    <SfBlockEditor Blocks="@BlocksData">
         <BlockEditorContextMenu Enable=true ShowItemOnClick=true Items="@CustomContextMenuItems" ItemSelect="@ItemSelect" Opening="@Opening" Closing="@Closing"></BlockEditorContextMenu>
     </SfBlockEditor>
 </div>
@@ -145,7 +144,6 @@ The following example demonstrates how to customize the Context menu.
         new BlockModel
         {
             BlockType = BlockType.Heading,
-            ID = "title-block",
             Properties = new HeadingBlockSettings { Level = 1 },
             Content = new List<ContentModel>
             {
@@ -159,7 +157,6 @@ The following example demonstrates how to customize the Context menu.
         new BlockModel
         {
             BlockType = BlockType.Quote,
-            ID = "intro-block",
             Content = new List<ContentModel>
             {
                 new ContentModel
@@ -262,7 +259,7 @@ The following example demonstrates how to customize the Block action menu.
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor ID="blockeditor" Blocks="@BlocksData">
+    <SfBlockEditor Blocks="@BlocksData">
         <BlockEditorActionMenu Enable=true PopupWidth="180px" PopupHeight="110px" EnableTooltip=true Items="@BlockActionMenuItems" ItemSelect="@ItemSelect" Opening="@Opening" Closing="@Closing"></BlockEditorActionMenu>
     </SfBlockEditor>
 </div>
@@ -272,7 +269,6 @@ The following example demonstrates how to customize the Block action menu.
         new BlockModel
         {
             BlockType = BlockType.Heading,
-            ID = "title-block",
             Properties = new HeadingBlockSettings { Level = 1 },
             Content = new List<ContentModel>
             {
@@ -286,7 +282,6 @@ The following example demonstrates how to customize the Block action menu.
         new BlockModel
         {
             BlockType = BlockType.Quote,
-            ID = "intro-block",
             Content = new List<ContentModel>
             {
                 new ContentModel
@@ -374,7 +369,7 @@ The following example demonstrates how to customize the Inline Toolbar.
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor ID="blockeditor" Blocks="@BlocksData">
+    <SfBlockEditor Blocks="@BlocksData">
         <BlockEditorInlineToolbar Enable=true PopupWidth="100px" Items="@CustomToolbarItems" ItemClick="@ItemClick"></BlockEditorInlineToolbar>
     </SfBlockEditor>
 </div>
@@ -384,7 +379,6 @@ The following example demonstrates how to customize the Inline Toolbar.
         new BlockModel
         {
             BlockType = BlockType.Heading,
-            ID = "title-block",
             Properties = new HeadingBlockSettings { Level = 1 },
             Content = new List<ContentModel>
             {
@@ -398,7 +392,6 @@ The following example demonstrates how to customize the Inline Toolbar.
         new BlockModel
         {
             BlockType = BlockType.Quote,
-            ID = "intro-block",
             Content = new List<ContentModel>
             {
                 new ContentModel

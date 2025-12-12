@@ -21,7 +21,7 @@ The following example shows XSS prevention removing a `<script>` tag and `onmous
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor ID="blockeditor" Blocks="@BlocksData" EnableHtmlSanitizer=true></SfBlockEditor>
+    <SfBlockEditor Blocks="@BlocksData" EnableHtmlSanitizer=true></SfBlockEditor>
 </div>
 @code {
     private List<BlockModel> BlocksData = new List<BlockModel>

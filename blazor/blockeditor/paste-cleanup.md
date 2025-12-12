@@ -27,7 +27,7 @@ In the below example, only `font-weight` and `font-style` styles will be retaine
 
 @using Syncfusion.Blazor.BlockEditor;
 
-<div class="container" style="width: 40px; margin: 50px auto;">
+<div class="container">
     <SfBlockEditor>
         <BlockEditorPasteCleanup AllowedStyle="@(new string[] { "font-weight", "font-style" })"></BlockEditorPasteCleanup>
     </SfBlockEditor>
@@ -45,7 +45,7 @@ In the below example, any `<script>` or `<iframe>` tags found in the pasted cont
 
 @using Syncfusion.Blazor.BlockEditor;
 
-<div class="container" style="width: 40px; margin: 50px auto;">
+<div class="container">
     <SfBlockEditor>
         <BlockEditorPasteCleanup AllowedStyle="@(new string[] { "font-weight", "font-style" })"></BlockEditorPasteCleanup>
     </SfBlockEditor>
@@ -93,7 +93,7 @@ Below example demonstrates the usage of paste settings that allows only specific
 
     private List<BlockModel> blockData = new List<BlockModel>()
     {
-        new BlockModel { ID = "demo-block", BlockType = BlockType.Paragraph }
+        new BlockModel { BlockType = BlockType.Paragraph }
     };
 
     private BlockEditorPasteCleanup pasteSettings = new BlockEditorPasteCleanup()
@@ -169,7 +169,7 @@ By default, the editor retains the formatting of pasted content (e.g., bold, ita
 
 @using Syncfusion.Blazor.BlockEditor;
 
-<div class="container" style="width: 40px; margin: 50px auto;">
+<div class="container">
     <SfBlockEditor>
         <BlockEditorPasteCleanup KeepFormat=false></BlockEditorPasteCleanup>
     </SfBlockEditor>
@@ -185,7 +185,7 @@ To paste content as plain text, stripping all HTML tags and inline styles, set t
 
 @using Syncfusion.Blazor.BlockEditor;
 
-<div class="container" style="width: 40px; margin: 50px auto;">
+<div class="container">
     <SfBlockEditor>
         <BlockEditorPasteCleanup PlainText=false></BlockEditorPasteCleanup>
     </SfBlockEditor>
@@ -230,7 +230,7 @@ Below example demonstrates the usage of paste settings that disables the keep fo
 
     private List<BlockModel> blockData = new List<BlockModel>()
     {
-        new BlockModel { ID = "demo-block", BlockType = BlockType.Paragraph }
+        new BlockModel { BlockType = BlockType.Paragraph }
     };
 
     private void HandleAfterPaste(PasteCleanupCompletedEventArgs args)
@@ -307,7 +307,7 @@ Below example demonstrates how to configure above events in the editor.
 
 @using Syncfusion.Blazor.BlockEditor;
 
-<div class="container" style="width: 40px; margin: 50px auto;">
+<div class="container">
     <SfBlockEditor PasteCleanupStarting="HandleBeforePaste" PasteCleanupCompleted="HandleAfterPaste">
     </SfBlockEditor>
 </div>

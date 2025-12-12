@@ -83,8 +83,7 @@ In the example below, the shortcut for bold formatting is changed to <kbd>Alt</k
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor ID="blockeditor" KeyConfig="@KeyConfig">
-    </SfBlockEditor>
+    <SfBlockEditor KeyConfig="@KeyConfig"></SfBlockEditor>
 </div>
 
 @code {
