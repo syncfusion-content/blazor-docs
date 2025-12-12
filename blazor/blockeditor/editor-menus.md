@@ -318,6 +318,7 @@ The following example demonstrates how to customize the Block action menu.
         {
             ID = "block-info-action",
             Label = "Block Info",
+            IconCss = "e-icons e-circle-info",
             Tooltip = "Show block information"
         }
     };
