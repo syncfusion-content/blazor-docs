@@ -7,7 +7,7 @@ control: Numeric TextBox
 documentation: ug
 ---
 
-# Prevent Mouse Wheel from Changing Value in Blazor NumericTextBox Component
+# Prevent Mouse Wheel Value Change in Blazor NumericTextBox
 
 The Blazor Numeric TextBox component supports controlling mouse wheel scrolling via the `AllowMouseWheel` property. This lets you prevent value changes when the input has focus and the user scrolls the mouse wheel.
 
