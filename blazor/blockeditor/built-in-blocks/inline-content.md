@@ -3,15 +3,15 @@ layout: post
 title: Inline content in Blazor Block Editor Component | Syncfusion
 description: Checkout and learn about Inline content in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: Block Editor
+control: BlockEditor
 documentation: ug
 ---
 
 # Inline Content in Blazor Block Editor component
 
-In the Syncfusion Block Editor, all content is organized within blocks. Each block contains a `Content` property, which is an array of inline elements that define the text and functionality within that block.
+In the Syncfusion Block Editor, all content is organized within blocks. Each block contains a `Content` property, which is a list of `ContentModel` that defines the text and functionality within that block.
 
-Each inline element in the `Content` array is an object with properties such as `ID`, `ContentType`, `Content`, and `Styles`, allowing for granular control over its appearance and behavior.
+Each `ContentModel` is an object with properties such as `ID`, `ContentType`, `Content`, and `Properties`, allowing for granular control over its appearance and behavior.
 
 ## Setting content type
 
@@ -30,7 +30,7 @@ By default, the content type is set to `Text`.
 
 To configure text content, set the `ContentType` property to `Text`. This is the default content type if none is specified.
 
-### Type
+### ContentType
 
 ```cshtml
 // Adding inline text
@@ -43,19 +43,17 @@ To configure text content, set the `ContentType` property to `Text`. This is the
 
 ## Configure hyperlink
 
-To create a hyperlink, set the `ContentType` property to `Link`. You can configure the link's URL and target using the `Properties` property.
+To create a hyperlink, set the `ContentType` property to `Link`. You can configure the link's URL using the `Properties` property.
 
 ### Configure link properties
 
-Link settings control the behavior and properties of hyperlinks in your content. You can configure link settings using the link `Properties` property.
-
-Link settings are configured through the `Properties` property, which accepts the following options:
+Link settings control the behavior and properties of hyperlinks in your content. You can configure link settings using the `Properties` property which accepts the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
 | Url | Specifies the destination URL of the link. | `''` |
 
-### Type & Props
+### ContentType and Properties
 
 ```cshtml
     new BlockModel
@@ -65,7 +63,7 @@ Link settings are configured through the `Properties` property, which accepts th
     }
 ```
 
-## Configure Label
+## Configure label
 
 To render labels, set the `ContentType` property to `Label`. Specify the `LabelID` of the particular label in `Properties` to render a label.
 
@@ -78,9 +76,9 @@ The Block Editor comes with different built-in label items. These includes:
 
 ### Customize label
 
-You can customize the labels by using the `Properties` property along with contentType `Label`.
+You can customize the labels by using the `Properties` property along with `ContentType` as `Label`.
 
-### Type & Props
+### ContentType and Properties
 
 ```cshtml
 // Adding inline label
@@ -101,10 +99,10 @@ Use the `TriggerChar` property to define the character that opens the label sugg
 
 Define the available labels using the `Items` array. When a user types the trigger character, a popup will show matching items.
 
-Each item in the [Items] array supports the following properties:
+Each item supports the following properties:
 
-| Property                                                              | Description                                         |
-| --------------------------------------------------------------------- | --------------------------------------------------- |
+| Property                     | Description                                         |
+| -----------------------------| --------------------------------------------------- |
 | `ID`                         | A unique identifier for the label.                  |
 | `Text`                       | The display text for the label.                     |
 | `GroupBy`                    | The category name for grouping similar labels.      |
@@ -112,19 +110,19 @@ Each item in the [Items] array supports the following properties:
 | `IconCss`                    | A CSS class for an icon to display with the label.  |
 
 
-When users type the trigger character followed by text, a popup will appear showing matching label items from which they can select. The selected label will be inserted into the content as a Label content item.
+When users type the trigger character, a popup will appear showing matching label items from which they can select. The selected label will be inserted into the content as a Label content item.
 
 ### Using labels with group headers
 
 Labels with the same `GroupBy` value will be grouped together in the label selection popup:
-
-The below sample demonstrates the customization of labels in the Block Editor.
 
 ## Configure mention
 
 Mentions are references to users or entities that can be inserted into your content. You can configure mention content by setting the type property to `Mention`. Specify the `UserID` of particular user in `Properties` to render a mention.
 
 Mentions are typically triggered by the `@` character and are linked to the `Users` collection defined in the Block Editor.
+
+The below sample demonstrates the usage of Mention and Label types in the Block Editor.
 
 ```cshtml
 
@@ -150,7 +148,7 @@ Mentions are typically triggered by the `@` character and are linked to the `Use
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content =[ 
+            Content =[
                 new ContentModel{ContentType = ContentType.Text, Content = "The Block Editor supports various content types: "},
                 new ContentModel{ContentType = ContentType.Link, Content = "hyperlinks", Properties = new LinkContentSettings { Url = "https://ej2.syncfusion.com/documentation/"} },
                 new ContentModel{ContentType = ContentType.Text, Content = ", inline "},
@@ -184,7 +182,7 @@ The `Styles` property supports the following options:
 | `Subscript`               | Renders the text as subscript.             | `false`       |
 | `Uppercase`               | Converts the text to uppercase.            | `false`       |
 | `Lowercase`               | Converts the text to lowercase.            | `false`       |
-| `InlineCode`              | Converts the text to inline code.           | `false`       |
+| `InlineCode`              | Converts the text to inline code.          | `false`       |
 
 You can apply one or more of these styles to any supported content element for rich text formatting.
 

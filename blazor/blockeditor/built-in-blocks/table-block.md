@@ -3,7 +3,7 @@ layout: post
 title: Table Blocks in Blazor Block Editor Component | Syncfusion
 description: Checkout and learn about Table Blocks in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: Block Editor
+control: BlockEditor
 documentation: ug
 ---
 
@@ -17,12 +17,12 @@ For Table blocks, you can configure layout and structure using the `Properties` 
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
-| width | Specifies the display width of the table. | `100%` |
-| enableHeader | Specifies whether to enable header for the table. | `true` |
-| enableRowNumbers | Specifies whether to enable row numbers for the table. | `true` |
-| readOnly | Specifies whether to render the table in read-only mode, disabling edits. | `false` |
-| columns | Defines the columns of the table, including their types and headers. | `[]` |
-| rows | Defines the rows of the table, each containing cells tied to columns. | `[]` |
+| Width | Specifies the display width of the table. | `100%` |
+| EnableHeader | Specifies whether to enable header for the table. | `true` |
+| EnableRowNumbers | Specifies whether to enable row numbers for the table. | `true` |
+| ReadOnly | Specifies whether to render the table in read-only mode, disabling edits. | `false` |
+| Columns | Defines the columns of the table, including their types and headers. | `[]` |
+| Rows | Defines the rows of the table, each containing cells tied to columns. | `[]` |
 
 The following example demonstrates how to pre-configure a `Table` block in the editor.
 

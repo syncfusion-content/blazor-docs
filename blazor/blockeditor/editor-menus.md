@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Editor Menus in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Editor Menus with Blazor Block Editor component in Blazor WebAssembly App.
+description: Checkout and learn about Editor Menus in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: Block Editor
+control: BlockEditor
 documentation: ug
 ---
 
@@ -25,7 +25,7 @@ The Slash Command menu comes with a set of pre-defined commands for all block ty
 -   **Image**: Inserts a media block for images.
 -   **Toggle**: Creates a collapsible content block.
 -   **Callout**: Inserts a block for highlighting important information.
--   **Utility (Divider, Quote, Code)**: Inserts a utility block like a divider, quote, or code block.
+-   **Utility (Divider, Quote)**: Inserts a utility block like a divider or quote block.
 
 ### Customize Slash command menu
 

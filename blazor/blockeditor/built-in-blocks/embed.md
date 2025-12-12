@@ -3,7 +3,7 @@ layout: post
 title: Embed in Blazor Block Editor Component | Syncfusion
 description: Checkout and learn about Embed in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: Block Editor
+control: BlockEditor
 documentation: ug
 ---
 

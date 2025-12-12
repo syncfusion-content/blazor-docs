@@ -3,7 +3,7 @@ layout: post
 title: Lists in Blazor Block Editor Component | Syncfusion
 description: Checkout and learn about List Blocks in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: Block Editor
+control: BlockEditor
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ The Syncfusion Blazor Block Editor component uses list blocks to organize conten
 
 You can render a Bullet List block by setting the `BlockType` property to `BulletList`. This block type is used to display unordered lists.
 
-### Type
+### BlockType
 
 ```cshtml
 // Adding bulletlist block
@@ -82,7 +82,7 @@ You can render a Checklist block by setting the `BlockType` property to `Checkli
 
 ### Configure checked state
 
-For blocks that support selection states, such as a `Checklist`, you can configure the checked state using the `properties` property with `IsChecked`.
+For blocks that support selection states, such as a `Checklist`, you can configure the checked state using the `Properties` property with `IsChecked`.
 
 By default, the `IsChecked` property is set to `false`.
 
@@ -134,7 +134,7 @@ By default, the `IsChecked` property is set to `false`.
 
 ### Configure placeholder
 
-The `Placeholder` property sets the text that appears when the block is empty. The default placeholder for a checklist is `To Do`.
+The `Placeholder` property sets the text that appears when the block is empty. The default placeholder for a checklist is `Todo`.
 
 ```cshtml
 // Adding placeholder value

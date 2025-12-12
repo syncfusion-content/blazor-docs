@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Events in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Events with Blazor Block Editor component in Blazor WebAssembly App.
+description: Checkout and learn about Events in Syncfusion Blazor Block Editor component and more.
 platform: Blazor
-control: Block Editor
+control: BlockEditor
 documentation: ug
 ---
 
