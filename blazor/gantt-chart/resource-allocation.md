@@ -578,32 +578,17 @@ builder.Services.AddSyncfusionBlazor();
 #region AI Integration
 // Open AI Service.
 
-string openAIApiKey = "API-KEY";
-string openAIModel = "OPENAI_MODEL";
-OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
-IChatClient openAiChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
-builder.Services.AddChatClient(openAiChatClient);
+string apiKey = "API-KEY";
+string modelName = "OPENAI_MODEL";
+OpenAIClient client = new OpenAIClient(apiKey);
+IChatClient chatClient = openAIClient.GetChatClient(modelName).AsIChatClient();
+builder.Services.AddChatClient(chatClient);
 
 builder.Services.AddSingleton<SyncfusionAIService>();
 builder.Services.AddSingleton<AzureAIService>();
 #endregion
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseAntiforgery();
-app.MapStaticAssets();
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
-
 app.Run();
 
 {% endhighlight %}
