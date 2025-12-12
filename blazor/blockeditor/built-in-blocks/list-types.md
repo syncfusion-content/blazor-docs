@@ -89,7 +89,7 @@ By default, the `IsChecked` property is set to `false`.
 ```cshtml
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="wrapper">
+<div id="container">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
@@ -154,7 +154,7 @@ The following example demonstrates how to render the different types of list blo
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="wrapper">
+<div id="container">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 

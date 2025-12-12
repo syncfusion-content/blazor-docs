@@ -50,7 +50,7 @@ You can use the `CssClass` property to customize the appearance of the Block Edi
 
 ```
 
-The following example demonstrates the usage of `Readonly` and `CssClass` properties of the Block Editor.
+The following example demonstrates the usage of `ReadOnly` and `CssClass` properties of the Block Editor.
 
 ```cshtml
 

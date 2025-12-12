@@ -23,6 +23,7 @@ The Slash Command menu comes with a set of pre-defined commands for all block ty
 -   **Lists (Bullet, Numbered, Checklist)**: Creates a block for the specified list type.
 -   **Paragraph**: Inserts a standard text block.
 -   **Image**: Inserts a media block for images.
+-   **Table**: Inserts a table block.
 -   **Toggle**: Creates a collapsible content block.
 -   **Callout**: Inserts a block for highlighting important information.
 -   **Utility (Divider, Quote)**: Inserts a utility block like a divider or quote block.

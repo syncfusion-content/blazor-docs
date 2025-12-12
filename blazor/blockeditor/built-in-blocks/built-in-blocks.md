@@ -45,7 +45,7 @@ By default, the `Indent` property is set to `0`.
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="wrapper">
+<div id="container">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 @code {
@@ -92,7 +92,7 @@ Custom CSS classes allow you to define specialized styling for specific blocks i
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="wrapper">
+<div id="container">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
