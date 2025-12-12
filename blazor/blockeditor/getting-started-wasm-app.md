@@ -199,4 +199,4 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor com
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the default web browser.
 
-![Blazor Block Editor Component](images/blazor-black-editor-component.png)
+![Blazor Block Editor Component](images/blazor-block-editor-component.png)
