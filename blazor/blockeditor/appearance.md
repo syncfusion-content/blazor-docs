@@ -17,7 +17,7 @@ You can specify the width and height for the Block Editor component using the `W
 
 ```cshtml
 
-@using Syncfusion.Blazor.Block Editor;
+@using Syncfusion.Blazor.BlockEditor;
 
 <SfBlock Editor ID="blockeditor" Width="100%" Height="80vh"></SfBlock Editor>
 
@@ -32,7 +32,7 @@ You can utilize the `ReadOnly` property to control whether the editor is in read
 
 ```cshtml
 
-@using Syncfusion.Blazor.Block Editor;
+@using Syncfusion.Blazor.BlockEditor;
 
 <SfBlock Editor ID="blockeditor" ReadOnly=true></SfBlock Editor>
 
@@ -44,17 +44,7 @@ You can use the `CssClass` property to customize the appearance of the Block Edi
 
 ```cshtml
 
-@using Syncfusion.Blazor.Block Editor;
-
-<SfBlock Editor ID="blockeditor" Width="600px" Height="400px" CssClass="custom-editor-theme"></SfBlock Editor>
-
-```
-
-The following example demonstrates the usage of `readonly` and `cssClass` properties of the Block Editor.
-
-```cshtml
-
-@using Syncfusion.Blazor.Block Editor;
+@using Syncfusion.Blazor.BlockEditor;
 
 <SfBlock Editor ID="blockeditor" Width="600px" Height="400px" CssClass="custom-editor-theme"></SfBlock Editor>
 

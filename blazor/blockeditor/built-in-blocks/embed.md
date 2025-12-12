@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Embed in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Embed in Syncfusion Blazor Block Editor component and more.
+description: Checkout and learn about Embed with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: BlockEditor
 documentation: ug

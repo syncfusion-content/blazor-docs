@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paste Clean-up in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Paste Clean-up in Syncfusion Blazor Block Editor component and more.
+description: Checkout and learn about Paste Clean-up with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: BlockEditor
 documentation: ug

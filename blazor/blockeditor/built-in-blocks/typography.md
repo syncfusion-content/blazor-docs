@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Typography Blocks in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Typography Blocks in Syncfusion Blazor Block Editor component and more.
+description: Checkout and learn about Typography Blocks with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: BlockEditor
 documentation: ug
