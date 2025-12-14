@@ -7,8 +7,6 @@ control: Accumulation Chart
 documentation: ug
 ---
 
-<!-- cSpell:ignore Cx Cy Fx Fy -->
-
 # Gradient in Blazor Accumulation Chart Component
 
 Gradients add depth and modern styling to charts by smoothly blending multiple colors. The Charts component supports two gradient types:
@@ -21,10 +19,10 @@ Gradients add depth and modern styling to charts by smoothly blending multiple c
 A linear gradient blends colors along a straight path from a defined start point to an end point. In accumulation charts, a linear gradient can be applied either to the whole series or to each point via the `OnPointRender` event. An `AccumulationChartLinearGradient` is configured with one or more color stops.
 
 Properties:
-- X1 - Horizontal start position of the gradient (0 to 1).
-- Y1 - Vertical start position of the gradient (0 to 1).
-- X2 - Horizontal end position of the gradient (0 to 1).
-- Y2 - Vertical end position of the gradient (0 to 1).
+- `X1` - Horizontal start position of the gradient (0 to 1).
+- `Y1` - Vertical start position of the gradient (0 to 1).
+- `X2` - Horizontal end position of the gradient (0 to 1).
+- `Y2` - Vertical end position of the gradient (0 to 1).
 
 Each color stop (`AccumulationChartGradientColorStop`) supports:
 - Offset   - Position along the gradient (0 to 100).
@@ -168,11 +166,11 @@ A diagonal linear gradient can be applied per data point using the `OnPointRende
 
 Configure a radial gradient by assigning an `AccumulationChartRadialGradient` with one or more color stops inside the `OnPointRender` event. The following properties control the gradient appearance:
 
-- Cx - Normalized horizontal center of the gradient (0 to 1).
-- Cy - Normalized vertical center of the gradient (0 to 1).
-- Fx - Normalized horizontal focal point from which the gradient appears to originate (0 to 1).
-- Fy - Normalized vertical focal point (0 to 1).
-- R  - Normalized radius of the gradient circle (0 to 1).
+- `Cx` - Normalized horizontal center of the gradient (0 to 1).
+- `Cy` - Normalized vertical center of the gradient (0 to 1).
+- `Fx` - Normalized horizontal focal point from which the gradient appears to originate (0 to 1).
+- `Fy` - Normalized vertical focal point (0 to 1).
+- `R`  - Normalized radius of the gradient circle (0 to 1).
 
 Each color stop (`AccumulationChartGradientColorStop`) supports:
 - Offset   - Position of the stop along the gradient (0 to 100).

@@ -7,8 +7,6 @@ control: Chart
 documentation: ug
 ---
 
-<!-- cSpell:ignore Cx Cy Fx Fy -->
-
 # Gradient in Blazor Charts Component
 
 Gradients add depth and modern styling to charts by smoothly blending multiple colors. The Charts component supports two gradient types:
@@ -27,10 +25,10 @@ Gradients can be applied to:
 A linear gradient blends colors along a straight path from a defined start point to an end point. Configure it by adding `ChartLinearGradient` inside the target element (Series, Trendline, or Indicator) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using `X1`, `Y1`, `X2`, and `Y2` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the `ChartGradientColorStop` property.
 
 In the `ChartLinearGradient`:
-- X1 - Sets the horizontal start position of the gradient (0 to 1).
-- Y1 - Sets the vertical start position of the gradient (0 to 1).
-- X2 - Sets the horizontal end position of the gradient (0 to 1).
-- Y2 - Sets the vertical end position of the gradient (0 to 1).
+- `X1` - Sets the horizontal start position of the gradient (0 to 1).
+- `Y1` - Sets the vertical start position of the gradient (0 to 1).
+- `X2` - Sets the horizontal end position of the gradient (0 to 1).
+- `Y2` - Sets the vertical end position of the gradient (0 to 1).
 
 In the `ChartGradientColorStop`:
 - Offset - Specifies the position of the color stop along the gradient (0 to 100).
@@ -234,11 +232,11 @@ Apply a linear gradient to a technical indicator by adding `ChartLinearGradient`
 A radial gradient blends colors outward from a central point, creating a circular or elliptical color progression. Configure it by adding `ChartRadialGradient` inside the target element (Series, Trendline, or Indicator) and define one or more color stops to control how colors transition from the center to the outer edge. Set the gradient’s center, optional focal point, and radius using `Cx`, `Cy`, `Fx`, `Fy`, and `R` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the `ChartGradientColorStop` property.
 
 In the `ChartRadialGradient`:
-- Cx - Sets the normalized horizontal center of the gradient (0 to 1).
-- Cy - Sets the normalized vertical center of the gradient (0 to 1).
-- Fx - Sets the normalized horizontal focal point from which the gradient appears to originate (0 to 1).
-- Fy - Sets the normalized vertical focal point (0 to 1).
-- R - Sets the normalized radius of the gradient circle (0 to 1).
+- `Cx` - Sets the normalized horizontal center of the gradient (0 to 1).
+- `Cy` - Sets the normalized vertical center of the gradient (0 to 1).
+- `Fx` - Sets the normalized horizontal focal point from which the gradient appears to originate (0 to 1).
+- `Fy` - Sets the normalized vertical focal point (0 to 1).
+- `R` - Sets the normalized radius of the gradient circle (0 to 1).
 
 In the `ChartGradientColorStop`:
 - Offset - Specifies the position of the color stop along the gradient (0 to 100).
