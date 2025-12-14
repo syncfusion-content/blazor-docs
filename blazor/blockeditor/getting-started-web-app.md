@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting Started with Syncfusion BlockEditor Component | Blazor Web App
-description: Check out and learn here about the documentation for getting started with Blazor BlockEditor Component in Blazor Web App. Explore here to more details.
+title: Getting Started | Syncfusion Block Editor Component | Blazor Web App
+description: Checkout and learn about the documentation for getting started with Blazor Block Editor Component in Blazor Web App. Explore here to more details.
 platform: Blazor
-component: BlockEditor
+control: BlockEditor
 documentation: ug
 ---
 
@@ -252,4 +252,4 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the default web browser.
 
-![Blazor Block Editor Component](images/blazor-black-editor-component.png)
+![Blazor Block Editor Component](images/blazor-block-editor-component.png)

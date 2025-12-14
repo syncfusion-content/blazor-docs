@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting Started | Syncfusion BlockEditor Component | Blazor WASM App
-description: Check out and learn here about the documentation for getting started with Blazor BlockEditor Component in Blazor WASM App. Explore here to more details.
+title: Getting Started | Syncfusion Block Editor Component | Blazor WASM App
+description: Checkout and learn about the documentation for getting started with Blazor Block Editor Component in Blazor WASM App. Explore here to more details.
 platform: Blazor
-component: BlockEditor
+control: BlockEditor
 documentation: ug
 ---
 
@@ -199,4 +199,4 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor com
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the default web browser.
 
-![Blazor Block Editor Component](images/blazor-black-editor-component.png)
+![Blazor Block Editor Component](images/blazor-block-editor-component.png)
