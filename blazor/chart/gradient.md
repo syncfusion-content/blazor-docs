@@ -231,7 +231,7 @@ Apply a linear gradient to a technical indicator by adding `ChartLinearGradient`
 
 ## Radial gradient
 
-A radial gradient blends colors outward from a central point, creating a circular or elliptical color progression. Configure it by adding `ChartRadialGradient` inside the target element (Series, Trendline, or Indicator) and define one or more color stops to control how colors transition from the center to the outer edge. Set the gradient’s center, optional focal point, and radius using `Cx`, `Cy`, `Fx`, `Fy`, and `R` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the `ChartGradientColorStop` property.
+A radial gradient blends colors outward from a central point, creating a circular or elliptical color progression. Configure it by adding `ChartRadialGradient` inside the target element (Series, Trendline, or Indicator) and define one or more color stops to control how colors transition from the center to the outer edge. Set the gradient’s center, optional focal point, and radius using `ChartRadialGradient` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the `ChartGradientColorStop` property.
 
 In the `ChartRadialGradient`:
 ```cshtml
