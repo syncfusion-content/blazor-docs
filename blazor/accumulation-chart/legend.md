@@ -389,6 +389,70 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLqsrMJWRuPUEHB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart Legend with Wrap](images/legend/blazor-accumulation-chart-legend-wrap.png)" %}
 
+## Legend Template
+
+Legend templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
+
+To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ToggleVisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+
+**Text** : Gets or sets the text to render for the current legend item in the template. Defaults to the value from the field mapped by AccumulationChartSeries.XName.
+
+**Data** : Gets the data item from AccumulationChartSeries.DataSource bound to the current legend item. Use this to access additional fields (for example, images, badges, or localized text) inside the template.
+
+```
+@using Syncfusion.Blazor.Charts
+
+@* Initialize the accumulation chart component and configure its essential features *@
+<SfAccumulationChart Title="Mobile Browser Statistics">
+
+    @* Display the legend and allow toggling visibility on interaction *@
+    <AccumulationChartLegendSettings Visible="true" >
+    </AccumulationChartLegendSettings>
+
+    <AccumulationChartSeriesCollection>
+        @* Define a pie series with X and Y mappings and color mapping *@
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser" PointColorMapping="Color">
+            @* Render a custom legend item using the template context *@
+            <LegendItemTemplate>
+                @{
+                    var info = context as AccumulationChartLegendInfo;
+                    var browser = info?.Data?["Browser"]?.ToString() ?? "";
+                    var users = info?.Data?["Users"] is null ? 0 : Convert.ToDouble(info.Data["Users"]);
+                }
+                <div style="display:flex; align-items:center; gap:8px; padding:4px 0;">
+                    <div style="display:flex; flex-direction:column; line-height:1.1;">
+                        <span style="font-weight:800; font-size:14px; color: @info.Data["Color"]">@browser</span>
+                        <span style="font-size:12px; opacity:0.8;"><b>@users million</b> people use @browser</span>
+                    </div>
+                </div>
+            </LegendItemTemplate>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+</SfAccumulationChart>
+
+@code {
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+        public string Color { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new()
+    {
+    new Statistics { Browser = "Chrome", Users = 37, Color = "#a16ee5" },
+    new Statistics { Browser = "UC Browser", Users = 17, Color = "#f7ce69" },
+    new Statistics { Browser = "iPhone", Users = 19, Color = "#55a5c2" },
+    new Statistics { Browser = "Others", Users = 4,  Color = "#7ddf1e" },
+    new Statistics { Browser = "Opera", Users = 11, Color = "#ff6ea6" },
+    new Statistics { Browser = "Android", Users = 12, Color = "#7953ac" },
+    };
+
+}
+```
+![Legend Template in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-template.png)
+
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 * [Grouping](./grouping)
