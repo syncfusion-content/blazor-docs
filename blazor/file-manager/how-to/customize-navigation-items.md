@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Navigation Pane in Blazor File Manager Component | Syncfusion
-description: Learn how to customize Navigation Pane in Syncfusion Blazor File Manager.
+title: Customize the Navigation Pane in Blazor File Manager | Syncfusion
+description: Learn how to customize the Navigation Pane in the Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
