@@ -18,24 +18,36 @@ Following things are needed to enable collaborative editing in Diagram Component
 * SignalR
 * Redis
 
+## NuGet packages required
+
+- Client (Blazor):
+  - Microsoft.AspNetCore.SignalR.Client
+  - Syncfusion.Blazor.Diagram
+- Server:
+  - Microsoft.AspNetCore.SignalR
+  - Microsoft.AspNetCore.SignalR.StackExchangeRedis
+  - StackExchange.Redis
+
 ## SignalR
 
 In collaborative editing, real-time communication is essential for users to see each other’s changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the client and server. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
 
-To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either Azure SignalR Service or a Redis backplane.
+To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either AspNetCore SignalR Service or a Redis backplane.
 
-### Scale-out SignalR using Azure SignalR service
+### Scale-out SignalR using AspNetCore SignalR service
 
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers).
+AspNetCore SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers).
 
-Below is a code snippet to configure Azure SignalR in an ASP.NET Core application using the AddAzureSignalR method
+Below is a code snippet to configure SignalR in a Blazor application using AddSignalR
 
 ```csharp
-builder.Services.AddSignalR().AddAzureSignalR("<your-azure-signalr-service-connection-string>", options => {
-    // Specify the channel name 
-    options.Channels.Add("diagram-editor");
+builder.Services.AddSignalR(options =>
+{
+    options.EnableDetailedErrors = true;
 });
 ```
+
+
 
 ### Scale-out SignalR using Redis
 
@@ -48,17 +60,12 @@ In the SignalR app, install the following NuGet package:
 Below is a code snippet to configure Redis backplane in an ASP.NET Core application using the AddStackExchangeRedis method
 
 ```csharp
-builder.Services.AddSignalR().AddStackExchangeRedis("<your_redis_connection_string>");
-```
-Configure options as needed:
-
-The following example shows how to add a channel prefix in the ConfigurationOptions object.
-
-```csharp
-builder.Services.AddDistributedMemoryCache().AddSignalR().AddStackExchangeRedis(connectionString, options =>
-  {
-      options.Configuration.ChannelPrefix = "diagram-editor";
-  });
+builder.Services.AddSingleton<IConnectionMultiplexer>(provider =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379,abortConnect=false";
+    return ConnectionMultiplexer.Connect(connectionString);
+});
+builder.Services.AddScoped<IRedisService, RedisService>();
 ```
 
 ## Redis
@@ -71,19 +78,7 @@ Redis imposes limits on concurrent connections. Select an appropriate Redis conf
 
 ## How to enable collaborative editing in client side
 
-### Step 1: Enable collaborative editing in Blazor Diagram
-
-To enable collaborative editing, inject CollaborativeEditingHandler and set the property `EnableCollaborativeEditing` to true in the Diagram, like in the code snippet below.
-
-```razor
-<SfDiagramComponent @ref="@Diagram" Width="100%" Height="500px" EnableCollaborativeEditing=true>
-</SfDiagramComponent>
-@code {
-    SfDiagramComponent Diagram;
-}
-```
-
-### Step 2: Configure SignalR to send and receive changes
+### Step 1: Configure SignalR to send and receive changes
 
 To broadcast the changes made and receive changes from remote users, configure SignalR like below.
 
@@ -99,46 +94,61 @@ To broadcast the changes made and receive changes from remote users, configure S
 
     private async Task InitializeSignalR()
     {
-        if(connection == null)
+        if (connection == null)
         {
             connection = new HubConnectionBuilder()
-                        .WithUrl("", options =>
+                        .WithUrl(NavigationManager.ToAbsoluteUri("/diagramHub"), options =>
                         {
-                            options.SkipNegotiation = false;
-                            options.Transports = Microsoft.AspNetCore.Http.Connections.HttpTransportType.WebSockets | 
-                                    Microsoft.AspNetCore.Http.Connections.HttpTransportType.LongPolling;
+                            options.SkipNegotiation = true;
+                            options.Transports = Microsoft.AspNetCore.Http.Connections.HttpTransportType.WebSockets;
                         })
                         .WithAutomaticReconnect()
                         .Build();
             connection.On<string>("OnSaveDiagramState", OnSaveDiagramState);
             connection.On("ShowConflict", ShowConflict);
-            connection.On<long>("UpdateVersion", UpdateVersion);
             connection.On("RevertCurrentChanges", RevertCurrentChanges);
             connection.On<string>("OnConnectedAsync", OnConnectedAsync);
+            connection.On<long>("UpdateVersion", UpdateVersion);
+            connection.On<List<string>>("CurrentUsers", CurrentUsers);
             connection.On<DiagramData>("LoadDiagramData", OnLoadDiagramData);
-            connection.On<string>("SendData", async (diagramChanges) =>
+            connection.On<List<string>, long, SelectionEvent>("ReceiveData", async (diagramChanges, serverVersion, selectionEvent) =>
             {
-                await InvokeAsync(() => OnReceiveDiagramUpdate(diagramChanges));
+                await InvokeAsync(() => OnReceiveDiagramUpdate(diagramChanges, serverVersion, selectionEvent));
+            });
+            connection.On<string>("UserJoined", ShowUserJoined);
+            connection.On<string>("UserLeft", ShowUserLeft);
+            connection.On("UpdateSelectionHighlighter", SendCurrentSelectorBoundsToOtherClient);
+            connection.On<List<SelectionEvent>>("PeerSelectionsBootstrap", async list =>
+            {
+                foreach (var evt in list)
+                    _peerSelections[evt.ConnectionId] = (evt.UserName ?? "User", evt.ElementIds?.ToHashSet() ?? new(), evt.SelectorBounds);
+                await InvokeAsync(StateHasChanged);
             });
 
-            connection.Reconnected += async newId =>
+            connection.On<SelectionEvent>("PeerSelectionChanged", async (evt) =>
             {
-                Console.WriteLine($"Reconnected. New ConnectionId: {newId}");
-            };
+                await InvokeAsync(() =>
+                {
+                    PeerSelectionChanged(evt);
+                    StateHasChanged();
+                }
+                );
+            });
+
+            connection.On<SelectionEvent>("PeerSelectionCleared", async evt =>
+            {
+                if (evt != null)
+                {
+                    _peerSelections.Remove(evt.ConnectionId);
+                    await InvokeAsync(StateHasChanged);
+                }
+            });
             await connection.StartAsync();
         }
     }
-    public async ValueTask DisposeAsync()
-    {
-        if (hubConnection is not null)
-        {
-            await hubConnection.DisposeAsync();
-        }
-    }
-}
 ```
 
-### Step 3: Join SignalR room while opening the diagram
+### Step 2: Join SignalR room while opening the diagram
 
 When opening a diagram, we need to generate a unique ID for each diagram. These unique IDs are then used to create rooms using SignalR, which facilitates sending and receiving data from the server.
 
@@ -146,159 +156,56 @@ When opening a diagram, we need to generate a unique ID for each diagram. These 
     string diagramId = "diagram";
     string currentUser = string.Empty;
     string roomName = "diagram_group";
-    protected override async Task OnInitializedAsync()
-    {
-        // Generate or use provided diagram ID
-        currentUser = string.IsNullOrEmpty(currentUser) ? $"User_{Random.Shared.Next(1000, 9999)}" : currentUser;
-    }
+
     private async Task OnConnectedAsync(string connectionId)
     {
         if(!string.IsNullOrEmpty(connectionId))
         {
+            this.ConnectionId = connectionId;
+            currentUser = string.IsNullOrEmpty(currentUser) ? $"{userCount}" : currentUser;
             // Join the room after connection is established
             await connection.SendAsync("JoinDiagram", roomName, diagramId, currentUser);
         }
     }
 ```
 
-### Step 4: Broadcast current editing changes to remote users
+### Step 3: Broadcast current editing changes to remote users
 
 Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the diagram using the `HistoryChange` event.
 
 ```razor
-<SfDiagramComponent @ref="@Diagram" Width="100%" Height="500px" EnableCollaborativeEditing=true HistoryChange="@OnHistoryChange">
-</SfDiagramComponent>
+                <SfDiagramComponent @ref="@DiagramInstance" ID="@DiagramId" HistoryChanged="@OnHistoryChange" >
+                    <DiagramHistoryManager EnableGroupActions="true"></DiagramHistoryManager>
+                </SfDiagramComponent>
 
 @code {
-    private async void HistoryChanged(HistoryChangedEventArgs args)
+    public async void OnHistoryChange(HistoryChangedEventArgs args)
     {
-        if (args != null && DInstance.EnableCollaborativeEditing && canRender && !isRevertingCurrentChanges)
+        if (args != null && DiagramInstance != null && !isLoadDiagram && !isRevertingCurrentChanges)
         {
-            List<string> parsedData = DInstance.SerializeDiagramChanges(args);
-            var editedElements = GetEditedElementIds(args).ToList();
-            await connection.SendAsync("BroadcastToOtherClients", parsedData, clientVersion, editedElements, args.EntryType.ToString());
-        }
-    }
-    private List<NodeBase> GetChangedObjects(HistoryChangedEventArgs args, HistoryEntryBase historyEntry)
-    {
-        if (args.ActionTrigger is not (HistoryChangedAction.Undo or HistoryChangedAction.Redo))
-        {
-            return args.Source;
-        }
+            bool isUndo = args.ActionTrigger == HistoryChangedAction.Undo;
+            bool isStartGroup = args.EntryType == (isUndo ? HistoryEntryType.EndGroup : HistoryEntryType.StartGroup);
+            bool isEndGroup = args.EntryType == (isUndo ? HistoryEntryType.StartGroup : HistoryEntryType.EndGroup);
 
-        IDiagramObject? historyObject = (args.ActionTrigger == HistoryChangedAction.Undo)
-                                ? historyEntry.UndoObject
-                                : historyEntry.RedoObject;
-
-        switch (historyObject)
-        {
-            case DiagramSelectionSettings selectionSettings:
-                {
-                    var objects = new List<NodeBase>();
-
-                    objects.AddRange(selectionSettings.Nodes);
-                    objects.AddRange(selectionSettings.Connectors);
-                    objects.AddRange(selectionSettings.Swimlanes);
-                    objects.AddRange(selectionSettings.Phases);
-                    objects.AddRange(selectionSettings.Lanes);
-
-                    if (selectionSettings.Header != null)
-                    {
-                        objects.Add(selectionSettings.Header);
-                    }
-
-                    return objects;
-                }
-            case NodeBase nodeBase:
-                {
-                    return new List<NodeBase> { nodeBase };
-                }
-            default:
-                {
-                    return args.Source;
-                }
-        }
-    }
-
-    private (List<Node> Nodes, List<Swimlane> Swimlanes, List<Connector> Connectors, List<Phase> Phases, List<Lane> Lanes, List<SwimlaneHeader> Headers)
-    ExtractObjects(List<NodeBase> changedObjects, HistoryChangedEventArgs args, HistoryEntryBase historyEntry)
-    {
-        var nodes = new List<Node>();
-        var swimlanes = new List<Swimlane>();
-        var connectors = new List<Connector>();
-        var phases = new List<Phase>();
-        var lanes = new List<Lane>();
-        var headers = new List<SwimlaneHeader>();
-
-        if (changedObjects == null) return (nodes, swimlanes, connectors, phases, lanes, headers);
-
-        foreach (var obj in changedObjects)
-        {
-            switch (obj)
+            if (isStartGroup) { editedElements = new(); isGroupAction = true; }
+            List<string> parsedData = DiagramInstance.GetDiagramUpdates(args);
+            editedElements.AddRange(GetEditedElementIds(args).ToList());
+            if (parsedData.Count > 0)
             {
-                case Swimlane swimlane:
-                    swimlanes.Add(swimlane);
-                    break;
-                case Node node:
-                    nodes.Add(node);
-                    break;
-                case Connector connector:
-                    connectors.Add(connector);
-                    break;
-                case Phase phase:
-                    phases.Add(phase);
-                    break;
-                case Lane lane:
-                    lanes.Add(lane);
-                    break;
-                case SwimlaneHeader header:
-                    headers.Add(header);
-                    break;
+                var (selectedElementIds, selectorBounds) = await UpdateOtherClientSelectorBounds();
+                SelectionEvent currentSelectionDetails = new SelectionEvent() { ElementIds = selectedElementIds, SelectorBounds = selectorBounds };
+                if (connection.State != HubConnectionState.Disconnected)
+                    await connection.SendAsync("BroadcastToOtherClients", parsedData, clientVersion, editedElements, currentSelectionDetails, roomName);
             }
+            if (isEndGroup || !isGroupAction) { editedElements = new(); isGroupAction = false; }
         }
-        return (nodes, swimlanes, connectors, phases, lanes, headers);
     }
 }
 ```
 
-## How to enable collaborative editing in ASP.NET Core
+## How to enable collaborative editing in Blazor
 
-### Step 1: Configure SignalR in ASP.NET Core
-
-We are using Microsoft SignalR to broadcast the changes. Please add the following configuration to your application’s `Program.cs` file.
-
-```csharp
-using Microsoft.AspNetCore.SignalR;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddSignalR();
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-app.MapHub<DiagramHub>("/diagramhub");
-
-app.Run();
-```
-
-### Step 2: Configure SignalR hub to create room for collaborative editing session
+### Step 1: Configure SignalR hub to create room for collaborative editing session
 
 To manage groups for each diagram, create a folder named “Hubs” and add a file named “DiagramHub.cs” inside it. Add the following code to the file to manage SignalR groups using room names.
 
@@ -312,22 +219,40 @@ namespace DiagramServerApplication.Hubs
 {
     public class DiagramHub : Hub
     {
-        private static readonly ConcurrentDictionary<string, HashSet<string>> Rooms = new ConcurrentDictionary<string, HashSet<string>>();
+        private readonly IDiagramService _diagramService;
+        private readonly IRedisService _redisService;
+        private readonly ILogger<DiagramHub> _logger;
+        private readonly IHubContext<DiagramHub> _diagramHubContext;
+        private static readonly ConcurrentDictionary<string, DiagramUser> _diagramUsers = new();
+
+        public DiagramHub(
+            IDiagramService diagramService, IRedisService redis,
+            ILogger<DiagramHub> logger, IHubContext<DiagramHub> diagramHubContext)
+        {
+            _diagramService = diagramService;
+            _redisService = redis;
+            _logger = logger;
+            _diagramHubContext = diagramHubContext;
+        }
+
+        public override Task OnConnectedAsync()
+        {
+            // Send session id to client.
+            Clients.Caller.SendAsync("OnConnectedAsync", Context.ConnectionId);
+            return base.OnConnectedAsync();
+        }
 
         public async Task JoinDiagram(string roomName, string diagramId, string userName)
         {
             try
             {
                 string userId = Context.ConnectionId;
-                // Check if user is already in the diagram (prevent duplicates)
                 if (_diagramUsers.TryGetValue(userId, out var existingUser))
                 {
                     if (existingUser != null)
                     {
-                        // Remove old connection if it exists
                         _diagramUsers.TryRemove(userId, out _);
                         await Groups.RemoveFromGroupAsync(userId, roomName);
-
                         _logger.LogInformation("Removed existing connection for user {UserId} before adding new one", userId);
                     }
                 }
@@ -346,30 +271,22 @@ namespace DiagramServerApplication.Hubs
                 {
                     ConnectionId = Context.ConnectionId,
                     UserName = userName,
-                    JoinedAt = DateTime.UtcNow
                 };
                 bool userExists = _diagramUsers?.Count > 0;
                 if (!userExists)
                     await ClearConnectionsFromRedis();
-
-
-                _diagramUsers.AddOrUpdate(userId, diagramUser, 
-                    (key, existingValue) => diagramUser // Value to update if key exists
+                _diagramUsers.AddOrUpdate(userId, diagramUser,
+                    (key, existingValue) => diagramUser
                 );
-
-                await RequestAndLoadStateAsync(
-    roomName,
-    diagramId,
-    Context.ConnectionId,
-    Context.ConnectionAborted);
+                await RequestAndLoadStateAsync(roomName, diagramId, Context.ConnectionId, Context.ConnectionAborted);
 
                 long currentServerVersion = await GetDiagramVersion();
                 await Clients.Caller.SendAsync("UpdateVersion", currentServerVersion);
                 await Clients.OthersInGroup(roomName).SendAsync("UserJoined", userName);
                 await SendCurrentSelectionsToCaller();
-
-                _logger.LogInformation("User {UserId} ({UserName}) joined diagram {DiagramId}. Total users: {UserCount}",
-                    userId, userName, diagramId, _diagramUsers.Count);
+                List<string> activeUsers = GetCurrentUsers();
+                await Clients.Group(roomName).SendAsync("CurrentUsers", activeUsers);
+                _logger.LogInformation("User {UserId} ({UserName}) joined diagram {DiagramId}. Total users: {UserCount}", userId, userName, diagramId, _diagramUsers.Count);
             }
             catch (Exception ex)
             {
@@ -378,15 +295,15 @@ namespace DiagramServerApplication.Hubs
             }
         }
 
-       public async Task BroadcastToOtherClients(List<string> payloads, long clientVersion, List<string>? elementIds, SelectionEvent currentSelection, string roomName)
+        public async Task BroadcastToOtherClients(List<string> payloads, long clientVersion, List<string>? elementIds, SelectionEvent currentSelection, string roomName)
         {
             var connId = Context.ConnectionId;
             var gate = GetConnectionLock(connId);
             await gate.WaitAsync();
             try
             {
-                var versionKey = "diagram:version_4000";
-                
+                var versionKey = "diagram:version";
+
                 var (acceptedSingle, serverVersionSingle) = await _redisService.CompareAndIncrementAsync(versionKey, clientVersion);
                 long serverVersionFinal = serverVersionSingle;
 
@@ -401,8 +318,8 @@ namespace DiagramServerApplication.Hubs
                             recentlyTouched.Add(id);
                     }
 
-                    var overlaps = elementIds.Where(id => recentlyTouched.Contains(id)).Distinct().ToList();
-                    if (overlaps.Count > 0)
+                    var overlaps = elementIds?.Where(id => recentlyTouched.Contains(id)).Distinct().ToList();
+                    if (overlaps?.Count > 0)
                     {
                         await Clients.Caller.SendAsync("RevertCurrentChanges", elementIds);
                         await Clients.Caller.SendAsync("ShowConflict");
@@ -416,17 +333,14 @@ namespace DiagramServerApplication.Hubs
                 var update = new DiagramUpdateMessage
                 {
                     SourceConnectionId = connId,
-                    Timestamp = DateTime.UtcNow,
                     Version = serverVersionFinal,
                     ModifiedElementIds = elementIds
                 };
 
                 await StoreUpdateInRedis(update, connId);
-                await Clients.OthersInGroup(roomName).SendAsync("ReceiveData", payloads);
-                await Clients.Caller.SendAsync("UpdateSelectionHighlighter");
-                await SelectElements(currentSelection.ElementIds, currentSelection.SelectorBounds, true);
-                await Clients.Groups(roomName).SendAsync("UpdateVersion", serverVersionFinal);
-
+                SelectionEvent selectionEvent = BuildSelectedElementEvent(currentSelection.ElementIds, currentSelection.SelectorBounds);
+                await UpdateSelectionBoundsInRedis(selectionEvent, currentSelection.ElementIds, currentSelection.SelectorBounds);
+                await Clients.OthersInGroup(roomName).SendAsync("ReceiveData", payloads, serverVersionFinal, selectionEvent);
                 await RemoveOldUpdates(serverVersionFinal);
             }
             finally
@@ -434,28 +348,84 @@ namespace DiagramServerApplication.Hubs
                 gate.Release();
             }
         }
-
-        public override async Task OnDisconnectedAsync(Exception exception)
+        public override async Task OnDisconnectedAsync(Exception? exception)
         {
-            foreach (var room in Rooms)
+            try
             {
-                if (room.Value.Contains(Context.ConnectionId))
+                string roomName = Context.Items["RoomName"]?.ToString();
+                string userName = Context.Items["UserName"]?.ToString();
+
+                await Clients.OthersInGroup(roomName)
+                                        .SendAsync("PeerSelectionCleared", new SelectionEvent
+                                        {
+                                            ConnectionId = Context.ConnectionId,
+                                            ElementIds = new()
+                                        });
+                await Clients.OthersInGroup(roomName).SendAsync("UserLeft", userName);
+
+                // Remove from SignalR group
+                await Groups.RemoveFromGroupAsync(Context.ConnectionId, roomName);
+                await _redisService.DeleteAsync(SelectionKey(Context.ConnectionId));
+
+                // Remove from diagram users tracking
+                if (_diagramUsers.TryGetValue(Context.ConnectionId, out var user))
                 {
-                    room.Value.Remove(Context.ConnectionId);
-                    await Groups.RemoveFromGroupAsync(Context.ConnectionId, room.Key);
-                    await Clients.Group(room.Key).SendAsync("UserLeft", Context.ConnectionId);
-                    if (room.Value.Count == 0)
-                    {
-                        Rooms.TryRemove(room.Key, out _);
-                    }
-                    break;
+                    if (user != null)
+                        _diagramUsers.TryRemove(Context.ConnectionId, out _);
                 }
+                List<string> activeUsers = GetCurrentUsers();
+                await Clients.Group(roomName).SendAsync("CurrentUsers", activeUsers);
+                // Clear context
+                Context.Items.Remove("DiagramId");
+                Context.Items.Remove("UserId");
+                Context.Items.Remove("UserName");
+                await base.OnDisconnectedAsync(exception);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during disconnect cleanup for connection {ConnectionId}", Context.ConnectionId);
             }
             await base.OnDisconnectedAsync(exception);
         }
     }
 }
 ```
+
+### Step 2: Register services, Redis backplane, CORS, and map the hub (Program.cs)
+
+Add these registrations to your server Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+// Redis (shared connection)
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+{
+    var cs = builder.Configuration.GetConnectionString("RedisConnectionString")
+             ?? "localhost:6379,abortConnect=false";
+    return ConnectionMultiplexer.Connect(cs);
+});
+
+// SignalR + Redis backplane
+builder.Services
+    .AddSignalR()
+    .AddStackExchangeRedis(builder.Configuration.GetConnectionString("RedisConnectionString")
+                           ?? "localhost:6379,abortConnect=false");
+
+// App services
+builder.Services.AddScoped<IRedisService, RedisService>();
+builder.Services.AddScoped<IDiagramService, DiagramService>(); // your implementation
+
+var app = builder.Build();
+
+app.MapHub<DiagramHub>("/diagramHub");
+
+app.Run();
+```
+
+Notes:
+- Ensure WebSockets are enabled on the host/proxy, or remove SkipNegotiation on the client to allow fallback transports.
+- Use a singleton IConnectionMultiplexer to respect Redis connection limits.
 
 ### Step 3: Configure Redis cache connection string in application level
 
@@ -476,45 +446,143 @@ Configure the Redis that stores temporary data for the collaborative editing ses
 }
 ```
 
-### Step 4: Configure Web API actions for collaborative editing
 
-#### Import File
+## Model types used in the sample (minimal)
 
-When opening a diagram, check the Redis cache for pending operations and retrieve them for the collaborative editing session.
-If pending operations exist, apply them to the `Diagram` instance using the `UpdateActions` method before converting it to the SFDT format.
+Define these models used by the snippets:
 
 ```csharp
-[HttpGet("LoadDiagram/{diagramId}")]
-public async Task<IActionResult> LoadDiagram(string diagramId)
+public sealed class SelectionEvent
 {
-    var diagramData = await _redisService.GetAsync(DIAGRAM_UPDATES_CHANNEL_PREFIX + diagramId);
-    if (diagramData == null)
-    { 
-        // Load default diagram or from permanent storage
-        return Ok(new { DiagramData = "{}", Version = 0 });
+    public string ConnectionId { get; set; } = string.Empty;
+    public string? UserName { get; set; }
+    public List<string>? ElementIds { get; set; }
+    public Rect? SelectorBounds { get; set; } // define Rect for your app
+}
+
+public sealed class DiagramUser
+{
+    public string ConnectionId { get; set; } = string.Empty;
+    public string UserName { get; set; } = "User";
+}
+
+public sealed class DiagramUpdateMessage
+{
+    public string SourceConnectionId { get; set; } = string.Empty;
+    public long Version { get; set; }
+    public List<string>? ModifiedElementIds { get; set; }
+    public DateTimeOffset Timestamp { get; set; } = DateTimeOffset.UtcNow;
+}
+
+public sealed class DiagramData
+{
+    public string DiagramId { get; set; } = string.Empty;
+    public string? SerializedState { get; set; }
+    public long Version { get; set; }
+}
+```
+
+## Client essentials (versioning, reconnect, and revert)
+
+```csharp
+long clientVersion = 0;
+bool isRevertingCurrentChanges = false;
+
+private void UpdateVersion(long serverVersion)
+{
+    clientVersion = serverVersion;
+}
+
+private async Task RevertCurrentChanges(List<string> elementIds)
+{
+    isRevertingCurrentChanges = true;
+    try
+    {
+        await ReloadElementsFromServerOrCache(elementIds);
     }
-    return Ok(new { DiagramData = diagramData, Version = await _redisService.GetAsync<long>(DIAGRAM_OPERATIONS_COUNT_PREFIX + diagramId) });
+    finally
+    {
+        isRevertingCurrentChanges = false;
+    }
 }
+
+// Rejoin the diagram room if connection drops and reconnects
+connection.Reconnected += async _ =>
+{
+    await connection.SendAsync("JoinDiagram", roomName, diagramId, currentUser);
+};
 ```
 
-#### Update editing records to Redis cache
-
-Each edit operation made by the user is sent to the server and pushed into a Redis list data structure. Each operation is assigned a version number upon insertion into Redis.
-
-After inserting the records to the server, the position of the current editing operation must be transformed relative to any previous editing operations not yet synced with the client using the `TransformOperation` method to resolve any potential conflicts with the help of the Operational Transformation algorithm.
-
-Once the conflict is resolved, the current operation is broadcast to all connected users within the group.
+When using HistoryChange, ensure you declare:
 
 ```csharp
-[HttpPost("UpdateDiagram/{diagramId}")]
-public async Task<IActionResult> UpdateDiagram(string diagramId, [FromBody] List<string> changes)
+List<string> editedElements = new();
+bool isGroupAction = false;
+```
+
+## Per-diagram versioning keys (server)
+
+Avoid a global version key. Use per-diagram keys:
+
+```csharp
+private static string VersionKey(string diagramId) => $"diagram:{diagramId}:version";
+private static string UpdateKey(long version, string diagramId) => $"diagram:{diagramId}:update:{version}";
+private static string SelectionKey(string connectionId, string diagramId) => $"diagram:{diagramId}:selection:{connectionId}";
+```
+
+Read diagramId from Context.Items["DiagramId"] inside hub methods and use it for all keys.
+
+## Conflict policy (optimistic concurrency)
+
+- Client sends payload with clientVersion and edited elementIds.
+- Server compares with Redis version. If stale and elements overlap, ask client to revert and show conflict.
+- If stale but no overlap, server increments and accepts.
+- Clients must set clientVersion to the server version after each accepted update.
+
+## Cleanup strategy for Redis
+
+- Keep only the last K versions (e.g., 200), or
+- Set TTL on update keys to bound memory usage.
+
+## Hosting, transport, and serialization
+
+- Enable WebSockets on your host/reverse proxy; consider keep-alives.
+- If WebSockets aren’t available, remove SkipNegotiation on the client to allow fallback transports.
+- For large payloads, enable MessagePack on server (and client if applicable) and consider sending diffs.
+
+## Security and rooms
+
+- Derive roomName from diagramId (e.g., "diagram:" + diagramId) and validate/normalize on server.
+- Consider authentication/authorization to join rooms.
+- Rate-limit BroadcastToOtherClients if necessary.
+
+## App settings example
+
+```json
 {
-    await _redisService.SetAsync(DIAGRAM_UPDATES_CHANNEL_PREFIX + diagramId, System.Text.Json.JsonSerializer.Serialize(changes));
-    await _redisService.IncrementAsync(DIAGRAM_OPERATIONS_COUNT_PREFIX + diagramId);
-    await _hubContext.Clients.Group(diagramId).SendAsync("ReceiveDiagramChanges", changes);
-    return Ok();
+  "ConnectionStrings": {
+    "RedisConnectionString": "<<Your Redis connection string>>"
+  }
 }
 ```
+
+## CollaborationServer helper methods (required in the sample)
+
+Implement or verify these server helpers exist in the Hub or related services; they are invoked in the snippets above:
+
+- GetConnectionLock(string connectionId): returns a per-connection SemaphoreSlim for serializing updates.
+- RequestAndLoadStateAsync(string roomName, string diagramId, string connectionId, CancellationToken abort): loads existing diagram state (from DB/Redis) and sends to caller via LoadDiagramData.
+- GetDiagramVersion(): reads current version from Redis for the current diagram (use VersionKey(diagramId)); return 0 if missing.
+- GetUpdatesSinceVersionAsync(long sinceVersion, int maxScan): reads recent DiagramUpdateMessage entries from Redis for conflict checks.
+- StoreUpdateInRedis(DiagramUpdateMessage update, string connectionId): stores update under UpdateKey(update.Version, diagramId).
+- UpdateSelectionBoundsInRedis(SelectionEvent evt, List<string>? elementIds, Rect? selectorBounds): persists the caller’s selection snapshot under SelectionKey(connectionId, diagramId).
+- SendCurrentSelectionsToCaller(): gathers SelectionEvent for active peers in this diagram and sends PeerSelectionsBootstrap to the caller.
+- GetCurrentUsers(): returns display names of users in _diagramUsers for this diagram/group.
+- RemoveOldUpdates(long latestVersion): trims old updates (keep last K versions or apply TTL) for this diagram.
+- ClearConnectionsFromRedis(): clears stale selection keys for all users when the first user joins.
+- SelectionKey(string connectionId): if you keep this overload, ensure it internally resolves diagramId; otherwise prefer SelectionKey(connectionId, diagramId).
+- BuildSelectedElementEvent(IEnumerable<string>? elementIds, Rect? selectorBounds): constructs SelectionEvent with Context.ConnectionId and current user name.
+
 
 The full version of the code discussed can be found in the GitHub location below.
 
