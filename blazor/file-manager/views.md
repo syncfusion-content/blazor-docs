@@ -46,14 +46,6 @@ The large icons view layout can be customized using the `LargeIconsTemplate` pro
 </SfFileManager>
 
 <style>
-    .fmtemplate .fm-item-details {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        padding: 4px;
-        font-size: 12px;
-    }
-
     .fmtemplate .e-large-icons .e-list-item {
         width: 185px;
     }
@@ -133,4 +125,5 @@ The details view settings like, column [Width](https://help.syncfusion.com/cr/bl
 </SfFileManager>
 
 ```
+
 
