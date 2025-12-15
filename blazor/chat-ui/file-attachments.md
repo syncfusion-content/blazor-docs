@@ -11,7 +11,7 @@ documentation: ug
 
 The `Attachment` support in Chat UI enables the users to upload and send files (images, documents, and more) alongside messages for richer, more contextual conversations. This enhances the interaction by allowing users to provide additional context through files.
 
-You can use the `ChatUIAttachment` tage directive to configure the attachments in the Chat UI.
+You can use the `ChatUIAttachment` tag directive to configure the attachments in the Chat UI.
 
 ## Enable file attachments
 
