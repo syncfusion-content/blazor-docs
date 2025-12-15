@@ -52,7 +52,7 @@ The `Image` block `Properties` property supports the following options:
 
 @using Syncfusion.Blazor.BlockEditor
 
-<div class="wrapper">
+<div id="container">
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 
