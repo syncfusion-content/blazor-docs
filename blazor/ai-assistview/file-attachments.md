@@ -127,3 +127,37 @@ You can use the `MaxFileSize` property to allow the maximum file size of the upl
 ```
 
 ![Blazor AI AssistView Attachment Enable](./images/fileSizeFailure.png)
+
+### Setting maximum count
+
+Restrict how many files can be attached at once using `MaximumCount` property. The default value is `10`. If users select more than the allowed count, the maxfileSize error will be displayed.
+
+```cshtml
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void OnAttachmentClick(AttachmentClickEventArgs args)
+    {
+        // Your required action here
+    }
+    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
+    {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove",
+        MaximumCount = 5
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+
+![Blazor AI AssistView Attachment Enable](./images/maximum-count.png)
