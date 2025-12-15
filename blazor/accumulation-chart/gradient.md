@@ -19,7 +19,7 @@ Gradients add depth and modern styling to charts by smoothly blending multiple c
 A linear gradient blends colors along a straight path from a defined start point to an end point. In accumulation charts, a linear gradient can be applied either to the whole series or to each point via the `OnPointRender` event. An `AccumulationChartLinearGradient` is configured with one or more color stops.
 
 Properties:
-```cshtml
+```
 X1 - Horizontal start position of the gradient (0 to 1).
 Y1 - Vertical start position of the gradient (0 to 1).
 X2 - Horizontal end position of the gradient (0 to 1).
@@ -37,7 +37,7 @@ Each color stop (`AccumulationChartGradientColorStop`) supports:
 
 A linear gradient may be applied directly at the series level. The same gradient is applied uniformly to all data points, legend symbols and tooltip markers.
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Charts
 
@@ -95,7 +95,7 @@ A linear gradient may be applied directly at the series level. The same gradient
 
 A diagonal linear gradient can be applied per data point using the `OnPointRender` event for a clear light-to-shadow transition.
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Charts
 
@@ -167,7 +167,7 @@ A diagonal linear gradient can be applied per data point using the `OnPointRende
 ## Radial gradient
 
 Configure a radial gradient by assigning an `AccumulationChartRadialGradient` with one or more color stops inside the `OnPointRender` event. The following properties control the gradient appearance:
-```cshtml
+```
 Cx - Normalized horizontal center of the gradient (0 to 1).
 Cy - Normalized vertical center of the gradient (0 to 1).
 Fx - Normalized horizontal focal point from which the gradient appears to originate (0 to 1).
@@ -186,7 +186,7 @@ Each color stop (`AccumulationChartGradientColorStop`) supports:
 
 A radial gradient can be applied directly at the series level. The same gradient is applied uniformly to all data points, legend symbols and tooltip markers.
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Charts
 
@@ -246,7 +246,7 @@ A radial gradient can be applied directly at the series level. The same gradient
 
 The following example uses a distinct color palette and an off-center radial gradient to create a clear light-to-shadow effect on each data point. The gradient is configured in `OnPointRender`, so each data point receives its own radial gradient derived from its base color.
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Charts
 
