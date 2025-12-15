@@ -17,6 +17,50 @@ The `Large Icons View` is the default starting view in the FileManager. The view
 
 In the large icons view, the thumbnail icons will be shown in a larger size, which displays the data in a form that best suits their content. For image type files, a **preview** will be displayed. Extension thumbnails will be displayed for other type files.
 
+### Customize existing Large Icons View
+
+The large icons view layout can be customized using the `LargeIconsTemplate` property, which allows you to display file or folder information, apply custom formatting, and use conditional rendering based on item type. You can customize it further based on your application requirements.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager;
+
+<SfFileManager TValue="FileManagerDirectoryContent" CssClass="fmtemplate">
+    <ChildContent>
+        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                                    UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                                    DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                                    GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+        </FileManagerAjaxSettings>
+    </ChildContent>
+    <LargeIconsTemplate Context="item">
+        @if (item is not null)
+        {
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+                <span><strong>@item.Name</strong></span>
+                <span><strong>Type:</strong> @(item.IsFile ? "File" : "Folder")</span>
+                <span><strong>Modified:</strong> @(item.DateModified.ToString("MM/dd/yyyy HH:mm"))</span>
+            </div>
+        }
+    </LargeIconsTemplate>
+</SfFileManager>
+
+<style>
+    .fmtemplate .fm-item-details {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .fmtemplate .e-large-icons .e-list-item {
+        width: 185px;
+    }
+</style>
+
+```
+
 ## Details View
 
 In the details view, the files are displayed in a sorted list order. This file list comprises of several columns of information about the files such as **Name**, **Date Modified**, **Type**, and **Size**. Each file has its own small icon representing the file type. Additional columns can be added using [DetailsViewSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDetailsViewSettings.html) API. The details view allows you to perform sorting using column header.
