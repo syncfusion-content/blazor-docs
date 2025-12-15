@@ -1,21 +1,19 @@
 ---
 layout: post
 title: Row Spanning in Blazor DataGrid Component | Syncfusion
-description: Learn how to use the column spanning in Syncfusion Blazor DataGrid.
+description: Learn how to use the row spanning in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-
 # Row Spanning in Blazor DataGrid
 
-Row spanning is a feature in the Syncfusion Blazor DataGrid that automatically merges adjacent cells with identical values horizontally across columns within the same row. This helps reduce visual repetition and presents grouped data in a more compact and readable format—ideal for scenarios where multiple columns in a row share the same value, such as repeated product details or status indicators.
+Row spanning in the Syncfusion Blazor DataGrid merges adjacent cells with identical values horizontally across columns within the same row. This feature reduces visual repetition and presents grouped data in a compact, readable format. It is particularly effective in scenarios where multiple columns share the same value, such as repeated product details or status indicators.
 
-This functionality is enabled by setting the `AutoSpan` property of the `SfGrid` component to `AutoSpanMode.Row`. Once activated, the grid intelligently evaluates each row and merges neighboring cells that contain the same value, creating a single, wider cell. The merging process is fully automatic and declarative, requiring no manual logic or data transformation.
+The functionality is enabled by setting the `AutoSpan` property of the `SfGrid` component to `AutoSpanMode.Row`. When activated, the grid evaluates each row and merges neighboring cells containing identical values, resulting in a single, wider cell. The merging process is automatic and declarative, requiring no manual logic or data transformation.
 
-Row spanning is part of the broader `AutoSpanMode` enumeration, which also includes `None`, `Column`, and `HorizontalAndVertical` options. These modes allow developers to control whether merging occurs horizontally, vertically, or in both directions, offering flexible layout customization for enhanced data presentation
-
+Row spanning is part of the broader `AutoSpanMode` enumeration, which provides multiple options for customizing cell merging behavior in the Syncfusion Blazor DataGrid. The available modes include `None`, `Row`, `Column`, and `HorizontalAndVertical`. 
 
 ## AutoSpanMode Enumeration
 
@@ -29,8 +27,7 @@ Row spanning is part of the broader `AutoSpanMode` enumeration, which also inclu
 
 ## Enabling Row Spanning
 
-To enable horizontal cell merging, set the `AutoSpan` property of the `SfGrid` component to `AutoSpanMode.Row`. This mode merges adjacent cells across columns within the same row when they share the same value.
-
+Horizontal cell merging in the Syncfusion Blazor DataGrid is enabled by setting the `AutoSpan` property of the `SfGrid` component to `AutoSpanMode.Row`. In this mode, adjacent cells across columns within the same row are automatically merged when they contain identical values. This reduces redundancy and provides a cleaner, more compact presentation of repeated data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -360,7 +357,7 @@ public class EmployeeDetails
 
 ## Disable spanning for specific column
 
-Spanning can also be disabled at the column level by setting the `AutoSpan` property of the `GridColumn` component to `AutoSpanMode.None`. This allows fine-grained control when spanning is required globally but should be excluded for specific columns.
+Spanning in the Syncfusion Blazor DataGrid can be disabled at the column level by setting the `AutoSpan` property of the `GridColumn` component to `AutoSpanMode.None`. This configuration provides fine-grained control, allowing automatic spanning to be applied globally while excluding specific columns where merging is not desired.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -689,7 +686,8 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-The effective spanning behavior for a column is determined by the intersection of grid-level and column-level `AutoSpan` modes. The column can only narrow what the grid allows; it cannot enable a span direction that the grid disables.
+The effective spanning behavior in the Syncfusion Blazor DataGrid is determined by the intersection of grid-level and column-level `AutoSpan` modes. A column can only restrict the spanning directions permitted at the grid level and cannot enable a span direction that has been disabled globally. This ensures consistent behavior across the grid while allowing fine-grained control for individual columns.
+
 
 ### Complete Combination Matrix
 
@@ -716,12 +714,14 @@ The effective spanning behavior for a column is determined by the intersection o
 
 ## Applying Row Spanning via programmatically
 
-In addition to automatic cell merging, the Syncfusion Blazor DataGrid provides API support to manually merge cells when custom layout behavior is required. This is achieved using the `MergeCellsAsync` method, which allows developers to define rectangular regions of cells to be merged programmatically.
+In addition to automatic cell merging, the Syncfusion Blazor DataGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the `MergeCellsAsync` method, which enables the definition of rectangular regions of cells to be merged programmatically.
 
-The method supports two overloads:
+Use `MergeCellsAsync` method to manually merge cells by defining rectangular regions. This method supports both single and batch merging, allowing precise control over layout customization when automatic spanning is insufficient.
 
-- `MergeCellsAsync(MergeCellInfo info)` – Merges a single cell region as defined by the provided MergeCellInfo instance.
-- `MergeCellsAsync(IEnumerable<MergeCellInfo> infos)` – Performs batch merging of multiple cell regions, each specified by a MergeCellInfo object.
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| info | `MergeCellInfo` | Defines a single rectangular cell region to be merged. |
+| infos | `IEnumerable<MergeCellInfo>` | Specifies multiple cell regions to be merged in a batch operation. Each region is defined by a `MergeCellInfo` instance. |
 
 To define a merged region, use the following properties of the MergeCellInfo class,
 
@@ -729,11 +729,8 @@ To define a merged region, use the following properties of the MergeCellInfo cla
 |--------------|------|-----------------------------------------------------------------------------|
 | RowIndex     | int  | The zero-based index of the anchor row (top-left cell of the merged region). |
 | ColumnIndex  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
-| RowSpan      | int  | The number of rows to span, starting from the anchor cell. By default set to 1. |
-| ColumnSpan   | int  | The number of columns to span, starting from the anchor cell. By default set to 1. |
-
-The following examples demonstrate how to use both overloads of MergeCellsAsync to perform row spanning manually.
-
+| RowSpan      | int (optional) | The number of rows to span, starting from the anchor cell. By default set to 1. |
+| ColumnSpan   | int (optional) | The number of columns to span, starting from the anchor cell. By default set to 1. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -850,13 +847,13 @@ public class Order
 
 ## Clearing Spanning via programmatically
 
-The Syncfusion Blazor DataGrid provides API support to manually remove merged regions when you need to restore individual cells. This is achieved using the `UnmergeCellsAsync` methods, which allow developers to unmerge specific areas. To reset all merges in the current view, the `UnmergeAllAsync` method can be used.
+The Syncfusion Blazor DataGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the `UnmergeCellsAsync` methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the `UnmergeAllAsync` method can be used to restore every cell to its original state.
 
-The method supports two overloads:
-
-- `UnmergeCellsAsync(UnmergeCellInfo info)` – Removes a single merged area identified by its anchor cell (top‑left of the merged region).
-- `UnmergeCellsAsync(IEnumerable<UnmergeCellInfo> infos)` – Removes multiple merged areas in one combined operation, improving performance by reducing re‑renders.
-- `UnmergeAllAsync()` – Removes all merged regions in the current view, restoring every cell to its original state.
+| Method | Parameter | Type | Description |
+|--------|-----------|------|-------------|
+| `UnmergeCellsAsync` | info | `UnmergeCellInfo` | Removes a single merged area identified by its anchor cell (top‑left of the merged region). |
+| `UnmergeCellsAsync` | infos | `IEnumerable<UnmergeCellInfo>` | Removes multiple merged areas in one combined operation, improving performance by reducing re‑renders. |
+| `UnmergeAllAsync` | – | – | Removes all merged regions in the current view, restoring every cell to its original state. |
 
 To identify a merged region, use the following properties of the UnmergeCellInfo class:
 
@@ -864,8 +861,6 @@ To identify a merged region, use the following properties of the UnmergeCellInfo
 |--------------|------|-----------------------------------------------------------------------------|
 | RowIndex     | int  | The zero-based index of the anchor row (top-left cell of the merged region). |
 | ColumnIndex  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
-
-The following examples demonstrate how to use both overloads of `UnmergeCellsAsync` and `UnmergeAllAsync` to unmerge row spanning manually.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1014,6 +1009,7 @@ public class Order
 
 The Row spanning is not compatible with the following features:
 
-1. Autofill 
-2. Inline Editing 
+1. Autofill.
+2. Inline Editing. 
 3. Grouping – Row and column spanning are supported only within the same caption row during grouping scenarios. This means cells can be merged horizontally or vertically only inside a single group header (caption row). Merging across different caption rows is not supported, since each caption row represents a distinct group context. Allowing spans between these rows would break the logical grouping structure and the visual hierarchy of the grid.
+4. Frozen Grid – When the `Freeze` property is set to `FreezeDirection.Fixed`, the concerned column will not be included for row spanning.
