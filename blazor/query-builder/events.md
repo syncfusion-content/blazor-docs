@@ -112,7 +112,7 @@ The OnActionFailure event is triggered whenever a remote data request or action 
 
 ## Drag-and-drop events
 
-Enable drag-and-drop by setting the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_AllowDragAndDrop) property to `true` (default is `false`).
+Enable drag-and-drop by setting the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_AllowDragAndDrop) property to `true` (default is `false`). When enabled, the following events will be triggered based on the actions performed.
 
 ### RuleDragStarting
 
