@@ -245,7 +245,47 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
-<SfBlockEditor ID="block-editor" />
+<SfBlockEditor Blocks="blockDataOverview">
+</SfBlockEditor>
+
+@code {
+    private List<BlockModel> blockDataOverview = new EditorBlockData().GetBlockDataOverview();
+
+    public class EditorBlockData
+    {
+        public List<BlockModel> GetBlockDataOverview()
+        {
+            List<BlockModel> blockDataOverview = new List<BlockModel>
+            {
+                new BlockModel
+                {
+                    BlockType = BlockType.Heading,
+                    Properties = new HeadingBlockSettings{ Level=2 },
+                    Content =
+                    {
+                        new ContentModel
+                        {
+                            ContentType = ContentType.Text,
+                            Content = "Getting Started with Block Editor"
+                        }
+                    }
+                },
+                new BlockModel
+                {
+                    BlockType = BlockType.Paragraph,
+                    Content =
+                    {
+                        new ContentModel { ContentType=ContentType.Text, Content="Welcome to" },
+                        new ContentModel { ContentType=ContentType.Text, Content=" Block Editor", Properties=new TextContentSettings{ Styles = new StyleModel{ Bold = true } } },
+                        new ContentModel { ContentType=ContentType.Text, Content=" - your flexible, modular workspace for creating rich, structured content. whether you're drafting documents, brainstorming ideas, or collaborating with your team, Block Editor makes it simple and intuitive." }
+                    }
+                },
+                new BlockModel{ BlockType = BlockType.Paragraph, Content = new List<ContentModel>() }
+            };
+            return blockDataOverview;
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
