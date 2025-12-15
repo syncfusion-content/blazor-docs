@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar items in Blazor AI AssistView component
 
-You can render the AI AssistView toolbar items by using the [AssistViewToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbarItem.html), [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbarItem.html), [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) & [AssistViewFooterToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbar.html) tag directives.
+You can render the AI AssistView toolbar items by using the [AssistViewToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbarItem.html), [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbarItem.html), [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) & `AssistViewFooterToolbar` tag directives.
 
 ## Configure footer toolbar
 
@@ -90,7 +90,7 @@ By setting ToolbarPosition as `Bottom`, footer items will be rendered at the bot
 
 ### Adding custom items
 
-You can use the [AssistViewFooterToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbarItem.html) tag directive within the [AssistViewFooterToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbar.html) to add custom items for the footer toolbar in the AI AssistView.
+You can use the `AssistViewFooterToolbarItem` tag directive within the `AssistViewFooterToolbar` to add custom items for the footer toolbar in the AI AssistView.
 
 > To know more about the items, please refer to the [Items](./toolbar-items#items) section.
 
@@ -159,7 +159,7 @@ The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interact
 
 ## Adding header toolbar items
 
-The AI AssistView component allows you to add header toolbar items using the [AssistViewToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbarItem.html) tag directive within the [AssistViewToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbar.html).
+The AI AssistView component allows you to add header toolbar items using the `AssistViewToolbarItem` tag directive within the `AssistViewToolbar`.
 
 ### Items
 

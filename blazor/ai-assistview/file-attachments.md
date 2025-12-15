@@ -130,7 +130,7 @@ You can use the `MaxFileSize` property to allow the maximum file size of the upl
 
 ### Setting maximum count
 
-Restrict how many files can be attached at once using `MaximumCount` property. The default value is `10`. If users select more than the allowed count, the maxfileSize error will be displayed.
+Restrict how many files can be attached at once using `MaximumCount` property. The default value is `10`. If users select more than the allowed count, the maximum count reached error will be displayed.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
