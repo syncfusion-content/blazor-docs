@@ -25,7 +25,7 @@ Gradients can be applied to:
 A linear gradient blends colors along a straight path from a defined start point to an end point. Configure it by adding `ChartLinearGradient` inside the target element (Series, Trendline, or Indicator) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using `X1`, `Y1`, `X2`, and `Y2` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the `ChartGradientColorStop` property.
 
 In the `ChartLinearGradient`:
-```cshtml
+```
 X1 - Sets the horizontal start position of the gradient (0 to 1).
 Y1 - Sets the vertical start position of the gradient (0 to 1).
 X2 - Sets the horizontal end position of the gradient (0 to 1).
@@ -43,7 +43,7 @@ In the `ChartGradientColorStop`:
 
 Apply a linear gradient to a series by adding `ChartLinearGradient` inside the target Series. The same gradient is applied to the series markers, legend symbol and tooltip marker for visual consistency.
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Charts
 
@@ -99,7 +99,7 @@ Apply a linear gradient to a series by adding `ChartLinearGradient` inside the t
 
 Apply a linear gradient to a trendline by adding `ChartLinearGradient` inside the target Trendline.
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Charts
 
@@ -164,7 +164,7 @@ Apply a linear gradient to a trendline by adding `ChartLinearGradient` inside th
 
 Apply a linear gradient to a technical indicator by adding `ChartLinearGradient` inside the target Indicator.
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Charts
 
@@ -234,7 +234,7 @@ Apply a linear gradient to a technical indicator by adding `ChartLinearGradient`
 A radial gradient blends colors outward from a central point, creating a circular or elliptical color progression. Configure it by adding `ChartRadialGradient` inside the target element (Series, Trendline, or Indicator) and define one or more color stops to control how colors transition from the center to the outer edge. Set the gradient’s center, optional focal point, and radius using `ChartRadialGradient` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the `ChartGradientColorStop` property.
 
 In the `ChartRadialGradient`:
-```cshtml
+```
 Cx - Sets the normalized horizontal center of the gradient (0 to 1).
 Cy - Sets the normalized vertical center of the gradient (0 to 1).
 Fx - Sets the normalized horizontal focal point from which the gradient appears to originate (0 to 1).
@@ -253,7 +253,7 @@ In the `ChartGradientColorStop`:
 
 Apply a radial gradient to a series by adding `ChartRadialGradient` inside the target Series. The same gradient is applied to the series markers, legend symbol and tooltip marker for visual consistency.
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Charts
 
