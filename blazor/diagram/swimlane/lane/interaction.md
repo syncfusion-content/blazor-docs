@@ -48,11 +48,11 @@ The following image shows children interaction in lane.
 
 ![Lane Children Interaction](../Swimlane-images/Child_Interaction.gif)
 
-## How to restrict nodes from being dragged or repositioned outside their assigned swimlane
+## How to restrict nodes from being dragged outside their swimlane
 
 By default, nodes in a swimlane can be moved freely within and outside the swimlane boundaries. When **NodeConstraints.AllowDragWithinSwimlane** is enabled by the nodes [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property, nodes cannot be dragged outside the swimlane. If an attempt is made to move a node beyond the swimlane’s boundaries, a “not allowed” cursor appears, indicating the restriction.
  
-To enforce this restriction for all child nodes within swimlanes, set the constraint during node initialization in the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) event. The constraint can also be enabled or disabled dynamically at runtime, for example, via a button click.
+To enforce this restriction for all child nodes within swimlanes, set the constraint during node initialization in the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) event.
  
 The following example demonstrates a node with the text "AllowDrag Within Swimlane" restricted to its swimlane boundaries:
 
@@ -163,7 +163,7 @@ The following example demonstrates a node with the text "AllowDrag Within Swimla
 
 ``` 
 
-The following example demonstrates enabling or disabling `AllowDragWithinSwimlane` dynamically at runtime by a button click.
+The following example demonstrates that a constraint can also be enabled or disabled at runtime, for example, via a button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
