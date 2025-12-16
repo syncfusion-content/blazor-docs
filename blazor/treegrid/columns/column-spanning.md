@@ -9,25 +9,9 @@ documentation: ug
 
 # Column Spanning in Blazor TreeGrid
 
-Column spanning in the Blazor TreeGrid provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This feature improves readability by consolidating repeated values into a single taller cell, which is especially useful when the same value appears across consecutive rows.
+Column spanning in the Blazor TreeGrid provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This improves readability by consolidating repeated values into a single taller cell, which is especially useful when the same value appears across consecutive rows.
 
-The functionality is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to `AutoSpanMode.Column`. Once applied, the TreeGrid evaluates each column and merges stacked cells that share identical values, thereby reducing visual redundancy and presenting a cleaner, more structured layout. The merging process is fully declarative and requires no additional code or preprocessing.
-
-Column spanning is part of the broader `AutoSpanMode` enumeration, which provides multiple options for customizing cell merging behavior in the Blazor TreeGrid. The available modes include `None`, `Row`, `Column`, and `HorizontalAndVertical`. 
-
-## AutoSpanMode enumeration
-
-| Enum Value | Description |
-|---------|-----|
-| AutoSpanMode.None | Disables automatic cell spanning. Every cell remains isolated. (Default Mode) | 
-| AutoSpanMode.Row | Enables horizontal merging across columns within the same row. | 
-| AutoSpanMode.Column | Enables vertical merging of adjacent cells with identical values in the same column. | 
-| AutoSpanMode.HorizontalAndVertical | Enables both horizontal and vertical merging. Executes row merging first, followed by column merging. | 
-
-
-## Enabling column spanning
-
-Vertical cell merging in the Blazor TreeGrid is enabled by setting the `AutoSpan` property of the `SfTreeGrid` component to `AutoSpanMode.Column`. In this mode, the TreeGrid automatically merges stacked cells that share identical values within the same column. This reduces redundancy across consecutive rows and provides a cleaner, more structured layout for repeated data. The merging process is fully declarative and requires no additional code or preprocessing.
+Column spanning is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to `AutoSpanMode.Column`.  When activated, the TreeGrid evaluates each column and merges stacked cells that share identical values, thereby reducing visual redundancy and presenting a cleaner, more structured layout. The merging process is fully declarative and requires no additional code or preprocessing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -96,6 +80,15 @@ Vertical cell merging in the Blazor TreeGrid is enabled by setting the `AutoSpan
 {% endhighlight %}
 {% endtabs %}
 
+## AutoSpanMode enumeration
+
+Column spanning is part of the broader `AutoSpanMode` enumeration, which provides multiple options for customizing cell merging behavior in the Blazor TreeGrid. The available modes are:
+| Enum Value | Description |
+|---------|-----|
+| AutoSpanMode.None | Disables automatic cell spanning. Every cell remains isolated. (Default Mode) | 
+| AutoSpanMode.Row | Enables horizontal merging across columns within the same row. | 
+| AutoSpanMode.Column | Enables vertical merging of adjacent cells with identical values in the same column. | 
+| AutoSpanMode.HorizontalAndVertical | Enables both horizontal and vertical merging. Executes row merging first, followed by column merging. | 
 
 ## Disable column spanning for specific column
 
@@ -497,21 +490,21 @@ Spanning in the Syncfusion Blazor TreeGrid can be disabled at the column level b
 {% endhighlight %}
 {% endtabs %}
 
-The effective spanning behavior in the Blazor TreeGrid is determined by the intersection of TreeGrid-level and column-level `AutoSpan` modes. A column can only restrict the spanning directions permitted at the TreeGrid level and cannot enable a span direction that has been disabled globally. This ensures consistent behavior across the TreeGrid while allowing fine-grained control for individual columns.
+## Controlling spanning at the TreeGrid and column levels
 
-### Complete combination matrix
+The spanning behavior is determined by how the TreeGrid‑level and column‑level `AutoSpan` settings interact. When spanning is disabled at the TreeGrid level, all spanning directions are turned off globally, and column settings cannot override this restriction. Column‑level `AutoSpan` can only narrow the spanning directions permitted by the TreeGrid, ensuring consistent behavior across the component while still allowing fine‑grained control at the column level.
 
 | TreeGrid AutoSpan | Column AutoSpan | Effective Behavior |
 |---|---|---|
 | None | None | No spanning. Both TreeGrid and column explicitly disable spanning. |
-| None | Row | No spanning. TreeGrid-level None overrides column-level Row. |
-| None | Column | No spanning. TreeGrid-level None overrides column-level Column. |
-| None | HorizontalAndVertical | No spanning. TreeGrid-level None overrides all spanning modes. |
-| Row | None | No spanning. Column explicitly disables spanning. |
+| None | Row | No spanning. Both TreeGrid and column explicitly disable spanning. |
+| None | Column | No spanning. Both TreeGrid and column explicitly disable spanning. |
+| None | HorizontalAndVertical | No spanning. Both TreeGrid and column explicitly disable spanning. |
+| Row | None | No spanning occurs when all columns are set to None. Column explicitly disables spanning. |
 | Row | Row | Row spanning only. Both TreeGrid and column enable row spanning. |
 | Row | Column | No spanning. TreeGrid only allows row spanning; column cannot enable column spanning. |
 | Row | HorizontalAndVertical | Row spanning only. TreeGrid only allows row spanning. |
-| Column | None | No spanning. Column explicitly disables spanning. |
+| Column | None | No spanning occurs when all columns are set to None. Column explicitly disables spanning. |
 | Column | Row | No spanning. TreeGrid only allows column spanning; column cannot enable row spanning. |
 | Column | Column | Column spanning only. Both TreeGrid and column enable column spanning. |
 | Column | HorizontalAndVertical | Column spanning only. TreeGrid only allows column spanning. |
@@ -537,10 +530,10 @@ To define a merged region, use the following properties of the MergeCellInfo cla
 
 | Property     | Type | Description                                                                 |
 |--------------|------|-----------------------------------------------------------------------------|
-| RowIndex     | int  | The zero-based index of the anchor row (top-left cell of the merged region). |
-| ColumnIndex  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
-| RowSpan      | int (optional) | The number of rows to span, starting from the anchor cell. By default set to 1. |
-| ColumnSpan   | int (optional) | The number of columns to span, starting from the anchor cell. By default set to 1. |
+| `RowIndex`     | int  | The zero-based index of the anchor row (top-left cell of the merged region). |
+| `ColumnIndex`  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
+| `RowSpan`      | int (optional) | The number of rows to span, starting from the anchor cell. By default set to 1. |
+| `ColumnSpan`   | int (optional) | The number of columns to span, starting from the anchor cell. By default set to 1. |
 
 The following sample demonstrates programmatic column spanning by calling `MergeCellsAsync` with parameters such as `RowIndex`, `ColumnIndex`, and `ColumnSpan` for a single merge, and by passing multiple `MergeCellInfo` objects with the same parameters in an array for batch merging.
 
@@ -772,12 +765,12 @@ The Blazor TreeGrid provides API support to manually remove merged regions when 
 | `UnmergeCellsAsync` | infos | `IEnumerable<UnmergeCellInfo>` | Removes multiple merged areas in one combined operation, improving performance by reducing re‑renders. |
 | `UnmergeAllAsync` | – | – | Removes all merged regions in the current view, restoring every cell to its original state. |
 
-To identify a merged region, use the following properties of the UnmergeCellInfo class:
+To identify a merged region, use the following properties of the `UnmergeCellInfo` class:
 
 | Property     | Type | Description                                                                 |
 |--------------|------|-----------------------------------------------------------------------------|
-| RowIndex     | int  | The zero-based index of the anchor row (top-left cell of the merged region). |
-| ColumnIndex  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
+| `RowIndex`     | int  | The zero-based index of the anchor row (top-left cell of the merged region). |
+| `ColumnIndex`  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
 
 This sample demonstrates clearing merged regions in the TreeGrid by calling `UnmergeCellsAsync` with parameters such as `RowIndex` and `ColumnIndex` to remove specific spans, passing multiple `UnmergeCellInfo` objects for batch unmerging, and using `UnmergeAllAsync` to reset all merged cells at once.
 
@@ -1030,7 +1023,7 @@ public class ProjectTask
 
 ## Limitations
 
-The following list outlines the features that are not compatible with row spanning.
+The following list outlines the features that are not compatible with column spanning.
 
 * Virtualization
 * Infinite Scrolling
@@ -1042,6 +1035,6 @@ The following list outlines the features that are not compatible with row spanni
 
 ## See also
 
-* [Column spanning in Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/columns/column-spanning)
+* [Column spanning in Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/rows/row-spanning)
 
 

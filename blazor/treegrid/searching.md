@@ -312,7 +312,7 @@ namespace TreeGridComponent.Data {
 
 ## Searching with case sensitivity
 
-The Blazor TreeGrid searching functionality lets you choose whether to match uppercase and lowercase letters exactly or ignore them. By default, searching is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same).  Case-Sensitive search is enabled by setting the [`TreeGridSearchSettings.IgnoreCase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreCase) property to **false**.
+The Blazor TreeGrid searching functionality allows control over whether uppercase and lowercase letters must match exactly or can be ignored. By default, searching is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same). Case-sensitive search can be enabled by setting the [`TreeGridSearchSettings.IgnoreCase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreCase) property to **false**.
 
 The following example demonstrates configuration of the `IgnoreCase` property within `TreeGridSearchSettings`:
 

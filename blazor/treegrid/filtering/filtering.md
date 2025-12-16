@@ -417,7 +417,7 @@ namespace TreeGridComponent.Data {
 
 ## Filtering with case sensitivity
 
-The Blazor TreeGrid filtering feature lets you choose whether to match uppercase and lowercase letters exactly or ignore them. By default, filtering is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same). Case-sensitive filtering is enabled by setting the [`TreeGridFilterSettings.EnableCaseSensitivity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableCaseSensitivity) property to **true**.
+The Blazor TreeGrid filtering functionality allows control over whether uppercase and lowercase letters must match exactly or can be ignored. By default, filtering is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same). Case-sensitive filtering is enabled by setting the [`TreeGridFilterSettings.EnableCaseSensitivity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableCaseSensitivity) property to **true**.
 
 The following example demonstrates configuration of the `EnableCaseSensitivity` property within `TreeGridFilterSettings`:
 
