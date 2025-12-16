@@ -50,9 +50,9 @@ The following image shows children interaction in lane.
 
 ## How to restricts nodes from being dragged or repositioned outside their assigned swimlane
 
-To keep child nodes confined to their lane, set their Constraints to include AllowDragWithinSwimlane. By default, nodes can move freely. When AllowDragWithinSwimlane is applied, a node can be dragged only within the bounds of its owning lane; attempts to move it across lane or swimlane boundaries are blocked.
+To restrict child nodes to their swimlane, set their [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) to include AllowDragWithinSwimlane. By default, nodes can move freely; however, with this constraint enabled, a node can only be dragged within the bounds of its owning swimlane. Attempts to move it across lane or swimlane boundaries are prevented.
 
-The following example shows one node is restricted to its lane, while another remains unrestricted for comparison.
+The following example demonstrates one node restricted to its swimlane, while another remains unrestricted for comparison.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -70,23 +70,26 @@ The following example shows one node is restricted to its lane, while another re
     {
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
+        {
+            Header = new SwimlaneHeader()
             {
-                Header = new SwimlaneHeader()
+                Annotation = new ShapeAnnotation()
                 {
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "SALES PROCESS FLOW CHART"
-                    },
-                    Height = 50,
+                    Content = "SALES PROCESS FLOW CHART"
                 },
-                OffsetX = 400,
-                OffsetY = 200,
-                Height = 120,
-                Width = 450,
-                Lanes = new DiagramObjectCollection<Lane>()
+                Height = 50,
+            },
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
+            Lanes = new DiagramObjectCollection<Lane>()
+            {
+                new Lane()
                 {
-                    new Lane(){Height = 100,
-                    Header = new SwimlaneHeader(){
+                    Height = 100,
+                    Header = new SwimlaneHeader()
+                    {
                         Width = 30,
                         Annotation = new ShapeAnnotation(){ Content = "Consumer" }
                     },
@@ -94,7 +97,12 @@ The following example shows one node is restricted to its lane, while another re
                     {
                         new Node()
                         {
-                            Height = 50, Width = 50, LaneOffsetX = 100, LaneOffsetY = 30, Constraints = NodeConstraints.Default | NodeConstraints.AllowDragWithinSwimlane , 
+                            Height = 50, 
+                            Width = 100, 
+                            LaneOffsetX = 100, 
+                            LaneOffsetY = 30, 
+                            //Enable AllowDragWithinSwimlane to restrict movement outside the swimlane
+                            Constraints = NodeConstraints.Default | NodeConstraints.AllowDragWithinSwimlane , 
                             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
                             { 
                                 new ShapeAnnotation() 
@@ -109,9 +117,9 @@ The following example shows one node is restricted to its lane, while another re
                         },
                         new Node(){Height = 50, Width = 50, LaneOffsetX = 250, LaneOffsetY = 30},
                     }
-                    },
-                }
-            };
+                },
+            }
+        };
         // Add swimlane
         SwimlaneCollections.Add(swimlane);
     }
@@ -151,6 +159,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ![Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)
 
 >**Note:**
-* To confine a node to its owning lane, add NodeConstraints.AllowDragWithinSwimlane to the node’s Constraints property.
-* To apply this restriction to all child nodes within lanes, set the constraint during node initialization in the NodeCreating event.
+* To restrict a node to its owning swimlane, add NodeConstraints.AllowDragWithinSwimlane to the node’s Constraints property.
+
+* To enforce this restriction for all child nodes within swimlanes, set the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) during node initialization in the NodeCreating event.
 
