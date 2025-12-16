@@ -113,15 +113,14 @@ A Force-Directed Tree layout can be created with DataSource. The following code 
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating">
-    <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"> </DataSourceSettings>
-    <Layout Type="LayoutType.ForceDirectedTree" @bind-LayoutSettings="@forceDirectedSettings">
-    </Layout>
+    <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"></DataSourceSettings>
+    <Layout Type="LayoutType.ForceDirectedTree" @bind-LayoutSettings="@forceDirectedSettings"></Layout>
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
-    ForceDirectedTreeLayoutSettings forceDirectedSettings = new ForceDirectedTreeLayoutSettings()
+    public ForceDirectedTreeLayoutSettings forceDirectedSettings = new ForceDirectedTreeLayoutSettings()
     {
         ConnectorLength = 100,
         AttractionStrength = 0.7,
@@ -151,24 +150,24 @@ A Force-Directed Tree layout can be created with DataSource. The following code 
 
     public List<ForceDirectedDetails> DataSource = new List<ForceDirectedDetails>()
     {
-        new ForceDirectedDetails()   { Id= "parent", Role= "Board" },
-        new ForceDirectedDetails()   { Id= "1", Role= "General Manager", Manager= "parent" },
-        new ForceDirectedDetails()   { Id= "2", Role= "Human Resource Manager", Manager= "1" },
-        new ForceDirectedDetails()   { Id= "3", Role= "Trainers", Manager= "2" },
-        new ForceDirectedDetails()   { Id= "4", Role= "Recruiting Team", Manager= "2" },
-        new ForceDirectedDetails()   { Id= "5", Role= "Finance Asst. Manager", Manager= "2" },
-        new ForceDirectedDetails()   { Id= "6", Role= "Design Manager", Manager= "1" },
-        new ForceDirectedDetails()   { Id= "7", Role= "Design Supervisor", Manager= "6" },
-        new ForceDirectedDetails()   { Id= "8", Role= "Development Supervisor", Manager= "6" },
-        new ForceDirectedDetails()   { Id= "9", Role= "Drafting Supervisor", Manager= "6" },
-        new ForceDirectedDetails()   { Id= "10", Role= "Operation Manager", Manager= "1" },
-        new ForceDirectedDetails()   { Id= "11", Role= "Statistic Department", Manager= "10" },
-        new ForceDirectedDetails()   { Id= "12", Role= "Logistic Department", Manager= "10" },
-        new ForceDirectedDetails()   { Id= "16", Role= "Marketing Manager", Manager= "1" },
-        new ForceDirectedDetails()   { Id= "17", Role= "Oversea sales Manager", Manager= "16" },
-        new ForceDirectedDetails()   { Id= "18", Role= "Petroleum Manager", Manager= "16" },
-        new ForceDirectedDetails()   { Id= "20", Role= "Service Dept. Manager", Manager= "16" },
-        new ForceDirectedDetails()   { Id= "21", Role= "Quality Department", Manager= "16" }
+        new ForceDirectedDetails() { Id = "parent", Role = "Board" },
+        new ForceDirectedDetails() { Id = "1", Role = "General Manager", Manager = "parent" },
+        new ForceDirectedDetails() { Id = "2", Role = "Human Resource Manager", Manager = "1" },
+        new ForceDirectedDetails() { Id = "3", Role = "Trainers", Manager = "2" },
+        new ForceDirectedDetails() { Id = "4", Role = "Recruiting Team", Manager = "2" },
+        new ForceDirectedDetails() { Id = "5", Role = "Finance Asst. Manager", Manager = "2" },
+        new ForceDirectedDetails() { Id = "6", Role = "Design Manager", Manager = "1" },
+        new ForceDirectedDetails() { Id = "7", Role = "Design Supervisor", Manager = "6" },
+        new ForceDirectedDetails() { Id = "8", Role = "Development Supervisor", Manager = "6" },
+        new ForceDirectedDetails() { Id = "9", Role = "Drafting Supervisor", Manager = "6" },
+        new ForceDirectedDetails() { Id = "10", Role = "Operation Manager", Manager = "1" },
+        new ForceDirectedDetails() { Id = "11", Role = "Statistic Department", Manager = "10" },
+        new ForceDirectedDetails() { Id = "12", Role = "Logistic Department", Manager = "10" },
+        new ForceDirectedDetails() { Id = "16", Role = "Marketing Manager", Manager = "1" },
+        new ForceDirectedDetails() { Id = "17", Role = "Oversea sales Manager", Manager = "16" },
+        new ForceDirectedDetails() { Id = "18", Role = "Petroleum Manager", Manager = "16" },
+        new ForceDirectedDetails() { Id = "20", Role = "Service Dept. Manager", Manager = "16" },
+        new ForceDirectedDetails() { Id = "21", Role = "Quality Department", Manager = "16" }
     };
 }
 ```
