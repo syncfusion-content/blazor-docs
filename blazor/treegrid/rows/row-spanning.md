@@ -13,7 +13,7 @@ Row spanning in the Syncfusion Blazor TreeGrid merges adjacent cells with identi
 
 The functionality is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to `AutoSpanMode.Row`. When activated, the TreeGrid evaluates each row and merges neighboring cells containing identical values, resulting in a single, wider cell. The merging process is automatic and declarative, requiring no manual logic or data transformation.
 
-Row spanning is part of the broader `AutoSpanMode` enumeration, which provides multiple options for customizing cell merging behavior in the Syncfusion Blazor TreeGrid. The available modes include `None`, `Row`, `Column`, and `HorizontalAndVertical`. 
+Row spanning is part of the broader `AutoSpanMode` enumeration, which provides multiple options for customizing cell merging behavior in the Blazor TreeGrid. The available modes include `None`, `Row`, `Column`, and `HorizontalAndVertical`. 
 
 ## AutoSpanMode enumeration
 
@@ -26,7 +26,7 @@ Row spanning is part of the broader `AutoSpanMode` enumeration, which provides m
 
 ## Enabling Row Spanning
 
-Horizontal cell merging in the Syncfusion Blazor TreeGrid is enabled by setting the `AutoSpan` property of the `SfTreeGrid` component to `AutoSpanMode.Row`. In this mode, adjacent cells across columns within the same row are automatically merged when they contain identical values. This mode reduces redundancy and provides a cleaner, more compact presentation of repeated data.
+Horizontal cell merging in the Blazor TreeGrid is enabled by setting the `AutoSpan` property of the `SfTreeGrid` component to `AutoSpanMode.Row`. In this mode, adjacent cells across columns within the same row are automatically merged when they contain identical values. This mode reduces redundancy and provides a cleaner, more compact presentation of repeated data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -98,7 +98,7 @@ Horizontal cell merging in the Syncfusion Blazor TreeGrid is enabled by setting 
 
 ## Disable spanning for specific column
 
-Spanning in the Syncfusion Blazor TreeGrid can be disabled at the column level by setting the `AutoSpan` property of the `TreeGridColumn` component to `AutoSpanMode.None`. This configuration provides fine-grained control, allowing automatic spanning to be applied globally while excluding specific columns where merging is not desired.
+Spanning in the Blazor TreeGrid can be disabled at the column level by setting the `AutoSpan` property of the `TreeGridColumn` component to `AutoSpanMode.None`. This configuration provides fine-grained control, allowing automatic spanning to be applied globally while excluding specific columns where merging is not desired.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -524,7 +524,7 @@ The effective spanning behavior is defined by the combination of TreeGrid-level 
 
 ## Applying Row Spanning via programmatically
 
-In addition to automatic cell merging, the Syncfusion Blazor TreeGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the `MergeCellsAsync` method, which enables the definition of rectangular regions of cells to be merged programmatically.
+In addition to automatic cell merging, the Blazor TreeGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the `MergeCellsAsync` method, which enables the definition of rectangular regions of cells to be merged programmatically.
 
 Use `MergeCellsAsync` method to manually merge cells by defining rectangular regions. This method supports both single and batch merging, allowing precise control over layout customization when automatic spanning is insufficient.
 
@@ -764,7 +764,7 @@ public class ProjectTask
 
 ## Clearing Spanning via programmatically
 
-The Syncfusion Blazor TreeGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the `UnmergeCellsAsync` methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the `UnmergeAllAsync` method can be used to restore every cell to its original state.
+The Blazor TreeGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the `UnmergeCellsAsync` methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the `UnmergeAllAsync` method can be used to restore every cell to its original state.
 
 | Method | Parameter | Type | Description |
 |--------|-----------|------|-------------|
