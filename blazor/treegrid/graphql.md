@@ -1155,7 +1155,7 @@ To handle search operations in the Syncfusion<sup style="font-size:70%">&reg;</s
 
 When a search is performed in the TreeGrid, the DataManager sends the search parameters to the server, which include the search keyword and the list of fields to search against. The server then processes these parameters and filters the data accordingly.
 
-![GraphqlAdaptor - Searching](./images/treegrid-graphql-searching.gif)
+![GraphqlAdaptor - Searching](./images/treegrid-graphql-searching.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -1637,7 +1637,8 @@ When a filter is applied in the TreeGrid, the DataManager sends the filtering cr
 
 On the server, these parameters are parsed and used to filter the data source accordingly before returning the results to the TreeGrid.
 
-![GraphqlAdaptor - Filtering](./images/treegrid-graphql-filtering.gif)
+![GraphqlAdaptor - Filtering](../images/treegrid-graphql-filtering.gif)
+![GraphqlAdaptor - Filtering](./images/treegrid-graphql-filtering.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -2145,7 +2146,7 @@ To handle sorting operations in the Syncfusion<sup style="font-size:70%">&reg;</
 
 When a sort action is triggered in the TreeGrid, the DataManager sends the sorting configuration in the `Sorted` property. This includes the field name to sort and the direction (Ascending or Descending). The server processes this parameter and sorts the data accordingly before returning it to the TreeGrid.
 
-![GraphqlAdaptor - Sorting](./images/treegrid-graphql-sorting.gif)
+![GraphqlAdaptor - Sorting](./images/treegrid-graphql-sorting.png)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
