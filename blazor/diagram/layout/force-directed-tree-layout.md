@@ -17,7 +17,7 @@ In this layout:
 - Connectors act like springs, pulling connected nodes closer together.
 - The interplay of repulsive and attractive forces produces a clear, well-organized structure.
 
-To enable this layout, set the layout Type to [ForceDirectedTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#fields) and configure the [ForceDirectedTreeLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FlowchartLayoutSettings).
+To enable this layout, set the layout Type to **ForceDirectedTree** and configure the [ForceDirectedTreeLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FlowchartLayoutSettings).
 
 The following example demonstrates how nodes are automatically positioned using the force‑directed tree layout.
 
@@ -30,10 +30,10 @@ The following example demonstrates how nodes are automatically positioned using 
 </SfDiagramComponent>
 
 @code {
-    public SfDiagramComponent diagram;
-    public DiagramObjectCollection<Node> Nodes = new();
-    public DiagramObjectCollection<Connector> Connectors = new();
-    public ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> Nodes = new();
+    private DiagramObjectCollection<Connector> Connectors = new();
+    private ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
     {
         RepulsionStrength = 8000,
         AttractionStrength = 0.7,
@@ -46,7 +46,7 @@ The following example demonstrates how nodes are automatically positioned using 
         InitializeCollection();
     }
 
-    public void InitializeCollection()
+    private void InitializeCollection()
     {
         string[] departments = { "Engineering", "Sales", "Marketing", "Operations" };
         string[] teams = { "Core", "Mobile", "Web", "Data" };
@@ -107,7 +107,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Blazor Force Directed Tree Diagram](../images/ForceDirectedTreeLayout.png)
 
-A Force-Directed Tree layout can be created with DataSource. The following code demonstrates how to render a Force-Directed Tree layout using DataSource.
+A Force-Directed Tree layout can be created with [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource). The following code demonstrates how to render a Force-Directed Tree layout using DataSource.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -120,7 +120,7 @@ A Force-Directed Tree layout can be created with DataSource. The following code 
 
 @code
 {
-    public ForceDirectedTreeLayoutSettings forceDirectedSettings = new ForceDirectedTreeLayoutSettings()
+    private ForceDirectedTreeLayoutSettings forceDirectedSettings = new ForceDirectedTreeLayoutSettings()
     {
         ConnectorLength = 100,
         AttractionStrength = 0.7,
@@ -141,14 +141,14 @@ A Force-Directed Tree layout can be created with DataSource. The following code 
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
     }
 
-    public class ForceDirectedDetails
+    private class ForceDirectedDetails
     {
         public string Id { get; set; }
         public string Role { get; set; }
         public string Manager { get; set; }
     }
 
-    public List<ForceDirectedDetails> DataSource = new List<ForceDirectedDetails>()
+    private List<ForceDirectedDetails> DataSource = new List<ForceDirectedDetails>()
     {
         new ForceDirectedDetails() { Id = "parent", Role = "Board" },
         new ForceDirectedDetails() { Id = "1", Role = "General Manager", Manager = "parent" },
@@ -177,7 +177,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Customize Layout Properties
 
-The [ForceDirectedTreeLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FlowchartLayoutSettings) class provides fine‑grained control over the physics‑based simulation that arranges nodes in a Force‑Directed Tree layout. By adjusting properties such as node repulsion, connector attraction, and the number of simulation iterations, the following can be achieved:
+The `ForceDirectedTreeLayoutSettings` class provides fine‑grained control over the physics‑based simulation that arranges nodes in a Force‑Directed Tree layout. By adjusting properties such as node repulsion, connector attraction, and the number of simulation iterations, the following can be achieved:
 
 - Prevent nodes from overlapping
 - Enhance diagram readability
@@ -187,14 +187,14 @@ These settings allow tailoring the layout to best represent data, ensuring both 
 
 ### How to Update Connector Length
 
-The [ConnectorLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ForceDirectedTreeLayoutSettings.html#Syncfusion_Blazor_Diagram_ForceDirectedTreeLayoutSettings_ConnectorLength) property defines the ideal distance between connected nodes. The layout algorithm attempts to position nodes so that their separation is close to this value. Adjusting ConnectorLength helps control the overall density and spread of the diagram.
+The [ConnectorLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ForceDirectedTreeLayoutSettings.html#Syncfusion_Blazor_Diagram_ForceDirectedTreeLayoutSettings_ConnectorLength) property defines the ideal distance between connected nodes. The layout algorithm attempts to position nodes so that their separation is close to this value. Adjusting `ConnectorLength` helps control the overall density and spread of the diagram.
 
 The following code demonstrates how to set a custom connector length.
 ```
 @using Syncfusion.Blazor.Diagram
 
 @code {
-    ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
+    private ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
     {
         // Sets the ideal length of the connectors to 200
         ConnectorLength = 200 
@@ -212,7 +212,7 @@ The following code demonstrates how to set a custom maximum iteration.
 @using Syncfusion.Blazor.Diagram
 
 @code {
-    ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
+    private ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
     {
         // Allows the simulation to run for up to 500 steps
         MaximumIteration = 500 
@@ -230,7 +230,7 @@ The following example increases the repulsion strength to spread out nodes furth
 @using Syncfusion.Blazor.Diagram
 
 @code {
-    ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
+    private ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
     {
         // Increases the force that pushes nodes apart
         RepulsionStrength = 10000 
@@ -242,7 +242,7 @@ The following example increases the repulsion strength to spread out nodes furth
 
 ### How to Update Attraction Strength
 
-The [AttractionStrength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ForceDirectedTreeLayoutSettings.html#Syncfusion_Blazor_Diagram_ForceDirectedTreeLayoutSettings_AttractionStrength) property determines the intensity of the force that pulls connected nodes together. Connectors act like springs, and this property controls the stiffness of those springs. A higher value will create a stronger pull between connected nodes, causing them to cluster more tightly. This force works in balance with RepulsionStrength.
+The [AttractionStrength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ForceDirectedTreeLayoutSettings.html#Syncfusion_Blazor_Diagram_ForceDirectedTreeLayoutSettings_AttractionStrength) property determines the intensity of the force that pulls connected nodes together. Connectors act like springs, and this property controls the stiffness of those springs. A higher value will create a stronger pull between connected nodes, causing them to cluster more tightly. This force works in balance with `RepulsionStrength`.
 
 The following example sets a higher attraction strength to pull connected nodes closer.
 
@@ -250,7 +250,7 @@ The following example sets a higher attraction strength to pull connected nodes 
 @using Syncfusion.Blazor.Diagram
 
 @code {
-    ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
+    private ForceDirectedTreeLayoutSettings LayoutSettings = new ForceDirectedTreeLayoutSettings
     {
         // Increases the spring-like force along connectors
         AttractionStrength = 0.9 
