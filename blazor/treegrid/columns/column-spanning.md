@@ -542,7 +542,7 @@ To define a merged region, use the following properties of the MergeCellInfo cla
 | RowSpan      | int (optional) | The number of rows to span, starting from the anchor cell. By default set to 1. |
 | ColumnSpan   | int (optional) | The number of columns to span, starting from the anchor cell. By default set to 1. |
 
-The following sample demonstrates programmatic column spanning by calling `MergeCellsAsync` with `RowIndex`, `ColumnIndex`, and `ColumnSpan` for a single merge, and by passing multiple `MergeCellInfo` objects with the same parameters in an array for batch merging.
+The following sample demonstrates programmatic column spanning by calling `MergeCellsAsync` with parameters such as `RowIndex`, `ColumnIndex`, and `ColumnSpan` for a single merge, and by passing multiple `MergeCellInfo` objects with the same parameters in an array for batch merging.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -553,7 +553,7 @@ The following sample demonstrates programmatic column spanning by calling `Merge
 <SfButton OnClick="MergeCellsAsync">Merge Cell</SfButton>
 <SfButton OnClick="MergeMultipleCellsAsync">Merge Multiple Cells</SfButton>
 
-<SfTreeGrid TValue="ProjectTask" @ref="Grid" DataSource="@Tasks" ChildMapping="Children" TreeColumnIndex="0" AllowPaging="true" GridLines="GridLine.Both">
+<SfTreeGrid TValue="ProjectTask" @ref="TreeGrid" DataSource="@Tasks" ChildMapping="Children" TreeColumnIndex="0" AllowPaging="true" GridLines="GridLine.Both">
     <TreeGridColumns>
         <TreeGridColumn Field="@nameof(ProjectTask.ActivityName)" HeaderText="Activity Name" Width="180" />
         <TreeGridColumn Field="@nameof(ProjectTask.StartDate)" HeaderText="Start Date" Format="d" Type="ColumnType.Date" Width="130" />
@@ -566,12 +566,12 @@ The following sample demonstrates programmatic column spanning by calling `Merge
 
 @code 
 {
-    private SfTreeGrid<ProjectTask> Grid;
+    private SfTreeGrid<ProjectTask> TreeGrid;
     public List<ProjectTask> Tasks { get; set; }
 
     public async Task MergeCellsAsync()
     {
-        await Grid.MergeCellsAsync(new MergeCellInfo
+        await TreeGrid.MergeCellsAsync(new MergeCellInfo
         {
             RowIndex = 1,
             ColumnIndex = 1,
@@ -581,7 +581,7 @@ The following sample demonstrates programmatic column spanning by calling `Merge
 
     public async Task MergeMultipleCellsAsync()
     {
-        await Grid.MergeCellsAsync(new[]
+        await TreeGrid.MergeCellsAsync(new[]
         {
             new MergeCellInfo { RowIndex = 0, ColumnIndex = 0, ColumnSpan = 2 },
             new MergeCellInfo { RowIndex = 5, ColumnIndex = 0, ColumnSpan = 3 },
@@ -779,7 +779,7 @@ To identify a merged region, use the following properties of the UnmergeCellInfo
 | RowIndex     | int  | The zero-based index of the anchor row (top-left cell of the merged region). |
 | ColumnIndex  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
 
-This sample demonstrates clearing merged regions in the TreeGrid by calling `UnmergeCellsAsync` with `RowIndex` and `ColumnIndex` to remove specific spans, passing multiple `UnmergeCellInfo` objects for batch unmerging, and using `UnmergeAllAsync` to reset all merged cells at once.
+This sample demonstrates clearing merged regions in the TreeGrid by calling `UnmergeCellsAsync` with parameters such as `RowIndex` and `ColumnIndex` to remove specific spans, passing multiple `UnmergeCellInfo` objects for batch unmerging, and using `UnmergeAllAsync` to reset all merged cells at once.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -795,7 +795,7 @@ This sample demonstrates clearing merged regions in the TreeGrid by calling `Unm
 
 <SfButton OnClick="UnMergeAllCells">UnMerge All Cells</SfButton>
 
-<SfTreeGrid TValue="ProjectTask" @ref="Grid" DataSource="@Tasks" ChildMapping="Children" TreeColumnIndex="0" AllowPaging="true" GridLines="GridLine.Both">
+<SfTreeGrid TValue="ProjectTask" @ref="TreeGrid" DataSource="@Tasks" ChildMapping="Children" TreeColumnIndex="0" AllowPaging="true" GridLines="GridLine.Both">
     <TreeGridColumns>
         <TreeGridColumn Field="@nameof(ProjectTask.ActivityName)" HeaderText="Activity Name" Width="180" />
         <TreeGridColumn Field="@nameof(ProjectTask.StartDate)" HeaderText="Start Date" Format="d" Type="ColumnType.Date" Width="130" />
@@ -808,12 +808,12 @@ This sample demonstrates clearing merged regions in the TreeGrid by calling `Unm
 
 @code 
 {
-    private SfTreeGrid<ProjectTask> Grid;
+    private SfTreeGrid<ProjectTask> TreeGrid;
     public List<ProjectTask> Tasks { get; set; }
 
     public async Task MergeCellsAsync()
     {
-        await Grid.MergeCellsAsync(new MergeCellInfo
+        await TreeGrid.MergeCellsAsync(new MergeCellInfo
         {
             RowIndex = 1,
             ColumnIndex = 1,
@@ -823,7 +823,7 @@ This sample demonstrates clearing merged regions in the TreeGrid by calling `Unm
 
     public async Task UnMergeCell()
     {
-        await Grid.UnmergeCellsAsync(new UnmergeCellInfo
+        await TreeGrid.UnmergeCellsAsync(new UnmergeCellInfo
         {
             RowIndex = 1,
             ColumnIndex = 1,
@@ -832,7 +832,7 @@ This sample demonstrates clearing merged regions in the TreeGrid by calling `Unm
 
     public async Task MergeMultipleCellsAsync()
     {
-        await Grid.MergeCellsAsync(new[]
+        await TreeGrid.MergeCellsAsync(new[]
         {
             new MergeCellInfo { RowIndex = 0, ColumnIndex = 0, ColumnSpan = 2 },
             new MergeCellInfo { RowIndex = 5, ColumnIndex = 0, ColumnSpan = 3 },
