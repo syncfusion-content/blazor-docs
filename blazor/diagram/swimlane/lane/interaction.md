@@ -50,7 +50,7 @@ The following image shows children interaction in lane.
 
 ## How to restrict nodes from being dragged or repositioned outside their assigned swimlane
 
-To restrict child nodes to their swimlane, set their [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) to include [NodeConstraints.AllowDragWithinSwimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_AllowDragWithinSwimlane). By default, nodes can move freely; however, with this constraint enabled, a node can only be dragged within the bounds of its owning swimlane. Attempts to move it across lane or swimlane boundaries are prevented.
+To restrict child nodes to their swimlane, set their [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) to include **NodeConstraints.AllowDragWithinSwimlane**. By default, nodes can move freely; however, with this constraint enabled, a node can only be dragged within the bounds of its owning swimlane. Attempts to move it across lane or swimlane boundaries are prevented.
 
 The following example demonstrates one node restricted to its swimlane, while another remains unrestricted for comparison.
 
@@ -64,7 +64,7 @@ The following example demonstrates one node restricted to its swimlane, while an
 @code
 {
     //Define diagram's swimlane collection
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -101,7 +101,7 @@ The following example demonstrates one node restricted to its swimlane, while an
                             Width = 100, 
                             LaneOffsetX = 100, 
                             LaneOffsetY = 30, 
-                            //Enable AllowDragWithinSwimlane to restrict movement outside the swimlane
+                            // To enable AllowDragWithinSwimlane to restrict movement outside the swimlane
                             Constraints = NodeConstraints.Default | NodeConstraints.AllowDragWithinSwimlane , 
                             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
                             { 
@@ -129,10 +129,10 @@ The following example demonstrates one node restricted to its swimlane, while an
         if (obj is Swimlane swimlane)
         {
             swimlane.Header.Style = new TextStyle()
-                {
-                    Fill = "#5b9bd5",
-                    StrokeColor = "#5b9bd5"
-                };
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
             foreach (Phase phase in swimlane.Phases)
             {
                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
@@ -145,10 +145,10 @@ The following example demonstrates one node restricted to its swimlane, while an
         else if (obj is Node node)
         {
             node.Style = new ShapeStyle()
-                {
-                    Fill = "#5b9bd5",
-                    StrokeColor = "#5b9bd5"
-                };
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
         }
     }
 }
@@ -159,7 +159,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ![Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)
 
 >**Note:**
-* To restrict a node to its owning swimlane, add [NodeConstraints.AllowDragWithinSwimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_AllowDragWithinSwimlane) to the node’s `Constraints` property.
+* To restrict a node to its owning swimlane, add **NodeConstraints.AllowDragWithinSwimlane** to the node’s `Constraints` property.
 
-* To enforce this restriction for all child nodes within swimlanes, set the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) during node initialization in the NodeCreating event.
+* To enforce this restriction for all child nodes within swimlanes, set the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) during node initialization in the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) event.
 
