@@ -678,9 +678,105 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ![Hiding Legend Item in Blazor Column Chart](images/legend/blazor-column-chart-hide-legend-item.png)
 
+## Legend Template
+
+Legend templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
+
+To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+
+```
+@using Syncfusion.Blazor.Charts
+
+@* Initialize the chart and configure essential features *@
+<SfChart Title="Olympic Medals">
+    @* Set category axis for country names *@
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+
+    @* Show the legend and enable series toggle *@
+    <ChartLegendSettings Visible="true" />
+
+    <ChartSeriesCollection>
+        @* Gold column series *@
+        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Fill="#FFD700" Type="ChartSeriesType.Column">
+            @* Custom legend with icon, label, and total count *@
+            <LegendItemTemplate>
+                <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
+                    <span style="font-size:18px;">🥇</span>
+                    <div style="display:flex; flex-direction:column; line-height:1.15;">
+                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:#FFD700;">Gold</span>
+                        <span style="font-size:12px; opacity:0.85;">Awarded for first place finishes</span>
+                        <span style="font-size:12px; opacity:0.75;">Total: @GoldTotal</span>
+                    </div>
+                </div>
+            </LegendItemTemplate>
+        </ChartSeries>
+
+        @* Silver column series *@
+        <ChartSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Width="2" Opacity="1" YName="Silver" Fill="#898989" Type="ChartSeriesType.Column">
+            @* Custom legend with icon, label, and total count *@
+            <LegendItemTemplate>
+                <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
+                    <span style="font-size:18px;">🥈</span>
+                    <div style="display:flex; flex-direction:column; line-height:1.15;">
+                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:#898989;">Silver</span>
+                        <span style="font-size:12px; opacity:0.85;">Awarded for second place finishes</span>
+                        <span style="font-size:12px; opacity:0.75;">Total: @SilverTotal</span>
+                    </div>
+                </div>
+            </LegendItemTemplate>
+        </ChartSeries>
+
+        @* Bronze column series *@
+        <ChartSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Width="2" Opacity="1" YName="Bronze" Fill="#CD7F32" Type="ChartSeriesType.Column">
+            @* Custom legend with icon, label, and total count *@
+            <LegendItemTemplate>
+                <div style="display:flex; align-items:center; gap:10px; padding:4px 0;">
+                    <span style="font-size:18px;">🥉</span>
+                    <div style="display:flex; flex-direction:column; line-height:1.15;">
+                        <span style="font-family:'Segoe UI'; font-size:14px; font-weight:700; color:#CD7F32;">Bronze</span>
+                        <span style="font-size:12px; opacity:0.85;">Awarded for third place finishes</span>
+                        <span style="font-size:12px; opacity:0.75;">Total: @BronzeTotal</span>
+                    </div>
+                </div>
+            </LegendItemTemplate>
+        </ChartSeries>
+    </ChartSeriesCollection>
+
+</SfChart>
+
+@code {
+
+    public class ChartData
+    {
+        public string Country { get; set; }
+        public double Gold { get; set; }
+        public double Silver { get; set; }
+        public double Bronze { get; set; }
+    }
+
+    public List<ChartData> MedalDetails = new()
+    {
+        new ChartData{ Country= "USA",      Gold=50, Silver=70, Bronze=45 },
+        new ChartData{ Country= "China",    Gold=40, Silver=60, Bronze=55 },
+        new ChartData{ Country= "Japan",    Gold=70, Silver=60, Bronze=50 },
+        new ChartData{ Country= "Australia",Gold=60, Silver=56, Bronze=40 },
+        new ChartData{ Country= "France",   Gold=50, Silver=45, Bronze=35 },
+        new ChartData{ Country= "Germany",  Gold=40, Silver=30, Bronze=22 },
+        new ChartData{ Country= "Italy",    Gold=40, Silver=35, Bronze=37 },
+        new ChartData{ Country= "Sweden",   Gold=30, Silver=25, Bronze=27 }
+    };
+
+    public int GoldTotal => (int)MedalDetails.Sum(m => m.Gold);
+    public int SilverTotal => (int)MedalDetails.Sum(m => m.Silver);
+    public int BronzeTotal => (int)MedalDetails.Sum(m => m.Bronze);
+}
+```
+![Legend Template in Blazor Column Chart](images/legend/blazor-column-chart-legend-template.png)
+
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
 * [Data label](./data-labels)
 * [Marker](./data-markers)
+* [Toggle Series Visibility Using Legend](https://support.syncfusion.com/kb/article/20966/how-to-toggle-series-visibility-using-legend-in-live-blazor-chart)

@@ -58,9 +58,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhKCVVRhJcQliSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Chart with Horizontal Striplines](images/strip-line/blazor-chart-horizontal-strip-line.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhKCVVRhJcQliSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Horizontal Striplines](images/strip-line/blazor-chart-horizontal-strip-line.png)" %}
 
 ## Vertical striplines
 
@@ -104,9 +102,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLUsBBRLpbtIuIn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Chart with Vertical Striplines](images/strip-line/blazor-chart-vertical-stripline.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLUsBBRLpbtIuIn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Vertical Striplines](images/strip-line/blazor-chart-vertical-stripline.png)" %}
 
 ## Striplines customization
 
@@ -150,9 +146,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVUCVLxVfbqQNji?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Chart with Custom Striplines](images/strip-line/blazor-chart-custom-stripline.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVUCVLxVfbqQNji?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Custom Striplines](images/strip-line/blazor-chart-custom-stripline.png)" %}
 
 ## Text customization
 
@@ -199,9 +193,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVgWVLHBJlQDgKI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Chart with Custom Stripline Text](images/strip-line/blazor-chart-custom-strip-text.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVgWVLHBJlQDgKI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Custom Stripline Text](images/strip-line/blazor-chart-custom-strip-text.png)" %}
 
 ## Segmented stripline
 
@@ -254,9 +246,193 @@ To create a stripline in a specific region with respect to a segment (segmented 
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMVhHrJGZtGLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMVhHrJGZtGLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart With Segmented Stripline](../chart/images/strip-line/blazor-chart-segmented-stripline.png)" %}
 
-![Blazor Chart With Segmented Stripline](../chart/images/strip-line/blazor-chart-segmented-stripline.png)
+## Stripline tooltip
+
+Stripline tooltips provide additional contextual information on interaction with striplines in the chart. To display a tooltip on a stripline, add the **ChartStriplineTooltip** component inside the desired **ChartStripline** and set the **Enable** property to **true**. It is particularly useful for explaining the significance of specific ranges or thresholds marked by striplines.
+
+### Default stripline tooltip code example:
+
+Below is the simplest way to enable a stripline tooltip using default settings. The tooltip will display on interaction with the stripline.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+@* Initialize the Chart to display vehicle traffic by time using a Spline series. *@
+<SfChart Title="Vehicle Traffic by Time">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"
+                       IntervalType="IntervalType.Hours"
+                       LabelFormat="h tt">
+        <ChartStriplines>
+
+            @* Stripline: visual band marking Rush Hour on the X axis *@
+            <ChartStripline Start="new DateTime(2024, 01, 01, 07, 00, 00)"
+                            End="new DateTime(2024, 01, 01, 09, 00, 00)"
+                            Text="Rush Hour"
+                            Color="#FFED4A"
+                            Visible="true">
+
+                @* Stripline Tooltip: shows 'Rush Hour' with band hover/tap *@
+                <ChartStriplineTooltip Enable="true"></ChartStriplineTooltip>
+            </ChartStripline>
+        </ChartStriplines>
+    </ChartPrimaryXAxis>
+
+    <ChartPrimaryYAxis Minimum="0" Maximum="1400" Interval="200" Title="Number of vehicles">
+    </ChartPrimaryYAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries Type="ChartSeriesType.Spline"
+                     DataSource="@Traffic"
+                     XName="Time"
+                     YName="Vehicles"
+                     Width="2"
+                     Fill="#F43F5E">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class TrafficPoint
+    {
+        public DateTime Time { get; set; }
+        public double Vehicles { get; set; }
+    }
+
+    public List<TrafficPoint> Traffic = new ()
+    {
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 06, 00, 00), Vehicles = 380 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 07, 00, 00), Vehicles = 820 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 08, 00, 00), Vehicles = 1200 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 09, 00, 00), Vehicles = 980 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 10, 00, 00), Vehicles = 650 },
+        new TrafficPoint { Time = new DateTime(2024, 01, 01, 11, 00, 00), Vehicles = 520 }
+    };
+}
+
+```
+
+![Blazor Chart with Default Stripline Tooltip](images/strip-line/blazor-chart-stripline-tooltip-default.png)
+
+### Tooltip customization properties
+
+The stripline tooltip offers comprehensive customization options through the following properties:
+
+- **Enable** - A boolean property that enables or disables the stripline tooltip. Default value is **false**.
+
+- **Header** - Defines the title text displayed at the top of the tooltip.
+
+- **Content** - Allows you to specify custom content for the tooltip body using a format string. The format supports token placeholders that are replaced with corresponding values at runtime. Supported tokens:
+  - **${stripline.text}** – The stripline label.
+  - **${stripline.start}** – The stripline start value.
+  - **${stripline.end}** – The stripline end value.
+  - **${axis.name}** – The axis name.
+  - **${stripline.segmentStart}** – The stripline segment start value (if applicable).
+  - **${stripline.segmentEnd}** – The stripline segment end value (if applicable).
+  - **${stripline.segmentAxisName}** – The stripline segment axis name (if applicable).
+  - **${stripline.size}** – The stripline size (if applicable).
+
+- **Fill** - Sets the background color of the tooltip. Accepts any valid CSS color value (hex, rgb, rgba, named colors).
+
+- **Opacity** - Controls the transparency level of the tooltip background. Accepts numeric values between 0 (completely transparent) and 1 (completely opaque). The default value is 0.75.
+
+- **ShowHeaderLine** - A boolean property that controls the visibility of the horizontal separator line between the tooltip header and content. Set to **true** to display the line or **false** to hide it.
+
+The **ChartStriplineTooltipTextStyle** component allows you to customize the appearance of text within the tooltip:
+
+- **Size** - Specifies the font size of the tooltip text. Accepts pixel values (e.g., "12px").
+
+- **Color** - Defines the text color. Accepts any valid CSS color value.
+
+- **FontFamily** - Sets the font family for the tooltip text. Accepts standard CSS font family values (e.g., "Arial", "Segoe UI", "Roboto").
+
+- **FontWeight** - Controls the thickness of the text.
+
+The **ChartStriplineTooltipBorder** component enables you to add and customize borders around the tooltip:
+
+- **Width** - Specifies the thickness of the tooltip border in pixels. Accepts numeric values. Default value is **0**.
+
+- **Color** - Defines the color of the tooltip border. Accepts any valid CSS color value.
+
+### Customized stripline tooltip code example:
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+@* Initialize the Chart to display department revenue by quarter using Column and Spline series. *@
+<SfChart Title="Department Revenue by Quarter">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+    </ChartPrimaryXAxis>
+
+    <ChartPrimaryYAxis Minimum="65" Maximum="110" Interval="5" LabelFormat="${value}k" RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.None">
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        <ChartStriplines>
+
+            @* Stripline: Highlights the upper revenue target range from 95k to 110k with text style and border customization. *@
+            <ChartStripline Start="95" End="110" Color="#FFF59E" HorizontalAlignment="Anchor.Middle" Visible="true">
+                <ChartStriplineTextStyle Size="12px" Color="#0b3a66" FontWeight="600"></ChartStriplineTextStyle>
+                <ChartStriplineBorder Width="0"></ChartStriplineBorder>
+
+                @* Stripline Tooltip: providing interactive context with customizatioon for the target bands over hover/tap *@
+                <ChartStriplineTooltip Enable="true"
+                                       Header="Target"
+                                       Content="Range: ${stripline.start} - ${stripline.end}<br/>Axis: ${axis.name}"
+                                       Fill="#F43F5E"
+                                       Opacity="0.95"
+                                       ShowHeaderLine="true">
+                    <ChartStriplineTooltipTextStyle Size="14px" Color="#FFFFFF" FontWeight="600" FontFamily="Segoe UI"></ChartStriplineTooltipTextStyle>
+                    <ChartStriplineTooltipBorder Width="2" Color="#1F2937"></ChartStriplineTooltipBorder>
+                </ChartStriplineTooltip>
+            </ChartStripline>
+        </ChartStriplines>
+    </ChartPrimaryYAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries Name="Sales" Type="ChartSeriesType.Column" DataSource="@SalesData" XName="Quarter" YName="Revenue" ColumnSpacing="0.2" Width="2" Fill="#FB923C">
+            <ChartMarker Visible="false"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries Name="Support" Type="ChartSeriesType.Spline" DataSource="@SupportData" XName="Quarter" YName="Revenue" Width="2" Fill="#22C55E">
+            <ChartMarker Visible="true">
+                <ChartDataLabel Visible="true"></ChartDataLabel>
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+
+    <ChartLegendSettings Visible="true" EnableHighlight="true"></ChartLegendSettings>
+</SfChart>
+
+@code {
+    public class RevenuePoint
+    {
+        public string Quarter { get; set; }
+        public double Revenue { get; set; }
+    }
+
+    public List<RevenuePoint> SalesData = new ()
+    {
+        new RevenuePoint { Quarter = "Q1", Revenue = 78 },
+        new RevenuePoint { Quarter = "Q2", Revenue = 88 },
+        new RevenuePoint { Quarter = "Q3", Revenue = 99 },
+        new RevenuePoint { Quarter = "Q4", Revenue = 92 }
+    };
+
+    public List<RevenuePoint> SupportData = new ()
+    {
+        new RevenuePoint { Quarter = "Q1", Revenue = 70 },
+        new RevenuePoint { Quarter = "Q2", Revenue = 83 },
+        new RevenuePoint { Quarter = "Q3", Revenue = 90 },
+        new RevenuePoint { Quarter = "Q4", Revenue = 85 }
+    };
+}
+
+```
+
+![Blazor Chart with Customized Stripline Tooltip](images/strip-line/blazor-chart-stripline-tooltip-customized.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

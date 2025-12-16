@@ -208,9 +208,11 @@ namespace TreeGridComponent.Data {
 public class Employee
     {
         public string Name { get; set; }
+        public string? FullName { get; set; }
         public string Designation { get; set; }
         public string EmpID { get; set; }
         public string Contact { get; set; }
+        public string? Country { get; set; }
         public int? ParentId { get; set; }
         public Employee Treedata { get; set; }
 
@@ -495,7 +497,7 @@ The **AutoFitColumnsAsync** method resizes the column to fit the widest cell's c
 
     private void OnDataBound(object e)
     {
-        this.TreeGrid.AutoFitColumnsAsync(new List<string>() { "TaskName" });
+        this.TreeGrid.AutoFitColumnsAsync(new string[] { "TaskName" });
     }
 }
 
@@ -988,4 +990,3 @@ public class TreeData
 {% endtabs %}
 
 ![Blazor Tree Grid Column with CheckBox](../images/blazor-treegrid-column-with-checkbox.png)
-

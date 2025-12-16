@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Adding script references in Blazor - Syncfusion
-description: Learn here about that how to add the script references manually in the Syncfusion Blazor Components.
+title: Reference script files for Syncfusion Blazor
+description: Add Syncfusion Blazor script references via CDN, static web assets, or the Custom Resource Generator (CRG).
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Reference scripts in Blazor Application
+# Reference scripts in Blazor applications
 
-This section provides information about the script isolation process and how to reference scripts from CDN, Static Web Assets and Custom resource generator (CRG) for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components.
+This page explains script isolation and how to reference Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts from the CDN, static web assets, and the Custom Resource Generator (CRG).
 
-N> The javascript interop files needs to be added to support the features that can't be implemented in native blazor.
+N> JavaScript interop files are required for features that cannot be implemented natively in Blazor.
 
-## CDN Reference
+## CDN reference
 
-You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts through the CDN resources.
+You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts using the CDN resources.
 
-* For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), reference scripts in `~/Components/App.razor` file.
-* For **Blazor WASM Standalone App**, reference scripts in `~/wwwroot/index.html` file.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
+* For a **Blazor WebAssembly (standalone) App**, add scripts in `~/wwwroot/index.html`.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Package you are using .
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on the CDN per version. Ensure the version in the URLs matches the NuGet package version used in the application.
 
 <table>
 <tr>
@@ -103,7 +103,7 @@ If you are using `PDF Viewer (Classic)`,`PDF Viewer`, `Smart PDF Viewer` or `Doc
 </head>
 ```
 
-In addition to above, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
+Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
 
 | Component | CDN Script Reference |
 | --- | --- |
@@ -120,17 +120,17 @@ N> To add custom Smart PDF Viewer script file in your application, refer [How to
 
 ## Static web assets
 
-You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts through the NuGet package's static web assets.
+You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts from NuGet packages using static web assets.
 
 ### Enable static web assets usage
 
-To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-8.0) method in the **~/Program.cs** file of your app.
+To use static web assets, call [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-9.0) in the app's **~/Program.cs** file.
 
-N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
+N> For a **Blazor Web App** (interaction mode: Auto) and **Blazor WebAssembly App**, call `UseStaticFiles` in the **Server** project.
 
-### Refer script from static web assets
+### Reference scripts from static web assets
 
-* The combined scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package. To refer script from static web assets, use the code below.
+* Combined scripts are available in the [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package. To refer the script from static web assets, use the code below.
 
     ```html
     <head>
@@ -139,7 +139,7 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
     </head>
     ```
 
-* If you're using the PDF viewer (Classic), PDF Viewer, Smart PDF Viewer or Document Editor component, use the code below to refer to script from static web assets.
+* If using the **PDF Viewer (Classic)**, **PDF Viewer**, **Smart PDF Viewer**, or **Document Editor** components, use the code below to reference scripts from static web assets.
 
     ```html
     <head>
@@ -151,9 +151,9 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
     </head>
     ```
 
-    N> The PDF Viewer and Document Editor component scripts are  available in static web assets from 19.3.* version.
+    N> The PDF Viewer and Document Editor component scripts are available in static web assets starting from version 19.3.*.
 
-## Individual control script reference
+## Individual component script references
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides component-wise scripts which can be referenced externally in application. If you are using minimal components, then you can import the selected components scripts via CDN or Static web assets directly without using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) instead of referencing single script with all components.
 
@@ -196,7 +196,7 @@ You can add a component script reference in one of the following ways based on u
 </tr>
 </table>
 
-The following table lists components and its script reference.
+The following table lists components and their script file names.
 
 <table>
     <tr>
@@ -340,6 +340,10 @@ The following table lists components and its script reference.
         <td>sf-chart.min.js</td>
     </tr>
     <tr>
+        <td>CheckBox</td>
+        <td>sf-checkbox.min.js</td>
+    </tr>
+    <tr>
         <td>AccumulationChart</td>
         <td>sf-accumulation-chart.min.js</td>
     </tr>
@@ -420,6 +424,10 @@ The following table lists components and its script reference.
         <td>sf-splitter.min.js</td>
     </tr>
     <tr>
+        <td>Switch</td>
+        <td>sf-switch.min.js</td>
+    </tr>
+    <tr>
         <td>Toast</td>
         <td>sf-toast.min.js</td>
     </tr>
@@ -463,7 +471,7 @@ The following table lists components and its script reference.
 
 ## Custom Resource Generator
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides an option to generate component interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 ## See also
 

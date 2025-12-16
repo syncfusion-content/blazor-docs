@@ -9,9 +9,9 @@ documentation: ug
 
 # Enable or Disable Item in Blazor Accordion Component
 
-The Syncfusion Blazor Accordion component provides robust support for managing its items, including the ability to dynamically enable or disable specific accordion items. This functionality is controlled through the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) property. When an item is disabled, it typically becomes non-interactive (e.g., cannot be expanded or collapsed by user clicks) and might display a different visual state (e.g., greyed out) to indicate its unavailability.
+The Accordion component provides support to enable or disable specific accordion items using the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) property.
 
-In the following example, the first accordion item is dynamically enabled or disabled when the **Enable/Disable First Item** button is clicked, demonstrating how to toggle its interactive state.
+In the following example, the first accordion item is enabled or disabled dynamically when the **Enable/Disable First Item** button is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -37,6 +37,4 @@ In the following example, the first accordion item is dynamically enabled or dis
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLgiLiUUImofYGa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Enabling or Disabling Item in Blazor Accordion](../images/blazor-accordion-enable-disable-item.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLgiLiUUImofYGa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling or Disabling Item in Blazor Accordion](../images/blazor-accordion-enable-disable-item.gif)" %}

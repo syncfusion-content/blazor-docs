@@ -372,8 +372,7 @@ A point or series can be selected programmatically on a chart using the [Selecte
 
 ```
 
-![Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtgBxfkYWmfSE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtgBxfkYWmfSE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.png)" %}
 
 ## Legend Selection
 

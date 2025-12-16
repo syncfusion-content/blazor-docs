@@ -63,9 +63,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVptvWuVRmwVTbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Pareto Chart](../images/othertypes/blazor-pareto-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVptvWuVRmwVTbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pareto Chart](../images/othertypes/blazor-pareto-chart.png)" %}
 
 ## Binding data with series
 

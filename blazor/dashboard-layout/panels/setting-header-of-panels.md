@@ -7,12 +7,12 @@ control: Dashboard Layout
 documentation: ug
 ---
 
-# Header and Content in Blazor Dashboard Layout Component
+# Header and Content Templates in Blazor Dashboard Layout Component
 
-Basically, Dashboard Layout Component have two templates to render the data in panels.
+The Blazor Dashboard Layout component utilizes two primary templates for rendering data within its panels:
 
-* [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate): To render data or any HTML template as the content.
-* [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate): A word or phrase that summarizes the panel’s content can be added as the header on the top of each panel.
+* [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate): Used to render data or any HTML structure as the main content of a panel.
+* [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate): Enables the display of a word or phrase that summarizes the panel's content, positioned at the top of each panel.
 
 ```cshtml
 
@@ -51,8 +51,6 @@ Basically, Dashboard Layout Component have two templates to render the data in p
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+The following output demonstrates the use of `HeaderTemplate` and `ContentTemplate` to define the header and content of panels:
 
-The following output demonstrates the Header and content of Panels using templates.
-
-![Blazor Dashboard Layout with Header.](images/blazor-admin-template-layout-with-header.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with Header.](images/blazor-admin-template-layout-with-header.png)" %}

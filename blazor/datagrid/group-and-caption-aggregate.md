@@ -1,23 +1,21 @@
 ---
 layout: post
-title:  Group and caption aggregate in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Group and caption aggregate in Syncfusion Blazor DataGrid component and much more details.
+title:  Group and caption aggregates in Blazor DataGrid Component | Syncfusion
+description: Learn how to configure group footer and caption aggregates in Syncfusion Blazor DataGrid using templates and AggregateTemplateContext.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Group and caption aggregate in Blazor DataGrid
+# Group and caption aggregates in Blazor DataGrid
 
-Group footer and caption aggregates in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allow you to calculate aggregate values based on the current group items. These aggregate values can be displayed in the group footer cells and group caption cells, respectively. To achieve this, you can use the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) and [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) properties of the [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn__ctor) component.
+Group footer and group caption aggregates in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid calculate values based on items in each group and display results in group footer cells and group caption cells. Configure these using the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) and [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) properties of the [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn__ctor) component. Aggregate values inside templates can be accessed through AggregateTemplateContext (for example, Sum, Min, Max).
 
-> When working with group aggregates in Grid, it is important to set the property **AllowGrouping** of the column to true.To maintain grouped columns in the Grid after grouping, set [showGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) to true.
+> For group aggregates, ensure grouping is enabled at the grid level with [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) set to **true**, and maintain grouped columns by setting [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) to **true**.
 
 ## Group footer aggregates
 
-Group footer aggregates are displayed in the footer cells of each group. These cells appear at the bottom of each group and provide aggregate values based on the grouped data. To display group footer aggregates, you need to provide a template using the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) property. The template will be used to render the aggregate values in the group footer cells.
-
-Here’s an example that demonstrates how to use group footer aggregates in the Grid:
+Group footer aggregates appear in the footer cells of each group and provide per-group summary values. To display group footer aggregates, define a template with the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) property. The template renders the aggregate value for each group’s footer row. Apply the Format property to present currency or date values using culture-aware formatting as needed.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -110,13 +108,11 @@ Here’s an example that demonstrates how to use group footer aggregates in the 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKCXUDfMsXaMrj?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDheZEVxysGhsjjP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Group caption aggregates
 
-Group caption aggregates are displayed in the caption cells of each group. These cells appear at the top of each group and provide a summary of the grouped data. To display group caption aggregates, you can use the [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) property. This property allows you to define a template that will be used to display the aggregate values in the group caption cells.
-
-Here’s an example that demonstrates how to use group and caption aggregates in the Grid:
+Group caption aggregates appear in the caption cells at the top of each group and provide a concise summary. To display group caption aggregates, define a template using the [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) property. The template renders the aggregate value in the caption area of each group. Apply the Format property to aggregate values to present culture-aware currency or date results.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -209,6 +205,6 @@ Here’s an example that demonstrates how to use group and caption aggregates in
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrAsjqWAiLCkcxM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVyDaVxoilKLoVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The group total summary in Grid is calculated based on the current page records for each group by default.

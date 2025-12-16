@@ -100,7 +100,7 @@ Gallery items can be added using [GalleryItem](https://help.syncfusion.com/cr/bl
 
 ![Ribbon Gallery Items](./images/gallery/gallery_items.png)
 
-#### Css class
+#### CSS class
 
 You can use the `CssClass` property to customize the gallery item.
 
@@ -179,6 +179,21 @@ You can use the `CssClass` property to customize the gallery item.
         },
     };
 }
+
+<style>
+
+    .e-ribbon-gallery-item.bad {
+        background: #ffb6b6;
+    }
+
+    .e-ribbon-gallery-item.good {
+        background: #c7ebc9;
+    }
+
+    .e-ribbon-gallery-item.neutral {
+        background: #eedd9d;
+    }
+</style>
 
 {% endhighlight %}
 {% endtabs %}

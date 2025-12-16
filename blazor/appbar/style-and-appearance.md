@@ -9,13 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor AppBar Component
 
-The AppBar component is highly customizable, allowing you to tailor its visual presentation to perfectly fit your application's design language. This document outlines various methods to modify the AppBar's appearance, focusing on overriding default CSS, utilizing custom classes, and applying HTML attributes.
-
-For comprehensive custom theming across Syncfusion controls, the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material) offers an intuitive interface to create and manage personalized custom themes efficiently.
-
-## Customizing AppBar Elements with CSS Classes
-
-The AppBar component includes a set of default CSS classes that can be targeted to customize its appearance. Below is a list of commonly used classes and their respective purposes:
+To modify the AppBar appearance, you need to override the default CSS of the AppBar component. Find the list of CSS classes and their corresponding sections in the AppBar component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class |
 |-----|----- |
@@ -31,9 +25,7 @@ N> You can change the prominent AppBar height if larger titles, images, or texts
 
 ## CssClass
 
-The `CssClass` property of the `SfAppBar` component assigns a custom CSS class to its root HTML element. This provides a clean way to introduce your own styles or completely override existing ones.
-
-In the example below, the AppBar background and color are customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_CssClass) property.
+CssClass is used for AppBar customization based on the custom class. In the example below, the AppBar background and color are customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -53,14 +45,11 @@ In the example below, the AppBar background and color are customized using the [
 </style>
 ```
 
-![Blazor AppBar with CssClass customization](./images/cssclass_appbar.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthgCVMTrrGSfJrV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthgCVMTrrGSfJrV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with CssClass customization](./images/cssclass_appbar.png)" %}
 
 ## HtmlAttributes
 
-The `SfAppBar` component provides the `HtmlAttributes` property (via the `@attributes` directive) to allow you to add any standard HTML attribute directly to the root element (`<div>`) of the AppBar. This is particularly useful for adding ARIA attributes for accessibility, custom `data-` attributes, or IDs.
-
-In the example below, an `aria-label` attribute is added to the AppBar to provide an accessible name for screen reader users.
+It can be used for additional inline attributes by specifying as inline attributes or by specifying `@attributes` directive. In the code example below, the aria-label of the AppBar is customized by specifying as inline attributes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
