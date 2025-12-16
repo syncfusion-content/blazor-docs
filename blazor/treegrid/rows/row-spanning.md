@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Spanning in Blazor TreeGrid
 
-Row spanning in the Syncfusion Blazor TreeGrid merges adjacent cells with identical values horizontally across columns within the same row. This feature reduces visual repetition and presents grouped data in a compact, readable format. This feature is useful when multiple columns share the same value, such as repeated product details or status indicators.
+Row spanning in the Blazor TreeGrid merges adjacent cells with identical values horizontally across columns within the same row. This feature reduces visual repetition and presents grouped data in a compact, readable format. This feature is useful when multiple columns share the same value, such as repeated product details or status indicators.
 
 The functionality is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to `AutoSpanMode.Row`. When activated, the TreeGrid evaluates each row and merges neighboring cells containing identical values, resulting in a single, wider cell. The merging process is automatic and declarative, requiring no manual logic or data transformation.
 

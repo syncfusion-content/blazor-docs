@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Spanning in Blazor TreeGrid
 
-Column spanning in the Syncfusion Blazor TreeGrid provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This feature improves readability by consolidating repeated values into a single taller cell, which is especially useful when the same value appears across consecutive rows.
+Column spanning in the Blazor TreeGrid provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This feature improves readability by consolidating repeated values into a single taller cell, which is especially useful when the same value appears across consecutive rows.
 
 The functionality is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to `AutoSpanMode.Column`. Once applied, the TreeGrid evaluates each column and merges stacked cells that share identical values, thereby reducing visual redundancy and presenting a cleaner, more structured layout. The merging process is fully declarative and requires no additional code or preprocessing.
 
