@@ -1637,7 +1637,6 @@ When a filter is applied in the TreeGrid, the DataManager sends the filtering cr
 
 On the server, these parameters are parsed and used to filter the data source accordingly before returning the results to the TreeGrid.
 
-![GraphqlAdaptor - Filtering](../images/treegrid-graphql-filtering.gif)
 ![GraphqlAdaptor - Filtering](./images/treegrid-graphql-filtering.png)
 
 {% tabs %}
@@ -3792,5 +3791,3 @@ namespace GraphQLServer.GraphQL
 {% endtabs %}
 
 ![Crud Operation](./images/treegrid-graphql-CRUD.gif)
-
-You can get the entire code in the [github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/GraphQLAdaptor) sample.
