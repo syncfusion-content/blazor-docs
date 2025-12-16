@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind GraphQL Data in Blazor TreeGrid | Syncfusion
+title: Bind GraphQL Adaptor in Blazor TreeGrid | Syncfusion
 description: Learn how to bind data from a GraphQL API to the Syncfusion Blazor TreeGrid, including querying, mutation, and integration techniques.
 platform: Blazor
 control: TreeGrid
@@ -11,7 +11,7 @@ documentation: ug
 
 GraphQL is a powerful query language for APIs, designed to provide a more efficient alternative to traditional REST APIs. It allows you to precisely fetch the data you need, reducing over-fetching and under-fetching of data. GraphQL provides a flexible and expressive syntax for querying, enabling clients to request only the specific data they require.
 
-Syncfusion’s Blazor TreeGrid  seamlessly integrates with GraphQL servers using the GraphQLAdaptor in the [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app). This specialized adaptor simplifies the interaction between the TreeGrid and GraphQL servers, allowing efficient data retrieval with support for data operations like CRUD (Create, Read, Update and Delete), paging, sorting, and filtering.
+Syncfusion’s Blazor TreeGrid  seamlessly integrates with GraphQL servers using the GraphQLAdaptor in the [`SfDataManager`](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app). This specialized adaptor simplifies the interaction between the TreeGrid and GraphQL servers, allowing efficient data retrieval with support for data operations like CRUD (Create, Read, Update and Delete), paging, sorting, and filtering.
 
 This section describes a step-by-step process for retrieving data from a GraphQL service using GraphQLAdaptor, then binding it to the TreeGrid to facilitate data and CRUD operations.
 
@@ -46,10 +46,10 @@ Install-Package HotChocolate.AspNetCore
 
 **Step 3: Create a model class**
 
-Add a new folder named **Models**. Then, add a model class named **OrderData.cs** in the **Models** folder to represent the order data.
+Add a new folder named **Models**. Then, add a model class named **EmployeeData.cs** in the **Models** folder to represent the employee data.
 
 {% tabs %}
-{% highlight cs tabtitle="OrderData.cs" %}
+{% highlight cs tabtitle="EmployeeData.cs" %}
 
 using System.Text.Json.Serialization;
 
@@ -307,7 +307,7 @@ namespace GraphQLServer.Models
 
 **Step 4: Define the GraphQL query**
 
-Create a `GraphQLQuery` class to define the query resolver for fetching order data. This class will handle the logic for retrieving data from the `OrderData` model. The following code demonstrates the `DataManagerRequestInput` class, which is passed as an argument to the resolver function.
+Create a `GraphQLQuery` class to define the query resolver for fetching employee data. This class will handle the logic for retrieving data from the `EmployeeData` model. The following code demonstrates the `DataManagerRequestInput` class, which is passed as an argument to the resolver function.
 
 {% tabs %}
 {% highlight cs tabtitle="GraphQLQuery.cs" %}
@@ -315,7 +315,7 @@ Create a `GraphQLQuery` class to define the query resolver for fetching order da
 using GraphQLServer.Models;
 
 /// <summary>
-/// Represents the GraphQL query resolver for fetching order data.
+/// Represents the GraphQL query resolver for fetching employee data.
 /// </summary>
 public class GraphQLQuery
 {
@@ -664,19 +664,24 @@ To verify that the GraphQL server is functioning correctly, use the following ex
 
 ```
 {
-    ordersData {
-        count
-        result {
-            orderID
-            customerID
-            shipCity
-            shipCountry
-        }
-    }
+   employeesData(dataManager: $dataManager) {
+      count
+      result {
+        employeeID
+        managerID
+        hasChild
+        name
+        lastName
+        title
+        location
+        dateJoined
+        salaryPerMonth
+        email
+      }
 }
 ```
 
-This query will return the total count of orders and a list of order details. Ensure the server is running and accessible at `http://localhost:xxxx/graphql` before testing. Here, `xxxx` represents the port number.
+This query will return the total count of employee data. Ensure the server is running and accessible at `http://localhost:xxxx/graphql` before testing. Here, `xxxx` represents the port number.
 
 For more details, refer to the [Hot Chocolate documentation](https://chillicream.com/docs/hotchocolate).
 
@@ -3791,3 +3796,5 @@ namespace GraphQLServer.GraphQL
 {% endtabs %}
 
 ![Crud Operation](./images/treegrid-graphql-CRUD.gif)
+
+You can get the entire code in the [github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/GraphQLAdaptor) sample.
