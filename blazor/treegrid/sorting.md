@@ -14,9 +14,7 @@ Sorting enables to sort data in the **Ascending** or **Descending** order. To so
 To enable sorting in the Tree Grid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) to true. Sorting options can be configured through the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSortSettings.html).
 
 {% tabs %}
-
 {% highlight razor %}
-
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 
@@ -44,7 +42,6 @@ To enable sorting in the Tree Grid, set the [AllowSorting](https://help.syncfusi
 }
 
 {% endhighlight %}
-
 {% highlight c# %}
 
 namespace TreeGridComponent.Data {
@@ -255,7 +252,7 @@ When the tree grid header is tapped on the touchscreen devices, the selected col
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid provides a way to customize the default sort action for a column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SortComparer) property of `TreeGridColumn`. The `SortComparer` data type uses the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0&viewFallbackFrom=net-5) interface, so the custom sort comparer class should be implemented in the interface `IComparer`.
 
-In this TreeGrid example, custom sorting enhances project management by allowing the "Priority" column to be sorted based on a predefined hierarchy (Critical, High, Normal, Low) instead of alphabetical order, and the "Story Points" column is defined as string, but it is sorted numerically so that string values are treated as numbers, producing the correct ascending sequence 3, 5, 30 rather than the alphabetical order "3", "30", "5". In descending order, the numeric order is reversed to 30, 5, 3, making larger story points appear at the top.
+In this TreeGrid example, custom sorting enhances project management by allowing the "Priority" column to be sorted based on a predefined hierarchy (Low, Normal, High, Critical) instead of alphabetical order, and the "Story Points" column is defined as string, but it is sorted numerically so that string values are treated as numbers, producing the correct ascending sequence 3, 5, 30 rather than the alphabetical order "3", "30", "5". In descending order, the numeric order is reversed to 30, 5, 3, making larger story points appear at the top.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -611,6 +608,6 @@ namespace TreeGridComponent.Data {
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrSWVWZprFrLETz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The SortComparer function takes two parameters: a and b. The a and b parameters are the values to be compared. The function returns -1, 0, or 1, depending on the comparison result.
-> * The SortComparer property will work only for local data.
-> * When using the column template to display data in a column, you will need to use the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to work with the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SortComparer) property.
+> * The `SortComparer` function takes two parameters: `a` and `b`. These parameters represent the values to be compared. The function returns **-1**, **0**, or **1**, depending on the comparison result, which showcases the sorting order.
+> * The `SortComparer` property will work only for local data.
+> * When using the column template to display data in a column, you will need to use the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to work with the `SortComparer` property.
