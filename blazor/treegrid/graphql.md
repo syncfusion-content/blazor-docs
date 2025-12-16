@@ -1155,7 +1155,7 @@ To handle search operations in the Syncfusion<sup style="font-size:70%">&reg;</s
 
 When a search is performed in the TreeGrid, the DataManager sends the search parameters to the server, which include the search keyword and the list of fields to search against. The server then processes these parameters and filters the data accordingly.
 
-![GraphqlAdaptor - Searching](../images/treegrid-graphql-searching.gif)
+![GraphqlAdaptor - Searching](./images/treegrid-graphql-searching.gif)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -1637,7 +1637,7 @@ When a filter is applied in the TreeGrid, the DataManager sends the filtering cr
 
 On the server, these parameters are parsed and used to filter the data source accordingly before returning the results to the TreeGrid.
 
-![GraphqlAdaptor - Filtering](../images/treegrid-graphql-filtering.gif)
+![GraphqlAdaptor - Filtering](./images/treegrid-graphql-filtering.gif)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -2145,7 +2145,7 @@ To handle sorting operations in the Syncfusion<sup style="font-size:70%">&reg;</
 
 When a sort action is triggered in the TreeGrid, the DataManager sends the sorting configuration in the `Sorted` property. This includes the field name to sort and the direction (Ascending or Descending). The server processes this parameter and sorts the data accordingly before returning it to the TreeGrid.
 
-![GraphqlAdaptor - Sorting](../images/treegrid-graphql-sorting.gif)
+![GraphqlAdaptor - Sorting](./images/treegrid-graphql-sorting.gif)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -2576,7 +2576,7 @@ When paging is applied, the DataManager sends the **Skip** and **Take** values t
 
 On the server side, the data is sliced based on the **Skip** and **Take** values, and the total record count is returned to enable proper pagination in the TreeGrid.
 
-![GraphQLAdaptor - Paging](../images/treegrid-graphql-paging.gif)
+![GraphQLAdaptor - Paging](./images/treegrid-graphql-paging.gif)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -3790,6 +3790,6 @@ namespace GraphQLServer.GraphQL
 {% endhighlight %}
 {% endtabs %}
 
-![Crud Operation](../images/treegrid-graphql-CRUD.gif)
+![Crud Operation](./images/treegrid-graphql-CRUD.gif)
 
 You can get the entire code in the [github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/GraphQLAdaptor) sample.
