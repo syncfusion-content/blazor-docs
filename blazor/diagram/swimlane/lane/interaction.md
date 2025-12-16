@@ -165,25 +165,13 @@ The following example demonstrates a node with the text "AllowDrag Within Swimla
 
 The following example demonstrates enabling or disabling `AllowDragWithinSwimlane` dynamically at runtime by a button click.
 
-<<<<<<< .mine
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-=======
->**Note:**
-* To restrict a node to its owning swimlane, add **NodeConstraints.AllowDragWithinSwimlane** to the node’s `Constraints` property.
->>>>>>> .theirs
 
-<<<<<<< .mine
 <button onclick="@AllowDrag">AllowDrag</button>
 <SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" >
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
-=======
-* To enforce this restriction for all child nodes within swimlanes, set the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) during node initialization in the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) event.
-
-
-
->>>>>>> .theirs
 
 @code
 {
