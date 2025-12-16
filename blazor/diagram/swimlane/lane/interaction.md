@@ -48,7 +48,7 @@ The following image shows children interaction in lane.
 
 ![Lane Children Interaction](../Swimlane-images/Child_Interaction.gif)
 
-## How to restricts nodes from being dragged or repositioned outside their assigned swimlane
+## How to restrict nodes from being dragged or repositioned outside their assigned swimlane
 
 To restrict child nodes to their swimlane, set their [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) to include AllowDragWithinSwimlane. By default, nodes can move freely; however, with this constraint enabled, a node can only be dragged within the bounds of its owning swimlane. Attempts to move it across lane or swimlane boundaries are prevented.
 
