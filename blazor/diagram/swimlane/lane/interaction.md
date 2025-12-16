@@ -50,9 +50,11 @@ The following image shows children interaction in lane.
 
 ## How to restrict nodes from being dragged or repositioned outside their assigned swimlane
 
-To restrict child nodes to their swimlane, set their [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) to include [NodeConstraints.AllowDragWithinSwimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_AllowDragWithinSwimlane). By default, nodes can move freely; however, with this constraint enabled, a node can only be dragged within the bounds of its owning swimlane. Attempts to move it across lane or swimlane boundaries are prevented.
-
-The following example demonstrates one node restricted to its swimlane, while another remains unrestricted for comparison.
+By default, nodes in a swimlane can be moved freely within and outside the swimlane boundaries. When **NodeConstraints.AllowDragWithinSwimlane** is enabled by the nodes [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property, nodes cannot be dragged outside the swimlane. If an attempt is made to move a node beyond the swimlane’s boundaries, a “not allowed” cursor appears, indicating the restriction.
+ 
+To enforce this restriction for all child nodes within swimlanes, set the constraint during node initialization in the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) event. The constraint can also be enabled or disabled dynamically at runtime, for example, via a button click.
+ 
+The following example demonstrates a node with the text "AllowDrag Within Swimlane" restricted to its swimlane boundaries:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -115,7 +117,13 @@ The following example demonstrates one node restricted to its swimlane, while an
                                 } 
                             } 
                         },
-                        new Node(){Height = 50, Width = 50, LaneOffsetX = 250, LaneOffsetY = 30},
+                        new Node()
+                        {
+                            Height = 50, 
+                            Width = 50, 
+                            LaneOffsetX = 250, 
+                            LaneOffsetY = 30
+                        },
                     }
                 },
             }
@@ -145,21 +153,94 @@ The following example demonstrates one node restricted to its swimlane, while an
         else if (obj is Node node)
         {
             node.Style = new ShapeStyle()
-                {
-                    Fill = "#5b9bd5",
-                    StrokeColor = "#5b9bd5"
-                };
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
         }
     }
 }
 
 ``` 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNode)
 
-![Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)
+The following example demonstrates enabling or disabling `AllowDragWithinSwimlane` dynamically at runtime by a button click.
 
->**Note:**
-* To restrict a node to its owning swimlane, add [NodeConstraints.AllowDragWithinSwimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_AllowDragWithinSwimlane) to the node’s `Constraints` property.
+```cshtml
+@using Syncfusion.Blazor.Diagram
 
-* To enforce this restriction for all child nodes within swimlanes, set the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) during node initialization in the NodeCreating event.
+<button onclick="@AllowDrag">AllowDrag</button>
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" >
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
 
+@code
+{
+    //Define diagram's swimlane collection
+    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+
+    protected override void OnInitialized()
+    {
+        // A swimlane is created and stored in the swimlanes collection.
+        Swimlane swimlane = new Swimlane()
+        {
+            Header = new SwimlaneHeader()
+            {
+                Annotation = new ShapeAnnotation()
+                {
+                    Content = "SALES PROCESS FLOW CHART"
+                },
+                Height = 50,
+            },
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 120,
+            Width = 450,
+            Lanes = new DiagramObjectCollection<Lane>()
+            {
+                new Lane()
+                {
+                    Height = 100,
+                    Header = new SwimlaneHeader()
+                    {
+                        Width = 30,
+                        Annotation = new ShapeAnnotation(){ Content = "Consumer" }
+                    },
+                    Children = new DiagramObjectCollection<Node>()
+                    {
+                        new Node()
+                        {
+                            Height = 50, 
+                            Width = 100,
+                            LaneOffsetX = 250, 
+                            LaneOffsetY = 30
+                        },
+                    }
+                },
+            }
+        };
+        // Add swimlane
+        SwimlaneCollections.Add(swimlane);
+    }
+
+    public void AllowDrag()
+    {
+        if (diagramComponent.SelectionSettings.Nodes.Count > 0)
+        {
+            if (diagramComponent.SelectionSettings.Nodes[0].Constraints.HasFlag(NodeConstraints.AllowDragWithinSwimlane))
+            {
+                diagramComponent.SelectionSettings.Nodes[0].Constraints &= ~NodeConstraints.AllowDragWithinSwimlane;
+
+            }
+            else
+            {
+                diagramComponent.SelectionSettings.Nodes[0].Constraints |= NodeConstraints.AllowDragWithinSwimlane;
+            }
+        }
+    }
+}
+
+``` 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVeMBiRzuEmRSmS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/AllowDragWithinSwimlane/AllowDragWithinSwimlane)
