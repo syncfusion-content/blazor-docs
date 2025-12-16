@@ -74,30 +74,24 @@ The Block Editor comes with different built-in label items. These includes:
 -   **Progress**: In-progress, On-hold, Done
 -   **Priority**: High, Medium, Low
 
-### Customize label
+### Global label settings
 
-You can customize the labels by using the `Properties` property along with `ContentType` as `Label`.
+You can configure global settings for all label inline contents using the `BlockEditorLabel` tag directive.
 
-### ContentType and Properties
+The `BlockEditorLabel` tag directive supports the following options:
 
-```cshtml
-// Adding inline label
-    new BlockModel
-    {
-        BlockType = BlockType.Paragraph,
-        Content = {new ContentModel{ContentType = ContentType.Label, Properties = new LabelContentSettings {
-            LabelID = "progress"
-        }}}
-    }
-```
+| Property | Description |
+|----------|-------------|
+| TriggerChar | Specifies the character that opens the label suggestions popup. |
+| Items | Specifies the label items. |
 
-### Trigger Character configuration
+#### Trigger Character configuration
 
 Use the `TriggerChar` property to define the character that opens the label suggestions popup. The default trigger character is `$`.
 
-### Label items configuration
+#### Label items configuration
 
-Define the available labels using the `Items` array. When a user types the trigger character, a popup will show matching items.
+Define the available labels using the `Items` property present in the `BlockEditorLabel` tag directive. When a user types the trigger character, a popup will show matching items.
 
 Each item supports the following properties:
 
@@ -112,7 +106,24 @@ Each item supports the following properties:
 
 When users type the trigger character, a popup will appear showing matching label items from which they can select. The selected label will be inserted into the content as a Label content item.
 
-### Using labels with group headers
+#### Customize label
+
+You can customize the labels by using the `Properties` property along with `ContentType` as `Label`.
+
+#### ContentType and Properties
+
+```cshtml
+// Adding inline label
+    new BlockModel
+    {
+        BlockType = BlockType.Paragraph,
+        Content = {new ContentModel{ContentType = ContentType.Label, Properties = new LabelContentSettings {
+            LabelID = "progress"
+        }}}
+    }
+```
+
+#### Using labels with group headers
 
 Labels with the same `GroupBy` value will be grouped together in the label selection popup:
 
