@@ -186,7 +186,7 @@ Apart from the default date navigation and view options available on the header 
 }
 ```
 
-The Scheduler with custom toolbar items alongside the default navigation and view options in the header bar will be rendered as shown in the following image.
+The Scheduler with custom toolbar items alongside the default navigation in the header bar will be rendered as shown in the following image.
 
 ![Customizing header bar using template in Blazor Scheduler](images/blazor-scheduler-toolbar-template.png)
 
