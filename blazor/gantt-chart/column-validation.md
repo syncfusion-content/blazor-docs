@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column validation in Blazor Gantt Chart Component | Syncfusion
+title: Column Validation in Blazor Gantt Chart Component | Syncfusion
 description: Learn how to configure built-in and custom column validation in the Syncfusion Blazor Gantt Chart component, including ValidationRules, DataAnnotations, and custom validator components with form-level checks.
 platform: Blazor
 control: Gantt Chart
@@ -11,7 +11,7 @@ documentation: ug
 
 Column validation allows validating edited or newly added row data before saving it. This feature is particularly useful for enforcing specific rules or constraints on individual columns to maintain data integrity. By applying validation rules to columns, error messages are displayed for invalid fields, and saving is prevented until all validations succeed.
 
-The Syncfusion® Blazor Gantt Chart component leverages the Form Validator library for column validation. Validation rules can be defined using the [GanttColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html?_gl=1*8pkqn2*_gcl_au*OTM1ODE5OTI5LjE3NjUzNTkzNzE.*_ga*MjU4MTYzMzQ2LjE3NjUzNTkzNzE.*_ga_41J4HFMX1J*czE3NjU1NDE1MDQkbzgkZzEkdDE3NjU1NDIwNzMkajYwJGwwJGgw) property to specify criteria for validating column values.
+The Syncfusion® Blazor Gantt Chart component leverages the Form Validator library for column validation. Validation rules can be defined using the [GanttColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) property to specify criteria for validating column values.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -19,11 +19,11 @@ The Syncfusion® Blazor Gantt Chart component leverages the Form Validator libra
 @using Syncfusion.Blazor.Gantt
 <SfGantt @ref="Gantt" TValue="TaskInfoModel" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
             Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel"})" TreeColumnIndex="1">
-    <GanttTaskFields Id="TaskId" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                    ParentID="ParentId"></GanttTaskFields>
+    <GanttTaskFields Id="TaskID" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                    ParentID="ParentID"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true"
+        <GanttColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true"
                         Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </GanttColumn>
         <GanttColumn Field="ActivityName" HeaderText="Task Name" Width="160"
@@ -63,24 +63,24 @@ The Syncfusion® Blazor Gantt Chart component leverages the Form Validator libra
     }
     public class TaskInfoModel
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string? ActivityName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int? Duration { get; set; }
         public int Progress { get; set; }           
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
     public static List<TaskInfoModel> EditingData()
     {
         List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-        new TaskInfoModel() { TaskId = 1, ActivityName = "Product concept", StartDate = new DateTime(2021, 04, 02), Duration = 5, Progress = 60, ParentId = null },
-        new TaskInfoModel() { TaskId = 2, ActivityName = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 70, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 3, ActivityName = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 80, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 4, ActivityName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = 2, Progress = 90, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 5, ActivityName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration = 0, Progress = 100, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 6, ActivityName = "Market research", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 30, ParentId = null },
-        new TaskInfoModel() { TaskId = 7, ActivityName = "Demand analysis", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 40, ParentId = 6 }
+        new TaskInfoModel() { TaskID = 1, ActivityName = "Product concept", StartDate = new DateTime(2021, 04, 02), Duration = 5, Progress = 60, ParentID = null },
+        new TaskInfoModel() { TaskID = 2, ActivityName = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 70, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 3, ActivityName = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 80, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 4, ActivityName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = 2, Progress = 90, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 5, ActivityName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration = 0, Progress = 100, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 6, ActivityName = "Market research", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 30, ParentID = null },
+        new TaskInfoModel() { TaskID = 7, ActivityName = "Demand analysis", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 40, ParentID = 6 }
         };
         return Tasks;
     }
@@ -92,6 +92,7 @@ The Syncfusion® Blazor Gantt Chart component leverages the Form Validator libra
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjheWLChfJEBegzY?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Data annotation
+
 The Syncfusion® Blazor Gantt Chart component supports data annotation validation attributes to validate fields in the underlying data model during Add and Edit operations. These attributes provide a declarative way to enforce rules directly on the model properties, ensuring data integrity without writing additional validation logic.
 
 ### How it works
@@ -106,11 +107,11 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 @using System.ComponentModel.DataAnnotations
 <SfGantt @ref="Gantt" TValue="TaskInfoModel" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel"})" TreeColumnIndex="1">
-    <GanttTaskFields Id="TaskId" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId"></GanttTaskFields>
+    <GanttTaskFields Id="TaskID" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true"
+        <GanttColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true"
                      Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </GanttColumn>
         <GanttColumn Field="ActivityName" HeaderText="Task Name" Width="160" />
@@ -136,7 +137,7 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
     }
     public class TaskInfoModel
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         [Required(ErrorMessage = "ActivityName is required")]
         [StringLength(50, MinimumLength = 5, ErrorMessage = "ActivityName must be between 5 and 50 characters")]
         public string? ActivityName { get; set; }
@@ -145,18 +146,18 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
         public int? Duration { get; set; }
         [Range(0, 100, ErrorMessage = "Progress must be between 0 and 100")]
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
     public static List<TaskInfoModel> EditingData()
     {
         List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-        new TaskInfoModel() { TaskId = 1, ActivityName = "Product concept", StartDate = new DateTime(2021, 04, 02), Duration = 5, Progress = 60, ParentId = null },
-        new TaskInfoModel() { TaskId = 2, ActivityName = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 70, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 3, ActivityName = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 80, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 4, ActivityName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = 2, Progress = 90, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 5, ActivityName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration = 0, Progress = 100, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 6, ActivityName = "Market research", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 30, ParentId = null },
-        new TaskInfoModel() { TaskId = 7, ActivityName = "Demand analysis", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 40, ParentId = 6 }
+        new TaskInfoModel() { TaskID = 1, ActivityName = "Product concept", StartDate = new DateTime(2021, 04, 02), Duration = 5, Progress = 60, ParentID = null },
+        new TaskInfoModel() { TaskID = 2, ActivityName = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 70, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 3, ActivityName = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 80, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 4, ActivityName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = 2, Progress = 90, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 5, ActivityName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration = 0, Progress = 100, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 6, ActivityName = "Market research", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 30, ParentID = null },
+        new TaskInfoModel() { TaskID = 7, ActivityName = "Demand analysis", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 40, ParentID = 6 }
         };
         return Tasks;
     }
@@ -168,6 +169,7 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoWLWLpyjcQTAD?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Custom validation
+
 Custom validation allows defining your own validation logic when built-in rules or data annotations do not meet specific requirements. This approach is useful for enforcing business-specific constraints, dependent-field checks, or conditional validations during Add and Edit operations.
 
 ### To implement custom validation in Blazor Gantt Chart:
@@ -177,7 +179,7 @@ Override the `IsValid` method to include custom logic.
 * Apply the custom attribute to the model property that needs validation.
 * The Gantt Chart will automatically enforce these rules during Add and Edit operations.
 
-The following sample code demonstrates how to implement custom validation for the ActivityName and Progress fields.
+The following sample code demonstrates how to implement custom validation for the **ActivityName** and **Progress** fields.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -186,11 +188,11 @@ The following sample code demonstrates how to implement custom validation for th
 @using System.ComponentModel.DataAnnotations
 <SfGantt @ref="Gantt" TValue="TaskInfoModel" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel"})" TreeColumnIndex="1">
-    <GanttTaskFields Id="TaskId" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId"></GanttTaskFields>
+    <GanttTaskFields Id="TaskID" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true"
+        <GanttColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true"
                      Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </GanttColumn>
         <GanttColumn Field="ActivityName" HeaderText="Task Name" Width="160" />
@@ -217,7 +219,7 @@ The following sample code demonstrates how to implement custom validation for th
     }
     public class TaskInfoModel
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         [CustomValidationActivityName]
         public string? ActivityName { get; set; }
         public DateTime? StartDate { get; set; }
@@ -225,7 +227,7 @@ The following sample code demonstrates how to implement custom validation for th
         public int? Duration { get; set; }
         [CustomValidationProgress]
         public int Progress { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
     }
 
     /// <summary>
@@ -266,13 +268,13 @@ The following sample code demonstrates how to implement custom validation for th
     public static List<TaskInfoModel> EditingData()
     {
         List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-        new TaskInfoModel() { TaskId = 1, ActivityName = "Product concept", StartDate = new DateTime(2021, 04, 02), Duration = 5, Progress = 60, ParentId = null },
-        new TaskInfoModel() { TaskId = 2, ActivityName = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 70, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 3, ActivityName = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 80, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 4, ActivityName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = 2, Progress = 90, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 5, ActivityName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration = 0, Progress = 100, ParentId = 1 },
-        new TaskInfoModel() { TaskId = 6, ActivityName = "Market research", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 30, ParentId = null },
-        new TaskInfoModel() { TaskId = 7, ActivityName = "Demand analysis", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 40, ParentId = 6 }
+        new TaskInfoModel() { TaskID = 1, ActivityName = "Product concept", StartDate = new DateTime(2021, 04, 02), Duration = 5, Progress = 60, ParentID = null },
+        new TaskInfoModel() { TaskID = 2, ActivityName = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 70, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 3, ActivityName = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 80, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 4, ActivityName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = 2, Progress = 90, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 5, ActivityName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration = 0, Progress = 100, ParentID = 1 },
+        new TaskInfoModel() { TaskID = 6, ActivityName = "Market research", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 30, ParentID = null },
+        new TaskInfoModel() { TaskID = 7, ActivityName = "Demand analysis", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 40, ParentID = 6 }
         };
         return Tasks;
     }
@@ -283,14 +285,15 @@ The following sample code demonstrates how to implement custom validation for th
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXreihChTSiAmHFW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
-## Custom validator component 
+## Custom validator component
+
 Custom validator components provide flexible validation beyond built‑in ValidationRules and ValidationAttribute classes.Here, you can override the default validation logic by implementing your custom validation rules, which allows for more complex and specific validation scenarios tailored to your application's needs.
 
 ### How does it work in Gantt Chart?
 
 The Syncfusion® Blazor Gantt Chart supports injecting a custom validator component into its internal EditForm using the `Validator` property of [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html).
 
-Inside the validator, you can access the current row’s data and the edit context via the implicit parameter context of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html?_gl=1*b3u6h5*_gcl_au*OTM1ODE5OTI5LjE3NjUzNTkzNzE.*_ga*MjU4MTYzMzQ2LjE3NjUzNTkzNzE.*_ga_41J4HFMX1J*czE3NjU1NDE1MDQkbzgkZzEkdDE3NjU1NDIyODgkajQ4JGwwJGgw). This enables form-level checks during Add/Edit operations.
+Inside the validator, you can access the current row’s data and the edit context via the implicit parameter context of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html). This enables form-level checks during Add/Edit operations.
 
 For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
 
@@ -301,7 +304,7 @@ In the below code example, the following things have been done.
 
 * A form validator component named GanttCustomValidator that accepts `ValidatorTemplateContext` as a parameter.
 * Usage of [GanttEditSettings.Validator]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html)) to inject the validator into the internal EditForm.
-* This validator component will checks for TaskId and ActivityName with per‑field messages.
+* This validator component will checks for **TaskID** and **ActivityName** with per‑field messages.
 * Display of errors using the built‑in validation tooltip via
 `ValidatorTemplateContext.ShowValidationMessage(fieldName, isValid, message)` method.
 
@@ -317,8 +320,8 @@ In the below code example, the following things have been done.
 
 <SfGantt TValue="GanttData.TaskInfoModel" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
             Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel"})" TreeColumnIndex="1">
-    <GanttTaskFields Id="TaskId" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-        ParentID="ParentId"></GanttTaskFields>
+    <GanttTaskFields Id="TaskID" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+        ParentID="ParentID"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true">
         <Validator>
             @{
@@ -328,14 +331,13 @@ In the below code example, the following things have been done.
         </Validator>
     </GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80"
+        <GanttColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true" Width="80"
                         TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </GanttColumn>
         <GanttColumn Field="ActivityName" HeaderText="Task Name" Width="160" />
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150" Format="d"
                      EditType="Syncfusion.Blazor.Grids.EditType.DateTimePickerEdit">
         </GanttColumn>
-
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="150" Format="g"
                      EditType="Syncfusion.Blazor.Grids.EditType.DateTimePickerEdit">
         </GanttColumn>
@@ -371,25 +373,25 @@ namespace ColumnValidationComponents
     {
         public class TaskInfoModel
         {
-            public int TaskId { get; set; }
+            public int TaskID { get; set; }
             public string ActivityName { get; set; } = string.Empty;
             public DateTime? StartDate { get; set; }
             public DateTime? EndDate { get; set; }
             public int? Duration { get; set; }
             public string Predecessor { get; set; } = string.Empty;
             public int Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int? ParentID { get; set; }
         }
         public static List<TaskInfoModel> EditingData()
         {
             List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-            new TaskInfoModel() { TaskId = 1, ActivityName = "Product concept", StartDate = new DateTime(2021, 04, 02), Duration = 5, Progress = 60, ParentId = null },
-            new TaskInfoModel() { TaskId = 2, ActivityName = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 70, ParentId = 1 },
-            new TaskInfoModel() { TaskId = 3, ActivityName = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 80, ParentId = 1 },
-            new TaskInfoModel() { TaskId = 4, ActivityName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = 2, Progress = 90, ParentId = 1 },
-            new TaskInfoModel() { TaskId = 5, ActivityName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration = 0, Progress = 100, ParentId = 1 },
-            new TaskInfoModel() { TaskId = 6, ActivityName = "Market research", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 30, ParentId = null },
-            new TaskInfoModel() { TaskId = 7, ActivityName = "Demand analysis", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 40, ParentId = 6 }
+            new TaskInfoModel() { TaskID = 1, ActivityName = "Product concept", StartDate = new DateTime(2021, 04, 02), Duration = 5, Progress = 60, ParentID = null },
+            new TaskInfoModel() { TaskID = 2, ActivityName = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 70, ParentID = 1 },
+            new TaskInfoModel() { TaskID = 3, ActivityName = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), Duration = 3, Progress = 80, ParentID = 1 },
+            new TaskInfoModel() { TaskID = 4, ActivityName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = 2, Progress = 90, ParentID = 1 },
+            new TaskInfoModel() { TaskID = 5, ActivityName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration = 0, Progress = 100, ParentID = 1 },
+            new TaskInfoModel() { TaskID = 6, ActivityName = "Market research", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 30, ParentID = null },
+            new TaskInfoModel() { TaskID = 7, ActivityName = "Demand analysis", StartDate = new DateTime(2021, 04, 09), Duration = 4, Progress = 40, ParentID = 6 }
             };
             return Tasks;
         }
@@ -455,7 +457,7 @@ namespace ColumnValidationComponents
 
         /// <summary>
         /// Executes field-level validation for the provided <see cref="FieldIdentifier"/>.
-        /// Currently validates <c>TaskId</c> and <c>ActivityName</c> of the <see cref="GanttData.TaskInfoModel"/>.
+        /// Currently validates <c>TaskID</c> and <c>ActivityName</c> of the <see cref="GanttData.TaskInfoModel"/>.
         /// Other fields will be cleared by default.
         /// </summary>
         private void HandleValidation(FieldIdentifier identifier)
@@ -465,8 +467,8 @@ namespace ColumnValidationComponents
                 _messageStore.Clear(identifier);
                 switch (identifier.FieldName)
                 {
-                    case nameof(GanttData.TaskInfoModel.TaskId):
-                        if (TaskInfoModel.TaskId <= 0)
+                    case nameof(GanttData.TaskInfoModel.TaskID):
+                        if (TaskInfoModel.TaskID <= 0)
                             AddError(identifier, "Task ID is required.");
                         else
                             ClearField(identifier);
@@ -507,7 +509,7 @@ namespace ColumnValidationComponents
             _messageStore.Clear();
             string[] fieldsToValidate = new[]
             {
-                nameof(GanttData.TaskInfoModel.TaskId),
+                nameof(GanttData.TaskInfoModel.TaskID),
                 nameof(GanttData.TaskInfoModel.ActivityName),
                 nameof(GanttData.TaskInfoModel.Progress),
                 nameof(GanttData.TaskInfoModel.StartDate),
@@ -537,6 +539,7 @@ namespace ColumnValidationComponents
 {% endtabs %}
 
 ## Limitation
+
 * **Resource column**: Validation is not supported because resource data is managed externally and updated as an empty string in the model.
 * **Predecessor column**: Validation cannot be applied when using localization or rendering Grid columns inside a dialog, as rules and attributes cannot be passed to these columns.
 
