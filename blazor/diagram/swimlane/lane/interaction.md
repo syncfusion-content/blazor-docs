@@ -50,7 +50,7 @@ The following image shows children interaction in lane.
 
 ## How to restrict nodes from being dragged outside their swimlane
 
-By default, nodes in a swimlane can be moved freely both within and outside the swimlane boundaries. Enabling the **NodeConstraints.AllowDragWithinSwimlane** option on the node’s [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property prevents the node from moving outside the swimlane. When a node is dragged beyond its boundaries, a 'not allowed' cursor appears to indicate the restriction.
+By default, nodes in a swimlane can move freely within and outside its boundaries. Enabling the **NodeConstraints.AllowDragWithinSwimlane** option in the node’s [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property restricts movement to the swimlane. When a node is dragged beyond its boundaries, a 'not allowed' cursor appears to indicate the restriction.
  
 To enforce this restriction for all child nodes within swimlanes, set the constraint during node initialization in the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) event.
  
