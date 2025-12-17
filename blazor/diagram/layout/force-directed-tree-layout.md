@@ -40,8 +40,6 @@ Specifies how many times the algorithm runs to stabilize the layout.
 
 Controls how strongly nodes repel each other.
 
-The following example increases the repulsion strength to spread out nodes further.
-
 >**Note:** Minimum value: 3000. Higher values create more space between nodes.
 
 ### AttractionStrength
@@ -56,7 +54,7 @@ The following example demonstrates how to customize the properties of the Force-
 
 <SfDiagramComponent @ref="@diagramComponent" Height="690px" Width="100%" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
-    <Layout Type="LayoutType.ForceDirectedTree" @bind-HorizontalSpacing="@layoutSettings"></Layout>
+    <Layout Type="LayoutType.ForceDirectedTree" @bind-ForceDirectedTreeLayoutSettings="@layoutSettings"></Layout>
 </SfDiagramComponent>
 
 @code {
@@ -72,7 +70,6 @@ The following example demonstrates how to customize the properties of the Force-
         AttractionStrength = 0.8
     };
 
-    // Easy sizing controls
     private int DepartmentsUnderCeo { get; set; } = 4;
     private int ManagersPerDepartment { get; set; } = 4;
     private int TeamsPerManager { get; set; } = 6;
@@ -177,7 +174,6 @@ The following example demonstrates how to customize the properties of the Force-
         public OrganizationLevel Level { get; set; }
     }
 
-    // Parameterized organization data generator
     private static List<OrganizationItem> BuildOrganizationData(int departmentCount, int managersPerDepartment, int teamsPerManager)
     {
         List<OrganizationItem> organizationData = new List<OrganizationItem>
@@ -210,7 +206,7 @@ The following example demonstrates how to customize the properties of the Force-
         }
         return organizationData;
     }
-    
+
     // Realistic software company hierarchy: 1 CEO with 4 departments, each with managers and their respective teams
     private static List<OrganizationItem> GetCompanyOrganizationData()
     {
@@ -292,6 +288,8 @@ The following example demonstrates how to customize the properties of the Force-
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeLayout)
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"% backgroundimage "[Blazor Diagram hierarchical layout example](../images/ForceDirectedTreeLayout.png)"}
 
 ## How to Create a Force-Directed Tree Using DataSource
