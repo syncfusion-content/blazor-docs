@@ -368,6 +368,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to create a connector](../connectors/connectors)
 
-* [How to generate the organization chart](./organizational-chart)
-
-* [How to generate the hierarchical layout](./hierarchical-layout)
+* [How to bind data to the Diagram](../data-binding)
