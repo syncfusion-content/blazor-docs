@@ -290,7 +290,7 @@ The following example demonstrates how to customize the properties of the Force-
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeLayout)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"% backgroundimage "[Blazor Diagram hierarchical layout example](../images/ForceDirectedTreeLayout.png)"}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"% backgroundimage "[Blazor Diagram hierarchical layout example](../images/Force-DirectedTreeLayout.png)"}
 
 ## How to Create a Force-Directed Tree Using DataSource
 
