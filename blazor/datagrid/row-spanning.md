@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Row Spanning in Blazor DataGrid Component | Syncfusion
-description: Learn how to use the row spanning in Syncfusion Blazor DataGrid.
+description: Learn here all about row spanning in Syncfusion Blazor DataGrid component of Syncfusion Essential Studio and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Row spanning in Blazor DataGrid
+# Row Spanning in Blazor DataGrid
 
 Row spanning in the Syncfusion Blazor DataGrid merges adjacent cells with identical values horizontally across columns within the same row. This feature reduces visual repetition and presents grouped data in a compact, readable format. It is particularly effective in scenarios where multiple columns share the same value, such as repeated product details or status indicators.
 
@@ -15,14 +15,12 @@ The functionality is enabled by setting the `AutoSpan` property of the `SfGrid` 
 
 Row spanning is part of the broader **AutoSpanMode** enumeration, which provides multiple options for customizing cell merging behavior in the Syncfusion Blazor DataGrid. The available modes include **None**, **Row**, **Column**, and **HorizontalAndVertical**. 
 
-**AutoSpanMode Enumeration**
-
 | Enum Value | Description |
 |---------|-----|
-| **AutoSpanMode.None** | Disables automatic cell spanning. Every cell remains isolated. (Default Mode) | 
-| **AutoSpanMode.Row** | Enables horizontal merging across columns within the same row. | 
-| **AutoSpanMode.Column** | Enables vertical merging of adjacent cells with identical values in the same column. | 
-| **AutoSpanMode.HorizontalAndVertical** | Enables both horizontal and vertical merging. Executes row merging first, followed by column merging. | 
+| AutoSpanMode.None | Disables automatic cell spanning so every cell remains isolated (Default Mode). | 
+| AutoSpanMode.Row | Enables horizontal merging across columns within the same row. | 
+| AutoSpanMode.Column | Enables vertical merging of adjacent cells with identical values in the same column. | 
+| AutoSpanMode.HorizontalAndVertical | Enables both horizontal and vertical merging. Executes row merging first, followed by column merging. |  
 
 ## Enable row spanning
 
@@ -472,7 +470,7 @@ public class TelecastData
 
 ## Disable spanning for specific column
 
-Spanning in the Syncfusion Blazor DataGrid can be disabled at the column level by setting the `AutoSpan` property of the `GridColumn` component to **AutoSpanMode.None**. This configuration provides fine-grained control, allowing automatic spanning to be applied globally while excluding specific columns where merging is not desired.
+Column spanning in Syncfusion Blazor DataGrid can be disabled for a specific column(s) by setting the `AutoSpan` property of the `GridColumn` component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding column(s) where merging is not required.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -505,8 +503,7 @@ Spanning in the Syncfusion Blazor DataGrid can be disabled at the column level b
         <GridColumn Field=@nameof(TelecastData.Program4PM) HeaderText="4:00 PM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(TelecastData.Program5PM) HeaderText="5:00 PM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(TelecastData.Program6PM) HeaderText="6:00 PM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
-        <GridColumn Field=@nameof(TelecastData.Program7PM) HeaderText="7:00 PM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
-        <!-- Disable spanning for the columns -->
+        <GridColumn Field=@nameof(TelecastData.Program7PM) HeaderText="7:00 PM" Width="150" TextAlign="TextAlign.Center"></GridColumn>        
         <GridColumn Field=@nameof(TelecastData.Program8PM) HeaderText="8:00 PM" Width="150" TextAlign="TextAlign.Center" AutoSpan="AutoSpanMode.None"></GridColumn>
         <GridColumn Field=@nameof(TelecastData.Program9PM) HeaderText="9:00 PM" Width="150" TextAlign="TextAlign.Center" AutoSpan="AutoSpanMode.None"></GridColumn>
         <GridColumn Field=@nameof(TelecastData.Program10PM) HeaderText="10:00 PM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
@@ -920,14 +917,14 @@ public class TelecastData
 The effective spanning behavior in the Syncfusion Blazor DataGrid is determined by the intersection of grid-level and column-level `AutoSpan` modes. A column can only restrict the spanning directions permitted at the grid level and cannot enable a span direction that has been disabled globally. This ensures consistent behavior across the grid while allowing fine-grained control for individual columns.
 
 
-**Complete Combination Matrix**
+**Combination Matrix**
 
 | Grid AutoSpan | Column AutoSpan | Effective Behavior |
 |---|---|---|
 | None | None | No spanning. Both grid and column explicitly disable spanning. |
-| None | Row | No spanning. Grid-level None overrides column-level Row. |
-| None | Column | No spanning. Grid-level None overrides column-level Column. |
-| None | HorizontalAndVertical | No spanning. Grid-level None overrides all spanning modes. |
+| None | Row | No spanning. Grid-level **None** overrides column-level **Row**. |
+| None | Column | No spanning. Grid-level **None** overrides column-level **Column**. |
+| None | HorizontalAndVertical | No spanning. Grid-level **None** overrides all spanning modes. |
 | Row | None | No spanning. Column explicitly disables spanning. |
 | Row | Row | Row spanning only. Both grid and column enable row spanning. |
 | Row | Column | No spanning. Grid only allows row spanning; column cannot enable column spanning. |
@@ -961,7 +958,7 @@ To define a merged region, use the following properties of the `MergeCellInfo` c
 | Property     | Type | Description                                                                 |
 |--------------|------|-----------------------------------------------------------------------------|
 | RowIndex     | int  | The zero-based index of the anchor row. |
-| ColumnIndex  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
+| ColumnIndex  | int  | The zero-based index of the anchor column (**top-left cell of the merged region**). |
 | RowSpan      | int (optional) | The number of rows to span, starting from the anchor cell. By default set to 1. |
 | ColumnSpan   | int (optional) | The number of columns to span, starting from the anchor cell. By default set to 1. |
 
@@ -1448,7 +1445,7 @@ To identify a merged region, use the following properties of the `UnmergeCellInf
 | Property     | Type | Description                                                                 |
 |--------------|------|-----------------------------------------------------------------------------|
 | RowIndex     | int  | The zero-based index of the anchor row. |
-| ColumnIndex  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
+| ColumnIndex  | int  | The zero-based index of the anchor column (**top-left cell of the merged region**). |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1946,8 +1943,8 @@ public class TelecastData
 
 ## Limitations
 
-The Row spanning is not compatible with the following features:
+The row spanning is not compatible with the following features:
 
 1. Autofill.
-2. Grouping – Row and column spanning are supported only within the same caption row during grouping scenarios. This means cells can be merged horizontally or vertically only inside a single group header (caption row). Merging across different caption rows is not supported, since each caption row represents a distinct group context. Allowing spans between these rows would break the logical grouping structure and the visual hierarchy of the grid.
-3. Frozen Grid – When the `Freeze` property is set to `FreezeDirection.Fixed`, the concerned column will not be included for row spanning.
+2. Grouping - Row and column spanning are supported only within the same caption row during grouping scenarios. This means cells can be merged horizontally or vertically only inside a single group header (caption row). Merging across different caption rows is not supported, since each caption row represents a distinct group context. Allowing spans between these rows would break the logical grouping structure and the visual hierarchy of the grid.
+3. Frozen Grid - When the `Freeze` property is set to `FreezeDirection.Fixed`, the concerned column will not be included for row spanning.
