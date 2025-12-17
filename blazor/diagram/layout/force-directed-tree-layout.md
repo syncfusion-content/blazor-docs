@@ -304,6 +304,7 @@ The following example demonstrates how to customize the properties of the Force-
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"%}
 
 ## How to Create a Force-Directed Tree Using DataSource
 
@@ -373,7 +374,8 @@ A Force-Directed Tree layout can be created with [DataSource](https://help.syncf
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeDataSource)
 
-![Blazor Force Directed Tree Data Source Diagram](../images/ForceDirectedTreeDataSource.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIWhiwURpVfzOI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Force Directed Tree Data Source Diagram](../images/ForceDirectedTreeDataSource.png)" %}
+
 ## See also
 
 * [How to create a node](../nodes/nodes)
