@@ -15,11 +15,9 @@ The functionality is enabled by setting the `AutoSpan` property of the `SfGrid` 
 
 Column spanning is part of the broader `AutoSpanMode` enumeration, which provides multiple options for customizing cell merging behavior in the Syncfusion Blazor DataGrid. The available modes include **None**, **Row**, **Column**, and **HorizontalAndVertical**. 
 
-**AutoSpanMode Enumeration**
-
 | Enum Value | Description |
 |---------|-----|
-| AutoSpanMode.None | Disables automatic cell spanning. Every cell remains isolated. (Default Mode) | 
+| AutoSpanMode.None | Disables automatic cell spanning so every cell remains isolated (Default Mode). | 
 | AutoSpanMode.Row | Enables horizontal merging across columns within the same row. | 
 | AutoSpanMode.Column | Enables vertical merging of adjacent cells with identical values in the same column. | 
 | AutoSpanMode.HorizontalAndVertical | Enables both horizontal and vertical merging. Executes row merging first, followed by column merging. | 
@@ -41,7 +39,7 @@ Vertical cell merging in the Syncfusion Blazor DataGrid is enabled by setting th
          AutoSpan="AutoSpanMode.Column" AllowSelection="false" EnableHover="false">  
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" Width="150" TextAlign="TextAlign.Right" IsPrimaryKey="true" IsFrozen="true"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="180" IsFrozen="@enableFrozen"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="180" IsFrozen="true"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_9_00) HeaderText="9:00 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_9_30) HeaderText="9:30 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_10_00) HeaderText="10:00 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
@@ -62,7 +60,6 @@ Vertical cell merging in the Syncfusion Blazor DataGrid is enabled by setting th
     </GridColumns>
 </SfGrid>
 @code {
-    private bool enableFrozen { get; set; } = true;
     public List<EmployeeDetails>? EmployeeTimeSheet { get; set; }
 
     protected override void OnInitialized()
@@ -357,7 +354,7 @@ public class EmployeeDetails
 
 ## Disable column spanning for specific column
 
-Column spanning in Syncfusion Blazor DataGrid can be disabled for a specific column by setting the `AutoSpan` property of the `GridColumn` component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding columns where merging is not required.
+Column spanning in Syncfusion Blazor DataGrid can be disabled for a specific column(s) by setting the `AutoSpan` property of the `GridColumn` component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding column(s) where merging is not required.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -370,7 +367,7 @@ Column spanning in Syncfusion Blazor DataGrid can be disabled for a specific col
         AutoSpan="AutoSpanMode.Column" AllowSelection="false" EnableHover="false">
        <GridColumns>
         <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" Width="150" TextAlign="TextAlign.Right" IsPrimaryKey="true" IsFrozen="true"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="180" IsFrozen="@enableFrozen"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="180" IsFrozen="true"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_9_00) HeaderText="9:00 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_9_30) HeaderText="9:30 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_10_00) HeaderText="10:00 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
@@ -392,7 +389,7 @@ Column spanning in Syncfusion Blazor DataGrid can be disabled for a specific col
 </SfGrid>
 
 @code {
-    private bool enableFrozen { get; set; } = true;
+    
     public List<EmployeeDetails>? EmployeeTimeSheet { get; set; }
 
     protected override void OnInitialized()
@@ -685,16 +682,16 @@ public class EmployeeDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBSshCRIKBMHUsU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The effective spanning behavior in the Syncfusion Blazor DataGrid is determined by the intersection of grid-level and column-level `AutoSpan` modes. A column can only restrict the spanning directions permitted at the grid level and cannot enable a span direction that has been disabled globally. This ensures consistent behavior across the grid while allowing fine-grained control for individual columns.
+The effective spanning behavior in the Syncfusion Blazor DataGrid is determined by the intersection of grid-level and column-level `AutoSpan` modes. A column can only restrict the spanning directions permitted at the grid-level and cannot enable a span direction that has been disabled globally. This ensures consistent behavior across the grid while allowing fine-grained control for individual columns.
 
-**Complete combination matrix**
+**Combination Matrix**
 
 | Grid AutoSpan | Column AutoSpan | Effective Behavior |
 |---|---|---|
 | None | None | No spanning. Both grid and column explicitly disable spanning. |
-| None | Row | No spanning. Grid-level None overrides column-level Row. |
-| None | Column | No spanning. Grid-level None overrides column-level Column. |
-| None | HorizontalAndVertical | No spanning. Grid-level None overrides all spanning modes. |
+| None | Row | No spanning. Grid-level **None** overrides column-level **Row**. |
+| None | Column | No spanning. Grid-level **None** overrides column-level **Column**. |
+| None | HorizontalAndVertical | No spanning. Grid-level **None** overrides all spanning modes. |
 | Row | None | No spanning. Column explicitly disables spanning. |
 | Row | Row | Row spanning only. Both grid and column enable row spanning. |
 | Row | Column | No spanning. Grid only allows row spanning; column cannot enable column spanning. |
@@ -747,7 +744,7 @@ To define a merged region, use the following properties of the `MergeCellInfo` c
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" Width="150" TextAlign="TextAlign.Right" IsPrimaryKey="true" IsFrozen="true"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="180" IsFrozen="@enableFrozen"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="180" IsFrozen="true"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_9_00) HeaderText="9:00 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_9_30) HeaderText="9:30 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_10_00) HeaderText="10:00 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
@@ -770,7 +767,6 @@ To define a merged region, use the following properties of the `MergeCellInfo` c
 
 @code
 {
-    private bool enableFrozen { get; set; } = true;
     public List<EmployeeDetails>? EmployeeTimeSheet { get; set; }
     public SfGrid<EmployeeDetails>? Grid;
 
@@ -1120,7 +1116,7 @@ To identify a merged region, use the following properties of the `UnmergeCellInf
 <SfGrid @ref="Grid" DataSource="@EmployeeTimeSheet"  GridLines="GridLine.Both" AllowSelection="false" EnableHover="false">    
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" Width="150" TextAlign="TextAlign.Right" IsPrimaryKey="true" IsFrozen="true"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="180" IsFrozen="@enableFrozen"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="180" IsFrozen="true"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_9_00) HeaderText="9:00 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_9_30) HeaderText="9:30 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Time_10_00) HeaderText="10:00 AM" Width="150" TextAlign="TextAlign.Center"></GridColumn>
@@ -1142,7 +1138,6 @@ To identify a merged region, use the following properties of the `UnmergeCellInf
 </SfGrid>
 @code
 {
-    private bool enableFrozen { get; set; } = true;
     public List<EmployeeDetails>? EmployeeTimeSheet { get; set; }
     public SfGrid<EmployeeDetails>? Grid;
 
