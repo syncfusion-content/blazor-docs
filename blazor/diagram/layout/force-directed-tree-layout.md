@@ -44,7 +44,7 @@ Determines how strongly connected nodes pull toward each other.
 ```
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagramComponent" Height="690px" Width="100%" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors">
+<SfDiagramComponent @ref="@diagramComponent" Height="690px" Width="100%" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors" Created="@OnCreated">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     <Layout Type="LayoutType.ForceDirectedTree" @bind-ForceDirectedTreeLayoutSettings="@layoutSettings"></Layout>
 </SfDiagramComponent>
@@ -89,6 +89,12 @@ Determines how strongly connected nodes pull toward each other.
                 Connectors!.Add(CreateNodeConnector(item.ParentId, item.Id));
             }
         }
+    }
+
+    public void OnCreated()
+    {
+        FitOptions options = new FitOptions() { Mode = FitMode.Both, Region = DiagramRegion.Content };
+        diagramComponent.FitToPage(options);
     }
 
     public Node CreateOrganizationNode(OrganizationItem item)
