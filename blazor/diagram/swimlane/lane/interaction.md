@@ -65,12 +65,12 @@ The following example demonstrates a node with the text "AllowDrag Within Swimla
 
 @code
 {
-    //Define diagram's swimlane collection
+    // Define diagram's swimlane collection
     private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
-        // A swimlane is created and stored in the swimlanes collection.
+        // A swimlane is created and stored in the swimlanes collection
         Swimlane swimlane = new Swimlane()
         {
             Header = new SwimlaneHeader()
@@ -104,7 +104,7 @@ The following example demonstrates a node with the text "AllowDrag Within Swimla
                             LaneOffsetX = 100, 
                             LaneOffsetY = 30, 
                             // To enable AllowDragWithinSwimlane to restrict movement outside the swimlane
-                            Constraints = NodeConstraints.Default | NodeConstraints.AllowDragWithinSwimlane , 
+                            Constraints = NodeConstraints.Default | NodeConstraints.AllowDragWithinSwimlane, 
                             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
                             { 
                                 new ShapeAnnotation() 
@@ -175,12 +175,12 @@ The following example demonstrates that a constraint can also be enabled or disa
 
 @code
 {
-    //Define diagram's swimlane collection
+    // Define diagram's swimlane collection
     DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
-        // A swimlane is created and stored in the swimlanes collection.
+        // A swimlane is created and stored in the swimlanes collection
         Swimlane swimlane = new Swimlane()
         {
             Header = new SwimlaneHeader()
