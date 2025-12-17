@@ -14,9 +14,9 @@ Collaborative editing enables multiple users to work on the same diagram at the 
 ## Prerequisites
 
 - *Real-time Transport Protocol*: Enables instant communication between clients and the server, ensuring that updates during collaborative editing are transmitted and reflected immediately.
-- *Distributed Cache or Database*: Serves as temporary storage for the queue of editing operations, helping maintain synchronization and consistency across multiple users.
+- *Distributed cache or Database*: Serves as temporary storage for the queue of editing operations, helping maintain synchronization and consistency across multiple users.
 
-### Real time transport protocol
+### Real-time transport protocol
 
 - *Managing Connections*: Maintains active connections between clients and the server to enable uninterrupted real-time collaboration. This ensures smooth and consistent communication throughout the editing session.
 - *Broadcasting Changes*: Instantly propagates any edits made by one user to all other collaborators. This guarantees that everyone is always working on the most up-to-date version of the diagram, fostering accuracy and teamwork.
@@ -38,7 +38,7 @@ Collaborative editing requires a reliable backing system to temporarily store an
     * If your application expects 50 or fewer requests per second, a database provides a reliable solution for managing the operation queue.
     * If your application expects more than 50 requests per second, a distributed cache is highly recommended for optimal performance.
 
-> Tips to calculate the average requests per second of your application:
-Assume the editor in your live application is actively used by 1000 users and each user's edit can trigger 2 to 5 requests per second. The total requests per second of your applications will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
+> Tips for calculating the average requests per second for your application:
+Assume the editor in your live application is actively used by 1000 users and each user’s edits can trigger 2–5 requests per second. The total requests per second of your application will be around 2,000 to 5,000. In this case, you can choose a configuration to support approximately 5,000 average requests per second.
 
 > Note: The metrics provided are for illustration purposes only. Actual throughput may vary based on additional server-side operations. It is strongly recommended to monitor your application’s traffic and performance and select a configuration that best meets your real-world requirements.

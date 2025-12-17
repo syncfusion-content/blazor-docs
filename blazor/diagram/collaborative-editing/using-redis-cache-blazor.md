@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative editing in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn all about collaborative editing in Syncfusion Blazor Diagram component and many more details.
+description: Check out and Learn all about collaborative editing in Syncfusion Blazor Diagram component and many more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -13,7 +13,7 @@ Collaborative editing enables multiple users to work on the same diagram at the 
 
 ## Prerequisites
 
-Following things are needed to enable collaborative editing in Diagram Component
+The following are needed to enable collaborative editing in the Diagram component:
 
 * SignalR
 * Redis
@@ -32,13 +32,13 @@ Following things are needed to enable collaborative editing in Diagram Component
 
 In collaborative editing, real-time communication is essential for users to see each other’s changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the client and server. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
 
-To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either AspNetCore SignalR Service or a Redis backplane.
+To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either ASP.NET Core SignalR service or a Redis backplane.
 
-### Scale-out SignalR using AspNetCore SignalR service
+### Scale-out SignalR using ASP.NET Core SignalR service
 
-AspNetCore SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers).
+ASP.NET Core SignalR service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers).
 
-Below is a code snippet to configure SignalR in a Blazor application using AddSignalR
+Below is a code snippet to configure SignalR in a Blazor application using AddSignalR:
 
 ```csharp
 builder.Services.AddSignalR(options =>
@@ -51,13 +51,13 @@ builder.Services.AddSignalR(options =>
 
 ### Scale-out SignalR using Redis
 
-Using a Redis backplane, you can achieve horizontal scaling of your SignalR application. The SignalR leverages Redis to efficiently broadcast messages across multiple servers. This allows your application to handle large user bases with minimal latency.
+Using a Redis backplane, you can achieve horizontal scaling of your SignalR application. SignalR leverages Redis to efficiently broadcast messages across multiple servers. This allows your application to handle large user bases with minimal latency.
 
 In the SignalR app, install the following NuGet package:
 
 `Microsoft.AspNetCore.SignalR.StackExchangeRedis`
 
-Below is a code snippet to configure Redis backplane in an Blazor server application using the AddStackExchangeRedis method
+Below is a code snippet to configure Redis backplane in a Blazor server application using the AddStackExchangeRedis method
 
 ```csharp
 builder.Services.AddSingleton<IConnectionMultiplexer>(provider =>
@@ -76,11 +76,11 @@ All diagram editing operations performed during collaboration are cached in Redi
 
 Redis imposes limits on concurrent connections. Select an appropriate Redis configuration based on your expected user load to maintain optimal performance and avoid connection bottlenecks.
 
-## How to enable collaborative editing in client side
+## How to enable collaborative editing on the client side
 
 ### Step 1: Configure SignalR to send and receive changes
 
-To broadcast the changes made and receive changes from remote users, configure SignalR like below.
+To broadcast the changes made and receive changes from remote users, configure SignalR as shown below.
 
 ```csharp
 @code {
@@ -393,7 +393,7 @@ namespace DiagramServerApplication.Hubs
 
 ### Step 2: Register services, Redis backplane, CORS, and map the hub (Program.cs)
 
-Add these registrations to your server Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
+Add these registrations to your server's Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
@@ -427,7 +427,7 @@ Notes:
 - Ensure WebSockets are enabled on the host/proxy, or remove SkipNegotiation on the client to allow fallback transports.
 - Use a singleton IConnectionMultiplexer to respect Redis connection limits.
 
-### Step 3: Configure Redis cache connection string in application level
+### Step 3: Configure Redis cache connection string at the application level
 
 Configure the Redis that stores temporary data for the collaborative editing session. Provide the Redis connection string in `appsettings.json` file.
 
@@ -449,7 +449,7 @@ Configure the Redis that stores temporary data for the collaborative editing ses
 
 ## Model types used in the sample (minimal)
 
-Define these models used by the snippets:
+Define the following models used by the snippets:
 
 ```csharp
 public sealed class SelectionEvent
@@ -513,7 +513,7 @@ connection.Reconnected += async _ =>
 };
 ```
 
-When using HistoryChange, ensure you declare:
+When using HistoryChange, declare:
 
 ```csharp
 List<string> editedElements = new();
@@ -534,7 +534,7 @@ Read diagramId from Context.Items["DiagramId"] inside hub methods and use it for
 
 ## Conflict policy (optimistic concurrency)
 
-- Client sends payload with clientVersion and edited elementIds.
+- The client sends a payload with clientVersion and edited elementIds.
 - Server compares with Redis version. If stale and elements overlap, ask client to revert and show conflict.
 - If stale but no overlap, server increments and accepts.
 - Clients must set clientVersion to the server version after each accepted update.
@@ -542,7 +542,7 @@ Read diagramId from Context.Items["DiagramId"] inside hub methods and use it for
 ## Cleanup strategy for Redis
 
 - Keep only the last K versions (e.g., 200), or
-- Set TTL on update keys to bound memory usage.
+- Set a TTL on update keys to limit memory usage.
 
 ## Hosting, transport, and serialization
 
@@ -577,7 +577,7 @@ Implement or verify these server helpers exist in the Hub or related services; t
 - StoreUpdateInRedis(DiagramUpdateMessage update, string connectionId): stores update under UpdateKey(update.Version, diagramId).
 - UpdateSelectionBoundsInRedis(SelectionEvent evt, List<string>? elementIds, Rect? selectorBounds): persists the caller’s selection snapshot under SelectionKey(connectionId, diagramId).
 - SendCurrentSelectionsToCaller(): gathers SelectionEvent for active peers in this diagram and sends PeerSelectionsBootstrap to the caller.
-- GetCurrentUsers(): returns display names of users in _diagramUsers for this diagram/group.
+- GetCurrentUsers(): returns the display names of users in _diagramUsers for this diagram/group.
 - RemoveOldUpdates(long latestVersion): trims old updates (keep last K versions or apply TTL) for this diagram.
 - ClearConnectionsFromRedis(): clears stale selection keys for all users when the first user joins.
 - SelectionKey(string connectionId): if you keep this overload, ensure it internally resolves diagramId; otherwise prefer SelectionKey(connectionId, diagramId).
@@ -586,4 +586,4 @@ Implement or verify these server helpers exist in the Hub or related services; t
 
 The full version of the code discussed can be found in the GitHub location below.
 
-GitHub Example: [Collaborative editing examples](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/CollabotativeEditing/DiagramCollaborativeEditing/DiagramCollaborativeEditing)
+GitHub Example: [Collaborative editing examples](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/CollaborativeEditing/DiagramCollaborativeEditing/DiagramCollaborativeEditing)
