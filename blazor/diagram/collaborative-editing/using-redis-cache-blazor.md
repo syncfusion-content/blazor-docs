@@ -586,4 +586,4 @@ Implement or verify these server helpers exist in the Hub or related services; t
 
 The full version of the code discussed can be found in the GitHub location below.
 
-GitHub Example: Collaborative editing examples
+GitHub Example: [Collaborative editing examples](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/CollabotativeEditing/DiagramCollaborativeEditing/DiagramCollaborativeEditing)
