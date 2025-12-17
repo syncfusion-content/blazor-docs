@@ -13,9 +13,11 @@ Create a reusable custom Grid component by wrapping the `SfGrid` in a Razor comp
 
 The following example creates a `CustomGrid` wrapper that renders `SfGrid` with default properties such as `GridPageSettings`. Any unmatched attributes passed to `CustomGrid` are forwarded to the inner `SfGrid`, and content placed inside `CustomGrid` is projected as columns via `ChildContent`.
 
-CustomGrid.razor
+**CustomGrid.razor:**
 
-```cshtml
+{% tabs %}
+{% highlight C# tabtitle="CustomGrid.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @typeparam TItem
 
@@ -30,11 +32,15 @@ CustomGrid.razor
     </GridPageSettings>
     @ChildContent
 </SfGrid>
-```
 
-CustomGrid.razor.cs
+{% endhighlight %}
+{% endtabs %}
 
-```csharp
+**CustomGrid.razor.cs:**
+
+{% tabs %}
+{% highlight C# tabtitle="CustomGrid.razor.cs" %}
+
 using Microsoft.AspNetCore.Components;
 using Syncfusion.Blazor.Grids;
 using System;
@@ -60,11 +66,15 @@ namespace SF_Grid_Inheritance.Shared
         public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
     }
 }
-```
 
-Index.razor
+{% endhighlight %}
+{% endtabs %}
 
-```razor
+**Index.razor:**
+
+{% tabs %}
+{% highlight C# tabtitle="Index.razor" %}
+
 @using SF_Grid_Inheritance.Shared
 @using Syncfusion.Blazor.Grids
 
@@ -100,4 +110,6 @@ Index.razor
         public double? Freight { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
