@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Force Directed Tree Layout in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create force directed tree layout in Syncfusion Blazor Diagram component and more.
+title: Force-Directed Tree Layout in Blazor Diagram Component | Syncfusion
+description: Learn how to create and customize the Force-Directed Tree Layout in the Syncfusion Blazor Diagram component with detailed steps and examples.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -20,7 +20,7 @@ The Force-Directed Tree Layout uses a simulation of physical forces to position 
 
 ## Configure Force-Directed Tree Layout Settings
 
-To enable the Force-Directed Tree Layout, set the Layout.Type property to **LayoutType.ForceDirectedTree** and configure the `ForceDirectedTreeLayoutSettings` class, which provides control over the simulation.
+To enable the Force-Directed Tree Layout, set the layout `Type` property to **LayoutType.ForceDirectedTree** and configure the `ForceDirectedTreeLayoutSettings` class, which provides control over the simulation.
 
 ## Layout Properties
 
@@ -54,17 +54,17 @@ The following example demonstrates how to customize the properties of the Force-
 ```
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="690px" Width="100%" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors">
+<SfDiagramComponent @ref="@diagramComponent" Height="690px" Width="100%" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
-    <Layout Type="LayoutType.ForceDirectedTree" @bind-ForceDirectedTreeLayoutSettings="@settings"></Layout>
+    <Layout Type="LayoutType.ForceDirectedTree" @bind-HorizontalSpacing="@layoutSettings"></Layout>
 </SfDiagramComponent>
 
 @code {
-    private SfDiagramComponent diagram;
+    private SfDiagramComponent diagramComponent;
     private DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
     private DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
-    
-    private ForceDirectedTreeLayoutSettings settings = new ForceDirectedTreeLayoutSettings
+
+    private ForceDirectedTreeLayoutSettings layoutSettings = new ForceDirectedTreeLayoutSettings
     {
         ConnectorLength = 120,
         MaximumIteration = 1500,
@@ -76,94 +76,92 @@ The following example demonstrates how to customize the properties of the Force-
     private int DepartmentsUnderCeo { get; set; } = 4;
     private int ManagersPerDepartment { get; set; } = 4;
     private int TeamsPerManager { get; set; } = 6;
-
+    
     protected override void OnInitialized()
     {
-        PopulateDiagram();
+        InitializeDiagram();
     }
 
-    private void PopulateDiagram()
+    private void InitializeDiagram()
     {
-        List<OrgItem> data = GetCompanyOrgData();
-        PopulateDiagramFromData(data);
+        List<OrganizationItem> organizationData = GetCompanyOrganizationData();
+        PopulateDiagramFromOrganizationData(organizationData);
     }
 
-    private void PopulateDiagramFromData(IEnumerable<OrgItem> items)
+    private void PopulateDiagramFromOrganizationData(IEnumerable<OrganizationItem> organizationItems)
     {
-        Dictionary<string, OrgItem> byId = items.ToDictionary(x => x.Id);
-        foreach (OrgItem item in items)
+        Dictionary<string, OrganizationItem> itemsById = organizationItems.ToDictionary(item => item.Id);
+        foreach (OrganizationItem item in organizationItems)
         {
-            Node node = CreateOrgNode(item);
+            Node node = CreateOrganizationNode(item);
             Nodes!.Add(node);
-            if (!string.IsNullOrEmpty(item.ParentId) && byId.ContainsKey(item.ParentId))
+            if (!string.IsNullOrEmpty(item.ParentId) && itemsById.ContainsKey(item.ParentId))
             {
-                Connectors!.Add(CreateConnector(item.ParentId, item.Id));
+                Connectors!.Add(CreateNodeConnector(item.ParentId, item.Id));
             }
         }
     }
 
-    private Node CreateOrgNode(OrgItem item)
+    private Node CreateOrganizationNode(OrganizationItem item)
     {
-        ShapeStyle style = new ShapeStyle { Fill = "orange", StrokeWidth = 2, StrokeColor = "#8c8c8c" };
-        double width = 35; 
-        double height = 35;
-        Shape shape = new BasicShape() { Shape = NodeBasicShapes.Ellipse };
-
+        ShapeStyle nodeStyle = new ShapeStyle { Fill = "orange", StrokeWidth = 2, StrokeColor = "#8c8c8c" };
+        double nodeWidth = 35;
+        double nodeHeight = 35;
+        Shape nodeShape = new BasicShape() { Shape = NodeBasicShapes.Ellipse };
         switch (item.Level)
         {
-            case OrgLevel.Header:
-                style.Fill = "#f39c12";
-                width = height = 140;
-                shape = new BasicShape { Shape = NodeBasicShapes.Ellipse };
+            case OrganizationLevel.Header:
+                nodeStyle.Fill = "#f39c12";
+                nodeWidth = nodeHeight = 140;
+                nodeShape = new BasicShape { Shape = NodeBasicShapes.Ellipse };
                 break;
-            case OrgLevel.Department:
-                style.Fill = "#27ae60";
-                width = height = 120;
-                shape = new BasicShape { Shape = NodeBasicShapes.Ellipse };
+            case OrganizationLevel.Department:
+                nodeStyle.Fill = "#27ae60";
+                nodeWidth = nodeHeight = 120;
+                nodeShape = new BasicShape { Shape = NodeBasicShapes.Ellipse };
                 break;
-            case OrgLevel.Manager:
-                style.Fill = "#2980b9";
-                shape = new BasicShape { Shape = NodeBasicShapes.Ellipse };
-                width = height = 100;
+            case OrganizationLevel.Manager:
+                nodeStyle.Fill = "#2980b9";
+                nodeShape = new BasicShape { Shape = NodeBasicShapes.Ellipse };
+                nodeWidth = nodeHeight = 100;
                 break;
-            case OrgLevel.Team:
-                style.Fill = "#f39c12";
-                shape = new BasicShape { Shape = NodeBasicShapes.Ellipse };
-                width = height = 80;
+            case OrganizationLevel.Team:
+                nodeStyle.Fill = "#f39c12";
+                nodeShape = new BasicShape { Shape = NodeBasicShapes.Ellipse };
+                nodeWidth = nodeHeight = 80;
                 break;
         }
-
         return new Node
         {
             ID = item.Id,
-            Width = width,
-            Height = height,
-            Shape = shape,
+            Width = nodeWidth,
+            Height = nodeHeight,
+            Shape = nodeShape,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>
             {
-                new ShapeAnnotation 
-                { 
-                    ID = $"{item.Id}_label", 
-                    Content = item.Name, 
-                    Style = new TextStyle() { FontSize = 18, Bold = true, Color = "white" } 
+                new ShapeAnnotation
+                {
+                    ID = $"{item.Id}_label",
+                    Content = item.Name,
+                    Style = new TextStyle() { FontSize = 18, Bold = true, Color = "white" }
                 }
             },
-            Style = style
+            Style = nodeStyle
         };
     }
 
-    private Connector CreateConnector(string sourceId, string targetId)
+    private Connector CreateNodeConnector(string sourceNodeId, string targetNodeId)
     {
         return new Connector
         {
-            ID = $"{sourceId}_{targetId}",
-            SourceID = sourceId,
-            TargetID = targetId,
+            ID = $"{sourceNodeId}_{targetNodeId}",
+            SourceID = sourceNodeId,
+            TargetID = targetNodeId,
             Type = ConnectorSegmentType.Straight
         };
     }
 
-    private enum OrgLevel
+    private enum OrganizationLevel
     {
         Header,
         Department,
@@ -171,73 +169,66 @@ The following example demonstrates how to customize the properties of the Force-
         Team
     }
 
-    public class OrgItem
+    public class OrganizationItem
     {
         public string Id { get; set; } = "";
         public string? ParentId { get; set; }
         public string Name { get; set; } = "";
-        public OrgLevel Level { get; set; }
+        public OrganizationLevel Level { get; set; }
     }
 
-    // Parametrized generator
-    private static List<OrgItem> BuildOrgData(int departments, int managersPerDept, int teamsPerManager)
+    // Parameterized organization data generator
+    private static List<OrganizationItem> BuildOrganizationData(int departmentCount, int managersPerDepartment, int teamsPerManager)
     {
-        List<OrgItem> data = new List<OrgItem>
+        List<OrganizationItem> organizationData = new List<OrganizationItem>
         {
-            new OrgItem { Id = "departments", ParentId = null, Name = "Departments", Level = OrgLevel.Header }
+            new OrganizationItem { Id = "departments", ParentId = null, Name = "Departments", Level = OrganizationLevel.Header }
         };
-
-        // Departments
-        for (int d = 1; d <= departments; d++)
+        // Create departments
+        for (int departmentIndex = 1; departmentIndex <= departmentCount; departmentIndex++)
         {
-            string deptId = $"dept_{d}";
-            data.Add(new OrgItem { Id = deptId, ParentId = "departments", Name = $"Department {d}", Level = OrgLevel.Department });
-
-            // Managers
-            for (int m = 1; m <= managersPerDept; m++)
+            string departmentId = $"dept_{departmentIndex}";
+            organizationData.Add(new OrganizationItem { Id = departmentId, ParentId = "departments", Name = $"Department {departmentIndex}", Level = OrganizationLevel.Department });
+            // Create managers for each department
+            for (int managerIndex = 1; managerIndex <= managersPerDepartment; managerIndex++)
             {
-                string mgrId = $"{deptId}_mgr_{m}";
-                data.Add(new OrgItem { Id = mgrId, ParentId = deptId, Name = $"Manager {d}.{m}", Level = OrgLevel.Manager });
-
-                // Teams
-                for (int t = 1; t <= teamsPerManager; t++)
+                string managerId = $"{departmentId}_mgr_{managerIndex}";
+                organizationData.Add(new OrganizationItem { Id = managerId, ParentId = departmentId, Name = $"Manager {departmentIndex}.{managerIndex}", Level = OrganizationLevel.Manager });
+                // Create teams for each manager
+                for (int teamIndex = 1; teamIndex <= teamsPerManager; teamIndex++)
                 {
-                    string teamId = $"{mgrId}_team_{t}";
-                    data.Add(new OrgItem
+                    string teamId = $"{managerId}_team_{teamIndex}";
+                    organizationData.Add(new OrganizationItem
                     {
                         Id = teamId,
-                        ParentId = mgrId,
-                        Name = $"Team {d}.{m}.{t}",
-                        Level = OrgLevel.Team
+                        ParentId = managerId,
+                        Name = $"Team {departmentIndex}.{managerIndex}.{teamIndex}",
+                        Level = OrganizationLevel.Team
                     });
                 }
             }
         }
-        return data;
+        return organizationData;
     }
-
-    // A realistic software-company hierarchy: 1 CEO has 4 depts each with 4 managers each to 6 teams each
-    private static List<OrgItem> GetCompanyOrgData()
+    
+    // Realistic software company hierarchy: 1 CEO with 4 departments, each with managers and their respective teams
+    private static List<OrganizationItem> GetCompanyOrganizationData()
     {
-        List<OrgItem> data = new List<OrgItem>();
-
-        // CEO
-        data.Add(new OrgItem { Id = "departments", ParentId = null, Name = "Departments", Level = OrgLevel.Header });
-
-        // Departments (Level 2)
-        List<OrgItem> departments = new List<OrgItem>
+        List<OrganizationItem> companyData = new List<OrganizationItem>();
+        // CEO level
+        companyData.Add(new OrganizationItem { Id = "departments", ParentId = null, Name = "Departments", Level = OrganizationLevel.Header });
+        // Department level (Level 2)
+        List<OrganizationItem> departmentList = new List<OrganizationItem>
         {
-            new OrgItem { Id = "uxTeam", ParentId = "departments", Name = "UX Team", Level = OrgLevel.Department },
-            new OrgItem { Id = "devTeam", ParentId = "departments", Name = "Development Team", Level = OrgLevel.Department },
-            new OrgItem { Id = "salesTeam", ParentId = "departments", Name = "Sales Team", Level = OrgLevel.Department },
-            new OrgItem { Id = "hrTeam", ParentId = "departments", Name = "HR Team", Level = OrgLevel.Department }
+            new OrganizationItem { Id = "uxTeam", ParentId = "departments", Name = "UX Team", Level = OrganizationLevel.Department },
+            new OrganizationItem { Id = "devTeam", ParentId = "departments", Name = "Development Team", Level = OrganizationLevel.Department },
+            new OrganizationItem { Id = "salesTeam", ParentId = "departments", Name = "Sales Team", Level = OrganizationLevel.Department },
+            new OrganizationItem { Id = "hrTeam", ParentId = "departments", Name = "HR Team", Level = OrganizationLevel.Department }
         };
-
-        foreach (OrgItem d in departments)
-            data.Add(d);
-
-        // Managers per department (Level 3) for 4 per department
-        Dictionary<string, (string id, string name)[]> managersByDept = new Dictionary<string, (string id, string name)[]>
+        foreach (OrganizationItem department in departmentList)
+            companyData.Add(department);
+        // Managers per department (Level 3) - 4 managers per department
+        Dictionary<string, (string id, string name)[]> managersByDepartment = new Dictionary<string, (string id, string name)[]>
         {
             ["uxTeam"] = new[]
             {
@@ -261,15 +252,13 @@ The following example demonstrates how to customize the properties of the Force-
                 ("hr_mgr", "Manager"),
             },
         };
-
-        foreach (string dept in managersByDept.Keys)
+        foreach (string departmentKey in managersByDepartment.Keys)
         {
-            foreach ((string id, string name) m in managersByDept[dept])
-                data.Add(new OrgItem { Id = m.id, ParentId = dept, Name = m.name, Level = OrgLevel.Manager });
+            foreach ((string id, string name) manager in managersByDepartment[departmentKey])
+                companyData.Add(new OrganizationItem { Id = manager.id, ParentId = departmentKey, Name = manager.name, Level = OrganizationLevel.Manager });
         }
-
-        // Teams per manager (Level 4) variable per requirements
-        Dictionary<string, int> teamCountByManager = new Dictionary<string, int>
+        // Teams per manager (Level 4) - variable count based on requirements
+        Dictionary<string, int> teamCountByManagerId = new Dictionary<string, int>
         {
             ["mgr1"] = 3,
             ["mgr2"] = 3,
@@ -281,30 +270,29 @@ The following example demonstrates how to customize the properties of the Force-
             ["agm2"] = 3,
             ["hr_mgr"] = 2,
         };
-
-        foreach (string dept in managersByDept.Keys)
+        foreach (string departmentKey in managersByDepartment.Keys)
         {
-            foreach ((string mid, string mname) mm in managersByDept[dept])
+            foreach ((string managerId, string managerName) manager in managersByDepartment[departmentKey])
             {
-                int count = teamCountByManager.ContainsKey(mm.mid) ? teamCountByManager[mm.mid] : 0;
-                for (int i = 1; i <= count; i++)
+                int teamCount = teamCountByManagerId.ContainsKey(manager.managerId) ? teamCountByManagerId[manager.managerId] : 0;
+                for (int teamIndex = 1; teamIndex <= teamCount; teamIndex++)
                 {
-                    string teamId = $"{mm.mid}_t{i}";
-                    data.Add(new OrgItem
+                    string teamId = $"{manager.managerId}_t{teamIndex}";
+                    companyData.Add(new OrganizationItem
                     {
                         Id = teamId,
-                        ParentId = mm.mid,
-                        Name = $"Team-{i}",
-                        Level = OrgLevel.Team
+                        ParentId = manager.managerId,
+                        Name = $"Team-{teamIndex}",
+                        Level = OrganizationLevel.Team
                     });
                 }
             }
         }
-        return data;
+        return companyData;
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"%}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"% backgroundimage "[Blazor Diagram hierarchical layout example](../images/ForceDirectedTreeLayout.png)"}
 
 ## How to Create a Force-Directed Tree Using DataSource
 
