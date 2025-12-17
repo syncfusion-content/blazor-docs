@@ -48,6 +48,149 @@ By default, the header bar holds the date and view navigation options, through w
 
 ![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-hide-header-bar.png)
 
+## Customizing header bar using template
+
+The Scheduler header bar can be customized by adding, removing, or reordering toolbar items using the `ScheduleToolBar` component and its child components. This provides a flexible way to create a personalized toolbar that meets your specific requirements.
+
+The Scheduler provides the following built-in toolbar components:
+
+* **`ScheduleToolBarPrevious`** - Navigates to the previous date range.
+* **`ScheduleToolBarNext`** - Navigates to the next date range.
+* **`ScheduleToolBarDateRange`** - Shows the current visible date range.
+* **`ScheduleToolBarToday`** - Navigates to today's date.
+* **`ScheduleToolBarViews`** - Renders buttons for each configured Scheduler view.
+* **`ScheduleToolBarNewEvent`** - Renders the Add button to create new appointments. This button will be visible only when the Scheduler is in adaptive UI mode or mobile mode.
+* **`ScheduleToolBarCustom`** - Adds a toolbar item with custom template content.
+
+The `ScheduleToolBarCustom` component allows you to add custom elements to the toolbar. It supports different item types through the `Type` property:
+
+* **`ItemType.Button`** (default) - Renders custom content as a button-type toolbar item.
+* **`ItemType.Input`** - Use when adding input elements like dropdowns or textboxes.
+* **`ItemType.Spacer`** - Creates flexible spacing to push subsequent items to the right.
+* **`ItemType.Separator`** - Adds a vertical line to separate toolbar item groups.
+
+N> When adding input elements within `ScheduleToolBarCustom`, you must set the `Type` property to `ItemType.Input`.
+
+The following example demonstrates adding a custom dropdown to the toolbar alongside default navigation items to filter appointments by owner.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfSchedule TValue="AppointmentData" Width="1436px" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings Query="@EventQuery" DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleResources>
+        <ScheduleResource TItem="OwnerData" TValue="int[]" Field="OwnerId" Title="Owner" Name="Owners" AllowMultiple="true"
+                          DataSource="@OwnerCollections" TextField="OwnerText" IdField="OwnerId" ColorField="Color" Query="@EventQuery">
+        </ScheduleResource>
+    </ScheduleResources>
+    <ScheduleToolBar>
+        <ScheduleToolBarPrevious />
+        <ScheduleToolBarNext />
+        <ScheduleToolBarDateRange />
+        <ScheduleToolBarCustom Type="ItemType.Spacer" />
+        <ScheduleToolBarCustom Type="ItemType.Input">
+            <SfDropDownList TValue="int" TItem="OwnerData" @bind-Value="@SelectedOwner" ShowClearButton="false" Width="125px" DataSource="@OwnerCollections">
+                <DropDownListFieldSettings Text="OwnerText" Value="OwnerId"></DropDownListFieldSettings>
+                <DropDownListEvents TValue="int" TItem="OwnerData" ValueChange="OnOwnerChange"></DropDownListEvents>
+            </SfDropDownList>
+        </ScheduleToolBarCustom>
+        <ScheduleToolBarCustom Type="ItemType.Spacer" />
+        <ScheduleToolBarToday />
+    </ScheduleToolBar>
+    <ScheduleViews>
+        <ScheduleView Option="View.Month"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    private DateTime CurrentDate = new DateTime(2025, 12, 10);
+    private Query? EventQuery { get; set; }
+    private List<OwnerData> OwnerCollections = new List<OwnerData>();
+    private List<AppointmentData> DataSource = new List<AppointmentData>();
+    private int SelectedOwner = 1;
+
+    protected override void OnInitialized()
+    {
+        OwnerCollections = new List<OwnerData>
+        {
+            new OwnerData { OwnerId = 1, OwnerText = "Nancy", Color = "#ea7a57" },
+            new OwnerData { OwnerId = 2, OwnerText = "Steven", Color = "#7fa900" },
+            new OwnerData { OwnerId = 3, OwnerText = "Michael", Color = "#5978ee" }
+        };
+        InitializeAppointments();
+        EventQuery = new Query().Where("OwnerId", "equal", SelectedOwner);
+    }
+
+    private void InitializeAppointments()
+    {
+        DataSource = new List<AppointmentData>
+        {
+            new AppointmentData
+            {
+                Id = 1,
+                Subject = "Project Meeting",
+                StartTime = new DateTime(2025, 12, 10, 9, 0, 0),
+                EndTime = new DateTime(2025, 12, 10, 10, 0, 0),
+                OwnerId = 1,
+                Description = "Project discussion with Nancy"
+            },
+            new AppointmentData
+            {
+                Id = 2,
+                Subject = "Design Discussion",
+                StartTime = new DateTime(2025, 12, 10, 10, 0, 0),
+                EndTime = new DateTime(2025, 12, 10, 11, 00, 0),
+                OwnerId = 2,
+                Description = "Design review with Steven"
+            },
+            new AppointmentData
+            {
+                Id = 3,
+                Subject = "Budget Meeting",
+                StartTime = new DateTime(2025, 12, 10, 11, 0, 0),
+                EndTime = new DateTime(2025, 12, 10, 12, 0, 0),
+                OwnerId = 3,
+                Description = "Budget discussion with Michael"
+            }
+        };
+    }
+
+    private async void OnOwnerChange(ChangeEventArgs<int, OwnerData> args)
+    {
+        SelectedOwner = args.Value;
+        EventQuery = new Query().Where("OwnerId", "equal", SelectedOwner);
+    }
+
+    public class OwnerData
+    {
+        public int OwnerId { get; set; }
+        public string? OwnerText { get; set; }
+        public string? Color { get; set; }
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string? Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string? Description { get; set; }
+        public int OwnerId { get; set; }
+        public bool IsAllDay { get; set; }
+        public string? RecurrenceRule { get; set; }
+        public string? RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+The Scheduler with custom toolbar items alongside the default navigation in the header bar will be rendered as shown in the following image.
+
+![Customizing header bar using template in Blazor Scheduler](images/blazor-scheduler-toolbar-template.png)
+
 ## How to display the view options within the header bar popup
 
 By default, the header bar holds the view navigation options, through which the user can switch between various views. You can move this view options to the header bar popup by setting `true` to the [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EnableAdaptiveUI) property.
