@@ -158,7 +158,7 @@ The following example demonstrates how to customize the properties of the Force-
         };
     }
 
-    private enum OrganizationLevel
+    public enum OrganizationLevel
     {
         Header,
         Department,
