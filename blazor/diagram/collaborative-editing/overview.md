@@ -14,7 +14,7 @@ Collaborative editing enables multiple users to work on the same diagram at the 
 ## Prerequisites
 
 - *Real-time Transport Protocol*: Enables instant communication between clients and the server, ensuring that updates during collaborative editing are transmitted and reflected immediately.
-- *Distributed Cache or Database*: Serves as temporary storage for the queue of editing operations, helping maintain synchronization and consistency across multiple users.
+- *Distributed Cache or Database*: Serves as temporary storage for the queue of diagram editing operations, helping maintain synchronization and consistency across multiple users.
 
 ### Real time transport protocol
 
