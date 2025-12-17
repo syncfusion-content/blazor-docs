@@ -43,7 +43,7 @@ In the following example, AI AssistView component rendered with footer toolbar i
 
 ### Toolbar positioning
 
-You can use the `ToolbarPosition` property to customize footer toolbar position. It has two modes such as `Inline`, and `Bottom`. By default, the ToolbarPosition is `Inline`.
+You can use the [ToolbarPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ToolbarPosition.html) property to customize footer toolbar position. It has two modes such as [Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ToolbarPosition.html#Syncfusion_Blazor_InteractiveChat_ToolbarPosition_Inline), and [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ToolbarPosition.html#Syncfusion_Blazor_InteractiveChat_ToolbarPosition_Bottom). By default, the ToolbarPosition is `Inline`.
 
 By setting ToolbarPosition as `Bottom`, footer items will be rendered at the bottom with a dedicated footer area .
 
@@ -90,7 +90,7 @@ By setting ToolbarPosition as `Bottom`, footer items will be rendered at the bot
 
 ### Adding custom items
 
-You can use the `AssistViewFooterToolbarItem` tag directive within the `AssistViewFooterToolbar` to add custom items for the footer toolbar in the AI AssistView.
+You can use the [AssistViewFooterToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbarItem.html) tag directive within the [AssistViewFooterToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbar.html) to add custom items for the footer toolbar in the AI AssistView.
 
 > To know more about the items, please refer to the [Items](./toolbar-items#items) section.
 
@@ -125,7 +125,7 @@ You can use the `AssistViewFooterToolbarItem` tag directive within the `AssistVi
 ![Blazor AI AssistView Footer Toolbar custom item](./images/footer-toolbar-item.png)
 
 ### Item click
-The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbar.html#Syncfusion_Blazor_InteractiveChat_PromptToolbar_ItemClick) event is triggered when the footer toolbar item is clicked.
+The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbar.html#Syncfusion_Blazor_InteractiveChat_AssistViewFooterToolbar_ItemClick) event is triggered when the footer toolbar item is clicked.
 
 ```cshtml
 
