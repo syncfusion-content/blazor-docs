@@ -48,7 +48,7 @@ By default, the header bar holds the date and view navigation options, through w
 
 ![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-hide-header-bar.png)
 
-## Customizing header bar using toolbar components
+## Customizing header bar using template
 
 The Scheduler header bar can be customized by adding, removing, or reordering toolbar items using the `ScheduleToolBar` component and its child components. This provides a flexible way to create a personalized toolbar that meets your specific requirements.
 
