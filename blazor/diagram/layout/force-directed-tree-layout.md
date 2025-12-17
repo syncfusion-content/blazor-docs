@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Force-Directed Tree Layout in Blazor Diagram Component | Syncfusion
-description: Learn how to create and customize the Force-Directed Tree Layout in the Syncfusion Blazor Diagram component with detailed steps and examples.
+description: Learn how to create and customize the Force-Directed Tree Layout in the Syncfusion Blazor Diagram component through detailed steps and examples.
 platform: Blazor
-control: Diagram Component
+control: Diagram
 documentation: ug
 ---
 
@@ -11,24 +11,17 @@ documentation: ug
 
 The Force-Directed Tree Layout is a physics-based algorithm that arranges nodes by simulating attractive and repulsive forces. This layout is ideal for visualizing complex relationships such as social networks, dependency graphs, and knowledge maps.
 
-## How the Force-Directed Tree Layout Works
+In this layout, nodes apply repulsive forces to prevent overlap, while connectors behave like springs to draw related nodes closer together. This simulation produces a visually balanced and natural arrangement, improving the clarity of intricate connections.
 
-The Force-Directed Tree Layout uses a simulation of physical forces to position nodes in a visually balanced way:
+## Configure force-directed tree layout settings
 
-- Repulsive Force: Each node pushes away other nodes, similar to charged particles, to prevent overlap.
-- Attractive Force: Connectors act like springs, pulling connected nodes closer together to maintain relationships.
-
-## Configure Force-Directed Tree Layout Settings
-
-To enable the Force-Directed Tree Layout, set the layout `Type` property to **LayoutType.ForceDirectedTree** and configure the `ForceDirectedTreeLayoutSettings` class, which provides control over the simulation.
-
-## Layout Properties
+To enable the Force-Directed Tree Layout, set the layout `Type` property to **LayoutType.ForceDirectedTree** and configure the `ForceDirectedTreeLayoutSettings` class, which provides control over the simulation. The properties of `ForceDirectedTreeLayoutSettings` class are listed below.
 
 ### ConnectorLength
 
 Defines the ideal distance between connected nodes.
 
->**Note:** Minimum value: 30.  Larger values spread nodes farther apart.
+>**Note:** Minimum value: 30. Larger values spread nodes farther apart.
 
 ### MaximumIteration
 
@@ -48,7 +41,6 @@ Determines how strongly connected nodes pull toward each other.
 
 >**Note:** Range: 0 to 1. Higher values cluster connected nodes more tightly.
 
-The following example demonstrates how to customize the properties of the Force-Directed Tree layout.
 ```
 @using Syncfusion.Blazor.Diagram
 
@@ -58,11 +50,11 @@ The following example demonstrates how to customize the properties of the Force-
 </SfDiagramComponent>
 
 @code {
-    private SfDiagramComponent diagramComponent;
-    private DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
-    private DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    public SfDiagramComponent diagramComponent;
+    public DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
+    public DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    private ForceDirectedTreeLayoutSettings layoutSettings = new ForceDirectedTreeLayoutSettings
+    public ForceDirectedTreeLayoutSettings layoutSettings = new ForceDirectedTreeLayoutSettings
     {
         ConnectorLength = 120,
         MaximumIteration = 1500,
@@ -70,22 +62,22 @@ The following example demonstrates how to customize the properties of the Force-
         AttractionStrength = 0.8
     };
 
-    private int DepartmentsUnderCeo { get; set; } = 4;
-    private int ManagersPerDepartment { get; set; } = 4;
-    private int TeamsPerManager { get; set; } = 6;
+    public int DepartmentsUnderCeo { get; set; } = 4;
+    public int ManagersPerDepartment { get; set; } = 4;
+    public int TeamsPerManager { get; set; } = 6;
     
     protected override void OnInitialized()
     {
         InitializeDiagram();
     }
 
-    private void InitializeDiagram()
+    public void InitializeDiagram()
     {
         List<OrganizationItem> organizationData = GetCompanyOrganizationData();
         PopulateDiagramFromOrganizationData(organizationData);
     }
 
-    private void PopulateDiagramFromOrganizationData(IEnumerable<OrganizationItem> organizationItems)
+    public void PopulateDiagramFromOrganizationData(IEnumerable<OrganizationItem> organizationItems)
     {
         Dictionary<string, OrganizationItem> itemsById = organizationItems.ToDictionary(item => item.Id);
         foreach (OrganizationItem item in organizationItems)
@@ -99,13 +91,13 @@ The following example demonstrates how to customize the properties of the Force-
         }
     }
 
-    private void OnCreated()
+    public void OnCreated()
     {
         FitOptions options = new FitOptions() { Mode = FitMode.Both, Region = DiagramRegion.Content };
-        diagramComponent!.FitToPage(options);
+        diagramComponent.FitToPage(options);
     }
 
-    private Node CreateOrganizationNode(OrganizationItem item)
+    public Node CreateOrganizationNode(OrganizationItem item)
     {
         ShapeStyle nodeStyle = new ShapeStyle { Fill = "orange", StrokeWidth = 2, StrokeColor = "#8c8c8c" };
         double nodeWidth = 35;
@@ -153,7 +145,7 @@ The following example demonstrates how to customize the properties of the Force-
         };
     }
 
-    private Connector CreateNodeConnector(string sourceNodeId, string targetNodeId)
+    public Connector CreateNodeConnector(string sourceNodeId, string targetNodeId)
     {
         return new Connector
         {
@@ -180,7 +172,7 @@ The following example demonstrates how to customize the properties of the Force-
         public OrganizationLevel Level { get; set; }
     }
 
-    private static List<OrganizationItem> BuildOrganizationData(int departmentCount, int managersPerDepartment, int teamsPerManager)
+    public static List<OrganizationItem> BuildOrganizationData(int departmentCount, int managersPerDepartment, int teamsPerManager)
     {
         List<OrganizationItem> organizationData = new List<OrganizationItem>
         {
@@ -214,7 +206,7 @@ The following example demonstrates how to customize the properties of the Force-
     }
 
     // Realistic software company hierarchy: 1 CEO with 4 departments, each with managers and their respective teams
-    private static List<OrganizationItem> GetCompanyOrganizationData()
+    public static List<OrganizationItem> GetCompanyOrganizationData()
     {
         List<OrganizationItem> companyData = new List<OrganizationItem>();
         // CEO level
@@ -259,7 +251,7 @@ The following example demonstrates how to customize the properties of the Force-
             foreach ((string id, string name) manager in managersByDepartment[departmentKey])
                 companyData.Add(new OrganizationItem { Id = manager.id, ParentId = departmentKey, Name = manager.name, Level = OrganizationLevel.Manager });
         }
-        // Teams per manager (Level 4) - variable count based on requirements
+        // Teams per manager (Level 4) - Variable count based on requirements
         Dictionary<string, int> teamCountByManagerId = new Dictionary<string, int>
         {
             ["mgr1"] = 3,
@@ -294,13 +286,13 @@ The following example demonstrates how to customize the properties of the Force-
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeLayout)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeLayout).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"% backgroundimage "[Blazor Diagram hierarchical layout example](../images/Force-DirectedTreeLayout.png)"}
 
-## How to Create a Force-Directed Tree Using DataSource
+## How to create a force-directed tree using datasource
 
-A Force-Directed Tree layout can be created with [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource). The following code demonstrates how to render a Force-Directed Tree layout using DataSource.
+The Force-Directed Tree Layout can be rendered by binding a collection of objects to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property. In [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html), the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) properties must be strings, and the provided data source should define a parent-child relationship. At least one node must have an empty `ParentID` to serve as the root node. The following code example demonstrates how to bind a collection of objects to the `DataSource` property for rendering the Force-Directed Tree Layout.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -313,7 +305,7 @@ A Force-Directed Tree layout can be created with [DataSource](https://help.syncf
 
 @code
 {
-    private ForceDirectedTreeLayoutSettings forceDirectedSettings = new ForceDirectedTreeLayoutSettings()
+    public ForceDirectedTreeLayoutSettings forceDirectedSettings = new ForceDirectedTreeLayoutSettings()
     {
         ConnectorLength = 100,
         AttractionStrength = 0.7,
@@ -321,7 +313,7 @@ A Force-Directed Tree layout can be created with [DataSource](https://help.syncf
         MaximumIteration = 350
     };
 
-    private void OnNodeCreating(IDiagramObject obj)
+    public void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         node.Height = 40;
@@ -334,14 +326,14 @@ A Force-Directed Tree layout can be created with [DataSource](https://help.syncf
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
     }
 
-    private class ForceDirectedDetails
+    public class ForceDirectedDetails
     {
         public string Id { get; set; }
         public string Role { get; set; }
         public string Manager { get; set; }
     }
 
-    private List<ForceDirectedDetails> DataSource = new List<ForceDirectedDetails>()
+    public List<ForceDirectedDetails> DataSource = new List<ForceDirectedDetails>()
     {
         new ForceDirectedDetails() { Id = "parent", Role = "Board" },
         new ForceDirectedDetails() { Id = "1", Role = "General Manager", Manager = "parent" },
@@ -364,7 +356,7 @@ A Force-Directed Tree layout can be created with [DataSource](https://help.syncf
     };
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeDataSource)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeDataSource).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIWhiwURpVfzOI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Force Directed Tree Data Source Diagram](../images/ForceDirectedTreeDataSource.png)" %}
 
