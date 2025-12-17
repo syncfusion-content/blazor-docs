@@ -74,7 +74,7 @@ These shortcuts cover general editor functionality including undo/redo operation
 
 You can customize shortcuts for menu-based actions, such as the `Slash Command Menu`, `Block Action Menu`, and `Context Menu`, by modifying the `Shortcut` property in their respective tag directives.
 
-For other operations, you can customize the keyboard shortcuts by configuring the `KeyConfig` property in the `SfBlockEditor` tag directive when initializing the Block Editor component. This allows you to override default shortcuts or add new ones according to your application's requirements.
+For other operations, you can customize the keyboard shortcuts by configuring the [KeyConfig](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_KeyConfig) property in the [SfBlockEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html) tag directive when initializing the Block Editor component. This allows you to override default shortcuts or add new ones according to your application's requirements.
 
 In the example below, the shortcut for bold formatting is changed to <kbd>Alt</kbd> + <kbd>B</kbd> and for italic formatting to <kbd>Alt</kbd> + <kbd>I</kbd>.
 

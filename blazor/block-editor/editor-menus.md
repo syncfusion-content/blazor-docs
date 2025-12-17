@@ -30,7 +30,7 @@ The Slash Command menu comes with a set of pre-defined commands for all block ty
 
 ### Customize Slash command menu
 
-You can use the `BlockEditorCommandMenu` tag directive to modify the Slash Command menu. This allows you to add custom commands, remove default items, or change the behavior of existing commands to fit your application's requirements.
+You can use the [BlockEditorCommandMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorCommandMenu.html) tag directive to modify the Slash Command menu. This allows you to add custom commands, remove default items, or change the behavior of existing commands to fit your application's requirements.
 
 ### Events
 
@@ -38,8 +38,8 @@ The following events are available for the Slash Command menu:
 
 |Name|Args|Description|
 |---|---|---|
-|`Filtering`|CommandFilteringEventArgs|Triggers when the user types to filter the command menu items.|
-|`ItemSelect`|CommandItemSelectEventArgs|Triggers when the user clicks on a command menu item.|
+|[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorCommandMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorCommandMenu_Filtering)|CommandFilteringEventArgs|Triggers when the user types to filter the command menu items.|
+|[ItemSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorCommandMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorCommandMenu_ItemSelect)|CommandItemSelectEventArgs|Triggers when the user clicks on a command menu item.|
 
 The following example demonstrates how to customize the Slash Command menu.
 
@@ -116,7 +116,7 @@ The Context menu offers the following built-in options:
 
 ### Customize Context menu
 
-You can use the `BlockEditorContextMenu` tag directive to customize the Context menu. This allows you to add specific actions or modify existing items based on your application needs.
+You can use the [BlockEditorContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorContextMenu.html) tag directive to customize the Context menu. This allows you to add specific actions or modify existing items based on your application needs.
 
 ### Events
 
@@ -124,9 +124,9 @@ The following events are available for the Context menu:
 
 |Name|Args|Description|
 |---|---|---|
-|`Opening`|ContextMenuOpeningEventArgs|Triggers before the context menu opens.|
-|`Closing`|ContextMenuClosingEventArgs|Triggers before the context menu closes.|
-|`itemSelect`|ContextMenuItemSelectEventArgs|Triggers when a context menu item is clicked.|
+|[Opening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorContextMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorContextMenu_Opening)|ContextMenuOpeningEventArgs|Triggers before the context menu opens.|
+|[Closing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorContextMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorContextMenu_Closing)|ContextMenuClosingEventArgs|Triggers before the context menu closes.|
+|[itemSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorContextMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorContextMenu_ItemSelect)|ContextMenuItemSelectEventArgs|Triggers when a context menu item is clicked.|
 
 The following example demonstrates how to customize the Context menu.
 
@@ -237,11 +237,11 @@ The Block Action menu provides convenient actions for managing individual blocks
 
 ### Customize Block action menu
 
-You can use the `BlockEditorActionMenu` tag directive to customize the Block action menu. This enables you to add block-specific commands that are relevant to your application, allowing for a highly tailored user experience.
+You can use the [BlockEditorActionMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html) tag directive to customize the Block action menu. This enables you to add block-specific commands that are relevant to your application, allowing for a highly tailored user experience.
 
 #### Show or hide tooltip
 
-By default, a tooltip is displayed when the user hovers over an action item. You can show or hide the tooltip using the `EnableTooltip` property in the `BlockEditorActionMenu` tag directive.
+By default, a tooltip is displayed when the user hovers over an action item. You can show or hide the tooltip using the [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorActionMenu_EnableTooltip) property in the [BlockEditorActionMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html) tag directive.
 
 ### Events
 
@@ -249,9 +249,9 @@ The following events are available for the Block action menu:
 
 |Name|Args|Description|
 |---|---|---|
-|`Opening`|ActionMenuOpeningEventArgs|Triggers when the block action menu is opened.|
-|`Closing`|ActionMenuClosingEventArgs|Triggers when the block action menu is closed.|
-|`ItemSelect`|ActionMenuItemSelectEventArgs|Triggers when a block action menu item is clicked.|
+|[Opening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorActionMenu_Opening)|ActionMenuOpeningEventArgs|Triggers when the block action menu is opened.|
+|[Closing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorActionMenu_Closing)|ActionMenuClosingEventArgs|Triggers when the block action menu is closed.|
+|[ItemSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorActionMenu_ItemSelect)|ActionMenuItemSelectEventArgs|Triggers when a block action menu item is clicked.|
 
 The following example demonstrates how to customize the Block action menu.
 
@@ -353,7 +353,7 @@ The Inline Toolbar includes the following built-in formatting options:
 
 ### Customize Inline Toolbar
 
-You can use the `BlockEditorInlineToolbar` tag directive to customize the Inline Toolbar by adding or removing formatting options based on your application's needs.
+You can use the [BlockEditorInlineToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorInlineToolbar.html) tag directive to customize the Inline Toolbar by adding or removing formatting options based on your application's needs.
 
 ### Events
 
@@ -361,7 +361,7 @@ The following events are available for the Inline Toolbar:
 
 |Name|Args|Description|
 |---|---|---|
-|`ItemClick`|InlineToolbarItemClickEventArgs|Triggers when the user clicks on an inline toolbar item.|
+|[ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorInlineToolbar.html#Syncfusion_Blazor_BlockEditor_BlockEditorInlineToolbar_ItemClick)|InlineToolbarItemClickEventArgs|Triggers when the user clicks on an inline toolbar item.|
 
 The following example demonstrates how to customize the Inline Toolbar.
 

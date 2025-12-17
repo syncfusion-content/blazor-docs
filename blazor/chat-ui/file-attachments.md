@@ -11,11 +11,11 @@ documentation: ug
 
 The `Attachment` support in Chat UI enables the users to upload and send files (images, documents, and more) alongside messages for richer, more contextual conversations. This enhances the interaction by allowing users to provide additional context through files.
 
-You can use the `ChatUIAttachment` tag directive to configure the attachments in the Chat UI.
+You can use the [ChatUIAttachment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html) tag directive to configure the attachments in the Chat UI.
 
 ## Enable file attachments
 
-Enable file attachment support by setting the `Enable` property to `true`. By default, it is `false`.
+Enable file attachment support by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_Enable) property to `true`. By default, it is `false`.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ Enable file attachment support by setting the `Enable` property to `true`. By de
 
 ### Setting saveUrl and removeUrl
 
-Set the `SaveUrl` and `RemoveUrl` properties to specify server endpoints for handling file uploads and removals. The `SaveUrl` processes file uploads, while the `RemoveUrl` handles file deletion requests.
+Set the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_SaveUrl) and [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_RemoveUrl) properties to specify server endpoints for handling file uploads and removals. The [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_SaveUrl) processes file uploads, while the [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_RemoveUrl) handles file deletion requests.
 
 ```cshtml
 
@@ -57,7 +57,7 @@ Set the `SaveUrl` and `RemoveUrl` properties to specify server endpoints for han
 
 ## Setting file type
 
-You can use the `AllowedFileTypes` property to specify which file types users can upload. This property accepts file extensions (e.g., '.pdf', '.docx') or MIME types to control the types of files that can be attached.
+You can use the [AllowedFileTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_AllowedFileTypes) property to specify which file types users can upload. This property accepts file extensions (e.g., '.pdf', '.docx') or MIME types to control the types of files that can be attached.
 
 ```cshtml
 
@@ -80,7 +80,7 @@ You can use the `AllowedFileTypes` property to specify which file types users ca
 
 ## Setting file size
 
-Configure the `MaxFileSize` property to define the maximum file size allowed for uploads. Specify the size in bytes. The default value is `30000000` bytes (approximately 30 MB). Files exceeding this limit will not be uploaded.
+Configure the [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_MaxFileSize) property to define the maximum file size allowed for uploads. Specify the size in bytes. The default value is `30000000` bytes (approximately 30 MB). Files exceeding this limit will not be uploaded.
 
 ```cshtml
 
@@ -105,7 +105,7 @@ Configure the `MaxFileSize` property to define the maximum file size allowed for
 
 ## Setting save format
 
-Control the format used to send files to the server using the `SaveFormat` property when path is not set. It does not change how files are uploaded. The default value is `Blob`.
+Control the format used to send files to the server using the [SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_SaveFormat) property when path is not set. It does not change how files are uploaded. The default value is `Blob`.
 
  - `Blob`: Used for fast, memory‑efficient local previews.
  - `Base64`: Reads the file as a Base64 data URL, useful when you need an inline data URL.
@@ -131,7 +131,7 @@ Control the format used to send files to the server using the `SaveFormat` prope
 
  ## Setting server path
 
-The `Path` property specifies the public base URL where uploaded files are (or will be) hosted. When this property is set, it takes precedence over the value defined in `SaveFormat`. This means that even if saveFormat includes a different location or structure for storing files, the path property will be used it for generating the file URL.
+The [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_Path) property specifies the public base URL where uploaded files are (or will be) hosted. When this property is set, it takes precedence over the value defined in [SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_SaveFormat). This means that even if saveFormat includes a different location or structure for storing files, the path property will be used it for generating the file URL.
 
 ```cshtml
 
@@ -154,7 +154,7 @@ The `Path` property specifies the public base URL where uploaded files are (or w
 
 ## Enabling drag-and-drop
 
-Toggle drag-and-drop support for attachments via `AllowDragAndDrop` property. The default value is `true`.
+Toggle drag-and-drop support for attachments via [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_AllowDragAndDrop) property. The default value is `true`.
 
 ```cshtml
 
@@ -177,7 +177,7 @@ Toggle drag-and-drop support for attachments via `AllowDragAndDrop` property. Th
 
 ## Setting maximum count
 
-Restrict how many files can be attached at once using `MaximumCount` property. The default value is `10`. If users select more than the allowed count, the maximum count reached error will be displayed.
+Restrict how many files can be attached at once using [MaximumCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_MaximumCount) property. The default value is `10`. If users select more than the allowed count, the maximum count reached error will be displayed.
 
 ```cshtml
 
@@ -204,11 +204,11 @@ Restrict how many files can be attached at once using `MaximumCount` property. T
 
 ### Customizing the file preview
 
-Provide a custom UI for previewing selected files using `PreviewTemplate` tag directive under `SfChatUI` component tag. Use this to render thumbnails, filenames, progress, remove buttons, or any additional metadata prior to sending.
+Provide a custom UI for previewing selected files using [PreviewTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_PreviewTemplate) tag directive under `SfChatUI` component tag. Use this to render thumbnails, filenames, progress, remove buttons, or any additional metadata prior to sending.
 
 ### Customizing the attachments
 
-Control how attachments appear inside message bubbles with `AttachmentTemplate` tag directive under `ChatUIAttachment` tag directive. Use this to tailor the display of images, documents, or custom file types once the message is posted.
+Control how attachments appear inside message bubbles with [AttachmentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html#Syncfusion_Blazor_InteractiveChat_ChatUIAttachment_AttachmentTemplate) tag directive under [ChatUIAttachment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatUIAttachment.html)  tag directive. Use this to tailor the display of images, documents, or custom file types once the message is posted.
 
 ```cshtml
 

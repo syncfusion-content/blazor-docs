@@ -13,7 +13,7 @@ The Block Editor component provides a comprehensive set of events that allow you
 
 ## Created
 
-The `Created` event is triggered when the Block Editor component is successfully initialized and ready for use. This event is useful for performing setup operations or initializing additional features after the editor is created.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Created) event is triggered when the Block Editor component is successfully initialized and ready for use. This event is useful for performing setup operations or initializing additional features after the editor is created.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ The `Created` event is triggered when the Block Editor component is successfully
 
 ## BlockChanged
 
-The `BlockChanged` event is triggered whenever the editor blocks are changed. This includes block additions, deletions, or any structural modifications to the document. Its event handler receives details about the changes.
+The [BlockChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_BlockChanged) event is triggered whenever the editor blocks are changed. This includes block additions, deletions, or any structural modifications to the document. Its event handler receives details about the changes.
 
 ```cshtml
 
@@ -55,7 +55,7 @@ The `BlockChanged` event is triggered whenever the editor blocks are changed. Th
 
 ## SelectionChanged
 
-The `SelectionChanged` event is triggered when the user's text selection changes within the editor. The event arguments contain details about the new selection, which can be useful for updating UI elements.
+The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_SelectionChanged) event is triggered when the user's text selection changes within the editor. The event arguments contain details about the new selection, which can be useful for updating UI elements.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ The `SelectionChanged` event is triggered when the user's text selection changes
 
 ## Focus
 
-The `Focus` event is triggered when the editor gains focus. This is useful for updating UI states and managing editor interactions.
+The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Focus) event is triggered when the editor gains focus. This is useful for updating UI states and managing editor interactions.
 
 ```cshtml
 
@@ -97,7 +97,7 @@ The `Focus` event is triggered when the editor gains focus. This is useful for u
 
 ## Blur
 
-The `Blur` event is triggered when the editor loses focus. This is commonly used for auto-saving content or hiding UI elements that should only be visible when the editor is active.
+The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blur) event is triggered when the editor loses focus. This is commonly used for auto-saving content or hiding UI elements that should only be visible when the editor is active.
 
 ```cshtml
 
@@ -118,7 +118,7 @@ The `Blur` event is triggered when the editor loses focus. This is commonly used
 
 ## PasteCleanupStarting
 
-The `PasteCleanupStarting` event is triggered before content is pasted into the editor. This event allows you to inspect, modify, or cancel the paste operation via its event arguments.
+The [PasteCleanupStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_PasteCleanupStarting) event is triggered before content is pasted into the editor. This event allows you to inspect, modify, or cancel the paste operation via its event arguments.
 
 ```cshtml
 
@@ -139,7 +139,7 @@ The `PasteCleanupStarting` event is triggered before content is pasted into the 
 
 ## PasteCleanupCompleted
 
-The `PasteCleanupCompleted` event is triggered after content has been successfully pasted into the editor. This is useful for post-processing pasted content or updating related UI elements.
+The [PasteCleanupCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_PasteCleanupCompleted) event is triggered after content has been successfully pasted into the editor. This is useful for post-processing pasted content or updating related UI elements.
 
 ```cshtml
 
