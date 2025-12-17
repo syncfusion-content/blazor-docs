@@ -13,7 +13,7 @@ The Block Editor component provides several properties to customize its visual a
 
 ## Setting width and height
 
-You can specify the width and height for the Block Editor component using the `Width` and `Height` properties.
+You can specify the width and height for the Block Editor component using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Height) properties.
 
 ```cshtml
 
@@ -28,7 +28,7 @@ You can specify the width and height for the Block Editor component using the `W
 
 ## Setting readonly mode
 
-You can utilize the `ReadOnly` property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it.
+You can utilize the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_ReadOnly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it.
 
 ```cshtml
 
@@ -40,7 +40,7 @@ You can utilize the `ReadOnly` property to control whether the editor is in read
 
 ## Customization using CSS Class
 
-You can use the `CssClass` property to customize the appearance of the Block Editor component.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_CssClass) property to customize the appearance of the Block Editor component.
 
 ```cshtml
 
@@ -50,7 +50,7 @@ You can use the `CssClass` property to customize the appearance of the Block Edi
 
 ```
 
-The following example demonstrates the usage of `ReadOnly` and `CssClass` properties of the Block Editor.
+The following example demonstrates the usage of [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_ReadOnly) and [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_CssClass) properties of the Block Editor.
 
 ```cshtml
 
