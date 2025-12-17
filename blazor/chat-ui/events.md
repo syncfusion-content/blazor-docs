@@ -158,7 +158,7 @@ The [AttachmentUploadFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## AttachmentRemoved
 
-The [AttachmentRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AttachmentUploadRemoved) event is triggered when an attached file is removed in the Chat UI component.
+The [AttachmentRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AttachmentRemoved) event is triggered when an attached file is removed in the Chat UI component.
 
 ```cshtml
 
