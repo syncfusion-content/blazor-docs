@@ -82,21 +82,20 @@ The [PromptChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inte
 }
 ```
 
-## AttachmentUploadStart
+## OnAttachmentUploadReady
 
-The [AttachmentUploadStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentUploadStart) event is triggered before the attached files upload begins in the AI AssistView
+The [OnAttachmentUploadReady](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_OnAttachmentUploadReady) event is triggered before the attached files upload begins in the AI AssistView
 
 ```cshtml
 
 @using Syncfusion.Blazor.InteractiveChat
-@using Syncfusion.Blazor.Inputs
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
-    <SfAIAssistView AttachmentUploadStart="AttachmentUploadStart" AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+    <SfAIAssistView OnAttachmentUploadReady="OnAttachmentUploadReady" AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
 </div>
 
 @code {
-    private void AttachmentUploadStart(UploadingEventArgs args)
+    private void OnAttachmentUploadReady(AttachmentUploadReadyEventArgs args)
     {
         // Your required action here
     }
@@ -196,6 +195,38 @@ The [AttachmentRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 @code {
     private void AttachmentRemoved(RemovingEventArgs args)
+    {
+        // Your required action here
+    }
+    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
+    {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+
+## AttachmentClick
+
+The [AttachmentClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentClick) event is triggered when an attached file is clicked in the AI AssistView.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView AttachmentClick="OnAttachmentClick" AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void OnAttachmentClick(AttachmentClickEventArgs args)
     {
         // Your required action here
     }
