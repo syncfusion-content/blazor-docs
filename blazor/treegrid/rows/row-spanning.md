@@ -95,9 +95,9 @@ Row spanning is part of the broader `AutoSpanMode` enumeration, which provides m
 | AutoSpanMode.Column | Enables vertical merging of adjacent cells with identical values in the same column. | 
 | AutoSpanMode.HorizontalAndVertical | Enables both horizontal and vertical merging. Executes row merging first, followed by column merging. |
 
-## Disable spanning for specific columns
+## Disable spanning for specific column(s)
 
-Spanning in the Blazor TreeGrid can be disabled at the column level by setting the `AutoSpan` property of the `TreeGridColumn` component to `AutoSpanMode.None`. This configuration provides fine-grained control, allowing automatic spanning to be applied globally while excluding specific columns where merging is not desired.
+Spanning in the Blazor TreeGrid can be disabled at the column(s) level by setting the `AutoSpan` property of the `TreeGridColumn` component to `AutoSpanMode.None`. This configuration provides fine-grained control, allowing automatic spanning to be applied globally while excluding specific column(s) where merging is not desired.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
