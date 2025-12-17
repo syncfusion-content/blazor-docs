@@ -52,7 +52,7 @@ The following example demonstrates how to customize the properties of the Force-
 ```
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagramComponent" Height="690px" Width="100%" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors">
+<SfDiagramComponent @ref="@diagramComponent" Height="690px" Width="100%" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors" Created="@OnCreated">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     <Layout Type="LayoutType.ForceDirectedTree" @bind-ForceDirectedTreeLayoutSettings="@layoutSettings"></Layout>
 </SfDiagramComponent>
@@ -97,6 +97,12 @@ The following example demonstrates how to customize the properties of the Force-
                 Connectors!.Add(CreateNodeConnector(item.ParentId, item.Id));
             }
         }
+    }
+
+    private void OnCreated()
+    {
+        FitOptions options = new FitOptions() { Mode = FitMode.Both, Region = DiagramRegion.Content };
+        diagramComponent!.FitToPage(options);
     }
 
     private Node CreateOrganizationNode(OrganizationItem item)
