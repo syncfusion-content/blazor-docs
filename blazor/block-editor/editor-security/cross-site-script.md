@@ -13,7 +13,7 @@ The Block Editor allows users to edit the content with security by preventing cr
 
 ## Enabling XSS prevention
 
-The `EnableHtmlSanitizer`, enabled by default, activates XSS prevention. When active, the editor automatically removes elements like `<script>` and attributes like `onmouseover` from the content.
+The [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer), enabled by default, activates XSS prevention. When active, the editor automatically removes elements like `<script>` and attributes like `onmouseover` from the content.
 The following example shows XSS prevention removing a `<script>` tag and `onmouseover` attribute:
 
 ```cshtml

@@ -9,11 +9,11 @@ documentation: ug
 
 # Lists in Blazor Block Editor component
 
-The Syncfusion Blazor Block Editor component uses list blocks to organize content into structured lists. To render a specific list type, set the `BlockType` property of the `BlockModel` to `BulletList`, `NumberedList`, or `Checklist`. Bullet lists are ideal for unordered items, numbered lists for ordered items, and checklists for interactive to-do lists.
+The Syncfusion Blazor Block Editor component uses list blocks to organize content into structured lists. To render a specific list type, set the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property of the [BlockModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html) to [BulletList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Bulletlist), [NumberedList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Numberedlist), or [Checklist](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Checklist). Bullet lists are ideal for unordered items, numbered lists for ordered items, and checklists for interactive to-do lists.
 
 ## Configure bullet list 
 
-You can render a Bullet List block by setting the `BlockType` property to `BulletList`. This block type is used to display unordered lists.
+You can render a Bullet List block by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [BulletList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Bulletlist). This block type is used to display unordered lists.
 
 ### BlockType
 
@@ -28,7 +28,7 @@ You can render a Bullet List block by setting the `BlockType` property to `Bulle
 
 ### Configure placeholder
 
-The `Placeholder` property sets the text that appears when the block is empty. The default placeholder for a bullet list is `Add item`.
+The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BulletListBlockSettings.html#Syncfusion_Blazor_BlockEditor_BulletListBlockSettings_Placeholder) property sets the text that appears when the block is empty. The default placeholder for a bullet list is `Add item`.
 
 ```cshtml
 // Adding placeholder value
@@ -42,7 +42,7 @@ The `Placeholder` property sets the text that appears when the block is empty. T
 
 ## Configure numbered list
 
-You can render a Numbered List block by setting the `BlockType` property to `NumberedList`. This block type is used to display ordered lists.
+You can render a Numbered List block by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [NumberedList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Numberedlist). This block type is used to display ordered lists.
 
 ```cshtml
 // Adding numberedlist block
@@ -55,7 +55,7 @@ You can render a Numbered List block by setting the `BlockType` property to `Num
 
 ### Configure placeholder
 
-The `Placeholder` property sets the text that appears when the block is empty. The default placeholder for a numbered list is `Add item`.
+The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.NumberedListBlockSettings.html#Syncfusion_Blazor_BlockEditor_NumberedListBlockSettings_Placeholder) property sets the text that appears when the block is empty. The default placeholder for a numbered list is `Add item`.
 
 ```cshtml
 // Adding placeholder value
@@ -69,7 +69,7 @@ The `Placeholder` property sets the text that appears when the block is empty. T
 
 ## Configure checklist
 
-You can render a Checklist block by setting the `BlockType` property to `Checklist`. This block type is used for creating interactive to-do lists.
+You can render a Checklist block by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Checklist](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Checklist). This block type is used for creating interactive to-do lists.
 
 ```cshtml
 // Adding checklist block 
@@ -82,9 +82,9 @@ You can render a Checklist block by setting the `BlockType` property to `Checkli
 
 ### Configure checked state
 
-For blocks that support selection states, such as a `Checklist`, you can configure the checked state using the `Properties` property with `IsChecked`.
+For blocks that support selection states, such as a [Checklist](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Checklist), you can configure the checked state using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property with [IsChecked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ChecklistBlockSettings.html#Syncfusion_Blazor_BlockEditor_ChecklistBlockSettings_IsChecked).
 
-By default, the `IsChecked` property is set to `false`.
+By default, the [IsChecked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ChecklistBlockSettings.html#Syncfusion_Blazor_BlockEditor_ChecklistBlockSettings_IsChecked) property is set to `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.BlockEditor
@@ -130,11 +130,11 @@ By default, the `IsChecked` property is set to `false`.
 
 ```
 
-![Blazor Block Editor Block IsChecked](./images/is-checked.png)
+![Blazor Block Editor Block IsChecked](./../images/is-checked.png)
 
 ### Configure placeholder
 
-The `Placeholder` property sets the text that appears when the block is empty. The default placeholder for a checklist is `Todo`.
+The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.CheckListBlockSettings.html#Syncfusion_Blazor_BlockEditor_CheckListBlockSettings_Placeholder) property sets the text that appears when the block is empty. The default placeholder for a checklist is `Todo`.
 
 ```cshtml
 // Adding placeholder value
@@ -188,4 +188,4 @@ The following example demonstrates how to render the different types of list blo
 
 ```
 
-![Blazor Block Editor List Blocks](./images/list-blocks.png)
+![Blazor Block Editor List Blocks](./../images/list-blocks.png)

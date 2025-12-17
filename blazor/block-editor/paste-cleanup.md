@@ -11,11 +11,11 @@ documentation: ug
 
 The Block Editor component provides robust paste clean-up functionalities to ensure that pasted content integrates seamlessly and maintains styling and structural consistency. This feature helps remove unwanted formatting, scripts, and elements copied from external sources like web pages or word processors.
 
-You can configure the paste behavior using the `BlockEditorPasteCleanup` tag directive, which allows you to define how content is handled when pasted into the editor.
+You can configure the paste behavior using the [BlockEditorPasteCleanup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html) tag directive, which allows you to define how content is handled when pasted into the editor.
 
 ## Configuring allowed styles
 
-The `AllowedStyles` property lets you define which CSS styles are permitted in pasted content. Any style not in this list is stripped out, ensuring that only desired visual attributes are preserved.
+The [AllowedStyles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_AllowedStyles) property lets you define which CSS styles are permitted in pasted content. Any style not in this list is stripped out, ensuring that only desired visual attributes are preserved.
 
 By default, the following styles are allowed:
 
@@ -37,7 +37,7 @@ In the below example, only `font-weight` and `font-style` styles will be retaine
 
 ## Setting denied tags
 
-The `DeniedTags` property specifies a list of HTML tags to be removed from pasted content. This is useful for stripping potentially problematic elements like `<script>` or `<iframe>` tags. By default, this property is an empty array, so no tags are removed.
+The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_DeniedTags) property specifies a list of HTML tags to be removed from pasted content. This is useful for stripping potentially problematic elements like `<script>` or `<iframe>` tags. By default, this property is an empty array, so no tags are removed.
 
 In the below example, any `<script>` or `<iframe>` tags found in the pasted content will be removed, preventing unwanted behavior or styling issues.
 
@@ -163,7 +163,7 @@ Below example demonstrates the usage of paste settings that allows only specific
 
 ## Disable Keep format
 
-By default, the editor retains the formatting of pasted content (e.g., bold, italics, links). You can disable this by setting the `KeepFormat` property to `false`. When disabled, the editor primarily pastes content as plain text, regardless of the `AllowedStyles` configuration.
+By default, the editor retains the formatting of pasted content (e.g., bold, italics, links). You can disable this by setting the [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_KeepFormat) property to `false`. When disabled, the editor primarily pastes content as plain text, regardless of the [AllowedStyles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_AllowedStyles) configuration.
 
 ```cshtml
 
@@ -179,7 +179,7 @@ By default, the editor retains the formatting of pasted content (e.g., bold, ita
 
 ## Allowing plain text
 
-To paste content as plain text, stripping all HTML tags and inline styles, set the `PlainText` property to `true` in `BlockEditorPasteCleanup` tag directive. This ensures that only raw text is inserted, which is ideal for maintaining strict content consistency. By default, this property is `false`.
+To paste content as plain text, stripping all HTML tags and inline styles, set the [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_PlainText) property to `true` in [BlockEditorPasteCleanup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html) tag directive. This ensures that only raw text is inserted, which is ideal for maintaining strict content consistency. By default, this property is `false`.
 
 ```cshtml
 
@@ -298,8 +298,8 @@ The Block Editor provides events to monitor and interact with the paste action.
 
 |Name|Args|Description|
 |---|---|---|
-|`PasteCleanupStarting`|PasteCleanupStartingEventArgs|Triggers before the content is pasted into the editor.|
-|`PasteCleanupCompleted`|PasteCleanupCompletedEventArgs|Triggers after the content is pasted into the editor.|
+|[PasteCleanupStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_PasteCleanupStarting)|PasteCleanupStartingEventArgs|Triggers before the content is pasted into the editor.|
+|[PasteCleanupCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_PasteCleanupCompleted)|PasteCleanupCompletedEventArgs|Triggers after the content is pasted into the editor.|
 
 Below example demonstrates how to configure above events in the editor.
 

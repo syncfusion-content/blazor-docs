@@ -13,17 +13,17 @@ The Block Editor supports the addition of embeds to help you organize and showca
 
 ## Adding an Image Block
 
-You can use the `Image` block to showcase an image content within your editor.
+You can use the [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Image) block to showcase an image content within your editor.
 
 ### Configure Image Block
 
-You can render an `Image` block by setting the `BlockType` property to `Image` in the block model. The `Properties` property allows you to configure the image source, allowed file types, display dimensions, and more.
+You can render an [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Image) block by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Image) in the block model. The [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property allows you to configure the image source, allowed file types, display dimensions, and more.
 
 #### Global Image Settings
 
-You can configure global settings for image blocks using the `BlockEditorImageBlock` tag directive. This ensures consistent behavior for all images in the editor.
+You can configure global settings for image blocks using the [BlockEditorImageBlock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorImageBlock.html) tag directive. This ensures consistent behavior for all images in the editor.
 
-The `BlockEditorImageBlock` tag directive supports the following options:
+The [BlockEditorImageBlock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorImageBlock.html) tag directive supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
@@ -39,7 +39,7 @@ The `BlockEditorImageBlock` tag directive supports the following options:
 
 #### Configure Image Block Properties
 
-The `Image` block `Properties` property supports the following options:
+The [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Image) block [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
@@ -74,4 +74,4 @@ The `Image` block `Properties` property supports the following options:
 
 ```
 
-![Blazor Block Editor Image Block](./images/image-block.png)
+![Blazor Block Editor Image Block](./../images/image-block.png)
