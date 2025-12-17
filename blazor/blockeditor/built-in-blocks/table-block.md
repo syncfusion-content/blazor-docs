@@ -9,11 +9,11 @@ documentation: ug
 
 # Table Blocks in Blazor Block Editor component
 
-The Syncfusion Block Editor allows you to render structured data in rows and columns by setting the block's `BlockType` property to `Table`. You can customize the table layout, header, row numbers, and define columns and rows using the `Properties` property.
+The Syncfusion Block Editor allows you to render structured data in rows and columns by setting the block's [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Table). You can customize the table layout, header, row numbers, and define columns and rows using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property.
 
 ### Configure Table Block
 
-For Table blocks, you can configure layout and structure using the `Properties` property. This property supports the following options:
+For Table blocks, you can configure layout and structure using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property. This property supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
@@ -24,7 +24,7 @@ For Table blocks, you can configure layout and structure using the `Properties` 
 | Columns | Defines the columns of the table, including their types and headers. | `[]` |
 | Rows | Defines the rows of the table, each containing cells tied to columns. | `[]` |
 
-The following example demonstrates how to pre-configure a `Table` block in the editor.
+The following example demonstrates how to pre-configure a [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Table) block in the editor.
 
 ```cshtml
 @using Syncfusion.Blazor.BlockEditor
@@ -130,4 +130,4 @@ The following example demonstrates how to pre-configure a `Table` block in the e
 }
 ```
 
-![Blazor Block Editor Table Block](./images/table-block.png)
+![Blazor Block Editor Table Block](./../images/table-block.png)

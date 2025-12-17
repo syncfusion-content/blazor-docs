@@ -9,13 +9,13 @@ documentation: ug
 
 # Inline Content in Blazor Block Editor component
 
-In the Syncfusion Block Editor, all content is organized within blocks. Each block contains a `Content` property, which is a list of `ContentModel` that defines the text and functionality within that block.
+In the Syncfusion Block Editor, all content is organized within blocks. Each block contains a [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Content) property, which is a list of [ContentModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html) that defines the text and functionality within that block.
 
-Each `ContentModel` is an object with properties such as `ID`, `ContentType`, `Content`, and `Properties`, allowing for granular control over its appearance and behavior.
+Each [ContentModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html) is an object with properties such as [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_ID), [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_ContentType), [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Content), and [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Properties), allowing for granular control over its appearance and behavior.
 
 ## Setting content type
 
-The Block Editor supports several inline content types through the `ContentType` enum, which can be set using the `ContentType` property.
+The Block Editor supports several inline content types through the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_ContentType) enum, which can be set using the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_ContentType) property.
 
 | Built-in Content Type  | Description                         |
 |------------------------|-------------------------------------|
@@ -24,11 +24,11 @@ The Block Editor supports several inline content types through the `ContentType`
 | Mention                | Represents a user mention.          |
 | Label                  | Represents a label or tag.          |
 
-By default, the content type is set to `Text`.
+By default, the content type is set to [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentType.html#Syncfusion_Blazor_BlockEditor_ContentType_Text).
 
 ## Configure text content
 
-To configure text content, set the `ContentType` property to `Text`. This is the default content type if none is specified.
+To configure text content, set the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_ContentType) property to [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentType.html#Syncfusion_Blazor_BlockEditor_ContentType_Text). This is the default content type if none is specified.
 
 ### ContentType
 
@@ -43,11 +43,11 @@ To configure text content, set the `ContentType` property to `Text`. This is the
 
 ## Configure hyperlink
 
-To create a hyperlink, set the `ContentType` property to `Link`. You can configure the link's URL using the `Properties` property.
+To create a hyperlink, set the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_ContentType) property to [Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentType.html#Syncfusion_Blazor_BlockEditor_ContentType_Link). You can configure the link's URL using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Properties) property.
 
 ### Configure link properties
 
-Link settings control the behavior and properties of hyperlinks in your content. You can configure link settings using the `Properties` property which accepts the following options:
+Link settings control the behavior and properties of hyperlinks in your content. You can configure link settings using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Properties) property which accepts the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
@@ -65,7 +65,7 @@ Link settings control the behavior and properties of hyperlinks in your content.
 
 ## Configure label
 
-To render labels, set the `ContentType` property to `Label`. Specify the `LabelID` of the particular label in `Properties` to render a label.
+To render labels, set the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_ContentType) property to [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentType.html#Syncfusion_Blazor_BlockEditor_ContentType_Label). Specify the [LabelID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.LabelContentSettings.html#Syncfusion_Blazor_BlockEditor_LabelContentSettings_LabelID) of the particular label in [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Properties) to render a label.
 
 ### Built-in items
 
@@ -76,9 +76,9 @@ The Block Editor comes with different built-in label items. These includes:
 
 ### Global label settings
 
-You can configure global settings for all label inline contents using the `BlockEditorLabel` tag directive.
+You can configure global settings for all label inline contents using the [BlockEditorLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorLabel.html) tag directive.
 
-The `BlockEditorLabel` tag directive supports the following options:
+The [BlockEditorLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorLabel.html) tag directive supports the following options:
 
 | Property | Description |
 |----------|-------------|
@@ -87,28 +87,28 @@ The `BlockEditorLabel` tag directive supports the following options:
 
 #### Trigger Character configuration
 
-Use the `TriggerChar` property to define the character that opens the label suggestions popup. The default trigger character is `$`.
+Use the [TriggerChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorLabel.html#Syncfusion_Blazor_BlockEditor_BlockEditorLabel_TriggerChar) property to define the character that opens the label suggestions popup. The default trigger character is `$`.
 
 #### Label items configuration
 
-Define the available labels using the `Items` property present in the `BlockEditorLabel` tag directive. When a user types the trigger character, a popup will show matching items.
+Define the available labels using the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorLabel.html#Syncfusion_Blazor_BlockEditor_BlockEditorLabel_Items) property present in the [BlockEditorLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorLabel.html) tag directive. When a user types the trigger character, a popup will show matching items.
 
 Each item supports the following properties:
 
 | Property                     | Description                                         |
 | -----------------------------| --------------------------------------------------- |
-| `ID`                         | A unique identifier for the label.                  |
-| `Text`                       | The display text for the label.                     |
-| `GroupBy`                    | The category name for grouping similar labels.      |
-| `LabelColor`                 | The background color of the label.                  |
-| `IconCss`                    | A CSS class for an icon to display with the label.  |
+| [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.LabelItemModel.html#Syncfusion_Blazor_BlockEditor_LabelItemModel_ID)                         | A unique identifier for the label.                  |
+| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.LabelItemModel.html#Syncfusion_Blazor_BlockEditor_LabelItemModel_Text)                       | The display text for the label.                     |
+| [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.LabelItemModel.html#Syncfusion_Blazor_BlockEditor_LabelItemModel_GroupBy)                    | The category name for grouping similar labels.      |
+| [LabelColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.LabelItemModel.html#Syncfusion_Blazor_BlockEditor_LabelItemModel_LabelColor)                 | The background color of the label.                  |
+| [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.LabelItemModel.html#Syncfusion_Blazor_BlockEditor_LabelItemModel_IconCss)                    | A CSS class for an icon to display with the label.  |
 
 
 When users type the trigger character, a popup will appear showing matching label items from which they can select. The selected label will be inserted into the content as a Label content item.
 
 #### Customize label
 
-You can customize the labels by using the `Properties` property along with `ContentType` as `Label`.
+You can customize the labels by using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Properties) property along with [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_ContentType) as [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentType.html#Syncfusion_Blazor_BlockEditor_ContentType_Label).
 
 #### ContentType and Properties
 
@@ -125,13 +125,13 @@ You can customize the labels by using the `Properties` property along with `Cont
 
 #### Using labels with group headers
 
-Labels with the same `GroupBy` value will be grouped together in the label selection popup:
+Labels with the same [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.LabelItemModel.html#Syncfusion_Blazor_BlockEditor_LabelItemModel_GroupBy) value will be grouped together in the label selection popup:
 
 ## Configure mention
 
-Mentions are references to users or entities that can be inserted into your content. You can configure mention content by setting the type property to `Mention`. Specify the `UserID` of particular user in `Properties` to render a mention.
+Mentions are references to users or entities that can be inserted into your content. You can configure mention content by setting the type property to [Mention](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentType.html#Syncfusion_Blazor_BlockEditor_ContentType_Mention). Specify the [UserID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.MentionContentSettings.html#Syncfusion_Blazor_BlockEditor_MentionContentSettings_UserID) of particular user in [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Properties) to render a mention.
 
-Mentions are typically triggered by the `@` character and are linked to the `Users` collection defined in the Block Editor.
+Mentions are typically triggered by the `@` character and are linked to the [Users](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Users) collection defined in the Block Editor.
 
 The below sample demonstrates the usage of Mention and Label types in the Block Editor.
 
@@ -177,23 +177,23 @@ The below sample demonstrates the usage of Mention and Label types in the Block 
 
 ## Applying Inline Styles
 
-The Block Editor allows you to apply rich formatting to block contents using the `Styles` property.
+The Block Editor allows you to apply rich formatting to block contents using the [Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.TextContentSettings.html#Syncfusion_Blazor_BlockEditor_TextContentSettings_Styles) property.
 
-The `Styles` property supports the following options:
+The [Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.TextContentSettings.html#Syncfusion_Blazor_BlockEditor_TextContentSettings_Styles) property supports the following options:
 
 | Style Property            | Description                                | Default Value |
 | ------------------------- | ------------------------------------------ | ------------- |
-| `Bold`                    | Makes the text bold.                       | `false`       |
-| `Italic`                  | Makes the text italicized.                 | `false`       |
-| `Underline`               | Adds an underline to the text.             | `false`       |
-| `Strikethrough`           | Adds a line through the text.              | `false`       |
-| `Color`                   | Sets the text color (HEX or RGBA format).  | `''`          |
-| `BackgroundColor`         | Sets the background color for the text.    | `''`          |
-| `Superscript`             | Renders the text as superscript.           | `false`       |
-| `Subscript`               | Renders the text as subscript.             | `false`       |
-| `Uppercase`               | Converts the text to uppercase.            | `false`       |
-| `Lowercase`               | Converts the text to lowercase.            | `false`       |
-| `InlineCode`              | Converts the text to inline code.          | `false`       |
+| [Bold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Bold)                    | Makes the text bold.                       | `false`       |
+| [Italic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Italic)                  | Makes the text italicized.                 | `false`       |
+| [Underline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Underline)               | Adds an underline to the text.             | `false`       |
+| [Strikethrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Strikethrough)           | Adds a line through the text.              | `false`       |
+| [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Color)                   | Sets the text color (HEX or RGBA format).  | `''`          |
+| [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_BackgroundColor)         | Sets the background color for the text.    | `''`          |
+| [Superscript](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Superscript)             | Renders the text as superscript.           | `false`       |
+| [Subscript](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Subscript)               | Renders the text as subscript.             | `false`       |
+| [Uppercase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Uppercase)               | Converts the text to uppercase.            | `false`       |
+| [Lowercase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_Lowercase)               | Converts the text to lowercase.            | `false`       |
+| [InlineCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.StyleModel.html#Syncfusion_Blazor_BlockEditor_StyleModel_InlineCode)              | Converts the text to inline code.          | `false`       |
 
 You can apply one or more of these styles to any supported content element for rich text formatting.
 
@@ -259,4 +259,4 @@ You can apply one or more of these styles to any supported content element for r
 
 ```
 
-![Blazor Block Editor Content Styles](./images/content-styles.png)
+![Blazor Block Editor Content Styles](./../images/content-styles.png)

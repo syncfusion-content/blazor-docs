@@ -76,7 +76,7 @@ The [UserTyping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interac
 
 ## OnAttachmentUploadReady
 
-The `OnAttachmentUploadReady` event is triggered before the attached files upload begins in the Chat UI component.
+The [OnAttachmentUploadReady](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_OnAttachmentUploadReady) event is triggered before the attached files upload begins in the Chat UI component.
 
 ```cshtml
 
@@ -102,7 +102,7 @@ The `OnAttachmentUploadReady` event is triggered before the attached files uploa
 
 ## AttachmentUploadSuccess
 
-The `AttachmentUploadSuccess` event is triggered when the attached file is successfully uploaded in the Chat UI component.
+The [AttachmentUploadSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AttachmentUploadSuccess) event is triggered when the attached file is successfully uploaded in the Chat UI component.
 
 ```cshtml
 
@@ -130,7 +130,7 @@ The `AttachmentUploadSuccess` event is triggered when the attached file is succe
 
 ## AttachmentUploadFailed
 
-The `AttachmentUploadFailed` event is triggered when the attached file upload fails in the Chat UI component.
+The [AttachmentUploadFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AttachmentUploadFailed) event is triggered when the attached file upload fails in the Chat UI component.
 
 ```cshtml
 
@@ -158,7 +158,7 @@ The `AttachmentUploadFailed` event is triggered when the attached file upload fa
 
 ## AttachmentRemoved
 
-The `AttachmentRemoved` event is triggered when an attached file is removed in the Chat UI component.
+The [AttachmentUploadRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AttachmentUploadRemoved) event is triggered when an attached file is removed in the Chat UI component.
 
 ```cshtml
 
@@ -186,7 +186,7 @@ The `AttachmentRemoved` event is triggered when an attached file is removed in t
 
 ## AttachmentClick
 
-The `AttachmentClick` event is triggered when an attached file is clicked in the Chat UI component.
+The [AttachmentClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_AttachmentClick) event is triggered when an attached file is clicked in the Chat UI component.
 
 ```cshtml
 
