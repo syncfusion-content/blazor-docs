@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting Started | Syncfusion BlockEditor Component | Blazor WASM App
-description: Check out and learn here about the documentation for getting started with Blazor BlockEditor Component in Blazor WASM App. Explore here to more details.
+title: Getting Started | Syncfusion Block Editor Component | Blazor WASM App
+description: Checkout and learn about the documentation for getting started with Blazor Block Editor Component in Blazor WASM App. Explore here to more details.
 platform: Blazor
-component: BlockEditor
+control: BlockEditor
 documentation: ug
 ---
 
@@ -89,7 +89,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% tabcontent .NET CLI %}
 
-### Prerequisites
+## Prerequisites
 
 Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK was previously installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
 
@@ -101,7 +101,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor WebAssembly App using .NET CLI
+## Create a Blazor WebAssembly App using .NET CLI
 
 Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to [this Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
 
@@ -114,7 +114,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor BlockEditor and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor BlockEditor and Themes NuGet in the App
 
 To add the **Blazor Block Editor** component to the application, run the following commands in a command prompt (Windows), command shell (Linux), or terminal (macOS) to install the `Syncfusion.Blazor.BlockEditor` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
 
@@ -192,11 +192,51 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor com
 {% tabs %}
 {% highlight razor %}
 
-<SfBlockEditor ID="block-editor" />
+<SfBlockEditor Blocks="blockDataOverview">
+</SfBlockEditor>
+
+@code {
+    private List<BlockModel> blockDataOverview = new EditorBlockData().GetBlockDataOverview();
+
+    public class EditorBlockData
+    {
+        public List<BlockModel> GetBlockDataOverview()
+        {
+            List<BlockModel> blockDataOverview = new List<BlockModel>
+            {
+                new BlockModel
+                {
+                    BlockType = BlockType.Heading,
+                    Properties = new HeadingBlockSettings{ Level=2 },
+                    Content =
+                    {
+                        new ContentModel
+                        {
+                            ContentType = ContentType.Text,
+                            Content = "Getting Started with Block Editor"
+                        }
+                    }
+                },
+                new BlockModel
+                {
+                    BlockType = BlockType.Paragraph,
+                    Content =
+                    {
+                        new ContentModel { ContentType=ContentType.Text, Content="Welcome to" },
+                        new ContentModel { ContentType=ContentType.Text, Content=" Block Editor", Properties=new TextContentSettings{ Styles = new StyleModel{ Bold = true } } },
+                        new ContentModel { ContentType=ContentType.Text, Content=" - your flexible, modular workspace for creating rich, structured content. whether you're drafting documents, brainstorming ideas, or collaborating with your team, Block Editor makes it simple and intuitive." }
+                    }
+                },
+                new BlockModel{ BlockType = BlockType.Paragraph, Content = new List<ContentModel>() }
+            };
+            return blockDataOverview;
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the default web browser.
 
-![Blazor Block Editor Component](images/blazor-black-editor-component.png)
+![Blazor Block Editor Component](images/blazor-block-editor-component.png)
