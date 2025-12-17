@@ -2980,7 +2980,6 @@ Define GraphQL mutation queries for Insert, Update, Delete, and Batch operations
 
 * **Delete Mutation:** A GraphQL mutation that removes records.
 
-* **Batch Mutation:** Handles multiple operations (Insert, Update, and Delete) in a single request.
 
 **Configuration in GraphQL server application**
 
@@ -3797,4 +3796,3 @@ namespace GraphQLServer.GraphQL
 
 ![Crud Operation](./images/treegrid-graphql-CRUD.gif)
 
-You can get the entire code in the [github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/GraphQLAdaptor) sample.
