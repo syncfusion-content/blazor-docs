@@ -79,7 +79,7 @@ The following example demonstrates adding a custom dropdown to the toolbar along
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfSchedule TValue="AppointmentData" Width="1436px" Height="650px" @bind-SelectedDate="@CurrentDate">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings Query="@EventQuery" DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleResources>
         <ScheduleResource TItem="OwnerData" TValue="int[]" Field="OwnerId" Title="Owner" Name="Owners" AllowMultiple="true"
