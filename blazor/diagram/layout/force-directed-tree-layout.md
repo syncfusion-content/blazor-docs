@@ -15,7 +15,7 @@ In this layout, nodes apply repulsive forces to prevent overlap, while connector
 
 ## Configure force-directed tree layout settings
 
-To enable the Force-Directed Tree Layout, set the layout `Type` property to **LayoutType.ForceDirectedTree** and configure the `ForceDirectedTreeLayoutSettings` class, which provides control over the simulation. The properties of `ForceDirectedTreeLayoutSettings` class are listed below.
+To enable the Force-Directed Tree Layout, set the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property to **LayoutType.ForceDirectedTree** and configure the [ForceDirectedTreeLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FlowchartLayoutSettings) class, which provides control over the simulation. The properties of `ForceDirectedTreeLayoutSettings` class are listed below.
 
 ### ConnectorLength
 
@@ -288,7 +288,7 @@ Determines how strongly connected nodes pull toward each other.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeLayout).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"% backgroundimage "[Blazor Diagram hierarchical layout example](../images/Force-DirectedTreeLayout.png)"}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Force-Directed layout example](../images/Force-DirectedTreeLayout.png)" %}
 
 ## How to create a force-directed tree using datasource
 
