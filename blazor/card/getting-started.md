@@ -227,4 +227,4 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLzZshSzfQZOzAc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Card Component](images/blazor-card-component.png)" %}
 
-N> You can also explore our [Blazor Card example](https://blazor.syncfusion.com/demos/card/basic-card?theme=fluent) that shows you how to render and configure the Card.
+N> You can also explore our [Blazor Card example](https://blazor.syncfusion.com/demos/card/basic-card) that shows you how to render and configure the Card.
