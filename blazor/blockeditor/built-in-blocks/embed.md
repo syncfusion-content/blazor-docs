@@ -21,9 +21,9 @@ You can render an `Image` block by setting the `BlockType` property to `Image` i
 
 #### Global Image Settings
 
-You can configure global settings for image blocks using the `ImageBlockSettings` property in the Block Editor root configuration. This ensures consistent behavior for all images in the editor.
+You can configure global settings for image blocks using the `BlockEditorImageBlock` tag directive. This ensures consistent behavior for all images in the editor.
 
-The `ImageBlockSettings` property supports the following options:
+The `BlockEditorImageBlock` tag directive supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|

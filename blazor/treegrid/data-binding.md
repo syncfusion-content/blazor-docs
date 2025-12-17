@@ -1108,6 +1108,7 @@ namespace WebAPI.Controller
 {% endtabs %}
 
 N> The LoadChildOnDemand feature is not applicable for local data binding.
+<br/> N> The `LoadChildOnDemand` support is also available for virtualization.
 
 
 <!-- Custom Adaptor
