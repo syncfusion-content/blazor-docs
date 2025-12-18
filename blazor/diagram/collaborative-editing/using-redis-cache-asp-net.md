@@ -45,15 +45,18 @@ Redis imposes limits on concurrent connections. Select an appropriate Redis conf
 
 ## How to enable collaborative editing in client side
 
-### Step 1: Configure SignalR to send and receive changes
+### Step 1: Configure SignalR Connection
+To enable real-time collaboration, you need to establish a SignalR connection that can send and receive diagram updates. This connection will allow the client to join a SignalR group (room) for collaborative editing, ensuring changes are shared only among users working on the same diagram.
 
-To enable real-time collaboration, you need to configure SignalR to broadcast changes made by one user and receive updates from other users. Below is an example implementation:
+The **RoomName** represents the unique group name for the diagram session, and all users editing the same diagram should join this group to share updates within that session. The **OnConnectedAsync** method is triggered after the client successfully connects to the server and receives a unique connection ID, confirming the connection. After that, the **JoinDiagram** method is called to add the client to the specified SignalR group, enabling the client to send and receive real-time updates with other users in the same room.
 
 ```csharp
 @using Microsoft.AspNetCore.SignalR.Client
 
 @code {
     HubConnection? connection;
+    string RoomName = "Syncfusion";
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender) 
@@ -74,50 +77,27 @@ To enable real-time collaboration, you need to configure SignalR to broadcast ch
                         .WithAutomaticReconnect()
                         .Build();
             connection.On<string>("OnConnectedAsync", OnConnectedAsync);
-            connection.On<List<string>>("ReceiveData", async (diagramChanges) =>
-            {
-                await DiagramInstance.SetDiagramUpdatesAsync(diagramChanges);
-
-            });
             await connection.StartAsync();
         }
     }
-}
-```
-
-**Explanation**
-* **OnConnectedAsync:** Triggered when the client successfully connects to the server and receives a unique connection ID. This ID can be used to join specific rooms for collaborative sessions.
-* **ReceiveData:** Invoked whenever another user makes changes to the diagram. The received data contains the updates, which you can apply to your local diagram instance using `SetDiagramUpdatesAsync(diagramChanges)`.
-
-By wiring these methods during the connection setup, you enable the server to broadcast updates to all connected clients, ensuring real-time synchronization.
-
-### Step 2: Join SignalR room when opening the diagram
-
-When a diagram is opened, you can join a SignalR group (room) to enable collaborative editing. This allows sending and receiving updates only within that specific group, ensuring that changes are shared among users working on the same diagram.
-
-```csharp
-    string roomName = "syncfusion";
-
     private async Task OnConnectedAsync(string connectionId)
     {
         if(!string.IsNullOrEmpty(connectionId))
         {
             // Join the room after connection is established
-            await connection.SendAsync("JoinDiagram", roomName);
+            await connection.SendAsync("JoinDiagram", RoomName);
         }
     }
+}
 ```
-**Explanation**
-
-* **roomName:** Represents the unique group name for the diagram session. All users editing the same diagram should join this group.
-* **OnConnectedAsync:** This method is triggered after the client successfully connects to the server and receives a unique connection ID.
-* **JoinDiagram:** Invokes the server-side method to add the client to the specified SignalR group. Once joined, the client can send and receive updates within this group.
-
-Using SignalR groups ensures that updates are scoped to the relevant diagram, preventing unnecessary broadcasts to all connected clients.
 
 ### Step 3: Broadcast Current Editing Changes to Remote Users
 
-To keep all collaborators in sync, changes made on the client-side must be sent to the server, which then broadcasts them to other connected users. This can be achieved using the `HistoryChanged` event of the Blazor Diagram component and the `GetDiagramUpdates` method.
+To keep all collaborators in sync, changes made on the client-side must be sent to the server, which then broadcasts them to other connected users. This is done by handling the HistoryChanged event of the Blazor Diagram component and using the `GetDiagramUpdates` method to serialize changes into JSON format for transmission. The server-side method BroadcastToOtherClients then sends these updates to all clients in the same SignalR group (room).
+
+The `HistoryChanged` event is triggered whenever a change occurs in the diagram, such as adding, deleting, or modifying shapes or connectors. The `GetDiagramUpdates` method converts these changes into a JSON format suitable for sending to the server, ensuring updates can be easily applied by other clients. Finally, the `BroadcastToOtherClients` method on the server broadcasts these updates to all users in the same collaborative session.
+
+For grouped interactions (e.g., multiple changes in a single operation), enable `EnableGroupActions` in `DiagramHistoryManager`. This ensures `StartGroupAction` and `EndGroupAction` notifications are included in the `HistoryChanged` event, allowing you to broadcast changes only after the group action completes.
 
 ```razor
 <SfDiagramComponent @ref="@DiagramInstance" ID="@DiagramId" HistoryChanged="@OnHistoryChange" >
@@ -139,27 +119,17 @@ To keep all collaborators in sync, changes made on the client-side must be sent 
     }
 }
 ```
-**Explanation**
-* **HistoryChanged Event:** Triggered whenever a change occurs in the diagram (e.g., adding, deleting, or modifying shapes/connectors).
-* **GetDiagramUpdates:** Serializes the diagram changes into a JSON format suitable for transmission to the server. This ensures that updates can be easily processed and applied by other clients.
-* **BroadcastToOtherClients:** A server-side SignalR method that sends updates to all clients in the same SignalR group (room).
-
-**Grouped Interactions**
-To optimize broadcasting during grouped actions (e.g., multiple changes in a single operation):
-
-Enable `EnableGroupActions` in DiagramHistoryManager
-```razor
-<DiagramHistoryManager EnableGroupActions="true"></DiagramHistoryManager>
-```
-This ensures `StartGroupAction` and `EndGroupAction` notifications are included in `HistoryChangedEvent`, allowing you to broadcast changes only after the group action completes.
 
 ## Server configuration
 
 ### Step 1: Configure SignalR Hub to Create Rooms for Collaborative Editing Sessions
 
-To manage SignalR groups for each diagram, create a folder named Hubs and add a file named DiagramHub.cs inside it. This hub will handle group management and broadcasting updates to connected clients.
+Create a folder named Hubs and add a file DiagramHub.cs. This hub manages SignalR groups (rooms) per diagram and broadcasts updates to connected clients.
 
-Use the `JoinDiagram` method to join a SignalR group (room) based on the unique connection ID.
+**OnConnectedAsync:** It will trigger when a new client connects. Sends the generated connection ID to the client so it can be used as a session identifier.
+**JoinDiagram(roomName):** Adds the current connection to a SignalR group (room) identified by roomName. Also records the mapping so the connection can be removed later.
+**BroadcastToOtherClients(payloads, roomName):** Sends edits/updates to other clients in the same room (excludes the sender).
+**OnDisconnectedAsync:** Triggered when a client disconnects. The hub removes the connection from any rooms it had joined.
 
 ```csharp
 using Microsoft.AspNetCore.SignalR;
@@ -181,7 +151,6 @@ namespace DiagramServerApplication.Hubs
             Clients.Caller.SendAsync("OnConnectedAsync", Context.ConnectionId);
             return base.OnConnectedAsync();
         }
-
         public async Task JoinDiagram(string roomName)
         {
             try
@@ -196,7 +165,6 @@ namespace DiagramServerApplication.Hubs
                 _logger.LogError(ex);
             }
         }
-
         public async Task BroadcastToOtherClients(List<string> payloads, string roomName)
         {
             try
@@ -228,6 +196,10 @@ namespace DiagramServerApplication.Hubs
 ### Step 2: Register services, Redis backplane, CORS, and map the hub (Program.cs)
 
 Add these registrations to your server Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
+* Register Redis for shared state and backplane support.
+* Configure SignalR with Redis for distributed messaging.
+* Add your application services (like RedisService).
+* Map the SignalR hub so clients can connect.
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
@@ -235,20 +207,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Redis (shared connection)
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
 {
-    var cs = builder.Configuration.GetConnectionString("RedisConnectionString")
-             ?? "localhost:6379,abortConnect=false";
+    var cs = builder.Configuration.GetConnectionString("RedisConnectionString");
     return ConnectionMultiplexer.Connect(cs);
 });
 
 // SignalR + Redis backplane
 builder.Services
     .AddSignalR()
-    .AddStackExchangeRedis(builder.Configuration.GetConnectionString("RedisConnectionString")
-                           ?? "localhost:6379,abortConnect=false");
+    .AddStackExchangeRedis(builder.Configuration.GetConnectionString("RedisConnectionString"));
 
 // App services
-builder.Services.AddScoped<IRedisService, RedisService>();
-builder.Services.AddScoped<IDiagramService, DiagramService>(); // your implementation
+builder.Services.AddScoped<IRedisService, RedisService>(); // your implementation
 
 var app = builder.Build();
 
@@ -324,7 +293,6 @@ This approach keeps collaborators in sync without locking, while ensuring determ
                         })
                         .WithAutomaticReconnect()
                         .Build();
-            connection.On<string>("OnConnectedAsync", OnConnectedAsync);
             // Show conflict notification
             connection.On("ShowConflict", ShowConflict);
             connection.On<long>("UpdateVersion", UpdateVersion);
@@ -370,7 +338,6 @@ This approach keeps collaborators in sync without locking, while ensuring determ
         // TODO: extract IDs from args (nodes/connectors edited)
         return new List<string>();
     }
-
 }
 ```
 **Server (SignalR Hub) – Validate with Redis and broadcast**
@@ -386,11 +353,8 @@ public class DiagramUpdateMessage
 
 public class DiagramHub : Hub
 {
-    private readonly IDiagramService _diagramService;
     private readonly IRedisService _redisService;
     private readonly ILogger<DiagramHub> _logger;
-    private readonly IHubContext<DiagramHub> _diagramHubContext;
-    private static readonly ConcurrentDictionary<string, DiagramUser> _diagramUsers = new();
 
     public DiagramHub(IRedisService redis, ILogger<DiagramHub> logger)
     {
@@ -445,41 +409,6 @@ public class DiagramHub : Hub
             _logger.LogError(ex);
         }
     }
-    private async Task<IReadOnlyList<DiagramUpdateMessage>> GetUpdatesSinceVersionAsync(long sinceVersion, int maxScan = 200)
-    {
-        var historyKey = "diagram_updates_history";
-        var length = await _redisService.ListLengthAsync(historyKey);
-        if (length == 0) return Array.Empty<DiagramUpdateMessage>();
-
-        long start = Math.Max(0, length - maxScan);
-        long end = length - 1;
-
-        var range = await _redisService.ListRangeAsync(historyKey, start, end);
-
-        var results = new List<DiagramUpdateMessage>(range.Length);
-        foreach (var item in range)
-        {
-            if (item.IsNullOrEmpty) continue;
-            var update = JsonSerializer.Deserialize<DiagramUpdateMessage>(item.ToString());
-            if (update is not null && update.Version > sinceVersion && update.SourceConnectionId != Context.ConnectionId)
-                results.Add(update);
-        }
-        results.Sort((a, b) => a.Version.CompareTo(b.Version));
-        return results;
-    }
-    private async Task StoreUpdateInRedis(DiagramUpdateMessage updateMessage)
-    {
-        try
-        {
-            // Store updates in redis
-            var historyKey = "diagram_updates_history";
-            await _redisService.ListPushAsync(historyKey, updateMessage);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error storing update in Redis for diagram");
-        }
-    }
 }
 ```
 **Redis service interface & implementation**
@@ -488,10 +417,7 @@ using StackExchange.Redis;
 
 public interface IRedisService
 {
-    Task<long> ListPushAsync<T>(string key, T value);
     Task<(bool accepted, long version)> CompareAndIncrementAsync(string key, long expectedVersion);
-    Task<long> ListLengthAsync(string key);
-    Task<RedisValue[]> ListRangeAsync(string key, long start = 0, long stop = -1);
 }
 ```
 ```csharp
@@ -551,41 +477,6 @@ end
                 _logger.LogError(ex, "Error in CompareAndIncrementAsync for key {Key}", key);
             }
         }
-        public async Task<long> ListPushAsync<T>(string key, T value)
-        {
-            try
-            {
-                var serializedValue = JsonSerializer.Serialize(value);
-                return await _database.ListLeftPushAsync(key, serializedValue);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error pushing to list {Key}", key);
-            }
-        }
-        public async Task<long> ListLengthAsync(string key)
-        {
-            try
-            {
-                return await _database.ListLengthAsync(key);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error getting list length {Key}", key);
-                return 0;
-            }
-        }
-        public async Task<RedisValue[]> ListRangeAsync(string key, long start = 0, long stop = -1)
-        {
-            try
-            {
-                return await _database.ListRangeAsync(key, start, stop);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error getting list range {Key}", key);
-            }
-        }
     }
 ```
 
@@ -640,6 +531,8 @@ To ensure reliable and efficient collaborative editing, consider the following b
     * The current implementation does not support multiple server instances. SignalR connections and Redis-based versioning are designed for a single-node setup. Scaling out requires configuring a SignalR backplane (e.g., Redis backplane) and ensuring consistent state across nodes.
 * **Zoom and Pan Not Collaborative**
     * Zoom and pan actions are local to each client and are not synchronized across users. This means collaborators may view different portions of the diagram independently.
+* **Unsupported Diagram Settings**
+    * Changes to properties such as PageSettings, ContextMenu, and ScrollSettings are not propagated to other users and will only apply locally.
 
 The full version of the code can be found in the GitHub location below.
 
