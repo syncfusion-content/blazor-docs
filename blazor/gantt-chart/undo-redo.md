@@ -299,7 +299,7 @@ In the following example, clicking an external button invokes the `UndoAsync` me
     }
 
     /// <summary>
-    /// Handles the undo action by invoking the Gantt component's asynchronous undo logic.
+    /// Handles the undo action by invoking the Gantt Chart component's asynchronous undo logic.
     /// </summary>
     private async Task UndoHandler()
     {
@@ -307,7 +307,7 @@ In the following example, clicking an external button invokes the `UndoAsync` me
     }
 
     /// <summary>
-    /// Handles the redo action by invoking the Gantt component's asynchronous redo logic.
+    /// Handles the redo action by invoking the Gantt Chart component's asynchronous redo logic.
     /// </summary>
     private async Task RedoHandler()
     {
