@@ -39,7 +39,7 @@ The `RoomName` represents the unique group name for the diagram session, and all
                         })
                         .WithAutomaticReconnect()
                         .Build();
-            // Triggered when the connection to the server is successfully established
+            // Triggered when the connection to the collaboration hub is successfully established
             connection.On<string>("OnConnectedAsync", OnConnectedAsync);
             await connection.StartAsync();
         }
@@ -81,7 +81,7 @@ For grouped interactions (e.g., multiple changes in a single operation), enable 
                         })
                         .WithAutomaticReconnect()
                         .Build();
-            // Triggers when connection established to server
+            // Triggered when the connection to the collaboration hub is successfully established
             connection.On<string>("OnConnectedAsync", OnConnectedAsync);
             // Apply remote changes to current diagram.
             connection.On<List<string>>("ReceiveData", async (diagramChanges) =>
@@ -106,7 +106,7 @@ For grouped interactions (e.g., multiple changes in a single operation), enable 
 }
 ```
 
-## Collaboration Hub configuration
+## Collaboration Hub Configuration
 ### Step 1: Register services, Redis backplane, CORS, and map the hub (Program.cs)
 
 Add these registrations to your collaboration hub Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
@@ -238,7 +238,7 @@ namespace DiagramServerApplication.Hubs
     }
 }
 ```
-## Conflict policy (optimistic concurrency)
+## Conflict Policy (Optimistic Concurrency)
 
 To handle conflicts during collaborative editing, we use an optimistic concurrency strategy with versioning:
 
@@ -400,7 +400,7 @@ public class DiagramHub : Hub
     }
 }
 ```
-**Redis service interface & implementation**
+**Redis Service Interface & Implementation**
 * The IRedisService interface defines `CompareAndIncrementAsync(string key, long expectedVersion)`.
 This method checks if the current version stored in Redis matches the version we expect. If it matches, it increases the version by 1.
 * **Purpose:** This is used in collaborative applications to avoid conflicts when multiple users edit the same element. It ensures only one update happens at a time.
@@ -472,7 +472,7 @@ end
     }
 ```
 
-## Cleanup strategy for Redis
+## Cleanup Strategy for Redis
 
 To prevent unbounded memory growth and maintain optimal performance, implement one or both of the following strategies:
 * **Keep Only the Last K Versions**
@@ -505,7 +505,7 @@ long version = 5;
 await _redisService.SetAsync(versionKey, version, TimeSpan.FromHours(1));
 ```
 
-## Hosting, transport, and serialization
+## Hosting, Transport, and Serialization
 
 To ensure reliable and efficient collaborative editing, consider the following best practices:
 * **1. Hosting**
