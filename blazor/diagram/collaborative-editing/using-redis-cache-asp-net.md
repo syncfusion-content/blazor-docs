@@ -11,7 +11,7 @@ documentation: ug
 ### Step 1: Configure SignalR Connection
 To enable real-time collaboration, you need to establish a SignalR connection that can send and receive diagram updates. This connection will allow the client to join a SignalR group (room) for collaborative editing, ensuring changes are shared only among users working on the same diagram.
 
-The `RoomName` represents the unique group name for the diagram session, and all users editing the same diagram should join this group to share updates within that session. The `OnConnectedAsync` method is triggered after the client successfully connects to the server and receives a unique connection ID, confirming the connection. After that, the `JoinDiagram` method is called to add the client to the specified SignalR group, enabling the client to send and receive real-time updates with other users in the same room.
+The `RoomName` represents the unique group name for the diagram session, and all users editing the same diagram should join this group to share updates within that session. The `OnConnectedAsync` method is triggered after the client successfully connects to the collaboration hub and receives a unique connection ID, confirming the connection. After that, the `JoinDiagram` method is called to add the client to the specified SignalR group, enabling the client to send and receive real-time updates with other users in the same room.
 
 ```csharp
 @using Microsoft.AspNetCore.SignalR.Client
