@@ -7,42 +7,6 @@ control: Diagram
 documentation: ug
 ---
 
-# Collaborative Editing with Redis in Blazor Diagram
-
-Collaborative editing allows multiple users to work on the same diagram simultaneously. All changes are synchronized in real-time, ensuring that collaborators can instantly see updates as they occur. This feature enhances productivity by removing the need to wait for others to finish their edits and promotes seamless teamwork.
-By leveraging Redis as the real-time data store, the application ensures fast and reliable communication between clients, making collaborative diagram editing smooth and efficient.
-
-## Prerequisites
-
-Following things are needed to enable collaborative editing in Diagram Component
-
-* SignalR
-* Redis
-
-## SignalR
-
-In collaborative editing, real-time communication is essential for users to see each other’s changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the blazor server and collaboration hub. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
-
-To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either AspNetCore SignalR Service or a Redis backplane.
-
-## Redis
-
-Redis is used as a temporary data store to manage real-time diagram collaborative editing operations. It helps queue editing actions and resolve conflicts through versioning mechanisms.
-
-All diagram editing operations performed during collaboration are cached in Redis. To prevent excessive memory usage, old versioning data is periodically removed from the Redis cache.
-
-Redis imposes limits on concurrent connections. Select an appropriate Redis configuration based on your expected user load to maintain optimal performance and avoid connection bottlenecks.
-
-## NuGet packages required
-
-- Blazor Server:
-  - Microsoft.AspNetCore.SignalR.Client
-  - Syncfusion.Blazor.Diagram
-- Collaboration Hub:
-  - Microsoft.AspNetCore.SignalR
-  - Microsoft.AspNetCore.SignalR.StackExchangeRedis
-  - StackExchange.Redis
-
 ## How to enable collaborative editing in Blazor server side
 ### Step 1: Configure SignalR Connection
 To enable real-time collaboration, you need to establish a SignalR connection that can send and receive diagram updates. This connection will allow the client to join a SignalR group (room) for collaborative editing, ensuring changes are shared only among users working on the same diagram.
@@ -390,23 +354,23 @@ public class DiagramHub : Hub
     {
         try
         {
-            var versionKey = "diagram:version";
+            string versionKey = "diagram:version";
             // Try to accept based on expected version (CAS via Lua)
-            var (accepted, serverVersion) = await _redisService.CompareAndIncrementAsync(versionKey, clientVersion);
+            (bool accepted, long serverVersion) = await _redisService.CompareAndIncrementAsync(versionKey, clientVersion);
 
             if (!accepted)
             {
                 // Check for overlaps since client's version
-                var recentUpdates = await GetUpdatesSinceVersionAsync(clientVersion, maxScan: 200);
-                var recentlyTouched = new HashSet<string>(StringComparer.Ordinal);
-                foreach (var upd in recentUpdates)
+                List<DiagramUpdateMessage> recentUpdates = await GetUpdatesSinceVersionAsync(clientVersion, maxScan: 200);
+                HashSet<string> recentlyTouched = new HashSet<string>(StringComparer.Ordinal);
+                foreach (DiagramUpdateMessage upd in recentUpdates)
                 {
                     if (upd.ModifiedElementIds == null) continue;
-                    foreach (var id in upd.ModifiedElementIds)
+                    foreach (string id in upd.ModifiedElementIds)
                         recentlyTouched.Add(id);
                 }
 
-                var overlaps = elementIds?.Where(id => recentlyTouched.Contains(id)).Distinct().ToList();
+                List<string> overlaps = elementIds?.Where(id => recentlyTouched.Contains(id)).Distinct().ToList();
                 if (overlaps?.Count > 0)
                 {
                     // Reject & notify caller of conflict
@@ -415,11 +379,11 @@ public class DiagramHub : Hub
                 }
 
                 // Accept non-overlapping stale update: increment once more
-                var (_, newServerVersion) = await _redisService.CompareAndIncrementAsync(versionKey, serverVersion);
+                (bool _, long newServerVersion) = await _redisService.CompareAndIncrementAsync(versionKey, serverVersion);
                 serverVersion = newServerVersion;
             }
             // Store update in Redis history
-            var update = new DiagramUpdateMessage
+            DiagramUpdateMessage update = new DiagramUpdateMessage
             {
                 SourceConnectionId = connId,
                 Version = serverVersion,
@@ -485,7 +449,7 @@ end
 ";
             try
             {
-                var result = (StackExchange.Redis.RedisResult[])await _database.ScriptEvaluateAsync(
+                RedisResult[] result = (StackExchange.Redis.RedisResult[])await _database.ScriptEvaluateAsync(
                     lua,
                     keys: new StackExchange.Redis.RedisKey[] { key },
                     values: new StackExchange.Redis.RedisValue[] { expectedVersion.ToString() });
@@ -525,7 +489,7 @@ public async Task<bool> SetAsync<T>(string key, T value, TimeSpan? expiry = null
 {
     try
     {
-        var serializedValue = JsonSerializer.Serialize(value);
+        string serializedValue = JsonSerializer.Serialize(value);
         return await _database.StringSetAsync(key, serializedValue, expiry);
     }
     catch (Exception ex)

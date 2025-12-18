@@ -8,37 +8,34 @@ documentation: ug
 ---
 
 # Collaborative Editing in Blazor Diagram
-
-Collaborative editing enables multiple users to work on the same diagram at the same time. Changes are reflected in real-time, allowing all participants to instantly see updates as they happen. This feature promotes seamless teamwork by eliminating the need to wait for others to finish their edits. As a result, teams can boost productivity, streamline workflows, and ensure everyone stays aligned throughout the design process.
+Collaborative editing allows multiple users to work on the same diagram simultaneously. All changes are synchronized in real-time, ensuring that collaborators can instantly see updates as they occur. This feature enhances productivity by removing the need to wait for others to finish their edits and promotes seamless teamwork.
+By leveraging Redis as the real-time data store, the application ensures fast and reliable communication between clients, making collaborative diagram editing smooth and efficient.
 
 ## Prerequisites
+Following things are needed to enable collaborative editing in Diagram Component
 
-- *Real-time Transport Protocol*: Enables instant communication between blazor server and the collaboration hub, ensuring that updates during collaborative editing are transmitted and reflected immediately.
-- *Distributed Cache or Database*: Serves as temporary storage for the queue of diagram editing operations, helping maintain synchronization and consistency across multiple users.
+* SignalR
+* Redis
 
-### Real time transport protocol
+## NuGet packages required
 
-- *Managing Connections*: Maintains active connections between blazor server and the collaboration hub to enable uninterrupted real-time collaboration. This ensures smooth and consistent communication throughout the editing session.
-- *Broadcasting Changes*: Instantly propagates any edits made by one user to all other collaborators. This guarantees that everyone is always working on the most up-to-date version of the diagram, fostering accuracy and teamwork.
+- Blazor Server:
+  - Microsoft.AspNetCore.SignalR.Client
+  - Syncfusion.Blazor.Diagram
+- Collaboration Hub:
+  - Microsoft.AspNetCore.SignalR
+  - Microsoft.AspNetCore.SignalR.StackExchangeRedis
+  - StackExchange.Redis
 
-### Distributed cache or database
+## SignalR
+In collaborative editing, real-time communication is essential for users to see each other’s changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the blazor server and collaboration hub. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
 
-Collaborative editing requires a reliable backing system to temporarily store and manage editing operations from all active users. This ensures real-time synchronization and conflict resolution across multiple clients. There are two primary options:
+To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either AspNetCore SignalR Service or a Redis backplane.
 
-- *Distributed Cache*: 
-    * Designed for high throughput and low latency.
-    * Handles significantly more HTTP requests per second compared to a database.
-    * Example: A server with 2 vCPUs and 8 GB RAM can process up to 125 requests per second using a distributed cache.
+## Redis
+Redis is used as a temporary data store to manage real-time diagram collaborative editing operations. It helps queue editing actions and resolve conflicts through versioning mechanisms.
 
-- *Database*: 
-    * Suitable for smaller-scale collaboration scenarios.
-    * With the same server configuration, a database can handle approximately 50 requests per second.
+All diagram editing operations performed during collaboration are cached in Redis. To prevent excessive memory usage, old versioning data is periodically removed from the Redis cache.
 
-> *Recommendation*:
-    * If your application expects 50 or fewer requests per second, a database provides a reliable solution for managing the operation queue.
-    * If your application expects more than 50 requests per second, a distributed cache is highly recommended for optimal performance.
+Redis imposes limits on concurrent connections. Select an appropriate Redis configuration based on your expected user load to maintain optimal performance and avoid connection bottlenecks.
 
-> Tips to calculate the average requests per second of your application:
-Assume the editor in your live application is actively used by 1000 users and each user's edit can trigger 2 to 5 requests per second. The total requests per second of your applications will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
-
-> Note: The metrics provided are for illustration purposes only. Actual throughput may vary based on additional server-side operations. It is strongly recommended to monitor your application’s traffic and performance and select a configuration that best meets your real-world requirements.
