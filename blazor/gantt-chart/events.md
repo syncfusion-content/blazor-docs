@@ -4551,7 +4551,7 @@ The [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 ## OnUndoRedo
-[OnUndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnUndoRedo) event triggers after an undo or redo operation completes. Event arguments provide the operation type (undo/redo), the action performed, and affected data such as modified records, deleted records, and an added record reference.
+[OnUndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnUndoRedo) event is triggered after an undo or redo operation completes. Event arguments indicate the operation type (undo or redo), the action performed, and the affected data, including modified records, deleted records, and any added record references.
 
 ``` cshtml
 
@@ -4600,7 +4600,7 @@ The [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         return new List<TaskData>()
         {
             new TaskData { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023,01,04), EndDate = new DateTime(2023,01,23) },
-            new TaskData { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023,01,04), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2023,01,04), Duration = "0", Progress = 30, ParentId = 1 },
             new TaskData { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023,01,04), Duration = "4", Progress = 40, ParentId = 1 },
             new TaskData { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023,01,04), Duration = "0", Progress = 30, ParentId = 1 }
         };
