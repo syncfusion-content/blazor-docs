@@ -561,10 +561,11 @@ To ensure reliable and efficient collaborative editing, consider the following b
 * **Zoom and Pan Not Collaborative**
     * Zoom and pan actions are local to each client and are not synchronized across users. This means collaborators may view different portions of the diagram independently.
 * **Unsupported Diagram Settings**
-    * Changes to properties such as PageSettings, ContextMenu, DiagramHistoryManager, UmlSequenceDiagram, Layout, and ScrollSettings are not propagated to other users and will only apply locally.
+    * Changes to properties such as PageSettings, ContextMenu, DiagramHistoryManager, SnapSettings, Rulers, UmlSequenceDiagram, Layout, and ScrollSettings are not propagated to other users and will only apply locally.
 
 >**Note:** 
 > * Collaboration is currently supported only for actions that trigger the HistoryChanged event.
+
 The full version of the code can be found in the GitHub location below.
 
 GitHub Example: [Collaborative editing examples](https://github.com/syncfusion/blazor-showcase-diagram-collaborative-editing).
