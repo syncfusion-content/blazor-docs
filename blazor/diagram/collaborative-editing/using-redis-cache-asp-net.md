@@ -279,16 +279,16 @@ namespace DiagramServerApplication.Hubs
 To handle conflicts during collaborative editing, we use an optimistic concurrency strategy with versioning:
 
 * **Versioning**: Each update carries the client’s clientVersion and the list of editedElementIds.
-* **Client Update:** The client sends serialized diagram changes, clientVersion, and editedElementIds to the collaboration hub.
+* **Blazor Server Update:** The blazor server sends serialized diagram changes, clientVersion, and editedElementIds to the collaboration hub.
 
 * **Collaboration Hub Validation:** The collaboration hub compares the incoming clientVersion with the latest version stored in Redis.
     * **If stale and overlapping elements exist:** reject the update, instruct the client to revert, and show a conflict notice.
     * **If stale but no overlap:** accept the update and increment the version atomically.
-* **Client Synchronization:** After acceptance, the client must update its local clientVersion to the server(collaboration hub) version.
+* **Blazor server Synchronization:** After acceptance, the blazor server must update its local clientVersion to the server(collaboration hub) version.
 
 This approach keeps collaborators in sync without locking, while ensuring deterministic conflict handling.
 
-**Client (Blazor) – Send updates & apply remote changes**
+**Blazor server – Send updates & apply remote changes**
 ```razor
 @using Microsoft.AspNetCore.SignalR.Client
 <SfDiagramComponent @ref="@DiagramInstance" ID="@DiagramId" HistoryChanged="@OnHistoryChange" >
