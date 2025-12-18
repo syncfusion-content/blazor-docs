@@ -48,7 +48,7 @@ Redis imposes limits on concurrent connections. Select an appropriate Redis conf
 ### Step 1: Configure SignalR Connection
 To enable real-time collaboration, you need to establish a SignalR connection that can send and receive diagram updates. This connection will allow the client to join a SignalR group (room) for collaborative editing, ensuring changes are shared only among users working on the same diagram.
 
-The **RoomName** represents the unique group name for the diagram session, and all users editing the same diagram should join this group to share updates within that session. The **OnConnectedAsync** method is triggered after the client successfully connects to the server and receives a unique connection ID, confirming the connection. After that, the **JoinDiagram** method is called to add the client to the specified SignalR group, enabling the client to send and receive real-time updates with other users in the same room.
+The `RoomName` represents the unique group name for the diagram session, and all users editing the same diagram should join this group to share updates within that session. The `OnConnectedAsync` method is triggered after the client successfully connects to the server and receives a unique connection ID, confirming the connection. After that, the `JoinDiagram` method is called to add the client to the specified SignalR group, enabling the client to send and receive real-time updates with other users in the same room.
 
 ```csharp
 @using Microsoft.AspNetCore.SignalR.Client
@@ -144,9 +144,63 @@ For grouped interactions (e.g., multiple changes in a single operation), enable 
 ```
 
 ## Server configuration
+### Step 1: Register services, Redis backplane, CORS, and map the hub (Program.cs)
 
-### Step 1: Configure SignalR Hub to Create Rooms for Collaborative Editing Sessions
+Add these registrations to your server Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
+* Register Redis for shared state and backplane support.
+* Configure SignalR with Redis for distributed messaging.
+* Add your application services (like RedisService).
+* Map the SignalR hub so clients can connect.
 
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+// Redis (shared connection)
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+{
+    var cs = builder.Configuration.GetConnectionString("RedisConnectionString");
+    return ConnectionMultiplexer.Connect(cs);
+});
+
+// SignalR + Redis backplane
+builder.Services
+    .AddSignalR()
+    .AddStackExchangeRedis(builder.Configuration.GetConnectionString("RedisConnectionString"));
+
+// App services
+builder.Services.AddScoped<IRedisService, RedisService>(); // your implementation
+
+var app = builder.Build();
+
+app.MapHub<DiagramHub>("/diagramHub");
+
+app.Run();
+```
+
+Notes:
+- Ensure WebSockets are enabled on the host/proxy, or remove SkipNegotiation on the client to allow fallback transports.
+- Use a singleton IConnectionMultiplexer to respect Redis connection limits.
+
+### Step 2: Configure Redis Cache Connection String at the Application Level
+To enable collaborative editing with real-time synchronization, configure Redis as the temporary data store. Redis ensures fast and reliable communication between multiple server instances when scaling the application.
+
+Add your Redis connection string in the `appsettings.json` file:
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "RedisConnectionString": "<<Your Redis connection string>>"
+  }
+}
+```
+
+### Step 3: Configure SignalR Hub to Create Rooms for Collaborative Editing Sessions
 Create a folder named Hubs and add a file DiagramHub.cs. This hub manages SignalR groups (rooms) per diagram and broadcasts updates to connected clients.
 
 The following key methods are implemented on the server side:
@@ -221,63 +275,6 @@ namespace DiagramServerApplication.Hubs
     }
 }
 ```
-
-### Step 2: Register services, Redis backplane, CORS, and map the hub (Program.cs)
-
-Add these registrations to your server Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
-* Register Redis for shared state and backplane support.
-* Configure SignalR with Redis for distributed messaging.
-* Add your application services (like RedisService).
-* Map the SignalR hub so clients can connect.
-
-```csharp
-var builder = WebApplication.CreateBuilder(args);
-
-// Redis (shared connection)
-builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
-{
-    var cs = builder.Configuration.GetConnectionString("RedisConnectionString");
-    return ConnectionMultiplexer.Connect(cs);
-});
-
-// SignalR + Redis backplane
-builder.Services
-    .AddSignalR()
-    .AddStackExchangeRedis(builder.Configuration.GetConnectionString("RedisConnectionString"));
-
-// App services
-builder.Services.AddScoped<IRedisService, RedisService>(); // your implementation
-
-var app = builder.Build();
-
-app.MapHub<DiagramHub>("/diagramHub");
-
-app.Run();
-```
-
-Notes:
-- Ensure WebSockets are enabled on the host/proxy, or remove SkipNegotiation on the client to allow fallback transports.
-- Use a singleton IConnectionMultiplexer to respect Redis connection limits.
-
-### Step 3: Configure Redis Cache Connection String at the Application Level
-To enable collaborative editing with real-time synchronization, configure Redis as the temporary data store. Redis ensures fast and reliable communication between multiple server instances when scaling the application.
-
-Add your Redis connection string in the `appsettings.json` file:
-```json
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "RedisConnectionString": "<<Your Redis connection string>>"
-  }
-}
-```
-
 ## Conflict policy (optimistic concurrency)
 
 To handle conflicts during collaborative editing, we use an optimistic concurrency strategy with versioning:
@@ -443,7 +440,7 @@ public class DiagramHub : Hub
 **Redis service interface & implementation**
 * The IRedisService interface defines `CompareAndIncrementAsync(string key, long expectedVersion)`.
 This method checks if the current version stored in Redis matches the version we expect. If it matches, it increases the version by 1.
-**Purpose:** This is used in collaborative applications to avoid conflicts when multiple users edit the same element. It ensures only one update happens at a time.
+* **Purpose:** This is used in collaborative applications to avoid conflicts when multiple users edit the same element. It ensures only one update happens at a time.
 ```csharp
 using StackExchange.Redis;
 
@@ -564,8 +561,10 @@ To ensure reliable and efficient collaborative editing, consider the following b
 * **Zoom and Pan Not Collaborative**
     * Zoom and pan actions are local to each client and are not synchronized across users. This means collaborators may view different portions of the diagram independently.
 * **Unsupported Diagram Settings**
-    * Changes to properties such as PageSettings, ContextMenu, and ScrollSettings are not propagated to other users and will only apply locally.
+    * Changes to properties such as PageSettings, ContextMenu, DiagramHistoryManager, UmlSequenceDiagram, Layout, and ScrollSettings are not propagated to other users and will only apply locally.
 
+>**Note:** 
+> * Collaboration is currently supported only for actions that trigger the HistoryChanged event.
 The full version of the code can be found in the GitHub location below.
 
 GitHub Example: [Collaborative editing examples](https://github.com/syncfusion/blazor-showcase-diagram-collaborative-editing).
