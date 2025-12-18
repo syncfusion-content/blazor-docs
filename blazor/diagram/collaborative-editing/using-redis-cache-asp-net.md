@@ -87,7 +87,7 @@ To enable real-time collaboration, you need to configure SignalR to broadcast ch
 
 **Explanation**
 * **OnConnectedAsync:** Triggered when the client successfully connects to the server and receives a unique connection ID. This ID can be used to join specific rooms for collaborative sessions.
-* **ReceiveData:** Invoked whenever another user makes changes to the diagram. The received data contains the updates, which you can apply to your local diagram instance using SetDiagramUpdatesAsync(modifiedData).
+* **ReceiveData:** Invoked whenever another user makes changes to the diagram. The received data contains the updates, which you can apply to your local diagram instance using `SetDiagramUpdatesAsync(diagramChanges)`.
 
 By wiring these methods during the connection setup, you enable the server to broadcast updates to all connected clients, ensuring real-time synchronization.
 
