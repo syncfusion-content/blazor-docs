@@ -16,7 +16,8 @@ The Diagram component includes a set of built-in automatic layout algorithms tha
 * Mind map tree layout
 * Radial tree layout
 * Hierarchical tree layout
-* Complex hierarchical tree layout
+* Complex Hierarchical tree layout
+* Force-Directed tree layout
 
 ## Defining layout
 
