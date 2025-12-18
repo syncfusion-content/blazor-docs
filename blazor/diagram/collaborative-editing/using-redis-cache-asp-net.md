@@ -141,8 +141,8 @@ To keep all collaborators in sync, changes made on the client-side must be sent 
 ```
 **Explanation**
 * **HistoryChanged Event:** Triggered whenever a change occurs in the diagram (e.g., adding, deleting, or modifying shapes/connectors).
-**GetDiagramUpdates:** Serializes the diagram changes into a JSON format suitable for transmission to the server. This ensures that updates can be easily processed and applied by other clients.
-**BroadcastToOtherClients:** A server-side SignalR method that sends updates to all clients in the same SignalR group (room).
+* **GetDiagramUpdates:** Serializes the diagram changes into a JSON format suitable for transmission to the server. This ensures that updates can be easily processed and applied by other clients.
+* **BroadcastToOtherClients:** A server-side SignalR method that sends updates to all clients in the same SignalR group (room).
 
 **Grouped Interactions**
 To optimize broadcasting during grouped actions (e.g., multiple changes in a single operation):
@@ -596,7 +596,8 @@ To prevent unbounded memory growth and maintain optimal performance, implement o
     * Maintain a fixed-size history list (e.g., last 200 updates) by trimming older entries after each push.
     * This ensures that only recent updates are retained for conflict resolution.
 * **Set TTL (Time-to-Live) on Update Keys**
-    * Apply an expiration policy to Redis keys storing version and history data:
+    * Apply an expiration policy to Redis keys storing version and history data.
+    * This bounds memory usage and automatically cleans up stale sessions.
 ```csharp
 // In IRedisService
 Task<bool> SetAsync<T>(string key, T value, TimeSpan? expiry = null);
@@ -620,18 +621,17 @@ const string versionKey = "diagram:version";
 long version = 5;
 await _redisService.SetAsync(versionKey, version, TimeSpan.FromHours(1));
 ```
-    * This bounds memory usage and automatically cleans up stale sessions.
 
 ## Hosting, transport, and serialization
 
 To ensure reliable and efficient collaborative editing, consider the following best practices:
-**1. Hosting**
+* **1. Hosting**
     * Enable WebSockets on your hosting environment and reverse proxy (e.g., Nginx, IIS, Azure App Service).
     * Configure keep-alives to maintain long-lived connections and prevent timeouts during idle periods.
-**2. Transport**
+* **2. Transport**
     * **Preferred:** WebSockets for low-latency, full-duplex communication.
     * **Fallback:** If WebSockets are unavailable, remove SkipNegotiation on the client to allow SignalR to fall back to Server-Sent Events (SSE) or Long Polling.
-**3. Serialization**
+* **3. Serialization**
     * For large payloads, enable MessagePack on both server and client for efficient binary serialization.
     * Consider sending diffs (incremental changes) instead of full diagram state to reduce bandwidth usage.
 
