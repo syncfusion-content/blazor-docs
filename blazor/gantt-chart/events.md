@@ -3812,7 +3812,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## IndentationChanging
 
-[IndentationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanging) event triggers before an indent or outdent action is performed in the Gantt Chart. The [IsIndent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IndentationChangingEventArgs-1.html#Syncfusion_Blazor_Gantt_IndentationChangingEventArgs_1_IsIndent) property of this event argument determines the type of indentation (indent or outdent). The following sample code demonstrates how to cancel the outdent action based on the `IsIndent` property.
+[IndentationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanging) event triggers before an indent or outdent action is performed in the Gantt Chart. The `IsIndent` property of this event argument determines the type of indentation (indent or outdent). The following sample code demonstrates how to cancel the outdent action based on the `IsIndent` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -3871,7 +3871,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## IndentationChanged
 
-[IndentationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanged) event triggers after an indent or outdent action is performed in the Gantt Chart. From the event argument, details about the indent or outdent action performed can be obtained using the [IsIndent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IndentationChangedEventArgs-1.html#Syncfusion_Blazor_Gantt_IndentationChangedEventArgs_1_IsIndent) property. The following sample demonstrates how to determine whether the performed action is an indent or outdent based on the `IsIndent` property.
+[IndentationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanged) event triggers after an indent or outdent action is performed in the Gantt Chart. From the event argument, details about the indent or outdent action performed can be obtained using the `IsIndent` property. The following sample demonstrates how to determine whether the performed action is an indent or outdent based on the `IsIndent` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
