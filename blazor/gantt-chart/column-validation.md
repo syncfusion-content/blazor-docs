@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Validation in Blazor Gantt Chart Component | Syncfusion
-description: Learn how to configure built-in and custom column validation in the Syncfusion Blazor Gantt Chart component, including ValidationRules, DataAnnotations, and custom validator components with form-level checks.
+description: Learn how to configure built-in and custom column validation in the Syncfusion Blazor Gantt Chart component, including validation rules, data annotations, and custom validator components with form-level checks.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 ## Column validation in Blazor Gantt Chart
 
-Column validation allows validating edited or newly added row data before saving it. This feature is particularly useful for enforcing specific rules or constraints on individual columns to maintain data integrity. By applying validation rules to columns, error messages are displayed for invalid fields, and saving is prevented until all validations succeed.
+Column validation ensures that edited or newly added row data meets defined criteria before it is saved. This feature is useful for enforcing rules or constraints on individual columns to maintain data integrity. When validation rules are applied, error messages are displayed for invalid fields, and saving is prevented until all validations pass.
 
-The Syncfusion® Blazor Gantt Chart component leverages the Form Validator library for column validation. Validation rules can be defined using the [GanttColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) property to specify criteria for validating column values.
+The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to perform column validation. Validation rules can be specified using the [GanttColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) property to define criteria for validating column values.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -93,12 +93,12 @@ The Syncfusion® Blazor Gantt Chart component leverages the Form Validator libra
 
 ## Data annotation
 
-The Syncfusion® Blazor Gantt Chart component supports data annotation validation attributes to validate fields in the underlying data model during Add and Edit operations. These attributes provide a declarative way to enforce rules directly on the model properties, ensuring data integrity without writing additional validation logic.
+The Syncfusion® Blazor Gantt Chart component supports data annotation validation attributes to validate fields in the underlying data model during add and edit operations. These attributes provide a declarative approach to enforce rules directly on model properties, ensuring data integrity without requiring additional validation logic.
 
-### How it works
+**Applying Data Annotation**
 
-* Apply these attributes to the model class properties bound to the Gantt Chart.
-* Validation messages are displayed using the built-in tooltip in the Gantt.
+* Add validation attributes to the model class properties that are bound to the Gantt Chart.
+* Validation messages are displayed using the built-in tooltip in the Gantt Chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -170,16 +170,15 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 
 ## Custom validation
 
-Custom validation allows defining your own validation logic when built-in rules or data annotations do not meet specific requirements. This approach is useful for enforcing business-specific constraints, dependent-field checks, or conditional validations during Add and Edit operations.
+The Syncfusion® Blazor Gantt Chart component supports custom validation for scenarios where built-in rules or data annotations do not meet specific requirements. This approach is useful for enforcing business-specific constraints, performing dependent-field checks, or applying conditional validations during add and edit operations.
 
-### To implement custom validation in Blazor Gantt Chart:
+**Implementing Custom Validation**
 
-* Create a class that inherits from `ValidationAttribute`.
-Override the `IsValid` method to include custom logic.
-* Apply the custom attribute to the model property that needs validation.
-* The Gantt Chart will automatically enforce these rules during Add and Edit operations.
+* Create a class that inherits from `ValidationAttribute` and override the `IsValid` method to include custom logic.
+* Apply the custom attribute to the model property that requires validation.
+* The Gantt Chart automatically enforces these rules during add and edit operations.
 
-The following sample code demonstrates how to implement custom validation for the **ActivityName** and **Progress** fields.
+The following example demonstrates how to implement custom validation for the **ActivityName** and **Progress** fields.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -287,26 +286,25 @@ The following sample code demonstrates how to implement custom validation for th
 
 ## Custom validator component
 
-Custom validator components provide flexible validation beyond built‑in ValidationRules and ValidationAttribute classes.Here, you can override the default validation logic by implementing your custom validation rules, which allows for more complex and specific validation scenarios tailored to your application's needs.
+The Syncfusion® Blazor Gantt Chart component supports custom validator components for scenarios that require validation beyond built-in [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) and `ValidationAttribute` classes. This approach allows overriding the default validation logic and implementing complex, application-specific rules.
 
-### How does it work in Gantt Chart?
+**Injecting a Custom Validator**
 
-The Syncfusion® Blazor Gantt Chart supports injecting a custom validator component into its internal EditForm using the `Validator` property of [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html).
+A custom validator component can be injected into the internal EditForm of the Gantt Chart using the [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Validator) property of [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html). Inside the validator, the current row's data and the edit context can be accessed through the implicit parameter context of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html). This enables form-level checks during add and edit operations.
 
-Inside the validator, you can access the current row’s data and the edit context via the implicit parameter context of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html). This enables form-level checks during Add/Edit operations.
+For details on creating a form validator component, refer to [ASP.NET Core Blazor Validator Components](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
 
-For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
+**Example: Implementing a Custom Validator**
 
-For example: Complex business logic
-You may need to validate multiple fields together (e.g., EndDate must be after StartDate, or Duration must match Progress).
+In the following example:
 
-In the below code example, the following things have been done.
+* A custom validator component named **GanttCustomValidator** accepts [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html) as a parameter.
 
-* A form validator component named GanttCustomValidator that accepts `ValidatorTemplateContext` as a parameter.
-* Usage of [GanttEditSettings.Validator]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html)) to inject the validator into the internal EditForm.
-* This validator component will checks for **TaskID** and **ActivityName** with per‑field messages.
-* Display of errors using the built‑in validation tooltip via
-`ValidatorTemplateContext.ShowValidationMessage(fieldName, isValid, message)` method.
+* The [GanttEditSettings.Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Validator) property is used to inject the validator into the internal EditForm.
+
+* The validator checks **TaskID** and **ActivityName** fields and displays per-field messages.
+
+* Errors are displayed using the built-in validation tooltip via the [ValidatorTemplateContext.ShowValidationMessage(fieldName, isValid, message)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html#Syncfusion_Blazor_Grids_ValidatorTemplateContext_ShowValidationMessage) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -540,10 +538,9 @@ namespace ColumnValidationComponents
 
 ## Limitation
 
-* **Resource column**: Validation is not supported because resource data is managed externally and updated as an empty string in the model.
-* **Predecessor column**: Validation cannot be applied when using localization or rendering Grid columns inside a dialog, as rules and attributes cannot be passed to these columns.
+* Validation is not supported for the **Resource** column.
+* Validation is not supported for **Predecessor** column when using localization or rendering Grid columns inside a dialog.
 
 ## See Also
-- [How to define columns manually in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column)
-- [How to use column templates in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-template)
-
+- [How to define columns manually in Blazor Gantt Chart?](https://blazor.syncfusion.com/documentation/gantt-chart/columns#defining-columns)
+- [How to use column templates in Blazor Gantt Chart?](https://blazor.syncfusion.com/documentation/gantt-chart/column-template)
