@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Column validation in Blazor Gantt Chart
+# Column Validation in Blazor Gantt Chart
 
 Column validation ensures that edited or newly added row data meets defined criteria before it is saved. This feature is useful for enforcing rules or constraints on individual columns to maintain data integrity. When validation rules are applied, error messages are displayed for invalid fields, and saving is prevented until all validations pass.
 
