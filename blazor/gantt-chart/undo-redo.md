@@ -13,7 +13,7 @@ The Syncfusion® Blazor Gantt Chart component includes built-in undo and redo fu
 
 ## Enable undo and redo
 
-The **Undo** feature in the Blazor Gantt Chart reverts the most recent action, including modifications to tasks, dependencies, and other supported operations. The **Redo** feature reapplies an action that was previously undone using the **Undo** option. This functionality is enabled by setting the [EnableUndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableUndoRedo) property in the Gantt Chart component. When enabled, undo and redo operations can be performed using the built-in toolbar items.
+The **Undo** feature in the Blazor Gantt Chart reverts the most recent action, such as modifications to tasks, dependencies, and other supported operations, while the **Redo** feature reapplies an action that was previously undone using the **Undo** option. This functionality can be enabled by setting the [EnableUndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableUndoRedo) property in the Gantt Chart component. When enabled, undo and redo operations can be performed using the built-in toolbar items, and the [OnUndoRedo](https://blazor.syncfusion.com/documentation/gantt-chart/events#onundoredo) event is triggered after each undo or redo operation is completed.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -81,6 +81,8 @@ The **Undo** feature in the Blazor Gantt Chart reverts the most recent action, i
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrIsLirBDkKyVlQ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
+> Define actions in the [UndoRedoActions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UndoRedoActions) property to record them in the Undo/Redo history. Only actions defined in this property will be recorded.
 
 ## Configure undo and redo actions
 
@@ -345,8 +347,6 @@ In the following example, clicking an external button invokes the `UndoAsync` me
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDroWBCrUEUVmsZF?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
-
-> Only the actions defined in the [UndoRedoActions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UndoRedoActions) property are recorded in the undo and redo history.
 
 ## See Also
 - [How to add undo/redo events?](https://blazor.syncfusion.com/documentation/gantt-chart/events##onundoredo)

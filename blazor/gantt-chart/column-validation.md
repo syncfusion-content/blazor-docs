@@ -91,6 +91,8 @@ The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjheWLChfJEBegzY?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
+> Validation is not supported for the [Resource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) column.
+
 ## Data annotation
 
 The Syncfusion® Blazor Gantt Chart component supports data annotation validation attributes to validate fields in the underlying data model during add and edit operations. These attributes provide a declarative approach to enforce rules directly on model properties, ensuring data integrity without requiring additional validation logic.
@@ -535,11 +537,6 @@ namespace ColumnValidationComponents
 
 {% endhighlight %}
 {% endtabs %}
-
-## Limitation
-
-* Validation is not supported for the **Resource** column.
-* Validation is not supported for **Predecessor** column when using localization or rendering Grid columns inside a dialog.
 
 ## See Also
 - [How to define columns manually in Blazor Gantt Chart?](https://blazor.syncfusion.com/documentation/gantt-chart/columns#defining-columns)
