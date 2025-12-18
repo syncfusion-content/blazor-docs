@@ -21,7 +21,7 @@ Following things are needed to enable collaborative editing in Diagram Component
 
 ## SignalR
 
-In collaborative editing, real-time communication is essential for users to see each other’s changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the client and server. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
+In collaborative editing, real-time communication is essential for users to see each other’s changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the blazor server and collaboration hub. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
 
 To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either AspNetCore SignalR Service or a Redis backplane.
 
@@ -35,15 +35,15 @@ Redis imposes limits on concurrent connections. Select an appropriate Redis conf
 
 ## NuGet packages required
 
-- Client (Blazor):
+- Blazor Server:
   - Microsoft.AspNetCore.SignalR.Client
   - Syncfusion.Blazor.Diagram
-- Server:
+- Collaboration Hub:
   - Microsoft.AspNetCore.SignalR
   - Microsoft.AspNetCore.SignalR.StackExchangeRedis
   - StackExchange.Redis
 
-## How to enable collaborative editing in client side
+## How to enable collaborative editing in Blazor server side
 ### Step 1: Configure SignalR Connection
 To enable real-time collaboration, you need to establish a SignalR connection that can send and receive diagram updates. This connection will allow the client to join a SignalR group (room) for collaborative editing, ensuring changes are shared only among users working on the same diagram.
 
@@ -93,9 +93,9 @@ The `RoomName` represents the unique group name for the diagram session, and all
 
 ### Step 3: Broadcast Current Editing Changes to Remote Users
 
-To keep all collaborators in sync, changes made on the client-side must be sent to the server, which then broadcasts them to other connected users. This is done by handling the `HistoryChanged` event of the Blazor Diagram component and using the `GetDiagramUpdates` method to serialize changes into JSON format for transmission. The server-side method `BroadcastToOtherClients` then sends these updates to all clients in the same SignalR group (room).
+To keep all collaborators in sync, changes made on the blazor server side must be sent to the collaboration hub, which then broadcasts them to other connected users. This is done by handling the `HistoryChanged` event of the Blazor Diagram component and using the `GetDiagramUpdates` method to serialize changes into JSON format for transmission. The collaboration hub method `BroadcastToOtherClients` then sends these updates to all clients in the same SignalR group (room).
 
-The `HistoryChanged` event is triggered whenever a change occurs in the diagram, such as adding, deleting, or modifying shapes or connectors. The `GetDiagramUpdates` method converts these changes into a JSON format suitable for sending to the server, ensuring updates can be easily applied by other clients. Finally, the `BroadcastToOtherClients` method on the server broadcasts these updates to other users in the same collaborative session. Each remote user receives the changes through the `ReceiveData` listener and applies them to their diagram using `SetDiagramUpdatesAsync(diagramChanges)`.
+The `HistoryChanged` event is triggered whenever a change occurs in the diagram, such as adding, deleting, or modifying shapes or connectors. The `GetDiagramUpdates` method converts these changes into a JSON format suitable for sending to the collaboration hub, ensuring updates can be easily applied by other clients. Finally, the `BroadcastToOtherClients` method on the collaboration hub broadcasts these updates to other users in the same collaborative session. Each remote user receives the changes through the `ReceiveData` listener and applies them to their diagram using `SetDiagramUpdatesAsync(diagramChanges)`.
 
 For grouped interactions (e.g., multiple changes in a single operation), enable `EnableGroupActions` in `DiagramHistoryManager`. This ensures `StartGroupAction` and `EndGroupAction` notifications are included in the `HistoryChanged` event, allowing you to broadcast changes only after the group action completes.
 
@@ -142,10 +142,10 @@ For grouped interactions (e.g., multiple changes in a single operation), enable 
 }
 ```
 
-## Server configuration
+## Collaboration Hub configuration
 ### Step 1: Register services, Redis backplane, CORS, and map the hub (Program.cs)
 
-Add these registrations to your server Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
+Add these registrations to your collaboration hub Program.cs so clients can connect and scale via Redis. Adjust policies/connection strings to your environment.
 * Register Redis for shared state and backplane support.
 * Configure SignalR with Redis for distributed messaging.
 * Add your application services (like RedisService).
@@ -202,7 +202,7 @@ Add your Redis connection string in the `appsettings.json` file:
 ### Step 3: Configure SignalR Hub to Create Rooms for Collaborative Editing Sessions
 Create a folder named Hubs and add a file DiagramHub.cs. This hub manages SignalR groups (rooms) per diagram and broadcasts updates to connected clients.
 
-The following key methods are implemented on the server side:
+The following key methods are implemented on the collaboration hub:
 * **OnConnectedAsync:** It will trigger when a new client connects. Sends the generated connection ID to the client so it can be used as a session identifier.
 * **JoinDiagram(roomName):** Adds the current connection to a SignalR group (room) identified by roomName. Also records the mapping so the connection can be removed later.
 * **BroadcastToOtherClients(payloads, roomName):** Sends updates to other clients in the same room (excludes the sender).
@@ -279,12 +279,12 @@ namespace DiagramServerApplication.Hubs
 To handle conflicts during collaborative editing, we use an optimistic concurrency strategy with versioning:
 
 * **Versioning**: Each update carries the client’s clientVersion and the list of editedElementIds.
-* **Client Update:** The client sends serialized diagram changes, clientVersion, and editedElementIds to the server.
+* **Client Update:** The client sends serialized diagram changes, clientVersion, and editedElementIds to the collaboration hub.
 
-* **Server Validation:** The server compares the incoming clientVersion with the latest version stored in Redis.
+* **Collaboration Hub Validation:** The collaboration hub compares the incoming clientVersion with the latest version stored in Redis.
     * **If stale and overlapping elements exist:** reject the update, instruct the client to revert, and show a conflict notice.
     * **If stale but no overlap:** accept the update and increment the version atomically.
-* **Client Synchronization:** After acceptance, the client must update its local clientVersion to the server version.
+* **Client Synchronization:** After acceptance, the client must update its local clientVersion to the server(collaboration hub) version.
 
 This approach keeps collaborators in sync without locking, while ensuring deterministic conflict handling.
 
@@ -365,7 +365,7 @@ This approach keeps collaborators in sync without locking, while ensuring determ
     }
 }
 ```
-**Server (SignalR Hub) – Validate with Redis and broadcast**
+**Collaboration Hub – Validate with Redis and broadcast**
 ```csharp
 using Microsoft.AspNetCore.SignalR;
 
@@ -549,9 +549,9 @@ To ensure reliable and efficient collaborative editing, consider the following b
     * Configure keep-alives to maintain long-lived connections and prevent timeouts during idle periods.
 * **2. Transport**
     * **Preferred:** WebSockets for low-latency, full-duplex communication.
-    * **Fallback:** If WebSockets are unavailable, remove SkipNegotiation on the client to allow SignalR to fall back to Server-Sent Events (SSE) or Long Polling.
+    * **Fallback:** If WebSockets are unavailable, remove SkipNegotiation on the Blazor server to allow SignalR to fall back to Server-Sent Events (SSE) or Long Polling.
 * **3. Serialization**
-    * For large payloads, enable MessagePack on both server and client for efficient binary serialization.
+    * For large payloads, enable MessagePack on both collaboration hub and blazor server projects for efficient binary serialization.
     * Consider sending diffs (incremental changes) instead of full diagram state to reduce bandwidth usage.
 
 ## Limitations

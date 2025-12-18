@@ -13,12 +13,12 @@ Collaborative editing enables multiple users to work on the same diagram at the 
 
 ## Prerequisites
 
-- *Real-time Transport Protocol*: Enables instant communication between clients and the server, ensuring that updates during collaborative editing are transmitted and reflected immediately.
+- *Real-time Transport Protocol*: Enables instant communication between blazor server and the collaboration hub, ensuring that updates during collaborative editing are transmitted and reflected immediately.
 - *Distributed Cache or Database*: Serves as temporary storage for the queue of diagram editing operations, helping maintain synchronization and consistency across multiple users.
 
 ### Real time transport protocol
 
-- *Managing Connections*: Maintains active connections between clients and the server to enable uninterrupted real-time collaboration. This ensures smooth and consistent communication throughout the editing session.
+- *Managing Connections*: Maintains active connections between blazor server and the collaboration hub to enable uninterrupted real-time collaboration. This ensures smooth and consistent communication throughout the editing session.
 - *Broadcasting Changes*: Instantly propagates any edits made by one user to all other collaborators. This guarantees that everyone is always working on the most up-to-date version of the diagram, fostering accuracy and teamwork.
 
 ### Distributed cache or database
