@@ -19,16 +19,6 @@ Following things are needed to enable collaborative editing in Diagram Component
 * SignalR
 * Redis
 
-## NuGet packages required
-
-- Client (Blazor):
-  - Microsoft.AspNetCore.SignalR.Client
-  - Syncfusion.Blazor.Diagram
-- Server:
-  - Microsoft.AspNetCore.SignalR
-  - Microsoft.AspNetCore.SignalR.StackExchangeRedis
-  - StackExchange.Redis
-
 ## SignalR
 
 In collaborative editing, real-time communication is essential for users to see each other’s changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the client and server. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
@@ -43,8 +33,17 @@ All diagram editing operations performed during collaboration are cached in Redi
 
 Redis imposes limits on concurrent connections. Select an appropriate Redis configuration based on your expected user load to maintain optimal performance and avoid connection bottlenecks.
 
-## How to enable collaborative editing in client side
+## NuGet packages required
 
+- Client (Blazor):
+  - Microsoft.AspNetCore.SignalR.Client
+  - Syncfusion.Blazor.Diagram
+- Server:
+  - Microsoft.AspNetCore.SignalR
+  - Microsoft.AspNetCore.SignalR.StackExchangeRedis
+  - StackExchange.Redis
+
+## How to enable collaborative editing in client side
 ### Step 1: Configure SignalR Connection
 To enable real-time collaboration, you need to establish a SignalR connection that can send and receive diagram updates. This connection will allow the client to join a SignalR group (room) for collaborative editing, ensuring changes are shared only among users working on the same diagram.
 
