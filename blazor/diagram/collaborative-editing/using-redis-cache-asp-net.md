@@ -76,7 +76,7 @@ The **RoomName** represents the unique group name for the diagram session, and a
                         })
                         .WithAutomaticReconnect()
                         .Build();
-            // Triggers when connection established to server
+            // Triggered when the connection to the server is successfully established
             connection.On<string>("OnConnectedAsync", OnConnectedAsync);
             await connection.StartAsync();
         }
