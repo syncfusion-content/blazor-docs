@@ -76,6 +76,7 @@ The **RoomName** represents the unique group name for the diagram session, and a
                         })
                         .WithAutomaticReconnect()
                         .Build();
+            // Triggers when connection established to server
             connection.On<string>("OnConnectedAsync", OnConnectedAsync);
             await connection.StartAsync();
         }
@@ -93,9 +94,9 @@ The **RoomName** represents the unique group name for the diagram session, and a
 
 ### Step 3: Broadcast Current Editing Changes to Remote Users
 
-To keep all collaborators in sync, changes made on the client-side must be sent to the server, which then broadcasts them to other connected users. This is done by handling the HistoryChanged event of the Blazor Diagram component and using the `GetDiagramUpdates` method to serialize changes into JSON format for transmission. The server-side method BroadcastToOtherClients then sends these updates to all clients in the same SignalR group (room).
+To keep all collaborators in sync, changes made on the client-side must be sent to the server, which then broadcasts them to other connected users. This is done by handling the `HistoryChanged` event of the Blazor Diagram component and using the `GetDiagramUpdates` method to serialize changes into JSON format for transmission. The server-side method `BroadcastToOtherClients` then sends these updates to all clients in the same SignalR group (room).
 
-The `HistoryChanged` event is triggered whenever a change occurs in the diagram, such as adding, deleting, or modifying shapes or connectors. The `GetDiagramUpdates` method converts these changes into a JSON format suitable for sending to the server, ensuring updates can be easily applied by other clients. Finally, the `BroadcastToOtherClients` method on the server broadcasts these updates to all users in the same collaborative session.
+The `HistoryChanged` event is triggered whenever a change occurs in the diagram, such as adding, deleting, or modifying shapes or connectors. The `GetDiagramUpdates` method converts these changes into a JSON format suitable for sending to the server, ensuring updates can be easily applied by other clients. Finally, the `BroadcastToOtherClients` method on the server broadcasts these updates to other users in the same collaborative session.
 
 For grouped interactions (e.g., multiple changes in a single operation), enable `EnableGroupActions` in `DiagramHistoryManager`. This ensures `StartGroupAction` and `EndGroupAction` notifications are included in the `HistoryChanged` event, allowing you to broadcast changes only after the group action completes.
 
@@ -126,10 +127,11 @@ For grouped interactions (e.g., multiple changes in a single operation), enable 
 
 Create a folder named Hubs and add a file DiagramHub.cs. This hub manages SignalR groups (rooms) per diagram and broadcasts updates to connected clients.
 
-**OnConnectedAsync:** It will trigger when a new client connects. Sends the generated connection ID to the client so it can be used as a session identifier.
-**JoinDiagram(roomName):** Adds the current connection to a SignalR group (room) identified by roomName. Also records the mapping so the connection can be removed later.
-**BroadcastToOtherClients(payloads, roomName):** Sends edits/updates to other clients in the same room (excludes the sender).
-**OnDisconnectedAsync:** Triggered when a client disconnects. The hub removes the connection from any rooms it had joined.
+The following key methods are implemented on the server side:
+* **OnConnectedAsync:** It will trigger when a new client connects. Sends the generated connection ID to the client so it can be used as a session identifier.
+* **JoinDiagram(roomName):** Adds the current connection to a SignalR group (room) identified by roomName. Also records the mapping so the connection can be removed later.
+* **BroadcastToOtherClients(payloads, roomName):** Sends updates to other clients in the same room (excludes the sender).
+* **OnDisconnectedAsync:** Triggered when a client disconnects. The hub removes the connection from any rooms it had joined.
 
 ```csharp
 using Microsoft.AspNetCore.SignalR;
@@ -412,6 +414,9 @@ public class DiagramHub : Hub
 }
 ```
 **Redis service interface & implementation**
+The IRedisService interface defines `CompareAndIncrementAsync(string key, long expectedVersion)`.
+This method checks if the current version stored in Redis matches the version we expect. If it matches, it increases the version by 1.
+**Purpose:** This is used in collaborative applications to avoid conflicts when multiple users edit the same diagram. It ensures only one update happens at a time.
 ```csharp
 using StackExchange.Redis;
 
