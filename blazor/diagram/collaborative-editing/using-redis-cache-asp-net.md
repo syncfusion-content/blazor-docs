@@ -96,7 +96,7 @@ The **RoomName** represents the unique group name for the diagram session, and a
 
 To keep all collaborators in sync, changes made on the client-side must be sent to the server, which then broadcasts them to other connected users. This is done by handling the `HistoryChanged` event of the Blazor Diagram component and using the `GetDiagramUpdates` method to serialize changes into JSON format for transmission. The server-side method `BroadcastToOtherClients` then sends these updates to all clients in the same SignalR group (room).
 
-The `HistoryChanged` event is triggered whenever a change occurs in the diagram, such as adding, deleting, or modifying shapes or connectors. The `GetDiagramUpdates` method converts these changes into a JSON format suitable for sending to the server, ensuring updates can be easily applied by other clients. Finally, the `BroadcastToOtherClients` method on the server broadcasts these updates to other users in the same collaborative session.
+The `HistoryChanged` event is triggered whenever a change occurs in the diagram, such as adding, deleting, or modifying shapes or connectors. The `GetDiagramUpdates` method converts these changes into a JSON format suitable for sending to the server, ensuring updates can be easily applied by other clients. Finally, the `BroadcastToOtherClients` method on the server broadcasts these updates to other users in the same collaborative session. Each remote user receives the changes through the `ReceiveData` listener and applies them to their diagram using `SetDiagramUpdatesAsync(diagramChanges)`.
 
 For grouped interactions (e.g., multiple changes in a single operation), enable `EnableGroupActions` in `DiagramHistoryManager`. This ensures `StartGroupAction` and `EndGroupAction` notifications are included in the `HistoryChanged` event, allowing you to broadcast changes only after the group action completes.
 
@@ -106,6 +106,28 @@ For grouped interactions (e.g., multiple changes in a single operation), enable 
 </SfDiagramComponent>
 
 @code {
+    private async Task InitializeSignalR()
+    {
+        if (connection == null)
+        {
+            connection = new HubConnectionBuilder()
+                        .WithUrl(NavigationManager.ToAbsoluteUri("/diagramHub"), options =>
+                        {
+                            options.SkipNegotiation = true;
+                            options.Transports = Microsoft.AspNetCore.Http.Connections.HttpTransportType.WebSockets;
+                        })
+                        .WithAutomaticReconnect()
+                        .Build();
+            // Triggers when connection established to server
+            connection.On<string>("OnConnectedAsync", OnConnectedAsync);
+            // Apply remote changes to current diagram.
+            connection.On<List<string>>("ReceiveData", async (diagramChanges) =>
+            {
+                await DiagramInstance.SetDiagramUpdatesAsync(diagramChanges);
+            });
+            await connection.StartAsync();
+        }
+    }
     public async void OnHistoryChange(HistoryChangedEventArgs args)
     {
         if (args != null)
@@ -158,6 +180,8 @@ namespace DiagramServerApplication.Hubs
             try
             {
                 string userId = Context.ConnectionId;
+                // Store room name in current context.
+                Context.Items["roomName"] = roomName;
 
                 // Add to SignalR group
                 await Groups.AddToGroupAsync(userId, roomName);
@@ -182,6 +206,8 @@ namespace DiagramServerApplication.Hubs
         {
             try
             {
+                // Get roomName from context
+                string roomName = Context.Items["roomName"].ToString();
                 // Remove from SignalR group
                 await Groups.RemoveFromGroupAsync(Context.ConnectionId, roomName);
                 await base.OnDisconnectedAsync(exception);
@@ -334,7 +360,6 @@ This approach keeps collaborators in sync without locking, while ensuring determ
     {
         // Show a dialog telling the user their change was rejected due to overlap
     }
-    
     private List<string> GetEditedElements(HistoryChangedEventArgs args)
     {
         // TODO: extract IDs from args (nodes/connectors edited)
