@@ -1033,7 +1033,7 @@ public class ProjectTask
 
 ## Limitations
 
-The following list outlines the features that are not compatible with column spanning.
+The following list outlines the features that are not compatible with column spanning:
 
 * Virtualization
 * Infinite Scrolling

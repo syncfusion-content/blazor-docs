@@ -1033,7 +1033,7 @@ public class ProjectTask
 
 ## Limitations
 
-The following list outlines the features that are not compatible with row spanning.
+The following list outlines the features that are not compatible with row spanning:
 
 * Virtualization
 * Infinite Scrolling
