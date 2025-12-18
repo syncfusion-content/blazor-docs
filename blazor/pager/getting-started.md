@@ -9,10 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Pager Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enables navigation through large collections by dividing content into multiple pages. This guide explains how to integrate the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor WebAssembly** application using [Visual Studio](https://visualstudio.microsoft.com/vs/) or **Visual Studio Code**.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=Nfg8b_bbIfI" %}
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enables navigation through large collections by dividing content into multiple pages. This guide explains how to integrate the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor WebAssembly** application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -32,6 +29,8 @@ A **Blazor WebAssembly App** can be created using **Visual Studio** with the bui
 4. Configure the **project name**, **location**, and **solution settings**, then click **Next**.
 5. Select the **target framework** as **.NET 8.0 or later** (choose the latest installed version available on the system).
 6. Click **Create** to generate the project.
+
+![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
 
 N> For detailed steps, refer to [Microsoft Blazor tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
 
