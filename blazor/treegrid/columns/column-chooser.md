@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Chooser in Blazor Tree Grid Component
 
-The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnChooser.html) as true.
+The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnChooser) as true.
 
 {% tabs %}
 
@@ -78,11 +78,11 @@ public class TreeData
 
 ![Show or Hide Columns in Blazor TreeGrid](../images/blazor-treegrid-show-hide-column.png)
 
-N> The column names can be hidden in the column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
+N> The column names can be hidden in the column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ShowInColumnChooser) property as false.
 
 ## Open column chooser by external button
 
-The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) as true.
+The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ShowInColumnChooser) as true.
 
 {% tabs %}
 
@@ -159,11 +159,11 @@ public class TreeData
 
 ![Opening Column Chooser in Blazor Tree Grid](../images/blazor-treegrid-open-column-chooser.png)
 
-N> The column names in column chooser can be hidden by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
+N> The column names in column chooser can be hidden by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ShowInColumnChooser) property as false.
 
 ## Text wrapping in column chooser
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid includes a enhancement that improves readability within the column chooser dialog by allowing long column names to wrap across multiple lines. This behavior is enabled by setting the [`TreeGridColumnChooserSettings.AllowTextWrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowTextWrap) property to **true**.
+The Blazor TreeGrid includes a enhancement that improves readability within the column chooser dialog by allowing long column names to wrap across multiple lines. This behavior is enabled by setting the [`TreeGridColumnChooserSettings.AllowTextWrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowTextWrap) property to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
