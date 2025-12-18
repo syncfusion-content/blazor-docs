@@ -77,7 +77,7 @@ namespace TreeGridComponent.Data {
 
 ## Initial search
 
-To apply search during initial rendering, configure the `Fields`, `Operator`, `Key`, and `IgnoreCase` properties in the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/SyncfusionSearchSettings.html).
+To apply search during initial rendering, configure the `Fields`, `Operator`, `Key`, and `IgnoreCase` properties in the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html).
 
 {% tabs %}
 
@@ -312,9 +312,7 @@ namespace TreeGridComponent.Data {
 
 ## Searching with case sensitivity
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid search functionality can ignore character casing for enhanced search accuracy. By default, searches are case-sensitive, requiring exact matches (e.g., "Task" vs. "task"). Case-insensitive search is enabled by setting the [`TreeGridSearchSettings.IgnoreCase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreCase) property to **true**.
-
-The following example demonstrates configuration of the `IgnoreCase` property within `TreeGridSearchSettings`:
+The Blazor TreeGrid searching functionality allows control over whether uppercase and lowercase letters must match exactly or can be ignored. By default, searching is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same). Case-sensitive search can be enabled by setting the [`TreeGridSearchSettings.IgnoreCase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreCase) property to **false**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -435,9 +433,7 @@ namespace TreeGridComponent.Data {
 
 ## Searching with ignore accent
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid search functionality can ignore diacritic characters or accents for enhanced search accuracy. By default, searches are accent-sensitive, requiring exact matches (e.g., "José" vs. "Jose"). Accent-insensitive search is enabled by setting the [`TreeGridSearchSettings.IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreAccent) property to **true**.
-
-The following example demonstrates configuration of the `IgnoreAccent` property within `TreeGridSearchSettings`:
+The Blazor TreeGrid search functionality can ignore diacritic characters or accents for enhanced search accuracy. By default, searches are accent-sensitive, requiring exact matches (e.g., "José" vs. "Jose"). Accent-insensitive search is enabled by setting the [`TreeGridSearchSettings.IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreAccent) property to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -556,5 +552,5 @@ namespace TreeGridComponent.Data {
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBeWrWDUuJTPmdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * This feature ignores accents for both searching and filtering operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid when using an `IEnumerable` data source.
+> * This feature ignores accents for both searching and filtering operations in the Blazor DataGrid when using an `IEnumerable` data source.
 > * This feature works only for characters outside the ASCII range.

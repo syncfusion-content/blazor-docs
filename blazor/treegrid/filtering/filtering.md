@@ -417,9 +417,7 @@ namespace TreeGridComponent.Data {
 
 ## Filtering with case sensitivity
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid filtering functionality can be configured to consider or ignore character casing. By default, filtering is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same). Case-sensitive filtering is enabled by setting the [`TreeGridFilterSettings.EnableCaseSensitivity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableCaseSensitivity) property to **true**.
-
-The following example demonstrates configuration of the `EnableCaseSensitivity` property within `TreeGridFilterSettings`:
+The Blazor TreeGrid filtering functionality allows control over whether uppercase and lowercase letters must match exactly or can be ignored. By default, filtering is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same). Case-sensitive filtering is enabled by setting the [`TreeGridFilterSettings.EnableCaseSensitivity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableCaseSensitivity) property to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -538,9 +536,7 @@ namespace TreeGridComponent.Data {
 
 ## Filtering with ignore accent
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid filtering functionality can be configured to ignore diacritic characters or accents. By default, filtering is accent-sensitive, requiring exact matches (e.g., "José" vs. "Jose"). Accent-insensitive filtering is enabled by setting the [`TreeGridFilterSettings.IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IgnoreAccent) property to **true**.
-
-The following example demonstrates configuration of the `IgnoreAccent` property within `TreeGridFilterSettings`:
+The Blazor TreeGrid filtering functionality can be configured to ignore diacritic characters or accents. By default, filtering is accent-sensitive, requiring exact matches (e.g., "José" vs. "Jose"). Accent-insensitive filtering is enabled by setting the [`TreeGridFilterSettings.IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IgnoreAccent) property to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
