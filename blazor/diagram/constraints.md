@@ -11,7 +11,7 @@ documentation: ug
 
 Constraints are used to enable or disable specific behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so multiple behaviors can be enabled or disabled using bitwise operators `(&, |, ~, <<, etc.)`.
 
-To learn more about bitwise operators, refer to [Bitwise Operations](constraints#bitwise-operations).
+To learn more about bitwise operators, refer to [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ## How to Enable or Disable Diagram Constraints
 
@@ -80,7 +80,7 @@ The following example shows how to add the Bridging constraint to the default co
 DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
 ```
 
-Diagram constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations) in the diagram.
+Diagram constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations) in the diagram.
 
 ```csharp
 //Removing multiple constraints from default.
@@ -185,7 +185,7 @@ The following example shows how to add the `Shadow` constraint to the default co
 NodeConstraints NodeConstraints = NodeConstraints.Default | NodeConstraints.Shadow;
 ```
 
-Node constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+Node constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ```csharp
  //Removing multiple constraints from default.
@@ -294,7 +294,7 @@ The following example shows how to add the `Bridging` constraint to the default 
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | ConnectorConstraints.Bridging;
 ```
 
-Connector constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+Connector constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ```csharp
 //Removing multiple constraints from default.
@@ -388,7 +388,7 @@ The following code example shows how to modify the port constraints to accept on
 port.Constraints = PortConstraints.InConnect;
 ```
 
-Port constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+Port constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ```csharp
 //Enable to create target connection alone.
@@ -669,7 +669,7 @@ The following code shows how to display only horizontal gridlines.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SnapConstraints)
 
-Snap constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+Snap constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ```csharp
 snapconstraints = SnapConstraints.ShowHorizontalLines | SnapConstraints.ShowVerticalLines | SnapConstraints.ShowLines;
