@@ -195,6 +195,7 @@ namespace DiagramServerApplication.Hubs
         {
             try
             {
+                // Broadcast diagram changes to other connected clients in same room.
                 await Clients.OthersInGroup(roomName).SendAsync("ReceiveData", payloads);
             }
             catch (Exception ex)
@@ -323,6 +324,7 @@ This approach keeps collaborators in sync without locking, while ensuring determ
                         .Build();
             // Show conflict notification
             connection.On("ShowConflict", ShowConflict);
+            // Update the client version to the latest server version.
             connection.On<long>("UpdateVersion", UpdateVersion);
             // Receive remote changes with the new server version
             connection.On<List<string, long>>("ReceiveData", async (diagramChanges, serverVersion) =>
@@ -439,9 +441,9 @@ public class DiagramHub : Hub
 }
 ```
 **Redis service interface & implementation**
-The IRedisService interface defines `CompareAndIncrementAsync(string key, long expectedVersion)`.
+* The IRedisService interface defines `CompareAndIncrementAsync(string key, long expectedVersion)`.
 This method checks if the current version stored in Redis matches the version we expect. If it matches, it increases the version by 1.
-**Purpose:** This is used in collaborative applications to avoid conflicts when multiple users edit the same diagram. It ensures only one update happens at a time.
+**Purpose:** This is used in collaborative applications to avoid conflicts when multiple users edit the same element. It ensures only one update happens at a time.
 ```csharp
 using StackExchange.Redis;
 
