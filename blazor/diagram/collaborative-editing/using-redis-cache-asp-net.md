@@ -112,9 +112,9 @@ documentation: ug
 
 ## Asp.NET Core Hub configuration
 
-### Step 1: Configure SignalR with Redis Backplane and Map the Diagram Hub(Program.cs)
+### Step 1: Configure SignalR with Redis and Map the Diagram Hub(Program.cs)
 
-Use the following setup to enable real-time collaboration with scale-out support. This configuration:
+Use the following setup to enable real-time collaboration on a single server instance. This configuration:
 
 * Add your `Redis` connection string to `appsettings.json`.
 ```json
@@ -122,7 +122,8 @@ Use the following setup to enable real-time collaboration with scale-out support
   "Logging": {
     "LogLevel": {
       "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
+      "Microsoft.AspNetCore": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
     }
   },
   "AllowedHosts": "*",
@@ -144,12 +145,10 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     return ConnectionMultiplexer.Connect(cs);
 });
 ```
-* Configure SignalR to use Redis so group messages are distributed across all app instances in a farm.
+* Configure SignalR to use Redis so group messages are distributed across all app instances.
 
 ```csharp
-builder.Services
-    .AddSignalR()
-    .AddStackExchangeRedis(builder.Configuration.GetConnectionString("RedisConnectionString"));
+builder.Services.AddSignalR();
 ```
 * Add your Redis-backed service(s) for tasks like versioning, history, or cleanup.
 
@@ -174,10 +173,10 @@ Notes:
 Create a folder named `Hubs` and add a file `DiagramHub.cs`. This hub manages SignalR groups (rooms) for each diagram session and broadcasts updates to all participants in the same room.
 
 What this hub does
-- Creates a per-connection session ID and sends it to the user.
-- Allows users join a specific room (diagram session) using a room name/ID.
-- Broadcasts diagram updates to other users in the same room (excluding the sender).
-- Cleans up group membership when users disconnect.
+* Creates a per-connection session ID and sends it to the user.
+* Allows users join a specific room (diagram session) using a room name/ID.
+* Broadcasts diagram updates to other users in the same room (excluding the sender).
+* Cleans up group membership when users disconnect.
 
 The following key methods are implemented on the collaboration hub:
 * OnConnectedAsync: Invoked when a user connects. Sends the SignalR Hub-generated connection ID to the user for session tracking.
@@ -538,52 +537,6 @@ public class DiagramHub : Hub
     }
 }
 ```
-
-## Cleanup strategy for Redis
-
-To prevent unbounded memory growth and maintain stable performance, implement one or both of the following:
-* Keep only the last K versions
-    * Maintain a fixed-size history (e.g., the last 200 updates) and trim older entries after each push.
-    * Retains only recent updates needed for conflict checks and recovery.
-* Apply TTL (Time-to-Live) to keys
-    * Set expiration on Redis keys that store version and history data.
-    * Bounds memory usage and automatically cleans up stale sessions.
-```csharp
-// In IRedisService
-Task<bool> SetAsync<T>(string key, T value, TimeSpan? expiry = null);
-// In RedisService
-public async Task<bool> SetAsync<T>(string key, T value, TimeSpan? expiry = null)
-{
-    try
-    {
-        string serializedValue = JsonSerializer.Serialize(value);
-        return await _database.StringSetAsync(key, serializedValue, expiry);
-    }
-    catch (Exception ex)
-    {
-        _logger.LogError(ex, "Error setting key {Key}", key);
-        return false;
-    }
-}
-
-// Applying TTL to the version key
-const string versionKey = "diagram:version";
-long version = 5;
-await _redisService.SetAsync(versionKey, version, TimeSpan.FromHours(1));
-```
-
-## Hosting, transport, and serialization
-
-To ensure reliable and efficient collaborative editing, consider the following best practices:
-* **1. Hosting**
-    * Enable WebSockets on your hosting environment and reverse proxy (e.g., Nginx, IIS, Azure App Service).
-    * Configure keep-alives to maintain long-lived connections and prevent timeouts during idle periods.
-* **2. Transport**
-    * **Preferred:** WebSockets for low-latency, full-duplex communication.
-    * **Fallback:** If WebSockets are unavailable, remove SkipNegotiation on the Blazor application to allow SignalR to fall back to ASP.NET Core SignalR Hub-Sent Events (SSE) or Long Polling.
-* **3. Serialization**
-    * For large payloads, enable MessagePack on both collaboration hub and blazor application projects for efficient binary serialization.
-    * Consider sending diffs (incremental changes) instead of full diagram state to reduce bandwidth usage.
 
 ## Limitations
 * Default deployment
