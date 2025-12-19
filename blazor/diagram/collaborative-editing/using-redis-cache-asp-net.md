@@ -587,7 +587,7 @@ To ensure reliable and efficient collaborative editing, consider the following b
 
 ## Limitations
 * Default deployment
-    * By default, a single server instance works without additional setup. For multi-instance (scale-out) deployments, configure a SignalR backplane (e.g., Redis) and use a shared Redis store so all nodes share group messages and version state consistently.
+    * By default, a single server instance works without additional setup. For multi-instance (scale-out) deployments, configure a `SignalR` backplane (e.g., Redis) and use a shared `Redis` store so all nodes share group messages and version state consistently.
 * View-only interactions
     * Zoom and pan are local to each user and are not synchronized, so collaborators may view different areas of the diagram.
 * Unsupported synchronized settings
