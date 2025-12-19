@@ -30,10 +30,9 @@ The following are required to enable collaborative editing in Diagram Component:
   1. SignalR Connection
      SignalR enables real-time communication between the Blazor application and the server hub. Each user joins a SignalR group (room) for a specific diagram session. Updates are broadcast only to users in the same room.
 
-  2. Redis Backplane
+  2. Using Redis for Conflict Resolution
     Redis ensures that collaborative editing works in a distributed environment by:
       * Storing versioning data for conflict resolution.
-      * Acting as a backplane for SignalR to scale across multiple servers.
       * Periodically cleaning old version data to prevent memory issues.
 
 ## Cleanup strategy for Redis
