@@ -606,7 +606,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrSWVWZprFrLETz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLosBiEBFOpdhVk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The `SortComparer` function takes two parameters: `a` and `b`. These parameters represent the values to be compared. The function returns **-1**, **0**, or **1**, depending on the comparison result, which showcases the sorting order.
 > * The `SortComparer` property will work only for local data.

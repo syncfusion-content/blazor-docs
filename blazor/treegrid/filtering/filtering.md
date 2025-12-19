@@ -532,7 +532,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVeWhWXTjGvORab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthSCriYrFRArzyg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Filtering with ignore accent
 
@@ -650,4 +650,4 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLICBWNzMjzIsMp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSChikLlQxWZHr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
