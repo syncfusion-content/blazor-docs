@@ -116,7 +116,7 @@ documentation: ug
 
 Use the following setup to enable real-time collaboration with scale-out support. This configuration:
 
-* Add your Redis connection string to appsettings.json.
+* Add your `Redis` connection string to `appsettings.json`.
 ```json
 {
   "Logging": {
