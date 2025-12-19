@@ -110,7 +110,7 @@ documentation: ug
 }
 ```
 
-## Asp.NET Core Hub configuration
+## ASP.NET Core Hub configuration
 
 ### Step 1: Configure SignalR with Redis and Map the Diagram Hub(Program.cs)
 
@@ -336,8 +336,8 @@ public class RedisService : IRedisService
             local expected = tonumber(ARGV[1]) or -1
 
             if v == expected then
-            local newv = redis.call('INCR', KEYS[1])
-            return {1, newv}
+            local newVersion = redis.call('INCR', KEYS[1])
+            return {1, newVersion}
             else
             return {0, v}
             end
@@ -402,10 +402,10 @@ public class DiagramHub : Hub
                 // Check for overlaps since user's version
                 List<DiagramUpdateMessage> recentUpdates = await GetUpdatesSinceVersionAsync(userVersion, maxScan: 200);
                 HashSet<string> recentlyTouched = new HashSet<string>(StringComparer.Ordinal);
-                foreach (DiagramUpdateMessage upd in recentUpdates)
+                foreach (DiagramUpdateMessage update in recentUpdates)
                 {
-                    if (upd.ModifiedElementIds == null) continue;
-                    foreach (string id in upd.ModifiedElementIds)
+                    if (update.ModifiedElementIds == null) continue;
+                    foreach (string id in update.ModifiedElementIds)
                         recentlyTouched.Add(id);
                 }
 
