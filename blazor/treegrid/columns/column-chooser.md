@@ -238,7 +238,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSChikLlQxWZHr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrSCLWYVEZRkQWK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Template support in column chooser
 
@@ -671,3 +671,4 @@ namespace TreeGridComponent.Data
 The following output is displayed as a result of the above code example.
 
 ![Column Chooser with Group in Blazor Tree Grid](../images/blazor-treegrid-column-chooser-group-template.png)
+
