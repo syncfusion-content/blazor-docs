@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Events in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Gantt Chart component and much more details.
+description: Checkout and learn here all about events in Syncfusion Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Events in Blazor GanttChart Component
+# Events in Blazor Gantt Chart Component
 
 In this section, the list of events of the Gantt Chart component has been provided which will be triggered for appropriate Gantt Chart actions.
 
@@ -3812,7 +3812,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## IndentationChanging
 
-[IndentationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanging) event triggers before an indent or outdent action is performed in the Gantt Chart. The [IsIndent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IndentationChangingEventArgs-1.html#Syncfusion_Blazor_Gantt_IndentationChangingEventArgs_1_IsIndent) property of this event argument determines the type of indentation (indent or outdent). The following sample code demonstrates how to cancel the outdent action based on the `IsIndent` property.
+[IndentationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanging) event triggers before an indent or outdent action is performed in the Gantt Chart. The `IsIndent` property of this event argument determines the type of indentation (indent or outdent). The following sample code demonstrates how to cancel the outdent action based on the `IsIndent` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -3871,7 +3871,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## IndentationChanged
 
-[IndentationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanged) event triggers after an indent or outdent action is performed in the Gantt Chart. From the event argument, details about the indent or outdent action performed can be obtained using the [IsIndent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IndentationChangedEventArgs-1.html#Syncfusion_Blazor_Gantt_IndentationChangedEventArgs_1_IsIndent) property. The following sample demonstrates how to determine whether the performed action is an indent or outdent based on the `IsIndent` property.
+[IndentationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanged) event triggers after an indent or outdent action is performed in the Gantt Chart. From the event argument, details about the indent or outdent action performed can be obtained using the `IsIndent` property. The following sample demonstrates how to determine whether the performed action is an indent or outdent based on the `IsIndent` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -4547,6 +4547,63 @@ The [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
             new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
+    }
+}
+```
+## OnUndoRedo
+[OnUndoRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnUndoRedo) event is triggered after an undo or redo operation completes. Event arguments indicate the operation type (undo or redo), the action performed, and the affected data, including modified records, deleted records, and any added record references.
+
+``` cshtml
+
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px"
+         EnableUndoRedo="true"
+         UndoRedoActions="@(new List<GanttUndoRedoAction>{ GanttUndoRedoAction.Edit, GanttUndoRedoAction.Add, GanttUndoRedoAction.Delete })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents TValue="TaskData" OnUndoRedo="UndoRedoHandler"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TaskCollection = GetTaskCollection();
+    }
+
+    private void UndoRedoHandler(GanttUndoRedoEventArgs<TaskData> args)
+    {
+        // args.IsRedo indicates redo (true) or undo (false)
+        // args.Action indicates the action type (e.g., Edit, Add, Delete, Sort)
+        // args.ModifiedRecords contains modified records, if any
+        // args.DeletedRecords contains deleted records, if any
+        // args.AddRecord contains the added record, if present
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; } = string.Empty;
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string? Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        return new List<TaskData>()
+        {
+            new TaskData { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023,01,04), EndDate = new DateTime(2023,01,23) },
+            new TaskData { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2023,01,04), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023,01,04), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023,01,04), Duration = "0", Progress = 30, ParentId = 1 }
+        };
     }
 }
 ```

@@ -11,7 +11,7 @@ documentation: ug
 
 Constraints are used to enable or disable specific behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so multiple behaviors can be enabled or disabled using bitwise operators `(&, |, ~, <<, etc.)`.
 
-To learn more about bitwise operators, refer to [Bitwise Operations](constraints#bitwise-operations).
+To learn more about bitwise operators, refer to [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ## How to Enable or Disable Diagram Constraints
 
@@ -80,7 +80,7 @@ The following example shows how to add the Bridging constraint to the default co
 DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
 ```
 
-Diagram constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations) in the diagram.
+Diagram constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations) in the diagram.
 
 ```csharp
 //Removing multiple constraints from default.
@@ -140,6 +140,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |[Resize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Resize)|Enables or Disables the expansion or compression of a node.|
 |[Inherit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Inherit)|Enables the node to inherit the interaction option from the parent object.|
 |[RoutingObstacle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_RoutingObstacle)|Enables or disables the node to be treated as obstacle while in routing.|
+|[AllowDragWithinSwimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_AllowDragWithinSwimlane)|Restricts a node’s movement strictly within the swimlane boundaries.|
 |[Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default)|Enables all default constraints for the node.|
 
 The following example shows how to disable the `Rotate` constraint from the default node constraints.
@@ -184,7 +185,7 @@ The following example shows how to add the `Shadow` constraint to the default co
 NodeConstraints NodeConstraints = NodeConstraints.Default | NodeConstraints.Shadow;
 ```
 
-Node constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+Node constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ```csharp
  //Removing multiple constraints from default.
@@ -293,7 +294,7 @@ The following example shows how to add the `Bridging` constraint to the default 
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | ConnectorConstraints.Bridging;
 ```
 
-Connector constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+Connector constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ```csharp
 //Removing multiple constraints from default.
@@ -387,7 +388,7 @@ The following code example shows how to modify the port constraints to accept on
 port.Constraints = PortConstraints.InConnect;
 ```
 
-Port constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+Port constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ```csharp
 //Enable to create target connection alone.
@@ -668,7 +669,7 @@ The following code shows how to display only horizontal gridlines.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SnapConstraints)
 
-Snap constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#bitwise-operations).
+Snap constraints are flagged enumerations, so multiple behaviors can be added or removed from the default constraints using [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
 ```csharp
 snapconstraints = SnapConstraints.ShowHorizontalLines | SnapConstraints.ShowVerticalLines | SnapConstraints.ShowLines;

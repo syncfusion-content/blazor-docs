@@ -84,8 +84,6 @@ N> Better performance can be achieved by using tree grid paging to fetch only a 
 
 ## Page size mode
 
-## Page size mode
-
 The [`PageSizeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property of [`TreeGridPageSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) defines two behaviors in TreeGrid paging to display a specific number of records on the current page.
 
 * **All** : Page size is calculated using the entire hierarchy, including both root and child records. 
