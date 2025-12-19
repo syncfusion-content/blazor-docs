@@ -7,7 +7,7 @@ control: MultiSelect DropDown
 documentation: ug
 ---
 
-# Getting Started with Blazor MultiSelect DropDown Component
+# Getting Started with Blazor MultiSelect DropDown in WASM App
 
 This guide explains how to add the [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component to a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
