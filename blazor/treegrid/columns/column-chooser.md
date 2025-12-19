@@ -238,7 +238,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVeCDLJCycwyswR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSChikLlQxWZHr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Template support in column chooser
 
