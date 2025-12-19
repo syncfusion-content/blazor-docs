@@ -24,30 +24,89 @@ The large icons view layout can be customized using the `LargeIconsTemplate` pro
 ```cshtml
 
 @using Syncfusion.Blazor.FileManager;
-
-<SfFileManager TValue="FileManagerDirectoryContent" CssClass="fmtemplate">
+<SfFileManager TValue="FileManagerDirectoryContent" CssClass="e-fm-template-sample">
     <ChildContent>
         <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                                    UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                                    DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                                    GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
         </FileManagerAjaxSettings>
     </ChildContent>
     <LargeIconsTemplate Context="item">
         @if (item is not null)
         {
-            <div style="display: flex; flex-direction: column; gap: 2px;">
-                <span><strong>@item.Name</strong></span>
-                <span><strong>Type:</strong> @(item.IsFile ? "File" : "Folder")</span>
-                <span><strong>Modified:</strong> @(item.DateModified.ToString("MM/dd/yyyy HH:mm"))</span>
+            <div class="custom-icon-card">
+                <div class="file-header">
+                    <div class="file-name" title="@item.Name">@item.Name</div>
+                </div>
+                <div class="@GetFileTypeCssClass(item)"></div>
+                <div class="file-formattedDate">Created on @item.DateCreated.ToString("MMMM d, yyyy")</div>
             </div>
         }
     </LargeIconsTemplate>
 </SfFileManager>
 
+@code {
+    private string GetFileTypeCssClass(FileManagerDirectoryContent item)
+    {
+        if (!item.IsFile)
+        {
+            return $"e-list-icon e-fe-folder";
+        }
+        var ext = System.IO.Path.GetExtension(item.Name)?.TrimStart('.') ?? string.Empty;
+        var type = ExtensionIconClassMap.GetValueOrDefault(ext, "unknown");
+        return $"e-list-icon e-fe-{type}";
+    }
+    private static readonly Dictionary<string, string> ExtensionIconClassMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+    {
+        { "jpg", "image" }, { "jpeg", "image" }, { "png", "image" }, { "gif", "image" },
+        { "mp3", "music" }, { "wav", "music" }, { "mp4", "video" }, { "avi", "video" },
+        { "xlsx", "xlsx" }, { "xls", "xlsx" }, { "pptx", "pptx" }, { "ppt", "pptx" },
+        { "rar", "rar" }, { "zip", "zip" }, { "txt", "txt" }, { "js", "js" },
+        { "css", "css" }, { "html", "html" }, { "exe", "exe" }, { "msi", "msi" },
+        { "php", "php" }, { "doc", "doc" }, { "docx", "docx" }, { "xml", "xml" },
+        { "pdf", "pdf" }
+    };
+}
 <style>
-    .fmtemplate .e-large-icons .e-list-item {
-        width: 185px;
+    .e-fm-template-sample .custom-icon-card {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .e-fm-template-sample .file-header {
+        display: contents;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .e-fm-template-sample .file-name {
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 110px;
+    }
+
+    .e-fm-template-sample .file-formattedDate {
+        font-size: 12px;
+        margin-top: 8px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .e-filemanager.e-fm-template-sample .e-large-icons .e-list-item {
+        height: 150px;
+        width: 135px;
     }
 </style>
 
@@ -125,5 +184,6 @@ The details view settings like, column [Width](https://help.syncfusion.com/cr/bl
 </SfFileManager>
 
 ```
+
 
 
