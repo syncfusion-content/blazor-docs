@@ -610,4 +610,4 @@ namespace TreeGridComponent.Data {
 
 > * The `SortComparer` function takes two parameters: `a` and `b`. These parameters represent the values to be compared. The function returns **-1**, **0**, or **1**, depending on the comparison result, which showcases the sorting order.
 > * The `SortComparer` property will work only for local data.
-> * When using the column template to display data in a column, you will need to use the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property of `TreeGridColumn` to work with the `SortComparer` property.
+> * When using the column template to display data in a column, the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property of `TreeGridColumn` must be used to work with the `SortComparer` property.
