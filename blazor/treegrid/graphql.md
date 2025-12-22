@@ -11,7 +11,7 @@ documentation: ug
 
 GraphQL is a powerful query language for APIs, designed to provide a more efficient alternative to traditional REST APIs. It allows you to precisely fetch the data you need, reducing over-fetching and under-fetching of data. GraphQL provides a flexible and expressive syntax for querying, enabling clients to request only the specific data they require.
 
-Syncfusion’s Blazor TreeGrid  seamlessly integrates with GraphQL servers using the `GraphQLAdaptor` in the [`SfDataManager`](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app). This specialized adaptor simplifies the interaction between the TreeGrid and GraphQL servers, allowing efficient data retrieval with support for data operations like CRUD (Create, Read, Update and Delete), paging, sorting, and filtering.
+Syncfusion’s Blazor TreeGrid  seamlessly integrates with GraphQL servers using the [GraphQLAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptor.html) in the [`SfDataManager`](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app). This specialized adaptor simplifies the interaction between the TreeGrid and GraphQL servers, allowing efficient data retrieval with support for data operations like CRUD (Create, Read, Update and Delete), paging, sorting, and filtering.
 
 This section describes a step-by-step process for retrieving data from a GraphQL service using `GraphQLAdaptor`, then binding it to the TreeGrid to facilitate data and CRUD operations.
 
