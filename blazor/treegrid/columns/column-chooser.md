@@ -163,7 +163,7 @@ N> The column names in column chooser can be hidden by defining the [ShowInColum
 
 ## Text wrapping in column chooser
 
-The Blazor TreeGrid includes a enhancement that improves readability within the column chooser dialog by allowing long column names to wrap across multiple lines. This behavior is enabled by setting the [`TreeGridColumnChooserSettings.AllowTextWrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowTextWrap) property to **true**.
+The Blazor TreeGrid includes a enhancement that improves readability within the column chooser dialog by allowing long column names to wrap across multiple lines. This behavior is enabled by setting the [`TreeGridColumnChooserSettings.AllowTextWrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridColumnChooserSettings_AllowTextWrap) property to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
