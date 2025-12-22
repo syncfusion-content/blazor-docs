@@ -110,7 +110,7 @@ documentation: ug
 }
 ```
 
-## Asp.NET Core Hub configuration
+## ASP.NET Core Hub configuration
 
 ### Configure SignalR with Redis and Map the Diagram Hub
 
@@ -243,7 +243,7 @@ namespace DiagramServerApplication.Hubs
 ```
 ## Conflict policy (optimistic concurrency)
 
-Collaborative edits use version-based optimistic concurrency, where each update includes the user’s current userVersion, the serialized diagram changes, and the IDs of elements affected by the edit (editedElementIds). This approach prevents conflicts without locking by allowing the server to validate versions and reject or rebase changes when discrepancies occur, ensuring consistency while maintaining real-time responsiveness.
+Collaborative edits use version-based optimistic concurrency, where each update includes the user’s current userVersion, the serialized diagram changes, and the IDs of elements affected by the edit (editedElementIds). This approach prevents conflicts without locking by allowing the server to validate versions and reject or reapply changes when discrepancies occur, ensuring consistency while maintaining real-time responsiveness.
 
 Add the following code in the DiagramHub class:
 
