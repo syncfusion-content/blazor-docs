@@ -691,8 +691,6 @@ To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGri
 
 **Step 1: Create a Blazor Web App**
 
-# Creating a Blazor Web App Named TreeGrid
-
 Create a **Blazor Web App** named **TreeGrid** using Visual Studio. Either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) can be used. Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet packages**
