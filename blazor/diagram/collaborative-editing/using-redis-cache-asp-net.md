@@ -363,4 +363,4 @@ private void ShowConflict()
 
 The full version of the code can be found in the GitHub location below.
 
-GitHub Example: [Collaborative editing examples](https://github.com/syncfusion/blazor-showcase-diagram-collaborative-editing).
+GitHub Example: [Collaborative editing examples](github.com/syncfusion/blazor-showcase-diagram-collaborative-editing).
