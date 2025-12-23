@@ -15,7 +15,7 @@ The [ToolbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Enable/Disable toolbar items based on row selection
 
-`ToolbarTemplate` feature enables rendering of custom components like [SfToolbar](https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp), which allows dynamic enabling or disabling of its toolbar items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property.
+`ToolbarTemplate` enables rendering of custom components like [SfToolbar](https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp), which allows dynamic enabling or disabling of its toolbar items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property.
 
 Setting the `Disabled` property of an `SfToolbar` item inside the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) or [RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeselected) event controls custom toolbar items based on row selection.
 
