@@ -7,15 +7,17 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Custom Toolbar In Blazor TreeGrid
+# Custom Toolbar in Blazor TreeGrid
 
-The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized TreeGrid experience.
+The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid enables a unique layout and styling options in Toolbar, adapts to application requirements, and delivers a personalized TreeGrid experience.
 
-The [ToolbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_ToolbarTemplate) feature provides option to render custom components
+The [ToolbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_ToolbarTemplate) provides option to render custom components inside the Toolbar in TreeGrid.
 
 ## Enable/Disable toolbar items based on row selection
 
-`ToolbarTemplate` enables rendering of custom components like [SfToolbar](https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp), which allows dynamic enabling or disabling of its toolbar items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property.
+`ToolbarTemplate` enables rendering of custom components like [SfToolbar](https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp), which allows dynamic enabling or disabling of its toolbar items using the toolbar's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property.
+
+To disable a toolbar item in the `ToolbarTemplate`, set its `Disabled` property to true.
 
 Setting the `Disabled` property of an `SfToolbar` item inside the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) or [RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeselected) event controls custom toolbar items based on row selection.
 
