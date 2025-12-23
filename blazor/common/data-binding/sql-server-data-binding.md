@@ -11,28 +11,32 @@ documentation: ug
 
 ## Introduction
 
-This topic gives a clear idea about how to consume data from [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15) using Microsoft SQL Client, bind it to a Syncfusion<sup style="font-size:70%">&reg;</sup> Component, and perform CRUD operations.
+This topic explains how to retrieve data from a [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15) database using Microsoft SQL Client, bind it to a Syncfusion® Blazor DataGrid component, and perform CRUD operations. The approach uses a custom adaptor and manual API integration to support flexible data access and editing workflows.
 
 ## Prerequisite software
 
 The following software are needed:
 
-* Microsoft.EntityFrameworkCore.SqlServer
-* Visual Studio 2022
-* .NET 8.0 or later.
+* Microsoft.EntityFrameworkCore.SqlServer (Nuget Package).
+* Visual Studio 2026 or earlier
+* .NET 10.0 or earlier versions.
 
 ## Create the database
 
-Open Visual Studio , select **View -> SQL Server Object Explorer**. Right-click on the Databases folder to create a new Database and name it as OrdersDetails.
+Open Visual Studio, then navigate to **View → SQL Server Object Explorer.**
+Right-click on the Databases folder and **select Add New Database**.
+In the dialog box, enter the database name as OrdersDetails and click OK to create it.
 
 ![Add new database in Blazor](../images/odata-add-db.png)
 ![Adding database name and location in Blazor](../images/odata-db-name.png)
 
-Right-click on the **Tables** folder of the created database and click **Add New Table**.
+Right-click on the **Tables** folder of the OrdersDetails database and select **Add New Table**.
+
 
 ![Add table in Blazor](../images/odata-add-table.png)
 
-Use the following query to add a new table named **Orders**.
+Use the following SQL query to define a new table named **Orders** in the **OrdersDetails** database. This table will store basic order information including ID, customer reference, freight charges, and order date.
+
 
 ```
 Create Table Orders(
@@ -43,34 +47,34 @@ Create Table Orders(
 )
 ```
 
-Now, the Orders table design will look like below. Click on the **Update** button.
+After executing the query, the Orders table schema will appear in the designer as shown in the snippet below.
+Verify that the columns and data types are correctly defined, then click **Update** to apply the changes.
 
 ![Database table design in Blazor](../images/odata-table-design.png)
 
-Now, click on **Update Database**.
+Now, select **Update Database** to confirm and create the table in the OrdersDetails database.
 
 ![Update database in Blazor](../images/odata-update-db.png)
 
 ## Creating Blazor Web App
 
-Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web App.
-
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+Open Visual Studio and follow the standard steps to create a new Blazor Web App as per in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+During project setup, ensure that you configure the appropriate[Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) based on your application requirements.
 
 ### Generate model class and API services from the database
 
-Now, you need to add **model classes** from the existing **OrdersDetails** database. To work with the SQL Server database in our application, install the following NuGet packages.If you have created a Blazor Web App with the `Interactive render mode` set to `WebAssembly` or `Auto` ensure to follow these steps:
+To work with the SQL Server database in your Blazor application, begin by installing the required NuGet packages.
+If you’ve created a Blazor Web App with the Interactive render mode set to `WebAssembly` or `Auto`, follow these steps:
 
-* Create the new project with Class Library template named as `BlazorWebApp.Shared` for model class and API services as shown below.
+* Create a new project using the Class Library template and name it `BlazorWebApp.Shared` for model class and API services as shown below.
 
 ![Create Shared Project](../images/db-shared-project.png)
 
-Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+This shared project will contain your model classes and API service logic, and should be referenced by both the server-side and client-side projects of your Blazor Web App. 
 
-* Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
-
-   * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
-   * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
+* Next, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App:
+    * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package enables scaffolding of database context and model classes from an existing database.
+    * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): Provides SQL Server support for Entity Framework Core.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -84,7 +88,8 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer
 {% endhighlight %}
 {% endtabs %}
 
-* Once the above packages are installed, you can add the following classes in the `BlazorWebApp.Shared` project  like shown below,
+* Once the above packages are installed, add the following classes to the BlazorWebApp.Shared project as like in below snip.
+This shared project will contain both the model definitions and the client-side service logic used to interact with the SQL Server database.
 
 ![Create Client Side Services](../images/db-models-services.png)
 
@@ -166,16 +171,16 @@ public class ClientServices
 {% endhighlight %}
 {% endtabs %}
 
- Here, `ClientServices` class will be responsible for interacting with the server-side API to perform operations such as retrieving data, inserting a new data, removing a data, and updating a data.
+Here, the `ClientServices` class will be responsible for interacting with the server-side API to perform operations such as retrieving data, inserting new records, removing existing records, and updating existing records. This ensures that all CRUD operations are handled in a centralized and reusable way within the shared project. 
 
-* Additionally, make sure to register the `ClientServices` class in `Program.cs` files of both server & client side project.
+* Additionally, make sure to register the `ClientServices` class in the `Program.cs` files of both the server-side and client-side projects so that it can be injected and accessed throughout the application lifecycle.
 
 ```
 builder.Services.AddScoped<ClientServices>();
 ```
-N> To ensure the using correct your's localhost portable number in code snippet.
+N> Ensure that you are using the correct localhost port number in the code snippets. The port number may vary depending on your environment and project configuration, so always verify it before running the application.
 
-* Next, ensure the `BaseUri` added in the **appsettings.json** file of server side project of your Web App.
+* Next, ensure that the **BaseUri** is added in the **appsettings.json** file of the server-side project of your Blazor Web App. This configuration is essential for defining the API endpoint that the client-side project will use to communicate with the server. By specifying the correct **BaseUri**, you enable seamless interaction between the client and server components, ensuring that all CRUD operations are routed properly through the configured API.
 
 ```
 {
@@ -191,7 +196,7 @@ N> To ensure the using correct your's localhost portable number in code snippet.
 }
 
 ```
-* Add the following code snippet to configure a scoped HttpClient with a base address in **Program.cs** file in server side application.
+* Add the following code snippet in the **Program.cs** file of the server-side project to configure a scoped HttpClient with a base address. 
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" %}
@@ -201,7 +206,7 @@ builder.Services.AddScoped(http => new HttpClient { BaseAddress = new Uri(builde
 {% endhighlight %}
 {% endtabs %}
 
-* Crete the `DataGridController` in server side application for handle CRUD (Create, Read, Update, Delete) operations for the Order entity.
+* Next, create a new controller named `DataGridController` in the server-side application. This controller will be responsible for handling all CRUD (Create, Read, Update, and Delete) operations for the Order entity. By exposing endpoints through this controller, the client-side application can interact with the SQL Server database via API calls, ensuring that data retrieval, insertion, modification, and deletion are managed in a structured and centralized manner.
 
 ```cshtml
 namespace BlazorWebApp.Controller
@@ -363,11 +368,11 @@ Open Visual Studio and follow the steps in the [documentation](https://blazor.sy
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid package
 
-To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the **Blazor DataGrid** component in your application, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If your Blazor Web App is configured to use WebAssembly or Auto render modes, make sure to install the Syncfusion® Blazor component NuGet packages within the client project as well. 
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, you can achieve the same by running the appropriate Package Manager Console commands to install the required packages directly.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -378,7 +383,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion®<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). For a complete list of available NuGet packages along with detailed information about each component, refer to the NuGet packages topic in the documentation.
+
 
 Open **~/_Imports.razor** file and import the following namespace.
 
@@ -389,9 +395,9 @@ Open **~/_Imports.razor** file and import the following namespace.
 
 {% endhighlight %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your App.
+Now, register the Syncfusion® Blazor service in the ~/Program.cs file of your application to enable the use of Syncfusion components such as the DataGrid.
 
-For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your web app.
+If you are working with a `Blazor Web App` configured to use `WebAssembly` or Auto (Server and WebAssembly) interactive render modes, make sure to register the Syncfusion®<sup style="font-size:70%">&reg;</sup>  Blazor service in both **~/Program.cs** files of your web app so that the components function correctly in both environments.
 
 ```cshtml
 
@@ -403,19 +409,19 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor has different themes. They are:
+Themes provide life to components, and Syncfusion®<sup style="font-size:70%">&reg;</sup> Blazor offers different themes:
 
-* Bootstrap5
-* Material 3
-* Tailwind CSS
-* High Contrast
-* Fluent
+- Bootstrap5
+- Material 3
+- Tailwind CSS
+- High Contrast
+- Fluent
 
 In this demo application, the latest theme will be used.
 
-  * For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto),  refer stylesheet inside the `<head>` of **~/Components/App.razor** .
+* For **.NET 8, .NET 9, and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), refer the stylesheet inside the `<head>` of **~/Components/App.razor**.
 
-  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
+* For **Blazor WebAssembly applications**, refer the stylesheet inside the `<head>` element of **wwwroot/index.html** file.
 
 {% highlight cshtml %}
 
@@ -435,7 +441,7 @@ Also, Include the script reference at the end of the `<body>` of **~/Components/
 
 In previous steps, you have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, you can add the grid component to the to the `.razor` page inside the `Pages` folder.
 
-If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component-included razor page as follows:
+If the interactivity location in your Blazor Web App is set to `Per page/component`, make sure to define a render mode at the very top of the Razor page that includes the Syncfusion®<sup style="font-size:70%">&reg;</sup> Blazor component as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -456,9 +462,9 @@ If you have set the interactivity location to `Per page/component` in the web ap
 
 ## Binding SQL data to the Blazor DataGrid Component
 
-Now, get the SQL data from the SQL server and bind it to the DataGrid component as a datasource by using the Custom adaptor feature. The Custom Adaptor can be created as a [Component](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor). Refer the [Grid Custom Binding](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor#data-binding) and [Custom adaptor as component](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) documentation for more details on the Custom adaptor.
+Now, retrieve the SQL data from the SQL Server and bind it to the DataGrid component by using the Custom Adaptor feature. The Custom Adaptor can be implemented as a reusable component, allowing you to define how the grid interacts with the server-side API for fetching and manipulating data. For more details on creating and configuring a [Custom Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor), refer to the Grid [Custom Binding](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor#data-binding) and [Custom Adaptor as Component](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) documentation. 
 
-Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Create columns using the following code. The properties used and their usage are discussed below.
+Once the adaptor is set up, you can define the grid columns using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. These columns specify how each field from the SQL data source is displayed in the DataGrid. The properties used in the column definitions and their usage are explained in the following section, along with sample code to illustrate the setup.
 
 {% tabs %}
 {% highlight razor tabtitle="Blazor Web App" %}
@@ -510,7 +516,14 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-In the custom adaptor’s **Read** method, you can get the Grid action details like paging,filtering,sorting information, etc., using **DataManagerRequest**.
+ 
+
+* Based on this request, construct a SQL query string that incorporates the necessary logic for paging and execute it against the SQL Server database. Use SqlDataAdapter to retrieve the data, and apply its Fill method to populate a DataSet with the results of the SelectCommand. Once the dataset is populated, convert it into a List to make it compatible with the DataGrid’s data binding. 
+
+* Return the response from the Read method as a Result and Count pair object, which allows the DataGrid to render the data and manage pagination accurately.
+
+
+In the **Read** method of the custom adaptor component, you can access the grid’s action details—such as paging, filtering, and sorting—using the **DataManagerRequest** object.
 
 * Based on the DataManagerRequest, form a SQL query string (to perform paging) and execute the SQL query. Retrieve the data from the database using SqlDataAdapter.
 
@@ -640,9 +653,9 @@ While running the application, the grid will be displayed as follows.
 
 ## Handling CRUD operations with our Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-Enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation for reference.
+Enable editing in the grid component by using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The DataGrid supports multiple editing modes such as Inline/Normal, Dialog, and Batch editing. For more details, refer to the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
 
-Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property are used to show toolbar items for editing.
+In the below code snippet, the Inline edit mode is enabled, and the Toolbar property is used to display toolbar items for editing operations.
 
 {% highlight razor %}
 
@@ -652,16 +665,16 @@ Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation
 
 {% endhighlight %}
 
-N> Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set IsPrimaryKey property as True for a particular GridColumn, whose value is a unique.
+N> Normal editing is the default edit mode for the DataGrid component. To perform CRUD operations, ensure that the IsPrimaryKey property is set to True for a specific GridColumn whose value is unique. This allows the grid to correctly identify and update records during editing.
 
-The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the DataAdaptor abstract class.
+The CRUD operations can be performed and customized by overriding the following methods of the DataAdaptor abstract class:
 
-* Insert/InsertAsync
-* Remove/RemoveAsync
-* Update/UpdateAsync
-* BatchUpdate/BatchUpdateAsync
+* Insert / InsertAsync – to add new records into the database.
+* Remove / RemoveAsync – to delete existing records.
+* Update / UpdateAsync – to modify existing records.
+* BatchUpdate / BatchUpdateAsync – to handle multiple changes (insert, update, delete) in a single request.
 
-Let’s see how to perform CRUD operation using SQL server data with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
+By implementing these methods, you can directly connect the Syncfusion® Blazor DataGrid component with SQL Server data and manage all CRUD operations seamlessly. In the following steps, we will see how to perform these operations using SQL Server data with the DataGrid.
 
 ### Insert Operation
 
