@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Custom toolbar in Blazor DataGrid
+# Custom toolbar in Blazor TreeGrid
 
 The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized TreeGrid experience.
 
