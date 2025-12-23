@@ -203,7 +203,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor com
 
 ## Configure Blocks
 
-You can use the [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) propery to manage and configure the blocks in the Block Editor component.
+You can use the [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property to manage and configure the blocks in the Block Editor component.
 
 {% tabs %}
 {% highlight razor %}
