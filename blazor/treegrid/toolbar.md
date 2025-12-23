@@ -196,6 +196,104 @@ Toolbar items can be enabled or disabled using the [EnableToolbarItemsAsync](htt
 The following screenshots represent a TreeGrid with Enable/disable toolbar items,
 ![Enabling or Disabling Toolbar Items in Blazor TreeGrid](images/blazor-treegrid-enable-disable-toolbar-items.png)
 
+## Enable/Disable Toolbar Items based on Row Selection
+
+ToolbarTemplate renders an SfToolbar inside the Syncfusion TreeGrid, binds boolean properties to each ToolbarItem’s Disabled attribute, invokes RowSelected to enable the buttons, and invokes RowDeselected to disable them.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.TreeGrid;
+
+
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" AllowSelection="true" ParentIdMapping="ParentId" TreeColumnIndex="1">
+    <TreeGridEvents RowSelected="RowSelected" RowDeselected="RowDeselected" TValue="TreeData.BusinessObject"></TreeGridEvents>
+    <TreeGridEditSettings AllowAdding="true" NewRowPosition="Syncfusion.Blazor.TreeGrid.RowPosition.Child"></TreeGridEditSettings>
+    <TreeGridTemplates>
+        <ToolbarTemplate>
+            <SfToolbar>
+                <ToolbarEvents Clicked = "ToolbarClickHandler"></ToolbarEvents>
+                <ToolbarItems>
+                    <ToolbarItem Text="Add" Id="Add" TooltipText="Add Enable/Disable" Visible="true" Disabled="@IsRowSelected"></ToolbarItem>
+                    <ToolbarItem Text="Save" Id="Save" TooltipText="Save Data" Visible="true" Disabled="@EnableSave"></ToolbarItem>
+                    </ToolbarItems>
+            </SfToolbar>
+        </ToolbarTemplate>
+    </TreeGridTemplates>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+    public List<TreeData.BusinessObject> TreeGridData { get; set; }
+    SfTreeGrid<TreeData.BusinessObject> TreeGrid;
+    public bool IsRowSelected { get; set; } = true;
+    public bool EnableSave { get; set; } = true;
+
+    protected override void OnInitialized()
+    {
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Text == "Add")
+        {
+            this.TreeGrid.AddRecordAsync();
+            EnableSave = false;
+        }
+        if (args.Item.Text == "Save")
+        {
+            this.TreeGrid.EndEditAsync();
+            EnableSave = true;
+        }
+    }
+
+    public void RowSelected(Syncfusion.Blazor.Grids.RowSelectEventArgs<TreeData.BusinessObject> args)
+    {
+        IsRowSelected = false;
+    }
+    public void RowDeselected(Syncfusion.Blazor.Grids.RowDeselectEventArgs<TreeData.BusinessObject> args)
+    {
+        IsRowSelected = true;
+    }
+
+    public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set; }
+            public string TaskName { get; set; }
+            public int? Duration { get; set; }
+            public int? Progress { get; set; }
+            public string Priority { get; set; }
+            public int? ParentId { get; set; }
+            public int? AgendaTopicTypeId { get; set; }
+            
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Progress = 80, Priority = "Low", ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5 });
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+
 <!--
 Custom toolbar items
 
