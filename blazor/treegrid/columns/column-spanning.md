@@ -11,7 +11,7 @@ documentation: ug
 
 Column spanning in the Blazor TreeGrid provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This improves readability by consolidating repeated values into a single taller cell, which is especially useful when the same value appears across consecutive rows.
 
-Column spanning is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to `AutoSpanMode.Column`.  When activated, the TreeGrid evaluates each column and merges stacked cells that share identical values, thereby reducing visual redundancy and presenting a cleaner, more structured layout. The merging process is fully declarative and requires no additional code or preprocessing.
+Column spanning is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to [AutoSpanMode.Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AutoSpanMode.html#Syncfusion_Blazor_Grids_AutoSpanMode_Column).  When activated, the TreeGrid evaluates each column and merges stacked cells that share identical values, thereby reducing visual redundancy and presenting a cleaner, more structured layout. The merging process is fully declarative and requires no additional code or preprocessing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -97,7 +97,7 @@ Column spanning is part of the broader `AutoSpanMode` enumeration, which provide
 
 ## Disable column spanning for specific column(s)
 
-Spanning in the Blazor TreeGrid can be disabled at the column(s) level by setting the `AutoSpan` property of the `TreeGridColumn` component to `AutoSpanMode.None`. This configuration provides fine-grained control, allowing automatic spanning to be applied globally while excluding specific column(s) where merging is not desired.
+Spanning in the Blazor TreeGrid can be disabled at the column(s) level by setting the `AutoSpan` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to `AutoSpanMode.None`. This configuration provides fine-grained control, allowing automatic spanning to be applied globally while excluding specific column(s) where merging is not desired.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -525,13 +525,13 @@ The spanning behavior is determined by how the TreeGrid‑level and column‑lev
 
 ## Applying column spanning via programmatically
 
-In addition to automatic cell merging, the Blazor TreeGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the `MergeCellsAsync` method, which enables the definition of rectangular regions of cells to be merged programmatically.
+In addition to automatic cell merging, the Blazor TreeGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method, which enables the definition of rectangular regions of cells to be merged programmatically.
 
 Use `MergeCellsAsync` method to manually merge cells by defining rectangular regions. This method supports both single and batch merging, allowing precise control over layout customization when automatic spanning is insufficient.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| info | `MergeCellInfo` | Defines a single rectangular cell region to be merged. |
+| info | [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) | Defines a single rectangular cell region to be merged. |
 | infos | `IEnumerable<MergeCellInfo>` | Specifies multiple cell regions to be merged in a batch operation. Each region is defined by a `MergeCellInfo` instance. |
 
 To define a merged region, use the following properties of the `MergeCellInfo` class,
@@ -767,11 +767,11 @@ public class ProjectTask
 
 ## Clearing spanning via programmatically
 
-The Blazor TreeGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the `UnmergeCellsAsync` methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the `UnmergeAllAsync` method can be used to restore every cell to its original state.
+The Blazor TreeGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the [UnmergeAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_UnmergeAllAsync) method can be used to restore every cell to its original state.
 
 | Method | Parameter | Type | Description |
 |--------|-----------|------|-------------|
-| `UnmergeCellsAsync` | info | `UnmergeCellInfo` | Removes a single merged area identified by its anchor cell (top‑left of the merged region). |
+| `UnmergeCellsAsync` | info | [UnmergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.UnmergeCellInfo.html) | Removes a single merged area identified by its anchor cell (top‑left of the merged region). |
 | `UnmergeCellsAsync` | infos | `IEnumerable<UnmergeCellInfo>` | Removes multiple merged areas in one combined operation, improving performance by reducing re‑renders. |
 | `UnmergeAllAsync` | – | – | Removes all merged regions in the current view, restoring every cell to its original state. |
 

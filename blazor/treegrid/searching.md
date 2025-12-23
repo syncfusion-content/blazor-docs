@@ -429,7 +429,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLIMrWjKvpFqzBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIshikhPJJKWJV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Searching with ignore accent
 
@@ -550,7 +550,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBeWrWDUuJTPmdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBSCBMuBFBKInJs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * This feature ignores accents for both searching and filtering operations in the Blazor DataGrid when using an `IEnumerable` data source.
+> * This feature ignores accents for both searching and filtering operations in the Blazor TreeGrid when using an `IEnumerable` data source.
 > * This feature works only for characters outside the ASCII range.
