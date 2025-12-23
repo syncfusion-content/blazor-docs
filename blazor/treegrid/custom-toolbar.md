@@ -7,19 +7,19 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Custom toolbar in Blazor TreeGrid
+# Custom Toolbar In Blazor TreeGrid
 
 The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized TreeGrid experience.
 
-The `ToolbarTemplate` feature provides option to render custom components
+The [ToolbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_ToolbarTemplate) feature provides option to render custom components
 
-## Enable/Disable Toolbar Items based on Row Selection
+## Enable/Disable toolbar items based on row selection
 
 `ToolbarTemplate` feature enables rendering of custom components like [SfToolbar](https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp), which allows dynamic enabling or disabling of its toolbar items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property.
 
-By setting the `Disabled` property of an `SfToolbar` item inside the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event or [RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeselected) event, you can control the custom toolbar items.
+Setting the `Disabled` property of an `SfToolbar` item inside the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) or [RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeselected) event controls custom toolbar items based on row selection.
 
-In the following sample, the custom toolbar item **Add** is enabled with the row selection and disabled with deselection.
+In the following sample, the custom toolbar item **Add** becomes enabled when a row is selected and disabled when the row is deselected.
 
 
 ```cshtml
