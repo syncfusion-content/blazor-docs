@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Toolbar Items in Blazor TreeGrid Component | Syncfusion
-description: Learn how to create and use custom toolbar items in the Syncfusion Blazor TreeGrid, including templates, icons with text, dropdowns, and export actions.
+description: Check out here and learn more details about using custom toolbar items in the Syncfusion Blazor TreeGrid, including templates, icons with text, dropdowns, and export actions.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Toolbar in Blazor TreeGrid
 
-The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid enables a unique layout and styling options in Toolbar, adapts to application requirements, and delivers a personalized TreeGrid experience.
+The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid provides flexible layout and styling options, enabling customization of toolbar elements.
 
 The [ToolbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_ToolbarTemplate) provides option to render custom components inside the Toolbar in TreeGrid.
 
