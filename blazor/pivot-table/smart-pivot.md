@@ -794,13 +794,13 @@ namespace SyncfusionAISamples.Components.Pages.PivotTable
 
 In this example, we added a custom button called **AI Assistant** to the Pivot Table toolbar. Here's how to use the AI-driven features:
 
-![AI Assistant Button](../../ai/images/ai-assistant-button.jpeg)
+![AI Assistant Button](images/ai-assistant-button.jpeg)
 
 #### Step 1: Click the AI Assistant button
 
 A dialog box opens with three options to choose from: **Predictive Modeling**, **Intelligent Report Aggregation**, and **Adaptive Filtering**.
 
-![AI Assistant Dialog](../../ai/images/ai-assistant-dialog.png)
+![AI Assistant Dialog](images/ai-assistant-dialog.png)
 
 #### Step 2: Select a feature
 
@@ -810,33 +810,33 @@ Pick one of the AI features below and follow the detailed steps for each feature
 
 Choose a future year to predict values for that time period. After you click Submit, the Pivot Table shows predicted data along with your existing data. The predicted values are highlighted in yellow so you can easily see them.
 
-![Predictive Modeling Dropdown](../../ai/images/predictive-modeling-dropdown.png)
+![Predictive Modeling Dropdown](images/predictive-modeling-dropdown.png)
 
-![Clicking the submit button](../../ai/images/Cliking-Submit-Button.png)
+![Clicking the submit button](images/Cliking-Submit-Button.png)
 
-![Predictive Modeling](../../ai/images/predictive-modeling.png)
+![Predictive Modeling](images/predictive-modeling.png)
 
 ##### Intelligent Report Aggregation
 
 Choose one or more fields from your data and pick an aggregation type (such as Sum or Count). After you click Submit, the AI arranges your data using only the fields you selected and applies the aggregation type you chose. The original data does not change.
 
-![Intelligent Report Dropdown](../../ai/images/intelligent-report-dropdown.jpeg)
+![Intelligent Report Dropdown](images/intelligent-report-dropdown.jpeg)
 
-![Intelligent Report Aggregation Dropdown](../../ai/images/intelligent-report-aggregation-dropdown.png)
+![Intelligent Report Aggregation Dropdown](images/intelligent-report-aggregation-dropdown.png)
 
-![Clicking the submit button](../../ai/images/intelligent-report-cliking-submit-button.png)
+![Clicking the submit button](images/intelligent-report-cliking-submit-button.png)
 
-![Intelligent Report Aggregation](../../ai/images/smart-aggregation.png)
+![Intelligent Report Aggregation](images/smart-aggregation.png)
 
 ##### Adaptive Filtering
 
 Type a product field member name (such as "Road Bikes" or "Mountain Bikes") in the input box. After you click Submit, the AI filters the products field to show only the items that match what you entered. The original data remains unchanged.
 
-![Adaptive Filter Suggestions](../../ai/images/adaptive-filtering-text-box.png)
+![Adaptive Filter Suggestions](images/adaptive-filtering-text-box.png)
 
-![Clicking the submit button](../../ai/images/adaptive-filtering-cliking-submit-button.png)
+![Clicking the submit button](images/adaptive-filtering-cliking-submit-button.png)
 
-![Adaptive Filtering](../../ai/images/adaptive-filtering.png)
+![Adaptive Filtering](images/adaptive-filtering.png)
 
 #### Step 3: Wait for processing
 
