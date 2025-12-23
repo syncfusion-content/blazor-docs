@@ -149,8 +149,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chat UI componen
 {% endhighlight %}
 {% endtabs %}
 
-*   Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chat UI component in your default web browser.
-
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chat UI component in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfMLiHUEAVqRkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chat UI Component.](images/chat-ui-component.png)" %}
