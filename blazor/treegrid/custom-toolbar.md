@@ -11,7 +11,7 @@ documentation: ug
 
 The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized TreeGrid experience.
 
-The `ToolbarTemplate` property implements this feature and offers extensive customization options for the toolbar.
+The `ToolbarTemplate` feature provides option to render custom components
 
 ## Enable/Disable Toolbar Items based on Row Selection
 
@@ -19,7 +19,7 @@ The `ToolbarTemplate` property implements this feature and offers extensive cust
 
 By setting the `Disabled` property of an `SfToolbar` item inside the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event or [RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeselected) event, you can control the custom toolbar items.
 
-In the following sample, the custom toolbar item **Add** is enabled when a row is selected and disabled when the row is deselected.
+In the following sample, the custom toolbar item **Add** is enabled with the row selection and disabled with deselection.
 
 
 ```cshtml
