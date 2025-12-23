@@ -245,7 +245,23 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
-<SfBlockEditor Blocks="blockDataOverview">
+<SfBlockEditor></SfBlockEditor>
+
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the default web browser.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLIsrhAgbKCOpbZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor BlockEditor Default.](images/blazor-block-editor-default.png)" %}
+
+## Configure Blocks
+
+You can use the [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property to manage and configure the blocks in the Block Editor component.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfBlockEditor @bind-Blocks="blockDataOverview">
 </SfBlockEditor>
 
 @code {
@@ -290,6 +306,4 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the default web browser.
-
-![Blazor Block Editor Component](images/blazor-block-editor-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSiBVATWtpaEWo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Block Editor Component](images/blazor-block-editor-component.png)" %}
