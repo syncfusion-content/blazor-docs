@@ -20,11 +20,8 @@ Collaborative editing in diagram control allows multiple users to edit and revie
 * Use `SignalR` for real-time communication between the Blazor app and an ASP.NET Core SignalR hub
 * Use `Redis` as a temporary data store to manage updates and version state
 * Basic setup:
-    * Configure an ASP.NET Core SignalR hub. [Refer link](/collaborative-editing-hub)
-    * Connect the Blazor app to the hub. [Refer link](/blazor-app-collaborative-editing)
-
-The complete source code discussed is available in the following GitHub repository:
-[Collaborative editing examples](https://github.com/syncfusion/blazor-showcase-diagram-collaborative-editing)
+    * Configure an ASP.NET Core SignalR hub. [Refer link](./collaborative-editing-hub)
+    * Connect the Blazor app to the hub. [Refer link](./blazor-app-collaborative-editing)
 
 ## Limitations
 
@@ -38,5 +35,6 @@ The complete source code discussed is available in the following GitHub reposito
 >**Note:** 
 Collaboration applies to actions that raise the [HistoryChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_HistoryChanged) event.
 
+## Sample code
 
-
+A complete working example is available in the [Syncfusion Blazor Collaborative Editing GitHub repository](https://github.com/syncfusion/blazor-showcase-diagram-collaborative-editing)

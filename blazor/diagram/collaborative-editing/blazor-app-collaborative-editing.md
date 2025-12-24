@@ -55,7 +55,7 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
             {
                 // Run the hub service and Add your service url like "/diagramHub" in the connection
                 connection = new HubConnectionBuilder()
-                            .WithUrl(<<Your ServiceURL>>), options =>
+                            .WithUrl("<<Your ServiceURL>>", options =>
                             {
                                 options.SkipNegotiation = true;
                                 options.Transports = Microsoft.AspNetCore.Http.Connections.HttpTransportType.WebSockets;
@@ -101,7 +101,7 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
 @code {
     
     public SfDiagramComponent DiagramInstance;
-    public DiagramId
+    public DiagramId = "diagram";
     private string roomName = "Syncfusion";
     
     
@@ -118,6 +118,9 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
                 {
                     await ApplyRemoteDiagramChanges(diagramChanges);
                 });
+
+                ---------------
+                ---------------
             }
         }
     }
