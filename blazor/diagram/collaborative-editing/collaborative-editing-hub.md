@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SignalR Hub Services for Real-Time Collaboration in Syncfusion Blazor Diagram
-description: Learn how to implement SignalR hub services with a Redis, real-time collaborative editing in the Syncfusion Blazor Diagram component, including setup, configuration.
+title: SignalR Hub for Real-Time Collaboration in Blazor Diagram | Syncfusion
+description: Checkout and learn to implement SignalR hub services with Redis for real-time collaborative editing in Syncfusion Blazor Diagram.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -15,7 +15,7 @@ This guide explains how to configure ASP.NET Core SignalR with Redis for real-ti
 
 ## Prerequisites
 
-* [System requirements for Asp.Net core components](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
+* [System requirements for ASP.NET Core components](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
 
 ## How to Create ASP.NET Core App
 
@@ -32,7 +32,7 @@ Open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager
 
 ## Configure SignalR with Redis
 
-To enable real-time collaboration, add your Redis connection string in `appsettings.json`, then register a singleton `IConnectionMultiplexer` in `Program.cs` to efficiently reuse the Redis connection. Finally, configure `SignalR` by registering its services in `Program.cs` to enable hub-based communication between blazor app and the asp.net core hub server.
+To enable real-time collaboration, add your Redis connection string in `appsettings.json`, then register a singleton `IConnectionMultiplexer` in `Program.cs` to efficiently reuse the Redis connection. Finally, configure `SignalR` by registering its services in `Program.cs` to enable hub-based communication between blazor app and the ASP.NET Core hub server.
 
 Add the following configuration to the `appsettings.json` file:
 ```json

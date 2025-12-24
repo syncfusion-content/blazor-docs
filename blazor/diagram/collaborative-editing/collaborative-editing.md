@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Real-time Collaborative Editing in Syncfusion Blazor Diagram Using SignalR and Redis
-description: Learn how to build real-time collaborative editing in the Syncfusion Blazor Diagram component with SignalR and Redis, including setup, code examples, and best practices.
+title: Collaborative Editing in Syncfusion Blazor Diagram | Syncfusion
+description: Checkout and learn to set up real-time collaborative editing in Syncfusion Blazor Diagram using SignalR and Redis with examples and best practices.
 platform: Blazor
 control: Diagram
 documentation: ug
