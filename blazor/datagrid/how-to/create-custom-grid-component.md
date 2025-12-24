@@ -21,7 +21,7 @@ The following example creates a `CustomGrid` wrapper that renders `SfGrid` with 
 @using Syncfusion.Blazor.Grids
 @typeparam TItem
 
-<SfGrid TItem="TItem"
+<SfGrid TValue="TItem"
         DataSource="DataSource"
         AllowSorting="AllowSorting"
         AllowPaging="AllowPaging"
