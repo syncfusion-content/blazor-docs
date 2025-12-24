@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configure SignalR for Real-Time Collaboration in Blazor Diagram | Syncfusion
+title: Collaborative Editing Configuration in Blazor Diagram | Syncfusion
 description: Checkout and learn to configure SignalR and Redis for real-time collaborative editing in Syncfusion Blazor Diagram.
 platform: Blazor
 control: Diagram
