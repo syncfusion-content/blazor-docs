@@ -21,6 +21,11 @@ The Pivot Table offers three types of filtering options:
 
 N> When all filtering options are disabled programmatically, the filter icon will not appear in the field list or grouping bar interface.
 
+To get a quick glance at how to filter data in the Blazor Pivot Table, watch this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=r6__Vaz4FDg"%}
+
 ## Member filtering
 
 This filtering option displays the Pivot Table with selective records based on the members you choose to include or exclude in each field. By default, member filtering is enabled through the [AllowMemberFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_AllowMemberFilter) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. 
