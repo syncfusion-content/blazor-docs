@@ -30,7 +30,7 @@ Open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager
 * Microsoft.Extensions.Caching.StackExchangeRedis
 * StackExchange.Redis
 
-### Configure SignalR with Redis
+## Configure SignalR with Redis
 
 To enable real-time collaboration, add your Redis connection string in `appsettings.json`, then register a singleton `IConnectionMultiplexer` in `Program.cs` to efficiently reuse the Redis connection. Finally, configure `SignalR` by registering its services in `Program.cs` to enable hub-based communication between blazor app and the asp.net core hub server.
 
@@ -74,7 +74,7 @@ app.MapHub<DiagramHub>("/diagramHub");
 
 ```
 
-### Implement DiagramHub
+## Implement DiagramHub
 
 Create a file named `DiagramHub.cs` and define a class `DiagramHub` that inherits from Hub. Implement the `OnConnectedAsync` method to notify clients when a new connection is established. Add a `JoinDiagram` method to manage SignalR groups for collaborative sessions. This method allows users to join specific rooms, broadcasts updates to all participants in the same room (excluding the sender), and ensures proper cleanup of group memberships when users disconnect to prevent stale sessions.
 

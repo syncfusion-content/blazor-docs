@@ -7,25 +7,28 @@ control: Diagram
 documentation: ug
 ---
 
-# Blazor Collaborative Diagram
+# SignalR Hub Configuration in Blazor Application
+
+## Overview
+This guide explains how to configure SignalR Hub in a Blazor application for real-time collaborative diagram editing.
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## How to create Blazor sample
+## How to Create Blazor sample
 
 To create a Blazor Web App, follow the steps outlined in the Blazor Web App [Getting Started](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app) documentation.
 
 ## How to Add Packages in the Blazor Application
 
-Open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution) in the client project, then search and install the following packages.
+Open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution) of the client project, then search and install the following packages.
 
 * Microsoft.AspNetCore.SignalR.Client
 * Syncfusion.Blazor.Diagram
 * Syncfusion.Blazor.Themes
 
-## Configure SignalR Service in blazor application
+## Configure SignalR Service in Blazor Application
 
 To enable real-time collaboration, configure SignalR HubConnection in your Blazor component as follows:
 
@@ -141,7 +144,7 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
 }
 ```
 
-## Conflict policy (optimistic concurrency) in blazor application
+## Conflict policy (optimistic concurrency) in Blazor Application
 
 To maintain consistency during collaborative editing, each user applies incoming changes using `SetDiagramUpdatesAsync`. After applying changes, the blazor sample synchronizes its `userVersion` with the  `serverVersion` through the `UpdateVersion` event. This version-based approach ensures conflicts are resolved without locking, allowing real-time responsiveness while preserving data integrity.
 
