@@ -92,7 +92,9 @@ N> For other interactive render modes and interactivity locations, refer to Rend
 To integrate the Blazor Pager component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages using the **integrated terminal**:
 
 1.Open the integrated terminal in Visual Studio Code (**Ctrl + `**).
+
 2.Navigate to the directory containing the **.csproj** file.
+
 3.Run the following commands to install the packages:
     - [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
