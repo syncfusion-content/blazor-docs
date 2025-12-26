@@ -239,4 +239,3 @@ The following example demonstrates handling touch events:
 ```
 
 
-
