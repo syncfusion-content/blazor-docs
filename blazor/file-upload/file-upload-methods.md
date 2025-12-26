@@ -11,7 +11,7 @@ documentation: ug
 
 This section details the various methods available to interact with and manage the Syncfusion Blazor File Upload component programmatically.
 
-## GetFileDetails
+### GetFileDetails
 
 The [`GetFileDetails`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_GetFileDetails_System_Collections_Generic_List_Syncfusion_Blazor_Inputs_FileInfo__) method retrieves the details of all files currently selected or uploaded in the File Upload component. This is useful for validating file properties like size, type, and name before or after the upload process.
 
