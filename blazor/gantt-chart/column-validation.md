@@ -89,7 +89,7 @@ The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjheWLChfJEBegzY?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjheWLChfJEBegzY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Validation is not supported for the [Resource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) column.
 
@@ -168,7 +168,7 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoWLWLpyjcQTAD?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoWLWLpyjcQTAD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom validation
 
@@ -284,7 +284,7 @@ The following example demonstrates how to implement custom validation for the **
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXreihChTSiAmHFW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXreihChTSiAmHFW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom validator component
 

@@ -80,7 +80,7 @@ The **Undo** in the Blazor Gantt Chart reverts the most recent action, such as m
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrIsLirBDkKyVlQ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrIsLirBDkKyVlQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Define actions in the [UndoRedoActions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UndoRedoActions) property to record them in the **Undo/Redo** history. Only actions defined in this property will be recorded.
 
@@ -181,7 +181,7 @@ The following table lists the built-in actions that can be included for undo and
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVoiBMLhDblevvL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVoiBMLhDblevvL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Configure undo redo step count
 
@@ -253,7 +253,7 @@ The following example illustrates how to configure the maximum number of undo an
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrSMrMVVXPqZxza?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrSMrMVVXPqZxza?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Performing undo and redo actions via methods
 
@@ -346,7 +346,7 @@ In the following example, clicking an external button invokes the `UndoAsync` me
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDroWBCrUEUVmsZF?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDroWBCrUEUVmsZF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See Also
 - [How to add undo/redo events?](https://blazor.syncfusion.com/documentation/gantt-chart/events##onundoredo)
