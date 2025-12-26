@@ -89,7 +89,7 @@ The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjheWLChfJEBegzY?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBesLBRqFxBKjrU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Validation is not supported for the [Resource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) column.
 
@@ -168,7 +168,7 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoWLWLpyjcQTAD?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoWLWLpyjcQTAD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom validation
 
@@ -222,7 +222,7 @@ The following example demonstrates how to implement custom validation for the **
     {
         public int TaskID { get; set; }
         [CustomValidationActivityName]
-        public string? ActivityName { get; set; }
+        public string ActivityName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public int? Duration { get; set; }
@@ -237,14 +237,14 @@ The following example demonstrates how to implement custom validation for the **
     /// </summary>
     public class CustomValidationActivityName : ValidationAttribute
     {
-        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        protected override System.ComponentModel.DataAnnotations.ValidationResult IsValid(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext)
         {
             var str = value as string;
             if (string.IsNullOrWhiteSpace(str))
-                return new ValidationResult("Task Name is required.");
+                return new System.ComponentModel.DataAnnotations.ValidationResult("Task Name is required.");
             if (str.Length < 5 || str.Length > 10)
-                return new ValidationResult("Task Name must be between 5 and 10 characters.");
-            return ValidationResult.Success;
+                return new System.ComponentModel.DataAnnotations.ValidationResult("Task Name must be between 5 and 10 characters.");
+            return System.ComponentModel.DataAnnotations.ValidationResult.Success;
         }
     }
 
@@ -254,16 +254,16 @@ The following example demonstrates how to implement custom validation for the **
     /// </summary>
     public class CustomValidationProgress : ValidationAttribute
     {
-        protected override ValidationResult IsValid(object value, ValidationContext context)
+        protected override System.ComponentModel.DataAnnotations.ValidationResult IsValid(object value, System.ComponentModel.DataAnnotations.ValidationContext context)
         {
             if (value == null)
-                return new ValidationResult("Progress is required.");
+                return new System.ComponentModel.DataAnnotations.ValidationResult("Progress is required.");
             var v = (int)value;
             if (v < 5)
-                return new ValidationResult("Progress must be greater than 5");
+                return new System.ComponentModel.DataAnnotations.ValidationResult("Progress must be greater than 5");
             if (v > 50)
-                return new ValidationResult("Progress must be lesser than 50");
-            return ValidationResult.Success;
+                return new System.ComponentModel.DataAnnotations.ValidationResult("Progress must be lesser than 50");
+            return System.ComponentModel.DataAnnotations.ValidationResult.Success;
         }
     }
     public static List<TaskInfoModel> EditingData()
@@ -284,7 +284,7 @@ The following example demonstrates how to implement custom validation for the **
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXreihChTSiAmHFW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBIsBVRUasBrMrl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom validator component
 
