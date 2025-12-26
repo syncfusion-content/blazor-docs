@@ -267,8 +267,8 @@ In the following example, clicking an external button invokes the `UndoAsync` me
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
 
-<SfButton @onclick="@UndoHandler">Undo</SfButton>
-<SfButton @onclick="@RedoHandler">Redo</SfButton>
+<SfButton OnClick="@UndoHandler">Undo</SfButton>
+<SfButton onClick="@RedoHandler">Redo</SfButton>
 <SfGantt ID="GanttChart" @ref="GanttInstance" DataSource="@TaskCollection" Height="500px" Width="100%" HighlightWeekends="true" EnableUndoRedo="true" UndoRedoActions="@undoRedoActions"
             Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
          TreeColumnIndex="1" EnableContextMenu="true" AllowFiltering="true" MaxUndoRedoSteps="5">
