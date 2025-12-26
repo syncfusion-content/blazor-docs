@@ -1299,64 +1299,77 @@ In this configuration, the `SfDateRangePicker` is rendered in the filter templat
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
+
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" TValue="OrderData" AllowFiltering="true" AllowPaging="true" DataSource="@GridData">
-    <GridEvents Filtering="FilteringHandler" TValue="OrderData"></GridEvents>
+    <GridEvents Filtering="FilteringHandler" FilterDialogOpening="FilterDialogOpeningHandler" TValue="OrderData"></GridEvents>
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true"
-                    TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="MM/dd/yyyy hh:mm tt"
-                    TextAlign="TextAlign.Right" Width="250">
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="MM/dd/yyyy hh:mm tt"
+        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="250">
             <FilterTemplate>
                 @{
-                    <SfDateRangePicker Placeholder="Choose a Range" Width="500" ShowClearButton="true"
-                                       @bind-StartDate="StartDate" @bind-EndDate="EndDate" TValue="DateTime">
-                        <DateRangePickerEvents TValue="DateTime" ValueChange="ValueChangeHandler">
+                    <SfDateRangePicker @ref="DateRangePicker" Placeholder="Choose a Range" Width="500" ShowClearButton="true"
+                    @bind-StartDate="StartDate" @bind-EndDate="EndDate" TValue="DateTime?">
+                        <DateRangePickerEvents TValue="DateTime?" ValueChange="ValueChangeHandler">
                         </DateRangePickerEvents>
                     </SfDateRangePicker>
                 }
             </FilterTemplate>
         </GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2"
-                    TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+@if (IsOrderDateCssEnabled)
+{
+    <style>
+        /* Hide operator dropdown only for OrderDate filter menu */
+        .e-ddl.e-input-group {
+        display: none !important;
+        }
+    </style>
+}
+
 @code {
-   
-    public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
+    
+    public bool IsOrderDateCssEnabled { get; set; } = false;
+
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
     public List<OrderData> GridData { get; set; }
     SfGrid<OrderData>? Grid { get; set; }
+    SfDateRangePicker<DateTime?> DateRangePicker;
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    public async Task FilteringHandler(FilteringEventArgs args)
-
+    public async Task FilteringHandler(Syncfusion.Blazor.Grids.FilteringEventArgs args)
     {
         if (args.ColumnName == "OrderDate" && args.FilterPredicates != null)
         {
-            args.Cancel = true; //cancel default filter action.
+            
+            args.Cancel = true;
+
             if (Grid.FilterSettings.Columns == null)
             {
                 Grid.FilterSettings.Columns = new List<GridFilterColumn>();
             }
-            if (Grid.FilterSettings.Columns.Count > 0)
-            {
-                Grid.FilterSettings.Columns.RemoveAll(c => c.Field == "OrderDate");
-            }
-            // Get all the Grid columns.
-            var columns = await Grid.GetColumns();
-            // Fetch the Uid of OrderDate column.
+            Grid.FilterSettings.Columns.RemoveAll(c => c.Field == "OrderDate");
+
+            var columns = await Grid.GetColumnsAsync();
             string fUid = columns[2].Uid;
+
             Grid.FilterSettings.Columns.Add(new GridFilterColumn
                 {
                     Field = "OrderDate",
@@ -1370,18 +1383,40 @@ In this configuration, the `SfDateRangePicker` is rendered in the filter templat
                     Field = "OrderDate",
                     Operator = Syncfusion.Blazor.Operator.LessThanOrEqual,
                     Predicate = "and",
-                    Value = EndDate.AddDays(1).AddSeconds(-1),
+                    Value = EndDate?.AddDays(1).AddSeconds(-1),
                     Uid = fUid
                 });
+
             Grid.Refresh();
         }
+        else if (args.ColumnName == "OrderDate" && args.FilterPredicates == null)
+        {
+            StartDate = null;
+            EndDate = null;
+            
+        }
+        
     }
-    public void ValueChangeHandler(RangePickerEventArgs<DateTime> args)
+
+    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
+    {
+        if (args.ColumnName == "OrderDate")
+        {
+            IsOrderDateCssEnabled = true;
+        }
+        else
+        {
+            IsOrderDateCssEnabled = false;
+        }
+    }
+
+    public void ValueChangeHandler(RangePickerEventArgs<DateTime?> args)
     {
         StartDate = args.StartDate;
         EndDate = args.EndDate;
     }
 }
+
 
 {% endhighlight %}
 
@@ -1390,7 +1425,6 @@ In this configuration, the `SfDateRangePicker` is rendered in the filter templat
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
-    public OrderData() { }
 
     public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
@@ -1402,14 +1436,14 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             int OrderID = 10248;
             int j = 1;
             for (int i = 1; i < 7; i++)
             {
                 Orders.Add(new OrderData(OrderID + 1, "VINET", DateTime.Now.AddDays(-j), 32.38));
-                Orders.Add(new OrderData(OrderID + 2, "TOMSP", DateTime.Now.AddDays(-j-1), 11.61));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", DateTime.Now.AddDays(-j - 1), 11.61));
                 Orders.Add(new OrderData(OrderID + 3, "HANAR", DateTime.Now.AddDays(-j - 2), 65.83));
                 Orders.Add(new OrderData(OrderID + 4, "VICTE", DateTime.Now.AddDays(-j - 3), 45.78));
                 Orders.Add(new OrderData(OrderID + 5, "SUPRD", DateTime.Now.AddDays(-j - 4), 98.6));
@@ -1433,7 +1467,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLJCLClyfCMmKmA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhSsLixJHGezNcW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Troubleshoot filter menu operator issue
 
