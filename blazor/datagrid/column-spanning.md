@@ -714,7 +714,7 @@ The [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | info | [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) | Defines a single rectangular cell region to be merged. |
-| infos | `IEnumerable<MergeCellInfo>` | Specifies multiple cell regions to be merged in a batch operation. Each region is defined by a [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) instance. |
+| infos | [IEnumerable&lt;MergeCellInfo&gt;](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_System_Collections_Generic_IEnumerable_Syncfusion_Blazor_Grids_MergeCellInfo__) | Specifies multiple cell regions to be merged in a batch operation. Each region is defined by a [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) instance. |
 
 To define a merged region, use the following properties of the [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) class,
 
@@ -1083,7 +1083,7 @@ The [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 | Method | Parameter | Type | Description |
 |--------|-----------|------|-------------|
 | [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) | info | [UnmergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.UnmergeCellInfo.html) | Removes a single merged area identified by its anchor cell (top‑left of the merged region). |
-| [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) | infos | `IEnumerable<UnmergeCellInfo>` | Removes multiple merged areas in one combined operation, improving performance by reducing re‑renders. |
+| [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) | infos | [IEnumerable&lt;UnmergeCellInfo&gt;](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_System_Collections_Generic_IEnumerable_Syncfusion_Blazor_Grids_UnmergeCellInfo__) | Removes multiple merged areas in one combined operation, improving performance by reducing re‑renders. |
 | [UnmergeAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeAllAsync) | – | – | Removes all merged regions in the current view, restoring every cell to its original state. |
 
 To identify a merged region, use the following properties of the [UnmergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.UnmergeCellInfo.html) class:
