@@ -964,8 +964,8 @@ To define a merged region, use the following properties of the [MergeCellInfo](h
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<button @onclick="MergeCellsAsync">Merge Cell</button>
-<button @onclick="MergeMultipleCellsAsync">Merge Multiple Cells</button>
+<SfButton @onclick="MergeCellsAsync">Merge Cell</SfButton>
+<SfButton @onclick="MergeMultipleCellsAsync">Merge Multiple Cells</SfButton>
 
 <SfGrid @ref="Grid" DataSource="@TeleCastDataList" GridLines="GridLine.Both"
         AllowSelection="false" EnableHover="false">
