@@ -347,10 +347,10 @@ It is not recommended to have a connection string with sensitive information in 
 
 ![Move connection string to appsettings.json in Blazor](../images/change-connection-string.png)
 
-Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Program.cs** file in .NET 6 and .NET 7 application.
+Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Program.cs** file in .NET 9 and .NET 10 application.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 9 & .NET 10 (~/Program.cs)" %}
 
 builder.Services.AddDbContext<LibraryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
@@ -456,10 +456,10 @@ namespace LibraryManagement.Models
 
 #### Register the service in Program.cs
 
-Now, you need to register the **LibraryService** and **ILibraryService** as services in the **Program.cs** file for .NET6 and .NET7 applications. Register the Scoped Services like below.
+Now, you need to register the **LibraryService** and **ILibraryService** as services in the **Program.cs** file for .NET9 and .NET10 applications. Register the Scoped Services like below.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 9 & .NET 10 (~/Program.cs)" %}
 
 builder.Services.AddScoped<ILibraryService, LibraryService>();
 builder.Services.AddDbContext<LibraryContext>(option =>
@@ -523,8 +523,8 @@ In this demo application, the latest theme will be used.
 
   * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
   * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
-    * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** file for .NET 6.
+    * **~/Pages/_Host.cshtml** file for .NET 10.
+    * **~/Pages/_Layout.cshtml** file for .NET 9.
 
 {% highlight cshtml %}
 
@@ -679,16 +679,20 @@ You can enable editing in the grid component using the **GridEditSettings** comp
 
 [Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing#editing)
 
-Here, inline edit mode and **Toolbar** property are used to show toolbar items for editing.
-While using the `DataSource` property of the Grid, changes will be reflected only in the Grid’s local datasource. To ensure that changes are also updated in the database, CRUD operations must be handled externally by using the Grid’s row-level events.  
+Here, inline edit mode and the **Toolbar** property are used to display toolbar items for editing.  
+When using the `DataSource` property of the Grid, changes are reflected only in the Grid’s local datasource. To ensure that changes are also updated in the database, CRUD operations must be handled externally through the Grid’s row-level events.
 
-- **RowCreated** – Triggered after a new record has been added. This event can be used to insert the new record into the database.  
-- **RowEdited** – Triggered after an existing record has been modified. This event can be used to update the corresponding record in the database.  
-- **RowDeleted** – Triggered after a record has been removed. This event can be used to delete the record from the database.  
+- **RowUpdating** – Triggered when a record is added or edited.  
+  - **Added**: Use this event to insert the new record into the database.  
+  - **Edited**: Use this event to update the corresponding record in the database.  
 
-By handling these events, the Grid can remain synchronized with the database. The Grid editing and toolbar features can be combined with these row-level events to provide full CRUD functionality with the existing Grid model.
+- **RowDeleting** – Triggered when a record is removed.  
+  - Use this event to delete the record from the database.  
 
-We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionComplete event code with the previous Grid model.
+By handling these events, the Grid remains synchronized with the database. The editing and toolbar features can be combined with these row-level events to provide complete CRUD functionality with the existing Grid model.
+
+
+We have added the DataGrid editing, toolbar, and RowUpdating and RowDeleting event code with the previous Grid model.
 
 
 {% tabs %}
@@ -722,24 +726,33 @@ We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionCompl
     {
         LibraryBooks = await clientlibrary.GetBooks();
     }
-    public void RowCreatedHandler(RowCreatedEventArgs<Book> args)
+    public async Task RowDeletingHandler(RowDeletingEventArgs<Book> args)
     {
-        // Initialize default values or cancel adding using args.Cancel.
-        await clientlibrary.AddBook(args.Data);
-    }
+       // Get the Id of the record being deleted
+       var id = args.Datas[0].Id;
 
-    public void RowEditedHandler(RowEditedEventArgs<Book> args)
+       // Remove the book from the database
+       await clientlibrary.DeleteBook(id);
+    }
+       
+
+    public async Task RowUpdatingHandler(RowUpdatingEventArgs<Book> args)
     {
-        // Configure editors or cancel editing using args as needed.
-        await clientlibrary.UpdateBook(args.Data);
-    }
+       // Determine whether the action is Add or Edit
+       var action = args.Action;
 
+       if (action == SaveActionType.Added)
+       {
+           // Insert new book into the database
+           await clientlibrary.InsertBook(args.Data);
+       }
+       else if (action == SaveActionType.Edited)
+       {
+           // Update existing book in the database
+           await clientlibrary.UpdateBook(args.Data.Id, args.Data);
+       }
+}
 
-    public void RowDeletedHandler(RowDeletedEventArgs<Book> args)
-    {
-        // Confirm or cancel deletion based on business rules.
-        await clientlibrary.DeleteBook(args.Data.Id);
-    }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="Blazor Server App" %}
@@ -767,24 +780,32 @@ We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionCompl
     {
         LibraryBooks = await LibraryService.GetBooks();
     }
-    public void RowCreatedHandler(RowCreatedEventArgs<Book> args)
+    public async Task RowDeletingHandler(RowDeletingEventArgs<Book> args)
     {
-        // Initialize default values or cancel adding using args.Cancel.
-        await LibraryService.AddBook(args.Data);
-    }
+       // Get the Id of the record being deleted
+       var id = args.Datas[0].Id;
 
-    public void RowEditedHandler(RowEditedEventArgs<Book> args)
-    {
-        // Configure editors or cancel editing using args as needed.
-        await LibraryService.UpdateBook(args.Data);
-    }
+       // Remove the book from the database
+       LibraryService.DeleteBook(id);
+   }
 
+   public async Task RowUpdatingHandler(RowUpdatingEventArgs<Book> args)
+   {
+       // Determine whether the action is Add or Edit
+       var action = args.Action;
 
-    public void RowDeletedHandler(RowDeletedEventArgs<Book> args)
-    {
-        // Confirm or cancel deletion based on business rules.
-        await LibraryService.DeleteBook(args.Data.Id);
-    }
+       if (action == SaveActionType.Added)
+       {
+           // Insert new book into the database
+           await LibraryService.InsertBook(args.Data);
+       }
+       else if (action == SaveActionType.Edited)
+       {
+           // Update existing book in the database
+           await LibraryService.UpdateBook(args.Data.Id, args.Data);
+       }
+   }
+
 }
 
 {% endhighlight %}
@@ -798,25 +819,48 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 ![After Clicking a Add button in Blazor](../images/add-row.png)
 
-After clicking the **Add** button in Blazor, use the **Update** toolbar button to confirm the insert action. At this point, the **RowCreated** event will be triggered. This event can be used to insert the new record into the database (`Book` table) by calling the `InsertBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App.Refer to the following code example.
+After clicking the **Add** button in Blazor, use the **Update** toolbar button to confirm the insert action. At this point, the **RowUpdating** event with the **Added** action will be triggered, and this can be used to insert the new record into the `Book` table by calling the `InsertBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App.
+
 
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-public void RowCreatedHandler(RowCreatedEventArgs<Book> args)
+public async Task RowUpdatingHandler(RowUpdatingEventArgs<Book> args)
 {
-    // Initialize default values or cancel adding using args.Cancel.
-    await LibraryService.AddBook(args.Data);
+    // Determine whether the action is Add or Edit
+    var action = args.Action;
+
+    if (action == SaveActionType.Added)
+    {
+        // Initialize default values or cancel adding using args.Cancel.
+        await clientlibrary.InsertBook(args.Data);
+    }
+    else if (action == SaveActionType.Edited)
+    {
+        // Initialize default values or cancel adding using args.Cancel.
+        await clientlibrary.UpdateBook(args.Data.Id, args.Data);
+    }
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="Blazor Server App" %}
 
-public void RowCreatedHandler(RowCreatedEventArgs<Book> args)
+public async Task RowUpdatingHandler(RowUpdatingEventArgs<Book> args)
 {
-    // Initialize default values or cancel adding using args.Cancel.
-    await LibraryService.AddBook(args.Data);
+    // Determine whether the action is Add or Edit
+    var action = args.Action;
+
+    if (action == SaveActionType.Added)
+    {
+        // Initialize default values or cancel adding using args.Cancel.
+        await LibraryService.InsertBook(args.Data);
+    }
+    else if (action == SaveActionType.Edited)
+    {
+        // Initialize default values or cancel adding using args.Cancel.
+        await LibraryService.UpdateBook(args.Data.Id, args.Data);
+    }
 }
 
 {% endhighlight %}
@@ -830,27 +874,47 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 ![After Clicking a update button in Blazor](../images/update.png)
 
-Now, the Price column value is changed to 125 from 250. After modifying the values, click the **Update** toolbar button to confirm the changes. At this point, the **RowEdited** event will be triggered. This event can be used to update the corresponding record in the database (`Book` table) by calling the `UpdateBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App.Refer to the following code example.
-
+Now, the **Price** column value is changed to `125` from `250`. After modifying the values, click the **Update** toolbar button to confirm the changes. At this point, the **RowUpdating** event with the **Edited** action will be triggered. This event can be used to update the corresponding record in the database (`Book` table) by calling the `UpdateBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App. Refer to the following code example:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-public void RowEditedHandler(RowEditedEventArgs<Book> args)
+public async Task RowUpdatingHandler(RowUpdatingEventArgs<Book> args)
 {
-    // Configure editors or cancel editing using args as needed.
-    await clientlibrary.UpdateBook(args.Data);
+    // Determine whether the action is Add or Edit
+    var action = args.Action;
+
+    if (action == SaveActionType.Added)
+    {
+        // Initialize default values or cancel adding using args.Cancel.
+        await clientlibrary.InsertBook(args.Data);
+    }
+    else if (action == SaveActionType.Edited)
+    {
+        // Initialize default values or cancel adding using args.Cancel.
+        await clientlibrary.UpdateBook(args.Data.Id, args.Data);
+    }
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="Blazor Server App" %}
 
-public void RowEditedHandler(RowEditedEventArgs<Book> args)
+public async Task RowUpdatingHandler(RowUpdatingEventArgs<Book> args)
 {
-    // Configure editors or cancel editing using args as needed.
-    await clientlibrary.UpdateBook(args.Data);
-}
+    // Determine whether the action is Add or Edit
+    var action = args.Action;
 
+    if (action == SaveActionType.Added)
+    {
+        // Initialize default values or cancel adding using args.Cancel.
+        await LibraryService.InsertBook(args.Data);
+    }
+    else if (action == SaveActionType.Edited)
+    {
+        // Initialize default values or cancel adding using args.Cancel.
+        await LibraryService.UpdateBook(args.Data.Id, args.Data);
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -860,24 +924,26 @@ The resultant grid will look like below.
 
 ### Delete a row
 
-To delete a row, select any row and click the **Delete** toolbar button. After confirming the deletion, the **RowDeleted** event will be triggered. This event can be used to remove the record from the database (`Book` table) by calling the `DeleteBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App.Refer to the following code example.
+To delete a row, select any row and click the **Delete** toolbar button. After confirming the deletion, the **RowDeleting** event will be triggered. This event can be used to remove the record from the database (`Book` table) by calling the `DeleteBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App. Refer to the following code example:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-public void RowDeletedHandler(RowDeletedEventArgs<Book> args)
+public async Task RowDeletingHandler(RowDeletingEventArgs<Book> args)
 {
     // Confirm or cancel deletion based on business rules.
-    await LibraryService.DeleteBook(args.Data.Id);
+    var id = args.Datas[0].Id;
+    await clientlibrary.DeleteBook(id);
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="Blazor Server App" %}
 
-public void RowDeletedHandler(RowDeletedEventArgs<Book> args)
+public async Task RowDeletingHandler(RowDeletingEventArgs<Book> args)
 {
     // Confirm or cancel deletion based on business rules.
-    await LibraryService.DeleteBook(args.Data.Id);
+    var id = args.Datas[0].Id;
+    await LibraryService.DeleteBook(id);
 }
 
 {% endhighlight %}
