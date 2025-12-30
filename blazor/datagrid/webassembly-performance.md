@@ -107,7 +107,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVIZyWdAaNWlsFx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBosssTgZQRxUWZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* `PreventRender` method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
 >* `PreventRender` method can be used only after Grid completed initial rendering. Calling this method during initial rendering will not have any effect.
@@ -205,7 +205,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBoDIWnqvasLQsp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeWCifKNvnampR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* `PreventRender` property internally overrides the [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRender) method of the Grid to prevent rendering.
 >* It is recommended to set `PreventRender` as true for user interactive events such as [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected), [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting) etc. for better performance.
