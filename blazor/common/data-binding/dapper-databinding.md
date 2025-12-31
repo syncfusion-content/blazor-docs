@@ -10,12 +10,17 @@ platform: Blazor
 
 # How to Bind Data Using Dapper and Perform CRUD Operations
 
-In this section, you can learn how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a `Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid` Component, and perform CRUD operations.
+* Consume data from a SQL Server database using [Dapper](https://github.com/DapperLib/Dappe), a lightweight object mapper.
+* Bind the retrieved data to the Syncfusion® Blazor DataGrid component so that records can be displayed in a structured grid format.
+* Perform CRUD operations (Create, Read, Update, Delete) directly from the DataGrid by connecting it with a custom adaptor that interacts with the database.
+
+This approach combines the simplicity and performance of Dapper for data access with the rich UI features of the Syncfusion® Blazor DataGrid, enabling you to build a responsive and interactive application that supports inline editing, sorting, filtering, and paging.
 
 ## Prerequisite software
 
-* Visual Studio 2022.
-* MS SQL Server.
+* Visual Studio 2026 (or later) installed and configured for Blazor development.
+
+* MS SQL Server (2017 or later) available to host the sample database.
 
 ## Creating Blazor application
 
@@ -23,12 +28,12 @@ In this section, you can learn how to consume data from a database using [Dapper
 
 ## Creating the database
 
-First, create a database named `BugTracker` and a table named `Bugs` to hold the list of bugs.
+First, create a database to store all bug details. This involves setting up a database named `BugTracker` and creating a table named `Bugs`inside it.
 
-1. Open SQL Server 2017 / latest version.
-2. Now, create a new database named `BugTracker`.
-3. Right-click on the created database and select New Query.
-4. Use the following SQL query to create a table named Bugs.
+1. Open Microsoft SQL Server — this can be SQL Server 2025 (latest version) or an earlier version such as SQL Server 2017 or SQL Server 2022.
+2. Create a new database and name it `BugTracker`. 
+3. After the database is created, right‑click on it and select New Query.
+4. In the query window, run the following SQL script to create the Bugs table.
 
 ```
 Create Table Bugs(
@@ -45,24 +50,25 @@ Now, the table design will look like below.
 
 ## Adding Dapper package and creating a model class
 
-To use Dapper and access database in the application, you need to install the following `NuGet` packages.
+To enable Dapper and establish database connectivity within the application, the required `NuGet` packages must be installed. These packages are added through the Package Manager Console in Visual Studio.
 
-Run the following commands in the Package Manager Console.
+Run the following commands in the Package Manager Console to add the required packages:
 
-* The following command enable us to use Dapper in our application.
+* The following command installs Dapper, which enables the application to handle database operations efficiently.
 
     ```
     Install-Package Dapper -Version 2.1.24
 
     ```
 
-* The following command provide database access classes such as  `SqlConnection`, `SqlCommand`, etc. Also provides data provider for MS SQL Server.
+* The next command installs the SQL Client package. This package provides the necessary tools for connecting to Microsoft SQL Server, including features such as SqlConnection, SqlCommand, and other essential database components.
 
     ```
     Install-Package Microsoft.Data.SqlClient
     ```
 
-Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, you need to create model class manually. Here, you are creating a class named `Bug.cs` in the `Data` folder as follows.
+Many database tools automatically generate files to define how data is structured. Dapper does not provide this automatic feature, so the data structure must be created manually.
+As part of this setup, a file named `Bug.cs` is created inside the `Data` folder. This file represents how each bug record is stored in the database.
 
 ```c#
 
@@ -87,8 +93,7 @@ namespace {Your namespace}
 ![Bug Model Class in Blazor](../images/bug-model-class.png)
 
 ## Creating data access layer
-
-Before creating a data access layer, you need to set the connection string of our database in the `appsettings.json` file as follows.
+Before setting up the data access layer, the application needs to know how to connect to the database. This connection information is added to the `appsettings.json` file. Update the file with the required connection string as shown below.
 
 ```cshtml
 
@@ -99,15 +104,18 @@ Before creating a data access layer, you need to set the connection string of ou
 ```
 ![Connection String in appsettings](../images/connection-string-appsettings.png)
 
-Now, right-click the `Data` folder and select `Class` to create a new class named `BugDataAccessLayer.cs`. Replace this class with the following code, which contains code to handle CRUD in the `Bugs` table.
+Now, create the file that will handle all communication with the database.
+Right‑click the `Data` folder and choose Class to create a new file named `BugDataAccessLayer.cs`.
+This file will contain the code responsible for adding, updating, retrieving, and deleting bug records in the `Bugs` table.
 
-In the following example,
 
-* In the constructor of the `BugDataAccessLayer`, `IConfiguration` is injected, which helps us to get the connection string provided in the `appsettings.json`.
+The code inside this class performs the following tasks:
+
+* In the constructor of `BugDataAccessLayer` receives `IConfiguration`, which provides access to the connection details stored in `appsettings.json`. This ensures the class can connect to the correct database.
 * `GetBugsAsync` method performs select operation and returns a list of bugs from the Bugs table.
 * `AddBugAsync` method inserts a new bug into the Bugs table.
 * `UpdateBugAsync` method updates the given bug object in the table.
-* `RemoveBugAsync` method removes the given bug by Id.
+* `RemoveBugAsync` method deletes a bug entry based on its ID.
 
 {% highlight c# %}
 
@@ -181,9 +189,15 @@ builder.Services.AddScoped<BugDataAccessLayer>();
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+Run the following commands in the Package Manager Console.
+To add the **Blazor DataGrid** component to the application, open the NuGet Package Manager in Visual Studio
+(Tools → NuGet Package Manager → Manage NuGet Packages for Solution).
+Then search for and install the following packages:
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) – provides the DataGrid component.
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) – provides the required styles for the component.
+
+Alternatively, the same installation can be completed by running the following command in the Package Manager Console.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -196,7 +210,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-Open `_Import.razor` file and add the following namespaces which are required to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid Component in this application.
+Open the `_Import.razor` file and add the following namespaces. These entries are required for the application to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component.
 
 {% highlight razor %}
 
@@ -206,7 +220,7 @@ Open `_Import.razor` file and add the following namespaces which are required to
 
 {% endhighlight %}
 
-Open `Program.cs` file in your application and register the Syncfusion<sup style="font-size:70%">&reg;</sup> service.
+Open the `Program.cs` file in your the application and register the Syncfusion<sup style="font-size:70%">&reg;</sup> service.
 
 ```cshtml
 
@@ -218,7 +232,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides different themes. They are:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides a variety of built‑in themes that can be applied to the application. The available themes include:
 
 * Bootstrap4
 * Material
@@ -226,11 +240,13 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides different theme
 * Bootstrap
 * High Contrast
 
-In this demo application, the Bootstrap4 theme will be used.
+In this sample application, the Bootstrap4 theme is used.
 
-* For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 7** app, add the theme reference inside the `<head>` section of the **~/Pages/_Host.cshtml** file.
 
-* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, add the theme reference inside the `<head>` section of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 8**,**.NET 9**, and **.NET 10** apps,add the theme reference inside the `<head>` section of the **~/Components/App.razor** file.
 
 
 {% highlight cshtml %}
@@ -241,11 +257,13 @@ In this demo application, the Bootstrap4 theme will be used.
 
 {% endhighlight %}
 
-Also, include the script reference in the following files
+Be sure to include the required script reference in the correct file based on the .NET version:
 
 * For **.NET 7** app, add script reference at end of the `<body>` section of the **~/Pages/_Host.cshtml** file.
 
 * For **.NET 6** app, add script reference at end of the `<body>` section of the **~/Pages/_Layout.cshtml** file.
+
+*For **.NET 8**,**.NET 9**, and **.NET 10** apps , add script reference at end of the `<body>` section of the **~/Components/App.razor** file.
 
 {% highlight cshtml %}
 <body>
@@ -254,7 +272,7 @@ Also, include the script reference in the following files
 </body>
 {% endhighlight %}
 
-In previous steps, you have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, you can add the DataGrid Component to the `index.razor` page of your app.
+After completing the previous configuration steps for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package, the DataGrid component can be added to the `Home.razor` page to initialize the grid within the application.
 
 {% highlight cshtml %}
 
@@ -265,20 +283,25 @@ In previous steps, you have successfully configured the Syncfusion<sup style="fo
 
 ## Binding data to the DataGrid component
 
-Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) here.
+The DataGrid can display information stored in a SQL database. Dapper is used to collect this information, and the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid shows it on the screen.
 
-The following points must be considered for creating a custom adaptor.
+To make this connection work, the DataGrid uses a feature called [custom data binding](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor). This feature allows the application to control how data is loaded, saved, updated, or deleted.
 
-* Our custom adaptor must extend the `DataAdaptor` class.
-* Override available CRUD methods to handle data querying and manipulation.
-* Register our custom adaptor class as a service in the `Program.cs`.
+A custom adaptor acts as the communication layer between the database and the DataGrid.During the creation of this adaptor, the following requirements must be metr.
 
-Now, create a new class named `BugDataAdaptor.cs` under the `Data` folder and replace the following code in that class.
+* The custom adaptor must inherit from the `DataAdaptor` class.
+* CRUD‑related methods must be implemented to manage data retrieval and updates.
+* The adaptor must be registered as a service in the `Program.cs` file to ensure availability within the application.
 
-In the following code example,
+### Creating the Custom Adaptor File
 
-* Extended `BugDataAdaptor` class with `DataAdaptor` base class.
-* Injected `BugDataAccessLayer` instance to perform data operations.
+A file named `BugDataAdaptor.cs` can be added under the `Data` folder.
+This file includes:
+
+* A `BugDataAdapto`r class that extends the DataAdaptor base class.
+* An integrated 'BugDataAccessLayer' instance responsible for handling all database operations.
+
+This structure ensures that the DataGrid receives accurate data from the database and efficiently processes changes made through the grid.
 
 {% highlight c# %}
 
@@ -300,7 +323,7 @@ public class BugDataAdaptor: DataAdaptor
 
 {% endhighlight %}
 
-Now, Open the `Program.cs` file in the application and register the `BugDataAdaptor` class.
+Next, open the `Program.cs` file in the application and register the `BugDataAdaptor` class to make it available for DataGrid operations.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
@@ -314,13 +337,12 @@ builder.Services.AddScoped<BugDataAdaptor>();
 {% endhighlight %}
 {% endtabs %}
 
-Now, you need to add the `SfDataManager` in Grid for binding the data to the Grid and added column definition.
+Next, add the `SfDataManager` component to the Grid to enable data binding and define the required column structure.
 
 In the following code example,
 
-* Defined `SfDataManager` component to provide data source to the grid. You can see that we have specified the `AdaptorInstance` property with the type of the custom adaptor we created in the previous step and mentioned the `Adaptor` property as `Adaptors.CustomAdaptor`.
-
-* `TValue` is specified as `Bug` class.
+* Configures the `SfDataManager` component as the data source for the Grid, with the `AdaptorInstance` property set to the custom adaptor created earlier and the `Adaptor` property assigned as `Adaptors.CustomAdaptor`.
+* Sets the `TValue` parameter to the Bug class to ensure proper data mapping within the Grid.
 
 {% highlight razor %}
 
@@ -330,7 +352,7 @@ In the following code example,
 
 {% endhighlight %}
 
-Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Next, you can create columns using the following code. Let's explore the properties used and their applications.
+Grid columns can be added using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. The following code example shows how to create these columns. Each column includes properties that control how data is displayed and formatted within the Grid.
 
 {% highlight razor %}
 
@@ -347,19 +369,19 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
 
 {% endhighlight %}
 
-Now, the DataGrid will look like this while running the application. The displayed records are fetched from the database.
+When the application is running, the DataGrid appears as shown below, displaying records retrieved directly from the database.
 
 ![Bug Grid Data in Blazor](../images/bug-grid-data.png)
 
 ## Handling CRUD operations with our Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
+Editing in the Grid can be enabled by using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. The Grid supports multiple editing modes, including Inline (Normal), Dialog, and Batch editing. Each mode provides a different way to modify records directly within the Grid. Additional details about these editing options are available in the official documentation.
 
 [Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing#editing)
 
-N> Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
+N> Normal editing is the default mode used by the DataGrid. To enable editing for a specific record, the column containing unique values must have the IsPrimaryKey property set to true. This ensures that the Grid can correctly identify and update the selected record.
 
-Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property to show toolbar items for editing.
+In this setup, the Grid uses Inline editing mode, and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property is enabled to display editing options such as Add, Edit, Delete, Update, and Cancel.
 
 {% highlight razor %}
 
@@ -377,11 +399,11 @@ Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.
 
 {% endhighlight %}
 
-You have already created CRUD operations methods in the data access layer section itself. Now, you are going to call those methods while performing CRUD actions in DataGrid.
+The CRUD operation methods are already defined in the data access layer. These methods are now used by the DataGrid to handle actions such as adding, updating, and deleting records during Grid interactions.
 
 ## Insert a row
 
-Add the following codes(`InsertAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform insert operation.
+Add the `InsertAsync` method to the `BugDataAdaptor`(CustomAdaptor) class to handle the insertion of new records into the database.
 
 {% highlight c# %}
 
@@ -393,17 +415,17 @@ public override async Task<object> InsertAsync(DataManager dataManager, object d
 
 {% endhighlight %}
 
-To insert a new row, click the `Add` toolbar button. The new record edit form will look like below.
+To add a new row, select the `Add` option from the toolbar. This action opens a form where the details for the new record can be entered, as shown in the image below.
 
 ![Insert a row in Grid](../images/insert-a-row.png)
 
-Clicking the `Update` toolbar button will call the `InsertAsync` method of our `BugDataAdaptor` to insert the record in the `Bug` table. Now, the successfully inserted record in the grid will look like below.
+Clicking the `Update` option in the toolbar triggers the `InsertAsync` method in the `BugDataAdaptor`. This action adds the new record to the `Bug` table. After the insertion is completed, the updated DataGrid displays the newly added record, as shown below.
 
 ![After inserting a row in Grid](../images/after-inserting-a-row.png)
 
 ## Update a row
 
-Add the following codes (`UpdateAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
+Add the `UpdateAsync` method to the `BugDataAdaptor`(CustomAdaptor) class to handle the update operation for modifying existing records in the database.
 
 {% highlight c# %}
 
@@ -415,17 +437,17 @@ public override async Task<object> UpdateAsync(DataManager dataManager, object d
 
 {% endhighlight %}
 
-To edit a row, select any row and click the `Edit` toolbar button. The edit form will look like below.
+To initiate row editing, select a record and activate the `Edit` option from the toolbar. The corresponding edit form is then displayed.
 
 ![Updating a row in Grid](../images/updating-a-row.png)
 
-Here, the `Status` field value is changed from `Not started` to `In progress`. Clicking the `Update` toolbar button will call the `UpdateAsync` method of `BugDataAdaptor` to update the record in the `Bug` table. Now, the successfully updated record in the grid will look like below.
+The `Status` field is updated from `Not started` to `In progress`. Selecting the `Update` option in the toolbar triggers the `UpdateAsync` method of the `BugDataAdaptor`, which applies the modified data to the `Bug` table. After the update operation is completed, the revised record is displayed in the grid as shown below.
 
 ![After updating a row in Grid](../images/after-updating.png)
 
 ## Delete a row
 
-Add the following codes(`RemoveAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
+Include the following(`RemoveAsync`) method in the `BugDataAdaptor` (CustomAdaptor) class to enable the delete operation
 
 {% highlight c# %}
 
@@ -437,7 +459,7 @@ public override async Task<object> RemoveAsync(DataManager dataManager, object p
 
 {% endhighlight %}
 
-To delete a row, select any row and click the `Delete` toolbar button. Clicking the `Delete` toolbar button will call the `RemoveAsync` method of our `BugDataAdaptor` to update the record in the `Bug` table.
+To delete a row, select the desired record and use the `Delete` option in the toolbar. Activating the `Delete` command triggers the `RemoveAsync` method in the `BugDataAdaptor`, which processes the delete operation for the corresponding entry in the `Bug` table.
 
 N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud) location.
 
