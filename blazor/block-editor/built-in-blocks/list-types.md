@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lists in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about List Blocks with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn about list blocks including bullet lists, numbered lists, and checklists in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -94,35 +94,35 @@ By default, the [IsChecked](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </div>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Task List:"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Task List:"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Checklist,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Completed task (checked)"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Completed task (checked)"}},
             Properties = new ChecklistBlockSettings {IsChecked = true}
         },
         new BlockModel
         {
             BlockType = BlockType.Checklist,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Pending task (unchecked)"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Pending task (unchecked)"}},
             Properties = new ChecklistBlockSettings {IsChecked = false}
         },
         new BlockModel
         {
             BlockType = BlockType.Checklist,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "High priority task"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "High priority task"}},
             Properties = new ChecklistBlockSettings {IsChecked = true}
         },
         new BlockModel
         {
             BlockType = BlockType.Checklist,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Low priority task"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Low priority task"}},
             Properties = new ChecklistBlockSettings {IsChecked = false}
         }
     };
@@ -159,28 +159,28 @@ The following example demonstrates how to render the different types of list blo
 </div>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.BulletList,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Features of the Block Editor"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Features of the Block Editor"}}
         },
         new BlockModel
         {
             BlockType = BlockType.NumberedList,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Step 1: Initialize the Block Editor"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Step 1: Initialize the Block Editor"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Checklist,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Review documentation"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Review documentation"}},
             Properties = new ChecklistBlockSettings {IsChecked = true}
         },
         new BlockModel
         {
             BlockType = BlockType.Checklist,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Implement drag and drop functionality"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Implement drag and drop functionality"}},
             Properties = new ChecklistBlockSettings {IsChecked = false}
         }
     };
