@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Embed in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Embed with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn about embedding images and visual content in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -57,7 +57,7 @@ The [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.
 </div>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
@@ -67,7 +67,7 @@ The [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "You can customize images further by configuring properties like allowedTypes for file upload restrictions, saveFormat for storage preferences, and cssClass for custom styling."}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "You can customize images further by configuring properties like allowedTypes for file upload restrictions, saveFormat for storage preferences, and cssClass for custom styling."}}
         }
     };
 }
