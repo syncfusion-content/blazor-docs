@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cross-Site scripting in Blazor Block Editor Component | Syncfusion
-description: Learn about Cross-Site Scripting (XSS) prevention and HTML sanitization in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
+description: Learn about XSS prevention and HTML sanitization features in the Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
 documentation: ug
