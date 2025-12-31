@@ -326,7 +326,7 @@ public class BugDataAdaptor: DataAdaptor
 Next, open the `Program.cs` file in the application and register the `BugDataAdaptor` class to make it available for DataGrid operations.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs"hl_lines="4"%}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="4" %}
 
 ....
 builder.Services.AddScoped<BugDataAccessLayer>();
