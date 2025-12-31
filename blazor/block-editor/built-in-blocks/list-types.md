@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lists in Blazor Block Editor Component | Syncfusion
-description: Learn about list blocks including bullet lists, numbered lists, and checklists in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
+description: Learn about list blocks including bullet lists, numbered lists, and checklists in the Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
 documentation: ug
