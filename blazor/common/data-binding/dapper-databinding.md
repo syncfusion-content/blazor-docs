@@ -10,7 +10,7 @@ platform: Blazor
 
 # How to Bind Data Using Dapper and Perform CRUD Operations
 
-* Consume data from a SQL Server database using [Dapper](https://github.com/DapperLib/Dappe), a lightweight object mapper.
+* Consume data from a SQL Server database using [Dapper](https://github.com/DapperLib/Dapper), a lightweight object mapper.
 * Bind the retrieved data to the Syncfusion® Blazor DataGrid component so that records can be displayed in a structured grid format.
 * Perform CRUD operations (Create, Read, Update, Delete) directly from the DataGrid by connecting it with a custom adaptor that interacts with the database.
 
@@ -98,7 +98,7 @@ Before setting up the data access layer, the application needs to know how to co
 ```cshtml
 
 "ConnectionStrings": {
-  "BugTrackerDatabase": "Server= {Your Server Name};Database=BugTracker;Integrated Security=True"
+  "BugTrackerDatabase": "Server= {Your Server Name};Database=BugTracker;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
 }
 
 ```
@@ -287,7 +287,7 @@ The DataGrid can display information stored in a SQL database. Dapper is used to
 
 To make this connection work, the DataGrid uses a feature called [custom data binding](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor). This feature allows the application to control how data is loaded, saved, updated, or deleted.
 
-A custom adaptor acts as the communication layer between the database and the DataGrid.During the creation of this adaptor, the following requirements must be metr.
+A custom adaptor acts as the communication layer between the database and the DataGrid.During the creation of this adaptor, the following requirements must be met.
 
 * The custom adaptor must inherit from the `DataAdaptor` class.
 * CRUD‑related methods must be implemented to manage data retrieval and updates.
@@ -298,7 +298,7 @@ A custom adaptor acts as the communication layer between the database and the Da
 A file named `BugDataAdaptor.cs` can be added under the `Data` folder.
 This file includes:
 
-* A `BugDataAdapto`r class that extends the DataAdaptor base class.
+* A `BugDataAdaptor` class that extends the DataAdaptor base class.
 * An integrated 'BugDataAccessLayer' instance responsible for handling all database operations.
 
 This structure ensures that the DataGrid receives accurate data from the database and efficiently processes changes made through the grid.
@@ -326,7 +326,7 @@ public class BugDataAdaptor: DataAdaptor
 Next, open the `Program.cs` file in the application and register the `BugDataAdaptor` class to make it available for DataGrid operations.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
+{% highlight c# tabtitle="~/Program.cs"hl_lines="4"%}
 
 ....
 builder.Services.AddScoped<BugDataAccessLayer>();
