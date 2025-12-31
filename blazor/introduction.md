@@ -95,6 +95,331 @@ padding-top: 20px;
     content: "\e706";
 }
 
+.sf-icon-fileupload:before {
+    content: "\e700";
+}
+.sf-icon-tooltip:before {
+    content: "\e701";
+}
+.sf-icon-word:before {
+    content: "\e702";
+}
+.sf-icon-datepicker:before {
+    content: "\e703";
+}
+.sf-icon-rangeselector:before {
+    content: "\e704";
+}
+.sf-icon-querybuilder:before {
+    content: "\e705";
+}
+.sf-icon-pivottable:before {
+    content: "\e706";
+}
+.sf-icon-contextmenu:before {
+    content: "\e707";
+}
+.sf-icon-smithchart:before {
+    content: "\e708";
+}
+.sf-icon-chartwizard:before {
+    content: "\e73a";
+}
+.sf-icon-toggleswitchbutton:before {
+    content: "\e709";
+}
+.sf-icon-circulargauge:before {
+    content: "\e710";
+}
+.sf-icon-filemanager:before {
+    content: "\e711";
+}
+.sf-icon-dashboardlayout:before {
+    content: "\e712";
+}
+.sf-icon-ganttchart:before {
+    content: "\e713";
+}
+.sf-icon-radiobutton:before {
+    content: "\e714";
+}
+.sf-icon-charts:before {
+    content: "\e715";
+}
+.sf-icon-inputmask:before {
+    content: "\e717";
+}
+.sf-icon-avatar:before {
+    content: "\e718";
+}
+.sf-icon-colorpicker:before {
+    content: "\e719";
+}
+.sf-icon-colorpalette:before {
+    content: "\e719";
+}
+.sf-icon-wordprocessor:before {
+    content: "\e720";
+}
+.sf-icon-chips:before {
+    content: "\e721";
+}
+.sf-icon-datagrid:before {
+    content: "\e722";
+}
+.sf-icon-listbox:before {
+    content: "\e723";
+}
+.sf-icon-textbox:before {
+    content: "\e724";
+}
+.sf-icon-dropdownlist:before {
+    content: "\e725";
+}
+.sf-icon-lineargauge:before {
+    content: "\e726";
+}
+.sf-icon-tabs:before {
+    content: "\e727";
+}
+.sf-icon-powerpoint:before {
+    content: "\e728";
+}
+.sf-icon-inplaceeditor:before {
+    content: "\e729";
+}
+.sf-icon-autocomplete:before {
+    content: "\e730";
+}
+.sf-icon-progressbutton:before {
+    content: "\e731";
+}
+.sf-icon-combobox:before {
+    content: "\e732";
+}
+.sf-icon-excel:before {
+    content: "\e733";
+}
+.sf-icon-multiselectdropdown:before {
+    content: "\e734";
+}
+.sf-icon-slider:before {
+    content: "\e735";
+}
+.sf-icon-rangeslider:before {
+    content: "\e735";
+}
+.sf-icon-checkbox:before {
+    content: "\e736";
+}
+.sf-icon-barcodegenerator:before {
+    content: "\e737";
+}
+.sf-icon-calendar:before {
+    content: "\e738";
+}
+.sf-icon-spreadsheet:before {
+    content: "\e739";
+}
+.sf-icon-sparklinecharts:before {
+    content: "\e740";
+}
+.sf-icon-card:before {
+    content: "\e741";
+}
+.sf-icon-accordion:before {
+    content: "\e742";
+}
+.sf-icon-button:before {
+    content: "\e743";
+}
+.sf-icon-splitter:before {
+    content: "\e744";
+}
+.sf-icon-sidebar:before {
+    content: "\e745";
+}
+.sf-icon-menubar:before {
+    content: "\e746";
+}
+.sf-icon-scheduler:before {
+    content: "\e747";
+}
+.sf-icon-bulletchart:before {
+    content: "\e748";
+}
+.sf-icon-spinner:before {
+    content: "\e749";
+}
+.sf-icon-signature:before { 
+    content: "\e750";
+}
+.sf-icon-carousel:before {
+    content: "\e751";
+}
+.sf-icon-pager:before {
+    content: "\e752";
+}
+.sf-icon-image_editor:before {
+    content: "\e753";
+}
+.sf-icon-3dchart:before {
+    content: "\e754";
+}
+.sf-icon-otpinput:before {
+    content: "\e755";
+}
+.sf-icon-aiassistview:before {
+    content: "\e756";
+}
+.sf-icon-speechtotext:before {
+    content: "\e757";
+}
+.sf-icon-timepicker:before {
+    content: "\e70a";
+}
+.sf-icon-treemap:before {
+    content: "\e70b";
+}
+.sf-icon-numerictextbox:before {
+    content: "\e70c";
+}
+.sf-icon-treegrid:before {
+    content: "\e70d";
+}
+.sf-icon-pdf:before {
+    content: "\e70e";
+}
+.sf-icon-richtexteditor:before {
+    content: "\e70f";
+}
+.sf-icon-listview:before {
+    content: "\e71a";
+}
+.sf-icon-splitbutton:before {
+    content: "\e71b";
+}
+.sf-icon-pdfviewer:before {
+    content: "\e71d";
+}
+.sf-icon-buttongroup:before {
+    content: "\e71e";
+}
+.sf-icon-badge:before {
+    content: "\e71f";
+}
+.sf-icon-daterangepicker:before {
+    content: "\e72a";
+}
+.sf-icon-diagram:before {
+    content: "\e72b";
+}
+.sf-icon-toast:before {
+    content: "\e72c";
+}
+.sf-icon-treeview:before {
+    content: "\e72d";
+}
+.sf-icon-dropdownmenu:before {
+    content: "\e72f";
+}
+.sf-icon-stockchart:before {
+    content: "\e73a";
+}
+.sf-icon-dialog:before {
+    content: "\e73b";
+}
+.sf-icon-maps:before {
+    content: "\e73c";
+}
+.sf-icon-toolbar:before {
+    content: "\e73d";
+}
+.sf-icon-heatmapchart:before {
+    content: "\e73e";
+}
+.sf-icon-datetimepicker:before {
+    content: "\e73f";
+}
+.sf-icon-kanban:before {
+    content: "\e74a";
+}
+.sf-icon-progressbar:before {
+    content: "\e74c";
+}
+.sf-icon-dropdowntree:before {
+    content: "\e74d";
+}
+.sf-icon-breadcrumb:before {
+    content: "\e74f";
+}
+.sf-icon-blockeditor:before {
+    content: "\e900";
+}
+.sf-icon-mediaquery:before {
+    content: "\e901";
+}
+.sf-icon-appbar:before {
+    content: "\e902";
+}
+.sf-icon-predefineddialogs:before {
+    content: "\e903";
+}
+.sf-icon-floatingactionbutton:before {
+    content: "\e904";
+}
+.sf-icon-message:before {
+    content: "\e905";
+}
+.sf-icon-skeleton:before {
+    content: "\e906";
+}
+.sf-icon-speeddial:before {
+    content: "\e907";
+    margin-left: 6.75px;
+    margin-right: 6.75px;
+}
+.sf-icon-arcgauge:before {
+    content: "\e908";
+}
+.sf-icon-mention:before {
+    content: "\e909";
+}
+.sf-icon-markdowneditor:before {
+    content: "\e910";
+}
+.sf-icon-sankey:before{
+  content: "\e911";
+}
+.sf-icon-chatui:before{
+    content: "\e912";
+}
+.sf-icon-ribbon:before{
+    content: "\e913";
+}
+
+.sf-icon-rating:before {
+    content: "\e90a";
+}
+.sf-icon-stepper:before {
+    content: "\e90b";
+} 
+.sf-icon-data_form:before {
+    content: "\e90c";
+}
+.sf-icon-timeline:before{
+    content: "\e90d";
+}
+.sf-icon-textarea:before {
+    content: "\e90e";
+}
+.sf-icon-multicolumncombobox:before {
+    content: "\e90f";
+}
+.sf-icon-accumulationchart:before {
+  content: "\e74b";
+}
+
 </style>
 
 <table id="table">
@@ -109,99 +434,99 @@ padding-top: 20px;
 <tr>
     <td>
         <div><p class="controlcategory-topics">GRIDS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/getting-started"><span class="sf-home-icon sf-icon-datagrid"></span> DataGrid</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/getting-started"><span class="sf-home-icon sf-icon-datagrid"></span>DataGrid</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started"><span class="sf-home-icon sf-icon-pivottable"></span>Pivot Table</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started">TreeGrid</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">Multicolumn ComboBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started"><span class="sf-home-icon sf-icon-treegrid"></span>TreeGrid</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started"><span class="sf-home-icon sf-icon-multicolumncombobox"></span>Multicolumn ComboBox</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">Rich Text Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp">Markdown Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started">Image Editor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"><span class="sf-home-icon sf-icon-richtexteditor"></span>Rich Text Editor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp"><span class="sf-home-icon sf-icon-markdowneditor"></span>Markdown Editor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started"><span class="sf-home-icon sf-icon-image_editor"></span>Image Editor</a></div>
         <div><p class="controlcategory">LAYOUT</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dialog/getting-started">Dialog</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp">Predefined Dialog</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/listview/getting-started">ListView</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/tooltip/getting-started">Tooltip</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/splitter/getting-started">Splitter</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started">Dashboard Layout</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/card/getting-started">Card</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/avatar/getting-started">Avatar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/media-query/getting-started">Media Query</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/timeline/getting-started">Timeline</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dialog/getting-started"><span class="sf-home-icon sf-icon-dialog"></span>Dialog</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp"><span class="sf-home-icon sf-icon-predefineddialogs"></span>Predefined Dialog</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/listview/getting-started"><span class="sf-home-icon sf-icon-listview"></span>ListView</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/tooltip/getting-started"><span class="sf-home-icon sf-icon-tooltip"></span>Tooltip</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/splitter/getting-started"><span class="sf-home-icon sf-icon-splitter"></span>Splitter</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started"><span class="sf-home-icon sf-icon-dashboardlayout"></span>Dashboard Layout</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/card/getting-started"><span class="sf-home-icon sf-icon-card"></span>Card</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/avatar/getting-started"><span class="sf-home-icon sf-icon-avatar"></span>Avatar</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/media-query/getting-started"><span class="sf-home-icon sf-icon-mediaquery"></span>Media Query</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/timeline/getting-started"><span class="sf-home-icon sf-icon-timeline"></span>Timeline</a></div>
     </td>
     <td>
         <div><p class="controlcategory-topics">DATA VISUALIZATION</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chart/getting-started">Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/3d-chart/getting-started-with-web-app">3D Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/sankey/getting-started">Sankey</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stock-chart/getting-started">Stock Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/circular-gauge/getting-started">Circular Gauge</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/linear-gauge/getting-started">Linear Gauge</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/diagram/getting-started">Diagram</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/heatmap-chart/getting-started">HeatMap</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/maps/getting-started">Maps</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-selector/getting-started">Range Selector</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smith-chart/getting-started">Smith Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/sparkline/getting-started">Sparkline Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/accumulation-chart/getting-started-with-web-app">Accumulation Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/barcode/getting-started">Barcode</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treemap/getting-started">TreeMap</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/bullet-chart/getting-started">Bullet Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/kanban/getting-started">Kanban</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chart/getting-started"><span class="sf-home-icon sf-icon-charts"></span>Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/3d-chart/getting-started-with-web-app"><span class="sf-home-icon sf-icon-3dchart"></span>3D Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/sankey/getting-started"><span class="sf-home-icon sf-icon-sankey"></span>Sankey</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stock-chart/getting-started"><span class="sf-home-icon sf-icon-stockchart"></span>Stock Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/circular-gauge/getting-started"><span class="sf-home-icon sf-icon-circulargauge"></span>Circular Gauge</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/linear-gauge/getting-started"><span class="sf-home-icon sf-icon-lineargauge"></span>Linear Gauge</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/diagram/getting-started"><span class="sf-home-icon sf-icon-diagram"></span>Diagram</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/heatmap-chart/getting-started"><span class="sf-home-icon sf-icon-heatmapchart"></span>HeatMap</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/maps/getting-started"><span class="sf-home-icon sf-icon-maps"></span>Maps</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-selector/getting-started"><span class="sf-home-icon sf-icon-rangeselector"></span>Range Selector</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smith-chart/getting-started"><span class="sf-home-icon sf-icon-smithchart"></span>Smith Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/sparkline/getting-started"><span class="sf-home-icon sf-icon-sparklinecharts"></span>Sparkline Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/accumulation-chart/getting-started-with-web-app"><span class="sf-home-icon sf-icon-accumulationchart"></span>Accumulation Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/barcode/getting-started"><span class="sf-home-icon sf-icon-barcodegenerator"></span>Barcode</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treemap/getting-started"><span class="sf-home-icon sf-icon-treemap"></span>TreeMap</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/bullet-chart/getting-started"><span class="sf-home-icon sf-icon-bulletchart"></span>Bullet Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/kanban/getting-started"><span class="sf-home-icon sf-icon-kanban"></span>Kanban</a></div>
         <div><p class="controlcategory">BUTTONS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/button/getting-started">Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/button-group/getting-started">Button Group</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started">Dropdown Menu</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-button/getting-started">Progress Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/split-button/getting-started">Split Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chip/getting-started">Chips</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/appearance/icons">Icons</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/floating-action-button/getting-started">Floating Action Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speeddial/getting-started">Speed Dial</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/button/getting-started"><span class="sf-home-icon sf-icon-button"></span>Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/button-group/getting-started"><span class="sf-home-icon sf-icon-buttongroup"></span>Button Group</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started"><span class="sf-home-icon sf-icon-dropdownmenu"></span>Dropdown Menu</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-button/getting-started"><span class="sf-home-icon sf-icon-progressbutton"></span>Progress Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/split-button/getting-started"><span class="sf-home-icon sf-icon-splitbutton"></span>Split Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chip/getting-started"><span class="sf-home-icon sf-icon-chips"></span>Chips</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/appearance/icons"><span class="sf-home-icon sf-icon-appbar"></span>Icons</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/floating-action-button/getting-started"><span class="sf-home-icon sf-icon-floatingactionbutton"></span>Floating Action Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speeddial/getting-started"><span class="sf-home-icon sf-icon-speeddial"></span>Speed Dial</a></div>
     </td>
     <td>
         <div><p class="controlcategory-topics">CALENDARS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/scheduler/getting-started">Scheduler</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/gantt-chart/getting-started">Gantt Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/calendar/getting-started">Calendar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datepicker/getting-started">DatePicker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started">DateRangePicker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datetime-picker/getting-started">DateTime Picker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/timepicker/getting-started">TimePicker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/scheduler/getting-started"><span class="sf-home-icon sf-icon-scheduler"></span>Scheduler</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/gantt-chart/getting-started"><span class="sf-home-icon sf-icon-ganttchart"></span>Gantt Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/calendar/getting-started"><span class="sf-home-icon sf-icon-calendar"></span>Calendar</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datepicker/getting-started"><span class="sf-home-icon sf-icon-datepicker"></span>DatePicker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started"><span class="sf-home-icon sf-icon-daterangepicker"></span>DateRangePicker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datetime-picker/getting-started"><span class="sf-home-icon sf-icon-datetimepicker"></span>DateTime Picker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/timepicker/getting-started"><span class="sf-home-icon sf-icon-timepicker"></span>TimePicker</a></div>
         <div><p class="controlcategory">INPUTS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/textbox/getting-started">TextBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/input-mask/getting-started">Input Mask</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started">Numeric TextBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/radio-button/getting-started">RadioButton</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/check-box/getting-started">CheckBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/color-picker/getting-started">Color Picker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-upload/getting-started">File Upload</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-slider/getting-started">Range Slider</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp">Textarea</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started">Toggle Switch Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/signature/getting-started">Signature</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rating/getting-started">Rating</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp">OTP Input</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app">Speech To Text</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/textbox/getting-started"><span class="sf-home-icon sf-icon-textbox"></span>TextBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/input-mask/getting-started"><span class="sf-home-icon sf-icon-inputmask"></span>Input Mask</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started"><span class="sf-home-icon sf-icon-numerictextbox"></span>Numeric TextBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/radio-button/getting-started"><span class="sf-home-icon sf-icon-radiobutton"></span>RadioButton</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/check-box/getting-started"><span class="sf-home-icon sf-icon-checkbox"></span>CheckBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/color-picker/getting-started"><span class="sf-home-icon sf-icon-colorpicker"></span>Color Picker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-upload/getting-started"><span class="sf-home-icon sf-icon-fileupload"></span>File Upload</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-slider/getting-started"><span class="sf-home-icon sf-icon-rangeslider"></span>Range Slider</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp"><span class="sf-home-icon sf-icon-textarea"></span>Textarea</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started"><span class="sf-home-icon sf-icon-toggleswitchbutton"></span>Toggle Switch Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/signature/getting-started"><span class="sf-home-icon sf-icon-signature"></span>Signature</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rating/getting-started"><span class="sf-home-icon sf-icon-rating"></span>Rating</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp"><span class="sf-home-icon sf-icon-otpinput"></span>OTP Input</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app"><span class="sf-home-icon sf-icon-speechtotext"></span>Speech To Text</a></div>
         <div><p class="controlcategory">FORMS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started">In-place Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/query-builder/getting-started">Query Builder</a></div>
-		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/data-form/getting-started">Data Form</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started"><span class="sf-home-icon sf-icon-inplaceeditor"></span>In-place Editor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/query-builder/getting-started"><span class="sf-home-icon sf-icon-querybuilder"></span>Query Builder</a></div>
+		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/data-form/getting-started"><span class="sf-home-icon sf-icon-data_form"></span>Data Form</a></div>
         <div><p class="controlcategory">Interactive chat</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI AssistView</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chat-ui/getting-started">Chat UI</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started"><span class="sf-home-icon sf-icon-aiassistview"></span>AI AssistView</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chat-ui/getting-started"><span class="sf-home-icon sf-icon-chatui"></span>Chat UI</a></div>
     </td>
     <td>
         <div><p class="controlcategory-topics">DROPDOWNS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/autocomplete/getting-started">AutoComplete</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/listbox/getting-started">ListBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/combobox/getting-started">ComboBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dropdown-list/getting-started">Dropdown List</a></div>
-		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dropdown-tree/getting-started">Dropdown Tree</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started">MultiSelect Dropdown</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/mention/getting-started">Mention</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/autocomplete/getting-started"><span class="sf-home-icon sf-icon-autocomplete"></span>AutoComplete</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/listbox/getting-started"><span class="sf-home-icon sf-icon-listbox"></span>ListBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/combobox/getting-started"><span class="sf-home-icon sf-icon-combobox"></span>ComboBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dropdown-list/getting-started"><span class="sf-home-icon sf-icon-dropdownlist"></span>Dropdown List</a></div>
+		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dropdown-tree/getting-started"><span class="sf-home-icon sf-icon-dropdowntree"></span>Dropdown Tree</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started"><span class="sf-home-icon sf-icon-multiselectdropdown"></span>MultiSelect Dropdown</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/mention/getting-started"><span class="sf-home-icon sf-icon-mention"></span>Mention</a></div>
         <div><p class="controlcategory">NAVIGATION</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/accordion/getting-started">Accordion</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/accordion/getting-started"><span class="sf-home-icon sf-icon-accordion"></span>Accordion</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started">Breadcrumb</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/carousel/getting-started">Carousel</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/context-menu/getting-started">Context Menu</a></div>
