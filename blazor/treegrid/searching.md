@@ -77,7 +77,7 @@ namespace TreeGridComponent.Data {
 
 ## Initial search
 
-To apply search during initial rendering, configure the `Fields`, `Operator`, `Key`, and `IgnoreCase` properties in the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/SyncfusionSearchSettings.html).
+To apply search during initial rendering, configure the `Fields`, `Operator`, `Key`, and `IgnoreCase` properties in the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html).
 
 {% tabs %}
 
@@ -309,3 +309,248 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 
 {% endtabs %}
+
+## Searching with case sensitivity
+
+The Blazor TreeGrid searching functionality allows control over whether uppercase and lowercase letters must match exactly or can be ignored. By default, searching is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same). Case-sensitive search can be enabled by setting the [`TreeGridSearchSettings.IgnoreCase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreCase) property to **false**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+<div class="container mt-4">
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true" AllowSorting="true" AllowReordering AllowResizing
+                Toolbar="@(new List<string>() { "Search" })">
+        <TreeGridSearchSettings IgnoreCase="false"></TreeGridSearchSettings>
+        <TreeGridColumns>
+            <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90" IsPrimaryKey />
+            <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
+            <TreeGridColumn Field=@nameof(TreeTask.ResourceName) HeaderText="Resource Name" Width="180" />
+            <TreeGridColumn Field=@nameof(TreeTask.City) HeaderText="City" Width="140" />
+            <TreeGridColumn Field=@nameof(TreeTask.StartDate) HeaderText="Start Date" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="d" Width="130" />
+            <TreeGridColumn Field=@nameof(TreeTask.Duration) HeaderText="Duration (days)" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140" />
+        </TreeGridColumns>
+        <TreeGridEditSettings AllowAdding AllowDeleting AllowEditing></TreeGridEditSettings>
+    </SfTreeGrid>
+</div>
+@code{
+    private List<TreeTask> TreeData = new();
+    public SfTreeGrid<TreeTask> TreeGrid;
+    protected override void OnInitialized()
+    {
+        TreeData = TreeTask.GetTreeTasks();
+    }
+   
+}
+
+{% endhighlight %}
+{% highlight c# %}
+
+namespace TreeGridComponent.Data {
+
+    public class TreeTask
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; } = string.Empty;
+        public string ResourceName { get; set; } = string.Empty;
+        public string City { get; set; } = string.Empty;
+        public DateTime StartDate { get; set; }
+        public int Duration { get; set; }
+        public int? ParentID { get; set; }
+        public static List<TreeTask> GetTreeTasks() => new()
+        {
+            new TreeTask
+            {
+                TaskID = 1,
+                TaskName = "Market Analysis",
+                ResourceName = "José Álvarez",
+                City = "Sevilla",
+                StartDate = new DateTime(2024, 1, 2),
+                Duration = 5,
+                ParentID = null
+            },
+            new TreeTask
+            {
+                TaskID = 2,
+                TaskName = "Competitor Review",
+                ResourceName = "Zoë Brontë",
+                City = "São Paulo",
+                StartDate = new DateTime(2024, 1, 3),
+                Duration = 3,
+                ParentID = 1
+            },
+            new TreeTask
+            {
+                TaskID = 3,
+                TaskName = "Focus Group",
+                ResourceName = "François Dœuf",
+                City = "Montréal",
+                StartDate = new DateTime(2024, 1, 4),
+                Duration = 2,
+                ParentID = 1
+            },
+            new TreeTask
+            {
+                TaskID = 4,
+                TaskName = "Product Design",
+                ResourceName = "Mårten Šedý",
+                City = "Göteborg",
+                StartDate = new DateTime(2024, 1, 5),
+                Duration = 6,
+                ParentID = null
+            },
+            new TreeTask
+            {
+                TaskID = 5,
+                TaskName = "UX Workshop",
+                ResourceName = "Anaïs Löhn",
+                City = "München",
+                StartDate = new DateTime(2024, 1, 6),
+                Duration = 4,
+                ParentID = 4
+            },
+            new TreeTask
+            {
+                TaskID = 6,
+                TaskName = "Prototype Testing",
+                ResourceName = "Renée Faßbinder",
+                City = "Zürich",
+                StartDate = new DateTime(2024, 1, 8),
+                Duration = 3,
+                ParentID = 4
+            }
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIshikhPJJKWJV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Searching with ignore accent
+
+The Blazor TreeGrid search functionality can ignore diacritic characters or accents for enhanced search accuracy. By default, searches are accent-sensitive, requiring exact matches (e.g., "José" vs. "Jose"). Accent-insensitive search is enabled by setting the [`TreeGridSearchSettings.IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_IgnoreAccent) property to **true**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+<div class="container mt-4">
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true" AllowSorting="true" AllowReordering AllowResizing
+                Toolbar="@(new List<string>() { "Search" })">
+        <TreeGridSearchSettings IgnoreAccent="false"></TreeGridSearchSettings>
+        <TreeGridColumns>
+            <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90" IsPrimaryKey />
+            <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
+            <TreeGridColumn Field=@nameof(TreeTask.ResourceName) HeaderText="Resource Name" Width="180" />
+            <TreeGridColumn Field=@nameof(TreeTask.City) HeaderText="City" Width="140" />
+            <TreeGridColumn Field=@nameof(TreeTask.StartDate) HeaderText="Start Date" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="d" Width="130" />
+            <TreeGridColumn Field=@nameof(TreeTask.Duration) HeaderText="Duration (days)" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140" />
+        </TreeGridColumns>
+        <TreeGridEditSettings AllowAdding AllowDeleting AllowEditing></TreeGridEditSettings>
+    </SfTreeGrid>
+</div>
+@code{
+    private List<TreeTask> TreeData = new();
+    public SfTreeGrid<TreeTask> TreeGrid;
+    protected override void OnInitialized()
+    {
+        TreeData = TreeTask.GetTreeTasks();
+    }
+   
+}
+
+{% endhighlight %}
+{% highlight c# %}
+
+namespace TreeGridComponent.Data {
+
+    public class TreeTask
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; } = string.Empty;
+        public string ResourceName { get; set; } = string.Empty;
+        public string City { get; set; } = string.Empty;
+        public DateTime StartDate { get; set; }
+        public int Duration { get; set; }
+        public int? ParentID { get; set; }
+        public static List<TreeTask> GetTreeTasks() => new()
+        {
+            new TreeTask
+            {
+                TaskID = 1,
+                TaskName = "Market Analysis",
+                ResourceName = "José Álvarez",
+                City = "Sevilla",
+                StartDate = new DateTime(2024, 1, 2),
+                Duration = 5,
+                ParentID = null
+            },
+            new TreeTask
+            {
+                TaskID = 2,
+                TaskName = "Competitor Review",
+                ResourceName = "Zoë Brontë",
+                City = "São Paulo",
+                StartDate = new DateTime(2024, 1, 3),
+                Duration = 3,
+                ParentID = 1
+            },
+            new TreeTask
+            {
+                TaskID = 3,
+                TaskName = "Focus Group",
+                ResourceName = "François Dœuf",
+                City = "Montréal",
+                StartDate = new DateTime(2024, 1, 4),
+                Duration = 2,
+                ParentID = 1
+            },
+            new TreeTask
+            {
+                TaskID = 4,
+                TaskName = "Product Design",
+                ResourceName = "Mårten Šedý",
+                City = "Göteborg",
+                StartDate = new DateTime(2024, 1, 5),
+                Duration = 6,
+                ParentID = null
+            },
+            new TreeTask
+            {
+                TaskID = 5,
+                TaskName = "UX Workshop",
+                ResourceName = "Anaïs Löhn",
+                City = "München",
+                StartDate = new DateTime(2024, 1, 6),
+                Duration = 4,
+                ParentID = 4
+            },
+            new TreeTask
+            {
+                TaskID = 6,
+                TaskName = "Prototype Testing",
+                ResourceName = "Renée Faßbinder",
+                City = "Zürich",
+                StartDate = new DateTime(2024, 1, 8),
+                Duration = 3,
+                ParentID = 4
+            }
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBSCBMuBFBKInJs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * This feature ignores accents for both searching and filtering operations in the Blazor TreeGrid when using an `IEnumerable` data source.
+> * This feature works only for characters outside the ASCII range.

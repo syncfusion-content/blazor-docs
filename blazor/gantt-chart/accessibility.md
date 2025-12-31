@@ -182,6 +182,15 @@ The Blazor Gantt Chart component supports comprehensive [keyboard interaction](h
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Saves the current cell and moves to the next editable cell in the dialog. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Saves the current cell and moves to the previous editable cell in the dialog. |
 
+### Undo Redo
+
+| Windows | Mac | Action |
+|---------|-----|--------|
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undoes the most recent tracked action. |
+| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Redoes the most recently undone action. |
+| <kbd>Ctrl</kbd> + <kbd>Shift </kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd>+ <kbd>⇧</kbd> + <kbd>Z</kbd> | Redoes the most recently undone action. |
+| <kbd>Ctrl</kbd> + <kbd>Shift </kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd>+ <kbd>⇧</kbd> + <kbd>Y</kbd> | Undoes the most recent tracked action. |
+
 ## Validate Accessibility Compliance
 
 Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests to ensure compliance with WCAG 2.2 and other standards. Evaluate the accessibility of the Blazor Gantt Chart component using the [sample](https://blazor.syncfusion.com/accessibility/gantt-chart) in a new window with accessibility tools.

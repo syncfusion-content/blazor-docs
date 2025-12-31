@@ -9,11 +9,157 @@ documentation: ug
 
 # Toolbar items in Blazor AI AssistView component
 
-You can render the AI AssistView toolbar items by using the [AssistViewToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbarItem.html), [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbarItem.html) & [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) tag directives.
+You can render the AI AssistView toolbar items by using the [AssistViewToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbarItem.html), [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbarItem.html), [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) & `AssistViewFooterToolbar` tag directives.
+
+## Configure footer toolbar
+
+By default, the footer toolbar renders the `send`, if attachment is enabled the `attachment` item will also be rendered which allows users to send the prompt text or attach files as needed.
+
+In the following example, AI AssistView component rendered with footer toolbar items such as `send` and `attachment` icons.
+
+```cshtml
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
+    {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+![Blazor AI AssistView Attachment Enable](./images/enableAttachment.png)
+
+### Toolbar positioning
+
+You can use the [ToolbarPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ToolbarPosition.html) property to customize footer toolbar position. It has two modes such as [Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ToolbarPosition.html#Syncfusion_Blazor_InteractiveChat_ToolbarPosition_Inline), and [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ToolbarPosition.html#Syncfusion_Blazor_InteractiveChat_ToolbarPosition_Bottom). By default, the ToolbarPosition is `Inline`.
+
+By setting ToolbarPosition as `Bottom`, footer items will be rendered at the bottom with a dedicated footer area .
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <button id="toolbarBtn" class="e-btn" @onclick="UpdateToolbarPosition">UpdateToolbarPosition</button>
+    <SfAIAssistView PromptRequested="PromptRequest" Prompts="@prompts">
+        <AssistViewFooterToolbar ToolbarPosition="@toolbarPosition">
+            <AssistViewFooterToolbarItem></AssistViewFooterToolbarItem>
+        </AssistViewFooterToolbar>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private ToolbarPosition toolbarPosition = ToolbarPosition.Bottom;
+    private List<AssistViewPrompt> prompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt() { Prompt = "What is AI?", Response = "<div>AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making.</div>" }
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+    private void UpdateToolbarPosition()
+    {
+        toolbarPosition = toolbarPosition == ToolbarPosition.Bottom ? ToolbarPosition.Inline : ToolbarPosition.Bottom;
+    }
+}
+
+<style>
+    #toolbarBtn {
+        margin-bottom: 10px;
+    }
+</style>
+
+```
+
+![Blazor AI AssistView Footer Toolbar Position](./images/footer-toolbar-position.png)
+
+### Adding custom items
+
+You can use the [AssistViewFooterToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbarItem.html) tag directive within the [AssistViewFooterToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbar.html) to add custom items for the footer toolbar in the AI AssistView.
+
+> To know more about the items, please refer to the [Items](./toolbar-items#items) section.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Navigations
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView PromptRequested="PromptRequest" Prompts="@prompts">
+        <AssistViewFooterToolbar ToolbarPosition="ToolbarPosition.Bottom">
+            <AssistViewFooterToolbarItem IconCss="e-icons e-assistview-icon" Align="ItemAlign.Left"></AssistViewFooterToolbarItem>
+        </AssistViewFooterToolbar>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private List<AssistViewPrompt> prompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt() { Prompt = "What is AI?", Response = "<div>AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making.</div>" }
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+
+```
+
+![Blazor AI AssistView Footer Toolbar custom item](./images/footer-toolbar-item.png)
+
+### Item click
+The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbar.html#Syncfusion_Blazor_InteractiveChat_AssistViewFooterToolbar_ItemClick) event is triggered when the footer toolbar item is clicked.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView PromptRequested="PromptRequest" Prompts="@prompts">
+        <AssistViewFooterToolbar ItemClick="FooterToolbarItemClicked">
+        </AssistViewFooterToolbar>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private void FooterToolbarItemClicked(AssistViewToolbarItemClickedEventArgs args)
+    {
+        // Your required action here
+    }
+    private List<AssistViewPrompt> prompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt() { Prompt = "What is AI?", Response = "<div>AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making.</div>" }
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+
+```
 
 ## Adding header toolbar items
 
-The AI AssistView component allows you to add header toolbar items using the [AssistViewToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbarItem.html) tag directive within the [AssistViewToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbar.html).
+The AI AssistView component allows you to add header toolbar items using the `AssistViewToolbarItem` tag directive within the `AssistViewToolbar`.
 
 ### Items
 
