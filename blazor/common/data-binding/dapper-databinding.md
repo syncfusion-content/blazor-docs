@@ -200,7 +200,7 @@ Then search for and install the following packages:
 Alternatively, the same installation can be completed by running the following command in the Package Manager Console.
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
