@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blocks in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Blocks with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn about blocks and content organization in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -49,30 +49,30 @@ By default, the [Indent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 </div>
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "This is a paragraph with no indentation (indent: 0)"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is a paragraph with no indentation (indent: 0)"}},
             Indent = 0
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "This paragraph has one level of indentation (indent: 1)"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This paragraph has one level of indentation (indent: 1)"}},
             Indent = 1
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "This paragraph has two levels of indentation (indent: 2)"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This paragraph has two levels of indentation (indent: 2)"}},
             Indent = 2
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Back to no indentation"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Back to no indentation"}},
             Indent = 0
         }
     };
@@ -97,47 +97,47 @@ Custom CSS classes allow you to define specialized styling for specific blocks i
 </div>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings { Level = 1 },
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Custom CSS Classes in Block Editor"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Custom CSS Classes in Block Editor"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "Default paragraph block"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Default paragraph block"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "This is an info block"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is an info block"}},
             CssClass = "info-block"
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "This is a warning block"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is a warning block"}},
             CssClass = "warning-block"
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "This is a success block"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is a success block"}},
             CssClass = "success-block"
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "This is a error block"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is an error block"}},
             CssClass = "error-block"
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = {new ContentModel{ContentType = ContentType.Text, Content = "This is a custom font block"}},
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is a custom font block"}},
             CssClass = "custom-font"
         }
     };
@@ -185,7 +185,7 @@ Custom CSS classes allow you to define specialized styling for specific blocks i
     padding-top: 10px;
     padding-bottom: 10px;
 }
-<style>
+</style>
 
 ```
 
