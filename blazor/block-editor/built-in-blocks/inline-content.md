@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Inline content in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Inline content with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn about inline content types, styling, and formatting in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -144,22 +144,23 @@ The below sample demonstrates the usage of Mention and Label types in the Block 
 </div>
 
 @code {
-    private List<UserModel> BlockUser = new List<UserModel>
+    private List<UserModel> BlockUser = new()
     {
         new UserModel {ID = "user1", User = "John Doe"}
     };
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings {Level = 2},
-            Content = {new ContentModel {ContentType = ContentType.Text, Content = "Different Content Types"}}
+            Content = new() {new ContentModel {ContentType = ContentType.Text, Content = "Different Content Types"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content =[
+            Content = new()
+            [
                 new ContentModel{ContentType = ContentType.Text, Content = "The Block Editor supports various content types: "},
                 new ContentModel{ContentType = ContentType.Link, Content = "hyperlinks", Properties = new LinkContentSettings { Url = "https://ej2.syncfusion.com/documentation/"} },
                 new ContentModel{ContentType = ContentType.Text, Content = ", inline "},
@@ -206,18 +207,19 @@ You can apply one or more of these styles to any supported content element for r
 </div>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Heading,
             Properties= new HeadingBlockSettings {Level = 2},
-            Content = {new ContentModel {ContentType = ContentType.Text, Content = "Content Styling Options"}}
+            Content = new() {new ContentModel {ContentType = ContentType.Text, Content = "Content Styling Options"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content =[ 
+            Content = new()
+            [ 
                 new ContentModel{ContentType = ContentType.Text, Content = "Bold text: ", Properties = new TextContentSettings { Styles = new StyleModel { Bold = true, Color = "#1976d2"}}},
                 new ContentModel{ContentType = ContentType.Text, Content = "This text is bold.", Properties = new TextContentSettings { Styles = new StyleModel { Bold = true}}}
             ]
@@ -225,7 +227,8 @@ You can apply one or more of these styles to any supported content element for r
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content =[
+            Content = new()
+            [
                 new ContentModel{ContentType = ContentType.Text, Content = "Italic text: ", Properties = new TextContentSettings { Styles = new StyleModel { Bold = true, Color = "#1976d2"}}},
                 new ContentModel{ContentType = ContentType.Text, Content = "This text is italicized.", Properties = new TextContentSettings { Styles = new StyleModel { Italic = true}}}
             ]
@@ -233,7 +236,8 @@ You can apply one or more of these styles to any supported content element for r
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content =[
+            Content = new()
+            [
                 new ContentModel{ContentType = ContentType.Text, Content = "Text with color: ", Properties = new TextContentSettings { Styles = new StyleModel { Bold = true, Color = "#1976d2"}}},
                 new ContentModel{ContentType = ContentType.Text, Content = "This text has custom color.", Properties = new TextContentSettings { Styles = new StyleModel { Color = "#e91e63"}}}
             ]
@@ -241,7 +245,8 @@ You can apply one or more of these styles to any supported content element for r
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content =[
+            Content = new()
+            [
                 new ContentModel{ContentType = ContentType.Text, Content = "Text with background: ", Properties = new TextContentSettings { Styles = new StyleModel { Bold = true, Color = "#1976d2"}}},
                 new ContentModel{ContentType = ContentType.Text, Content = "This text has background color.", Properties = new TextContentSettings { Styles = new StyleModel { BackgroundColor = "#fff9c4"}}}
             ]
@@ -249,7 +254,8 @@ You can apply one or more of these styles to any supported content element for r
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content =[
+            Content = new()
+            [
                 new ContentModel{ContentType = ContentType.Text, Content = "Multiple styles: ", Properties = new TextContentSettings { Styles = new StyleModel { Bold = true, Color = "#1976d2"}}},
                 new ContentModel{ContentType = ContentType.Text, Content = "This text combines multiple styles.", Properties = new TextContentSettings { Styles = new StyleModel { Bold = true, Italic = true, Underline = true, Color = "#4caf50"}}}
             ]
