@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Block Editor Component | Syncfusion
-description: Check out and learn about handling lifecycle events, user interaction events, and content change events with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn about handling lifecycle, interaction, and content change events in Syncfusion Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
 documentation: ug

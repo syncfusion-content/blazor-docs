@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Block Editor Component | Syncfusion
-description: Check out and learn here all about configuring appearance properties, dimensions, read-only mode, and custom styling with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn to configure appearance properties, dimensions, read-only mode, and custom styling in Syncfusion Blazor Block Editor.
 platform: Blazor
 control: BlockEditor
 documentation: ug

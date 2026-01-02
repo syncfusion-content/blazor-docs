@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Block Editor in Blazor Web App
+title: Getting Started with Blazor Block Editor in Blazor Web App | Syncfusion
 description: Learn how to get started with the Blazor Block Editor component in Blazor Web App using Visual Studio, Visual Studio Code, or the .NET CLI.
 platform: Blazor
 control: BlockEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor Block Editor in Blazor Web App
+## Getting Started with Blazor Block Editor in Blazor Web App
 
 The Blazor Block Editor is a modular, block-based content editor component that enables rich, structured content creation. It provides an intuitive interface for building documents, articles, and collaborative content using customizable blocks such as headings, paragraphs, lists, and more.
 
