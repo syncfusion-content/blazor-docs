@@ -69,7 +69,7 @@ cd BlazorApp
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart3D NuGet in the App
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Ensure in the project root directory where the `.csproj` file is located.
 * Run the following command to install a [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D) NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
