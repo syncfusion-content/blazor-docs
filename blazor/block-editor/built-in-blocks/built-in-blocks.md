@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Blocks in Blazor Block Editor component
+# Blocks in Blazor Block Editor Component
 
 The Syncfusion Block Editor uses [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) as the fundamental units for creating and managing content. The entire editor content is structured as a collection of these blocks, which are configured and managed through the [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property.
 
@@ -82,7 +82,7 @@ By default, the [Indent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ![Blazor Block Editor Blocks Indent](./../images/indent.png)
 
-## Configure CSS Class
+## Configure CSS class
 
 You can apply custom styling to individual blocks using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_CssClass) property. This property accepts a string containing one or more CSS class names.
 
