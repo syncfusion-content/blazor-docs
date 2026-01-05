@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Paste Clean-up in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Paste Clean-up with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+title: Paste Cleanup in Blazor Block Editor Component | Syncfusion
+description: Checkout and learn about Paste Cleanup with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: BlockEditor
 documentation: ug
 ---
 
-# Paste Clean-up in Blazor Block Editor component
+# Paste Cleanup in Blazor Block Editor component
 
 The Block Editor component provides robust paste clean-up functionalities to ensure that pasted content integrates seamlessly and maintains styling and structural consistency. This feature helps remove unwanted formatting, scripts, and elements copied from external sources like web pages or word processors.
 
@@ -21,7 +21,7 @@ By default, the following styles are allowed:
 
 ['font-weight', 'font-style', 'text-decoration', 'text-transform'].
 
-In the below example, only `font-weight` and `font-style` styles will be retained from the pasted content. All other inline styles will be removed.
+The following example demonstrates retaining only `font-weight` and `font-style` styles from the pasted content. All other inline styles will be removed.
 
 ```cshtml
 
@@ -29,7 +29,7 @@ In the below example, only `font-weight` and `font-style` styles will be retaine
 
 <div class="container">
     <SfBlockEditor>
-        <BlockEditorPasteCleanup AllowedStyle="@(new string[] { "font-weight", "font-style" })"></BlockEditorPasteCleanup>
+        <BlockEditorPasteCleanup AllowedStyles="@(new string[] { "font-weight", "font-style" })"></BlockEditorPasteCleanup>
     </SfBlockEditor>
 </div>
 
@@ -39,7 +39,7 @@ In the below example, only `font-weight` and `font-style` styles will be retaine
 
 The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_DeniedTags) property specifies a list of HTML tags to be removed from pasted content. This is useful for stripping potentially problematic elements like `<script>` or `<iframe>` tags. By default, this property is an empty array, so no tags are removed.
 
-In the below example, any `<script>` or `<iframe>` tags found in the pasted content will be removed, preventing unwanted behavior or styling issues.
+The following example demonstrates removing `<script>` and `<iframe>` tags from the pasted content, preventing unwanted behavior or styling issues.
 
 ```cshtml
 
@@ -47,17 +47,17 @@ In the below example, any `<script>` or `<iframe>` tags found in the pasted cont
 
 <div class="container">
     <SfBlockEditor>
-        <BlockEditorPasteCleanup AllowedStyle="@(new string[] { "font-weight", "font-style" })"></BlockEditorPasteCleanup>
+        <BlockEditorPasteCleanup DeniedTags="@(new string[] { "script", "iframe" })"></BlockEditorPasteCleanup>
     </SfBlockEditor>
 </div>
 
 ```
 
-Below example demonstrates the usage of paste settings that allows only specific styles and also removes the specific tags from the pasted content.
+The following example demonstrates configuring paste settings to allow only specific styles while also removing specific tags from the pasted content.
 
 ```cshtml
 
-@using Syncfusion.Blazor.BlockEditor
+@using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
     <SfBlockEditor @ref="blockEditor" Blocks="@blockData" PasteCleanupCompleted="HandleAfterPaste">
@@ -95,12 +95,6 @@ Below example demonstrates the usage of paste settings that allows only specific
     {
         new BlockModel { BlockType = BlockType.Paragraph }
     };
-
-    private BlockEditorPasteCleanup pasteSettings = new BlockEditorPasteCleanup()
-        {
-            AllowedStyles = new string[] { "text-decoration" },
-            DeniedTags = new string[] { "script", "iframe" }
-        };
 
     private void HandleAfterPaste(PasteCleanupCompletedEventArgs args)
     {
@@ -171,7 +165,7 @@ By default, the editor retains the formatting of pasted content (e.g., bold, ita
 
 <div class="container">
     <SfBlockEditor>
-        <BlockEditorPasteCleanup KeepFormat=false></BlockEditorPasteCleanup>
+        <BlockEditorPasteCleanup KeepFormat="false"></BlockEditorPasteCleanup>
     </SfBlockEditor>
 </div>
 
@@ -187,7 +181,7 @@ To paste content as plain text, stripping all HTML tags and inline styles, set t
 
 <div class="container">
     <SfBlockEditor>
-        <BlockEditorPasteCleanup PlainText=false></BlockEditorPasteCleanup>
+        <BlockEditorPasteCleanup PlainText="false"></BlockEditorPasteCleanup>
     </SfBlockEditor>
 </div>
 
@@ -197,7 +191,7 @@ Below example demonstrates the usage of paste settings that disables the keep fo
 
 ```cshtml
 
-@using Syncfusion.Blazor.BlockEditor
+@using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
     <SfBlockEditor @ref="blockEditor" Blocks="@blockData" PasteCleanupCompleted="HandleAfterPaste">

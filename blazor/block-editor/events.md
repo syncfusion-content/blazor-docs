@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Events with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn about handling lifecycle, interaction, and content change events in Syncfusion Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -9,151 +9,145 @@ documentation: ug
 
 # Events in Blazor Block Editor Component
 
-The Block Editor component provides a comprehensive set of events that allow you to monitor and respond to various user interactions and editor state changes. These events enable you to implement custom behaviors, validation, logging, and integration with other systems.
+The Block Editor component provides a comprehensive set of events to monitor and respond to various user interactions and editor state changes. These events enable implementation of custom behaviors, validation, logging, and integration with other systems.
 
 ## Created
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Created) event is triggered when the Block Editor component is successfully initialized and ready for use. This event is useful for performing setup operations or initializing additional features after the editor is created.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Created) event triggers when the Block Editor component is successfully initialized and ready for use. This event is useful for performing setup operations or initializing additional features after the editor is created.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <div id="container">
     <SfBlockEditor Created="@OnCreated"></SfBlockEditor>
 </div>
-@code {
 
+@code {
     private void OnCreated()
     {
-        // Your required actions here
+        // Perform initialization tasks
+        // Example: Load user preferences, setup auto-save, etc.
     }
 }
-
 ```
 
 ## BlockChanged
 
-The [BlockChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_BlockChanged) event is triggered whenever the editor blocks are changed. This includes block additions, deletions, or any structural modifications to the document. Its event handler receives details about the changes.
+The [BlockChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_BlockChanged) event triggers whenever editor blocks are changed. This includes block additions, deletions, or any structural modifications to the document. The event handler receives details about the changes.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <div id="container">
-    <SfBlockEditor BlockChanged="@BlockChanged"></SfBlockEditor>
+    <SfBlockEditor BlockChanged="@OnBlockChanged"></SfBlockEditor>
 </div>
-@code {
 
-    private void BlockChanged(BlockChangedEventArgs args)
+@code {
+    private void OnBlockChanged(BlockChangedEventArgs args)
     {
-        // Your required actions here
+        // Access changed blocks via args
+        // Example: Track document changes, trigger auto-save, update word count, etc.
     }
 }
-
 ```
 
 ## SelectionChanged
 
-The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_SelectionChanged) event is triggered when the user's text selection changes within the editor. The event arguments contain details about the new selection, which can be useful for updating UI elements.
+The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_SelectionChanged) event triggers when the user's text selection changes within the editor. The event arguments contain details about the new selection, which can be useful for updating UI elements or enabling context-specific features.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <div id="container">
-    <SfBlockEditor SelectionChanged="@SelectionChanged"></SfBlockEditor>
+    <SfBlockEditor SelectionChanged="@OnSelectionChanged"></SfBlockEditor>
 </div>
-@code {
 
-    private void SelectionChanged(SelectionChangedEventArgs args)
+@code {
+    private void OnSelectionChanged(SelectionChangedEventArgs args)
     {
-        // Your required actions here
+        // Access selection details via args
+        // Example: Update toolbar state, show formatting options, etc.
     }
 }
-
 ```
 
 ## Focus
 
-The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Focus) event is triggered when the editor gains focus. This is useful for updating UI states and managing editor interactions.
+The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Focus) event triggers when the editor gains focus. This is useful for updating UI states, showing toolbars, or managing editor interactions.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <div id="container">
-    <SfBlockEditor Focus="@Focus"></SfBlockEditor>
+    <SfBlockEditor Focus="@OnFocus"></SfBlockEditor>
 </div>
-@code {
 
-    private void Focus(FocusEventArgs args)
+@code {
+    private void OnFocus(FocusEventArgs args)
     {
-        // Your required actions here
+        // Handle focus event
+        // Example: Show floating toolbar, highlight editor border, etc.
     }
 }
-
 ```
 
 ## Blur
 
-The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blur) event is triggered when the editor loses focus. This is commonly used for auto-saving content or hiding UI elements that should only be visible when the editor is active.
+The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blur) event triggers when the editor loses focus. This is commonly used for auto-saving content, hiding UI elements that should only be visible when the editor is active, or validating content.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <div id="container">
-    <SfBlockEditor Blur="@Blur"></SfBlockEditor>
+    <SfBlockEditor Blur="@OnBlur"></SfBlockEditor>
 </div>
-@code {
 
-    private void Blur(BlurEventArgs args)
+@code {
+    private void OnBlur(BlurEventArgs args)
     {
-        // Your required actions here
+        // Handle blur event
+        // Example: Auto-save content, hide toolbars, validate input, etc.
     }
 }
-
 ```
 
 ## PasteCleanupStarting
 
-The [PasteCleanupStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_PasteCleanupStarting) event is triggered before content is pasted into the editor. This event allows you to inspect, modify, or cancel the paste operation via its event arguments.
+The [PasteCleanupStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_PasteCleanupStarting) event triggers before content is pasted into the editor. This event allows inspection, modification, or cancellation of the paste operation via event arguments.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <div id="container">
-    <SfBlockEditor PasteCleanupStarting="@PasteCleanupStarting"></SfBlockEditor>
+    <SfBlockEditor PasteCleanupStarting="@OnPasteCleanupStarting"></SfBlockEditor>
 </div>
-@code {
 
-    private void PasteCleanupStarting(PasteCleanupStartingEventArgs args)
+@code {
+    private void OnPasteCleanupStarting(PasteCleanupStartingEventArgs args)
     {
-        // Your required actions here
+        // Inspect or modify pasted content before insertion
+        // Example: Strip formatting, sanitize HTML, prevent certain content types, etc.
+        // Set args.Cancel = true to prevent paste operation
     }
 }
-
 ```
 
 ## PasteCleanupCompleted
 
-The [PasteCleanupCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_PasteCleanupCompleted) event is triggered after content has been successfully pasted into the editor. This is useful for post-processing pasted content or updating related UI elements.
+The [PasteCleanupCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_PasteCleanupCompleted) event triggers after content has been successfully pasted into the editor. This is useful for post-processing pasted content or updating related UI elements.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <div id="container">
-    <SfBlockEditor PasteCleanupCompleted="@PasteCleanupCompleted"></SfBlockEditor>
+    <SfBlockEditor PasteCleanupCompleted="@OnPasteCleanupCompleted"></SfBlockEditor>
 </div>
-@code {
 
-    private void PasteCleanupCompleted(PasteCleanupCompletedEventArgs args)
+@code {
+    private void OnPasteCleanupCompleted(PasteCleanupCompletedEventArgs args)
     {
-        // Your required actions here
+        // Handle post-paste operations
+        // Example: Log paste action, update statistics, trigger content analysis, etc.
     }
 }
-
 ```

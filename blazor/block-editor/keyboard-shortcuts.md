@@ -9,7 +9,7 @@ documentation: ug
 
 # Keyboard Shortcuts in Blazor Block Editor component
 
-The Block Editor component provides comprehensive keyboard shortcuts to enhance productivity and streamline content creation. These shortcuts are organized into different categories based on their functionality, allowing users to quickly access various features without relying on mouse interactions.
+The Block Editor component provides comprehensive keyboard shortcuts to enhance productivity and streamline content creation. These shortcuts are organized into different categories based on their functionality, allowing users to quickly access various features without relying on mouse interactions. The ⌘ symbol represents the Command key on Mac, and ⌥ represents the Option key.
 
 ## Content editing and formatting
 
