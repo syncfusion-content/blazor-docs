@@ -11,15 +11,15 @@ documentation: ug
 
 The Block Editor supports the addition of embeds to help you organize and showcase visual content effectively.
 
-## Adding an Image Block
+## Adding an image block
 
 You can use the [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Image) block to showcase an image content within your editor.
 
-### Configure Image Block
+### Configure image block
 
 You can render an [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Image) block by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Image) in the block model. The [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property allows you to configure the image source, allowed file types, display dimensions, and more.
 
-#### Global Image Settings
+#### Global image settings
 
 You can configure global settings for image blocks using the [BlockEditorImageBlock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorImageBlock.html) tag directive. This ensures consistent behavior for all images in the editor.
 
@@ -37,7 +37,7 @@ The [BlockEditorImageBlock](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 | MinHeight | Minimum height allowed for resizing. | `''` |
 | MaxHeight | Maximum height allowed for resizing. | `''` |
 
-#### Configure Image Block Properties
+#### Configure image block properties
 
 The [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Image) block [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property supports the following options:
 

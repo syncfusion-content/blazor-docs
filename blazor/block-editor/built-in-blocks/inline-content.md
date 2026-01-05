@@ -85,7 +85,7 @@ The [BlockEditorLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.B
 | TriggerChar | Specifies the character that opens the label suggestions popup. |
 | Items | Specifies the label items. |
 
-#### Trigger Character configuration
+#### Trigger character configuration
 
 Use the [TriggerChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorLabel.html#Syncfusion_Blazor_BlockEditor_BlockEditorLabel_TriggerChar) property to define the character that opens the label suggestions popup. The default trigger character is `$`.
 
@@ -176,7 +176,7 @@ The below sample demonstrates the usage of Mention and Label types in the Block 
 
 ```
 
-## Applying Inline Styles
+## Applying inline styles
 
 The Block Editor allows you to apply rich formatting to block contents using the [Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.TextContentSettings.html#Syncfusion_Blazor_BlockEditor_TextContentSettings_Styles) property.
 

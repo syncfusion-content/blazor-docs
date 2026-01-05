@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor Block Editor Component
+# Getting started with Blazor Block Editor component
 
 The Blazor Block Editor is a modular, block-based content editor component that enables rich, structured content creation. It provides an intuitive interface for building documents, articles, and collaborative content using customizable blocks such as headings, paragraphs, lists, and more. The WebAssembly deployment model allows the editor to run entirely in the browser, providing a responsive client-side experience.
 
@@ -205,7 +205,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor com
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLIsrhAgbKCOpbZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor BlockEditor Default.](images/blazor-block-editor-default.png)" %}
 
-## Configure Blocks
+## Configure blocks
 
 The Block Editor uses a block-based content structure where each block represents a specific content type (heading, paragraph, list, etc.). The [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property manages and configures these blocks, allowing full control over the content structure and presentation.
 

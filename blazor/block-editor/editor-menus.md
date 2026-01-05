@@ -11,11 +11,11 @@ documentation: ug
 
 The Block Editor component includes several intuitive, context-aware menus that streamline content creation and editing. These menus provide quick access to formatting options and commands, improving user productivity.
 
-## Slash Command Menu
+## Slash command menu
 
 The Slash Command menu allows users to quickly insert or transform blocks by typing `/` followed by a command. This keyboard-driven approach provides an efficient way to interact with the editor without using the mouse.
 
-### Built-In Items
+### Built-in items
 
 The Slash Command menu comes with a set of predefined commands for all block types:
 
@@ -28,7 +28,7 @@ The Slash Command menu comes with a set of predefined commands for all block typ
 - **Callout**: Inserts a block for highlighting important information.
 - **Utility (Divider, Quote)**: Inserts a utility block like a divider or quote block.
 
-### Customize Slash Command Menu
+### Customize slash command menu
 
 Use the [BlockEditorCommandMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorCommandMenu.html) tag directive to modify the Slash Command menu. This lets you add custom commands, remove default items, or change the behavior of existing commands to fit application requirements.
 
@@ -105,11 +105,11 @@ The following example demonstrates how to customize the Slash Command menu with 
 }
 ```
 
-## Context Menu
+## Context menu
 
 The Context menu appears when a user right-clicks within a specific block. It provides context-aware actions relevant to the clicked block or content. Use this menu for actions that apply to the entire block or selected content within it.
 
-### Built-In Items
+### Built-in items
 
 The Context menu offers the following built-in options:
 
@@ -118,7 +118,7 @@ The Context menu offers the following built-in options:
 - **Indent**: Increases or decreases the indent level of the selected block.
 - **Link**: Adds or edits a hyperlink for the selected text.
 
-### Customize Context Menu
+### Customize context menu
 
 Use the [BlockEditorContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorContextMenu.html) tag directive to customize the Context menu. This lets you add specific actions or modify existing items based on application needs.
 
@@ -231,11 +231,11 @@ The following example demonstrates how to customize the Context menu with additi
 }
 ```
 
-## Block Action Menu
+## Block action menu
 
 The Block Action menu appears next to a block when hovering over it and clicking the drag handle icon. It offers quick actions specific to that block. Use this menu for block-level operations like moving, duplicating, or deleting blocks, as opposed to the Context menu which handles content-level actions.
 
-### Built-In Items
+### Built-in items
 
 The Block Action menu provides convenient actions for managing individual blocks:
 
@@ -244,11 +244,11 @@ The Block Action menu provides convenient actions for managing individual blocks
 - **Move Up**: Moves the block one position higher.
 - **Move Down**: Moves the block one position lower.
 
-### Customize Block Action Menu
+### Customize block action menu
 
 Use the [BlockEditorActionMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html) tag directive to customize the Block Action menu. This lets you add block-specific commands that are relevant to the application, allowing for a highly tailored user experience.
 
-#### Show or Hide Tooltip
+#### Show or Hide tooltip
 
 By default, a tooltip is displayed when the user hovers over an action item. Show or hide the tooltip using the [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html#Syncfusion_Blazor_BlockEditor_BlockEditorActionMenu_EnableTooltip) property in the [BlockEditorActionMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html) tag directive.
 
@@ -353,11 +353,11 @@ The following example demonstrates how to customize the Block Action menu with c
 }
 ```
 
-## Inline Toolbar
+## Inline toolbar
 
 The Inline Toolbar appears when text is selected in the editor, providing quick access to common text formatting actions that apply to inline content.
 
-### Built-In Items
+### Built-in items
 
 The Inline Toolbar includes the following built-in formatting options:
 
@@ -367,7 +367,7 @@ The Inline Toolbar includes the following built-in formatting options:
 - **Text Color**: Changes the color of the selected text.
 - **Background Color**: Changes the background color of the selected text.
 
-### Customize Inline Toolbar
+### Customize inline toolbar
 
 Use the [BlockEditorInlineToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorInlineToolbar.html) tag directive to customize the Inline Toolbar by adding or removing formatting options based on application needs.
 
