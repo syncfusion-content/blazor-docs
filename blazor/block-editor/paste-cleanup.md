@@ -155,7 +155,7 @@ The following example demonstrates configuring paste settings to allow only spec
 
 ```
 
-## Disable keep format
+## Disable Keep format
 
 By default, the editor retains the formatting of pasted content (e.g., bold, italics, links). You can disable this by setting the [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_KeepFormat) property to `false`. When disabled, the editor primarily pastes content as plain text, regardless of the [AllowedStyles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_AllowedStyles) configuration.
 

@@ -28,7 +28,7 @@ The Slash Command menu comes with a set of predefined commands for all block typ
 - **Callout**: Inserts a block for highlighting important information.
 - **Utility (Divider, Quote)**: Inserts a utility block like a divider or quote block.
 
-### Customize slash command menu
+### Customize Slash command menu
 
 Use the [BlockEditorCommandMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorCommandMenu.html) tag directive to modify the Slash Command menu. This lets you add custom commands, remove default items, or change the behavior of existing commands to fit application requirements.
 
@@ -244,7 +244,7 @@ The Block Action menu provides convenient actions for managing individual blocks
 - **Move Up**: Moves the block one position higher.
 - **Move Down**: Moves the block one position lower.
 
-### Customize block action menu
+### Customize Block action menu
 
 Use the [BlockEditorActionMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorActionMenu.html) tag directive to customize the Block Action menu. This lets you add block-specific commands that are relevant to the application, allowing for a highly tailored user experience.
 
@@ -353,7 +353,7 @@ The following example demonstrates how to customize the Block Action menu with c
 }
 ```
 
-## Inline toolbar
+## Inline Toolbar
 
 The Inline Toolbar appears when text is selected in the editor, providing quick access to common text formatting actions that apply to inline content.
 
@@ -367,7 +367,7 @@ The Inline Toolbar includes the following built-in formatting options:
 - **Text Color**: Changes the color of the selected text.
 - **Background Color**: Changes the background color of the selected text.
 
-### Customize inline toolbar
+### Customize Inline Toolbar
 
 Use the [BlockEditorInlineToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorInlineToolbar.html) tag directive to customize the Inline Toolbar by adding or removing formatting options based on application needs.
 

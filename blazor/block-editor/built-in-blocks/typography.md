@@ -93,7 +93,7 @@ The below sample demonstrates the configuration of placeholder in the Block Edit
 
 Heading blocks create document titles and section headers. These blocks help structure content hierarchically, making it easier to read and navigate. Render a Heading block by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Heading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Heading).
 
-### Configuring levels
+### Configuring Levels
 
 Set the heading level using the [Level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.HeadingBlockSettings.html#Syncfusion_Blazor_BlockEditor_HeadingBlockSettings_Level) property, with `1` being the highest level (title) and `4` being the lowest (subsection).
 
@@ -165,7 +165,7 @@ You can configure placeholder text for block using the [Placeholder](https://hel
 
 You can render Collapsible blocks by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property as [CollapsibleParagraph](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_CollapsibleParagraph) or [CollapsibleHeading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_CollapsibleHeading). Collapsible blocks allow users to expand or collapse sections, providing a way to hide or show content as needed.
 
-### Configure levels
+### Configure Levels
 
 You can configure the CollapsibleHeading using the property [Level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.CollapsibleHeadingBlockSettings.html#Syncfusion_Blazor_BlockEditor_CollapsibleHeadingBlockSettings_Level) inside the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property . The levels can be varied from `Level: 1` to `Level: 4`.
 

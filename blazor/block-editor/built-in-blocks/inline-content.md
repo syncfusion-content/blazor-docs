@@ -176,7 +176,7 @@ The below sample demonstrates the usage of Mention and Label types in the Block 
 
 ```
 
-## Applying inline styles
+## Applying Inline Styles
 
 The Block Editor allows you to apply rich formatting to block contents using the [Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.TextContentSettings.html#Syncfusion_Blazor_BlockEditor_TextContentSettings_Styles) property.
 
