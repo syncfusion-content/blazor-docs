@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Undo Redo in Blazor Block Editor component
+# Undo Redo in Blazor Block Editor Component
 
 The undo/redo feature in Block Editor enables users to revert or reapply changes made to the content, offering a safety net for edits and enhancing the overall editing experience.
 

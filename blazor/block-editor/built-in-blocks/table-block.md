@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Table Blocks in Blazor Block Editor component
+# Table Blocks in Blazor Block Editor Component
 
 The Syncfusion Block Editor allows you to render structured data in rows and columns by setting the block's [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Table). You can customize the table layout, header, row numbers, and define columns and rows using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property.
 

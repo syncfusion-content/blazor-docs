@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Events in Blazor Block Editor component
+# Events in Blazor Block Editor Component
 
 The Block Editor component provides a comprehensive set of events to monitor and respond to various user interactions and editor state changes. These events enable implementation of custom behaviors, validation, logging, and integration with other systems.
 

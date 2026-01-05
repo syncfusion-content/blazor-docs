@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Embed Blocks in Blazor Block Editor component
+# Embed Blocks in Blazor Block Editor Component
 
 The Block Editor supports the addition of embeds to help you organize and showcase visual content effectively.
 

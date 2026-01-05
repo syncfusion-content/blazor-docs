@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Blocks in Blazor Block Editor component
+# Blocks in Blazor Block Editor Component
 
 The Syncfusion Block Editor uses [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) as the fundamental units for creating and managing content. The entire editor content is structured as a collection of these blocks, which are configured and managed through the [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property.
 

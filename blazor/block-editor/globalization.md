@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Globalization in Blazor Block Editor component
+# Globalization in Blazor Block Editor Component
 
 The Syncfusion Blazor Block Editor component supports globalization features like `Localization` and `Right-to-Left (RTL)` alignment, enabling it to be adapted for different cultures and languages.
 

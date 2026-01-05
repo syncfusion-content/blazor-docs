@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Inline Content in Blazor Block Editor component
+# Inline Content in Blazor Block Editor Component
 
 In the Syncfusion Block Editor, all content is organized within blocks. Each block contains a [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html#Syncfusion_Blazor_BlockEditor_ContentModel_Content) property, which is a list of [ContentModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.ContentModel.html) that defines the text and functionality within that block.
 
@@ -176,7 +176,7 @@ The below sample demonstrates the usage of Mention and Label types in the Block 
 
 ```
 
-## Applying Inline Styles
+## Applying inline styles
 
 The Block Editor allows you to apply rich formatting to block contents using the [Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.TextContentSettings.html#Syncfusion_Blazor_BlockEditor_TextContentSettings_Styles) property.
 

@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Controlling Editor Access in Blazor Block Editor component
+# Controlling Editor Access in Blazor Block Editor Component
 
 The Syncfusion Blazor Block Editor provides a read-only mode to control user interaction with the editor. This allows users to view formatted content without editing. These features are useful for displaying content without modifications or temporarily restricting input, such as when presenting archived documents, previewing content, or restricting editing permissions.
 

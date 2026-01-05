@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Appearance in Blazor Block Editor component
+# Appearance in Blazor Block Editor Component
 
 The Block Editor component provides several properties to customize its visual appearance, allowing control over dimensions, styling, and behavior.
 
@@ -24,7 +24,7 @@ Specify the width and height for the Block Editor component using the [Width](ht
 <SfBlockEditor Width="800px" Height="500px"></SfBlockEditor>
 ```
 
-## Setting Read-only mode
+## Setting read-only mode
 
 Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_ReadOnly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it. This is useful for displaying finalized documents, creating preview modes, or implementing approval workflows where content should be visible but not editable.
 

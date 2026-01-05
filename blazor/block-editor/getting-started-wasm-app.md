@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Getting started with Blazor Block Editor component
+# Getting Started with Blazor Block Editor Component
 
 The Blazor Block Editor is a modular, block-based content editor component that enables rich, structured content creation. It provides an intuitive interface for building documents, articles, and collaborative content using customizable blocks such as headings, paragraphs, lists, and more. The WebAssembly deployment model allows the editor to run entirely in the browser, providing a responsive client-side experience.
 
@@ -189,7 +189,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Block Editor component
+## Add Blazor Block Editor Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the **~/Pages/Index.razor** file.
 
