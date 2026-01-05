@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Typography Blocks in Blazor Block Editor component
+# Typography Blocks in Blazor Block Editor Component
 
 Typography blocks are essential for organizing and presenting text-based content. The Block Editor component supports various structural blocks—such as Paragraph, Heading, Collapsible (CollapsibleParagraph and CollapsibleHeading), Divider, Quote, and Callout—to help you format and structure content effectively.
 
@@ -93,7 +93,7 @@ The below sample demonstrates the configuration of placeholder in the Block Edit
 
 Heading blocks create document titles and section headers. These blocks help structure content hierarchically, making it easier to read and navigate. Render a Heading block by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Heading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Heading).
 
-### Configuring Levels
+### Configuring levels
 
 Set the heading level using the [Level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.HeadingBlockSettings.html#Syncfusion_Blazor_BlockEditor_HeadingBlockSettings_Level) property, with `1` being the highest level (title) and `4` being the lowest (subsection).
 

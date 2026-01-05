@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Paste Cleanup in Blazor Block Editor component
+# Paste Cleanup in Blazor Block Editor Component
 
 The Block Editor component provides robust paste clean-up functionalities to ensure that pasted content integrates seamlessly and maintains styling and structural consistency. This feature helps remove unwanted formatting, scripts, and elements copied from external sources like web pages or word processors.
 
@@ -155,7 +155,7 @@ The following example demonstrates configuring paste settings to allow only spec
 
 ```
 
-## Disable Keep format
+## Disable keep format
 
 By default, the editor retains the formatting of pasted content (e.g., bold, italics, links). You can disable this by setting the [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_KeepFormat) property to `false`. When disabled, the editor primarily pastes content as plain text, regardless of the [AllowedStyles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorPasteCleanup.html#Syncfusion_Blazor_BlockEditor_BlockEditorPasteCleanup_AllowedStyles) configuration.
 
