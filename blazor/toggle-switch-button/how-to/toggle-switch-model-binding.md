@@ -21,7 +21,8 @@ In this sample, first check the option and click the submit button to post the s
 <EditForm Model="Annotate">
     <DataAnnotationsValidator></DataAnnotationsValidator>
     <div class="form-group">
-        <SfSwitch @bind-Checked="@Annotate.Check">I agree to receive newsletter</SfSwitch>
+        <SfSwitch @bind-Checked="@Annotate.Check"></SfSwitch>
+         <label>I agree to receive newsletter</label>
         <ValidationMessage For="@(() => Annotate.Check)" />
     </div>
     <SfButton HtmlAttributes="@Submit" Content="Submit" IsPrimary="true"></SfButton>
