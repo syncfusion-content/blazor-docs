@@ -11,7 +11,7 @@ documentation: ug
 
 The Block Editor component provides several properties to customize its visual appearance, allowing control over dimensions, styling, and behavior.
 
-## Setting Width and Height
+## Setting width and height
 
 Specify the width and height for the Block Editor component using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Height) properties.
 
@@ -24,7 +24,7 @@ Specify the width and height for the Block Editor component using the [Width](ht
 <SfBlockEditor Width="800px" Height="500px"></SfBlockEditor>
 ```
 
-## Setting Read-Only Mode
+## Setting read-only mode
 
 Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_ReadOnly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it. This is useful for displaying finalized documents, creating preview modes, or implementing approval workflows where content should be visible but not editable.
 
@@ -34,7 +34,7 @@ Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Block
 <SfBlockEditor ReadOnly="true"></SfBlockEditor>
 ```
 
-## Customization Using CSS Class
+## Customization using CSS class
 
 Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_CssClass) property to customize the appearance of the Block Editor component with custom styles.
 
