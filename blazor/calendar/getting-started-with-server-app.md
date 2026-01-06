@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Calendar Component in Server App
+title: Getting Started with Syncfusion Blazor Calendar Component | Server App
 description: Checkout and learn about the documentation for getting started with Blazor Calendar Component in Blazor Server App.
 platform: Blazor
 component: Calendar

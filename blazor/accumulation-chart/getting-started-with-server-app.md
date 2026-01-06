@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Stared with Blazor Accumulation Chart in Server | Syncfusion
+title: Getting Stared | Blazor Accumulation Chart in Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor Server App.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Accumulation Chart Component in Blazor Server App
+# Getting Started with Blazor Accumulation Chart in Blazor Server App
 
 This section briefly explains about how to include `Blazor Accumulation Chart` component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
