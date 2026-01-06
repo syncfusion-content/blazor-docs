@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Customize the Toolbar in Blazor Scheduler Component | Syncfusion
