@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Toolbar in Blazor Scheduler Component | Syncfusion
-description: This section explains how to customize the toolbar in the Blazor Scheduler component.
+description: This section explains how to customize the toolbar in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
