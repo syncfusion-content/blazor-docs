@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integrate LiteLLM with Blazor AI AssistView Component
 
-The AI AssistView component can be integrated with [LiteLLM](https://docs.litellm.ai/docs/), an open-source proxy that provides a unified OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com/) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai). The AI AssistView component serves as a user interface where prompts are sent to the LiteLLM proxy, which forwards them to the configured LLM provider. This enables natural language understanding and context-aware responses.
+The AI AssistView component can be integrated with [LiteLLM](https://docs.litellm.ai/docs/), an open-source proxy that provides a unified OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai). The AI AssistView component serves as a user interface where prompts are sent to the LiteLLM proxy, which forwards them to the configured LLM provider. This enables natural language understanding and context-aware responses.
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ Nuget\Install-Package Markdig
 
 ## Configure the LiteLLM Proxy
 
-* **Set Environment Variable**: Set your OpenAI API key as an environment variable for security (e.g., `export OPENAI_API_KEY=sk-your-openai-key` on macOS/Linux or `set OPENAI_API_KEY=sk-your-openai-key` on Windows). Avoid hardcoding the key in files.
+* **Set Environment Variable**: Set your OpenAI API key as an environment variable for security (e.g.,`export OPENAI_API_KEY=<your-openai-api-key>` on macOS/Linux or `set OPENAI_API_KEY=<your-openai-api-key>` on Windows). Avoid hard-coding the key in files.
 
 * **Create config.yaml**: In your project root, create a `config.yaml` file to define the model alias and routing. This exposes an OpenAI-compatible endpoint at `http://localhost:4000/v1/chat/completions`.
 
@@ -58,9 +58,9 @@ Nuget\Install-Package Markdig
 ```yaml
 model_list:
   - model_name: openai/gpt-4o-mini      # Alias your frontend will use
-    litellm_params:
+    LiteLLM_params:
       model: gpt-4o-mini                # OpenAI base model name
-      api_key: os.environ/OPENAI_API_KEY
+      api_key: OS.environ/OPENAI_API_KEY
 
 router_settings:
   # Optional: master_key for proxy authentication
