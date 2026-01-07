@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Undo Redo in Blazor Block Editor component
+# Undo Redo in Blazor Block Editor Component
 
 The undo/redo feature in Block Editor enables users to revert or reapply changes made to the content, offering a safety net for edits and enhancing the overall editing experience.
 
@@ -18,7 +18,7 @@ The undo/redo feature in Block Editor enables users to revert or reapply changes
 | Undo       | Ctrl + Z     | ⌘ + Z   | Reverts the last action. |
 | Redo       | Ctrl + Y     | ⌘ + Y | Reapplies the last undone action. |
 
-## Configuring Undo/Redo stack
+## Configuring undo/redo stack
 
 The Block Editor stores a history of actions, allowing users to perform undo and redo operations. By default, it saves up to `30` actions. You can customize this limit using the [UndoRedoStack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_UndoRedoStack) property to control the maximum number of steps that can be undone or redone.
 
