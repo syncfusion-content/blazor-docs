@@ -92,22 +92,46 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
-- Create a file named **AzureAIService.cs** file and place it inside the `Service` folder, which is located inside the `Components` folder.
+- Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
-{% highlight c# tabtitle="AzureAIService.cs" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="7 8 9 11 12 13" %}
+
+using Syncfusion.Blazor.AI;
+using Microsoft.Extensions.AI;
+using OpenAI;
+
+var builder = WebApplication.CreateBuilder(args);
+
+string openAIApiKey = "API-KEY";
+string openAIModel = "OPENAI_MODEL";
+OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
+IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
+builder.Services.AddChatClient(openAIChatClient);
+builder.Services.AddSingleton<SyncfusionAIService>();
+builder.Services.AddSingleton<AIService>();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+- Create a file named **AIService.cs** file and place it inside the `Service` folder, which is located inside the `Components` folder.
+
+{% tabs %}
+{% highlight c# tabtitle="AIService.cs" %}
 
 using Microsoft.Extensions.AI;
 using Syncfusion.Blazor.AI;
 
 namespace QBwithNaturalLanguageProcessing.Service
 {
-    public class AzureAIService
+    public class AIService
     {
         private SyncfusionAIService _openAIConfiguration;
         private ChatParameters chatParameters_history = new ChatParameters();
 
-        public AzureAIService(SyncfusionAIService openAIConfiguration)
+        public Service(SyncfusionAIService openAIConfiguration)
         {
             _openAIConfiguration = openAIConfiguration;
         }
@@ -162,30 +186,6 @@ namespace QBwithNaturalLanguageProcessing.Service
 {% endhighlight %}
 {% endtabs %}
 
-- Add the following to the **~/Program.cs** file in the Blazor Web App:
-
-{% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
-
-using Syncfusion.Blazor.AI;
-using Microsoft.Extensions.AI;
-using OpenAI;
-
-var builder = WebApplication.CreateBuilder(args);
-
-string openAIApiKey = "API-KEY";
-string openAIModel = "OPENAI_MODEL";
-OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
-IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
-builder.Services.AddChatClient(openAIChatClient);
-builder.Services.AddSingleton<SyncfusionAIService>();
-builder.Services.AddSingleton<AzureAIService>();
-
-var app = builder.Build();
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Azure OpenAI
 
 Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
@@ -205,7 +205,7 @@ Install-Package Azure.AI.OpenAI
 - Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
@@ -224,7 +224,7 @@ AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
 IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
 builder.Services.AddChatClient(azureOpenAIChatClient);
 builder.Services.AddSingleton<SyncfusionAIService>();
-builder.Services.AddSingleton<AzureAIService>();
+builder.Services.AddSingleton<AIService>();
 
 var app = builder.Build();
 
@@ -253,7 +253,7 @@ Install-Package OllamaSharp
 - Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="7 8 9 11 12 13" %}
 
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
@@ -265,7 +265,7 @@ string ModelName = "MODEL_NAME";
 IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
 builder.Services.AddChatClient(chatClient);
 builder.Services.AddSingleton<SyncfusionAIService>();
-builder.Services.AddSingleton<AzureAIService>();
+builder.Services.AddSingleton<AIService>();
 
 var app = builder.Build();
 
@@ -276,7 +276,7 @@ var app = builder.Build();
 
 ## Register Syncfusion Blazor service
 
-Register the Syncfusion® Blazor Service in the ~/Program.cs file of your Blazor Web App.
+Register the Syncfusion® Blazor Service in the **~/Program.cs** file of the Blazor Web App.
 
 If the **Interactive Render Mode** is set to `Server`, register the Syncfusion® Blazor service in the **~/Program.cs** file.
 
@@ -328,8 +328,7 @@ Add the Natural Language Query processing in the Syncfusion® Blazor Query Build
 @using Syncfusion.Blazor.QueryBuilder
 @using QBwithNaturalLanguageProcessing.Service
 @using Syncfusion.Blazor.Spinner
-@inject AzureAIService OpenAIService
-
+@inject AIService OpenAIService
 
 <div>
     <SfTab LoadOn="ContentLoad.Init">
