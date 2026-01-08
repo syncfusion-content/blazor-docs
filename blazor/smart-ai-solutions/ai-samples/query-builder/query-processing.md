@@ -124,7 +124,7 @@ var app = builder.Build();
 using Microsoft.Extensions.AI;
 using Syncfusion.Blazor.AI;
 
-namespace QBwithNaturalLanguageProcessing.Service
+namespace NaturalLanguageProcessing.Service
 {
     public class AIService
     {
@@ -326,7 +326,7 @@ Add the Natural Language Query processing in the Syncfusion® Blazor Query Build
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.QueryBuilder
-@using QBwithNaturalLanguageProcessing.Service
+@using NaturalLanguageProcessing.Service
 @using Syncfusion.Blazor.Spinner
 @inject AIService OpenAIService
 
@@ -363,7 +363,7 @@ Add the Natural Language Query processing in the Syncfusion® Blazor Query Build
         </TabItems>
     </SfTab>
     <div class="e-custom-elem">
-        <SfButton Content="Run Query" CssClass="e-primary" IconCss="e-icons e-play" @onclick="GenBtnClick"></SfButton>
+        <SfButton Content="Run Query" CssClass="e-primary" IconCss="e-icons e-play" @onclick="GenerateButtonClick"></SfButton>
     </div>
     <div class="e-custom-elem">
         <span class="e-text">Results</span>
@@ -438,7 +438,7 @@ Add the Natural Language Query processing in the Syncfusion® Blazor Query Build
     {
         GridData = DataSource;
     }
-    private async void GenBtnClick()
+    private async void GenerateButtonClick()
     {
         VisibleProperty = true;
         string prompt = "Create an SQL query to achieve the following task: " + TextAreaValue + " from a single table. Focus on constructing a valid SQL query that directly addresses the specified task, ensuring it adheres to standard SQL syntax for querying a single table. NOTE: Return only the SQL query without any additional explanation or commentary. The response should contain the query itself, formatted correctly and ready for execution.";
