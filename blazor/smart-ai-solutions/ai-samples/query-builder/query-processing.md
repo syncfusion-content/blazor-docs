@@ -92,6 +92,76 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
+- Create a file named **AzureAIService.cs** file and place it inside the `Service` folder, which is located inside the `Components` folder.
+
+{% tabs %}
+{% highlight c# tabtitle="AzureAIService.cs" %}
+
+using Microsoft.Extensions.AI;
+using Syncfusion.Blazor.AI;
+
+namespace QBwithNaturalLanguageProcessing.Service
+{
+    public class AzureAIService
+    {
+        private SyncfusionAIService _openAIConfiguration;
+        private ChatParameters chatParameters_history = new ChatParameters();
+
+        public AzureAIService(SyncfusionAIService openAIConfiguration)
+        {
+            _openAIConfiguration = openAIConfiguration;
+        }
+
+        /// <summary>
+        /// Gets a text completion from the Azure OpenAI service.
+        /// </summary>
+        /// <param name="prompt">The user prompt to send to the AI service.</param>
+        /// <param name="returnAsJson">Indicates whether the response should be returned in JSON format. Defaults to <c>true</c></param>
+        /// <param name="appendPreviousResponse">Indicates whether to append previous responses to the conversation history. Defaults to <c>false</c></param>
+        /// <param name="systemRole">Specifies the systemRole that is sent to AI Clients. Defaults to <c>null</c></param>
+        /// <returns>The AI-generated completion as a string.</returns>
+        public async Task<string> GetCompletionAsync(string prompt, bool returnAsJson = true, bool appendPreviousResponse = false, string systemRole = null)
+        {
+            string systemMessage = returnAsJson ? "You are a helpful assistant that only returns and replies with valid, iterable RFC8259 compliant JSON in your responses unless I ask for any other format. Do not provide introductory words such as 'Here is your result' or '```json', etc. in the response" : !string.IsNullOrEmpty(systemRole) ? systemRole : "You are a helpful assistant";
+            try
+            {
+                ChatParameters chatParameters = appendPreviousResponse ? chatParameters_history : new ChatParameters();
+                if (appendPreviousResponse)
+                {
+                    if (chatParameters.Messages == null)
+                    {
+                        chatParameters.Messages = new List<ChatMessage>() {
+                            new ChatMessage(ChatRole.System,systemMessage),
+                        };
+                    }
+                    chatParameters.Messages.Add(new ChatMessage(ChatRole.User, prompt));
+                }
+                else
+                {
+                    chatParameters.Messages = new List<ChatMessage>(2) {
+                        new ChatMessage (ChatRole.System, systemMessage),
+                        new ChatMessage(ChatRole.User,prompt)
+                    };
+                }
+                var completion = await _openAIConfiguration.GenerateResponseAsync(chatParameters);
+                if (appendPreviousResponse)
+                {
+                    chatParameters_history?.Messages?.Add(new ChatMessage(ChatRole.Assistant, completion.ToString()));
+                }
+                return completion.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An exception has occurred: {ex.Message}");
+                return "";
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 - Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
@@ -243,7 +313,7 @@ await builder.Build().RunAsync();
 
 ### AI-powered Query Builder Natural Language Query Processing
 
-Add the Natural Langauge Query processing in the Syncfusion® Blazor Query Builder component inside the **~Pages/Home.razor** file. This feature enables users to input queries in plain language, which the system then interprets to automatically generate the appropriate database queries.
+Add the Natural Language Query processing in the Syncfusion® Blazor Query Builder component inside the **~Pages/Home.razor** file. This feature enables users to input queries in plain language, which the system then interprets to automatically generate the appropriate database queries.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -426,12 +496,10 @@ If the AI service fails to return a valid response, the Query Builder shows a to
 
 When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
 
-## Sample Code
-
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
-
 ## Live Demo
 
 Explore the AI-powered Smart Query Builder in action by visiting the live demo:
 
-👉 [Try the Live Demo](https://blazor.syncfusion.com/demos/pivot-table/ai-smart-pivot?theme=fluent2)
+👉 [Try the Live Demo](https://blazor.syncfusion.com/demos/query-builder/ai-natural-languagequery?theme=fluent2)
+
+N> A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
