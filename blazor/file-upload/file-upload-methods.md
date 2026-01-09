@@ -61,8 +61,6 @@ The [`GetFileDetails`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLetYVyVNjMlOlP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
 
-![Blazor FileUpload GetFileDetails Method](./images/blazor-fileupload-getfiledetails.gif)
-
 
 ## GetFilesDataAsync
 
@@ -103,8 +101,6 @@ The [`GetFilesDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthoZYLzypWUmzGy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor FileUpload GetFilesDataAsync Method](./images/blazor-fileupload-getfilesdataasync.gif)
-
 ## UploadAsync
 
 The [`UploadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_UploadAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__) method programmatically initiates the upload process for all selected files in the File Upload component. This method is particularly useful when [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) is set to `false`, allowing the user to trigger the upload manually at a specific time, such as after reviewing their selections.
@@ -132,8 +128,6 @@ The [`UploadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 > **Note:** When [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) is set to `false`, calling [`UploadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_UploadAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__) is essential to begin the file transfer. If [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) is `true`, files will start uploading automatically upon selection, and [`UploadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_UploadAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__) may not be necessary.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBeXYVTezyQELFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor FileUpload UploadAsync Method](./images/blazor-fileupload-uploadasync.gif)
 
 ## CancelAsync
 
@@ -167,8 +161,6 @@ The [`CancelAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor FileUpload CancelAsync Method](./images/blazor-fileupload-cancelasync.gif)
-
 ## ClearAllAsync
 
 The [`ClearAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ClearAllAsync) method allows you to programmatically clear all selected or uploaded files from the File Upload component's internal list and UI. This is useful for resetting the component and preparing it for a new selection of files, or for cleaning up after a successful (or failed) upload operation.
@@ -196,8 +188,6 @@ The [`ClearAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 > **Note:** [`ClearAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ClearAllAsync)  only affects the client-side representation in the File Upload component. It does not automatically delete files from the server if they have already been uploaded. Server-side deletion would require a separate call to your server-side API.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVItErIihaDlaeE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor FileUpload ClearAllAsync Method](./images/blazor-fileupload-clearallasync.gif)
 
 ## RemoveAsync
 
@@ -235,5 +225,3 @@ The [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 > **Note:** The [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) method typically requires the fileInfo[] of the file you wish to remove. If [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) is configured in [`UploaderAsyncSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html), calling [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) will also trigger a server-side call to the specified [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) to handle server-side file deletion. If no [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) is configured, [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) will only remove the file from the client-side component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhSjYreMJJIqYvz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor FileUpload RemoveAsync Method](./images/blazor-fileupload-removeasync.gif)
