@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Undo redo in Blazor Block Editor component
+# Undo Redo in Blazor Block Editor Component
 
 The undo/redo feature in Block Editor enables users to revert or reapply changes made to the content, offering a safety net for edits and enhancing the overall editing experience.
 
@@ -18,11 +18,11 @@ The undo/redo feature in Block Editor enables users to revert or reapply changes
 | Undo       | Ctrl + Z     | ⌘ + Z   | Reverts the last action. |
 | Redo       | Ctrl + Y     | ⌘ + Y | Reapplies the last undone action. |
 
-## Configuring Undo/Redo stack
+## Configuring undo/redo stack
 
 The Block Editor stores a history of actions, allowing users to perform undo and redo operations. By default, it saves up to `30` actions. You can customize this limit using the [UndoRedoStack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_UndoRedoStack) property to control the maximum number of steps that can be undone or redone.
 
-The example below sets the undo/redo history limit to `20` actions.
+The following example demonstrates how to set the undo/redo history limit to `20` actions.
 
 
 ```cshtml
@@ -30,7 +30,7 @@ The example below sets the undo/redo history limit to `20` actions.
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor Blocks="@BlocksData" UndoRedoStack=20></SfBlockEditor>
+    <SfBlockEditor Blocks="@BlocksData" UndoRedoStack="20"></SfBlockEditor>
 </div>
 @code {
     private List<BlockModel> BlocksData = new List<BlockModel>
@@ -68,7 +68,7 @@ The example below sets the undo/redo history limit to `20` actions.
                 new ContentModel
                 {
                     ContentType = ContentType.Text,
-                    Content = "1. Undo stack set to maximum 40 actions\n2. Press Ctrl+Z to undo\n3. Press Ctrl+Y to redo\n4. Actions include text edits, block moves, additions, deletions"
+                    Content = "1. Undo stack set to maximum 20 actions\n2. Press Ctrl+Z to undo\n3. Press Ctrl+Y to redo\n4. Actions include text edits, block moves, additions, deletions"
                 }
             }
         }
@@ -85,5 +85,7 @@ The example below sets the undo/redo history limit to `20` actions.
 </style>
 
 ```
+
+The following screenshot displays the Block Editor component with undo/redo functionality.
 
 ![Blazor Block Editor Undo Redo](./images/undo-redo.png)

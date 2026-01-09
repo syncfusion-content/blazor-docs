@@ -47,7 +47,7 @@ Block Editor can be localized for any culture by translating its static text lab
 |`linkCancel`|Cancel|
 |`codeCopyTooltip`|Copy code|
 
-Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to localize Syncfusion Blazor components.
+Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation for detailed steps on implementing localization in Syncfusion Blazor components.
 
 ## Right-to-Left (RTL)
 

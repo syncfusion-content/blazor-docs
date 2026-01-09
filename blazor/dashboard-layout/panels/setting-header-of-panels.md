@@ -53,4 +53,4 @@ The Blazor Dashboard Layout component utilizes two primary templates for renderi
 ```
 The following output demonstrates the use of `HeaderTemplate` and `ContentTemplate` to define the header and content of panels:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with Header.](images/blazor-admin-template-layout-with-header.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with Header.](../images/blazor-admin-template-layout-with-header.png)" %}

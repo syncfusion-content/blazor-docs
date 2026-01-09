@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Typography Blocks in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Typography Blocks with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn about typography blocks like paragraphs, headings, quotes, and callouts in the Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
 documentation: ug
 ---
 
-# Typography Blocks in Blazor Block Editor component
+# Typography Blocks in Blazor Block Editor Component
 
 Typography blocks are essential for organizing and presenting text-based content. The Block Editor component supports various structural blocks—such as Paragraph, Heading, Collapsible (CollapsibleParagraph and CollapsibleHeading), Divider, Quote, and Callout—to help you format and structure content effectively.
 
@@ -34,12 +34,12 @@ The below sample demonstrates the configuration of paragraph block in the Block 
 <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "This is a paragraph block example."}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is a paragraph block example."}}
         }
     };
 }
@@ -71,12 +71,12 @@ The below sample demonstrates the configuration of placeholder in the Block Edit
 <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "This is a sample paragraph block."}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is a sample paragraph block."}}
         },
         new BlockModel
         {
@@ -93,7 +93,7 @@ The below sample demonstrates the configuration of placeholder in the Block Edit
 
 Heading blocks create document titles and section headers. These blocks help structure content hierarchically, making it easier to read and navigate. Render a Heading block by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Heading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Heading).
 
-### Configuring Levels
+### Configuring levels
 
 Set the heading level using the [Level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.HeadingBlockSettings.html#Syncfusion_Blazor_BlockEditor_HeadingBlockSettings_Level) property, with `1` being the highest level (title) and `4` being the lowest (subsection).
 
@@ -116,31 +116,31 @@ The following sample demonstrates the configuration of a heading block in the Bl
 <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings { Level = 1},
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "Main Document Title"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Main Document Title"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings { Level = 2},
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "Chapter Overview"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Chapter Overview"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings { Level = 3},
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "Section Introduction"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Section Introduction"}}
         },
         new BlockModel
         {
             BlockType = BlockType.Heading,
             Properties = new HeadingBlockSettings { Level = 4},
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "Sub-section Details"}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Sub-section Details"}}
         },
     };
 }
@@ -204,29 +204,31 @@ This example shows how to configure [CollapsibleHeading](https://help.syncfusion
 <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.CollapsibleHeading,
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "Collapsible Section"}},
-            Properties = new CollapsibleHeadingBlockSettings { Level = 1, IsExpanded = true, Children = new List<BlockModel> {
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Collapsible Section"}},
+            Properties = new CollapsibleHeadingBlockSettings { Level = 1, IsExpanded = true, Children = new()
+            {
                 new BlockModel
                 {
                     BlockType = BlockType.Paragraph,
-                    Content ={new ContentModel{ContentType = ContentType.Text, Content = "This content is inside a toggle section and can be collapsed."}}
+                    Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This content is inside a toggle section and can be collapsed."}}
                 }
             } }
         },
         new BlockModel
         {
             BlockType = BlockType.CollapsibleParagraph,
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "Toggle paragraph section"}},
-            Properties = new CollapsibleParagraphBlockSettings { IsExpanded = false, Children = new List<BlockModel> {
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "Toggle paragraph section"}},
+            Properties = new CollapsibleParagraphBlockSettings { IsExpanded = false, Children = new()
+            {
                 new BlockModel
                 {
                     BlockType = BlockType.Paragraph,
-                    Content ={new ContentModel{ContentType = ContentType.Text, Content = "This content is initially hidden because isExpanded is set to false."}}
+                    Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This content is initially hidden because isExpanded is set to false."}}
                 }
             } }
         }
@@ -267,12 +269,12 @@ This sample shows how to place a divider between two blocks.
 <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "This section discusses the features of the Block Editor."}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This section discusses the features of the Block Editor."}}
         },
         new BlockModel
         {
@@ -281,7 +283,7 @@ This sample shows how to place a divider between two blocks.
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "This section covers implementation details and usage examples."}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This section covers implementation details and usage examples."}}
         }
     };
 }
@@ -301,12 +303,12 @@ The following sample shows how to configure a quote block.
 <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Quote,
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "The greatest glory in living lies not in never falling, but in rising every time we fall."}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "The greatest glory in living lies not in never falling, but in rising every time we fall."}}
         }
     };
 }
@@ -339,18 +341,18 @@ The following sample adds a callout block to the editor.
 <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Callout,
             Properties = new CalloutBlockSettings { 
-                Children = new List<BlockModel>
+                Children = new()
                 {
                     new BlockModel
                     {
                         BlockType = BlockType.Paragraph,
-                        Content ={ new ContentModel{ ContentType = ContentType.Text, Content = "Important information: This is a callout block used to highlight important content." }}
+                        Content = new() { new ContentModel{ ContentType = ContentType.Text, Content = "Important information: This is a callout block used to highlight important content." }}
                     }
                 }
                 
@@ -380,14 +382,14 @@ This structure is essential for maintaining nested relationships within the edit
 <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
             ID = "security-callout",
             BlockType = BlockType.Callout,
             Properties = new CalloutBlockSettings { 
-                Children = new List<BlockModel>
+                Children = new()
                 {
                     new BlockModel
                     {
@@ -395,21 +397,21 @@ This structure is essential for maintaining nested relationships within the edit
                         ParentID = "security-callout",
                         BlockType = BlockType.Heading,
                         Properties = new HeadingBlockSettings { Level = 3},
-                        Content ={ new ContentModel{ ContentType = ContentType.Text, Content = "Security Notice" }}
+                        Content = new() { new ContentModel{ ContentType = ContentType.Text, Content = "Security Notice" }}
                     },
                     new BlockModel
                     {
                         ID = "security-warning",
                         ParentID = "security-callout",
                         BlockType = BlockType.Paragraph,
-                        Content ={ new ContentModel{ ContentType = ContentType.Text, Content = "Always validate user input before processing to prevent security vulnerabilities." }}
+                        Content = new() { new ContentModel{ ContentType = ContentType.Text, Content = "Always validate user input before processing to prevent security vulnerabilities." }}
                     },
                     new BlockModel
                     {
                         ID = "security-tips",
                         ParentID = "security-callout",
                         BlockType = BlockType.Paragraph,
-                        Content ={ new ContentModel{ ContentType = ContentType.Text, Content = "Use HTTPS for all data transmission" }},
+                        Content = new() { new ContentModel{ ContentType = ContentType.Text, Content = "Use HTTPS for all data transmission" }},
                         Indent = 1
                     },
                     new BlockModel
@@ -417,7 +419,7 @@ This structure is essential for maintaining nested relationships within the edit
                         ID = "security-tips-2",
                         ParentID = "security-callout",
                         BlockType = BlockType.Paragraph,
-                        Content ={ new ContentModel{ ContentType = ContentType.Text, Content = "Implement proper authentication mechanisms" }},
+                        Content = new() { new ContentModel{ ContentType = ContentType.Text, Content = "Implement proper authentication mechanisms" }},
                         Indent = 1
                     },
                     new BlockModel
@@ -425,7 +427,7 @@ This structure is essential for maintaining nested relationships within the edit
                         ID = "security-tips-3",
                         ParentID = "security-callout",
                         BlockType = BlockType.Paragraph,
-                        Content ={ new ContentModel{ ContentType = ContentType.Text, Content = "Regularly update dependencies and libraries" }},
+                        Content = new() { new ContentModel{ ContentType = ContentType.Text, Content = "Regularly update dependencies and libraries" }},
                         Indent = 1
                     },
                 }

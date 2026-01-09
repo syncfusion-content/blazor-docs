@@ -48,30 +48,46 @@ By default, the header bar holds the date and view navigation options, through w
 
 ![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-hide-header-bar.png)
 
-## Customizing header bar using template
+## Toolbar customization
 
-The Scheduler header bar can be customized by adding, removing, or reordering toolbar items using the `ScheduleToolBar` component and its child components. This provides a flexible way to create a personalized toolbar that meets your specific requirements.
+Syncfusion Blazor Scheduler enables comprehensive toolbar customization to match your application's navigation and filtering requirements. By using the `ScheduleToolBar` component and its child items, you can:
+
+- Integrate built-in navigation controls (Previous, Next, Today, Views).
+- Embed custom elements, such as dropdowns and buttons.
+- Rearrange, add, or remove toolbar items to streamline user workflows.
+- Apply adaptive spacing or separators for a responsive layout.
+
+Use these configuration options to deliver an intuitive and branded scheduling experience.
+
+### Built-in toolbar items
 
 The Scheduler provides the following built-in toolbar components:
 
-* **`ScheduleToolBarPrevious`** - Navigates to the previous date range.
-* **`ScheduleToolBarNext`** - Navigates to the next date range.
-* **`ScheduleToolBarDateRange`** - Shows the current visible date range.
-* **`ScheduleToolBarToday`** - Navigates to today's date.
-* **`ScheduleToolBarViews`** - Renders buttons for each configured Scheduler view.
-* **`ScheduleToolBarNewEvent`** - Renders the Add button to create new appointments. This button will be visible only when the Scheduler is in adaptive UI mode or mobile mode.
-* **`ScheduleToolBarCustom`** - Adds a toolbar item with custom template content.
+| Item                  | Description                                                                                     |
+| --------------------- | ----------------------------------------------------------------------------------------------- |
+| `ScheduleToolBarPrevious`  | Navigates to the previous date range.                                                           |
+| `ScheduleToolBarNext`        | Navigates to the next date range.                                                               |
+| `ScheduleToolBarDateRange`   | Displays the current visible date range.                                                        |
+| `ScheduleToolBarToday`       | Navigates to today's date.                                                                      |
+| `ScheduleToolBarViews` | Renders view-switching buttons for any user-configured views. However, if only a single view is configured, the view-switching buttons will not be rendered. If no views are explicitly configured, the Scheduler renders its default set of built-in views. |
+| `ScheduleToolBarNewEvent`    | Renders an "Add" button for creating new appointments. This is visible when `EnableAdaptiveUI` is `true` on desktop or when the Scheduler is rendered on mobile devices. |
 
-The `ScheduleToolBarCustom` component allows you to add custom elements to the toolbar. It supports different item types through the `Type` property:
+### Custom toolbar item
 
-* **`ItemType.Button`** (default) - Renders custom content as a button-type toolbar item.
-* **`ItemType.Input`** - Use when adding input elements like dropdowns or textboxes.
-* **`ItemType.Spacer`** - Creates flexible spacing to push subsequent items to the right.
-* **`ItemType.Separator`** - Adds a vertical line to separate toolbar item groups.
+For more advanced scenarios, the `ScheduleToolBarCustom` component allows you to add custom content to the toolbar. It supports different item types through the `Type` property to accommodate various UI elements.
 
-N> When adding input elements within `ScheduleToolBarCustom`, you must set the `Type` property to `ItemType.Input`.
+| Type                | Description                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| `ItemType.Button`   | (Default) Renders custom content as a button-style item for clickable actions.        |
+| `ItemType.Input`    | Used to embed input controls, such as a `SfDropDownList` or `SfTextBox`, into the toolbar.    |
+| `ItemType.Spacer`   | Adds an adaptive space that pushes subsequent items, creating horizontal separation. |
+| `ItemType.Separator`| Adds a vertical divider line to visually separate groups of toolbar items.            |
 
-The following example demonstrates adding a custom dropdown to the toolbar alongside default navigation items to filter appointments by owner.
+N> When adding input elements such as dropdowns or textboxes within `ScheduleToolBarCustom`, the `Type` property must be set to `ItemType.Input` to ensure proper rendering and interaction behavior.
+
+### Configuring Custom Toolbar
+
+In this comprehensive example, we create a custom toolbar that enhances navigation and adds resource-based filtering within the Blazor Scheduler. The toolbar includes built-in navigation controls (previous/next, date range, and today) along with a custom dropdown for selecting a resource. When the dropdown value changes, the `OnOwnerChange` event updates the `EventQuery` filter, which is bound to both the `ScheduleResource` and the `ScheduleEventSettings`. This dynamic binding ensures the scheduler displays appointments only for the selected resource.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -187,9 +203,7 @@ The following example demonstrates adding a custom dropdown to the toolbar along
 }
 ```
 
-The Scheduler with custom toolbar items alongside the default navigation in the header bar will be rendered as shown in the following image.
-
-![Customizing header bar using template in Blazor Scheduler](images/blazor-scheduler-toolbar-template.png)
+![Blazor Scheduler with a Custom Toolbar](images/blazor-scheduler-toolbar-template.png)
 
 ## How to display the view options within the header bar popup
 

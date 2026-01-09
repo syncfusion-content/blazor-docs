@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Controlling Editor Access | Blazor Block Editor Component | Syncfusion
-description: Checkout and learn here all about Controlling Editor Access with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn how to control editor access and implement read-only mode in the Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
 documentation: ug
 ---
 
-# Controlling Editor Access in Blazor Block Editor component
+# Controlling Editor Access in Blazor Block Editor Component
 
-The Syncfusion Blazor Block Editor provides read-only modes to control user interaction with the editor. This allows users to view formatted content without editing. This features are useful for displaying content without modifications or temporarily restricting input.
+The Syncfusion Blazor Block Editor provides a read-only mode to control user interaction with the editor. This allows users to view formatted content without editing. These features are useful for displaying content without modifications or temporarily restricting input, such as when presenting archived documents, previewing content, or restricting editing permissions.
 
 ## Read-only mode
 
@@ -24,20 +24,20 @@ The following example demonstrates how to enable read-only mode in the Block Edi
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
-    <SfBlockEditor Blocks="@BlocksData" ReadOnly=true></SfBlockEditor>
+    <SfBlockEditor Blocks="@BlocksData" ReadOnly="true"></SfBlockEditor>
 </div>
 @code {
-    private List<BlockModel> BlocksData = new List<BlockModel>
+    private List<BlockModel> BlocksData = new()
     {
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content = new List<ContentModel>
+            Content = new()
             {
                 new ContentModel
                 {
                     ContentType = ContentType.Text,
-                    Content = "The Block Editor supports various content types. When the readOnly property is set to true, it prevents users from editing the content, making the editor display-only."
+                    Content = "The Block Editor supports various content types. When the ReadOnly property is set to true, it prevents users from editing the content, making the editor display-only."
                 }
             }
         }
