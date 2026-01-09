@@ -480,7 +480,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-button/getting-started"><span class="sf-home-icon sf-icon-progressbutton"></span>Progress Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/split-button/getting-started"><span class="sf-home-icon sf-icon-splitbutton"></span>Split Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chip/getting-started"><span class="sf-home-icon sf-icon-chips"></span>Chips</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/appearance/icons"><span class="sf-home-icon sf-icon-appbar"></span>Icons</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/appearance/icons"><span class="sf-home-icon sf-icon-button"></span>Icons</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/floating-action-button/getting-started"><span class="sf-home-icon sf-icon-floatingactionbutton"></span>Floating Action Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speeddial/getting-started"><span class="sf-home-icon sf-icon-speeddial"></span>Speed Dial</a></div>
     </td>
