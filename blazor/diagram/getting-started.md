@@ -115,11 +115,11 @@ string azureOpenAIEndpoint = "AZURE_OPENAI_ENDPOINT";
 string azureOpenAIModel = "AZURE_OPENAI_MODEL";
 
 AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-     new Uri(endpoint),
-     new ApiKeyCredential(apiKey)
+     new Uri(azureOpenAIEndpoint),
+     new ApiKeyCredential(azureOpenAIKey)
 );
 
-IChatClient AIChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
+IChatClient AIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
 builder.Services.AddScoped<AzureAIService>(sp =>
 {
     return new AzureAIService(AIChatClient);
