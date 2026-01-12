@@ -35,7 +35,7 @@ This package contains the base component, common classes, common functionalities
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a>
 </td>
 <td>
-Common, Base
+Common, Base, MediaQuery
 </td>
 <td>
 <ul>
@@ -180,6 +180,51 @@ The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and comp
 </td>
 <td>
 <a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+</td>
+</tr>
+</table>
+
+## Syncfusion.Blazor.BlockEditor
+
+The Blazor BlockEditor is a modern, block-based content editor for composing rich, structured documents.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.BlockEditor">Syncfusion.Blazor.BlockEditor</a>
+</td>
+<td>
+<ul>
+<li><a href="https://blazor.syncfusion.com/documentation/block-editor/getting-started">Block Editor</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SfBlockEditor</li>
+</ul>
+</td>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core">Syncfusion.Blazor.Core</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns">Syncfusion.Blazor.DropDowns</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups">Syncfusion.Blazor.Popups</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons">Syncfusion.Blazor.SplitButtons</a>
 </td>
 </tr>
 </table>
