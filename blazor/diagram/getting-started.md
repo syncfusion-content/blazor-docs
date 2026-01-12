@@ -86,6 +86,7 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Azure.AI.OpenAI
+Install-Package Syncfusion.Blazor.AI
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
 
@@ -95,7 +96,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
 **To configure the AI service, add the following settings to the ~/Program.cs file in your Blazor Server app.**
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="14-16 18-21 23 24-29" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines=" 3-6 14-28" %}
 
 using Syncfusion.Blazor.Diagram;
 using Syncfusion.Blazor.AI;
@@ -114,16 +115,14 @@ string azureOpenAIEndpoint = "AZURE_OPENAI_ENDPOINT";
 string azureOpenAIModel = "AZURE_OPENAI_MODEL";
 
 AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-     new Uri(azureOpenAIEndpoint),
-     new ApiKeyCredential(azureOpenAIKey)
+     new Uri(endpoint),
+     new ApiKeyCredential(apiKey)
 );
 
-IChatClient AIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
-builder.Services.AddScoped<UserTokenService>();
+IChatClient AIChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
 builder.Services.AddScoped<AzureAIService>(sp =>
 {
-    var userTokenService = sp.GetRequiredService<UserTokenService>();
-    return new AzureAIService(userTokenService, AIChatClient);
+    return new AzureAIService(AIChatClient);
 });
 
 var app = builder.Build();
