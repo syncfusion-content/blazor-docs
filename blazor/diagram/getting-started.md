@@ -96,12 +96,13 @@ Install-Package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
 **To configure the AI service, add the following settings to the ~/Program.cs file in your Blazor Server app.**
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines=" 3-6 14-28" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines=" 3-7 15-29" %}
 
 using Syncfusion.Blazor.Diagram;
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
+using AIService;
 using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
