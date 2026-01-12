@@ -1343,6 +1343,9 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
 
 {% endhighlight %}
 {% endtabs %}
+
+A complete working AI sample can be downloaded from [GitHub](https://github.com/syncfusion/smart-ai-samples).
+
 ## Step 6: How to Add Stylesheet and Script Resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script in the `<head>` and the script reference at the end of the `<body>` in the **App.razor** file as shown below:
