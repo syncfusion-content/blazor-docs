@@ -1,6 +1,6 @@
 # TriState in Blazor CheckBox Component
 
-The Syncfusion Blazor CheckBox component supports a `TriState` mode that allows the checkbox to represent three distinct states: Checked, Indeterminate, and Unchecked. This feature is enabled by setting the EnableTriState property to true. 
+The Syncfusion Blazor CheckBox component supports a TriState mode that allows the checkbox to represent three distinct states: Checked, Indeterminate, and Unchecked. This feature is enabled by setting the `EnableTriState` property to true. 
 To properly handle all three states, the bound property must be of type bool? (nullable boolean).
 
 When EnableTriState="true", the checkbox cycles through the following states:
