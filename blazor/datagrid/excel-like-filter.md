@@ -102,7 +102,7 @@ public class OrderData
 > * Supports multiple filter types: text, numbers, dates, and true/false values
 > * Provides search functionality to find specific values within the filter dialog
 > * Allows clearing of previously applied filters
-> * The grid does not have a default Between operator; however, the Excel filter offers a Between option for number or date type columns, functioning as a range filter using two conditions.
+> * By default, the grid does not include a ‘Between’ operator. However, the Excel filter provides a ‘Between’ option for numeric and date columns, which functions as a range filter by applying two conditions.
 
 ## Checkbox Filtering
 
