@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TriState in Blazor CheckBox Component | Syncfusion
-description: Checkout and learn here all about TriState in Syncfusion Blazor CheckBox component and much more.
+description: Checkout and learn here all about the TriState in Syncfusion Blazor CheckBox component and much more.
 platform: Blazor
 control: Checkbox
 documentation: ug
