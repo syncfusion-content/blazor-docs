@@ -171,60 +171,6 @@ The following code example shows how to add a Swimlane and a Connector at runtim
     private DiagramObjectCollection<NodeBase> swimlaneCollection = new DiagramObjectCollection<NodeBase>();
     private DiagramObjectCollection<NodeBase> NodesAndConnectors = new DiagramObjectCollection<NodeBase>();
 
-    protected override void OnInitialized()
-    { 
-        Node node1 = new Node()
-        {
-            ID = "node1",
-            Height = 50,
-            Width = 50,
-            LaneOffsetX = 100,
-            LaneOffsetY = 30,
-            Ports = new DiagramObjectCollection<PointPort>()
-            {
-                new PointPort()
-                {
-                    ID = "port1",
-                    Visibility = PortVisibility.Visible,
-                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
-                    Height = 10,
-                    Width = 10
-                }
-            }
-        };
-        NodesAndConnectors.Add(node1);
-
-        Node node2 = new Node()
-        {
-            ID = "node2",
-            Height = 50,
-            Width = 50,
-            LaneOffsetX = 250,
-            LaneOffsetY = 30,
-            Ports = new DiagramObjectCollection<PointPort>()
-            {
-                new PointPort()
-                {
-                    ID = "port2",
-                    Visibility = PortVisibility.Visible,
-                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
-                    Height = 10,
-                    Width = 10
-                }
-            }
-        };
-        NodesAndConnectors.Add(node2);
-
-        Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-            Type = ConnectorSegmentType.Straight
-        };
-        NodesAndConnectors.Add(Connector);
-    }
-
     private async void OnCreated()
     {
         await AddSwimlaneAndConnector();
@@ -285,6 +231,60 @@ The following code example shows how to add a Swimlane and a Connector at runtim
 
         // Add connector to diagram
         await diagram.AddDiagramElementsAsync(nodeCollection);
+    }
+
+    protected override void OnInitialized()
+    { 
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Height = 50,
+            Width = 50,
+            LaneOffsetX = 100,
+            LaneOffsetY = 30,
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                    Height = 10,
+                    Width = 10
+                }
+            }
+        };
+        NodesAndConnectors.Add(node1);
+
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 50,
+            Width = 50,
+            LaneOffsetX = 250,
+            LaneOffsetY = 30,
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port2",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Height = 10,
+                    Width = 10
+                }
+            }
+        };
+        NodesAndConnectors.Add(node2);
+
+        Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Straight
+        };
+        NodesAndConnectors.Add(Connector);
     }
 }
 ```
