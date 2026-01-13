@@ -340,6 +340,10 @@ The following table lists components and their script file names.
         <td>sf-chart.min.js</td>
     </tr>
     <tr>
+        <td>CheckBox</td>
+        <td>sf-checkbox.min.js</td>
+    </tr>
+    <tr>
         <td>AccumulationChart</td>
         <td>sf-accumulation-chart.min.js</td>
     </tr>
@@ -418,6 +422,10 @@ The following table lists components and their script file names.
     <tr>
         <td>Splitter</td>
         <td>sf-splitter.min.js</td>
+    </tr>
+    <tr>
+        <td>Switch</td>
+        <td>sf-switch.min.js</td>
     </tr>
     <tr>
         <td>Toast</td>

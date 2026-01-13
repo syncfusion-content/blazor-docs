@@ -11,7 +11,7 @@ documentation: ug
 
 ## Inserting images from web urls
 
-To insert an image from an online source like Google, Ping, and more, enable the images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows inserting an image from the online source.
+To insert an image from an online source like Google, Bing, and more, enable the images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows inserting an image from the online source.
 
 ![Blazor RichTextEditor inserting image](../images/blazor-richtexteditor-insert-image.png)
 
