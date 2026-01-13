@@ -1449,7 +1449,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
 {% endhighlight %}
 {% endtabs %}
 
-A complete working AI sample can be downloaded from [GitHub](https://github.com/syncfusion/smart-ai-samples).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/AISamples/WasmAISample).
 
 ## Step 6: How to Add Stylesheet and Script Resources
 
@@ -2822,7 +2822,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
 {% endhighlight %}
 {% endtabs %}
 
-A complete working AI sample can be downloaded from [GitHub](https://github.com/syncfusion/smart-ai-samples).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/AISamples/WasmAISample).
 
 ## Step 6: How to Add Stylesheet and Script Resources
 
