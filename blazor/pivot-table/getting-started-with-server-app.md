@@ -25,11 +25,17 @@ To quickly get started with the Blazor Pivot Table, check out this [GitHub sampl
 
 ## Create a new Blazor Server App in Visual Studio
 
-Create a **Blazor Server App** using the **Blazor Web App** template in Visual Studio. You can use [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For step-by-step guidance, refer to the [Blazor Server App Getting Started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+
+![Blazor Server App Creation Template](images/Blazor-server-app-creation.png)
+
+Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) when creating a Blazor Server App.
+
+![Blazor Server App with Interactive Mode](images/blazor-app-interactive-mode.png)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet packages
 
-To include the **Blazor Pivot Table** component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search for and install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages. Alternatively, run the following commands in the Package Manager Console.
+To include the **Blazor Pivot Table** component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). then Search and install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages. Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -40,7 +46,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages documentation](https://blazor.syncfusion.com/documentation/nuget-packages) for a complete list of available packages and component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -68,7 +74,7 @@ cd BlazorApp
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet packages
 
 1. Open the integrated terminal in Visual Studio Code with <kbd>Ctrl</kbd>+<kbd>`</kbd>.
-2. Ensure you are in the project root directory where the `.csproj` file is located.
+2. Ensure in the project root directory where the `.csproj` file is located.
 3. Run the following commands to install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and restore dependencies.
 
 {% tabs %}
@@ -89,7 +95,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-- Install the latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). To check the installed version, run the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -101,7 +107,7 @@ dotnet --version
 
 ## Create a Blazor Server App using .NET CLI
 
-Run the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux) to create a new Blazor Server App.
+Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -112,11 +118,9 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a new Blazor Server App in a directory named `BlazorApp`. For more details, see the [Create Blazor app](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) documentation.
-
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet packages
 
-Run the following commands in the command prompt (Windows), terminal (macOS), or command shell (Linux) to install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and restore dependencies.
+To add the **Blazor Pivot Table** component to the application, run the following commands in the command prompt (Windows), terminal (macOS), or command shell (Linux) to install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -136,16 +140,20 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add import namespaces
 
-To use the Pivot Table component, open the **~/_Imports.razor** file and include the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces. This allows your app to access the necessary Pivot Table classes and options.
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
 
-```cshtml
+{% tabs %}
+{% highlight C# tabtitle="~/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PivotView
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Next, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor Server App. This step enables the pivot table component in your Blazor Server App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of the Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 10" %}
@@ -166,7 +174,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-To style and enable the Blazor Pivot Table, include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the stylesheet in the `<head>` section and the script at the end of the `<body>` section in the **App.razor** file, as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
 ```html
 <head>
@@ -184,13 +192,13 @@ To style and enable the Blazor Pivot Table, include the theme stylesheet and scr
 </body>
 ```
 
-N> Visit the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) section to learn about referencing themes using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). Also, explore the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) section for different ways to include script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
 
 ## Add Blazor Pivot Table component
 
-To include the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component, add it to the **~/Components/Pages/Home.razor** file. If your app uses per-page or per-component interactivity, specify the render mode at the top of the **Home.razor** file, as shown below:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `Home.razor` page.
 
-N> If your app uses global interactivity with the **Server** render mode, this is configured by default in the **App.razor** file.
+N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
