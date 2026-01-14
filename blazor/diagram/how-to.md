@@ -157,6 +157,8 @@ The [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddDiagramElements)
 
+## How to Add Swimlane Using the AddDiagramElementsAsync Method
+
 The following code example shows how to add a Swimlane and a Connector at runtime using binding properties after the diagram has been initialized, by calling the `AddDiagramElementsAsync` method.
 
 ```
