@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Query Processing with Blazor ComboBox and AI models | Syncfusion
+title: Semantic Search with Blazor ComboBox and AI models | Syncfusion
 description: Learn how to use the Syncfusion Blazor ComboBox with OpenAI, Azure OpenAI, or Ollama for semantic search. Explore to more details.
 platform: Blazor
 control: AI Integration
@@ -205,11 +205,11 @@ var app = builder.Build();
 
 ## Register Syncfusion Blazor service
 
-Register the Syncfusion® Blazor Service in the **~/Program.cs** file of the Blazor Web App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of the Blazor Web App.
 
-If the **Interactive Render Mode** is set to `Server`, register the Syncfusion® Blazor service in the **~/Program.cs** file.
+If the **Interactive Render Mode** is set to `Server`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion® Blazor service in the **~/Program.cs** files of the main server project and associated .Client project.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** files of the main server project and associated .Client project.
 
 {% tabs %}
 {% highlight C# tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
@@ -242,7 +242,17 @@ await builder.Build().RunAsync();
 
 ### AI-powered ComboBox Semantic Searching with Embeddings
 
-This feature makes the Syncfusion Blazor ComboBox a powerful tool for creating more intelligent and responsive search interfaces.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ComboBox component in the **~Pages/Home.razor** file.
+
+The **Semantic Search** feature allows users to search for items based on the meaning and context of their queries, rather than relying solely on exact keyword matches. Powered by local embeddings, this feature enhances search accuracy by understanding the user's intent, delivering more relevant and intuitive results.
+
+This functionality is particularly useful in applications where quickly finding the right item is critical, making the Syncfusion Blazor ComboBox a powerful tool for building smarter and more responsive search interfaces.
+
+**Features**:
+
+* Contextual Search: Users can search using natural language, with the system interpreting the intent behind their query.
+* Enhanced Accuracy: More relevant results are provided by understanding the meaning of user input, not just the keywords.
+* Ideal for Large Datasets: Especially beneficial for applications with complex or extensive datasets.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -333,6 +343,8 @@ This feature makes the Syncfusion Blazor ComboBox a powerful tool for creating m
 {% endhighlight %}
 {% endtabs %}
 
+![Semantic Search with Blazor ComboBox](images/semantic-search.gif)
+
 ## Error Handling and Troubleshooting
 
 If the AI service fails to return a valid response, the ComboBox shows a toast in the upper-right corner: "Server is busy right now, Please try again". Common issues include:
@@ -353,3 +365,9 @@ Explore the AI-powered Smart ComboBox in action by visiting the live demo:
 👉 [Try the Live Demo](https://blazor.syncfusion.com/demos/combobox/embeddings?theme=fluent2)
 
 N> A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+
+## How it Works
+
+The **Semantic Search** feature helps users find items by interpreting the meaning and context of their search queries. Unlike traditional search methods, which rely on exact keyword matches, this feature understands the intent behind the query. As a result, users receive more accurate and relevant results.
+
+This feature significantly improves the user experience, particularly when navigating large or complex datasets, by making search interactions more intuitive and effective.
