@@ -8,44 +8,37 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate LiteLLM with Blazor AI AssistView Component
+# Integrate AI AssistView with LiteLLM
 
-The AI AssistView component can be integrated with [LiteLLM](https://docs.litellm.ai/docs/), an open-source proxy that provides a unified OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai). The AI AssistView component serves as a user interface where prompts are sent to the LiteLLM proxy, which forwards them to the configured LLM provider. This enables natural language understanding and context-aware responses.
+The **AI AssistView** component can also be integrated with [LiteLLM](https://docs.litellm.ai/docs), an open-source proxy that provides a unified, OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
+
+In this setup:
+* **AI AssistView** serves as the user interface for entering prompts.
+* Prompts are sent to the **LiteLLM proxy**, which forwards them to the configured LLM provider.
+* The LLM provider processes the prompt and returns a response through LiteLLM.
+* This enables **natural language understanding** and **context-aware responses** without changing the AssistView integration logic, as LiteLLM uses the same OpenAI-style API.
 
 ## Prerequisites
 
 Before starting, ensure you have the following:
 
-* **OpenAI Account**: For generating an OpenAI API key to use with LiteLLM.
+* **OpenAI Account**: Access to OpenAI services and a generated **API key**.
 
-* **Python**: Version 3.8 or higher, to run the LiteLLM proxy.
+* **Python**: Required to run the **LiteLLM proxy**.
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package: For parsing Markdown responses.
-
-## Set Up the AI AssistView Component
-
-Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
-
-## Install Dependencies
-
-Install the required packages:
-
-* Install the LiteLLM proxy via pip in your Python environment.
-
-```bash
-
-pip install "litellm[proxy]"
-
-```
-* Install the Markdig nuget packages in the application.
+* **Markdig**: For parsing Markdown responses.
 
 ```bash
 
 Nuget\Install-Package Markdig
 
 ```
+
+## Set Up the AI AssistView Component
+
+Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
 
 ## Configure the LiteLLM Proxy
 
@@ -73,25 +66,17 @@ router_settings:
 {% endhighlight %}
 {% endtabs %}
 
-* **Start the Proxy**: 
-Run the following command in your project root to start the LiteLLM proxy:
-
-```bash
-
-litellm --config "./config.yaml" --port 4000 --host 0.0.0.0
-
-```
 Security note: In production, use a secret manager for the API key and restrict CORS origins. The optional `master_key` can add proxy-level authentication—set `LITELLM_API_KEY` in the Blazor code to match if enabled.
 
-## LiteLLM with AI AssistView
+## Configure AI AssistView with LiteLLM
 
-Modify the razor file to integrate LiteLLM with the AI AssistView component.
+To integrate **LiteLLM** with the **Syncfusion AI AssistView** component, modify the razor file in your Blazor application. The component will send user prompts to the LiteLLM proxy, which forwards them to the configured LLM provider (e.g., **OpenAI** or **Azure OpenAI**) and returns natural language responses.
 
-* Update your optional LiteLLM master key (if enabled) securely in the configuration:
+In the following example:
 
-```bash
-const string liteLlmApiKey = "";
-```
+* The [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event sends the user prompt to the LiteLLM proxy at `/v1/chat/completions`. 
+* The proxy uses the **model alias** defined in `config.yaml` (e.g., `openai/gpt-4o-mini`) and routes the request to the actual LLM provider. 
+* The response is parsed as **Markdown** using the `Markdig` library and displayed in the AI AssistView component.
 
 {% tabs %}
 {% highlight razor %}
@@ -203,3 +188,30 @@ const string liteLlmApiKey = "";
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Run and Test
+
+### Start the proxy:
+
+Navigate to your project root and run the following command to start the proxy:
+
+```bash
+pip install "litellm[proxy]"
+litellm --config "./config.yaml" --port 4000 --host 0.0.0.0
+```
+
+### Start the application:
+
+In a separate terminal window, navigate to your project folder and start the Blazor application:
+
+```bash
+dotnet run
+```
+
+Open your app to interact with the AI AssistView component integrated with LiteLLM.
+
+## Troubleshooting
+
+* `401 Unauthorized`: Verify your `API_KEY` and model deployment name.
+* `Model not found`: Ensure model matches `model_name` in `config.yaml`.
+* `CORS issues`: Configure `router_settings.cors_allow_origins` properly.
