@@ -218,6 +218,7 @@ The Blazor BlockEditor is a modern, block-based content editor for composing ric
 </ul>
 </td>
 <td>
+<ul>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core">Syncfusion.Blazor.Core</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns">Syncfusion.Blazor.DropDowns</a></li>
@@ -225,6 +226,7 @@ The Blazor BlockEditor is a modern, block-based content editor for composing ric
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups">Syncfusion.Blazor.Popups</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons">Syncfusion.Blazor.SplitButtons</a></li>
+</ul>
 </td>
 </tr>
 </table>
@@ -582,11 +584,13 @@ The Blazor DataForm is a powerful UI component that simplifies the creation of d
 <td><a href="https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app">DataForm</a></td>
 <td>SfDataForm</td>
 <td>
+<ul>
 <li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
 <li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
 <li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+</ul>
 </td>
 </tr>
 </table>
