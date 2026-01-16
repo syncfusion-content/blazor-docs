@@ -266,9 +266,9 @@ This Razor snippet places a Floating Action Button (FAB) with an AI icon on top 
         <Header> <span class="e-icons e-ai-chat" style="color: black; font-size: 16px;"></span> AI Assist</Header>
         <Content>
             <p style="margin-bottom: 10px;">Suggested Prompts</p>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MobileBankingPrompt)">Mindmap diagram for Mobile banking registration</SfButton>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(OrganizationalResearchPrompt)">Mindmap diagram for Organizational research</SfButton>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MeetingAgendaPrompt)">Mindmap diagram for Meeting agenda</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MobileBankingPrompt)">MindMap diagram for Mobile banking registration</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(OrganizationalResearchPrompt)">MindMap diagram for Organizational research</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MeetingAgendaPrompt)">MindMap diagram for Meeting agenda</SfButton>
             
             <div style="display: flex; flex: 95%; margin-top:20px;">
                     <SfTextBox @bind-Value="@OpenAIPrompt" CssClass="db-openai-textbox" Height="32px" Placeholder="Please enter your prompt for generating a mindmap diagram..." autofocus style="font-size: 14px;"></SfTextBox>
@@ -296,9 +296,9 @@ namespace TextToMindMapDiagram
         public Home Parent;
         public bool ShowAIAssistDialog = false;
         public string OpenAIPrompt;
-        string MobileBankingPrompt = "Mindmap diagram for Mobile banking registration";
-        string OrganizationalResearchPrompt = "Mindmap diagram for Organizational research";
-        string MeetingAgendaPrompt = "Mindmap diagram for Meeting agenda";
+        string MobileBankingPrompt = "MindMap diagram for Mobile banking registration";
+        string OrganizationalResearchPrompt = "MindMap diagram for Organizational research";
+        string MeetingAgendaPrompt = "MindMap diagram for Meeting agenda";
         public void OnFabClicked()
         {
             ShowAIAssistDialog = !ShowAIAssistDialog;
@@ -332,8 +332,8 @@ namespace TextToMindMapDiagram
                     .Split(new[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries)
                     .Where(line => !string.IsNullOrWhiteSpace(line))
                     .ToList();
-                    if (filteredData[0].Trim() != "mindmap")
-                        filteredData.Insert(0, "mindmap");
+                    if (filteredData[0].Trim() != "MindMap")
+                        filteredData.Insert(0, "MindMap");
                     filteredData[1].TrimStart('-', '+');
                     result = string.Join("\n", filteredData);
                     Parent.Diagram!.BeginUpdate();
@@ -392,7 +392,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             <div class="diagram-area">
                 <SfDiagramComponent ID="diagram-area" @ref="@Diagram" @bind-InteractionController="@interactionController" @bind-Nodes="@nodes" @bind-Connectors="@connectors" CollectionChanging="CollectionChanging" @bind-Height="@height" @bind-Width="@width" GetCustomTool="@GetCustomTool" NodeCreating="@NodeCreating" ConnectorCreating="@ConnectorCreating" @bind-SelectionSettings="@selectionSettings" SelectionChanging="OnSelectionChanging" Created="OnCreated">
                     <ScrollSettings @bind-ScrollLimit="@scrollLimit" @bind-CurrentZoom="@CurrentZoom" @bind-MaxZoom="@maxZoom" @bind-MinZoom="@minZoom"></ScrollSettings>
-                    <Layout @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Type="@layoutType" GetBranch="@getbranch"></Layout>
+                    <Layout @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Type="@layoutType" GetBranch="@getBranch"></Layout>
                     <SnapSettings @bind-Constraints="@SnapConstraint"></SnapSettings>
                     <PageSettings MultiplePage="true"></PageSettings>
                     <CommandManager @bind-Commands="@commands" Execute="@ExecuteCommand" CanExecute="@CanExecute" />
@@ -460,7 +460,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     private DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings();
     private DiagramObjectCollection<UserHandle> handles = new DiagramObjectCollection<UserHandle>();
     
-    private List<MindMapDetails> MindmapData = new List<MindMapDetails>()
+    private List<MindMapDetails> MindMapData = new List<MindMapDetails>()
     {
         new MindMapDetails(){Id="node1",Label="Business Planning",ParentId ="",Branch= BranchType.Root, Fill="#D0ECFF", Level = 0 },
         new MindMapDetails(){Id="node2",Label= "Expectation",ParentId = "node1",Branch= BranchType.Left,Fill= "#C4F2E8", Level = 1  },
@@ -584,7 +584,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
                 Diagram.EndGroupAction();
             }
         }
-        if (obj.Name == "sibilingChildTop")
+        if (obj.Name == "siblingChildTop")
         {
             Node rootNode = Diagram!.Nodes!.Where(node => node.InEdges!.Count == 0).ToList()[0];
             if (rootNode.ID != Diagram.SelectionSettings!.Nodes![0].ID)
@@ -624,7 +624,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         {
             NavigateChild("Left");
         }
-        if (obj.Name == "deleteChid" || obj.Name == "delete" || obj.Name == "backspace")
+        if (obj.Name == "deleteChild" || obj.Name == "delete" || obj.Name == "backspace")
         {
             Diagram!.BeginUpdate();
             RemoveData(Diagram.SelectionSettings!.Nodes![0], Diagram);
@@ -633,12 +633,12 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         }
         if (obj.Name == "fitPage")
         {
-            FitOptions fitoption = new FitOptions()
+            FitOptions fitOption = new FitOptions()
             {
                 Mode = FitMode.Both,
                 Region = DiagramRegion.PageSettings,
             };
-            Diagram?.FitToPage(fitoption);
+            Diagram?.FitToPage(fitOption);
         }
         if (obj.Name == "duplicate")
         {
@@ -683,7 +683,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     }
 
     /// <summary>
-    /// This method is used to return a minimum distance node whie navigating between left and right
+    /// This method is used to return a minimum distance node while navigating between left and right
     /// </summary>
     private Node GetMinDistanceNode(SfDiagramComponent diagram, string direction)
     {
@@ -810,7 +810,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     }
 
     /// <summary>
-    /// This method is used to get the connectors by node's inedges and outedges
+    /// This method is used to get the connectors by node's in edges and out edges
     /// </summary>
     private Connector? GetConnector(DiagramObjectCollection<Connector> diagramConnectors, string name)
     {
@@ -832,7 +832,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         args.CanExecute = true;
     }
 
-    private BranchType getbranch(IDiagramObject obj)
+    private BranchType getBranch(IDiagramObject obj)
     {
         Node? node = obj as Node;
         BranchType Branch = (BranchType)node!.AdditionalInfo!["Orientation"];
@@ -1101,14 +1101,14 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             for (int i = 0; i < outEdges.Count; i++)
             {
                 Connector? connector = diagram.GetObject(outEdges[i]) as Connector;
-                Node? targetnode = diagram.GetObject(connector!.TargetID) as Node;
-                if (targetnode!.OutEdges!.Count > 0)
+                Node? targetNode = diagram.GetObject(connector!.TargetID) as Node;
+                if (targetNode!.OutEdges!.Count > 0)
                 {
-                    RemoveData(targetnode, diagram);
+                    RemoveData(targetNode, diagram);
                 }
                 else
                 {
-                    diagram.Delete(new DiagramObjectCollection<NodeBase>() { targetnode });
+                    diagram.Delete(new DiagramObjectCollection<NodeBase>() { targetNode });
                 }
             }
             diagram.Delete(new DiagramObjectCollection<NodeBase>() { node });
@@ -1295,7 +1295,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             new KeyboardCommand() { Name = "showShortCut", Gesture = new KeyGesture(){ Key = DiagramKeys.F1, Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "leftChild", Gesture = new KeyGesture(){ Key = DiagramKeys.Tab, Modifiers = ModifierKeys.Shift } },
             new KeyboardCommand() { Name = "rightChild", Gesture = new KeyGesture(){ Key = DiagramKeys.Tab,Modifiers = ModifierKeys.None } },
-            new KeyboardCommand() { Name = "sibilingChildTop", Gesture = new KeyGesture(){ Key = DiagramKeys.Enter,Modifiers = ModifierKeys.None } },
+            new KeyboardCommand() { Name = "siblingChildTop", Gesture = new KeyGesture(){ Key = DiagramKeys.Enter,Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "fitPage", Gesture = new KeyGesture(){ Key = DiagramKeys.F8, Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "duplicate", Gesture = new KeyGesture(){ Key = DiagramKeys.D, Modifiers = ModifierKeys.Control } },
 
@@ -1310,11 +1310,11 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             new KeyboardCommand() { Name = "delete", Gesture = new KeyGesture(){ Key = DiagramKeys.Delete, Modifiers = ModifierKeys.None  } },
             new KeyboardCommand() { Name = "backspace", Gesture = new KeyGesture(){ Key = DiagramKeys.BackSpace, Modifiers = ModifierKeys.None  } },
         };
-        MindMapDetails rootNodeData = MindmapData[0];
+        MindMapDetails rootNodeData = MindMapData[0];
         CreateNode(rootNodeData.Id!, rootNodeData.ParentId!, rootNodeData.Label!, rootNodeData.Fill!, rootNodeData.Branch, rootNodeData.Level);
-        for (int i = 1; i < MindmapData.Count; i++)
+        for (int i = 1; i < MindMapData.Count; i++)
         {
-            MindMapDetails nodeData = MindmapData[i];
+            MindMapDetails nodeData = MindMapData[i];
             string sourcePortID = string.Empty;
             string targetPortID = string.Empty;
             CreateNode(nodeData.Id!, nodeData.ParentId!, nodeData.Label!, nodeData.Fill!, nodeData.Branch, nodeData.Level);
@@ -1361,7 +1361,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     internal static string RandomId()
     {
         Random random = new Random();
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
         return new string(Enumerable.Repeat(chars, 5)
             .Select(s => s[random.Next(s.Length)]).ToArray());
     }
@@ -1786,7 +1786,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             <div class="diagram-area">
                 <SfDiagramComponent ID="diagram-area" @ref="@Diagram" @bind-InteractionController="@interactionController" @bind-Nodes="@nodes" @bind-Connectors="@connectors" CollectionChanging="CollectionChanging" @bind-Height="@height" @bind-Width="@width" GetCustomTool="@GetCustomTool" NodeCreating="@NodeCreating" ConnectorCreating="@ConnectorCreating" @bind-SelectionSettings="@selectionSettings" SelectionChanging="OnSelectionChanging" Created="OnCreated">
                     <ScrollSettings @bind-ScrollLimit="@scrollLimit" @bind-CurrentZoom="@CurrentZoom" @bind-MaxZoom="@maxZoom" @bind-MinZoom="@minZoom"></ScrollSettings>
-                    <Layout @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Type="@layoutType" GetBranch="@getbranch"></Layout>
+                    <Layout @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Type="@layoutType" GetBranch="@getBranch"></Layout>
                     <SnapSettings @bind-Constraints="@SnapConstraint"></SnapSettings>
                     <PageSettings MultiplePage="true"></PageSettings>
                     <CommandManager @bind-Commands="@commands" Execute="@ExecuteCommand" CanExecute="@CanExecute" />
@@ -1854,7 +1854,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     private DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings();
     private DiagramObjectCollection<UserHandle> handles = new DiagramObjectCollection<UserHandle>();
     
-    private List<MindMapDetails> MindmapData = new List<MindMapDetails>()
+    private List<MindMapDetails> MindMapData = new List<MindMapDetails>()
     {
         new MindMapDetails(){Id="node1",Label="Business Planning",ParentId ="",Branch= BranchType.Root, Fill="#D0ECFF", Level = 0 },
         new MindMapDetails(){Id="node2",Label= "Expectation",ParentId = "node1",Branch= BranchType.Left,Fill= "#C4F2E8", Level = 1  },
@@ -1978,7 +1978,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
                 Diagram.EndGroupAction();
             }
         }
-        if (obj.Name == "sibilingChildTop")
+        if (obj.Name == "siblingChildTop")
         {
             Node rootNode = Diagram!.Nodes!.Where(node => node.InEdges!.Count == 0).ToList()[0];
             if (rootNode.ID != Diagram.SelectionSettings!.Nodes![0].ID)
@@ -2018,7 +2018,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         {
             NavigateChild("Left");
         }
-        if (obj.Name == "deleteChid" || obj.Name == "delete" || obj.Name == "backspace")
+        if (obj.Name == "deleteChild" || obj.Name == "delete" || obj.Name == "backspace")
         {
             Diagram!.BeginUpdate();
             RemoveData(Diagram.SelectionSettings!.Nodes![0], Diagram);
@@ -2226,7 +2226,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         args.CanExecute = true;
     }
 
-    private BranchType getbranch(IDiagramObject obj)
+    private BranchType getBranch(IDiagramObject obj)
     {
         Node? node = obj as Node;
         BranchType Branch = (BranchType)node!.AdditionalInfo!["Orientation"];
@@ -2689,7 +2689,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             new KeyboardCommand() { Name = "showShortCut", Gesture = new KeyGesture(){ Key = DiagramKeys.F1, Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "leftChild", Gesture = new KeyGesture(){ Key = DiagramKeys.Tab, Modifiers = ModifierKeys.Shift } },
             new KeyboardCommand() { Name = "rightChild", Gesture = new KeyGesture(){ Key = DiagramKeys.Tab,Modifiers = ModifierKeys.None } },
-            new KeyboardCommand() { Name = "sibilingChildTop", Gesture = new KeyGesture(){ Key = DiagramKeys.Enter,Modifiers = ModifierKeys.None } },
+            new KeyboardCommand() { Name = "siblingChildTop", Gesture = new KeyGesture(){ Key = DiagramKeys.Enter,Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "fitPage", Gesture = new KeyGesture(){ Key = DiagramKeys.F8, Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "duplicate", Gesture = new KeyGesture(){ Key = DiagramKeys.D, Modifiers = ModifierKeys.Control } },
 
@@ -2704,11 +2704,11 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             new KeyboardCommand() { Name = "delete", Gesture = new KeyGesture(){ Key = DiagramKeys.Delete, Modifiers = ModifierKeys.None  } },
             new KeyboardCommand() { Name = "backspace", Gesture = new KeyGesture(){ Key = DiagramKeys.BackSpace, Modifiers = ModifierKeys.None  } },
         };
-        MindMapDetails rootNodeData = MindmapData[0];
+        MindMapDetails rootNodeData = MindMapData[0];
         CreateNode(rootNodeData.Id!, rootNodeData.ParentId!, rootNodeData.Label!, rootNodeData.Fill!, rootNodeData.Branch, rootNodeData.Level);
-        for (int i = 1; i < MindmapData.Count; i++)
+        for (int i = 1; i < MindMapData.Count; i++)
         {
-            MindMapDetails nodeData = MindmapData[i];
+            MindMapDetails nodeData = MindMapData[i];
             string sourcePortID = string.Empty;
             string targetPortID = string.Empty;
             CreateNode(nodeData.Id!, nodeData.ParentId!, nodeData.Label!, nodeData.Fill!, nodeData.Branch, nodeData.Level);
@@ -2755,7 +2755,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     internal static string RandomId()
     {
         Random random = new Random();
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
         return new string(Enumerable.Repeat(chars, 5)
             .Select(s => s[random.Next(s.Length)]).ToArray());
     }
@@ -3183,7 +3183,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             <div class="diagram-area">
                 <SfDiagramComponent ID="diagram-area" @ref="@Diagram" @bind-InteractionController="@interactionController" @bind-Nodes="@nodes" @bind-Connectors="@connectors" CollectionChanging="CollectionChanging" @bind-Height="@height" @bind-Width="@width" GetCustomTool="@GetCustomTool" NodeCreating="@NodeCreating" ConnectorCreating="@ConnectorCreating" @bind-SelectionSettings="@selectionSettings" SelectionChanging="OnSelectionChanging" Created="OnCreated">
                     <ScrollSettings @bind-ScrollLimit="@scrollLimit" @bind-CurrentZoom="@CurrentZoom" @bind-MaxZoom="@maxZoom" @bind-MinZoom="@minZoom"></ScrollSettings>
-                    <Layout @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Type="@layoutType" GetBranch="@getbranch"></Layout>
+                    <Layout @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Type="@layoutType" GetBranch="@getBranch"></Layout>
                     <SnapSettings @bind-Constraints="@SnapConstraint"></SnapSettings>
                     <PageSettings MultiplePage="true"></PageSettings>
                     <CommandManager @bind-Commands="@commands" Execute="@ExecuteCommand" CanExecute="@CanExecute" />
@@ -3251,7 +3251,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     private DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings();
     private DiagramObjectCollection<UserHandle> handles = new DiagramObjectCollection<UserHandle>();
     
-    private List<MindMapDetails> MindmapData = new List<MindMapDetails>()
+    private List<MindMapDetails> MindMapData = new List<MindMapDetails>()
     {
         new MindMapDetails(){Id="node1",Label="Business Planning",ParentId ="",Branch= BranchType.Root, Fill="#D0ECFF", Level = 0 },
         new MindMapDetails(){Id="node2",Label= "Expectation",ParentId = "node1",Branch= BranchType.Left,Fill= "#C4F2E8", Level = 1  },
@@ -3375,7 +3375,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
                 Diagram.EndGroupAction();
             }
         }
-        if (obj.Name == "sibilingChildTop")
+        if (obj.Name == "siblingChildTop")
         {
             Node rootNode = Diagram!.Nodes!.Where(node => node.InEdges!.Count == 0).ToList()[0];
             if (rootNode.ID != Diagram.SelectionSettings!.Nodes![0].ID)
@@ -3415,7 +3415,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         {
             NavigateChild("Left");
         }
-        if (obj.Name == "deleteChid" || obj.Name == "delete" || obj.Name == "backspace")
+        if (obj.Name == "deleteChild" || obj.Name == "delete" || obj.Name == "backspace")
         {
             Diagram!.BeginUpdate();
             RemoveData(Diagram.SelectionSettings!.Nodes![0], Diagram);
@@ -3424,12 +3424,12 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         }
         if (obj.Name == "fitPage")
         {
-            FitOptions fitoption = new FitOptions()
+            FitOptions fitOption = new FitOptions()
             {
                 Mode = FitMode.Both,
                 Region = DiagramRegion.PageSettings,
             };
-            Diagram?.FitToPage(fitoption);
+            Diagram?.FitToPage(fitOption);
         }
         if (obj.Name == "duplicate")
         {
@@ -3474,7 +3474,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     }
 
     /// <summary>
-    /// This method is used to return a minimum distance node whie navigating between left and right
+    /// This method is used to return a minimum distance node while navigating between left and right
     /// </summary>
     private Node GetMinDistanceNode(SfDiagramComponent diagram, string direction)
     {
@@ -3601,7 +3601,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     }
 
     /// <summary>
-    /// This method is used to get the connectors by node's inedges and outedges
+    /// This method is used to get the connectors by node's in edges and out edges
     /// </summary>
     private Connector? GetConnector(DiagramObjectCollection<Connector> diagramConnectors, string name)
     {
@@ -3623,7 +3623,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         args.CanExecute = true;
     }
 
-    private BranchType getbranch(IDiagramObject obj)
+    private BranchType getBranch(IDiagramObject obj)
     {
         Node? node = obj as Node;
         BranchType Branch = (BranchType)node!.AdditionalInfo!["Orientation"];
@@ -3892,14 +3892,14 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             for (int i = 0; i < outEdges.Count; i++)
             {
                 Connector? connector = diagram.GetObject(outEdges[i]) as Connector;
-                Node? targetnode = diagram.GetObject(connector!.TargetID) as Node;
-                if (targetnode!.OutEdges!.Count > 0)
+                Node? targetNode = diagram.GetObject(connector!.TargetID) as Node;
+                if (targetNode!.OutEdges!.Count > 0)
                 {
-                    RemoveData(targetnode, diagram);
+                    RemoveData(targetNode, diagram);
                 }
                 else
                 {
-                    diagram.Delete(new DiagramObjectCollection<NodeBase>() { targetnode });
+                    diagram.Delete(new DiagramObjectCollection<NodeBase>() { targetNode });
                 }
             }
             diagram.Delete(new DiagramObjectCollection<NodeBase>() { node });
@@ -4086,7 +4086,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             new KeyboardCommand() { Name = "showShortCut", Gesture = new KeyGesture(){ Key = DiagramKeys.F1, Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "leftChild", Gesture = new KeyGesture(){ Key = DiagramKeys.Tab, Modifiers = ModifierKeys.Shift } },
             new KeyboardCommand() { Name = "rightChild", Gesture = new KeyGesture(){ Key = DiagramKeys.Tab,Modifiers = ModifierKeys.None } },
-            new KeyboardCommand() { Name = "sibilingChildTop", Gesture = new KeyGesture(){ Key = DiagramKeys.Enter,Modifiers = ModifierKeys.None } },
+            new KeyboardCommand() { Name = "siblingChildTop", Gesture = new KeyGesture(){ Key = DiagramKeys.Enter,Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "fitPage", Gesture = new KeyGesture(){ Key = DiagramKeys.F8, Modifiers = ModifierKeys.None } },
             new KeyboardCommand() { Name = "duplicate", Gesture = new KeyGesture(){ Key = DiagramKeys.D, Modifiers = ModifierKeys.Control } },
 
@@ -4101,11 +4101,11 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
             new KeyboardCommand() { Name = "delete", Gesture = new KeyGesture(){ Key = DiagramKeys.Delete, Modifiers = ModifierKeys.None  } },
             new KeyboardCommand() { Name = "backspace", Gesture = new KeyGesture(){ Key = DiagramKeys.BackSpace, Modifiers = ModifierKeys.None  } },
         };
-        MindMapDetails rootNodeData = MindmapData[0];
+        MindMapDetails rootNodeData = MindMapData[0];
         CreateNode(rootNodeData.Id!, rootNodeData.ParentId!, rootNodeData.Label!, rootNodeData.Fill!, rootNodeData.Branch, rootNodeData.Level);
-        for (int i = 1; i < MindmapData.Count; i++)
+        for (int i = 1; i < MindMapData.Count; i++)
         {
-            MindMapDetails nodeData = MindmapData[i];
+            MindMapDetails nodeData = MindMapData[i];
             string sourcePortID = string.Empty;
             string targetPortID = string.Empty;
             CreateNode(nodeData.Id!, nodeData.ParentId!, nodeData.Label!, nodeData.Fill!, nodeData.Branch, nodeData.Level);
@@ -4152,7 +4152,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     internal static string RandomId()
     {
         Random random = new Random();
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
         return new string(Enumerable.Repeat(chars, 5)
             .Select(s => s[random.Next(s.Length)]).ToArray());
     }
