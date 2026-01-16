@@ -867,7 +867,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     private static async Task AddRightChild(SfDiagramComponent diagram, bool isSibling = false)
     {
         string newChildID = RandomId();
-        string newchildColor = ""; BranchType type = BranchType.Left; Node? parentNode = null;
+        string newChildColor = ""; BranchType type = BranchType.Left; Node? parentNode = null;
         string parentId = Convert.ToString(diagram.SelectionSettings!.Nodes![0].AdditionalInfo!["ParentId"])!;
         BranchType nodeBranch = (BranchType)diagram.SelectionSettings.Nodes[0].AdditionalInfo!["Orientation"];
         double currentLevel = Convert.ToDouble(diagram.SelectionSettings.Nodes[0].AdditionalInfo!["Level"]);
@@ -901,18 +901,18 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         if (level == 0)
         {
             int index = Convert.ToInt32(GetFillColorIndex(level));
-            newchildColor = fillColorCode[index];
+            newChildColor = fillColorCode[index];
         }
         else
         {
-            newchildColor = diagram.SelectionSettings.Nodes[0].Style!.Fill!;
+            newChildColor = diagram.SelectionSettings.Nodes[0].Style!.Fill!;
         }
 
         MindMapDetails childNode = new MindMapDetails()
         {
             Id = newChildID.ToString(),
             ParentId = isSibling ? parentId : diagram.SelectionSettings.Nodes[0].ID!,
-            Fill = newchildColor,
+            Fill = newChildColor,
             Branch = childType,
             Label = "New Child",
             Level = isSibling ? parentLevel + 1 : currentLevel + 1
@@ -994,7 +994,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     private static async Task AddLeftChild(SfDiagramComponent diagram, bool isSibling = false)
     {
         string newChildID = RandomId();
-        string newchildColor = ""; BranchType type = BranchType.Left; Node? parentNode = null;
+        string newChildColor = ""; BranchType type = BranchType.Left; Node? parentNode = null;
         string parentId = Convert.ToString(diagram.SelectionSettings!.Nodes![0].AdditionalInfo!["ParentId"])!;
         BranchType nodeBranch = (BranchType)diagram.SelectionSettings.Nodes[0].AdditionalInfo!["Orientation"];
         double currentLevel = Convert.ToDouble(diagram.SelectionSettings.Nodes[0].AdditionalInfo!["Level"]);
@@ -1028,17 +1028,17 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         if (level == 0)
         {
             int index = Convert.ToInt32(GetFillColorIndex(level));
-            newchildColor = fillColorCode[index];
+            newChildColor = fillColorCode[index];
         }
         else
         {
-            newchildColor = diagram.SelectionSettings.Nodes[0].Style!.Fill!;
+            newChildColor = diagram.SelectionSettings.Nodes[0].Style!.Fill!;
         }
         MindMapDetails childNode = new MindMapDetails()
         {
             Id = newChildID.ToString(),
             ParentId = isSibling ? parentId : diagram.SelectionSettings.Nodes[0].ID!,
-            Fill = newchildColor,
+            Fill = newChildColor,
             Branch = childType,
             Label = "New Child",
             Level = isSibling ? parentLevel + 1 : currentLevel + 1
@@ -3057,9 +3057,9 @@ This Razor snippet places a Floating Action Button (FAB) with an AI icon on top 
         <Header> <span class="e-icons e-ai-chat" style="color: black; font-size: 16px;"></span> AI Assist</Header>
         <Content>
             <p style="margin-bottom: 10px;">Suggested Prompts</p>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MobileBankingPrompt)">Mindmap diagram for Mobile banking registration</SfButton>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(OrganizationalResearchPrompt)">Mindmap diagram for Organizational research</SfButton>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MeetingAgendaPrompt)">Mindmap diagram for Meeting agenda</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MobileBankingPrompt)">MindMap diagram for Mobile banking registration</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(OrganizationalResearchPrompt)">MindMap diagram for Organizational research</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MeetingAgendaPrompt)">MindMap diagram for Meeting agenda</SfButton>
             
             <div style="display: flex; flex: 95%; margin-top:20px;">
                     <SfTextBox @bind-Value="@OpenAIPrompt" CssClass="db-openai-textbox" Height="32px" Placeholder="Please enter your prompt for generating a mindmap diagram..." autofocus style="font-size: 14px;"></SfTextBox>
@@ -3087,9 +3087,9 @@ namespace TextToMindMapDiagram
         public Home Parent;
         public bool ShowAIAssistDialog = false;
         public string OpenAIPrompt;
-        string MobileBankingPrompt = "Mindmap diagram for Mobile banking registration";
-        string OrganizationalResearchPrompt = "Mindmap diagram for Organizational research";
-        string MeetingAgendaPrompt = "Mindmap diagram for Meeting agenda";
+        string MobileBankingPrompt = "MindMap diagram for Mobile banking registration";
+        string OrganizationalResearchPrompt = "MindMap diagram for Organizational research";
+        string MeetingAgendaPrompt = "MindMap diagram for Meeting agenda";
         public void OnFabClicked()
         {
             ShowAIAssistDialog = !ShowAIAssistDialog;
@@ -3123,8 +3123,8 @@ namespace TextToMindMapDiagram
                     .Split(new[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries)
                     .Where(line => !string.IsNullOrWhiteSpace(line))
                     .ToList();
-                    if (filteredData[0].Trim() != "mindmap")
-                        filteredData.Insert(0, "mindmap");
+                    if (filteredData[0].Trim() != "MindMap")
+                        filteredData.Insert(0, "MindMap");
                     filteredData[1].TrimStart('-', '+');
                     result = string.Join("\n", filteredData);
                     Parent.Diagram!.BeginUpdate();
@@ -3658,7 +3658,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     private static async Task AddRightChild(SfDiagramComponent diagram, bool isSibling = false)
     {
         string newChildID = RandomId();
-        string newchildColor = ""; BranchType type = BranchType.Left; Node? parentNode = null;
+        string newChildColor = ""; BranchType type = BranchType.Left; Node? parentNode = null;
         string parentId = Convert.ToString(diagram.SelectionSettings!.Nodes![0].AdditionalInfo!["ParentId"])!;
         BranchType nodeBranch = (BranchType)diagram.SelectionSettings.Nodes[0].AdditionalInfo!["Orientation"];
         double currentLevel = Convert.ToDouble(diagram.SelectionSettings.Nodes[0].AdditionalInfo!["Level"]);
@@ -3692,18 +3692,18 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         if (level == 0)
         {
             int index = Convert.ToInt32(GetFillColorIndex(level));
-            newchildColor = fillColorCode[index];
+            newChildColor = fillColorCode[index];
         }
         else
         {
-            newchildColor = diagram.SelectionSettings.Nodes[0].Style!.Fill!;
+            newChildColor = diagram.SelectionSettings.Nodes[0].Style!.Fill!;
         }
 
         MindMapDetails childNode = new MindMapDetails()
         {
             Id = newChildID.ToString(),
             ParentId = isSibling ? parentId : diagram.SelectionSettings.Nodes[0].ID!,
-            Fill = newchildColor,
+            Fill = newChildColor,
             Branch = childType,
             Label = "New Child",
             Level = isSibling ? parentLevel + 1 : currentLevel + 1
@@ -3785,7 +3785,7 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
     private static async Task AddLeftChild(SfDiagramComponent diagram, bool isSibling = false)
     {
         string newChildID = RandomId();
-        string newchildColor = ""; BranchType type = BranchType.Left; Node? parentNode = null;
+        string newChildColor = ""; BranchType type = BranchType.Left; Node? parentNode = null;
         string parentId = Convert.ToString(diagram.SelectionSettings!.Nodes![0].AdditionalInfo!["ParentId"])!;
         BranchType nodeBranch = (BranchType)diagram.SelectionSettings.Nodes[0].AdditionalInfo!["Orientation"];
         double currentLevel = Convert.ToDouble(diagram.SelectionSettings.Nodes[0].AdditionalInfo!["Level"]);
@@ -3819,17 +3819,17 @@ This page renders an interactive mind map workspace built with Syncfusion Diagra
         if (level == 0)
         {
             int index = Convert.ToInt32(GetFillColorIndex(level));
-            newchildColor = fillColorCode[index];
+            newChildColor = fillColorCode[index];
         }
         else
         {
-            newchildColor = diagram.SelectionSettings.Nodes[0].Style!.Fill!;
+            newChildColor = diagram.SelectionSettings.Nodes[0].Style!.Fill!;
         }
         MindMapDetails childNode = new MindMapDetails()
         {
             Id = newChildID.ToString(),
             ParentId = isSibling ? parentId : diagram.SelectionSettings.Nodes[0].ID!,
-            Fill = newchildColor,
+            Fill = newChildColor,
             Branch = childType,
             Label = "New Child",
             Level = isSibling ? parentLevel + 1 : currentLevel + 1
