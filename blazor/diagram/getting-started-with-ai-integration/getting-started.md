@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Diagram Component in Blazor Server App|Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor Server App.
+title: Getting Started with AI integration in a Blazor Server App|Syncfusion
+description: Checkout and learn about the documentation for getting started with AI integration in a Blazor Server App.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Getting Started with Diagram Component in the Blazor Server App.
+# Getting Started with AI integration in a Blazor Server App.
 
 This section explains the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component into your Blazor Server app using Visual Studio, Visual Studio Code and .NET CLI. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 

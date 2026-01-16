@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Diagram Component in Blazor WASM App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor WASM App.
+title: Getting Started with AI integration in a Blazor WASM App | Syncfusion
+description: Checkout and learn about the documentation for getting started with AI integration in a Blazor WASM App.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Getting Started with Diagram Component in the Blazor WASM App
+# Getting Started with AI integration in a Blazor WASM App
 
 This section explains the step-by-step process for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component into a Blazor WebAssembly (WASM) app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
@@ -334,12 +334,12 @@ This Razor snippet places a Floating Action Button (FAB) with an AI icon on top 
         <Header> <span class="e-icons e-ai-chat" style="color: black; font-size: 16px;"></span> AI Assist</Header>
         <Content>
             <p style="margin-bottom: 10px;">Suggested Prompts</p>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MobileBankingPrompt)">Mindmap diagram for Mobile banking registration</SfButton>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(OrganizationalResearchPrompt)">Mindmap diagram for Organizational research</SfButton>
-                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MeetingAgendaPrompt)">Mindmap diagram for Meeting agenda</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MobileBankingPrompt)">MindMap diagram for Mobile banking registration</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(OrganizationalResearchPrompt)">MindMap diagram for Organizational research</SfButton>
+                <SfButton style="flex: 1; overflow: visible; border-radius: 8px;margin-bottom: 10px;" @onclick="()=>GenerateMindMap(MeetingAgendaPrompt)">MindMap diagram for Meeting agenda</SfButton>
             
             <div style="display: flex; flex: 95%; margin-top:20px;">
-                    <SfTextBox @bind-Value="@OpenAIPrompt" CssClass="db-openai-textbox" Height="32px" Placeholder="Please enter your prompt for generating a mindmap diagram..." autofocus style="font-size: 14px;"></SfTextBox>
+                    <SfTextBox @bind-Value="@OpenAIPrompt" CssClass="db-openai-textbox" Height="32px" Placeholder="Please enter your prompt for generating a mind map diagram..." autofocus style="font-size: 14px;"></SfTextBox>
                 <SfButton @onclick="@GetResponseFromAI" CssClass="e-icons e-flat e-send" IsPrimary="true" style="height: 38px; width: 38px; margin-left: 5px; padding: 0;"></SfButton>
             </div>
         </Content>
