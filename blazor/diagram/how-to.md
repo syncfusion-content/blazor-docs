@@ -157,6 +157,140 @@ The [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddDiagramElements)
 
+## How to Add Swimlane Using the AddDiagramElementsAsync Method
+
+The following code example shows how to add a Swimlane and a Connector at runtime using binding properties after the diagram has been initialized, by calling the `AddDiagramElementsAsync` method.
+
+```
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Created="OnCreated" />
+
+@code
+{
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<NodeBase> nodeCollection = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> swimlaneCollection = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> NodesAndConnectors = new DiagramObjectCollection<NodeBase>();
+
+    private async void OnCreated()
+    {
+        await AddSwimlaneAndConnector();
+    }
+
+    private async Task AddSwimlaneAndConnector()
+    {
+        Node clonedNode1 = (Node)NodesAndConnectors[0].Clone();
+        Node clonedNode2 = (Node)NodesAndConnectors[1].Clone();
+        Connector clonedConnector = (Connector)NodesAndConnectors[2].Clone();
+
+        // Create a swimlane
+        Swimlane swimlane = new Swimlane()
+        {
+            ID = "swimlane1",
+            OffsetX = 400,
+            OffsetY = 200,
+            Height = 200,
+            Width = 450,
+            Header = new SwimlaneHeader()
+            {
+                Annotation = new ShapeAnnotation() { Content = "Sales Process" },
+                Height = 50,
+            },
+            Lanes = new DiagramObjectCollection<Lane>()
+            {
+                new Lane()
+                {
+                    ID = "lane1",
+                    Height = 100,
+                    Header = new SwimlaneHeader()
+                    {
+                        Width = 30,
+                        Annotation = new ShapeAnnotation() { Content = "Consumer" }
+                    },
+                    Children = new DiagramObjectCollection<Node>()
+                    {
+                        clonedNode1, clonedNode2
+                    }
+                }
+            }
+        };
+
+        // Add swimlane to collection
+        swimlaneCollection.Add(swimlane);
+
+        // Add swimlane to diagram
+        await diagram.AddDiagramElementsAsync(swimlaneCollection);
+
+        clonedConnector.ID = "clonedConnector";
+        clonedConnector.SourceID = "node1";
+        clonedConnector.SourcePortID = "port1";
+        clonedConnector.TargetID = "node2";
+        clonedConnector.TargetPortID = "port2";
+
+        // Add connector to collection
+        nodeCollection.Add(clonedConnector);
+
+        // Add connector to diagram
+        await diagram.AddDiagramElementsAsync(nodeCollection);
+    }
+
+    protected override void OnInitialized()
+    { 
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Height = 50,
+            Width = 50,
+            LaneOffsetX = 100,
+            LaneOffsetY = 30,
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                    Height = 10,
+                    Width = 10
+                }
+            }
+        };
+        NodesAndConnectors.Add(node1);
+
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 50,
+            Width = 50,
+            LaneOffsetX = 250,
+            LaneOffsetY = 30,
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port2",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Height = 10,
+                    Width = 10
+                }
+            }
+        };
+        NodesAndConnectors.Add(node2);
+
+        Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Straight
+        };
+        NodesAndConnectors.Add(Connector);
+    }
+}
+```
+
 ## How to Clear Nodes and Connectors from the Diagram
 
 The [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clear) method removes all elements from the diagram, including nodes, connectors, and groups. Use it to reset the canvas to a blank state before loading or creating a new set of elements.
