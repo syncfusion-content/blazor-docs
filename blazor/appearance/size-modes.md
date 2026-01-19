@@ -222,6 +222,44 @@ Refer to the following code, where the e-bigger class is added to enable touch m
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
+## Change font size for all components
+
+You can change the font-size for all the components by overriding the CSS in `<style>` 
+
+```cshtml
+
+@page "/"
+
+@using Syncfusion.Blazor.Calendars;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.Popups;
+
+<div class="e-control">
+    <SfCalendar TValue="DateTime?" Value="@DateValue"></SfCalendar>
+</div>
+
+<div class="e-control">
+    <SfButton> Button </SfButton>
+</div>
+
+<div class="e-control">
+    <SfCheckBox Label="checked" @bind-Checked="isChecked"></SfCheckBox>
+</div>
+
+<style>
+    .e-control, .e-control [class^='e-'], .e-control [class*=' e-'] {
+
+    font-size:1rem;
+
+    }
+</style>
+
+@code {
+    private bool isChecked = true;
+    public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28)  ;
+}
+```
+
 
 ## Change font size and font family for all components
 
