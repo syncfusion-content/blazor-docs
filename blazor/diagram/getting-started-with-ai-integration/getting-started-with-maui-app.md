@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Getting Started with the AI integration in a Blazor MAUI App
+# Getting Started with AI integration in a Blazor MAUI App
 
 This guide walks through the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component into a Blazor MAUI application using either Visual Studio or Visual Studio Code.
 
@@ -118,9 +118,9 @@ If using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet package in 
 
 ## Step 6: To Configure Azure OpenAI Service
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then the values for `apiKey`, `deploymentName`, and `endpoint` will be provided.
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then collect the `apiKey`, `deploymentName`, and `endpoint` values.
 
-**Install the following NuGet packages to your project:**
+**Install the following NuGet packages in your project:**
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -133,7 +133,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
 {% endhighlight %}
 {% endtabs %}
 
-**To configure the AI service, add the following settings to the ~/MauiProgram.cs file in your project.**
+**To configure the AI service, add the following settings to the ~/MauiProgram.cs file.**
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines=" 2-5 11-24" %}
@@ -165,14 +165,14 @@ builder.Services.AddScoped<AzureAIService>(serviceProvider  =>
 {% endhighlight %}
 {% endtabs %}
 
-**Create a Azure AI Service**
+**Create an Azure AI Service**
 
 `AzureAIService` is a small wrapper around an injected `IChatClient` that lets you:
 
-* Send a prompt to an AI chat/completions endpoint (e.g., Azure OpenAI or any service conforming to your IChatClient abstraction).
+* Send a prompt to a AI chat/completions endpoint (such as Azure OpenAI or any provider compatible with IChatClient).
 * Optionally control the response format (strict JSON or free-form text) via a system instruction.
 * Adjust generation settings like temperature, top‑p, penalties, and max tokens.
-* Receive the AI’s completion as a string.
+* Receive the AI completion as a string.
 
 {% tabs %}
 {% highlight c# tabtitle="~/AzureAIService.cs" %}
@@ -241,11 +241,11 @@ namespace AIService
 
 **Create an AI Assist Button with Icon**
 
-This Razor snippet places a Floating Action Button (FAB) with an AI icon on top of a diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
+This Razor snippet places a Floating Action Button (FAB) with an AI icon overlays the diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
 
 * A set of suggested prompt buttons (one‑click actions).
 * A textbox for custom prompts.
-* A send button that calls your AI service to generate a mind map diagram based on the prompt.
+* A send button that calls your AI service to generate a mind map based on the prompt.
 
 {% tabs %}
 {% highlight c# tabtitle="~/DiagramOpenAI.razor" %}
@@ -279,7 +279,7 @@ This Razor snippet places a Floating Action Button (FAB) with an AI icon on top 
 {% endhighlight %}
 {% endtabs %}
 
-**Generate Mind Map from AI Prompt**
+**Generate Mind Map from an AI Prompt**
 
 This handles the core logic that takes the user’s prompt, sends it to the AI service, processes the AI response, and renders a mind map diagram in the application using the `LoadDiagramFromMermaidAsync` method. It also manages UI states like showing a loading indicator and closing the dialog.
 
@@ -1509,9 +1509,9 @@ If using `Syncfusion.Blazor.Diagram` && `Syncfusion.Blazor.Themes` NuGet package
 
 ## Step 6: To Configure Azure OpenAI Service
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then the values for `apiKey`, `deploymentName`, and `endpoint` will be provided.
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then collect the `apiKey`, `deploymentName`, and `endpoint` values.
 
-**Install the following NuGet packages to your project:**
+**Install the following NuGet packages in your project:**
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -1524,7 +1524,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
 {% endhighlight %}
 {% endtabs %}
 
-**To configure the AI service, add the following settings to the ~/MauiProgram.cs file in your project.**
+**To configure the AI service, add the following settings to the ~/MauiProgram.cs file.**
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines=" 2-5 11-24" %}
@@ -1556,14 +1556,14 @@ builder.Services.AddScoped<AzureAIService>(serviceProvider  =>
 {% endhighlight %}
 {% endtabs %}
 
-**Create a Azure AI Service**
+**Create an Azure AI Service**
 
 `AzureAIService` is a small wrapper around an injected `IChatClient` that lets you:
 
-* Send a prompt to an AI chat/completions endpoint (e.g., Azure OpenAI or any service conforming to your IChatClient abstraction).
+* Send a prompt to a AI chat/completions endpoint (such as Azure OpenAI or any provider compatible with IChatClient).
 * Optionally control the response format (strict JSON or free-form text) via a system instruction.
 * Adjust generation settings like temperature, top‑p, penalties, and max tokens.
-* Receive the AI’s completion as a string.
+* Receive the AI completion as a string.
 
 {% tabs %}
 {% highlight c# tabtitle="~/AzureAIService.cs" %}
@@ -1632,7 +1632,7 @@ namespace AIService
 
 **Create an AI Assist Button with Icon**
 
-This Razor snippet places a Floating Action Button (FAB) with an AI icon on top of a diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
+This Razor snippet places a Floating Action Button (FAB) with an AI icon overlays the diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
 
 * A set of suggested prompt buttons (one‑click actions).
 * A textbox for custom prompts.
@@ -1670,7 +1670,7 @@ This Razor snippet places a Floating Action Button (FAB) with an AI icon on top 
 {% endhighlight %}
 {% endtabs %}
 
-**Generate Mind Map from AI Prompt**
+**Generate Mind Map from an AI Prompt**
 
 This handles the core logic that takes the user’s prompt, sends it to the AI service, processes the AI response, and renders a mind map diagram in the application using the `LoadDiagramFromMermaidAsync` method. It also manages UI states like showing a loading indicator and closing the dialog.
 
@@ -2801,4 +2801,8 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 ## See also
 
-* [How to Create a Diagram Builder in MAUI platform](https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform)
+* [Explore AI demo for flowchart](https://blazor.syncfusion.com/demos/diagram/ai-text-to-flowchart?theme=fluent2)
+
+* [Explore AI demo for sequence diagram](https://blazor.syncfusion.com/demos/diagram/ai-text-to-sequence-diagram?theme=fluent2)
+
+* [Explore AI demo for mind map](https://blazor.syncfusion.com/demos/diagram/ai-text-to-mindmap?theme=fluent2)

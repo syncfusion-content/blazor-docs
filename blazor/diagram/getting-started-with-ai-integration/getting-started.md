@@ -115,9 +115,9 @@ N> If the Interactivity Location is set to `Global` and the **Render Mode** is `
 
 ## Step 7: To Configure Azure OpenAI Service
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then the values for `apiKey`, `deploymentName`, and `endpoint` will be provided.
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then collect the `apiKey`, `deploymentName`, and `endpoint` values.
 
-**Install the following NuGet packages to your project:**
+**Install the following NuGet packages in your project:**
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -130,7 +130,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
 {% endhighlight %}
 {% endtabs %}
 
-**To configure the AI service, add the following settings to the ~/Program.cs file in your Blazor Server app.**
+**To configure the AI service, add the following settings to the ~/Program.cs file.**
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines=" 3-7 15-29" %}
@@ -168,14 +168,14 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-**Create a Azure AI Service**
+**Create an Azure AI Service**
 
 `AzureAIService` is a small wrapper around an injected `IChatClient` that lets you:
 
-* Send a prompt to an AI chat/completions endpoint (e.g., Azure OpenAI or any service conforming to your IChatClient abstraction).
+* Send a prompt to a AI chat/completions endpoint (such as Azure OpenAI or any provider compatible with IChatClient).
 * Optionally control the response format (strict JSON or free-form text) via a system instruction.
 * Adjust generation settings like temperature, top‑p, penalties, and max tokens.
-* Receive the AI’s completion as a string.
+* Receive the AI completion as a string.
 
 {% tabs %}
 {% highlight c# tabtitle="~/AzureAIService.cs" %}
@@ -244,7 +244,7 @@ namespace AIService
 
 **Create an AI Assist Button with Icon**
 
-This Razor snippet places a Floating Action Button (FAB) with an AI icon on top of a diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
+This Razor snippet places a Floating Action Button (FAB) with an AI icon overlays the diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
 
 * A set of suggested prompt buttons (one‑click actions).
 * A textbox for custom prompts.
@@ -282,7 +282,7 @@ This Razor snippet places a Floating Action Button (FAB) with an AI icon on top 
 {% endhighlight %}
 {% endtabs %}
 
-**Generate Mind Map from AI Prompt**
+**Generate Mind Map from an AI Prompt**
 
 This handles the core logic that takes the user’s prompt, sends it to the AI service, processes the AI response, and renders a mind map diagram in the application using the `LoadDiagramFromMermaidAsync` method. It also manages UI states like showing a loading indicator and closing the dialog.
 
@@ -1509,9 +1509,9 @@ N> If the Interactivity Location is set to `Global` and the **Render Mode** is `
 
 ## Step 7: To Configure Azure OpenAI Service
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then the values for `apiKey`, `deploymentName`, and `endpoint` will be provided.
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then collect the `apiKey`, `deploymentName`, and `endpoint` values.
 
-**Install the following NuGet packages to your project:**
+**Install the following NuGet packages in your project:**
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -1524,7 +1524,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
 {% endhighlight %}
 {% endtabs %}
 
-**To configure the AI service, add the following settings to the ~/Program.cs file in your Blazor Server app.**
+**To configure the AI service, add the following settings to the ~/Program.cs file.**
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines=" 3-7 15-29" %}
@@ -1562,14 +1562,14 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-**Create a Azure AI Service**
+**Create an Azure AI Service**
 
 `AzureAIService` is a small wrapper around an injected `IChatClient` that lets you:
 
-* Send a prompt to an AI chat/completions endpoint (e.g., Azure OpenAI or any service conforming to your IChatClient abstraction).
+* Send a prompt to a AI chat/completions endpoint (such as Azure OpenAI or any provider compatible with IChatClient).
 * Optionally control the response format (strict JSON or free-form text) via a system instruction.
 * Adjust generation settings like temperature, top‑p, penalties, and max tokens.
-* Receive the AI’s completion as a string.
+* Receive the AI completion as a string.
 
 {% tabs %}
 {% highlight c# tabtitle="~/AzureAIService.cs" %}
@@ -1638,7 +1638,7 @@ namespace AIService
 
 **Create an AI Assist Button with Icon**
 
-This Razor snippet places a Floating Action Button (FAB) with an AI icon on top of a diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
+This Razor snippet places a Floating Action Button (FAB) with an AI icon overlays the diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
 
 * A set of suggested prompt buttons (one‑click actions).
 * A textbox for custom prompts.
@@ -1676,7 +1676,7 @@ This Razor snippet places a Floating Action Button (FAB) with an AI icon on top 
 {% endhighlight %}
 {% endtabs %}
 
-**Generate Mind Map from AI Prompt**
+**Generate Mind Map from an AI Prompt**
 
 This handles the core logic that takes the user’s prompt, sends it to the AI service, processes the AI response, and renders a mind map diagram in the application using the `LoadDiagramFromMermaidAsync` method. It also manages UI states like showing a loading indicator and closing the dialog.
 
@@ -2906,9 +2906,9 @@ N> If the Interactivity Location is set to `Global` and the **Render Mode** is `
 
 ## Step 6: To Configure Azure OpenAI Service
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then the values for `apiKey`, `deploymentName`, and `endpoint` will be provided.
+For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?view=foundry-classic&pivots=web-portal); then collect the `apiKey`, `deploymentName`, and `endpoint` values.
 
-**Install the following NuGet packages to your project:**
+**Install the following NuGet packages in your project:**
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -2921,7 +2921,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.25412.6
 {% endhighlight %}
 {% endtabs %}
 
-**To configure the AI service, add the following settings to the ~/Program.cs file in your Blazor Server app.**
+**To configure the AI service, add the following settings to the ~/Program.cs file.**
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines=" 3-7 15-29" %}
@@ -2959,14 +2959,14 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-**Create a Azure AI Service**
+**Create an Azure AI Service**
 
 `AzureAIService` is a small wrapper around an injected `IChatClient` that lets you:
 
-* Send a prompt to an AI chat/completions endpoint (e.g., Azure OpenAI or any service conforming to your IChatClient abstraction).
+* Send a prompt to a AI chat/completions endpoint (such as Azure OpenAI or any provider compatible with IChatClient).
 * Optionally control the response format (strict JSON or free-form text) via a system instruction.
 * Adjust generation settings like temperature, top‑p, penalties, and max tokens.
-* Receive the AI’s completion as a string.
+* Receive the AI completion as a string.
 
 {% tabs %}
 {% highlight c# tabtitle="~/AzureAIService.cs" %}
@@ -3035,7 +3035,7 @@ namespace AIService
 
 **Create an AI Assist Button with Icon**
 
-This Razor snippet places a Floating Action Button (FAB) with an AI icon on top of a diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
+This Razor snippet places a Floating Action Button (FAB) with an AI icon overlays the diagram surface. When the FAB is clicked, it opens a modal dialog titled AI Assist. The dialog shows:
 
 * A set of suggested prompt buttons (one‑click actions).
 * A textbox for custom prompts.
@@ -3073,7 +3073,7 @@ This Razor snippet places a Floating Action Button (FAB) with an AI icon on top 
 {% endhighlight %}
 {% endtabs %}
 
-**Generate Mind Map from AI Prompt**
+**Generate Mind Map from an AI Prompt**
 
 This handles the core logic that takes the user’s prompt, sends it to the AI service, processes the AI response, and renders a mind map diagram in the application using the `LoadDiagramFromMermaidAsync` method. It also manages UI states like showing a loading indicator and closing the dialog.
 
@@ -4182,6 +4182,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Explore AI demo for flowchart](https://blazor.syncfusion.com/demos/diagram/ai-text-to-flowchart?theme=fluent2)
+
+* [Explore AI demo for sequence diagram](https://blazor.syncfusion.com/demos/diagram/ai-text-to-sequence-diagram?theme=fluent2)
+
+* [Explore AI demo for mind map](https://blazor.syncfusion.com/demos/diagram/ai-text-to-mindmap?theme=fluent2)
