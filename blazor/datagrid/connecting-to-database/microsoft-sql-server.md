@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting Microsoft SQL Server Data to Blazor DataGrid Using Custom Adaptor
 
-Syncfusion Blazor DataGrid provides seamless integration with Microsoft SQL Server databases through a Custom Adaptor pattern. This guide demonstrates implement SQL Server data directly to the grid, implement server-side data operations (searching, filtering, sorting, paging, grouping), and enable full CRUD (Create, Read, Update, Delete) functionality using raw SQL queries via SqlClient.
+Syncfusion Blazor DataGrid provides seamless integration with Microsoft SQL Server databases through a Custom Adaptor pattern. This guide demonstrates binding SQL Server data directly to the grid, implementing server‑side data operations (searching, filtering, sorting, paging, grouping), and enable full CRUD (Create, Read, Update, Delete) functionality using raw SQL queries via SqlClient.
 
 ---
 
@@ -294,7 +294,7 @@ The Custom Adaptor serves as the bridge between DataGrid UI interactions and SQL
 1. User interaction → Grid detects user action (click, type, scroll)
 2. DataManagerRequest creation → Grid creates request object with operation parameters
 3. Custom Adaptor invocation → SfDataManager calls appropriate adaptor method
-4. Data Layer execution → Adaptor calls TicketData methods to execute SQL queries
+4. Data layer execution → Adaptor calls TicketData methods to execute SQL queries
 5. Result processing → Adaptor applies data transformations and returns DataResult
 6. Grid rendering → Grid displays processed data in UI
 
