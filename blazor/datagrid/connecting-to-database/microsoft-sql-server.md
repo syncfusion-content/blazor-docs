@@ -186,7 +186,7 @@ public class TicketData
 Connection string parameters:
 - Data Source: SQL Server instance name (e.g., localhost\SQLEXPRESS, DESKTOP-ABC123, 192.168.1.100)
 - Initial Catalog: Target database name (e.g., NetworkSupportDB)
-- Integrated Security: Windows Authentication enablement
+- Integrated Security: Windows Authentication option
 - Connect Timeout: Connection timeout in seconds
 - Encrypt: SSL encryption toggle (enable for production)
 
