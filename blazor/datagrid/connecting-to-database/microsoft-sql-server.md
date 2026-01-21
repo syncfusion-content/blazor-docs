@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Connecting Microsoft SQL Server Data to Blazor DataGrid Using Custom Adaptor
+# Connecting Microsoft SQL Server Data to Blazor DataGrid
 
 Syncfusion Blazor DataGrid provides seamless integration with Microsoft SQL Server databases through a Custom Adaptor pattern. This guide demonstrates binding SQL Server data directly to the grid, implementing server‑side data operations (searching, filtering, sorting, paging, grouping), and enable full CRUD (Create, Read, Update, Delete) functionality using raw SQL queries via SqlClient.
 
@@ -24,7 +24,7 @@ Microsoft SQL Server offers enterprise-grade capabilities for building scalable,
 - CRUD integration: Enable users to create, read, update, and delete records directly from the DataGrid UI with automatic database synchronization.
 - Server-side operations: Implement searching, filtering, sorting, grouping, and aggregation on the database server, reducing client-side processing overhead.
 
-## Prerequisites for integration
+## Prerequisites
 
 Ensure the following software and packages are installed before proceeding:
 
@@ -43,7 +43,9 @@ Ensure the following software and packages are installed before proceeding:
 
 ### Step 1: Create database and table in SQL Server
 
-Open SQL Server Management Studio (SSMS) and execute the following script to create the database and Tickets table:
+A **Network Support Ticket System** scenario is used to demonstrate binding the Syncfusion Blazor DataGrid to Microsoft SQL Server with real ticket records and server-side operations. "NetworkSupportDB" database and "Tickets" table store ticket data for CRUD actions, enabling grid-driven querying, editing, paging, and aggregation.
+
+Open SQL Server Management Studio (SSMS) and execute the following script to create the database and "Tickets" table:
 
 ```sql
 -- Create Database
@@ -81,7 +83,12 @@ VALUES
 GO
 ```
 
+With the database and Tickets table provisioned, continue by installing the NuGet packages required for Syncfusion Blazor components and SQL Server connectivity.
+These dependencies will be referenced by the grid adaptor and data access layer in the following steps.
+
 ### Step 2: Install required NuGet packages
+
+Syncfusion.Blazor provides the DataGrid and related UI services, while Microsoft.Data.SqlClient enables secure, performant connectivity to SQL Server with raw query support. Installing these packages establishes the core UI and data-access dependencies used by the custom adaptor and data layer.
 
 Open the Package Manager Console in Visual Studio and install the necessary packages:
 
@@ -95,7 +102,11 @@ Alternatively, use NuGet Package Manager UI:
 2. Search for and install **Syncfusion.Blazor** (latest stable version)
 3. Search for and install **Microsoft.Data.SqlClient** (version 5.2.0 or later)
 
+Package installation has been completed. Continue with defining the data model aligned with the Tickets schema to ensure strong typing and reliable DataGrid binding.
+
 ### Step 3: Define the data model
+
+A strongly typed model establishes a clear contract between the database schema and the grid, enabling compile-time validation and predictable serialization. Aligning properties with SQL column data types ensures accurate binding, editing, and server-side processing.
 
 Create a C# model class representing the Tickets table structure in `Data/Tickets.cs`:
 
@@ -119,26 +130,11 @@ public class Tickets
 }
 ```
 
-### Step 4: Configure connection string
+Model definition has been completed. Proceed to configure the connection string to enable database connectivity.
 
-Define the SQL Server connection string in `Data/TicketData.cs`:
+### Step 4: Configure data access (TicketData.cs)
 
-```csharp
-public class TicketData
-{
-    private string connectionString = "Data Source=YOUR_SERVER;Initial Catalog=YOUR_DATABASE;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
-}
-```
-
-**Connection string parameters**:
-- `Data Source=YOUR_SERVER` - SQL Server instance name (e.g., `localhost\SQLEXPRESS`, `DESKTOP-ABC123`, `192.168.1.100`)
-- `Initial Catalog=YOUR_DATABASE` - Target database name (e.g., `NetworkSupportDB`)
-- `Integrated Security=True` - Enable Windows Authentication
-- `Connect Timeout=30` - Connection timeout in seconds
-- `Encrypt=False` - Disable SSL encryption for development environments (enable for production)
-
-### Step 5: Create data access layer (TicketData.cs)
-Implement the `GetTicketsData()` method in `Data/TicketData.cs` to fetch records from SQL Server:
+Define the SQL Server connection string and implement the data retrieval method in **Data/TicketData.cs** to establish reliable connectivity and server-side data access. The implementation uses "SqlConnection", "SqlCommand", and "SqlDataAdapter" to execute a SELECT statement and materialize results into the strongly typed "Tickets" model.
 
 ```csharp
 using Microsoft.Data.SqlClient;
@@ -150,24 +146,19 @@ public class TicketData
 
     public async Task<List<Tickets>> GetTicketsData()
     {
-        // Define SELECT query
         string queryString = "SELECT * FROM dbo.Tickets ORDER BY TicketId";
-        
-        // Establish SQL connection
+
         using (SqlConnection sqlConnection = new SqlConnection(connectionString))
         {
             sqlConnection.Open();
-            
-            // Create SQL command
+
             using (SqlCommand sqlCommand = new SqlCommand(queryString, sqlConnection))
             {
-                // Execute query and populate DataTable via SqlDataAdapter
                 using (SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand))
                 {
                     DataTable dataTable = new DataTable();
                     sqlDataAdapter.Fill(dataTable);
-                    
-                    // Map DataTable rows to Tickets model using LINQ projection
+
                     var dataSource = (from DataRow row in dataTable.Rows
                                       select new Tickets()
                                       {
@@ -186,7 +177,7 @@ public class TicketData
                                           CreatedAt = Convert.ToDateTime(row["CreatedAt"]),
                                           UpdatedAt = Convert.ToDateTime(row["UpdatedAt"])
                                       }).ToList();
-                    
+
                     return dataSource;
                 }
             }
@@ -195,13 +186,26 @@ public class TicketData
 }
 ```
 
-**Key implementation details**:
-- Use `using` statements to ensure automatic disposal of SqlConnection, SqlCommand, and SqlDataAdapter
-- Execute `sqlDataAdapter.Fill(dataTable)` to populate the DataTable with query results
-- Handle null values using `DBNull.Value` checks for nullable DateTime fields
-- Return `List<Tickets>` to adaptor for DataGrid binding
+Connection string parameters:
+- Data Source: SQL Server instance name (e.g., localhost\SQLEXPRESS, DESKTOP-ABC123, 192.168.1.100)
+- Initial Catalog: Target database name (e.g., NetworkSupportDB)
+- Integrated Security: Windows Authentication enablement
+- Connect Timeout: Connection timeout in seconds
+- Encrypt: SSL encryption toggle (enable for production)
 
-### Step 6: Register Syncfusion services
+Key implementation details:
+- "SqlConnection" establishes and manages the session to SQL Server so the query can be executed against the target database.
+- "SqlCommand" encapsulates the SELECT statement and binds it to the open connection to request the desired result set.
+- "SqlDataAdapter" bridges the command execution and in-memory structures, enabling retrieval into a DataTable without manual data readers.
+- "SqlDataAdapter.Fill" hydrates a DataTable; LINQ projection maps rows to the "Tickets" model.
+- Nullable DateTime fields are handled via "DBNull.Value" checks.
+- The method returns "List<Tickets>" for consistent binding in the custom adaptor and DataGrid.
+
+Data access configuration has been completed. Proceed to register Syncfusion Blazor services.
+
+### Step 5: Register Syncfusion services
+
+Registers the Syncfusion component services required by the DataGrid at runtime and exposes grid APIs via dependency injection.
 
 Configure Syncfusion services in `Program.cs`:
 
@@ -221,10 +225,16 @@ Add required namespaces in `Components/_Imports.razor`:
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Microsoft.Data.SqlClient
 ```
 
-### Step 7: Implement custom adaptor
+Service registration and namespace imports have been completed. Continue with configuring DataGrid–SQL Server integration using the Custom Adaptor.
+
+### Step 6: Binding data from Microsoft SQL Server using CustomAdaptor
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **Microsoft SQL Server** database using a [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
+The Custom Adaptor serves as the bridge between DataGrid UI interactions and SQL Server database operations. When users interact with the grid (search, filter, sort, page), the adaptor intercepts these requests and executes corresponding SQL operations.
+
+### Implement custom adaptor
 
 Create a Custom Adaptor class in `Components/Pages/Home.razor` that bridges DataGrid actions with SQL Server operations:
 
@@ -259,35 +269,19 @@ Create a Custom Adaptor class in `Components/Pages/Home.razor` that bridges Data
 ```
 
 **Custom Adaptor methods reference**:
-- `ReadAsync(DataManagerRequest)` - Retrieve and process records (search, filter, sort, page, group)
-- `InsertAsync(DataManager, object)` - Create new records in SQL Server
-- `UpdateAsync(DataManager, object, string, string)` - Edit existing records in SQL Server
-- `RemoveAsync(DataManager, object, string, string)` - Delete records from SQL Server
-- `BatchUpdateAsync(DataManager, object, object, object, string, string, int?)` - Handle bulk operations
+- [ReadAsync(DataManagerRequest)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) - Retrieve and process records (search, filter, sort, page, group)
+- [InsertAsync(DataManager, object)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) - Create new records in SQL Server
+- [UpdateAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Edit existing records in SQL Server
+- [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from SQL Server
+- [BatchUpdateAsync(DataManager, object, object, object, string, string, int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) - Handle bulk operations
 
 Bind the adaptor to the DataGrid markup in `Home.razor`:
 
 ```html
-<SfGrid TValue="Tickets" AllowSorting="true" AllowFiltering="true" AllowPaging="true" 
-        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+<SfGrid TValue="Tickets">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field="@nameof(Tickets.TicketId)" HeaderText="ID" IsPrimaryKey="true" IsIdentity="true"></GridColumn>
-        <GridColumn Field="@nameof(Tickets.PublicTicketId)" HeaderText="Ticket #"></GridColumn>
-        <GridColumn Field="@nameof(Tickets.Title)" HeaderText="Subject"></GridColumn>
-        <GridColumn Field="@nameof(Tickets.Status)" HeaderText="Status"></GridColumn>
-        <GridColumn Field="@nameof(Tickets.Priority)" HeaderText="Priority"></GridColumn>
-        <GridColumn Field="@nameof(Tickets.DueDate)" HeaderText="Due Date" Type="ColumnType.Date"></GridColumn>
-    </GridColumns>
 </SfGrid>
 ```
-
----
-
-## Connecting Syncfusion Blazor DataGrid to Microsoft SQL Server
-
-The Custom Adaptor serves as the bridge between DataGrid UI interactions and SQL Server database operations. When users interact with the grid (search, filter, sort, page), the adaptor intercepts these requests and executes corresponding SQL operations.
 
 **Data flow architecture**:
 
@@ -299,6 +293,7 @@ The Custom Adaptor serves as the bridge between DataGrid UI interactions and SQL
 6. Grid rendering → Grid displays processed data in UI
 
 The Custom Adaptor implementation centralizes all database logic, enabling consistent SQL execution, error handling, and performance optimization across all grid operations.
+
 ## Handling data operations
 
 Server-side data operations optimize performance by processing data before transmission to the client. Each operation in the Custom Adaptor's `ReadAsync` method handles specific grid functionality.
@@ -306,6 +301,8 @@ Server-side data operations optimize performance by processing data before trans
 ---
 
 ### Implement searching
+
+Enables keyword-based query across configured fields, allowing the grid to delegate search criteria to the adaptor for efficient server-side filtering.
 
 Add searching capability to filter records based on user-entered keywords:
 
@@ -325,9 +322,13 @@ Enable the search toolbar in DataGrid markup:
 </SfGrid>
 ```
 
+Search configuration has been established; proceed with column-level filtering to refine results further.
+
 ---
 
 ### Apply filtering
+
+Provides column-level criteria evaluation so the adaptor can restrict datasets at the source for precise, performant retrieval.
 
 Add filtering to restrict records based on column-specific criteria:
 
@@ -348,9 +349,13 @@ Enable filtering in DataGrid markup:
 </SfGrid>
 ```
 
+Filtering configuration is complete; continue with sorting to define the desired record ordering.
+
 ---
 
 ### Enable sorting
+
+Enables deterministic record ordering by delegating sort descriptors to the adaptor for database-optimized sorting.
 
 Add sorting to arrange records in ascending or descending order:
 
@@ -370,9 +375,13 @@ Enable sorting in DataGrid markup:
 </SfGrid>
 ```
 
+Sorting configuration is finalized; proceed with aggregates or subsequent operations as needed.
+
 ---
 
 ### Configure aggregates
+
+Aggregate functions compute summary statistics across datasets without requiring row-level retrieval, enabling efficient calculation of totals, averages, and counts at the database server level.
 
 Add aggregate calculations (Sum, Count, Average, Min, Max) for summary statistics:
 
@@ -402,9 +411,13 @@ Enable aggregates in DataGrid markup:
 </SfGrid>
 ```
 
+Aggregate configuration has been established; proceed with implementing paging to distribute large datasets across multiple pages.
+
 ---
 
 ### Add paging support
+
+Paging divides large result sets into fixed-size pages, reducing memory consumption and improving client-side responsiveness by retrieving only the requested page from the server.
 
 Add paging to divide large datasets into manageable pages:
 
@@ -432,9 +445,13 @@ Enable paging in DataGrid markup:
 </SfGrid>
 ```
 
+Paging implementation is complete; continue with grouping records to organize data hierarchically by column values.
+
 ---
 
 ### Enable grouping
+
+Grouping hierarchically organizes records by specified column values, enabling data summarization and nested record visualization while reducing query complexity through server-side grouping operations.
 
 Add grouping to organize records hierarchically by column values:
 
@@ -462,12 +479,16 @@ Enable grouping in DataGrid markup:
 </SfGrid>
 ```
 
+Grouping configuration has been completed; proceed to implementing CRUD operations to enable record creation, modification, and deletion directly from the DataGrid interface.
+
 ---
 ## Handling CRUD operations
 
 Custom Adaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in TicketData.cs to execute SQL commands.
 
 ### Create (Insert) records
+
+Record insertion enables users to create new tickets directly from the DataGrid interface; the adaptor intercepts the insertion request, applies business logic validation, and persists the new record to the SQL Server database.
 
 Implement `InsertAsync` to handle new record creation:
 
@@ -485,7 +506,7 @@ public override async Task<object> InsertAsync(DataManager dataManager, object v
 }
 ```
 
-In `Data/TicketData.cs`, implement the insert method:
+In **Data/TicketData.cs**, implement the insert method:
 
 ```csharp
 public async Task AddTicketAsync(Tickets ticket)
@@ -508,11 +529,19 @@ public async Task AddTicketAsync(Tickets ticket)
 }
 ```
 
+Record insertion has been configured; the new ticket is now persisted to the database and reflected in the grid. Continue with implementing the read operation to retrieve and display records from SQL Server.
+
 ### Read (Retrieve) records
 
-The `ReadAsync` method is implemented in Step 7, retrieving and processing records from SQL Server.
+Record retrieval executes SQL queries against the database and materializes results into the strongly typed Tickets model; the adaptor processes data operations (search, filter, sort, aggregate, page, group) before returning the result set to the grid for display.
+
+The `ReadAsync` method is implemented in Step 6, retrieving and processing records from SQL Server.
+
+Record retrieval has been established; the grid now displays SQL Server data with full support for searching, filtering, sorting, paging, grouping, and aggregation. Continue with implementing record updates to enable in-place editing of existing tickets.
 
 ### Update (Edit) records
+
+Record modification enables users to edit ticket attributes directly within the DataGrid; the adaptor captures the edited row, validates changes, and synchronizes modifications to the SQL Server database while maintaining data integrity.
 
 Implement `UpdateAsync` to handle record modifications:
 
@@ -530,7 +559,7 @@ public override async Task<object> UpdateAsync(DataManager dataManager, object v
 }
 ```
 
-In `Data/TicketData.cs`, implement the update method:
+In **Data/TicketData.cs**, implement the update method:
 
 ```csharp
 public async Task UpdateTicketAsync(Tickets ticket)
@@ -553,7 +582,11 @@ public async Task UpdateTicketAsync(Tickets ticket)
 }
 ```
 
+Record updates have been configured; modifications are now synchronized to the database and reflected in the grid UI. Continue with implementing record deletion to complete the full CRUD lifecycle.
+
 ### Delete (Remove) records
+
+Record deletion enables users to remove tickets directly from the DataGrid; the adaptor intercepts the deletion request, executes corresponding SQL DELETE statements, and removes the record from both the database and grid display.
 
 Implement `RemoveAsync` to handle record deletion:
 
@@ -571,7 +604,9 @@ public override async Task<object> RemoveAsync(DataManager dataManager, object v
 }
 ```
 
-In `Data/TicketData.cs`, implement the delete method:
+Record deletion has been implemented; tickets are now removed from the database and the grid UI reflects the changes immediately. Continue with batch operations to handle multiple record modifications in a single transaction.
+
+In **Data/TicketData.cs**, implement the delete method:
 
 ```csharp
 public async Task RemoveTicketAsync(int ticketId)
@@ -590,6 +625,8 @@ public async Task RemoveTicketAsync(int ticketId)
 ```
 
 ### Batch operations
+
+Batch operations aggregate multiple insertions, updates, and deletions into a single request, reducing network overhead and enabling transactional consistency by persisting all changes atomically to the SQL Server database.
 
 Implement `BatchUpdateAsync` to process multiple record changes in a single request:
 
@@ -627,6 +664,8 @@ public override async Task<object> BatchUpdateAsync(DataManager dataManager, obj
 }
 ```
 
+Batch operations have been configured; the adaptor now supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
+
 ---
 
 ## Run the application
@@ -637,4 +676,4 @@ Build and launch the Blazor application:
 dotnet build ; dotnet run
 ```
 
-Navigate to the application URL (e.g., `https://localhost:5001`) to view the DataGrid with SQL Server data binding.
+> A complete sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor) repository.
