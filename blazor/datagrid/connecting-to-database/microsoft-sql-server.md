@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Microsoft SQL Server Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn how to bind Microsoft SQL Server data to Syncfusion Blazor DataGrid, enable CRUD operations, and implement server-side data processing with raw SQL queries.
+title: Microsoft SQL Server Data Binding in Blazor DataGrid | Syncfusion
+description: Learn how to bind Microsoft SQL Server data to Syncfusion Blazor DataGrid with server-side searching, filtering, sorting, paging, grouping and CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -39,7 +39,7 @@ Ensure the following software and packages are installed before proceeding:
 
 ### Step 1: Create database and table in SQL Server
 
-The **Network Support Ticket System** scenario is used to demonstrate binding the Syncfusion Blazor DataGrid to Microsoft SQL Server with real ticket records and server-side operations. "NetworkSupportDB" database and "Tickets" table store ticket data for CRUD actions, enabling grid-driven querying, editing, paging, and aggregation.
+The **Network Support Ticket System** scenario demonstrates binding the Syncfusion Blazor DataGrid to a Microsoft SQL Server database using real ticket records and server‑side operations. The "NetworkSupportDB" database and its "Tickets" table store the ticket data required for performing CRUD operations, enabling grid-driven querying, editing, paging, and aggregation.
 
 Open SQL Server Management Studio (SSMS) and execute the following script to create the database and "Tickets" table:
 
@@ -84,12 +84,11 @@ These dependencies will be referenced by the grid adaptor and data access layer 
 
 ### Step 2: Install required NuGet packages
 
-Syncfusion.Blazor provides the DataGrid and related UI services, while Microsoft.Data.SqlClient enables secure, performant connectivity to SQL Server with raw query support. Installing these packages establishes the core UI and data-access dependencies used by the custom adaptor and data layer.
+Syncfusion.Blazor provides the DataGrid and related UI services, while Microsoft.Data.SqlClient enables secure, efficient connectivity to SQL Server with raw query support.
 
-Open the Package Manager Console in Visual Studio and install the necessary packages:
+Open the Package Manager Console in Visual Studio and install the necessary package:
 
 ```powershell
-Install-Package Syncfusion.Blazor -Version 28.1.33 ;
 Install-Package Microsoft.Data.SqlClient -Version 5.2.0
 ```
 
@@ -201,7 +200,15 @@ Key implementation details:
 
 Data access configuration has been completed. Proceed to register Syncfusion Blazor services.
 
-### Step 5: Register Syncfusion services
+## Integrate Syncfusion Blazor DataGrid
+
+### Step 1: Install required NuGet packages and register Syncfusion services
+
+Open the Package Manager Console in Visual Studio and install the necessary package:
+
+```powershell
+Install-Package Syncfusion.Blazor -Version 28.1.33 ;
+```
 
 Registers the Syncfusion component services required by the DataGrid at runtime and exposes grid APIs via dependency injection.
 
@@ -235,12 +242,12 @@ Add required namespaces in **Components/_Imports.razor**:
 
 Service registration and namespace imports have been completed. Continue with configuring DataGrid–SQL Server integration using the Custom Adaptor.
 
-### Step 6: Binding data from Microsoft SQL Server using CustomAdaptor
+### Step 2: Bind data from Microsoft SQL Server using CustomAdaptor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **Microsoft SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 The Custom Adaptor serves as the bridge between DataGrid UI interactions and SQL Server database operations. When users interact with the grid (search, filter, sort, page), the adaptor intercepts these requests and executes corresponding SQL operations.
 
-### Implement custom adaptor
+**Implement custom adaptor**
 
 Create a Custom Adaptor class in **Components/Pages/Home.razor** that bridges DataGrid actions with SQL Server operations:
 
@@ -368,17 +375,24 @@ Bind the adaptor to the DataGrid markup in **Home.razor**:
 
 The Custom Adaptor implementation centralizes all database logic, enabling consistent SQL execution, error handling, and performance optimization across all grid operations.
 
-### Handling data operations
+### Handle data operations
 
-Server-side data operations optimize performance by processing data before transmission to the client. Each operation in the Custom Adaptor's `ReadAsync` method handles specific grid functionality.
+Server-side data operations optimize performance by processing data before transmission to the client. Each operation in the Custom Adaptor's `ReadAsync` method handles specific grid functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+
+**Common Methods in DataOperations**
+
+* [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) - Applies search criteria to the collection.
+* [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) - Filters data based on conditions.
+* [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) - Sorts data by one or more fields.
+* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records for paging.
+* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records for paging.
+* [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) – Calculates aggregate values such as Sum, Average, Min, and Max.
 
 ---
 
-### Implement searching
+**Implement searching**
 
-Enables keyword-based query across configured fields, allowing the grid to delegate search criteria to the adaptor for efficient server-side filtering.
-
-Add searching capability to filter records based on user-entered keywords:
+Enables keyword-based query across configured fields, allowing the grid to delegate search criteria to the adaptor for efficient server-side filtering. The built-in `PerformSearching` method of the `DataOperations` class applies search criteria from the `DataManagerRequest` to the data source.
 
 ```csharp
 public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
@@ -413,11 +427,9 @@ Search configuration has been established; proceed with column-level filtering t
 
 ---
 
-### Apply filtering
+**Apply filtering**
 
-Provides column-level criteria evaluation so the adaptor can restrict datasets at the source for precise, performant retrieval.
-
-Add filtering to restrict records based on column-specific criteria, combined with searching:
+Provides column-level criteria evaluation so the adaptor can restrict datasets at the source for precise, efficient retrieval. The built-in `PerformFiltering` method in the `DataOperations` class applies filter criteria from the `DataManagerRequest` to the data collection.
 
 ```csharp
 public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
@@ -459,11 +471,9 @@ Filtering configuration is complete; continue with sorting to define the desired
 
 ---
 
-### Enable sorting
+**Enable sorting**
 
-Enables deterministic record ordering by delegating sort descriptors to the adaptor for database-optimized sorting.
-
-Add sorting to arrange records in ascending or descending order, combined with searching and filtering:
+Enables deterministic record ordering by delegating sort descriptors to the adaptor for database-optimized sorting. The built-in `PerformSorting` method in the `DataOperations` class applies sort criteria from the `DataManagerRequest` to the data collection.
 
 ```csharp
 public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
@@ -511,11 +521,9 @@ Sorting configuration is finalized; proceed with aggregates or subsequent operat
 
 ---
 
-### Configure aggregates
+**Configure aggregates**
 
-Aggregate functions compute summary statistics across datasets without requiring row-level retrieval, enabling efficient calculation of totals, averages, and counts at the database server level.
-
-Add aggregate calculations (Sum, Count, Average, Min, Max) for summary statistics, combined with searching, filtering, and sorting:
+Aggregate functions compute summary statistics across datasets without requiring row-level retrieval, enabling efficient calculation of totals, averages, and counts at the database server level. The built-in `PerformAggregation` method in the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class calculates aggregate values based on the criteria specified in the `DataManagerRequest`.
 
 ```csharp
 public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
@@ -577,11 +585,9 @@ Aggregate configuration has been established; proceed with implementing paging t
 
 ---
 
-### Add paging support
+**Add paging support**
 
-Paging divides large result sets into fixed-size pages, reducing memory consumption and improving client-side responsiveness by retrieving only the requested page from the server.
-
-Add paging to divide large datasets into manageable pages, combined with searching, filtering, sorting, and aggregates:
+Paging divides large result sets into fixed-size pages, reducing memory consumption and improving client-side responsiveness by retrieving only the requested page from the server.The built-in `PerformSkip`, `PerformTake` methods in the `DataOperations` class apply paging criteria from the `DataManagerRequest` to the data collection.
 
 ```csharp
 public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
@@ -655,11 +661,9 @@ Paging implementation is complete; continue with grouping records to organize da
 
 ---
 
-### Enable grouping
+**Enable grouping**
 
-Grouping hierarchically organizes records by specified column values, enabling data summarization and nested record visualization while reducing query complexity through server-side grouping operations.
-
-Add grouping to organize records hierarchically by column values, combined with all preceding data operations:
+Grouping hierarchically organizes records by specified column values, enabling data summarization and nested record visualization while reducing query complexity through server-side grouping operations.The built-in `Group` method in the `DataUtil` class applies grouping logic based on the configuration in the `DataManagerRequest`.
 
 ```csharp
 public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
@@ -749,7 +753,7 @@ Grouping configuration has been completed; proceed to implementing CRUD operatio
 
 ---
 
-### Handling CRUD operations
+### Handle CRUD operations
 
 Custom Adaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in TicketData.cs to execute SQL commands.
 
@@ -802,7 +806,7 @@ Record insertion has been configured; the new ticket is now persisted to the dat
 
 Record retrieval executes SQL queries against the database and materializes results into the strongly typed Tickets model; the adaptor processes data operations (search, filter, sort, aggregate, page, group) before returning the result set to the grid for display.
 
-The `ReadAsync` method is implemented in Step 6, retrieving and processing records from SQL Server.
+The `ReadAsync` method is implemented in [Step 02](#step-2-bind-data-from-microsoft-sql-server-using-customadaptor), retrieving and processing records from SQL Server which returns either the IEnumerable result or a `DataResult` object with `Result` and `Count`.
 
 Record retrieval has been established; the grid now displays SQL Server data with full support for searching, filtering, sorting, paging, grouping, and aggregation. Continue with implementing record updates to enable in-place editing of existing tickets.
 
