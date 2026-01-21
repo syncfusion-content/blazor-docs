@@ -307,10 +307,20 @@ Enables keyword-based query across configured fields, allowing the grid to deleg
 Add searching capability to filter records based on user-entered keywords:
 
 ```csharp
-// Searching
-if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
 {
-    dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+    
+    // Searching
+    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    {
+        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+    }
+
+    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+    return dataManagerRequest.RequiresCounts 
+        ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+        : (object)dataSource;
 }
 ```
 
@@ -330,13 +340,29 @@ Search configuration has been established; proceed with column-level filtering t
 
 Provides column-level criteria evaluation so the adaptor can restrict datasets at the source for precise, performant retrieval.
 
-Add filtering to restrict records based on column-specific criteria:
+Add filtering to restrict records based on column-specific criteria, combined with searching:
 
 ```csharp
-// Filtering
-if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
 {
-    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+    
+    // Searching
+    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    {
+        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+    }
+
+    // Filtering
+    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+    {
+        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+    }
+
+    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+    return dataManagerRequest.RequiresCounts 
+        ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+        : (object)dataSource;
 }
 ```
 
@@ -357,13 +383,35 @@ Filtering configuration is complete; continue with sorting to define the desired
 
 Enables deterministic record ordering by delegating sort descriptors to the adaptor for database-optimized sorting.
 
-Add sorting to arrange records in ascending or descending order:
+Add sorting to arrange records in ascending or descending order, combined with searching and filtering:
 
 ```csharp
-// Sorting
-if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
 {
-    dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+    
+    // Searching
+    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    {
+        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+    }
+
+    // Filtering
+    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+    {
+        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+    }
+
+    // Sorting
+    if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+    {
+        dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+    }
+
+    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+    return dataManagerRequest.RequiresCounts 
+        ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+        : (object)dataSource;
 }
 ```
 
@@ -383,18 +431,43 @@ Sorting configuration is finalized; proceed with aggregates or subsequent operat
 
 Aggregate functions compute summary statistics across datasets without requiring row-level retrieval, enabling efficient calculation of totals, averages, and counts at the database server level.
 
-Add aggregate calculations (Sum, Count, Average, Min, Max) for summary statistics:
+Add aggregate calculations (Sum, Count, Average, Min, Max) for summary statistics, combined with searching, filtering, and sorting:
 
 ```csharp
-// Aggregates
-IDictionary<string, object>? aggregates = null;
-if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
+public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
 {
-    aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-}
+    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+    
+    // Searching
+    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    {
+        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+    }
 
-// Include aggregates in return
-return new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates };
+    // Filtering
+    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+    {
+        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+    }
+
+    // Sorting
+    if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+    {
+        dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+    }
+
+    // Aggregates
+    IDictionary<string, object>? aggregates = null;
+    if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
+    {
+        aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
+    }
+
+    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+    return dataManagerRequest.RequiresCounts 
+        ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
+        : (object)dataSource;
+}
 ```
 
 Enable aggregates in DataGrid markup:
@@ -419,20 +492,53 @@ Aggregate configuration has been established; proceed with implementing paging t
 
 Paging divides large result sets into fixed-size pages, reducing memory consumption and improving client-side responsiveness by retrieving only the requested page from the server.
 
-Add paging to divide large datasets into manageable pages:
+Add paging to divide large datasets into manageable pages, combined with searching, filtering, sorting, and aggregates:
 
 ```csharp
-// Calculate total count before paging
-int totalRecordsCount = dataSource.Count();
+public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+{
+    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+    
+    // Searching
+    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    {
+        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+    }
 
-// Paging
-if (dataManagerRequest.Skip != 0)
-{
-    dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
-}
-if (dataManagerRequest.Take != 0)
-{
-    dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+    // Filtering
+    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+    {
+        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+    }
+
+    // Sorting
+    if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+    {
+        dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+    }
+
+    // Aggregates
+    IDictionary<string, object>? aggregates = null;
+    if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
+    {
+        aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
+    }
+
+    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+    
+    // Paging
+    if (dataManagerRequest.Skip != 0)
+    {
+        dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+    }
+    if (dataManagerRequest.Take != 0)
+    {
+        dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+    }
+
+    return dataManagerRequest.RequiresCounts 
+        ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
+        : (object)dataSource;
 }
 ```
 
@@ -453,20 +559,68 @@ Paging implementation is complete; continue with grouping records to organize da
 
 Grouping hierarchically organizes records by specified column values, enabling data summarization and nested record visualization while reducing query complexity through server-side grouping operations.
 
-Add grouping to organize records hierarchically by column values:
+Add grouping to organize records hierarchically by column values, combined with all preceding data operations:
 
 ```csharp
-// Grouping
-if (dataManagerRequest.Group != null && dataManagerRequest.Group.Count > 0)
+public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
 {
-    IEnumerable groupedData = dataSource.ToList();
-    foreach (var group in dataManagerRequest.Group)
+    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+    
+    // Searching
+    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
     {
-        groupedData = DataUtil.Group<Tickets>(groupedData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
     }
+
+    // Filtering
+    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+    {
+        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+    }
+
+    // Sorting
+    if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+    {
+        dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+    }
+
+    // Aggregates
+    IDictionary<string, object>? aggregates = null;
+    if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
+    {
+        aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
+    }
+
+    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+    DataResult dataObject = new DataResult();
+    
+    // Grouping
+    if (dataManagerRequest.Group != null && dataManagerRequest.Group.Count > 0)
+    {
+        IEnumerable ResultData = dataSource.ToList();
+        foreach (var group in dataManagerRequest.Group)
+        {
+            ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+        }
+        dataObject.Result = ResultData;
+        dataObject.Count = totalRecordsCount;
+        dataObject.Aggregates = aggregates;
+        return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
+    }
+    
+    // Paging
+    if (dataManagerRequest.Skip != 0)
+    {
+        dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+    }
+    if (dataManagerRequest.Take != 0)
+    {
+        dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+    }
+
     return dataManagerRequest.RequiresCounts 
-        ? new DataResult() { Result = groupedData, Count = totalRecordsCount } 
-        : (object)groupedData;
+        ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
+        : (object)dataSource;
 }
 ```
 
@@ -506,7 +660,7 @@ public override async Task<object> InsertAsync(DataManager dataManager, object v
 }
 ```
 
-In **Data/TicketData.cs**, implement the insert method:
+In `Data/TicketData.cs`, implement the insert method:
 
 ```csharp
 public async Task AddTicketAsync(Tickets ticket)
@@ -559,7 +713,7 @@ public override async Task<object> UpdateAsync(DataManager dataManager, object v
 }
 ```
 
-In **Data/TicketData.cs**, implement the update method:
+In `Data/TicketData.cs`, implement the update method:
 
 ```csharp
 public async Task UpdateTicketAsync(Tickets ticket)
@@ -606,7 +760,7 @@ public override async Task<object> RemoveAsync(DataManager dataManager, object v
 
 Record deletion has been implemented; tickets are now removed from the database and the grid UI reflects the changes immediately. Continue with batch operations to handle multiple record modifications in a single transaction.
 
-In **Data/TicketData.cs**, implement the delete method:
+In `Data/TicketData.cs`, implement the delete method:
 
 ```csharp
 public async Task RemoveTicketAsync(int ticketId)
