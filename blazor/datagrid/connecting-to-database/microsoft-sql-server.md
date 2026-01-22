@@ -86,7 +86,7 @@ These dependencies will be referenced by the grid adaptor and data access layer 
 
 Syncfusion.Blazor provides the DataGrid and related UI services, while Microsoft.Data.SqlClient enables secure, efficient connectivity to SQL Server with raw query support.
 
-Open the Package Manager Console in Visual Studio and install the necessary package:
+Open **Visual Studio**, navigate to the **Package Manager Console**, and install the necessary package:
 
 ```powershell
 Install-Package Microsoft.Data.SqlClient -Version 5.2.0
@@ -105,7 +105,7 @@ Package installation has been completed. Continue with defining the data model a
 
 A strongly typed model establishes a clear contract between the database schema and the grid, enabling compile-time validation and predictable serialization. Aligning properties with SQL column data types ensures accurate binding, editing, and server-side processing.
 
-Create a model class representing the Tickets table structure in **Data/Tickets.cs**:
+Create a new folder **Data**, inside the folder create a new file **Tickets.cs** to design a model class representing the Tickets table structure:
 
 ```csharp
 public class Tickets
@@ -131,7 +131,7 @@ Model definition has been completed. Proceed to configure the connection string 
 
 ### Step 4: Configure data access (TicketData.cs)
 
-Define the SQL Server connection string and implement the data retrieval method in **Data/TicketData.cs** to establish reliable connectivity and server-side data access. The implementation uses "SqlConnection", "SqlCommand", and "SqlDataAdapter" to execute a SELECT statement and materialize results into the strongly typed "Tickets" model.
+Define the SQL Server connection string and implement the data retrieval method by creating a new folder **Data** and inside the folder create a new file **TicketData.cs** to establish reliable connectivity and server-side data access. The implementation uses "SqlConnection", "SqlCommand", and "SqlDataAdapter" to execute a SELECT statement and materialize results into the strongly typed "Tickets" model.
 
 ```csharp
 using Microsoft.Data.SqlClient;
@@ -204,7 +204,7 @@ Data access configuration has been completed. Proceed to register Syncfusion Bla
 
 ### Step 1: Install required NuGet packages and register Syncfusion services
 
-Open the Package Manager Console in Visual Studio and install the necessary package:
+Open **Visual Studio**, navigate to the **Package Manager Console**, and install the necessary package:
 
 ```powershell
 Install-Package Syncfusion.Blazor -Version 28.1.33 ;
@@ -224,6 +224,16 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
+**Add Import Namespaces**
+Add required namespaces in **Components/_Imports.razor**:
+
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+```
+
+**Add stylesheet and script resources**
 Add Syncfusion styles and scripts in **Components/App.razor**:
 ```html
 <!-- Syncfusion Blazor CSS -->
@@ -232,13 +242,22 @@ Add Syncfusion styles and scripts in **Components/App.razor**:
 <script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-Add required namespaces in **Components/_Imports.razor**:
+**Add Syncfusion Blazor DataGrid component**
 
-```csharp
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
+Create new **Home.razor** file and add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component. The DataGrid automatically generates columns when no explicit column definitions are provided. For greater control over column behavior and appearance, use [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to specify each column and configure properties such as [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width). This approach provides full control over column behavior and appearance.
+
+```html
+<SfGrid TValue="Tickets">
+    <GridColumns>
+        <GridColumn Field=@nameof(Tickets.TicketId) IsPrimaryKey="true" IsIdentity="true"></GridColumn>
+        <GridColumn Field=@nameof(Tickets.PublicTicketId) IsIdentity="true" HeaderText="Ticket ID" Width="160" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Tickets.Title) HeaderText="Subject" Width="280"></GridColumn>
+        <!-- Add Required Additional Columns -->
+    </GridColumns>
+</SfGrid>
 ```
+> * Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** for a column that contains unique values.
+> * If the database includes an **auto-generated column**, set [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) for that column to disable editing during **add** or **update** operations.
 
 Service registration and namespace imports have been completed. Continue with configuring DataGrid–SQL Server integration using the Custom Adaptor.
 
@@ -288,84 +307,11 @@ Create a Custom Adaptor class in **Components/Pages/Home.razor** that bridges Da
 - [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from SQL Server
 - [BatchUpdateAsync(DataManager, object, object, object, string, string, int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) - Handle bulk operations
 
-Bind the adaptor to the DataGrid markup in **Home.razor**:
+Bind the created adaptor to the DataGrid markup in **Home.razor**.
 
 ```html
 <SfGrid TValue="Tickets">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridColumns>
-        <GridColumn Field=@nameof(Tickets.TicketId) IsPrimaryKey="true" ShowInColumnChooser="false" ShowColumnMenu="false"></GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.PublicTicketId) HeaderText="Ticket ID" Width="160" TextAlign="TextAlign.Right" EditType="EditType.DefaultEdit" AllowAdding="false" AllowEditing="false">
-            <Template>
-                @{
-                    var data = (Tickets)context;
-                }
-                <a class="status-text status-ticket-id">
-                    @data.PublicTicketId
-                </a>
-            </Template>
-        </GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.Title) HeaderText="Subject" Width="280" ClipMode="ClipMode.EllipsisWithTooltip" EditType="EditType.DefaultEdit"></GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.Status) HeaderText="Status" Width="180" EditType="EditType.DropDownEdit" EditorSettings="@StatusDropDownParams">
-            <Template>
-                @{
-                    var data = (Tickets)context;
-                }
-                <span class="status-text @GetStatusClass(data)" title="@GetStatusDescription(data)">
-                    @data.Status
-                </span>
-            </Template>
-        </GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.Priority) HeaderText="Priority" Width="160" EditType="EditType.DropDownEdit" EditorSettings="@PriorityDropDownParams">
-            <Template>
-                @{
-                    var data = (Tickets)context;
-                }
-                <span class="priority-pill @GetPriorityClass(data)" title="@GetPriorityDescription(data)">
-                    <span class="priority-icon" aria-hidden="true"></span>
-                    @data.Priority
-                </span>
-            </Template>
-        </GridColumn>
-
-    <GridColumn Field=@nameof(Tickets.Category) HeaderText="Category" Width="180" EditType="EditType.DropDownEdit" EditorSettings="@CategoryDropDownParams">
-            <Template>
-                @{
-                    var data = (Tickets)context;
-                }
-                <span class="chip @GetCategoryClass(data)">
-                    @data.Category
-                </span>
-            </Template>
-        </GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.Department) HeaderText="Department" Width="170" EditType="EditType.DropDownEdit" EditorSettings="@DepartmentDropDownParams"></GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.CreatedBy) HeaderText="Requested By" Width="180" EditType="EditType.DropDownEdit" EditorSettings="@CreatedByDropDownParams"></GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.Assignee) HeaderText="Agent" Width="160" EditType="EditType.DropDownEdit" EditorSettings="@AssigneeDropDownParams"></GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.DueDate) HeaderText="Resolution Due" Width="200" Type="ColumnType.DateTime" Format="MMM d, yyyy, h:mm tt" EditType="EditType.DateTimePickerEdit"></GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.ResponseDue) HeaderText="Response Due" Width="200" EditType="EditType.DateTimePickerEdit">
-            <Template>
-                @{
-                    var data = (Tickets)context;
-                }
-                <span class="@GetResponseDueClass(data)" title="@GetResponseDueTooltip(data)">
-                    @(data.ResponseDue?.ToString("MMM d, yyyy, h:mm tt") ?? "")
-                </span>
-            </Template>
-        </GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.UpdatedAt) HeaderText="Last Modified" Width="200" Type="ColumnType.DateTime" Format="MMM d, yyyy, h:mm tt" EditType="EditType.DateTimePickerEdit"></GridColumn>
-
-        <GridColumn Field=@nameof(Tickets.CreatedAt) HeaderText="Created On" Width="200" Type="ColumnType.DateTime" Format="MMM d, yyyy, h:mm tt" EditType="EditType.DateTimePickerEdit"></GridColumn>
-    </GridColumns>
 </SfGrid>
 ```
 
@@ -375,7 +321,7 @@ Bind the adaptor to the DataGrid markup in **Home.razor**:
 
 The Custom Adaptor implementation centralizes all database logic, enabling consistent SQL execution, error handling, and performance optimization across all grid operations.
 
-### Handle data operations
+### Perform data operations
 
 Server-side data operations optimize performance by processing data before transmission to the client. Each operation in the Custom Adaptor's `ReadAsync` method handles specific grid functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
@@ -390,29 +336,33 @@ Server-side data operations optimize performance by processing data before trans
 
 ---
 
-**Implement searching**
+**Searching**
 
 Enables keyword-based query across configured fields, allowing the grid to delegate search criteria to the adaptor for efficient server-side filtering. The built-in `PerformSearching` method of the `DataOperations` class applies search criteria from the `DataManagerRequest` to the data source.
 
 ```csharp
-public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+public class CustomAdaptor : DataAdaptor
 {
-    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
-    
-    // Searching
-    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
     {
-        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-    }
+        IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+        
+        // Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
 
-    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-    return dataManagerRequest.RequiresCounts 
-        ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
-        : (object)dataSource;
+        int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+            : (object)dataSource;
+    }
 }
 ```
 
-Enable the search toolbar in DataGrid markup:
+Enable Search by adding the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property in the DataGrid markup:
 
 ```html
 <SfGrid TValue="Tickets" Toolbar="@(new List<string>() { "Search" })">
@@ -423,39 +373,41 @@ Enable the search toolbar in DataGrid markup:
 </SfGrid>
 ```
 
-Search configuration has been established; proceed with column-level filtering to refine results further.
-
 ---
 
-**Apply filtering**
+**Filtering**
 
 Provides column-level criteria evaluation so the adaptor can restrict datasets at the source for precise, efficient retrieval. The built-in `PerformFiltering` method in the `DataOperations` class applies filter criteria from the `DataManagerRequest` to the data collection.
 
 ```csharp
-public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+public class CustomAdaptor : DataAdaptor
 {
-    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
-    
-    // Searching
-    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
     {
-        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-    }
+        IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+        
+        // Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
 
-    // Filtering
-    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-    {
-        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
-    }
+        // Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
 
-    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-    return dataManagerRequest.RequiresCounts 
-        ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
-        : (object)dataSource;
+        int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+            : (object)dataSource;
+    }
 }
 ```
 
-Enable filtering in DataGrid markup, combined with searching:
+To enable filtering in the DataGrid markup, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**. Once enabled, configure filtering behavior and appearance using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) property.
 
 ```html
 <SfGrid TValue="Tickets" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
@@ -467,45 +419,46 @@ Enable filtering in DataGrid markup, combined with searching:
 </SfGrid>
 ```
 
-Filtering configuration is complete; continue with sorting to define the desired record ordering.
-
 ---
 
-**Enable sorting**
+**Sorting**
 
 Enables deterministic record ordering by delegating sort descriptors to the adaptor for database-optimized sorting. The built-in `PerformSorting` method in the `DataOperations` class applies sort criteria from the `DataManagerRequest` to the data collection.
 
 ```csharp
-public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+public class CustomAdaptor : DataAdaptor
 {
-    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
-    
-    // Searching
-    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
     {
-        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-    }
+        IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+        
+        // Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
 
-    // Filtering
-    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-    {
-        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
-    }
+        // Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
 
-    // Sorting
-    if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
-    {
-        dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
-    }
+        // Sorting
+        if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+        {
+            dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+        }
 
-    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-    return dataManagerRequest.RequiresCounts 
-        ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
-        : (object)dataSource;
+        int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+            : (object)dataSource;
+    }
 }
 ```
-
-Enable sorting in DataGrid markup, combined with searching and filtering:
+To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in the Grid component.
 
 ```html
 <SfGrid TValue="Tickets" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
@@ -517,52 +470,54 @@ Enable sorting in DataGrid markup, combined with searching and filtering:
 </SfGrid>
 ```
 
-Sorting configuration is finalized; proceed with aggregates or subsequent operations as needed.
-
 ---
 
-**Configure aggregates**
+**Aggregation**
 
 Aggregate functions compute summary statistics across datasets without requiring row-level retrieval, enabling efficient calculation of totals, averages, and counts at the database server level. The built-in `PerformAggregation` method in the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class calculates aggregate values based on the criteria specified in the `DataManagerRequest`.
 
 ```csharp
-public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+public class CustomAdaptor : DataAdaptor
 {
-    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
-    
-    // Searching
-    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
     {
-        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-    }
+        IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+        
+        // Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
 
-    // Filtering
-    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-    {
-        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
-    }
+        // Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
 
-    // Sorting
-    if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
-    {
-        dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
-    }
+        // Sorting
+        if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+        {
+            dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+        }
 
-    // Aggregates
-    IDictionary<string, object>? aggregates = null;
-    if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
-    {
-        aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-    }
+        // Aggregates
+        IDictionary<string, object>? aggregates = null;
+        if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
+        {
+            aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
+        }
 
-    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-    return dataManagerRequest.RequiresCounts 
-        ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
-        : (object)dataSource;
+        int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
+            : (object)dataSource;
+    }
 }
 ```
 
-Enable aggregates in DataGrid markup, combined with searching, filtering, and sorting:
+Enable aggregates by including [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html) component in DataGrid markup, for each aggregate column, specify at least the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) properties.
 
 ```html
 <SfGrid TValue="Tickets" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
@@ -581,63 +536,65 @@ Enable aggregates in DataGrid markup, combined with searching, filtering, and so
 </SfGrid>
 ```
 
-Aggregate configuration has been established; proceed with implementing paging to distribute large datasets across multiple pages.
-
 ---
 
-**Add paging support**
+**Paging**
 
 Paging divides large result sets into fixed-size pages, reducing memory consumption and improving client-side responsiveness by retrieving only the requested page from the server.The built-in `PerformSkip`, `PerformTake` methods in the `DataOperations` class apply paging criteria from the `DataManagerRequest` to the data collection.
 
 ```csharp
-public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+public class CustomAdaptor : DataAdaptor
 {
-    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
-    
-    // Searching
-    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
     {
-        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-    }
+        IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+        
+        // Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
 
-    // Filtering
-    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-    {
-        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
-    }
+        // Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
 
-    // Sorting
-    if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
-    {
-        dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
-    }
+        // Sorting
+        if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+        {
+            dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+        }
 
-    // Aggregates
-    IDictionary<string, object>? aggregates = null;
-    if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
-    {
-        aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-    }
+        // Aggregates
+        IDictionary<string, object>? aggregates = null;
+        if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
+        {
+            aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
+        }
 
-    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-    
-    // Paging
-    if (dataManagerRequest.Skip != 0)
-    {
-        dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
-    }
-    if (dataManagerRequest.Take != 0)
-    {
-        dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
-    }
+        int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+        
+        // Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+        }
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+        }
 
-    return dataManagerRequest.RequiresCounts 
-        ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
-        : (object)dataSource;
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
+            : (object)dataSource;
+    }
 }
 ```
 
-Enable paging in DataGrid markup, combined with searching, filtering, sorting, and aggregates:
+To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. Paging options can be configured through the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. GridPageSettings allows control of page size, current page, and total record count.
 
 ```html
 <SfGrid TValue="Tickets" AllowPaging="true" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
@@ -657,84 +614,85 @@ Enable paging in DataGrid markup, combined with searching, filtering, sorting, a
 </SfGrid>
 ```
 
-Paging implementation is complete; continue with grouping records to organize data hierarchically by column values.
-
 ---
 
-**Enable grouping**
+**Grouping**
 
 Grouping hierarchically organizes records by specified column values, enabling data summarization and nested record visualization while reducing query complexity through server-side grouping operations.The built-in `Group` method in the `DataUtil` class applies grouping logic based on the configuration in the `DataManagerRequest`.
 
 ```csharp
-public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+public class CustomAdaptor : DataAdaptor
 {
-    IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
-    
-    // Searching
-    if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
     {
-        dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-    }
-
-    // Filtering
-    if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-    {
-        dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
-    }
-
-    // Sorting
-    if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
-    {
-        dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
-    }
-
-    // Aggregates
-    IDictionary<string, object>? aggregates = null;
-    if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
-    {
-        aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-    }
-
-    int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-    DataResult dataObject = new DataResult();
-    
-    // Grouping
-    if (dataManagerRequest.Group != null && dataManagerRequest.Group.Count > 0)
-    {
-        IEnumerable ResultData = dataSource.ToList();
-        foreach (var group in dataManagerRequest.Group)
+        IEnumerable<Tickets> dataSource = await TicketService.GetTicketsData();
+        
+        // Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
         {
-            ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
         }
-        dataObject.Result = ResultData;
-        dataObject.Count = totalRecordsCount;
-        dataObject.Aggregates = aggregates;
-        return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-    }
-    
-    // Paging
-    if (dataManagerRequest.Skip != 0)
-    {
-        dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
-    }
-    if (dataManagerRequest.Take != 0)
-    {
-        dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
-    }
 
-    return dataManagerRequest.RequiresCounts 
-        ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
-        : (object)dataSource;
+        // Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
+
+        // Sorting
+        if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+        {
+            dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+        }
+
+        // Aggregates
+        IDictionary<string, object>? aggregates = null;
+        if (dataManagerRequest.Aggregates != null && dataManagerRequest.Aggregates.Count > 0)
+        {
+            aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
+        }
+
+        int totalRecordsCount = dataSource.Cast<Tickets>().Count();
+        DataResult dataObject = new DataResult();
+        
+        // Grouping
+        if (dataManagerRequest.Group != null && dataManagerRequest.Group.Count > 0)
+        {
+            IEnumerable ResultData = dataSource.ToList();
+            foreach (var group in dataManagerRequest.Group)
+            {
+                ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+            }
+            dataObject.Result = ResultData;
+            dataObject.Count = totalRecordsCount;
+            dataObject.Aggregates = aggregates;
+            return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
+        }
+        
+        // Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+        }
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+        }
+
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } 
+            : (object)dataSource;
+    }
 }
 ```
 
-Enable grouping in DataGrid markup, combined with all preceding data operations:
+Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**, combined with all preceding data operations.
 
 ```html
 <SfGrid TValue="Tickets" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Search" })">
     <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <GridGroupSettings Columns="@(new string[] { "Status" })"></GridGroupSettings>
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridAggregates>
         <GridAggregate>
@@ -749,11 +707,9 @@ Enable grouping in DataGrid markup, combined with all preceding data operations:
 </SfGrid>
 ```
 
-Grouping configuration has been completed; proceed to implementing CRUD operations to enable record creation, modification, and deletion directly from the DataGrid interface.
-
 ---
 
-### Handle CRUD operations
+### Perform CRUD operations
 
 Custom Adaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in TicketData.cs to execute SQL commands.
 
@@ -761,19 +717,23 @@ Custom Adaptor methods enable users to create, read, update, and delete records 
 
 Record insertion enables users to create new tickets directly from the DataGrid interface; the adaptor intercepts the insertion request, applies business logic validation, and persists the new record to the SQL Server database.
 
-Implement `InsertAsync` to handle new record creation:
+In **Home.razor** implement `InsertAsync` to handle new record creation:
 
 ```csharp
-public override async Task<object> InsertAsync(DataManager dataManager, object value, string key)
+public class CustomAdaptor : DataAdaptor
 {
-    // Extract new record data from grid
-    Tickets newTicket = value as Tickets;
-    
-    // Call data layer method to insert into SQL Server
-    await TicketService.AddTicketAsync(newTicket);
-    
-    // Return inserted record for grid UI update
-    return value;
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> InsertAsync(DataManager dataManager, object value, string key)
+    {
+        // Extract new record data from grid
+        Tickets newTicket = value as Tickets;
+        
+        // Call data layer method to insert into SQL Server
+        await TicketService.AddTicketAsync(newTicket);
+        
+        // Return inserted record for grid UI update
+        return value;
+    }
 }
 ```
 
@@ -817,16 +777,20 @@ Record modification enables users to edit ticket attributes directly within the 
 Implement `UpdateAsync` to handle record modifications:
 
 ```csharp
-public override async Task<object> UpdateAsync(DataManager dataManager, object value, string keyField, string key)
+public class CustomAdaptor : DataAdaptor
 {
-    // Extract modified record data from grid
-    Tickets updatedTicket = value as Tickets;
-    
-    // Call data layer method to update in SQL Server
-    await TicketService.UpdateTicketAsync(updatedTicket);
-    
-    // Return updated record for grid UI update
-    return value;
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> UpdateAsync(DataManager dataManager, object value, string keyField, string key)
+    {
+        // Extract modified record data from grid
+        Tickets updatedTicket = value as Tickets;
+        
+        // Call data layer method to update in SQL Server
+        await TicketService.UpdateTicketAsync(updatedTicket);
+        
+        // Return updated record for grid UI update
+        return value;
+    }
 }
 ```
 
@@ -859,19 +823,23 @@ Record updates have been configured; modifications are now synchronized to the d
 
 Record deletion enables users to remove tickets directly from the DataGrid; the adaptor intercepts the deletion request, executes corresponding SQL DELETE statements, and removes the record from both the database and grid display.
 
-Implement `RemoveAsync` to handle record deletion:
+In **Home.razor** implement `RemoveAsync` to handle record deletion:
 
 ```csharp
-public override async Task<object> RemoveAsync(DataManager dataManager, object value, string keyField, string key)
+public class CustomAdaptor : DataAdaptor
 {
-    // Extract record to delete (or use key parameter for primary key value)
-    Tickets ticketToDelete = value as Tickets;
-    
-    // Call data layer method to delete from SQL Server
-    await TicketService.RemoveTicketAsync(ticketToDelete.TicketId);
-    
-    // Return deleted record
-    return value;
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> RemoveAsync(DataManager dataManager, object value, string keyField, string key)
+    {
+        // Extract record to delete (or use key parameter for primary key value)
+        Tickets ticketToDelete = value as Tickets;
+        
+        // Call data layer method to delete from SQL Server
+        await TicketService.RemoveTicketAsync(ticketToDelete.TicketId);
+        
+        // Return deleted record
+        return value;
+    }
 }
 ```
 
@@ -899,39 +867,43 @@ public async Task RemoveTicketAsync(int ticketId)
 
 Batch operations aggregate multiple insertions, updates, and deletions into a single request, reducing network overhead and enabling transactional consistency by persisting all changes atomically to the SQL Server database.
 
-Implement `BatchUpdateAsync` to process multiple record changes in a single request:
+In **Home.razor** implement `BatchUpdateAsync` to process multiple record changes in a single request:
 
 ```csharp
-public override async Task<object> BatchUpdateAsync(DataManager dataManager, object changed, object added, object deleted, string keyField, string key, int? dropIndex)
+public class CustomAdaptor : DataAdaptor
 {
-    // Process updated records
-    if (changed != null)
+    public TicketData TicketService = new TicketData();
+    public override async Task<object> BatchUpdateAsync(DataManager dataManager, object changed, object added, object deleted, string keyField, string key, int? dropIndex)
     {
-        foreach (var record in (IEnumerable<Tickets>)changed)
+        // Process updated records
+        if (changed != null)
         {
-            await TicketService.UpdateTicketAsync(record as Tickets);
+            foreach (var record in (IEnumerable<Tickets>)changed)
+            {
+                await TicketService.UpdateTicketAsync(record as Tickets);
+            }
         }
-    }
 
-    // Process new records
-    if (added != null)
-    {
-        foreach (var record in (IEnumerable<Tickets>)added)
+        // Process new records
+        if (added != null)
         {
-            await TicketService.AddTicketAsync(record as Tickets);
+            foreach (var record in (IEnumerable<Tickets>)added)
+            {
+                await TicketService.AddTicketAsync(record as Tickets);
+            }
         }
-    }
 
-    // Process deleted records
-    if (deleted != null)
-    {
-        foreach (var record in (IEnumerable<Tickets>)deleted)
+        // Process deleted records
+        if (deleted != null)
         {
-            await TicketService.RemoveTicketAsync((record as Tickets).TicketId);
+            foreach (var record in (IEnumerable<Tickets>)deleted)
+            {
+                await TicketService.RemoveTicketAsync((record as Tickets).TicketId);
+            }
         }
-    }
 
-    return key;
+        return key;
+    }
 }
 ```
 
