@@ -1,15 +1,15 @@
 ---
 layout: post
-title: MySQL Server Data Binding in Blazor DataGrid Component using Entity Framework | Syncfusion
+title: MySQL Server Data Binding in Blazor DataGrid using Entity Framework | Syncfusion
 description: Learn about connecting MySQL Server with Entity Framework Core and binding data to Syncfusion Blazor DataGrid with complete CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting MySQL Server data to Blazor DataGrid Component
+# Connecting MySQL Server data to Blazor DataGrid
 
-The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component supports binding data from a MySQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
+[Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a MySQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
 
 Entity Framework Core is an Object-Relational Mapper (ORM) that simplifies database operations by:
 - Automatic SQL Generation: EF Core generates optimized SQL queries automatically.
