@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting Microsoft SQL Server Data to Blazor DataGrid
 
-Syncfusion Blazor DataGrid seamlessly integrates with Microsoft SQL Server, enabling direct data binding, server-side operations (searching, filtering, sorting, paging, grouping), and full CRUD functionality using raw SQL queries.
+[Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) seamlessly integrates with Microsoft SQL Server, enabling direct data binding, server-side operations (searching, filtering, sorting, paging, grouping), and full CRUD functionality using raw SQL queries.
 
 Microsoft SQL Server offers enterprise-grade capabilities for building scalable, secure data-driven applications with Blazor. Integrating SQL Server directly with Syncfusion DataGrid provides significant advantages:
 
@@ -35,7 +35,7 @@ Ensure the following software and packages are installed before proceeding:
 
 ---
 
-## SQL Setup environment
+## SQL setup environment
 
 ### Step 1: Create database and table in SQL Server
 
@@ -82,7 +82,7 @@ GO
 With the database and Tickets table provisioned, continue by installing the NuGet packages required for Syncfusion Blazor components and SQL Server connectivity.
 These dependencies will be referenced by the grid adaptor and data access layer in the following steps.
 
-### Step 2: Install required NuGet packages
+### Step 2: Install NuGet packages
 
 Syncfusion.Blazor provides the DataGrid and related UI services, while Microsoft.Data.SqlClient enables secure, efficient connectivity to SQL Server with raw query support.
 
@@ -202,7 +202,7 @@ Data access configuration has been completed. Proceed to register Syncfusion Bla
 
 ## Integrate Syncfusion Blazor DataGrid
 
-### Step 1: Install required NuGet packages and register Syncfusion services
+### Step 1: Install NuGet packages and register Syncfusion services
 
 Open **Visual Studio**, navigate to the **Package Manager Console**, and install the necessary package:
 
@@ -224,8 +224,9 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-**Add Import Namespaces**
-Add required namespaces in **Components/_Imports.razor**:
+**Import Namespaces**
+
+Open the **_Imports.razor** file and add required namespaces.
 
 ```csharp
 @using Syncfusion.Blazor
@@ -234,12 +235,17 @@ Add required namespaces in **Components/_Imports.razor**:
 ```
 
 **Add stylesheet and script resources**
-Add Syncfusion styles and scripts in **Components/App.razor**:
+
+Add Syncfusion styles and scripts in **Components/App.razor**. The theme stylesheet and script files are provided through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-asset) in the NuGet packages.
+
 ```html
-<!-- Syncfusion Blazor CSS -->
-<link href="_content/Syncfusion.Blazor/styles/tailwind3.css" rel="stylesheet" />
-<!-- Syncfusion Blazor Scripts -->
-<script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<head>
+    ....
+    <!-- Syncfusion Blazor CSS -->
+    <link href="_content/Syncfusion.Blazor/styles/tailwind3.css" rel="stylesheet" />
+    <!-- Syncfusion Blazor Scripts -->
+    <script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
 ```
 
 **Add Syncfusion Blazor DataGrid component**
@@ -256,14 +262,14 @@ Create new **Home.razor** file and add the Syncfusion<sup style="font-size:70%">
     </GridColumns>
 </SfGrid>
 ```
-> * Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** for a column that contains unique values.
+> * Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to "true" for a column that contains unique values.
 > * If the database includes an **auto-generated column**, set [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) for that column to disable editing during **add** or **update** operations.
 
 Service registration and namespace imports have been completed. Continue with configuring DataGrid–SQL Server integration using the Custom Adaptor.
 
-### Step 2: Bind data from Microsoft SQL Server using CustomAdaptor
+### Step 2: Bind data from Microsoft SQL Server using Custom Adaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **Microsoft SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **Microsoft SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Custom Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 The Custom Adaptor serves as the bridge between DataGrid UI interactions and SQL Server database operations. When users interact with the grid (search, filter, sort, page), the adaptor intercepts these requests and executes corresponding SQL operations.
 
 **Implement custom adaptor**
@@ -362,7 +368,7 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-Enable Search by adding the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property in the DataGrid markup:
+To enable searching add the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property in the DataGrid markup.
 
 ```html
 <SfGrid TValue="Tickets" Toolbar="@(new List<string>() { "Search" })">
@@ -407,7 +413,7 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-To enable filtering in the DataGrid markup, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**. Once enabled, configure filtering behavior and appearance using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) property.
+To enable filtering in the DataGrid markup, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to "true". Configure filtering behavior and appearance using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) property.
 
 ```html
 <SfGrid TValue="Tickets" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
@@ -458,11 +464,16 @@ public class CustomAdaptor : DataAdaptor
     }
 }
 ```
-To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in the Grid component.
+To enable sorting in the DataGrid markup, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to "true". Configure initial sorting by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) (the column's data field name) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) properties  in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) collection of [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
 
 ```html
 <SfGrid TValue="Tickets" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
     <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="Priority" Direction="SortDirection.Ascending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridColumns>
         <!-- Grid columns -->
@@ -522,6 +533,11 @@ Enable aggregates by including [GridAggregateColumn](https://help.syncfusion.com
 ```html
 <SfGrid TValue="Tickets" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
     <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="Priority" Direction="SortDirection.Ascending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridAggregates>
         <GridAggregate>
@@ -594,11 +610,16 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. Paging options can be configured through the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. GridPageSettings allows control of page size, current page, and total record count.
+To enable paging in the DataGrid markup, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to "true". Paging options can be configured through the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. GridPageSettings allows control of page size, current page, and total record count.
 
 ```html
 <SfGrid TValue="Tickets" AllowPaging="true" AllowSorting="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })">
     <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="Priority" Direction="SortDirection.Ascending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
     <GridPageSettings PageSize="10"></GridPageSettings>
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridAggregates>
@@ -687,12 +708,18 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**, combined with all preceding data operations.
+To enable grouping in the DataGrid markup, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to "true". Configure grouping behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 ```html
 <SfGrid TValue="Tickets" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Search" })">
     <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="Priority" Direction="SortDirection.Ascending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
     <GridPageSettings PageSize="10"></GridPageSettings>
+    <GridGroupSettings Columns="@(new string[] { "Category" })"></GridGroupSettings>
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridAggregates>
         <GridAggregate>
@@ -760,15 +787,15 @@ public async Task AddTicketAsync(Tickets ticket)
 }
 ```
 
-Record insertion has been configured; the new ticket is now persisted to the database and reflected in the grid. Continue with implementing the read operation to retrieve and display records from SQL Server.
+Now the new ticket is persisted to the database and reflected in the grid.
 
 **Read (Retrieve) records**
 
 Record retrieval executes SQL queries against the database and materializes results into the strongly typed Tickets model; the adaptor processes data operations (search, filter, sort, aggregate, page, group) before returning the result set to the grid for display.
 
-The `ReadAsync` method is implemented in [Step 02](#step-2-bind-data-from-microsoft-sql-server-using-customadaptor), retrieving and processing records from SQL Server which returns either the IEnumerable result or a `DataResult` object with `Result` and `Count`.
+The `ReadAsync` method is implemented in [Step 02](#step-2-bind-data-from-microsoft-sql-server-using-custom-adaptor), retrieving and processing records from SQL Server which returns either the IEnumerable result or a `DataResult` object with `Result` and `Count`.
 
-Record retrieval has been established; the grid now displays SQL Server data with full support for searching, filtering, sorting, paging, grouping, and aggregation. Continue with implementing record updates to enable in-place editing of existing tickets.
+Now the grid displays SQL Server data with full support for searching, filtering, sorting, paging, grouping, and aggregation.
 
 **Update (Edit) records**
 
@@ -817,7 +844,7 @@ public async Task UpdateTicketAsync(Tickets ticket)
 }
 ```
 
-Record updates have been configured; modifications are now synchronized to the database and reflected in the grid UI. Continue with implementing record deletion to complete the full CRUD lifecycle.
+Now the modifications are synchronized to the database and reflected in the grid UI.
 
 **Delete (Remove) records**
 
@@ -843,7 +870,7 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-Record deletion has been implemented; tickets are now removed from the database and the grid UI reflects the changes immediately. Continue with batch operations to handle multiple record modifications in a single transaction.
+Now the tickets are removed from the database and the grid UI reflects the changes immediately.
 
 In **Data/TicketData.cs**, implement the delete method:
 
@@ -907,7 +934,7 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-Batch operations have been configured; the adaptor now supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
+Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
 ---
 
