@@ -11,7 +11,7 @@ documentation: ug
 
 ## What is a Custom Value?
 
-A custom value is an entry that does not exist in the predefined data source of the ComboBox. This feature is useful when the available options may not cover all possible user inputs. For example, in a product category dropdown, a new category that is not yet listed can be added.
+A custom value is a user-entered entry that is not present in the ComboBox's predefined data source. This capability is useful when the available options do not cover all possible user inputs. For example, in a product category dropdown, a new category that is not yet listed can be added.
 
 ## Understanding the AllowCustom Property
 
@@ -22,9 +22,10 @@ The [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 | `true` (default) | Users can type and submit values not present in the ComboBox popup. When the typed text does not match any existing items, the `CustomValueSpecifier` event is triggered, allowing the custom value to be processed. |
 | `false` | Users can only select from the available options in the data source. |
 
+When `AllowFiltering` is enabled, user input continues to filter existing items; a custom value is processed when the entered text does not match any filtered results.
 ## Adding Custom Values Using the AddItemsAsync Method
 
-The [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AddItemsAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method allows dynamically adding new items to the ComboBox data source at runtime. This method is particularly useful when handling the `CustomValueSpecifier` event to persist user-entered custom values.
+The [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AddItemsAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method, which is available on dropdown components such as `SfDropDownList` and `SfComboBox`, allows dynamically adding new items to the ComboBox data source at runtime. This method is particularly useful when handling the `CustomValueSpecifier` event to persist user-entered custom values.
 
 ### Method Signature
 
@@ -89,7 +90,8 @@ The following example demonstrates a scenario where users can select an existing
 1. **User types a value**: When a user types text that does not match any existing category, the `CustomValueSpecifier` event is triggered.
 2. **Event handler creates new item**: The `OnCustomValueSpecifier` method creates a new `ProductCategory` object with the entered text.
 3. **AddItemsAsync adds the item**: The new category is added to the ComboBox data source dynamically.
-4. **Item becomes selectable**: The newly added item appears in the dropdown and can be selected in future interactions.
+    By default, `AddItemsAsync` inserts new items at the end of the data source (unless an `index` is specified). It does not automatically select the newly added item.
+4. **Item becomes selectable**: The newly added item appears in the dropdown and can be selected in future interactions. To programmatically select the new item, set the ComboBox's value to the new item's value after calling `AddItemsAsync`.
 
 N> Custom values can also be committed using the keyboard by pressing **Enter** when the desired text is typed in the input field.
 
