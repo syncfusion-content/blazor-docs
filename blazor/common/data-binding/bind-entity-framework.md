@@ -9,8 +9,7 @@ documentation: ug
 
 # Bind Data from SQL Server to Syncfusion® Blazor Components
 
-This section explains how to retrieve data from a SQL Server database using Entity Framework and bind it to the Blazor Grid component for performing Create, Read, Update, and Delete (CRUD) operations.
-
+This section explains how to retrieve data from a SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) and bind it to the Blazor Grid component for performing Create, Read, Update, and Delete (CRUD) operations.
 Entity Framework is an open-source object-relational mapper (O/RM) developed by Microsoft. It simplifies database access by allowing developers to work with data as strongly typed objects instead of writing raw SQL queries. Entity Framework supports multiple database providers; however, the focus here is on using [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database.
 
 The following step-by-step procedure demonstrates how to configure Entity Framework with SQL Server and connect it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component in a Blazor Server application to enable CRUD functionality.
@@ -31,12 +30,12 @@ Used as the database engine for storing and retrieving application data.
 Follow these steps to set up the database and table required for storing book records:
 1. **Open SQL Server Management Studio (SSMS).** Launch SQL Server to begin working with databases.
 
-2. **Create a new database named `Library`.** 
+2. **Create a new database named Library.** 
     - In the Object Explorer, right-click on **Databases**. 
     - Select **New Database**. 
     - Enter `Library` as the database name and click **OK**.
 3. **Open a new query window.** 
-    - Right-click on the newly created `Library` database. 
+    - Right-click on the newly created Library database. 
     - Select **New Query** to open the SQL editor. 
 4. **Run the following SQL script to create a table named `Book`:**
 
@@ -542,7 +541,7 @@ Also, Include the script reference at the end of the `<body>` of **~/Components/
 ```
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component to an application
 
-In previous steps, you have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, you can add the grid component to the `.razor` page inside the `Pages` folder.
+In previous steps, you have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, you can add the Grid component to the `.razor` page inside the `Pages` folder.
 
 If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component-included razor page as follows:
 
@@ -564,7 +563,7 @@ If you have set the interactivity location to `Per page/component` in the web ap
 
 ## Bind data to Blazor DataGrid component using Entity Framework
 
-To consume data from the database using Entity Framework, the `LibraryService` must be injected into the Razor page and assigned to the DataGrid’s `DataSource` property. The `DataSource` property of the DataGrid component is responsible for binding SQL Server data retrieved through Entity Framework in a Blazor Server application, enabling seamless data display and interaction.
+To consume data from the database using **Entity Framework**, the LibraryService must be injected into the Razor page and assigned to the DataGrid’s datasource Variable. The **DataSource** property of the DataGrid component is responsible for binding SQL Server data retrieved through Entity Framework in a Blazor Server application, enabling seamless data display and interaction.
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -607,7 +606,7 @@ To consume data from the database using Entity Framework, the `LibraryService` m
 
 Grid columns can be defined using the **GridColumn** component. We are going to create columns using the following code. Let us see the properties used and their usage.
 
-* **Field** property specifies the column name of the Book table to display in the grid column.
+* **Field** property specifies the column name of the Book table to display in the Grid column.
 * **IsPrimaryKey** property specifies that the given column is a primary key column. Here, Id column is a primary key column.
 * **Visible** property specifies the column visibility. Setting as false will hide the column at the user end.
 * **Width** property specifies the column width.
@@ -817,9 +816,9 @@ N> Normal edit mode is the default mode of editing.
 
 To insert a new row, click the **Add** toolbar button. The new record edit form will look like below.
 
-![After Clicking a Add button in Blazor](../images/add-row.png)
+![ After clicking the Add button in the toolbar of the DataGrid](../images/add-row.png)
 
-After clicking the **Add** button in Blazor, use the **Update** toolbar button to confirm the insert action. At this point, the **RowUpdating** event with the **Added** action will be triggered, and this can be used to insert the new record into the `Book` table by calling the `InsertBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App.
+After clicking the **Add** button in Blazor, use the **Update** toolbar button to confirm the insert action. At this point, the [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event with the **Added** action will be triggered, and this can be used to insert the new record into the `Book` table by calling the **InsertBook()**` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App.
 
 
 
@@ -866,15 +865,15 @@ public async Task RowUpdatingHandler(RowUpdatingEventArgs<Book> args)
 {% endhighlight %}
 {% endtabs %}
 
-![After Inserting a record in Grid](../images/after-inserting.png)
+![After Inserting a record in DataGrid](../images/after-inserting.png)
 
 ### Update a row
 
 To edit a row, select any row and click the **Edit** toolbar button. The edit form will look like below.
 
-![After Clicking a update button in Blazor](../images/update.png)
+![After clicking the Update button in the toolbar of the DataGrid](../images/update.png)
 
-Now, the **Price** column value is changed to `125` from `250`. After modifying the values, click the **Update** toolbar button to confirm the changes. At this point, the **RowUpdating** event with the **Edited** action will be triggered. This event can be used to update the corresponding record in the database (`Book` table) by calling the `UpdateBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App. Refer to the following code example:
+Now, the **Price** column value is changed to 125 from 250. After modifying the values, click the **Update** toolbar button to confirm the changes. At this point, the [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event with the **Edited** action will be triggered. This event can be used to update the corresponding record in the database (`Book` table) by calling the **UpdateBook()** method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App. Refer to the following code example.
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -918,13 +917,13 @@ public async Task RowUpdatingHandler(RowUpdatingEventArgs<Book> args)
 {% endhighlight %}
 {% endtabs %}
 
-The resultant grid will look like below.
+The resultant Grid will look like below.
 
-![After Updating a record in Blazor](../images/after-update.png)
+![After Updating a record in DataGrid](../images/after-update.png)
 
 ### Delete a row
 
-To delete a row, select any row and click the **Delete** toolbar button. After confirming the deletion, the **RowDeleting** event will be triggered. This event can be used to remove the record from the database (`Book` table) by calling the `DeleteBook()` method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App. Refer to the following code example:
+To delete a row, select any row and click the **Delete** toolbar button. After confirming the deletion, the [RowDeleting](https://blazor.syncfusion.com/documentation/datagrid/events#rowdeleting) event will be triggered. This event can be used to remove the record from the database (`Book` table) by calling the **DeleteBook()** method of the `ClientServices` in the Blazor Web App (`BlazorWebApp.Shared` project) and the `LibraryService` in the Blazor Server App. Refer to the following code example:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
