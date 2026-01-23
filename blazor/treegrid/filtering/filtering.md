@@ -414,3 +414,240 @@ namespace TreeGridComponent.Data {
 
 
 {% endtabs %}
+
+## Filtering with case sensitivity
+
+The Blazor TreeGrid filtering functionality allows control over whether uppercase and lowercase letters must match exactly or can be ignored. By default, filtering is not case-sensitive, meaning matches are found regardless of character case (e.g., "Task" and "task" are treated the same). Case-sensitive filtering is enabled by setting the [`TreeGridFilterSettings.EnableCaseSensitivity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_EnableCaseSensitivity) property to **true**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+<div class="container mt-4">
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
+    <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar" EnableCaseSensitivity="true"> </TreeGridFilterSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90" IsPrimaryKey />
+        <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
+        <TreeGridColumn Field=@nameof(TreeTask.ResourceName) HeaderText="Resource Name" Width="180" />
+        <TreeGridColumn Field=@nameof(TreeTask.City) HeaderText="City" Width="140" />
+        <TreeGridColumn Field=@nameof(TreeTask.StartDate) HeaderText="Start Date" Type="ColumnType.Date" Format="d" Width="130" />
+        <TreeGridColumn Field=@nameof(TreeTask.Duration) HeaderText="Duration (days)" TextAlign="TextAlign.Right" Width="140" />
+    </TreeGridColumns>
+</SfTreeGrid>
+</div>
+@code{
+    private List<TreeTask> TreeData = new();
+    public SfTreeGrid<TreeTask> TreeGrid;
+    protected override void OnInitialized()
+    {
+        TreeData = TreeTask.GetTreeTasks();
+    }
+   
+}
+
+{% endhighlight %}
+{% highlight c# %}
+
+namespace TreeGridComponent.Data {
+
+    public class TreeTask
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; } = string.Empty;
+        public string ResourceName { get; set; } = string.Empty;
+        public string City { get; set; } = string.Empty;
+        public DateTime StartDate { get; set; }
+        public int Duration { get; set; }
+        public int? ParentID { get; set; }
+        public static List<TreeTask> GetTreeTasks() => new()
+        {
+            new TreeTask
+            {
+                TaskID = 1,
+                TaskName = "Market Analysis",
+                ResourceName = "José Álvarez",
+                City = "Sevilla",
+                StartDate = new DateTime(2024, 1, 2),
+                Duration = 5,
+                ParentID = null
+            },
+            new TreeTask
+            {
+                TaskID = 2,
+                TaskName = "Competitor Review",
+                ResourceName = "Zoë Brontë",
+                City = "São Paulo",
+                StartDate = new DateTime(2024, 1, 3),
+                Duration = 3,
+                ParentID = 1
+            },
+            new TreeTask
+            {
+                TaskID = 3,
+                TaskName = "Focus Group",
+                ResourceName = "François Dœuf",
+                City = "Montréal",
+                StartDate = new DateTime(2024, 1, 4),
+                Duration = 2,
+                ParentID = 1
+            },
+            new TreeTask
+            {
+                TaskID = 4,
+                TaskName = "Product Design",
+                ResourceName = "Mårten Šedý",
+                City = "Göteborg",
+                StartDate = new DateTime(2024, 1, 5),
+                Duration = 6,
+                ParentID = null
+            },
+            new TreeTask
+            {
+                TaskID = 5,
+                TaskName = "UX Workshop",
+                ResourceName = "Anaïs Löhn",
+                City = "München",
+                StartDate = new DateTime(2024, 1, 6),
+                Duration = 4,
+                ParentID = 4
+            },
+            new TreeTask
+            {
+                TaskID = 6,
+                TaskName = "Prototype Testing",
+                ResourceName = "Renée Faßbinder",
+                City = "Zürich",
+                StartDate = new DateTime(2024, 1, 8),
+                Duration = 3,
+                ParentID = 4
+            }
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthSCriYrFRArzyg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Filtering with ignore accent
+
+The Blazor TreeGrid filtering functionality can be configured to ignore diacritic characters or accents. By default, filtering is accent-sensitive, requiring exact matches (e.g., "José" vs. "Jose"). Accent-insensitive filtering is enabled by setting the [`TreeGridFilterSettings.IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_IgnoreAccent) property to **true**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+<div class="container mt-4">
+    <<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
+    <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar" IgnoreAccent="true"> </TreeGridFilterSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90"  IsPrimaryKey />
+        <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
+        <TreeGridColumn Field=@nameof(TreeTask.ResourceName) HeaderText="Resource Name" Width="180" />
+        <TreeGridColumn Field=@nameof(TreeTask.City) HeaderText="City" Width="140" />
+        <TreeGridColumn Field=@nameof(TreeTask.StartDate) HeaderText="Start Date" Type="ColumnType.Date" Format="d" Width="130" />
+        <TreeGridColumn Field=@nameof(TreeTask.Duration) HeaderText="Duration (days)" TextAlign="TextAlign.Right" Width="140" />
+    </TreeGridColumns>
+</SfTreeGrid>
+</div>
+@code{
+    private List<TreeTask> TreeData = new();
+    public SfTreeGrid<TreeTask> TreeGrid;
+    protected override void OnInitialized()
+    {
+        TreeData = TreeTask.GetTreeTasks();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# %}
+
+namespace TreeGridComponent.Data {
+
+    public class TreeTask
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; } = string.Empty;
+        public string ResourceName { get; set; } = string.Empty;
+        public string City { get; set; } = string.Empty;
+        public DateTime StartDate { get; set; }
+        public int Duration { get; set; }
+        public int? ParentID { get; set; }
+        public static List<TreeTask> GetTreeTasks() => new()
+        {
+            new TreeTask
+            {
+                TaskID = 1,
+                TaskName = "Market Analysis",
+                ResourceName = "José Álvarez",
+                City = "Sevilla",
+                StartDate = new DateTime(2024, 1, 2),
+                Duration = 5,
+                ParentID = null
+            },
+            new TreeTask
+            {
+                TaskID = 2,
+                TaskName = "Competitor Review",
+                ResourceName = "Zoë Brontë",
+                City = "São Paulo",
+                StartDate = new DateTime(2024, 1, 3),
+                Duration = 3,
+                ParentID = 1
+            },
+            new TreeTask
+            {
+                TaskID = 3,
+                TaskName = "Focus Group",
+                ResourceName = "François Dœuf",
+                City = "Montréal",
+                StartDate = new DateTime(2024, 1, 4),
+                Duration = 2,
+                ParentID = 1
+            },
+            new TreeTask
+            {
+                TaskID = 4,
+                TaskName = "Product Design",
+                ResourceName = "Mårten Šedý",
+                City = "Göteborg",
+                StartDate = new DateTime(2024, 1, 5),
+                Duration = 6,
+                ParentID = null
+            },
+            new TreeTask
+            {
+                TaskID = 5,
+                TaskName = "UX Workshop",
+                ResourceName = "Anaïs Löhn",
+                City = "München",
+                StartDate = new DateTime(2024, 1, 6),
+                Duration = 4,
+                ParentID = 4
+            },
+            new TreeTask
+            {
+                TaskID = 6,
+                TaskName = "Prototype Testing",
+                ResourceName = "Renée Faßbinder",
+                City = "Zürich",
+                StartDate = new DateTime(2024, 1, 8),
+                Duration = 3,
+                ParentID = 4
+            }
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSChikLlQxWZHr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

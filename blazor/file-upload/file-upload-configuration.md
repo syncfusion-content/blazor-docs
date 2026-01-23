@@ -15,7 +15,7 @@ The Syncfusion Blazor FileUpload component offers a wide range of properties to 
 
 The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ID) property is used to provide a unique identifier for the FileUpload component. This is useful for referencing the component in JavaScript or CSS, and for ensuring accessibility.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader ID="myFileUploadComponent" name="UploadFiles" />
@@ -31,7 +31,7 @@ The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUplo
 
 The [`AllowedExtensions`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions)property specifies the file types that can be uploaded. This is crucial for validating user uploads and ensuring only acceptable file formats are accepted.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader AllowedExtensions=".jpg,.jpeg,.png,.gif" />
@@ -47,7 +47,7 @@ The [`AllowedExtensions`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 The [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowMultiple) property determines whether the user can select multiple files for upload at once. Set to `true` for scenarios where multiple documents or images need to be uploaded simultaneously.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader AllowMultiple="true" />
@@ -63,7 +63,7 @@ The [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 The [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) property controls whether files are uploaded immediately after selection. Set to `true` for instant uploads, useful for quick submissions.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader AutoUpload="true" />
@@ -79,7 +79,7 @@ If [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 
 The [`SequentialUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_SequentialUpload)property, when [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowMultiple) is `true`, specifies whether selected files should be uploaded one after another or concurrently. Use `true` for sequential processing, which can be useful for server resource management.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader AllowMultiple="true" SequentialUpload="true" />
@@ -95,7 +95,7 @@ The [`SequentialUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The [`DirectoryUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_DirectoryUpload) property enables users to select and upload an entire directory instead of individual files. This is useful for uploading complex folder structures.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader DirectoryUpload="true" />
@@ -111,7 +111,7 @@ The [`DirectoryUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Enabled) property controls whether the FileUpload component is interactive or disabled. This is useful for temporarily preventing file uploads, for example, until certain form conditions are met.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader Enabled="false" />
@@ -127,7 +127,7 @@ The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.S
 
 The [`MaxFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) property sets the maximum allowable size for a single file upload in bytes. This helps prevent excessively large files from being uploaded, which can impact server performance or storage.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader MaxFileSize="5242880" /> @* 5 MB *@
@@ -144,7 +144,7 @@ The [`MaxFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 The [`MinFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize) property sets the minimum allowable size for a single file upload in bytes. This can be used to prevent the upload of empty or insignificant files.
 
-## Code Example 
+### Code Example 
 
 ```cshtml
 <SfUploader MinFileSize="1024" /> @* 1 KB *@
@@ -158,7 +158,7 @@ The [`MinFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 The [`EnableHtmlSanitizer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_EnableHtmlSanitizer) property, when set to `true`, sanitizes the file names to remove potentially harmful HTML content. This is a security measure to prevent cross-site scripting (XSS) attacks through malicious file names.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader EnableHtmlSanitizer="true" />
@@ -172,7 +172,7 @@ The [`EnableHtmlSanitizer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 The [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_EnablePersistence) property, when `true`, allows the component's state (e.g., uploaded files list) to be maintained even after a page reload. This improves user experience by preserving progress.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader EnablePersistence="true" ID="UploadFiles" >
@@ -187,7 +187,7 @@ The [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 The [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_EnableRtl) property enables Right-to-Left (RTL) rendering for cultures that read from right to left. This is important for internationalization and accessibility.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader EnableRtl="true" />
@@ -201,7 +201,7 @@ The [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 
 The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_HtmlAttributes) property allows you to add custom HTML attributes to the root element of the FileUpload component. This is useful for applying custom styling, data attributes, or other HTML properties not directly exposed as Blazor parameters.
 
-## Code Example
+### Code Example
 
 ```cshtml
 <SfUploader HtmlAttributes="@(new Dictionary<string, object>() { { "data-custom-attribute", "fileupload-data" }, { "class", "my-custom-uploader" } })" />
@@ -217,7 +217,7 @@ The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_InputAttributes) property allows you to add custom HTML attributes specifically to the underlying `input type="file"` element within the FileUpload component. This is useful for applying browser-specific input attributes or custom event handlers.
 
-## Code Example 
+### Code Example 
 
 ```cshtml
 <SfUploader InputAttributes="@(new Dictionary<string, object>() { { "accept", "image/*" } })" />
@@ -233,7 +233,7 @@ The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_TabIndex) property specifies the tab order of the FileUpload component relative to other focusable elements on the page. This is important for keyboard navigation and accessibility.
 
-## Code Example 
+### Code Example 
 
 ```cshtml
 <input type="text" TabIndex="1" /><br />
@@ -250,7 +250,7 @@ The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.
 
 The FileUpload component supports displaying a list of files that are already available on the server as ["UploaderUploadedFiles"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderUploadedFiles.html#properties) files. This is useful for editing scenarios where users need to see and potentially remove existing files before uploading new ones.
 
-## Code Example 
+### Code Example 
 
 ```cshtml
  <SfUploader>
