@@ -27,7 +27,7 @@ Open Visual Studio, select **View -> SQL Server Object Explorer**. Right-click t
 ![Add new database in Blazor](../images/odata-add-db.png)
 ![Adding database name and location in Blazor](../images/odata-db-name.png)
 
-Right-click the **Tables** folder in the OrdersDetails database and select **Add New Table**.
+Right-click the **Tables** folder in the **OrdersDetails** database and select **Add New Table**.
 
 ![Add table in Blazor](../images/odata-add-table.png)
 
@@ -138,7 +138,7 @@ namespace ODataServiceProject.Models
 {% endhighlight %}
 {% endtabs %}
 
-It’s generally a better practice to avoid keeping the connection string with sensitive information directly in the OrdersDetailsContext.cs file. Instead, it’s recommended to move the connection string to the **appsettings.json** file for improved security and easier configuration.
+It is generally a better practice to avoid keeping the connection string with sensitive information directly in the OrdersDetailsContext.cs file. Instead, it’s recommended to move the connection string to the **appsettings.json** file for improved security and easier configuration.
 
 {% tabs %}
 {% highlight json tabtitle="appsettings.json" %}
@@ -172,7 +172,7 @@ builder.Services.AddDbContext<OrdersDetailsContext>(option =>
 
 ### Creating ODataV4 service
 
-The application is now set up to connect to the **OrdersDetails** database using E[Entity Framework](https://learn.microsoft.com/en-us/ef/core/). Now, we need to retrieve data from this database and make it available to the Blazor application. To achieve this, we will create an OData controller that serves data from the DbContext to the Blazor app.
+The application is now set up to connect to the **OrdersDetails** database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/). Now, we need to retrieve data from this database and make it available to the Blazor application. To achieve this, we will create an OData controller that serves data from the DbContext to the Blazor app.
 
 To create the OData controller, right-click the **Controller** folder in the ODataServiceProject, then select **Add -> New Item -> API controller with read/write actions**. Name this controller **OrdersController**, as it will handle records from the Orders table.
 
@@ -272,7 +272,7 @@ Add the following line in the **launchSettings.json** file.
 {% endtabs %}
 
 Additionally, when configuring the application to work with a Blazor Web App, make sure to include the AddCors() and UseCors() methods in the **Program.cs** file of the ODataService project. These methods enable cross-origin requests, which are required for the Blazor app to communicate with the OData service.
-Open the **Program.cs** file in your .NET application and configure it by referring to the following code
+Open the **Program.cs** file in your .NET application and configure it by referring to the following code.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -382,7 +382,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-Themes provide life to components, and Syncfusion®<sup style="font-size:70%">&reg;</sup> Blazor offers different themes:
+Themes provide life to components, and Syncfusion®<sup style="font-size:70%">&reg;</sup> Blazor offers different [themes](https://blazor.syncfusion.com/documentation/appearance/themes):
 
 - Bootstrap5
 - Material 3
@@ -415,7 +415,7 @@ In this demo application, the latest theme will be used.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component to an application
 
-In the previous steps, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package has been successfully configured in the application. The next step is to add the grid component to a `.razor` page located inside the `Pages` folder.
+In the previous steps, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package has been successfully configured in the application. The next step is to add the Grid component to a `.razor` page located inside the `Pages` folder.
 
 If the interactivity location is set to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component-included razor page as follows:
 
@@ -454,7 +454,7 @@ To retrieve data from the OData controller, configure the **SfDataManager** comp
 
 N> In the example above, a localhost URL is used. Replace it with the actual URL of your OData service.
 
-Grid columns can be defined using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. The following code demonstrates how to create columns for the grid.
+Grid columns can be defined using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. The following code demonstrates how to create columns for the Grid.
 
 {% tabs %}
 {% highlight razor %}
@@ -512,9 +512,9 @@ public class OrdersController : ODataController
 
 ## Handling CRUD operations with our Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-Editing can be enabled in the DataGrid component by using [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). The grid supports multiple editing modes, including [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
+Editing can be enabled in the DataGrid component by using [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). The Grid supports multiple editing modes, including [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
 
-In this example, the Inline edit mode is used along with the Toolbar to display editing actions. The DataGrid editing configuration and toolbar code have been added to the existing grid model.
+In this example, the Inline edit mode is used along with the Toolbar to display editing actions. The DataGrid editing configuration and toolbar code have been added to the existing Grid model.
 
 {% tabs %}
 {% highlight razor %}
@@ -546,7 +546,7 @@ In this example, the Inline edit mode is used along with the Toolbar to display 
 {% endhighlight %}
 {% endtabs %}
 
-N> Normal editing is the default edit mode for the DataGrid component. To perform CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to True for a specific GridColumn whose value is unique. This allows the grid to correctly identify and update records during editing.
+N> Normal editing is the default edit mode for the DataGrid component. To perform CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to true for a specific GridColumn whose value is unique. This allows the Grid to correctly identify and update records during editing.
 
 ### Insert a row
 
@@ -593,7 +593,7 @@ public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta
 {% endhighlight %}
 {% endtabs %}
 
-The resultant grid will look like below.
+The resultant Grid will look like below.
 
 ![Update Operation in Blazor](../images/odata-update-two.png)
 
