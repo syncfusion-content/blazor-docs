@@ -1225,3 +1225,134 @@ The following example demonstrates how to send additional parameters to the serv
 ```
 
 ![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](../images/custom-adaptor-params.png)
+
+## How to use ExpandoObject with a custom adaptor to process grid data operations
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports processing dynamic data created with `ExpandoObject`, where fields are defined at runtime. Since dynamic objects do not expose compile‑time property names, standard LINQ operations cannot apply searching, filtering, sorting, or paging reliably. Syncfusion provides dedicated helper classes that evaluate dynamic fields at runtime and enable complete data‑processing support. These classes work together inside a `CustomAdaptor` to prepare the processed result before sending it back to the DataGrid.
+
+The following description explains how dynamic data is processed using this approach.
+
+### DynamicObjectOperation
+
+The [DynamicObjectOperation]('https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DynamicObjectOperation.html') class is designed for handling dynamic objects whose properties are defined at runtime. It enables the DataGrid to interpret and evaluate dynamic fields during data processing. This class supports essential operations such as searching, filtering, and sorting, all executed directly against dynamic members without requiring compile‑time property definitions. By evaluating fields dynamically, it ensures that ExpandoObject data can be processed accurately even when the structure varies between records.
+
+### QueryableOperation
+
+The [QueryableOperation]('https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.QueryableOperation.html') class provides reliable paging support for dynamic data sources. It performs Skip and Take operations on objects that implement `IDynamicMetaObjectProvider`, including ExpandoObject. These runtime‑aware paging methods allow the DataGrid to paginate dynamic data consistently, regardless of the absence of fixed property names. This ensures that only the relevant portion of records is returned during each request.
+
+The following example demonstrates how ExpandoObject data is processed using `DynamicObjectOperation` and `QueryableOperation` inside a Custom Adaptor.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using System.Collections
+@using System.Dynamic
+
+<SfGrid TValue="ExpandoObject" ID="Grid" AllowGrouping="true" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>() { "Search" })" AllowPaging="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" EditType="Syncfusion.Blazor.Grids.EditType.DropDownEdit" Width="150"></GridColumn>
+        <GridColumn Field="Verified" HeaderText="Active" DisplayAsCheckBox="true" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public static List<ExpandoObject> Orders { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(index =>
+        {
+            dynamic order = new ExpandoObject();
+            order.OrderID = 1000 + index;
+            order.CustomerID = new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" }[Random.Shared.Next(5)];
+            order.Freight = new[] { 2.0, 1.0, 4.0, 5.0, 3.0 }[Random.Shared.Next(5)] * index;
+            order.OrderDate = new[]
+            {
+                new DateTime(1996, 11, 5),
+                new DateTime(1996, 10, 3),
+                new DateTime(1996, 9, 9),
+                new DateTime(1996, 8, 2),
+                new DateTime(1996, 4, 11)
+            }[Random.Shared.Next(5)];
+            order.ShipCountry = new[] { "USA", "UK" }[Random.Shared.Next(2)];
+            order.Verified = new[] { true, false }[Random.Shared.Next(2)];
+            return order;
+        }).Cast<ExpandoObject>().ToList();
+    }
+
+    // Custom adaptor implementation by extending the DataAdaptor class.
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs the data read operation.
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            // Retrieve the data source.
+            IQueryable DataSource = Orders.AsQueryable();
+
+            // Perform searching if search criteria are provided.
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                DataSource = DynamicObjectOperation.PerformSearching(DataSource, dm.Search);
+            }
+
+            // Perform sorting if sorting criteria are provided.
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
+            }
+
+            // Perform filtering if filter criteria are provided.
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                DataSource = DynamicObjectOperation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+
+            // Count the total number of records.
+            int count = DataSource.Count();
+
+            // Perform paging by skipping the specified number of records.
+            if (dm.Skip != 0)
+            {
+                DataSource = QueryableOperation.PerformSkip<IDynamicMetaObjectProvider>((IQueryable<IDynamicMetaObjectProvider>)DataSource, dm.Skip);
+            }
+
+            // Take the specified number of records for paging.
+            if (dm.Take != 0)
+            {
+                DataSource = QueryableOperation.PerformTake<IDynamicMetaObjectProvider>((IQueryable<IDynamicMetaObjectProvider>)DataSource, dm.Take);
+            }
+
+            // Creates a DataResult object to hold the result.
+            DataResult DataObject = new DataResult();
+
+            // Checking if grouping is required.
+            if (dm.Group != null)
+            {
+                IEnumerable ResultData = DataSource.Cast<ExpandoObject>().ToList();
+                foreach (var group in dm.Group)
+                {
+                    ResultData = DataUtil.Group<ExpandoObject>(ResultData, group, dm.Aggregates, 0, dm.GroupByFormatter);
+                }
+
+                // Setting the grouped result and count in the DataResult object.
+                DataObject.Result = ResultData;
+                DataObject.Count = count;
+
+                // Returning the result with or without counts based on the request.
+                return dm.RequiresCounts ? DataObject : (object)ResultData;
+
+            }
+
+            // Return the result with or without counts based on the request.
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBxNshUgbCCAdtC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
