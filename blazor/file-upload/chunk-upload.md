@@ -9,251 +9,379 @@ documentation: ug
 
 # Chunk Upload in Blazor File Upload Component
 
-The Uploader component supports uploading large files by splitting them into smaller chunks and sending them to the server using AJAX. Chunking improves reliability on unstable networks and enables pause, resume, and retry for failed chunks.
+### Description
 
-N> The chunk upload works only with asynchronous upload.
+Chunk Upload in the Syncfusion Blazor File Upload component allows you to upload large files by splitting them into smaller, manageable chunks. This process significantly improves reliability, especially over unreliable networks, by reducing the impact of network interruptions. If a part of the file fails to upload, only that specific chunk needs to be re-transmitted, rather than the entire file. This feature is particularly useful for handling large media files, database backups, or any other substantial data transfers where interruptions are a concern. The Uploader sends these chunks to the server using AJAX, enabling the ability to pause, resume, and retry failed chunk uploads.
 
-To enable chunk upload, configure the [ChunkSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AsyncSettings) option with a value in bytes. The [OnChunkUploadStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnChunkUploadStart) event is triggered at the beginning of the chunk upload process. Ensure the server endpoint specified in SaveUrl can accept and append chunk data and finalize the file when all chunks are received.
+**Use Case:** Imagine a user uploading a 2GB video file. Without chunking, a network hiccup or browser crash during the upload would require the user to restart the entire upload from the beginning. With chunk upload, the file is broken into smaller pieces (e.g., 10MB each). If the upload fails at the 500MB mark, only the 51st chunk (and subsequent chunks) needs to be re-uploaded, saving significant time and improving user experience.
 
-## Save and remove action for Blazor (ASP.NET Core hosted) application
+**Note:**
+* **The chunk upload works exclusively with asynchronous uploads.**
+* **Chunk upload will only be activated when the selected file size is greater than the specified `ChunkSize`. Otherwise, files will be uploaded using the normal (non-chunked) upload mechanism.**
 
-The server-side implementation depends on application requirements. The following code demonstrates handling chunk uploads using the File Upload component.
+## Chunk Configuration
 
-> The `chunk-index` and `total-chunk` values are accessible through the form data using `Request.Form`, which retrieves these details from the incoming request.
-* `chunk-index` - Indicates the index of the current chunk being received.
-* `total-chunk` - Represents the total number of chunks for the file being uploaded.
+To enable chunk upload, you need to configure the `ChunkSize` property within the [`<UploaderAsyncSettings>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html) component. The `ChunkSize` property accepts a value in `bytes`.
 
-```csharp
-public string uploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploaded Files"); // Set your desired upload directory path
+The following properties allow for further control over the chunk upload process:
 
-public async Task<IActionResult> Save(IFormFile UploadFiles)
-{
-    try
-    {
-        if (UploadFiles.Length > 0)
-        {
-            var fileName = UploadFiles.FileName;
+*   **[`ChunkSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_ChunkSize)**: Sets the size of each chunk in bytes. Larger files will be divided based on this size.
+*   **[`RetryAfterDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RetryAfterDelay)**: Specifies the delay in milliseconds before attempting a retry after a chunk upload fails. The default is 500 milliseconds.
+*   **[`RetryCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RetryCount)**: Defines the number of times the component will attempt to retry a failed chunk upload. By default, it retries 3 times. If all retries fail, the upload is aborted, and the `Failure` event is triggered.
 
-            // Create upload directory if it doesn't exist
-            if (!Directory.Exists(uploads))
-            {
-                Directory.CreateDirectory(uploads);
-            }
-
-            if (UploadFiles.ContentType == "application/octet-stream") //Handle chunk upload
-            {
-                // Fetch chunk-index and total-chunk from form data
-                var chunkIndex = Request.Form["chunk-index"];
-                var totalChunk = Request.Form["total-chunk"];
-
-                // Path to save the chunk files with .part extension
-                var tempFilePath = Path.Combine(uploads, fileName + ".part");
-
-                using (var fileStream = new FileStream(tempFilePath, chunkIndex == "0" ? FileMode.Create : FileMode.Append))
-                {
-                    await UploadFiles.CopyToAsync(fileStream);
-                }
-
-                // If all chunks are uploaded, move the file to the final destination
-                if (Convert.ToInt32(chunkIndex) == Convert.ToInt32(totalChunk) - 1)
-                {
-                    var finalFilePath = Path.Combine(uploads, fileName);
-
-                    // Move the .part file to the final destination without the .part extension
-                    System.IO.File.Move(tempFilePath, finalFilePath);
-
-                    return Ok(new { status = "File uploaded successfully" });
-                }
-
-                return Ok(new { status = "Chunk uploaded successfully" });
-            }
-            else //Handle normal upload
-            {
-                var filePath = Path.Combine(uploads, fileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await UploadFiles.CopyToAsync(fileStream);
-                }
-
-                return Ok(new { status = "File uploaded successfully" });
-            }
-        }
-
-        return BadRequest(new { status = "No file to upload" });
-    }
-    catch (Exception ex)
-    {
-        return StatusCode(500, new { status = "Error", message = ex.Message });
-    }
-}
-
-// Method to handle file removal (optional if needed)
-public async Task<IActionResult> Remove(string UploadFiles)
-{
-    try
-    {
-        var filePath = Path.Combine(uploads, UploadFiles);
-
-        if (System.IO.File.Exists(filePath))
-        {
-            System.IO.File.Delete(filePath);
-            return Ok(new { status = "File deleted successfully" });
-        }
-        else
-        {
-            return NotFound(new { status = "File not found" });
-        }
-    }
-    catch (Exception ex)
-    {
-        return StatusCode(500, new { status = "Error", message = ex.Message });
-    }
-}
-```
+### Code Example - Enabling Chunk Upload
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles">
-    <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove" ChunkSize="500000"></UploaderAsyncSettings>
-    <UploaderEvents OnChunkUploadStart="@OnChunkUploadStartHandler" OnChunkSuccess="@OnChunkSuccessHandler" Success="@SuccessHandler" OnChunkFailure="@OnChunkFailureHandler"></UploaderEvents>
+    <UploaderAsyncSettings 
+        SaveUrl="api/SampleData/Save" 
+        RemoveUrl="api/SampleData/Remove" 
+        ChunkSize="500000"  @* 500 KB chunk size *@
+        RetryCount="5" 
+        RetryAfterDelay="3000">
+    </UploaderAsyncSettings>
 </SfUploader>
+```
+
+### Preview
+
+![Blazor FileUpload with Chunk Upload](./images/blazor-fileupload-with-chunk-upload.png)
+
+### Resumable Upload
+
+The File Upload component supports resumable uploads, allowing users to pause and resume large file transfers. This is invaluable when dealing with network interruptions or when a user needs to temporarily halt an upload. The pause icon becomes available once an upload begins.
+
+>**The pause and resume features are only available when chunk upload is enabled.**
+
+### Public Methods:
+
+*   **`PauseAsync()`**: Manually pauses the ongoing file upload.
+*   **`ResumeAsync()`**: Resumes a paused file upload.
+
+### Code Example - Resumable Upload
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<SfUploader ID="UploadFiles" @ref="UploaderObj">
+    <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save" RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove" ChunkSize="500000">
+</UploaderAsyncSettings>
+    <UploaderEvents OnResume="@OnResumeHandler" Paused="@PausedHandler"></UploaderEvents>
+</SfUploader>
+
+<button @onclick="PauseUpload">Pause Upload</button>
+<button @onclick="ResumeUpload">Resume Upload</button>
+
 @code {
-    private void OnChunkUploadStartHandler(UploadingEventArgs args)
+    SfUploader UploaderObj;
+
+    private void OnResumeHandler(PauseResumeEventArgs args)
     {
-        // Here, you can customize your code.
+        // Custom logic to execute when an upload is resumed
     }
-    private void OnChunkSuccessHandler(SuccessEventArgs args)
+
+    private void PausedHandler(PauseResumeEventArgs args)
     {
-        // Here, you can customize your code.
+        // Custom logic to execute when an upload is paused
     }
-    private void SuccessHandler(SuccessEventArgs args)
+
+    private async Task PauseUpload()
     {
-        // Here, you can customize your code.
+        await UploaderObj.PauseAsync();
     }
-    private void OnChunkFailureHandler(FailureEventArgs args)
+
+    private async Task ResumeUpload()
     {
-        // Here, you can customize your code.
+        await UploaderObj.ResumeAsync();
     }
 }
 ```
 
-![Blazor FileUpload with Chunk Upload](./images/blazor-fileupload-with-chunk-upload.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBSCiBHpPMIERUe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Chunk upload splits selected files into data blobs (chunks) and sends them via AJAX requests. Chunks are sent in sequential order, and the next chunk is sent only after the previous one succeeds. If any chunk fails, remaining chunks are not sent. The [ChunkSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_ChunkSuccess) or [ChunkFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_ChunkFailure) event is triggered after each chunk transfer. When all chunks are successfully uploaded and combined on the server, the uploader [Success](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Success) event is triggered. For production scenarios, validate file size and type on the server, generate unique file names, write to a dedicated uploads directory, and sanitize user inputs.
+### Preview
 
-N> Chunk upload works when the selected file size is greater than the specified chunk size; otherwise, files are uploaded using the default behavior.
+![Resuming File Uploads in Blazor FileUpload](./images/blazor-fileupload-resume-file-upload.png)
 
-## Save action configuration in server-side blazor
+### Cancel Upload
 
-The uploader save action configuration in server-side blazor application, using MVC via `UseMvcWithDefaultRoute` in ASP.NET Core 3.0 and `services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0)` on IServiceCollection requires an explicit opt-in inside **Startup.cs** page. This is required because MVC must know whether it can rely on the authorization and CORS Middle ware during initialization.
+Users can cancel an ongoing file upload using the cancel icon in the UI or programmatically using the `CancelAsync()` method. When an upload is canceled, any partially uploaded file is removed from the server.
+
+If an upload fails (e.g., due to server error), the pause icon transforms into a retry icon. Clicking this icon will retry the failed chunk request from where it left off. However, if you explicitly cancel an upload and then retry, the file upload action will restart from the beginning.
+
+**Note:**
+*   **Chunk upload retry:** Retries to upload the failed request from the point of failure.
+*   **Default upload retry:** Retries to upload the entire failed file again from the beginning.
+
+### Public Methods:
+
+*   **`CancelAsync()`**: Cancels the current upload operation.
+*   **`RetryAsync()`**: Retries the upload of a failed or canceled file.
+
+### Code Example - Cancel Upload
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<SfUploader ID="UploadFiles" @ref="UploaderObj">
+    <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove" ChunkSize="500000"></UploaderAsyncSettings>
+</SfUploader>
+
+<button @onclick="CancelFirstFile">Cancel First File</button>
+<button @onclick="RetryFirstFile">Retry First File</button>
+
+@code {
+    SfUploader UploaderObj;
+
+    private async Task CancelFirstFile()
+    {
+        await UploaderObj.CancelAsync();
+    }
+
+    private async Task RetryFirstFile()
+    {
+        await UploaderObj.RetryAsync();
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhSiiVdpPBHTykT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Preview
+
+![Canceling File Uploads in Blazor FileUpload](./images/blazor-fileupload-cancel-file-upload.png)
+
+## Backend Configuration (ASP.NET Core Hosted Application)
+
+The server-side implementation is crucial for handling the incoming file chunks. The following C# code snippet demonstrates how to handle chunk uploads in an ASP.NET Core backend.
+
+> The `chunk-index` and `total-chunk` values are accessible through the form data using `Request.Form`, which retrieves these details from the incoming request.
+> *   `chunk-index` - Indicates the index of the current chunk being received.
+> *   `total-chunk` - Represents the total number of chunks for the file being uploaded.
+
+```csharp
+public class SampleDataController : Controller
+{
+    public string uploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploaded Files"); // Set your desired upload directory path
+
+    [HttpPost("api/SampleData/Save")]
+    public async Task<IActionResult> Save(IFormFile UploadFiles)
+    {
+        try
+        {
+            if (UploadFiles.Length > 0)
+            {
+                var fileName = UploadFiles.FileName;
+
+                // Create upload directory if it doesn't exist
+                if (!Directory.Exists(uploads))
+                {
+                    Directory.CreateDirectory(uploads);
+                }
+
+                // Check for chunk upload based on ContentType
+                if (Request.Form.ContainsKey("chunk-index") && Request.Form.ContainsKey("total-chunk")) // Handle chunk upload
+                {
+                    // Fetch chunk-index and total-chunk from form data
+                    var chunkIndex = Request.Form["chunk-index"];
+                    var totalChunk = Request.Form["total-chunk"];
+
+                    // Path to save the chunk files with .part extension
+                    var tempFilePath = Path.Combine(uploads, fileName + ".part");
+
+                    using (var fileStream = new FileStream(tempFilePath, chunkIndex == "0" ? FileMode.Create : FileMode.Append))
+                    {
+                        await UploadFiles.CopyToAsync(fileStream);
+                    }
+
+                    // If all chunks are uploaded, move the file to the final destination
+                    if (Convert.ToInt32(chunkIndex) == Convert.ToInt32(totalChunk) - 1)
+                    {
+                        var finalFilePath = Path.Combine(uploads, fileName);
+
+                        // Move the .part file to the final destination without the .part extension
+                        System.IO.File.Move(tempFilePath, finalFilePath);
+
+                        return Ok(new { status = "File uploaded successfully" });
+                    }
+
+                    return Ok(new { status = "Chunk uploaded successfully" });
+                }
+                else // Handle normal upload
+                {
+                    var filePath = Path.Combine(uploads, fileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await UploadFiles.CopyToAsync(fileStream);
+                    }
+
+                    return Ok(new { status = "File uploaded successfully" });
+                }
+            }
+
+            return BadRequest(new { status = "No file to upload" });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { status = "Error", message = ex.Message });
+        }
+    }
+
+    // Method to handle file removal (optional if needed)
+    [HttpPost("api/SampleData/Remove")]
+    public IActionResult Remove(string UploadFiles)
+    {
+        try
+        {
+            var filePath = Path.Combine(uploads, UploadFiles);
+
+            if (System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+                return Ok(new { status = "File deleted successfully" });
+            }
+            else
+            {
+                return NotFound(new { status = "File not found" });
+            }
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { status = "Error", message = ex.Message });
+        }
+    }
+}
+```
+
+### Save action configuration in server-side blazor
+
+For server-side Blazor applications using ASP.NET Core 3.0 or later, configuring the uploader's `Save` action requires explicit opt-in for MVC routing within your `Startup.cs` file. This ensures that MVC can properly handle authorization and CORS middleware during initialization.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 
-public void ConfigureServices(IServiceCollection services)
+public class Startup
 {
-    services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-}
-
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-{
-    if (env.IsDevelopment())
+    public void ConfigureServices(IServiceCollection services)
     {
-        app.UseDeveloperExceptionPage();
-    }
-    else
-    {
-        app.UseExceptionHandler("/Error");
-        app.UseHsts();
+        services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+        services.AddRazorPages();
+        services.AddServerSideBlazor();
+        services.AddSingleton<WeatherForecastService>(); // Example service
     }
 
-    app.UseHttpsRedirection();
-    app.UseStaticFiles();
-
-    app.UseRouting();
-    app.UseMvcWithDefaultRoute();
-
-    app.UseEndpoints(endpoints =>
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-        endpoints.MapBlazorHub<App>(selector: "app");
-        endpoints.MapFallbackToPage("/_Host");
-    });
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        else
+        {
+            app.UseExceptionHandler("/Error");
+            app.UseHsts();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+        app.UseMvcWithDefaultRoute(); // Crucial for MVC controller routing
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapBlazorHub<App>(selector: "app");
+            endpoints.MapFallbackToPage("/_Host");
+        });
+    }
 }
 ```
 
-## Additional configurations
+## Events
 
-To modify chunk upload behavior, the following options can be used.
+The Blazor Uploader component provides several events specific to chunk upload operations, allowing you to hook into different stages of the process and implement custom logic.
 
-* **RetryAfterDelay**: If an error occurs while sending any chunk request from JavaScript, the operation is held for 500 milliseconds (by default) and then retried. This can be configured through the [AsyncSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AsyncSettings) property by specifying the interval in milliseconds.
+*   **[`OnChunkUploadStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnChunkUploadStart)**: Triggered at the beginning of each chunk's upload process. This event allows you to perform actions before a chunk is sent to the server.
+*   **[`OnChunkSuccess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnChunkSuccess)**: Occurs when a single chunk has been successfully uploaded to the server. This can be used for tracking progress per chunk.
+*   **[`OnChunkFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnChunkFailure)**: Fired when an individual chunk upload fails. This is useful for error handling and logging specific chunk failures.
+*   **[`Paused`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Paused)**: Triggered when a file transfer is paused by the user or programmatically.
+*   **[`OnResume`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnResume)**: Occurs when a paused file transfer is resumed.
+*   **[`Canceling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Canceling)**: Triggered when an upload request is about to be canceled.
+*   **[`Success`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Success)**: This event is triggered when all chunks of a file have been successfully uploaded, indicating the completion of the entire file transfer.
+*   **[`Failure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Failure)**: Occurs when the overall file upload operation (after all retries) ultimately fails.
 
-* **RetryCount**: Specifies the number of retry attempts when a file fails to upload. By default, the retry action is performed 3 times. If the file continues to fail, the request is aborted and the uploader [Failure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_Failure) event triggers.
-
-The following sample sets the chunk upload delay to 3000 milliseconds and the retry count to 5. The failure event triggers because an incorrect saveUrl is used.
+### Code Example - Handling Chunk Events
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfUploader ID="UploadFiles">
-    <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove" ChunkSize=500000 RetryCount=5 RetryAfterDelay =3000>
-</UploaderAsyncSettings>
-</SfUploader>
-```
-
-## Resumable upload
-
-Chunk upload allows resuming an interrupted upload after a network failure or a manual pause. Pause and resume can be performed using public methods (`pause` and `resume`) as well as UI interactions. The pause icon becomes available after the upload begins. The [Paused](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Paused) event is triggered when pausing an upload, and the [OnResume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnResume) event is triggered when resuming to upload the remaining file. Ensure the server appends chunks consistently so that resume continues from the last successful chunk.
-
-N> The pause and resume features are available only when chunk upload is enabled.
-
-```cshtml
 @using Syncfusion.Blazor.Inputs
-
 <SfUploader ID="UploadFiles">
-    <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove"  ChunkSize=500000>
-</UploaderAsyncSettings>
-<UploaderEvents OnResume="@OnResumeHandler" Paused="@PausedHandler"></UploaderEvents>
+    <UploaderAsyncSettings 
+        SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save" 
+        RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove" 
+        ChunkSize="500000">
+    </UploaderAsyncSettings>
+    <UploaderEvents 
+        OnChunkUploadStart="@OnChunkUploadStartHandler" 
+        OnChunkSuccess="@OnChunkSuccessHandler" 
+        OnChunkFailure="@OnChunkFailureHandler"
+        Paused="@PausedHandler"
+        OnResume="@OnResumeHandler"
+        Success="@SuccessHandler"
+        OnFailure="@FailureHandler">
+    </UploaderEvents>
 </SfUploader>
+
+<div style="margin-top:20px;">
+    <h4>Upload Status:</h4>
+    <p><strong>Chunk Upload:</strong> @ChunkStatus</p>
+    <p><strong>Pause/Resume:</strong> @PauseResumeStatus</p>
+    <p><strong>Final Status:</strong> @FinalStatus</p>
+</div>
+
 @code {
-    private void OnResumeHandler(PauseResumeEventArgs args)
+    private string ChunkStatus = "Waiting...";
+    private string PauseResumeStatus = "Waiting...";
+    private string FinalStatus = "Waiting...";
+
+    private void OnChunkUploadStartHandler(UploadingEventArgs args)
     {
-        // Here, you can customize your code.
+        ChunkStatus = $"Started chunk upload for {args.FileData.Name}";
     }
+
+    private void OnChunkSuccessHandler(SuccessEventArgs args)
+    {
+        ChunkStatus = $"Chunk upload successful for {args.File?.Name}, Response: {args.Response}";
+    }
+
+    private void OnChunkFailureHandler(Syncfusion.Blazor.Inputs.FailureEventArgs args)
+    {
+        ChunkStatus = $"Chunk upload failed for {args.File?.Name}, Error: {args.StatusText}";
+    }
+
     private void PausedHandler(PauseResumeEventArgs args)
     {
-        // Here, you can customize your code.
+        PauseResumeStatus = $"File {args.File?.Name} paused.";
+    }
+
+    private void OnResumeHandler(PauseResumeEventArgs args)
+    {
+        PauseResumeStatus = $"File {args.File?.Name} resumed.";
+    }
+
+    private void SuccessHandler(SuccessEventArgs args)
+    {
+        FinalStatus = $"File {args.File?.Name} uploaded successfully. Response: {args.Response}";
+    }
+
+    private void FailureHandler(Syncfusion.Blazor.Inputs.FailureEventArgs args)
+    {
+        FinalStatus = $"File upload failed for {args.File?.Name}. Error: {args.StatusText}";
     }
 }
+
 ```
-
-![Resuming File Uploads in Blazor FileUpload](./images/blazor-fileupload-resume-file-upload.png)
-
-## Cancel upload
-
-The uploader component allows canceling an uploading file. This can be done by selecting the cancel icon or by using the `Cancel` method. The [Canceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_Canceling) event fires whenever the upload request is canceled. When canceling, any partially uploaded file data is removed from the server according to the server implementation.
-
-When a request fails, the pause icon changes to a retry icon. Selecting the retry icon resends the failed chunk request and continues from the failure point. The canceled upload request can also be retried using the retry UI or `Retry` methods; in that case, the upload starts from the beginning.
-
-The following example demonstrates chunk upload with cancel support.
-
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
-
-```cshtml
-@using Syncfusion.Blazor.Inputs
-
-<SfUploader ID="UploadFiles">
-<UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove" ChunkSize=500000>
-</UploaderAsyncSettings>
-</SfUploader>
-```
-
-![Canceling File Uploads in Blazor FileUpload](./images/blazor-fileupload-cancel-file-upload.png)
-
-N> The retry action has different behavior for chunk upload and default upload.
-<br/> * Chunk upload: Retries the failed request from the point of failure.
-<br/> * Default upload: Retries the failed file from the beginning.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhoiCrRfOPSTmJm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

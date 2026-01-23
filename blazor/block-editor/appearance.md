@@ -1,59 +1,52 @@
 ---
 layout: post
 title: Appearance in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn here all about Appearance with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn to configure appearance properties, dimensions, read-only mode, and custom styling in Syncfusion Blazor Block Editor.
 platform: Blazor
 control: BlockEditor
 documentation: ug
 ---
 
-# Appearance in Blazor Block Editor component
+# Appearance in Blazor Block Editor Component
 
-The Block Editor component provides several properties to customize its visual appearance, allowing you to control its dimensions, styling, and behavior.
+The Block Editor component provides several properties to customize its visual appearance, allowing control over dimensions, styling, and behavior.
 
 ## Setting width and height
 
-You can specify the width and height for the Block Editor component using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Height) properties.
+Specify the width and height for the Block Editor component using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Height) properties.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <SfBlockEditor Width="100%" Height="80vh"></SfBlockEditor>
 
-// Or with specific pixel values
+@* Or with specific pixel values *@
 <SfBlockEditor Width="800px" Height="500px"></SfBlockEditor>
-
 ```
 
-## Setting readonly mode
+## Setting read-only mode
 
-You can utilize the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_ReadOnly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it.
+Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_ReadOnly) property to control whether the editor is in read-only mode. When set to `true`, users cannot edit the content but can still view it. This is useful for displaying finalized documents, creating preview modes, or implementing approval workflows where content should be visible but not editable.
 
 ```cshtml
+@using Syncfusion.Blazor.BlockEditor
 
-@using Syncfusion.Blazor.BlockEditor;
-
-<SfBlockEditor ReadOnly=true></SfBlockEditor>
-
+<SfBlockEditor ReadOnly="true"></SfBlockEditor>
 ```
 
-## Customization using CSS Class
+## Customization using CSS class
 
-You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_CssClass) property to customize the appearance of the Block Editor component.
+Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_CssClass) property to customize the appearance of the Block Editor component with custom styles.
 
 ```cshtml
-
-@using Syncfusion.Blazor.BlockEditor;
+@using Syncfusion.Blazor.BlockEditor
 
 <SfBlockEditor Width="600px" Height="400px" CssClass="custom-editor-theme"></SfBlockEditor>
-
 ```
 
-The following example demonstrates the usage of [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_ReadOnly) and [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_CssClass) properties of the Block Editor.
+The following example demonstrates the usage of [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_ReadOnly) and [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_CssClass) properties.
 
 ```cshtml
-
 @using Syncfusion.Blazor.BlockEditor
 @using Syncfusion.Blazor.Buttons
 
@@ -83,12 +76,12 @@ The following example demonstrates the usage of [ReadOnly](https://help.syncfusi
 
 @code {
     private SfBlockEditor? BlockEditorRef;
-
     private bool IsReadonly { get; set; } = false;
     private string CurrentTheme { get; set; } = "default";
     private string StatusMessage { get; set; } = "Editable, Default Theme";
     private string OutputMessage { get; set; } = "";
     private string CssClasses => $"{CurrentTheme} {(IsReadonly ? "readonly-mode" : "")}".Trim();
+
     private List<BlockModel> Blocks => new List<BlockModel>
     {
         new BlockModel
@@ -105,7 +98,7 @@ The following example demonstrates the usage of [ReadOnly](https://help.syncfusi
             BlockType = BlockType.Paragraph,
             Content = new List<ContentModel>
             {
-                new ContentModel { ContentType = ContentType.Text, Content = "This demo showcases different appearance configurations including readonly mode and a custom CSS theme." }
+                new ContentModel { ContentType = ContentType.Text, Content = "This demo showcases different appearance configurations including read-only mode and a custom CSS theme." }
             }
         },
         new BlockModel
@@ -133,7 +126,7 @@ The following example demonstrates the usage of [ReadOnly](https://help.syncfusi
                 new ContentModel
                 {
                     ContentType = ContentType.Text,
-                    Content = "Use the readonly toggle to switch between editable and read-only modes. In readonly mode, you can view content but cannot make changes."
+                    Content = "Use the read-only toggle to switch between editable and read-only modes. In read-only mode, content can be viewed but not modified."
                 }
             }
         }
@@ -142,9 +135,8 @@ The following example demonstrates the usage of [ReadOnly](https://help.syncfusi
     private void ToggleReadonly()
     {
         IsReadonly = !IsReadonly;
-
         UpdateStatus();
-        DisplayOutput($"Readonly mode {(IsReadonly ? "enabled" : "disabled")}. {(IsReadonly ? "Content is now view-only." : "Content is now editable.")}");
+        DisplayOutput($"Read-only mode {(IsReadonly ? "enabled" : "disabled")}. {(IsReadonly ? "Content is now view-only." : "Content is now editable.")}");
     }
 
     private void ApplyCustomTheme()
@@ -156,7 +148,7 @@ The following example demonstrates the usage of [ReadOnly](https://help.syncfusi
 
     private void OnEditorFocus()
     {
-        DisplayOutput("Editor focused. You can now type or edit content.");
+        DisplayOutput("Editor focused. Content editing is now active.");
     }
 
     private void OnEditorBlur()
@@ -171,7 +163,7 @@ The following example demonstrates the usage of [ReadOnly](https://help.syncfusi
 
     private void UpdateStatus()
     {
-        string mode = IsReadonly ? "Readonly" : "Editable";
+        string mode = IsReadonly ? "Read-Only" : "Editable";
         string theme = CurrentTheme == "default" ? "Default" : "Custom";
         StatusMessage = $"{mode}, {theme} Theme";
     }
@@ -277,8 +269,8 @@ The following example demonstrates the usage of [ReadOnly](https://help.syncfusi
         color: #101111;
     }
 </style>
-
 ```
-![Blazor Block Editor Appearance](./images/appearance.png)
 
-![Blazor Block Editor Custom Styles](./images/customStyles.png)
+![Blazor Block Editor with custom gradient theme and styling](./images/appearance.png)
+
+![Blazor Block Editor with custom CSS classes applied](./images/customStyles.png)

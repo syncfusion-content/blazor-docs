@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Table Blocks in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Table Blocks with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+description: Learn about table blocks and structured data display in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
 ---
 
-# Table Blocks in Blazor Block Editor component
+# Table Blocks in Blazor Block Editor Component
 
 The Syncfusion Block Editor allows you to render structured data in rows and columns by setting the block's [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Table). You can customize the table layout, header, row numbers, and define columns and rows using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property.
 
-### Configure Table Block
+### Configure table block
 
 For Table blocks, you can configure layout and structure using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property. This property supports the following options:
 
@@ -32,7 +32,7 @@ The following example demonstrates how to pre-configure a [Table](https://help.s
 <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
 
 @code {
-    private List<BlockModel> BlockData = new List<BlockModel>
+    private List<BlockModel> BlockData = new()
     {
         new BlockModel
         {
@@ -66,7 +66,7 @@ The following example demonstrates how to pre-configure a [Table](https://help.s
                                     {
                                         ID = "c1_p",
                                         BlockType = BlockType.Paragraph,
-                                        Content = {new ContentModel{ID = "c1_t",ContentType = ContentType.Text, Content = "Cell1"}}
+                                        Content = new() {new ContentModel{ID = "c1_t",ContentType = ContentType.Text, Content = "Cell1"}}
                                     }
                                 }
                             },
@@ -79,7 +79,7 @@ The following example demonstrates how to pre-configure a [Table](https://help.s
                                     {
                                         ID = "c2_p",
                                         BlockType = BlockType.Paragraph,
-                                        Content = {new ContentModel{ID = "c2_t",ContentType = ContentType.Text, Content = "Cell2"}}
+                                        Content = new() {new ContentModel{ID = "c2_t",ContentType = ContentType.Text, Content = "Cell2"}}
                                     }
                                 }
                             }
@@ -99,7 +99,7 @@ The following example demonstrates how to pre-configure a [Table](https://help.s
                                     {
                                         ID = "c3_p",
                                         BlockType = BlockType.Paragraph,
-                                        Content = {new ContentModel{ID = "c3_t",ContentType = ContentType.Text, Content = "Cell3"}}
+                                        Content = new() {new ContentModel{ID = "c3_t",ContentType = ContentType.Text, Content = "Cell3"}}
                                     }
                                 }
                             },
@@ -112,7 +112,7 @@ The following example demonstrates how to pre-configure a [Table](https://help.s
                                     {
                                         ID = "c4_p",
                                         BlockType = BlockType.Paragraph,
-                                        Content = {new ContentModel{ID = "c4_t",ContentType = ContentType.Text, Content = "Cell4"}}
+                                        Content = new() {new ContentModel{ID = "c4_t",ContentType = ContentType.Text, Content = "Cell4"}}
                                     }
                                 }
                             }
@@ -124,7 +124,7 @@ The following example demonstrates how to pre-configure a [Table](https://help.s
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
-            Content ={new ContentModel{ContentType = ContentType.Text, Content = "This is a paragraph block example."}}
+            Content = new() {new ContentModel{ContentType = ContentType.Text, Content = "This is a paragraph block example."}}
         }
     };
 }
