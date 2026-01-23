@@ -88,7 +88,7 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer
 {% endhighlight %}
 {% endtabs %}
 
-* Once the above packages are installed, add the following classes to the BlazorWebApp.Shared project as like in below snip.
+* Once the above packages are installed, add the following classes to the `BlazorWebApp.Shared` project as like in below snip.
 This shared project will contain both the model definitions and the client-side service logic used to interact with the SQL Server database.
 
 ![Create Client Side Services](../images/db-models-services.png)
@@ -180,7 +180,7 @@ builder.Services.AddScoped<ClientServices>();
 ```
 N> Ensure that you are using the correct localhost port number in the code snippets. The port number may vary depending on your environment and project configuration, so always verify it before running the application.
 
-* Next, ensure that the **BaseUri** is added in the **appsettings.json** file of the server-side project of your Blazor Web App. This configuration is essential for defining the API endpoint that the client-side project will use to communicate with the server. By specifying the correct **BaseUri**, you enable seamless interaction between the client and server components, ensuring that all CRUD operations are routed properly through the configured API.
+* Next, ensure that the `BaseUri` is added in the **appsettings.json** file of the server-side project of your Blazor Web App. This configuration is essential for defining the API endpoint that the client-side project will use to communicate with the server. By specifying the correct **BaseUri**, you enable seamless interaction between the client and server components, ensuring that all CRUD operations are routed properly through the configured API.
 
 ```
 {
@@ -370,7 +370,7 @@ Open Visual Studio and follow the steps in the [documentation](https://blazor.sy
 
 To add the **Blazor DataGrid** component in your application, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If your Blazor Web App is configured to use WebAssembly or Auto render modes, make sure to install the Syncfusion® Blazor component NuGet packages within the client project as well. 
+If your Blazor Web App is configured to use `WebAssembly or Auto` render modes, make sure to install the Syncfusion® Blazor component NuGet packages within the client project as well. 
 
 Alternatively, you can achieve the same by running the appropriate Package Manager Console commands to install the required packages directly.
 
@@ -395,7 +395,7 @@ Open **~/_Imports.razor** file and import the following namespace.
 
 {% endhighlight %}
 
-Now, register the Syncfusion® Blazor service in the ~/Program.cs file of your application to enable the use of Syncfusion components such as the DataGrid.
+Now, register the Syncfusion® Blazor service in the **~/Program.cs** file of your application to enable the use of Syncfusion components such as the DataGrid.
 
 If you are working with a `Blazor Web App` configured to use `WebAssembly` or Auto (Server and WebAssembly) interactive render modes, make sure to register the Syncfusion®<sup style="font-size:70%">&reg;</sup>  Blazor service in both **~/Program.cs** files of your web app so that the components function correctly in both environments.
 
@@ -655,7 +655,7 @@ While running the application, the grid will be displayed as follows.
 
 Enable editing in the grid component by using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The DataGrid supports multiple editing modes such as Inline/Normal, Dialog, and Batch editing. For more details, refer to the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
 
-In the below code snippet, the Inline edit mode is enabled, and the Toolbar property is used to display toolbar items for editing operations.
+In the below code snippet, the Inline edit mode is enabled, and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property is used to display toolbar items for editing operations.
 
 {% highlight razor %}
 
