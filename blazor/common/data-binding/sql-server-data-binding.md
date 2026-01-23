@@ -64,7 +64,7 @@ During project setup, ensure that you configure the appropriate[Interactive rend
 ### Generate model class and API services from the database
 
 To work with the SQL Server database in your Blazor application, begin by installing the required NuGet packages.
-If you’ve created a Blazor Web App with the Interactive render mode set to `WebAssembly` or `Auto`, follow these steps:
+If you have created a Blazor Web App with the Interactive render mode set to `WebAssembly` or `Auto`, follow these steps:
 
 * Create a new project using the Class Library template and name it `BlazorWebApp.Shared` for model class and API services as shown below.
 
@@ -523,7 +523,7 @@ Once the adaptor is set up, you can define the grid columns using the [GridColum
 * Return the response from the Read method as a Result and Count pair object, which allows the DataGrid to render the data and manage pagination accurately.
 
 
-In the **Read** method of the custom adaptor component, you can access the grid’s action details—such as paging, filtering, and sorting—using the **DataManagerRequest** object.
+In the **Read** method of the custom adaptor component, you can access the DataGrid action details—such as paging, filtering, and sorting—using the **DataManagerRequest** object.
 
 * Based on the DataManagerRequest, form a SQL query string (to perform paging) and execute the SQL query. Retrieve the data from the database using SqlDataAdapter.
 
@@ -678,7 +678,7 @@ By implementing these methods, you can directly connect the Syncfusion® Blazor 
 
 ### Insert Operation
 
-To Perform the Insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To Perform the Insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the **CustomAdaptorComponent.razor**.
 
 {% tabs %}
 {% highlight razor tabtitle="Blazor Web App" %}
@@ -729,7 +729,7 @@ The resultant grid will look like below.
 
 ### Update Operation
 
-To Perform the Update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To Perform the Update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the **CustomAdaptorComponent.razor**.
 
 {% tabs %}
 {% highlight razor tabtitle="Blazor Web App" %}
@@ -782,7 +782,7 @@ The resultant grid will look like below.
 
 ### Delete Operation
 
-To Perform the Delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To Perform the Delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the **CustomAdaptorComponent.razor**.
 
 {% tabs %}
 {% highlight razor tabtitle="Blazor Web App" %}
