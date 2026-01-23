@@ -1226,7 +1226,7 @@ The following example demonstrates how to send additional parameters to the serv
 
 ![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](../images/custom-adaptor-params.png)
 
-## How to use ExpandoObject with a custom adaptor to process grid data operations
+## How to use ExpandoObject with a custom adaptor to process Grid data operations
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports processing dynamic data created with `ExpandoObject`, where fields are defined at runtime. Since dynamic objects do not expose compile‑time property names, standard LINQ operations cannot apply searching, filtering, sorting, or paging reliably. Syncfusion provides dedicated helper classes that evaluate dynamic fields at runtime and enable complete data‑processing support. These classes work together inside a `CustomAdaptor` to prepare the processed result before sending it back to the DataGrid.
 
