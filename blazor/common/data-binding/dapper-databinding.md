@@ -301,7 +301,7 @@ This file includes:
 * A `BugDataAdaptor` class that extends the DataAdaptor base class.
 * An integrated 'BugDataAccessLayer' instance responsible for handling all database operations.
 
-This structure ensures that the DataGrid receives accurate data from the database and efficiently processes changes made through the grid.
+This structure ensures that the DataGrid receives accurate data from the database and efficiently processes changes made through the Grid.
 
 {% highlight c# %}
 
@@ -441,7 +441,7 @@ To initiate row editing, select a record and activate the `Edit` option from the
 
 ![Updating a row in Grid](../images/updating-a-row.png)
 
-The `Status` field is updated from `Not started` to `In progress`. Selecting the `Update` option in the toolbar triggers the `UpdateAsync` method of the `BugDataAdaptor`, which applies the modified data to the `Bug` table. After the update operation is completed, the revised record is displayed in the grid as shown below.
+The `Status` field is updated from `Not started` to `In progress`. Selecting the `Update` option in the toolbar triggers the `UpdateAsync` method of the `BugDataAdaptor`, which applies the modified data to the `Bug` table. After the update operation is completed, the revised record is displayed in the Grid as shown below.
 
 ![After updating a row in Grid](../images/after-updating.png)
 
