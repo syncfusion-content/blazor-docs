@@ -61,7 +61,7 @@ Run the following commands in the Package Manager Console to add the required pa
 
     ```
 
-* The next command installs the SQL Client package. This package provides the necessary tools for connecting to Microsoft SQL Server, including features such as SqlConnection, SqlCommand, and other essential database components.
+* The next command installs the SQL Client package. This package provides the necessary tools for connecting to Microsoft SQL Server, including features such as `SqlConnection`, `SqlCommand`, and other essential database components.
 
     ```
     Install-Package Microsoft.Data.SqlClient
@@ -287,7 +287,7 @@ The DataGrid can display information stored in a SQL database. Dapper is used to
 
 To make this connection work, the DataGrid uses a feature called [custom data binding](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor). This feature allows the application to control how data is loaded, saved, updated, or deleted.
 
-A custom adaptor acts as the communication layer between the database and the DataGrid.During the creation of this adaptor, the following requirements must be met.
+A custom adaptor acts as the communication layer between the database and the DataGrid. During the creation of this adaptor, the following requirements must be met.
 
 * The custom adaptor must inherit from the `DataAdaptor` class.
 * CRUD‑related methods must be implemented to manage data retrieval and updates.
@@ -341,7 +341,7 @@ Next, add the `SfDataManager` component to the Grid to enable data binding and d
 
 In the following code example,
 
-* Configures the `SfDataManager` component as the data source for the Grid, with the `AdaptorInstance` property set to the custom adaptor created earlier and the `Adaptor` property assigned as `Adaptors.CustomAdaptor`.
+* Configures the `SfDataManager` component as the datasource for the Grid, with the `AdaptorInstance` property set to the custom adaptor created earlier and the `Adaptor` property assigned as `Adaptors.CustomAdaptor`.
 * Sets the `TValue` parameter to the Bug class to ensure proper data mapping within the Grid.
 
 {% highlight razor %}
