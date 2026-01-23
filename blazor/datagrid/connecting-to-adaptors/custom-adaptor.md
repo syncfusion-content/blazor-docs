@@ -1234,11 +1234,11 @@ The following description explains how dynamic data is processed using this appr
 
 ### DynamicObjectOperation
 
-The [DynamicObjectOperation]('https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DynamicObjectOperation.html') class is designed for handling dynamic objects whose properties are defined at runtime. It enables the DataGrid to interpret and evaluate dynamic fields during data processing. This class supports essential operations such as searching, filtering, and sorting, all executed directly against dynamic members without requiring compile‑time property definitions. By evaluating fields dynamically, it ensures that ExpandoObject data can be processed accurately even when the structure varies between records.
+The [DynamicObjectOperation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DynamicObjectOperation.html) class is designed for handling dynamic objects whose properties are defined at runtime. It enables the DataGrid to interpret and evaluate dynamic fields during data processing. This class supports essential operations such as searching, filtering, and sorting, all executed directly against dynamic members without requiring compile‑time property definitions. By evaluating fields dynamically, it ensures that ExpandoObject data can be processed accurately even when the structure varies between records.
 
 ### QueryableOperation
 
-The [QueryableOperation]('https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.QueryableOperation.html') class provides reliable paging support for dynamic data sources. It performs Skip and Take operations on objects that implement `IDynamicMetaObjectProvider`, including ExpandoObject. These runtime‑aware paging methods allow the DataGrid to paginate dynamic data consistently, regardless of the absence of fixed property names. This ensures that only the relevant portion of records is returned during each request.
+The [QueryableOperation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.QueryableOperation.html) class provides reliable paging support for dynamic data sources. It performs Skip and Take operations on objects that implement `IDynamicMetaObjectProvider`, including ExpandoObject. These runtime‑aware paging methods allow the DataGrid to paginate dynamic data consistently, regardless of the absence of fixed property names. This ensures that only the relevant portion of records is returned during each request.
 
 The following example demonstrates how ExpandoObject data is processed using `DynamicObjectOperation` and `QueryableOperation` inside a Custom Adaptor.
 
