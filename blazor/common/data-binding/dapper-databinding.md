@@ -11,7 +11,7 @@ platform: Blazor
 # How to Bind Data Using Dapper and Perform CRUD Operations
 
 * Consume data from a SQL Server database using [Dapper](https://github.com/DapperLib/Dapper), a lightweight object mapper.
-* Bind the retrieved data to the Syncfusion® Blazor DataGrid component so that records can be displayed in a structured grid format.
+* Bind the retrieved data to the `Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid` component so that records can be displayed in a structured grid format.
 * Perform CRUD operations (Create, Read, Update, Delete) directly from the DataGrid by connecting it with a custom adaptor that interacts with the database.
 
 This approach combines the simplicity and performance of Dapper for data access with the rich UI features of the Syncfusion® Blazor DataGrid, enabling you to build a responsive and interactive application that supports inline editing, sorting, filtering, and paging.
