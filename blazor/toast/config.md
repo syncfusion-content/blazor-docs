@@ -315,7 +315,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddSingleton<ToastService>();
+builder.Services.AddScoped<ToastService>();
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -380,7 +380,8 @@ app.Run();
                 this.Options.Content = options.Content;
                 this.IsToastVisible = true;
                 this.StateHasChanged();
-                this.Toast.ShowAsync();
+                Toast.ShowAsync(new ToastModel() { Title = options.Title, Content = options.Content });
+                
             });
         };
         base.OnInitialized();
