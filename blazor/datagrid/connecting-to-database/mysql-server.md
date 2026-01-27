@@ -93,7 +93,7 @@ After executing this script, the transaction records are stored in the `transact
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-For this guide, a Blazor application named **Transaction** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and MySQL integration.
+For this guide, a Blazor application named **Grid_MySQL** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and MySQL integration.
 
 **Method 1: Using Package Manager Console**
 
