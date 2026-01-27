@@ -1236,7 +1236,6 @@ public class CustomAdaptor : DataAdaptor
     {
         if (value is TransactionModel transaction)
         {
-            // This method will be invoked when inserting new records into the Blazor DataGrid component.
             await _transactionService!.AddTransactionAsync(transaction);
         }
         return value;
@@ -1248,35 +1247,26 @@ In **Data/TransactionRepository.cs**, implement the insert method:
 ```csharp
 public async Task AddTransactionAsync(TransactionModel value)
 {
-    // Validate required fields
     if (transaction == null)
         throw new ArgumentNullException(nameof(transaction), "Transaction cannot be null");
 
-    // Set default values if not provided
     if (transaction.CreatedAt == null)
         transaction.CreatedAt = DateTime.Now;
 
     if (string.IsNullOrWhiteSpace(transaction.CurrencyCode))
         transaction.CurrencyCode = "INR";
 
-    // IMPORTANT: Generate a temporary TransactionId BEFORE insert to satisfy NOT NULL constraint
-    // This uses a temporary high sequence number that will be updated after getting the real ID
     string temporaryTransactionId = GeneratePublicTransactionId(transaction.CreatedAt, 99999);
     transaction.TransactionId = temporaryTransactionId;
 
-    // Add the transaction to the context
     _context.Transactions.Add(transaction);
 
-    // Save changes to get the generated ID
     await _context.SaveChangesAsync();
 
-    // Generate the final TransactionId using the actual inserted ID and CreatedAt date
     string finalTransactionId = GeneratePublicTransactionId(transaction.CreatedAt, transaction.Id);
 
-    // Update the transaction with the final TransactionId
     transaction.TransactionId = finalTransactionId;
 
-    // Mark as modified and save changes
     _context.Transactions.Update(transaction);
     await _context.SaveChangesAsync();
 }
@@ -1306,7 +1296,6 @@ public class CustomAdaptor : DataAdaptor
     {
         if (value is TransactionModel transaction)
         {
-            // This method will be invoked when updating existing records in the Blazor DataGrid component.
             await _transactionService!.UpdateTransactionAsync(transaction);
         }
         return value;
@@ -1318,11 +1307,9 @@ In **Data/TransactionRepository.cs**, implement the update method:
 ```csharp
 public async Task UpdateTransactionAsync(TransactionModel value)
 {
-    // Validate that the transaction object is not null
     if (transaction == null)
         throw new ArgumentNullException(nameof(transaction), "Transaction cannot be null");
 
-    // Check if transaction exists in the database by its ID
     var existingTransaction = await _context.Transactions.FindAsync(transaction.Id);
     if (existingTransaction == null)
         throw new KeyNotFoundException($"Transaction with ID {transaction.Id} not found in the database.");
@@ -1338,12 +1325,9 @@ public async Task UpdateTransactionAsync(TransactionModel value)
     existingTransaction.PaymentGateway = transaction.PaymentGateway;
     existingTransaction.CompletedAt = transaction.CompletedAt;
     existingTransaction.Status = transaction.Status;
-    // Note: CreatedAt is not updated as it should remain the original creation time
 
-    // Mark the entity as modified
     _context.Transactions.Update(existingTransaction);
 
-    // Save changes (existingTransaction is already tracked, so no need to call Update)
     await _context.SaveChangesAsync();
 }
 ```
@@ -1371,7 +1355,6 @@ public class CustomAdaptor : DataAdaptor
 {
     public override async Task<object> RemoveAsync(DataManager dataManager, object value, string keyField, string key)
     {
-        // This method will be invoked when deleting existing records from the Blazor DataGrid component.
         int? recordId = null;
         if (value is int intValue)
         {
@@ -1399,18 +1382,28 @@ In **Data/TransactionRepository.cs**, implement the delete method:
 ```csharp
 public async Task RemoveTransactionAsync(int? key)
 {
-    // Validate input
-    if (key == null || key <= 0)
-        throw new ArgumentException("Transaction ID cannot be null or invalid", nameof(key));
+    try
+    {
+        if (key == null || key <= 0)
+            throw new ArgumentException("Transaction ID cannot be null or invalid", nameof(key));
 
-    // Find the transaction
-    var transaction = await _context.Transactions.FindAsync(key);
-    if (transaction == null)
-        throw new KeyNotFoundException($"Transaction with ID {key} not found");
+        var transaction = await _context.Transactions.FindAsync(key);
+        if (transaction == null)
+            throw new KeyNotFoundException($"Transaction with ID {key} not found");
 
-    // Remove and save
-    _context.Transactions.Remove(transaction);
-    await _context.SaveChangesAsync();
+        _context.Transactions.Remove(transaction);
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateException ex)
+    {
+        Console.WriteLine($"Database error while deleting transaction: {ex.Message}");
+        throw;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error deleting transaction: {ex.Message}");
+        throw;
+    }
 }
 ```
 **What happens behind the scenes:**
