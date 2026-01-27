@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to handle unordered dataSource in Blazor TreeGrid | Syncfusion
+description: Learn here all about how to order the unordered data from TreeGrid in Syncfusion Blazor TreeGrid component and more.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # How to handle unordered dataSource in Blazor TreeGrid
 
 When row virtualization is enabled in Blazor  TreeGrid, an unordered data source can cause improper rendering because the component expects hierarchical data in order. To fix this, the data should sort and structure before assigning it to the TreeGrid.
@@ -61,4 +70,5 @@ Refer to the [sample](https://blazorplayground.syncfusion.com/embed/hXhntshRzqsG
 ## Conclusion    
 
 To ensure smooth rendering when using virtualization in Blazor TreeGrid, the data source must be in hierarchical order. If the data is unordered, sort and structure it before binding to the TreeGrid component. This guarantees correct task hierarchy display and prevents rendering issues for large datasets.
+
  
