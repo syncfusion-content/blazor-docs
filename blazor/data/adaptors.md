@@ -48,7 +48,7 @@ To configure the `UrlAdaptor`, set the [Adaptor](https://help.syncfusion.com/cr/
 @using Syncfusion.Blazor.Grids
 
 <SfGrid TValue="EmployeeData" ID="Grid" AllowPaging="true">
-    <SfDataManager Url="https://blazor.syncfusion.com/services/development/api/gridurldata" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/gridurldata" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridColumns>
         <GridColumn Field="@nameof(EmployeeData.EmployeeID)" HeaderText="Employee ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field="@nameof(EmployeeData.EmployeeName)" HeaderText="First Name" Width="130"></GridColumn>
