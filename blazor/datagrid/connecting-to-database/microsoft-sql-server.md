@@ -1290,7 +1290,6 @@ public class CustomAdaptor : DataAdaptor
     {
         if (value is Tickets ticket)
         {
-            // This method will be invoked when inserting new records into the Blazor DataGrid component.
             await _ticketService!.AddTicketAsync(ticket);
         }
         return value;
@@ -1303,22 +1302,31 @@ In **Data/TicketRepository.cs**, the insert method is implemented as:
 ```csharp
 public async Task AddTicketAsync(Tickets value)
 {
-    // Validate required fields
-    if (value == null)
-        throw new ArgumentNullException(nameof(value), "Ticket cannot be null");
+    try
+    {
+        if (value == null)
+            throw new ArgumentNullException(nameof(value), "Ticket cannot be null");
 
-    // Set default values if not provided
-    if (value.CreatedAt == null)
-        value.CreatedAt = DateTime.Now;
+        if (value.CreatedAt == null)
+            value.CreatedAt = DateTime.Now;
 
-    if (value.UpdatedAt == null)
-        value.UpdatedAt = DateTime.Now;
+        if (value.UpdatedAt == null)
+            value.UpdatedAt = DateTime.Now;
 
-    // Add the ticket to the context
-    _context.Tickets.Add(value);
+        _context.Tickets.Add(value);
 
-    // Save changes to database
-    await _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateException ex)
+    {
+        Console.WriteLine($"Database error while adding ticket: {ex.Message}");
+        throw;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error adding ticket: {ex.Message}");
+        throw;
+    }
 }
 ```
 
@@ -1345,7 +1353,6 @@ public class CustomAdaptor : DataAdaptor
     {
         if (value is Tickets ticket)
         {
-            // This method will be invoked when updating existing records in the Blazor DataGrid component.
             await _ticketService!.UpdateTicketAsync(ticket);
         }
         return value;
@@ -1358,35 +1365,49 @@ In **Data/TicketRepository.cs**, the update method is implemented as:
 ```csharp
 public async Task UpdateTicketAsync(Tickets value)
 {
-    // Validate input
-    if (value == null)
-        throw new ArgumentNullException(nameof(value), "Ticket cannot be null");
+    try
+    {
+        if (value == null)
+            throw new ArgumentNullException(nameof(value), "Ticket cannot be null");
 
-    if (value.TicketId <= 0)
-        throw new ArgumentException("Ticket ID must be valid", nameof(value.TicketId));
+        if (value.TicketId <= 0)
+            throw new ArgumentException("Ticket ID must be valid", nameof(value.TicketId));
 
-    // Check if ticket exists
-    var existingTicket = await _context.Tickets.FindAsync(value.TicketId);
-    if (existingTicket == null)
-        throw new KeyNotFoundException($"Ticket with ID {value.TicketId} not found");
+        var existingTicket = await _context.Tickets.FindAsync(value.TicketId);
+        if (existingTicket == null)
+            throw new KeyNotFoundException($"Ticket with ID {value.TicketId} not found");
 
-    // Copy values from incoming entity to the tracked entity
-    existingTicket.PublicTicketId = value.PublicTicketId;
-    existingTicket.Title = value.Title;
-    existingTicket.Description = value.Description;
-    existingTicket.Category = value.Category;
-    existingTicket.Department = value.Department;
-    existingTicket.Assignee = value.Assignee;
-    existingTicket.CreatedBy = value.CreatedBy;
-    existingTicket.Status = value.Status;
-    existingTicket.Priority = value.Priority;
-    existingTicket.ResponseDue = value.ResponseDue;
-    existingTicket.DueDate = value.DueDate;
-    existingTicket.CreatedAt = value.CreatedAt;
-    existingTicket.UpdatedAt = DateTime.Now;
+        existingTicket.PublicTicketId = value.PublicTicketId;
+        existingTicket.Title = value.Title;
+        existingTicket.Description = value.Description;
+        existingTicket.Category = value.Category;
+        existingTicket.Department = value.Department;
+        existingTicket.Assignee = value.Assignee;
+        existingTicket.CreatedBy = value.CreatedBy;
+        existingTicket.Status = value.Status;
+        existingTicket.Priority = value.Priority;
+        existingTicket.ResponseDue = value.ResponseDue;
+        existingTicket.DueDate = value.DueDate;
+        existingTicket.CreatedAt = value.CreatedAt;
+        existingTicket.UpdatedAt = DateTime.Now;
 
-    // Save changes
-    await _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateConcurrencyException ex)
+    {
+        Console.WriteLine($"Concurrency error while updating ticket: {ex.Message}");
+        throw;
+    }
+    catch (DbUpdateException ex)
+    {
+        Console.WriteLine($"Database error while updating ticket: {ex.Message}");
+        throw;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error updating ticket: {ex.Message}");
+        throw;
+    }
 }
 ```
 
@@ -1442,18 +1463,28 @@ In **Data/TicketRepository.cs**, the delete method is implemented as:
 ```csharp
 public async Task RemoveTicketAsync(int? key)
 {
-    // Validate input
-    if (key == null || key <= 0)
-        throw new ArgumentException("Ticket ID cannot be null or invalid", nameof(key));
+    try
+    {
+        if (key == null || key <= 0)
+            throw new ArgumentException("Ticket ID cannot be null or invalid", nameof(key));
 
-    // Find the ticket
-    var ticket = await _context.Tickets.FindAsync(key);
-    if (ticket == null)
-        throw new KeyNotFoundException($"Ticket with ID {key} not found");
+        var ticket = await _context.Tickets.FindAsync(key);
+        if (ticket == null)
+            throw new KeyNotFoundException($"Ticket with ID {key} not found");
 
-    // Remove and save
-    _context.Tickets.Remove(ticket);
-    await _context.SaveChangesAsync();
+        _context.Tickets.Remove(ticket);
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateException ex)
+    {
+        Console.WriteLine($"Database error while deleting ticket: {ex.Message}");
+        throw;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error deleting ticket: {ex.Message}");
+        throw;
+    }
 }
 ```
 
