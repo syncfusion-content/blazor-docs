@@ -415,8 +415,7 @@ namespace Transaction.Data
         /// </summary>
         public async Task AddTransactionAsync(TransactionModel transaction)
         {
-            _context.Transactions.Add(transaction);
-            await _context.SaveChangesAsync();
+            // Handle logic to add a new transaction to the database
         }
 
         /// <summary>
@@ -424,12 +423,7 @@ namespace Transaction.Data
         /// </summary>
         public async Task UpdateTransactionAsync(TransactionModel transaction)
         {
-            var existingTransaction = await _context.Transactions.FindAsync(transaction.Id);
-            if (existingTransaction == null)
-                throw new KeyNotFoundException($"Transaction with ID {transaction.Id} not found.");
-
-            _context.Transactions.Update(transaction);
-            await _context.SaveChangesAsync();
+            // Handle logic to update an existing transaction to the database
         }
 
         /// <summary>
@@ -437,12 +431,7 @@ namespace Transaction.Data
         /// </summary>
         public async Task RemoveTransactionAsync(int? transactionId)
         {
-            var transaction = await _context.Transactions.FindAsync(transactionId);
-            if (transaction == null)
-                throw new KeyNotFoundException($"Transaction with ID {transactionId} not found.");
-
-            _context.Transactions.Remove(transaction);
-            await _context.SaveChangesAsync();
+            // Handle logic to delete an existing transaction to the database
         }
     }
 }
@@ -701,7 +690,6 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
         AllowPaging="true" 
         AllowSorting="true" 
         AllowFiltering="true" 
-        AllowSearching="true"
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     
@@ -753,7 +741,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
     <!-- Grid columns configuration -->
 </SfGrid>
 ```
-Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
+4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
 
 ```csharp
 @code {
@@ -844,7 +832,6 @@ Searching allows the user to find records by entering keywords in the search box
 
 ```razor
 <SfGrid TValue="TransactionModel"        
-        AllowSearching="true"
         AllowPaging="true
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -852,7 +839,7 @@ Searching allows the user to find records by entering keywords in the search box
     <!-- Grid columns configuration -->
 </SfGrid>
 ```
-Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
 
 ```csharp
 @code {
@@ -879,7 +866,8 @@ public class CustomAdaptor : DataAdaptor
         {
             dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
         }
-        
+
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
         // Handling Paging
         if (dataManagerRequest.Skip != 0)
         {
@@ -925,7 +913,6 @@ Filtering allows the user to restrict data based on column values using a menu i
 <SfGrid TValue="TransactionModel" 
         AllowPaging="true"         
         AllowFiltering="true"
-        AllowSearching="true"
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     
@@ -966,6 +953,7 @@ public class CustomAdaptor : DataAdaptor
             dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
         }
         
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
         // Handling Paging
         if (dataManagerRequest.Skip != 0)
         {
@@ -1013,7 +1001,6 @@ Sorting enables the user to arrange records in ascending or descending order bas
         AllowPaging="true" 
         AllowSorting="true" 
         AllowFiltering="true" 
-        AllowSearching="true"
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
  
@@ -1061,6 +1048,7 @@ public class CustomAdaptor : DataAdaptor
             dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
         }
         
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
         // Handling Paging
         if (dataManagerRequest.Skip != 0)
         {
@@ -1108,7 +1096,6 @@ Grouping organizes records into hierarchical groups based on column values.
         AllowSorting="true" 
         AllowFiltering="true" 
         AllowGrouping="true"
-        AllowSearching="true"
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
      <GridPageSettings PageSize="10"></GridPageSettings>
@@ -1154,6 +1141,8 @@ public class CustomAdaptor : DataAdaptor
             dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
         }
 
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
+        DataResult dataObject = new DataResult();
         // Handling Group operation in CustomAdaptor.
         if (dataManagerRequest.Group != null)
         {
@@ -1217,7 +1206,6 @@ Add the Grid **EditSettings** and **Toolbar** configuration to enable create, re
         AllowSorting="true" 
         AllowFiltering="true" 
         AllowGrouping="true"
-        AllowSearching="true"
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
      <GridPageSettings PageSize="10"></GridPageSettings>
@@ -1260,10 +1248,36 @@ In **Data/TransactionRepository.cs**, implement the insert method:
 ```csharp
 public async Task AddTransactionAsync(TransactionModel value)
 {
-    // Add the transaction to the context
-    _context.Transactions.Add(value);
+    // Validate required fields
+    if (transaction == null)
+        throw new ArgumentNullException(nameof(transaction), "Transaction cannot be null");
 
-    // Save changes to database
+    // Set default values if not provided
+    if (transaction.CreatedAt == null)
+        transaction.CreatedAt = DateTime.Now;
+
+    if (string.IsNullOrWhiteSpace(transaction.CurrencyCode))
+        transaction.CurrencyCode = "INR";
+
+    // IMPORTANT: Generate a temporary TransactionId BEFORE insert to satisfy NOT NULL constraint
+    // This uses a temporary high sequence number that will be updated after getting the real ID
+    string temporaryTransactionId = GeneratePublicTransactionId(transaction.CreatedAt, 99999);
+    transaction.TransactionId = temporaryTransactionId;
+
+    // Add the transaction to the context
+    _context.Transactions.Add(transaction);
+
+    // Save changes to get the generated ID
+    await _context.SaveChangesAsync();
+
+    // Generate the final TransactionId using the actual inserted ID and CreatedAt date
+    string finalTransactionId = GeneratePublicTransactionId(transaction.CreatedAt, transaction.Id);
+
+    // Update the transaction with the final TransactionId
+    transaction.TransactionId = finalTransactionId;
+
+    // Mark as modified and save changes
+    _context.Transactions.Update(transaction);
     await _context.SaveChangesAsync();
 }
 ```
@@ -1304,13 +1318,32 @@ In **Data/TransactionRepository.cs**, implement the update method:
 ```csharp
 public async Task UpdateTransactionAsync(TransactionModel value)
 {
-    // Check if transaction exists
-    var existingTransaction = await _context.Transactions.FindAsync(value.Id);
-    if (existingTransaction == null)
-        throw new KeyNotFoundException($"Transaction with ID {value.Id} not found");
+    // Validate that the transaction object is not null
+    if (transaction == null)
+        throw new ArgumentNullException(nameof(transaction), "Transaction cannot be null");
 
-    // Update the entity
-    _context.Transactions.Update(value);
+    // Check if transaction exists in the database by its ID
+    var existingTransaction = await _context.Transactions.FindAsync(transaction.Id);
+    if (existingTransaction == null)
+        throw new KeyNotFoundException($"Transaction with ID {transaction.Id} not found in the database.");
+
+    existingTransaction.TransactionId = transaction.TransactionId;
+    existingTransaction.CustomerId = transaction.CustomerId;
+    existingTransaction.OrderId = transaction.OrderId;
+    existingTransaction.InvoiceNumber = transaction.InvoiceNumber;
+    existingTransaction.Description = transaction.Description;
+    existingTransaction.Amount = transaction.Amount;
+    existingTransaction.CurrencyCode = transaction  .CurrencyCode;
+    existingTransaction.TransactionType = transaction.TransactionType;
+    existingTransaction.PaymentGateway = transaction.PaymentGateway;
+    existingTransaction.CompletedAt = transaction.CompletedAt;
+    existingTransaction.Status = transaction.Status;
+    // Note: CreatedAt is not updated as it should remain the original creation time
+
+    // Mark the entity as modified
+    _context.Transactions.Update(existingTransaction);
+
+    // Save changes (existingTransaction is already tracked, so no need to call Update)
     await _context.SaveChangesAsync();
 }
 ```
@@ -1366,6 +1399,10 @@ In **Data/TransactionRepository.cs**, implement the delete method:
 ```csharp
 public async Task RemoveTransactionAsync(int? key)
 {
+    // Validate input
+    if (key == null || key <= 0)
+        throw new ArgumentException("Transaction ID cannot be null or invalid", nameof(key));
+
     // Find the transaction
     var transaction = await _context.Transactions.FindAsync(key);
     if (transaction == null)
