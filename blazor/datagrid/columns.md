@@ -942,7 +942,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows alig
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrJCMMuCwICimOy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N >* The `TextAlign` property only changes the alignment of cell content, not the column header. To align both the column header and content, use the `HeaderTextAlign` property along with `TextAlign`.
+N> The `TextAlign` property only changes the alignment of cell content, not the column header. To align both the column header and content, use the `HeaderTextAlign` property along with `TextAlign`.
 
 >* If only `HeaderTextAlign` is specified, the header will align as expected, but the cell content will remain at its default alignment.
 >* To achieve consistent alignment for both header and cell content, specify both properties.

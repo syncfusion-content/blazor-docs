@@ -281,6 +281,8 @@ public class OrdersDetails
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBHtMhbpBpDVXzQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Drag and drop to custom component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dragging rows into custom components. Enable [AllowRowDragAndDrop] and set [RowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) to the **ID** of the target component.
