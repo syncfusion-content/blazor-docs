@@ -98,7 +98,7 @@ This shared project will contain both the model definitions and the client-side 
 
 public class Order
 {
-    public int? OrderID { get; set; }
+    public long OrderID { get; set; }
 
     public string CustomerID { get; set; }
 
@@ -257,7 +257,7 @@ namespace BlazorWebApp.Controller
             DataSet Data = CreateCommand(QueryStr, ConnectionStr);
             Orders = Data.Tables[0].AsEnumerable().Select(r => new Order
             {
-                OrderID = r.Field<int>("OrderID"),
+                OrderID = r.Field<long>("OrderID"),
                 CustomerID = r.Field<string>("CustomerID")
             }).ToList();  // Here, we convert dataset into list
             List<Order> DataSource = Orders;
@@ -632,7 +632,7 @@ string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{
     DataSet Data = CreateCommand(QueryStr, ConnectionStr);
     Orders = Data.Tables[0].AsEnumerable().Select(r => new Order
     {
-        OrderID = r.Field<int>("OrderID"),
+        OrderID = r.Field<long>("OrderID"),
         CustomerID = r.Field<string>("CustomerID")
     }).ToList();  // Here, we convert dataset into list
     IEnumerable<Order> DataSource = Orders;
