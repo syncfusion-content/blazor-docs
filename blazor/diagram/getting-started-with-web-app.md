@@ -460,7 +460,7 @@ N> If the **Interactivity Location** is set to `Global` and the **Render Mode** 
 Run the app from the command line (Windows) by opening a terminal at the server/project folder (the folder containing the project .csproj that hosts the app) and executing `dotnet run` command.
 
 Ways to open a terminal at the server project folder:
-- File Explorer → navigate to the server project folder → click the address bar, type cmd or powershell, press Enter (opens Command Prompt or PowerShell at that path).
+- File Explorer → navigate to the server project folder → click the address bar, type cmd or PowerShell, press Enter (opens Command Prompt or PowerShell at that path).
 - File Explorer → Shift + Right-click in the folder whitespace → choose "Open PowerShell window here" or "Open in Terminal".
 - Run the application with:
   ```powershell
