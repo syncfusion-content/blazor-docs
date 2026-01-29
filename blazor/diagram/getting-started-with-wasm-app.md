@@ -331,7 +331,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram componen
 Run the app from the command line (Windows) by opening a terminal at the project folder (the folder containing the project .csproj that hosts the app) and executing `dotnet run` command.
 
 Ways to open a terminal at the folder containing the project file:
-- File Explorer → navigate to the folder with project file → click the address bar, type cmd or powershell, press Enter (opens Command Prompt or PowerShell at that path).
+- File Explorer → navigate to the folder with project file → click the address bar, type cmd or PowerShell, press Enter (opens Command Prompt or PowerShell at that path).
 - File Explorer → Shift + Right-click in the folder whitespace → choose "Open PowerShell window here" or "Open in Terminal".
 - Run the application with:
   ```powershell
