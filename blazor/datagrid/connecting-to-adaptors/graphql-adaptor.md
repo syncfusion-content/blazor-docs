@@ -507,7 +507,8 @@ public class WhereFilter
                 "Fields": ["Department"],
                 "Key": "Finance",
                 "Operator": "contains",
-                "IgnoreCase": true
+                "IgnoreCase": true,
+                "IgnoreAccent": true
             }
         ],
         "Where": [
@@ -1129,7 +1130,8 @@ When search text is entered, the DataGrid automatically sends:
           "Fields": ["EmployeeName", "Department", "Category", "Description"],
           "Key": "finance",
           "Operator": "contains",
-          "IgnoreCase": true
+          "IgnoreCase": true,
+          "IgnoreAccent": true
         }
       ],
       "Skip": 0,
