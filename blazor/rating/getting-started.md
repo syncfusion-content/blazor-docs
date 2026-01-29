@@ -203,7 +203,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rating component
 
 ## Value
 
-You can set the rating value by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property.
+Set the rating value by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property.
 
 {% tabs %}
 {% highlight razor %}

@@ -11,8 +11,6 @@ documentation: ug
 
 This guide shows how to add the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component to a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get started quickly with the Blazor Calendar component, refer to the following [GitHub sample](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -223,6 +221,8 @@ Here, the Calendar allows selecting a date from the 5th to the 27th of the curre
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzjMLSzUEDfIGE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
 
 ## See also
 

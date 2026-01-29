@@ -13,8 +13,6 @@ documentation: ug
 
 This section explains how to add the [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component to a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get started quickly with the Blazor In-place Editor component, refer to this [GitHub](https://github.com/SyncfusionExamples/how-to-add-a-blazor-in-place-editor-to-a-blazor-webassembly-app) sample.
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -197,6 +195,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor In-place Editor 
 {% tabs %}
 {% highlight cshtml %}
 
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.InPlaceEditor
+
 <table>
     <tr>
         <td>
@@ -247,7 +248,7 @@ The following example shows how to initialize a simple In-place Editor with a po
             </label>
         </td>
         <td>
-            <SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.AutoComplete" @bind-Value="@AutoValue" Mode="RenderMode.Popup" TValue="string">
+            <SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.AutoComplete" @bind-Value="@AutoValue" Mode="Syncfusion.Blazor.InPlaceEditor.RenderMode.Popup" TValue="string">
                 <EditorComponent>
                     <SfAutoComplete TValue="string" TItem="Countries" @bind-Value="@AutoValue" Placeholder="e.g. Australia" DataSource="@LocalData">
                         <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
