@@ -259,7 +259,7 @@ public class OrderDetails
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection of rows across different pages based on their index value. This feature is useful for performing actions such as highlighting, styling, or executing operations on rows regardless of their location within the paginated grid.
 
-To achieve this, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method along with the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method. By handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), logic can be implemented to navigate to the desired page and select the row based on its index.
+To achieve this, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__System_Boolean_) method with the `selectAcrossPages` parameter set to true. This enables row selection across different pages. By handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), logic can be implemented to navigate to the desired page and select the row based on its index.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -276,7 +276,6 @@ To achieve this, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor
 </div>
 <SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="true" AllowPaging="true" Height="315">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row"></GridSelectionSettings>
-    <GridPageSettings PageSize="@PageSizeValue"></GridPageSettings> 
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
@@ -298,7 +297,6 @@ To achieve this, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor
         public string Text { get; set; }
         public string Value { get; set; }
     }
-    public int PageSizeValue = 10;
     private List<DropDownOrder> DropDownData = new()
     {
         new() { Text = "1", Value = "1" },
@@ -314,12 +312,8 @@ To achieve this, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor
     };
     private async Task ValueChange(ChangeEventArgs<int, DropDownOrder> Args)
     {
-        int seletedrowIndex = Args.Value;
-        int pageSize = Grid.PageSettings.PageSize;
-        int pageIndex = (seletedrowIndex - 1) / pageSize + 1;
-        int rowIndex = (seletedrowIndex - 1) % pageSize;      
-        await Grid.GoToPageAsync(pageIndex);
-        await Grid.SelectRowAsync(rowIndex, true);        
+        int seletedrowIndex = Args.Value-1;
+        await Grid.SelectRowAsync(seletedrowIndex, selectAcrossPages: true);        
     }    
 }
 
@@ -369,7 +363,7 @@ public class Order
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVojfLsCxSoSKyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBHZWBkhogLsJDN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Multiple row selection by single click on row
 
