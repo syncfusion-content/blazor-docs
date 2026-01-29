@@ -199,4 +199,4 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor OTP Input compon
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor OTP Input component in the default web browser.
 
-![Blazor OTP Input Component](images/blazor-otp-input-component.png)
+![Blazor OTP Input Component](images/blazor-otp-default.png)
