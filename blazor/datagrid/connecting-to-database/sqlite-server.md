@@ -36,7 +36,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net9.0 or compatible | Runtime and build tools |
 | SQLite | 3.0 or later | Embedded Database engine |
-| Syncfusion.Blazor | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
 | Microsoft.EntityFrameworkCore | 9.0.0 or later | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.Tools | 9.0.0 or later | Tools for managing database migrations |
 | Microsoft.EntityFrameworkCore.Sqlite | 9.0.0 or later | SQLite provider for Entity Framework Core |
@@ -48,7 +49,7 @@ Ensure the following software and packages are installed before proceeding:
 First, the **SQLite database** structure must be created to store asset records. Unlike server-based databases, a SQLite database is a single file on disk.
 
 **Instructions:**
-1. You can use a tool like **DB Browser for SQLite** or the `sqlite3` command line tool.
+1. To view or edit the database, use **DB Browser for SQLite** or the `sqlite3` command-line tool.
 2. Create a new database file named `asset.db`.
 3. Define a `asset` table with the specified schema.
 4. Insert sample data for testing.
