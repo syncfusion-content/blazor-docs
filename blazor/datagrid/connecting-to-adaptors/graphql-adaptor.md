@@ -432,6 +432,12 @@ public class SearchFilter
     /// </summary>
     [GraphQLName("IgnoreCase")]
     public bool IgnoreCase { get; set; }
+
+    /// <summary>
+    /// Indicates whether to ignore accent marks and diacritic characters during search operations
+    /// </summary>
+    [GraphQLName("IgnoreAccent")]
+    public bool IgnoreAccent { get; set; }
 }
 
 /// <summary>
