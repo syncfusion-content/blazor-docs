@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQLite to Blazor Data Grid Using Entity Framework
 
-The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQLite database using Entity Framework Core (EF Core). This approach provides a lightweight, serverless database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQLite database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
 
 **What is Entity Framework Core?**
 
@@ -50,7 +50,7 @@ First, the **SQLite database** structure must be created to store asset records.
 **Instructions:**
 1. You can use a tool like **DB Browser for SQLite** or the `sqlite3` command line tool.
 2. Create a new database file named `asset.db`.
-3. Define a `assetinfo` table with the specified schema.
+3. Define a `asset` table with the specified schema.
 4. Insert sample data for testing.
 
 Run the following SQL script:
@@ -58,7 +58,7 @@ Run the following SQL script:
 ```sql
 -- Create Database asset.db
 -- Create the IT Assets table (matches Asset entity)
-CREATE TABLE IF NOT EXISTS assetinfo (
+CREATE TABLE IF NOT EXISTS asset (
     Id              INTEGER PRIMARY KEY AUTOINCREMENT,
     AssetID         TEXT NOT NULL UNIQUE,
     AssetName       TEXT NOT NULL,
@@ -77,12 +77,12 @@ CREATE TABLE IF NOT EXISTS assetinfo (
 );
 
 -- Insert sample realistic data (20 records)
-INSERT INTO assetinfo (Id, AssetID, AssetName, AssetType, Model, SerialNumber, InvoiceID, AssignedTo, Department, PurchaseDate, PurchaseCost, WarrantyExpiry, Condition, LastMaintenance, Status) VALUES
+INSERT INTO asset (Id, AssetID, AssetName, AssetType, Model, SerialNumber, InvoiceID, AssignedTo, Department, PurchaseDate, PurchaseCost, WarrantyExpiry, Condition, LastMaintenance, Status) VALUES
 ('1', 'AST-001', 'Dell Latitude Laptop', 'Laptop', 'Latitude 5520', 'SN-DEL-2024-001', 'INV-2023-0015', 'John Smith', 'IT', '2023-01-15', 1250.00, '2026-01-15', 'Good', '2024-06-10', 'Active'),
 ('2', 'AST-002', 'HP ProBook Laptop', 'Laptop', 'ProBook 450 G8', 'SN-HP-2024-002', 'INV-2023-0042', 'Sarah Johnson', 'Finance', '2023-03-20', 1100.00, '2026-03-20', 'Good', '2024-05-15', 'Active'),
 ```
 
-After executing this script, the asset records are stored in the `assetinfo` table within the `asset.db` database. The database is now ready for integration with the Blazor application.
+After executing this script, the asset records are stored in the `asset` table within the `asset.db` database. The database is now ready for integration with the Blazor application.
 
 ---
 
@@ -121,7 +121,7 @@ All required packages are now installed.
 
 ### Step 3: Create the Data Model
 
-A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the `assetinfo` table.
+A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the `asset` table.
 
 **Instructions:**
 
@@ -135,7 +135,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Grid_SQLite.Data
 {
  /// <summary>
-    /// Represents an asset record mapped to the 'assetinfo' table in the database.
+    /// Represents an asset record mapped to the 'asset' table in the database.
     /// This model defines the structure of asset-related data used throughout the application.
     /// </summary>
     public class Asset
@@ -338,7 +338,7 @@ namespace Grid_SQLite.Data
                     .HasDefaultValue("Available");
 
                 // Table name
-                entity.ToTable("assetinfo");
+                entity.ToTable("asset");
             });
         }
     }
@@ -347,7 +347,7 @@ namespace Grid_SQLite.Data
 
 **Explanation:**
 - The `DbContext` class inherits from Entity Framework's `DbContext` base class.
-- The `Assets` property represents the `assetinfo` table in the database.
+- The `Assets` property represents the `asset` table in the database.
 - The `OnModelCreating` method configures how the database columns should behave (maximum length, required/optional, default values, etc.).
 
 The **AssetDbContext** class is required because:
@@ -1438,7 +1438,7 @@ Now Assets are removed from the database and the grid UI reflects the changes im
 
 **Batch Update**
 
-Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring assest consistency by applying all changes automically to the SQLite Server
+Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring asset consistency by applying all changes atomically to the SQLite Server.
 
 In **Home.razor**, implement the `BatchUpdateAsync` method within the `CustomAdaptor` class:
 
