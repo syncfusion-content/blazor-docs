@@ -1,1245 +1,1835 @@
 ---
 layout: post
-title: MySQL Server Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn about consuming data from MySQL Server and binding it to Syncfusion Component, and performing CRUD operations.
+title: Blazor Data Grid connected to MySQL via Entity Framework | Syncfusion
+description: Bind MySQL data to Blazor Data Grid using Entity Framework Core with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting MySQL Server data in to Blazor DataGrid Component
+# Connecting MySQL Server to Blazor Data Grid Using Entity Framework
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports binding data from a MySQL Server database using multiple approaches. Common methods include:
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a MySQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
 
-- Using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property for local binding.
-- Implementing a [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for custom logic.
-- Configuring remote data binding through adaptors such as [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor).
+**What is Entity Framework Core?**
 
-**Using UrlAdaptor**
+Entity Framework Core (EF Core) is a software tool that simplifies database operations in .NET applications. It serves as a bridge between C# code and databases like MySQL.
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) enables communication between the DataGrid and a remote API service connected to **MySQL** Server. This approach is suitable when the API implements custom logic for data operations and returns results in the **result** and **count** format.
+**Key Benefits of Entity Framework Core**
 
-**Using CustomAdaptor**
+- **Automatic SQL Generation**: Entity Framework Core generates optimized SQL queries automatically, eliminating the need to write raw SQL code.
+- **Type Safety**: Work with strongly-typed objects instead of raw SQL strings, reducing errors.
+- **Built-in Security**: Automatic parameterization prevents SQL injection attacks.
+- **Version Control for Databases**: Manage database schema changes version-by-version through migrations.
+- **Familiar Syntax**: Use LINQ (Language Integrated Query) syntax, which is more intuitive than raw SQL strings.
 
-The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) provides full control over data operations and CRUD functionality. It allows implementing custom logic for **searching**, **filtering**, **sorting**, **paging**, and **grouping** directly in the server-side code.
+**What is Pomelo MySQL?**
 
-## Binding data from MySQL Server using an API service
+**Pomelo MySQL** is a software library that helps .NET applications work with a MySQL database using Entity Framework Core. It acts as a bridge between Entity Framework Core and MySQL, allowing applications to read, write, update, and delete data in a MySQL database.
 
-This section describes step by step process how to retrieve data from a MySQL Server using an API service and bind it to the Blazor DataGrid component.
+## Prerequisites
 
-### Creating an API service
+Ensure the following software and packages are installed before proceeding:
 
-1. **Create an ASP.NET Core Web API Project**
+| Software/Package | Version | Purpose |
+|-----------------|---------|---------|
+| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| .NET SDK | net8.0 or compatible | Runtime and build tools |
+| MySQL Server | 8.0.41 or later | Database server |
+| Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Microsoft.EntityFrameworkCore | 9.0.0 or later | Core framework for database operations |
+| Microsoft.EntityFrameworkCore.Tools | 9.0.0 or later | Tools for managing database migrations |
+| Pomelo.EntityFrameworkCore.MySql | 9.0.0 or later | MySQL provider for Entity Framework Core |
 
-In Visual Studio, create a new **ASP.NET Core Web API** project named **MyWebService**.
+## Setting Up the MySQL Environment for Entity Framework Core
 
-Refer to [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed steps.
+### Step 1: Create the database and Table in MySQL server
 
-2. **Install SQL Client Package**
+First, the **MySQL database** structure must be created to store transaction records.
 
-Add the [MySQL.Data](https://www.nuget.org/packages/MySql.Data) NuGet package to the project using NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
+**Instructions:**
+1. Open MySQL Workbench or any MySQL client.
+2. Create a new database named `transactiondb`.
+3. Define a `transactions` table with the specified schema.
+4. Insert sample data for testing.
 
-3. **Add API Controller**
+Run the following SQL script:
 
-Create a controller named **GridController.cs** under the Controllers folder.
+```sql
+-- Create Database
+CREATE DATABASE IF NOT EXISTS transactiondb;
+USE transactiondb;
 
-4. **Fetch Data from SQL Server**
+-- Create Transaction Table
+CREATE TABLE IF NOT EXISTS transactions (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    TransactionId VARCHAR(50) NOT NULL UNIQUE,
+    CustomerId INT NOT NULL,
+    OrderId INT NULL,
+    InvoiceNumber VARCHAR(50) NULL,
+    Description VARCHAR(500) NULL,
+    Amount DECIMAL(15, 2) NOT NULL,
+    CurrencyCode VARCHAR(10) NULL,
+    TransactionType VARCHAR(50) NULL,
+    PaymentGateway VARCHAR(100) NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CompletedAt DATETIME NULL,
+    Status VARCHAR(50) NULL
+);
 
-Use **SqlConnection** and **SqlDataAdapter** to retrieve data and convert it into a collection of Order objects:
+-- Insert Sample Data (Optional)
+INSERT INTO transactions (TransactionId, CustomerId, OrderId, InvoiceNumber, Description, Amount, CurrencyCode, TransactionType, PaymentGateway, CreatedAt, CompletedAt, Status) VALUES
+('TXN260113001', 1001, 50001, 'INV-2026-001', 'Samsung S25 Ultra', 153399.00, 'INR', 'SALE', 'Razorpay', '2026-01-13 10:15:30', '2026-01-13 10:16:55', 'SUCCESS'),
+('TXN260113002', 1002, 50002, 'INV-2026-002', 'MacBook Pro M4', 224199.00, 'INR', 'SALE', 'Stripe', '2026-01-13 11:20:10', '2026-01-13 11:21:40', 'SUCCESS');
+```
 
-{% tabs %}
-{% highlight razor tabtitle="GridController.cs" %}
-using Microsoft.AspNetCore.Mvc;
-using MySql.Data.MySqlClient;
-using System.Data;
-using Syncfusion.Blazor;
-using Syncfusion.Blazor.Data;
-using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
+After executing this script, the transaction records are stored in the `transactions` table within the `transactiondb` database. The database is now ready for integration with the Blazor application.
 
-namespace MyWebService.Controllers
-{
-    [ApiController]
-    public class GridController : ControllerBase
-    {
-        public static List<Order> Orders { get; set; }
+---
 
-        public class Order
-        {
-            [Key]
-            public int? OrderID { get; set; }
-            public string? CustomerName { get; set; }
-            public int? EmployeeID { get; set; }
-            public decimal? Freight { get; set; }
-            public string? ShipCity { get; set; }
-        }
+### Step 2: Install Required NuGet Packages
 
-        [Route("api/[controller]")]
-        public List<Order> GetOrderData()
-        {
-            //TODO: Enter the connectionstring of database
-            string ConnectionString = @"<Enter a valid connection string>";
-            string QueryStr = "SELECT * FROM orders ORDER BY OrderID";
-            MySqlConnection sqlConnection = new(ConnectionString);
-            sqlConnection.Open();
-            //Initialize the MySqlCommand
-            MySqlCommand SqlCommand = new(QueryStr, sqlConnection);
-            //Initialize the MySqlDataAdapter
-            MySqlDataAdapter DataAdapter = new(SqlCommand);
-            DataTable DataTable = new();
-            // Using MySqlDataAdapter, process the query string and fill the data into the dataset
-            DataAdapter.Fill(DataTable);
-            sqlConnection.Close();
-            //Cast the data fetched from MySqlDataAdapter to List<T>
-            var DataSource = (from DataRow Data in DataTable.Rows
-                            select new Order()
-                            {
-                                OrderID = Convert.ToInt32(Data["OrderID"]),
-                                CustomerName = Data["CustomerName"].ToString(),
-                                EmployeeID = Convert.ToInt32(Data["EmployeeID"]),
-                                ShipCity = Data["ShipCity"].ToString(),
-                                Freight = Convert.ToDecimal(Data["Freight"])
-                            }).ToList();
-            return DataSource;
-        }
-    }
-}
-{% endhighlight %}
-{% endtabs %}
+Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
+This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-5. **Run and test the application**
+For this guide, a Blazor application named **Grid_MySQL** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and MySQL integration.
 
-Start the API and access **https://localhost:xxxx/api/Grid** to view the data.
+**Method 1: Using Package Manager Console**
 
-![Hosted API URL](../images/Ms-Sql-data.png)
-
-### Connecting Blazor DataGrid to an API service
-
-This section explains how to retrieve data from a **MySQL** Server database using `UrlAdaptor` and bind it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component.
-
-**Prerequisites**
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-1. **Create a Blazor Web App**
-
-Create a **Blazor Web App** using Visual Studio 2022. Use [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension.
-
-> Configure the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) during project creation.
-
-2. **Install Syncfusion Packages**
-
-* Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search and install the following packages:
-
-    - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
-    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-
-* Alternatively, use the Package Manager Console:
+1. Open Visual Studio 2022.
+2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
+3. Run the following commands:
 
 ```powershell
-Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Microsoft.EntityFrameworkCore -Version 9.0.0
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 9.0.0
+Install-Package Pomelo.EntityFrameworkCore.MySql -Version 9.0.0
+Install-Package Syncfusion.Blazor.Grids -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
-> When using **WebAssembly** or **Auto** render modes in a Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages within the client project.
+**Method 2: Using NuGet Package Manager UI**
 
-> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+2. Search for and install each package individually:
+   - **Microsoft.EntityFrameworkCore** (version 9.0.0 or later)
+   - **Microsoft.EntityFrameworkCore.Tools** (version 9.0.0 or later)
+   - **Pomelo.EntityFrameworkCore.MySql** (version 9.0.0 or later)
+   - **Syncfusion.Blazor.Grids** (version {{site.blazorversion}})
+   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
 
-3. **Register Syncfusion Blazor service**
+All required packages are now installed.
 
-- Add the required namespaces in **~/_Imports.razor**:
+### Step 3: Create the Data Model
 
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
+A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the `transactions` table.
+
+**Instructions:**
+
+1. Create a new folder named `Data` in the Blazor application project.
+2. Inside the `Data` folder, create a new file named **TransactionModel.cs**.
+3. Define the **TransactionModel** class with the following code:
+
+```csharp
+
+using System.ComponentModel.DataAnnotations;
+
+namespace Grid_MySQL.Data
+{
+    /// <summary>
+    /// Represents a transaction record mapped to the 'transactions' table in the database.
+    /// This model defines the structure of transaction-related data used throughout the application.
+    /// </summary>
+    public class TransactionModel
+    {
+        /// <summary>
+        /// Gets or sets the unique identifier for the transaction record.
+        /// </summary>
+        [Key]
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the unique transaction reference generated by the system or payment gateway.
+        /// </summary>
+        public string? TransactionId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the identifier of the customer associated with the transaction.
+        /// </summary>
+        public int? CustomerId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the identifier of the order linked to this transaction.
+        /// </summary>
+        public int? OrderId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the invoice number associated with the transaction.
+        /// </summary>
+        public string? InvoiceNumber { get; set; }
+
+        /// <summary>
+        /// Gets or sets a description or additional details about the transaction.
+        /// </summary>
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// Gets or sets the monetary amount of the transaction.
+        /// </summary>
+        public decimal Amount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the currency code (e.g., USD, INR, EUR) for the transaction.
+        /// </summary>
+        public string? CurrencyCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of transaction (e.g., Payment, Refund).
+        /// </summary>
+        public string? TransactionType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the payment gateway used to process the transaction.
+        /// </summary>
+        public string? PaymentGateway { get; set; }
+
+        /// <summary>
+        /// Gets or sets the timestamp indicating when the transaction was created.
+        /// </summary>
+        public DateTime? CreatedAt { get; set; }
+
+        /// <summary>
+        /// Gets or sets the timestamp indicating when the transaction was completed.
+        /// </summary>
+        public DateTime? CompletedAt { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current status of the transaction (e.g., Pending, Completed, Failed).
+        /// </summary>
+        public string? Status { get; set; }
+    }
+}
+
 ```
 
-- For apps using **WebAssembly** or **Auto** (Server and WebAssembly) render modes, register the service in both **~/Program.cs** files.
+**Explanation:**
+- The `[Key]` attribute marks the `Id` property as the primary key (a unique identifier for each record).
+- Each property represents a column in the database table.
+- The `?` symbol indicates that a property is nullable (can be empty).
 
-```cshtml
+The data model has been successfully created.
+
+### Step 4: Configure the DbContext
+
+A `DbContext` is a special class that manages the connection between the application and the MySQL database. It handles all database operations such as saving, updating, deleting, and retrieving data.
+
+**Instructions:**
+
+1. Inside the `Data` folder, create a new file named **TransactionDbContext.cs**.
+2. Define the `TransactionDbContext` class with the following code:
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+namespace Grid_MySQL.Data
+{
+    /// <summary>
+    /// DbContext for Transaction entity
+    /// Manages database connections and entity configurations
+    /// </summary>
+    public class TransactionDbContext : DbContext
+    {
+        public TransactionDbContext(DbContextOptions<TransactionDbContext> options)
+            : base(options)
+        {
+        }
+
+        /// <summary>
+        /// DbSet for Transaction entities
+        /// </summary>
+        public DbSet<TransactionModel> Transactions => Set<TransactionModel>();
+
+        /// <summary>
+        /// Configures the entity mappings and constraints
+        /// </summary>
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configure Transaction entity
+            modelBuilder.Entity<TransactionModel>(entity =>
+            {
+                // Primary Key
+                entity.HasKey(e => e.Id);
+
+                // Auto-increment for Primary Key
+                entity.Property(e => e.Id)
+                    .ValueGeneratedOnAdd();
+
+                // Column configurations
+                entity.Property(e => e.TransactionId)
+                    .HasMaxLength(50)
+                    .IsRequired(true);
+
+                entity.Property(e => e.InvoiceNumber)
+                    .HasMaxLength(100)
+                    .IsRequired(false);
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(500)
+                    .IsRequired(false);
+
+                entity.Property(e => e.CurrencyCode)
+                    .HasMaxLength(3)
+                    .HasDefaultValue("INR");
+
+                entity.Property(e => e.TransactionType)
+                    .HasMaxLength(50)
+                    .IsRequired(false);
+
+                entity.Property(e => e.PaymentGateway)
+                    .HasMaxLength(50)
+                    .IsRequired(false);
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(50)
+                    .IsRequired(false);
+
+                entity.Property(e => e.Amount)
+                    .HasPrecision(10, 2);
+
+                entity.Property(e => e.CustomerId)
+                    .IsRequired(false);
+
+                entity.Property(e => e.OrderId)
+                    .IsRequired(false);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .IsRequired(false);
+
+                entity.Property(e => e.CompletedAt)
+                    .HasColumnType("datetime")
+                    .IsRequired(false);
+
+                entity.ToTable("transactions");
+            });
+        }
+    }
+}
+```
+
+**Explanation:**
+- The `DbContext` class inherits from Entity Framework's `DbContext` base class.
+- The `Transactions` property represents the `transactions` table in the database.
+- The `OnModelCreating` method configures how the database columns should behave (maximum length, required/optional, default values, etc.).
+
+The **TransactionDbContext** class is required because:
+
+- It **connects** the application to the database.
+- It **manages** all database operations.
+- It **maps** C# models to actual database tables.
+- It **configures** how data should look inside the database.
+
+Without this class, Entity Framework Core will not know where to save data or how to create the transactions table. The DbContext has been successfully configured.
+
+### Step 5: Configure the Connection String
+
+A connection string contains the information needed to connect the application to the MySQL database, including the server address, port, database name, and credentials.
+
+**Instructions:**
+
+1. Open the `appsettings.json` file in the project root.
+2. Add or update the `ConnectionStrings` section with the MySQL connection details:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;Database=transactiondb;Uid=root;Pwd=Amrish_arjun11;SslMode=None;ConvertZeroDateTime=false;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
+**Connection String Components:**
+
+| Component | Description |
+|-----------|-------------|
+| Server | The address of the MySQL server (use `localhost` for local development) |
+| Port | The MySQL port number (default is `3306`) |
+| Database | The database name (in this case, `transactiondb`) |
+| Uid | The MySQL username (default is `root`) |
+| Pwd | The MySQL password |
+| SslMode | SSL encryption mode (set to `None` for local development) |
+| ConvertZeroDateTime | Converts zero datetime values to NULL |
+
+The database connection string has been configured successfully.
+
+### Step 6: Create the Repository Class
+
+A repository class is an intermediary layer that handles all database operations. This class uses Entity Framework Core to communicate with the database.
+
+**Instructions:**
+
+1. Inside the `Data` folder, create a new file named **TransactionRepository.cs**.
+2. Define the **TransactionRepository** class with the following code:
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+namespace Grid_MySQL.Data
+{
+    /// <summary>
+    /// Repository pattern implementation for Transaction entity using Entity Framework Core
+    /// Handles all CRUD operations and business logic for transactions
+    /// </summary>
+    public class TransactionRepository
+    {
+        private readonly TransactionDbContext _context;
+
+        public TransactionRepository(TransactionDbContext context)
+        {
+            _context = context;
+        }
+
+        /// <summary>
+        /// Retrieves all transactions from the database ordered by ID in descending order
+        /// </summary>
+        /// <returns>List of all transactions</returns>
+        public async Task<List<TransactionModel>> GetTransactionsAsync()
+        {
+            return await _context.Transactions
+                .OrderByDescending(t => t.Id)
+                .ToListAsync();
+        }
+
+        /// <summary>
+        /// Adds a new transaction to the database
+        /// </summary>
+        public async Task AddTransactionAsync(TransactionModel transaction)
+        {
+            // Handle logic to add a new transaction to the database
+        }
+
+        /// <summary>
+        /// Updates an existing transaction in the database
+        /// </summary>
+        public async Task UpdateTransactionAsync(TransactionModel transaction)
+        {
+            // Handle logic to update an existing transaction to the database
+        }
+
+        /// <summary>
+        /// Deletes a transaction from the database
+        /// </summary>
+        public async Task RemoveTransactionAsync(int? transactionId)
+        {
+            // Handle logic to delete an existing transaction to the database
+        }
+    }
+}
+```
+
+The repository class has been created.
+
+### Step 7: Register Services in Program.cs
+
+The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Entity Framework Core and the repository pattern.
+
+**Instructions:**
+
+1. Open the `Program.cs` file at the project root.
+2. Add the following code after the line `var builder = WebApplication.CreateBuilder(args);`:
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using Grid_MySQL.Data;
 using Syncfusion.Blazor;
 
+var builder = WebApplication.CreateBuilder(args);
+
+// Get connection string from appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// Register DbContext with MySQL database
+builder.Services.AddDbContext<TransactionDbContext>(options =>
+{
+    options.UseMySql(
+        connectionString,
+        ServerVersion.AutoDetect(connectionString)
+    );
+});
+
+// Register the repository for dependency injection
+builder.Services.AddScoped<TransactionRepository>();
+
+// Register Syncfusion Blazor services
 builder.Services.AddSyncfusionBlazor();
+
+// Add other services as needed
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseAntiforgery();
+
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+app.Run();
 ```
 
-4. **Add stylesheet and script resources**
+The service registration has been completed successfully.
 
-Access the theme stylesheet and script from NuGet using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in **~/Components/App.razor**:
+---
+
+## Integrating Syncfusion Blazor DataGrid
+
+### Step 1: Install and Configure Blazor DataGrid Components
+
+Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+
+**Instructions:**
+
+1. The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
+2. Import the required namespaces in the `Components/_Imports.razor` file:
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+```
+
+3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
-</head>
+<!-- Syncfusion Blazor Stylesheet -->
+<link href="_content/Syncfusion.Blazor/styles/tailwind3.css" rel="stylesheet" />
 
-<body>
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
+<!-- Syncfusion Blazor Scripts -->
+<script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-> * Refer to [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for additional methods such as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
-> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in the Blazor Web App configuration.
+Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-5. **Configure DataGrid with UrlAdaptor**
+### Step 2: Update the Blazor DataGrid in the Home Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component supports multiple adaptors for remote data binding. For API services, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor) and specify the service endpoint in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
+The Home component will display the transaction data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+**Instructions:**
 
-<SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager Url="https://localhost:xxxx/api/Grid" BatchUrl="https://localhost:xxxx/api/Grid/Batch" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridAggregates>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Sum: @aggregate.Sum</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Average: @aggregate.Average</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-    </GridAggregates>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID"  ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
+1. open the file named `Home.razor` in the `Components/Pages` folder.
+2. Add the following code to create a basic DataGrid:
 
-@code {
-    SfGrid<Order> Grid { get; set; }
-    public List<Order> Orders { get; set; }
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public int EmployeeID { get; set; }
-        public decimal Freight { get; set; }
-        public string ShipCity { get; set; }
-    }
-}
-{% endhighlight %}
-{% highlight c# tabtitle="GridController.cs" %}
-[ApiController]
-public class GridController : ControllerBase
-{ 
-    /// <summary>
-    /// Returns the data collection as result and count after performing data operations based on request from <see cref=”DataManagerRequest”/>
-    /// </summary>
-    /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates and paging which is handled on the Blazor DataGrid component side</param>
-    /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
-    [HttpPost]
-    [Route("api/[controller]")]
-    public object Post([FromBody] DataManagerRequest DataManagerRequest)
-    {
-        IEnumerable<Order> DataSource = GetOrderData();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        return new { result = DataSource, count = TotalRecordsCount};
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Handling data operations in UrlAdaptor
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports server-side operations such as **searching**, **sorting**, **filtering**, **aggregating**, and **paging** when using the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor).
-
-The [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object provides details for each operation, and these can be applied using built-in methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class:
-
-* [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) -Applies search criteria to the data source based on search filters.
-* [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) - Filters the data source using conditions specified in the request.
-* [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) - Sorts the data source according to one or more sort descriptors.
-* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records for paging.
-* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records before returning results.
-
-These methods enable efficient handling of large datasets by performing operations on the server side. The following sections demonstrate how to manage these operations using the `UrlAdaptor`.
-
-> * To enable these operations, add the **Syncfusion.Blazor.Data** package to the API service project using NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
-
-### Handling searching operation
-
-Enable server-side searching by implementing logic in the API controller with the [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This method applies search criteria to the collection based on filters specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
-
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-    IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Searching in UrlAdaptor.
-    if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
-    {
-        // Searching
-        DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
-        //Add custom logic here if needed and remove above method
-    }
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    return new { result = DataSource, count = TotalRecordsCount };
-}
-{% endhighlight %}
-
-### Handling filtering operation
-
-Enable server-side filtering by implementing logic in the API controller using the [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This method applies filter conditions to the collection based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-    IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Filtering in UrlAdaptor.
-    if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
-    {
-        // Filtering
-        DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
-        //Add custom logic here if needed and remove above method
-    }
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    return new { result = DataSource, count = TotalRecordsCount };
-}
-
-{% endhighlight %}
-
-### Handling sorting operation
-
-Enable server-side sorting by implementing logic in the API controller using the [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This method sorts the collection based on one or more sort descriptors specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-    IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Sorting in UrlAdaptor.
-    if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
-    {
-        // Sorting
-        DataSource = DataOperations.PerformSorting(DataSource, DataManagerRequest.Sorted);
-        //Add custom logic here if needed and remove above method
-    }
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    return new { result = DataSource, count = TotalRecordsCount };
-}
-{% endhighlight %}
-
-### Handling aggregate operation
-
-Enable server-side aggregation by implementing logic in the API controller using the [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This method calculates aggregate values such as **Sum**, **Average**, **Min**, and **Max** for the specified fields based on the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
- [HttpPost]
- [Route("api/[controller]")]
- public object Post([FromBody] DataManagerRequest DataManagerRequest)
- {
-    IEnumerable<Order> DataSource = GetOrderData();
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    // Handling Aggregation in UrlAdaptor.
-    IDictionary<string, object> Aggregates = null;
-    if (DataManagerRequest.Aggregates != null) 
-    {  
-        // Aggregation
-        Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
-        //Add custom logic here if needed and remove above method                
-    }
-    return new { result = DataSource, count = TotalRecordsCount, aggregates = Aggregates };
- }
-{% endhighlight %}
-
-> The server-side implementation of the `PerformAggregation` method is required only for [Footer aggregates](https://blazor.syncfusion.com/documentation/datagrid/footer-aggregate). Explicit handling is not necessary for[ Group Footer aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate#group-footer-aggregates) or [Group Caption aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate#group-caption-aggregates).
-
-### Handling paging operation
-
-Enable server-side paging by implementing logic in the API controller using the [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) and [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Collections_Generic_IEnumerable___0__System_Int32_) methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. These methods apply paging based on the **Skip** and **Take** values provided in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-    IEnumerable<Order> DataSource = GetOrderData();
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    // Handling Paging in UrlAdaptor.
-    if (DataManagerRequest.Skip != 0)
-    {
-        // Paging
-        DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
-        //Add custom logic here if needed and remove above method
-    }
-    if (DataManagerRequest.Take != 0)
-    {
-        DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
-        //Add custom logic here if needed and remove above method
-    }
-    return new { result = DataSource, count = TotalRecordsCount };
-}
-{% endhighlight %}
-
-N> For optimal performance, apply operations in the following sequence: **Searching → Filtering → Sorting → Aggregation → Paging → Grouping** in [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
-
-### Handling CRUD operations
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports Create, Read, Update, and Delete (CRUD) operations through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. These operations are mapped to API endpoints using properties such as:
-
-* [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl) – API endpoint for inserting new records.
-* [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) – API endpoint for updating existing records.
-* [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) – API endpoint for deleting records.
-* [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl) – Single endpoint for all CRUD operations.
-* [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) – API endpoint for batch editing.
-
-To enable editing, configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) and [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) properties, and set the Mode property to [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditMode.html#Syncfusion_Blazor_Grids_EditMode_Normal) to allow adding, editing, and deleting records.
-
-{% tabs %}
-{% highlight razor %}
-<SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager Url="https://localhost:xxxx/api/Grid" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" BatchUrl="https://localhost:xxxx/api/Grid/Batch" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-{% endhighlight %}
-{% endtabs %}
-
-> * Normal(Inline) editing is the default [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor DataGrid component.
-> * To enable CRUD operations, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for a column that contains unique values.
-> * If the database includes an auto-generated column, set the [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property for that column to disable editing during **add** or **update** operations.
-
-**Insert Operation:**
-
-To insert a new record, click the **Add** toolbar button. This action displays the edit form for entering the new record details. After providing the required values, click the **Update** toolbar button. The record will be added to the Orders table by invoking the following **POST** API method.
-
-{% tabs %}
-{% highlight c# tabtitle="OrdersController.cs" %}
-[HttpPost]
-[Route("api/Grid/Insert")]
-/// <summary>
-/// Inserts a new data item into the data collection.
-/// </summary>
-/// <param name="CRUDModel<T>">The set of information along with new record detail which is need to be inserted.</param>
-/// <returns>Returns void</returns>
-public void Insert([FromBody] CRUDModel<Order> Value)
-{
-    //TODO: Enter the connectionstring of database
-    string ConnectionString = @"<Enter a valid connection string>";
-    //Create query to insert the specific into the database by accessing its properties
-    string Query = $"Insert into Orders(OrderID, CustomerName,Freight,ShipCity,EmployeeID) values( '{Value.Value.OrderID}','{Value.Value.CustomerName}','{Value.Value.Freight}','{Value.Value.ShipCity}','{Value.Value.EmployeeID}')";
-    MySqlConnection Connection = new MySqlConnection(ConnectionString);
-    Connection.Open();
-    MySqlCommand Command = new MySqlCommand(Query, Connection);
-    //Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-    //Add custom logic here if needed and remove above method
-}
-{% endhighlight %}
-{% endtabs %}
-
-**Update Operation:**
-
-To edit a row, select the required row and click the **Edit** button in the toolbar. An edit form will appear, allowing changes to any column value. After making the changes, click the **Update** button in the toolbar to save the record in the Orders table. This action triggers the following **POST** method in the API.
-
-{% tabs %}
-{% highlight c# tabtitle="OrdersController.cs" %}
-[HttpPost]
-[Route("api/Grid/Update")]
-/// <summary>
-/// Update a existing data item from the data collection.
-/// </summary>
-/// <param name="CRUDModel<T>">The set of information along with updated record detail which is need to be updated.</param>
-/// <returns>Returns void</returns>
-public void Update([FromBody] CRUDModel<Order> Value)
-{
-    //TODO: Enter the connectionstring of database
-    string ConnectionString = @"<Enter a valid connection string>";
-    //Create query to update the changes into the database by accessing its properties
-    string Query = $"Update Orders set CustomerName='{Value.Value.CustomerName}', Freight='{Value.Value.Freight}',EmployeeID='{Value.Value.EmployeeID}',ShipCity='{Value.Value.ShipCity}' where OrderID='{Value.Value.OrderID}'";
-    MySqlConnection Connection = new MySqlConnection(ConnectionString);
-    Connection.Open();
-    //Execute the MySQL Command
-    MySqlCommand Command = new MySqlCommand(Query, Connection);
-    //Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-    //Add custom logic here if needed and remove above method
-}
-{% endhighlight %}
-{% endtabs %}
-
-**Delete Operation:**
-
-To remove a record, select the desired row and click the **Delete** toolbar button. This action sends a **DELETE** request to the configured API endpoint, passing the primary key of the selected record. The corresponding entry will be deleted from the Orders table by invoking the following **POST** API method.
-
-{% tabs %}
-{% highlight c# tabtitle="OrdersController.cs" %}
- [HttpPost]
-[Route("api/Grid/Delete")]
-/// <summary>
-/// Remove a specific data item from the data collection.
-/// </summary>
-/// <param name="CRUDModel<T>">The set of information along with specific record detail which is need to be removed.</param>
-/// <returns>Returns void</returns>
-public void Delete([FromBody] CRUDModel<Order> Value)
-{
-    //TODO: Enter the connectionstring of database
-    string ConnectionString = @"<Enter a valid connection string>";
-    //Create query to remove the specific from database by passing the primary key column value.
-    string Query = $"Delete from Orders where OrderID={Value.Key}";
-    MySqlConnection Connection = new MySqlConnection(ConnectionString);
-    Connection.Open();
-    //Execute the MySQL Command
-    MySqlCommand Command = new MySqlCommand(Query, Connection);
-    //Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-    //Add custom logic here if needed and remove above method
-}
-{% endhighlight %}
-{% endtabs %}
-
-**Batch Operation:**
-
-To perform batch updates, set the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) to **Batch** in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component and configure the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
-In batch mode:
-
-- Use the **Add** toolbar button to insert new rows.
-- Double-click a cell to edit its value.
-- Select a row and click **Delete** to remove it.
-- Click **Update** to commit all changes (insert, update, delete) in a single request from the Orders table using a single API **POST** request.
-
-{% highlight razor %}
- [HttpPost]
-[Route("api/Grid/Batch")]
-/// <summary>
-/// Batchupdate (Insert, Update, Delete) a collection of data items from the data collection.
-/// </summary>
-/// <param name="CRUDModel<T>">The set of information along with details about the CRUD actions to be executed from the database.</param>
-/// <returns>Returns void</returns>
-public void Batch([FromBody] CRUDModel<Order> Value)
-{
-    //TODO: Enter the connectionstring of database
-    string ConnectionString = @"<Enter a valid connection string>";
-    if (Value.Changed != null)
-    {
-        foreach (var Record in (IEnumerable<Order>)Value.Changed)
-        {
-            //Create query to update the changes into the database by accessing its properties
-            string Query = $"Update Orders set CustomerName='{Record.CustomerName}', Freight='{Record.Freight}',EmployeeID='{Record.EmployeeID}',ShipCity='{Record.ShipCity}' where OrderID='{Record.OrderID}'";
-            MySqlConnection Connection = new MySqlConnection(ConnectionString);
-            Connection.Open();
-            //Execute the MySQL Command
-            MySqlCommand Command = new MySqlCommand(Query, Connection);
-            //Execute this code to reflect the changes into the database
-            Command.ExecuteNonQuery();
-            Connection.Close();
-            //Add custom logic here if needed and remove above method
-        }
-
-    }
-    if (Value.Added != null)
-    {
-        foreach (var Record in (IEnumerable<Order>)Value.Added)
-        {
-            //Create query to insert the specific into the database by accessing its properties 
-            string Query = $"Insert into Orders(CustomerName,Freight,ShipCity,EmployeeID) values('{Record.CustomerName}','{Record.Freight}','{Record.ShipCity}','{Record.EmployeeID}')";
-            MySqlConnection Connection = new MySqlConnection(ConnectionString);
-            Connection.Open();
-            //Execute the MySQL Command
-            MySqlCommand Command = new MySqlCommand(Query, Connection);
-            //Execute this code to reflect the changes into the database
-            Command.ExecuteNonQuery();
-            Connection.Close();
-            //Add custom logic here if needed and remove above method
-        }
-    }
-    if (Value.Deleted != null)
-    {
-        foreach (var Record in (IEnumerable<Order>)Value.Deleted)
-        {
-            //Create query to remove the specific from database by passing the primary key column value.
-            string Query = $"Delete from Orders where OrderID={Record.OrderID}";
-            MySqlConnection Connection = new MySqlConnection(ConnectionString);
-            Connection.Open();
-            //Execute the MySQL Command
-            MySqlCommand Command = new MySqlCommand(Query, Connection);
-            //Execute this code to reflect the changes into the database
-            Command.ExecuteNonQuery();
-            Connection.Close();
-            //Add custom logic here if needed and remove above method
-        }
-    }
-}
-{% endhighlight %}
-
-![Blazor DataGrid component bound with MySQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
-
-> Find the complete implementation in this [GitHub](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor) repository.
-
-## Binding data from MySQL Server using CustomAdaptor
-
-This section explains how to retrieve data from a Microsoft SQL Server database using [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) and bind it to the Blazor DataGrid component.
-
-**Step 1: Create the Blazor DataGrid Component**
-
-Follow the procedure described in [Connecting Blazor DataGrid to an API service](#connecting-blazor-datagrid-to-an-api-service).
-
-> * Set the rendermode to **InteractiveServer** or **InteractiveAuto** based on application configuration.
-
-**Step 2: Install MySQL NuGet Package**
-
-Install the **MySql.Data** package to connect to MySQL Server.
-
-In Visual Studio, open (*Tools → NuGet Package Manager → Manage NuGet Packages*) for Solution, search for **MySql.Data**, and install it.
-
-**Step 3: Configure the DataGrid with CustomAdaptor**
-
-Inject a custom service into the `CustomAdaptor` and configure the component as shown below:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+```html
+@page "/"
 @rendermode InteractiveServer
+@inject TransactionRepository TransactionService
 
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
-@using MySql.Data.MySqlClient;
+<PageTitle>Transaction Management System</PageTitle>
 
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
-    <GridAggregates>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Sum: @aggregate.Sum</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Average: @aggregate.Average</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-    </GridAggregates>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" ValidationRules="@(new ValidationRules{ Required= true })"  IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
+<div class="container-fluid p-4">
+    <h1 class="mb-4">Transaction Management System</h1>
+    <p class="mb-3">Manage and view all transaction records from the database.</p>
+    
+    <!-- Syncfusion Blazor DataGrid Component -->
+    <SfGrid TValue="TransactionModel" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
+        <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+        
+        <GridColumns>
+           //columns configuration
+        </GridColumns>
+        
+        <GridPageSettings PageSize="10"></GridPageSettings>
+    </SfGrid>
+</div>
 
 @code {
-    SfGrid<Order> Grid { get; set; }
+    // CustomAdaptor class will be added in the next step
 }
-{% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs" %}
- public class Order
- {
-     public int? OrderID { get; set; }
-     public string CustomerName { get; set; }
-     public int EmployeeID { get; set; }
-     public decimal Freight { get; set; }
-     public string ShipCity { get; set; }
- }
-{% endhighlight %}
-{% endtabs %}
+```
 
-**Step 4: Implement Data Retrieval Logic**
+**Component Explanation:**
 
-Implement the [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method in `CustomAdaptor` to fetch data from the service by calling **GetOrdersAsync**.
+- **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component.
+- **`@inject TransactionRepository`**: Injects the repository to access database methods.
+- **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
+- **`<GridColumns>`**: Defines individual columns in the DataGrid.
+- **`<GridPageSettings>`**: Configures pagination with 10 records per page.
 
-* Use `SqlDataAdapter` to retrieve data from Microsoft SQL Server.
-* Populate a **DataSet** using the **Fill** method and convert it into a List.
-* Return the response as a **Result** and **Count** pair in the `ReadAsync` method to bind data to the Blazor DataGrid.
+The Home component has been updated successfully with DataGrid.
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@rendermode InteractiveServer
+---
 
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
-@using MySql.Data.MySqlClient;
-@using System.Collections
+### Step 3: Implement the CustomAdaptor
 
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
-    <GridAggregates>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Sum: @aggregate.Sum</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Average: @aggregate.Average</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-    </GridAggregates>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" ValidationRules="@(new ValidationRules{ Required= true })"  IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **MySQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to `CustomAdaptor` for scenarios that require full control over data operations.
 
+The `CustomAdaptor` is a bridge between the DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Add the following `CustomAdaptor` class code inside the `@code` block:
+
+```csharp
 @code {
+
+    private static TransactionRepository? _transactionService;
+
     /// <summary>
-    /// Implementing CustomAdaptor by extending the <see cref=“DataAdaptor”/> class.
-    /// The Blazor DataGrid component support for custom data binding, which enables the binding and manipulation of data in a personalized way, using user-defined methods.
+    /// CustomAdaptor class bridges DataGrid interactions with database operations.
+    /// This adaptor handles all data retrieval and manipulation for the DataGrid.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
-        public OrderData OrderService = new OrderData();
+        public TransactionRepository? TransactionService
+        {
+            get => _transactionService;
+            set => _transactionService = value;
+        }
+
         /// <summary>
-        /// Returns the data collection after performing data operations based on request from <see cref=”DataManagerRequest”/>
+        /// ReadAsync retrieves records from the database and applies data operations.
+        /// This method executes when the grid initializes and when filtering, searching, sorting, or paging occurs.
         /// </summary>
-        /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates paging and grouping which is handled on the Blazor DataGrid component side</param>
-        /// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-        /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
-        public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-            int TotalRecordsCount = DataSource.Cast<Order>().Count();
-            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-        }
-    }
-}
-{% endhighlight %}
-{% highlight razor tabtitle="OrderData.cs" %}
-public class OrderData
-{
-     public async Task<List<Order>> GetOrdersAsync()
-        {
-            //Create query to fetch data from database
-            string Query = "SELECT * FROM orders ORDER BY OrderID;";
-            List<Order> Orders = null;
-            //Create SQL Connection
-            using (MySqlConnection Connection = new MySqlConnection(ConnectionString))
+            try
             {
-                //Using MySqlDataAdapter and Query create connection with database 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(Query, Connection);
-                DataSet data = new DataSet();
-                Connection.Open();
-                // Using MySqlDataAdapter, process the query string and fill the data into the dataset
-                adapter.Fill(data);
-                //Cast the data fetched from MySqlDataAdapter to List<T>
-                Orders = data.Tables[0].AsEnumerable().Select(r => new Order
+                // Fetch all transactions from the database
+                IEnumerable<TransactionModel> dataSource = await _transactionService!.GetTransactionsAsync();
+
+                // Apply search operation if search criteria exists
+                if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
                 {
-                    OrderID = r.Field<int>("OrderID"),
-                    CustomerName = r.Field<string>("CustomerName"),
-                    EmployeeID = r.Field<int>("EmployeeID"),
-                    ShipCity = r.Field<string>("ShipCity"),
-                    Freight = r.Field<decimal>("Freight")
-                }).ToList();
-                Connection.Close();
-            }
-            return Orders;
-        }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor DataGrid component bound with MySQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
-
-### Handling data operations in a Custom Adaptor
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports server-side operations such as **searching**, **filtering**, **sorting**, **paging**, and **aggregating** when using a `CustomAdaptor`. These operations are implemented by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object provides the necessary details for each operation, and these can be applied using built-in methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) and [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) classes:
-
-* [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) – Applies search criteria to the data source based on search filters.
-
-* [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) – Filters the data source using conditions specified in the request.
-
-* [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SortedColumn__) – Sorts the data source according to one or more sort descriptors.
-
-* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) – Retrieves a specified number of records for paging.
-
-* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Collections_Generic_IEnumerable___0__System_Int32_) – Skips a defined number of records before returning results.
-
-* [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) – Applies aggregate details to calculate summary values such as Sum, Average, Min, and Max.
-
-These methods enable efficient server-side data handling in a custom adaptor implementation for **MySQL Server**.
-
-N> To enable these operations, install the **Syncfusion.Blazor.Data** package using NuGet Package Manager in Visual Studio:
-
-(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
-
-### Handling searching operation
-
-When using `CustomAdaptor`, the searching operation is implemented by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class applies search criteria from the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data source. Custom logic can also be implemented to handle searching as required.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Searching in CustomAdaptor.
-        if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
-        {
-            // Searching
-            DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
-            //Add custom logic here if needed and remove above method
-        }
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-### Handling filtering operation
-
-When implementing `CustomAdaptor`, the filtering operation is managed by overriding the[Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method in the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class applies filter criteria from the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data collection. Custom filtering logic can also be implemented to meet specific requirements.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Filtering in CustomAdaptor.
-        if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
-        {
-            // Filtering
-            DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
-            //Add custom logic here if needed and remove above method
-        }
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-### Handling sorting operation
-
-When implementing `CustomAdaptor`, the sorting operation is handled by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method in the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class applies sort criteria from the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data collection. Custom sorting logic can also be implemented to meet specific requirements.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Sorting in CustomAdaptor.
-        if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
-        {
-            // Sorting
-            DataSource = DataOperations.PerformSorting(DataSource, DataManagerRequest.Sorted);
-            //Add custom logic here if needed and remove above method
-        }
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-### Handling aggregate operation
-
-When implementing `CustomAdaptor`, aggregate operations are managed by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor-1.html) abstract class.
-
-The built-in [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) method in the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class calculates aggregate values based on the criteria specified in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html). Custom aggregation logic can also be implemented when specific requirements exist.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        // Handling Aggregation in CustomAdaptor.
-        IDictionary<string, object> Aggregates = null;
-        if (DataManagerRequest.Aggregates != null) // Aggregation
-        {
-            Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
-            //Add custom logic here if needed and remove above method
-        }
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount, Aggregates = Aggregates } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-> The server-side implementation of the `PerformAggregation` method is required only for [Footer aggregates](https://blazor.syncfusion.com/documentation/datagrid/footer-aggregate). Explicit handling is not necessary for[ Group Footer aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate#group-footer-aggregates) or [Group Caption aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate#group-caption-aggregates).
-
-### Handling paging operation
-
-When implementing `CustomAdaptor`, paging is managed by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) and [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Collections_Generic_IEnumerable___0__System_Int32_) methods in the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class apply paging criteria from the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data collection. Custom paging logic can also be implemented when specific requirements exist.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        // Handling paging in CustomAdaptor.
-        if (DataManagerRequest.Skip != 0)
-        {
-            // Paging
-            DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
-            //Add custom logic here if needed and remove above method
-        }
-        if (DataManagerRequest.Take != 0)
-        {
-            // Taking
-            DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
-            //Add custom logic here if needed and remove above method
-        }
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-### Handling grouping operation
-
-When implementing `CustomAdaptor`, grouping is managed by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_Group__1_System_Collections_IEnumerable_System_String_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__System_Boolean_System_Boolean_) method in the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class applies grouping logic based on the configuration in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html). Custom grouping logic can also be implemented when specific requirements exist.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        DataResult DataObject = new DataResult();
-        // Handling Group operation in CustomAdaptor.
-        if (DataManagerRequest.Group != null)
-        {
-            IEnumerable ResultData = DataSource.ToList();
-            // Grouping
-            foreach (var group in DataManagerRequest.Group)
-            {
-                ResultData = DataUtil.Group<Order>(ResultData, group, DataManagerRequest.Aggregates, 0, DataManagerRequest.GroupByFormatter);
-                //Add custom logic here if needed and remove above method
-            }
-            DataObject.Result = ResultData;
-            DataObject.Count = TotalRecordsCount;
-            return DataManagerRequest.RequiresCounts ? DataObject : (object)ResultData;
-        }
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-N> For optimal performance, apply operations in the following sequence: **Searching → Filtering → Sorting → Aggregation → Paging → Grouping** in [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
-
-```cshtml
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data Read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        DataResult DataObject = new DataResult();
-        // Handling both Grouping and Aggregation in CustomAdaptor.
-        if (DataManagerRequest.Aggregates != null || DataManagerRequest.Group != null) // Aggregation
-        {
-            if (DataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = DataSource.ToList();
-                // Grouping
-                foreach (var group in DataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Order>(ResultData, group, DataManagerRequest.Aggregates, 0, DataManagerRequest.GroupByFormatter);
-                    //Add custom logic here if needed and remove above method
+                    dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
                 }
-                DataObject.Result = ResultData;
-            }
-            else
-            {
-                DataObject.Result = DataSource;
-            }
-            DataObject.Count = TotalRecordsCount;
-            DataObject.Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
 
-            return DataManagerRequest.RequiresCounts ? DataObject : (object)DataSource;
+                // Apply filter operation if filter criteria exists
+                if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+                {
+                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                }
+
+                // Apply sort operation if sort criteria exists
+                if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+                {
+                    dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+                }
+
+                // Calculate total record count before paging for accurate pagination
+                int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
+
+                // Apply paging skip operation
+                if (dataManagerRequest.Skip != 0)
+                {
+                    dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+                }
+
+                // Apply paging take operation to retrieve only the requested page size
+                if (dataManagerRequest.Take != 0)
+                {
+                    dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+                }
+
+                // Return the result with total count for pagination metadata
+                return dataManagerRequest.RequiresCounts
+                    ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
+                    : (object)dataSource;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while retrieving data: {ex.Message}");
+            }
         }
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
+    }
+}
+
+```
+
+The `CustomAdaptor` class has been successfully implemented with all data operations.
+
+**Common methods in data operations**
+
+* [ReadAsync(DataManagerRequest)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) - Retrieve and process records (search, filter, sort, page, group)
+
+* [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) - Applies search criteria to the collection.
+* [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) - Filters data based on conditions.
+* [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) - Sorts data by one or more fields.
+* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records for paging.
+* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records for paging.
+* [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) – Calculates aggregate values such as Sum, Average, Min, and Max.
+
+---
+
+### Step 4: Add Toolbar with CRUD and search options
+
+The toolbar provides buttons for adding, editing, deleting records, and searching the data.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
+
+```html
+<SfGrid TValue="TransactionModel" 
+        AllowPaging="true" 
+        AllowSorting="true" 
+        AllowFiltering="true" 
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+
+3. Add the toolbar items list in the `@code` block:
+
+```csharp
+@code {
+    private List<string> ToolbarItems = new List<string> { "Add", "Edit", "Delete", "Update", "Cancel", "Search"};
+
+    // CustomAdaptor class code...
+}
+```
+
+**Toolbar Items Explanation:**
+
+| Item | Function |
+|------|----------|
+| `Add` | Opens a form to add a new transaction record. |
+| `Edit` | Enables editing of the selected record. |
+| `Delete` | Deletes the selected record from the database. |
+| `Update` | Saves changes made to the selected record. |
+| `Cancel` | Cancels the current edit or add operation. |
+| `Search` | Displays a search box to find records. |
+
+The toolbar has been successfully added.
+
+---
+
+### Step 5: Implement Paging Feature
+
+Paging divides large datasets into smaller pages to improve performance and usability.
+
+**Instructions:**
+
+1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+2. The page size is configured with [<GridPageSettings>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+3. No additional code changes are required from the previous steps.
+
+```html
+<SfGrid TValue="TransactionModel" 
+        AllowPaging="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
+
+```csharp
+@code {
+   
+    
+/// <summary>
+/// CustomAdaptor class to handle grid data operations with MySQL using Entity Framework
+/// </summary>
+public class CustomAdaptor : DataAdaptor
+{
+    public static TransactionRepository? _transactionService { get; set; }
+    public TransactionRepository? TransactionService 
+    { 
+        get => _transactionService;
+        set => _transactionService = value;
+    }
+
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+    {
+        IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();        
+
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
+        DataResult dataObject = new DataResult();
+        
+        // Handling Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);            
+        }
+
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);            
+        }
+
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+            : (object)dataSource;
+    }
+
+}
+```
+
+Fetches transaction data by calling the **GetTransactionsAsync** method, which is implemented in the **TransactionRepository.cs** file.
+
+```csharp
+/// <summary>
+/// Retrieves all transactions from the database ordered by ID descending
+/// </summary>
+/// <returns>List of all transactions</returns>
+public async Task<List<TransactionModel>> GetTransactionsAsync()
+{
+    try
+    {
+        return await _context.Transactions
+            .OrderByDescending(t => t.Id)
+            .ToListAsync();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error retrieving transactions: {ex.Message}");
+        throw;
     }
 }
 ```
 
-### Handling CRUD operations
+**How Paging Works:**
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports Create, Read, Update, and Delete (CRUD) operations through the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration. Multiple edit modes are available, including **Inline**, **Dialog**, and **Batch** editing. For details, refer to the [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
+- The DataGrid displays 10 records per page (as set in `GridPageSettings`).
+- Navigation buttons allow the user to move between pages.
+- When a page is requested, the `ReadAsync` method receives skip and take values.
+- The `DataOperations.PerformSkip()` and `DataOperations.PerformTake()` methods handle pagination.
+- Only the requested page of records is transmitted from the server.
 
-When using `CustomAdaptor`, CRUD operations are implemented by overriding the following methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor-1.html) class:
+Paging feature is now active with 10 records per page.
 
-* [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) / [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) – Handles record insertion.
-* [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Handles record updates.
-* [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Handles record deletion.
-* [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) / [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) – Handles batch operations (insert, update, delete).
+---
 
-Each method can be customized to execute SQL commands against the **Microsoft SQL Server** database.
+### Step 6: Implement Searching feature
 
-{% highlight razor %}
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+Searching allows the user to find records by entering keywords in the search box.
+
+**Instructions:**
+
+1. The search functionality is already enabled in the CustomAdaptor's `ReadAsync` method.
+2. Ensure the toolbar includes the "Search" item.
+3. No additional code changes are required.
+
+```html
+<SfGrid TValue="TransactionModel"        
+        AllowPaging="true
+        Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+
+```csharp
+@code {
+    private List<string> ToolbarItems = new List<string> { "Search"};
+    
+/// <summary>
+/// CustomAdaptor class to handle grid data operations with MySQL using Entity Framework
+/// </summary>
+public class CustomAdaptor : DataAdaptor
+{
+    public static TransactionRepository? _transactionService { get; set; }
+    public TransactionRepository? TransactionService 
+    { 
+        get => _transactionService;
+        set => _transactionService = value;
+    }
+
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+    {
+        IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+
+        // Handling Search
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
+
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
+        // Handling Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            //Add custom logic here if needed and remove above method
+        }
+
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            //Add custom logic here if needed and remove above method
+        }
+
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+            : (object)dataSource;
+    }
+
+}
+```
+
+**How Searching Works:**
+
+- When the user enters text in the search box and presses Enter, the DataGrid sends a search request to the CustomAdaptor.
+- The `ReadAsync` method receives the search criteria in `dataManagerRequest.Search`.
+- The `DataOperations.PerformSearching()` method filters the data based on the search term.
+- Results are returned and displayed in the DataGrid.
+
+Searching feature is now active.
+
+---
+
+### Step 7: Implement Filtering feature
+
+Filtering allows the user to restrict data based on column values using a menu interface.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Add the [AllowFiltering]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+
+```html
+<SfGrid TValue="TransactionModel" 
+        AllowPaging="true"         
+        AllowFiltering="true"
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+
+3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
+
+```csharp
+/// <summary>
+/// CustomAdaptor class to handle grid data operations with MySQL using Entity Framework
+/// </summary>
+public class CustomAdaptor : DataAdaptor
+{
+    public static TransactionRepository? _transactionService { get; set; }
+    public TransactionRepository? TransactionService 
+    { 
+        get => _transactionService;
+        set => _transactionService = value;
+    }
+
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+    {
+        IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+
+        // Handling Search
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
+
+        // Handling Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
+        
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
+        // Handling Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            //Add custom logic here if needed and remove above method
+        }
+
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            //Add custom logic here if needed and remove above method
+        }
+
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+            : (object)dataSource;
+    }
+
+}
+```
+
+**How Filtering Works:**
+
+- Click on the dropdown arrow in any column header to open the filter menu.
+- Select filtering criteria (equals, contains, greater than, less than, etc.).
+- Click the "Filter" button to apply the filter.
+- The `ReadAsync` method receives the filter criteria in `dataManagerRequest.Where`.
+- Results are filtered accordingly and displayed in the DataGrid.
+
+Filtering feature is now active.
+
+---
+
+### Step 8: Implement Sorting feature
+
+Sorting enables the user to arrange records in ascending or descending order based on column values.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+
+```html
+<SfGrid TValue="TransactionModel" 
+        AllowPaging="true" 
+        AllowSorting="true" 
+        AllowFiltering="true" 
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+ 
+     <GridPageSettings PageSize="10"></GridPageSettings>
+     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+
+3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
+
+```csharp
+/// <summary>
+/// CustomAdaptor class to handle grid data operations with MySQL using Entity Framework
+/// </summary>
+public class CustomAdaptor : DataAdaptor
+{
+    public static TransactionRepository? _transactionService { get; set; }
+    public TransactionRepository? TransactionService 
+    { 
+        get => _transactionService;
+        set => _transactionService = value;
+    }
+
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+    {
+        IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+
+        // Handling Search
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
+
+        // Handling Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
+
+         // Handling Sorting
+        if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+        {
+            dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+        }
+        
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
+        // Handling Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            //Add custom logic here if needed and remove above method
+        }
+
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            //Add custom logic here if needed and remove above method
+        }
+
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+            : (object)dataSource;
+    }
+
+}
+```
+
+**How Sorting Works:**
+
+- Click on the column header to sort in ascending order.
+- Click again to sort in descending order.
+- The `ReadAsync` method receives the sort criteria in `dataManagerRequest.Sorted`.
+- Records are sorted accordingly and displayed in the DataGrid.
+
+Sorting feature is now active.
+
+---
+
+### Step 9: Implement Grouping feature
+
+Grouping organizes records into hierarchical groups based on column values.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
+
+```html
+<SfGrid TValue="TransactionModel" 
+        AllowPaging="true" 
+        AllowSorting="true" 
+        AllowFiltering="true" 
+        AllowGrouping="true"
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+     <GridPageSettings PageSize="10"></GridPageSettings>
+     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <!-- Grid columns  -->
+</SfGrid>
+```
+3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
+
+
+```csharp
+/// <summary>
+/// CustomAdaptor class to handle grid data operations with MySQL using Entity Framework
+/// </summary>
+public class CustomAdaptor : DataAdaptor
+{
+    public static TransactionRepository? _transactionService { get; set; }
+    public TransactionRepository? TransactionService 
+    { 
+        get => _transactionService;
+        set => _transactionService = value;
+    }
+
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+    {
+        IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+
+        // Handling Search
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
+
+        // Handling Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
+
+         // Handling Sorting
+        if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+        {
+            dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+        }
+
+        int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
+        DataResult dataObject = new DataResult();
+        // Handling Group operation in CustomAdaptor.
+        if (dataManagerRequest.Group != null)
+        {
+            IEnumerable ResultData = dataSource.ToList();
+            // Grouping
+            foreach (var group in dataManagerRequest.Group)
+            {
+                ResultData = DataUtil.Group<TransactionModel>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                //Add custom logic here if needed and remove above method
+            }
+            dataObject.Result = ResultData;
+            dataObject.Count = totalRecordsCount;
+            dataObject.Aggregates = aggregates;
+            return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
+        }
+        
+        // Handling Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            //Add custom logic here if needed and remove above method
+        }
+
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            //Add custom logic here if needed and remove above method
+        }
+
+        return dataManagerRequest.RequiresCounts 
+            ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+            : (object)dataSource;
+    }
+
+}
+```
+
+
+**How Grouping Works:**
+
+- Columns can be grouped by dragging the column header into the group drop area.
+- Each group can be expanded or collapsed by clicking on the group header.
+- The `ReadAsync` method receives the grouping instructions through `dataManagerRequest.Group`.
+- The grouping operation is processed using **DataUtil.Group**, which organizes the records into hierarchical groups based on the selected column.
+- Grouping is performed after search, filter, and sort operations, ensuring the grouped data reflects all applied conditions.
+- The processed grouped result is then returned to the **Grid** and displayed in a structured, hierarchical format.
+
+Grouping feature is now active.
+
+---
+
+### Step 10: Perform CRUD operations
+
+CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **TransactionRepository.cs** to execute MySQL commands.
+
+Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+
+```html
+<SfGrid TValue="TransactionModel" 
+        AllowPaging="true" 
+        AllowSorting="true" 
+        AllowFiltering="true" 
+        AllowGrouping="true"
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+     <GridPageSettings PageSize="10"></GridPageSettings>
+     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <!-- Grid columns  -->
+</SfGrid>
+```
+Add the toolbar items list in the `@code` block:
+
+```csharp
+@code {
+    private List<string> ToolbarItems = new List<string> { "Add", "Edit", "Delete", "Update", "Cancel", "Search"};
+
+    // CustomAdaptor class code...
+}
+```
+**Insert**
+
+Record insertion allows new transactions to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the MySQL Server database.
+
+In **Home.razor**, implement the `InsertAsync` method to handle record deletion within the `CustomAdaptor` class:
+
+```csharp
+public class CustomAdaptor : DataAdaptor
+{
+    public override async Task<object> InsertAsync(DataManager dataManager, object value, string key)
+    {
+        if (value is TransactionModel transaction)
+        {
+            await _transactionService!.AddTransactionAsync(transaction);
+        }
+        return value;
+    }
+}
+```
+In **Data/TransactionRepository.cs**, implement the insert method:
+
+```csharp
+public async Task AddTransactionAsync(TransactionModel value)
+{
+    if (transaction == null)
+        throw new ArgumentNullException(nameof(transaction), "Transaction cannot be null");
+
+    if (transaction.CreatedAt == null)
+        transaction.CreatedAt = DateTime.Now;
+
+    if (string.IsNullOrWhiteSpace(transaction.CurrencyCode))
+        transaction.CurrencyCode = "INR";
+
+    string temporaryTransactionId = GeneratePublicTransactionId(transaction.CreatedAt, 99999);
+    transaction.TransactionId = temporaryTransactionId;
+
+    _context.Transactions.Add(transaction);
+
+    await _context.SaveChangesAsync();
+
+    string finalTransactionId = GeneratePublicTransactionId(transaction.CreatedAt, transaction.Id);
+
+    transaction.TransactionId = finalTransactionId;
+
+    _context.Transactions.Update(transaction);
+    await _context.SaveChangesAsync();
+}
+```
+
+**What happens behind the scenes:**
+
+1. The form data is collected and validated in the CustomAdaptor's `InsertAsync()` method.
+2. The `TransactionRepository.AddTransactionAsync()` method is called.
+3. The new record is added to the `_context.Transactions` collection.
+4. `SaveChangesAsync()` persists the record to the MySQL database.
+5. The DataGrid automatically refreshes to display the new record.
+
+Now the new transaction is persisted to the database and reflected in the grid.
+
+**Update**
+
+Record modification allows transaction details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **MySQL Server database** while ensuring data integrity is preserved.
+
+In **Home.razor**, implement the `UpdateAsync` method to handle record deletion within the `CustomAdaptor` class:
+
+
+```csharp
+public class CustomAdaptor : DataAdaptor
+{
+    public override async Task<object> UpdateAsync(DataManager dataManager, object value, string keyField, string key)
+    {
+        if (value is TransactionModel transaction)
+        {
+            await _transactionService!.UpdateTransactionAsync(transaction);
+        }
+        return value;
+    }
+}
+```
+In **Data/TransactionRepository.cs**, implement the update method:
+
+```csharp
+public async Task UpdateTransactionAsync(TransactionModel value)
+{
+    if (transaction == null)
+        throw new ArgumentNullException(nameof(transaction), "Transaction cannot be null");
+
+    var existingTransaction = await _context.Transactions.FindAsync(transaction.Id);
+    if (existingTransaction == null)
+        throw new KeyNotFoundException($"Transaction with ID {transaction.Id} not found in the database.");
+
+    existingTransaction.TransactionId = transaction.TransactionId;
+    existingTransaction.CustomerId = transaction.CustomerId;
+    existingTransaction.OrderId = transaction.OrderId;
+    existingTransaction.InvoiceNumber = transaction.InvoiceNumber;
+    existingTransaction.Description = transaction.Description;
+    existingTransaction.Amount = transaction.Amount;
+    existingTransaction.CurrencyCode = transaction  .CurrencyCode;
+    existingTransaction.TransactionType = transaction.TransactionType;
+    existingTransaction.PaymentGateway = transaction.PaymentGateway;
+    existingTransaction.CompletedAt = transaction.CompletedAt;
+    existingTransaction.Status = transaction.Status;
+
+    _context.Transactions.Update(existingTransaction);
+
+    await _context.SaveChangesAsync();
+}
+```
+
+**What happens behind the scenes:**
+
+1. The modified data is collected from the form.
+2. The CustomAdaptor's `UpdateAsync()` method is called.
+3. The `TransactionRepository.UpdateTransactionAsync()` method is called.
+4. The existing record is retrieved from the database by ID.
+5. All properties are updated with the new values (except ID and CreatedAt).
+6. `SaveChangesAsync()` persists the changes to the MySQL database.
+7. The DataGrid refreshes to display the updated record.
+
+Now modifications are synchronized to the database and reflected in the grid UI.
+
+**Delete**
+
+Record deletion allows transactions to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **MySQL DELETE** operation, and updates both the database and the grid to reflect the removal.
+
+In **Home.razor**, implement the `RemoveAsync` method to handle record deletion within the `CustomAdaptor` class:
+
+```csharp
+public class CustomAdaptor : DataAdaptor
+{
+    public override async Task<object> RemoveAsync(DataManager dataManager, object value, string keyField, string key)
+    {
+        int? recordId = null;
+        if (value is int intValue)
+        {
+            recordId = intValue;
+        }
+        else if (value is TransactionModel transaction)
+        {
+            recordId = transaction.Id;
+        }
+        else if (int.TryParse(value?.ToString(), out int parsedValue))
+        {
+            recordId = parsedValue;
+        }
+
+        if (recordId.HasValue && recordId.Value > 0)
+        {
+            await _transactionService!.RemoveTransactionAsync(recordId);
+        }
+        return value;
+    }
+}
+```
+In **Data/TransactionRepository.cs**, implement the delete method:
+
+```csharp
+public async Task RemoveTransactionAsync(int? key)
+{
+    try
+    {
+        if (key == null || key <= 0)
+            throw new ArgumentException("Transaction ID cannot be null or invalid", nameof(key));
+
+        var transaction = await _context.Transactions.FindAsync(key);
+        if (transaction == null)
+            throw new KeyNotFoundException($"Transaction with ID {key} not found");
+
+        _context.Transactions.Remove(transaction);
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateException ex)
+    {
+        Console.WriteLine($"Database error while deleting transaction: {ex.Message}");
+        throw;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error deleting transaction: {ex.Message}");
+        throw;
+    }
+}
+```
+**What happens behind the scenes:**
+
+1. The user selects a record and clicks "Delete".
+2. A confirmation dialog appears (built into the DataGrid).
+3. If confirmed, the CustomAdaptor's `RemoveAsync()` method is called.
+4. The `TransactionRepository.RemoveTransactionAsync()` method is called.
+5. The record is located in the database by its ID.
+6. The record is removed from the `_context.Transactions` collection.
+7. `SaveChangesAsync()` executes the DELETE statement in MySQL.
+8. The DataGrid refreshes to remove the deleted record from the UI.
+
+Now transactions are removed from the database and the grid UI reflects the changes immediately.
+
+**Batch update**
+
+Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring transactional consistency by applying all changes atomically to the MySQL Server database.
+
+In **Home.razor**, implement the `BatchUpdateAsync` method to handle multiple record updates in a single request within the `CustomAdaptor` class:
+
+```csharp
+public class CustomAdaptor : DataAdaptor
+{
+    public override async Task<object> BatchUpdateAsync(DataManager dataManager, object changed, object added, object deleted, string keyField, string key, int? dropIndex)
+    {
+        // Process updated records
+        if (changed != null)
+        {
+            foreach (var record in (IEnumerable<TransactionModel>)changed)
+            {
+                await _transactionService!.UpdateTransactionAsync(record);
+            }
+        }
+
+        // Process newly added records
+        if (added != null)
+        {
+            foreach (var record in (IEnumerable<TransactionModel>)added)
+            {
+                await _transactionService!.AddTransactionAsync(record);
+            }
+        }
+
+        // Process deleted records
+        if (deleted != null)
+        {
+            foreach (var record in (IEnumerable<TransactionModel>)deleted)
+            {
+                await _transactionService!.RemoveTransactionAsync(record.Id);
+            }
+        }
+        return key;
+    }
+}
+```
+> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+
+**What happens behind the scenes:**
+
+- The DataGrid collects all added, edited, and deleted records in Batch Edit mode.
+- The combined batch request is passed to the CustomAdaptor’s `BatchUpdateAsync()` method.
+- Each modified record is processed using `TransactionRepository.UpdateTransactionAsync()`.
+- Each newly added record is saved using `TransactionRepository.AddTransactionAsync()`.
+- Each deleted record is removed using `TransactionRepository.RemoveTransactionAsync()`.
+- All repository operations persist changes to the MySQL Server database.
+- The DataGrid refreshes to display the updated, added, and removed records in a single response.
+
+Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
+
+**Reference links**
+- [InsertAsync(DataManager, object)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) - Create new records in MySQL Server
+- [UpdateAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Edit existing records in MySQL Server
+- [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from MySQL Server
+- [BatchUpdateAsync(DataManager, object, object, object, string, string, int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) - Handle bulk operations
+
+---
+
+### Step 11: Complete code
+Here is the complete and final `Home.razor` component with all features integrated:
+
+```html
+
+@using System.Collections
+@using Grid_MySQL.Data
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@inject TransactionRepository TransactionService
+
+<SfGrid TValue="TransactionModel" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true"
+    Height="500px" Width="100%" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridPageSettings PageSize="10"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(TransactionModel.Id) IsPrimaryKey="true" ShowInColumnChooser="false" ShowColumnMenu="false"></GridColumn>
+        <GridColumn Field=@nameof(TransactionModel.TransactionId) HeaderText="Transaction ID" Width="170" TextAlign="TextAlign.Left" AllowAdding="false" AllowEditing="false">
+            <Template>
+                @{
+                    var data = (TransactionModel)context;
+                }   
+                <a class="status-text status-ticket-id">
+                    @data.TransactionId
+                </a>
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(TransactionModel.CustomerId) HeaderText="Customer ID" Width="140" ValidationRules="@(new ValidationRules { Required = true })" EditType="EditType.NumericEdit" />
+        <GridColumn Field=@nameof(TransactionModel.OrderId) HeaderText="Order ID" Width="120" ValidationRules="@(new ValidationRules { Required = true })" EditType="EditType.NumericEdit" />
+        <GridColumn Field=@nameof(TransactionModel.InvoiceNumber) HeaderText="Invoice No" Width="130" EditType="EditType.DefaultEdit" />
+        <GridColumn Field=@nameof(TransactionModel.Description) HeaderText="Description" Width="180" EditType="EditType.DefaultEdit" />
+        <GridColumn Field=@nameof(TransactionModel.Amount) HeaderText="Amount" Width="130" ValidationRules="@(new ValidationRules { Required = true })" Format="N2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit">
+            <Template>
+                @{
+                    var amount = (context as TransactionModel)?.Amount ?? 0;
+                    var amountClass = amount < 0 ? "amnt-negative" : "amnt-positive";
+                }
+                <span class="@amountClass">@amount.ToString("N2")</span>
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(TransactionModel.CurrencyCode) HeaderText="Curr" Width="100" TextAlign="TextAlign.Center" EditType="EditType.DefaultEdit" />
+        <GridColumn Field=@nameof(TransactionModel.TransactionType) HeaderText="Type" Width="100" EditType="EditType.DropDownEdit" EditorSettings="@TypeDropDownParams">
+            <Template>
+                @{
+                    var data = (TransactionModel)context;
+                }
+                <span class="chip @GetCategoryClass(data)">
+                    @data.TransactionType
+                </span>
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(TransactionModel.PaymentGateway) HeaderText="Gateway" Width="130" EditType="EditType.DropDownEdit" EditorSettings="@GatewayDropDownParams" />
+        <GridColumn Field=@nameof(TransactionModel.CreatedAt) HeaderText="Created" Width="170" Format="dd-MMM-yy hh:mm tt" TextAlign="TextAlign.Right" Type="ColumnType.DateTime" AllowEditing="false" />
+        <GridColumn Field=@nameof(TransactionModel.CompletedAt) HeaderText="Completed" Width="170" Format="dd-MMM-yy hh:mm tt" TextAlign="TextAlign.Right" Type="ColumnType.DateTime" EditType="EditType.DateTimePickerEdit" />
+
+        <GridColumn Field=@nameof(TransactionModel.Status) HeaderText="Status" Width="110" ValidationRules="@(new ValidationRules { Required = true })" EditType="EditType.DropDownEdit" EditorSettings="@StatusDropDownParams">
+            <Template>
+                @{
+                    var status = (context as TransactionModel)?.Status;
+                    var badgeClass = status?.ToLower() switch
+                    {
+                        "success" => "e-badge e-badge-success",
+                        "failed" => "e-badge e-badge-danger",
+                        "pending" => "e-badge e-badge-warning",
+                        "processing" => "e-badge e-badge-info",
+                        _ => "e-badge"
+                    };
+                }
+                <span class="@badgeClass">@status</span>
+            </Template>
+        </GridColumn>
     </GridColumns>
 </SfGrid>
-{% endhighlight %}
 
-> * Normal(Inline) editing is the default [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor DataGrid component.
-> * To enable CRUD operations, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for a column that contains unique values.
-> * If the database includes an auto-generated column, set the [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property for that column to disable editing during **add** or **update** operations.
 
-**Insert Operation:**
+```
+> * Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** for a column that contains unique values.
+> * If the database includes an **auto-generated column**, set [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) for that column to disable editing during **add** or **update** operations.
+> * The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html?_gl=1*4kxqtd*_gcl_au*ODcxNTU4MzMyLjE3Njc1ODkwOTk.*_ga*NjA2MTg0NzMuMTc1OTc1MDUyNg..*_ga_41J4HFMX1J*czE3Njk1MzE3NTAkbzY1JGcxJHQxNzY5NTMyOTMwJGo2MCRsMCRoMA..) property can be used to specify the desired editor for each column. [🔗](https://blazor.syncfusion.com/documentation/datagrid/edit-types)
+> * The behavior of default editors can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the `GridColumn` component. [🔗](https://blazor.syncfusion.com/documentation/datagrid/edit-types#customizing-the-default-editors)
+> * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the `GridColumn` component  specifies the data type of a grid column.
+> * The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*8q6kap*_gcl_au*ODcxNTU4MzMyLjE3Njc1ODkwOTk.*_ga*NjA2MTg0NzMuMTc1OTc1MDUyNg..*_ga_41J4HFMX1J*czE3Njk1MzE3NTAkbzY1JGcxJHQxNzY5NTMzMDg0JGozMCRsMCRoMA..#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. [🔗](https://blazor.syncfusion.com/documentation/datagrid/column-template)
 
-To implement record insertion, override the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) or [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) method in the `CustomAdaptor` class.
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-/// <summary>
-/// Inserts a new data item into the data collection.
-/// </summary>
-/// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
-/// <param name="Value">The new record which is need to be inserted.</param>
-/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-/// <returns>Returns the newly inserted record details.</returns>
-public override async Task<object> InsertAsync(DataManager DataManager, object Value, string Key)
-{
-    // Add your insert logic here
-    // This method will be invoked when inserting new records into the Blazor DataGrid component.
-    await OrderService.AddOrderAsync(Value as Order);
-    return Value;
-}
-{% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs" %}
-        public async Task AddOrderAsync(Order Value)
-        {
-            //Create query to insert the specific into the database by accessing its properties 
-            string Query = $"Insert into Orders(OrderID,CustomerName,Freight,ShipCity,EmployeeID) values('{(Value as Order).OrderID}','{(Value as Order).CustomerName}','{(Value as Order).Freight}','{(Value as Order).ShipCity}','{(Value as Order).EmployeeID}')";
-            MySqlConnection Connection = new MySqlConnection(ConnectionString);
-            Connection.Open();
-            //Execute the MySQL Command
-            MySqlCommand Command = new MySqlCommand(Query, Connection);
-            //Execute this code to reflect the changes into the database
-            Command.ExecuteNonQuery();
-            Connection.Close();
-        }
-{% endhighlight %}
-{% endtabs %}
+```csharp
 
-**Update Operation:**
+@code {
+    private CustomAdaptor? _customAdaptor;
 
-To implement record updates, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method in the `CustomAdaptor` class.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-/// <summary>
-/// Updates an existing data item in the data collection.
-/// </summary>
-/// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
-/// <param name="Value">The modified record which is need to be updated.</param>
-/// <param name="KeyField">The primary column name specifies the field name of the primary column.</param>
-/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-/// <returns>Returns the updated data item.</returns>
-public override async Task<object> UpdateAsync(DataManager DataManager, object Value, string KeyField, string Key)
-{
-    // Add your update logic here
-    // This method will be invoked when updating existing records in the Blazor DataGrid component.
-    await OrderService.UpdateOrderAsync(Value as Order);
-    return Value;
-}
-{% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs" %}
-public async Task UpdateOrderAsync(Order Value)
-{
-    //Create query to update the changes into the database by accessing its properties
-    string Query = $"Update Orders set CustomerName='{(Value as Order).CustomerName}', Freight='{(Value as Order).Freight}',EmployeeID='{(Value as Order).EmployeeID}',ShipCity='{(Value as Order).ShipCity}' where OrderID='{(Value as Order).OrderID}'";
-    MySqlConnection Connection = new MySqlConnection(ConnectionString);
-    Connection.Open();
-    //Execute the MySQL Command
-    MySqlCommand Command = new MySqlCommand(Query, Connection);
-    //Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-}
-{% endhighlight %}
-{% endtabs %}
-
-**Delete Operation:**
-
-To perform record deletion, override the [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method in the `CustomAdaptor` class.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-/// <summary>
-/// Removes a data item from the data collection.
-/// </summary>
-/// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
-/// <param name="Value">The Value specifies the primary column value which is needs to be removed from the grid record.</param>
-/// <param name="KeyField">The KeyField specifies the field name of the primary column.</param>
-/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-/// <returns>Returns the removed data item.</returns>
-public override async Task<object> RemoveAsync(DataManager DataManager, object Value, string KeyField, string Key)
-{
-    // Add your delete logic here
-    // This method will be invoked when deleting existing records from the Blazor DataGrid component.
-    await OrderService.RemoveOrderAsync(Value as int?);
-    return Value;
-}
-{% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs" %}
-public async Task RemoveOrderAsync(int? Key)
-{
-    //Create query to remove the specific from database by passing the primary key column value.
-    string Query = $"Delete from Orders where OrderID={Key}";
-    MySqlConnection Connection = new MySqlConnection(ConnectionString);
-    Connection.Open();
-    //Execute the MySQL Command
-    MySqlCommand Command = new MySqlCommand(Query, Connection);
-    //Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-}
-{% endhighlight %}
-{% endtabs %}
-
-**Batch Operation:**
-
-To implement batch updates such as insert, update, and delete in a single request, override the [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) or [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) method in the `CustomAdaptor` class.
-
-{% highlight razor %}
-/// <summary>
-/// /// Batchupdate (Insert, Update, Delete) a collection of data items from the data collection.
-/// </summary>
-/// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
-/// <param name="Changed">The Changed specifies the collection of record updated in batch mode which needs to be updated from the grid record.</param>
-/// <param name="Added">The Added specifies the collection of record inserted in batch mode which needs to be inserted from the grid record.</param>
-/// <param name="Deleted">The Deleted specifies the collection of record deleted in batch mode which needs to be removed from the grid record.</param>
-/// <param name="KeyField">The KeyField specifies the field name of the primary column.</param>
-/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-/// <param name="DropIndex">An optional parameter that can be used to perform row drag and drop operation.</param>
-/// <returns>Returns the removed data item.</returns>
-public override async Task<object> BatchUpdateAsync(DataManager DataManager, object Changed, object Added, object Deleted, string KeyField, string Key, int? DropIndex)
-{
-    if (Changed != null)
+    protected override void OnInitialized()
     {
-        foreach (var record in (IEnumerable<Order>)Changed)
+        // Initialize the CustomAdaptor with the injected TransactionRepository
+        _customAdaptor = new CustomAdaptor { TransactionService = TransactionService };
+    }
+
+
+    /// <summary>
+    /// CustomAdaptor class to handle grid data operations with MySQL using Entity Framework
+    /// </summary>
+    public class CustomAdaptor : DataAdaptor
+    {
+        public static TransactionRepository? _transactionService { get; set; }
+        public TransactionRepository? TransactionService 
+        { 
+            get => _transactionService;
+            set => _transactionService = value;
+        }
+
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            await OrderService.UpdateOrderAsync(record as Order);
+            IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+
+            // Handling Search
+            if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+            {
+                dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+            }
+
+            // Handling Filtering
+            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+            {
+                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+            }
+
+            // Handling Sorting
+            if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+            {
+                dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+            }
+
+            // Handling Aggregation in CustomAdaptor.
+            IDictionary<string, object>? aggregates = null;
+            if (dataManagerRequest.Aggregates != null) // Aggregation
+            {
+                aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
+            }
+
+            int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
+            DataResult dataObject = new DataResult();
+            // Handling Group operation in CustomAdaptor.
+            if (dataManagerRequest.Group != null)
+            {
+                IEnumerable ResultData = dataSource.ToList();
+                // Grouping
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    ResultData = DataUtil.Group<TransactionModel>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    //Add custom logic here if needed and remove above method
+                }
+                dataObject.Result = ResultData;
+                dataObject.Count = totalRecordsCount;
+                dataObject.Aggregates = aggregates;
+                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
+            }
+
+            // Handling Paging
+            if (dataManagerRequest.Skip != 0)
+            {
+                dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+                //Add custom logic here if needed and remove above method
+            }
+
+            if (dataManagerRequest.Take != 0)
+            {
+                dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+                //Add custom logic here if needed and remove above method
+            }
+
+            return dataManagerRequest.RequiresCounts 
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
+                : (object)dataSource;
+        }
+
+        public override async Task<object> InsertAsync(DataManager dataManager, object value, string? key)
+        {
+            await _transactionService!.AddTransactionAsync(value as TransactionModel);
+            return value;
+        }
+
+        public override async Task<object> UpdateAsync(DataManager dataManager, object value, string? keyField, string key)
+        {
+            await _transactionService!.UpdateTransactionAsync(value as TransactionModel);
+            return value;
+        }
+
+        public override async Task<object> RemoveAsync(DataManager dataManager, object value, string? keyField, string key)
+        {
+            await _transactionService!.RemoveTransactionAsync(value as int?);
+            return value;
+        }
+
+        public override async Task<object> BatchUpdateAsync(DataManager dataManager, object changedRecords, object addedRecords, object deletedRecords, string? keyField, string key, int? dropIndex)
+        {
+            if (changedRecords != null)
+            {
+                foreach (var record in (IEnumerable<TransactionModel>)changedRecords)
+                {
+                    await _transactionService!.UpdateTransactionAsync(record as TransactionModel);
+                }
+            }
+            if (addedRecords != null)
+            {
+                foreach (var record in (IEnumerable<TransactionModel>)addedRecords)
+                {
+                    await _transactionService!.AddTransactionAsync(record as TransactionModel);
+                }
+            }
+            if (deletedRecords != null)
+            {
+                foreach (var record in (IEnumerable<TransactionModel>)deletedRecords)
+                {
+                    await _transactionService!.RemoveTransactionAsync((record as TransactionModel).Id);
+                }
+            }
+            return key;
         }
     }
-    if (Added != null)
+
+    /// <summary>
+    /// Provides a list of payment gateway options used as a data source for the Gateway dropdown editor in the grid.
+    /// </summary>
+    private static List<TransactionModel> CustomGateway = new List<TransactionModel> {
+        new TransactionModel() { PaymentGateway = "Razorpay" },
+        new TransactionModel() { PaymentGateway= "GooglePay" },
+        new TransactionModel() { PaymentGateway= "Stripe" },
+        new TransactionModel() { PaymentGateway= "PhonePe" },
+        new TransactionModel() { PaymentGateway= "Paytm" },
+    };
+
+    /// <summary>
+    /// Provides a list of transaction types used as a data source for the Type dropdown editor in the grid.
+    /// </summary>
+    private static List<TransactionModel> CustomType = new List<TransactionModel> {
+        new TransactionModel() { TransactionType = "SALE" },
+        new TransactionModel() { TransactionType = "REFUND" },
+        new TransactionModel() { TransactionType = "TOPUP" },
+    };
+
+    /// <summary>
+    /// Provides a list of transaction statuses used as a data source for the Status dropdown editor in the grid.
+    /// </summary>
+    private static List<TransactionModel> CustomStatus = new List<TransactionModel> {
+        new TransactionModel() { Status = "SUCCESS" },
+        new TransactionModel() { Status = "PROCESSING" },
+        new TransactionModel() { Status = "PENDING" },
+        new TransactionModel() { Status = "FAILED" },
+    };
+
+    /// <summary>
+    /// Dropdown editor settings configured with payment gateway options for the PaymentGateway column in grid edit mode.
+    /// </summary>
+    private IEditorSettings GatewayDropDownParams = new DropDownEditCellParams
     {
-        foreach (var record in (IEnumerable<Order>)Added)
-        {
-            await OrderService.AddOrderAsync(record as Order);
-        }
-    }
-    if (Deleted != null)
+        Params = new DropDownListModel<object, object>() { DataSource = CustomGateway, Query = new Syncfusion.Blazor.Data.Query() },
+    };
+
+    /// <summary>
+    /// Dropdown editor settings configured with transaction type options for the TransactionType column in grid edit mode.
+    /// </summary>
+    private IEditorSettings TypeDropDownParams = new DropDownEditCellParams
     {
-        foreach (var record in (IEnumerable<Order>)Deleted)
+        Params = new DropDownListModel<object, object>() { DataSource = CustomType, Query = new Syncfusion.Blazor.Data.Query() },
+    };
+
+    /// <summary>
+    /// Dropdown editor settings configured with transaction status options for the Status column in grid edit mode.
+    /// </summary>
+    private IEditorSettings StatusDropDownParams = new DropDownEditCellParams
+    {
+        Params = new DropDownListModel<object, object>() { DataSource = CustomStatus, Query = new Syncfusion.Blazor.Data.Query() },
+    };
+
+    /// <summary>
+    /// Returns a CSS class name based on the transaction type to apply visual styling in the grid template.
+    /// </summary>
+    private string GetCategoryClass(TransactionModel data)
+    {
+        return data.TransactionType?.ToLower() switch
         {
-            await OrderService.RemoveOrderAsync((record as Order).OrderID);
-        }
+            "sale" => "category-sale",
+            "topup" => "category-topup",
+            "refund" => "category-refund",
+            _ => ""
+        };
     }
-    return Key;
 }
-{% endhighlight %}
 
-![Blazor DataGrid component bound with MySQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
+```
 
-> A complete sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MySQL%20database%20using%20CustomAdaptor) repository.
+## Running the Application
+
+**Step 1: Build the Application**
+
+1. Open the terminal or Package Manager Console.
+2. Navigate to the project directory.
+3. Run the following command:
+
+```powershell
+dotnet build
+```
+
+**Step 2: Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Step 3: Access the Application**
+
+1. Open a web browser.
+2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
+3. The transaction management application is now running and ready to use.
+
+### Available Features
+
+- **View Data**: All transactions from the MySQL database are displayed in the DataGrid.
+- **Search**: Use the search box to find transactions by any field.
+- **Filter**: Click on column headers to apply filters.
+- **Sort**: Click on column headers to sort data in ascending or descending order.
+- **Pagination**: Navigate through records using page numbers.
+- **Add**: Click the "Add" button to create a new transaction.
+- **Edit**: Click the "Edit" button to modify existing transactions.
+- **Delete**: Click the "Delete" button to remove transactions.
+
+---
+
+## Complete Sample Repository
+
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MySQL%20database%20using%20CustomAdaptor).
+
+---
+
+## Summary
+
+This guide demonstrates how to:
+1. Create a MySQL database with transaction records. [🔗](#step-1-create-the-database-and-table-in-mysql-server)
+2. Install necessary NuGet packages for Entity Framework Core and Syncfusion. [🔗](#step-2-install-required-nuget-packages)
+3. Create data models and DbContext for database communication. [🔗](#step-3-create-the-data-model)
+4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
+5. Implement the repository pattern for data access. [🔗](#step-6-create-the-repository-class)
+6. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-syncfusion-blazor-grid-components)
+7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
+
+The application now provides a complete solution for managing transaction data with a modern, user-friendly interface.

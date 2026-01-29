@@ -247,6 +247,9 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.InPlaceEditor
+
 <table>
     <tr>
         <td>
@@ -297,7 +300,7 @@ The following code explains how to initialize a simple In-place Editor with popu
             </label>
         </td>
         <td>
-            <SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.AutoComplete" @bind-Value="@AutoValue" Mode="RenderMode.Popup" TValue="string">
+            <SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.AutoComplete" @bind-Value="@AutoValue" Mode="Syncfusion.Blazor.InPlaceEditor.RenderMode.Popup" TValue="string">
                 <EditorComponent>
                     <SfAutoComplete TValue="string" TItem="Countries" @bind-Value="@AutoValue" Placeholder="e.g. Australia" DataSource="@LocalData">
                         <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
@@ -502,6 +505,7 @@ Submit the editor value to the server by configuring the [SaveUrl](https://help.
 | **`PrimaryKey`** | Defines the unique primary key of the editable field used for saving data in the database. |
 
 > The `PrimaryKey` property is mandatory. If it is not set, edited data are not sent to the server.
+
 ## Refresh Blazor In-place Editor with modified value
 
 After submit, the edited data is sent to the server, and the updated value is reflected in the In-place Editor.
