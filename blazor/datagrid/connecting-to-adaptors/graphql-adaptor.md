@@ -1,54 +1,26 @@
 ---
 layout: post
-title: Blazor Data Grid with GraphQL CRUD and Data Operations | Syncfusion
-description: Build Blazor Data Grid applications with GraphQL integration. Enable filtering, sorting, paging, grouping and CRUD operations on data.
+title: Blazor Data Grid with GraphQL: CRUD & Data Operations | Syncfusion
+description: Build Blazor apps with GraphQL and Syncfusion Data Grid to enable CRUD, filtering, sorting, paging, and grouping for seamless data operations.
 control: DataGrid
 platform: blazor
 documentation: ug
 ---
 
-# Connecting the Syncfusion Blazor DataGrid with GraphQL Backend using Hot Chocolate
+# Connect Syncfusion Blazor DataGrid with GraphQL using Hot Chocolate
 
 GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
-**How GraphQL Differs from REST APIs:**
-
-**REST API Approach:**
-- A single endpoint returns predefined data.
-- The client receives all available data, even if only some fields are needed.
-- Multiple endpoints may be required to fetch related data.
-
-**GraphQL Approach:**
-- A single endpoint accepts queries describing the exact data required.
-- The client receives only the requested fields.
-- Related data is fetched in a single query.
+**Traditional REST APIs** and **GraphQL** differ mainly in how data is requested and returned: **REST APIs expose** multiple endpoints that return fixed data structures, often including unnecessary fields and requiring several requests to fetch related data, while **GraphQL** uses a single endpoint where queries define the exact fields needed, enabling precise responses and allowing related data to be retrieved efficiently in one request. This makes **GraphQL** especially useful for **Blazor DataGrid integration**, the **reason** is data‑centric UI components require well‑structured and selective datasets to support efficient filtering, reduce network calls, and improve overall performance.
 
 **Key GraphQL Concepts**
 
 - **Queries**: A query is a request to read data. Queries do not modify data; they only retrieve it.
 - **Mutations**: A mutation is a request to modify data. Mutations create, update, or delete records.
-- **Resolvers**: Resolvers are functions that handle queries and mutations. Each resolver retrieves data from the data source or performs the requested operation.
+- **Resolvers**: Each query or mutation is handled by a resolver, which is a function responsible for fetching data or executing an operation. **Query resolvers** handle **read operations**, while **mutation resolvers** handle **write operations**.
+- **Schema**: Defines the structure of the API. The schema describes available data types, the fields within those types, and the operations that can be executed. Query definitions specify how data can be retrieved, and mutation definitions specify how data can be modified. 
 
-    - A **query resolver** handles read operations.
-    - A **mutation resolver** handles create, update, and delete operations.
-
-- **Schema**: A GraphQL schema defines the structure of available data and the operations the API supports. The schema specifies:
-    - Data types and their fields.
-    - Query operations available to the client.
-    - Mutation operations available to the client.
-
-**Why GraphQL is Useful for Blazor DataGrid Integration ?**
-
-Many modern data-driven UI components expect data in a clear structure and work better when the backend returns only the required fields or filtered records. Traditional REST APIs usually return fixed data shapes, which often causes over-fetching or under-fetching. GraphQL solves these challenges by:
-
-- **Precise Data Fetching:** The grid requests only the columns it displays.
-- **Efficient Filtering:** Complex filters are expressed in a single query.
-- **Single Request:** Related data is retrieved in one query instead of multiple requests.
-- **Type Safety:** The schema provides clear contracts between the client and server.
-
-**What is Hot Chocolate ?**
-[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET, created by **ChilliCream**. Hot Chocolate enables developers to build GraphQL APIs quickly and efficiently using Blazor, ASP.NET Core and the modern .NET ecosystem.
-
+[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET, developed by [ChilliCream](https://chillicream.com). Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor.
 
 ## Prerequisites
 
@@ -116,7 +88,7 @@ The `Program.cs` file configures and registers the GraphQL services.
 ```csharp
 [Program.cs]
 
-using ExpenseTracker.Models;
+using Grid_GraphQLAdaptor.Models;
 using HotChocolate.Execution.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -213,7 +185,7 @@ In the context of an expense tracker, the data model defines what information is
 **File Location:** `Models/ExpenseRecord.cs`
 
 ```csharp
-namespace Expense_Tracker_GraphQL.Models
+namespace Grid_GraphQLAdaptor.Models
 {
     /// <summary>
     /// Represents a single expense record stored in the database.
@@ -301,7 +273,7 @@ The expense data model has been successfully created.
 
 A query resolver is a method in the backend that handles read requests from the client. When the Blazor DataGrid needs to fetch data, it sends a GraphQL query to the server. The query resolver receives this request, processes it, and returns the appropriate data. Query resolvers do not modify data; they only retrieve and return it.
 
-In simple terms, A **GraphQL query** asks a question,
+In simple terms, a **GraphQL query** asks a question,
 and a **resolver** is the one who answers it.
 
 **Instructions:**
@@ -312,7 +284,7 @@ and a **resolver** is the one who answers it.
 ```csharp
 [Models/GraphQLQuery.cs]
 
-using ExpenseTracker.Models;
+using Grid_GraphQLAdaptor.Models;
 
 public class GraphQLQuery
 {
@@ -325,7 +297,7 @@ public class GraphQLQuery
         List<ExpenseRecord> dataSource = ExpenseRecord.GetAllRecords();
 
         // Apply search, filter, sort, and paging operations as provided by the DataGrid.
-        // Operations are applied sequentially: search → filter → sort → paging
+        // Operations are applied sequentially: search → filter → sort → paging.
 
         // Store the total count before paging.
         int totalRecords = dataSource.Count;
@@ -372,7 +344,7 @@ When the DataGrid performs operations like pagination, sorting, filtering, or se
 2. Define the **DataManagerRequestInput** class and supporting classes with the following code:
 
 ```csharp
-namespace Expense_Tracker_GraphQL.Models;
+namespace Grid_GraphQLAdaptor.Models;
 
 /// <summary>
 /// Represents the input structure for data manager requests from the Syncfusion Blazor DataGrid.
@@ -512,40 +484,49 @@ public class WhereFilter
 
 **Example Scenario:** A sequence of operations is performed on the DataGrid as follows:
 
-- Searches for **"Sales"** in the Department column.
-- Filters for amounts greater than 5000.
+- Searches for **"Finance"** in the Department column.
+- Filters for amounts greater than 1000.
 - Sorts by Amount in descending order.
 - Navigates to page 2 (showing records 11-20).
 - Resulting **DataManagerRequestInput** Parameters:
 
-```csharp
+```json
 {
-  "skip": 10,
-  "take": 10,
-  "requiresCounts": true,
-  "search": [
-    {
-      "fields": ["department"],
-      "key": "Sales",
-      "operator": "contains",
-      "ignoreCase": true
+    "dataManager": {
+        "Skip": 10,
+        "Take": 10,
+        "RequiresCounts": true,
+        "Search": [
+            {
+                "Fields": ["Department"],
+                "Key": "Finance",
+                "Operator": "contains",
+                "IgnoreCase": true
+            }
+        ],
+        "Where": [
+            {
+                "Condition": "and",
+                "Predicates": [
+                    {
+                        "Field": "Amount",
+                        "Operator": "greaterThan",
+                        "Value": 1000,
+                        "Predicates": []
+                    }
+                ]
+            }
+        ],
+        "Sorted": [
+            {
+                "Name": "Amount",
+                "Direction": "Descending"
+            }
+        ]
     }
-  ],
-  "where": [
-    {
-      "field": "amount",
-      "operator": "greaterThan",
-      "value": 5000
-    }
-  ],
-  "sorted": [
-    {
-      "name": "amount",
-      "direction": "Descending"
-    }
-  ]
 }
 ```
+
 
 **DataManagerRequestInput Properties:**
 
@@ -568,17 +549,17 @@ Example: **RequiresCounts → requiresCounts**
 
 A **GraphQL mutation resolver** is a method in the backend that handles write requests (data modifications) from the client. While queries only read data, mutations create, update, or delete records. When the Blazor DataGrid performs add, edit, or delete operations, it sends a GraphQL mutation to the server. The mutation resolver receives this request, processes it, and persists the changes to the data source.
 
-In simple terms: A **GraphQL mutation** asks for a change, and a **resolver** is the one who makes it.
+In simple terms, a **GraphQL mutation** asks for a change, and a **resolver** is the one who makes it.
 
 **Instructions:**
 1. Inside the Models folder, create a new file named **GraphQLMutation.cs**.
 2. Define the **GraphQLMutation** class with the following code:
 
 ```csharp
-using Expense_Tracker_GraphQL.Models;
+using Grid_GraphQLAdaptor.Models;
 using HotChocolate.Types;
 
-namespace Expense_Tracker_GraphQL.Models
+namespace Grid_GraphQLAdaptor.Models
 {
     /// <summary>
     /// GraphQL Mutation class that handles all write operations (Create, Update, Delete).
@@ -651,7 +632,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Grids package was installed in **Step 1** of the previous heading.
+1. The Syncfusion.Blazor.Grids package was installed in [**Step 1**](#step-1-install-and-configure-blazor-datagrid-components-with-graphql) of the previous heading.
 2. Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
@@ -680,7 +661,7 @@ The Home component will display the expense data in a Syncfusion Blazor DataGrid
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
 2. Add the following code to create a basic DataGrid:
 
-```razor
+```html
 @page "/"
 @rendermode InteractiveServer
 
@@ -723,7 +704,7 @@ The Home component will display the expense data in a Syncfusion Blazor DataGrid
 
 The `SfDataManager` component connects the DataGrid to the GraphQL backend using the adaptor options configured below:
 
-```razor
+```html
 <SfDataManager Url="http://localhost:5272/graphql" 
                GraphQLAdaptorOptions="@adaptorOptions" 
                Adaptor="Adaptors.GraphQLAdaptor">
@@ -881,7 +862,7 @@ result {
 }
 ```
 - `count` - Returns total number of records (used for pagination)
-  - Example: If 150 total expense records exist, count = 150
+  - Example: If 500 total expense records exist, count = 500
   - DataGrid uses this to calculate how many pages exist
 - `result` - Contains the array of expense records
   - `{ ... }` - List of fields to return for each record
@@ -954,6 +935,131 @@ When the backend executes the query, it returns a **JSON response** in this exac
 
 ---
 
+**Interactive GraphQL Testing with Nitro UI**
+
+Before moving on to data operations, it's helpful to test your GraphQL endpoint directly. Hot Chocolate provides an interactive interface called **Banana Cake Pop** (also known as Nitro UI) that allows you to write, execute, and debug GraphQL queries and mutations without writing any frontend code.
+
+**Accessing the GraphQL Interface:**
+
+1. Start your Blazor application by running `dotnet run` in the terminal.
+2. Open your web browser and navigate to the GraphQL endpoint:
+   ```
+   https://localhost:5272/graphql
+   ```
+   (Replace `5272` with the port configured in your `launchSettings.json`)
+
+3. The interactive GraphQL explorer interface will load, providing a powerful tool for testing your API.
+
+**GraphQL Explorer Interface Demo**
+
+![GraphQL Explorer Interface Demo](../images/blazor-graphQL-explorer-interface-demo-datagrid.gif)
+
+---
+
+**Understanding the Nitro UI Interface**
+
+The GraphQL explorer consists of four main areas designed to streamline your testing workflow:
+
+**1. Query Editor (Left Panel)**
+This is where you write your GraphQL queries and mutations. The editor features syntax highlighting, intelligent code suggestions, and real-time error detection. Simply paste or type your GraphQL query here. For example, you can use the `expenseRecordData` query to fetch expense records with specific data operations.
+
+**2. Variables Panel (Bottom Left)**
+Located below the query editor, this panel allows you to define variables that your query uses. Instead of hardcoding values in your query, you can parameterize them here. This makes queries reusable for different scenarios. For the `expenseRecordData` query, you would define your `DataManagerRequestInput` object here with parameters like `skip`, `take`, `search`, `where`, and `sorted`.
+
+**3. Run Button (Top Center)**
+After writing your query and setting variables, click the **Run** button (or press **Ctrl + Enter**) to execute your query against the backend. The GraphQL server processes your request and returns results.
+
+**4. Response Pane (Right Panel)**
+This panel displays the response from your GraphQL query. The response is formatted as JSON, showing both the data returned and any errors that occurred. You can expand and collapse nested objects to inspect specific fields, making it easy to understand the structure of your data.
+
+---
+
+**Testing the expenseRecordData Query**
+
+Here's a practical example of testing your expense data query:
+
+**Step 1: Paste the Query**
+
+In the Query Editor, paste the following query:
+
+```graphql
+query expenseRecordData($dataManager: DataManagerRequestInput!) {
+  expenseRecordData(dataManager: $dataManager) {
+    count
+    result {
+      expenseId
+      employeeName
+      employeeEmail
+      department
+      category
+      amount
+      taxPct
+      totalAmount
+    }
+  }
+}
+```
+
+**Step 2: Define Variables**
+
+In the Variables Panel, paste the following variables object:
+
+```json
+{
+  "dataManager": {
+    "Skip": 0,
+    "Take": 10,
+    "RequiresCounts": true
+  }
+}
+```
+
+This configuration requests the first 10 expense records from the database.
+
+**Step 3: Execute the Query**
+
+Click the **Run** button. The GraphQL server will process your request and return the matching expense records in the Response Pane.
+
+**Step 4: Inspect the Response**
+
+The Response Pane will display:
+
+```json
+{
+  "data": {
+    "expenseRecordData": {
+      "count": 500,
+      "result": [
+        {
+          "expenseId": "EXP001",
+          "employeeName": "John Smith",
+          "employeeEmail": "john.smith@company.com",
+          "department": "Sales",
+          "category": "Travel & Mileage",
+          "amount": 450,
+          "taxPct": 0.1,
+          "totalAmount": 495
+        }
+        // ... more records
+      ]
+    }
+  }
+}
+```
+
+**Testing Data Operations:**
+
+You can modify the variables to test different operations:
+
+- **Searching**: Add a `search` parameter with `fields`, `key`, and `operator` to filter records by keyword
+- **Filtering**: Add a `where` parameter with field conditions to apply complex filters
+- **Sorting**: Add a `sorted` parameter with field name and direction (Ascending/Descending)
+- **Combining Operations**: Mix multiple parameters together—the backend processes them in sequence
+
+This interactive testing approach helps you verify that your GraphQL backend is working correctly before connecting it to the Blazor DataGrid component. For more details on using Hot Chocolate's query interface, refer to the [official Hot Chocolate documentation](https://chillicream.com/docs/hotchocolate/v15).
+
+---
+
 ### Step 4: Add Toolbar with CRUD and search options
 
 The toolbar provides buttons for adding, editing, deleting records, and searching the data.
@@ -963,7 +1069,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 1. Open the `Components/Pages/Home.razor` file.
 2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
-```razor
+```html
 <SfGrid TValue="ExpenseRecord" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -990,11 +1096,11 @@ Paging divides large datasets into smaller pages to improve performance and usab
 **Instructions:**
 
 1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [<GridPageSettings>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+2. The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 3. No additional code changes are required from the previous steps.
 
 
-```razor
+```html
 <SfGrid TValue="ExpenseRecord" 
         AllowPaging="true">
     <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
@@ -1040,7 +1146,7 @@ Fetches expenses data by calling the **GetAllRecords** method, which is implemen
 private static List<ExpenseRecord> _expenseStore = null;
 public static List<ExpenseRecord> GetAllRecords()
 {
-    // add code to return a list of ExpenseRecord to process it further
+    // Add code to return a list of "ExpenseRecord" to process it further.
     return _expenseStore;
 }
 
@@ -1078,7 +1184,7 @@ Searching provides the capability to find specific records by entering keywords 
 
 1. Ensure the toolbar includes the "Search" item.
 
-```razor
+```html
 <SfGrid TValue="ExpenseRecord"
         AllowPaging="true"
         Toolbar="@ToolbarItems">
@@ -1162,7 +1268,7 @@ Sorting enables organizing records by selecting column headers, arranging the da
 
 1. Ensure the `<SfGrid>` component has [AllowSorting="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting).
 
-```razor
+```html
 <SfGrid TValue="ExpenseRecord"
         AllowPaging="true"
         AllowSorting="true"
@@ -1237,7 +1343,7 @@ When a column header is selected for sorting, the DataGrid automatically sends:
 }
 ```
 
-The backend resolver receives this and processes the sort specification in the `GetExpenseRecordData` method. Multiple sorting conditions can be applied sequentially by holding the **Ctrl key** and selecting additional column headers. Sorting feature is now active.
+The backend resolver receives this and processes the sort specification in the `GetExpenseRecordData` method. Multiple sorting conditions can be applied sequentially by holding the **Ctrl** key and selecting additional column headers. Sorting feature is now active.
 
 ---
 
@@ -1249,7 +1355,7 @@ The backend resolver receives this and processes the sort specification in the `
  
  1. Ensure the ``<SfGrid>`` component has [AllowFiltering="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering).
  
- ``````razor
+ ```html
  <SfGrid TValue="ExpenseRecord"
          AllowPaging="true"
          AllowFiltering="true"
@@ -1259,11 +1365,11 @@ The backend resolver receives this and processes the sort specification in the `
      <GridPageSettings PageSize="10"></GridPageSettings>
      <!-- Grid columns configuration -->
  </SfGrid>
- ``````
+ ```
 
  2. Update the ``GetExpenseRecordData`` method in the ``GraphQLQuery`` class to handle filtering:
 
- ``````csharp
+ ```csharp
  namespace Grid_GraphQLAdaptor.Models;
 
  public class GraphQLQuery
@@ -1370,16 +1476,16 @@ The backend resolver receives this and processes the sort specification in the `
                  return Convert.ToDouble(propertyValue) > Convert.ToDouble(fieldValue);
              case "lessthan":
                  return Convert.ToDouble(propertyValue) < Convert.ToDouble(fieldValue);
-             case "greaterthanequal":
+             case "greaterthanorequal":
                  return Convert.ToDouble(propertyValue) >= Convert.ToDouble(fieldValue);
-             case "lessthanequal":
+             case "lessthanorequal":
                  return Convert.ToDouble(propertyValue) <= Convert.ToDouble(fieldValue);
              default:
                  return false;
          }
      }
  }
- ``````
+ ```
 
   **Supported Filter Operators:**
 
@@ -1392,13 +1498,13 @@ The backend resolver receives this and processes the sort specification in the `
  | ``endswith`` | Ends with value | Category ends with "Supplies" |
  | ``greaterthan`` | Greater than numeric value | Amount > 1000 |
  | ``lessthan`` | Less than numeric value | TaxPct < 0.15 |
- | ``greaterthanequal`` | Greater than or equal | Amount >= 500 |
- | ``lessthanequal`` | Less than or equal | TaxPct <= 0.10 |
+ | ``greaterthanorequal`` | Greater than or equal | Amount >= 500 |
+ | ``lessthanorequal`` | Less than or equal | TaxPct <= 0.10 |
 
  **How Filter Variables are Passed:**
 
  When filter conditions are applied, the DataGrid automatically sends:
- ``````json
+ ```json
   {
    "dataManager": {
        "Where": [
@@ -1428,7 +1534,7 @@ The backend resolver receives this and processes the sort specification in the `
        "RequiresCounts": true
     }
 }
- ``````
+ ```
 
  **Filter Logic with Multiple Checkbox Selections:**
 
@@ -1449,7 +1555,7 @@ Grouping enables organizing and displaying records based on column values. This 
 
 1. Ensure the `<SfGrid>` component has [AllowGrouping="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping).
 
-```razor
+```html
 <SfGrid TValue="ExpenseRecord"
         AllowPaging="true"
         AllowGrouping="true"
@@ -1574,7 +1680,7 @@ The backend resolver receives the group specifications in the `GetExpenseRecordD
 
  Add the Grid `GridEditSettings` and `Toolbar` configuration to enable create, read, update, and delete (CRUD) operations.
  
- ``````razor
+ ```html
  <SfGrid TValue="ExpenseRecord"
          AllowPaging="true"
          AllowFiltering="true"
@@ -1584,7 +1690,7 @@ The backend resolver receives the group specifications in the `GetExpenseRecordD
      <GridEditSettings AllowAdding="true" Mode="EditMode.Dialog"></GridEditSettings>
      <!-- Grid columns configuration -->
  </SfGrid>
- ``````
+ ```
  
 Add the toolbar items list in the `@code` block:
 
@@ -1604,7 +1710,7 @@ Add the toolbar items list in the `@code` block:
  
  1. Update the ``GraphQLAdaptorOptions`` in the ``@code`` block to include the Insert mutation:
 
- ``````csharp
+ ```csharp
  @code {
      private GraphQLAdaptorOptions adaptorOptions = new GraphQLAdaptorOptions
      {
@@ -1622,11 +1728,11 @@ Add the toolbar items list in the `@code` block:
          }
      };
  }
- ``````
+ ```
 
  2. Implement the ``CreateExpense`` method in the ``GraphQLMutation`` class:
 
- ``````csharp
+ ```csharp
  namespace Grid_GraphQLAdaptor.Models;
 
  public class GraphQLMutation
@@ -1678,7 +1784,7 @@ Add the toolbar items list in the `@code` block:
          return record;
      }
  }
- ``````
+ ```
 
  **Insert Operation Logic Breakdown:**
 
@@ -1842,7 +1948,11 @@ public class GraphQLMutation
             existingExpense.ReimbursementStatus = record.ReimbursementStatus;
             existingExpense.IsPolicyCompliant = record.IsPolicyCompliant;
             existingExpense.Tags = record.Tags;
-            existingExpense.ExpenseDate = record.ExpenseDate;
+            
+            if (record.ExpenseDate != null)
+            {
+                existingExpense.ExpenseDate = record.ExpenseDate;
+            }
 
             existingExpense.TotalAmount = existingExpense.Amount + (existingExpense.Amount * existingExpense.TaxPct);
         }
