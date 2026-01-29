@@ -36,6 +36,8 @@ A **Blazor Web App** can be created using **Visual Studio** with the built-in [M
 6. Choose the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes) (**Server**) and configure the [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
 7. Review the remaining options and click **Create** to generate the project.
 
+![Blazor Server App with Interactive Mode](images/blazor-app-interactive-mode.png)
+
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes in Visual Studio
 
 To integrate the Blazor DataGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages in the solution:
