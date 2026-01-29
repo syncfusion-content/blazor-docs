@@ -935,131 +935,6 @@ When the backend executes the query, it returns a **JSON response** in this exac
 
 ---
 
-**Interactive GraphQL Testing with Nitro UI**
-
-Before moving on to data operations, it's helpful to test your GraphQL endpoint directly. Hot Chocolate provides an interactive interface called **Banana Cake Pop** (also known as Nitro UI) that allows you to write, execute, and debug GraphQL queries and mutations without writing any frontend code.
-
-**Accessing the GraphQL Interface:**
-
-1. Start your Blazor application by running `dotnet run` in the terminal.
-2. Open your web browser and navigate to the GraphQL endpoint:
-   ```
-   https://localhost:5272/graphql
-   ```
-   (Replace `5272` with the port configured in your `launchSettings.json`)
-
-3. The interactive GraphQL explorer interface will load, providing a powerful tool for testing your API.
-
-**GraphQL Explorer Interface Demo**
-
-![GraphQL Explorer Interface Demo](../images/blazor-graphQL-explorer-interface-demo-datagrid.gif)
-
----
-
-**Understanding Nitro UI Interface**
-
-The GraphQL explorer consists of four main areas designed to streamline your testing workflow:
-
-**1. Query Editor (Left Panel)**
-This is where you write your GraphQL queries and mutations. The editor features syntax highlighting, intelligent code suggestions, and real-time error detection. Simply paste or type your GraphQL query here. For example, you can use the `expenseRecordData` query to fetch expense records with specific data operations.
-
-**2. Variables Panel (Bottom Left)**
-Located below the query editor, this panel allows you to define variables that your query uses. Instead of hard coding values in your query, you can parameterize them here. This makes queries reusable for different scenarios. For the `expenseRecordData` query, you would define your `DataManagerRequestInput` object here with parameters like `skip`, `take`, `search`, `where`, and `sorted`.
-
-**3. Run Button (Top Center)**
-After writing your query and setting variables, click the **Run** button (or press **Ctrl + Enter**) to execute your query against the backend. The GraphQL server processes your request and returns results.
-
-**4. Response Pane (Right Panel)**
-This panel displays the response from your GraphQL query. The response is formatted as JSON, showing both the data returned and any errors that occurred. You can expand and collapse nested objects to inspect specific fields, making it easy to understand the structure of your data.
-
----
-
-**Testing the expenseRecordData Query**
-
-Here's a practical example of testing your expense data query:
-
-**Step 1: Paste the Query**
-
-In the Query Editor, paste the following query:
-
-```graphql
-query expenseRecordData($dataManager: DataManagerRequestInput!) {
-  expenseRecordData(dataManager: $dataManager) {
-    count
-    result {
-      expenseId
-      employeeName
-      employeeEmail
-      department
-      category
-      amount
-      taxPct
-      totalAmount
-    }
-  }
-}
-```
-
-**Step 2: Define Variables**
-
-In the Variables Panel, paste the following variables object:
-
-```json
-{
-  "dataManager": {
-    "Skip": 0,
-    "Take": 10,
-    "RequiresCounts": true
-  }
-}
-```
-
-This configuration requests the first 10 expense records from the database.
-
-**Step 3: Execute the Query**
-
-Click the **Run** button. The GraphQL server will process your request and return the matching expense records in the Response Pane.
-
-**Step 4: Inspect the Response**
-
-The Response Pane will display:
-
-```json
-{
-  "data": {
-    "expenseRecordData": {
-      "count": 500,
-      "result": [
-        {
-          "expenseId": "EXP001",
-          "employeeName": "John Smith",
-          "employeeEmail": "john.smith@company.com",
-          "department": "Sales",
-          "category": "Travel & Mileage",
-          "amount": 450,
-          "taxPct": 0.1,
-          "totalAmount": 495
-        }
-        // ... more records
-      ]
-    }
-  }
-}
-```
-
-**Testing Data Operations:**
-
-You can modify the variables to test different operations:
-
-- **Searching**: Add a `search` parameter with `fields`, `key`, and `operator` to filter records by keyword
-- **Filtering**: Add a `where` parameter with field conditions to apply complex filters
-- **Sorting**: Add a `sorted` parameter with field name and direction (Ascending/Descending)
-- **Combining Operations**: Mix multiple parameters together—the backend processes them in sequence
-
-This interactive testing approach helps you verify that your GraphQL backend is working correctly before connecting it to the Blazor DataGrid component. For more details on using Hot Chocolate's query interface, refer to the [Nitro documentation](https://chillicream.com/docs/nitro).
-
----
-
 ### Step 4: Add Toolbar with CRUD and search options
 
 The toolbar provides buttons for adding, editing, deleting records, and searching the data.
@@ -1740,34 +1615,9 @@ Add the toolbar items list in the `@code` block:
      public ExpenseRecord CreateExpense(ExpenseRecord record, int index, string action, [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
      {
          var expenses = ExpenseRecord.GetAllRecords();
-
          if (string.IsNullOrWhiteSpace(record.ExpenseId))
          {
-             string detectedPrefix = "EXP";
-             var firstWithLetters = expenses
-                 .Select(e => e.ExpenseId)
-                 .FirstOrDefault(id => !string.IsNullOrWhiteSpace(id) && char.IsLetter(id[0]));
-             if (!string.IsNullOrWhiteSpace(firstWithLetters))
-             {
-                 int i = 0;
-                 while (i < firstWithLetters.Length && char.IsLetter(firstWithLetters[i])) i++;
-                 if (i > 0) detectedPrefix = firstWithLetters.Substring(0, i);
-             }
-
-             int maxSeq = expenses
-                 .Select(e => e.ExpenseId)
-                 .Where(id => !string.IsNullOrWhiteSpace(id))
-                 .Select(id =>
-                 {
-                     int j = id.Length - 1;
-                     while (j >= 0 && char.IsDigit(id[j])) j--;
-                     var numPart = id.Substring(j + 1);
-                     return int.TryParse(numPart, out var n) ? n : 0;
-                 })
-                 .DefaultIfEmpty(1000)
-                 .Max();
-
-             record.ExpenseId = $"{detectedPrefix}{maxSeq + 1}";
+             record.ExpenseId = GenerateExpenseId(expenses);
          }
 
          record.TotalAmount = record.Amount + (record.Amount * record.TaxPct);
@@ -1783,8 +1633,46 @@ Add the toolbar items list in the `@code` block:
 
          return record;
      }
+
+     /// <summary>
+     /// Generates a unique ExpenseId by extracting prefix from existing IDs and incrementing the sequence number.
+     /// </summary>
+     /// <param name="expenses">The list of existing expense records.</param>
+     /// <returns>A newly generated unique ExpenseId.</returns>
+     private string GenerateExpenseId(List<ExpenseRecord> expenses)
+     {
+         string detectedPrefix = "EXP";
+         var firstWithLetters = expenses
+             .Select(e => e.ExpenseId)
+             .FirstOrDefault(id => !string.IsNullOrWhiteSpace(id) && char.IsLetter(id[0]));
+         if (!string.IsNullOrWhiteSpace(firstWithLetters))
+         {
+             int i = 0;
+             while (i < firstWithLetters.Length && char.IsLetter(firstWithLetters[i])) i++;
+             if (i > 0) detectedPrefix = firstWithLetters.Substring(0, i);
+         }
+
+         int maxSeq = expenses
+             .Select(e => e.ExpenseId)
+             .Where(id => !string.IsNullOrWhiteSpace(id))
+             .Select(id =>
+             {
+                 int j = id.Length - 1;
+                 while (j >= 0 && char.IsDigit(id[j])) j--;
+                 var numPart = id.Substring(j + 1);
+                 return int.TryParse(numPart, out var n) ? n : 0;
+             })
+             .DefaultIfEmpty(1000) // start sequence at 1001 if nothing found
+             .Max();
+
+         return $"{detectedPrefix}{maxSeq + 1}";
+     }
  }
  ```
+
+**Helper Method Explanation:**
+- The `GenerateExpenseId()` helper method extracts the alphabetic prefix (e.g., "EXP") from existing expense IDs and increments the numeric sequence number to create a unique identifier.
+- This method is reused in both `CreateExpense()` and `BatchUpdate()` operations to ensure consistent ID generation across all add operations.
 
  **Insert Operation Logic Breakdown:**
 
@@ -1935,32 +1823,42 @@ public class GraphQLMutation
         
         if (existingExpense != null)
         {
-            existingExpense.EmployeeName = record.EmployeeName;
-            existingExpense.EmployeeEmail = record.EmployeeEmail;
-            existingExpense.EmployeeAvatarUrl = record.EmployeeAvatarUrl;
-            existingExpense.Department = record.Department;
-            existingExpense.Category = record.Category;
-            existingExpense.Description = record.Description;
-            existingExpense.Amount = record.Amount;
-            existingExpense.TaxPct = record.TaxPct;
-            existingExpense.Currency = record.Currency;
-            existingExpense.PaymentMethod = record.PaymentMethod;
-            existingExpense.ReimbursementStatus = record.ReimbursementStatus;
-            existingExpense.IsPolicyCompliant = record.IsPolicyCompliant;
-            existingExpense.Tags = record.Tags;
-            
-            if (record.ExpenseDate != null)
-            {
-                existingExpense.ExpenseDate = record.ExpenseDate;
-            }
-
-            existingExpense.TotalAmount = existingExpense.Amount + (existingExpense.Amount * existingExpense.TaxPct);
+            UpdateExpenseProperties(existingExpense, record);
         }
 
         return existingExpense;
     }
+
+    /// <summary>
+    /// Updates all properties of an existing expense record with values from a source record.
+    /// </summary>
+    /// <param name="target">The existing expense record to update.</param>
+    /// <param name="source">The source record containing new values.</param>
+    private void UpdateExpenseProperties(ExpenseRecord target, ExpenseRecord source)
+    {
+        target.EmployeeName = source.EmployeeName;
+        target.EmployeeEmail = source.EmployeeEmail;
+        target.EmployeeAvatarUrl = source.EmployeeAvatarUrl;
+        target.Department = source.Department;
+        target.Category = source.Category;
+        target.Description = source.Description;
+        target.Amount = source.Amount;
+        target.TaxPct = source.TaxPct;
+        target.Currency = source.Currency;
+        target.PaymentMethod = source.PaymentMethod;
+        target.ReimbursementStatus = source.ReimbursementStatus;
+        target.IsPolicyCompliant = source.IsPolicyCompliant;
+        target.Tags = source.Tags;
+        target.ExpenseDate = source.ExpenseDate;
+
+        target.TotalAmount = target.Amount + (target.Amount * target.TaxPct);
+    }
 }
 ```
+
+**Helper Method Explanation:**
+- The `UpdateExpenseProperties()` helper method encapsulates all property assignment logic, making the update operation cleaner and more maintainable.
+- This method is reused in both `UpdateExpense()` and `BatchUpdate()` operations to ensure consistent property updates and total amount recalculation across all edit operations.
 
 **Update Operation Logic Breakdown:**
 
@@ -2216,89 +2114,55 @@ using HotChocolate.Types;
 
 public class GraphQLMutation
 {
-    public IEnumerable<ExpenseRecord> BatchUpdate(
-        List<ExpenseRecord>? changed,
-        List<ExpenseRecord>? added,
-        List<ExpenseRecord>? deleted,
-        string action,
-        string primaryColumnName,
-        [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters,
-        int? dropIndex)
+    public List<ExpenseRecord> BatchUpdate(List<ExpenseRecord>? changed, List<ExpenseRecord>? added,
+        List<ExpenseRecord>? deleted, string action, string primaryColumnName,
+        [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters, int? dropIndex)
     {
-        var source = ExpenseRecord.GetAllRecords();
+        var expenses = ExpenseRecord.GetAllRecords();
 
-        if (changed != null && changed.Count > 0)
+        // Update existing expenses
+        if (changed != null)
         {
-            foreach (var rec in changed)
+            foreach (var changedItem in changed)
             {
-                var id = rec.ExpenseId;
-                var existing = source.FirstOrDefault(x => x.ExpenseId == id);
+                var existing = expenses.FirstOrDefault(e => e.ExpenseId == changedItem.ExpenseId);
                 if (existing != null)
                 {
-                    existing.EmployeeName = rec.EmployeeName;
-                    existing.EmployeeEmail = rec.EmployeeEmail;
-                    existing.EmployeeAvatarUrl = rec.EmployeeAvatarUrl;
-                    existing.Department = rec.Department;
-                    existing.Category = rec.Category;
-                    existing.Description = rec.Description;
-                    existing.Amount = rec.Amount;
-                    existing.TaxPct = rec.TaxPct;
-                    existing.Currency = rec.Currency;
-                    existing.PaymentMethod = rec.PaymentMethod;
-                    existing.ReimbursementStatus = rec.ReimbursementStatus;
-                    existing.IsPolicyCompliant = rec.IsPolicyCompliant;
-                    existing.Tags = rec.Tags;
-                    if (rec.ExpenseDate != null) existing.ExpenseDate = rec.ExpenseDate;
-                    existing.TotalAmount = existing.Amount + (existing.Amount * existing.TaxPct);
+                    UpdateExpenseProperties(existing, changedItem);
                 }
             }
         }
 
-        if (added != null && added.Count > 0)
+        // Add new expenses
+        if (added != null)
         {
-            foreach (var rec in added)
+            foreach (var newItem in added)
             {
-                if (string.IsNullOrWhiteSpace(rec.ExpenseId))
+                if (string.IsNullOrWhiteSpace(newItem.ExpenseId))
                 {
-                    var detectedPrefix = "EXP";
-                    var firstWithLetters = source.Select(e => e.ExpenseId).FirstOrDefault(id => !string.IsNullOrWhiteSpace(id) && char.IsLetter(id[0]));
-                    if (!string.IsNullOrWhiteSpace(firstWithLetters))
-                    {
-                        int i = 0;
-                        while (i < firstWithLetters.Length && char.IsLetter(firstWithLetters[i])) i++;
-                        if (i > 0) detectedPrefix = firstWithLetters.Substring(0, i);
-                    }
-                    int maxSeq = source.Select(e => e.ExpenseId).Where(id => !string.IsNullOrWhiteSpace(id)).Select(id =>
-                    {
-                        int j = id.Length - 1;
-                        while (j >= 0 && char.IsDigit(id[j])) j--;
-                        var numPart = id.Substring(j + 1);
-                        return int.TryParse(numPart, out var n) ? n : 0;
-                    }).DefaultIfEmpty(1000).Max();
-                    rec.ExpenseId = $"{detectedPrefix}{maxSeq + 1}";
+                    newItem.ExpenseId = GenerateExpenseId(expenses);
                 }
-                rec.TotalAmount = rec.Amount + (rec.Amount * rec.TaxPct);
-                if (dropIndex.HasValue && dropIndex.Value >= 0 && dropIndex.Value <= source.Count)
-                {
-                    source.Insert(dropIndex.Value, rec);
-                }
+
+                newItem.TotalAmount = newItem.Amount + (newItem.Amount * newItem.TaxPct);
+
+                if (dropIndex.HasValue && dropIndex >= 0 && dropIndex <= expenses.Count)
+                    expenses.Insert(dropIndex.Value, newItem);
                 else
-                {
-                    source.Add(rec);
-                }
+                    expenses.Add(newItem);
             }
         }
 
-        if (deleted != null && deleted.Count > 0)
+        // Delete expenses
+        if (deleted != null)
         {
-            foreach (var rec in deleted)
+            foreach (var del in deleted)
             {
-                var target = source.FirstOrDefault(x => x.ExpenseId == rec.ExpenseId);
-                if (target != null) source.Remove(target);
+                var toRemove = expenses.FirstOrDefault(e => e.ExpenseId == del.ExpenseId);
+                if (toRemove != null) expenses.Remove(toRemove);
             }
         }
 
-        return source;
+        return expenses;
     }
 }
 ```
