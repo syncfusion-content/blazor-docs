@@ -25,7 +25,7 @@ The [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 When `AllowFiltering` is enabled, user input continues to filter existing items; a custom value is processed when the entered text does not match any filtered results.
 ## Adding Custom Values Using the AddItemsAsync Method
 
-The [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AddItemsAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method, which is available on dropdown components such as `SfDropDownList` and `SfComboBox`, allows dynamically adding new items to the ComboBox data source at runtime. This method is particularly useful when handling the `CustomValueSpecifier` event to persist user-entered custom values.
+The [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) method, which is available on dropdown components such as `SfDropDownList` and `SfComboBox`, allows dynamically adding new items to the ComboBox data source at runtime. This method is particularly useful when handling the `CustomValueSpecifier` event to persist user-entered custom values.
 
 ### Method Signature
 
@@ -95,4 +95,4 @@ The following example demonstrates a scenario where users can select an existing
 
 N> Custom values can also be committed using the keyboard by pressing **Enter** when the desired text is typed in the input field.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhRNiVVgsyBLmLd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBnjMBqrTWEjiBq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.gif)" %}
