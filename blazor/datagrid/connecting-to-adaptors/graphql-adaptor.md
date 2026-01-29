@@ -20,7 +20,7 @@ GraphQL is a query language that allows applications to request exactly the data
 - **Resolvers**: Each query or mutation is handled by a resolver, which is a function responsible for fetching data or executing an operation. **Query resolvers** handle **read operations**, while **mutation resolvers** handle **write operations**.
 - **Schema**: Defines the structure of the API. The schema describes available data types, the fields within those types, and the operations that can be executed. Query definitions specify how data can be retrieved, and mutation definitions specify how data can be modified. 
 
-[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET, developed by [ChilliCream](https://chillicream.com). Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor.
+[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor.
 
 ## Prerequisites
 
@@ -956,7 +956,7 @@ Before moving on to data operations, it's helpful to test your GraphQL endpoint 
 
 ---
 
-**Understanding the Nitro UI Interface**
+**Understanding Nitro UI Interface**
 
 The GraphQL explorer consists of four main areas designed to streamline your testing workflow:
 
@@ -964,7 +964,7 @@ The GraphQL explorer consists of four main areas designed to streamline your tes
 This is where you write your GraphQL queries and mutations. The editor features syntax highlighting, intelligent code suggestions, and real-time error detection. Simply paste or type your GraphQL query here. For example, you can use the `expenseRecordData` query to fetch expense records with specific data operations.
 
 **2. Variables Panel (Bottom Left)**
-Located below the query editor, this panel allows you to define variables that your query uses. Instead of hardcoding values in your query, you can parameterize them here. This makes queries reusable for different scenarios. For the `expenseRecordData` query, you would define your `DataManagerRequestInput` object here with parameters like `skip`, `take`, `search`, `where`, and `sorted`.
+Located below the query editor, this panel allows you to define variables that your query uses. Instead of hard coding values in your query, you can parameterize them here. This makes queries reusable for different scenarios. For the `expenseRecordData` query, you would define your `DataManagerRequestInput` object here with parameters like `skip`, `take`, `search`, `where`, and `sorted`.
 
 **3. Run Button (Top Center)**
 After writing your query and setting variables, click the **Run** button (or press **Ctrl + Enter**) to execute your query against the backend. The GraphQL server processes your request and returns results.
@@ -1056,7 +1056,7 @@ You can modify the variables to test different operations:
 - **Sorting**: Add a `sorted` parameter with field name and direction (Ascending/Descending)
 - **Combining Operations**: Mix multiple parameters together—the backend processes them in sequence
 
-This interactive testing approach helps you verify that your GraphQL backend is working correctly before connecting it to the Blazor DataGrid component. For more details on using Hot Chocolate's query interface, refer to the [official Hot Chocolate documentation](https://chillicream.com/docs/hotchocolate/v15).
+This interactive testing approach helps you verify that your GraphQL backend is working correctly before connecting it to the Blazor DataGrid component. For more details on using Hot Chocolate's query interface, refer to the [Nitro documentation](https://chillicream.com/docs/nitro).
 
 ---
 
@@ -1109,7 +1109,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 </SfGrid>
 ```
 
-4. Update the `GetExpenseRecordData` method in the `CustomAdGraphQLQueryaptor` class to handle paging:
+4. Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle paging:
 
 ```csharp
 namespace Grid_GraphQLAdaptor.Models;
