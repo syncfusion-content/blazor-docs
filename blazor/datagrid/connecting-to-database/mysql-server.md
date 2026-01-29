@@ -536,7 +536,7 @@ The Home component will display the transaction data in a Syncfusion Blazor Data
 1. open the file named `Home.razor` in the `Components/Pages` folder.
 2. Add the following code to create a basic DataGrid:
 
-```razor
+```html
 @page "/"
 @rendermode InteractiveServer
 @inject TransactionRepository TransactionService
@@ -687,7 +687,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 1. Open the `Components/Pages/Home.razor` file.
 2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
-```razor
+```html
 <SfGrid TValue="TransactionModel" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -734,7 +734,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 2. The page size is configured with [<GridPageSettings>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 3. No additional code changes are required from the previous steps.
 
-```razor
+```html
 <SfGrid TValue="TransactionModel" 
         AllowPaging="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -832,7 +832,7 @@ Searching allows the user to find records by entering keywords in the search box
 2. Ensure the toolbar includes the "Search" item.
 3. No additional code changes are required.
 
-```razor
+```html
 <SfGrid TValue="TransactionModel"        
         AllowPaging="true
         Toolbar="@ToolbarItems">
@@ -911,7 +911,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowFiltering]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
-```razor
+```html
 <SfGrid TValue="TransactionModel" 
         AllowPaging="true"         
         AllowFiltering="true"
@@ -998,7 +998,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
-```razor
+```html
 <SfGrid TValue="TransactionModel" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1092,7 +1092,7 @@ Grouping organizes records into hierarchical groups based on column values.
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
 
-```razor
+```html
 <SfGrid TValue="TransactionModel" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1202,7 +1202,7 @@ CustomAdaptor methods enable users to create, read, update, and delete records d
 
 Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
-```razor
+```html
 <SfGrid TValue="TransactionModel" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1487,7 +1487,7 @@ Now the adaptor supports bulk modifications with atomic database synchronization
 ### Step 11: Complete code
 Here is the complete and final `Home.razor` component with all features integrated:
 
-```razor
+```html
 
 @using System.Collections
 @using Transaction.Data
