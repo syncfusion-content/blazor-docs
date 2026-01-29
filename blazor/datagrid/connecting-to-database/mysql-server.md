@@ -135,7 +135,7 @@ A data model is a C# class that represents the structure of a database table. Th
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Transaction.Data
+namespace Grid_MySQL.Data
 {
     /// <summary>
     /// Represents a transaction record mapped to the 'transactions' table in the database.
@@ -232,7 +232,7 @@ A `DbContext` is a special class that manages the connection between the applica
 ```csharp
 using Microsoft.EntityFrameworkCore;
 
-namespace Transaction.Data
+namespace Grid_MySQL.Data
 {
     /// <summary>
     /// DbContext for Transaction entity
@@ -384,7 +384,7 @@ A repository class is an intermediary layer that handles all database operations
 ```csharp
 using Microsoft.EntityFrameworkCore;
 
-namespace Transaction.Data
+namespace Grid_MySQL.Data
 {
     /// <summary>
     /// Repository pattern implementation for Transaction entity using Entity Framework Core
@@ -450,7 +450,7 @@ The `Program.cs` file is where application services are registered and configure
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
-using Transaction.Data;
+using Grid_MySQL.Data;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -1490,7 +1490,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 ```html
 
 @using System.Collections
-@using Transaction.Data
+@using Grid_MySQL.Data
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
