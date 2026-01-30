@@ -373,68 +373,32 @@ Data binding is typically performed in the [OnInitialized](https://learn.microso
 {% tabs %}
 {% highlight razor %}
 
-
-<SfTreeGrid DataSource="@TreeData">
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="5" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="30" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
+    </TreeGridColumns>
 </SfTreeGrid>
 
-@code {
-    public List<BusinessObject> TreeData { get; set; } = new();
-
-    protected override void OnInitialized()
-    {
-        var random = new Random();
-        var priorities = new[] { "High", "Normal", "Critical", "Low" };
-
-        int parentsCount = 15;
-        int childrenPerParent = 4;
-
-        TreeData = new List<BusinessObject>();
-
-        int taskId = 1;
-
-        for (int p = 1; p <= parentsCount; p++)
-        {
-            // Add Parent
-            int parentTaskId = taskId;
-
-            TreeData.Add(new BusinessObject
-            {
-                TaskId = parentTaskId,
-                TaskName = $"Parent Task {p}",
-                Duration = random.Next(3, 11),
-                Progress = random.Next(0, 101),
-                Priority = priorities[random.Next(priorities.Length)],
-                ParentId = null
-            });
-
-            taskId++;
-
-            // Add Children
-            for (int c = 1; c <= childrenPerParent; c++)
-            {
-                TreeData.Add(new BusinessObject
-                {
-                    TaskId = taskId,
-                    TaskName = $"Child Task {p}.{c}",
-                    Duration = random.Next(1, 10),
-                    Progress = random.Next(0, 101),
-                    Priority = priorities[random.Next(priorities.Length)],
-                    ParentId = parentTaskId
-                });
-
-                taskId++;
-            }
-        }
-    }
-
+@code
+{
     public class BusinessObject
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
-        public int Duration { get; set; }
-        public int Progress { get; set; }
-        public string Priority { get; set; }
         public int? ParentId { get; set; }
+    }
+
+    public List<BusinessObject> TreeData = new List<BusinessObject>();
+
+    protected override void OnInitialized()
+    {
+        TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", ParentId = null });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", ParentId = 1 });
+        TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", ParentId = 1, });
+        TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", ParentId = null });
+        TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", ParentId = 4 });
+        TreeData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", ParentId = 5 });
     }
 }
 
