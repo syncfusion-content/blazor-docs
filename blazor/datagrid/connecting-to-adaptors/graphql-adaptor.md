@@ -660,9 +660,9 @@ For this project, the tailwind3 theme is used. A different theme can be selected
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-### Step 2: Update the Blazor DataGrid in the Home Component
+### Step 2: Update the Blazor DataGrid
 
-The Home component will display the expense data in a Syncfusion Blazor DataGrid with search, filter, sort, editing and pagination capabilities.
+The `Home.razor` component will display the expense data in a Syncfusion Blazor DataGrid with search, filter, sort, editing and pagination capabilities.
 
 **Instructions:**
 
