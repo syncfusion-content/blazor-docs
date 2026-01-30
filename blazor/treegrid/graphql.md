@@ -7,7 +7,7 @@ platform: blazor
 documentation: ug
 ---
 
-# Connecting the Syncfusion Blazor TreeGrid with GraphQL Backend using Hot Chocolate
+# Connecting the TreeGrid with GraphQL Backend using Hot Chocolate
 
 GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
@@ -20,7 +20,7 @@ GraphQL is a query language that allows applications to request exactly the data
 - **Resolvers**: Each query or mutation is handled by a resolver, which is a function responsible for fetching data or executing an operation. **Query resolvers** handle **read operations**, while **mutation resolvers** handle **write operations**.
 - **Schema**: Defines the structure of the API. The schema describes available data types, the fields within those types, and the operations that can be executed. Query definitions specify how data can be retrieved, and mutation definitions specify how data can be modified. 
 
-[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET, developed by ChilliCream. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor. 
+[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET, developed by `ChilliCream`. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor. 
 
 ## Prerequisites
 
@@ -2627,15 +2627,15 @@ public class EmployeesDataResponse
 
  | Operator | Purpose | Example |
  |----------|---------|---------|
- | ``equal`` | Exact match | Amount equals 500 |
- | ``notequal`` | Not equal to value | Status not equal to "Rejected" |
- | ``contains`` | Contains substring (case-insensitive) | Description contains "travel" |
- | ``startswith`` | Starts with value | EmployeeName starts with "John" |
- | ``endswith`` | Ends with value | Category ends with "Supplies" |
- | ``greaterthan`` | Greater than numeric value | Amount > 1000 |
- | ``lessthan`` | Less than numeric value | TaxPct < 0.15 |
- | ``greaterthanequal`` | Greater than or equal | Amount >= 500 |
- | ``lessthanequal`` | Less than or equal | TaxPct <= 0.10 |
+ | equal | Exact match | Amount equals 500 |
+ | notequal | Not equal to value | Status not equal to "Rejected" |
+ | contains | Contains substring (case-insensitive) | Description contains "travel" |
+ | startswith | Starts with value | EmployeeName starts with "John" |
+ | endswith | Ends with value | Category ends with "Supplies" |
+ | greater than | Greater than numeric value | Amount > 1000 |
+ | less than | Less than numeric value | TaxPct < 0.15 |
+ | greater than equal | Greater than or equal | Amount >= 500 |
+ | less than equal | Less than or equal | TaxPct <= 0.10 |
 
  **How Filter Variables are Passed:**
 
@@ -3045,7 +3045,7 @@ namespace TreeGrid_GraphQLAdaptor.Models
 |------|---------|----------------|
 | **1. Locate Record** | Find the existing employee by primary key | `UpdateEmployee` looks up by `primaryColumnName` (case‑insensitive); default lookup is by `employeeID` |
 | **2. Validate Existence** | Ensure record exists before modifying | `if (existing == null) return null;` |
-| **3. Apply Field Changes** | Copy only provided fields from incoming `record` | Each updatable property is set only when the incoming value is non-null (or HasValue for nullable value types), e.g. `if (record.FirstName != null) existing.FirstName = record.FirstName;` |
+| **3. Apply Field Changes** | Copy only provided fields from incoming `record` | Each property is set only when the incoming value is non-null (or HasValue for nullable value types), e.g. `if (record.FirstName != null) existing.FirstName = record.FirstName;` |
 | **4. Handle Manager Change** | Maintain parent/child relationship consistency | If `ManagerID` changes: assign `existing.ManagerID = record.ManagerID`; set `newManager.HasChild = true` when present; recompute `oldManager.HasChild` by checking remaining children |
 | **5. Preserve Unchanged Data** | Avoid overwriting unspecified fields | Unspecified/null fields are left intact (ID is preserved) |
 | **6. Update HasChild Flag** | Allow explicit HasChild updates from client | `if (record.HasChild) existing.HasChild = record.HasChild;` |
@@ -3107,7 +3107,7 @@ mutation update($record: EmployeeDataInput!, $action: String!, $primaryColumnNam
 | `action` | `string` | Action descriptor from the tree grid (commonly `"save"` for updates) | `"save"` |
 | `primaryColumnName` | `string` | Name of the primary key column used by the tree grid/backend (case‑insensitive) | `"EmployeeID"` |
 | `primaryColumnValue` | `string` | Primary key value identifying the record to update | `"EMP011"` |
-| `additionalParameters` | `Any` | Optional freeform metadata passed through by the adaptor | `{}` or custom context |
+| `additionalParameters` | `Any` | Optional free-form metadata passed through by the adaptor | `{}` or custom context |
 
 **Backend Response:**
 
