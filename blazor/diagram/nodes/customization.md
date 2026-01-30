@@ -20,34 +20,33 @@ The following code shows how to customize the appearance of a shape.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                //Sets the style for the node
-                Style = new ShapeStyle() { Fill = "Green", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
-            };
-        // Add node
-        nodes.Add(node);
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            // Add node
+            Style = new ShapeStyle() { Fill = "Green", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
+        };
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeAppearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/NodeAppearance.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtreCDNdTPXnzIxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)" %}
 
@@ -62,38 +61,39 @@ The following code shows how to customize the appearance of a shape.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" NodeCreating="@NodeCreating" />
+<SfDiagramComponent Height="600px" @ref="_diagram" Nodes="@_nodes" NodeCreating="@NodeCreating" />
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node1 = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Shape of the Node
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-            };
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Shape of the Node
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+        };
         Node node2 = new Node()
-            {
-                // Position of the node
-                OffsetX = 100,
-                OffsetY = 100,
-                // Shape of the Node
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse }
-            };
-        nodes.Add(node1);
-        nodes.Add(node2);
+        {
+            // Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            // Shape of the Node
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse }
+        };
+        _nodes.Add(node1);
+        _nodes.Add(node2);
     }
+
     //Method to define nodecreating event
     private void NodeCreating(IDiagramObject obj)
     {
@@ -107,7 +107,7 @@ The following code shows how to customize the appearance of a shape.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDroMttxJlMdwANx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeDefaultSample)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/NodeDefaultSample.razor)
 
 ## How to Update Node Templates 
 
@@ -115,8 +115,9 @@ Define node style using a template in [NodeTemplate](https://help.syncfusion.com
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<SfDiagramComponent @ref="diagram" Width="1200px" Height="1000px" Nodes="@nodes">
+<SfDiagramComponent @ref="_diagram" Width="1200px" Height="1000px" Nodes="@_nodes">
     <DiagramTemplates>
         <NodeTemplate>
             @{
@@ -153,22 +154,24 @@ Define node style using a template in [NodeTemplate](https://help.syncfusion.com
                                 <tr><td class="c1">node0</td><td class="c2">100</td></tr>
                             </tbody>
                         </table>
-                        <input type="button" value="Button2" @onclick="@OnClick" />
+                        <SfButton Content="Button2" OnClick="@OnClick" />
                     </div>
                 </div>
-            }
+             }
         </NodeTemplate>
     </DiagramTemplates>
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    //Reference the diagram
+    private SfDiagramComponent _diagram;
+    //Define diaram's nodes collection
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 137,
@@ -178,17 +181,17 @@ Define node style using a template in [NodeTemplate](https://help.syncfusion.com
             ID = "html1",
             Shape = new Shape() { Type = NodeShapes.HTML },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void OnClick()
+    private void OnClick()
     {
-        nodes[0].BackgroundColor = "cornflowerblue";
+        _nodes[0].BackgroundColor = "cornflowerblue";
         StateHasChanged();
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeTemplate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/NodeTemplate.razor)
 
 N> In this example, the node's background color is updated using the click event of the button defined in the template.
 
@@ -203,40 +206,41 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
 @using System.Collections.ObjectModel
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" SetNodeTemplate="@SetNodeTemplate" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" SetNodeTemplate="@SetNodeTemplate" />
 
 @code
 {
-    // Initialize node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    // Initialize node collection with node
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
         {
             ID = "node1",
-            // Size of the node.
+            // Size of the node
             Height = 100,
             Width = 100,
-            // Position of the node.
+            // Position of the node
             OffsetX = 100,
             OffsetY = 100,
         };
         Node node2 = new Node()
         {
             ID = "node6",
-            // Size of the node.
+            // Size of the node
             Height = 510,
             Width = 202,
-            // Position of the node.
+            // Position of the node
             OffsetX = 300,
             OffsetY = 100,
         };
-        nodes.Add(node1);
-        nodes.Add(node2);
+        _nodes.Add(node1);
+        _nodes.Add(node2);
     }
 
+    //SetNode Template method
     private CommonElement SetNodeTemplate(IDiagramObject node)
     {
         if ((node as Node).ID == "node6")
@@ -249,27 +253,27 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
             column1.Margin = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column1.Padding = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column1.Children = new ObservableCollection<CommonElement>();
-            column1.Children.Add(getTextElement("Events"));
+            column1.Children.Add(GetTextElement("Events"));
 
             StackPanel column2 = new StackPanel();
             column2.Margin = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column2.Padding = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column2.Children = new ObservableCollection<CommonElement>();
-            column2.Children.Add(getTextElement("Emails"));
+            column2.Children.Add(GetTextElement("Emails"));
             column2.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
             StackPanel column3 = new StackPanel();
             column3.Margin = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column3.Padding = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column3.Children = new ObservableCollection<CommonElement>();
-            column3.Children.Add(getTextElement("Calls"));
+            column3.Children.Add(GetTextElement("Calls"));
             column3.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
             StackPanel column4 = new StackPanel();
             column4.Margin = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column4.Padding = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column4.Children = new ObservableCollection<CommonElement>();
-            column4.Children.Add(getTextElement("Smart contents"));
+            column4.Children.Add(GetTextElement("Smart contents"));
             column4.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
             table.Orientation = Orientation.Vertical;
@@ -278,23 +282,13 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
         }
         else
         {
-            (node as Node).Style = new ShapeStyle() 
-            { 
-                Fill = "#6F409F", 
-                StrokeColor = "#6F409F", 
-                StrokeWidth = 2 
-            };
-            (node as Node).Shape = new BasicShape() 
-            { 
-                Type = NodeShapes.Basic, 
-                Shape = NodeBasicShapes.Rectangle, 
-                CornerRadius = 10 
-            };
+            (node as Node).Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F", StrokeWidth = 2 };
+            (node as Node).Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle, CornerRadius = 10 };
         }
         return null;
     }
 
-    private TextElement getTextElement(string text)
+    private TextElement GetTextElement(string text)
     {
         TextElement textElement = new TextElement();
         textElement.Width = 60;
@@ -305,7 +299,7 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/SetTemplate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/SetTemplate.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIWZZRJvqiUhpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)" %}
 
@@ -315,14 +309,61 @@ The diagram provides the ability to customize the border color of a node using t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
+
 @code
 {
     // Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
+
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
+
+        // A node is created and stored in nodes array.
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+
+            // Sets the border color of the node
+            BorderColor = "Orange",
+
+            // Sets the border width for better visibility
+            BorderWidth = 20
+        };
+        _nodes.Add(node);
+    }
+}
+```
+A complete working sample can be downloaded from [GitHub](hhttps://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/BorderColor.razor)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhosNjHfPAnHiMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Border Color for Node](../images/BorderColor.png)" %}
+
+## How to change the border width of a node
+
+The diagram allows customizing the border width of a node using the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BorderWidth) property. By default, the border width is **1** pixel. Adjust this value to increase or decrease the thickness of the node's border as needed.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
+
+@code
+{
+    // Define diagram's nodes collection
+    private DiagramObjectCollection<Node> _nodes;
+
+    protected override void OnInitialized()
+    {
+        _nodes = new DiagramObjectCollection<Node>();
+
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -338,50 +379,13 @@ The diagram provides the ability to customize the border color of a node using t
             // Sets the border width for better visibility
             BorderWidth = 20
         };
-        nodes.Add(node);
-    }
-}
-```
-A complete working sample can be downloaded from [GitHub](hhttps://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BorderColor)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhosNjHfPAnHiMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Border Color for Node](../images/BorderColor.png)" %}
-
-## How to change the border width of a node
-
-The diagram allows customizing the border width of a node using the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BorderWidth) property. By default, the border width is **1** pixel. Adjust this value to increase or decrease the thickness of the node's border as needed.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
-@code
-{
-    // Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        // A node is created and stored in nodes array.
-        Node node = new Node()
-        {
-            ID = "node1",
-            // Position of the node
-            OffsetX = 100,
-            OffsetY = 100,
-            // Size of the node
-            Width = 100,
-            Height = 100,
-            // Sets the border color of the node
-            BorderColor = "red",
-            // Sets the border width for better visibility
-            BorderWidth = 20
-        };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBeCjDHTvzsMOQM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BorderWidth)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/BorderWidth.razor)
 
 ## How to Update Node Shadow
 
@@ -390,40 +394,37 @@ Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfus
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-                Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
-                Shadow = new Shadow()
-                {
-                    Angle = 50,
-                    Color = "gray",
-                    Opacity = 0.8,
-                    Distance = 10
-                }
-            };
-        nodes.Add(node);
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
+            Constraints = NodeConstraints.Default | NodeConstraints.Shadow
+        };
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeShadow)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/NodeShadow.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSWNXHzlpHUmqs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)" %}
 
@@ -434,22 +435,23 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    //Define diagram's nodes collection
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node.
+            // Position of the node
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node.
+            // Size of the node
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -458,7 +460,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
                 StrokeColor = "white" 
             },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
-            // Custom Shadow of the node.
+            // Custom Shadow of the node
             Shadow = new Shadow()
             {
                 Angle = 50,
@@ -467,11 +469,11 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
                 Distance = 20
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CustomShadow)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/CustomShadow.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyiZjdpFIWLXYh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)" %}
 
@@ -492,32 +494,33 @@ There are two types of gradients:
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    //Define diagram's nodes collection
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node.
+            // Position of the node
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node.
+            // Size of the node
             Width = 100,
             Height = 100,
             Style = new ShapeStyle()
             {
                 Gradient = new LinearGradientBrush()
                 {
-                    // Start point of linear gradient.
+                    //Start point of linear gradient
                     X1 = 0,
                     Y1 = 0,
-                    // End point of linear gradient.
+                    ////End point of linear gradient
                     X2 = 50,
                     Y2 = 50,
                     //Sets an array of stop objects
@@ -525,15 +528,15 @@ There are two types of gradients:
                     {
                         new GradientStop(){ Color = "white", Offset = 0},
                         new GradientStop(){ Color = "#6495ED", Offset = 100}
-                    },                    
+                    },
                 }
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/LinearGradientStyle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/LinearGradientStyle.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIWjNRpFSnUxQF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)" %}
 
@@ -544,21 +547,22 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    //Define diagram's nodes collection
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node.
+            // Position of the node
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node.
+            // Size of the node
             Width = 100,
             Height = 100,
             Shape = new BasicShape() 
@@ -572,26 +576,26 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
                 StrokeColor = "#024249",
                 Gradient = new RadialGradientBrush()
                 {
-                    // Center point of outer circle.
+                    //Center point of outer circle
                     CX = 50,
                     CY = 50,
-                    // Center point of inner circle.
+                    //Center point of inner circle
                     FX = 50,
                     FY = 50,
                     GradientStops = new DiagramObjectCollection<GradientStop>()
                     {
                         new GradientStop() { Color = "#00555b", Offset = 45 },
                         new GradientStop() { Color= "#37909A", Offset= 90 }
-                    },                    
+                    },
                 }
             },
         };
-        // Add node.
-        nodes.Add(node);
+        // Add node
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/RadientGradientStyle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/RadientGradientStyle.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBosNDdJlxWJNRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.png)" %}
 
@@ -604,41 +608,42 @@ The following code shows how to set the `AdditionalInfo` value.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    //Define diagram's nodes collection
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
-        Dictionary<string, object> NodeInfo = new Dictionary<string, object>();
-        NodeInfo.Add("nodeInfo", "Central Node");
+        _nodes = new DiagramObjectCollection<Node>();
+        Dictionary<string, object> nodeInfo = new Dictionary<string, object>();
+        nodeInfo.Add("nodeInfo", "Central Node");
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
-            // Position of the node.
+            // Position of the node
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node.
+            // Size of the node
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
             { 
                 Fill = "#6BA5D7", 
-                StrokeColor = "white"
+                StrokeColor = "white" 
             },
-            AdditionalInfo = NodeInfo
+            AdditionalInfo = nodeInfo
         };
-        // Add node.
-        nodes.Add(node);
+        // Add node
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIMDtdpvxPfjor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CustomProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/CustomProperty.razor)
 
 **Note:** You can set any type of value for the `AdditionalInfo` property.
 
@@ -653,58 +658,58 @@ The following code illustrates how to render nodes based on the stack order.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // nodes are created and stored in nodes array.
         Node node1 = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 2,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 2,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-            };
-        nodes.Add(node1);
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+        };
+        _nodes.Add(node1);
 
         Node node2 = new Node()
+        {
+            ID = "node2",
+            // Position of the node.
+            OffsetX = 300,
+            OffsetY = 300,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 1,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                // Position of the node.
-                OffsetX = 300,
-                OffsetY = 300,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 1,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-            };
-        nodes.Add(node2);
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+        };
+        _nodes.Add(node2);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeWXNdzbmSIZbU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/ZIndexProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/ZIndexProperty.razor)
 
 ## How to Set Pivot Property for a Node
 
@@ -717,42 +722,42 @@ The following code illustrates how to set the Pivot value.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
+        {
+            ID = "node",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 2,
+            Style = new ShapeStyle()
             {
-                ID = "node",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 2,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                // Pivot of the node.
-                Pivot = new DiagramPoint() { X = 0, Y = 0 }
-            };
-        nodes.Add(node);
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            },
+            // Pivot of the node.
+            Pivot = new DiagramPoint() { X = 0, Y = 0 },
+        };
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVSWDXHJFGuSlPe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/PivotProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/PivotProperty.razor)
 
 ## How to Set Background Color for a Node
 
@@ -765,36 +770,39 @@ The following code illustrates how to set the background color for the node.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
+        {
+            ID = "node",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            BackgroundColor = "red",
+            Shape = new BasicShape()
             {
-                ID = "node",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                BackgroundColor = "red",
-                Shape = new BasicShape(){Shape = NodeBasicShapes.Star}
-            };
-        nodes.Add(node);
+                Shape = NodeBasicShapes.Star
+            }
+        };
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDheCjXRflFqrSPl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BackgroundColor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/BackgroundColor.razor)
 
 ## How to Check if a Node Is Automatically Positioned
 
@@ -806,8 +814,8 @@ The following code illustrates how to set the auto layout property for nodes.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px"  Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
+<SfDiagramComponent Height="600px" Nodes="@_nodes" Connectors="@_connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@_horizontalSpacing" @bind-VerticalSpacing="@_verticalSpacing">
     </Layout>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
@@ -817,14 +825,12 @@ The following code illustrates how to set the auto layout property for nodes.
     </SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    private int _horizontalSpacing = 40;
+    private int _verticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -835,13 +841,14 @@ The following code illustrates how to set the auto layout property for nodes.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
-            new ShapeAnnotation 
-            { 
+            new ShapeAnnotation
+            {
                 Content = node.Annotations[0].Content,
-                Style = new TextStyle() { Color = "white", Bold = true }, 
+                Style = new TextStyle() { Color = "white", Bold = true },
             }
         };
     }
+
     private void OnConnectorCreating(IDiagramObject connector)
     {
         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
@@ -850,7 +857,7 @@ The following code illustrates how to set the auto layout property for nodes.
     protected override void OnInitialized()
     {
         //Initialize the node and connectors.
-        nodes = new DiagramObjectCollection<Node>()
+        _nodes = new DiagramObjectCollection<Node>()
         {
             new Node() { ID="node1", CanAutoLayout = true, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Steve-Ceo"} } },
             new Node() { ID="node2", CanAutoLayout = true, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Kevin-Manager"} } },
@@ -860,7 +867,7 @@ The following code illustrates how to set the auto layout property for nodes.
             new Node() { ID="node6", CanAutoLayout = true, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="John-Manager"} } },
             new Node() { ID="node7", CanAutoLayout = false, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Mary-CSE"} } },
         };
-        connectors = new DiagramObjectCollection<Connector>()
+        _connectors = new DiagramObjectCollection<Connector>()
         {
             new Connector() { ID="connector1", SourceID="node1", TargetID="node2" },
             new Connector() { ID="connector2", SourceID="node1", TargetID="node3" },
@@ -874,7 +881,7 @@ The following code illustrates how to set the auto layout property for nodes.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVyMZNRJFPvqBiy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CanAutoLayout)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/CanAutoLayout.razor)
 
 ### How to Get InEdges and OutEdges of a Node
 
@@ -885,47 +892,47 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="GetInEdges" OnClick="@GetInEdges" />
-<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
+<SfDiagramComponent @ref="_diagram" Height="600px" Nodes="@_nodes" Connectors="@_connectors" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
-            {
-                ID = "node1",
-                Width = 100,
-                Height = 100,
-                OffsetX = 300,
-                OffsetY = 300,
-
-            };
-        nodes.Add(node1);
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+        };
+        _nodes.Add(node1);
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 100,
-                Height = 100,
-                OffsetX = 300,
-                OffsetY = 500,
-            };
-        nodes.Add(node2);
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+        };
+        _nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            };
-        connectors.Add(connector1);
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
+        _connectors.Add(connector1);
     }
+
     private void GetInEdges()
     {
         List<string> Inedges = new List<string>();
-        foreach (string inedge in diagram.Nodes[1].InEdges)
+        foreach (string inedge in _diagram.Nodes[1].InEdges)
         {
             Inedges.Add(inedge);
         }
@@ -934,7 +941,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVestNxzlawypJC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/InedgesOutedges)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/InedgesOutedges.razor)
 
 ## How to Get Data Source Settings Details
 
@@ -946,9 +953,9 @@ The following code illustrates how to get data source settings details.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-  <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"> </DataSourceSettings>
-    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@HorizontalSpacing" VerticalSpacing="@VerticalSpacing" >
+<SfDiagramComponent Height="600px" Width="1200px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <DataSourceSettings ID="Id" ParentID="Manager" DataSource="_dataSource"> </DataSourceSettings>
+    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@_horizontalSpacing" VerticalSpacing="@_verticalSpacing">
     </Layout>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
@@ -958,14 +965,10 @@ The following code illustrates how to get data source settings details.
     </SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int _horizontalSpacing = 40;
+    private int _verticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -981,7 +984,12 @@ The following code illustrates how to get data source settings details.
             }
         };
         //Initializing the default node's shape style.
-        node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
+        node.Style = new ShapeStyle() 
+        { 
+            Fill = "darkcyan", 
+            StrokeWidth = 3, 
+            StrokeColor = "Black" 
+        };
     }
 
     private void OnConnectorCreating(IDiagramObject connector)
@@ -997,7 +1005,8 @@ The following code illustrates how to get data source settings details.
         public string ChartType { get; set; }
         public string Color { get; set; }
     }
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+
+    public List<HierarchicalDetails> _dataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
         new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
@@ -1023,7 +1032,7 @@ The following code illustrates how to get data source settings details.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrIsNjxpkNBdAVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/DataProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/DataProperty.razor)
 
 ## See also
 
