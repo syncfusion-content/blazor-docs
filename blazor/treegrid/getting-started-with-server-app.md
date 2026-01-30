@@ -248,9 +248,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 N>
 * Refer to [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for various methods to reference themes in a Blazor application:
 
->* [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)
->* [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference)
->* [Custom Resource Generator (CRG)](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
+    >* [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)
+    >* [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference)
+    >* [Custom Resource Generator (CRG)](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
 
 >* For script reference options, see [Adding Script References](https://blazor.syncfusion.com/documentation/common/adding-script-references).
 
@@ -273,10 +273,17 @@ Set the render mode at the top of the **Razor** file to enable server interactiv
 * **Global**: Render mode is configured in **App.razor** and applies to the entire application by default.
 * **Per page/component**: Render mode is set at the top of the specific **Razor** file (for example, **Pages/Index.razor**).
 
-```
-@* desired render mode define here *@
-@rendermode InteractiveServer
-```
+2. **Add TreeGrid component**
+
+Add the **TreeGrid** tag to the **Razor** page:
+
+{% tabs %}
+{% highlight razor %}
+
+<SfTreeGrid></SfTreeGrid>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Defining row data
 
