@@ -86,7 +86,7 @@ The following example shows how to align selected objects.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVyCDjwJCfOjpco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignLeft)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignLeft.razor)
 ### How to Align the Selected Objects to the Right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
@@ -149,7 +149,7 @@ The following code example illustrates how to align all the selected objects at 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLysZZGJMcwqXVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignRight)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignRight.razor)
 ### How to Align the Selected Objects to the Top
 
 The following code example illustrates how to align all the selected objects at the top of the selection boundary.
@@ -212,7 +212,7 @@ The following code example illustrates how to align all the selected objects at 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhICDDQJCbChApg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignTop)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignTop.razor)
 ### How to Align the Selected Objects to the Bottom
 
 The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
@@ -275,7 +275,7 @@ The following code example illustrates how to align all the selected objects at 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhSsXtczMFIBzzh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignBottom)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignBottom.razor)
 ### How to Align the Selected Objects to the Middle
 
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
@@ -338,7 +338,7 @@ The following code example illustrates how to align all the selected objects at 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSMtXGTLXtRoWh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignMiddle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignMiddle.razor)
 ### How to Align the Selected Objects to the Center
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
@@ -401,7 +401,7 @@ The following code example illustrates how to align all the selected objects at 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLyCNDwJrjONeSo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignCenter)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignCenter.razor)
 ## How to Distribute Diagram Elements
 
 The [SetDistribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetDistribute_Syncfusion_Blazor_Diagram_DistributeOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands enable place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
@@ -525,7 +525,7 @@ The following code example illustrates how to execute the space commands.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hthyWtZcphWwlvSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/SetDistributeCommands)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/SetDistributeCommands.razor)
 ## How to Use Sizing Commands
 
 Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on the width, height, and size of the reference object (FirstSelectedItem).
@@ -613,7 +613,7 @@ The following code example illustrates how to execute the size commands.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhesNXwJrBISiKH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/SizingCommands)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/SizingCommands.razor)
 ## How to Use Clipboard Commands
 
 Clipboard commands are used to cut, copy, or paste selected elements.
@@ -703,7 +703,7 @@ The following code illustrates the clipboard commands.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVyCNZwTrAtIRTn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ClipboardCommands)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/ClipboardCommands.razor)
 ## How to Use Grouping commands
 
 **Grouping commands** are used to group or ungroup the selected elements on the diagram. To group the elements, select the elements using the select all command and group the selected elements using the group command.
@@ -778,7 +778,7 @@ The following example demonstrates the grouping commands.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLeiXtGpVAehaos?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/GroupingCommands)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/GroupingCommands.razor)
 ## How to Arrange Diagram Elements Using Z-Order Commands
 
 Z-Order commands are used to control the stacking order (Z-Order) of the diagram elements such as nodes, connectors, and groups. Also, arrange the selected objects on the diagram page with their Z-order values by using the Bring to front, Bring forward, Send to back, and Send backward features.
@@ -845,7 +845,7 @@ The following code illustrates how to execute the BringToFront command.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBSCDtwzBJNbsnd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/BringToFront)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/BringToFront.razor)
 
 
 ### How to Use the Send To Back Commands
@@ -910,7 +910,7 @@ The following code illustrates how to execute the SendToBack command.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhyMDDQJVzeveQe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/SendToBack)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/SendToBack.razor)
 
 ### How to Use the Bring Forward Commands
 
@@ -974,7 +974,7 @@ The following code illustrates how to execute the BringForward command.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVICjZczBStjvIA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/BringForward)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/BringForward.razor)
 
 ### How to Use the Send Backward Commands
 
@@ -1038,7 +1038,7 @@ The following code illustrates how to execute the SendBackward command.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLyMtXwzrIwhhCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/SendBackward)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/SendBackward.razor)
 
 The following gif illustrates how to perform z-order commands.
 
@@ -1091,7 +1091,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLeCDZmpBRKjQLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ZoomingCommands)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/ZoomingCommands.razor)
 
 ## How to Use the Nudge command
 
@@ -1128,7 +1128,7 @@ The following code illustrates how to execute nudge command.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtrICNNGfrnxaSPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/NudgeCommand.razor)
 
 ## How to Nudge Elements with Arrow keys
 
@@ -1176,7 +1176,7 @@ These commands enhance user experience by offering flexibility in diagram editin
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBIsXjmpVcUdGmM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/UndoRedoCommands)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/UndoRedoCommands.razor)
 
 
 ## How to Bring the Specific Element into the Viewport of the Diagram
@@ -1215,7 +1215,7 @@ protected override void OnInitialized()
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVSijDGzLGPnCmi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/BringInToView)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/BringIntoView.razor)
 
 ## How to Bring the Specific Element into the Center of the Viewport of the Diagram
 
@@ -1253,7 +1253,7 @@ protected override void OnInitialized()
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLoMtXmfLFgyexg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/BringintoCenter)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/BringintoCenter)
 
 ## How to Bring the Entire Diagram into the Current Viewport Using Fit to Page Command
 
@@ -1393,7 +1393,7 @@ The following code illustrates how to execute the FitToPage method.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLosXtmfLaNhXqr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/FittoPage)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/FitToPage.razor)
 
 #### FitToPage Parameters
 
@@ -1544,7 +1544,7 @@ The following code illustrates how to execute the CanZoomIn command.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoMDXQThuHMAcI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CanZoomIn)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/CanZoomIn.razor)
 
 ![CanZoomIn to bring the small diagram into view](images/CanZoomIn.png)
 
@@ -1665,7 +1665,7 @@ The following code example shows how to define a custom command.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrSMtjmJKNVzxBS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CustomCommands/CustomCommands)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/CustomCommands.razor)
 
 ### How to Modify the Existing Command
 
@@ -1760,4 +1760,4 @@ The following code example shows how to disable a command and how to modify the 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrIsXtwzKjPJVBi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ModifyExistingCommands/ModifyExistingCommands)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/ModifyExistingCommands.razor)
