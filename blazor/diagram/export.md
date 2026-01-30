@@ -49,7 +49,7 @@ Diagram provides support to export the diagram as image or SVG files. The follow
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVSsXjPKcQBMSRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/Export)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/Export.razor)
 
 ## Exporting Options
 
@@ -85,7 +85,7 @@ Diagram provides support to export the desired region of the diagram to the desi
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVICZDlgwcGbHBb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportOption)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/ExportOption.razor)
 
 ### How to Customize Page Size
 
@@ -115,7 +115,7 @@ Diagram provides support to change the page size. The page size can be adjusted 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBesNNFgwFiDfWu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPageSize)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/ExportWithPageSize.razor)
 
 ### How to Add Margin Around Exported Diagram Image
 
@@ -149,7 +149,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNryCjZvAmvTSrzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportMargin)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/ExportMargin.razor)
 
 ### How to Export Diagrams by Region
 
@@ -190,7 +190,7 @@ The following code example illustrates how to export the diagram based on page s
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSiXtvUwbliLpo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportRegion)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/ExportRegion.razor)
 
 ### How to Export Diagram with Custom Bounds
 
@@ -224,7 +224,7 @@ The following code example illustrates how to export the region specified in the
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZresXjFUwYAvcER?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportClipBounds)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/ExportClipBounds.razor)
 
 ### How to Export Diagram as Single or Multiple Pages
 
@@ -265,7 +265,7 @@ The following code example illustrates how to export the diagram to a single pag
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBoMtjbgwaFojuu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPage)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/ExportWithPage.razor)
 
 ### How to Change Orientation at Runtime
 
@@ -298,7 +298,7 @@ The diagram component supports switching between [Portrait](https://help.syncfus
      }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportOrientation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/ExportOrientation.razor)
 
 ### How to Export the Diagram as PDF
 
@@ -411,7 +411,7 @@ triggerDownload: function triggerDownload(type, fileName, url)
     anchorElement.click();
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportToPDF)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Export/ExportToPDF.razor)
 
 ## See Also
 

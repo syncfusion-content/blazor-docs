@@ -44,7 +44,7 @@ To create a container, define a [Container](https://help.syncfusion.com/cr/blazo
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBICtDmzpHBjmkf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerNode).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerNode.razor).
 
 
 >**Note:** The container ID should be unique, begin with a letter, and not contain spaces or special characters (such as underscores or symbols).
@@ -105,7 +105,7 @@ To add child elements to a container, define the child nodes and assign their ID
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLeijXGTpdvrBys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerSample).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerSample.razor).
 
 ### How to Customize Container Header
 
@@ -182,7 +182,7 @@ The following example shows how to define a container header and customize its a
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBIMXZmTTwgGvNM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerHeaderSample).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerHeaderSample.razor).
 
 ![Blazor Diagram Container Header](images/ContainerImages/ContainerWithHeader.png)
 
@@ -278,7 +278,7 @@ The following code example shows how to define containers and add them to the sy
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtreMNtcpzlVcyaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerPalette).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerPalette.razor).
 
 ![Blazor Diagram Container Palette](images/ContainerImages/ContainerPalette.png)
 
