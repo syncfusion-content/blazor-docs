@@ -528,13 +528,13 @@ For this project, the tailwind3 theme is used. A different theme can be selected
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-### Step 2: Update the Blazor DataGrid in the Home Component
+### Step 2: Update the Blazor DataGrid
 
-The Home component will display the transaction data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
+The `Home.razor` component will display the transaction data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
 **Instructions:**
 
-1. open the file named `Home.razor` in the `Components/Pages` folder.
+1. Open the file named `Home.razor` in the `Components/Pages` folder.
 2. Add the following code to create a basic DataGrid:
 
 ```cshtml
@@ -1796,7 +1796,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The transaction management application is now running and ready to use.
 
-### Available Features
+**Available Features**
 
 - **View Data**: All transactions from the MySQL database are displayed in the DataGrid.
 - **Search**: Use the search box to find transactions by any field.

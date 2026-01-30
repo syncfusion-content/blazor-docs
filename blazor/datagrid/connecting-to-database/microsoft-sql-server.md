@@ -602,9 +602,9 @@ For this project, the tailwind3 theme is used. A different theme can be selected
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-### Step 2: Update the Blazor DataGrid in the Home Component
+### Step 2: Update the Blazor DataGrid
 
-The Home component will display the ticket data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
+The `Home.razor` component will display the ticket data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
 **Instructions:**
 
@@ -1572,7 +1572,7 @@ Now the adaptor supports bulk modifications with atomic database synchronization
 
 ---
 
-### Step 11: Complete Home.razor Code
+### Step 11: Complete Code
 
 Here is the complete and final `Home.razor` component with all features integrated. This component uses the exact implementation from the Grid_MSSQL project:
 
@@ -2114,7 +2114,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The Network Support Ticket System is now running and ready to use.
 
-### Available Features
+**Available Features**
 
 - **View Data**: All tickets from the SQL Server database are displayed in the DataGrid.
 - **Search**: Use the search box to find tickets by any field.
