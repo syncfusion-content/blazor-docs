@@ -255,7 +255,6 @@ Below example demonstrates simple column chooser template using [TreeGridColumnC
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.TreeGrid;
-@inject WeatherForecastService ForecastService
 
 <SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1"
             ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
@@ -296,7 +295,7 @@ Below example demonstrates simple column chooser template using [TreeGridColumnC
     private List<BusinessObject> GridData;
     protected override void OnInitialized()
     {
-        GridData = ForecastService.GetTree1();
+        GridData = new BusinessObject().GetTree1();
     }
 }
 
@@ -314,23 +313,24 @@ namespace TreeGridComponent.Data
         public int Progress { get; set; }
         public string Priority { get; set; }
         public int? ParentId { get; set; }
-    }
-    public List<BusinessObject> TreeGridData = new List<BusinessObject>();
-    public List<BusinessObject> GetTree1()
-    {
-        if (TreeGridData.Count == 0)
+    
+        public List<BusinessObject> TreeGridData = new List<BusinessObject>();
+        public List<BusinessObject> GetTree1()
         {
-            TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            if (TreeGridData.Count == 0)
+            {
+                TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            }
+            return TreeGridData;
         }
-        return TreeGridData;
     }
 }
 
@@ -350,18 +350,19 @@ In below example, we have rendered ListView as custom component inside the Templ
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
-@inject WeatherForecastService ForecastService
+@using Syncfusion.Blazor.Grids;
+
 
 <SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId"
-            TreeColumnIndex="1" ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
+            TreeColumnIndex="1" ShowColumnChooser="true" Toolbar="@(new List<string>() { "ColumnChooser" })" AllowPaging="true">
     <TreeGridColumnChooserSettings>
-        <Template>
-            @{
-                var ContextData = context as ColumnChooserTemplateContext;
-                <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
-            }
-        </Template>
-    </TreeGridColumnChooserSettings>
+    <Template>
+        @{
+            var ContextData = context as ColumnChooserTemplateContext;
+            <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
+        }
+    </Template>
+</TreeGridColumnChooserSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" IsPrimaryKey="true"
                         TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -398,8 +399,8 @@ In below example, we have rendered ListView as custom component inside the Templ
     public SfTreeGrid<BusinessObject> TreeGrid { get; set; }
     private List<BusinessObject> GridData;
     protected override void OnInitialized()
-    {
-        GridData = ForecastService.GetTree1();
+    {  
+        GridData = new BusinessObject().GetTree1();
     }
 }
 
@@ -417,23 +418,24 @@ namespace TreeGridComponent.Data
         public int Progress { get; set; }
         public string Priority { get; set; }
         public int? ParentId { get; set; }
-    }
-    public List<BusinessObject> TreeGridData = new List<BusinessObject>();
-    public List<BusinessObject> GetTree1()
-    {
-        if (TreeGridData.Count == 0)
+
+        public List<BusinessObject> TreeGridData = new List<BusinessObject>();
+        public List<BusinessObject> GetTree1()
         {
-            TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            if (TreeGridData.Count == 0)
+            {
+                TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            }
+            return TreeGridData;
         }
-        return TreeGridData;
     }
 }
 
@@ -449,8 +451,8 @@ namespace TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid
 @using Syncfusion.Blazor.Lists;
 @using Syncfusion.Blazor.Inputs;
+@using TreeGridComponent.Data
 @inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
-@inject WeatherForecastService ForecastService
 
 <div class="setMargin">
     <SfTextBox Placeholder="Search" ShowClearButton="true" Input="@OnInput"></SfTextBox>
@@ -462,7 +464,7 @@ namespace TreeGridComponent.Data
         <Template>
             @{
                 DataModel item = context as DataModel;
-                <img src="@UriHelper.ToAbsoluteUri($"images/{ item.Id}.png")" alt="@ item.Id" />
+                <img src="@UriHelper.ToAbsoluteUri($"images/{ item.Id}.png")" alt="@item.Id" />
             }
             @context.Text
         </Template>
@@ -577,7 +579,7 @@ We can also group the columns inside the column chooser template with the help o
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
-@inject WeatherForecastService ForecastService
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId"
             TreeColumnIndex="1" ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
@@ -626,7 +628,7 @@ We can also group the columns inside the column chooser template with the help o
     private List<BusinessObject> GridData;
     protected override void OnInitialized()
     {
-        GridData = ForecastService.GetTree1();
+        GridData = new BusinessObject().GetTree1();
     }
 }
 
@@ -644,23 +646,24 @@ namespace TreeGridComponent.Data
         public int Progress { get; set; }
         public string Priority { get; set; }
         public int? ParentId { get; set; }
-    }
-    public List<BusinessObject> TreeGridData = new List<BusinessObject>();
-    public List<BusinessObject> GetTree1()
-    {
-        if (TreeGridData.Count == 0)
+
+        public List<BusinessObject> TreeGridData = new List<BusinessObject>();
+        public List<BusinessObject> GetTree1()
         {
-            TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
-            TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            if (TreeGridData.Count == 0)
+            {
+                TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+                TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            }
+            return TreeGridData;
         }
-        return TreeGridData;
     }
 }
 

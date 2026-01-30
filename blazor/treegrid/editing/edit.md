@@ -727,10 +727,7 @@ For Row or Dialog edit modes, use the [Canceling](https://help.syncfusion.com/cr
 
     public void BeforeRowEditingHandler(OnRowEditStartEventArgs args)
     {
-        if (args.Data.TaskId > 5)
-        {
-            args.Cancel = true;
-        }        
+        args.Cancel = false;      
     }
 
     public void RowEditingHandler(RowEditingEventArgs<TreeData.BusinessObject> args)

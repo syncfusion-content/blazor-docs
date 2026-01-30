@@ -22,6 +22,7 @@ N> The column template feature is used to render the customized element value in
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 @inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
 <div class="col-lg-12 control-section">
     <div class="content-wrapper">
@@ -547,6 +548,7 @@ This can be achieved by initially defining an anchor tag inside the column templ
 ```cshtml
 @inject NavigationManager UriHelper
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 
 <SfTreeGrid  DataSource="@Employees" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
@@ -612,7 +614,7 @@ In the above code, the url to be navigated is specified in the Link variable of 
 <br>
 <div><b>Employee ID:</b><div class="details">@EmpID</div></div>
 <div><b>Position:</b><div class="details">@Title</div></div>
-<div>
+</div>
 
 <style>
     .center {

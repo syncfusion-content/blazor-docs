@@ -58,10 +58,15 @@ public class TreeData
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 4,Progress = 80,ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", StartDate = new DateTime(2017, 10, 25), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 25), Duration = 4, Progress = 80, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child task 2", StartDate = new DateTime(2017, 10, 25), Duration = 5, Progress = 65, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
             return BusinessObjectCollection;
         }
     }
@@ -148,17 +153,17 @@ public class TreeData
        
         public static List<TreeData> GetSelfDataSource()
         {
-            List<TreeData> TreeDataCollection = new List<TreeData>();
-            TreeDataCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            TreeDataCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
-            TreeDataCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
-            TreeDataCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
-            TreeDataCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
-            return TreeDataCollection;
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
+            return BusinessObjectCollection;
         }
     }
 }
@@ -223,10 +228,15 @@ public class TreeData
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
             return BusinessObjectCollection;
         }
     }
@@ -300,10 +310,15 @@ public class TreeData
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
             return BusinessObjectCollection;
         }
     }
@@ -375,10 +390,15 @@ public class TreeData
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 5 });
             return BusinessObjectCollection;
         }
     }

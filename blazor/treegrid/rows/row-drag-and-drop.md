@@ -547,8 +547,7 @@ To drag and drop between two TreeGrids, enable [AllowRowDragAndDrop](https://hel
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 <div id='container'>
-        <div>
-            <div style="float: left;  width:49%" id="Grid">
+    <div style="float: left;  width:49%" id="Grid">
 <SfTreeGrid ID="Grid" DataSource="@TreeGridData" AllowRowDragAndDrop="true" AllowSelection="true" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></TreeGridSelectionSettings>
     <TreeGridRowDropSettings TargetID="DestGrid"></TreeGridRowDropSettings>
@@ -569,11 +568,11 @@ To drag and drop between two TreeGrids, enable [AllowRowDragAndDrop](https://hel
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
-</div>  
+    </div>  
 </div>
 @code{
-    public List<TreeData.BusinessObject> TreeGridData { get; set; }
-    public List<TreeData.BusinessObject> SecondGrid { get; set; } = new List<TreeData.BusinessObject>();
+    public List<WrapData> TreeGridData { get; set; }
+    public List<WrapData> SecondGrid { get; set; } = new List<WrapData>();
     protected override void OnInitialized()
     {       
         this.TreeGridData = WrapData.GetWrapData().ToList();

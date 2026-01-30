@@ -338,76 +338,80 @@ namespace TreeGridComponent.Data {
 
         public class SelfReferenceData
         {
-        public static List<SelfReferenceData> tree = new List<SelfReferenceData>();
-        public int? TaskID { get; set; }
-        public string TaskName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public String Progress { get; set; }
-        public Prioritize Priority { get; set; }
-        public double? Duration { get; set; }
-        public int? ParentID { get; set; }
-        public bool? IsParent { get; set; }
-        public int? ParentItem { get; set;}
-        public SelfReferenceData() { }
-        public static List<SelfReferenceData> GetTree()
-        {
+            public static List<SelfReferenceData> tree = new List<SelfReferenceData>();
+            [Key]
+            public int? TaskID { get; set; }
+            public string TaskName { get; set; }
+            public DateTime? StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public String Progress { get; set; }
+            public String Priority { get; set; }
+            public double? Duration { get; set; }
+            public int? ParentID { get; set; }
+            public bool? IsParent { get; set; }
+            public bool? Approved { get; set; }
+            public int? ParentItem { get; set; }
+            public SelfReferenceData() { }
+            public static List<SelfReferenceData> GetTree()
+            {
                 tree.Clear();
                 int root = -1;
                 int TaskNameID = 0;
                 int ChildCount = -1;
                 int SubTaskCount = -1;
-                var values = Enum.GetValues(typeof(Prioritize));
-                for (var t = 1; t <= 60; t++)
+                for (var t = 1; t <= 200; t++)
                 {
-                Random gen = new Random();
-                Random ran = new Random();
-                DateTime start = new DateTime(2021, 06, 07);
-                int range = (DateTime.Today - start).Days;
-                DateTime startingDate = start.AddDays(gen.Next(range));
-                DateTime end = new DateTime(2023, 08, 25);
-                int endrange = (end - DateTime.Today).Days;
-                DateTime endingDate = end.AddDays(gen.Next(endrange));
-                    string progr = (ran.Next() % 3) == 0 ? "Started" : (ran.Next() % 2) == 0 ? "Open" : "In Progress";
-                    bool appr = (ran.Next() % 3) == 0 ? true : (ran.Next() % 2) == 0 ? false : true;
+                    DateTime start = new DateTime(2022, 08, 25);
+                    DateTime end = new DateTime(2027, 08, 25);
+                    DateTime startingDate = start.AddDays(t + 2);
+                    DateTime endingDate = end.AddDays(t + 20);
+                    string math = "";
+                    string progr = "";
+                    bool appr = true;
+                    int duration = 0;
+                    duration = (t % 2 == 0) ? 52 : (t % 5 == 0) ? 14 : (t % 3 == 0) ? 25 : 34;
+                    math = (t % 3) == 0 ? "High" : (t % 2) == 0 ? "Low" : "Critical";
+                    progr = (t % 3) == 0 ? "Started" : (t % 2) == 0 ? "Open" : "In Progress";
+                    appr = (t % 3) == 0 ? true : (t % 2) == 0 ? false : true;
                     root++; TaskNameID++;
                     int rootItem = root + 1;
-                    tree.Add(new SelfReferenceData() { TaskID = rootItem, TaskName = "Parent task " + TaskNameID.ToString(), StartDate = startingDate, EndDate = endingDate, IsParent = true, ParentID = null, Progress = progr, Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
+                    tree.Add(new SelfReferenceData() { TaskID = rootItem, TaskName = "Parent task " + TaskNameID.ToString(), StartDate = startingDate, EndDate = endingDate, IsParent = true, ParentID = null, Progress = progr, Priority = math, Duration = duration, Approved = appr });
                     int parent = tree.Count;
                     for (var c = 0; c < 2; c++)
                     {
-                    DateTime start1 = new DateTime(2021, 07, 09);
-                    int range1 = (DateTime.Today - start1).Days;
-                    DateTime startingDate1 = start1.AddDays(gen.Next(range1));
-                    DateTime end1 = new DateTime(2022, 08, 23);
-                    int endrange1 = (end1 - DateTime.Today).Days;
-                    DateTime endingDate1 = end1.AddDays(gen.Next(endrange1));
-                    root++; ChildCount++;
+                        DateTime start1 = new DateTime(2022, 08, 25);
+                        DateTime startingDate1 = start1.AddDays(c + 4);
+                        DateTime end1 = new DateTime(2025, 06, 16);
+                        DateTime endingDate1 = end1.AddDays(c + 15);
+                        root++; ChildCount++;
                         int parn = parent + c + 1;
-                        progr = (ran.Next() % 3) == 0 ? "In Progress" : (ran.Next() % 2) == 0 ? "Open" : "Validated";
-                        appr = (ran.Next() % 3) == 0 ? true : (ran.Next() % 2) == 0 ? false : true;
+                        string val = "";
+                        duration = (c % 3 == 0) ? 1 : (c % 2 == 0) ? 12 : 98;
+                        val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
+                        progr = ((c + 1) % 3) == 0 ? "In Progress" : ((c + 1) % 2) == 0 ? "Open" : "Validated";
+                        appr = ((c + 1) % 3) == 0 ? true : ((c + 3) % 2) == 0 ? false : true;
                         int iD = root + 1;
-                        tree.Add(new SelfReferenceData() { TaskID = iD, TaskName = "Child task " + (ChildCount + 1).ToString(), StartDate = startingDate1, EndDate = endingDate1, IsParent = (((parent + c + 1) % 3) == 0), ParentID = rootItem, Progress = progr, Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
+                        tree.Add(new SelfReferenceData() { TaskID = iD, TaskName = "Child task " + (ChildCount + 1).ToString(), StartDate = startingDate1, EndDate = endingDate1, IsParent = (((parent + c + 1) % 3) == 0), ParentID = rootItem, Progress = progr, Priority = val, Duration = duration, Approved = appr });
                         if ((((parent + c + 1) % 3) == 0))
                         {
-                        int immParent = tree.Count;
+                            int immParent = tree.Count;
                             for (var s = 0; s < 3; s++)
                             {
-                            DateTime start2 = new DateTime(2021, 05, 05);
-                            int range2 = (DateTime.Today - start2).Days;
-                            DateTime startingDate2 = start2.AddDays(gen.Next(range2));
-                            DateTime end2 = new DateTime(2024, 06, 16);
-                            int endrange2 = (end2 - DateTime.Today).Days;
-                            DateTime endingDate2 = end2.AddDays(gen.Next(endrange2));
-                            root++; SubTaskCount++;
-                                tree.Add(new SelfReferenceData() { TaskID = root + 1, TaskName = "Sub task " + (SubTaskCount + 1).ToString(), StartDate = startingDate2, EndDate = endingDate2, IsParent = false, ParentID = iD, Progress = (immParent % 2 == 0) ? "In Progress" : "Closed", Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
+                                DateTime start2 = new DateTime(2022, 08, 25);
+                                DateTime startingDate2 = start2.AddDays(s + 4);
+                                DateTime end2 = new DateTime(2024, 06, 16);
+                                DateTime endingDate2 = end2.AddDays(s + 13);
+                                root++; SubTaskCount++;
+                                duration = (s % 2 == 0) ? 67 : 14;
+                                string Prior = (immParent % 2 == 0) ? "Validated" : "Normal";
+                                tree.Add(new SelfReferenceData() { TaskID = root + 1, TaskName = "Sub task " + (SubTaskCount + 1).ToString(), StartDate = startingDate2, EndDate = endingDate2, IsParent = false, ParentID = iD, Progress = (immParent % 2 == 0) ? "In Progress" : "Closed", Priority = Prior, Duration = duration, Approved = appr });
                             }
                         }
                     }
                 }
-            return tree;
+                return tree;
+            }
         }
-    }
 }
 
 {% endhighlight %}
@@ -546,7 +550,7 @@ The Blazor TreeGrid filtering functionality can be configured to ignore diacriti
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 <div class="container mt-4">
-    <<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar" IgnoreAccent="true"> </TreeGridFilterSettings>
     <TreeGridColumns>
         <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90"  IsPrimaryKey />

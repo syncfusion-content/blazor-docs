@@ -132,6 +132,7 @@ The cell edit template is used to add a custom component for a particular column
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Inputs;
+@using Syncfusion.Blazor.DropDowns;
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" />
