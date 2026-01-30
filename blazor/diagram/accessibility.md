@@ -155,7 +155,7 @@ The Blazor Diagram component supports the [keyboard interaction](https://www.w3.
 |<kbd>Ctrl+5</kbd> | <kbd>⌘</kbd> + <kbd>5</kbd> | Activate the free form tool.|
 |<kbd>Ctrl+9</kbd> | <kbd>⌘</kbd> + <kbd>9</kbd> | Activate the ellipse tool.|
 
-N> You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)
+N> You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Accessibility/KeyBoardNavigation.razor)
 
 ## How to Ensure Accessibility
 
