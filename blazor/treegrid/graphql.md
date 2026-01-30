@@ -191,251 +191,251 @@ In the context of an expense tracker, the data model defines what information is
 ```csharp
 namespace TreeGrid_GraphQLAdaptor.Models
 {
-	public class EmployeeData
-	{
-		[GraphQLName("employeeID")]
-		public string EmployeeID { get; set; } = default!; // EMP001, EMP002, ...
+    public class EmployeeData
+    {
+        [GraphQLName("employeeID")]
+        public string EmployeeID { get; set; } = default!; // EMP001, EMP002, ...
 
-		[GraphQLName("firstName")]
-		public string? FirstName { get; set; }
+        [GraphQLName("firstName")]
+        public string? FirstName { get; set; }
 
-		[GraphQLName("lastName")]
-		public string? LastName { get; set; }
+        [GraphQLName("lastName")]
+        public string? LastName { get; set; }
 
-		[GraphQLName("title")]
-		public string? Title { get; set; }
+        [GraphQLName("title")]
+        public string? Title { get; set; }
 
-		// Parent reference as EMP###
-		[GraphQLName("managerID")]
-		public string? ManagerID { get; set; }
+        // Parent reference as EMP###
+        [GraphQLName("managerID")]
+        public string? ManagerID { get; set; }
 
-		[GraphQLName("hasChild")]
-		public bool HasChild { get; set; }
+        [GraphQLName("hasChild")]
+        public bool HasChild { get; set; }
 
-		[GraphQLName("name")]
-		public string? Name { get; set; }
+        [GraphQLName("name")]
+        public string? Name { get; set; }
 
-		[GraphQLName("location")]
-		public string? Location { get; set; }
+        [GraphQLName("location")]
+        public string? Location { get; set; }
 
-		[GraphQLName("dateJoined")]
-		public DateTime? DateJoined { get; set; }
+        [GraphQLName("dateJoined")]
+        public DateTime? DateJoined { get; set; }
 
-		[GraphQLName("salaryPerMonth")]
-		public decimal? SalaryPerMonth { get; set; }
+        [GraphQLName("salaryPerMonth")]
+        public decimal? SalaryPerMonth { get; set; }
 
-		[GraphQLName("email")]
-		public string? Email { get; set; }
+        [GraphQLName("email")]
+        public string? Email { get; set; }
 
-		[GraphQLName("projectDetails")]
-		public string? ProjectDetails { get; set; }
+        [GraphQLName("projectDetails")]
+        public string? ProjectDetails { get; set; }
 
-		[GraphQLName("projectStatus")]
-		public string? ProjectStatus { get; set; }
+        [GraphQLName("projectStatus")]
+        public string? ProjectStatus { get; set; }
 
-		[GraphQLName("priority")]
-		public string? Priority { get; set; } // Low, Medium, High, Critical
+        [GraphQLName("priority")]
+        public string? Priority { get; set; } // Low, Medium, High, Critical
 
-		[GraphQLName("progress")]
-		public int? Progress { get; set; } // 0..100
+        [GraphQLName("progress")]
+        public int? Progress { get; set; } // 0..100
 
-		[GraphQLName("projectStartDate")]
-		public DateTime? ProjectStartDate { get; set; }
+        [GraphQLName("projectStartDate")]
+        public DateTime? ProjectStartDate { get; set; }
 
-		[GraphQLName("projectEndDate")]
-		public DateTime? ProjectEndDate { get; set; }
+        [GraphQLName("projectEndDate")]
+        public DateTime? ProjectEndDate { get; set; }
 
-		[GraphQLName("projectId")]
-		public string? ProjectId { get; set; } // PRJ001 ...
+        [GraphQLName("projectId")]
+        public string? ProjectId { get; set; } // PRJ001 ...
 
-		private static readonly object _sync = new();
-		private static List<EmployeeData>? _employeesData;
+        private static readonly object _sync = new();
+        private static List<EmployeeData>? _employeesData;
 
-		private static string EmpId(int n) => $"EMP{n:000}";
-		private static string PrjId(int n) => $"PRJ{n:000}";
+        private static string EmpId(int n) => $"EMP{n:000}";
+        private static string PrjId(int n) => $"PRJ{n:000}";
 
-		// Name pools (48 * 32 = 1536 unique full-name combinations)
-		private static readonly string[] FirstNames =
-		{
-			"Ava","Liam","Olivia","Noah","Emma","Elijah","Sophia","Lucas","Isabella","Mason",
-			"Mia","James","Amelia","Benjamin","Charlotte","Ethan","Harper","Henry","Evelyn","Alexander",
-			"Abigail","Michael","Emily","Daniel","Elizabeth","Logan","Sofia","Jackson","Avery","Sebastian",
-			"Ella","Jack","Scarlett","Aiden","Grace","Owen","Chloe","Samuel","Lily","Matthew",
-			"Hannah","Joseph","Victoria","Levi","Aria","David","Nora","Wyatt"
-		};
+        // Name pools (48 * 32 = 1536 unique full-name combinations)
+        private static readonly string[] FirstNames =
+        {
+            "Ava","Liam","Olivia","Noah","Emma","Elijah","Sophia","Lucas","Isabella","Mason",
+            "Mia","James","Amelia","Benjamin","Charlotte","Ethan","Harper","Henry","Evelyn","Alexander",
+            "Abigail","Michael","Emily","Daniel","Elizabeth","Logan","Sofia","Jackson","Avery","Sebastian",
+            "Ella","Jack","Scarlett","Aiden","Grace","Owen","Chloe","Samuel","Lily","Matthew",
+            "Hannah","Joseph","Victoria","Levi","Aria","David","Nora","Wyatt"
+        };
 
-		private static readonly string[] LastNames =
-		{
-			"Anderson","Baker","Campbell","Diaz","Edwards","Foster","Garcia","Harris","Ibrahim","Johnson",
-			"Kim","Lopez","Miller","Nguyen","Owens","Patel","Quinn","Rodriguez","Smith","Turner",
-			"Upton","Vasquez","Walker","Xu","Young","Zimmerman","Clark","Parker","Carter","Howard",
-			"Brooks","Murphy"
-		};
+        private static readonly string[] LastNames =
+        {
+            "Anderson","Baker","Campbell","Diaz","Edwards","Foster","Garcia","Harris","Ibrahim","Johnson",
+            "Kim","Lopez","Miller","Nguyen","Owens","Patel","Quinn","Rodriguez","Smith","Turner",
+            "Upton","Vasquez","Walker","Xu","Young","Zimmerman","Clark","Parker","Carter","Howard",
+            "Brooks","Murphy"
+        };
 
-		// Simple, non‑technical project names (short and clear)
-		private static readonly string[] SimpleProjectNames =
-		{
-			"Website Redesign",
-			"Online Store",
-			"Customer Portal",
-			"Employee Portal",
-			"Help Center",
-			"Booking System",
-			"Payment System",
-			"Inventory Tracker",
-			"Order Tracker",
-			"Reporting Dashboard",
-			"Mobile App",
-			"Chat Support",
-			"Email Notices",
-			"File Sharing",
-			"Maps & Locations",
-			"Video Library",
-			"Search Tool",
-			"Survey Tool",
-			"Learning Portal",
-			"HR System",
-			"Scheduling App",
-			"Billing & Invoices",
-			"Ticket System",
-			"News & Blog",
-			"Profile Manager",
-			"Settings Panel",
-			"Theme Builder",
-			"Docs Site",
-			"Admin Dashboard",
-			"Data Import",
-			"Data Export",
-			"Backup Service",
-			"Alerts Center",
-			"Task Manager",
-			"Calendar",
-			"Feedback Board",
-			"Onboarding Guide"
-		};
+        // Simple, non‑technical project names (short and clear)
+        private static readonly string[] SimpleProjectNames =
+        {
+            "Website Redesign",
+            "Online Store",
+            "Customer Portal",
+            "Employee Portal",
+            "Help Center",
+            "Booking System",
+            "Payment System",
+            "Inventory Tracker",
+            "Order Tracker",
+            "Reporting Dashboard",
+            "Mobile App",
+            "Chat Support",
+            "Email Notices",
+            "File Sharing",
+            "Maps & Locations",
+            "Video Library",
+            "Search Tool",
+            "Survey Tool",
+            "Learning Portal",
+            "HR System",
+            "Scheduling App",
+            "Billing & Invoices",
+            "Ticket System",
+            "News & Blog",
+            "Profile Manager",
+            "Settings Panel",
+            "Theme Builder",
+            "Docs Site",
+            "Admin Dashboard",
+            "Data Import",
+            "Data Export",
+            "Backup Service",
+            "Alerts Center",
+            "Task Manager",
+            "Calendar",
+            "Feedback Board",
+            "Onboarding Guide"
+        };
 
-		// Scrambled unique full name for index n (1-based)
-		private static (string first, string last, string full) UniquePersonName(int n)
-		{
-			int idx = n - 1; // zero-based
-			int F = FirstNames.Length;
-			int L = LastNames.Length;
+        // Scrambled unique full name for index n (1-based)
+        private static (string first, string last, string full) UniquePersonName(int n)
+        {
+            int idx = n - 1; // zero-based
+            int F = FirstNames.Length;
+            int L = LastNames.Length;
 
-			int i = idx % F;          // first-name index cycles fastest
-			int q = idx / F;          // advances every F items
-			int j = (q + 13 * i) % L; // interleave last names to avoid blocks
+            int i = idx % F;          // first-name index cycles fastest
+            int q = idx / F;          // advances every F items
+            int j = (q + 13 * i) % L; // interleave last names to avoid blocks
 
-			string first = FirstNames[i];
-			string last = LastNames[j];
-			return (first, last, $"{first} {last}");
-		}
+            string first = FirstNames[i];
+            string last = LastNames[j];
+            return (first, last, $"{first} {last}");
+        }
 
-		// Pick a short, clear project name
-		private static string ProjectName(int n)
-		{
-			// Use a stride to mix names; wraps automatically
-			return SimpleProjectNames[(n * 5) % SimpleProjectNames.Length];
-		}
+        // Pick a short, clear project name
+        private static string ProjectName(int n)
+        {
+            // Use a stride to mix names; wraps automatically
+            return SimpleProjectNames[(n * 5) % SimpleProjectNames.Length];
+        }
 
-		// Parent + Children only (no grandchildren)
-		public static List<EmployeeData> GetAllRecords()
-		{
-			if (_employeesData != null) return _employeesData;
+        // Parent + Children only (no grandchildren)
+        public static List<EmployeeData> GetAllRecords()
+        {
+            if (_employeesData != null) return _employeesData;
 
-			lock (_sync)
-			{
-				if (_employeesData != null) return _employeesData;
+            lock (_sync)
+            {
+                if (_employeesData != null) return _employeesData;
 
-				var list = new List<EmployeeData>();
-				int next = 0; // sequential counter for EMP ids
+                var list = new List<EmployeeData>();
+                int next = 0; // sequential counter for EMP ids
 
-				string[] locations = { "Seattle", "Chicago", "New York", "Boston", "San Francisco", "Austin", "Denver", "London", "Berlin", "Paris" };
-				string[] priorities = { "Low", "Medium", "High", "Critical" };
-				string[] statuses = { "Open", "In Progress", "Started", "Validated", "Closed" };
-				string[] titles = { "Executive", "Director", "Manager", "Lead", "Engineer", "Analyst" };
+                string[] locations = { "Seattle", "Chicago", "New York", "Boston", "San Francisco", "Austin", "Denver", "London", "Berlin", "Paris" };
+                string[] priorities = { "Low", "Medium", "High", "Critical" };
+                string[] statuses = { "Open", "In Progress", "Started", "Validated", "Closed" };
+                string[] titles = { "Executive", "Director", "Manager", "Lead", "Engineer", "Analyst" };
 
-				int rootCount = 100;        // number of parents
-				int childrenPerRoot = 9;    // children per parent
+                int rootCount = 100;        // number of parents
+                int childrenPerRoot = 9;    // children per parent
 
-				for (int r = 0; r < rootCount; r++)
-				{
-					string rootPriority = (r % 3) switch { 0 => "High", 1 => "Critical", _ => "Medium" };
-					string rootStatus = (r % 2 == 0) ? "Open" : "In Progress";
+                for (int r = 0; r < rootCount; r++)
+                {
+                    string rootPriority = (r % 3) switch { 0 => "High", 1 => "Critical", _ => "Medium" };
+                    string rootStatus = (r % 2 == 0) ? "Open" : "In Progress";
 
-					var rootEmpId = EmpId(++next);
-					var rootName = UniquePersonName(next);
+                    var rootEmpId = EmpId(++next);
+                    var rootName = UniquePersonName(next);
 
-					var root = new EmployeeData
-					{
-						EmployeeID = rootEmpId,
-						FirstName = rootName.first,
-						LastName = rootName.last,
-						Name = rootName.full,
-						Title = titles[r % titles.Length],
-						ManagerID = null,
-						HasChild = true,
-						Location = locations[r % locations.Length],
-						DateJoined = new DateTime(2016 + (r % 5), 1 + (r % 12), 5 + (r % 20)),
-						SalaryPerMonth = 15000 + (r % 4) * 1200,
-						Email = $"{rootName.first.ToLower()}.{rootName.last.ToLower()}{next:000}@company.com",
-						ProjectDetails = ProjectName(next),
-						ProjectStatus = rootStatus,
-						Priority = rootPriority,
-						Progress = 60 + (r * 7) % 41,
-						ProjectStartDate = new DateTime(2024, 1 + (r % 6), 1 + (r % 28)),
-						ProjectEndDate = new DateTime(2025, 1 + ((r + 6) % 12), 1 + (r % 28)),
-						ProjectId = PrjId(next)
-					};
-					list.Add(root);
+                    var root = new EmployeeData
+                    {
+                        EmployeeID = rootEmpId,
+                        FirstName = rootName.first,
+                        LastName = rootName.last,
+                        Name = rootName.full,
+                        Title = titles[r % titles.Length],
+                        ManagerID = null,
+                        HasChild = true,
+                        Location = locations[r % locations.Length],
+                        DateJoined = new DateTime(2016 + (r % 5), 1 + (r % 12), 5 + (r % 20)),
+                        SalaryPerMonth = 15000 + (r % 4) * 1200,
+                        Email = $"{rootName.first.ToLower()}.{rootName.last.ToLower()}{next:000}@company.com",
+                        ProjectDetails = ProjectName(next),
+                        ProjectStatus = rootStatus,
+                        Priority = rootPriority,
+                        Progress = 60 + (r * 7) % 41,
+                        ProjectStartDate = new DateTime(2024, 1 + (r % 6), 1 + (r % 28)),
+                        ProjectEndDate = new DateTime(2025, 1 + ((r + 6) % 12), 1 + (r % 28)),
+                        ProjectId = PrjId(next)
+                    };
+                    list.Add(root);
 
-					// Children
-					for (int c = 0; c < childrenPerRoot; c++)
-					{
-						string childPriority = priorities[(c + r) % priorities.Length];
-						string childStatus = statuses[(c + r) % statuses.Length];
+                    // Children
+                    for (int c = 0; c < childrenPerRoot; c++)
+                    {
+                        string childPriority = priorities[(c + r) % priorities.Length];
+                        string childStatus = statuses[(c + r) % statuses.Length];
 
-						var childEmpId = EmpId(++next);
-						var childName = UniquePersonName(next);
+                        var childEmpId = EmpId(++next);
+                        var childName = UniquePersonName(next);
 
-						var child = new EmployeeData
-						{
-							EmployeeID = childEmpId,
-							FirstName = childName.first,
-							LastName = childName.last,
-							Name = childName.full,
-							Title = (c % 2 == 0) ? "Manager" : "Lead",
-							ManagerID = rootEmpId,
-							HasChild = false,
-							Location = locations[(r + c + 1) % locations.Length],
-							DateJoined = new DateTime(2018 + (c % 5), 1 + ((c + 2) % 12), 1 + ((c + 5) % 28)),
-							SalaryPerMonth = 8500 + (c % 6) * 700,
-							Email = $"{childName.first.ToLower()}.{childName.last.ToLower()}{next:000}@company.com",
-							ProjectDetails = ProjectName(next),
-							ProjectStatus = childStatus,
-							Priority = childPriority,
-							Progress = (c * 13) % 101,
-							ProjectStartDate = DateTime.Today.AddDays(-(c % 200)),
-							ProjectEndDate = DateTime.Today.AddDays((c % 200) + 30),
-							ProjectId = PrjId(next)
-						};
-						list.Add(child);
-					}
-				}
+                        var child = new EmployeeData
+                        {
+                            EmployeeID = childEmpId,
+                            FirstName = childName.first,
+                            LastName = childName.last,
+                            Name = childName.full,
+                            Title = (c % 2 == 0) ? "Manager" : "Lead",
+                            ManagerID = rootEmpId,
+                            HasChild = false,
+                            Location = locations[(r + c + 1) % locations.Length],
+                            DateJoined = new DateTime(2018 + (c % 5), 1 + ((c + 2) % 12), 1 + ((c + 5) % 28)),
+                            SalaryPerMonth = 8500 + (c % 6) * 700,
+                            Email = $"{childName.first.ToLower()}.{childName.last.ToLower()}{next:000}@company.com",
+                            ProjectDetails = ProjectName(next),
+                            ProjectStatus = childStatus,
+                            Priority = childPriority,
+                            Progress = (c * 13) % 101,
+                            ProjectStartDate = DateTime.Today.AddDays(-(c % 200)),
+                            ProjectEndDate = DateTime.Today.AddDays((c % 200) + 30),
+                            ProjectId = PrjId(next)
+                        };
+                        list.Add(child);
+                    }
+                }
 
-				var parentsWithChildren = list
-					.Where(e => !string.IsNullOrWhiteSpace(e.ManagerID))
-					.Select(e => e.ManagerID!)
-					.Distinct(StringComparer.OrdinalIgnoreCase)
-					.ToHashSet(StringComparer.OrdinalIgnoreCase);
+                var parentsWithChildren = list
+                    .Where(e => !string.IsNullOrWhiteSpace(e.ManagerID))
+                    .Select(e => e.ManagerID!)
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .ToHashSet(StringComparer.OrdinalIgnoreCase);
 
-				foreach (var e in list)
-					e.HasChild = parentsWithChildren.Contains(e.EmployeeID);
+                foreach (var e in list)
+                    e.HasChild = parentsWithChildren.Contains(e.EmployeeID);
 
-				_employeesData = list;
-				return _employeesData;
-			}
-		}
-	}
+                _employeesData = list;
+                return _employeesData;
+            }
+        }
+    }
 }
 ```
 **Property Mapping Reference**
@@ -503,166 +503,166 @@ namespace TreeGrid_GraphQLAdaptor.Models
     /// <summary>
     /// Represents the GraphQL query resolver for fetching employee data.
     /// </summary>
-	public class GraphQLQuery
-	{
-		// SINGLE ENTRYPOINT: handles roots, children, expand/collapse, expandall, loadchildondemand, filtering, search, sort, paging
-		public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
-		{
-			EnsureDataLoaded();
+    public class GraphQLQuery
+    {
+        // SINGLE ENTRYPOINT: handles roots, children, expand/collapse, expandall, loadchildondemand, filtering, search, sort, paging
+        public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
+        {
+            EnsureDataLoaded();
 
-			// Parent detection (params first, then ManagerID== in where)
-			string? parentId = TryGetParentIdFromParams(dataManager?.Params)
-							?? TryGetParentIdFromWhere(dataManager?.Where);
+            // Parent detection (params first, then ManagerID== in where)
+            string? parentId = TryGetParentIdFromParams(dataManager?.Params)
+                            ?? TryGetParentIdFromWhere(dataManager?.Where);
 
-			// CHILDREN SLICE: return only direct children of requested parent
-			if (!string.IsNullOrWhiteSpace(parentId))
-			{
-				var children = _data
-					.Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase))
-					.ToList();
+            // CHILDREN SLICE: return only direct children of requested parent
+            if (!string.IsNullOrWhiteSpace(parentId))
+            {
+                var children = _data
+                    .Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
 
-				return new EmployeesDataResponse
-				{
-					Count = children.Count,
-					Result = children,
-					Items = children
-				};
-			}
+                return new EmployeesDataResponse
+                {
+                    Count = children.Count,
+                    Result = children,
+                    Items = children
+                };
+            }
 
-			// ROOTS: proper root-only paging
-			var roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID)).ToList();
-			int total = roots.Count;
+            // ROOTS: proper root-only paging
+            var roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID)).ToList();
+            int total = roots.Count;
 
-			IEnumerable<EmployeeData> page = roots;
-			if (dataManager?.Skip is int sk && dataManager.Take is int tk)
-			{
-				page = page.Skip(sk).Take(tk);
-			}
+            IEnumerable<EmployeeData> page = roots;
+            if (dataManager?.Skip is int sk && dataManager.Take is int tk)
+            {
+                page = page.Skip(sk).Take(tk);
+            }
 
-			var list = page.ToList();
-			return new EmployeesDataResponse
-			{
-				Count = total,
-				Result = list,
-				Items = list
-			};
-		}
+            var list = page.ToList();
+            return new EmployeesDataResponse
+            {
+                Count = total,
+                Result = list,
+                Items = list
+            };
+        }
 
-		private static List<EmployeeData> _data = EnsureDataInternal();
+        private static List<EmployeeData> _data = EnsureDataInternal();
 
-		private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
+        private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
 
-		private static void EnsureDataLoaded()
-		{
-			if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
-		}
+        private static void EnsureDataLoaded()
+        {
+            if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
+        }
 
-		private static string? TryGetParentIdFromParams(object? prms)
-		{
-			if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
-			return ToEmpId(v);
-		}
+        private static string? TryGetParentIdFromParams(object? prms)
+        {
+            if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
+            return ToEmpId(v);
+        }
 
-		private static bool TryReadFromParams(object? prms, string key, out object? value)
-		{
-			value = null;
-			if (prms == null) return false;
+        private static bool TryReadFromParams(object? prms, string key, out object? value)
+        {
+            value = null;
+            if (prms == null) return false;
 
-			// IDictionary<string, object>
-			if (prms is IDictionary<string, object> dictObj)
-				return dictObj.TryGetValue(key, out value);
+            // IDictionary<string, object>
+            if (prms is IDictionary<string, object> dictObj)
+                return dictObj.TryGetValue(key, out value);
 
-			// IReadOnlyDictionary<string, object>
-			if (prms is IReadOnlyDictionary<string, object> roDict)
-				return roDict.TryGetValue(key, out value);
+            // IReadOnlyDictionary<string, object>
+            if (prms is IReadOnlyDictionary<string, object> roDict)
+                return roDict.TryGetValue(key, out value);
 
-			// IDictionary<string, JsonElement>
-			if (prms is IDictionary<string, JsonElement> dictJson)
-			{
-				if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
-				return false;
-			}
+            // IDictionary<string, JsonElement>
+            if (prms is IDictionary<string, JsonElement> dictJson)
+            {
+                if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
+                return false;
+            }
 
-			// IEnumerable<KeyValuePair<string, object>>
-			if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
-			{
-				foreach (var kv in kvs)
-					if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
-					{ value = kv.Value; return true; }
-			}
+            // IEnumerable<KeyValuePair<string, object>>
+            if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
+            {
+                foreach (var kv in kvs)
+                    if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
+                    { value = kv.Value; return true; }
+            }
 
-			// JsonElement object
-			if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
-			{
-				if (jeObj.TryGetProperty(key, out var je))
-				{ value = je; return true; }
-			}
+            // JsonElement object
+            if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
+            {
+                if (jeObj.TryGetProperty(key, out var je))
+                { value = je; return true; }
+            }
 
-			return false;
-		}
+            return false;
+        }
 
-		private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
-		{
-			if (where == null || where.Count == 0) return null;
+        private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
+        {
+            if (where == null || where.Count == 0) return null;
 
-			foreach (var wf in where)
-			{
-				if (!string.IsNullOrWhiteSpace(wf.Field) &&
-					wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
-				{
-					var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
-					if (op is "equal" or "eq")
-					{
-						if (wf.Value == null) return null;
-						return ToEmpId(wf.Value);
-					}
-				}
+            foreach (var wf in where)
+            {
+                if (!string.IsNullOrWhiteSpace(wf.Field) &&
+                    wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
+                {
+                    var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
+                    if (op is "equal" or "eq")
+                    {
+                        if (wf.Value == null) return null;
+                        return ToEmpId(wf.Value);
+                    }
+                }
 
-				if (wf.Predicates != null && wf.Predicates.Count > 0)
-				{
-					var nested = TryGetParentIdFromWhere(wf.Predicates);
-					if (nested != null || wf.Value == null) return nested;
-				}
-			}
-			return null;
-		}
+                if (wf.Predicates != null && wf.Predicates.Count > 0)
+                {
+                    var nested = TryGetParentIdFromWhere(wf.Predicates);
+                    if (nested != null || wf.Value == null) return nested;
+                }
+            }
+            return null;
+        }
 
-		private static string? ToEmpId(object? v)
-		{
-			if (v == null) return null;
-			if (v is string s)
-			{
-				if (int.TryParse(s, out var n)) return $"EMP{n:000}";
-				return s;
-			}
-			if (v is int i) return $"EMP{i:000}";
-			if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
-			if (v is JsonElement je)
-			{
-				return je.ValueKind switch
-				{
-					JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
-					JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
-					JsonValueKind.Null => null,
-					_ => null
-				};
-			}
-			return v.ToString();
-		}
-	}
+        private static string? ToEmpId(object? v)
+        {
+            if (v == null) return null;
+            if (v is string s)
+            {
+                if (int.TryParse(s, out var n)) return $"EMP{n:000}";
+                return s;
+            }
+            if (v is int i) return $"EMP{i:000}";
+            if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
+            if (v is JsonElement je)
+            {
+                return je.ValueKind switch
+                {
+                    JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
+                    JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
+                    JsonValueKind.Null => null,
+                    _ => null
+                };
+            }
+            return v.ToString();
+        }
+    }
 
-	// Response type
-	public class EmployeesDataResponse
-	{
-		[GraphQLName("count")]
-		public int Count { get; set; }
+    // Response type
+    public class EmployeesDataResponse
+    {
+        [GraphQLName("count")]
+        public int Count { get; set; }
 
-		[GraphQLName("result")]
-		public List<EmployeeData> Result { get; set; } = new();
+        [GraphQLName("result")]
+        public List<EmployeeData> Result { get; set; } = new();
 
-		[GraphQLName("items")]
-		public List<EmployeeData> Items { get; set; } = new();
-	}
+        [GraphQLName("items")]
+        public List<EmployeeData> Items { get; set; } = new();
+    }
 }
 ```
 
@@ -691,149 +691,149 @@ When the TreeGrid performs operations like pagination, sorting, filtering, or se
 ```csharp
 namespace TreeGrid_GraphQLAdaptor.Models
 {
-		/// <summary>
-		/// Represents the input structure for data manager requests.
-		/// </summary>
-		public class DataManagerRequestInput
-		{
-			[GraphQLName("Skip")]
-			public int Skip { get; set; }
+        /// <summary>
+        /// Represents the input structure for data manager requests.
+        /// </summary>
+        public class DataManagerRequestInput
+        {
+            [GraphQLName("Skip")]
+            public int Skip { get; set; }
 
-			[GraphQLName("Take")]
-			public int Take { get; set; }
+            [GraphQLName("Take")]
+            public int Take { get; set; }
 
-			[GraphQLName("RequiresCounts")]
-			public bool RequiresCounts { get; set; } = false;
+            [GraphQLName("RequiresCounts")]
+            public bool RequiresCounts { get; set; } = false;
 
-			[GraphQLName("Params")]
-			[GraphQLType(typeof(AnyType))]
-			public IDictionary<string, object> Params { get; set; }
+            [GraphQLName("Params")]
+            [GraphQLType(typeof(AnyType))]
+            public IDictionary<string, object> Params { get; set; }
 
-			[GraphQLName("Aggregates")]
-			[GraphQLType(typeof(AnyType))]
-			public List<Aggregate>? Aggregates { get; set; }
+            [GraphQLName("Aggregates")]
+            [GraphQLType(typeof(AnyType))]
+            public List<Aggregate>? Aggregates { get; set; }
 
-			[GraphQLName("Search")]
-			public List<SearchFilter>? Search { get; set; }
+            [GraphQLName("Search")]
+            public List<SearchFilter>? Search { get; set; }
 
-			[GraphQLName("Sorted")]
-			public List<Sort>? Sorted { get; set; }
+            [GraphQLName("Sorted")]
+            public List<Sort>? Sorted { get; set; }
 
-			[GraphQLName("Where")]
-			[GraphQLType(typeof(AnyType))]
-			public List<WhereFilter>? Where { get; set; }
+            [GraphQLName("Where")]
+            [GraphQLType(typeof(AnyType))]
+            public List<WhereFilter>? Where { get; set; }
 
-			[GraphQLName("Group")]
-			public List<string>? Group { get; set; }
+            [GraphQLName("Group")]
+            public List<string>? Group { get; set; }
 
-			[GraphQLName("antiForgery")]
-			public string? antiForgery { get; set; }
+            [GraphQLName("antiForgery")]
+            public string? antiForgery { get; set; }
 
-			[GraphQLName("Table")]
-			public string? Table { get; set; }
+            [GraphQLName("Table")]
+            public string? Table { get; set; }
 
-			[GraphQLName("IdMapping")]
-			public string? IdMapping { get; set; }
+            [GraphQLName("IdMapping")]
+            public string? IdMapping { get; set; }
 
-			[GraphQLName("Select")]
-			public List<string>? Select { get; set; }
+            [GraphQLName("Select")]
+            public List<string>? Select { get; set; }
 
-			[GraphQLName("Expand")]
-			public List<string>? Expand { get; set; }
+            [GraphQLName("Expand")]
+            public List<string>? Expand { get; set; }
 
-			[GraphQLName("Distinct")]
-			public List<string>? Distinct { get; set; }
+            [GraphQLName("Distinct")]
+            public List<string>? Distinct { get; set; }
 
-			[GraphQLName("ServerSideGroup")]
-			public bool? ServerSideGroup { get; set; }
+            [GraphQLName("ServerSideGroup")]
+            public bool? ServerSideGroup { get; set; }
 
-			[GraphQLName("LazyLoad")]
-			public bool? LazyLoad { get; set; }
+            [GraphQLName("LazyLoad")]
+            public bool? LazyLoad { get; set; }
 
-			[GraphQLName("LazyExpandAllGroup")]
-			public bool? LazyExpandAllGroup { get; set; }
-		}
+            [GraphQLName("LazyExpandAllGroup")]
+            public bool? LazyExpandAllGroup { get; set; }
+        }
 
-		/// <summary>
-		/// Represents an aggregate operation in the data manager request.
-		/// </summary>
-		public class Aggregate
-		{
-			[GraphQLName("Field")]
-			public string Field { get; set; }
+        /// <summary>
+        /// Represents an aggregate operation in the data manager request.
+        /// </summary>
+        public class Aggregate
+        {
+            [GraphQLName("Field")]
+            public string Field { get; set; }
 
-			[GraphQLName("Type")]
-			public string Type { get; set; }
-		}
+            [GraphQLName("Type")]
+            public string Type { get; set; }
+        }
 
-		/// <summary>
-		/// Represents a search filter in the data manager request.
-		/// </summary>
-		public class SearchFilter
-		{
-			[GraphQLName("Fields")]
-			public List<string> Fields { get; set; }
+        /// <summary>
+        /// Represents a search filter in the data manager request.
+        /// </summary>
+        public class SearchFilter
+        {
+            [GraphQLName("Fields")]
+            public List<string> Fields { get; set; }
 
-			[GraphQLName("Key")]
-			public string Key { get; set; }
+            [GraphQLName("Key")]
+            public string Key { get; set; }
 
-			[GraphQLName("Operator")]
-			public string Operator { get; set; }
+            [GraphQLName("Operator")]
+            public string Operator { get; set; }
 
-			[GraphQLName("IgnoreCase")]
-			public bool IgnoreCase { get; set; }
+            [GraphQLName("IgnoreCase")]
+            public bool IgnoreCase { get; set; }
 
-			[GraphQLName("IgnoreAccent")]
-			public bool? IgnoreAccent { get; set; }
-		}
+            [GraphQLName("IgnoreAccent")]
+            public bool? IgnoreAccent { get; set; }
+        }
 
-		/// <summary>
-		/// Represents a sorting operation in the data manager request.
-		/// </summary>
-		public class Sort
-		{
-			[GraphQLName("Name")]
-			public string Name { get; set; }
+        /// <summary>
+        /// Represents a sorting operation in the data manager request.
+        /// </summary>
+        public class Sort
+        {
+            [GraphQLName("Name")]
+            public string Name { get; set; }
 
-			[GraphQLName("Direction")]
-			public string Direction { get; set; }
+            [GraphQLName("Direction")]
+            public string Direction { get; set; }
 
-			[GraphQLName("Comparer")]
-			[GraphQLType(typeof(AnyType))]
-			public object Comparer { get; set; }
-		}
+            [GraphQLName("Comparer")]
+            [GraphQLType(typeof(AnyType))]
+            public object Comparer { get; set; }
+        }
 
-		/// <summary>
-		/// Represents a filter condition in the data manager request.
-		/// </summary>
-		public class WhereFilter
-		{
-			[GraphQLName("Field")]
-			public string? Field { get; set; }
+        /// <summary>
+        /// Represents a filter condition in the data manager request.
+        /// </summary>
+        public class WhereFilter
+        {
+            [GraphQLName("Field")]
+            public string? Field { get; set; }
 
-			[GraphQLName("IgnoreCase")]
-			public bool? IgnoreCase { get; set; }
+            [GraphQLName("IgnoreCase")]
+            public bool? IgnoreCase { get; set; }
 
-			[GraphQLName("IgnoreAccent")]
-			public bool? IgnoreAccent { get; set; }
+            [GraphQLName("IgnoreAccent")]
+            public bool? IgnoreAccent { get; set; }
 
-			[GraphQLName("IsComplex")]
-			public bool? IsComplex { get; set; }
+            [GraphQLName("IsComplex")]
+            public bool? IsComplex { get; set; }
 
-			[GraphQLName("Operator")]
-			public string? Operator { get; set; }
+            [GraphQLName("Operator")]
+            public string? Operator { get; set; }
 
-			[GraphQLName("Condition")]
-			public string? Condition { get; set; }
+            [GraphQLName("Condition")]
+            public string? Condition { get; set; }
 
-			[GraphQLName("Value")]
-			[GraphQLType(typeof(AnyType))]
-			public object? Value { get; set; }
+            [GraphQLName("Value")]
+            [GraphQLType(typeof(AnyType))]
+            public object? Value { get; set; }
 
-			[GraphQLName("predicates")]
-			public List<WhereFilter>? Predicates { get; set; }
-		}
-	
+            [GraphQLName("predicates")]
+            public List<WhereFilter>? Predicates { get; set; }
+        }
+    
 }
 ```
 
@@ -914,158 +914,158 @@ In simple terms, a **GraphQL mutation** asks for a change, and a **resolver** is
 ```csharp
 namespace TreeGrid_GraphQLAdaptor.Models
 {
-	public class GraphQLMutation
-	{
-		public EmployeeData CreateEmployee(
-			EmployeeData record,
-			int index,
-			string action,
-			[GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
-		{
-			var employees = EmployeeData.GetAllRecords();
+    public class GraphQLMutation
+    {
+        public EmployeeData CreateEmployee(
+            EmployeeData record,
+            int index,
+            string action,
+            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+        {
+            var employees = EmployeeData.GetAllRecords();
 
-			// Accept provided values; caller should supply EmployeeID (e.g., EMP001) and optional ManagerID.
-			var entity = new EmployeeData
-			{
-				EmployeeID = record.EmployeeID,
-				FirstName = record.FirstName,
-				LastName = record.LastName,
-				Title = record.Title,
-				ManagerID = record.ManagerID,
-				HasChild = record.HasChild,
-				Name = record.Name,
-				Location = record.Location,
-				DateJoined = record.DateJoined,
-				SalaryPerMonth = record.SalaryPerMonth,
-				Email = record.Email,
-				ProjectDetails = record.ProjectDetails,
-				ProjectStatus = record.ProjectStatus,
-				Priority = record.Priority,
-				Progress = record.Progress,
-				ProjectStartDate = record.ProjectStartDate,
-				ProjectEndDate = record.ProjectEndDate,
-				ProjectId = record.ProjectId // e.g., PRJ001
-			};
+            // Accept provided values; caller should supply EmployeeID (e.g., EMP001) and optional ManagerID.
+            var entity = new EmployeeData
+            {
+                EmployeeID = record.EmployeeID,
+                FirstName = record.FirstName,
+                LastName = record.LastName,
+                Title = record.Title,
+                ManagerID = record.ManagerID,
+                HasChild = record.HasChild,
+                Name = record.Name,
+                Location = record.Location,
+                DateJoined = record.DateJoined,
+                SalaryPerMonth = record.SalaryPerMonth,
+                Email = record.Email,
+                ProjectDetails = record.ProjectDetails,
+                ProjectStatus = record.ProjectStatus,
+                Priority = record.Priority,
+                Progress = record.Progress,
+                ProjectStartDate = record.ProjectStartDate,
+                ProjectEndDate = record.ProjectEndDate,
+                ProjectId = record.ProjectId // e.g., PRJ001
+            };
 
-			if (!string.IsNullOrWhiteSpace(entity.ManagerID))
-			{
-				var manager = employees.FirstOrDefault(e => string.Equals(e.EmployeeID, entity.ManagerID, System.StringComparison.OrdinalIgnoreCase));
-				if (manager != null) manager.HasChild = true;
-			}
+            if (!string.IsNullOrWhiteSpace(entity.ManagerID))
+            {
+                var manager = employees.FirstOrDefault(e => string.Equals(e.EmployeeID, entity.ManagerID, System.StringComparison.OrdinalIgnoreCase));
+                if (manager != null) manager.HasChild = true;
+            }
 
-			if (index >= 0 && index <= employees.Count)
-				employees.Insert(index, entity);
-			else
-				employees.Add(entity);
+            if (index >= 0 && index <= employees.Count)
+                employees.Insert(index, entity);
+            else
+                employees.Add(entity);
 
-			return entity;
-		}
-
-
-		public EmployeeData? UpdateEmployee(
-			EmployeeData record,
-			string action,
-			string primaryColumnName,
-			string primaryColumnValue,
-			[GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
-		{
-			var employees = EmployeeData.GetAllRecords();
-
-			var keyName = primaryColumnName?.ToLowerInvariant();
-			var existing = keyName switch
-			{
-				"employeeid" => employees.FirstOrDefault(x => string.Equals(x.EmployeeID, primaryColumnValue, System.StringComparison.OrdinalIgnoreCase)),
-				_ => employees.FirstOrDefault(x => string.Equals(x.EmployeeID, primaryColumnValue, System.StringComparison.OrdinalIgnoreCase))
-			};
-			if (existing == null) return null;
-
-			if (record.FirstName != null) existing.FirstName = record.FirstName;
-			if (record.LastName != null) existing.LastName = record.LastName;
-			if (record.Title != null) existing.Title = record.Title;
-			if (record.Name != null) existing.Name = record.Name;
-			if (record.Location != null) existing.Location = record.Location;
-			if (record.DateJoined.HasValue) existing.DateJoined = record.DateJoined;
-			if (record.SalaryPerMonth.HasValue) existing.SalaryPerMonth = record.SalaryPerMonth;
-			if (record.Email != null) existing.Email = record.Email;
-			if (record.ProjectDetails != null) existing.ProjectDetails = record.ProjectDetails;
-			if (record.ProjectStatus != null) existing.ProjectStatus = record.ProjectStatus;
-			if (record.Priority != null) existing.Priority = record.Priority;
-			if (record.Progress.HasValue) existing.Progress = record.Progress;
-			if (record.ProjectStartDate.HasValue) existing.ProjectStartDate = record.ProjectStartDate;
-			if (record.ProjectEndDate.HasValue) existing.ProjectEndDate = record.ProjectEndDate;
-			if (record.ProjectId != null) existing.ProjectId = record.ProjectId;
-
-			if (!string.IsNullOrWhiteSpace(record.ManagerID) &&
-				!string.Equals(record.ManagerID, existing.ManagerID, System.StringComparison.OrdinalIgnoreCase))
-			{
-				var oldManagerId = existing.ManagerID;
-				existing.ManagerID = record.ManagerID;
-
-				if (!string.IsNullOrWhiteSpace(existing.ManagerID))
-				{
-					var newManager = employees.FirstOrDefault(e => string.Equals(e.EmployeeID, existing.ManagerID, System.StringComparison.OrdinalIgnoreCase));
-					if (newManager != null) newManager.HasChild = true;
-				}
-
-				if (!string.IsNullOrWhiteSpace(oldManagerId))
-				{
-					var oldManager = employees.FirstOrDefault(e => string.Equals(e.EmployeeID, oldManagerId, System.StringComparison.OrdinalIgnoreCase));
-					if (oldManager != null)
-					{
-						oldManager.HasChild = employees.Any(e => string.Equals(e.ManagerID, oldManager.EmployeeID, System.StringComparison.OrdinalIgnoreCase));
-					}
-				}
-			}
-
-			if (record.HasChild) existing.HasChild = record.HasChild;
-
-			return existing;
-		}
+            return entity;
+        }
 
 
-		public EmployeeData? DeleteEmployee(
-			string primaryColumnValue,
-			string action,
-			string primaryColumnName,
-			[GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
-		{
-			var employees = EmployeeData.GetAllRecords();
+        public EmployeeData? UpdateEmployee(
+            EmployeeData record,
+            string action,
+            string primaryColumnName,
+            string primaryColumnValue,
+            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+        {
+            var employees = EmployeeData.GetAllRecords();
 
-			var keyName = primaryColumnName?.ToLowerInvariant();
-			var toDelete = keyName switch
-			{
-				"employeeid" => employees.FirstOrDefault(x => string.Equals(x.EmployeeID, primaryColumnValue, System.StringComparison.OrdinalIgnoreCase)),
-				_ => employees.FirstOrDefault(x => string.Equals(x.EmployeeID, primaryColumnValue, System.StringComparison.OrdinalIgnoreCase))
-			};
-			if (toDelete == null) return null;
+            var keyName = primaryColumnName?.ToLowerInvariant();
+            var existing = keyName switch
+            {
+                "employeeid" => employees.FirstOrDefault(x => string.Equals(x.EmployeeID, primaryColumnValue, System.StringComparison.OrdinalIgnoreCase)),
+                _ => employees.FirstOrDefault(x => string.Equals(x.EmployeeID, primaryColumnValue, System.StringComparison.OrdinalIgnoreCase))
+            };
+            if (existing == null) return null;
 
-			var idsToRemove = new HashSet<string>(System.StringComparer.OrdinalIgnoreCase);
-			CollectWithDescendants(employees, toDelete.EmployeeID, idsToRemove);
+            if (record.FirstName != null) existing.FirstName = record.FirstName;
+            if (record.LastName != null) existing.LastName = record.LastName;
+            if (record.Title != null) existing.Title = record.Title;
+            if (record.Name != null) existing.Name = record.Name;
+            if (record.Location != null) existing.Location = record.Location;
+            if (record.DateJoined.HasValue) existing.DateJoined = record.DateJoined;
+            if (record.SalaryPerMonth.HasValue) existing.SalaryPerMonth = record.SalaryPerMonth;
+            if (record.Email != null) existing.Email = record.Email;
+            if (record.ProjectDetails != null) existing.ProjectDetails = record.ProjectDetails;
+            if (record.ProjectStatus != null) existing.ProjectStatus = record.ProjectStatus;
+            if (record.Priority != null) existing.Priority = record.Priority;
+            if (record.Progress.HasValue) existing.Progress = record.Progress;
+            if (record.ProjectStartDate.HasValue) existing.ProjectStartDate = record.ProjectStartDate;
+            if (record.ProjectEndDate.HasValue) existing.ProjectEndDate = record.ProjectEndDate;
+            if (record.ProjectId != null) existing.ProjectId = record.ProjectId;
 
-			employees.RemoveAll(e => idsToRemove.Contains(e.EmployeeID));
+            if (!string.IsNullOrWhiteSpace(record.ManagerID) &&
+                !string.Equals(record.ManagerID, existing.ManagerID, System.StringComparison.OrdinalIgnoreCase))
+            {
+                var oldManagerId = existing.ManagerID;
+                existing.ManagerID = record.ManagerID;
 
-			if (!string.IsNullOrWhiteSpace(toDelete.ManagerID))
-			{
-				var manager = employees.FirstOrDefault(e => string.Equals(e.EmployeeID, toDelete.ManagerID, System.StringComparison.OrdinalIgnoreCase));
-				if (manager != null)
-				{
-					manager.HasChild = employees.Any(e => string.Equals(e.ManagerID, manager.EmployeeID, System.StringComparison.OrdinalIgnoreCase));
-				}
-			}
+                if (!string.IsNullOrWhiteSpace(existing.ManagerID))
+                {
+                    var newManager = employees.FirstOrDefault(e => string.Equals(e.EmployeeID, existing.ManagerID, System.StringComparison.OrdinalIgnoreCase));
+                    if (newManager != null) newManager.HasChild = true;
+                }
 
-			return toDelete;
-		}
+                if (!string.IsNullOrWhiteSpace(oldManagerId))
+                {
+                    var oldManager = employees.FirstOrDefault(e => string.Equals(e.EmployeeID, oldManagerId, System.StringComparison.OrdinalIgnoreCase));
+                    if (oldManager != null)
+                    {
+                        oldManager.HasChild = employees.Any(e => string.Equals(e.ManagerID, oldManager.EmployeeID, System.StringComparison.OrdinalIgnoreCase));
+                    }
+                }
+            }
 
-		private static void CollectWithDescendants(List<EmployeeData> all, string rootId, HashSet<string> bag)
-		{
-			if (bag.Contains(rootId)) return;
-			bag.Add(rootId);
-			var children = all.Where(e => string.Equals(e.ManagerID, rootId, System.StringComparison.OrdinalIgnoreCase))
-							  .Select(e => e.EmployeeID);
-			foreach (var c in children)
-				CollectWithDescendants(all, c, bag);
-		}
-	}
+            if (record.HasChild) existing.HasChild = record.HasChild;
+
+            return existing;
+        }
+
+
+        public EmployeeData? DeleteEmployee(
+            string primaryColumnValue,
+            string action,
+            string primaryColumnName,
+            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+        {
+            var employees = EmployeeData.GetAllRecords();
+
+            var keyName = primaryColumnName?.ToLowerInvariant();
+            var toDelete = keyName switch
+            {
+                "employeeid" => employees.FirstOrDefault(x => string.Equals(x.EmployeeID, primaryColumnValue, System.StringComparison.OrdinalIgnoreCase)),
+                _ => employees.FirstOrDefault(x => string.Equals(x.EmployeeID, primaryColumnValue, System.StringComparison.OrdinalIgnoreCase))
+            };
+            if (toDelete == null) return null;
+
+            var idsToRemove = new HashSet<string>(System.StringComparer.OrdinalIgnoreCase);
+            CollectWithDescendants(employees, toDelete.EmployeeID, idsToRemove);
+
+            employees.RemoveAll(e => idsToRemove.Contains(e.EmployeeID));
+
+            if (!string.IsNullOrWhiteSpace(toDelete.ManagerID))
+            {
+                var manager = employees.FirstOrDefault(e => string.Equals(e.EmployeeID, toDelete.ManagerID, System.StringComparison.OrdinalIgnoreCase));
+                if (manager != null)
+                {
+                    manager.HasChild = employees.Any(e => string.Equals(e.ManagerID, manager.EmployeeID, System.StringComparison.OrdinalIgnoreCase));
+                }
+            }
+
+            return toDelete;
+        }
+
+        private static void CollectWithDescendants(List<EmployeeData> all, string rootId, HashSet<string> bag)
+        {
+            if (bag.Contains(rootId)) return;
+            bag.Add(rootId);
+            var children = all.Where(e => string.Equals(e.ManagerID, rootId, System.StringComparison.OrdinalIgnoreCase))
+                              .Select(e => e.EmployeeID);
+            foreach (var c in children)
+                CollectWithDescendants(all, c, bag);
+        }
+    }
 }
 ```
 
@@ -1107,7 +1107,7 @@ Syncfusion is a library that provides pre-built UI components like TreeGrid, whi
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Syncfusion components are now configured and ready to use. For additional guidance, refer to the TreeGrid component’s [getting‑started](https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp) documentation.
 
 ### Step 2: Update the Blazor TreeGrid in the Home Component
 
@@ -1220,7 +1220,6 @@ The Home component will display the expense data in a Syncfusion Blazor TreeGrid
 - **`<TreeGridColumns>`**: Defines individual columns in the TreeGrid.
 - **`<TreeGridPageSettings>`**: Configures pagination with 10 records per page.
 - **`<TreeGridEditSettings>`**: Enable editing functionality directly within the TreeGrid by setting the AllowEditing, AllowAdding, and AllowDeleting properties within the TreeGridEditSettings to **true**.
-- **`<Template>`**:  Allows customization of the default dialog editing behavior by defining custom editors for grid rows within a dialog..
 
 The `SfDataManager` component connects the TreeGrid to the GraphQL backend using the adaptor options configured below:
 
@@ -1249,7 +1248,7 @@ The `SfDataManager` component connects the TreeGrid to the GraphQL backend using
 
 ### Step 3: Configure GraphQL Adaptor and Data Binding
 
-The GraphQL adaptor is a bridge that connects the Syncfusion Blazor TreeGrid with the GraphQL backend. The adaptor translates TreeGrid operations (filtering, sorting, paging, searching) into GraphQL queries and mutations. When the user interacts with the grid, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the grid display.
+The GraphQL adaptor is a bridge that connects the Syncfusion Blazor TreeGrid with the GraphQL backend. The adaptor translates TreeGrid operations (filtering, sorting, paging, searching) into GraphQL queries and mutations. When the user interacts with the tree grid, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the tree grid display.
 
 **What is a GraphQL Adaptor?**
 
@@ -1559,168 +1558,168 @@ using System.Text.Json;
 
 namespace TreeGrid_GraphQLAdaptor.Models
 {
-	// Defines the GraphQL resolver for handling TreeGrid requests.
-	public class GraphQLQuery
-	{
-		// SINGLE ENTRYPOINT: handles roots, children, expand/collapse, expandall, loadchildondemand, filtering, search, sort, paging
-		public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
-		{
-			EnsureDataLoaded();
+    // Defines the GraphQL resolver for handling TreeGrid requests.
+    public class GraphQLQuery
+    {
+        // SINGLE ENTRYPOINT: handles roots, children, expand/collapse, expandall, loadchildondemand, filtering, search, sort, paging
+        public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
+        {
+            EnsureDataLoaded();
 
-			// Parent detection (params first, then ManagerID== in where)
-			string? parentId = TryGetParentIdFromParams(dataManager?.Params)
-							?? TryGetParentIdFromWhere(dataManager?.Where);
+            // Parent detection (params first, then ManagerID== in where)
+            string? parentId = TryGetParentIdFromParams(dataManager?.Params)
+                            ?? TryGetParentIdFromWhere(dataManager?.Where);
 
-			// CHILDREN SLICE: return only direct children of requested parent
-			if (!string.IsNullOrWhiteSpace(parentId))
-			{
-				var children = _data
-					.Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase))
-					.ToList();
+            // CHILDREN SLICE: return only direct children of requested parent
+            if (!string.IsNullOrWhiteSpace(parentId))
+            {
+                var children = _data
+                    .Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
 
-				return new EmployeesDataResponse
-				{
-					Count = children.Count,
-					Result = children,
-					Items = children
-				};
-			}
+                return new EmployeesDataResponse
+                {
+                    Count = children.Count,
+                    Result = children,
+                    Items = children
+                };
+            }
 
-			// ROOTS: proper root-only paging
-			var roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID)).ToList();
-			int total = roots.Count;
+            // ROOTS: proper root-only paging
+            var roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID)).ToList();
+            int total = roots.Count;
 
-			IEnumerable<EmployeeData> page = roots;
-			if (dataManager?.Skip is int sk && dataManager.Take is int tk)
-			{
-				page = page.Skip(sk).Take(tk);
-			}
+            IEnumerable<EmployeeData> page = roots;
+            if (dataManager?.Skip is int sk && dataManager.Take is int tk)
+            {
+                page = page.Skip(sk).Take(tk);
+            }
 
-			var list = page.ToList();
-			return new EmployeesDataResponse
-			{
-				Count = total,
-				Result = list,
-				Items = list
-			};
-		}
+            var list = page.ToList();
+            return new EmployeesDataResponse
+            {
+                Count = total,
+                Result = list,
+                Items = list
+            };
+        }
 
-		private static List<EmployeeData> _data = EnsureDataInternal();
+        private static List<EmployeeData> _data = EnsureDataInternal();
 
-		private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
+        private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
 
-		private static void EnsureDataLoaded()
-		{
-			if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
-		}
+        private static void EnsureDataLoaded()
+        {
+            if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
+        }
 
-		private static string? TryGetParentIdFromParams(object? prms)
-		{
-			if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
-			return ToEmpId(v);
-		}
+        private static string? TryGetParentIdFromParams(object? prms)
+        {
+            if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
+            return ToEmpId(v);
+        }
 
-		private static bool TryReadFromParams(object? prms, string key, out object? value)
-		{
-			value = null;
-			if (prms == null) return false;
+        private static bool TryReadFromParams(object? prms, string key, out object? value)
+        {
+            value = null;
+            if (prms == null) return false;
 
-			// IDictionary<string, object>
-			if (prms is IDictionary<string, object> dictObj)
-				return dictObj.TryGetValue(key, out value);
+            // IDictionary<string, object>
+            if (prms is IDictionary<string, object> dictObj)
+                return dictObj.TryGetValue(key, out value);
 
-			// IReadOnlyDictionary<string, object>
-			if (prms is IReadOnlyDictionary<string, object> roDict)
-				return roDict.TryGetValue(key, out value);
+            // IReadOnlyDictionary<string, object>
+            if (prms is IReadOnlyDictionary<string, object> roDict)
+                return roDict.TryGetValue(key, out value);
 
-			// IDictionary<string, JsonElement>
-			if (prms is IDictionary<string, JsonElement> dictJson)
-			{
-				if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
-				return false;
-			}
+            // IDictionary<string, JsonElement>
+            if (prms is IDictionary<string, JsonElement> dictJson)
+            {
+                if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
+                return false;
+            }
 
-			// IEnumerable<KeyValuePair<string, object>>
-			if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
-			{
-				foreach (var kv in kvs)
-					if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
-					{ value = kv.Value; return true; }
-			}
+            // IEnumerable<KeyValuePair<string, object>>
+            if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
+            {
+                foreach (var kv in kvs)
+                    if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
+                    { value = kv.Value; return true; }
+            }
 
-			// JsonElement object
-			if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
-			{
-				if (jeObj.TryGetProperty(key, out var je))
-				{ value = je; return true; }
-			}
+            // JsonElement object
+            if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
+            {
+                if (jeObj.TryGetProperty(key, out var je))
+                { value = je; return true; }
+            }
 
-			return false;
-		}
+            return false;
+        }
 
-		private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
-		{
-			if (where == null || where.Count == 0) return null;
+        private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
+        {
+            if (where == null || where.Count == 0) return null;
 
-			foreach (var wf in where)
-			{
-				if (!string.IsNullOrWhiteSpace(wf.Field) &&
-					wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
-				{
-					var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
-					if (op is "equal" or "eq")
-					{
-						if (wf.Value == null) return null;
-						return ToEmpId(wf.Value);
-					}
-				}
+            foreach (var wf in where)
+            {
+                if (!string.IsNullOrWhiteSpace(wf.Field) &&
+                    wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
+                {
+                    var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
+                    if (op is "equal" or "eq")
+                    {
+                        if (wf.Value == null) return null;
+                        return ToEmpId(wf.Value);
+                    }
+                }
 
-				if (wf.Predicates != null && wf.Predicates.Count > 0)
-				{
-					var nested = TryGetParentIdFromWhere(wf.Predicates);
-					if (nested != null || wf.Value == null) return nested;
-				}
-			}
-			return null;
-		}
+                if (wf.Predicates != null && wf.Predicates.Count > 0)
+                {
+                    var nested = TryGetParentIdFromWhere(wf.Predicates);
+                    if (nested != null || wf.Value == null) return nested;
+                }
+            }
+            return null;
+        }
 
-		private static string? ToEmpId(object? v)
-		{
-			if (v == null) return null;
-			if (v is string s)
-			{
-				if (int.TryParse(s, out var n)) return $"EMP{n:000}";
-				return s;
-			}
-			if (v is int i) return $"EMP{i:000}";
-			if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
-			if (v is JsonElement je)
-			{
-				return je.ValueKind switch
-				{
-					JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
-					JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
-					JsonValueKind.Null => null,
-					_ => null
-				};
-			}
-			return v.ToString();
-		}
-	}
+        private static string? ToEmpId(object? v)
+        {
+            if (v == null) return null;
+            if (v is string s)
+            {
+                if (int.TryParse(s, out var n)) return $"EMP{n:000}";
+                return s;
+            }
+            if (v is int i) return $"EMP{i:000}";
+            if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
+            if (v is JsonElement je)
+            {
+                return je.ValueKind switch
+                {
+                    JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
+                    JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
+                    JsonValueKind.Null => null,
+                    _ => null
+                };
+            }
+            return v.ToString();
+        }
+    }
 
-	// Response type
-	public class EmployeesDataResponse
-	{
-		[GraphQLName("count")]
-		public int Count { get; set; }
+    // Response type
+    public class EmployeesDataResponse
+    {
+        [GraphQLName("count")]
+        public int Count { get; set; }
 
-		[GraphQLName("result")]
-		public List<EmployeeData> Result { get; set; } = new();
+        [GraphQLName("result")]
+        public List<EmployeeData> Result { get; set; } = new();
 
-		[GraphQLName("items")]
-		public List<EmployeeData> Items { get; set; } = new();
-	}
-	
+        [GraphQLName("items")]
+        public List<EmployeeData> Items { get; set; } = new();
+    }
+    
 }
 ```
 
@@ -1793,256 +1792,256 @@ using System.Text.Json;
 
 namespace TreeGrid_GraphQLAdaptor.Models
 {
-	// Defines the GraphQL resolver for handling TreeGrid data requests.
-	public class GraphQLQuery
-	{
-		// - Roots: search applied, then paged by Skip/Take
-		// - Children slice: ManagerID=parentId, search applied;
-		public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
-		{
-			EnsureDataLoaded();
+    // Defines the GraphQL resolver for handling TreeGrid data requests.
+    public class GraphQLQuery
+    {
+        // - Roots: search applied, then paged by Skip/Take
+        // - Children slice: ManagerID=parentId, search applied;
+        public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
+        {
+            EnsureDataLoaded();
 
-			// Detect explicit children request from params first, then ManagerID filter in where (only to detect parentId)
-			string? parentId = TryGetParentIdFromParams(dataManager?.Params)
-							   ?? TryGetParentIdFromWhere(dataManager?.Where);
+            // Detect explicit children request from params first, then ManagerID filter in where (only to detect parentId)
+            string? parentId = TryGetParentIdFromParams(dataManager?.Params)
+                               ?? TryGetParentIdFromWhere(dataManager?.Where);
 
-			// CHILDREN SLICE: return only direct children of requested parent (no paging)
-			if (!string.IsNullOrWhiteSpace(parentId))
-			{
-				IEnumerable<EmployeeData> children = _data
-					.Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase));
+            // CHILDREN SLICE: return only direct children of requested parent (no paging)
+            if (!string.IsNullOrWhiteSpace(parentId))
+            {
+                IEnumerable<EmployeeData> children = _data
+                    .Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase));
 
-				// Apply search to the current level only
-				children = ApplySearch(children, dataManager?.Search ?? new List<SearchFilter>());
+                // Apply search to the current level only
+                children = ApplySearch(children, dataManager?.Search ?? new List<SearchFilter>());
 
-				var list = children.ToList();
-				return new EmployeesDataResponse
-				{
-					Count = list.Count,
-					Result = list,
-					Items = list
-				};
-			}
+                var list = children.ToList();
+                return new EmployeesDataResponse
+                {
+                    Count = list.Count,
+                    Result = list,
+                    Items = list
+                };
+            }
 
-			// ROOTS: search then paging
-			IEnumerable<EmployeeData> roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID));
+            // ROOTS: search then paging
+            IEnumerable<EmployeeData> roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID));
 
-			// Apply search to roots
-			roots = ApplySearch(roots, dataManager?.Search ?? new List<SearchFilter>());
+            // Apply search to roots
+            roots = ApplySearch(roots, dataManager?.Search ?? new List<SearchFilter>());
 
-			int total = roots.Count();
+            int total = roots.Count();
 
-			// Paging
-			if (dataManager?.Skip is int sk && dataManager.Take is int tk)
-			{
-				roots = roots.Skip(sk).Take(tk);
-			}
+            // Paging
+            if (dataManager?.Skip is int sk && dataManager.Take is int tk)
+            {
+                roots = roots.Skip(sk).Take(tk);
+            }
 
-			var page = roots.ToList();
-			return new EmployeesDataResponse
-			{
-				Count = total,
-				Result = page,
-				Items = page
-			};
-		}
+            var page = roots.ToList();
+            return new EmployeesDataResponse
+            {
+                Count = total,
+                Result = page,
+                Items = page
+            };
+        }
 
-		private static List<EmployeeData> _data = EnsureDataInternal();
+        private static List<EmployeeData> _data = EnsureDataInternal();
 
-		private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
+        private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
 
-		private static void EnsureDataLoaded()
-		{
-			if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
-		}
+        private static void EnsureDataLoaded()
+        {
+            if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
+        }
 
-		private static string? TryGetParentIdFromParams(object? prms)
-		{
-			if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
-			return ToEmpId(v);
-		}
+        private static string? TryGetParentIdFromParams(object? prms)
+        {
+            if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
+            return ToEmpId(v);
+        }
 
-		private static bool TryReadFromParams(object? prms, string key, out object? value)
-		{
-			value = null;
-			if (prms == null) return false;
+        private static bool TryReadFromParams(object? prms, string key, out object? value)
+        {
+            value = null;
+            if (prms == null) return false;
 
-			if (prms is IDictionary<string, object> dictObj)
-				return dictObj.TryGetValue(key, out value);
+            if (prms is IDictionary<string, object> dictObj)
+                return dictObj.TryGetValue(key, out value);
 
-			if (prms is IReadOnlyDictionary<string, object> roDict)
-				return roDict.TryGetValue(key, out value);
+            if (prms is IReadOnlyDictionary<string, object> roDict)
+                return roDict.TryGetValue(key, out value);
 
-			if (prms is IDictionary<string, JsonElement> dictJson)
-			{
-				if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
-				return false;
-			}
+            if (prms is IDictionary<string, JsonElement> dictJson)
+            {
+                if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
+                return false;
+            }
 
-			if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
-			{
-				foreach (var kv in kvs)
-					if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
-					{ value = kv.Value; return true; }
-			}
+            if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
+            {
+                foreach (var kv in kvs)
+                    if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
+                    { value = kv.Value; return true; }
+            }
 
-			if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
-			{
-				if (jeObj.TryGetProperty(key, out var je))
-				{ value = je; return true; }
-			}
+            if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
+            {
+                if (jeObj.TryGetProperty(key, out var je))
+                { value = je; return true; }
+            }
 
-			return false;
-		}
+            return false;
+        }
 
-		private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
-		{
-			if (where == null || where.Count == 0) return null;
+        private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
+        {
+            if (where == null || where.Count == 0) return null;
 
-			foreach (var wf in where)
-			{
-				if (!string.IsNullOrWhiteSpace(wf.Field) &&
-					wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
-				{
-					var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
-					if (op is "equal" or "eq")
-					{
-						if (wf.Value == null) return null;
-						return ToEmpId(wf.Value);
-					}
-				}
+            foreach (var wf in where)
+            {
+                if (!string.IsNullOrWhiteSpace(wf.Field) &&
+                    wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
+                {
+                    var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
+                    if (op is "equal" or "eq")
+                    {
+                        if (wf.Value == null) return null;
+                        return ToEmpId(wf.Value);
+                    }
+                }
 
-				if (wf.Predicates != null && wf.Predicates.Count > 0)
-				{
-					var nested = TryGetParentIdFromWhere(wf.Predicates);
-					if (nested != null || wf.Value == null) return nested;
-				}
-			}
-			return null;
-		}
+                if (wf.Predicates != null && wf.Predicates.Count > 0)
+                {
+                    var nested = TryGetParentIdFromWhere(wf.Predicates);
+                    if (nested != null || wf.Value == null) return nested;
+                }
+            }
+            return null;
+        }
 
-		// Search only
-		private static IEnumerable<EmployeeData> ApplySearch(IEnumerable<EmployeeData> data, List<SearchFilter> searches)
-		{
-			if (searches == null || searches.Count == 0) return data;
+        // Search only
+        private static IEnumerable<EmployeeData> ApplySearch(IEnumerable<EmployeeData> data, List<SearchFilter> searches)
+        {
+            if (searches == null || searches.Count == 0) return data;
 
-			IEnumerable<EmployeeData> current = data;
+            IEnumerable<EmployeeData> current = data;
 
-			foreach (var s in searches)
-			{
-				if (s == null) continue;
-				var key = s.Key ?? string.Empty;
-				if (string.IsNullOrWhiteSpace(key)) continue;
+            foreach (var s in searches)
+            {
+                if (s == null) continue;
+                var key = s.Key ?? string.Empty;
+                if (string.IsNullOrWhiteSpace(key)) continue;
 
-				var cmp = s.IgnoreCase ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
+                var cmp = s.IgnoreCase ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
 
-				// If no fields provided, search a reasonable set
-				var fields = (s.Fields != null && s.Fields.Count > 0)
-					? s.Fields
-					: new List<string> {
-					"employeeID","managerID","name","firstName","lastName",
-					"title","location","email","projectId","projectDetails",
-					"projectStatus","priority","progress"
-					};
+                // If no fields provided, search a reasonable set
+                var fields = (s.Fields != null && s.Fields.Count > 0)
+                    ? s.Fields
+                    : new List<string> {
+                    "employeeID","managerID","name","firstName","lastName",
+                    "title","location","email","projectId","projectDetails",
+                    "projectStatus","priority","progress"
+                    };
 
-				current = current.Where(e =>
-				{
-					foreach (var f in fields)
-					{
-						var val = GetFieldString(e, f);
-						if (!string.IsNullOrEmpty(val) && val.IndexOf(key, cmp) >= 0)
-							return true;
-					}
-					return false;
-				});
-			}
+                current = current.Where(e =>
+                {
+                    foreach (var f in fields)
+                    {
+                        var val = GetFieldString(e, f);
+                        if (!string.IsNullOrEmpty(val) && val.IndexOf(key, cmp) >= 0)
+                            return true;
+                    }
+                    return false;
+                });
+            }
 
-			return current;
-		}
+            return current;
+        }
 
-		// Map field to string for search
-		private static string? GetFieldString(EmployeeData e, string field)
-		{
-			if (string.IsNullOrWhiteSpace(field)) return null;
+        // Map field to string for search
+        private static string? GetFieldString(EmployeeData e, string field)
+        {
+            if (string.IsNullOrWhiteSpace(field)) return null;
 
-			switch (field)
-			{
-				case "employeeID":
-				case "EmployeeID": return e.EmployeeID;
-				case "managerID":
-				case "ManagerID": return e.ManagerID;
-				case "hasChild":
-				case "HasChild": return e.HasChild ? "true" : "false";
-				case "name":
-				case "Name": return e.Name;
-				case "firstName":
-				case "FirstName": return e.FirstName;
-				case "lastName":
-				case "LastName": return e.LastName;
-				case "title":
-				case "Title": return e.Title;
-				case "location":
-				case "Location": return e.Location;
-				case "dateJoined":
-				case "DateJoined": return e.DateJoined?.ToString("o");
-				case "salaryPerMonth":
-				case "SalaryPerMonth": return e.SalaryPerMonth?.ToString();
-				case "email":
-				case "Email": return e.Email;
-				case "projectId":
-				case "ProjectId": return e.ProjectId;
-				case "projectDetails":
-				case "ProjectDetails": return e.ProjectDetails;
-				case "projectStatus":
-				case "ProjectStatus": return e.ProjectStatus;
-				case "priority":
-				case "Priority": return e.Priority;
-				case "progress":
-				case "Progress": return e.Progress?.ToString();
-				case "projectStartDate":
-				case "ProjectStartDate": return e.ProjectStartDate?.ToString("o");
-				case "projectEndDate":
-				case "ProjectEndDate": return e.ProjectEndDate?.ToString("o");
-				default: return null;
-			}
-		}
+            switch (field)
+            {
+                case "employeeID":
+                case "EmployeeID": return e.EmployeeID;
+                case "managerID":
+                case "ManagerID": return e.ManagerID;
+                case "hasChild":
+                case "HasChild": return e.HasChild ? "true" : "false";
+                case "name":
+                case "Name": return e.Name;
+                case "firstName":
+                case "FirstName": return e.FirstName;
+                case "lastName":
+                case "LastName": return e.LastName;
+                case "title":
+                case "Title": return e.Title;
+                case "location":
+                case "Location": return e.Location;
+                case "dateJoined":
+                case "DateJoined": return e.DateJoined?.ToString("o");
+                case "salaryPerMonth":
+                case "SalaryPerMonth": return e.SalaryPerMonth?.ToString();
+                case "email":
+                case "Email": return e.Email;
+                case "projectId":
+                case "ProjectId": return e.ProjectId;
+                case "projectDetails":
+                case "ProjectDetails": return e.ProjectDetails;
+                case "projectStatus":
+                case "ProjectStatus": return e.ProjectStatus;
+                case "priority":
+                case "Priority": return e.Priority;
+                case "progress":
+                case "Progress": return e.Progress?.ToString();
+                case "projectStartDate":
+                case "ProjectStartDate": return e.ProjectStartDate?.ToString("o");
+                case "projectEndDate":
+                case "ProjectEndDate": return e.ProjectEndDate?.ToString("o");
+                default: return null;
+            }
+        }
 
-		private static string? ToEmpId(object? v)
-		{
-			if (v == null) return null;
-			if (v is string s)
-			{
-				if (int.TryParse(s, out var n)) return $"EMP{n:000}";
-				return s;
-			}
-			if (v is int i) return $"EMP{i:000}";
-			if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
-			if (v is JsonElement je)
-			{
-				return je.ValueKind switch
-				{
-					JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
-					JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
-					JsonValueKind.Null => null,
-					_ => null
-				};
-			}
-			return v.ToString();
-		}
-	}
+        private static string? ToEmpId(object? v)
+        {
+            if (v == null) return null;
+            if (v is string s)
+            {
+                if (int.TryParse(s, out var n)) return $"EMP{n:000}";
+                return s;
+            }
+            if (v is int i) return $"EMP{i:000}";
+            if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
+            if (v is JsonElement je)
+            {
+                return je.ValueKind switch
+                {
+                    JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
+                    JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
+                    JsonValueKind.Null => null,
+                    _ => null
+                };
+            }
+            return v.ToString();
+        }
+    }
 
-	// Response type
-	public class EmployeesDataResponse
-	{
-		[GraphQLName("count")]
-		public int Count { get; set; }
+    // Response type
+    public class EmployeesDataResponse
+    {
+        [GraphQLName("count")]
+        public int Count { get; set; }
 
-		[GraphQLName("result")]
-		public List<EmployeeData> Result { get; set; } = new();
+        [GraphQLName("result")]
+        public List<EmployeeData> Result { get; set; } = new();
 
-		[GraphQLName("items")]
-		public List<EmployeeData> Items { get; set; } = new();
-	}
+        [GraphQLName("items")]
+        public List<EmployeeData> Items { get; set; } = new();
+    }
 
 }
 ```
@@ -2085,204 +2084,204 @@ using TreeGrid_GraphQLAdaptor.Models;
 
 public class GraphQLQuery
 {
-	// - Roots: paged by Skip/Take and sorted if dataManager.Sorted provided
-	// - Children slice: direct children for a parentId; sorted if dataManager.Sorted provided;
-	public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
-	{
-		EnsureDataLoaded();
+    // - Roots: paged by Skip/Take and sorted if dataManager.Sorted provided
+    // - Children slice: direct children for a parentId; sorted if dataManager.Sorted provided;
+    public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
+    {
+        EnsureDataLoaded();
 
-		string? parentId = TryGetParentIdFromParams(dataManager?.Params)
-						?? TryGetParentIdFromWhere(dataManager?.Where);
+        string? parentId = TryGetParentIdFromParams(dataManager?.Params)
+                        ?? TryGetParentIdFromWhere(dataManager?.Where);
 
-		// CHILDREN SLICE (no paging)
-		if (!string.IsNullOrWhiteSpace(parentId))
-		{
-			var children = _data
-				.Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase))
-				.ToList();
+        // CHILDREN SLICE (no paging)
+        if (!string.IsNullOrWhiteSpace(parentId))
+        {
+            var children = _data
+                .Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase))
+                .ToList();
 
-			children = SortListStable(children, dataManager?.Sorted);
-			return new EmployeesDataResponse
-			{
-				Count = children.Count,
-				Result = children,
-				Items = children
-			};
-		}
+            children = SortListStable(children, dataManager?.Sorted);
+            return new EmployeesDataResponse
+            {
+                Count = children.Count,
+                Result = children,
+                Items = children
+            };
+        }
 
-		// ROOTS: paging + optional sorting
-		var roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID)).ToList();
-		int total = roots.Count;
+        // ROOTS: paging + optional sorting
+        var roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID)).ToList();
+        int total = roots.Count;
 
-		roots = SortListStable(roots, dataManager?.Sorted);
+        roots = SortListStable(roots, dataManager?.Sorted);
 
-		IEnumerable<EmployeeData> page = roots;
-		if (dataManager?.Skip is int sk && dataManager.Take is int tk)
-		{
-			page = page.Skip(sk).Take(tk);
-		}
+        IEnumerable<EmployeeData> page = roots;
+        if (dataManager?.Skip is int sk && dataManager.Take is int tk)
+        {
+            page = page.Skip(sk).Take(tk);
+        }
 
-		var list = page.ToList();
-		return new EmployeesDataResponse
-		{
-			Count = total,
-			Result = list,
-			Items = list
-		};
-	}
+        var list = page.ToList();
+        return new EmployeesDataResponse
+        {
+            Count = total,
+            Result = list,
+            Items = list
+        };
+    }
 
-	private static List<EmployeeData> _data = EnsureDataInternal();
+    private static List<EmployeeData> _data = EnsureDataInternal();
 
-	private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
+    private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
 
-	private static void EnsureDataLoaded()
-	{
-		if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
-	}
+    private static void EnsureDataLoaded()
+    {
+        if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
+    }
 
-	private static string? TryGetParentIdFromParams(object? prms)
-	{
-		if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
-		return ToEmpId(v);
-	}
+    private static string? TryGetParentIdFromParams(object? prms)
+    {
+        if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
+        return ToEmpId(v);
+    }
 
-	private static bool TryReadFromParams(object? prms, string key, out object? value)
-	{
-		value = null;
-		if (prms == null) return false;
+    private static bool TryReadFromParams(object? prms, string key, out object? value)
+    {
+        value = null;
+        if (prms == null) return false;
 
-		if (prms is IDictionary<string, object> dictObj)
-			return dictObj.TryGetValue(key, out value);
+        if (prms is IDictionary<string, object> dictObj)
+            return dictObj.TryGetValue(key, out value);
 
-		if (prms is IReadOnlyDictionary<string, object> roDict)
-			return roDict.TryGetValue(key, out value);
+        if (prms is IReadOnlyDictionary<string, object> roDict)
+            return roDict.TryGetValue(key, out value);
 
-		if (prms is IDictionary<string, JsonElement> dictJson)
-		{
-			if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
-			return false;
-		}
+        if (prms is IDictionary<string, JsonElement> dictJson)
+        {
+            if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
+            return false;
+        }
 
-		if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
-		{
-			foreach (var kv in kvs)
-				if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
-				{ value = kv.Value; return true; }
-		}
+        if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
+        {
+            foreach (var kv in kvs)
+                if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
+                { value = kv.Value; return true; }
+        }
 
-		if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
-		{
-			if (jeObj.TryGetProperty(key, out var je))
-			{ value = je; return true; }
-		}
+        if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
+        {
+            if (jeObj.TryGetProperty(key, out var je))
+            { value = je; return true; }
+        }
 
-		return false;
-	}
+        return false;
+    }
 
-	private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
-	{
-		if (where == null || where.Count == 0) return null;
+    private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
+    {
+        if (where == null || where.Count == 0) return null;
 
-		foreach (var wf in where)
-		{
-			if (!string.IsNullOrWhiteSpace(wf.Field) &&
-				wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
-			{
-				var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
-				if (op is "equal" or "eq")
-				{
-					if (wf.Value == null) return null;
-					return ToEmpId(wf.Value);
-				}
-			}
+        foreach (var wf in where)
+        {
+            if (!string.IsNullOrWhiteSpace(wf.Field) &&
+                wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
+            {
+                var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
+                if (op is "equal" or "eq")
+                {
+                    if (wf.Value == null) return null;
+                    return ToEmpId(wf.Value);
+                }
+            }
 
-			if (wf.Predicates != null && wf.Predicates.Count > 0)
-			{
-				var nested = TryGetParentIdFromWhere(wf.Predicates);
-				if (nested != null || wf.Value == null) return nested;
-			}
-		}
-		return null;
-	}
+            if (wf.Predicates != null && wf.Predicates.Count > 0)
+            {
+                var nested = TryGetParentIdFromWhere(wf.Predicates);
+                if (nested != null || wf.Value == null) return nested;
+            }
+        }
+        return null;
+    }
 
-	private static string? ToEmpId(object? v)
-	{
-		if (v == null) return null;
-		if (v is string s)
-		{
-			if (int.TryParse(s, out var n)) return $"EMP{n:000}";
-			return s;
-		}
-		if (v is int i) return $"EMP{i:000}";
-		if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
-		if (v is JsonElement je)
-		{
-			return je.ValueKind switch
-			{
-				JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
-				JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
-				JsonValueKind.Null => null,
-				_ => null
-			};
-		}
-		return v.ToString();
-	}
+    private static string? ToEmpId(object? v)
+    {
+        if (v == null) return null;
+        if (v is string s)
+        {
+            if (int.TryParse(s, out var n)) return $"EMP{n:000}";
+            return s;
+        }
+        if (v is int i) return $"EMP{i:000}";
+        if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
+        if (v is JsonElement je)
+        {
+            return je.ValueKind switch
+            {
+                JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
+                JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
+                JsonValueKind.Null => null,
+                _ => null
+            };
+        }
+        return v.ToString();
+    }
 
-	private static List<EmployeeData> SortListStable(List<EmployeeData> list, List<Sort>? sorts)
-	{
-		if (sorts == null || sorts.Count == 0)
-			return list.OrderBy(x => x.EmployeeID, StringComparer.OrdinalIgnoreCase).ToList();
+    private static List<EmployeeData> SortListStable(List<EmployeeData> list, List<Sort>? sorts)
+    {
+        if (sorts == null || sorts.Count == 0)
+            return list.OrderBy(x => x.EmployeeID, StringComparer.OrdinalIgnoreCase).ToList();
 
-		IOrderedEnumerable<EmployeeData>? ordered = null;
+        IOrderedEnumerable<EmployeeData>? ordered = null;
 
-		for (int i = 0; i < sorts.Count; i++)
-		{
-			var s = sorts[i];
-			bool desc = string.Equals(s.Direction, "desc", StringComparison.OrdinalIgnoreCase) ||
-						string.Equals(s.Direction, "descending", StringComparison.OrdinalIgnoreCase);
+        for (int i = 0; i < sorts.Count; i++)
+        {
+            var s = sorts[i];
+            bool desc = string.Equals(s.Direction, "desc", StringComparison.OrdinalIgnoreCase) ||
+                        string.Equals(s.Direction, "descending", StringComparison.OrdinalIgnoreCase);
 
-			Func<EmployeeData, object?> key = s.Name switch
-			{
-				"employeeID" => e => e.EmployeeID,
-				"managerID" => e => e.ManagerID,
-				"name" => e => e.Name,
-				"firstName" => e => e.FirstName,
-				"lastName" => e => e.LastName,
-				"title" => e => e.Title,
-				"location" => e => e.Location,
-				"dateJoined" => e => e.DateJoined,
-				"salaryPerMonth" => e => e.SalaryPerMonth,
-				"email" => e => e.Email,
-				"projectId" => e => e.ProjectId,
-				"projectDetails" => e => e.ProjectDetails,
-				"projectStatus" => e => e.ProjectStatus,
-				"priority" => e => e.Priority,
-				"progress" => e => e.Progress,
-				"projectStartDate" => e => e.ProjectStartDate,
-				"projectEndDate" => e => e.ProjectEndDate,
-				_ => e => e.EmployeeID
-			};
+            Func<EmployeeData, object?> key = s.Name switch
+            {
+                "employeeID" => e => e.EmployeeID,
+                "managerID" => e => e.ManagerID,
+                "name" => e => e.Name,
+                "firstName" => e => e.FirstName,
+                "lastName" => e => e.LastName,
+                "title" => e => e.Title,
+                "location" => e => e.Location,
+                "dateJoined" => e => e.DateJoined,
+                "salaryPerMonth" => e => e.SalaryPerMonth,
+                "email" => e => e.Email,
+                "projectId" => e => e.ProjectId,
+                "projectDetails" => e => e.ProjectDetails,
+                "projectStatus" => e => e.ProjectStatus,
+                "priority" => e => e.Priority,
+                "progress" => e => e.Progress,
+                "projectStartDate" => e => e.ProjectStartDate,
+                "projectEndDate" => e => e.ProjectEndDate,
+                _ => e => e.EmployeeID
+            };
 
-			ordered = i == 0
-				? (desc ? list.OrderByDescending(key) : list.OrderBy(key))
-				: (desc ? ordered!.ThenByDescending(key) : ordered!.ThenBy(key));
-		}
+            ordered = i == 0
+                ? (desc ? list.OrderByDescending(key) : list.OrderBy(key))
+                : (desc ? ordered!.ThenByDescending(key) : ordered!.ThenBy(key));
+        }
 
-		return ordered!.ThenBy(x => x.EmployeeID, StringComparer.OrdinalIgnoreCase).ToList();
-	}
+        return ordered!.ThenBy(x => x.EmployeeID, StringComparer.OrdinalIgnoreCase).ToList();
+    }
 }
 
 // Response type
 public class EmployeesDataResponse
 {
-	[GraphQLName("count")]
-	public int Count { get; set; }
+    [GraphQLName("count")]
+    public int Count { get; set; }
 
-	[GraphQLName("result")]
-	public List<EmployeeData> Result { get; set; } = new();
+    [GraphQLName("result")]
+    public List<EmployeeData> Result { get; set; } = new();
 
-	[GraphQLName("items")]
-	public List<EmployeeData> Items { get; set; } = new();
+    [GraphQLName("items")]
+    public List<EmployeeData> Items { get; set; } = new();
 }
 ```
 
@@ -2346,281 +2345,281 @@ using TreeGrid_GraphQLAdaptor.Models;
 
 public class GraphQLQuery
 {
-	// - Roots: filters applied, then paged by Skip/Take
-	// - Children slice: ManagerID=parentId, then filters applied; no paging
-	public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
-	{
-		EnsureDataLoaded();
+    // - Roots: filters applied, then paged by Skip/Take
+    // - Children slice: ManagerID=parentId, then filters applied; no paging
+    public EmployeesDataResponse EmployeesData(DataManagerRequestInput dataManager)
+    {
+        EnsureDataLoaded();
 
-		// Detect explicit children request from params first, then ManagerID filter in where
-		string? parentId = TryGetParentIdFromParams(dataManager?.Params)
-							?? TryGetParentIdFromWhere(dataManager?.Where);
+        // Detect explicit children request from params first, then ManagerID filter in where
+        string? parentId = TryGetParentIdFromParams(dataManager?.Params)
+                            ?? TryGetParentIdFromWhere(dataManager?.Where);
 
-		// CHILDREN SLICE: return only direct children of requested parent (no paging)
-		if (!string.IsNullOrWhiteSpace(parentId))
-		{
-			var children = _data
-				.Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase))
-				.ToList();
+        // CHILDREN SLICE: return only direct children of requested parent (no paging)
+        if (!string.IsNullOrWhiteSpace(parentId))
+        {
+            var children = _data
+                .Where(d => string.Equals(d.ManagerID, parentId, StringComparison.OrdinalIgnoreCase))
+                .ToList();
 
-			// Apply non-parent filters to the current level
-			children = ApplyWhereExcludingParent(children, dataManager?.Where ?? new List<WhereFilter>()).ToList();
+            // Apply non-parent filters to the current level
+            children = ApplyWhereExcludingParent(children, dataManager?.Where ?? new List<WhereFilter>()).ToList();
 
-			return new EmployeesDataResponse
-			{
-				Count = children.Count,
-				Result = children,
-				Items = children
-			};
-		}
+            return new EmployeesDataResponse
+            {
+                Count = children.Count,
+                Result = children,
+                Items = children
+            };
+        }
 
-		// ROOTS: apply filters, then paging
-		var roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID)).ToList();
-		roots = ApplyWhereExcludingParent(roots, dataManager?.Where ?? new List<WhereFilter>()).ToList();
+        // ROOTS: apply filters, then paging
+        var roots = _data.Where(d => string.IsNullOrWhiteSpace(d.ManagerID)).ToList();
+        roots = ApplyWhereExcludingParent(roots, dataManager?.Where ?? new List<WhereFilter>()).ToList();
 
-		int total = roots.Count;
+        int total = roots.Count;
 
-		IEnumerable<EmployeeData> page = roots;
-		if (dataManager?.Skip is int sk && dataManager.Take is int tk)
-		{
-			page = page.Skip(sk).Take(tk);
-		}
+        IEnumerable<EmployeeData> page = roots;
+        if (dataManager?.Skip is int sk && dataManager.Take is int tk)
+        {
+            page = page.Skip(sk).Take(tk);
+        }
 
-		var list = page.ToList();
-		return new EmployeesDataResponse
-		{
-			Count = total,
-			Result = list,
-			Items = list
-		};
-	}
+        var list = page.ToList();
+        return new EmployeesDataResponse
+        {
+            Count = total,
+            Result = list,
+            Items = list
+        };
+    }
 
-	private static List<EmployeeData> _data = EnsureDataInternal();
+    private static List<EmployeeData> _data = EnsureDataInternal();
 
-	private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
+    private static List<EmployeeData> EnsureDataInternal() => EmployeeData.GetAllRecords();
 
-	private static void EnsureDataLoaded()
-	{
-		if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
-	}
+    private static void EnsureDataLoaded()
+    {
+        if (_data == null || _data.Count == 0) _data = EnsureDataInternal();
+    }
 
-	private static string? TryGetParentIdFromParams(object? prms)
-	{
-		if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
-		return ToEmpId(v);
-	}
+    private static string? TryGetParentIdFromParams(object? prms)
+    {
+        if (!TryReadFromParams(prms, "parentId", out var v) || v is null) return null;
+        return ToEmpId(v);
+    }
 
-	private static bool TryReadFromParams(object? prms, string key, out object? value)
-	{
-		value = null;
-		if (prms == null) return false;
+    private static bool TryReadFromParams(object? prms, string key, out object? value)
+    {
+        value = null;
+        if (prms == null) return false;
 
-		if (prms is IDictionary<string, object> dictObj)
-			return dictObj.TryGetValue(key, out value);
+        if (prms is IDictionary<string, object> dictObj)
+            return dictObj.TryGetValue(key, out value);
 
-		if (prms is IReadOnlyDictionary<string, object> roDict)
-			return roDict.TryGetValue(key, out value);
+        if (prms is IReadOnlyDictionary<string, object> roDict)
+            return roDict.TryGetValue(key, out value);
 
-		if (prms is IDictionary<string, JsonElement> dictJson)
-		{
-			if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
-			return false;
-		}
+        if (prms is IDictionary<string, JsonElement> dictJson)
+        {
+            if (dictJson.TryGetValue(key, out var je)) { value = je; return true; }
+            return false;
+        }
 
-		if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
-		{
-			foreach (var kv in kvs)
-				if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
-				{ value = kv.Value; return true; }
-		}
+        if (prms is IEnumerable<KeyValuePair<string, object>> kvs)
+        {
+            foreach (var kv in kvs)
+                if (string.Equals(kv.Key, key, StringComparison.OrdinalIgnoreCase))
+                { value = kv.Value; return true; }
+        }
 
-		if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
-		{
-			if (jeObj.TryGetProperty(key, out var je))
-			{ value = je; return true; }
-		}
+        if (prms is JsonElement jeObj && jeObj.ValueKind == JsonValueKind.Object)
+        {
+            if (jeObj.TryGetProperty(key, out var je))
+            { value = je; return true; }
+        }
 
-		return false;
-	}
+        return false;
+    }
 
-	private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
-	{
-		if (where == null || where.Count == 0) return null;
+    private static string? TryGetParentIdFromWhere(List<WhereFilter>? where)
+    {
+        if (where == null || where.Count == 0) return null;
 
-		foreach (var wf in where)
-		{
-			if (!string.IsNullOrWhiteSpace(wf.Field) &&
-				wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
-			{
-				var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
-				if (op is "equal" or "eq")
-				{
-					if (wf.Value == null) return null;
-					return ToEmpId(wf.Value);
-				}
-			}
+        foreach (var wf in where)
+        {
+            if (!string.IsNullOrWhiteSpace(wf.Field) &&
+                wf.Field.Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
+            {
+                var op = (wf.Operator ?? "equal").Trim().ToLowerInvariant();
+                if (op is "equal" or "eq")
+                {
+                    if (wf.Value == null) return null;
+                    return ToEmpId(wf.Value);
+                }
+            }
 
-			if (wf.Predicates != null && wf.Predicates.Count > 0)
-			{
-				var nested = TryGetParentIdFromWhere(wf.Predicates);
-				if (nested != null || wf.Value == null) return nested;
-			}
-		}
-		return null;
-	}
+            if (wf.Predicates != null && wf.Predicates.Count > 0)
+            {
+                var nested = TryGetParentIdFromWhere(wf.Predicates);
+                if (nested != null || wf.Value == null) return nested;
+            }
+        }
+        return null;
+    }
 
-	// Apply structured Where (respect nested groups, AND/OR), ignoring ManagerID match here
-	private static IEnumerable<EmployeeData> ApplyWhereExcludingParent(IEnumerable<EmployeeData> data, List<WhereFilter> where)
-	{
-		if (where == null || where.Count == 0) return data;
+    // Apply structured Where (respect nested groups, AND/OR), ignoring ManagerID match here
+    private static IEnumerable<EmployeeData> ApplyWhereExcludingParent(IEnumerable<EmployeeData> data, List<WhereFilter> where)
+    {
+        if (where == null || where.Count == 0) return data;
 
-		bool Match(EmployeeData e, WhereFilter f)
-		{
-			// ignore ManagerID in non-parent filtering
-			if ((f.Field ?? string.Empty).Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
-				return true;
+        bool Match(EmployeeData e, WhereFilter f)
+        {
+            // ignore ManagerID in non-parent filtering
+            if ((f.Field ?? string.Empty).Equals("ManagerID", StringComparison.OrdinalIgnoreCase))
+                return true;
 
-			var op = (f.Operator ?? "equal").Trim().ToLowerInvariant();
-			var ignoreCase = f.IgnoreCase ?? true;
-			var cmp = ignoreCase ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
+            var op = (f.Operator ?? "equal").Trim().ToLowerInvariant();
+            var ignoreCase = f.IgnoreCase ?? true;
+            var cmp = ignoreCase ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
 
-			var right = f.Value?.ToString() ?? string.Empty;
-			var left = GetFieldString(e, f.Field ?? string.Empty) ?? string.Empty;
+            var right = f.Value?.ToString() ?? string.Empty;
+            var left = GetFieldString(e, f.Field ?? string.Empty) ?? string.Empty;
 
-			return op switch
-			{
-				"equal" or "==" or "eq" => string.Equals(left, right, cmp),
-				"notequal" or "!=" or "ne" or "neq" => !string.Equals(left, right, cmp),
-				"contains" => left.IndexOf(right, cmp) >= 0,
-				"startswith" => left.StartsWith(right, cmp),
-				"endswith" => left.EndsWith(right, cmp),
-				_ => string.Equals(left, right, cmp)
-			};
-		}
+            return op switch
+            {
+                "equal" or "==" or "eq" => string.Equals(left, right, cmp),
+                "notequal" or "!=" or "ne" or "neq" => !string.Equals(left, right, cmp),
+                "contains" => left.IndexOf(right, cmp) >= 0,
+                "startswith" => left.StartsWith(right, cmp),
+                "endswith" => left.EndsWith(right, cmp),
+                _ => string.Equals(left, right, cmp)
+            };
+        }
 
-		IEnumerable<EmployeeData> ApplyNode(IEnumerable<EmployeeData> src, WhereFilter f)
-		{
-			if (f.IsComplex == true && f.Predicates != null && f.Predicates.Count > 0)
-			{
-				var condition = (f.Condition ?? "and").Trim().ToLowerInvariant();
+        IEnumerable<EmployeeData> ApplyNode(IEnumerable<EmployeeData> src, WhereFilter f)
+        {
+            if (f.IsComplex == true && f.Predicates != null && f.Predicates.Count > 0)
+            {
+                var condition = (f.Condition ?? "and").Trim().ToLowerInvariant();
 
-				if (condition == "or")
-				{
-					var set = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-					var bag = new List<EmployeeData>();
-					foreach (var p in f.Predicates)
-					{
-						foreach (var item in ApplyNode(src, p))
-						{
-							if (set.Add(item.EmployeeID))
-								bag.Add(item);
-						}
-					}
-					return bag;
-				}
-				else
-				{
-					var current = src;
-					foreach (var p in f.Predicates)
-						current = ApplyNode(current, p);
-					return current;
-				}
-			}
-			else
-			{
-				return src.Where(e => Match(e, f));
-			}
-		}
+                if (condition == "or")
+                {
+                    var set = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+                    var bag = new List<EmployeeData>();
+                    foreach (var p in f.Predicates)
+                    {
+                        foreach (var item in ApplyNode(src, p))
+                        {
+                            if (set.Add(item.EmployeeID))
+                                bag.Add(item);
+                        }
+                    }
+                    return bag;
+                }
+                else
+                {
+                    var current = src;
+                    foreach (var p in f.Predicates)
+                        current = ApplyNode(current, p);
+                    return current;
+                }
+            }
+            else
+            {
+                return src.Where(e => Match(e, f));
+            }
+        }
 
-		var result = data;
-		foreach (var f in where)
-			result = ApplyNode(result, f);
+        var result = data;
+        foreach (var f in where)
+            result = ApplyNode(result, f);
 
-		return result;
-	}
+        return result;
+    }
 
-	// Map field name to string value for filtering
-	private static string? GetFieldString(EmployeeData e, string field)
-	{
-		if (string.IsNullOrWhiteSpace(field)) return null;
+    // Map field name to string value for filtering
+    private static string? GetFieldString(EmployeeData e, string field)
+    {
+        if (string.IsNullOrWhiteSpace(field)) return null;
 
-		switch (field)
-		{
-			case "employeeID":
-			case "EmployeeID": return e.EmployeeID;
-			case "managerID":
-			case "ManagerID": return e.ManagerID;
-			case "hasChild":
-			case "HasChild": return e.HasChild ? "true" : "false";
-			case "name":
-			case "Name": return e.Name;
-			case "firstName":
-			case "FirstName": return e.FirstName;
-			case "lastName":
-			case "LastName": return e.LastName;
-			case "title":
-			case "Title": return e.Title;
-			case "location":
-			case "Location": return e.Location;
-			case "dateJoined":
-			case "DateJoined": return e.DateJoined?.ToString("o");
-			case "salaryPerMonth":
-			case "SalaryPerMonth": return e.SalaryPerMonth?.ToString();
-			case "email":
-			case "Email": return e.Email;
-			case "projectId":
-			case "ProjectId": return e.ProjectId;
-			case "projectDetails":
-			case "ProjectDetails": return e.ProjectDetails;
-			case "projectStatus":
-			case "ProjectStatus": return e.ProjectStatus;
-			case "priority":
-			case "Priority": return e.Priority;
-			case "progress":
-			case "Progress": return e.Progress?.ToString();
-			case "projectStartDate":
-			case "ProjectStartDate": return e.ProjectStartDate?.ToString("o");
-			case "projectEndDate":
-			case "ProjectEndDate": return e.ProjectEndDate?.ToString("o");
-			default: return null;
-		}
-	}
+        switch (field)
+        {
+            case "employeeID":
+            case "EmployeeID": return e.EmployeeID;
+            case "managerID":
+            case "ManagerID": return e.ManagerID;
+            case "hasChild":
+            case "HasChild": return e.HasChild ? "true" : "false";
+            case "name":
+            case "Name": return e.Name;
+            case "firstName":
+            case "FirstName": return e.FirstName;
+            case "lastName":
+            case "LastName": return e.LastName;
+            case "title":
+            case "Title": return e.Title;
+            case "location":
+            case "Location": return e.Location;
+            case "dateJoined":
+            case "DateJoined": return e.DateJoined?.ToString("o");
+            case "salaryPerMonth":
+            case "SalaryPerMonth": return e.SalaryPerMonth?.ToString();
+            case "email":
+            case "Email": return e.Email;
+            case "projectId":
+            case "ProjectId": return e.ProjectId;
+            case "projectDetails":
+            case "ProjectDetails": return e.ProjectDetails;
+            case "projectStatus":
+            case "ProjectStatus": return e.ProjectStatus;
+            case "priority":
+            case "Priority": return e.Priority;
+            case "progress":
+            case "Progress": return e.Progress?.ToString();
+            case "projectStartDate":
+            case "ProjectStartDate": return e.ProjectStartDate?.ToString("o");
+            case "projectEndDate":
+            case "ProjectEndDate": return e.ProjectEndDate?.ToString("o");
+            default: return null;
+        }
+    }
 
-	private static string? ToEmpId(object? v)
-	{
-		if (v == null) return null;
-		if (v is string s)
-		{
-			if (int.TryParse(s, out var n)) return $"EMP{n:000}";
-			return s;
-		}
-		if (v is int i) return $"EMP{i:000}";
-		if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
-		if (v is JsonElement je)
-		{
-			return je.ValueKind switch
-			{
-				JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
-				JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
-				JsonValueKind.Null => null,
-				_ => null
-			};
-		}
-		return v.ToString();
-	}
+    private static string? ToEmpId(object? v)
+    {
+        if (v == null) return null;
+        if (v is string s)
+        {
+            if (int.TryParse(s, out var n)) return $"EMP{n:000}";
+            return s;
+        }
+        if (v is int i) return $"EMP{i:000}";
+        if (v is long l && l >= int.MinValue && l <= int.MaxValue) return $"EMP{(int)l:000}";
+        if (v is JsonElement je)
+        {
+            return je.ValueKind switch
+            {
+                JsonValueKind.Number => je.TryGetInt32(out var j) ? $"EMP{j:000}" : null,
+                JsonValueKind.String => int.TryParse(je.GetString(), out var k) ? $"EMP{k:000}" : je.GetString(),
+                JsonValueKind.Null => null,
+                _ => null
+            };
+        }
+        return v.ToString();
+    }
 }
 
 // Response type
 public class EmployeesDataResponse
 {
-	[GraphQLName("count")]
-	public int Count { get; set; }
+    [GraphQLName("count")]
+    public int Count { get; set; }
 
-	[GraphQLName("result")]
-	public List<EmployeeData> Result { get; set; } = new();
+    [GraphQLName("result")]
+    public List<EmployeeData> Result { get; set; } = new();
 
-	[GraphQLName("items")]
-	public List<EmployeeData> Items { get; set; } = new();
+    [GraphQLName("items")]
+    public List<EmployeeData> Items { get; set; } = new();
 }
  ``````
 
@@ -2685,7 +2684,7 @@ public class EmployeesDataResponse
  
  CRUD operations (Create, Read, Update, Delete) provide complete data‑management capabilities within the TreeGrid. The TreeGrid offers built‑in dialogs and action buttons to perform these operations, while backend resolvers execute the corresponding data modifications.
 
- Add the Grid `GridEditSettings` and `Toolbar` configuration to enable create, read, update, and delete (CRUD) operations.
+ Add the TreeGrid `TreeGridEditSettings` and `Toolbar` configuration to enable create, read, update, and delete (CRUD) operations.
  
  ``````razor
  <SfTreeGrid @ref="tree"
@@ -2768,7 +2767,7 @@ Add the toolbar items list in the `@code` block:
  ``````csharp
  namespace TreeGrid_GraphQLAdaptor.Models
 {
-	 public class GraphQLMutation
+     public class GraphQLMutation
     {
         public EmployeeData CreateEmployee(
             EmployeeData record,
@@ -2975,7 +2974,7 @@ The Update operation enables modifying existing expense records. When the Edit a
 ```csharp
 namespace TreeGrid_GraphQLAdaptor.Models
 {
-	 public class GraphQLMutation
+     public class GraphQLMutation
     {
        public EmployeeData? UpdateEmployee(
             EmployeeData record,
@@ -3105,8 +3104,8 @@ mutation update($record: EmployeeDataInput!, $action: String!, $primaryColumnNam
 | Parameter | Type | Purpose | Example |
 |-----------|------|---------|---------|
 | `record` | `EmployeeData` | Object with fields to update; only non-null / HasValue fields are applied | See JSON `record` above |
-| `action` | `string` | Action descriptor from the grid (commonly `"save"` for updates) | `"save"` |
-| `primaryColumnName` | `string` | Name of the primary key column used by the grid/backend (case‑insensitive) | `"EmployeeID"` |
+| `action` | `string` | Action descriptor from the tree grid (commonly `"save"` for updates) | `"save"` |
+| `primaryColumnName` | `string` | Name of the primary key column used by the tree grid/backend (case‑insensitive) | `"EmployeeID"` |
 | `primaryColumnValue` | `string` | Primary key value identifying the record to update | `"EMP011"` |
 | `additionalParameters` | `Any` | Optional freeform metadata passed through by the adaptor | `{}` or custom context |
 
@@ -3192,7 +3191,7 @@ The Delete operation enables removing expense records from the system. When the 
 ```csharp
 namespace TreeGrid_GraphQLAdaptor.Models
 {
-	public class GraphQLMutation
+    public class GraphQLMutation
     {
         public EmployeeData? DeleteEmployee(
             string primaryColumnValue,
@@ -3291,8 +3290,8 @@ mutation delete($primaryColumnValue: String!, $action: String!, $primaryColumnNa
 | Parameter | Type | Purpose | Example |
 |-----------|------|---------|---------|
 | `primaryColumnValue` | `string` | Primary key value identifying which employee to delete | `"EMP021"` |
-| `action` | `string` | Action descriptor from the grid (commonly `"delete"`) | `"delete"` |
-| `primaryColumnName` | `string` | Name of the primary key column used by grid/backend (case‑insensitive) | `"EmployeeID"` |
+| `action` | `string` | Action descriptor from the tree grid (commonly `"delete"`) | `"delete"` |
+| `primaryColumnName` | `string` | Name of the primary key column used by tree grid/backend (case‑insensitive) | `"EmployeeID"` |
 | `additionalParameters` | `Any` | Optional freeform metadata passed through by the adaptor | `{}` or custom context |
 
 **Backend Response:**
