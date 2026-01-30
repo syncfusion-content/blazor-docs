@@ -220,7 +220,7 @@ The following code example shows how to flip the node.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrysNtlgEhFRKGy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipDirection)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Flip/FlipDirection)
 
 
 | FlipDirection | DiagramFlipMode | Output|
@@ -468,7 +468,7 @@ The following code example shows how to flip the group.
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBeiZDvgaptrZdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 For more information about node interaction, refer to [Node Interaction](./nodes/interaction).
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipGroup)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Flip/FlipGroup)
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- |-------- |
