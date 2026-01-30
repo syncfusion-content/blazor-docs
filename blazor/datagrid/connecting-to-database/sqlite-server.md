@@ -560,9 +560,9 @@ For this project, the tailwind3 theme is used. A different theme can be selected
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-### Step 2: Update the Blazor DataGrid in the Home Component
+### Step 2: Update the Blazor DataGrid
 
-The Home component will display the asset data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
+The `Home.razor` component will display the asset data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
 **Instructions:**
 
@@ -1822,7 +1822,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The IT Asset Management application is now running and ready to use.
 
-### Available Features
+**Available Features**
 
 - **View Data**: All assets from the SQLite database are displayed in the DataGrid.
 - **Search**: Use the search box to find assets by any field.
