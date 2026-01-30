@@ -8,25 +8,36 @@ keywords: adaptors, ODataV4adaptor, ODataV4 adaptor, remotedata
 documentation: ug
 ---
 
-# ODataV4Adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# ODataV4Adaptor in Syncfusion Blazor DataGrid
 
-The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables seamless integration of the Grid with OData V4 services, facilitating efficient data fetching and manipulation. This guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) actions using the `ODataV4Adaptor` in your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports integration with **OData V4** services through the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. This adaptor enables efficient communication between the DataGrid and OData-compliant endpoints, allowing server-side operations such as **read**, **create**, **update**, and **delete**. It is designed for applications that require standardized querying and data manipulation using **OData** protocols.
+
+The ODataV4Adaptor ensures:
+
+- Seamless data binding with **OData V4** services.
+- Support for query options such as **$filter**, **$orderby**, **$skip**, **$top**, and **$count**.
+- Compatibility with CRUD operations through **HTTP** methods like **GET**, **POST**, **PATCH**, and **DELETE**.
 
 ## Configuring an OData V4 Service
 
-To configure a server with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
+To enable OData V4 integration with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, configure a server-side OData service as follows:
 
 **1. Create a Blazor web app**
 
-You can create a **Blazor Web App** named **ODataV4Adaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+1. Open Visual Studio 2022.  
+2. Choose **Blazor Web App** and name the project **ODataV4Adaptor**.
+3. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension to create the project.
+4. Select the preferred [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
 
 **2. Install NuGet packages**
 
-Using the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), install the `Microsoft.AspNetCore.OData` NuGet package.
+Install the **Microsoft.AspNetCore.OData** package using the NuGet Package Manager in Visual Studio:
+
+*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*
 
 **3. Create a model class**
  
-Create a new folder named **Models**. Then, add a model class named **OrdersDetails.cs** to the **Models** folder under `ODataV4Adaptor.Client` to represent the order data.
+Create a **Models** folder and add a class named **OrdersDetails.cs** under **ODataV4Adaptor.Client.Models** to represent order data:
  
 ```csharp
 
@@ -78,7 +89,7 @@ namespace ODataV4Adaptor.Client.Models
 
 **4. Build the Entity Data Model**
 
-To construct the Entity Data Model for your OData service, use the `ODataConventionModelBuilder` to define the model’s structure in the `Program.cs` file of the `ODataV4Adaptor` project. Start by creating an instance of the `ODataConventionModelBuilder`, and then register the entity set **Orders** using the `EntitySet<T>` method, where `OrdersDetails` represents the CLR type containing order details.
+The **ODataConventionModelBuilder** in **Program.cs** defines the EDM:
 
 ```csharp
 // Create an ODataConventionModelBuilder to build the OData model.
@@ -88,9 +99,9 @@ var modelBuilder = new ODataConventionModelBuilder();
 modelBuilder.EntitySet<OrdersDetails>("Grid");
 ```
 
-**5. Register the OData services**
+**5. Register OData services**
 
-After building the Entity Data Model, register the OData services in the `Program.cs` file of your application. Follow these steps:
+Add OData services in **Program.cs**:
 
 ```cs
 // Add controllers with OData support to the service collection.
@@ -103,7 +114,7 @@ builder.Services.AddControllers().AddOData(
  
 **6. Create an API controller**
  
-Create an API controller (aka, **GridController.cs**) file under the **Controllers** folder within the `ODataV4Adaptor` project. This controller facilitates data communication with the Blazor DataGrid.
+Add **GridController.cs** under the **Controllers** folder to handle data operations.
  
 ```csharp
  
@@ -137,8 +148,6 @@ namespace ODataV4Adaptor.Controllers
 
 **7. Register controllers in `Program.cs`**
  
-Add the following lines in the `Program.cs` file under the `ODataV4Adaptor` project to register controllers:
- 
 ```csharp
 // Register controllers in the service container.
 builder.Services.AddControllers();
@@ -149,21 +158,22 @@ app.MapControllers();
 
 **8. Run the application:**
 
-Run the application in Visual Studio. It will be hosted at the URL **https://localhost:xxxx**. 
-
-After running the application, you can verify that the server-side API controller successfully returns the order data at the URL **https://localhost:xxxx/odata/grid** (where **xxxx** represents the port number).
+Run the application in Visual Studio. The API will be available at a URL such as **https://localhost:xxxx/api/grid**, where **xxxx** represents the port number.
 
 ![ODataV4Adaptor Data](../images/odatav4-adaptors-data.png)
 
-## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to an OData V4 Service
+## Connecting Syncfusion Blazor DataGrid to an OData V4 Service
 
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid into your project using Visual Studio, follow the below steps:
+To bind the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to a remote API using the [ODataV4Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_ODataV4Adaptor), configure the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component with the API endpoint and adaptor type. The following steps outline the integration process:
 
-**1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet packages**
+**1. Install Required NuGet Packages**
 
-To add the Blazor DataGrid to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) for the `ODataV4Adaptor.Client` project, search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+* Install the required packages in the `ODataV4Adaptor.Client` project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install:
 
-Alternatively, use the following Package Manager commands:
+    - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+* Alternatively, use the Package Manager Console:
 
 ```powershell
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
@@ -172,16 +182,16 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 > Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
 
-**2. Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
+**2. Register Syncfusion Blazor service**
 
-- Open the **~/_Imports.razor** file and import the required namespaces.
+- Add the required namespaces in **~/_Imports.razor**:
 
 ```cs
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 ```
 
-- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of `ODataV4Adaptor.Client` project.
+- For apps using **WebAssembly** or **Auto** (Server and WebAssembly) render modes, register the service in both **~/Program.cs** files.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -189,9 +199,9 @@ using Syncfusion.Blazor;
 builder.Services.AddSyncfusionBlazor();
 ```
 
-**3. Add stylesheet and script resources**
+**3. Add stylesheet and script references**
 
-Include the theme stylesheet and script references in the **~/Components/App.razor** file.
+Include the theme and script references in **App.razor**:
 
 ```html
 <head>
@@ -205,17 +215,15 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 </body>
 ```
 
-> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
-> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for available methods to include themes, such as Static Web Assets, CDN, or CRG.
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in the Blazor Web App configuration.
 
-**4. Add Blazor DataGrid and configure with server**
+**4. Configure DataGrid with ODataV4Adaptor**
 
-To connect the Blazor DataGrid to an OData V4 service, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to `Adaptors.ODataV4Adaptor`. Update the **Index.razor** file as follows.
-
-The `SfDataManager` offer multiple adaptor options to connect with remote databases based on an API service. Below is an example of the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), which works with an OData V4 API that returns data in the expected `value` and `@odata.context` format.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component provides multiple adaptors for remote data binding. For **OData V4** services, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to [Adaptors.ODataV4Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_ODataV4Adaptor) and specify the service endpoint in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -264,21 +272,28 @@ namespace ODataV4Adaptor.Controllers
 {% endhighlight %}
 {% endtabs %}
  
-> Replace https://localhost:xxxx/odata/grid with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+> Replace **https://localhost:xxxx/odata/grid** with the actual API endpoint that returns data in **OData V4** format.
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid will display data fetched from the OData V4 service.
+When the application runs, the DataGrid displays data retrieved from the OData V4 service.
 
 ![ODataV4Adaptor Data](../images/blazor-odatav4-adaptors.gif)
 
-> Replace `https://localhost:xxxx/odata/` with the actual URL of your OData V4 service.
+## Perform data operations in ODataV4Adaptor
 
-## Handling searching operation
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports server-side operations such as **searching**, **sorting**, **filtering**, **paging**, and **CRUD** when connected to an **OData V4** service through the `ODataV4Adaptor`. These operations are executed on the server using **OData** query options:
 
-By default, ODataV4 does not support global search, which is the ability to search across all fields simultaneously. To overcome this limitation, Syncfusion<sup style="font-size:70%">&reg;</sup> provides a search fallback mechanism that allows you to implement a global search experience using the `EnableODataSearchFallback` option.
+* **$filter** – Applies **filter** conditions and **search** criteria from [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data source.
+* **$orderby** – Applies **sort** descriptors from `DataManagerRequest` for **ascending** or **descending** order.
+* **$skip, $top** – Applies **paging** details from `DataManagerRequest` to skip and retrieve records.
+* **$count** – Requests the total record count for **paging** and **aggregation**.
 
-To enable search operations in your web application using OData, you first need to configure OData support in your service collection. This involves adding the `Filter` method within the OData setup, allowing you to filter data based on specified criteria. Once enabled, clients can utilize the **$filter** query option in their requests to search for specific data entries.
+The adaptor ensures efficient communication between the DataGrid and the **OData** service by generating appropriate query parameters for each operation, reducing client-side processing and improving performance for large datasets.
+
+### Handling searching operation
+
+**OData V4** does not natively support global search across all fields. To enable this functionality, configure the `EnableODataSearchFallback` option in the `ODataV4Adaptor`. This allows the Grid to perform a fallback search when the **$filter** query option cannot handle global search.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -305,7 +320,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -341,7 +356,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling filtering operation
 
-To enable filtering operations in your web application using OData, you first need to configure OData support in your service collection. This involves adding the `Filter` method within the OData setup, allowing you to filter data based on specified criteria. Once enabled, clients can utilize the **$filter** query option in their requests to retrieve specific data entries.
+Enable filtering by adding the **Filter** method in the OData configuration and setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** in [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$filter** query option retrieves records based on specified criteria.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -367,7 +382,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -394,7 +409,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling sorting operation
 
-To enable sorting operations in your web application using OData, you first need to configure OData support in your service collection. This involves adding the `OrderBy` method within the OData setup, allowing you to sort data based on specified criteria. Once enabled, clients can utilize the **$orderby** query option in their requests to sort data entries according to the desired attributes.
+Enable sorting by adding the **OrderBy** method in the OData configuration and setting [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$orderby** query option sorts records based on specified fields.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -421,7 +436,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -448,7 +463,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling paging operation
 
-To implement paging operations in your web application using OData, you can utilize the `SetMaxTop` method within your OData setup to limit the maximum number of records that can be returned per request. While you configure the maximum limit, clients can utilize the **$skip** and **$top** query options in their requests to specify the number of records to skip and the number of records to take, respectively.
+Paging can be enabled using the **SetMaxTop** method in the OData configuration and setting [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true** in [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The **$skip** and **$top** query options implement paging by skipping a specified number of records and retrieving the required count.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -480,7 +495,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -503,9 +518,16 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, and Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports Create, Read, Update, and Delete (CRUD) operations when configured with `ODataV4Adaptor`. These operations are automatically mapped to standard OData endpoints, and the server must implement corresponding **HTTP methods** to handle each action.
 
-To enable CRUD operations in the Grid within your application, follow these steps. In the example below, the inline edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property is configured to display toolbar items for editing.
+To support full CRUD functionality, define the following methods in the **GridController** class:
+
+* **GET** – Retrieves data from the service
+* **POST** – Inserts new records
+* **PATCH** – Updates existing records
+* **DELETE** – Removes records
+
+To enable [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) in the DataGrid, configure the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) and [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) properties to allow **adding**, **editing**, and **deleting** records.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -528,11 +550,11 @@ To enable CRUD operations in the Grid within your application, follow these step
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal or Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
 
 **Insert Record:**
 
-To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
+To insert a new record, implement the **HttpPost** method in the **GridController** class. This method receives the new record from the client and adds it to the data source.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -566,7 +588,7 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 
 **Update Record:**
 
-Updating a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
+To update an existing record, implement the **HttpPatch** method. This method performs a partial update based on the provided key and non-null fields.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -609,7 +631,7 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
 
 **Delete Record:**
 
-To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
+To delete a record, implement the **HttpDelete** method. This method removes the record identified by the key from the data source.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -641,4 +663,4 @@ public IActionResult Delete(int key)
 
 ![Delete Record](../images/odatav4-adaptor-delete-record.png)
 
-Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/ODataV4Adaptor).
+> The complete implementation is available in the [GitHub location](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/ODataV4Adaptor).
