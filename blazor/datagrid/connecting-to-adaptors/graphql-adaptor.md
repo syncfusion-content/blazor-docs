@@ -656,6 +656,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 <!-- Syncfusion Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
@@ -668,7 +669,7 @@ The Home component will display the expense data in a Syncfusion Blazor DataGrid
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
 2. Add the following code to create a basic DataGrid:
 
-```html
+```cshtml
 @page "/"
 @rendermode InteractiveServer
 
@@ -711,7 +712,7 @@ The Home component will display the expense data in a Syncfusion Blazor DataGrid
 
 The `SfDataManager` component connects the DataGrid to the GraphQL backend using the adaptor options configured below:
 
-```html
+```cshtml
 <SfDataManager Url="http://localhost:5272/graphql" 
                GraphQLAdaptorOptions="@adaptorOptions" 
                Adaptor="Adaptors.GraphQLAdaptor">
@@ -951,7 +952,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 1. Open the `Components/Pages/Home.razor` file.
 2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
-```html
+```cshtml
 <SfGrid TValue="ExpenseRecord" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -982,7 +983,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 3. No additional code changes are required from the previous steps.
 
 
-```html
+```cshtml
 <SfGrid TValue="ExpenseRecord" 
         AllowPaging="true">
     <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
@@ -1066,7 +1067,7 @@ Searching provides the capability to find specific records by entering keywords 
 
 1. Ensure the toolbar includes the "Search" item.
 
-```html
+```cshtml
 <SfGrid TValue="ExpenseRecord"
         AllowPaging="true"
         Toolbar="@ToolbarItems">
@@ -1151,7 +1152,7 @@ Sorting enables organizing records by selecting column headers, arranging the da
 
 1. Ensure the `<SfGrid>` component has [AllowSorting="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting).
 
-```html
+```cshtml
 <SfGrid TValue="ExpenseRecord"
         AllowPaging="true"
         AllowSorting="true"
@@ -1238,7 +1239,7 @@ The backend resolver receives this and processes the sort specification in the `
  
  1. Ensure the ``<SfGrid>`` component has [AllowFiltering="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering).
  
- ```html
+ ```cshtml
  <SfGrid TValue="ExpenseRecord"
          AllowPaging="true"
          AllowFiltering="true"
@@ -1438,7 +1439,7 @@ Grouping enables organizing and displaying records based on column values. This 
 
 1. Ensure the `<SfGrid>` component has [AllowGrouping="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping).
 
-```html
+```cshtml
 <SfGrid TValue="ExpenseRecord"
         AllowPaging="true"
         AllowGrouping="true"
@@ -1563,7 +1564,7 @@ The backend resolver receives the group specifications in the `GetExpenseRecordD
 
  Add the Grid `GridEditSettings` and `Toolbar` configuration to enable create, read, update, and delete (CRUD) operations.
  
- ```html
+ ```cshtml
  <SfGrid TValue="ExpenseRecord"
          AllowPaging="true"
          AllowFiltering="true"

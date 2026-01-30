@@ -389,7 +389,7 @@ A connection string contains the information needed to connect the application t
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=CustomSQLServer;Initial Catalog=NetworkSupportDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
+    "DefaultConnection": "Data Source=SYNCLAPN-43362;Initial Catalog=NetworkSupportDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
   },
   "Logging": {
     "LogLevel": {
