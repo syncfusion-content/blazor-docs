@@ -88,7 +88,7 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVysNXGTednqtYb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/Parent-Child%20Relationship)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/Parent-Child%20Relationship.razor)
 
 ## How to Bind Local Data to the Diagram
 
@@ -199,7 +199,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBSitjmJywScwCt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/LocalData)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/LocalData.razor)
 
 ## How to Bind ExpandoObject Data to the Diagram
 
@@ -387,7 +387,7 @@ The following code example illustrates how to bind ExpandoObject data with the d
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLSiDtcJyboFLqr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/ExpandoObject)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/ExpandoObject.razor)
 
 ##  How to Bind DynamicObject Data to the Diagram
 
@@ -591,7 +591,7 @@ The following code example illustrates how to bind DynamicObject data with the d
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCNNGTykSwaxF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/DynamicObj)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/DynamicObj.razor)
 
 ## How to Bind JSON Data to the Diagram
 
@@ -662,7 +662,7 @@ The following sample code demonstrates binding local data through SfDataManager 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLostXmzRXsgeJi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/JSONData)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/JSONData.razor)
 
 ## How to Bind Remote Data to the Diagram
 
@@ -759,7 +759,7 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLeWZNQpRDIabQI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/RemoteData/ODataAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/ODataAdaptor.razor)
 
 ### How to Bind OData V4 Services
 
@@ -850,7 +850,7 @@ OData V4 is an updated version of the OData protocols, and the `SfDataManager` c
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXreWtNmTdMAJWbU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/RemoteData/ODataV4Adaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/ODataV4Adaptor.razor)
 
 ### How to Bind Web API Services to the Diagram
 
@@ -945,7 +945,7 @@ The following sample code demonstrates how to bind remote data to the Diagram co
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrSsDXwpHLVLxIu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/RemoteData/WebAPIAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/WebAPIAdaptor.razor)
 
 ### How to Bind URL Services to the Diagram
 A URL service is a web service accessible via a Uniform Resource Locator (URL). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services. The [UrlAdaptor](../data/adaptors#url-adaptor) serves as the base adaptor for interacting with remote data services. Most built-in adaptors are derived from the `UrlAdaptor`.
@@ -1037,7 +1037,7 @@ The following sample code demonstrates how to bind data to the Diagram component
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSMZjmfnrvrKJB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/RemoteData/URLAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/URLAdaptor.razor)
 
 ### How to Bind Custom Data
 Custom data binding can be performed in the diagram component by providing a custom adaptor class and overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class.
@@ -1399,7 +1399,7 @@ The following sample code demonstrates implementing CRUD operations for custom b
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthIMXNbKTJLixOX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/DiagramWithCustomAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/DiagramWithCustomAdaptor.razor)
 
 ### How to Bind GraphQL Service
 GraphQL is a query language for APIs that allows you to can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from a GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
@@ -1495,7 +1495,7 @@ GraphQL is a query language for APIs that allows you to can get exactly what you
 
 ![Binding with GraphQL service](images/GraphQLAdaptor.png) 
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/GraphQLAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/GraphQLAdaptor.razor)
 
 ### How to Perform CRUD Operations Using Mutations
 
@@ -1760,7 +1760,7 @@ namespace ASPNetCoreGraphQlServer.GraphQl
 }
 
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/GraphQLAdaptorCRUD)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/GraphQLAdaptorCRUD.razor)
 
 ## Entity Framework
 Follow these steps to consume data from **Entity Framework** in the Diagram.
