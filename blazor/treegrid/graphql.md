@@ -3292,7 +3292,7 @@ mutation delete($primaryColumnValue: String!, $action: String!, $primaryColumnNa
 | `primaryColumnValue` | `string` | Primary key value identifying which employee to delete | `"EMP021"` |
 | `action` | `string` | Action descriptor from the tree grid (commonly `"delete"`) | `"delete"` |
 | `primaryColumnName` | `string` | Name of the primary key column used by tree grid/backend (case‑insensitive) | `"EmployeeID"` |
-| `additionalParameters` | `Any` | Optional freeform metadata passed through by the adaptor | `{}` or custom context |
+| `additionalParameters` | `Any` | Optional free form metadata passed through by the adaptor | `{}` or custom context |
 
 **Backend Response:**
 
