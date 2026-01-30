@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Connecting SQLite to Blazor Data Grid Using Entity Framework
+# Connecting SQLite Server to Blazor Data Grid Using Entity Framework
 
-The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQLite database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQLite Server database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
 
 **What is Entity Framework Core?**
 
@@ -35,7 +35,7 @@ Ensure the following software and packages are installed before proceeding:
 |-----------------|---------|---------|
 | Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net9.0 or compatible | Runtime and build tools |
-| SQLite | 3.0 or later | Embedded Database engine |
+| SQLite Server | 3.0 or later | Embedded Database engine |
 | Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
 | Microsoft.EntityFrameworkCore | 9.0.0 or later | Core framework for database operations |
@@ -548,13 +548,15 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
-```html
+```cshtml
 <!-- Syncfusion Blazor Stylesheet -->
-<link href="_content/Syncfusion.Blazor/styles/tailwind3.css" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
 <!-- Syncfusion Blazor Scripts -->
-<script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
+
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
@@ -567,7 +569,7 @@ The Home component will display the asset data in a Syncfusion Blazor DataGrid w
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
 2. Add the following code to create a basic DataGrid:
 
-```html
+```cshtml
 @page "/"
 @rendermode InteractiveServer
 @inject AssetRepository AssetService
@@ -715,7 +717,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 1. Open the `Components/Pages/Home.razor` file.
 2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
-```html
+```cshtml
 <SfGrid TValue="Asset" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -760,10 +762,10 @@ Paging divides large datasets into smaller pages to improve performance and usab
 **Instructions:**
 
 1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [<GridPageSettings>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+2. The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 3. No additional code changes are required from the previous steps.
 
-```html
+```cshtml
 <SfGrid TValue="Asset" 
         AllowPaging="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -858,7 +860,7 @@ Searching allows the user to find records by entering keywords in the search box
 2. Ensure the toolbar includes the "Search" item.
 3. No additional code changes are required.
 
-```html
+```cshtml
 <SfGrid TValue="Asset"        
         AllowPaging="true"
         Toolbar="@ToolbarItems">
@@ -939,7 +941,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
-```html
+```cshtml
 <SfGrid TValue="Asset" 
         AllowPaging="true"         
         AllowFiltering="true"
@@ -1026,7 +1028,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
-```html
+```cshtml
 <SfGrid TValue="Asset" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1120,7 +1122,7 @@ Grouping organizes records into hierarchical groups based on column values.
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
 
-```html
+```cshtml
 <SfGrid TValue="Asset" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1230,7 +1232,7 @@ CustomAdaptor methods enable users to create, read, update, and delete records d
 
 Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
-```html
+```cshtml
 <SfGrid TValue="Asset" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1498,7 +1500,7 @@ Now the adaptor supports bulk modifications with atomic database synchronization
 ### Step 11: Complete code
 Here is the complete and final `Home.razor` component with all features integrated. This component uses the exact implementation from the Grid_SQLite project:
 
-```html
+```cshtml
 @page "/"
 @rendermode InteractiveServer
 @using System.Collections
