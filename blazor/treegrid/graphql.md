@@ -20,7 +20,7 @@ GraphQL is a query language that allows applications to request exactly the data
 - **Resolvers**: Each query or mutation is handled by a resolver, which is a function responsible for fetching data or executing an operation. **Query resolvers** handle **read operations**, while **mutation resolvers** handle **write operations**.
 - **Schema**: Defines the structure of the API. The schema describes available data types, the fields within those types, and the operations that can be executed. Query definitions specify how data can be retrieved, and mutation definitions specify how data can be modified. 
 
-[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET, developed by `ChilliCream`. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor. 
+[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor. 
 
 ## Prerequisites
 
@@ -3107,7 +3107,7 @@ mutation update($record: EmployeeDataInput!, $action: String!, $primaryColumnNam
 | `action` | `string` | Action descriptor from the tree grid (commonly `"save"` for updates) | `"save"` |
 | `primaryColumnName` | `string` | Name of the primary key column used by the tree grid/backend (case‑insensitive) | `"EmployeeID"` |
 | `primaryColumnValue` | `string` | Primary key value identifying the record to update | `"EMP011"` |
-| `additionalParameters` | `Any` | Optional free-form metadata passed through by the adaptor | `{}` or custom context |
+| `additionalParameters` | `Any` | Optional free form metadata passed through by the adaptor | `{}` or custom context |
 
 **Backend Response:**
 
