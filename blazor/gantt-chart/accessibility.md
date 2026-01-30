@@ -17,7 +17,7 @@ The table below summarizes the accessibility compliance of the Blazor Gantt Char
 
 | Accessibility Criteria | Compatibility |
 |------------------------|---------------|
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate compatibility"> |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | AAA |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate compatibility"> |
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |

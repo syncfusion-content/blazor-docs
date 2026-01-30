@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Query Builder component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor ContextMenu component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Query Builder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
