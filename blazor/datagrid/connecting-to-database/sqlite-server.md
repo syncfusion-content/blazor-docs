@@ -548,7 +548,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
-```cshtml
+```html
 <!-- Syncfusion Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
