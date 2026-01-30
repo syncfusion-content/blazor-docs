@@ -743,6 +743,8 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
                 throw new Exception($"An error occurred while retrieving data: {ex.Message}");
             }
         }
+    }
+}
 
 ```
 
