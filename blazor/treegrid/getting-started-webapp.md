@@ -35,7 +35,7 @@ A **Blazor Web App** can be created using **Visual Studio** with the built-in [M
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet in the App
 
-To integrate the Blazor DataGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages in the solution:
+To integrate the Blazor TreeGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages in the solution:
 
 1. Open **NuGet Package Manager** in Visual Studio:
 
@@ -157,7 +157,7 @@ cd BlazorApp.Client
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet in the App
 
-To integrate the Blazor DataGrid component in a **Blazor Web App** using the **.NET CLI**:
+To integrate the Blazor TreeGrid component in a **Blazor Web App** using the **.NET CLI**:
 
 1. Open a **command prompt**, **terminal**, or **shell**.
 2. Navigate to the directory containing the **.csproj** file.
@@ -301,7 +301,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid can be adde
 
 **1. Define Render Mode**
 
-To use the **DataGrid** component in a **Blazor Web App**, set the **render mode** at the top of the **.razor** file.
+To use the **TreeGrid** component in a **Blazor Web App**, set the **render mode** at the top of the **.razor** file.
 
 {% tabs %}
 {% highlight razor %}

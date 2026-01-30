@@ -89,7 +89,7 @@ cd MauiBlazorApp
 
 ## Install Blazor TreeGrid and Themes NuGet in the App
 
-To integrate the Blazor DataGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages using the **integrated terminal**:
+To integrate the Blazor TreeGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages using the **integrated terminal**:
 
 1. Press **Ctrl + `** to open the integrated terminal in Visual Studio Code.
 2. Navigate to the directory containing the **.csproj** file.
@@ -212,7 +212,7 @@ Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
 ### How to Run the Sample on Android
 
-To run the Blazor DataGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the Blazor TreeGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
@@ -324,7 +324,7 @@ In the above code example, the [Self-Referential](https://blazor.syncfusion.com/
 
 ## Enable paging
 
-[Paging](https://blazor.syncfusion.com/documentation/datagrid/paging) feature enables users to view the tree grid record in a paged view. It can be enabled by setting the  [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPaging) property to **true**. The pager can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PageSettings) property.
+[Paging](https://blazor.syncfusion.com/documentation/treegrid/paging) feature enables users to view the tree grid record in a paged view. It can be enabled by setting the  [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPaging) property to **true**. The pager can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PageSettings) property.
 
 In root-level paging mode, paging is based on the root-level rows only, i.e., it ignores the child row count and it can be enabled by using the [PageSettings.PageSizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property.
 
@@ -375,7 +375,7 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 
 ## Enable sorting
 
-[Sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting) feature enables to order the records. It can be enabled by setting the  [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) property to **true**.Sorting behavior can be customized using the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSortSettings.html) component.
+[Sorting](https://blazor.syncfusion.com/documentation/treegrid/sorting) feature enables to order the records. It can be enabled by setting the  [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) property to **true**. Sorting behavior can be customized using the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSortSettings.html) component.
 
 {% tabs %}
 {% highlight razor %}
