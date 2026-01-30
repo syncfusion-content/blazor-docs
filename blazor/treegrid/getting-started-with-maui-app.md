@@ -17,15 +17,35 @@ This section explains you through the step-by-step process of integrating the Sy
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+To use .NET MAUI project templates, install the **Mobile development with .NET** workload in Visual Studio.
+For detailed instructions, refer to the [.NET MAUI installation](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio) guide or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+A Blazor MAUI application can be created using the **.NET MAUI Blazor App** template in Visual Studio with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc).
+
+1. Open **Visual Studio** with the Mobile development with .NET workload installed.
+2. Select **Create a new project**.
+3. Choose **.NET MAUI Blazor App** from the list of templates and click **Next**.
+4. Specify the **project name**, **location**, and **solution settings**, then click **Next**.
+5. Select the latest available **.NET target framework**.
+6. Click **Create** to generate the project.
+
+> For detailed instructions, refer to the official [.NET MAUI getting started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) guide.
+
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet in the app
 
-To add **Blazor TreeGrid**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+1. Open **NuGet Package Manager** in Visual Studio:
+
+    *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+
+2. Search and install the following packages:
+
+    - [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid)
+    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+3. Alternatively, use the **Package Manager Console**:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -44,15 +64,39 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+To use .NET MAUI project templates, install the **Mobile development with .NET** workload in Visual Studio.
+For detailed instructions, refer to the [.NET MAUI installation](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) guide or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+A Blazor MAUI application can be created using the **.NET CLI** commands in **Visual Studio Code**.
+
+1. Install the latest **.NET SDK** that supports .NET MAUI.
+2. Open **Visual Studio Code**.
+3. Press **Ctrl + `** to open the integrated terminal.
+4. Run the following command to create a new Blazor MAUI App:
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor MAUI App" %}
+
+dotnet new maui-blazor -o MauiBlazorApp
+cd MauiBlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+> For detailed instructions, refer to the [.NET MAUI getting started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) guide.
 
 ## Install Blazor TreeGrid and Themes NuGet in the App
 
-To add **Blazor TreeGrid**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To integrate the Blazor DataGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages using the **integrated terminal**:
+
+1. Press **Ctrl + `** to open the integrated terminal in Visual Studio Code.
+2. Navigate to the directory containing the **.csproj** file.
+3. Run the following commands to install the packages:
+
+    * [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid)
+    * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 {% tabs %}
 
@@ -137,11 +181,50 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <!-- <script src="_content/Syncfusion.Blazor.TreeGrid/scripts/sf-treegrid.min.js" type="text/javascript"></script> -->
 </head>
 ```
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> 
+* Refer to [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for various methods to reference themes in a Blazor application:
+
+    >* [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)
+    >* [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference)
+    >* [Custom Resource Generator (CRG)](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
+
+>* For script reference options, see [Adding Script References](https://blazor.syncfusion.com/documentation/common/adding-script-references).
 
 ## Add Blazor TreeGrid component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the **~/Pages/Index.razor** file.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfTreeGrid></SfTreeGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+* The component will render as an empty tree grid until data is bound.
+
+### How to Run the Sample on Windows
+
+Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+
+![Blazor TreeGrid Component](images/blazor-treegrid-maui-app.png)
+
+### How to Run the Sample on Android
+
+To run the Blazor DataGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
+
+Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
+
+N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
+
+![Blazor TreeGrid Component](images/blazor-treegrid-component.png)
+
+## Defining row data
+
+The TreeGrid requires a data source to display records. A collection implementing **IEnumerable<T>** can be assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. Alternatively, data can be provided through a [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app) instance for **remote binding**.
+
+Data binding is typically performed in the [OnInitialized](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitialized?view=aspnetcore-10.0) lifecycle method of the component.
 
 {% tabs %}
 {% highlight razor %}
@@ -178,30 +261,20 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid compone
 {% endhighlight %}
 {% endtabs %}
 
-### How to Run the Sample on Windows
-
-Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
-
-![Blazor TreeGrid Component](images/blazor-treegrid-maui-app.png)
-
-### How to Run the Sample on Android
-
-To run the Blazor DataGrid in a Blazor Android MAUI application using the Android emulator, follow these steps:
-
-Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
-
-N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
-
-![Blazor TreeGrid Component](images/blazor-treegrid-component.png)
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. The TreeGrid will render and display the collection.
 
 ## Defining columns
 
-The Tree Grid has an option to define columns using the [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) directive. In the `TreeGridColumn` directive there are properties to customize columns.
+The Tree Grid has an option to define columns using the [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) directive. In the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) directive there are properties to customize columns.
 
-Let’s check the properties used here:
-* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) to map with a property name in datasource is been added.
-* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderText) to change the title of columns is been added.
-* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_TextAlign) to change the alignment of columns is been used. By default, columns will be left aligned. To change columns to right align, define **TextAlign** as *Right*.
+**Common Column Properties**
+
+* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) to map with a property name in datasource has been added.
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderText) to change the title of columns has been added.
+* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_TextAlign) to change the alignment of columns is used. By default, columns will be left aligned. To change columns to right align, define **TextAlign** as *Right*.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format): Applies standard or custom formatting for numeric and date values.
+* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Type): Defines the column type, such as ColumnType.Date for date fields.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Width): Sets the column width in pixels or percentage to control layout consistency.
 
 {% tabs %}
 {% highlight razor %}
@@ -251,7 +324,7 @@ In the above code example, the [Self-Referential](https://blazor.syncfusion.com/
 
 ## Enable paging
 
-The paging feature enables users to view the tree grid record in a paged view. It can be enabled by setting the  [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPaging) property to true. The pager can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PageSettings) property.
+[Paging](https://blazor.syncfusion.com/documentation/datagrid/paging) feature enables users to view the tree grid record in a paged view. It can be enabled by setting the  [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPaging) property to **true**. The pager can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PageSettings) property.
 
 In root-level paging mode, paging is based on the root-level rows only, i.e., it ignores the child row count and it can be enabled by using the [PageSettings.PageSizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property.
 
@@ -302,7 +375,7 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 
 ## Enable sorting
 
-The sorting feature enables to order the records. It can be enabled by setting the  [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) property to `true`.
+[Sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting) feature enables to order the records. It can be enabled by setting the  [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) property to **true**.Sorting behavior can be customized using the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSortSettings.html) component.
 
 {% tabs %}
 {% highlight razor %}
