@@ -287,7 +287,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes and scripts are a
 ```
 
 N>
-* Refer to [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for various methods to reference themes in a Blazor application:
+>* Refer to [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for various methods to reference themes in a Blazor application:
 
 >* [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)
 >* [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference)
@@ -332,37 +332,11 @@ Add the **TreeGrid** tag to the **Razor** page:
 {% tabs %}
 {% highlight razor %}
 
-<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
-    <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="5" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="30" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
-    </TreeGridColumns>
-</SfTreeGrid>
-
-@code
-{
-    public class BusinessObject
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    public List<BusinessObject> TreeData = new List<BusinessObject>();
-
-    protected override void OnInitialized()
-    {
-        TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", ParentId = null });
-        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", ParentId = 1 });
-        TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", ParentId = 1, });
-        TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", ParentId = null });
-        TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", ParentId = 4 });
-        TreeData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", ParentId = 5 });
-    }
-}
+<SfTreeGrid></SfTreeGrid>
 
 {% endhighlight %}
 {% endtabs %}
+
 
 ## Defining row data
 
@@ -524,6 +498,7 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 ## Enable sorting
 
 [Sorting](https://blazor.syncfusion.com/documentation/treegrid/sorting) feature enables to order the records. It can be enabled by setting the  [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) property to **true**.
+Sorting behavior can be customized using the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSortSettings.html) component.
 
 {% tabs %}
 {% highlight razor %}

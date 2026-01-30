@@ -432,6 +432,7 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 ## Enable sorting
 
 [Sorting](https://blazor.syncfusion.com/documentation/treegrid/sorting) feature enables to order the records. It can be enabled by setting the  [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) property to `true`.
+Sorting behavior can be customized using the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSortSettings.html) component.
 
 {% tabs %}
 {% highlight razor %}
