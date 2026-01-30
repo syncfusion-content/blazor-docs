@@ -26,7 +26,7 @@ The [Show](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Conte
     </ContextMenuSettings>
 </SfDiagramComponent>
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/DefaultContextMenu)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/DefaultContextMenu.razor)
 ![Default Context Menu](images/ContextMenuDefault.gif)
 
 The following code shows how to disable the default context menu items.
@@ -151,7 +151,7 @@ The following code example shows how to add custom context menu items along with
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtryWDDQToDgkczx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/CustomContextMenu)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/CustomContextMenu.razor)
 
 ### How to Show Custom Context Menu Alone
 
@@ -166,7 +166,7 @@ The following code example shows how to show custom context menu items alone.
     </ContextMenuSettings>
 </SfDiagramComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/CustomContextMenuOnly)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/CustomContextMenuOnly.razor)
 ![Custom Context Menu](images/ContextMenuCustomMenuOnly.gif)
 
 ## How to Customize Context Menu Items Using Templates
@@ -274,7 +274,7 @@ Diagram provides template support for the context menu. The context menu items c
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSitXcpeBhpOuL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuTemplate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/ContextMenuTemplate.razor)
 ![Context Menu Template](images/ContextMenuTemplate.gif)
 
 ## Events
@@ -301,7 +301,7 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent/ContextMenuOpenningEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/ContextMenuOpenningEvent.razor)
 
 ### How to Handle Context Menu Item Clicked Event
 
@@ -324,7 +324,7 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent/ContextMenuItemClickedEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/ContextMenuItemClickedEvent.razor)
 
 The following code example shows how to add separate custom context menu items for nodes and connectors. In the following code, the node color context menu item only renders for the node and the connector color context menu item only renders for the connector.
 
@@ -438,7 +438,7 @@ The following code example shows how to add separate custom context menu items f
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLIMXjGfIhvkfXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent/ContextMenuEvents)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/ContextMenuEvents.razor)
 
 ## See also
 
