@@ -7,7 +7,7 @@ control: TextBox
 documentation: ug
 ---
 
-# Getting Started with Blazor TextBox component
+# Getting Started with Blazor TextBox component in MAUI App
 
 This guide walks through integrating the Syncfusion® Blazor TextBox component into a .NET MAUI Blazor app using both Visual Studio and Visual Studio Code.
 
