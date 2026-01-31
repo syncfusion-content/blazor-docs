@@ -9,15 +9,17 @@ documentation: ug
 
 # SQL database file system provider
 
+To get started with the SQL database file system provider, ensure that a SQL Server instance or LocalDB is available and properly configured. A database with the required schema to manage files and folders should be created, and a valid connection string must be defined in the application configuration to establish connectivity.
+
 The SQL database file system provider allows the users to manage the file system being maintained in a SQL database table. Unlike the other file system providers, the SQL database file system provider works on ID basis. Here, each file and folder have a unique ID based on which all the file operations will be performed. To get started, clone the [EJ2.ASP.NET Core SQL Server Database File Provider](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider) using the following command.
 
 ```json
 
-<add name="FileExplorerConnection" connectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\FileManager.mdf;Integrated Security=True;Trusted_Connection=true" />
+git clone https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider  sql-server-database-aspcore-file-provider
 
 ```
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. To establish the SQL server connection with the database file (for eg: FileManager.mdf), you need to specify the connection string in the web config file as shown below.
+After cloning, just open the project in Visual Studio and restore the NuGet packages. To establish the SQL server connection with the database file (for eg: `FileManager.mdf`), you need to specify the connection string in the `web.config` file as shown below.
 
 ```json
 
@@ -35,17 +37,17 @@ Then, make an entry for the connection string in `appsettings.json` file as show
 
 ```
 
-Now, to configure the database connection, you need to set the connection name, table name and root folder ID value by passing these values to the SetSQLConnection method.
+Now, to configure the database connection, you need to set the **connectionName**, **tableName**, **rootFolderID** value by passing these values to the `SetSQLConnection` method in the `SQLProviderController.cs` file.
 
 ```csharp
 
-void SetSQLConnection(string name, string tableName, string tableID)\
+operation.SetSQLConnection(connectionName, tableName, rootFolderID);
 
 ```
 
 N> Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf) to learn about the pre-defined file system SQL database for the Blazor File Manager.
 
-After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the File Manager component to the appropriate controller methods allows to manage the files in the SQL database table.
+After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **FileManagerAjaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the files in the SQL database table.
 
 ```cshtml
 
