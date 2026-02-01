@@ -7,7 +7,7 @@ control: File Upload
 documentation: ug
 ---
 
-# Chunk Upload in Blazor File Upload Component
+# Chunk Upload in Blazor File Upload Component 
 
 ### Description
 
