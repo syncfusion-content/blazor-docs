@@ -56,7 +56,7 @@ public AzureProviderController(IHostingEnvironment hostingEnvironment)
 
 ``` 
 
-After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **FileManagerAjaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the Azure blob storage.
+After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows to manage the Azure blob storage.
 
 ```cshtml
 

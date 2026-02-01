@@ -9,7 +9,7 @@ documentation: ug
 
 # Amazon S3 cloud file provider
 
-To get started with the Amazon S3 cloud file provider, ensure that you have an active Amazon Web Services (AWS) account and an S3 bucket created in the required AWS Region. You will also need the `AWS Access Key ID`, `Secret Access Key`, `bucket name` , and the `bucket region` to configure and connect the File Manager to the S3 storage.
+To get started with the Amazon S3 cloud file provider, ensure that you have an active Amazon Web Services (AWS) account and an S3 bucket created in the required AWS Region. You will also need the `AWS Access Key ID`, `Secret Access Key`, `bucket name` , and the `bucket region` to connect the File Manager to the S3 storage.
 
 To learn more about creating and configuring an Amazon S3 bucket, refer to this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html).
 
@@ -29,7 +29,7 @@ this.operation.RegisterAmazonS3("<---bucketName--->", "<---awsAccessKeyId--->", 
 
 ```
 
-After registering the Amazon client account details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **FileManagerAjaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
+After registering the Amazon client account details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
 
 ```cshtml
 
