@@ -195,7 +195,7 @@ Stretch and align the image content anywhere but within the node boundary. The [
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNryMtjFfxupxJNV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthHtVtBrNGpDIig?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/ImageAlign.razor)
 
