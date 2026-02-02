@@ -1,1250 +1,2037 @@
 ---
 layout: post
-title: PostgreSQL Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn about consuming data from PostgreSQL Server and binding it to Syncfusion Component, and performing CRUD operations.
+title: Blazor Data Grid with PostgreSQL via Entity Framework | Syncfusion
+description: Bind PostgreSQL data to Blazor Data Grid using Entity Framework Core with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting PostgreSQL Server data in to Blazor DataGrid Component
+# Connecting PostgreSQL to Blazor Data Grid Using Entity Framework
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports binding data from a [PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) Server database using multiple approaches. Common methods include:
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
 
-- Using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property for local binding.
-- Implementing a [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for custom logic.
-- Configuring remote data binding through adaptors such as [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor).
+**What is Entity Framework Core?**
 
-This section explains how to connect and retrieve data from a PostgreSQL Server database using [Npgsql EntityFrameworkCore PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) and bind the data to a Blazor DataGrid component through the following methods:
+Entity Framework Core (EF Core) is a software tool that simplifies database operations in .NET applications. It serves as a bridge between C# code and databases like PostgreSQL.
 
- **Using UrlAdaptor**
+**Key Benefits of Entity Framework Core**
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) enables communication between the DataGrid and a remote API service connected to **PostgreSQL** Server. This approach is suitable when the API implements custom logic for data operations and returns results in the **result** and **count** format.
+- **Automatic SQL Generation**: Entity Framework Core generates optimized SQL queries automatically, eliminating the need to write raw SQL code.
+- **Type Safety**: Work with strongly-typed objects instead of raw SQL strings, reducing errors.
+- **Built-in Security**: Automatic parameterization prevents SQL injection attacks.
+- **Version Control for Databases**: Manage database schema changes version-by-version through migrations.
+- **Familiar Syntax**: Use LINQ (Language Integrated Query) syntax, which is more intuitive than raw SQL strings.
 
-**Using CustomAdaptor**
+**What is Npgsql Entity Framework Core Provider?**
 
-The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) provides full control over data operations and CRUD functionality. It allows implementing custom logic for **searching**, **filtering**, **sorting**, **paging**, and **grouping** directly in the server-side code.
+The **Npgsql.EntityFrameworkCore.PostgreSQL** package is the official Entity Framework Core provider for PostgreSQL. It acts as a bridge between Entity Framework Core and PostgreSQL, allowing applications to read, write, update, and delete data in a PostgreSQL database.
 
-## Binding data from PostgreSQL Server using an API service
+## Prerequisites
 
-This section explains how to retrieve data from a **PostgreSQL** Server database through an API service and bind it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component.
+Ensure the following software and packages are installed before proceeding:
 
-### Creating an API service
+| Software/Package | Version | Purpose |
+|-----------------|---------|---------|
+| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| .NET SDK | net10.0 or compatible | Runtime and build tools |
+| PostgreSQL Server | 12 or later | Database server |
+| pgAdmin 4 | Latest | PostgreSQL GUI management tool |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Microsoft.EntityFrameworkCore | 10.0.2 or later | Core framework for database operations |
+| Npgsql.EntityFrameworkCore.PostgreSQL | 10.0.0 or later | PostgreSQL provider for Entity Framework Core |
 
-1. **Create an ASP.NET Core Web API Project**
+## Setting Up the PostgreSQL Environment for Entity Framework Core
 
-In Visual Studio, create a new **ASP.NET Core Web API** project named **MyWebService**.
+### Step 1: Create the database and Table in PostgreSQL
 
-Refer to [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed steps.
+First, the **PostgreSQL database** structure must be created to store purchase order records.
 
-2. **Install PostgreSQL NuGet Package**
+**UI Instructions (Using pgAdmin 4):**
 
-Add the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) package to the project using NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
+1. **Open pgAdmin 4** and connect to your PostgreSQL server.
+2. **Create Database**:
+   - Right-click on **Databases** → Select **Create** → **Database**
+   - Enter name: `PurchaseOrderDB`
+   - Click **Save**
+3. **Create Table**:
+   - Expand `PurchaseOrderDB` → Right-click on **Schemas** → **public** → **Tables**
+   - Click **Create** → **Table**
+   - Enter table name: `PurchaseOrder`
+   - Define columns as per the script below
+4. **Execute SQL Script** (Alternative method):
+   - Right-click on `PurchaseOrderDB` → **Query Tool**
+   - Copy and paste the SQL script below
+   - Execute (F5 or Run button)
 
-3. **Create an API Controller**
+**SQL Script for PostgreSQL:**
 
-Add a controller named **GridController.cs** under the **Controllers** folder. This controller will handle data communication between the **PostgreSQL** database and the Blazor DataGrid component.
+```sql
+-- Create Database
+CREATE DATABASE PurchaseOrderDB
 
-4. **Implement Data Retrieval Logic**
+-- Connect to the database
+\c PurchaseOrderDB;
 
-Use **NpgsqlConnection**, **NpgsqlCommand**, and **NpgsqlDataAdapter** to execute queries and fetch data from **PostgreSQL**. Populate the data into a DataTable and convert it into a strongly typed collection.
+-- Create PurchaseOrder Table
+CREATE TABLE public.PurchaseOrder (
+    PurchaseOrderId SERIAL PRIMARY KEY,
+    PoNumber VARCHAR(30) NOT NULL UNIQUE,
+    VendorID VARCHAR(50) NOT NULL,
+    ItemName VARCHAR(200) NOT NULL,
+    ItemCategory VARCHAR(100),
+    Quantity INTEGER NOT NULL,
+    UnitPrice NUMERIC(12,2) NOT NULL,
+    TotalAmount NUMERIC(14,2),
+    Status VARCHAR(30) NOT NULL DEFAULT 'Pending',
+    OrderedBy VARCHAR(100) NOT NULL,
+    ApprovedBy VARCHAR(100),
+    OrderDate DATE NOT NULL,
+    ExpectedDeliveryDate DATE,
+    CreatedAt TIMESTAMP NOT NULL DEFAULT NOW(),
+    UpdatedAt TIMESTAMP NOT NULL DEFAULT NOW()
+);
 
-{% tabs %}
-{% highlight razor tabtitle="GridController.cs" %}
-using Microsoft.AspNetCore.Mvc;
-using Npgsql;
-using System.Data;
-using Syncfusion.Blazor;
-using Syncfusion.Blazor.Data;
-using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
+-- Insert Sample Data (Optional)
+INSERT INTO public."PurchaseOrder" ("PoNumber", "VendorID", "ItemName", "ItemCategory", "Quantity", "UnitPrice", "TotalAmount", "Status", "OrderedBy", "ApprovedBy", "OrderDate", "ExpectedDeliveryDate", "CreatedAt", "UpdatedAt")
+VALUES
+('PO-2025-0001', 'VEN-9001', 'FHD Laptop', 'Electronics', 5, 899.99, 4499.95, 'Pending', 'Alice Johnson', 'Carol Davis', '2025-01-10', '2025-01-20', NOW(), NOW()),
+('PO-2025-0002', 'VEN-9002', 'Fibre Cables', 'Networking', 100, 15.50, 1550.00, 'Approved', 'Bob Smith', 'Alice Johnson', '2025-01-09', '2025-01-17', NOW(), NOW());
+```
 
-namespace MyWebService.Controllers
-{
-    [ApiController]
-    public class GridController : ControllerBase
-    {
-        public static List<Order> Orders { get; set; }
+After executing this script, the purchase order records are stored in the `PurchaseOrder` table within the `PurchaseOrderDB` database. The database is now ready for integration with the Blazor application.
 
-        public class Order
-        {
-            [Key]
-            public int? OrderID { get; set; }
-            public string? CustomerName { get; set; }
-            public int? EmployeeID { get; set; }
-            public decimal? Freight { get; set; }
-            public string? ShipCity { get; set; }
-        }
+---
 
-        [Route("api/[controller]")]
-        public List<Order> GetOrderData()
-        {
-            // TODO: Enter the connection string of the database
-            string ConnectionString = @"<Enter a valid connection string>";
-            string Query = "SELECT * FROM public.\"Orders\" ORDER BY \"OrderID\"";
-            NpgsqlConnection Connection = new(ConnectionString);
-            sqlConnection.Open(); 
-            //Using NpgsqlCommand and Query create connection with database
-            NpgsqlCommand Command = new(Query, Connection);
-            //Using NpgsqlDataAdapter execute the NpgsqlCommand 
-            NpgsqlDataAdapter DataAdapter = new(Command);
-            DataTable DataTable = new();
-            // Using NpgsqlDataAdapter, process the query string and fill the data into the dataset
-            DataAdapter.Fill(DataTable);
-            sqlConnection.Close();          
-            // Cast the data fetched from NpgsqlDataAdapter to List<T>
-            var DataSource = (from DataRow Data in DataTable.Rows
-                              select new Order()
-                              {
-                                  OrderID = Convert.ToInt32(Data["OrderID"]),
-                                  CustomerName = Data["CustomerName"].ToString(),
-                                  EmployeeID = Convert.ToInt32(Data["EmployeeID"]),
-                                  ShipCity = Data["ShipCity"].ToString(),
-                                  Freight = Convert.ToDecimal(Data["Freight"])
-                              }).ToList();
-            return DataSource;
-        }
-    }
-}
-{% endhighlight %}
-{% endtabs %}
+### Step 2: Install Required NuGet Packages
 
-5. **Run and test the application**
+Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
+This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-Start the API and access **https://localhost:xxxx/api/Grid** to view the data.
+For this guide, a Blazor application named **Grid_PostgreSQL** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and PostgreSQL integration.
 
-![Hosted API URL](../images/Ms-Sql-data.png)
+**Method 1: Using Package Manager Console**
 
-### Connecting Blazor DataGrid to an API service
-
-Create a simple Blazor DataGrid component by following these steps. This section explains how to include the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
-
-**Prerequisites**
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-1. **Create a Blazor Web App**
-
-Create a **Blazor Web App** using Visual Studio 2022. Use [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension.
-
-> Configure the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) during project creation.
-
-2. **Install Syncfusion Packages**
-
-* Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search and install the following packages:
-
-    - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
-    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-
-* Alternatively, use the Package Manager Console:
+1. Open Visual Studio 2022.
+2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
+3. Run the following commands:
 
 ```powershell
-Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Microsoft.EntityFrameworkCore -Version 10.0.2; 
+Install-Package Npgsql.EntityFrameworkCore.PostgreSQL -Version 10.0.0; 
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}}; 
+Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
-> When using **WebAssembly** or **Auto** render modes in a Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages within the client project.
+**Method 2: Using NuGet Package Manager UI**
 
-> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+2. Search for and install each package individually:
+   - **Microsoft.EntityFrameworkCore** (version 10.0.2 or later)
+   - **Npgsql.EntityFrameworkCore.PostgreSQL** (version 10.0.0 or later)
+   - **Syncfusion.Blazor.Grid** (version {{site.blazorversion}})
+   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
 
-3. **Register Syncfusion Blazor service**
+**Project File Reference**
 
-- Add the required namespaces in **~/_Imports.razor**:
+The installed packages are reflected in the **Grid_PostgreSQL.csproj** file:
 
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
+```xml
+<ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="*" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
+</ItemGroup>
 ```
 
-- For apps using **WebAssembly** or **Auto** (Server and WebAssembly) render modes, register the service in both **~/Program.cs** files.
+All required packages are now installed.
 
-```cshtml
+### Step 3: Create the Data Model
+
+A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the `PurchaseOrder` table.
+
+**Instructions:**
+
+1. Create a new folder named `Data` in the Blazor application project.
+2. Inside the `Data` folder, create a new file named **PurchaseOrder.cs**.
+3. Define the **PurchaseOrder** class with the following code:
+
+```csharp
+using System.ComponentModel.DataAnnotations;
+
+namespace Grid_PostgreSQL.Data
+{
+    /// <summary>
+    /// Represents a purchase order record mapped to the 'PurchaseOrder' table in the database.
+    /// This model defines the structure of purchase order-related data used throughout the application.
+    /// </summary>
+    public class PurchaseOrder
+    {
+        /// <summary>
+        /// Gets or sets the unique identifier for the purchase order record.
+        /// This is the primary key and auto-incremented by the database.
+        /// </summary>
+        [Key]
+        public int PurchaseOrderId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the public-facing purchase order number (e.g., PO-2025-0001).
+        /// This is a unique identifier visible to users and external systems.
+        /// </summary>
+        public string? PoNumber { get; set; }
+
+        /// <summary>
+        /// Gets or sets the vendor identifier (e.g., VEN-9001).
+        /// Links the purchase order to a specific vendor.
+        /// </summary>
+        public string? VendorID { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name or description of the item being ordered.
+        /// </summary>
+        public string? ItemName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the category of the item (e.g., Electronics, Office Supplies, Hardware).
+        /// </summary>
+        public string? ItemCategory { get; set; }
+
+        /// <summary>
+        /// Gets or sets the quantity of items being ordered.
+        /// Must be a positive integer.
+        /// </summary>
+        public int Quantity { get; set; }
+
+        /// <summary>
+        /// Gets or sets the unit price of each item (e.g., 899.99).
+        /// Stored with precision of 12 digits and 2 decimal places.
+        /// </summary>
+        public decimal UnitPrice { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total amount for the order (Quantity × UnitPrice).
+        /// Auto-calculated and stored with precision of 14 digits and 2 decimal places.
+        /// </summary>
+        public decimal? TotalAmount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current status of the purchase order.
+        /// Possible values: Pending, Approved, Ordered, Received, Cancelled, Completed.
+        /// </summary>
+        public string? Status { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the person who created the purchase order.
+        /// </summary>
+        public string? OrderedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the person who approved the purchase order.
+        /// </summary>
+        public string? ApprovedBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the date when the purchase order was placed.
+        /// </summary>
+        public DateTime OrderDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the expected delivery date for the ordered items.
+        /// </summary>
+        public DateTime? ExpectedDeliveryDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the timestamp indicating when the purchase order record was created.
+        /// Auto-set to the current date and time by the database.
+        /// </summary>
+        public DateTime CreatedAt { get; set; }
+
+        /// <summary>
+        /// Gets or sets the timestamp indicating when the purchase order record was last updated.
+        /// Auto-updated to the current date and time whenever a modification occurs.
+        /// </summary>
+        public DateTime UpdatedAt { get; set; }
+    }
+}
+```
+
+**Explanation:**
+- The `[Key]` attribute marks the `PurchaseOrderId` property as the primary key (a unique identifier for each record).
+- Each property represents a column in the database table.
+- The `?` symbol indicates that a property is nullable (can be empty).
+- The model includes comprehensive XML documentation for each property.
+- Decimal properties use `decimal` type for accurate monetary calculations.
+
+The data model has been successfully created.
+
+### Step 4: Configure the DbContext
+
+A `DbContext` is a special class that manages the connection between the application and the PostgreSQL database. It handles all database operations such as saving, updating, deleting, and retrieving data.
+
+**Instructions:**
+
+1. Inside the `Data` folder, create a new file named **PurchaseOrderDbContext.cs**.
+2. Define the `PurchaseOrderDbContext` class with the following code:
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+namespace Grid_PostgreSQL.Data
+{
+    /// <summary>
+    /// DbContext for Purchase Order entity
+    /// Manages database connections and entity configurations for the Purchase Order Management System
+    /// This context bridges the application with PostgreSQL database
+    /// </summary>
+    public class PurchaseOrderDbContext : DbContext
+    {
+        /// <summary>
+        /// Initializes a new instance of the PurchaseOrderDbContext class.
+        /// </summary>
+        /// <param name="options">The options to be used by a DbContext</param>
+        public PurchaseOrderDbContext(DbContextOptions<PurchaseOrderDbContext> options)
+            : base(options)
+        {
+        }
+
+        /// <summary>
+        /// Gets or sets the DbSet for Purchase Order entities.
+        /// Represents the collection of all purchase orders in the database.
+        /// </summary>
+        public DbSet<PurchaseOrder> PurchaseOrders => Set<PurchaseOrder>();
+
+        /// <summary>
+        /// Configures the entity mappings, constraints, and database-specific configurations
+        /// This method is called by Entity Framework Core during model creation.
+        /// </summary>
+        /// <param name="modelBuilder">Provides a simple API for configuring the EF model</param>
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<PurchaseOrder>(entity =>
+            {
+                // Set table name and schema
+                entity.ToTable("purchaseorder", schema: "public");
+
+                entity.HasKey(e => e.PurchaseOrderId)
+                    .HasName("pk_purchaseorder_id");
+
+                entity.Property(e => e.PurchaseOrderId)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("purchaseorderid")
+                    .HasColumnType("integer");
+
+                entity.Property(e => e.PoNumber)
+                    .HasColumnName("ponumber")
+                    .HasColumnType("character varying(30)")
+                    .HasMaxLength(30)
+                    .IsRequired(true);
+
+                entity.HasIndex(e => e.PoNumber)
+                    .IsUnique()
+                    .HasDatabaseName("uq_purchaseorder_ponumber");
+
+                entity.Property(e => e.VendorID)
+                    .HasColumnName("vendorid")
+                    .HasColumnType("character varying(50)")
+                    .HasMaxLength(50)
+                    .IsRequired(true);
+
+                entity.Property(e => e.ItemName)
+                    .HasColumnName("itemname")
+                    .HasColumnType("character varying(200)")
+                    .HasMaxLength(200)
+                    .IsRequired(true);
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnName("itemcategory")
+                    .HasColumnType("character varying(100)")
+                    .HasMaxLength(100)
+                    .IsRequired(false);
+
+                entity.Property(e => e.Quantity)
+                    .HasColumnName("quantity")
+                    .HasColumnType("integer")
+                    .IsRequired(true);
+
+                entity.Property(e => e.UnitPrice)
+                    .HasColumnName("unitprice")
+                    .HasColumnType("numeric(12,2)")
+                    .HasPrecision(12, 2)
+                    .IsRequired(true);
+
+                entity.Property(e => e.TotalAmount)
+                    .HasColumnName("totalamount")
+                    .HasColumnType("numeric(14,2)")
+                    .HasPrecision(14, 2)
+                    .IsRequired(false);
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("status")
+                    .HasColumnType("character varying(30)")
+                    .HasMaxLength(30)
+                    .IsRequired(true)
+                    .HasDefaultValue("Pending");
+
+                entity.Property(e => e.OrderedBy)
+                    .HasColumnName("orderedby")
+                    .HasColumnType("character varying(100)")
+                    .HasMaxLength(100)
+                    .IsRequired(true);
+
+                entity.Property(e => e.ApprovedBy)
+                    .HasColumnName("approvedby")
+                    .HasColumnType("character varying(100)")
+                    .HasMaxLength(100)
+                    .IsRequired(false);
+
+                entity.Property(e => e.OrderDate)
+                    .HasColumnName("orderdate")
+                    .HasColumnType("date")
+                    .IsRequired(true);
+
+                entity.Property(e => e.ExpectedDeliveryDate)
+                    .HasColumnName("expecteddeliverydate")
+                    .HasColumnType("date")
+                    .IsRequired(false);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("createdat")
+                    .HasColumnType("timestamp without time zone")
+                    .IsRequired(true)
+                    .HasDefaultValueSql("NOW()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasColumnName("updatedat")
+                    .HasColumnType("timestamp without time zone")
+                    .IsRequired(true)
+                    .HasDefaultValueSql("NOW()");
+
+                entity.HasIndex(e => e.Status)
+                    .HasDatabaseName("ix_purchaseorder_status");
+
+                entity.HasIndex(e => e.VendorID)
+                    .HasDatabaseName("ix_purchaseorder_vendorid");
+
+                entity.HasIndex(e => e.OrderDate)
+                    .HasDatabaseName("ix_purchaseorder_orderdate");
+
+                entity.HasIndex(e => e.OrderedBy)
+                    .HasDatabaseName("ix_purchaseorder_orderedby");
+
+                entity.HasIndex(e => e.CreatedAt)
+                    .HasDatabaseName("ix_purchaseorder_createdat");
+
+                entity.HasIndex(e => new { e.Status, e.OrderDate })
+                    .HasDatabaseName("ix_purchaseorder_status_orderdate");
+            });
+        }
+    }
+}
+```
+
+**Explanation:**
+- The `DbContext` class inherits from Entity Framework's `DbContext` base class.
+- The `PurchaseOrders` property represents the `PurchaseOrder` table in the database.
+- The `OnModelCreating` method configures how the database columns should behave (maximum length, required/optional, default values, data types, indexes, etc.).
+- PostgreSQL-specific configurations include:
+  - `HasColumnType("character varying(30)")` for VARCHAR columns
+  - `HasColumnType("timestamp without time zone")` for timestamp columns
+  - `HasDefaultValueSql("NOW()")` for default current timestamp values
+  - `HasPrecision(12, 2)` for NUMERIC columns with decimal precision
+- Database indexes are configured for improved query performance on frequently accessed columns.
+
+The **PurchaseOrderDbContext** class is required because:
+
+- It **connects** the application to the PostgreSQL database.
+- It **manages** all database operations.
+- It **maps** C# models to actual database tables.
+- It **configures** how data should look inside the database.
+- It **enables** PostgreSQL-specific features like indexes and default value functions.
+
+Without this class, Entity Framework Core will not know where to save data or how to create the PurchaseOrder table. The DbContext has been successfully configured.
+
+### Step 5: Configure the Connection String
+
+A connection string contains the information needed to connect the application to the PostgreSQL database, including the server address, database name, and authentication credentials.
+
+**Instructions:**
+
+1. Open the `appsettings.json` file in the project root.
+2. Update the `ConnectionStrings` section with the PostgreSQL connection details:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=5432;Database=PurchaseOrderDB;User Id=postgres;Password=postgresql@123"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
+**Connection String Components:**
+
+| Component | Description |
+|-----------|-------------|
+| Server | The address of the PostgreSQL server (localhost for local development) |
+| Port | The port number on which PostgreSQL is running (default is 5432) |
+| Database | The database name (in this case, `PurchaseOrderDB`) |
+| User Id | The PostgreSQL username (default is `postgres`) |
+| Password | The password for the PostgreSQL user account |
+
+
+> **Security Note:** For production environments, store sensitive credentials in environment variables or Azure Key Vault instead of storing them in appsettings.json. Example: `Password=${DB_PASSWORD}` and set the environment variable `DB_PASSWORD` on the deployment server.
+
+The database connection string has been configured successfully.
+
+### Step 6: Create the Repository Class
+
+A repository class is an intermediary layer that handles all database operations. This class uses Entity Framework Core to communicate with the PostgreSQL database.
+
+**Instructions:**
+
+1. Inside the `Data` folder, create a new file named **PurchaseOrderRepository.cs**.
+2. Define the **PurchaseOrderRepository** class with the following code:
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+namespace Grid_PostgreSQL.Data
+{
+    /// <summary>
+    /// Repository pattern implementation for PurchaseOrder entity using Entity Framework Core
+    /// Handles all CRUD operations and business logic for purchase orders
+    /// Communicates with PostgreSQL database through PurchaseOrderDbContext
+    /// </summary>
+    public class PurchaseOrderRepository
+    {
+        private readonly PurchaseOrderDbContext _context;
+
+        public PurchaseOrderRepository(PurchaseOrderDbContext context)
+        {
+            _context = context;
+        }
+
+        /// <summary>
+        /// Retrieves all purchase orders from the database ordered by ID descending
+        /// </summary>
+        /// <returns>List of all purchase orders</returns>
+        public async Task<List<PurchaseOrder>> GetPurchaseOrdersDataAsync()
+        {
+            try
+            {
+                return await _context.PurchaseOrders
+                    .OrderByDescending(p => p.PurchaseOrderId)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving purchase orders: {ex.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Generates a unique purchase order number (PoNumber) in the format PO-YYYY-XXXX
+        /// where YYYY is the current year and XXXX is a sequential 4-digit number
+        /// </summary>
+        /// <returns>A unique purchase order number</returns>
+        private async Task<string> GeneratePoNumberAsync()
+        {
+            try
+            {
+                var currentYear = DateTime.Now.Year;
+                var lastPo = await _context.PurchaseOrders
+                    .Where(p => p.PoNumber!.StartsWith($"PO-{currentYear}"))
+                    .OrderByDescending(p => p.PoNumber)
+                    .FirstOrDefaultAsync();
+
+                int nextNumber = 1;
+                if (lastPo != null)
+                {
+                    var lastNumber = int.Parse(lastPo.PoNumber!.Split('-')[2]);
+                    nextNumber = lastNumber + 1;
+                }
+
+                return $"PO-{currentYear}-{nextNumber:D4}";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error generating PO number: {ex.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Adds a new purchase order to the database
+        /// Auto-generates the PoNumber if not provided
+        /// Sets CreatedAt and UpdatedAt timestamps
+        /// </summary>
+        /// <param name="value">The purchase order model to add</param>
+        public async Task AddPurchaseOrderAsync(PurchaseOrder value)
+        {
+            // Add Logic for adding a new purchase order to the database 
+        }
+
+        /// <summary>
+        /// Updates an existing purchase order in the database
+        /// Validates that the purchase order exists before updating
+        /// Updates the UpdatedAt timestamp automatically
+        /// </summary>
+        /// <param name="value">The purchase order model with updated values</param>
+        public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
+        {
+            // Add Logic for updating an existing purchase order to the database 
+        }
+
+        /// <summary>
+        /// Deletes a purchase order from the database
+        /// Validates that the purchase order exists before deletion
+        /// </summary>
+        /// <param name="key">The purchase order ID to delete</param>
+        public async Task RemovePurchaseOrderAsync(int? key)
+        {
+            // Add Logic for removing an existing purchase order to the database 
+        }
+    }
+}
+```
+The repository class has been created.
+
+
+### Step 7: Register Services in Program.cs
+
+The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Entity Framework Core with PostgreSQL and the repository pattern.
+
+**Instructions:**
+
+1. Open the `Program.cs` file at the project root.
+2. Add the following code after the line `var builder = WebApplication.CreateBuilder(args);`:
+
+```csharp
+using Grid_PostgreSQL.Components;
+using Grid_PostgreSQL.Data;
 using Syncfusion.Blazor;
+using Microsoft.EntityFrameworkCore;
 
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+// ========== SYNCFUSION BLAZOR CONFIGURATION ==========
 builder.Services.AddSyncfusionBlazor();
+
+// ========== ENTITY FRAMEWORK CORE CONFIGURATION ==========
+// Get connection string from appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("Connection string 'DefaultConnection' not found in configuration.");
+}
+
+// Register DbContext with PostgreSQL provider (Npgsql)
+builder.Services.AddDbContext<PurchaseOrderDbContext>(options =>
+{
+    options.UseNpgsql(connectionString);
+
+    // Enable detailed error messages in development
+    if (builder.Environment.IsDevelopment())
+    {
+        options.EnableSensitiveDataLogging();
+        options.EnableDetailedErrors();
+    }
+});
+
+// Register Repository for dependency injection
+builder.Services.AddScoped<PurchaseOrderRepository>();
+// =======================================================
+
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAntiforgery();
+
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+app.Run();
 ```
 
-4. **Add stylesheet and script resources**
+**Explanation:**
 
-Access the theme stylesheet and script from NuGet using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the **<head>** section and the script reference at the end of the **<body>** in **~/Components/App.razor**:
+- **`AddSyncfusionBlazor()`**: Registers Syncfusion Blazor components (DataGrid, themes, etc.).
+- **`AddDbContext<PurchaseOrderDbContext>`**: Registers the DbContext with PostgreSQL as the database provider using `UseNpgsql()`.
+- **Connection String Validation**: Ensures the connection string is configured before attempting to connect.
+- **`EnableSensitiveDataLogging()`**: Enabled in development to log detailed information about database operations (useful for debugging).
+- **`EnableDetailedErrors()`**: Provides more detailed error messages during development.
+- **`AddScoped<PurchaseOrderRepository>`**: Registers the repository as a scoped service, creating a new instance for each HTTP request.
+- **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
+
+The service registration has been completed successfully.
+
+---
+
+## Integrating Syncfusion Blazor DataGrid
+
+### Step 1: Install and Configure Blazor DataGrid Components
+
+Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+
+**Instructions:**
+
+1. The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous section.
+2. Import the required namespaces in the `Components/_Imports.razor` file:
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+```
+
+3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
-</head>
+<!-- Syncfusion Blazor Stylesheet -->
+<link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<body>
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
+<!-- Syncfusion Blazor Scripts -->
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-> * Refer to [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for additional methods such as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
-> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in the Blazor Web App configuration.
+Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting-started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-5. **Configure DataGrid with UrlAdaptor**
+### Step 2: Update the Blazor DataGrid in the Home Component
 
-The [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component supports multiple adaptors for remote data binding. For API services, set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [Adaptors.UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor) and specify the service endpoint in the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
+The Home component will display the purchase order data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+**Instructions:**
 
-<SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager Url="https://localhost:xxxx/api/Grid" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridAggregates>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Sum: @aggregate.Sum</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Average: @aggregate.Average</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-    </GridAggregates>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
+1. Open the file named `Home.razor` in the `Components/Pages` folder.
+2. Add the following code to create a DataGrid:
 
-@code {
-    SfGrid<Order> Grid { get; set; }
-    public List<Order> Orders { get; set; }
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public int EmployeeID { get; set; }
-        public decimal Freight { get; set; }
-        public string ShipCity { get; set; }
-    }
-}
-{% endhighlight %}
-{% highlight c# tabtitle="GridController.cs" %}
-[ApiController]
-public class GridController : ControllerBase
-{ 
-    /// <summary>
-    /// Returns the data collection as result and count after performing data operations based on request from <see cref=”DataManagerRequest”/>
-    /// </summary>
-    /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates and paging which is handled on the Blazor DataGrid component side</param>
-    /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
-    [HttpPost]
-    [Route("api/[controller]")]
-    public object Post([FromBody] DataManagerRequest DataManagerRequest)
-    {
-        IEnumerable<Order> DataSource = GetOrderData();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        return new { result = DataSource, count = TotalRecordsCount };
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor DataGrid component bound with PostgreSQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
-
-### Handling data operations in UrlAdaptor
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports server-side operations such as **searching**, **sorting**, **filtering**, **aggregating**, and **paging** when using the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor).
-
-The [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object provides details for each operation, and these can be applied using built-in methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class:
-
-* [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) -Applies search criteria to the data source based on search filters.
-* [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) - Filters the data source using conditions specified in the request.
-* [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) - Sorts the data source according to one or more sort descriptors.
-* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records for paging.
-* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records before returning results.
-
-These methods enable efficient handling of large datasets by performing operations on the server side. The following sections demonstrate how to manage these operations using the `UrlAdaptor`.
-
-> * To enable these operations, add the **Syncfusion.Blazor.Data** package to the API service project using NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
-
-### Handling searching operation
-
-Enable server-side searching by implementing logic in the API controller with the [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This method applies search criteria to the collection based on filters specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
-
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-    IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Searching in UrlAdaptor.
-    if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
-    {
-        // Searching
-        DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
-        //Add custom logic here if needed and remove above method
-    }
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    return new { result = DataSource, count = TotalRecordsCount };
-}
-{% endhighlight %}
-
-### Handling filtering operation
-
-Enable server-side filtering by implementing logic in the API controller using the [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This method applies filter conditions to the collection based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-    IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Filtering in UrlAdaptor.
-    if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
-    {
-        // Filtering
-        DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
-        //Add custom logic here if needed and remove above method
-    }
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    return new { result = DataSource, count = TotalRecordsCount };
-}
-
-{% endhighlight %}
-
-### Handling sorting operation
-
-Enable server-side sorting by implementing logic in the API controller using the [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This method sorts the collection based on one or more sort descriptors specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-    IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Sorting in UrlAdaptor.
-    if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
-    {
-        // Sorting
-        DataSource = DataOperations.PerformSorting(DataSource, DataManagerRequest.Sorted);
-        //Add custom logic here if needed and remove above method
-    }
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    return new { result = DataSource, count = TotalRecordsCount };
-}
-{% endhighlight %}
-
-### Handling aggregate operation
-
-Enable server-side aggregation by implementing logic in the API controller using the [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This method calculates aggregate values such as **Sum**, **Average**, **Min**, and **Max** for the specified fields based on the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
- [HttpPost]
- [Route("api/[controller]")]
- public object Post([FromBody] DataManagerRequest DataManagerRequest)
- {
-    IEnumerable<Order> DataSource = GetOrderData();
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    // Handling Aggregation in UrlAdaptor.
-    IDictionary<string, object> Aggregates = null;
-    if (DataManagerRequest.Aggregates != null) 
-    {  
-        // Aggregation
-        Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
-        //Add custom logic here if needed and remove above method                
-    }
-    return new { result = DataSource, count = TotalRecordsCount, aggregates = Aggregates };
- }
-{% endhighlight %}
-
-> The server-side implementation of the `PerformAggregation` method is required only for [Footer aggregates](https://blazor.syncfusion.com/documentation/datagrid/footer-aggregate). Explicit handling is not necessary for[ Group Footer aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate#group-footer-aggregates) or [Group Caption aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate#group-caption-aggregates).
-
-### Handling paging operation
-
-Enable server-side paging by implementing logic in the API controller using the [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) and [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Collections_Generic_IEnumerable___0__System_Int32_) methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. These methods apply paging based on the **Skip** and **Take** values provided in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
-
-{% highlight razor %}
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest DataManagerRequest)
-{
-    IEnumerable<Order> DataSource = GetOrderData();
-    int TotalRecordsCount = DataSource.Cast<Order>().Count();
-    // Handling Paging in Url Adaptor.
-    if (DataManagerRequest.Skip != 0)
-    {
-        // Paging
-        DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
-        //Add custom logic here if needed and remove above method
-    }
-    if (DataManagerRequest.Take != 0)
-    {
-        DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
-        //Add custom logic here if needed and remove above method
-    }
-    return new { result = DataSource, count = TotalRecordsCount };
-}
-{% endhighlight %}
-
-N> For optimal performance, apply operations in the following sequence: **Searching → Filtering → Sorting → Aggregation → Paging → Grouping** in [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
-
-### Handling CRUD operations
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports Create, Read, Update, and Delete (CRUD) operations through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. These operations are mapped to API endpoints using properties such as:
-
-* [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl) – API endpoint for inserting new records.
-* [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) – API endpoint for updating existing records.
-* [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) – API endpoint for deleting records.
-* [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl) – Single endpoint for all CRUD operations.
-* [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) – API endpoint for batch editing.
-
-To enable editing, configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) and [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) properties, and set the Mode property to [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditMode.html#Syncfusion_Blazor_Grids_EditMode_Normal) to allow adding, editing, and deleting records.
-
-{% tabs %}
-{% highlight razor %}
-<SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager Url="https://localhost:xxxx/api/Grid" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" BatchUrl="https://localhost:xxxx/api/Grid/Batch" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-{% endhighlight %}
-{% endtabs %}
-
-> * Normal(Inline) editing is the default [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor DataGrid component.
-> * To enable CRUD operations, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for a column that contains unique values.
-> * If the database includes an auto-generated column, set the [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property for that column to disable editing during **add** or **update** operations.
-
-**Insert Operation:**
-
-To insert a new record, click the **Add** toolbar button. This action displays the edit form for entering the new record details. After providing the required values, click the **Update** toolbar button. The record will be added to the Orders table by invoking the following **POST** API method.
-
-{% tabs %}
-{% highlight c# tabtitle="OrdersController.cs" %}
-[HttpPost]
-[Route("api/Grid/Insert")]
-/// <summary>
-/// Inserts a new data item into the data collection.
-/// </summary>
-/// <param name="CRUDModel<T>">The set of information along with new record detail which is need to be inserted.</param>
-/// <returns>Returns void</returns>
-public void Insert([FromBody] CRUDModel<Order> Value)
-{
-    // TODO: Enter the connection string of the database
-    string ConnectionString = @"<Enter a valid connection string>";
-    // Create query to insert the specific into the database by accessing its properties
-    string Query = $"Insert into \"Orders\" (\"OrderID\", \"CustomerName\", \"Freight\", \"ShipCity\", \"EmployeeID\") values('{Value.Value.OrderID}','{Value.Value.CustomerName}','{Value.Value.Freight}','{Value.Value.ShipCity}','{Value.Value.EmployeeID}')";
-    NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-    Connection.Open();
-    // Execute the Npgsql Command
-    NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-    // Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-    // Add custom logic here if needed and remove the above method
-}
-{% endhighlight %}
-{% endtabs %}
-
-**Update Operation:**
-
-To edit a row, select the required row and click the **Edit** toolbar button. The edit form will appear, allowing modification of any column value as needed. Clicking the **Update** toolbar button applies the changes to the record in the Orders table by invoking the corresponding **POST** method of the API.
-
-{% tabs %}
-{% highlight c# tabtitle="OrdersController.cs" %}
-[HttpPost]
-[Route("api/Grid/Update")]
-/// <summary>
-/// Update a existing data item from the data collection.
-/// </summary>
-/// <param name="CRUDModel<T>">The set of information along with updated record detail which is need to be updated.</param>
-/// <returns>Returns void</returns>
-public void Update([FromBody] CRUDModel<Order> Value)
-{
-    // TODO: Enter the connection string of the database
-    string ConnectionString = @"<Enter a valid connection string>";
-    // Create query to update the changes into the database by accessing its properties
-    string Query = $"Update \"Orders\" set \"CustomerName\"='{Value.Value.CustomerName}', \"Freight\"={Value.Value.Freight},\"EmployeeID\"={Value.Value.EmployeeID},\"ShipCity\"='{Value.Value.ShipCity}' where \"OrderID\"={Value.Value.OrderID}";
-    NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-    Connection.Open();
-    // Execute the Npgsql Command
-    NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-    // Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-    // Add custom logic here if needed and remove the above method
-}
-{% endhighlight %}
-{% endtabs %}
-
-**Delete Operation:**
-
-To remove a record, select the desired row and click the **Delete** toolbar button. This action sends a **DELETE** request to the configured API endpoint, passing the primary key of the selected record. The corresponding entry will be deleted from the Orders table by invoking the following **POST** API method.
-
-{% tabs %}
-{% highlight c# tabtitle="OrdersController.cs" %}
- [HttpPost]
-[Route("api/Grid/Delete")]
-/// <summary>
-/// Remove a specific data item from the data collection.
-/// </summary>
-/// <param name="CRUDModel<T>">The set of information along with specific record detail which is need to be removed.</param>
-/// <returns>Returns void</returns>
-public void Delete([FromBody] CRUDModel<Order> Value)
-{
-    //TODO: Enter the connectionstring of database
-    string ConnectionString = @"<Enter a valid connection string>";
-    //Create query to remove the specific from database by passing the primary key column value.
-    string Query = $"DELETE FROM \"Orders\" WHERE \"OrderID\" = {Value.Key}";
-    NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-    Connection.Open();
-    //Execute the Npgsql Command
-    NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-    //Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-    //Add custom logic here if needed and remove above method
-}
-{% endhighlight %}
-{% endtabs %}
-
-**Batch Operation:**
-
-To perform batch updates, set the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) to **Batch** in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component and configure the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
-In batch mode:
-
-- Use the **Add** toolbar button to insert new rows.
-- Double-click a cell to edit its value.
-- Select a row and click **Delete** to remove it.
-- Click **Update** to commit all changes (insert, update, delete) in a single request from the Orders table using a single API **POST** request.
-
-{% highlight razor %}
- [HttpPost]
-[Route("api/Grid/Batch")]
-/// <summary>
-/// Batchupdate (Insert, Update, Delete) a collection of data items from the data collection.
-/// </summary>
-/// <param name="CRUDModel<T>">The set of information along with details about the CRUD actions to be executed from the database.</param>
-/// <returns>Returns void</returns>
-public void Batch([FromBody] CRUDModel<Order> Value)
-{
-    // TODO: Enter the connection string of the database
-    string ConnectionString = @"<Enter a valid connection string>";
-    if (Value.Changed != null)
-    {
-        foreach (var Record in (IEnumerable<Order>)Value.Changed)
-        {
-            // Create query to update the changes into the database by accessing its properties
-            string Query = $"Update \"Orders\" set \"CustomerName\"='{Record.CustomerName}', \"Freight\"={Record.Freight},\"EmployeeID\"={Record.EmployeeID},\"ShipCity\"='{Record.ShipCity}' where \"OrderID\"= {Record.OrderID}";
-            NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-            Connection.Open();
-            // Execute the Npgsql Command
-            NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-            // Execute this code to reflect the changes into the database
-            Command.ExecuteNonQuery();
-            Connection.Close();
-            // Add custom logic here if needed and remove the above method
-        }
-    }
-    if (Value.Added != null)
-    {
-        foreach (var Record in (IEnumerable<Order>)Value.Added)
-        {
-            // Create query to insert the specific into the database by accessing its properties 
-            string Query = $"Insert into \"Orders\" (\"OrderID\", \"CustomerName\", \"Freight\", \"ShipCity\", \"EmployeeID\") values('{Record.OrderID}', '{Record.CustomerName}','{Record.Freight}','{Record.ShipCity}','{Record.EmployeeID}')";
-            NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-            Connection.Open();
-            // Execute the Npgsql Command
-            NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-            // Execute this code to reflect the changes into the database
-            Command.ExecuteNonQuery();
-            Connection.Close();
-            // Add custom logic here if needed and remove the above method
-        }
-    }
-    if (Value.Deleted != null)
-    {
-        foreach (var Record in (IEnumerable<Order>)Value.Deleted)
-        {
-            // Create query to remove the specific from the database by passing the primary key column value.
-            string Query = $"DELETE FROM \"Orders\" WHERE \"OrderID\"={Record.OrderID}";
-            NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-            Connection.Open();
-            // Execute the Npgsql Command
-            NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-            // Execute this code to reflect the changes into the database
-            Command.ExecuteNonQuery();
-            Connection.Close();
-            // Add custom logic here if needed and remove the above method
-        }
-    }
-}
-{% endhighlight %}
-
-![Blazor DataGrid component bound with PostgreSQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
-
-> Find the complete implementation in this [GitHub](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor) repository.
-
-## Binding data from PostgreSQL Server using CustomAdaptor
-
-This section explains how to retrieve data from a Microsoft SQL Server database using [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) and bind it to the Blazor DataGrid component.
-
-**Step 1: Create the Blazor DataGrid Component**
-
-Follow the procedure described in [Connecting Blazor DataGrid to an API service](#connecting-blazor-datagrid-to-an-api-service).
-
-> * Set the rendermode to InteractiveServer or InteractiveAuto based on application configuration.
-
-**Step 2: Install PostgreSQL NuGet Package**
-
-To connect a **PostgreSQL** Server database using the PostgreSQL driver in the application, install the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) NuGet package.
-
-Open NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages*), search for **Npgsql.EntityFrameworkCore.PostgreSQL**, and install it in the project.
-
-**Step 3: Configure the DataGrid with CustomAdaptor**
-
-Inject a custom service into the `CustomAdaptor` and configure the component as shown below:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@rendermode InteractiveServer
-
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
-
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
-    <GridAggregates>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Sum: @aggregate.Sum</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Average: @aggregate.Average</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-    </GridAggregates>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    SfGrid<Order> Grid { get; set; }
-}
-{% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs" %}
- public class Order
- {
-     public int? OrderID { get; set; }
-     public string CustomerName { get; set; }
-     public int EmployeeID { get; set; }
-     public decimal Freight { get; set; }
-     public string ShipCity { get; set; }
- }
-{% endhighlight %}
-{% endtabs %}
-
-**Step 4: Implement Data Retrieval Logic**
-
-Implement the [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method in `CustomAdaptor` to fetch data from the service by calling **GetOrdersAsync**.
-
-* Use `SqlDataAdapter` to retrieve data from Microsoft SQL Server.
-* Populate a **DataSet** using the **Fill** method and convert it into a List.
-* Return the response as a **Result** and **Count** pair in the `ReadAsync` method to bind data to the Blazor DataGrid.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@rendermode InteractiveServer
-
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+```cshtml
+@page "/"
 @using System.Collections
+@using Grid_PostgreSQL.Data
+@inject PurchaseOrderRepository PurchaseOrderService
+<PageTitle>Purchase Order Management System</PageTitle>
 
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
-    <GridAggregates>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Sum: @aggregate.Sum</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Average: @aggregate.Average</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-    </GridAggregates>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
+<section class="bg-gray-50 dark:bg-gray-950">
+    <div class="mx-auto w-full py-12 sm:px-6 px-4">
+        <h1 class="mb-4 text-3xl font-bold">Purchase Order Management System</h1>
+        <p class="mb-3 text-gray-600">Manage and view all purchase orders from the database.</p>
+        
+        <!-- Syncfusion Blazor DataGrid Component -->
+        <SfGrid TValue="PurchaseOrder" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
+            <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+            
+            <GridColumns>
+                <!-- Columns configuration -->
+            </GridColumns>
+            
+            <GridPageSettings PageSize="10"></GridPageSettings>
+        </SfGrid>
+    </div>
+</section>
 
 @code {
+    // CustomAdaptor class will be added in the next step
+}
+```
+
+**Component Explanation:**
+
+- **`@inject PurchaseOrderRepository`**: Injects the repository to access database methods.
+- **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
+- **`<GridColumns>`**: Defines individual columns in the DataGrid.
+- **`<GridPageSettings>`**: Configures pagination with 10 records per page.
+
+The Home component has been updated successfully with DataGrid.
+
+---
+
+### Step 3: Implement the CustomAdaptor
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **PostgreSQL** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
+
+The `CustomAdaptor` is a bridge between the DataGrid and the PostgreSQL database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Add the following `CustomAdaptor` class code inside the `@code` block:
+
+```csharp
+@code {
+
+    private CustomAdaptor? _customAdaptor;
+
+    protected override void OnInitialized()
+    {
+        // Initialize the CustomAdaptor with the injected PurchaseOrderRepository
+        _customAdaptor = new CustomAdaptor { PurchaseOrderService = PurchaseOrderService };
+    }
+
     /// <summary>
-    /// Implementing customAdaptor by extending the <see cref=“DataAdaptor”/> class.
-    /// The Blazor DataGrid component support for custom data binding, which enables the binding and manipulation of data in a personalized way, using user-defined methods.
+    /// CustomAdaptor class bridges DataGrid interactions with database operations.
+    /// This adaptor handles all data retrieval and manipulation for the DataGrid.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
-        public OrderData OrderService = new OrderData();
+        public static PurchaseOrderRepository? _purchaseOrderService { get; set; }
+
+        public PurchaseOrderRepository? PurchaseOrderService
+        {
+            get => _purchaseOrderService;
+            set => _purchaseOrderService = value;
+        }
+
         /// <summary>
-        /// Returns the data collection after performing data operations based on request from <see cref=”DataManagerRequest”/>
+        /// ReadAsync retrieves records from the database and applies data operations.
+        /// This method executes when the grid initializes and when filtering, searching, sorting, or paging occurs.
         /// </summary>
-        /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates paging and grouping which is handled on the Blazor DataGrid component side</param>
-        /// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-        /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
-        public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-            int TotalRecordsCount = DataSource.Cast<Order>().Count();
-            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-        }
-    }
-}
-{% endhighlight %}
-{% highlight razor tabtitle="OrderData.cs" %}
-public class OrderData
-{
-    // TODO: Enter the connection string of the database
-    public string ConnectionString = @"<Enter a valid connection string>";
-    public async Task<List<Order>> GetOrdersAsync()
-    {
-        // Create query to fetch data from the database
-        string Query = "SELECT * FROM public.\"Orders\" ORDER BY \"OrderID\"";
-        List<Order> Orders = null;
-        // Create Npgsql Connection
-        NpgsqlConnection Connection = new(ConnectionString);
-        sqlConnection.Open();
-        //Using NpgsqlCommand and Query create connection with database
-        NpgsqlCommand Command = new(Query, Connection);
-        //Using NpgsqlDataAdapter execute the NpgsqlCommand
-        NpgsqlDataAdapter DataAdapter = new(Command);
-        DataTable DataTable = new();
-        // Using NpgsqlDataAdapter, process the query string and fill the data into the dataset
-        DataAdapter.Fill(DataTable);
-        sqlConnection.Close();
-        // Cast the data fetched from NpgsqlDataAdapter to List<T>
-        Orders = (from DataRow Data in DataTable.Rows
-                  select new Order()
-                  {
-                      OrderID = Convert.ToInt32(Data["OrderID"]),
-                      CustomerName = Data["CustomerName"].ToString(),
-                      EmployeeID = Convert.ToInt32(Data["EmployeeID"]),
-                      ShipCity = Data["ShipCity"].ToString(),
-                      Freight = Convert.ToDecimal(Data["Freight"])
-                  }).ToList();
-        return Orders;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor DataGrid component bound with PostgreSQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
-
-### Perform Data Operations in a Custom Adaptor
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports server-side operations such as **searching**, **filtering**, **sorting**, **paging**, and **aggregating** when using a `CustomAdaptor`. These operations are implemented by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object provides the necessary details for each operation, and these can be applied using built-in methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) and [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) classes:
-
-* [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) – Applies search criteria to the data source based on search filters.
-
-* [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) – Filters the data source using conditions specified in the request.
-
-* [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SortedColumn__) – Sorts the data source according to one or more sort descriptors.
-
-* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) – Retrieves a specified number of records for paging.
-
-* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Collections_Generic_IEnumerable___0__System_Int32_) – Skips a defined number of records before returning results.
-
-* [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) – Applies aggregate details to calculate summary values such as Sum, Average, Min, and Max.
-
-These methods enable efficient server-side data handling in a custom adaptor implementation for **PostgreSQL Server**.
-
-N> To enable these operations, install the **Syncfusion.Blazor.Data** package using NuGet Package Manager in Visual Studio:
-
-(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
-
-### Handling searching operation
-
-When using `CustomAdaptor`, the searching operation is implemented by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class applies search criteria from the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data source. Custom logic can also be implemented to handle searching as required.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Searching in CustomAdaptor.
-        if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
-        {
-            // Searching
-            DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
-            //Add custom logic here if needed and remove above method
-        }
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-### Handling filtering operation
-
-When implementing `CustomAdaptor`, the filtering operation is managed by overriding the[Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method in the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class applies filter criteria from the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data collection. Custom filtering logic can also be implemented to meet specific requirements.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Filtering in CustomAdaptor.
-        if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
-        {
-            // Filtering
-            DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
-            //Add custom logic here if needed and remove above method
-        }
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-### Handling sorting operation
-
-When implementing `CustomAdaptor`, the sorting operation is handled by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method in the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class applies sort criteria from the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data collection. Custom sorting logic can also be implemented to meet specific requirements.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Sorting in CustomAdaptor.
-        if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
-        {
-            // Sorting
-            DataSource = DataOperations.PerformSorting(DataSource, DataManagerRequest.Sorted);
-            //Add custom logic here if needed and remove above method
-        }
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-### Handling aggregate operation
-
-When implementing `CustomAdaptor`, aggregate operations are managed by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor-1.html) abstract class.
-
-The built-in [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) method in the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class calculates aggregate values based on the criteria specified in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html). Custom aggregation logic can also be implemented when specific requirements exist.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        // Handling Aggregation in CustomAdaptor.
-        IDictionary<string, object> Aggregates = null;
-        if (DataManagerRequest.Aggregates != null) // Aggregation
-        {
-            Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
-            //Add custom logic here if needed and remove above method
-        }
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount, Aggregates = Aggregates } : (object)DataSource;
-    }
-}
-{% endhighlight %}  
-
-> The server-side implementation of the `PerformAggregation` method is required only for [Footer aggregates](https://blazor.syncfusion.com/documentation/datagrid/footer-aggregate). Explicit handling is not necessary for [Group Footer aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate#group-footer-aggregates) or [Group Caption aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate#group-caption-aggregates).
-
-### Handling paging operation
-
-When implementing `CustomAdaptor`, paging is managed by overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
-
-The built-in [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) and [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Collections_Generic_IEnumerable___0__System_Int32_) methods in the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class apply paging criteria from the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to the data collection. Custom paging logic can also be implemented when specific requirements exist.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        // Handling paging in CustomAdaptor.
-        if (DataManagerRequest.Skip != 0)
-        {
-            // Paging
-            DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
-            //Add custom logic here if needed and remove above method
-        }
-        if (DataManagerRequest.Take != 0)
-        {
-            // Taking
-            DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
-            //Add custom logic here if needed and remove above method
-        }
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
-
-### Handling grouping operation
-
-When employing `CustomAdaptor`, the grouping operation must be managed within the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the `CustomAdaptor`.
-
-In the code example below, grouping a custom data source can be achieved by utilizing the [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_Group__1_System_Collections_IEnumerable_System_String_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__System_Boolean_System_Boolean_) method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. An alternative approach is to implement a custom method for the grouping operation and bind the resulting data to the Blazor DataGrid component.
-
-{% highlight razor %}
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        DataResult DataObject = new DataResult();
-        // Handling Group operation in CustomAdaptor.
-        if (DataManagerRequest.Group != null)
-        {
-            IEnumerable ResultData = DataSource.ToList();
-            // Grouping
-            foreach (var group in DataManagerRequest.Group)
+            try
             {
-                ResultData = DataUtil.Group<Order>(ResultData, group, DataManagerRequest.Aggregates, 0, DataManagerRequest.GroupByFormatter);
-                //Add custom logic here if needed and remove above method
-            }
-            DataObject.Result = ResultData;
-            DataObject.Count = TotalRecordsCount;
-            return DataManagerRequest.RequiresCounts ? DataObject : (object)ResultData;
-        }
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
-    }
-}
-{% endhighlight %}
+                // Fetch all purchase orders from the database
+                IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
 
-N> For optimal performance, apply operations in the following sequence: **Searching → Filtering → Sorting → Aggregation → Paging → Grouping** in [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
-
-```cshtml
-public class CustomAdaptor : DataAdaptor
-{
-    public OrderData OrderService = new OrderData();
-    // Performs data Read operation
-    public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
-    {
-        IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        int TotalRecordsCount = DataSource.Cast<Order>().Count();
-        DataResult DataObject = new DataResult();
-        // Handling both Grouping and Aggregation in CustomAdaptor.
-        if (DataManagerRequest.Aggregates != null || DataManagerRequest.Group != null) // Aggregation
-        {
-            if (DataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = DataSource.ToList();
-                // Grouping
-                foreach (var group in DataManagerRequest.Group)
+                // Apply search operation if search criteria exists
+                if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
                 {
-                    ResultData = DataUtil.Group<Order>(ResultData, group, DataManagerRequest.Aggregates, 0, DataManagerRequest.GroupByFormatter);
-                    //Add custom logic here if needed and remove above method
+                    dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
                 }
-                DataObject.Result = ResultData;
-            }
-            else
-            {
-                DataObject.Result = DataSource;
-            }
-            DataObject.Count = TotalRecordsCount;
-            DataObject.Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
 
-            return DataManagerRequest.RequiresCounts ? DataObject : (object)DataSource;
+                // Apply filter operation if filter criteria exists
+                if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+                {
+                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                }
+
+                // Apply sort operation if sort criteria exists
+                if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+                {
+                    dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+                }
+
+                // Calculate total record count before paging for accurate pagination
+                int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
+
+                // Apply paging skip operation
+                if (dataManagerRequest.Skip != 0)
+                {
+                    dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+                }
+
+                // Apply paging take operation to retrieve only the requested page size
+                if (dataManagerRequest.Take != 0)
+                {
+                    dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+                }
+
+                // Return the result with total count for pagination metadata
+                return dataManagerRequest.RequiresCounts
+                    ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
+                    : (object)dataSource;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while retrieving data: {ex.Message}");
+            }
         }
-        return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
 ```
 
-### Handling CRUD operations
+The `CustomAdaptor` class has been successfully implemented with all data operations.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports Create, Read, Update, and Delete (CRUD) operations through the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration. Multiple edit modes are available, including **Inline**, **Dialog**, and **Batch** editing. For details, refer to the [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
+**Common methods in data operations**
 
-When using `CustomAdaptor`, CRUD operations are implemented by overriding the following methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor-1.html) class:
+* [ReadAsync(DataManagerRequest)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) - Retrieve and process records (search, filter, sort, page, group)
 
-* [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) / [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) – Handles record insertion.
-* [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Handles record updates.
-* [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Handles record deletion.
-* [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) / [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) – Handles batch operations (insert, update, delete).
+* [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) - Applies search criteria to the collection.
+* [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) - Filters data based on conditions.
+* [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) - Sorts data by one or more fields.
+* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records for paging.
+* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records for paging.
+* [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) – Calculates aggregate values such as Sum, Average, Min, and Max.
 
-Each method can be customized to execute SQL commands against the **PostgreSQL** Server database using **NpgsqlConnection** and **NpgsqlCommand**.
+---
 
-{% highlight razor %}
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel", "Search" })">
+### Step 4: Add Toolbar with CRUD and search options
+
+The toolbar provides buttons for adding, editing, deleting records, and searching the data.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
+
+```cshtml
+<SfGrid TValue="PurchaseOrder" 
+        AllowPaging="true" 
+        AllowSorting="true" 
+        AllowFiltering="true" 
+        Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-    </GridColumns>
+    
+    <!-- Grid columns configuration -->
 </SfGrid>
-{% endhighlight %}
+```
 
-> * Normal(Inline) editing is the default [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor DataGrid component.
-> * To enable CRUD operations, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for a column that contains unique values.
-> * If the database includes an auto-generated column, set the [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property for that column to disable editing during **add** or **update** operations.
+3. Add the toolbar items list in the `@code` block:
 
-**Insert Operation:**
+```csharp
+@code {
+    private List<string> ToolbarItems = new List<string> { "Add", "Edit", "Delete", "Update", "Cancel", "Search"};
 
-To implement record insertion, override the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) or [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) method in the `CustomAdaptor` class.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-/// <summary>
-/// Inserts a new data item into the data collection.
-/// </summary>
-/// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
-/// <param name="Value">The new record which is need to be inserted.</param>
-/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-/// <returns>Returns the newly inserted record details.</returns>
-public override async Task<object> InsertAsync(DataManager DataManager, object Value, string Key)
-{
-    // Add your insert logic here
-    // This method will be invoked when inserting new records into the Blazor DataGrid component.
-    await OrderService.AddOrderAsync(Value as Order);
-    return Value;
+    // CustomAdaptor class code...
 }
-{% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs" %}
-public async Task AddOrderAsync(Order Value)
-{
-    // Create query to insert the specific into the database by accessing its properties 
-    string Query = $"Insert into \"Orders\" (\"OrderID\", \"CustomerName\", \"Freight\", \"ShipCity\", \"EmployeeID\") values({Value.OrderID}, '{Value.CustomerName}', {Value.Freight}, '{Value.ShipCity}', {Value.EmployeeID})";
-    NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-    Connection.Open();
-    // Execute the Npgsql Command
-    NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-    // Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-}  
-{% endhighlight %}
-{% endtabs %}
+```
 
-**Update Operation:**
+**Toolbar Items Explanation:**
 
-To implement record updates, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method in the `CustomAdaptor` class.
+| Item | Function |
+|------|----------|
+| `Add` | Opens a form to add a new purchase order record. |
+| `Edit` | Enables editing of the selected record. |
+| `Delete` | Deletes the selected record from the database. |
+| `Update` | Saves changes made to the selected record. |
+| `Cancel` | Cancels the current edit or add operation. |
+| `Search` | Displays a search box to find records. |
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-/// <summary>
-/// Updates an existing data item in the data collection.
-/// </summary>
-/// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
-/// <param name="Value">The modified record which is need to be updated.</param>
-/// <param name="KeyField">The primary column name specifies the field name of the primary column.</param>
-/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-/// <returns>Returns the updated data item.</returns>
-public override async Task<object> UpdateAsync(DataManager DataManager, object Value, string KeyField, string Key)
-{
-    // Add your update logic here
-    // This method will be invoked when updating existing records in the Blazor DataGrid component.
-    await OrderService.UpdateOrderAsync(Value as Order);
-    return Value;
-}
-{% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs" %}
-public async Task UpdateOrderAsync(Order Value)
-{
-    //Create query to update the changes into the database by accessing its properties
-    string Query = $"Update \"Orders\" set \"CustomerName\"='{(Value as Order).CustomerName}', \"Freight\"={(Value as Order).Freight},\"EmployeeID\"={(Value as Order).EmployeeID},\"ShipCity\"='{(Value as Order).ShipCity}' where \"OrderID\"={(Value as Order).OrderID}";
-    NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-    Connection.Open();
-    //Execute the NpgSQL Command
-    NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-    //Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-}
-{% endhighlight %}
-{% endtabs %}
+The toolbar has been successfully added.
 
-**Delete Operation:**
+---
 
-To perform record deletion, override the [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method in the `CustomAdaptor` class.
+### Step 5: Implement Paging Feature
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-/// <summary>
-/// Removes a data item from the data collection.
-/// </summary>
-/// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
-/// <param name="Value">The Value specifies the primary column value which is needs to be removed from the grid record.</param>
-/// <param name="KeyField">The KeyField specifies the field name of the primary column.</param>
-/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-/// <returns>Returns the removed data item.</returns>
-public override async Task<object> RemoveAsync(DataManager DataManager, object Value, string KeyField, string Key)
-{
-    // Add your delete logic here
-    // This method will be invoked when deleting existing records from the Blazor DataGrid component.
-    await OrderService.RemoveOrderAsync(Value as int?);
-    return Value;
-}
-{% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs" %}
-public async Task RemoveOrderAsync(int? Key)
-{
-    //Create query to remove the specific from database by passing the primary key column value.
-    string Query = $"DELETE FROM \"Orders\" WHERE \"OrderID\" = {Key}";
-    NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
-    Connection.Open();
-    //Execute the NpgSQL Command
-    NpgsqlCommand Command = new NpgsqlCommand(Query, Connection);
-    //Execute this code to reflect the changes into the database
-    Command.ExecuteNonQuery();
-    Connection.Close();
-}
-{% endhighlight %}
-{% endtabs %}
+Paging divides large datasets into smaller pages to improve performance and usability.
 
-**Batch Operation:**
+**Instructions:**
 
-To implement batch updates such as insert, update, and delete in a single request, override the [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) or [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) method in the `CustomAdaptor` class.
+1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+2. The page size is configured with [<GridPageSettings>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+3. No additional code changes are required from the previous steps.
 
-{% highlight razor %}
-/// <summary>
-/// /// Batchupdate (Insert, Update, Delete) a collection of data items from the data collection.
-/// </summary>
-/// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
-/// <param name="Changed">The Changed specifies the collection of record updated in batch mode which needs to be updated from the grid record.</param>
-/// <param name="Added">The Added specifies the collection of record inserted in batch mode which needs to be inserted from the grid record.</param>
-/// <param name="Deleted">The Deleted specifies the collection of record deleted in batch mode which needs to be removed from the grid record.</param>
-/// <param name="KeyField">The KeyField specifies the field name of the primary column.</param>
-/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
-/// <param name="DropIndex">An optional parameter that can be used to perform row drag and drop operation.</param>
-/// <returns>Returns the removed data item.</returns>
-public override async Task<object> BatchUpdateAsync(DataManager DataManager, object Changed, object Added, object Deleted, string KeyField, string Key, int? DropIndex)
-{
-    if (Changed != null)
+```cshtml
+<SfGrid TValue="PurchaseOrder" 
+        AllowPaging="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+
+4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
+
+```csharp
+@code {
+    /// <summary>
+    /// CustomAdaptor class to handle grid data operations with PostgreSQL using Entity Framework
+    /// </summary>
+    public class CustomAdaptor : DataAdaptor
     {
-        foreach (var record in (IEnumerable<Order>)Changed)
+        public static PurchaseOrderRepository? _purchaseOrderService { get; set; }
+        public PurchaseOrderRepository? PurchaseOrderService
         {
-            await OrderService.UpdateOrderAsync(record as Order);
+            get => _purchaseOrderService;
+            set => _purchaseOrderService = value;
+        }
+
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+        {
+            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+
+            int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
+            
+            // Handling Paging
+            if (dataManagerRequest.Skip != 0)
+            {
+                dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            }
+            if (dataManagerRequest.Take != 0)
+            {
+                dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            }
+
+            return dataManagerRequest.RequiresCounts
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
+                : (object)dataSource;
         }
     }
-    if (Added != null)
-    {
-        foreach (var record in (IEnumerable<Order>)Added)
-        {
-            await OrderService.AddOrderAsync(record as Order);
-        }
-    }
-    if (Deleted != null)
-    {
-        foreach (var record in (IEnumerable<Order>)Deleted)
-        {
-            await OrderService.RemoveOrderAsync((record as Order).OrderID);
-        }
-    }
-    return Key;
 }
-{% endhighlight %}
+```
 
-![Blazor DataGrid component bound with PostgreSQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
+Fetches purchase orders by calling the `GetPurchaseOrdersDataAsync` method implemented in `PurchaseOrderRepository.cs`.
 
-> A complete sample implementation is available in the [GitHub](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20PostgreSQL%20database%20using%20CustomAdaptor) repository.
+**How Paging Works:**
+
+- The DataGrid displays 10 records per page (as set in `GridPageSettings`).
+- Navigation buttons allow the user to move between pages.
+- When a page is requested, the `ReadAsync` method receives skip and take values.
+- The `DataOperations.PerformSkip()` and `DataOperations.PerformTake()` methods handle pagination.
+- Only the requested page of records is transmitted from the server.
+
+Paging feature is now active with 10 records per page.
+
+---
+
+### Step 6: Implement Searching feature
+
+Searching allows the user to find purchase order records by entering keywords in the search box.
+
+**Instructions:**
+
+1. Ensure the toolbar includes the "Search" item.
+
+```cshtml
+<SfGrid TValue="PurchaseOrder"
+        AllowPaging="true"
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+
+2. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+
+```csharp
+@code {
+    private List<string> ToolbarItems = new List<string> { "Search"};
+    
+    /// <summary>
+    /// CustomAdaptor class to handle grid data operations with PostgreSQL using Entity Framework
+    /// </summary>
+    public class CustomAdaptor : DataAdaptor
+    {
+        public static PurchaseOrderRepository? _purchaseOrderService { get; set; }
+        public PurchaseOrderRepository? PurchaseOrderService { get => _purchaseOrderService; set => _purchaseOrderService = value; }
+
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+        {
+            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+
+            // Handling Search
+            if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+            {
+                dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+            }
+
+            int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
+            
+            // Handling Paging
+            if (dataManagerRequest.Skip != 0)
+            {
+                dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            }
+            if (dataManagerRequest.Take != 0)
+            {
+                dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            }
+
+            return dataManagerRequest.RequiresCounts
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
+                : (object)dataSource;
+        }
+    }
+}
+```
+
+**How Searching Works:**
+
+- When the user enters text in the search box and presses Enter, the DataGrid sends a search request to the CustomAdaptor.
+- The `ReadAsync` method receives the search criteria in `dataManagerRequest.Search`.
+- The `DataOperations.PerformSearching()` method filters the data based on the search term across all columns (PoNumber, ItemName, Status, VendorID, etc.).
+- Results are returned and displayed in the DataGrid.
+
+Searching feature is now active.
+
+---
+
+### Step 7: Implement Filtering feature
+
+Filtering allows the user to restrict purchase order data based on column values using a menu interface.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+
+```cshtml
+<SfGrid TValue="PurchaseOrder" 
+        AllowPaging="true"         
+        AllowFiltering="true"
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+
+3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
+
+```csharp
+@code {
+    private List<string> ToolbarItems = new List<string> { "Search"};
+    
+    /// <summary>
+    /// CustomAdaptor class to handle grid data operations with PostgreSQL using Entity Framework
+    /// </summary>
+    public class CustomAdaptor : DataAdaptor
+    {
+        public static PurchaseOrderRepository? _purchaseOrderService { get; set; }
+        public PurchaseOrderRepository? PurchaseOrderService { get => _purchaseOrderService; set => _purchaseOrderService = value; }
+
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+        {
+            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+
+            // Handling Search
+            if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+            {
+                dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+            }
+
+            // Handling Filtering
+            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+            {
+                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+            }
+
+            int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
+
+            // Handling Paging
+            if (dataManagerRequest.Skip != 0)
+            {
+                dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            }
+            if (dataManagerRequest.Take != 0)
+            {
+                dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            }
+
+            return dataManagerRequest.RequiresCounts
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
+                : (object)dataSource;
+        }
+    }
+}
+```
+
+**How Filtering Works:**
+
+- Click on the dropdown arrow in any column header to open the filter menu.
+- Select filtering criteria (equals, contains, greater than, less than, etc.).
+- Click the "Filter" button to apply the filter.
+- The `ReadAsync` method receives the filter criteria in `dataManagerRequest.Where`.
+- The `DataOperations.PerformFiltering()` method applies the filter conditions to the data.
+- Results are filtered accordingly and displayed in the DataGrid.
+- Common filter use cases: Filter by Status (Pending, Approved, Ordered, etc.), VendorID, ItemCategory, or OrderDate range.
+
+Filtering feature is now active.
+
+---
+
+### Step 8: Implement Sorting feature
+
+Sorting enables the user to arrange purchase order records in ascending or descending order based on column values.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+
+```cshtml
+<SfGrid TValue="PurchaseOrder" 
+        AllowPaging="true" 
+        AllowSorting="true" 
+        AllowFiltering="true" 
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+ 
+     <GridPageSettings PageSize="10"></GridPageSettings>
+     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    
+    <!-- Grid columns configuration -->
+</SfGrid>
+```
+
+3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
+
+```csharp
+@code {
+    public class CustomAdaptor : DataAdaptor
+    {
+        public static PurchaseOrderRepository? _purchaseOrderService { get; set; }
+        public PurchaseOrderRepository? PurchaseOrderService { get => _purchaseOrderService; set => _purchaseOrderService = value; }
+
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+        {
+            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+
+            // Handling Search
+            if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+            {
+                dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+            }
+
+            // Handling Filtering
+            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+            {
+                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+            }
+
+            // Handling Sorting
+            if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+            {
+                dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+            }
+
+            int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
+
+            // Handling Paging
+            if (dataManagerRequest.Skip != 0)
+            {
+                dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            }
+            if (dataManagerRequest.Take != 0)
+            {
+                dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            }
+
+            return dataManagerRequest.RequiresCounts
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
+                : (object)dataSource;
+        }
+    }
+}
+```
+
+**How Sorting Works:**
+
+- Click on the column header to sort in ascending order.
+- Click again to sort in descending order.
+- The `ReadAsync` method receives the sort criteria in `dataManagerRequest.Sorted`.
+- The `DataOperations.PerformSorting()` method sorts the data based on the specified column and direction.
+- Records are sorted accordingly and displayed in the DataGrid.
+- Sorting can be applied to all columns: PoNumber, ItemName, Status, OrderDate, TotalAmount, etc.
+
+Sorting feature is now active.
+
+---
+
+### Step 9: Implement Grouping feature
+
+Grouping organizes purchase order records into hierarchical groups based on column values, providing a structured view of the data.
+
+**Instructions:**
+
+1. Open the `Components/Pages/Home.razor` file.
+2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
+
+```cshtml
+<SfGrid TValue="PurchaseOrder" 
+        AllowPaging="true" 
+        AllowSorting="true" 
+        AllowFiltering="true" 
+        AllowGrouping="true"
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+     <GridPageSettings PageSize="10"></GridPageSettings>
+     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <!-- Grid columns  -->
+</SfGrid>
+```
+
+3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
+
+```csharp
+@code {
+    public class CustomAdaptor : DataAdaptor
+    {
+        public static PurchaseOrderRepository? _purchaseOrderService { get; set; }
+        public PurchaseOrderRepository? PurchaseOrderService { get => _purchaseOrderService; set => _purchaseOrderService = value; }
+
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+        {
+            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+
+            // Handling Search
+            if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+            {
+                dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+            }
+
+            // Handling Filtering
+            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+            {
+                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+            }
+            
+            // Handling Sorting
+            if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+            {
+                dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+            }
+
+            int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
+
+            // Handling Grouping
+            if (dataManagerRequest.Group != null)
+            {
+                IEnumerable ResultData = dataSource.ToList();
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    ResultData = DataUtil.Group<PurchaseOrder>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
+                var dataObject = new DataResult { Result = ResultData, Count = totalRecordsCount, Aggregates = aggregates };
+                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
+            }
+
+            // Handling Paging
+            if (dataManagerRequest.Skip != 0)
+            {
+                dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            }
+            if (dataManagerRequest.Take != 0)
+            {
+                dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            }
+
+            return dataManagerRequest.RequiresCounts
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates }
+                : (object)dataSource;
+        }
+    }
+}
+```
+
+**How Grouping Works:**
+
+- Columns can be grouped by dragging the column header into the group drop area.
+- Common grouping scenarios: Group by Status (to see Pending, Approved, Ordered, Received, Cancelled, Completed orders separately) or by ItemCategory.
+- Each group can be expanded or collapsed by clicking on the group header.
+- The `ReadAsync` method receives the grouping instructions through `dataManagerRequest.Group`.
+- The grouping operation is processed using **DataUtil.Group**, which organizes the records into hierarchical groups based on the selected column.
+- Grouping is performed after search, filter, and sort operations, ensuring the grouped data reflects all applied conditions.
+- The processed grouped result is then returned to the **Grid** and displayed in a structured, hierarchical format.
+
+Grouping feature is now active.
+
+---
+
+### Step 10: Perform CRUD operations
+
+CustomAdaptor methods enable users to create, read, update, and delete purchase order records directly from the DataGrid. Each operation calls corresponding data layer methods in **PurchaseOrderRepository.cs** to execute PostgreSQL commands.
+
+Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+
+```cshtml
+<SfGrid TValue="PurchaseOrder" 
+        AllowPaging="true" 
+        AllowSorting="true" 
+        AllowFiltering="true" 
+        AllowGrouping="true"
+        Toolbar="@ToolbarItems">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+     <GridPageSettings PageSize="10"></GridPageSettings>
+     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+    <!-- Grid columns  -->
+</SfGrid>
+```
+
+Add the toolbar items list in the `@code` block:
+
+```csharp
+@code {
+    private List<string> ToolbarItems = new List<string> { "Add", "Edit", "Delete", "Update", "Cancel", "Search"};
+
+    // CustomAdaptor class code...
+}
+```
+
+**Insert**
+
+Record insertion allows new purchase orders to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the PostgreSQL database.
+
+In **Home.razor**, implement the `InsertAsync` method within the `CustomAdaptor` class:
+
+```csharp
+public class CustomAdaptor : DataAdaptor
+{
+    public override async Task<object> InsertAsync(DataManager dataManager, object value, string? key)
+    {
+        if (value is PurchaseOrder purchaseOrder)
+        {
+            await _purchaseOrderService!.AddPurchaseOrderAsync(purchaseOrder);
+        }
+        return value;
+    }
+}
+```
+
+In **Data/PurchaseOrderRepository.cs**, the insert method is implemented as:
+
+```csharp
+public async Task AddPurchaseOrderAsync(PurchaseOrder value)
+{
+    try
+    {
+        if (value == null)
+            throw new ArgumentNullException(nameof(value), "Purchase Order cannot be null");
+        
+        // Auto-generate the PoNumber if not provided
+        if (string.IsNullOrEmpty(value.PoNumber))
+        {
+            value.PoNumber = await GeneratePoNumberAsync();
+        }
+        
+        if (value.CreatedAt == default)
+            value.CreatedAt = DateTime.Now;
+
+        if (value.UpdatedAt == default)
+            value.UpdatedAt = DateTime.Now;
+
+        // Set default status if not provided
+        if (string.IsNullOrEmpty(value.Status))
+            value.Status = "Pending";
+
+        _context.PurchaseOrders.Add(value);
+
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateException ex)
+    {
+        Console.WriteLine($"Database error while adding purchase order: {ex.Message}");
+        throw;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error adding purchase order: {ex.Message}");
+        throw;
+    }
+}
+
+/// <summary>
+/// Generates a unique purchase order number based on the current count and date.
+/// Format: PO-YYYY-XXXX (e.g., PO-2026-0001, PO-2026-0002)
+/// </summary>
+/// <returns>A unique purchase order number</returns>
+/// <exception cref="Exception">Thrown when database query fails</exception>
+private async Task<string> GeneratePoNumberAsync()
+{
+    try
+    {
+        // Get the current year
+        int currentYear = DateTime.Now.Year;
+        int count = await _context.PurchaseOrders
+            .Where(p => p.OrderDate.HasValue && p.OrderDate.Value.Year == currentYear)
+            .CountAsync();
+        int nextNumber = count + 1;
+
+        string poNumber = $"PO-{currentYear}-{nextNumber:D4}";
+
+        while (await _context.PurchaseOrders.AnyAsync(p => p.PoNumber == poNumber))
+        {
+            nextNumber++;
+            poNumber = $"PO-{currentYear}-{nextNumber:D4}";
+        }
+
+        return poNumber;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error generating PoNumber: {ex.Message}");
+        throw;
+    }
+}
+
+```
+
+**What happens behind the scenes:**
+
+1. The form data is collected and validated in the CustomAdaptor's `InsertAsync()` method.
+2. The `PurchaseOrderRepository.AddPurchaseOrderAsync()` method is called.
+3. The PoNumber is auto-generated if not provided using the `GeneratePoNumberAsync()` helper method.
+4. Default values are set for timestamps and status.
+5. The new record is added to the `_context.PurchaseOrders` collection.
+6. `SaveChangesAsync()` persists the record to the PostgreSQL database.
+7. The DataGrid automatically refreshes to display the new record.
+
+Now the new purchase order is persisted to the database and reflected in the grid.
+
+**Update**
+
+Record modification allows purchase order details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **PostgreSQL database** while ensuring data integrity is preserved.
+
+In **Home.razor**, implement the `UpdateAsync` method within the `CustomAdaptor` class:
+
+```csharp
+public class CustomAdaptor : DataAdaptor
+{
+    public override async Task<object> UpdateAsync(DataManager dataManager, object value, string? keyField, string key)
+    {
+        if (value is PurchaseOrder purchaseOrder)
+        {
+            await _purchaseOrderService!.UpdatePurchaseOrderAsync(purchaseOrder);
+        }
+        return value;
+    }
+}
+```
+
+In **Data/PurchaseOrderRepository.cs**, the update method is implemented as:
+
+```csharp
+public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
+{
+    try
+    {
+        if (value == null)
+            throw new ArgumentNullException(nameof(value), "Purchase Order cannot be null");
+
+        if (value.PurchaseOrderId <= 0)
+            throw new ArgumentException("Purchase Order ID must be valid", nameof(value.PurchaseOrderId));
+
+        var existingPurchaseOrder = await _context.PurchaseOrders.FindAsync(value.PurchaseOrderId);
+        if (existingPurchaseOrder == null)
+            throw new KeyNotFoundException($"Purchase Order with ID {value.PurchaseOrderId} not found");
+
+        existingPurchaseOrder.PoNumber = value.PoNumber;
+        existingPurchaseOrder.VendorID = value.VendorID;
+        existingPurchaseOrder.ItemName = value.ItemName;
+        existingPurchaseOrder.ItemCategory = value.ItemCategory;
+        existingPurchaseOrder.Quantity = value.Quantity;
+        existingPurchaseOrder.UnitPrice = value.UnitPrice;
+        existingPurchaseOrder.TotalAmount = value.TotalAmount;
+        existingPurchaseOrder.Status = value.Status;
+        existingPurchaseOrder.OrderedBy = value.OrderedBy;
+        existingPurchaseOrder.ApprovedBy = value.ApprovedBy;
+        existingPurchaseOrder.OrderDate = value.OrderDate;
+        existingPurchaseOrder.ExpectedDeliveryDate = value.ExpectedDeliveryDate;
+        existingPurchaseOrder.CreatedAt = value.CreatedAt;
+        existingPurchaseOrder.UpdatedAt = DateTime.Now;
+
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateConcurrencyException ex)
+    {
+        Console.WriteLine($"Concurrency error while updating purchase order: {ex.Message}");
+        throw;
+    }
+    catch (DbUpdateException ex)
+    {
+        Console.WriteLine($"Database error while updating purchase order: {ex.Message}");
+        throw;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error updating purchase order: {ex.Message}");
+        throw;
+    }
+}
+```
+
+**What happens behind the scenes:**
+
+1. The modified data is collected from the form.
+2. The CustomAdaptor's `UpdateAsync()` method is called.
+3. The `PurchaseOrderRepository.UpdatePurchaseOrderAsync()` method is called.
+4. The existing record is retrieved from the database by ID.
+5. All properties are updated with the new values.
+6. The `UpdatedAt` timestamp is automatically set to the current time.
+7. `SaveChangesAsync()` persists the changes to the PostgreSQL database.
+8. The DataGrid refreshes to display the updated record.
+
+Now modifications are synchronized to the database and reflected in the grid UI.
+
+**Delete**
+
+Record deletion allows purchase orders to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **PostgreSQL DELETE** operation, and updates both the database and the grid to reflect the removal.
+
+In **Home.razor**, implement the `RemoveAsync` method within the `CustomAdaptor` class:
+
+```csharp
+public class CustomAdaptor : DataAdaptor
+{
+    public override async Task<object> RemoveAsync(DataManager dataManager, object value, string? keyField, string key)
+    {
+        // This method will be invoked when deleting existing records from the Blazor DataGrid component.
+        int? recordId = null;
+        if (value is int intValue)
+        {
+            recordId = intValue;
+        }
+        else if (value is PurchaseOrder purchaseOrder)
+        {
+            recordId = purchaseOrder.PurchaseOrderId;
+        }
+        else if (int.TryParse(value?.ToString(), out int parsedValue))
+        {
+            recordId = parsedValue;
+        }
+
+        if (recordId.HasValue && recordId.Value > 0)
+        {
+            await _purchaseOrderService!.RemovePurchaseOrderAsync(recordId);
+        }
+        return value;
+    }
+}
+```
+
+In **Data/PurchaseOrderRepository.cs**, the delete method is implemented as:
+
+```csharp
+public async Task RemovePurchaseOrderAsync(int? key)
+{
+    try
+    {
+        if (key == null || key <= 0)
+            throw new ArgumentException("Purchase Order ID cannot be null or invalid", nameof(key));
+
+        var purchaseOrder = await _context.PurchaseOrders.FindAsync(key);
+        if (purchaseOrder == null)
+            throw new KeyNotFoundException($"Purchase Order with ID {key} not found");
+
+        _context.PurchaseOrders.Remove(purchaseOrder);
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateException ex)
+    {
+        Console.WriteLine($"Database error while deleting purchase order: {ex.Message}");
+        throw;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error deleting purchase order: {ex.Message}");
+        throw;
+    }
+}
+```
+
+**What happens behind the scenes:**
+
+1. The user selects a record and clicks "Delete".
+2. A confirmation dialog appears (built into the DataGrid).
+3. If confirmed, the CustomAdaptor's `RemoveAsync()` method is called.
+4. The `PurchaseOrderRepository.RemovePurchaseOrderAsync()` method is called.
+5. The record is located in the database by its ID.
+6. The record is removed from the `_context.PurchaseOrders` collection.
+7. `SaveChangesAsync()` executes the DELETE statement in PostgreSQL.
+8. The DataGrid refreshes to remove the deleted record from the UI.
+
+Now purchase orders are removed from the database and the grid UI reflects the changes immediately.
+
+**Batch update**
+
+Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring transactional consistency by applying all changes atomically to the PostgreSQL database.
+
+In **Home.razor**, implement the `BatchUpdateAsync` method within the `CustomAdaptor` class:
+
+```csharp
+public class CustomAdaptor : DataAdaptor
+{
+    public override async Task<object> BatchUpdateAsync(DataManager dataManager, object changed, object added, object deleted, string? keyField, string key, int? dropIndex)
+    {
+        // Process updated records
+        if (changed != null)
+        {
+            foreach (var record in (IEnumerable<PurchaseOrder>)changed)
+            {
+                await _purchaseOrderService!.UpdatePurchaseOrderAsync(record);
+            }
+        }
+
+        // Process newly added records
+        if (added != null)
+        {
+            foreach (var record in (IEnumerable<PurchaseOrder>)added)
+            {
+                await _purchaseOrderService!.AddPurchaseOrderAsync(record);
+            }
+        }
+
+        // Process deleted records
+        if (deleted != null)
+        {
+            foreach (var record in (IEnumerable<PurchaseOrder>)deleted)
+            {
+                await _purchaseOrderService!.RemovePurchaseOrderAsync(record.PurchaseOrderId);
+            }
+        }
+        return key;
+    }
+}
+```
+
+> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+
+---
+
+## Complete Home.razor Implementation
+
+Now that all the CustomAdaptor methods are implemented for CRUD operations, the complete Home.razor component includes GridColumns for all purchase order fields. The following is the complete Home.razor implementation that integrates all steps and features:
+
+```cshtml
+@page "/"
+@using System.Collections
+@using Grid_PostgreSQL.Data
+@using Syncfusion.Blazor.Grids
+@inject PurchaseOrderRepository PurchaseOrderService
+<PageTitle>Purchase Order Management System</PageTitle>
+
+<section class="bg-gray-50 dark:bg-gray-950">
+    <div class="mx-auto w-full py-12 sm:px-6 px-4">
+        <h1 class="mb-4 text-3xl font-bold">Purchase Order Management System</h1>
+        <p class="mb-3 text-gray-600">Manage and view all purchase orders from the PostgreSQL database with full CRUD, search, filter, sort, and grouping capabilities.</p>
+        
+        <!-- Syncfusion Blazor DataGrid Component -->
+        <SfGrid TValue="PurchaseOrder" 
+                AllowPaging="true" 
+                AllowSorting="true" 
+                AllowFiltering="true" 
+                AllowGrouping="true"
+                Toolbar="@ToolbarItems">
+            
+            <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+            
+            <GridPageSettings PageSize="10"></GridPageSettings>
+            <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+            <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+            
+            <GridColumns>
+                <GridColumn Field="@nameof(PurchaseOrder.PurchaseOrderId)" HeaderText="ID" Width="80" IsPrimaryKey="true"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.PoNumber)" HeaderText="PO Number" Width="120"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.VendorID)" HeaderText="Vendor ID" Width="110"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.ItemName)" HeaderText="Item Name" Width="150"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.ItemCategory)" HeaderText="Category" Width="120"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.Quantity)" HeaderText="Qty" Type="ColumnType.Decimal" Width="80"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.UnitPrice)" HeaderText="Unit Price" Type="ColumnType.Decimal" Format="C2" Width="110"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.TotalAmount)" HeaderText="Total Amount" Type="ColumnType.Decimal" Format="C2" Width="130"  AllowAdding="false" AllowEditing="false"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.Status)" HeaderText="Status" Width="110"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.OrderedBy)" HeaderText="Ordered By" Width="120"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.ApprovedBy)" HeaderText="Approved By" Width="120"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.OrderDate)" HeaderText="Order Date" Type="ColumnType.Date" Format="yMd" Width="120"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.ExpectedDeliveryDate)" HeaderText="Expected Delivery" Type="ColumnType.Date" Format="yMd" Width="140"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.CreatedAt)" HeaderText="Created At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.UpdatedAt)" HeaderText="Updated At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
+            </GridColumns>
+            
+        </SfGrid>
+    </div>
+</section>
+
+@code {
+    private List<string> ToolbarItems = new List<string> { "Add", "Edit", "Delete", "Update", "Cancel", "Search" };
+    private CustomAdaptor? _customAdaptor;
+
+    protected override void OnInitialized()
+    {
+        _customAdaptor = new CustomAdaptor { PurchaseOrderService = PurchaseOrderService };
+    }
+
+    /// <summary>
+    /// CustomAdaptor class bridges DataGrid interactions with database operations.
+    /// This adaptor handles all data retrieval and manipulation for the DataGrid,
+    /// including Search, Filter, Sort, Group, Paging, and CRUD operations.
+    /// </summary>
+    public class CustomAdaptor : DataAdaptor
+    {
+        public static PurchaseOrderRepository? _purchaseOrderService { get; set; }
+
+        public PurchaseOrderRepository? PurchaseOrderService
+        {
+            get => _purchaseOrderService;
+            set => _purchaseOrderService = value;
+        }
+
+        /// <summary>
+        /// ReadAsync retrieves records from the database and applies data operations.
+        /// This method executes when the grid initializes and when filtering, searching, sorting, or paging occurs.
+        /// </summary>
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+        {
+            try
+            {
+                IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+
+                // Apply search operation if search criteria exists
+                if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+                {
+                    dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+                }
+
+                // Apply filter operation if filter criteria exists
+                if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+                {
+                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                }
+
+                // Apply sort operation if sort criteria exists
+                if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+                {
+                    dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+                }
+
+                int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
+
+                // Apply grouping if group criteria exists
+                if (dataManagerRequest.Group != null && dataManagerRequest.Group.Count > 0)
+                {
+                    IEnumerable ResultData = dataSource.ToList();
+                    foreach (var group in dataManagerRequest.Group)
+                    {
+                        ResultData = DataUtil.Group<PurchaseOrder>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    }
+                    return dataManagerRequest.RequiresCounts
+                        ? new DataResult { Result = ResultData, Count = totalRecordsCount }
+                        : (object)ResultData;
+                }
+
+                // Apply paging skip operation
+                if (dataManagerRequest.Skip != 0)
+                {
+                    dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+                }
+
+                // Apply paging take operation
+                if (dataManagerRequest.Take != 0)
+                {
+                    dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+                }
+
+                return dataManagerRequest.RequiresCounts
+                    ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
+                    : (object)dataSource;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while retrieving data: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// InsertAsync creates a new purchase order record in the database.
+        /// </summary>
+        public override async Task<object> InsertAsync(DataManager dataManager, object value, string? key)
+        {
+            if (value is PurchaseOrder purchaseOrder)
+            {
+                await _purchaseOrderService!.AddPurchaseOrderAsync(purchaseOrder);
+            }
+            return value;
+        }
+
+        /// <summary>
+        /// UpdateAsync modifies an existing purchase order record in the database.
+        /// </summary>
+        public override async Task<object> UpdateAsync(DataManager dataManager, object value, string? keyField, string key)
+        {
+            if (value is PurchaseOrder purchaseOrder)
+            {
+                await _purchaseOrderService!.UpdatePurchaseOrderAsync(purchaseOrder);
+            }
+            return value;
+        }
+
+        /// <summary>
+        /// RemoveAsync deletes a purchase order record from the database.
+        /// </summary>
+        public override async Task<object> RemoveAsync(DataManager dataManager, object value, string? keyField, string key)
+        {
+            int? recordId = null;
+            if (value is int intValue)
+            {
+                recordId = intValue;
+            }
+            else if (value is PurchaseOrder purchaseOrder)
+            {
+                recordId = purchaseOrder.PurchaseOrderId;
+            }
+            else if (int.TryParse(value?.ToString(), out int parsedValue))
+            {
+                recordId = parsedValue;
+            }
+
+            if (recordId.HasValue && recordId.Value > 0)
+            {
+                await _purchaseOrderService!.RemovePurchaseOrderAsync(recordId);
+            }
+            return value;
+        }
+
+        /// <summary>
+        /// BatchUpdateAsync processes multiple insert, update, and delete operations atomically.
+        /// </summary>
+        public override async Task<object> BatchUpdateAsync(DataManager dataManager, object changed, object added, object deleted, string? keyField, string key, int? dropIndex)
+        {
+            // Process updated records
+            if (changed != null)
+            {
+                foreach (var record in (IEnumerable<PurchaseOrder>)changed)
+                {
+                    await _purchaseOrderService!.UpdatePurchaseOrderAsync(record);
+                }
+            }
+
+            // Process newly added records
+            if (added != null)
+            {
+                foreach (var record in (IEnumerable<PurchaseOrder>)added)
+                {
+                    await _purchaseOrderService!.AddPurchaseOrderAsync(record);
+                }
+            }
+
+            // Process deleted records
+            if (deleted != null)
+            {
+                foreach (var record in (IEnumerable<PurchaseOrder>)deleted)
+                {
+                    await _purchaseOrderService!.RemovePurchaseOrderAsync(record.PurchaseOrderId);
+                }
+            }
+            return key;
+        }
+    }
+}
+```
+
+**Key Features of the Complete Implementation:**
+
+1. **GridColumns**: Defines 15 columns for all purchase order fields with appropriate data types and formatting.
+2. **Toolbar**: Provides Add, Edit, Delete, Update, Cancel, and Search buttons for CRUD operations.
+3. **Search**: Users can search across all columns using the search box.
+4. **Filter**: Click column headers to apply menu-based filters (Status, Category, VendorID, etc.).
+5. **Sort**: Click column headers to sort ascending or descending.
+6. **Grouping**: Drag column headers to the group area to organize data by Status or Category.
+7. **Paging**: Data is displayed in pages of 10 records each.
+8. **CRUD Operations**: Add, Edit, Update, and Delete records with automatic timestamps and PoNumber generation.
+9. **Batch Editing**: Multiple changes can be made and saved atomically.
+10. **Error Handling**: Comprehensive exception handling with meaningful error messages.
+
+---
+
+## Running the Application
+
+**Step 1: Ensure PostgreSQL Database is Ready**
+
+1. Verify that PostgreSQL is running on your system.
+2. Confirm that the `PurchaseOrderDB` database exists with the `PurchaseOrder` table (created in Step 1).
+3. Verify the connection string in `appsettings.json` matches your PostgreSQL configuration.
+
+**Step 2: Build the Application**
+
+1. Open the terminal or Package Manager Console in Visual Studio.
+2. Navigate to the project directory:
+
+```powershell
+cd "path/to/Grid_PostgreSQL"
+```
+
+3. Run the following command to restore packages and build:
+
+```powershell
+dotnet build
+```
+
+**Step 3: Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Step 1: Ensure PostgreSQL Database is Ready**
+
+1. Verify that PostgreSQL is running on your system.
+2. Confirm that the `PurchaseOrderDB` database exists with the `PurchaseOrder` table (created in Step 1).
+3. Verify the connection string in `appsettings.json` matches your PostgreSQL configuration.
+
+**Step 2: Build the Application**
+
+1. Open the terminal or Package Manager Console in Visual Studio.
+2. Navigate to the project directory:
+
+```powershell
+cd "path/to/Grid_PostgreSQL"
+```
+
+3. Run the following command to restore packages and build:
+
+```powershell
+dotnet build
+```
+
+**Step 3: Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Step 4: Access the Application**
+
+1. Open a web browser.
+2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
+3. The Purchase Order Management System is now running and ready to use.
+
+### Available Features
+
+- **View Data**: All purchase orders from the PostgreSQL database are displayed in the DataGrid.
+- **Search**: Use the search box to find purchase orders by any field.
+- **Filter**: Click on column headers to apply filters.
+- **Sort**: Click on column headers to sort data in ascending or descending order.
+- **Pagination**: Navigate through records using page numbers.
+- **Add**: Click the "Add" button to create a new purchase order.
+- **Edit**: Click the "Edit" button to modify existing purchase orders.
+- **Delete**: Click the "Delete" button to remove purchase orders.
+
+---
+
+## Complete Sample Repository
+
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20PostgreSQL%20database%20using%20CustomAdaptor).
+
+---
+
+## Summary
+
+This guide demonstrates how to:
+
+1. Create a PostgreSQL database with purchase order records using pgAdmin 4. [🔗](#step-1-create-the-database-and-table-in-postgresql)
+2. Install necessary NuGet packages for Entity Framework Core with Npgsql and Syncfusion. [🔗](#step-2-install-required-nuget-packages)
+3. Create data models and DbContext for database communication with PostgreSQL-specific configuration. [🔗](#step-3-create-the-data-model)
+4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
+5. Implement the repository pattern for data access with helper methods. [🔗](#step-6-create-the-repository-class)
+6. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
+7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
+
+The application now provides a complete solution for managing purchase orders with a modern, user-friendly interface integrated with PostgreSQL.
+
