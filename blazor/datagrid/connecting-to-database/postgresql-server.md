@@ -717,9 +717,9 @@ For this project, the tailwind3 theme is used. A different theme can be selected
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting-started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-### Step 2: Update the Blazor DataGrid in the Home Component
+### Step 2: Update the Blazor DataGrid
 
-The Home component will display the purchase order data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
+The `Home.razor` component will display the purchase order data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
 **Instructions:**
 
@@ -1693,7 +1693,7 @@ public class CustomAdaptor : DataAdaptor
 
 ---
 
-## Complete Home.razor Implementation
+## Complete Code
 
 Now that all the CustomAdaptor methods are implemented for CRUD operations, the complete Home.razor component includes GridColumns for all purchase order fields. The following is the complete Home.razor implementation that integrates all steps and features:
 
