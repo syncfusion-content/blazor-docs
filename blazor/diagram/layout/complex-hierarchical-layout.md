@@ -14,7 +14,7 @@ The complex hierarchical tree layout arranges nodes in a tree-like structure in 
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+<SfDiagramComponent Height="600px" Nodes="@_nodes" Connectors="@_connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
     </Layout>
     <SnapSettings>
@@ -27,14 +27,14 @@ The complex hierarchical tree layout arranges nodes in a tree-like structure in 
 
 @code 
 {
-    int left = 40;
-    int top = 50;
+    private int left = 40;
+    private int top = 50;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -54,26 +54,26 @@ The complex hierarchical tree layout arranges nodes in a tree-like structure in 
     protected override void OnInitialized()
     {
         //Initializing node and connectors.
-        nodes = new DiagramObjectCollection<Node>()
+        _nodes = new DiagramObjectCollection<Node>()
         {
-            new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node1"} } },
-            new Node() { ID="node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node2"} } },
-            new Node() { ID="node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node3"} } },
-            new Node() { ID="node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node4"} } },
-            new Node() { ID="node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node5"} } },
+            new Node() { ID = "node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "node1" } } },
+            new Node() { ID = "node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "node2" } } },
+            new Node() { ID = "node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "node3" } } },
+            new Node() { ID = "node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "node4" } } },
+            new Node() { ID = "node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "node5" } } },
         };
-        connectors = new DiagramObjectCollection<Connector>()
+        _connectors = new DiagramObjectCollection<Connector>()
         {
-            new Connector() { ID="connector1", SourceID="node1", TargetID="node4" },
-            new Connector() { ID="connector2", SourceID="node2", TargetID="node4" },
-            new Connector() { ID="connector3", SourceID="node3", TargetID="node4" },
-            new Connector() { ID="connector4", SourceID="node4", TargetID="node5" },
+            new Connector() { ID = "connector1", SourceID = "node1", TargetID = "node4" },
+            new Connector() { ID = "connector2", SourceID = "node2", TargetID = "node4" },
+            new Connector() { ID = "connector3", SourceID = "node3", TargetID = "node4" },
+            new Connector() { ID = "connector4", SourceID = "node4", TargetID = "node5" },
         };
     }
 }
 
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ComplexHierarchicalTree)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/ComplexHierarchicalTree.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjheCZtRzgdyOSbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with multi-parent support](../images/blazor-diagram-complex.png)" %}
 
@@ -96,8 +96,8 @@ The following code example shows how to create a complex hierarchical tree with 
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //Creates node with some default values.
     private void OnNodeCreating(IDiagramObject obj)
@@ -127,26 +127,26 @@ The following code example shows how to create a complex hierarchical tree with 
         public string Id { get; set; }
         public List<string>ReportingPerson { get; set; }
     }
-    public object DataSource = new List<object>()
+    private object DataSource = new List<object>()
     {
-        new ComplexHierarchical() { Id= "node11" },
-        new ComplexHierarchical() { Id= "node12", ReportingPerson= new List<string>(){"node114" }},
-        new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
-        new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},     
-        new ComplexHierarchical() { Id= "node21"},
-        new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
-        new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
-        new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },    
-        new ComplexHierarchical() { Id= "node31"},
-        new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
+        new ComplexHierarchical() { Id = "node11" },
+        new ComplexHierarchical() { Id = "node12", ReportingPerson = new List<string>() { "node114" } },
+        new ComplexHierarchical() { Id = "node13", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node14", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node15", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node116", ReportingPerson = new List<string>() { "node22", "node12" } },     
+        new ComplexHierarchical() { Id = "node21" },
+        new ComplexHierarchical() { Id = "node22", ReportingPerson = new List<string>() { "node114" } },
+        new ComplexHierarchical() { Id = "node23", ReportingPerson = new List<string>() { "node22" } },
+        new ComplexHierarchical() { Id = "node24", ReportingPerson = new List<string>() { "node22" } },
+        new ComplexHierarchical() { Id = "node25", ReportingPerson = new List<string>() { "node22" } },    
+        new ComplexHierarchical() { Id = "node31" },
+        new ComplexHierarchical() { Id = "node114", ReportingPerson = new List<string>() { "node11", "node21", "node31" } }
     };
 }
 
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LineDistribution)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/LineDistribution.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIWNtHfKwJNZDP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with SamePoint disabled](../images/blazor-diagram-samepoint.png) %}
 
@@ -168,8 +168,8 @@ The following code illustrates how to arrange the nodes in a non linear manner.
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //Creates node with some default values.
     private void OnNodeCreating(IDiagramObject obj)
@@ -199,25 +199,25 @@ The following code illustrates how to arrange the nodes in a non linear manner.
         public string Id { get; set; }
         public List<string>ReportingPerson { get; set; }
     }
-    public object DataSource = new List<object>()
+    private object DataSource = new List<object>()
     {
-        new ComplexHierarchical() { Id= "node11" },
-        new ComplexHierarchical() { Id= "node12", ReportingPerson= new List<string>(){"node114" }},
-        new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
-        new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},       
-        new ComplexHierarchical() { Id= "node21"},
-        new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
-        new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
-        new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },      
-        new ComplexHierarchical() { Id= "node31"},
-        new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
+        new ComplexHierarchical() { Id = "node11" },
+        new ComplexHierarchical() { Id = "node12", ReportingPerson = new List<string>() { "node114" } },
+        new ComplexHierarchical() { Id = "node13", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node14", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node15", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node116", ReportingPerson = new List<string>() { "node22", "node12" } },       
+        new ComplexHierarchical() { Id = "node21" },
+        new ComplexHierarchical() { Id = "node22", ReportingPerson = new List<string>() { "node114" } },
+        new ComplexHierarchical() { Id = "node23", ReportingPerson = new List<string>() { "node22" } },
+        new ComplexHierarchical() { Id = "node24", ReportingPerson = new List<string>() { "node22" } },
+        new ComplexHierarchical() { Id = "node25", ReportingPerson = new List<string>() { "node22" } },      
+        new ComplexHierarchical() { Id = "node31" },
+        new ComplexHierarchical() { Id = "node114", ReportingPerson = new List<string>() { "node11", "node21", "node31" } }
     };
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementNonLinear)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/LinearArrangementNonLinear.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrSCXNxzKPCTjys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with nonlinear child arrangemen](../images/blazor-diagram-non-linear.png)" %}
 
@@ -234,8 +234,8 @@ The following code illustrates how to arrange the nodes in  linear manner by ena
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 50;
 
     //Creates node with some default values.
     private void OnNodeCreating(IDiagramObject obj)
@@ -265,24 +265,24 @@ The following code illustrates how to arrange the nodes in  linear manner by ena
         public string Id { get; set; }
         public List<string>ReportingPerson { get; set; }
     }
-    public object DataSource = new List<object>()
+    private object DataSource = new List<object>()
     {
-        new ComplexHierarchical() { Id= "node11" },
-        new ComplexHierarchical() { Id= "node12", ReportingPerson= new List<string>(){"node114" }},
-        new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
-        new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},   
-        new ComplexHierarchical() { Id= "node21"},
-        new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
-        new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
-        new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },       
-        new ComplexHierarchical() { Id= "node31"},
-        new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
+        new ComplexHierarchical() { Id = "node11" },
+        new ComplexHierarchical() { Id = "node12", ReportingPerson = new List<string>() { "node114" } },
+        new ComplexHierarchical() { Id = "node13", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node14", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node15", ReportingPerson = new List<string>() { "node12" } },
+        new ComplexHierarchical() { Id = "node116", ReportingPerson = new List<string>() { "node22", "node12" } },   
+        new ComplexHierarchical() { Id = "node21" },
+        new ComplexHierarchical() { Id = "node22", ReportingPerson = new List<string>() { "node114" } },
+        new ComplexHierarchical() { Id = "node23", ReportingPerson = new List<string>() { "node22" } },
+        new ComplexHierarchical() { Id = "node24", ReportingPerson = new List<string>() { "node22" } },
+        new ComplexHierarchical() { Id = "node25", ReportingPerson = new List<string>() { "node22" } },       
+        new ComplexHierarchical() { Id = "node31" },
+        new ComplexHierarchical() { Id = "node114", ReportingPerson = new List<string>() { "node11", "node21", "node31" } }
     };
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementLinear)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/LinearArrangementLinear.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBICjjHfqEiCuMb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with linear child arrangement](../images/blazor-diagram-lineararrangement.png)" %}
