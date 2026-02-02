@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component displays task data in a tabular format using columns. Columns organize task data efficiently and enable user interactions such as sorting, filtering, and formatting within the Gantt chart.
 
-Each column is defined using the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property, which maps values from the data source. This mapping ensures accurate data binding and enables formatting and customization for each column.
+Each column is defined using the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field) property, which maps values from the data source. This mapping ensures accurate data binding and enables formatting and customization for each column.
 
 > If the column `Field` is not specified in the data source, the column values will be empty.
 
@@ -234,7 +234,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for B
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVICZWpUlnjXERR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* The Gantt uses the `Internalization` library to format values based on the specified format and culture.
->* By default, the number and date values are formatted in **en-US** locale. You can localize the currency and date in different locale as explained [here](https://www.syncfusion.com/blazor-components/blazor-gantt-chart).
+>* By default, the number and date values are formatted in **en-US** locale. You can localize the currency and date to a different locale as explained [here](https://www.syncfusion.com/blazor-components/blazor-gantt-chart).
 >* The available format codes may vary depending on the data type of the column.
 >* You can also customize the formatting further by providing a custom function to the `GanttColumn.Format` property, instead of a format string.
 >* Make sure that the format string is valid and compatible with the data type of the column, to avoid unexpected results.
@@ -454,7 +454,7 @@ The Syncfusion<sup style="font-size:70%">®</sup> Gantt component for Blazor sup
 
 ### Resizing a column to fit its content using method
 
-You can resize a column in Gantt Chart to fit its content using the [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoFitColumnsAsync) method. This adjusts the column width based on the widest cell without wrapping. To apply this during initial rendering, call the method in the [DataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#databound) event.
+You can resize a column in Gantt Chart to fit its content using the [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoFitColumnsAsync_System_String___) method. This adjusts the column width based on the widest cell without wrapping. To apply this during initial rendering, call the method in the [DataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#databound) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -531,7 +531,7 @@ You can resize a column in Gantt Chart to fit its content using the [AutoFitColu
 
 ## Change tree column
 
-The Syncfusion<sup style="font-size:70%">®</sup> Blazor Gantt Chart component displays hierarchical task relationships using expand/collapse icons. These icons help users navigate parent and child tasks efficiently. To configure their position, set the `treeColumnIndex` property to the index of the column where the icons should appear. By default, the value is **0**, which places them in the first column.
+The Syncfusion<sup style="font-size:70%">®</sup> Blazor Gantt Chart component displays hierarchical task relationships using expand/collapse icons. These icons help users navigate parent and child tasks efficiently. To configure their position, set the [TreeColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TreeColumnIndex) property to the index of the column where the icons should appear. By default, the value is **0**, which places them in the first column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -625,12 +625,12 @@ The following example demonstrates hiding and showing the **Duration** column us
     private List<TaskData> TaskCollection { get; set; }
     private string[] ColumnList = {"Duration"};
 
-    public void show() {
-        this.Gantt.ShowColumnsAsync(ColumnList, "HeaderText");
+    public async Task show() {
+        await Gantt.ShowColumnsAsync(ColumnList, "HeaderText");
     }
 
-    public void hide() {
-        this.Gantt.HideColumnsAsync(ColumnList, "HeaderText");
+    public async Task hide() {
+        await Gantt.HideColumnsAsync(ColumnList, "HeaderText");
     }
 
     protected override void OnInitialized()
@@ -829,7 +829,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
 
 ## Responsive columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor Gantt Chart component provides a built-in feature to control column visibility based on media queries using the `HideAtMedia` property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor Gantt Chart component provides a built-in feature to control column visibility based on media queries using the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HideAtMedia) property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
 
 The following example demonstrates a Gantt chart where the **Job Name** column is set to `(min-width: 700px)`, meaning it will be hidden when the browser width is less than or equal to 700px. Similarly, the **Duration** column is set to `(max-width: 500px)`, so it will be hidden when the browser width exceeds 500px.
 

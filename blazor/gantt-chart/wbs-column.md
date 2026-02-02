@@ -19,7 +19,7 @@ To display the WBS column in the Gantt treegrid, set the [ShowWbsColumn](https:/
 
 To automatically generate and maintain WBS codes based on task hierarchy, enable the [AutoGenerateWbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoGenerateWbs) property. WBS codes are updated when tasks are added, deleted, moved, edited, indented, outdented, sorted, filtered, or searched.
 
-To render WBS and WBS Predecessor columns, bind the `WbsCode` and `WbsPredecessor` fields in `GanttTaskFields`.
+To render WBS and WBS Predecessor columns, bind the [WbsCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_WbsCode) and [WbsPredecessor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_WbsPredecessor) fields in `GanttTaskFields`.
 
 WBS codes follow a hierarchical structure: parent tasks use sequential numbers (e.g., 1, 2, 3), and child tasks use decimal notation (e.g., 1.1, 1.2, 1.1.1). Codes are recalculated automatically when the task hierarchy changes due to operations like indenting, outdenting, or reordering.
 
@@ -143,7 +143,7 @@ The example below demonstrates how WBS auto-update is conditionally triggered du
     private SfGantt<TaskData> GanttRef;
     private List<TaskData> TaskCollection { get; set; } = new();
     private bool EnableAutoUpdate { get; set; } = true;
-    private bool IsRowDragged{ get; set; }
+    private bool IsRowDragged { get; set; }
     protected override void OnInitialized()
     {
         TaskCollection = GetTaskCollection();
@@ -208,9 +208,9 @@ The WBS feature has a few limitations in the Gantt component:
 * WBS Code and WBS Predecessor fields cannot be mapped directly from the data source as they are generated dynamically by the component based on task hierarchy.
 
 ## See Also
-- [How to define columns manually in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column)
-- [How to customize column headers in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-headers)
-- [How to use the column menu in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-menu)
+- [How to define columns manually in Blazor Gantt Chart?](https://blazor.syncfusion.com/documentation/gantt-chart/columns)
+- [How to customize column headers in Blazor Gantt Chart?](https://blazor.syncfusion.com/documentation/gantt-chart/column-template)
+- [How to use the column menu in Blazor Gantt Chart?](https://blazor.syncfusion.com/documentation/gantt-chart/column-menu)
 - [How to reorder columns in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-reorder)
 - [How to resize columns in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-resizing)
-- [How to use column templates in Blazor Gantt Chart?](https://ej2.syncfusion.com/blazor/documentation/gantt-chart/columns/column-template)
+- [How to use column templates in Blazor Gantt Chart?](https://blazor.syncfusion.com/documentation/gantt-chart/column-template)

@@ -461,7 +461,7 @@ In the following code snippet, clicking an external button merges the segments o
 
 ## Segment event
 
-The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_SegmentChanging) event is triggered in the Blazor Gantt chart when split and merge actions occur, or when there are changes in the scheduling dates of tasks. Using this event, any custom actions can be performed or even the split or merge action can be canceled by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SegmentEventArgs-1.html#Syncfusion_Blazor_Gantt_SegmentEventArgs_1_Cancel) property of the even argument to `true`.
+The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_SegmentChanging) event is triggered in the Blazor Gantt chart when split and merge actions occur, or when there are changes in the scheduling dates of tasks. Using this event, any custom actions can be performed or even the split or merge action can be canceled by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SegmentEventArgs-1.html#Syncfusion_Blazor_Gantt_SegmentEventArgs_1_Cancel) property of the event argument to `true`.
 
 In the below code snippet, using the `SegmentChanging` event a customized message is displayed when doing split or merge actions. Moreover, segment deletion is prevented to the 1st index task.
 
@@ -469,7 +469,7 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-<span class="text-primary">@segmetEventMessage</span
+<span class="text-primary">@segmentEventMessage</span>
 <SfGantt TValue="TaskData" DataSource="@taskCollection" Height="450px" Width="800px" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
@@ -492,13 +492,13 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
     private DateTime projectEnd = new DateTime(2022, 05, 10);
     private List<TaskData> taskCollection { get; set; }
     private List<SegmentModel> segmentCollection { get; set; }
-    private string segmetEventMessage { get; set; }
+    private string segmentEventMessage { get; set; }
 
     private async Task SegmentEventHandler(SegmentEventArgs<SegmentModel> args)
     {
         if (args.UpdatedSegments != null && args.UpdatedSegments.Any())
         {
-            segmetEventMessage = "The segment details are updated!";
+            segmentEventMessage = "The segment details are updated!";
         }
         if (args.DeletedSegments != null && args.DeletedSegments.Any())
         {
@@ -506,14 +506,14 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
             {
                 if (segment.TaskID == 2)
                 {
-                    segmetEventMessage = "The deleted segment action is canceled!";
+                    segmentEventMessage = "The deleted segment action is canceled!";
                     args.Cancel = true;
                 }
             }
         }
         if (args.AddedSegments != null && args.AddedSegments.Any())
         {
-            segmetEventMessage = "New segment is added!";
+            segmentEventMessage = "New segment is added!";
         }
         await Task.CompletedTask;
     }

@@ -10,7 +10,7 @@ keywords: Blazor Gantt Chart, AI resource allocation, Syncfusion Blazor AI
 
 # Resource allocation with Blazor Gantt Chart and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatic resource reallocation in a Syncfusion Blazor Gantt Chart component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. This sample demonstrates how to efficiently manage resource overallocation by reallocating available resources to tasks.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package for automatic resource reallocation in a Syncfusion Blazor Gantt Chart component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. This sample demonstrates how to efficiently manage resource overallocation by reallocating available resources to tasks.
 
 ## Prerequisites
 
@@ -231,7 +231,7 @@ await builder.Build().RunAsync();
 
 ## Integrated Gantt Chart with AI
 
-The following code example show hot to integrate the Gantt Chart with AI for automatic resource allocation
+The following code example show how to integrate the Gantt Chart with AI for automatic resource allocation
 
 {% tabs %}
 {% highlight C# tabtitle="Home.razor" %}

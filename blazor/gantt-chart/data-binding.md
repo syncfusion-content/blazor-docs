@@ -22,7 +22,7 @@ N> When using `DataSource` as `IEnumerable<T>`, component type(TValue) will be i
 
 To bind list binding to the Gantt component, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using `SfDataManager` component.
 
-### Hierarchical data Binding
+### Hierarchical data binding
 
 Hierarchical data binding organizes complex parent-child relationships through nested object structures. Each parent task contains multiple child tasks through the `Child` field mapping, creating natural tree structures that represent project hierarchies.
 
@@ -70,8 +70,8 @@ Hierarchical data binding organizes complex parent-child relationships through n
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXryWDrzgHBfdbbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> * Indent/Outdent is not supported for hierarchy data.
-<br/> * ExpandCollapse state maintenance is not supported for hierarchy data.
-<br/> * Row drag and drop feature is not supported for hierarchy data.
+>* ExpandCollapse state maintenance is not supported for hierarchy data.
+>* Row drag and drop feature is not supported for hierarchy data.
 
 ### Self-referential data structure
 
@@ -731,8 +731,6 @@ app.Run();
 
 {% endtabs %}
 
-N>You can find the sample for load on demand [here](https://github.com/SyncfusionExamples/BlazorGantt-OData-Adaptor-sample).
-
 ### Load child on demand
 
 
@@ -742,7 +740,7 @@ The `HasChildMapping` property identifies whether a record contains child items,
 
 The [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) property, when disabled, renders all root nodes in a collapsed state initially. You can expand a node to fetch its children from the server.
 
-The [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) property, when enabled along with `LoadChildOnDemand` disabled, renders only the visible root nodes in a collapsed state.
+The [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) property, when enabled along with `LoadChildOnDemand` disabled, renders only the visible root nodes in a collapsed state.
 
 You can expand a root node to load its children, which are then cached locally. On subsequent expand/collapse actions, child records are loaded from the local cache instead of from the remote server.
 

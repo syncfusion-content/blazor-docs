@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Entity frameWork in Blazor Gantt Chart Component
+# Entity FrameWork in Blazor Gantt Chart Component
 
 You need to follow the below steps to consume data from the **Entity Framework** in the Gantt Chart component.
 
@@ -138,7 +138,7 @@ You need to follow the following steps when working with a server-side applicati
 
 ### Custom adaptor
 
-In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data, `CustomAdaptor` of DataManager property is used to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). You can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Check the following code snippet to assign the data source to Gantt.
+In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data, `CustomAdaptor` of DataManager property is used to call the server method. Learn  know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). You can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Check the following code snippet to assign the data source to Gantt.
 
 ```cshtml
 @using GanttEF.Models

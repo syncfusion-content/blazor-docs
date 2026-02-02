@@ -62,11 +62,11 @@ The following code example demonstrates editing in the Gantt component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBIWDWeiYcZSwrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Editing feature requires a primary key column for CRUD operations. While defining columns in Gantt using the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) property, it is mandatory that any one of the columns, must be a primary column. By default, the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) column will be the primary key column.  If `Id` column is not defined, we need to enable [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) for any one of the columns defined in the `GanttColumns` property.
+Editing feature requires a primary key column for CRUD operations. When defining columns in Gantt using the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) property,  at least one column must be marked as the primary key. By default, the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) column will be the primary key column.  If `Id` column is not defined, we need to enable [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) for any one of the columns defined in the `GanttColumns` property.
 
 ## Cell edit type and its params
 
-The [GanttColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditType) is used to define the edit type for any particular column. You can set the `GanttColumn.editType` based on data type of the column.
+The [GanttColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditType) is used to define the edit type for any particular column. You can set the `GanttColumn.EditType` based on data type of the column.
 
 Below is the combined content from the provided markdown sections in bullet points, as requested, ensuring clarity and conciseness while preserving the original information:
 
@@ -79,7 +79,7 @@ Below is the combined content from the provided markdown sections in bullet poin
   - **datetimepickeredit**: Uses the [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) component for editing date-time data.
 
 - **Customization**:
-  - You can customize model of the `GanttColumn.EditType` component through the `GanttColumn.EditorSettings`.
+  - You can customize model of the [GanttColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditType) component through the [GanttColumn.EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditorSettings).
 
 - **Edit type parameters**:
   - **numericedit**: Supports parameters like `Decimals: 2`, `Value: 5`.
@@ -158,7 +158,7 @@ Below is the combined content from the provided markdown sections in bullet poin
 
 ## Cell edit template
 
-The cell edit template feature in Syncfusion Blazor Gantt Chart component allows you to customize the editing interface of individual cells by embedding custom components or HTML elements. Instead of using the default editor such as a textbox, you can define a template that provides a tailored editing experience such as a dropdown, date picker, or checkbox based on your application's requirements. This is especially useful when you need more control over how data is entered or displayed during editing.
+The cell [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditTemplate) feature in Syncfusion Blazor Gantt Chart component allows you to customize the editing interface of individual cell by embedding custom components or HTML elements. Instead of using the default editor such as a textbox, you can define a template that provides a tailored editing experience such as a dropdown, date picker, or checkbox based on your application's requirements. This is especially useful when you need more control over how data is entered or displayed during editing.
 
 The following code example demonstrates how to define an edit template for a specific column, where the **TaskName** field is rendered using a dropdown.
 
@@ -250,7 +250,7 @@ In the following demo, editing is disabled for the **TaskName** column.
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Edit" })">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Edit" })">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttColumns>
@@ -263,8 +263,7 @@ In the following demo, editing is disabled for the **TaskName** column.
     <GanttEditSettings AllowEditing="true"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
+@code{    
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -323,7 +322,7 @@ Action |Description
 
 ### Task dependency editing
 
-You can tap the left/right connector point to initiate task [dependencies](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks#task-dependency-editing) edit mode and again tap another taskbar to establish the dependency line between two taskbars.
+You can tap the left/right connector point to initiate task dependencies edit mode and again tap another taskbar to establish the dependency line between two taskbars.
 
 Once the dependency edit mode is initiated, a dialog appears with the message **Choose another task** and a **Cancel** button. Tapping another taskbar will prompt a second dialog with the message **Select the connector position** and a tooltip near the second taskbar showing **Left** and **Right** buttons. Selecting one of these buttons establishes the dependency relationship between the two tasks. You can click the **Cancel** button at any time to exit the edit mode.
 
@@ -340,7 +339,7 @@ Removing dependency | Once you tap the taskbar with direct dependency, then conf
 
 ## Taskbar editing tooltip
 
-The taskbar editing tooltip can be customized using the [GanttTooltipSettings.ShowTooltipOnEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltipOnEditing) property. By default, this property is set to **true**. The following code example shows how to customize the taskbar editing tooltip in Gantt Chart.
+The taskbar editing tooltip can be integrated in Gantt chart by using the [GanttTooltipSettings.ShowTooltipOnEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltipOnEditing) property. By default, this property is set to **true**. The following code example shows how to integrate the `GanttTooltiSettings.ShowTooltipOnEditing` in a Gantt Chart:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -359,7 +358,7 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Sh
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = this.TaskCollection = GetTaskCollection();
+        this.TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {

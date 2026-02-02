@@ -10,7 +10,7 @@ documentation: ug
 
 ## Taskbar template
 
-You can design your taskbars to view the tasks in Gantt Chart Chart by using `GanttTemplates.TaskbarTemplate` property. It is also possible to customize the parent taskbars and milestones with custom templates by using `GanttTemplates.ParentTaskbarTemplate` and `GanttTemplates.MilestoneTemplate` properties.
+You can design your taskbars to view the tasks in Gantt Chart by using [GanttTemplates.TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. It is also possible to customize the parent taskbars and milestones with custom templates by using [GanttTemplates.ParentTaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_ParentTaskbarTemplate) and [GanttTemplates.MilestoneTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_MilestoneTemplate) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -237,7 +237,7 @@ N> The `TaskbarHeight` property accepts only pixel value.
 
 ### Taskbar background
 
-In the Gantt Chart component, the appearance can be customized based on the Hierarchy using the `GetHierarchicalData` method with the custom styles. So, the method `GetHierarchicalData` helps the user to do the customization and access the internal properties of Gantt. The following code example shows how to customize Gantt Chart Rows using Gantt properties as `level` and `hasChildRecords` from `GetHierarchicalData` method in [QueryChartRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryChartRowInfo) event of Gantt.
+In the Gantt Chart component, the appearance can be customized based on the Hierarchy using the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) method with the custom styles. So, the method `GetRowTaskModel` helps the user to do the customization and access the internal properties of Gantt. The following code example shows how to customize Gantt Chart Rows using Gantt properties as `Level` and `HasChildRecords` from `GetRowTaskModel` method in [QueryChartRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryChartRowInfo) event of Gantt.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -256,14 +256,17 @@ In the Gantt Chart component, the appearance can be customized based on the Hier
     }
     private void GanttChartRowInfo(QueryChartRowInfoEventArgs<TaskData> args)
     {
-        dynamic data = Gantt.GetHierarchicalData(args.Data.TaskId);
-        if (data.level == 0 && data.hasChildRecords == true)
+        IGanttTaskModel<TaskData> data = Gantt.GetRowTaskModel(args.Data);
+        if (data != null)
         {
-            args.Row.AddClass(new string[] { "customize-parent" });
-        }
-        else
-        {
-            args.Row.AddClass(new string[] { "customize-child" });
+            if (data.Level == 0 && data.HasChildRecords == true)
+            {
+                args.Row.AddClass(new string[] { "customize-parent" });
+            }
+            else
+            {
+                args.Row.AddClass(new string[] { "customize-child" });
+            }
         }
     }
     public class TaskData
@@ -380,6 +383,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
         <GanttEventMarker Day="@Event" Label="Project approval and kick-off"
                           CssClass="e-custom-event-marker"></GanttEventMarker>
     </GanttEventMarkers>
+    <GanttTooltipSettings TValue="TaskData" ShowTooltip="true"></GanttTooltipSettings>
 </SfGantt>
 
 @code{

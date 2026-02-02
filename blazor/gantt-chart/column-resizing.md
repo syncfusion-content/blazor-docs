@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows you to resize columns dynamically by dragging the edges of column headers. This feature enhances readability and layout flexibility, especially when working with large datasets. To enable this feature, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowResizing) property to **true** in the Gantt configuration. 
 
-Column width can be adjusted by dragging the right edge of the header, with changes applied immediately.   
+Column width can be adjusted by dragging the right edge of the header, changes are applied immediately. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -64,7 +64,7 @@ Column width can be adjusted by dragging the right edge of the header, with chan
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrojaByrMWhLdCJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* In RTL mode, you can click and drag the left edge of header cell to resize the column.
->* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Width) property of the column can be set initially to define the default width of the column. However, when column resizing is enabled, you can override the default width by manually resizing the columns.
+>* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) property of the column can be set initially to define the default width of the column. However, when column resizing is enabled, you can override the default width by manually resizing the columns.
 
 ## Restrict the resizing based on minimum and maximum width
 
