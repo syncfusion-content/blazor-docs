@@ -9,42 +9,19 @@ documentation: ug
 
 # Customize background and text color in Blazor TextBox component
 
-Customize the TextBox appearance (background color, text color, and borders) by overriding its default CSS classes. The following example uses the `e-input-group` container to apply a custom background and text color. It also toggles the focus state class to reflect focus styling.
+To customize the background and text color of the Blazor TextBox component, you can use custom CSS styles along with the Syncfusion Blazor TextBox component. Below are the steps to achieve this customization:
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<div class="@(TextClass)">
-    <div class="e-input-in-wrap">
-        <input class="e-input" type="text" Placeholder="Enter Date" Value="John" @onfocus="@Focus" @onblur="@Blur" />
-        <span class="e-input-group-icon e-input-date"></span>
-    </div>
-</div>
+<SfTextBox Placeholder='Name'></SfTextBox>
 
-@code {
-    public string FocusClass { get; set; } = " e-input-focus";
-    public string TextClass { get; set; } = "e-input-group";
-    public void Focus(FocusEventArgs args)
-    {
-        this.TextClass = this.TextClass + FocusClass;
-        StateHasChanged();
-    }
-
-    public void Blur(FocusEventArgs args)
-    {
-        if (this.TextClass.Contains(FocusClass))
-        {
-            this.TextClass = this.TextClass.Replace(FocusClass, "");
-        }
-        StateHasChanged();
-    }
-}
 <style>
-    .e-input-group {
-        background: yellow;
-        color: red;
+    .e-input-group input.e-input, .e-input-group.e-control-wrapper input.e-input, .e-float-input input, .e-float-input.e-control-wrapper input, .e-input-group textarea.e-input, .e-input-group.e-control-wrapper textarea.e-input, .e-float-input textarea, .e-float-input.e-control-wrapper textarea, .e-input-group .e-input[disabled], .e-input-group.e-control-wrapper .e-input[disabled], .e-input-group.e-disabled input.e-input, .e-input-group.e-control-wrapper.e-disabled input.e-input, .e-input-group.e-disabled textarea.e-input, .e-input-group.e-control-wrapper.e-disabled textarea.e-input {
+        background-color: orange;
+        color: white;
     }
 </style>
 ```
 
-![Blazor TextBox with Custom Background and Text Color](../images/blazor-textbox-custom-style.png)
+N> Use custom CSS classes if you wish to apply the styles conditionally to specific TextBox components.
