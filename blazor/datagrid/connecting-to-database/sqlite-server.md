@@ -372,7 +372,7 @@ A connection string contains the information needed to connect the application t
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=C:\\Users\\AmrishDharmaraj\\OneDrive - Syncfusion\\Desktop\\db\\asset.db"
+    "DefaultConnection": "Data Source=C:\\Desktop\\db\\asset.db"
   },
   "Logging": {
     "LogLevel": {
@@ -384,7 +384,7 @@ A connection string contains the information needed to connect the application t
 }
 ```
 
-**Note:** Ensure the path to `asset.db` is correct for your environment.
+**Note:** Ensure the path to `asset.db` is correct for the environment.
 
 The database connection string has been configured successfully.
 
@@ -1308,7 +1308,57 @@ public async Task AddAssetAsync(Asset asset)
     _context.Assets.Update(asset);
     await _context.SaveChangesAsync();
 }
+
+/// <summary>
+/// Generates a temporary asset ID with AST prefix for initial database insert
+/// This temporary ID will be replaced with the final ID after the record is saved
+/// </summary>
+/// <returns>Temporary asset ID</returns>
+private string GenerateTemporaryAssetId()
+{
+    string temporaryAssetId = $"{PublicAssetIdPrefix}-99999";
+    return temporaryAssetId;
+}
+
+/// <summary>
+/// Generates the final unique asset ID based on the actual database ID
+/// <param name="databaseId">The actual database primary key ID of the inserted asset</param>
+/// <returns>Final asset ID</returns>
+private string GenerateAssetId(int databaseId)
+{
+    string assetId = $"{PublicAssetIdPrefix}-{databaseId:D3}";
+    return assetId;
+}
+
+/// <summary>
+/// Generates a unique serial number for a new asset
+/// </summary>
+/// <param name="assetName">The name of the asset</param>
+/// <param name="purchaseDate">The purchase date of the asset</param>
+/// <param name="assetId">The generated asset ID</param>
+/// <returns>Generated serial number</returns>
+private string GenerateSerialNumber(string assetType, DateTime? purchaseDate, string assetId)
+{
+    string assetNamePrefix = string.IsNullOrWhiteSpace(assetType) 
+        ? "UNK" 
+        : assetType.Substring(0, Math.Min(3, assetType.Length)).ToUpper();
+
+    int purchaseYear = purchaseDate?.Year ?? DateTime.Now.Year;
+
+    string assetIdNumber = assetId.Contains("-") 
+        ? assetId.Split('-')[1] 
+        : assetId;
+
+    string serialNumber = $"SN-{assetNamePrefix}-{purchaseYear}-{assetIdNumber}";
+
+    return serialNumber;
+}
 ```
+
+**Helper methods explanation:**
+- `GenerateTemporaryAssetId()`: Creates a placeholder asset ID (AST-99999) for initial database insertion before it's replaced with the final ID.
+-  `GenerateAssetId()`: Generates the final unique asset ID in format AST-XXX by combining the "AST-" prefix with the zero-padded database primary key.
+- `GenerateSerialNumber()`: Creates a unique serial number using the asset type prefix, purchase year, and asset ID number.
 
 **What happens behind the scenes:**
 
