@@ -154,7 +154,7 @@ The following table describes the available Text annotation directions
 
 | Direction | Image |
 | -------- | -------- |
-| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Auto) | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Auto) | ![Auto TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
 | [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Left) | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
 | [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Right) | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png)|
 | [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Top) | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png)|
