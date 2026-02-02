@@ -69,7 +69,7 @@ GO
 
 -- Create table (MS SQL)
 CREATE TABLE dbo.Support_Ticket (
-    TicketID INT IDENTITY(1,1) PRIMARY KEY,
+    TicketID INT PRIMARY KEY,
     Title VARCHAR(255) NOT NULL,
     ParentTicketID INT NULL,
     Category VARCHAR(100) NULL,
@@ -77,9 +77,9 @@ CREATE TABLE dbo.Support_Ticket (
     Status VARCHAR(50) NULL,
     Assignee VARCHAR(100) NULL,
     CustomerName VARCHAR(200) NULL,
-    CreatedAt DATETIME NULL,
-    DueDate DATETIME NULL,
-    EstimatedHours DECIMAL(6,2) NULL,
+    CreatedAt DATETIME2 NULL,
+    DueDate DATETIME2 NULL,
+    EstimatedHours DECIMAL(18,2) NULL,
     Description NVARCHAR(MAX) NULL,
     HasChildren BIT NOT NULL DEFAULT(0)
 );
@@ -295,7 +295,7 @@ namespace TreeGrid_MSSQL.Data
                 // Column configurations
 
                 entity.Property(e => e.Title)
-                    .HasMaxLength(200)
+                    .HasMaxLength(255)
                     .IsRequired(false);
 
                 entity.Property(e => e.Description)
@@ -376,7 +376,7 @@ A connection string contains the information needed to connect the application t
 ```json
 {
     "ConnectionStrings": {
-    "DefaultConnection": "Data Source=SYNCLAPN-41983;Initial Catalog=NetworkSupportDB;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False"
+    "DefaultConnection": "Data Source=SYNCLAPN-41983;Initial Catalog=NetworkSupportDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
     },
   "Logging": {
     "LogLevel": {
@@ -1055,10 +1055,11 @@ Sorting enables the user to arrange records in ascending or descending order bas
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
  
      <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
-     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.Menu"></TreeGridFilterSettings>
+     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.Menu">
+     </TreeGridFilterSettings>
     
     <!-- TreeGrid columns configuration -->
-</TreeSfGrid>
+</SfTreeGrid>
 ```
 
 3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
@@ -1180,10 +1181,6 @@ public async Task AddTicketAsync(Tickets value)
     {
         // Handle logic to add a new ticket to the database
         if (value == null) throw new ArgumentNullException(nameof(value));
-
-
-        int generatedPublicTicketId = await GeneratePublicTicketIdAsync();
-        value.ParentTicketID = generatedPublicTicketId;
 
         // ensure CreatedDate if not set
         if (value.CreatedAt == default) value.CreatedAt = DateTime.UtcNow;
@@ -1409,7 +1406,7 @@ public class CustomAdaptor : DataAdaptor
         {
             foreach (var record in (IEnumerable<Tickets>)deleted)
             {
-                await _ticketService!.RemoveTicketAsync(record.TicketId);
+                await _ticketService!.RemoveTicketAsync(record.TicketID);
             }
         }
         return key;
@@ -1536,21 +1533,21 @@ Here is the complete and final `Home.razor` component with all features integrat
 
     public class CustomAdaptor : DataAdaptor
     {
-private TicketRepository? _ticketService;
+        private TicketRepository? _ticketService;
 
-public TicketRepository? TicketService
-{
-    get => _ticketService;
-    set => _ticketService = value;
-}
+        public TicketRepository? TicketService
+        {
+            get => _ticketService;
+            set => _ticketService = value;
+        }
 
         /// <summary>
         /// Returns the data collection after performing data operations based on request from <see cref="DataManagerRequest"/>
         /// </summary>
-        /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding paging, grouping, filtering, searching, sorting which is handled on the Blazor DataTreeGrid component side</param>
+        /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding paging, filtering, searching, sorting which is handled on the Blazor DataTreeGrid component side</param>
         /// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
         /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? Key = null)
         {
             IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
 
@@ -1890,7 +1887,7 @@ dotnet run
 
 ## Complete Sample Repository
 
-A complete, working sample implementation is available in the [GitHub repository](#).
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
 
 ---
 ## Summary
