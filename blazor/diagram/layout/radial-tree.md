@@ -22,8 +22,8 @@ Create a radial tree layout with a `DataSource`. The following code example illu
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" Width="100%" Height="800px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
-    <DataSourceSettings DataSource="RadialSource" ID="Id" ParentID="ReportingPerson"></DataSourceSettings>
+<SfDiagramComponent @ref="_diagram" Width="100%" Height="800px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
+    <DataSourceSettings DataSource="@_radialSource" ID="Id" ParentID="ReportingPerson"></DataSourceSettings>
 
     <Layout Type="LayoutType.RadialTree" HorizontalSpacing="30" VerticalSpacing="30"></Layout>
 
@@ -32,7 +32,8 @@ Create a radial tree layout with a `DataSource`. The following code example illu
 
 @code 
 {    
-    SfDiagramComponent diagram;
+    private SfDiagramComponent? _diagram;
+    
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -43,7 +44,7 @@ Create a radial tree layout with a `DataSource`. The following code example illu
         if (radialData.Id == "parent")
         {
             size = 20;
-            color="white";
+            color = "white";
         }
         else
         {
@@ -99,7 +100,7 @@ Create a radial tree layout with a `DataSource`. The following code example illu
         public string ReportingPerson { get; set; }
     }
 
-    public List<RadialTreeDetails> RadialSource = new List<RadialTreeDetails>()
+    private List<RadialTreeDetails> _radialSource = new List<RadialTreeDetails>()
     {
         new RadialTreeDetails()   { Id = "parent", Name = "Maria Anders", Designation = "Managing Director" },
         new RadialTreeDetails()   { Id = "1", Name = "Ana Trujillo", Designation = "Project Manager",
@@ -141,7 +142,7 @@ Create a radial tree layout with a `DataSource`. The following code example illu
     };
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/RadialTreeWithDataSource).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/RadialTreeWithDataSource.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhSMjjRTccRZEwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Radial Tree Diagram](../images/RadialTreeUG.png)" %}
 
@@ -154,20 +155,20 @@ Render a radial tree layout without using a `Datasource`. The following example 
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" Width="1200px" Height="800px" @bind-Nodes="@nodes" @bind-Connectors="@connectors" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
-    <Layout Type="LayoutType.RadialTree" HorizontalSpacing="40" VerticalSpacing="40" Root="@root">
+<SfDiagramComponent @ref="_diagram" Width="1200px" Height="800px" @bind-Nodes="@_nodes" @bind-Connectors="@_connectors" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
+    <Layout Type="LayoutType.RadialTree" HorizontalSpacing="40" VerticalSpacing="40" Root="@_root">
     </Layout>
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent diagram;
+    private SfDiagramComponent? _diagram;
     //Initialize the diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     //Initialize the diagram's connectors collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    string root = "node1";
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    private string _root = "node1";
 
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
@@ -183,7 +184,7 @@ Render a radial tree layout without using a `Datasource`. The following example 
     private void OnConnectorCreating(IDiagramObject connector)
     {
         (connector as Connector).Type = ConnectorSegmentType.Straight;
-        (connector as Connector).TargetDecorator=new DecoratorSettings
+        (connector as Connector).TargetDecorator = new DecoratorSettings
             {
             Shape = DecoratorShape.None,
         };
@@ -191,63 +192,63 @@ Render a radial tree layout without using a `Datasource`. The following example 
 
     protected override void OnInitialized()
     {
-        for(int i = 1;i < 18;i++)
+        for(int i = 1; i < 18; i++)
         {
             Node node1 = new Node()
             {
-                ID = "node"+i,
+                ID = "node" + i,
                 Width = 70,
                 Height = 70,
             };
-            nodes.Add(node1);
+            _nodes.Add(node1);
         }
 
         Connector connector1 = new Connector() { ID = "connector1", SourceID = "node1", TargetID = "node2", };
-        connectors.Add(connector1);
+        _connectors.Add(connector1);
 
         Connector connector2 = new Connector() { ID = "connector2", SourceID = "node1", TargetID = "node3", };
-        connectors.Add(connector2);
+        _connectors.Add(connector2);
 
         Connector connector3 = new Connector() { ID = "connector3", SourceID = "node1", TargetID = "node4", };
-        connectors.Add(connector3);
+        _connectors.Add(connector3);
 
         Connector connector4 = new Connector() { ID = "connector4", SourceID = "node2", TargetID = "node5", };
-        connectors.Add(connector4);
+        _connectors.Add(connector4);
 
         Connector connector5 = new Connector() { ID = "connector5", SourceID = "node3", TargetID = "node6", };
-        connectors.Add(connector5);
+        _connectors.Add(connector5);
 
         Connector connector6 = new Connector() { ID = "connector6", SourceID = "node4", TargetID = "node7", };
-        connectors.Add(connector6);
+        _connectors.Add(connector6);
 
         Connector connector7 = new Connector() { ID = "connector7", SourceID = "node1", TargetID = "node8", };
-        connectors.Add(connector7);
+        _connectors.Add(connector7);
 
         Connector connector8 = new Connector() { ID = "connector8", SourceID = "node8", TargetID = "node9", };
-        connectors.Add(connector8);
+        _connectors.Add(connector8);
         Connector connector9 = new Connector() { ID = "connector9", SourceID = "node2", TargetID = "node10", };
-        connectors.Add(connector9);
+        _connectors.Add(connector9);
         Connector connector10 = new Connector() { ID = "connector10", SourceID = "node3", TargetID = "node11", };
-        connectors.Add(connector10);
+        _connectors.Add(connector10);
         Connector connector11 = new Connector() { ID = "connector11", SourceID = "node4", TargetID = "node12", };
-        connectors.Add(connector11);
+        _connectors.Add(connector11);
         Connector connector12 = new Connector() { ID = "connector12", SourceID = "node8", TargetID = "node13", };
-        connectors.Add(connector12);
+        _connectors.Add(connector12);
         Connector connector13 = new Connector() { ID = "connector13", SourceID = "node2", TargetID = "node14", };
-        connectors.Add(connector13);
+        _connectors.Add(connector13);
         Connector connector14 = new Connector() { ID = "connector14", SourceID = "node3", TargetID = "node15", };
-        connectors.Add(connector14);
+        _connectors.Add(connector14);
         Connector connector15 = new Connector() { ID = "connector15", SourceID = "node4", TargetID = "node16", };
-        connectors.Add(connector15);
+        _connectors.Add(connector15);
         Connector connector16 = new Connector() { ID = "connector16", SourceID = "node8", TargetID = "node17", };
-        connectors.Add(connector16);
+        _connectors.Add(connector16);
 
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZryMjjRTQPLzBJz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/RadialTreeWithNodes).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/RadialTreeWithNodes.razor).
 
 ## See also
 
