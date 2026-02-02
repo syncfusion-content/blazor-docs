@@ -22,16 +22,16 @@ You can specify the any one of the above activity type using the [ActivityType](
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize the diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -48,11 +48,11 @@ You can specify the any one of the above activity type using the [ActivityType](
                 ActivityType = BpmnActivityType.Task 
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/BpmnActivity)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnActivity/BpmnActivitySample.razor)
 
  ![Send Task BPMN Shape](../images/Task.png) 
 
@@ -64,16 +64,16 @@ The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.B
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         {
             // Position of the node.
             OffsetX = 100,
@@ -91,11 +91,11 @@ The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.B
                 TaskType = BpmnTaskType.Send
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }   
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/BpmnActivityTask)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnActivity/BpmnActivityTaskSample.razor)
 
 
  ![Send Task BPMN Shape](../images/Send.png) 
@@ -109,7 +109,7 @@ The various types of BPMN tasks are tabulated as follows.
 | [Receive](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTaskType.html#Syncfusion_Blazor_Diagram_BpmnTaskType_Receive) | ![Receive Task BPMN Shape](../images/Receive.png) |A Receive task indicates the wait for the arrival of a certain message. The task is completed once the message has been received.|
 | [Instantiating Receive](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTaskType.html#Syncfusion_Blazor_Diagram_BpmnTaskType_InstantiatingReceive) | ![Instantiating Receive Task BPMN Shape](../images/InsService.png) |A receive task is used to instantiate a process that is the receive task replace the message start event.|
 | [Manual](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTaskType.html#Syncfusion_Blazor_Diagram_BpmnTaskType_Manual) |![Manual Task BPMN Shape](../images/Manual.png) |A Manual task is a task that is performed without the aid of any business process execution engine or any application.|
-| [Business Rule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTaskType.html#Syncfusion_Blazor_Diagram_BpmnTaskType_BusinessRule[) | ![Business Rule  Task BPMN Shape](../images/Bussiness.png) |A Business Rule task is used to synchronously execute one or more rules.|
+| [Business Rule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTaskType.html#Syncfusion_Blazor_Diagram_BpmnTaskType_BusinessRule) | ![Business Rule  Task BPMN Shape](../images/Bussiness.png) |A Business Rule task is used to synchronously execute one or more rules.|
 | [User](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTaskType.html#Syncfusion_Blazor_Diagram_BpmnTaskType_User) | ![User Task BPMN Shape](../images/User.png) |A User task represents that a human performer performs the task with the use of a software application.|
 | [Script](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTaskType.html#Syncfusion_Blazor_Diagram_BpmnTaskType_Script) | ![Script Task BPMN Shape](../images/Script.png) |A Script task is an automated activity when a process execution arrives at the Script task, the corresponding script is executed.|
 
@@ -121,16 +121,16 @@ A [CollapsedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -148,11 +148,11 @@ A [CollapsedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
                 ActivityType = BpmnActivityType.CollapsedSubProcess
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/BpmnActivityCollapsedSubProcess)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnActivity/BpmnActivityCollapsedSubProcessSample.razor)
 
 
  ![Collapsed Subprocess BPMN Shape](../images/Bpmn-CollapsedSub-Process-Loop-None.png)
@@ -167,16 +167,16 @@ You can define the `Loop` property in BPMN Activity, as shown in the following c
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {       
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -194,11 +194,11 @@ You can define the `Loop` property in BPMN Activity, as shown in the following c
                 Loop = BpmnLoopCharacteristic.Standard,
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Loop)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnActivity/LoopSample.razor)
 
 
  ![Standard Task BPMN Shape](../images/Bpmn-Task-Loop-Standard.png) 
@@ -220,16 +220,16 @@ The following table contains various types of BPMN loops.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -248,11 +248,11 @@ The following table contains various types of BPMN loops.
                 IsCompensation = true,
             }
         };
-        nodes.Add(node1);
+        _nodes.Add(node1);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Compensation)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnActivity/CompensationSample.razor)
 
 
  ![IsCompensationActivity Task BPMN Shape](../images/Bpmn-Task-Compensation.png)
@@ -268,16 +268,16 @@ N>* By default, the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -296,11 +296,11 @@ N>* By default, the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
                 IsCall = true,
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Call)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnActivity/CallSample.razor)
 
 
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-Task-Call.png)
@@ -316,16 +316,16 @@ N>* By default, the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -343,11 +343,11 @@ N>* By default, the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.B
                 IsAdhoc = true
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/Adhoc)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnActivity/AdhocSample.razor)
 
 
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-CollapsedSub-Process-AdHocpng.png)
@@ -360,16 +360,16 @@ SubProcessType represents the type of task that is being processed. The [SubProc
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -387,11 +387,11 @@ SubProcessType represents the type of task that is being processed. The [SubProc
                 SubProcessType = BpmnSubProcessType.Event,
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnActivity/SubProcessType)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnActivity/SubProcessTypeSample.razor)
 
  ![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png)
 
