@@ -36,11 +36,11 @@ To learn more about creating and customizing ports in the Blazor Diagram, watch 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -67,11 +67,11 @@ To learn more about creating and customizing ports in the Blazor Diagram, watch 
                }
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/CreatePorts)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/CreatePorts.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBSijXcVpWKTOyP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Creating a port on a node in Blazor Diagram](../images/blazor-diagram-create-port.png)" %}
 
@@ -86,14 +86,14 @@ The following code example demonstrates how to connect connectors to ports on no
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
+<SfDiagramComponent Height="600px" Nodes="@_nodes" Connectors="@_connectors">
 </SfDiagramComponent>
 
 @code
 {
     // Initialize node and connector collections
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -149,15 +149,15 @@ The following code example demonstrates how to connect connectors to ports on no
                 Style = new ShapeStyle() { StrokeColor = "#6495ED", StrokeWidth = 2 }
             };
 
-        nodes.Add(node1);
-        nodes.Add(node2);
-        connectors.Add(connector1);
+        _nodes.Add(node1);
+        _nodes.Add(node2);
+        _connectors.Add(connector1);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXheCtXwVJeRRDCO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/NodePortConnection).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/NodePortConnection/NodePortConnection.razor).
 
 ## How to Create a Connector Port
 
@@ -168,18 +168,18 @@ The following code example demonstrates how to create a connector port.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
+<SfDiagramComponent Height="600px" Connectors="@_connectors">
 </SfDiagramComponent>
 
 @code
 {
     //Define diagram's connector collection
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
         // A connector is created and stored in connectors collection.
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
 
         // Create connector
         Connector connector = new Connector()
@@ -198,13 +198,13 @@ The following code example demonstrates how to create a connector port.
                 }
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjreWtDQLzdKOmAc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/CreateConnectorPorts)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ConnectorPort/CreateConnectorPorts.razor)
 
 ### How to Connect a Connector to a Connector Port
 
@@ -275,7 +275,7 @@ The following code example demonstrates how to connect one connector to a port o
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrIitNQVpnbrMzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortConnection)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ConnectorPort/ConnectorPortConnection.razor)
 
 ## How to Add Ports at Runtime
 
@@ -290,16 +290,15 @@ If an `ID` is not set, then default `ID` is assigned automatically.
 
 
 <SfButton Content="AddPorts" OnClick="@AddPorts" />
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
         //A node is created and stored in nodes array.
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             //Position of the node.
@@ -310,10 +309,10 @@ If an `ID` is not set, then default `ID` is assigned automatically.
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void AddPorts()
+    private void AddPorts()
     {
         PointPort port = new PointPort()
         {
@@ -323,14 +322,14 @@ If an `ID` is not set, then default `ID` is assigned automatically.
             Visibility = PortVisibility.Visible
         };
         // Initialize port collection.
-        nodes[0].Ports.Add(port);
+        _nodes[0].Ports.Add(port);
     }
 }
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBSCjtcVJmUjDyF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/AddPort)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/AddPort.razor)
 
 Also, a port can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
@@ -338,7 +337,7 @@ The following code explains how to add ports to a node at runtime by using the `
 
 ```csharp
 //Method to add port at runtime
-public async void AddPorts()
+private async void AddPorts()
 {
     PointPort port = new PointPort()
     {
@@ -346,10 +345,10 @@ public async void AddPorts()
         Offset = new DiagramPoint() { X = 0, Y = 0.5 }, 
         Visibility = PortVisibility.Visible
     };
-    await ((nodes[0].Ports) as DiagramObjectCollection<PointPort>).AddAsync(port);
+    await ((_nodes[0].Ports) as DiagramObjectCollection<PointPort>).AddAsync(port);
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/AddPortsAsync())
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/AddPortsAsync.razor)
 
 ![Adding a port at runtime in Blazor Diagram](../images/blazor-diagram-add-port.png)
 
@@ -364,16 +363,15 @@ The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Po
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="AddPorts" OnClick="@AddPorts" />
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
         //A node is created and stored in nodes array.
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             //Position of the node.
@@ -388,10 +386,10 @@ The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Po
                 StrokeColor = "white" 
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-   public void AddPorts()
+   private void AddPorts()
     {
         PointPort port1 = new PointPort() 
         { 
@@ -421,14 +419,14 @@ The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Po
             Style = new ShapeStyle() { Fill = "gray" }
         };
         // Add multiple ports in the port collection.
-        nodes[0].Ports.Add(port1);
-        nodes[0].Ports.Add(port2);
-        nodes[0].Ports.Add(port3);
-        nodes[0].Ports.Add(port4);
+        _nodes[0].Ports.Add(port1);
+        _nodes[0].Ports.Add(port2);
+        _nodes[0].Ports.Add(port3);
+        _nodes[0].Ports.Add(port4);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/AddMultiplePorts)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/AddMultiplePorts.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLoCjDmhJcOloQL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding multiple ports to a node in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)" %}
 
@@ -441,16 +439,15 @@ A port can be removed from a node by using the native `RemoveAt` method. The fol
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="RemovePorts" OnClick="@RemovePorts" />
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -482,22 +479,22 @@ A port can be removed from a node by using the native `RemoveAt` method. The fol
                 }
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void RemovePorts()
+    private void RemovePorts()
     {
-        (nodes[0].Ports as DiagramObjectCollection<PointPort>).RemoveAt(0);
+        (_nodes[0].Ports as DiagramObjectCollection<PointPort>).RemoveAt(0);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrIsjtQhTvfKOEo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/RemovePorts)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/RemovePorts.razor)
 
 ## How to Update Port at Runtime
 
-Port properties can be changed at runtime.
+`Port` properties can be changed at runtime.
 
 The following code example explains how to change port properties at runtime.
 
@@ -507,12 +504,12 @@ The following code example explains how to change port properties at runtime.
 
 
 <SfButton Content="Update Port" OnClick="@UpdatePort" />
-<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" />
+<SfDiagramComponent @ref="_diagram" Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes;
 
 protected override void OnInitialized()
 {
@@ -529,7 +526,7 @@ protected override void OnInitialized()
         Visibility = PortVisibility.Visible
     });
     // A node is created and stored in nodes array.
-    nodes = new DiagramObjectCollection<Node>();
+    _nodes = new DiagramObjectCollection<Node>();
     Node node = new Node()
     {
         // Position of the node.
@@ -541,22 +538,22 @@ protected override void OnInitialized()
         Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         Ports = ports
     };
-    nodes.Add(node);
+    _nodes.Add(node);
 }
 
     public async void UpdatePort()
     {
         //Update ports at run time.
-        diagram.BeginUpdate();
-        nodes[0].Ports[0].Offset.X = 1;
-        nodes[0].Ports[0].Offset.Y = 1;
-        await diagram.EndUpdateAsync();
+        _diagram.BeginUpdate();
+        _nodes[0].Ports[0].Offset.X = 1;
+        _nodes[0].Ports[0].Offset.Y = 1;
+        await _diagram.EndUpdateAsync();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrSCtjQVTaiSkyT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/UpdatePorts)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/UpdatePorts.razor)
 
 ## How to Specify Connection Direction for Ports
 
@@ -567,16 +564,16 @@ The following code example shows how to set the connection direction for a port.
 @using Syncfusion.Blazor.Diagram
 
 
-<SfDiagramComponent Width="600px" Height="600px" Nodes="@nodes" Connectors="@connectors" >
+<SfDiagramComponent Width="600px" Height="600px" Nodes="@_nodes" Connectors="@_connectors" >
 </SfDiagramComponent>
 
 
 @code
 {
     //Defines Diagram's Nodes collection
-    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Defines Diagram's Connectors collection
-    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -599,7 +596,7 @@ The following code example shows how to set the connection direction for a port.
                     }
                 }
             };
-        nodes.Add(node1);
+        _nodes.Add(node1);
         Node node2 = new Node()
             {
                 ID = "node2",
@@ -622,7 +619,7 @@ The following code example shows how to set the connection direction for a port.
                 }
             };
         // Add node.
-        nodes.Add(node2);
+        _nodes.Add(node2);
         Connector Connector1 = new Connector()
             {
                 ID = "connector1",
@@ -634,11 +631,11 @@ The following code example shows how to set the connection direction for a port.
                 // Type of the connector segments.
                 Type = ConnectorSegmentType.Orthogonal
             };
-        connectors.Add(Connector1);
+        _connectors.Add(Connector1);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/PortDirection)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/PortDirection.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLoWXZcrTaRefIs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Port Connection Direction](../images/PortDirection.gif)" %}
 
@@ -653,13 +650,13 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
 
 
 <SfButton Content="GetInEdges" OnClick="@GetInEdges" />
-<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
+<SfDiagramComponent @ref="_diagram" Height="600px" Nodes="@_nodes" Connectors="@_connectors" />
 
 @code
 {
-    SfDiagramComponent diagram;
-     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes= new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors= new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -693,7 +690,7 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
             },
             
         };
-        nodes.Add(node1);
+        _nodes.Add(node1);
         Node node2 = new Node()
         {
             ID = "node2",
@@ -723,7 +720,7 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
                 }
             },
         };
-        nodes.Add(node2);
+        _nodes.Add(node2);
         Connector connector1 = new Connector()
         {
             ID = "connector1",
@@ -732,12 +729,12 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
             TargetPortID="port1",
             TargetID = "node2",
         };
-        connectors.Add(connector1);
+        _connectors.Add(connector1);
     }
     private void GetInEdges()
     {
         List<string> Inedges= new List<string>();
-        foreach (string inedge in diagram.Nodes[1].Ports[0].InEdges)
+        foreach (string inedge in _diagram.Nodes[1].Ports[0].InEdges)
         {
             Inedges.Add(inedge);
         }
@@ -746,7 +743,7 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyCDDmBSZCuJme?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/InedgesAndOutedges)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/InedgesAndOutedges.razor)
 
 
 
