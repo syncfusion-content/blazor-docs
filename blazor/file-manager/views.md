@@ -185,3 +185,5 @@ The details view settings like, column [Width](https://help.syncfusion.com/cr/bl
 
 ```
 
+
+
