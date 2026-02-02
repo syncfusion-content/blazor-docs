@@ -136,8 +136,8 @@ The following code explains how to add an annotation to a node at runtime by usi
 //Method to add annotation at runtime.
 public async void AddLabelAsync()
 {
-    ShapeAnnotation _annotation = new ShapeAnnotation { Content = "Annotation" };
-    await (_diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).AddAsync(_annotation);
+    ShapeAnnotation annotation = new ShapeAnnotation { Content = "Annotation" };
+    await (_diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).AddAsync(annotation);
 }
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AddAsync.razor)
@@ -200,8 +200,8 @@ Also, The `Remove` method can also be used to remove a specific annotation objec
     // Method to remove annotation at runtime using Remove method.
     public void RemoveLabel()
     {
-        ShapeAnnotation _annotation = (diagram.Nodes[0].Annotations[0]) as ShapeAnnotation;
-        (diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).Remove(_annotation);
+        ShapeAnnotation annotation = (_diagram.Nodes[0].Annotations[0]) as ShapeAnnotation;
+        (_diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).Remove(annotation);
     }
 ```
 
