@@ -218,7 +218,7 @@ namespace Grid_PostgreSQL.Data
 
         /// <summary>
         /// Gets or sets the current status of the purchase order.
-        /// Possible values: Pending, Approved, Ordered, Received, Cancelled, Completed.
+        /// Possible values: Pending, Approved, Ordered, Received, Canceled, Completed.
         /// </summary>
         public string? Status { get; set; }
 
@@ -1331,7 +1331,7 @@ Grouping organizes purchase order records into hierarchical groups based on colu
 **How Grouping Works:**
 
 - Columns can be grouped by dragging the column header into the group drop area.
-- Common grouping scenarios: Group by Status (to see Pending, Approved, Ordered, Received, Cancelled, Completed orders separately) or by ItemCategory.
+- Common grouping scenarios: Group by Status (to see Pending, Approved, Ordered, Received, Canceled, Completed orders separately) or by ItemCategory.
 - Each group can be expanded or collapsed by clicking on the group header.
 - The `ReadAsync` method receives the grouping instructions through `dataManagerRequest.Group`.
 - The grouping operation is processed using **DataUtil.Group**, which organizes the records into hierarchical groups based on the selected column.
