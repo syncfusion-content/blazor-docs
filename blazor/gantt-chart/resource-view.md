@@ -157,7 +157,7 @@ This configuration groups tasks by resources, displaying them as child nodes.
 
 ## Visualize resource overallocation
 
-Overallocation occurs when tasks exceed a resource’s daily capacity, calculated from [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) and [resource unit](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#resource-unit). Enable indicators with [ShowOverallocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowOverallocation) set to **true** (default: **false**), highlighting affected date ranges with square brackets.
+Overallocation occurs when tasks exceed a resource’s daily capacity, calculated from [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) and [Resource unit](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#resource-unit). Enable indicators with [ShowOverallocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowOverallocation) set to **true** (default: **false**), highlighting affected date ranges with square brackets.
 
 The following example toggles overallocation visibility:
 
@@ -608,7 +608,7 @@ namespace BlazorGanttChart.Data
 
 ## Taskbar drag and drop between resources
 
-Enable taskbar drag-and-drop between resources with [AllowTaskbarDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings.html#Syncfusion_Blazor_Gantt_GanttTaskbarSettings_AllowTaskbarDragAndDrop) set to **true**. This allows vertical taskbar movement for reassignment, triggered by the [RowDragStarting](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdragstarting) and [RowDropping](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdropped) events.
+Enable taskbar drag-and-drop between resources with [AllowTaskbarDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings.html#Syncfusion_Blazor_Gantt_GanttTaskbarSettings_AllowTaskbarDragAndDrop) set to **true**. This allows vertical taskbar movement for reassignment, triggered by the [RowDragStarting](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdragstarting) and [RowDropping](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdropping) events.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -787,7 +787,7 @@ In the Gantt Chart, you can enable dynamic resources assignments by setting the 
 
 ### Through dialog box
 
-In the resource tab of the [add/edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) within the Gantt chart, resources can be both added and removed.
+In the resource tab of the [add/edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#edit-tasks-via-dialog) within the Gantt chart, resources can be both added and removed.
 
 In the resource view, you can easily change task resources. If the dialog box's resource tab has multiple resources, you can add one resource, make individual changes, or remove assigned resources as needed, all done efficiently.
 
@@ -1097,4 +1097,4 @@ namespace BlazorGanttChart.Data
 * [Resource Unit](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#resource-unit)
 * [Configure task duration using Work](https://blazor.syncfusion.com/documentation/gantt-chart/work)
 
-* [Custom taskbar styling using template](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#binding-data-source-for-resource-collection-and-assigning-resource-to-tasks)
+* [Custom taskbar styling using template](https://blazor.syncfusion.com/documentation/gantt-chart/resources#custom-taskbar-styling-using-template)

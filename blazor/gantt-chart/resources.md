@@ -331,7 +331,7 @@ In the Gantt Chart, you can enable dynamic resource assignments by setting the [
 
 ### Through cell edit
 
-To edit resources directly through [cell editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#cell-editing), you can use the [GanttResourceColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) within the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) of the Blazor Gantt Chart. The following code snippet demonstrates the cell edit functionality in the Gantt chart.
+To edit resources directly through [cell editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#edit-tasks-via-cell-editing), you can use the [GanttResourceColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) within the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) of the Blazor Gantt Chart. The following code snippet demonstrates the cell edit functionality in the Gantt chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -475,7 +475,7 @@ namespace BlazorGanttChart.Data
 
 ### Through dialog box
 
-In the resource tab of the [Add/Edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) within the Gantt chart, resources can be conveniently added or removed using the checkboxes provided in the grid rows of the resource tab. Selecting a checkbox item in a grid row adds the corresponding resource to the task, while unchecking it removes the resource. Additionally, the resource tab allows editing the unit value for individual resources.
+In the resource tab of the [Add/Edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#edit-tasks-via-dialog) within the Gantt chart, resources can be conveniently added or removed using the checkboxes provided in the grid rows of the resource tab. Selecting a checkbox item in a grid row adds the corresponding resource to the task, while unchecking it removes the resource. Additionally, the resource tab allows editing the unit value for individual resources.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

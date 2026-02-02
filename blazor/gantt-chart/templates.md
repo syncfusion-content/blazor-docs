@@ -14,7 +14,7 @@ Blazor supports templated components that accept one or more UI segments as inpu
 The Gantt Chart provides several template options for customization, such as:
 
 - [Column template](https://blazor.syncfusion.com/documentation/gantt-chart/column-template) – Used to customize the content of individual cells.
-- [Header template](https://blazor.syncfusion.com/documentation/gantt-chart/columns#header-template) – Used to customize the content of header cells.
+- [Header template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderTemplate) – Used to customize the content of header cells.
 
 ## Template Context
 
