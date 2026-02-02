@@ -19,11 +19,11 @@ The following code explains how to draw a connector by using port constraints.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -61,11 +61,11 @@ The following code explains how to draw a connector by using port constraints.
                 }
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraints)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Interaction/DrawConstraints.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLICXZwLBSpDDeI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drawing a connector from a node port in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)" %}
 
@@ -77,18 +77,18 @@ The following code explains how to draw a connector by using port constraints.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
+<SfDiagramComponent Height="600px" Connectors="@_connectors">
 </SfDiagramComponent>
 
 @code
 {
     //Define diagram's connector collection
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
         // A connector is created and stored in connectors collection.
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
 
         // Create an orthogonal connector
         Connector connector = new Connector()
@@ -108,11 +108,11 @@ The following code explains how to draw a connector by using port constraints.
                 }
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/ConnectorPortDraw)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Interaction/ConnectorPortDraw.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyMZtwBrIugdQz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drawing a connector from a connector port in Blazor Diagram](../images/ConnectorPort/ConnectorPortDraw.gif)" %}
 
@@ -131,16 +131,16 @@ The following code explains how to draw the connector by using port constraints.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" DrawingObject="DrawingObject"/>
+<SfDiagramComponent @ref="_diagram" Height="600px" Nodes="@_nodes" DrawingObject="_drawingObject"/>
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-    public SfDiagramComponent diagram;
-    IDiagramObject DrawingObject;
+    private DiagramObjectCollection<Node> _nodes;
+    private SfDiagramComponent _diagram;
+    private IDiagramObject _drawingObject;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // Nodes are created and stored in the nodes array.
         Node node1 = new Node()
         {
@@ -168,7 +168,7 @@ The following code explains how to draw the connector by using port constraints.
                 }
             },
         };
-        nodes.Add(node1);
+        _nodes.Add(node1);
         Node node2 = new Node()
         {
             // Position of the node.
@@ -195,8 +195,8 @@ The following code explains how to draw the connector by using port constraints.
                 }
             },
         };
-        nodes.Add(node2);
-        DrawingObject = new Connector()
+        _nodes.Add(node2);
+        _drawingObject = new Connector()
         {
             ID = "connector1",
             Type = ConnectorSegmentType.Bezier,            
@@ -204,7 +204,7 @@ The following code explains how to draw the connector by using port constraints.
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraintsWithDrawingObject).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Interaction/DrawConstraintsWithDrawingObject.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBSMjZcVLxvdKSU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drawing a Bezier connector from a port in Blazor Diagram](../images/blazor-diagram-draw-port-connection-bezier.gif)" %}
 
