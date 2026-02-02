@@ -11,22 +11,22 @@ documentation: ug
 
 ## How to Create Orthogonal Segments
 
-[Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) segments create segments that are perpendicular to each other. To create an orthogonal connector, set the connector Type to **Orthogonal** to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
+[Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) segments create segments that are perpendicular to each other. To create an orthogonal connector, set the connector [Type]() to **Orthogonal** to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@_connectors">
 </SfDiagramComponent>
 
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
+        Connector connector = new Connector()
         {
             ID = "connector1",
             SourcePoint = new DiagramPoint()
@@ -36,7 +36,7 @@ documentation: ug
             },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-             //Specify the segments type as Orthogonal.
+            //Specify the segments type as Orthogonal.
             Type = ConnectorSegmentType.Orthogonal,
             TargetDecorator = new DecoratorSettings()
             {
@@ -49,11 +49,11 @@ documentation: ug
                 }
             }
         };
-        connectors.Add(Connector);
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Orthogonal)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/Orthogonal.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZroijZnUeUFxqCq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Orthogonal Segment in Blazor Diagram](../../images/blazor-diagram-connector-with-orthogonal.png)" %}
 
@@ -116,8 +116,6 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjryWZNdUofLzsmT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Orthogonal)
-
 N> Ensure the connector type and each segment type are both set to **Orthogonal**. There should be no contradiction between connector type and segment type.
 
 ### How to Edit Orthogonal Segments
@@ -128,20 +126,20 @@ N> Ensure the connector type and each segment type are both set to **Orthogonal*
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors">
+<SfDiagramComponent @ref="_diagram" Width="1000px" Height="500px" Connectors="@_connectors">
 </SfDiagramComponent>
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's node collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
         // Enable the segment editing.
+        Connector connector = new Connector()
         {
             ID = "Connector2",
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
@@ -149,12 +147,12 @@ N> Ensure the connector type and each segment type are both set to **Orthogonal*
             SourcePoint = new DiagramPoint { X = 400, Y = 100 },
             TargetPoint = new DiagramPoint { X = 500, Y = 200 }
         };
-        connectors.Add(Connector);
+        _connectors.Add(connector);
     }
 }
 ```
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/OrthogonalSegmentEditing)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/OrthogonalSegmentEditing.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLIijXxgIHDFceR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Orthogonal connector segment in Blazor Diagram](../../images/blazor-diagram-edit-orthogonal-segment.gif)" %}
 
@@ -162,9 +160,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The Orthogonal connector can have multiple segments between the source and target points. By default, segment thumbs are rendered as **circles**. They can be customized globally or per connector using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 
-To change the segment thumb shape for all Orthogonal connectors, configure the `SegmentThumbSettings` property of the SfDiagramComponent and set the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html#Syncfusion_Blazor_Diagram_SegmentThumbSettings_Shape) property to the desired shape.
+To change the segment thumb shape for all Orthogonal connectors, configure the  [ConnectorSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorSegmentThumb) property of the SfDiagramComponent and set the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html#Syncfusion_Blazor_Diagram_SegmentThumbSettings_Shape) property to the desired shape.
 
-To customize the segment thumb shape for a specific connector, first disable the [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) constraint. Then, configure the `SegmentThumbSettings` property of the Connector class, specifying the desired shape using the `Shape` property of the `SegmentThumbSettings` class.
+To customize the segment thumb shape for a specific connector, first disable the [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) constraint. Then, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SegmentThumbSettings) property of the Connector class, specifying the desired shape using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html#Syncfusion_Blazor_Diagram_SegmentThumbSettings_Shape) property of the `SegmentThumbSettings` class.
 
 The following predefined shapes are available for segment thumbs:
 
@@ -187,28 +185,31 @@ The following code example illustrates how to customize the orthogonal segment t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors">
+
+<SfDiagramComponent @ref="_diagram" Width="1000px" Height="500px" Connectors="@_connectors">
 </SfDiagramComponent>
+
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
+        Connector connector = new Connector()
         {
             ID = "Connector2",
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
             Type = ConnectorSegmentType.Orthogonal,
             SourcePoint = new DiagramPoint { X = 400, Y = 100 },
             TargetPoint = new DiagramPoint { X = 500, Y = 200 },
-            SegmentThumbSettings = new SegmentThumbSettings() {Shape = SegmentThumbShapes.IndentedArrow}
+            SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.IndentedArrow }
         };
-        connectors.Add(Connector);
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/OrthogonalThumbShape).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/OrthogonalThumbShape.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhSMNXRqeQwfDfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings.png)" %}
 
@@ -218,16 +219,19 @@ The following code example illustrates how to customize the orthogonal segment t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors" ConnectorSegmentThumb="@segmentThumbSettings">
+
+<SfDiagramComponent @ref="_diagram" Width="1000px" Height="500px" Connectors="@_connectors" ConnectorSegmentThumb="@_segmentThumbSettings">
 </SfDiagramComponent>
+
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    SegmentThumbSettings segmentThumbSettings = new SegmentThumbSettings(){Shape = SegmentThumbShapes.Fletch};
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    private SegmentThumbSettings _segmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Fletch };
+    
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
+        Connector connector = new Connector()
         {
             ID = "Connector2",
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape,
@@ -235,11 +239,11 @@ The following code example illustrates how to customize the orthogonal segment t
             SourcePoint = new DiagramPoint { X = 400, Y = 100 },
             TargetPoint = new DiagramPoint { X = 500, Y = 200 }
         };
-        connectors.Add(Connector);
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/OrthogonalThumbSetting)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/OrthogonalThumbSetting.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVoMjNdUevUbNDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings1.png)" %}
 
