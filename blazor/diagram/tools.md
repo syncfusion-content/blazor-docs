@@ -22,19 +22,19 @@ To draw a [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="addNode" OnClick="@AddNode" />
-<SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
+<SfDiagramComponent @ref="_diagram" Nodes="@_nodes" Height="600px" />
 
 @code
 {
-    //Reference to diagram.
-    SfDiagramComponent diagram;
+    // Reference to diagram.
+    private SfDiagramComponent _diagram;
 
-    //Defines diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    // Defines diagram's nodes collection.
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "group",
@@ -55,15 +55,15 @@ To draw a [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     private void AddNode()
     {
         //To draw an object once, activate draw once.
-        diagram.InteractionController = DiagramInteractions.DrawOnce;
+        _diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the shape.
-        diagram.DrawingObject = new Node()
+        _diagram.DrawingObject = new Node()
         {
             Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
@@ -71,13 +71,13 @@ To draw a [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/NodeDrawTool)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DrawingTools/NodeDrawTool.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrSWXtlTaXxLYBl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)" %}
 
 ## How to Draw a Connector Using the Drawing Tool
 
-To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), activate the drawing tool with [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) and set the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
+To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), activate the drawing tool with `InteractionController` and set the `DrawingObject` property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -85,19 +85,19 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 
 <SfButton Content="AddConnector" OnClick="@AddConnector" />
-<SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
+<SfDiagramComponent @ref="_diagram" Nodes="@_nodes" Height="600px" />
 
 @code
 {
-    //Reference to diagram.
-    SfDiagramComponent diagram;
+    // Reference to diagram.
+    private SfDiagramComponent _diagram;
 
-    //Defines diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    // Defines diagram's nodes collection.
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "group",
@@ -118,15 +118,15 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     private void AddConnector()
     {
         //To draw an object once, activate draw once.
-        diagram.InteractionController = DiagramInteractions.DrawOnce;
+        _diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the connectors.
-        diagram.DrawingObject = new Connector()
+        _diagram.DrawingObject = new Connector()
         {
             ID = "connector1",
             Type = ConnectorSegmentType.Straight,            
@@ -134,7 +134,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ConnectorDrawTool)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DrawingTools/ConnectorDrawTool.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIstXvJusulLEe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)" %}
 
@@ -148,19 +148,19 @@ Create a text Node by click on the diagram page. The following code illustrates 
 
 
 <SfButton Content="AddNode" OnClick="@AddNode" />
-<SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
+<SfDiagramComponent @ref="_diagram" Nodes="@_nodes" Height="600px" />
 
 @code
 {
-    //Reference to diagram.
-    SfDiagramComponent diagram;
+    // Reference to diagram.
+    private SfDiagramComponent _diagram;
 
-    //Define the diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    // Define the diagram's nodes collection.
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "group",
@@ -181,15 +181,15 @@ Create a text Node by click on the diagram page. The following code illustrates 
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     private void AddNode()
     {
         //To draw an object once, activate draw once.
-        diagram.InteractionController = DiagramInteractions.DrawOnce;
+        _diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the shape.
-        diagram.DrawingObject = new Node()
+        _diagram.DrawingObject = new Node()
         {
             Shape = new TextShape() { Content = "Text Content" },
             Style = new TextStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
@@ -197,7 +197,7 @@ Create a text Node by click on the diagram page. The following code illustrates 
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/TextNodeDrawTool)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DrawingTools/TextNodeDrawTool.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSWZDPJEVRtROs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)" %}
 
@@ -213,20 +213,20 @@ The following code illustrates how to draw a polygon shape.
 
 
 <SfButton Content="Polygon" OnClick="@Polygon" />
-<SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
+<SfDiagramComponent @ref="_diagram" Nodes="@_nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
-    //Reference to diagram.
-    SfDiagramComponent diagram;
-    //Defines diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    // Reference to diagram.
+    private SfDiagramComponent _diagram;
+    // Defines diagram's nodes collection.
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "group",
@@ -247,15 +247,15 @@ The following code illustrates how to draw a polygon shape.
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     private void Polygon()
     {
         //To draw an object once, activate draw once.
-        diagram.InteractionController = DiagramInteractions.DrawOnce;
+        _diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the polygon shape.
-        diagram.DrawingObject = new Node()
+        _diagram.DrawingObject = new Node()
         {
             ID = "polygon",
             Shape = new BasicShape()
@@ -269,7 +269,7 @@ The following code illustrates how to draw a polygon shape.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSWZtvJYqNgdAL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolygonShapeTool)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DrawingTools/PolygonShapeTool.razor)
 ## How to Draw a Polyline Using the Drawing Tool
 
 Create  [Polyline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Polyline) segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
@@ -282,18 +282,18 @@ The following code illustrates how to draw a polyline connector.
 
 
 <SfButton Content="Polyline" OnClick="@Polyline" />
-<SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
+<SfDiagramComponent @ref="_diagram" Nodes="@_nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 @code
 {
-    //Reference to the diagram.
-    SfDiagramComponent diagram;
-    //Define the diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    // Reference to the diagram.
+    private SfDiagramComponent _diagram;
+    // Define the diagram's nodes collection.
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "group",
@@ -314,14 +314,14 @@ The following code illustrates how to draw a polyline connector.
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void Polyline()
     {
         //Draw an object once and activate the draw once.
-        diagram.InteractionController = DiagramInteractions.DrawOnce;
+        _diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the polyline connector.
-        diagram.DrawingObject = new Connector()
+        _diagram.DrawingObject = new Connector()
         {
             ID = "connector1",
             Type = ConnectorSegmentType.Polyline,            
@@ -331,7 +331,7 @@ The following code illustrates how to draw a polyline connector.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVyCtXlTkUJtRHh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolylineDrawTool)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DrawingTools/PolylineDrawTool.razor)
 
 ## How to Select Tool
 
@@ -354,65 +354,66 @@ When more than one of these interaction controllers are applied, an interaction 
 |6th|[None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_None)|Disables all interaction controllers.|
 |7th|[Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_Default)|Allows users to select an individual as well as multiple nodes and connectors.|
 
-Set the desired [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) for the diagram.
+Set the desired `InteractionController` for the diagram.
 
 The following code illustrates how to enable a single interaction controller:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Connectors="@connectors" Height="600px" InteractionController="@tool" />
+<SfDiagramComponent Connectors="@_connectors" Height="600px" InteractionController="@_tool" />
 
 @code
 {
-    //Enable the single tool.
-    public DiagramInteractions tool = DiagramInteractions.DrawOnce;
-    //Defines diagram's connectors collection.
-    public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    // Enable the single tool.
+    private DiagramInteractions _tool = DiagramInteractions.DrawOnce;
+    // Defines diagram's connectors collection.
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DrawingTools/ToolSelection.razor).
 
 The following code illustrates how to enable multiple interaction controllers:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Connectors="@connectors" @ref="diagram" Height="600px" InteractionController="@tool" />
+<SfDiagramComponent Connectors="@_connectors" @ref="_diagram" Height="600px" InteractionController="@_tool" />
 
 @code
 {
-    //Reference to diagram.
-    SfDiagramComponent diagram;
-    //Enable the multiple tools.
-    public DiagramInteractions tool = DiagramInteractions.DrawOnce | DiagramInteractions.ZoomPan;
-    //Defines diagram's connectors collection.
-    public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    // Reference to diagram.
+    private SfDiagramComponent _diagram;
+    // Enable the multiple tools.
+    private DiagramInteractions _tool = DiagramInteractions.DrawOnce | DiagramInteractions.ZoomPan;
+    // Defines diagram's connectors collection.
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 }
 ```
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ToolSelection).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DrawingTools/MultipleTools.razor).
 
 ## How to Enable Freehand Drawing
 
-The diagram supports an innovative feature called Freehand Drawing, empowering users to effortlessly create freeform curves (splines) directly on the diagram page. With this remarkable functionality, users can unlock their imagination and showcase their creativity by effortlessly sketching anything from simple drawings to elaborate artistic creations. To utilize this feature, users can access the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property and select the [Freehand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Freehand) connector type, enabling them to express their ideas and concepts through fluid and natural hand-drawn lines.
+The diagram supports an innovative feature called Freehand Drawing, empowering users to effortlessly create freeform curves (splines) directly on the diagram page. With this remarkable functionality, users can unlock their imagination and showcase their creativity by effortlessly sketching anything from simple drawings to elaborate artistic creations. To utilize this feature, users can access the `DrawingObject` property and select the [Freehand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Freehand) connector type, enabling them to express their ideas and concepts through fluid and natural hand-drawn lines.
 
 The following code illustrates how to draw a freehand drawing.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 <input Type="button" value="Freehand" @onclick="Freehand" />
-<SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
+<SfDiagramComponent @ref="_diagram" Nodes="@_nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 @code
 {
-    //Reference to the diagram.
-    SfDiagramComponent diagram;
-    //Define the diagram's nodes collection.
-    public DiagramObjectCollection<Node> nodes;
+    // Reference to the diagram.
+    private SfDiagramComponent _diagram;
+    // Define the diagram's nodes collection.
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "group",
@@ -433,14 +434,14 @@ The following code illustrates how to draw a freehand drawing.
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void Freehand()
     {
         //Draw an object once and activate the draw once.
-        diagram.InteractionController = DiagramInteractions.DrawOnce;
+        _diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the freehand connector.
-        diagram.DrawingObject = new Connector()
+        _diagram.DrawingObject = new Connector()
         {
             ID = "connector1",
             Type = ConnectorSegmentType.Freehand,            
@@ -448,7 +449,7 @@ The following code illustrates how to draw a freehand drawing.
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/FreehandDrawTool).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DrawingTools/FreehandDrawTool.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVeitNFTOofPXrU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Freehand Drawing Tool in Blazor Diagram](images/blazor-diagram-freehand-drawing-tool.gif)" %}
 
