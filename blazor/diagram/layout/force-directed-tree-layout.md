@@ -44,17 +44,17 @@ Determines how strongly connected nodes pull toward each other.
 ```
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagramComponent" Height="690px" Width="100%" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors" Created="@OnCreated">
+<SfDiagramComponent @ref="_diagramComponent" Height="690px" Width="100%" @bind-Nodes="@_nodes" @bind-Connectors="@_connectors" Created="@OnCreated">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
-    <Layout Type="LayoutType.ForceDirectedTree" @bind-ForceDirectedTreeLayoutSettings="@layoutSettings"></Layout>
+    <Layout Type="LayoutType.ForceDirectedTree" @bind-ForceDirectedTreeLayoutSettings="@_layoutSettings"></Layout>
 </SfDiagramComponent>
 
 @code {
-    public SfDiagramComponent diagramComponent;
-    public DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
-    public DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagramComponent;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
-    public ForceDirectedTreeLayoutSettings layoutSettings = new ForceDirectedTreeLayoutSettings
+    private ForceDirectedTreeLayoutSettings _layoutSettings = new ForceDirectedTreeLayoutSettings
     {
         ConnectorLength = 120,
         MaximumIteration = 1500,
@@ -62,42 +62,42 @@ Determines how strongly connected nodes pull toward each other.
         AttractionStrength = 0.8
     };
 
-    public int DepartmentsUnderCeo { get; set; } = 4;
-    public int ManagersPerDepartment { get; set; } = 4;
-    public int TeamsPerManager { get; set; } = 6;
+    private int _departmentsUnderCeo = 4;
+    private int _managersPerDepartment = 4;
+    private int _teamsPerManager = 6;
     
     protected override void OnInitialized()
     {
         InitializeDiagram();
     }
 
-    public void InitializeDiagram()
+    private void InitializeDiagram()
     {
         List<OrganizationItem> organizationData = GetCompanyOrganizationData();
         PopulateDiagramFromOrganizationData(organizationData);
     }
 
-    public void PopulateDiagramFromOrganizationData(IEnumerable<OrganizationItem> organizationItems)
+    private void PopulateDiagramFromOrganizationData(IEnumerable<OrganizationItem> organizationItems)
     {
         Dictionary<string, OrganizationItem> itemsById = organizationItems.ToDictionary(item => item.Id);
         foreach (OrganizationItem item in organizationItems)
         {
             Node node = CreateOrganizationNode(item);
-            Nodes!.Add(node);
+            _nodes!.Add(node);
             if (!string.IsNullOrEmpty(item.ParentId) && itemsById.ContainsKey(item.ParentId))
             {
-                Connectors!.Add(CreateNodeConnector(item.ParentId, item.Id));
+                _connectors!.Add(CreateNodeConnector(item.ParentId, item.Id));
             }
         }
     }
 
-    public void OnCreated()
+    private void OnCreated()
     {
         FitOptions options = new FitOptions() { Mode = FitMode.Both, Region = DiagramRegion.Content };
-        diagramComponent.FitToPage(options);
+        _diagramComponent.FitToPage(options);
     }
 
-    public Node CreateOrganizationNode(OrganizationItem item)
+    private Node CreateOrganizationNode(OrganizationItem item)
     {
         ShapeStyle nodeStyle = new ShapeStyle { Fill = "orange", StrokeWidth = 2, StrokeColor = "#8c8c8c" };
         double nodeWidth = 35;
@@ -145,7 +145,7 @@ Determines how strongly connected nodes pull toward each other.
         };
     }
 
-    public Connector CreateNodeConnector(string sourceNodeId, string targetNodeId)
+    private Connector CreateNodeConnector(string sourceNodeId, string targetNodeId)
     {
         return new Connector
         {
@@ -172,7 +172,7 @@ Determines how strongly connected nodes pull toward each other.
         public OrganizationLevel Level { get; set; }
     }
 
-    public static List<OrganizationItem> BuildOrganizationData(int departmentCount, int managersPerDepartment, int teamsPerManager)
+    private static List<OrganizationItem> BuildOrganizationData(int departmentCount, int managersPerDepartment, int teamsPerManager)
     {
         List<OrganizationItem> organizationData = new List<OrganizationItem>
         {
@@ -206,7 +206,7 @@ Determines how strongly connected nodes pull toward each other.
     }
 
     // Realistic software company hierarchy: 1 CEO with 4 departments, each with managers and their respective teams
-    public static List<OrganizationItem> GetCompanyOrganizationData()
+    private static List<OrganizationItem> GetCompanyOrganizationData()
     {
         List<OrganizationItem> companyData = new List<OrganizationItem>();
         // CEO level
@@ -286,7 +286,7 @@ Determines how strongly connected nodes pull toward each other.
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeLayout).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/ForceDirectedTreeLayout.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Force-Directed layout example](../images/Force-DirectedTreeLayout.png)" %}
 
@@ -298,14 +298,14 @@ The Force-Directed Tree Layout can be rendered by binding a collection of object
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating">
-    <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"></DataSourceSettings>
-    <Layout Type="LayoutType.ForceDirectedTree" @bind-ForceDirectedTreeLayoutSettings="@forceDirectedSettings"></Layout>
+    <DataSourceSettings ID="Id" ParentID="Manager" DataSource="@_dataSource"></DataSourceSettings>
+    <Layout Type="LayoutType.ForceDirectedTree" @bind-ForceDirectedTreeLayoutSettings="@_forceDirectedSettings"></Layout>
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
-    public ForceDirectedTreeLayoutSettings forceDirectedSettings = new ForceDirectedTreeLayoutSettings()
+    private ForceDirectedTreeLayoutSettings _forceDirectedSettings = new ForceDirectedTreeLayoutSettings()
     {
         ConnectorLength = 100,
         AttractionStrength = 0.7,
@@ -313,7 +313,7 @@ The Force-Directed Tree Layout can be rendered by binding a collection of object
         MaximumIteration = 350
     };
 
-    public void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         node.Height = 40;
@@ -333,7 +333,7 @@ The Force-Directed Tree Layout can be rendered by binding a collection of object
         public string Manager { get; set; }
     }
 
-    public List<ForceDirectedDetails> DataSource = new List<ForceDirectedDetails>()
+    private List<ForceDirectedDetails> _dataSource = new List<ForceDirectedDetails>()
     {
         new ForceDirectedDetails() { Id = "parent", Role = "Board" },
         new ForceDirectedDetails() { Id = "1", Role = "General Manager", Manager = "parent" },
@@ -356,7 +356,7 @@ The Force-Directed Tree Layout can be rendered by binding a collection of object
     };
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ForceDirectedTreeDataSource).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/ForceDirectedTreeDataSource.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIWhiwURpVfzOI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Force Directed Tree Data Source Diagram](../images/ForceDirectedTreeDataSource.png)" %}
 
