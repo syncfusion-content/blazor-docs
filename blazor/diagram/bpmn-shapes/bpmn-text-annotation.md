@@ -36,7 +36,7 @@ documentation: ug
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -85,7 +85,7 @@ The following code example represents how to create a TextAnnotation and connect
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {

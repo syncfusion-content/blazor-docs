@@ -27,7 +27,7 @@ You can specify the any one of the above activity type using the [ActivityType](
 @code
 {
     // Initialize the diagram's nodes collection.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -69,7 +69,7 @@ The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.B
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -126,7 +126,7 @@ A [CollapsedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -172,7 +172,7 @@ You can define the `Loop` property in BPMN Activity, as shown in the following c
 @code
 {       
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -225,7 +225,7 @@ The following table contains various types of BPMN loops.
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -273,7 +273,7 @@ N>* By default, the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -321,7 +321,7 @@ N>* By default, the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -365,7 +365,7 @@ SubProcessType represents the type of task that is being processed. The [SubProc
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
