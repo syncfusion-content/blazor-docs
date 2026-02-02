@@ -107,9 +107,6 @@ Consult the component-specific documents below for details on how Syncfusion<sup
 </td>
 <td>
 <b>Keyboard Navigation</b>
-</td>
-<td>
-<b>Axe-core Accessibility Validation</b>
 </td>  
 <td>
 <b>Accessibility Example</b>
@@ -123,10 +120,7 @@ Consult the component-specific documents below for details on how Syncfusion<sup
 Accordion 
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -179,9 +173,6 @@ Accumulation Chart
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/accumulation-chart" target="_blank">Demo</a>
 </td>
 <td>
@@ -193,10 +184,7 @@ Accumulation Chart
 AppBar
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+NA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -228,10 +216,7 @@ AppBar
 AI AssistView
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -263,13 +248,10 @@ AI AssistView
 AutoComplete
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -298,10 +280,7 @@ AutoComplete
 Breadcrumb
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -333,10 +312,7 @@ Breadcrumb
 Bullet Chart
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -368,10 +344,7 @@ Bullet Chart
 Button
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -403,10 +376,7 @@ Button
 Button Group
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -438,13 +408,10 @@ Button Group
 Calendar
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -473,7 +440,7 @@ Calendar
 Carousel
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -494,9 +461,6 @@ Carousel
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/carousel" target="_blank">Demo</a>
 </td>
 <td>
@@ -508,10 +472,7 @@ Carousel
 Chart
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -543,10 +504,7 @@ Chart
 Chat UI
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -578,10 +536,7 @@ Chat UI
 CheckBox
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -610,13 +565,10 @@ CheckBox
 </tr>
 <tr>
 <td>
-Blazor Chip
+Chip
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -648,7 +600,7 @@ Blazor Chip
 Circular Gauge
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -669,9 +621,6 @@ Circular Gauge
 N/A
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/circulargauge" target="_blank">Demo</a>
 </td>
 <td>
@@ -683,10 +632,7 @@ N/A
 Color Picker
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -718,10 +664,7 @@ Color Picker
 ComboBox
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -753,10 +696,7 @@ ComboBox
 ContextMenu
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -788,7 +728,7 @@ ContextMenu
 Dashboard
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -809,9 +749,6 @@ Dashboard
 N/A
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/dashboardlayout" target="_blank">Demo</a>
 </td>
 <td>
@@ -823,7 +760,7 @@ N/A
 Grid
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -839,9 +776,6 @@ Grid
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -858,13 +792,10 @@ Grid
 DatePicker
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -893,13 +824,10 @@ DatePicker
 DateRangePicker
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -928,13 +856,10 @@ DateRangePicker
 Datetime Picker
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -963,7 +888,7 @@ Datetime Picker
 Diagram
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -982,9 +907,6 @@ Diagram
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/accessibility/diagram" target="_blank">Demo</a>
@@ -998,10 +920,7 @@ Diagram
 Dialog
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1054,9 +973,6 @@ DocumentEditor
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/document-editor" target="_blank">Demo</a>
 </td>
 <td>
@@ -1068,10 +984,7 @@ DocumentEditor
 Dropdown Menu
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1103,10 +1016,7 @@ Dropdown Menu
 DropDown List
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1138,13 +1048,10 @@ DropDown List
 Dropdown Tree
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1173,10 +1080,7 @@ Dropdown Tree
 FileManager
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1208,10 +1112,7 @@ FileManager
 File Upload
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1243,16 +1144,13 @@ File Upload
 Gantt Chart
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1277,7 +1175,7 @@ Gantt Chart
 HeatMap Chart
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1296,9 +1194,6 @@ N/A
 </td>
 <td>
 N/A
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/accessibility/heatmap" target="_blank">Demo</a>
@@ -1313,10 +1208,7 @@ N/A
 In-place editor
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1348,10 +1240,7 @@ In-place editor
 Image Editor
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1383,10 +1272,7 @@ Image Editor
 Input Mask
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1418,7 +1304,7 @@ Input Mask
 Kanban
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1431,9 +1317,6 @@ Kanban
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1453,7 +1336,7 @@ Kanban
 Linear Gauge
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1472,9 +1355,6 @@ N/A
 </td>
 <td>
 N/A
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/accessibility/lineargauge" target="_blank">Demo</a>
@@ -1488,10 +1368,7 @@ N/A
 ListBox
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1523,13 +1400,10 @@ ListBox
 ListView
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1558,7 +1432,7 @@ ListView
 Maps
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1568,9 +1442,6 @@ Maps
 </td>
 <td>
 N/A
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1593,10 +1464,7 @@ N/A
 Mention
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1628,10 +1496,7 @@ Mention
 Menu Bar
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1663,10 +1528,7 @@ Menu Bar
 MultiSelect Dropdown
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1698,10 +1560,7 @@ MultiSelect Dropdown
 Numeric TextBox
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1733,13 +1592,10 @@ Numeric TextBox
 Pager
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1789,9 +1645,6 @@ SfPdfViewer
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/sfpdfviewer" target="_blank">Demo</a>
 </td>
 <td>
@@ -1803,7 +1656,7 @@ SfPdfViewer
 Pivot Table
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1819,9 +1672,6 @@ Pivot Table
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1838,7 +1688,7 @@ Pivot Table
 ProgressBar
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1857,9 +1707,6 @@ ProgressBar
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/accessibility/progress-bar" target="_blank">Demo</a>
@@ -1873,10 +1720,7 @@ ProgressBar
 ProgressButton
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1908,10 +1752,7 @@ ProgressButton
 Query Builder
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1943,10 +1784,7 @@ Query Builder
 RadioButton
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1978,10 +1816,7 @@ RadioButton
 Range Selector
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2013,10 +1848,7 @@ Range Selector
 Range Slider
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2048,10 +1880,7 @@ Range Slider
 Rating
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2083,7 +1912,7 @@ Rating
 Rich Text Editor
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2104,9 +1933,6 @@ Rich Text Editor
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/rich-text-editor" target="_blank">Demo</a>
 </td>
 <td>
@@ -2118,10 +1944,7 @@ Rich Text Editor
 Scheduler
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2153,10 +1976,7 @@ Scheduler
 Sidebar
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2188,7 +2008,7 @@ Sidebar
 Signature
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2198,9 +2018,6 @@ Signature
 </td>
 <td>
 N/A
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2223,7 +2040,7 @@ N/A
 Skeleton
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2244,9 +2061,6 @@ Skeleton
 N/A
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/skeleton" target="_blank">Demo</a>
 </td>
 <td>
@@ -2258,10 +2072,7 @@ N/A
 Smith Chart
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2293,10 +2104,7 @@ Smith Chart
 Sparkline
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2328,10 +2136,7 @@ Sparkline
 SpeedDial
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2363,7 +2168,7 @@ SpeedDial
 SplitButton
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2373,9 +2178,6 @@ SplitButton
 </td>
 <td>
 N/A
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2398,10 +2200,7 @@ N/A
 Splitter
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2433,10 +2232,7 @@ Splitter
 Stepper
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2468,10 +2264,7 @@ Stepper
 Stock Chart
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2503,10 +2296,7 @@ Stock Chart
 Tabs
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2538,10 +2328,7 @@ Tabs
 TextBox
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2573,7 +2360,7 @@ TextBox
 Timeline
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2592,9 +2379,6 @@ N/A
 </td>
 <td>
 N/A
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/accessibility/timeline" target="_blank">Demo</a>
@@ -2608,10 +2392,7 @@ N/A
 TimePicker
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2643,7 +2424,7 @@ TimePicker
 Toast
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2662,9 +2443,6 @@ Toast
 </td>
 <td>
 N/A
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/accessibility/toast" target="_blank">Demo</a>
@@ -2678,7 +2456,7 @@ N/A
 Toggle Switch Button
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2688,9 +2466,6 @@ Toggle Switch Button
 </td>
 <td>
 N/A
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2713,10 +2488,7 @@ N/A
 Toolbar
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2748,10 +2520,7 @@ Toolbar
 Tooltip
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2783,16 +2552,13 @@ Tooltip
 TreeGrid
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2818,7 +2584,7 @@ TreeGrid
 TreeMap
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -2839,9 +2605,6 @@ TreeMap
 N/A
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
 <a href="https://blazor.syncfusion.com/accessibility/treemap" target="_blank">Demo</a>
 </td>
 <td>
@@ -2853,10 +2616,7 @@ N/A
 TreeView
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AAA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
