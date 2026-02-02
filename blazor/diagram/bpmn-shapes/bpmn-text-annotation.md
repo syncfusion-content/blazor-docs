@@ -31,16 +31,16 @@ documentation: ug
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -64,13 +64,13 @@ documentation: ug
                 },
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIsXNxgTgIKWVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation/BpmnTextAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnTextAnnotation/BpmnTextAnnotationSample.razor)
 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)
 
@@ -80,16 +80,16 @@ The following code example represents how to create a TextAnnotation and connect
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
         {
             // Position of the node.
@@ -106,7 +106,7 @@ The following code example represents how to create a TextAnnotation and connect
                 ActivityType = BpmnActivityType.Task 
             },
         };
-        nodes.Add(node1);
+        _nodes.Add(node1);
         Node node2 = new Node()
         {
             // Position of the node.
@@ -131,14 +131,14 @@ The following code example represents how to create a TextAnnotation and connect
                 },
             }
         };
-        nodes.Add(node2);
+        _nodes.Add(node2);
     }
 }
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrIWNXnKpTiBXyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation/TextAnnotationTarget)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnTextAnnotation/TextAnnotationTargetSample.razor)
 
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
 
@@ -154,7 +154,7 @@ The following table describes the available Text annotation directions
 
 | Direction | Image |
 | -------- | -------- |
-| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Auto) | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Auto) | ![Auto TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
 | [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Left) | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
 | [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Right) | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png)|
 | [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Top) | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png)|
