@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in Syncfusion Blazor Diagram Component | Syncfusion
+title: Node Events in Syncfusion Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Node Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
