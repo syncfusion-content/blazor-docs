@@ -190,7 +190,7 @@ You can programmatically or dynamically select single rows, multiple rows, or a 
 
 ### Single row selection
 
-Select a single row in the Gantt Chart component by calling the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Double_System_Nullable_System_Boolean__) method with the desired row index.
+Select a single row in the Gantt Chart component by calling the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SelectRowAsync_System_Int32_System_Boolean_) method with the desired row index.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -262,7 +262,7 @@ Select a single row in the Gantt Chart component by calling the [SelectRowAsync]
 
 ### Multiple rows selection
 
-Select multiple rows in the Gantt Chart component by using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method with an array of row indexes.
+Select multiple rows in the Gantt Chart component by using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SelectRowsAsync_System_Int32___) method with an array of row indexes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
