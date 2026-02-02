@@ -117,6 +117,38 @@ Consult the component-specific documents below for details on how Syncfusion<sup
 </tr>
 <tr>
 <td>
+3D Chart
+</td>
+<td>
+AAA
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+---
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/3d-chart/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
 Accordion 
 </td>
 <td>
@@ -1141,6 +1173,38 @@ AAA
 </tr>
 <tr>
 <td>
+Floating Action Button
+</td>
+<td>
+AA
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/fab" target="_blank">Demo</a>
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/floating-action-button/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
 Gantt Chart
 </td>
 <td>
@@ -1461,6 +1525,38 @@ N/A
 </tr>
 <tr>
 <td>
+Markdown Editor
+</td>
+<td>
+AAA
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+---
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/markdown-editor/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
 Mention
 </td>
 <td>
@@ -1521,6 +1617,70 @@ AAA
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/menu-bar/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Message
+</td>
+<td>
+AAA
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/message" target="_blank">Demo</a>
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/message/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+MultiColumn ComboBox
+</td>
+<td>
+AAA
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+---
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1617,6 +1777,38 @@ AAA
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/pager/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+OTP Input
+</td>
+<td>
+AAA
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
+</td>
+<td>
+---
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/otp-input/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1909,6 +2101,38 @@ AAA
 </tr>
 <tr>
 <td>
+Ribbon
+</td>
+<td>
+AAA
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+---
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/ribbon/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
 Rich Text Editor
 </td>
 <td>
@@ -2129,6 +2353,38 @@ AAA
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/sparkline/accessibility" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Speech To Text
+</td>
+<td>
+AAA
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
+</td>
+<td>
+---
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/speech-to-text/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
