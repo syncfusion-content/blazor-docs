@@ -23,17 +23,17 @@ The following code illustrates how to interact with Bezier efficiently by using 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors"></SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" Connectors="@_connectors"></SfDiagramComponent>
 
 @code {
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     //Define the diagram's node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes.Add(
+        _nodes.Add(
             new Node()
                 {
                     ID = "node1",
@@ -51,7 +51,7 @@ The following code illustrates how to interact with Bezier efficiently by using 
                     },
                     }
                 });
-        nodes.Add(new Node()
+        _nodes.Add(new Node()
             {
                 ID = "node2",
                 OffsetX = 300,
@@ -85,7 +85,7 @@ The following code illustrates how to interact with Bezier efficiently by using 
                 },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
             };
-        connectors.Add(connector1);
+        _connectors.Add(connector1);
     }
 }
 ```
