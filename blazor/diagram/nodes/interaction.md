@@ -23,18 +23,18 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
 
 <SfButton Content="Select" OnClick="@OnSelect" />
 <SfButton Content="UnSelect" OnClick="@UnSelect" />
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Reference of the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
             {
@@ -47,23 +47,23 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
                 Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
             };
         // Add node
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void OnSelect()
+    private void OnSelect()
     {
         // Select the node
-        diagram.Select(new ObservableCollection<IDiagramObject> { diagram.Nodes[0] });
+        _diagram.Select(new ObservableCollection<IDiagramObject> { diagram.Nodes[0] });
     }
 
-    public void UnSelect()
+    private void UnSelect()
     {
         // clear selection in the diagram
-        diagram.ClearSelection();
+        _diagram.ClearSelection();
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Select)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Interaction/Select.razor)
 
 Selection is also available during interaction:
 
@@ -83,18 +83,18 @@ A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com
 
 
 <SfButton Content="Drag" OnClick="@OnDrag" />
-<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@nodes" />
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Reference of the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
             {
@@ -107,17 +107,17 @@ A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com
                 Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
             };
         // Add node
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void OnDrag()
+    private void OnDrag()
     {
         // Drag the node
-        Diagram.Drag(Diagram.Nodes[0], 10, 10);
+        _diagram.Drag(_diagram.Nodes[0], 10, 10);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Drag)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Interaction/Drag.razor)
 
 Dragging is also supported during interaction:
 
@@ -136,18 +136,18 @@ A node can be resized at runtime by using the [Scale](https://help.syncfusion.co
 
 
 <SfButton Content="Resize" OnClick="@OnResize" />
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Reference of the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
             {
@@ -160,17 +160,17 @@ A node can be resized at runtime by using the [Scale](https://help.syncfusion.co
                 Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
             };
         // Add node
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void OnResize()
+    private void OnResize()
     {
         // Resize the node
-        diagram.Scale(diagram.Nodes[0], 0.5, 0.5, new DiagramPoint() { X = 0, Y = 0 });
+        _diagram.Scale(_diagram.Nodes[0], 0.5, 0.5, new DiagramPoint() { X = 0, Y = 0 });
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Resize)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Interaction/Resize.razor)
 
 Resizing is also supported during interaction:
 
@@ -190,18 +190,18 @@ A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.c
 
 
 <SfButton Content="Rotate" OnClick="@OnRotate" />
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Reference of the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
@@ -214,17 +214,17 @@ A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.c
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
         // Add node
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void OnRotate()
+    private void OnRotate()
     {
         // Rotate the node
-        diagram.Rotate(diagram.Nodes[0], diagram.Nodes[0].RotationAngle + 10);
+        _diagram.Rotate(_diagram.Nodes[0], _diagram.Nodes[0].RotationAngle + 10);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Rotate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Interaction/Rotate.razor)
 
 Rotation is also supported during interaction:
 
@@ -243,10 +243,10 @@ Use this property when you want to specify the node’s rotation at the time of 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -258,11 +258,11 @@ Use this property when you want to specify the node’s rotation at the time of 
             OffsetY = 100,
             RotationAngle = 50, // Rotates node by 50 degrees
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/RotateAngleProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Interaction/RotateAngleProperty.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSittQVMwKuLcJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node rotated by a fixed angle using the RotationAngle property](../images/NodeRotation.png)" %}
 

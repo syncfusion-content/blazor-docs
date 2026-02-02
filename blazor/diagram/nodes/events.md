@@ -29,18 +29,18 @@ The following code example demonstrates how to get the selection change event in
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
+                    Nodes="@_nodes" 
                     SelectionChanging="OnSelectionChanging"
                     SelectionChanged="OnSelectionChanged" />
 
 @code
 {
     // To define node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
@@ -58,18 +58,18 @@ The following code example demonstrates how to get the selection change event in
             }
         };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     // Event to notify the selection changing event before selecting/unselecting the diagram elements.
-    public void OnSelectionChanging(SelectionChangingEventArgs args)
+    private void OnSelectionChanging(SelectionChangingEventArgs args)
     {
         // Sets true to cancel the selection.
         args.Cancel = true;
     }
 
     // Event to notify the selection changed event after selecting/unselecting the diagram elements.
-    public void OnSelectionChanged(SelectionChangedEventArgs args)
+    private void OnSelectionChanged(SelectionChangedEventArgs args)
     {
         // Action to be performed.
     }
@@ -77,7 +77,7 @@ The following code example demonstrates how to get the selection change event in
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBSCjjmsOntdxie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SelectionChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/SelectionChange.razor)
 
 ## How to Handle Position Change Event 
 
@@ -93,18 +93,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" 
-                    Nodes="@nodes"
+                    Nodes="@_nodes"
                     PositionChanging="OnPositionChanging"
                     PositionChanged="OnPositionChanged" />
 
 @code
 {
     // To define node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
@@ -122,18 +122,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             Shape = new Shape() { Type = NodeShapes.Basic}
         };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     // Event to notify the position changing event while dragging the elements in diagram.
-    public void OnPositionChanging(PositionChangingEventArgs args)
+    private void OnPositionChanging(PositionChangingEventArgs args)
     {
         // Sets true to cancel the action.
         args.Cancel = true;
     }
 
     //Event to notify the position changed event when the node's or connector's position is changed.
-    public void OnPositionChanged(PositionChangedEventArgs args)
+    private void OnPositionChanged(PositionChangedEventArgs args)
     {
         // Action to be performed.
     }
@@ -141,7 +141,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthICtjciuGtobOO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PositionChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/PositionChange.razor)
 
 ## How to Handle Size Change Event 
 
@@ -157,18 +157,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
+                    Nodes="@_nodes" 
                     SizeChanged="OnSizeChanged" 
                     SizeChanging="OnSizeChanging"/>
 
 @code
 {
     // To define node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
@@ -185,18 +185,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             }
         };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     // Event to notify the Size changing event before the diagram elements size is changed.
-    public void OnSizeChanging(SizeChangingEventArgs args)
+    private void OnSizeChanging(SizeChangingEventArgs args)
     {
         // Sets true to cancel the resize action
         args.Cancel = true;
     }
 
     // Event to notify the Size change event after the diagram elements size is changed.
-    public void OnSizeChanged(SizeChangedEventArgs args)
+    private void OnSizeChanged(SizeChangedEventArgs args)
     {
         // Action to be performed.
     }
@@ -204,7 +204,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVSCtZGiEcHqVrO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SizeChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/SizeChange.razor)
 
 ## How to Handle Rotate Change Event 
 
@@ -220,18 +220,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
+                    Nodes="@_nodes" 
                     RotationChanging="OnRotateChanging"
                     RotationChanged="OnRotateChanged" />
 
 @code
 {
     // To define node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
@@ -248,18 +248,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             }
         };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     // Event to notify the rotation changing event before the node is rotated.
-    public void OnRotateChanging(RotationChangingEventArgs args)
+    private void OnRotateChanging(RotationChangingEventArgs args)
     {
         // Sets true to cancel the rotation
         args.Cancel = true;
     }
 
     // Event to notify the rotation changed event after the node is rotated.
-    public void OnRotateChanged(RotationChangedEventArgs args)
+    private void OnRotateChanged(RotationChangedEventArgs args)
     {
         // Action to be performed.
     }
@@ -267,7 +267,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMjNGMEPDIoUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/RotationChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/RotationChange.razor)
 
 ## How to Use Node Creating Event
 
@@ -277,17 +277,17 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
+                    Nodes="@_nodes" 
                     NodeCreating="OnNodeCreating" />
 
 @code
 {
     // Define the node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         //  A node is created and stored in node collection.
         Node node = new Node()
         {
@@ -304,10 +304,10 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             }
         };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject obj)
     { 
         Node node = obj as Node;
         node.Style.Fill = "#357BD2";
@@ -318,7 +318,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVSMZNwsaPGCptX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/NodeCreatingEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/NodeCreatingEvent.razor)
 
 ## How to Handle Property Changed Event
 
@@ -326,15 +326,15 @@ The [PropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" 
+<SfDiagramComponent @ref="@_diagram" 
                     Width="100%" 
                     Height="700px" 
-                    Nodes="nodes" 
+                    Nodes="_nodes" 
                     PropertyChanged="OnNodePropertyChanged">
 </SfDiagramComponent>
 @code {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -346,7 +346,7 @@ The [PropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
             Height = 100,
             Style = new ShapeStyle { Fill = "#6495ED", StrokeColor = "white" }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     // Method to handle Node Property Changed event
     private void OnNodePropertyChanged(PropertyChangedEventArgs args)
@@ -362,7 +362,7 @@ The [PropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtroiXXcVZjLxVof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PropertyChangedEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/PropertyChangedEvent.razor)
 
 ## How to Handle Collection Change Events
 
@@ -377,15 +377,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     CollectionChanged="OnCollectionChanged">
 </SfDiagramComponent>
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -395,7 +395,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             Width = 100,
             Height = 100
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
      //  Notify the Collection Changed event while changing the collection of the node at run time.
     private void OnCollectionChanged(CollectionChangedEventArgs args)
@@ -406,7 +406,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNroWDXQBDjHmggk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/CollectionChangeEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/CollectionChangeEvent.razor)
 
 ## How to Handle the Mouse Enter Event
 
@@ -416,15 +416,15 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     MouseEnter="OnMouseEnter">
 </SfDiagramComponent>
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -434,7 +434,7 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
             Width = 100,
             Height = 100
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void OnMouseEnter(DiagramElementMouseEventArgs args)
     {
@@ -443,7 +443,7 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrSsDDGVXMoFpjP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseEnterEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/MouseEnterEvent.razor)
 
 ## How to Handle the Mouse Leave Event
 
@@ -453,15 +453,15 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     MouseLeave="OnMouseLeave">
 </SfDiagramComponent>
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -471,7 +471,7 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
             Width = 100,
             Height = 100
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void OnMouseLeave(DiagramElementMouseEventArgs args)
     {
@@ -480,7 +480,7 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVyCXZcBNhXdpGO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseLeaveEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/MouseLeaveEvent.razor)
 
 ## How to Handle the Mouse Hover Event
 
@@ -490,15 +490,15 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     MouseHover="OnMouseHover">
 </SfDiagramComponent>
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    SfDiagramComponent _diagram;
+    DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -508,7 +508,7 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
             Width = 100,
             Height = 100
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void OnMouseHover(DiagramElementMouseEventArgs args)
     {
@@ -517,12 +517,12 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBeiXjcLNBzlmCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/MouseHoverEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/MouseHoverEvent.razor)
 
 
 ## How to Enable or Disable Node Behaviors Using Constraints
 
-The node `Constraints` property enables or disables specific features (for example, select, drag, resize, rotate). For more information about node constraints, refer to the [Node Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints#node-constraints).
+The node [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property enables or disables specific features (for example, select, drag, resize, rotate). For more information about node constraints, refer to the [Node Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints#node-constraints).
 
 ## See also
 
