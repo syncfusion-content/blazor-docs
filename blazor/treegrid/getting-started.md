@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with TreeGrid in Blazor WASM App | Syncfusion
-description: Learn about getting started with Blazor TreeGrid component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor TreeGrid component in a Blazor WebAssembly application, including setup and basic usage.
 platform: Blazor
 control: TreeGrid
 documentation: ug

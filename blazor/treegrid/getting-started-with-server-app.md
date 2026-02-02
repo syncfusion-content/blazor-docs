@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with TreeGrid in Blazor Server App | Syncfusion
-description: Learn about getting started with Blazor TreeGrid component in Blazor Server Application.
+description: Learn how to get started with the Syncfusion Blazor TreeGrid component in a Blazor Server application, including setup and basic usage.
 platform: Blazor
 control: TreeGrid
 documentation: ug
