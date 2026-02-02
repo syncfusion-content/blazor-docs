@@ -75,7 +75,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add import namespaces
 
-To use the Pivot Table component, open the **~/_Imports.razor** file and add the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
+To use the Pivot Table component, open the **~/Components/_Imports.razor** file and add the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -126,7 +126,7 @@ namespace MauiBlazorWindow;
 
 ## Add stylesheet and script resources
 
-To make the Pivot Table look and work correctly, add the stylesheet and script files from NuGet using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Place these in the `<head>` section of the **~/index.html** file.
+To make the Pivot Table look and work correctly, add the stylesheet and script files from NuGet using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Place these in the `<head>` section of the **~wwwroot/index.html** file.
 
 ```html
 <head>
@@ -143,7 +143,7 @@ N> You can learn more about adding themes to your Blazor app in the [Blazor Them
 
 ## Add Blazor Pivot Table component
 
-Finally, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component to the **~/Pages/Index.razor** file to display it in your app.
+Finally, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component to the **~/Pages/Home.razor** file to display it in your app.
 
 {% tabs %}
 {% highlight razor %}
@@ -161,6 +161,8 @@ For demonstration purposes, a collection of objects containing sales details for
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <SfPivotView TValue="ProductDetails">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -293,6 +295,8 @@ To define each field in its respective axis, configure the following basic prope
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
@@ -334,6 +338,8 @@ N> Formatting can only be applied to numeric fields in the value section of the 
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <SfPivotView TValue="ProductDetails" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -394,6 +400,8 @@ To enable the field list, set the [ShowFieldList](https://help.syncfusion.com/cr
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
@@ -437,6 +445,8 @@ Users can also use the grouping bar to sort, filter, or remove fields quickly wi
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
@@ -479,6 +489,8 @@ The following example shows how to add a field to the filter axis in a Blazor Pi
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -531,6 +543,8 @@ Below is a sample code that shows how to set up calculated fields both through c
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
@@ -579,6 +593,8 @@ The following code example shows how to display a server-side error message to t
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <span class="error">@ErrorDetails</span>
 <SfPivotView TValue="PivotViewData" Width="100%" Height="450" AllowDataCompression="true" EnableVirtualization="true" ShowFieldList="true" ShowGroupingBar="true" MaxNodeLimitInMemberEditor="50">
