@@ -361,12 +361,18 @@ The following code illustrates how to enable a single interaction controller:
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Connectors="@_connectors" Height="600px" InteractionController="@_tool" />
+<SfDiagramComponent Connectors="@_connectors" Height="600px" InteractionController="@_tool" DrawingObject="@_drawingObject" />
 
 @code
 {
     // Enable the single tool.
     private DiagramInteractions _tool = DiagramInteractions.DrawOnce;
+    // Drawing object used by the diagram.
+    private Connector _drawingObject = new Connector()
+    {
+        ID = "connector1",
+        Type = ConnectorSegmentType.Straight,
+    };
     // Defines diagram's connectors collection.
     private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 }
