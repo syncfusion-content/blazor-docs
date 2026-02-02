@@ -9,16 +9,18 @@ documentation: ug
 
 # Value Binding in MultiColumn ComboBox
 
-Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
+Value binding synchronizes the selected value between the Blazor MultiColumn ComboBox and the parent component. The control supports two binding approaches:
+- `@bind-Value` to bind the selected value
+- `@bind-Index` to bind by the zero-based item index
 
-* bind-Value Binding 
-* bind-Index Binding
+## Value binding
 
-## Bind value binding
+Bind the selected value using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute. Supported value types include primitives (such as `string`, `int`, `bool`, `enum`) and complex types. Ensure the bound value type aligns with the configured [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) and [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) mapping.
 
-Value binding can be accomplished using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute, which supports `string`, `int`, `enum`, `bool`, and `complex types`. When the component's value changes, it will impact all instances where the variable is bound using the `@bind-value` attribute. For the binding to function correctly, the value assigned to the `@bind-value` attribute should correspond to the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) and [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) mapped to the component.
+- `TValue`: Specifies the selected value type.
+- `TItem`: Specifies the data model type of each item.
 
-* **TValue** - Specifies the type of each list item on the suggestion list.
+When the component value changes, all places bound with the same variable are updated.
 
 {% highlight cshtml %}
 
@@ -26,9 +28,7 @@ Value binding can be accomplished using the [@bind-Value](https://help.syncfusio
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBJXYhzMFjWdrGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBJXYhzMFjWdrGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.png)" %}
 
 ## Index value binding
 
@@ -40,9 +40,7 @@ The Index value binding is accomplished through the [@bind-Index]() attribute, w
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrJXOrUfZAICmMF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrJXOrUfZAICmMF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.png)" %}
 
 <!-- ## Object binding
 
@@ -58,11 +56,11 @@ In the example provided, the `Name` column is linked to the [ValueField](https:/
 
 ## Show or hide clear button
 
-Utilize the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ShowClearButton) property to control the visibility of the clear button. When the clear button is activated, the `Value`, `Text`, and `Index` properties will all revert to null.
+Control the clear button visibility using the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ShowClearButton) property. When the clear button is clicked, the `Value`, `Text`, and `Index` properties reset to `null`.
 
 N> If the TValue is a non-nullable type, pressing the clear button will reset it to the default value for that data type. Conversely, if TValue is a nullable type, pressing the clear button will set it to null. For instance, if TValue is defined as `int`, clearing it will assign a value of 0 to the component, whereas if TValue is defined as `int?`, it will assign a value of null.
 
-The following example illustrates the use of `string` as the TValue. Therefore, when the clear button is used, the value will be set to null, as that is the default for that type.
+The following example uses `string` as the `TValue`, so clearing sets the value to `null`.
 
 {% highlight cshtml %}
 
@@ -70,17 +68,15 @@ The following example illustrates the use of `string` as the TValue. Therefore, 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBftkrKpNAYFijk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBftkrKpNAYFijk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.png)" %}
 
 ## Dynamically change TItem
 
-The `TItem` property can be modified dynamically by specifying the datasource type of the MultiColumn ComboBox component using the `@typeparam` directive. The sample demonstration below illustrates how to dynamically change the `TItem` with various types of datasources.
+`TItem` can be changed dynamically by wrapping the MultiColumn ComboBox in a generic component that declares `@typeparam` parameters for `TValue` and `TItem`, and exposes parameters for the data source and bound value. The following sample demonstrates using a generic component to switch data types.
 
-### Creating generic MultiColumn Combobox component
+### Creating a generic MultiColumn ComboBox component
 
-First, create a `MultiColumnComboBox.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
+Create a `MultiColumnComboBox.razor` file that defines `@typeparam` for `TValue` and `TItem`, and exposes parameters for `customData` and `ComboBoxValue`.
 
 {% tabs %}
 {% highlight razor %}
@@ -106,11 +102,11 @@ First, create a `MultiColumnComboBox.razor` file as a parent component in the `/
 {% endhighlight %}
 {% endtabs %}
 
-### Usage of generic component with different type
+### Use the generic component with different types
 
-Then, render the Generic MultiColumn ComboBox component with the required `TValue` and `TItem` in the respective razor components. 
+Render the generic component with the required `TValue` and `TItem` in the corresponding Razor page.
 
-Here, the MultiColumn ComboBox component with TValue as an int nullable type in the `/Index.razor` file.
+Example: Use `int?` for `TValue` and a `Games` model for `TItem` in `Index.razor`.
 
 **[Index.razor]**
 

@@ -17,7 +17,7 @@ N> JavaScript interop files are required for features that cannot be implemented
 
 You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts using the CDN resources.
 
-* For **.NET 8 and .NET 9** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
+* For **.NET 8, .NET 9 and .NET 10** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
 * For a **Blazor WebAssembly (standalone) App**, add scripts in `~/wwwroot/index.html`.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on the CDN per version. Ensure the version in the URLs matches the NuGet package version used in the application.
@@ -340,6 +340,10 @@ The following table lists components and their script file names.
         <td>sf-chart.min.js</td>
     </tr>
     <tr>
+        <td>CheckBox</td>
+        <td>sf-checkbox.min.js</td>
+    </tr>
+    <tr>
         <td>AccumulationChart</td>
         <td>sf-accumulation-chart.min.js</td>
     </tr>
@@ -418,6 +422,10 @@ The following table lists components and their script file names.
     <tr>
         <td>Splitter</td>
         <td>sf-splitter.min.js</td>
+    </tr>
+    <tr>
+        <td>Switch</td>
+        <td>sf-switch.min.js</td>
     </tr>
     <tr>
         <td>Toast</td>

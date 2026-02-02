@@ -65,6 +65,4 @@ In the following sample, Dialog will open while clicking `Save As...` item.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthUWrrGqYuNWlPV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ContextMenu](./../images/blazor-contextmenu.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthUWrrGqYuNWlPV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu](./../images/blazor-contextmenu.png)" %}

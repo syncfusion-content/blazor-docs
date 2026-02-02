@@ -62,6 +62,10 @@ The navigation pane displays the folder hierarchy of the file system and provide
 
 ![Blazor File Manager with Navigation Pane](./images/blazor-filemanager-navigationpane.png)
 
+You can customize the appearance of the navigation pane by using the `NavigationPaneTemplate` property. This enables you to modify icons, display text, and include additional elements to suit your application's requirements.
+
+![Blazor File Manager with Navigation Pane Template Output](./images/blazor-filemanager-navigationpane-template.png)
+
 ### BreadCrumb
 
 The File Manager provides breadcrumb for navigating to the parent folders. The breadcrumb in the File Manager is responsible for resizing. Whenever the path length exceeds the breadcrumb length, a dropdown button will be added at the starting of the breadcrumb to hold the parent folders adjacent to root.
@@ -75,6 +79,10 @@ The `Large Icons View` is the default starting view in the FileManager. The view
 In the large icons view, the thumbnail icons will be shown in a larger size, which displays the data in a form that best suits their content. For image and video type files, a **preview** will be displayed. Extension thumbnails will be displayed for other type files.
 
 ![Blazor File Manager with LargeIconView](./images/blazor-filemanager-largeiconsview.png)
+
+The `LargeIconsTemplate` property enables complete customization of how folders and files are rendered in the `Large Icons View`. It allows you to enhance the layout by adding background images, custom file-type icons, and actions such as dropdown menus.
+
+![Blazor FileManager Large Icon View Template Output](./images/blazor-filemanager-template-large-icons-view.png)
 
 ## Details View
 
@@ -140,6 +148,16 @@ Refer to the [Toolbar](https://blazor.syncfusion.com/documentation/file-manager/
 ![Upload a file in Blazor FileManger](./images/blazor-filemanager-upload-operation.png)
 
 ![Download a file in Blazor FileManger](./images/blazor-filemanager-download-operation.png)
+
+### Upload Files or Folders via context menu
+
+In the Blazor File Manager component, you can perform the files or folder [upload](https://blazor.syncfusion.com/documentation/file-manager/file-operations#uploading-files) operations with the help of Context Menu items by switching between the Files or Folder from Upload menu item.
+
+Refer to the [Context Menu](https://blazor.syncfusion.com/documentation/file-manager/context-menu) sections to learn more about the items that are present in Context Menu.
+
+![Upload a file in Blazor FileManger](./images/blazor-filemanager-fileupload.png)
+
+![Download a folder in Blazor FileManger](./images/blazor-filemanager-folderupload.png)
 
 ### Searching Files and Folders
 

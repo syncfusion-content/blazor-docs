@@ -53,4 +53,4 @@ In the Gantt Chart component, you can hide chart part and display Tree Grid part
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVetkLHARucneHx?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVetkLHARucneHx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

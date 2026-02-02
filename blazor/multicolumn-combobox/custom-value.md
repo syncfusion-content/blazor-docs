@@ -9,7 +9,7 @@ documentation: ug
 
 # Adding Custom Value to Blazor MultiColumn ComboBox Component
 
-You can include custom values in the MultiColumn ComboBox component. If the entered character(s) are not found in the list, a button will appear in the popup menu. Clicking this button will add the custom character(s) to the existing list as a new item. By default, the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowCustom) property is set to `true`.
+Custom values can be added to the Blazor MultiColumn ComboBox when the typed value does not match any item in the list. In this case, an action button appears in the popup; selecting it adds the typed value as a new item to the current list. By default, the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowCustom) property is set to `true`. To prevent adding custom values, set `AllowCustom` to `false`.
 
 **[Index.razor]**
 
@@ -46,9 +46,7 @@ You can include custom values in the MultiColumn ComboBox component. If the ente
         return base.OnInitializedAsync();
     }
 }
-{% endhighlight razor %}
+{% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrzNaLUIDqNTtMS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor MultiColumn ComboBox with custom value](./images/blazor-multicolumn-custom-value.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrzNaLUIDqNTtMS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with custom value](./images/blazor-multicolumn-custom-value.gif)" %}
