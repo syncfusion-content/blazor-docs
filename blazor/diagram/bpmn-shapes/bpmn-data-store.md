@@ -9,22 +9,22 @@ documentation: ug
 
 # BPMN Data Store in Blazor Diagram Component
 
-A data store is used to store or access data associated with a business process. To create a data store shape, the node property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) should be set to **BpmnDataStore**. The following code example explains how to create a data store.
+A data store is used to store or access data associated with a business process. To create a data store shape, the node property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) should be set to [BpmnDataStore](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataStore.html). The following code example explains how to create a data store.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -38,12 +38,12 @@ A data store is used to store or access data associated with a business process.
             // Sets shape to DataStore.
             Shape = new BpmnDataStore()
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNryCNtxhaGiAiQN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnDataStore/BpmnDataStore)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnDataStore/BpmnDataStoreSample.razor)
 
 ![BPMN Datasource](../images/Bpmn-DataStore.png)
