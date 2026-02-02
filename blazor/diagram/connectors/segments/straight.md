@@ -16,17 +16,16 @@ To create a straight line, set the connector [Type](https://help.syncfusion.com/
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@_connectors" />
 
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
+        Connector connector = new Connector()
         {
             ID = "connector1",
             SourcePoint = new DiagramPoint()
@@ -36,7 +35,7 @@ To create a straight line, set the connector [Type](https://help.syncfusion.com/
             },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-             //Specify the segment type as straight.
+            //Specify the segment type as straight.
             Type = ConnectorSegmentType.Straight,
             TargetDecorator = new DecoratorSettings()
             {
@@ -49,13 +48,13 @@ To create a straight line, set the connector [Type](https://help.syncfusion.com/
                 }
             }
         };
-        connectors.Add(Connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLosDNdKeaXEThH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/Straight.razor)
 
 ### How to Edit Straight Segments
 
@@ -66,20 +65,19 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="_diagram" Width="1000px" Height="500px" Connectors="@_connectors" />
 
 @code
 {
-    //Reference the diagram.
-    SfDiagramComponent Diagram;
-    //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Reference the diagram
+    private SfDiagramComponent _diagram;
+    // Initialize diagram's connector collection
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
-        { 
+        {
             ID = "Connector1",
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
             SourcePoint = new DiagramPoint { X = 200, Y = 100 },
@@ -94,11 +92,11 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
                 }
             }
         };
-        connectors.Add(Connector);
+        _connectors.Add(Connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/StraightSegmentEditing)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/StraightSegmentEditing.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyiXjRAxXrpBqh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.gif)" %}
 
@@ -106,7 +104,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The straight connector can have multiple segments between the source and target points. By default, segment thumbs are rendered as **circles**. They can be customized globally or per connector using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 
-To change the segment thumb shape for all Straight connectors, configure the `SegmentThumbSettings` property of the SfDiagramComponent class and set the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html#Syncfusion_Blazor_Diagram_SegmentThumbSettings_Shape) property to the desired shape.
+To change the segment thumb shape for all Straight connectors, configure the [ConnectorSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorSegmentThumb) property of the SfDiagramComponent class and set the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html#Syncfusion_Blazor_Diagram_SegmentThumbSettings_Shape) property to the desired shape.
 
 To customize the segment thumb shape for a specific connector, first disable the [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) constraint. Then set the shape on the connector’s  `SegmentThumbSettings` property of the Connector class, specifying the desired shape using the `Shape` property of the `SegmentThumbSettings` class. 
 
@@ -133,36 +131,38 @@ The following code example illustrates how to create a customized straight segme
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.Internal
-<SfDiagramComponent Width="1000px" Height="500px"  Connectors="@connectors" ConnectorSegmentThumb="@connectorSegmentThumb"></SfDiagramComponent>
-@code {
-    
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@_connectors" ConnectorSegmentThumb="@_connectorSegmentThumb" />
+
+@code
+{
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     //Define the segment shape
-    SegmentThumbSettings connectorSegmentThumb = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Rectangle };
+    private SegmentThumbSettings _connectorSegmentThumb = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Rectangle };
+
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
+        Connector connector = new Connector()
+        {
+            ID = "Connector",
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape,
+            SourcePoint = new DiagramPoint { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint { X = 250, Y = 250 },
+            Segments = new DiagramObjectCollection<ConnectorSegment>
             {
-                ID = "Connector",
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape,
-                SourcePoint = new DiagramPoint { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint { X = 250, Y = 250 },
-                  
-                Segments = new DiagramObjectCollection<ConnectorSegment>
+                new StraightSegment()
                 {
-                   new StraightSegment()
-                   {
-                       Type = ConnectorSegmentType.Straight,
-                       Point = new DiagramPoint { X = 180, Y = 180 }
-                   }
-                },
-            };
-        connectors.Add(Connector);
+                    Type = ConnectorSegmentType.Straight,
+                    Point = new DiagramPoint { X = 180, Y = 180 }
+                }
+            },
+        };
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight/StraightSegmentShape)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/Straight/StraightSegmentShape.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNryWNXdAHtbHWYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with straight segment thumb shape and style in Blazor Diagram](../../images/StraightSegmentShape.png)" %}
 
@@ -171,37 +171,37 @@ The following code example illustrates how to create a customized straight segme
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.Internal
-<SfDiagramComponent Width="1000px" Height="500px"  Connectors="@connectors" ></SfDiagramComponent>
-@code {
-    
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@_connectors"></SfDiagramComponent>
+
+@code
+{
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-   
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
+        Connector connector = new Connector()
+        {
+            ID = "Connector",
+            Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+            SourcePoint = new DiagramPoint { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint { X = 250, Y = 250 },
+            Segments = new DiagramObjectCollection<ConnectorSegment>
             {
-                ID = "Connector",
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
-                SourcePoint = new DiagramPoint { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint { X = 250, Y = 250 },
-                  
-                Segments = new DiagramObjectCollection<ConnectorSegment>
+                new StraightSegment()
                 {
-                   new StraightSegment()
-                   {
-                       Type = ConnectorSegmentType.Straight,
-                       Point = new DiagramPoint { X = 180, Y = 180 }
-                   }
-                },
-                  SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Square },
-           
-            };
-        connectors.Add(Connector);
+                    Type = ConnectorSegmentType.Straight,
+                    Point = new DiagramPoint { X = 180, Y = 180 }
+                }
+            },
+            SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Square },
+        };
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight/SegmentShape)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/Straight/SegmentShape.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoiNtnUHWzxrCh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.png)" %}
 
