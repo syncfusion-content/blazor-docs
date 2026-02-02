@@ -304,7 +304,7 @@ The following sample demonstrates this behavior: when filtering the **TaskName**
 
 ## Filtering a specific column by method
 
-You can filter columns dynamically in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component by using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_) method.
+You can filter columns dynamically in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component by using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__) method.
 
 The example below demonstrates how to filter the **TaskName** and **TaskID** columns using a single value. Filtering is triggered by an external button click, which invokes the `FilterByColumnAsync` method.
 
