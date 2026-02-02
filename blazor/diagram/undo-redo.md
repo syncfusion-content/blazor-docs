@@ -377,8 +377,8 @@ This feature is useful when want to temporarily restrict users from performing u
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Disable Undo/Redo" OnClick="@DisableUndoRedo" />
-<SfButton Content="Enable Undo/Redo" OnClick="@EnableUndoRedo" />
+<SfButton Content="Disable Undo/Redo" OnClick="@OnDisableUndoRedo" />
+<SfButton Content="Enable Undo/Redo" OnClick="@OnEnableUndoRedo" />
 
 @* Initialize Diagram *@
 <SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes">
@@ -408,14 +408,14 @@ This feature is useful when want to temporarily restrict users from performing u
         _nodes.Add(node);
     }
 
-    private void DisableUndoRedo()
+    private void OnDisableUndoRedo()
     {
         // Disable undo and redo operations.
         _diagram.HistoryManager.CanUndo = false;
         _diagram.HistoryManager.CanRedo = false;
     }
 
-    private void EnableUndoRedo()
+    private void OnEnableUndoRedo()
     {
         // Enable undo and redo operations.
         _diagram.HistoryManager.CanUndo = true;
