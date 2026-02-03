@@ -1922,28 +1922,17 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
 
 ## Running the Application
 
-**Step 1: Ensure PostgreSQL Database is Ready**
-
-1. Verify that PostgreSQL is running on your system.
-2. Confirm that the `PurchaseOrderDB` database exists with the `PurchaseOrder` table (created in Step 1).
-3. Verify the connection string in `appsettings.json` matches your PostgreSQL configuration.
-
-**Step 2: Build the Application**
+**Step 1: Build the Application**
 
 1. Open the terminal or Package Manager Console in Visual Studio.
-2. Navigate to the project directory:
-
-```powershell
-cd "path/to/Grid_PostgreSQL"
-```
-
+2. Navigate to the project directory.
 3. Run the following command to restore packages and build:
 
 ```powershell
 dotnet build
 ```
 
-**Step 3: Run the Application**
+**Step 2: Run the Application**
 
 Execute the following command:
 
@@ -1951,36 +1940,7 @@ Execute the following command:
 dotnet run
 ```
 
-**Step 1: Ensure PostgreSQL Database is Ready**
-
-1. Verify that PostgreSQL is running on your system.
-2. Confirm that the `PurchaseOrderDB` database exists with the `PurchaseOrder` table (created in Step 1).
-3. Verify the connection string in `appsettings.json` matches your PostgreSQL configuration.
-
-**Step 2: Build the Application**
-
-1. Open the terminal or Package Manager Console in Visual Studio.
-2. Navigate to the project directory:
-
-```powershell
-cd "path/to/Grid_PostgreSQL"
-```
-
-3. Run the following command to restore packages and build:
-
-```powershell
-dotnet build
-```
-
-**Step 3: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-**Step 4: Access the Application**
+**Step 3: Access the Application**
 
 1. Open a web browser.
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
