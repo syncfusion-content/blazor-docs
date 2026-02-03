@@ -25,12 +25,12 @@ The following code example explains how to define a swimlane with lane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -52,11 +52,11 @@ The following code example explains how to define a swimlane with lane.
             }
         };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-       if (obj is Swimlane swimlane)
+       if (diagramObject is Swimlane swimlane)
        {
          swimlane.Header.Style = new TextStyle()
              {
@@ -75,7 +75,7 @@ The following code example explains how to define a swimlane with lane.
     }
 }
 ``` 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneCreation).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Lane/LaneCreation.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoCNNwLozzxYUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane](../Swimlane-images/Swimlane_Lane.PNG)" %}
 
@@ -90,12 +90,12 @@ The following code example shows how to define and customize a lane header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections"  NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections"  NodeCreating="@OnNodeCreating"/>
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -125,11 +125,11 @@ The following code example shows how to define and customize a lane header.
                 }
             };
     // Add swimlane.
-    SwimlaneCollections.Add(swimlane);
+    _swimlaneCollections.Add(swimlane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-       if (obj is Swimlane swimlane)
+       if (diagramObject is Swimlane swimlane)
        {
            swimlane.Header.Style = new TextStyle()
            {
@@ -144,7 +144,7 @@ The following code example shows how to define and customize a lane header.
     }
 }
 ``` 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeader).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Lane/LaneHeader.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoCjjQVyzOTpIw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Header](../Swimlane-images/Swimlane_Lane_Header.PNG)" %}
 
@@ -155,7 +155,7 @@ The following code example explains how to define a lane header annotation templ
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections">
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections">
     <DiagramTemplates>
         <AnnotationTemplate>
             @if (context is Annotation annotation)
@@ -181,7 +181,7 @@ The following code example explains how to define a lane header annotation templ
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -217,11 +217,11 @@ The following code example explains how to define a lane header annotation templ
             }
         };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
 }
 ``` 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeaderTemplate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Lane/LaneHeaderTemplate.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBSiDDQVIyJbNWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Header](../Swimlane-images/Swimlane_Lane_Header_Template.PNG)" %}
 
@@ -235,12 +235,12 @@ Add and remove a lane at runtime by using the `Add` and `Remove` methods of the 
 
 <SfButton Content="Add Lane" OnClick="@AddLane" />
 <SfButton Content="Remove Lane" OnClick="@RemoveLane" />
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
         protected override void OnInitialized()
     {
@@ -269,7 +269,7 @@ Add and remove a lane at runtime by using the `Add` and `Remove` methods of the 
                 }
             };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
 
     private void AddLane()
@@ -281,17 +281,17 @@ Add and remove a lane at runtime by using the `Add` and `Remove` methods of the 
                   Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
             }
         };
-        SwimlaneCollections[0].Lanes.Add(newLane);
+        _swimlaneCollections[0].Lanes.Add(newLane);
     }
 
     private void RemoveLane()
     {
-        Lane lane = SwimlaneCollections[0].Lanes[^1];
-        SwimlaneCollections[0].Lanes.Remove(lane);
+        Lane lane = _swimlaneCollections[0].Lanes[^1];
+        _swimlaneCollections[0].Lanes.Remove(lane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
             swimlane.Header.Style = new TextStyle()
              {
@@ -310,7 +310,7 @@ Add and remove a lane at runtime by using the `Add` and `Remove` methods of the 
     }
 }
 ``` 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/AddRemoveLaneAtRuntime).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Lane/AddRemoveLaneAtRuntime.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoMZXmhexDADSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Add Remove](../Swimlane-images/Lane_Add_Remove.gif)" %}
 
@@ -327,12 +327,12 @@ The following code example shows how to add nodes to a lane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -367,11 +367,11 @@ The following code example shows how to add nodes to a lane.
                 }
             };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
              swimlane.Header.Style = new TextStyle()
              {
@@ -387,7 +387,7 @@ The following code example shows how to add nodes to a lane.
                  lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
              }
         }
-        else if (obj is Node node)
+        else if (diagramObject is Node node)
         {
              node.Style = new ShapeStyle()
              {
@@ -398,7 +398,7 @@ The following code example shows how to add nodes to a lane.
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneChildren).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Lane/LaneChildren.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVeWjtmhSRGTRbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane Children](../Swimlane-images/Lane_Children.PNG)" %}
 
@@ -412,81 +412,90 @@ The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 Below is an example demonstrating how to set the orientation for lanes in an SfSymbolPaletteComponent:
 
 ```cshtml
-   @using Syncfusion.Blazor.Diagram
-   @using Syncfusion.Blazor.Diagram.SymbolPalette
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
 <div class="control-section">
-    <div style="width:80%;">
+    <div style="width:20%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
-                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
+            <SfSymbolPaletteComponent @ref="_symbolPalette" Height="300px" Width="200px" Palettes="@_palettes" 
+                                      SymbolHeight="60" SymbolWidth="60" SymbolMargin="@_symbolMargin">
             </SfSymbolPaletteComponent>
         </div>
     </div>
 </div>
+
 @code
 {
-    //Reference the symbolpreview.
-    DiagramSize SymbolPreview;
-    //Define symbol margin.
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
-    SfSymbolPaletteComponent symbolpalette;
-    //Define palattes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Reference the symbol preview.
+    private DiagramSize _symbolPreview;
+    // Define symbol margin.
+    private SymbolMargin _symbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private SfSymbolPaletteComponent _symbolPalette;
+    // Define palettes collection.
+    private DiagramObjectCollection<Palette> _palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's swimlane-shape collection.
-    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> _swimlaneNodes = new DiagramObjectCollection<NodeBase>();
+
     protected override void OnInitialized()
     {
         InitPaletteModel();
     }
+
     private void InitPaletteModel()
     {
-        Palettes = new DiagramObjectCollection<Palette>();
-        SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+        _palettes = new DiagramObjectCollection<Palette>();
+
+        _swimlaneNodes = new DiagramObjectCollection<NodeBase>();
+
         //create a horizontal lane.
         Lane horizontalLane = new Lane()
+        {
+            ID = "HorizontalSwimlane",
+            Orientation = Orientation.Horizontal,
+            Height = 100,
+            Width = 150,
+            // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+            Header = new SwimlaneHeader()
             {
-                ID = "HorizontalSwimlane",
-                Orientation = Orientation.Horizontal,
-                Height = 100,
-                Width = 150,
-                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
-                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
-                    Width = 25,
-                    Height = 100
-                },
-            };
+                Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
+                Width = 25,
+                Height = 100
+            },
+        };
+
         //create a vertical lane.
         Lane verticalLane = new Lane()
+        {
+            ID = "VerticalSwimlane",
+            Orientation = Orientation.Vertical,
+            Height = 150,
+            Width = 100,
+            // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+            Header = new SwimlaneHeader()
             {
-                ID = "VerticalSwimlane",
-                Orientation = Orientation.Vertical,
-                Height = 150,
+                Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
                 Width = 100,
-                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
-                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
-                    Width = 100,
-                    Height = 25
-                },
-            };
-        SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
+                Height = 25
+            },
+        };
+
+        _swimlaneNodes = new DiagramObjectCollection<NodeBase>()
         {
             horizontalLane,
             verticalLane,
         };
-        Palettes = new DiagramObjectCollection<Palette>()
+
+        _palettes = new DiagramObjectCollection<Palette>()
         {
-            new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
+            new Palette() { Symbols = _swimlaneNodes, Title = "Swimlane Shapes", ID = "SwimlaneShapes" },
         };
-      }
     }
+}
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneOrientation).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Lane/LaneOrientation.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjheCXNmVyYiGoHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane](../Swimlane-images/LaneOrientation.PNG)" %}
 

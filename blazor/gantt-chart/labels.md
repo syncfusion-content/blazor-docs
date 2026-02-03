@@ -18,7 +18,7 @@ Task labels are configured using the [GanttLabelSettings](https://help.syncfusio
 - [RightLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html#Syncfusion_Blazor_Gantt_GanttLabelSettings_1_RightLabel): Shows metrics like progress percentages or durations to the right, suitable for completion data.
 - [TaskLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html#Syncfusion_Blazor_Gantt_GanttLabelSettings_1_TaskLabel): Overlays content like task titles or progress on taskbars, prominent but limited by taskbar width.
 
-Use template literals for formatted labels, such as **${Progress}%** for progress percentages. Ensure valid `GanttTaskFields` mappings to reference fields accurately.
+We can customize labels with [TaskLabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html#Syncfusion_Blazor_Gantt_GanttLabelSettings_1_TaskLabelTemplate), [RightLabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html#Syncfusion_Blazor_Gantt_GanttLabelSettings_1_RightLabelTemplate), and [LeftLabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttLabelSettings-1.html#Syncfusion_Blazor_Gantt_GanttLabelSettings_1_LeftLabelTemplate) to render HTML, icons, or formatted values. Ensure valid `GanttTaskFields` mappings to reference fields accurately.
 
 The following example configures labels for task names, IDs, and progress:
 
