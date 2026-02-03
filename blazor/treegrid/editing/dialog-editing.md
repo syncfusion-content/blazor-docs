@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Dialog Editing in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Dialog Editing in Syncfusion Blazor Tree Grid component and much more details.
+description: Dialog editing in the Syncfusion Blazor TreeGrid component.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Dialog Editing in Blazor Tree Grid Component
+# Dialog Editing in Blazor TreeGrid Component
 
 In Dialog edit mode, while editing the currently selected row, data will be shown on a dialog. The cell values and save edited data can be changed to the data source. To enable Dialog edit, set the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Dialog**.
 
@@ -51,6 +51,7 @@ public class TreeData
             public string TaskName { get; set;}
             public int? Duration { get; set;}
             public int? Progress { get; set;}
+            public DateTime? StartDate { get; set;}
             public string Priority { get; set;}
             public int? ParentId { get; set;}
         }
@@ -160,6 +161,7 @@ public class TreeData
             public string TaskName { get; set;}
             public int? Duration { get; set;}
             public int? Progress { get; set;}
+            public DateTime? StartDate { get; set;}
             public string Priority { get; set;}
             public int? ParentId { get; set;}
         }
@@ -167,15 +169,15 @@ public class TreeData
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 8,Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,StartDate = new DateTime(2017, 10, 23),Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 8,Progress = 80,StartDate = new DateTime(2017, 10, 23),Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,StartDate = new DateTime(2017, 10, 23),Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,StartDate = new DateTime(2017, 10, 23),Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,StartDate = new DateTime(2017, 10, 23),Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,StartDate = new DateTime(2017, 10, 23),Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,StartDate = new DateTime(2017, 10, 23),Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,StartDate = new DateTime(2017, 10, 23),Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,StartDate = new DateTime(2017, 10, 23),Priority = "Low",ParentId = 5});
             return BusinessObjectCollection;
         }
     }

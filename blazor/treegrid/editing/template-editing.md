@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Editing in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Template Editing in Syncfusion Blazor Tree Grid component and much more details.
+description: Template editing in the Syncfusion Blazor TreeGrid component.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Dialog template
 
-To know about customizing the Dialog Template in Blazor tree grid component, you can check this video.
+See the following video for customizing the dialog template.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=TxHrtyVwY4A"%}
@@ -26,8 +26,10 @@ In some cases, the new field editors must be added in the dialog which are not p
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
+@using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <TreeGridEvents TValue="TreeData" RowCreated="RowCreatedHandler"></TreeGridEvents>
@@ -85,10 +87,10 @@ In some cases, the new field editors must be added in the dialog which are not p
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    public void RowCreatedHandler(RowCreatedEventArgs<TreeData.BusinessObject> args)
-    {
-        Check = true;
-    }
+        public void RowCreatedHandler(RowCreatedEventArgs<TreeData> args)
+        {
+            Check = true;
+        }
 }
 
 {% endhighlight %}
@@ -129,7 +131,7 @@ public class TreeData
 
 ![Blazor TreeGrid with Dialog Template](../images/blazor-treegrid-dialog-template.png)
 
-N> The template form editors should have **name** attribute.
+> Note: The template form editors should have **name** attribute.
 
 ### Disable components in dialog template
 
@@ -208,7 +210,7 @@ This is demonstrated in the following sample code, by using [BeforeRowEditing](h
     public void BeforeRowEditingHandler(OnRowEditStartEventArgs args)
     {
         // The Textbox component is disabled using its Enabled property
-        this.Enabled = false;       
+        this.Enabled = false;
     }
 }
 
