@@ -512,36 +512,6 @@ The TreeGrid displays data in columns. Each column maps to a property in the dat
 | **Type** | Data type for formatting | ColumnType.Date, ColumnType.Number, etc. |
 | **Format** | Format pattern for values | "yMd" for dates, "C" for currency, etc. |
 
-**Example: Add a Custom Column**
-
-To add an additional column (for example, Assigned To):
-
-```razor
-<TreeGridColumn Field="AssignedTo" HeaderText="Assigned To" Width="150"></TreeGridColumn>
-```
-
-Then update the `TaskData` class:
-
-```csharp
-public class TaskData
-{
-    // Existing properties...
-    public string AssignedTo { get; set; }
-}
-```
-
-And add data to the sample tasks:
-
-```csharp
-TreeData.Add(new TaskData 
-{ 
-    TaskId = 1, 
-    TaskName = "Project Launch", 
-    AssignedTo = "John Smith",
-    // Other properties...
-});
-```
-
 > **Note:** The `TreeColumnIndex="1"` property on the SfTreeGrid component specifies that the tree expand/collapse icons appear in the `TaskName` column (second column, zero-indexed).
 
 ---
