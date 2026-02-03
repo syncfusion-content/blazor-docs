@@ -15,14 +15,14 @@ The annotation size can be customized using the [Height](https://help.syncfusion
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Connectors="@connectors" />
+<SfDiagramComponent Height="600px" Connectors="@_connectors" />
 @code
 {
     // Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    DiagramObjectCollection<Connector> _connectors;
     protected override void OnInitialized()
     {
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             SourcePoint = new DiagramPoint() { X = 300, Y = 40 },
@@ -40,13 +40,13 @@ The annotation size can be customized using the [Height](https://help.syncfusion
               },
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXByCtXxVTAfPZsm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/SizeOfAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/SizeOfAnnotation.razor)
 
 ![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
 
@@ -57,16 +57,16 @@ A [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node",
@@ -88,13 +88,13 @@ A [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBIWtDRBTaSnpxq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/HyperlinktoAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinktoAnnotation.razor)
 
 ![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
 
@@ -105,16 +105,16 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node",
@@ -137,13 +137,13 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLoMXNRrIZKmISV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/HyperlinkWithContent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinkWithContent.razor)
 
 ![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.png)
 
@@ -154,16 +154,16 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node",
@@ -186,13 +186,13 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthoiXDdVIsShZlW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/AnnotationWithTextWrapping)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationWithTextWrapping.razor)
 
 | TextWrapping | Description | Image |
 | -------- | -------- | -------- |
@@ -213,16 +213,16 @@ The following code sample demonstrates how the `TextOverflow` property works wit
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node",
@@ -246,13 +246,13 @@ The following code sample demonstrates how the `TextOverflow` property works wit
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVoCXtHLSBncEEM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/AnnotationWithTextOverflow)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationWithTextOverflow.razor)
 
 | TextOverflow | Wrapping | Image |
 | -------- | -------- | -------- |
@@ -285,16 +285,16 @@ The following code explains how to customize the visual appearance of an annotat
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node",
@@ -322,13 +322,13 @@ The following code explains how to customize the visual appearance of an annotat
             },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBSMtXHByUvlGFt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/Appearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/Appearance.razor)
 
 ![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
 
@@ -343,19 +343,19 @@ The font style of annotations can be changed dynamically at runtime by modifying
 
 <SfButton Content="UpdateStyle" OnClick="@UpdateStyle" />
 
-<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@nodes" />
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Reference of the diagram.
-    SfDiagramComponent Diagram;
+    SfDiagramComponent _diagram;
 
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -382,23 +382,23 @@ The font style of annotations can be changed dynamically at runtime by modifying
             },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     public void UpdateStyle()
     {
         // Change the style of the annotation.
-        Diagram.BeginUpdate();
-        Diagram.Nodes[0].Annotations[0].Style.Bold = false;
-        Diagram.Nodes[0].Annotations[0].Style.TextDecoration = TextDecoration.None;
-        Diagram.Nodes[0].Annotations[0].Style.Color = "Red";
-        Diagram.EndUpdateAsync();
+        _diagram.BeginUpdate();
+        _diagram.Nodes[0].Annotations[0].Style.Bold = false;
+        _diagram.Nodes[0].Annotations[0].Style.TextDecoration = TextDecoration.None;
+        _diagram.Nodes[0].Annotations[0].Style.Color = "Red";
+        _Diagram.EndUpdateAsync();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLSMXXHLypEIAGt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/AnnotationStyleatRunTime)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationStyleAtRunTime.razor)
 
 ## How to Edit Annotations at Runtime
 
@@ -418,16 +418,16 @@ Annotations can be set to read-only mode by configuring their [Constraints](http
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node",
@@ -446,13 +446,13 @@ Annotations can be set to read-only mode by configuring their [Constraints](http
             },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrIWjtxBeoSmkMG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/ReaonlyConstraints)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/ReadonlyConstraints.razor)
 
 ## How to Create Multiple Annotations
 
@@ -461,19 +461,19 @@ Multiple annotations can be added to a single node or connector. The following c
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" Connectors="@_connectors" />
 
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     // Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node",
@@ -502,8 +502,8 @@ Multiple annotations can be added to a single node or connector. The following c
                 }
             },
         };
-        nodes.Add(node);
-        connectors = new DiagramObjectCollection<Connector>();
+        _nodes.Add(node);
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             SourcePoint = new DiagramPoint() { X = 300, Y = 40 },
@@ -529,13 +529,13 @@ Multiple annotations can be added to a single node or connector. The following c
                 },
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoMZtHrSEKMWRQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/MultipleAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/MultipleAnnotation.razor)
 
 ![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
 
@@ -568,7 +568,7 @@ The following code illustrates how to define a template for both a node's and a 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="1000px" Nodes="@nodes" Connectors="@connectors">
+<SfDiagramComponent Width="1000px" Height="1000px" Nodes="@_nodes" Connectors="@_connectors">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
     <DiagramTemplates>
         <AnnotationTemplate>
@@ -576,8 +576,8 @@ The following code illustrates how to define a template for both a node's and a 
             {
                 if (annotation.ID.Contains("Node"))
                 {
-                    string ID = annotation.ID + "TemplateContent";
-                    <div id="@ID" class="profile-card" style="width:100%;height:100%;display:flex;align-items:center; gap:10px">
+                    string _id = annotation.ID + "TemplateContent";
+                    <div id="@_id" class="profile-card" style="width:100%;height:100%;display:flex;align-items:center; gap:10px">
                         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
                             <g>
                                 <rect height="48" width="48" fill="#000000" rx="50%" ry="50%" />
@@ -589,8 +589,8 @@ The following code illustrates how to define a template for both a node's and a 
                 }
                 if (annotation.ID.Contains("Connector"))
                 {
-                    string ID = annotation.ID + "TemplateContent";
-                    <div id="@ID" class="profile-card" style="width: 100%; height: 100%; display: flex; align-items: center; gap: 10px">
+                    string _id = annotation.ID + "TemplateContent";
+                    <div id="@_id" class="profile-card" style="width: 100%; height: 100%; display: flex; align-items: center; gap: 10px">
                         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
                             <g>
                                 <rect height="48" width="48" fill="#000000" rx="50%" ry="50%" />
@@ -606,8 +606,8 @@ The following code illustrates how to define a template for both a node's and a 
 </SfDiagramComponent>
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -631,7 +631,7 @@ The following code illustrates how to define a template for both a node's and a 
                  },
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
 
         Connector connector = new Connector()
         {
@@ -654,13 +654,14 @@ The following code illustrates how to define a template for both a node's and a 
                  },
             },
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVoMDtHVnZBKrQG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/TemplateSupportforAnnotation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/TemplateSupportforAnnotation.razor)
+
 ![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.png)
 
 ## How to Add Additional Information for an Annotation
@@ -671,17 +672,17 @@ The following code demonstrates how to set a value for the `AdditionalInfo` prop
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // Create a dictionary to store additional information for the annotation.
-        Dictionary<string, object> AnnotationInfo = new Dictionary<string, object>();
-        AnnotationInfo.Add("author", "John Doe");
-        AnnotationInfo.Add("modifiedDate", DateTime.Now);
+        Dictionary<string, object> _annotationInfo = new Dictionary<string, object>();
+        _annotationInfo.Add("author", "John Doe");
+        _annotationInfo.Add("modifiedDate", DateTime.Now);
         // A node with an annotation containing additional information.
         Node node = new Node()
         {
@@ -699,18 +700,18 @@ The following code demonstrates how to set a value for the `AdditionalInfo` prop
                 new ShapeAnnotation
                 {
                     Content = "Annotated Node",
-                    AdditionalInfo = AnnotationInfo
+                    AdditionalInfo = _annotationInfo
                 }
             }
         };
         // Add the node to the collection.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtreCDDHBnjOUXBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AdditionalInfoProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AdditionalInfoProperty.razor)
 
 **Note:** The `AdditionalInfo` property can accept any type of object as its value.
 
