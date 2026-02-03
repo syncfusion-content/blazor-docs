@@ -24,17 +24,17 @@ The following code example shows how to register and get notifications from the 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent TextChanging="@OnLabelTextChanging" Height="600px" TextChanged="OnTextChanged" Nodes="@nodes" />
+<SfDiagramComponent TextChanging="@OnLabelTextChanging" Height="600px" TextChanged="@OnTextChanged" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
     // Triggered when the node and connector's labels change in the diagram.
-   private void OnLabelTextChanging(TextChangeEventArgs args)
-   {
-      args.Cancel = true;
-   }
+    private void OnLabelTextChanging(TextChangeEventArgs args)
+    {
+        args.Cancel = true;
+    }
     // Triggered this event when complete the editing for Annotation and update the old text and new text values.
     private void OnTextChanged(TextChangeEventArgs args)
     {
@@ -44,7 +44,7 @@ The following code example shows how to register and get notifications from the 
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 100,
@@ -57,13 +57,13 @@ The following code example shows how to register and get notifications from the 
         {
             new ShapeAnnotation { Content = "Annotation" }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoijjnBnkUtSTH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Events/TextChangedEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/TextChangedEvent.razor)
 
 ## See also
 
