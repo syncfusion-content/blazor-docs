@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregate in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about aggregate in Syncfusion Blazor TreeGrid component and much more details.
+description: Learn how to configure and customize Aggregates in the Syncfusion Blazor TreeGrid component.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,20 +9,20 @@ documentation: ug
 
 # Aggregate in Blazor TreeGrid Component
 
-To know about Aggregate in Blazor tree grid Component, you can check this video.
+To learn about Aggregate in the Blazor TreeGrid component, check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=h-yS0PTLaXk"%}
 
-Aggregate values are displayed in the Tree Grid footer and in parent row footer for child row aggregate values. It can be configured through [TreeGridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html) property. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Type) are the minimum properties required to represent an aggregate column.
+Aggregate values are displayed in the TreeGrid footer and in parent row footer for child row aggregate values. It can be configured through [TreeGridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html) property. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Type) are the minimum properties required to represent an aggregate column.
 
-By default, the aggregate value can be displayed in the Tree Grid footer, and footer of child rows. To show the aggregate value in one of the cells, use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_FooterTemplate).
+By default, the aggregate value can be displayed in the TreeGrid footer, and footer of child rows. To show the aggregate value in one of the cells, use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_FooterTemplate).
 
 ## Built-in aggregate types
 
 The aggregate type should be specified in the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Type) property to configure an aggregate column.
 
-The built-in aggregates are,
+The built-in aggregates are:
 * Sum
 * Average
 * Min
@@ -82,8 +82,6 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 @code{
     public List<TreeData> TreeGridData { get; set; }
 
-    public Syncfusion.Blazor.Grids.AggregateTemplateContext model = new Syncfusion.Blazor.Grids.AggregateTemplateContext();
-
     protected override void OnInitialized()
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
@@ -96,21 +94,21 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 
 namespace TreeGridComponent.Data {
 
- public class TreeData
+    public class TreeData
     {     
-            public int TaskId { get; set; }
-            public string TaskName { get; set; }
-            public DateTime? StartDate { get; set; }
-            public int? Duration { get; set; }
-            public int? Progress { get; set; }
-            public bool Approved { get; set; }
-            public int? ParentId { get; set; }
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
+        public int? Progress { get; set; }
+        public bool Approved { get; set; }
+        public int? ParentId { get; set; }
         
         public static List<TreeData> GetSelfDataSource()
         {
             List<TreeData> TreeDataCollection = new List<TreeData>();
             TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Approved = true, ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, Approved = false, Duration = 50, ParentId = 1 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, Approved = false,  ParentId = 1 });
             TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Approved = true, ParentId = 2 });
             TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Approved = false, Progress = 77, ParentId = 3 });
             TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Approved = true, ParentId = null });
@@ -172,8 +170,6 @@ The aggregate value result can be formatted by using the [Format](https://help.s
 @code{
     public List<TreeData> TreeGridData { get; set; }
 
-    public Syncfusion.Blazor.Grids.AggregateTemplateContext model = new Syncfusion.Blazor.Grids.AggregateTemplateContext();
-
     protected override void OnInitialized()
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
@@ -186,21 +182,21 @@ The aggregate value result can be formatted by using the [Format](https://help.s
 
 namespace TreeGridComponent.Data {
 
- public class TreeData
+    public class TreeData
     {     
-            public int TaskId { get; set; }
-            public string TaskName { get; set; }
-            public DateTime? StartDate { get; set; }
-            public int? Duration { get; set; }
-            public int? Progress { get; set; }
-            public bool Approved { get; set; }
-            public int? ParentId { get; set; }
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
+        public int? Progress { get; set; }
+        public bool Approved { get; set; }
+        public int? ParentId { get; set; }
         
         public static List<TreeData> GetSelfDataSource()
         {
             List<TreeData> TreeDataCollection = new List<TreeData>();
             TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Approved = true, ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1",Duration = 4, Progress = 80, Approved = false, Duration = 50, ParentId = 1 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1",Duration = 4, Progress = 80, Approved = false,  ParentId = 1 });
             TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Approved = true, ParentId = 2 });
             TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Approved = false, Progress = 77, ParentId = 3 });
             TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Approved = true, ParentId = null });
@@ -219,14 +215,6 @@ namespace TreeGridComponent.Data {
 
 ![Format Aggregate in Blazor TreeGrid](images/blazor-treegrid-aggregate-format.png)
 
-<!-- Custom aggregate
-
-To calculate the aggregate value with your own aggregate functions, use the custom aggregate option. To use custom aggregation, specify the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Type) as `Custom`, and provide the custom aggregate function in the [`CustomAggregate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html) property.
-
-> To access the custom aggregate value inside the template, use the key as `Custom`.
-
--->
-
 ## Limitations
 
-* By default, Footer Aggregate or total aggregate will be shown only for the current page records and not for the dataSource. To aggregate for all page records, set adaptor in **SfDataManager**.
+* By default, current view aggregates are calculated based on the current page records. To calculate aggregates for the entire dataset, configuration with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) is required.
