@@ -18,12 +18,12 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
+<SfDiagramComponent Height="600px" Nodes="@_nodes">
     @* Initialize the diagram snapping the custom interval *@
     <SnapSettings Constraints="SnapConstraints.All">
-        <HorizontalGridLines SnapIntervals="@SnapInterval">
+        <HorizontalGridLines SnapIntervals="@_snapInterval">
         </HorizontalGridLines>
-        <VerticalGridLines SnapIntervals="@SnapInterval">
+        <VerticalGridLines SnapIntervals="@_snapInterval">
         </VerticalGridLines>
     </SnapSettings>
 </SfDiagramComponent>
@@ -31,15 +31,15 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 @code
 {
     //Sets the snap interval.
-    public double[] SnapInterval { get; set; } = new double[]
+    private double[] _snapInterval { get; set; } = new double[]
     {
         10
     };
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node();
         diagramNode.OffsetX = 100;
         diagramNode.OffsetY = 100;
@@ -47,11 +47,11 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
         diagramNode.Height = 100;
         diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
         diagramNode.ID = "node1";
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomGridline)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/CustomGridline.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthoitNvgOEsjvmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GridLines in Blazor Diagram](images/blazor-diagram-gridlines.png)" %}
 
@@ -65,7 +65,7 @@ The appearance of gridlines can be customized using predefined properties.
 
 * For horizontal gridlines, use [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineDashArray) properties are used to customize the line color and line style of the horizontal gridlines.
 
-* For vertical gridlines, use [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_LineDashArray) properties are used to customize the line color and line style of the vertical gridlines.
+* For vertical gridlines, use `LineColor` and `LineDashArray` properties are used to customize the line color and line style of the vertical gridlines.
 
 The following code example illustrates how to customize the appearance of gridlines.
 
@@ -83,12 +83,12 @@ The following code example illustrates how to customize the appearance of gridli
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthSstjFquOSqpGo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/Appearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/Appearance.razor)
 
 
 ## How to Create Dot Grid Patterns
 
-The appearance of the grid lines can be changed into dots by using the [GridType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_GridType) as Dots. The following code illustrates how to render grid patterns as Dots.
+The appearance of the grid lines can be changed into dots by using the [GridType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_GridType) as **Dots**. The following code illustrates how to render grid patterns as Dots.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -96,23 +96,20 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 <SfDiagramComponent Width="1000px" Height="500px">
     @* Customizes the appearance of the gridlines *@
     <SnapSettings GridType="GridType.Dots">
-        <HorizontalGridLines LineColor="Blue" @bind-LineIntervals="@HInterval" 
-                             @bind-DotIntervals="@HDotInterval"></HorizontalGridLines>
-        <VerticalGridLines LineColor="Blue" @bind-LineIntervals="@VInterval" 
-                           @bind-DotIntervals="@VDotInterval"></VerticalGridLines>
+        <HorizontalGridLines LineColor="Blue" @bind-LineIntervals="@_hInterval" @bind-DotIntervals="@_hDotInterval"></HorizontalGridLines>
+        <VerticalGridLines LineColor="Blue" @bind-LineIntervals="@_vInterval" @bind-DotIntervals="@_vDotInterval"></VerticalGridLines>
     </SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
-    public double[] HDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20 };
-    public double[] VDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20, 1, 20, 1, 20 };
-    public double[] HInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
-    public double[] VInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
+    private double[] _hDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20 };
+    private double[] _vDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20, 1, 20, 1, 20 };
+    private double[] _hInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
+    private double[] _vInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
 }
-
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomizeGridline)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/CustomizeGridline.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLeCjDFUEuuwDSA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dot Grid in Blazor Diagram](images/blazor-diagram-dot-grid.png)" %}
 
@@ -129,9 +126,9 @@ The following code example illustrates how to customize the thickness of lines a
 <SfDiagramComponent Height="600px">
     @* Customize the appearance of the grid lines *@
     <SnapSettings Constraints="SnapConstraints.ShowLines">
-        <HorizontalGridLines LineColor="blue" LineDashArray="2,2" LineIntervals="@LineInterval">
+        <HorizontalGridLines LineColor="blue" LineDashArray="2,2" LineIntervals="@_lineInterval">
         </HorizontalGridLines>
-        <VerticalGridLines LineColor="blue" LineDashArray="2,2" LineIntervals="@LineInterval">
+        <VerticalGridLines LineColor="blue" LineDashArray="2,2" LineIntervals="@_lineInterval">
         </VerticalGridLines>
     </SnapSettings>
 </SfDiagramComponent>
@@ -139,13 +136,13 @@ The following code example illustrates how to customize the thickness of lines a
 @code
 {
     //Sets the line intervals for the gridlines.
-    public double[] LineInterval { get; set; } = new double[] 
+    private double[] _lineInterval { get; set; } = new double[] 
     {
         1.25, 14, 0.25, 15, 0.25, 15, 0.25, 15, 0.25, 15
     };
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/LineInterval)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/LineInterval.razor)
 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDByMjjlTDjqLjhz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Custom Thickness of GridLines](images/blazor-diagram-custom-gridlines-thickness.png)" %}
@@ -161,19 +158,19 @@ Snapping to gridlines can be enabled or disabled with the [SnapConstraints](http
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-    <SnapSettings Constraints="@snapConstraints"></SnapSettings>
+<SfDiagramComponent Height="600px" Nodes="@_nodes">
+    <SnapSettings Constraints="@_snapConstraints"></SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
     //Sets the snap constraints.
-    public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SnapConstraints _snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node();
         diagramNode.OffsetX = 100;
         diagramNode.OffsetY = 100;
@@ -181,11 +178,11 @@ Snapping to gridlines can be enabled or disabled with the [SnapConstraints](http
         diagramNode.Height = 100;
         diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
         diagramNode.ID = "node1";
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapToLines)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/SnapToLines.razor)
 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLIsZtFpZDwzFgS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.gif)" %}
@@ -199,12 +196,12 @@ By default, objects snapped towards the nearest gridline. The gridline or positi
 
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
+<SfDiagramComponent Height="600px" Nodes="@_nodes">
     @* Initialize the diagram snapping the custom interval *@
     <SnapSettings Constraints="SnapConstraints.All">
-        <HorizontalGridLines SnapIntervals="@SnapInterval">
+        <HorizontalGridLines SnapIntervals="@_snapInterval">
         </HorizontalGridLines>
-        <VerticalGridLines SnapIntervals="@SnapInterval">
+        <VerticalGridLines SnapIntervals="@_snapInterval">
         </VerticalGridLines>
     </SnapSettings>
 </SfDiagramComponent>
@@ -212,15 +209,15 @@ By default, objects snapped towards the nearest gridline. The gridline or positi
 @code
 {
     //Sets the snap interval.
-    public double[] SnapInterval { get; set; } = new double[]
+    private double[] _snapInterval { get; set; } = new double[]
     {
         10
     };
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node();
         diagramNode.OffsetX = 100;
         diagramNode.OffsetY = 100;
@@ -228,13 +225,13 @@ By default, objects snapped towards the nearest gridline. The gridline or positi
         diagramNode.Height = 100;
         diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
         diagramNode.ID = "node1";
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXroCZtbTNsMUXqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomizeSnapInterval)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/CustomizeSnapInterval.razor)
 
 
 ### How to Enable Snap to Object
@@ -250,20 +247,20 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-    <SnapSettings Constraints="@snapConstraints" SnapAngle="10" SnapDistance="10">
+<SfDiagramComponent Height="600px" Nodes="@_nodes">
+    <SnapSettings Constraints="@_snapConstraints" SnapAngle="10" SnapDistance="10">
     </SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
     //Sets the Snap to objects constraints.
-    public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SnapConstraints _snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node();
         diagramNode.OffsetX = 100;
         diagramNode.OffsetY = 100;
@@ -271,7 +268,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
         diagramNode.Height = 100;
         diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
         diagramNode.ID = "node1";
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
 
         diagramNode = new Node();
         diagramNode.OffsetX = 300;
@@ -280,11 +277,11 @@ The snap to object provides visual cues to assist with aligning and spacing diag
         diagramNode.Height = 100;
         diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
         diagramNode.ID = "node2";
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapToObject)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/SnapToObject.razor)
 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeWZtPJtixDcGj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.gif)" %}
@@ -299,19 +296,22 @@ The following code example illustrates how to customize the snap line style.
 ```cshtml
 @page "/"
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-    <SnapSettings Constraints="@snapConstraints" SnapAngle="10" SnapDistance="10" SnapLineStyle="snapLineStyle">
+
+<SfDiagramComponent Height="600px" Nodes="@_nodes">
+    <SnapSettings Constraints="@_snapConstraints" SnapAngle="10" SnapDistance="10" SnapLineStyle="@_snapLineStyle">
     </SnapSettings>
 </SfDiagramComponent>
+
 @code
 {
     //Sets the Snap to objects constraints.
-    public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject | SnapConstraints.SnapToLines;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    ShapeStyle snapLineStyle = new ShapeStyle() { StrokeColor = "green", StrokeWidth = 3 };
+    private SnapConstraints _snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject | SnapConstraints.SnapToLines;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private ShapeStyle _snapLineStyle = new ShapeStyle() { StrokeColor = "green", StrokeWidth = 3 };
+
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node();
         diagramNode.OffsetX = 100;
         diagramNode.OffsetY = 100;
@@ -319,7 +319,8 @@ The following code example illustrates how to customize the snap line style.
         diagramNode.Height = 100;
         diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
         diagramNode.ID = "node1";
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
+
         diagramNode = new Node();
         diagramNode.OffsetX = 300;
         diagramNode.OffsetY = 100;
@@ -327,11 +328,10 @@ The following code example illustrates how to customize the snap line style.
         diagramNode.Height = 100;
         diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
         diagramNode.ID = "node2";
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapLineStyle)
-
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/SnapLineStyle.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVSiXZbfDrShrCg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GuideLines in Blazor Diagram](images/SnapLineStyle.png)" %}

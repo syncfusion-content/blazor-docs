@@ -72,7 +72,7 @@ To enable this feature, configure [GanttFilterSettings.FilterType](https://help.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component displays up to 1000 distinct values per column in the filter dialog by default. These values are taken from the first 1000 records bound to the component and shown as checkbox list items to maintain optimal performance. Additional values can be accessed using the search option within the filter dialog.
 
-To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Gantt_FilterDialogOpeningEventArgs_FilterChoiceCount) property can be configured within the[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpening) event to increase or decrease the number of distinct values displayed, depending on the dataset size and filtering requirements.
+To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpenedEventArgs.html#Syncfusion_Blazor_Grids_FilterDialogOpenedEventArgs_FilterChoiceCount) property can be configured within the[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpening) event to increase or decrease the number of distinct values displayed, depending on the dataset size and filtering requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

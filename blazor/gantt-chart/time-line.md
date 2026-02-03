@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Timeline in Blazor Gantt Chart component
+# Timeline in Blazor Gantt Chart Component
 
 The timeline in the Blazor Gantt Chart component represents project durations as cells with defined units and formats, supporting in-built view modes like Hour-Minute, Day-Hour, Week-Day, Month-Week, Year-Month, and Minutes for flexible visualization. Configure modes using the [TimelineViewMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TimelineViewMode.html) property, with top and bottom tiers customized via [TopTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit) and [BottomTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit) in [TimelineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html). This enables detailed views, such as weekly overviews with daily breakdowns for projects, ensuring accurate timeline representation.
 
@@ -71,7 +71,7 @@ In Week mode, the top tier shows weeks and the bottom tier days, suitable for sh
 
 ### Month timeline mode
 
-In Month mode, the top tier shows months and the bottom tier show weeks, ideal for medium-term planning.
+In Month mode, the top tier shows months and the bottom tier shows weeks, ideal for medium-term planning.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -461,7 +461,7 @@ When designing the timeline cells, you can utilize the following context propert
 * `Value`: Defines the formatted date value that will be displayed in the timeline cells.
 * `Tier`: Defines whether the cell is part of the top or bottom tier.
 
-The following code example how to customize the top tier to display the week's weather details and the bottom tier to highlight working and non-working days, with formatted text for holidays. 
+The following code example shows how to customize the top tier to display the week's weather details and the bottom tier to highlight working and non-working days, with formatted text for holidays. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

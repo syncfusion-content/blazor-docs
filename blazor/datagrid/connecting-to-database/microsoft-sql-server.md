@@ -389,7 +389,7 @@ A connection string contains the information needed to connect the application t
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=SYNCLAPN-43362;Initial Catalog=NetworkSupportDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
+    "DefaultConnection": "Data Source=CustomSQLServer;Initial Catalog=NetworkSupportDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
   },
   "Logging": {
     "LogLevel": {
@@ -593,24 +593,25 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
-<link href="_content/Syncfusion.Blazor.Themes/styles/tailwind3.css" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
 <!-- Syncfusion Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-### Step 2: Update the Blazor DataGrid in the Home Component
+### Step 2: Update the Blazor DataGrid
 
-The Home component will display the ticket data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
+The `Home.razor` component will display the ticket data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
 **Instructions:**
 
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
 2. Add the following code to create a basic DataGrid:
 
-```html
+```cshtml
 @page "/"
 @rendermode InteractiveServer
 @inject TicketRepository TicketService
@@ -697,7 +698,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
             try
             {
                 // Fetch all tickets from the database
-                IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+                IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
                 // Apply search operation if search criteria exists
                 if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -732,6 +733,15 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
                     dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
                 }
 
+                // Handling Grouping
+                if (dataManagerRequest.Group != null)
+                {
+                    foreach (var group in dataManagerRequest.Group)
+                    {
+                        dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    }
+                }
+
                 // Return the result with total count for pagination metadata
                 return dataManagerRequest.RequiresCounts
                     ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
@@ -742,6 +752,8 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
                 throw new Exception($"An error occurred while retrieving data: {ex.Message}");
             }
         }
+    }
+}
 
 ```
 
@@ -769,7 +781,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 1. Open the `Components/Pages/Home.razor` file.
 2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
-```html
+```cshtml
 <SfGrid TValue="Tickets" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -813,10 +825,10 @@ Paging divides large datasets into smaller pages to improve performance and usab
 **Instructions:**
 
 1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [<GridPageSettings>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+2. The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 3. No additional code changes are required from the previous steps.
 
-```html
+```cshtml
 <SfGrid TValue="Tickets" 
         AllowPaging="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -844,7 +856,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
             
@@ -910,7 +922,7 @@ Searching allows the user to find records by entering keywords in the search box
 
 1. Ensure the toolbar includes the "Search" item.
 
-```html
+```cshtml
 <SfGrid TValue="Tickets"
         AllowPaging="true"
         Toolbar="@ToolbarItems">
@@ -936,7 +948,7 @@ Searching allows the user to find records by entering keywords in the search box
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -984,7 +996,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
-```html
+```cshtml
 <SfGrid TValue="Tickets" 
         AllowPaging="true"         
         AllowFiltering="true"
@@ -1013,7 +1025,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1069,7 +1081,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
-```html
+```cshtml
 <SfGrid TValue="Tickets" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1095,7 +1107,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1156,7 +1168,7 @@ Grouping organizes records into hierarchical groups based on column values.
 1. Open the `Components/Pages/Home.razor` file.
 2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
 
-```html
+```cshtml
 <SfGrid TValue="Tickets" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1181,7 +1193,7 @@ Grouping organizes records into hierarchical groups based on column values.
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1203,18 +1215,6 @@ Grouping organizes records into hierarchical groups based on column values.
 
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
 
-            // Handling Grouping
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                var dataObject = new DataResult { Result = ResultData, Count = totalRecordsCount, Aggregates = aggregates };
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
-
             // Handling Paging
             if (dataManagerRequest.Skip != 0)
             {
@@ -1225,8 +1225,17 @@ Grouping organizes records into hierarchical groups based on column values.
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
             }
 
+            // Handling Grouping
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
+            }
+
             return dataManagerRequest.RequiresCounts
-                ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates }
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
                 : (object)dataSource;
         }
     }
@@ -1252,7 +1261,7 @@ CustomAdaptor methods enable users to create, read, update, and delete records d
 
 Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
-```html
+```cshtml
 <SfGrid TValue="Tickets" 
         AllowPaging="true" 
         AllowSorting="true" 
@@ -1331,7 +1340,39 @@ public async Task AddTicketAsync(Tickets value)
         throw;
     }
 }
+
+private async Task<string> GeneratePublicTicketIdAsync()
+{
+    try
+    {
+        var existingTickets = await GetTicketsDataAsync();
+
+        int maxNumber = existingTickets
+            .Where(ticket => !string.IsNullOrEmpty(ticket.PublicTicketId) && ticket.PublicTicketId.StartsWith(PublicTicketIdPrefix))
+            .Select(ticket =>
+            {
+                string numberPart = ticket.PublicTicketId.Substring((PublicTicketIdPrefix + PublicTicketIdSeparator).Length);
+                if (int.TryParse(numberPart, out int number))
+                    return number;
+                return 0;
+            })
+            .DefaultIfEmpty(PublicTicketIdStartNumber - 1)
+            .Max();
+        int nextNumber = maxNumber + 1;
+        string newPublicTicketId = $"{PublicTicketIdPrefix}{PublicTicketIdSeparator}{nextNumber}";
+
+        return newPublicTicketId;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error generating ticket ID: {ex.Message}");
+        return $"{PublicTicketIdPrefix}{PublicTicketIdSeparator}{PublicTicketIdStartNumber}";
+    }
+}
 ```
+
+**Helper methods explanation:**
+- `GeneratePublicTicketIdAsync()`: A new PublicTicketId is auto-generated using previously generated PublicTicketId.
 
 **What happens behind the scenes:**
 
@@ -1569,11 +1610,11 @@ Now the adaptor supports bulk modifications with atomic database synchronization
 
 ---
 
-### Step 11: Complete Home.razor Code
+### Step 11: Complete Code
 
 Here is the complete and final `Home.razor` component with all features integrated. This component uses the exact implementation from the Grid_MSSQL project:
 
-```html
+```cshtml
 @page "/"
 @using System.Collections
 @using Grid_MSSQL.Data
@@ -1706,7 +1747,7 @@ Here is the complete and final `Home.razor` component with all features integrat
         /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
             
             // Handling Searching in CustomAdaptor.
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1726,27 +1767,8 @@ Here is the complete and final `Home.razor` component with all features integrat
                 dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
             }
 
-            // Handling Aggregates
-            IDictionary<string, object>? aggregates = null;
-            if (dataManagerRequest.Aggregates != null)
-            {
-                aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-            }
-
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-            DataResult dataObject = new DataResult();
-            // Handling Group operation in CustomAdaptor.
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                dataObject.Result = ResultData;
-                dataObject.Count = totalRecordsCount;
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
+            
             // Handling paging in CustomAdaptor.
             if (dataManagerRequest.Skip != 0)
             {
@@ -1756,7 +1778,17 @@ Here is the complete and final `Home.razor` component with all features integrat
             {
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
             }
-            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } : (object)dataSource;
+
+            // Handling Grouping
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
+            }
+
+            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount } : (object)dataSource;
         }
 
         /// <summary>
@@ -2111,7 +2143,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The Network Support Ticket System is now running and ready to use.
 
-### Available Features
+**Available Features**
 
 - **View Data**: All tickets from the SQL Server database are displayed in the DataGrid.
 - **Search**: Use the search box to find tickets by any field.
