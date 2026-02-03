@@ -14,8 +14,8 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
+<SfDiagramComponent Height="600px" Nodes="@_nodes" Connectors="@_connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@_horizontalSpacing" @bind-VerticalSpacing="@_verticalSpacing">
     </Layout>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
@@ -27,12 +27,12 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
 @code 
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int _left = 40;
+    private int _top = 50;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    private int _horizontalSpacing = 40;
+    private int _verticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -52,30 +52,30 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
     protected override void OnInitialized()
     {
         //Initializing node and connectors.
-        nodes = new DiagramObjectCollection<Node>()
+        _nodes = new DiagramObjectCollection<Node>()
         {
-            new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Steve-Ceo"} } },
-            new Node() { ID="node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Kevin-Manager"} } },
-            new Node() { ID="node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Peter-Manager"} } },
-            new Node() { ID="node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Jim-CSE"} } },
-            new Node() { ID="node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Martin-CSE"} } },
-            new Node() { ID="node6", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="John-Manager"} } },
-            new Node() { ID="node7", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Mary-CSE"} } },
+            new Node() { ID = "node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Steve-Ceo" } } },
+            new Node() { ID = "node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Kevin-Manager" } } },
+            new Node() { ID = "node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Peter-Manager" } } },
+            new Node() { ID = "node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Jim-CSE" } } },
+            new Node() { ID = "node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Martin-CSE" } } },
+            new Node() { ID = "node6", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "John-Manager" } } },
+            new Node() { ID = "node7", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Mary-CSE" } } },
         };
-        connectors = new DiagramObjectCollection<Connector>()
+        _connectors = new DiagramObjectCollection<Connector>()
         {
-            new Connector() { ID="connector1", SourceID="node1", TargetID="node2" },
-            new Connector() { ID="connector2", SourceID="node1", TargetID="node3" },
-            new Connector() { ID="connector3", SourceID="node2", TargetID="node4" },
-            new Connector() { ID="connector4", SourceID="node2", TargetID="node5" },
-            new Connector() { ID="connector5", SourceID="node3", TargetID="node6" },
-            new Connector() { ID="connector6", SourceID="node3", TargetID="node7" },
+            new Connector() { ID = "connector1", SourceID = "node1", TargetID = "node2" },
+            new Connector() { ID = "connector2", SourceID = "node1", TargetID = "node3" },
+            new Connector() { ID = "connector3", SourceID = "node2", TargetID = "node4" },
+            new Connector() { ID = "connector4", SourceID = "node2", TargetID = "node5" },
+            new Connector() { ID = "connector5", SourceID = "node3", TargetID = "node6" },
+            new Connector() { ID = "connector6", SourceID = "node3", TargetID = "node7" },
         };
     }
 }
 
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HeirarchicalLayout)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/HeirarchicalLayout.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBICjDdzpLQdEPv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor hierarchical layout with manually defined nodes and connectors](../images/blazor-hierarchical-diagram.png)" %}
 
@@ -85,9 +85,9 @@ A hierarchical layout can also be created from a data source. The following exam
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-  <DataSourceSettings ID="Id" ParentID="Manager" DataSource="DataSource"> </DataSourceSettings>
-    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@HorizontalSpacing" VerticalSpacing="@VerticalSpacing" >
+<SfDiagramComponent Height="600px" Nodes="@_nodes" Connectors="@_connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+  <DataSourceSettings ID="Id" ParentID="Manager" DataSource="@_dataSource"> </DataSourceSettings>
+    <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="@_horizontalSpacing" VerticalSpacing="@_verticalSpacing" >
     </Layout>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
@@ -99,12 +99,12 @@ A hierarchical layout can also be created from a data source. The following exam
 
 @code 
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int _left = 40;
+    private int _top = 50;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    private int _horizontalSpacing = 40;
+    private int _verticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -128,33 +128,33 @@ A hierarchical layout can also be created from a data source. The following exam
         public string ChartType { get; set; }
         public string Color { get; set; }
     }
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+    private List<HierarchicalDetails> _dataSource = new List<HierarchicalDetails>()
     {
-        new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
-        new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
-        new HierarchicalDetails()   { Id= "11", Role= "Assistant Manager", Manager= "1", Color= "#71AF17" },
-        new HierarchicalDetails()   { Id= "2", Role= "Human Resource Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-        new HierarchicalDetails()   { Id= "3", Role= "Trainers", Manager= "2", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "4", Role= "Recruiting Team", Manager= "2", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "5", Role= "Finance Asst. Manager", Manager= "2", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "6", Role= "Design Manager", Manager= "1",ChartType= "right", Color= "#1859B7" },
-        new HierarchicalDetails()   { Id= "7", Role= "Design Supervisor", Manager= "6", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "8", Role= "Development Supervisor", Manager= "6", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "9", Role= "Drafting Supervisor", Manager= "6", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "10", Role= "Operation Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-        new HierarchicalDetails()   { Id= "11", Role= "Statistic Department", Manager= "10", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "12", Role= "Logistic Department", Manager= "10", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "16", Role= "Marketing Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-        new HierarchicalDetails()   { Id= "17", Role= "Oversea sales Manager", Manager= "16", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "18", Role= "Petroleum Manager", Manager= "16", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "20", Role= "Service Dept. Manager", Manager= "16", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "21", Role= "Quality Department", Manager= "16", Color= "#2E95D8" }
+        new HierarchicalDetails()   { Id = "parent", Role = "Board", Color = "#71AF17" },
+        new HierarchicalDetails()   { Id = "1", Role = "General Manager", Manager = "parent", ChartType = "right", Color = "#71AF17" },
+        new HierarchicalDetails()   { Id = "11", Role = "Assistant Manager", Manager = "1", Color = "#71AF17" },
+        new HierarchicalDetails()   { Id = "2", Role = "Human Resource Manager", Manager = "1", ChartType = "right", Color = "#1859B7" },
+        new HierarchicalDetails()   { Id = "3", Role = "Trainers", Manager = "2", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "4", Role = "Recruiting Team", Manager = "2", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "5", Role = "Finance Asst. Manager", Manager = "2", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "6", Role = "Design Manager", Manager = "1", ChartType = "right", Color = "#1859B7" },
+        new HierarchicalDetails()   { Id = "7", Role = "Design Supervisor", Manager = "6", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "8", Role = "Development Supervisor", Manager = "6", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "9", Role = "Drafting Supervisor", Manager = "6", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "10", Role = "Operation Manager", Manager = "1", ChartType = "right", Color = "#1859B7" },
+        new HierarchicalDetails()   { Id = "11", Role = "Statistic Department", Manager = "10", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "12", Role = "Logistic Department", Manager = "10", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "16", Role = "Marketing Manager", Manager = "1", ChartType = "right", Color = "#1859B7" },
+        new HierarchicalDetails()   { Id = "17", Role = "Oversea sales Manager", Manager = "16", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "18", Role = "Petroleum Manager", Manager = "16", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "20", Role = "Service Dept. Manager", Manager = "16", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "21", Role = "Quality Department", Manager = "16", Color = "#2E95D8" }
     };
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVIsZNxJfPxIhga?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/HierarchicalTreeWithDataSource.razor)
 
 >**Note:** In `DataSourceSettings`, the type of the `ID` and `ParentID` properties is string, and the provided `DataSource` should have a parent-child relationship. At least one node must have an empty `ParentID` to act as the root.
 
@@ -165,17 +165,22 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 Use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property to change the orientation at runtime. The following code shows how to change the layout.
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Width="500px" >
-    <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
+    <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@_orientation"></Layout>
 </SfDiagramComponent>
 
-// Initializing the orientation value.
-LayoutOrientation orientation = LayoutOrientation.TopToBottom;
-
-public void UpdateOrientation()
+@code
 {
-    // Update LayoutOrientation in runtime.
-    orientation = LayoutOrientation.BottomToTop;
+    // Initializing the orientation value.
+    private LayoutOrientation _orientation = LayoutOrientation.TopToBottom;
+
+    public void UpdateOrientation()
+    {
+        // Update LayoutOrientation in runtime.
+        _orientation = LayoutOrientation.BottomToTop;
+    }
 }
 ```
 
@@ -184,21 +189,27 @@ public void UpdateOrientation()
 Adjust the horizontal and vertical spacing for the diagram layout using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
 
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
-    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"/>
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px">
+    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@_horizontalSpacing" @bind-VerticalSpacing="@_verticalSpacing"/>
 </SfDiagramComponent>
 
-// Initializing the Horizontal and Vertical value.
-int HorizontalSpacing = 40;
-int VerticalSpacing = 50;
-
-// Update the spacing.
-public void UpdateSpacing()
+@code
 {
-    Diagram.BeginUpdate();
-    HorizontalSpacing += 10;
-    VerticalSpacing += 10;
-    Diagram.EndUpdateAsync();
+    // Initializing the Horizontal and Vertical value.
+    private SfDiagramComponent _diagram;
+    private int _horizontalSpacing = 40;
+    private int _verticalSpacing = 50;
+
+    // Update the spacing.
+    public void UpdateSpacing()
+    {
+        _diagram.BeginUpdate();
+        _horizontalSpacing += 10;
+        _verticalSpacing += 10;
+        _diagram.EndUpdateAsync();
+    }
 }
 ```
 
@@ -207,23 +218,29 @@ public void UpdateSpacing()
 Use the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property to create padding around the layout within the viewport. This is useful to keep the tree away from the edges of the diagram.
 
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px" >
   <Layout Type="LayoutType.HierarchicalTree">
-     <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
+     <LayoutMargin Top="@_top" Left="@_left"></LayoutMargin>
   </Layout>
 </SfDiagramComponent>
 
-// Initializing the Margin Top and Left value.
-int left = 40;
-int top = 50;
-
-// Update the margin values.
-public void UpdateMargin()
+@code
 {
-    Diagram.BeginUpdate();
-    left += 10;
-    top += 10;
-    Diagram.EndUpdateAsync();
+    // Initializing the Margin Top and Left value.
+    private SfDiagramComponent _diagram;
+    private int _left = 40;
+    private int _top = 50;
+
+    // Update the margin values.
+    public void UpdateMargin()
+    {
+        _diagram.BeginUpdate();
+        _left += 10;
+        _top += 10;
+        _diagram.EndUpdateAsync();
+    }
 }
 ```
 
