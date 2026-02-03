@@ -2349,7 +2349,7 @@ This guide demonstrates how to:
 4. Create the ExpenseRecord data model used across the GraphQL schema. [🔗](#step-4-create-the-data-model)
 5. Implement GraphQL query resolvers to read data. [🔗](#step-5-graphql-query-resolvers)
 6. Create the DataManagerRequestInput input type to carry grid operations. [🔗](#step-6-create-the-datamanagerrequestinput-class)
-7. Define GraphQL mutation resolvers for Create, Update, and Delete. [🔗](#step-7-define-graphql-mutation-resolvers)
+7. Define GraphQL mutation resolvers for Create, Update, and Delete. [🔗](#step-7-graphql-mutation-resolvers)
 8. Integrate Syncfusion Blazor DataGrid and configure the GraphQL adaptor. [🔗](#step-3-configure-graphql-adaptor-and-data-binding)
 9. Perform CRUD operations from the grid using GraphQL mutations. [🔗](#perform-crud-operations)
 
