@@ -17,9 +17,7 @@ This section guides through integrating the Syncfusion<sup style="font-size:70%"
 
 ## Prerequisites
 
-Install the Mobile development with .NET workload for Visual Studio to use .NET MAUI project templates. For details, refer to the .NET MAUI installation guide and the Syncfusion Blazor extension documentation:
-- https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin
-- https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio
+Install the Mobile development with .NET workload for Visual Studio to use .NET MAUI project templates. For details, refer to the [.NET MAUI installation guide](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) and the [Syncfusion Blazor extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) documentation:
 
 ## Create a new Blazor MAUI App in Visual Studio
 
@@ -27,9 +25,7 @@ Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://l
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the app
 
-To add the Blazor DropDownList component, open the NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then install Syncfusion.Blazor.DropDowns and Syncfusion.Blazor.Themes:
-- https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns
-- https://www.nuget.org/packages/Syncfusion.Blazor.Themes
+To add the Blazor DropDownList component, open the NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes):
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -40,9 +36,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on NuGet. See the NuGet packages list for available components and details:
-- https://www.nuget.org/packages?q=syncfusion.blazor
-- https://blazor.syncfusion.com/documentation/nuget-packages
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) list for available components and details:
 
 {% endtabcontent %}
 
@@ -50,9 +44,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Prerequisites
 
-Ensure the .NET SDK is installed and the .NET MAUI workloads are added via the .NET CLI. For setup guidance, refer to:
-- https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code
-- https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project
+To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
@@ -173,7 +165,7 @@ To run the Blazor DataGrid in a Blazor Android MAUI application using the Androi
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
-N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
+N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)
 

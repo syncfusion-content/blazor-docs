@@ -194,7 +194,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListBox componen
 {% tabs %}
 {% highlight razor %}
 
-<SfListBox TValue="string[]"></SfListBox>
+<SfListBox TValue="string[]" TItem="string[]"></SfListBox>
 
 {% endhighlight %}
 {% endtabs %}

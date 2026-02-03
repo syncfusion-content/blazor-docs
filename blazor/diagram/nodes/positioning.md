@@ -31,35 +31,35 @@ The following code shows how to change the pivot value.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes" />
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
 
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-            {
-                ID = "node",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-                // Pivot of the node
-                Pivot = new DiagramPoint() { X = 0, Y = 0 }
-            };
-        nodes.Add(node);
+        {
+            ID = "node",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // Pivot of the node
+            Pivot = new DiagramPoint() { X = 0, Y = 0 }
+        };
+        _nodes.Add(node);
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -68,12 +68,12 @@ The following code shows how to change the pivot value.
         {
             //OnAfterRenderAsync will be triggered after the component rendered.
             await Task.Delay(200);
-            diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[0] });
+            _diagram.Select(new ObservableCollection<IDiagramObject>() { _diagram.Nodes[0] });
         }
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/Positioning)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Position/Positioning.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhIWDXwLVtSsRsA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Positioning a node using pivot and offsets in Blazor Diagram](../images/blazor-diagram-node-position.png)" %}
 
@@ -82,16 +82,16 @@ Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -110,11 +110,11 @@ Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.
             // RotationAngle of the node.
             RotationAngle = 90
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/NodeRotateAngle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Position/NodeRotateAngle.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVoiNDchBsisDsF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing a nodes rotation angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)" %}
 
@@ -125,16 +125,16 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes" />
 
 @code
- {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+{
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -157,11 +157,11 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
                 StrokeColor = "white" 
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/MinMaxSize)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Position/MinMaxSize.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNreCZZcBrsHVKLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Maximum and Minimum Size of Blazor Diagram Node](../images/blazor-diagram-show-max-min-size-node.gif)" %}
 

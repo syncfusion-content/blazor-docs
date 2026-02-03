@@ -18,16 +18,16 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
         {
             ID = "node1",
@@ -45,12 +45,12 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
             },
            
         };
-         Node node2 = new Node()
+        Node node2 = new Node()
         {
             ID = "node2",
             Width = 100,
             Height = 100,
-            OffsetX = 100,
+            OffsetX = 300,
             OffsetY = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
@@ -62,8 +62,8 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
             },
            
         };
-        nodes.Add(node1);
-        nodes.Add(node2);
+        _nodes.Add(node1);
+        _nodes.Add(node2);
     }
 }
 ```
@@ -75,7 +75,7 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 | **Parent** | When this option is set, the annotation rotates along with its parent node. | ![Blazor Diagram RotationReference Parent](../images/rotationReferenceParent.gif) |
 
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Interactions/RotationReference)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationReference.razor)
 
 ## How to rotate a Annotation using the RotationAngle property
 
@@ -85,10 +85,10 @@ The following code examples illustrate how to configure `RotationAngle` for an a
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -99,22 +99,22 @@ The following code examples illustrate how to configure `RotationAngle` for an a
             OffsetX = 100,
             OffsetY = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
-    { 
-        new ShapeAnnotation 
-        { 
-            Content = "Node",
-            ID = "Annotation",
-            RotationAngle = 30,    
-        }
-    },
+            { 
+                new ShapeAnnotation 
+                { 
+                    Content = "Node",
+                    ID = "Annotation",
+                    RotationAngle = 30,    
+                }
+            },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIiZDRTogIAqku?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RotationAngleProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationAngleProperty.razor)
 
 ![Annotation Rotation in Blazor Diagram](../images/RotationAngleAnnotation.png)
 
