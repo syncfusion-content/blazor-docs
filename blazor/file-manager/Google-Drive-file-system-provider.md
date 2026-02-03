@@ -26,9 +26,9 @@ To authenticate from the client end, you need to obtain OAuth 2.0 client credent
 
 **Steps to Generate OAuth 2.0 Credentials:**
 
-* Go to the [Google API Console](https://console.cloud.google.com/apis/dashboard).
-* Create a new project or select an existing project.
-* Enable the **Google Drive API** for your project by selecting **API Library**.
+* Log in to the [Google Cloud Console](https://console.cloud.google.com/).
+* Tap on the drop-down button and select **New project**.
+* Enable the **Google Drive API** for your project by navigating to **APIs & Services → Library**, then selecting **Google Drive API → Enable**.
 * Configure the project by selecting the **OAuth consent screen** option. Complete the steps under **App Information, Audience, Contact Information, and Finish** by clicking **Get Started** in the displayed window.
 * After completing the above details, click the **Create OAuth client** button. Choose either **Desktop app** or **Web application** as appropriate.
 * Once the OAuth client is created, a confirmation popup will appear. Download the generated **client_secret.json** file.
@@ -36,8 +36,8 @@ To authenticate from the client end, you need to obtain OAuth 2.0 client credent
 
 After downloading the `client_secret.json`, copy it into the following paths of the cloned project:
 
-* EJ2FileManagerService > credentials > client_secret.json
-* GoogleOAuth2.0Base > credentials > client_secret.json
+* [EJ2FileManagerService > credentials > client_secret.json](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider/blob/master/EJ2GoogleDriveFileProvider/credentials/client_secret.json)
+* [GoogleOAuth2.0Base > credentials > client_secret.json](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider/blob/master/GoogleOAuth2.0Base/credentials/client_secret.json)
 
 After updating the credentials, just build and run the project. Now, the project will be hosted in `http://localhost:{port}`, and it will ask to log on to the Gmail account for which created the client secret credentials. Then, provide permission to access the Google Drive files by clicking the allow access button in the page. Now, just mapping the ajaxSettings property of the File Manager component to the appropriate controller methods will allow to manage the files from the Google Drive.
 
