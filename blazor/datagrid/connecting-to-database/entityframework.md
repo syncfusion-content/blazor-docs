@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor DataGrid with SQL via EF Core and REST API | Syncfusion
-description: Bind SQL Server data to Blazor DataGrid using EF Core and REST API (UrlAdaptor) with CRUD, filtering, sorting, paging, and grouping.
+description: Bind SQL Server data to Blazor DataGrid using EF Core and REST API (UrlAdaptor) with CRUD, filtering, sorting, and paging.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -403,6 +403,30 @@ The `Home.razor` component will display the order data in a Syncfusion Blazor Da
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
     </GridColumns>
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
+                    <GroupFooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </GroupFooterTemplate>
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
     <GridPageSettings PageSize="10"></GridPageSettings>
 </SfGrid>
 
@@ -421,6 +445,9 @@ The `Home.razor` component will display the order data in a Syncfusion Blazor Da
 - **`<GridFilterSettings>`**: Configures filter type as `Menu` for dropdown-style filtering.
 - **`<GridEditSettings>`**: Enables inline editing in `Normal` mode (edit one row at a time).
 - **`Toolbar`**: "Add", "Edit", "Delete", "Update", "Cancel", "Search" for CRUD and search operations.
+- **`<GridAggregates>`**: Displays summary calculations (Sum, Count, Average, Min, Max) in footer rows. The `<GroupFooterTemplate>` shows aggregates for each group, while `<FooterTemplate>` displays aggregates for the entire grid at the bottom.
+
+> Note: In URL Adaptor, the DataGrid component handles grouping and aggregation operations automatically. Customizable operations like searching, filtering, sorting, and paging can be modified in the controller logic, but grouping and aggregation are managed directly by the datagrid component.
 
 ### Step 3: Implement the Endpoints for UrlAdaptor
 
@@ -582,7 +609,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
         dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
     }
 
-    return new { result = dataSource, count = totalRecordsCount };
+    return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource
 }
 ```
 
@@ -638,7 +665,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
             dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
         }
 
-        return new { result = dataSource, count = totalRecordsCount };
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource
     }
     catch (Exception ex)
     {
@@ -698,13 +725,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
         // Handling Filtering
         if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
         {
-            foreach (var condition in dataManagerRequest.Where)
-            {
-                foreach (var predicate in condition.predicates)
-                {
-                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, predicate.Operator);
-                }
-            }
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
         }
 
         int totalRecordsCount = dataSource.Count();
@@ -720,7 +741,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
             dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
         }
 
-        return new { result = dataSource, count = totalRecordsCount };
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource
     }
     catch (Exception ex)
     {
@@ -783,13 +804,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
         // Handling Filtering
         if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
         {
-            foreach (var condition in dataManagerRequest.Where)
-            {
-                foreach (var predicate in condition.predicates)
-                {
-                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, predicate.Operator);
-                }
-            }
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
         }
 
         // Handling Sorting
@@ -811,7 +826,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
             dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
         }
 
-        return new { result = dataSource, count = totalRecordsCount };
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource
     }
     catch (Exception ex)
     {
@@ -832,114 +847,7 @@ Sorting feature is now active.
 
 ---
 
-### Step 8: Implement Grouping Feature
-
-Grouping organizes records into hierarchical groups based on column values.
-
-**Instructions:**
-
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
-
-```cshtml
-<SfGrid TValue="Order" 
-        AllowPaging="true" 
-        AllowSorting="true"
-        AllowFiltering="true"
-        AllowGrouping="true"
-        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })" 
-        Width="100%" Height="600px">
-    <SfDataManager Url="http://localhost:5175/api/Grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridPageSettings PageSize="10"></GridPageSettings>
-</SfGrid>
-```
-
-3. Update the `Post` action in **Controllers/GridController.cs** to handle grouping:
-
-```csharp
-[HttpPost]
-[Route("api/[controller]")]
-public object Post([FromBody] DataManagerRequest dataManagerRequest)
-{
-    try
-    {
-        IEnumerable<Order> dataSource = GetOrderData();
-
-        // Handling Searching
-        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
-        {
-            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-        }
-
-        // Handling Filtering
-        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-        {
-            foreach (var condition in dataManagerRequest.Where)
-            {
-                foreach (var predicate in condition.predicates)
-                {
-                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, predicate.Operator);
-                }
-            }
-        }
-
-        // Handling Sorting
-        if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
-        {
-            dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
-        }
-
-        // Handling Grouping
-        if (dataManagerRequest.Group != null && dataManagerRequest.Group.Count > 0)
-        {
-            dataSource = (IEnumerable<Order>)DataOperations.PerformGrouping(dataSource, dataManagerRequest.Group);
-        }
-
-        int totalRecordsCount = dataSource.Cast<Order>().Count();
-
-        // Handling Aggregation
-        IDictionary<string, object> aggregates = null;
-        if (dataManagerRequest.Aggregates != null)
-        {
-            aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-        }
-
-        // Handling Paging
-        if (dataManagerRequest.Skip != 0)
-        {
-            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
-        }
-
-        if (dataManagerRequest.Take != 0)
-        {
-            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
-        }
-
-        return new { result = dataSource, count = totalRecordsCount, aggregates = aggregates };
-    }
-    catch (Exception ex)
-    {
-        return new { error = ex.Message, innerError = ex.InnerException?.Message };
-    }
-}
-```
-
-**How Grouping Works:**
-
-- Columns can be grouped by dragging the column header into the group drop area.
-- Each group can be expanded or collapsed by clicking on the group header.
-- The `Post` method receives the grouping instructions through `dataManagerRequest.Group`.
-- The grouping operation is processed using **DataOperations.PerformGrouping**, which organizes the records into hierarchical groups based on the selected column.
-- Grouping is performed after search, filter, and sort operations, ensuring the grouped data reflects all applied conditions.
-- The processed grouped result is then returned to the **Grid** and displayed in a structured, hierarchical format.
-
-Grouping feature is now active.
-
----
-
-### Step 9: Perform CRUD Operations
+### Step 8: Perform CRUD Operations
 
 CRUD operations (Create, Read, Update, Delete) enable users to manage data directly from the DataGrid. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
 
@@ -966,11 +874,7 @@ CRUD operations (Create, Read, Update, Delete) enable users to manage data direc
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridPageSettings PageSize="10"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        // Add Columns
     </GridColumns>
 </SfGrid>
 ```
@@ -1214,9 +1118,8 @@ This guide demonstrates how to:
 4. Configure connection strings and register services in Program.cs. [🔗](#step-5-configure-the-connection-string)
 5. Create REST API endpoints in a controller for CRUD operations. [🔗](#step-6-create-the-grid-api-controller)
 6. Implement searching, filtering, and sorting in the REST API. [🔗](#step-5-implement-searching-feature)
-7. Enable grouping and pagination for efficient data management. [🔗](#step-8-implement-grouping-feature)
-8. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-9-perform-crud-operations)
-9. Handle batch operations for bulk data modifications. [🔗](#step-9-perform-crud-operations)
+7. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-8-perform-crud-operations)
+8. Handle batch operations for bulk data modifications. [🔗](#step-8-perform-crud-operations)
 
 The application now provides a complete solution for managing orders with a modern, user-friendly interface using Entity Framework Core with SQL Server and REST API endpoints via UrlAdaptor.
 
