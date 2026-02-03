@@ -9,7 +9,7 @@ documentation: ug
 
 # Validation in Blazor TextBox Component
 
-The TextBox supports three types of validation styles, namely `error`, `warning`, and `success`. These are visual states only and do not implement validation logic. Apply the corresponding classes—`.e-error`, `.e-warning`, or `.e-success`—to the component’s wrapper (added via the CssClass property) to change the appearance based on validation outcome. For more information, see the CssClass API reference.
+The TextBox supports three types of validation styles, namely `error`, `warning`, and `success`. These are visual states only and do not implement validation logic. Apply the corresponding classes—`.e-error`, `.e-warning`, or `.e-success`—to the component’s wrapper (added via the CssClass property) to change the appearance based on validation outcome. For more information, see the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) API reference.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -28,7 +28,7 @@ The TextBox supports three types of validation styles, namely `error`, `warning`
 
 ## Limit no of character count
 
-Limit the number of characters by setting the `maxlength` attribute using the HtmlAttributes property. This enforces a client-side input limit and complements (but does not replace) server-side or model validation.
+Limit the number of characters by setting the `maxlength` attribute using the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_HtmlAttributes) property. This enforces a client-side input limit and complements (but does not replace) server-side or model validation.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
