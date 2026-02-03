@@ -13,7 +13,7 @@ Virtualization enables the efficient rendering of large datasets in the TreeGrid
 
 ## Row Virtualization
 
-Row virtualization renders only the rows visible in the viewport, appending additional records as the user scrolls vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~EnableVirtualization.html) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Height.html) property.
+Row virtualization renders only the rows visible in the viewport, appending additional records as the user scrolls vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Height.html) property.
 
 The number of records displayed is determined implicitly by the content area's height, with additional buffer records maintained for smooth scrolling. Expand and Collapse states of child records are persisted during virtualization.
 
