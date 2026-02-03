@@ -55,6 +55,7 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
             public int? Duration { get; set;}
             public int? Progress { get; set;}
             public int? ParentId { get; set;}
+            public bool IsParent { get; set; }
         }
 
         public static List<BusinessObject> GetSelfDataSource()
@@ -96,9 +97,9 @@ Custom validation can be used by overriding the IsValid method inside the class 
 The following sample code demonstrates custom validations implemented in the fields `Duration` and `Priority` .
 
 ```cshtml
-@using TreeGridComponent. Data; 
-@using Syncfusion. Blazor. TreeGrid; 
-@using System. ComponentModel. DataAnnotations; 
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using System.ComponentModel.DataAnnotations;
 
 <SfTreeGrid TValue="BusinessObject" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0"
 Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
@@ -181,7 +182,7 @@ Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
 
 ```cshtml
 
-namespace TreeGridComponent. Data
+namespace TreeGridComponent.Data
 {
 
     public class BusinessObject
@@ -221,9 +222,9 @@ In the below code example, the following things have been done.
 
 {% highlight c# %}
 
-using Microsoft. AspNetCore. Components; 
-using Microsoft. AspNetCore. Components. Forms; 
-using Syncfusion. Blazor. Grids; 
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
+using Syncfusion.Blazor.Grids;
 
 public class MyCustomValidator : ComponentBase
 {
@@ -303,8 +304,8 @@ public class MyCustomValidator : ComponentBase
 
 {% highlight razor %}
 
-@using TreeGridComponent. Data; 
-@using Syncfusion. Blazor. TreeGrid; 
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
 @inject WeatherForecastService ForecastService
 
 <SfTreeGrid @ref="TreeGrid" TValue="Tree" DataSource="GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0"
@@ -344,9 +345,9 @@ public class MyCustomValidator : ComponentBase
 
 {% highlight c# %}
 
-namespace TreeGridComponent. Data
-{
+namespace TreeGridComponent.Data
 
+{
     public class Tree
     {
         [Required(ErrorMessage = "Task ID  should not be empty")]
@@ -438,13 +439,13 @@ The output will be as follows.
 
 {% highlight razor %}
 
-@using TreeGridComponent. Data; 
-@using Syncfusion. Blazor. TreeGrid; 
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid @ref="TreeGrid" TValue="Tree" DataSource="GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0" 
 Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel", "Delete" })">
 <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"
-                          Mode="Syncfusion. Blazor. TreeGrid. EditMode. Dialog">
+                          Mode="Syncfusion.Blazor.TreeGrid.EditMode.Dialog">
         <Validator>
             <DataAnnotationsValidator></DataAnnotationsValidator>
         </Validator>
@@ -472,7 +473,8 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel", "Delete" })">
 
 {% highlight c# %}
 
-namespace TreeGridComponent. Data
+namespace TreeGridComponent.Data
+
 {
 
     public class Tree
@@ -631,3 +633,4 @@ N> The validation message for fields that are not defined in the TreeGrid column
 ```
 
 ![Display Validation in Blazor Tree Grid Dialog Template](../images/blazor-treegrid-display-validation-in-dialog-template.png)
+
