@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dialog Editing in Blazor Tree Grid Component | Syncfusion
-description: Dialog editing in the Syncfusion Blazor TreeGrid component.
+description: Dialog editing in the Syncfusion Blazor TreeGrid displays a popup form for adding or updating records, enabling structured and user-friendly data editing.
 platform: Blazor
 control: Tree Grid
 documentation: ug

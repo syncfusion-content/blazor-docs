@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Editing in Blazor Tree Grid Component | Syncfusion
-description: Template editing in the Syncfusion Blazor TreeGrid component.
+description: Template editing in the Syncfusion Blazor TreeGrid allows customizing cell and row content using flexible templates for rich, dynamic data presentation.
 platform: Blazor
 control: Tree Grid
 documentation: ug
