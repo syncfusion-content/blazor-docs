@@ -96,10 +96,9 @@ N> * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 <br/> * It requires the selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) to be `Cell`,  [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CellSelectionMode) to be `Box` and also Batch Editing should be enabled.
 
 The following GIF represent a tree grid with auto fill feature.
-![Auto FIll in Blazor TreeGrid](../images/blazor-treegrid-auto-fill.gif)
+![Animated demo showing AutoFill copying cell values in a TreeGrid](../images/blazor-treegrid-auto-fill.gif)
 
 
 ## Limitations of AutoFill
 
-* Since the string values are not parsed to number and date type, so when the selected string type cells are dragged to the number type cells then it will be displayed as **NaN**. For date type cells, when the selected string type cells are dragged to date type cells then it will be displayed as an **empty cell**.
-* Linear series and the sequential data generations are not supported in this autofill feature.
+String values are not parsed to number or date types. Copying string-type cells into number-type cells displays NaN; into date-type cells leaves the cell empty. Linear series and sequential data generation are not supported.
