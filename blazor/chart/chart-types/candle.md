@@ -13,7 +13,7 @@ documentation: ug
 
 [Candle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) series is similar to Hilo Open Close series. It is used to represent the **Low**, **High**, **Open and Closing** prices over time. It is commonly used in financial charts to visualize stock price movements.
 
-You can learn how to create a candle chart using Blazor Charts by watching the video below.
+A detailed demonstration of the process for creating a candle chart using Blazor Charts is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=KDOI77kV34Q" %}
 
@@ -161,7 +161,7 @@ The color of the candle will be defined by comparing with previous values. [Bull
     };
 }
 
-``` 
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhTtlrZzYcERtLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Solid candles
@@ -204,7 +204,7 @@ The color of the candle will be defined by comparing with previous values. [Bull
     };
 }
 
-``` 
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrJZPrNfEvwlPNT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
@@ -392,7 +392,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrfZbVDoNPkKESJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

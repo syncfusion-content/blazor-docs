@@ -69,8 +69,8 @@ The Blazor Chart component followed the [keyboard interaction](https://www.w3.or
 |<kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the chart.|
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point right side from the selected point.|
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point.|
-| <kbd>←</kbd> | <kbd>←</kbd> | Moves the focus to the next series in our Chart component.|
-| <kbd>→</kbd> | <kbd>→</kbd> | Moves the focus to the previous series in our Chart component.|
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves the focus to the next series in the Chart.|
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the focus to the previous series in the Chart.|
 |<kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Selects the data point in the series|
 | <kbd>↓</kbd> , <kbd>←</kbd> | <kbd>↓</kbd> / <kbd>←</kbd> | Moves the focus to the legend left side from the selected legend.|
 | <kbd>↑</kbd> , <kbd>→</kbd> | <kbd>↑</kbd> / <kbd>→</kbd> | Moves the focus to the legend right side from the selected legend.|
