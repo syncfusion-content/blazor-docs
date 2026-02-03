@@ -50,7 +50,7 @@ First, the **PostgreSQL database** structure must be created to store purchase o
 
 **UI Instructions (Using pgAdmin 4):**
 
-1. **Open pgAdmin 4** and connect to your PostgreSQL server.
+1. **Open pgAdmin 4** and connect to the PostgreSQL server.
 2. **Create Database**:
    - Right-click on **Databases** → Select **Create** → **Database**
    - Enter name: `PurchaseOrderDB`
