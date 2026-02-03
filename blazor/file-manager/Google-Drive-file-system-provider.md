@@ -9,7 +9,9 @@ documentation: ug
 
 # Google Drive file system provider
 
-The Google Drive file system provider allows the users to manage the files and folders in a Google Drive account. The Google Drive file system provider works on id basis where each file and folder have a unique ID. To get started, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider) using the following command.
+To get started with the Google Drive file system provider, ensure that you have a Google account, a project created in the Google API Console with the Google Drive API enabled, and OAuth 2.0 client credentials (**client ID** and **client secret**) downloaded as a `client_secret.json` file.
+
+The Google Drive file system provider allows users to manage files and folders in their Google Drive account. It operates on an ID-based system where each file and folder has a unique ID. To begin, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider) using the following command.
 
 ```
 
@@ -18,10 +20,21 @@ git clone https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-pr
 cd ej2-google-drive-aspcore-file-provider
 
 ```
+The Google Drive file system provider uses the [Google Drive APIs](https://developers.google.com/drive/api/v3/reference/) for file access, and [OAuth 2.0](https://developers.google.com/identity/protocols/OAuth2) for authentication and authorization.
 
-Google Drive file system provider use the [Google Drive APIs](https://developers.google.com/drive/api/v3/reference/) to read the file in the file system and uses the [OAuth 2.0](https://developers.google.com/identity/protocols/OAuth2) protocol for authentication and authorization. To authenticate from the client end, have to obtain OAuth 2.0 client credentials from the `Google API Console`. To learn more about generating the client credentials from the from Google API Console, refer to this [link](https://developers.google.com/identity/protocols/OAuth2UserAgent).
+To authenticate from the client end, you need to obtain OAuth 2.0 client credentials from the `Google API Console`. To learn more about generating the client credentials from the from Google API Console, refer to this [link](https://developers.google.com/identity/protocols/OAuth2UserAgent).
 
-After generating the client secret data, copy the JSON data to the following specified JSON files in the cloned location.
+**Steps to Generate OAuth 2.0 Credentials:**
+
+* Go to the [Google API Console](https://console.developers.google.com).
+* Create a new project or select an existing project.
+* Enable the **Google Drive API** for your project by selecting **API Library**.
+* Configure the project by selecting the **OAuth consent screen** option. Complete the steps under **App Information, Audience, Contact Information, and Finish** by clicking **Get Started** in the displayed window.
+* After completing the above details, click the **Create OAuth client** button. Choose either **Desktop app** or **Web application** as appropriate.
+* Once the OAuth client is created, a confirmation popup will appear. Download the generated **client_secret.json** file.
+* Finally, add test users by selecting the **Audience** option under the **OAuth consent screen** section.
+
+After downloading the `client_secret.json`, copy it into the following paths of the cloned project:
 
 * EJ2FileManagerService > credentials > client_secret.json
 * GoogleOAuth2.0Base > credentials > client_secret.json
