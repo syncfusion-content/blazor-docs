@@ -201,16 +201,16 @@ By default, the TreeGrid renders twice as many records as the defined height per
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.TreeGrid
 
-<SfTreeGrid DataSource="@TreeGridData" OverscanCount="5" IdMapping="TaskID" RowHeight="35"  TreeColumnIndex="1" ParentIdMapping="ParentID" Height="410" Width="410" EnableHover="false" EnableVirtualization="true"  EnableColumnVirtualization="true">
+<SfTreeGrid DataSource="@TreeGridData" OverscanCount="5" IdMapping="TaskID" RowHeight="35" TreeColumnIndex="1" ParentIdMapping="ParentID" Height="410" EnableHover="false" EnableVirtualization="true" EnableColumnVirtualization="true">
     <TreeGridPageSettings PageSize="40"></TreeGridPageSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskID" HeaderText="No" TextAlign="TextAlign.Right" Width="60"></TreeGridColumn>
-        <TreeGridColumn Field="FIELD1" HeaderText="Name" Width="100"></TreeGridColumn>
-        <TreeGridColumn Field="FIELD2" HeaderText="Year" TextAlign="TextAlign.Right" Width="80"></TreeGridColumn>
-        <TreeGridColumn Field="FIELD3" HeaderText="Stint" TextAlign="TextAlign.Right" Width="80"></TreeGridColumn>
-        <TreeGridColumn Field="FIELD4" HeaderText="TMID" TextAlign="TextAlign.Right" Width="80"></TreeGridColumn>
-        <TreeGridColumn Field="FIELD5" HeaderText="LGID" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
-        <TreeGridColumn Field="FIELD6" HeaderText="GP" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="Field1" HeaderText="Name" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Field2" HeaderText="Year" TextAlign="TextAlign.Right" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Field3" HeaderText="Stint" TextAlign="TextAlign.Right" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Field4" HeaderText="TMID" TextAlign="TextAlign.Right" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Field5" HeaderText="LGID" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="Field6" HeaderText="GP" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
         <TreeGridColumn Field="Field7" HeaderText="GS" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
         <TreeGridColumn Field="Field8" HeaderText="Minutes" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
         <TreeGridColumn Field="Field9" HeaderText="Points" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
@@ -228,22 +228,22 @@ By default, the TreeGrid renders twice as many records as the defined height per
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
     private List<VirtualData> TreeGridData { get; set; } = new List<VirtualData>();
     protected override void OnInitialized()
     {
         TreeGridData = VirtualData.GetTreeVirtualData();
-        
+
     }
     public class VirtualData
     {
         public int TaskID { get; set; }
-        public string FIELD1 { get; set; }
-        public int FIELD2 { get; set; }
-        public int FIELD3 { get; set; }
-        public int FIELD4 { get; set; }
-        public int FIELD5 { get; set; }
-        public int FIELD6 { get; set; }
+        public string Field1 { get; set; }
+        public int Field2 { get; set; }
+        public int Field3 { get; set; }
+        public int Field4 { get; set; }
+        public int Field5 { get; set; }
+        public int Field6 { get; set; }
         public int Field7 { get; set; }
         public int Field8 { get; set; }
         public int Field9 { get; set; }
@@ -262,71 +262,71 @@ By default, the TreeGrid renders twice as many records as the defined height per
         public static List<VirtualData> GetTreeVirtualData()
         {
             string[] Names = new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC",
-            "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET",
-            "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV",
-            "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU",
-            "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU",
-            "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE",
-            "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
+"OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET",
+"MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV",
+"COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU",
+"OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU",
+"WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE",
+"HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
             List<VirtualData> DataCollection = new List<VirtualData>();
             var RecordID = 0;
             for (var i = 1; i <= 2000; i++)
             {
                 var name = (i % 100);
                 VirtualData Parent = new VirtualData()
-                    {
-                        TaskID = ++RecordID,
-                        FIELD1 = Names[name],
-                        FIELD2 = (i % 2 == 0) ? 1967 + 2 : (i % 5 == 0) ? 1967 + 8 : 1967 + 12,
-                        FIELD3 = (i % 2 == 0) ? 395 + 2 : (i % 5 == 0) ? 395 + 1 : 395 + 25,
-                        FIELD4 = (i % 2 == 0) ? 87 + 2 : (i % 5 == 0) ? 87 + 1 : 87 + 15,
-                        FIELD5 = (i % 2 == 0) ? 410 + 2 : (i % 5 == 0) ? 410 + 1 : 410 + 45,
-                        FIELD6 = (i % 2 == 0) ? 67 + 2 : (i % 5 == 0) ? 67 + 1 : 67 + 6,
-                        Field7 = (i % 2 == 0) ? 35 + 2 : (i % 5 == 0) ? 24 + 1 : 45 + 12,
-                        Field8 = (i % 2 == 0) ? 100 + 2 : (i % 5 == 0) ? 100 + 1 : 100 + 12,
-                        Field9 = (i % 2 == 0) ? 35 + 2 : (i % 5 == 0) ? 24 + 1 : 45 + 12,
-                        Field10 = (i % 2 == 0) ? 46 + 2 : (i % 5 == 0) ? 46 + 1 : 64 + 6,
-                        Field11 = (i % 2 == 0) ? 67 + 2 : (i % 5 == 0) ? 67 + 1 : 67 + 6,
-                        Field12 = (i % 2 == 0) ? 100 + 62 : (i % 5 == 0) ? 100 + 41 : 100 + 112,
-                        Field13 = (i % 2 == 0) ? 2 + 2 : (i % 5 == 0) ? 1 + 1 : 1 + 6,
-                        Field14 = (i % 2 == 0) ? 46 + 2 : (i % 5 == 0) ? 46 + 1 : 64 + 6,
-                        Field15 = (i % 2 == 0) ? 1000 + 112 : (i % 5 == 0) ? 1000 + 153 : 1000 + 412,
-                        Field16 = (i % 2 == 0) ? 210 + 23 : (i % 5 == 0) ? 210 + 12 : 210 + 621,
-                        Field17 = (i % 2 == 0) ? 300 + 533 : (i % 5 == 0) ? 300 + 321 : 300 + 699,
-                        Field18 = (i % 2 == 0) ? 400 + 232 : (i % 5 == 0) ? 400 + 153 : 400 + 342,
-                        Field19 = (i % 2 == 0) ? 40 + 12 : (i % 5 == 0) ? 40 + 24 : 40 + 25,
-                        Field20 = (i % 2 == 0) ? 700 + 423 : (i % 5 == 0) ? 700 + 53 : 700 + 43,
-                        ParentID = null
-                    };
+                {
+                    TaskID = ++RecordID,
+                    Field1 = Names[name],
+                    Field2 = (i % 2 == 0) ? 1967 + 2 : (i % 5 == 0) ? 1967 + 8 : 1967 + 12,
+                    Field3 = (i % 2 == 0) ? 395 + 2 : (i % 5 == 0) ? 395 + 1 : 395 + 25,
+                    Field4 = (i % 2 == 0) ? 87 + 2 : (i % 5 == 0) ? 87 + 1 : 87 + 15,
+                    Field5 = (i % 2 == 0) ? 410 + 2 : (i % 5 == 0) ? 410 + 1 : 410 + 45,
+                    Field6 = (i % 2 == 0) ? 67 + 2 : (i % 5 == 0) ? 67 + 1 : 67 + 6,
+                    Field7 = (i % 2 == 0) ? 35 + 2 : (i % 5 == 0) ? 24 + 1 : 45 + 12,
+                    Field8 = (i % 2 == 0) ? 100 + 2 : (i % 5 == 0) ? 100 + 1 : 100 + 12,
+                    Field9 = (i % 2 == 0) ? 35 + 2 : (i % 5 == 0) ? 24 + 1 : 45 + 12,
+                    Field10 = (i % 2 == 0) ? 46 + 2 : (i % 5 == 0) ? 46 + 1 : 64 + 6,
+                    Field11 = (i % 2 == 0) ? 67 + 2 : (i % 5 == 0) ? 67 + 1 : 67 + 6,
+                    Field12 = (i % 2 == 0) ? 100 + 62 : (i % 5 == 0) ? 100 + 41 : 100 + 112,
+                    Field13 = (i % 2 == 0) ? 2 + 2 : (i % 5 == 0) ? 1 + 1 : 1 + 6,
+                    Field14 = (i % 2 == 0) ? 46 + 2 : (i % 5 == 0) ? 46 + 1 : 64 + 6,
+                    Field15 = (i % 2 == 0) ? 1000 + 112 : (i % 5 == 0) ? 1000 + 153 : 1000 + 412,
+                    Field16 = (i % 2 == 0) ? 210 + 23 : (i % 5 == 0) ? 210 + 12 : 210 + 621,
+                    Field17 = (i % 2 == 0) ? 300 + 533 : (i % 5 == 0) ? 300 + 321 : 300 + 699,
+                    Field18 = (i % 2 == 0) ? 400 + 232 : (i % 5 == 0) ? 400 + 153 : 400 + 342,
+                    Field19 = (i % 2 == 0) ? 40 + 12 : (i % 5 == 0) ? 40 + 24 : 40 + 25,
+                    Field20 = (i % 2 == 0) ? 700 + 423 : (i % 5 == 0) ? 700 + 53 : 700 + 43,
+                    ParentID = null
+                };
                 DataCollection.Add(Parent);
                 for (var j = 1; j <= 4; j++)
                 {
                     var childName = ((i + j) % 100);
                     DataCollection.Add(new VirtualData()
-                        {
-                            TaskID = ++RecordID,
-                            FIELD1 = Names[childName],
-                            FIELD2 = (j % 3 == 0) ? 1967 + (j + 2) : (j % 4 == 0) ? 1967 + (j + 1) : 1967 + j,
-                            FIELD3 = (j % 3 == 0) ? 395 + (j + 2) : (j % 4 == 0) ? 395 + (j + 4) : 395 + (j + 13),
-                            FIELD4 = (j % 3 == 0) ? 87 + (j + 2) : (j % 4 == 0) ? 87 + (j + 1) : 87 + (j + 12),
-                            FIELD5 = (j % 3 == 0) ? 410 + (j + 2) : (j % 4 == 0) ? 410 + (j + 1) : 410 + (j + 14),
-                            FIELD6 = (j % 3 == 0) ? 67 + (j + 2) : (j % 4 == 0) ? 67 + (j + 1) : 67 + (j + 7),
-                            Field7 = (j % 3 == 0) ? 89 + (j + 2) : (j % 4 == 0) ? 94 + (j + 1) : 23 + (j + 7),
-                            Field8 = (j % 3 == 0) ? 76 + (j + 2) : (j % 4 == 0) ? 23 + (j + 1) : 45 + (j + 7),
-                            Field9 = (j % 3 == 0) ? 87 + (j + 2) : (j % 4 == 0) ? 87 + (j + 1) : 87 + (j + 12),
-                            Field10 = (j % 3 == 0) ? 54 + (j + 2) : (j % 4 == 0) ? 54 + (j + 1) : 54 + (j + 12),
-                            Field11 = (j % 3 == 0) ? 280 + (j + 2) : (j % 4 == 0) ? 280 + (j + 1) : 280 + (j + 12),
-                            Field12 = (j % 3 == 0) ? 126 + (j + 2) : (j % 4 == 0) ? 116 + (j + 1) : 156 + (j + 12),
-                            Field13 = (j % 3 == 0) ? 12 + (j + 2) : (j % 4 == 0) ? 12 + (j + 1) : 12 + (j + 12),
-                            Field14 = (j % 3 == 0) ? 54 + (j + 2) : (j % 4 == 0) ? 53 + (j + 1) : 23 + (j + 12),
-                            Field15 = (j % 3 == 0) ? 1003 + (j + 2) : (j % 4 == 0) ? 1100 + (j + 1) : 1000 + (j + 12),
-                            Field16 = (j % 3 == 0) ? 210 + (j + 2) : (j % 4 == 0) ? 237 + (j + 1) : 290 + (j + 12),
-                            Field17 = (j % 3 == 0) ? 300 + (j + 2) : (j % 4 == 0) ? 300 + (j + 1) : 300 + (j + 12),
-                            Field18 = (j % 3 == 0) ? 400 + (j + 2) : (j % 4 == 0) ? 400 + (j + 1) : 400 + (j + 12),
-                            Field19 = (j % 3 == 0) ? 40 + (j + 2) : (j % 4 == 0) ? 40 + (j + 1) : 40 + (j + 12),
-                            Field20 = (j % 3 == 0) ? 700 + (j + 2) : (j % 4 == 0) ? 700 + (j + 1) : 700 + (j + 12),
-                            ParentID = Parent.TaskID
-                        });
+                    {
+                        TaskID = ++RecordID,
+                        Field1 = Names[childName],
+                        Field2 = (j % 3 == 0) ? 1967 + (j + 2) : (j % 4 == 0) ? 1967 + (j + 1) : 1967 + j,
+                        Field3 = (j % 3 == 0) ? 395 + (j + 2) : (j % 4 == 0) ? 395 + (j + 4) : 395 + (j + 13),
+                        Field4 = (j % 3 == 0) ? 87 + (j + 2) : (j % 4 == 0) ? 87 + (j + 1) : 87 + (j + 12),
+                        Field5 = (j % 3 == 0) ? 410 + (j + 2) : (j % 4 == 0) ? 410 + (j + 1) : 410 + (j + 14),
+                        Field6 = (j % 3 == 0) ? 67 + (j + 2) : (j % 4 == 0) ? 67 + (j + 1) : 67 + (j + 7),
+                        Field7 = (j % 3 == 0) ? 89 + (j + 2) : (j % 4 == 0) ? 94 + (j + 1) : 23 + (j + 7),
+                        Field8 = (j % 3 == 0) ? 76 + (j + 2) : (j % 4 == 0) ? 23 + (j + 1) : 45 + (j + 7),
+                        Field9 = (j % 3 == 0) ? 87 + (j + 2) : (j % 4 == 0) ? 87 + (j + 1) : 87 + (j + 12),
+                        Field10 = (j % 3 == 0) ? 54 + (j + 2) : (j % 4 == 0) ? 54 + (j + 1) : 54 + (j + 12),
+                        Field11 = (j % 3 == 0) ? 280 + (j + 2) : (j % 4 == 0) ? 280 + (j + 1) : 280 + (j + 12),
+                        Field12 = (j % 3 == 0) ? 126 + (j + 2) : (j % 4 == 0) ? 116 + (j + 1) : 156 + (j + 12),
+                        Field13 = (j % 3 == 0) ? 12 + (j + 2) : (j % 4 == 0) ? 12 + (j + 1) : 12 + (j + 12),
+                        Field14 = (j % 3 == 0) ? 54 + (j + 2) : (j % 4 == 0) ? 53 + (j + 1) : 23 + (j + 12),
+                        Field15 = (j % 3 == 0) ? 1003 + (j + 2) : (j % 4 == 0) ? 1100 + (j + 1) : 1000 + (j + 12),
+                        Field16 = (j % 3 == 0) ? 210 + (j + 2) : (j % 4 == 0) ? 237 + (j + 1) : 290 + (j + 12),
+                        Field17 = (j % 3 == 0) ? 300 + (j + 2) : (j % 4 == 0) ? 300 + (j + 1) : 300 + (j + 12),
+                        Field18 = (j % 3 == 0) ? 400 + (j + 2) : (j % 4 == 0) ? 400 + (j + 1) : 400 + (j + 12),
+                        Field19 = (j % 3 == 0) ? 40 + (j + 2) : (j % 4 == 0) ? 40 + (j + 1) : 40 + (j + 12),
+                        Field20 = (j % 3 == 0) ? 700 + (j + 2) : (j % 4 == 0) ? 700 + (j + 1) : 700 + (j + 12),
+                        ParentID = Parent.TaskID
+                    });
                 }
             }
             return DataCollection;
@@ -346,58 +346,6 @@ Virtualization in TreeGrid boosts performance by rendering only the rows visible
 With hierarchical data, parent rows may contain nested child rows. Virtual scrolling requires knowing the total row count and their combined heights, but tree structures complicate this because the number of visible rows changes when parents are expanded or collapsed. Since child rows are hidden until their parent is expanded, accurately determining total scrollable height is challenging and can result in missing rows or incomplete rendering.
 
 To resolve this, flatten hierarchical data using a recursive method such as **HierarchyToFlatData**. This method traverses all parent-child relationships and flattens them into a single-level collection for efficient binding to TreeGrid with virtualization enabled.
-
-Use the following method in your component (e.g., **Index.razor**) and call it during initialization:
-
-```ts
-
-protected override void OnInitialized()
-{
-  // Call the method to flatten hierarchical data and assign it to TreeGrid Data.
-  this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
-}
-
-/// <summary>
-/// Recursively flattens hierarchical data into a single-level list.
-/// </summary>
-/// <param name="dataSource">The original hierarchical data.</param>
-/// <param name="childMapping">The property name that maps to child records.</param>
-/// <param name="addedData">An internal list to accumulate the flattened records.</param>
-/// <returns>A flat list of all hierarchical records.</returns>
-public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, string childMapping, List<VirtualData> addedData = null)
-{
-  // If no list is passed to collect flat data, create a new one.
-  if (addedData == null)
-  {
-    addedData = new List<VirtualData>();
-  }
-
-  // Loop through each item in the current data level.
-  foreach (var item in dataSource)
-  {
-    // Add the current item to the flat list.
-    addedData.Add(item);
-
-    // Get the property info for the child mapping (e.g., "Children").
-    var propertyInfo = item.GetType().GetProperty(childMapping);
-
-    // Get the children using the property name.
-    var children = propertyInfo?.GetValue(item) as IEnumerable<VirtualData>;
-
-    // If there are child records, recursively flatten them too.
-    if (children != null)
-    {
-      HierarchyToFlatData(children.ToList(), childMapping, addedData);
-    }
-  }
-
-  // Return the final flat list.
-  return addedData;
-}
-
-``` 
-
-The following example demonstrates binding hierarchical data using the [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property, enabling virtualization by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) to **true** and convert hierarchical data into a flat list using a recursive method (**HierarchyToFlatData**) before binding it to the TreeGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -653,11 +601,11 @@ N> Specify each column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusio
 The following GIF represent a TreeGrid with Column virtualization.
 ![Column Virtualization in Blazor TreeGrid](./images/blazor-treegrid-column-virtualization.gif)
 
-## Enable Cell placeholder during Virtualization
+## Cell Placeholder during Virtualization
 
-Displays placeholder in cells while data is loading in scrolling action. Also, the same set of DOM elements is reused to enhance performance.
+This feature displays placeholders in cells while data loads during scrolling. Also, the same set of DOM elements is reused to enhance performance.
 
-To set up the enable cell placeholder during virtualization, define the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualMaskRow) as true along with the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization)/[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableColumnVirtualization) property.
+To enable cell placeholders during virtualization, define the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualMaskRow) as true along with the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization)/[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableColumnVirtualization) property.
 
 ```csharp
 
@@ -763,12 +711,12 @@ The following image represents a TreeGrid with the mask row virtualization.
 
 ## Limitations for Virtualization
 
-* While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
+* While using column virtualization, column width should be in pixels. Percentage values are not accepted.
 * Due to the element height limitation in browsers, the maximum number of records loaded by the TreeGrid is limited by the browser capability.
 * Cell selection will not be persisted in both row and column virtualization.
 * Stacked Header is not compatible with detail template.
 * Virtual scrolling is not compatible with detail template.
 * Row count of the page does not depend on the **PageSize** property of the **TreeGridPageSettings**. Row count for the page is determined by the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) given to the TreeGrid.
-* The virtual height of the TreeGrid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. In order to increase the row height to accommodate the content then the row height can be  specified as below to ensure all the table rows are in same height.
+* The virtual height of the TreeGrid content is calculated using the row height and total number of records in the data source and hence features which change row height such as text wrapping are not supported. In order to increase the row height to accommodate the content then the row height can be  specified as below to ensure all the table rows are in same height.
 * Programmatic selection using the **SelectRowsAsync** method is not supported in virtual scrolling.
 * When row virtualization is enabled, reordering rows is limited to only the records currently visible in the viewport.
