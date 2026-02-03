@@ -13,7 +13,7 @@ This section lists the TextBox events and when they are triggered during user in
 
 ## Blur
 
-The `Blur` event triggers when the TextBox loses focus.
+The [`Blur`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Blur) event triggers when the TextBox loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -30,7 +30,7 @@ The `Blur` event triggers when the TextBox loses focus.
 
 ## Created
 
-The `Created` event triggers after the TextBox component is initialized and rendered.
+The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Created) event triggers after the TextBox component is initialized and rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -47,7 +47,7 @@ The `Created` event triggers after the TextBox component is initialized and rend
 
 ## Destroyed
 
-The `Destroyed` event triggers when the TextBox component is disposed.
+The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Destroyed) event triggers when the TextBox component is disposed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -64,7 +64,7 @@ The `Destroyed` event triggers when the TextBox component is disposed.
 
 ## Focus
 
-The `Focus` event triggers when the TextBox receives focus.
+The [`Focus`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Focus) event triggers when the TextBox receives focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -81,7 +81,7 @@ The `Focus` event triggers when the TextBox receives focus.
 
 ## Input
 
-The `Input` event triggers every time the TextBox value changes (on each keystroke or input).
+The [`Input`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Input) event triggers every time the TextBox value changes (on each keystroke or input).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -98,7 +98,7 @@ The `Input` event triggers every time the TextBox value changes (on each keystro
 
 ## ValueChange
 
-The `ValueChange` event triggers when the TextBox value is committed (typically on focus out) and has changed since it received focus.
+The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ValueChange) event triggers when the TextBox value is committed (typically on focus out) and has changed since it received focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
