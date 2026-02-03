@@ -18,7 +18,7 @@ Serialization is the process of saving and loading the persistent state of a dia
 When saving and loading the diagram, we must use two-way binding (such as @bind) for nodes and connectors.
 
 ```cshtml
-<SfDiagramComponent @ref="@diagram" @bind-Connectors="@connectors" @bind-Nodes="@nodes"></SfDiagramComponent>
+<SfDiagramComponent @ref="@_diagram" @bind-Connectors="@_connectors" @bind-Nodes="@_nodes"></SfDiagramComponent>
 ```
 
 ## How to Save the Diagram as String
@@ -26,9 +26,9 @@ When saving and loading the diagram, we must use two-way binding (such as @bind)
 While saving, the [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is serialized into a JSON string. The [SaveDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SaveDiagram) method returns the serialize the diagram as a string. The following code illustrates how to save the diagram.
 
 ```cshtml
-SfDiagramComponent Diagram;
+SfDiagramComponent _diagram;
 //returns the serialized string of the Diagram
-string data = Diagram.SaveDiagram();
+string data = _diagram.SaveDiagram();
 ```
 
 ## How to Load the Diagram from String
@@ -36,11 +36,11 @@ string data = Diagram.SaveDiagram();
 The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data using the [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. The following code illustrates how to load the diagram from serialized string data.
 
 ```cshtml
-SfDiagramComponent Diagram;
+private SfDiagramComponent _diagram;
 //returns the serialized string of the Diagram
-string data = Diagram.SaveDiagram();
+private string _data = _diagram.SaveDiagram();
 //Loads the Diagram from saved data
-await Diagram.LoadDiagramAsync(data);
+await _diagram.LoadDiagramAsync(_data);
 ```
 
 ## How to Load the SfDiagram JSON Data String Using SfDiagram Component
@@ -50,13 +50,13 @@ Load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 The following code illustrates how to load the SfDiagramComponent from SfDiagram serialized string data.
 
 ```cshtml
-SfDiagram ClassicDiagram;
+SfDiagram _classicDiagram;
 //returns the serialized string of the SfDiagram
-string data = ClassicDiagram.SaveDiagram(); 
+private string _data = _classicDiagram.SaveDiagram(); 
 
-SfDiagramComponent Diagram;
+SfDiagramComponent _diagram;
 //Loads the SfDiagramComponent from saved data of the SfDiagram
-await Diagram.LoadDiagramAsync(data, true);
+await _diagram.LoadDiagramAsync(_data, true);
 ```
 
 ## How to Save and Load the Diagram Using File Stream
@@ -64,34 +64,34 @@ await Diagram.LoadDiagramAsync(data, true);
 The diagram support to save and load the diagram using a file stream. The below code illustrates how to download the saved diagram as a file.
 
 ```cshtml
-    SfDiagramComponent diagram;
-    private string fileName;
-    private string ExtensionType = ".json";
+    private SfDiagramComponent _diagram;
+    private string _fileName;
+    private string _extensionType = ".json";
 
     //Method to save the diagram
-    public async Task SaveDiagram()
+    private async Task SaveDiagram()
     {
-        fileName = await jsRuntime.InvokeAsync<string>("getDiagramFileName", "");
-        await DownloadDiagram(fileName);
+        _fileName = await jsRuntime.InvokeAsync<string>("getDiagramFileName", "");
+        await DownloadDiagram(_fileName);
     }
 
     //Method to download the diagram
-    public async Task DownloadDiagram(string fileName)
+    private async Task DownloadDiagram(string fileName)
     {
-        string data = diagram.SaveDiagram();
+        string data = _diagram.SaveDiagram();
         await FileUtil.SaveAs(jsRuntime, data, fileName);
     }
 
     //Method to load the diagram
-    public async Task LoadDiagram()
+    private async Task LoadDiagram()
     {
-        diagram.BeginUpdate();
-        ExtensionType = ".json";
+        _diagram.BeginUpdate();
+        _extensionType = ".json";
         await FileUtil.Click(jsRuntime);
-        await diagram.EndUpdateAsync();
+        await _diagram.EndUpdateAsync();
     }
 
-    public async static Task SaveAs(IJSRuntime js, string data, string fileName)
+    private async static Task SaveAs(IJSRuntime js, string data, string fileName)
     {
         await js.InvokeAsync<object>(
         "saveDiagram",
@@ -100,7 +100,7 @@ The diagram support to save and load the diagram using a file stream. The below 
         // Specify IFormatProvider
     }
 
-    public async static Task Click(IJSRuntime js)
+    private async static Task Click(IJSRuntime js)
     {
         await js.InvokeAsync<object>(
             "click").ConfigureAwait(true);
@@ -136,7 +136,7 @@ The diagram support to save and load the diagram using a file stream. The below 
     }
 ```
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Serialization/SaveAndLoad)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Serialization/D:\Blazor-UG-Examples\Diagram\Server\Pages\Serialization\SaveAndLoad)
 
 ## How to Import and Export Using Mermaid Syntax
 
@@ -147,9 +147,9 @@ The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
  The [SaveDiagramAsMermaid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SaveDiagramAsMermaid) method serializes the diagram into a Mermaid-compatible string format. This method works for diagrams using Flowchart, Mind Map or Sequence Diagram layouts. The following code illustrates how to save the diagram in Mermaid string format.
 
 ```cshtml
-SfDiagramComponent Diagram;
+private SfDiagramComponent _diagram;
 //returns the serialized Mermaid string of the Diagram
-string data = Diagram.SaveDiagramAsMermaid();
+private string _data = _diagram.SaveDiagramAsMermaid();
 ```
 
 ### How to Load Diagram from Mermaid Syntax
@@ -157,13 +157,14 @@ string data = Diagram.SaveDiagramAsMermaid();
 Load a [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) from the serialized Mermaid syntax data using the [LoadDiagramFromMermaidAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramFromMermaidAsync_System_String_) method. The following code illustrates how to load a diagram from a Mermaid string data.
 
 ```cshtml
-SfDiagramComponent Diagram;
+private SfDiagramComponent _diagram;
 // Retrieves the serialized Mermaid string of the Diagram
-string data = Diagram.SaveDiagramAsMermaid();
+private string _data = _diagram.SaveDiagramAsMermaid();
 // Loads the Diagram from the saved Mermaid string
-await Diagram.LoadDiagramFromMermaidAsync(data);
+await _diagram.LoadDiagramFromMermaidAsync(_data);
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/MermaidSupport).
+```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Serialization/Mermaid.razor).
 
 >**Note:** Mermaid syntax data serialization and deserialization are only supported for Flowchart, Mind map and Sequence Diagram layouts. Please ensure that your diagram uses one of these layouts for successful data loading.
 
