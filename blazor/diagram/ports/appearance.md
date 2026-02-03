@@ -24,15 +24,15 @@ The following code shows how to change the appearance of the port.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -65,11 +65,11 @@ The following code shows how to change the appearance of the port.
                 }
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance/Appearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Appearance/Appearance.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBesjXcLLVeqypd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing port appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)" %}
 
@@ -100,15 +100,15 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
  ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -138,11 +138,11 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
                 }
             },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance/CustomShape)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Appearance/CustomShape.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVyMXtmLrqCMsyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Port rendered with a custom path shape in Blazor Diagram](../images/blazor-diagram-port-custom-shape.png)" %}
 
@@ -167,13 +167,13 @@ The following code shows how to set the `AdditionalInfo` value for a port.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // Create a dictionary to hold additional information for the port.
         Dictionary<string, object> PortInfo = new Dictionary<string, object>();
         PortInfo.Add("portInfo", "Port A");
@@ -199,13 +199,13 @@ The following code shows how to set the `AdditionalInfo` value for a port.
                 Ports = new DiagramObjectCollection<PointPort>  { port }
             };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrSMtZmVLKcHHTs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Appearance/AdditionalInfoPropertyPort.razor)
 
 
 **Note:** Like `AdditionalInfo` for Nodes, you can set any type of value for the `AdditionalInfo` property of a port.

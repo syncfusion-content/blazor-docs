@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiSelectDropDown Component | Syncfusion
+title: Getting Started with Blazor MultiSelect Dropdown | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor MultiSelect DropDown Component in Blazor MAUI App.
 platform: Blazor
 control: MultiSelect DropDown
 documentation: ug
 ---
 
-# Getting Started with Blazor MultiSelect DropDown Component
+# Getting Started with Blazor MultiSelect DropDown Component in MAUI App
 
-This guide walks through integrating the Syncfusion Blazor MultiSelect Dropdown component into a .NET MAUI Blazor app using Visual Studio and Visual Studio Code.
+This guide walks through integrating the Syncfusion [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component into a .NET MAUI Blazor app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -19,8 +19,8 @@ This guide walks through integrating the Syncfusion Blazor MultiSelect Dropdown 
 
 To use the .NET MAUI project templates, install the Mobile development with .NET workload for Visual Studio. For details, see the .NET MAUI installation guide for Visual Studio or use the Syncfusion Blazor Extension.
 
-- .NET MAUI installation for Visual Studio: https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin
-- Syncfusion Blazor Extension: https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio
+- [.NET MAUI installation for Visual Studio](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin)
+- [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Create a new Blazor MAUI App in Visual Studio
 
@@ -49,8 +49,8 @@ N> Syncfusion Blazor components are available in NuGet. See the [NuGet packages]
 
 To use the .NET MAUI project templates, install the Mobile development with .NET workload for Visual Studio Code/.NET CLI. For details, see the .NET MAUI installation guide for Visual Studio Code or use the Syncfusion Blazor Extension.
 
-- .NET MAUI installation for VS Code: https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code
-- Syncfusion Blazor Extension: https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project
+- [.NET MAUI installation for VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+- [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
@@ -167,9 +167,9 @@ Run the sample on Windows to launch the .NET MAUI Blazor app.
 
 To run the Blazor MultiSelect Dropdown in a .NET MAUI Android app using the Android Emulator, follow these steps:
 
-- Install and launch the Android emulator: https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows
+- [Install and launch the Android emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows)
 
-N> If any errors occur while using the Android Emulator, see Troubleshooting Android Emulator: https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting.
+N> If any errors occur while using the Android Emulator, see [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)
 

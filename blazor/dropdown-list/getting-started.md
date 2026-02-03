@@ -9,10 +9,6 @@ documentation: ug
 
 # Getting Started with Dropdown List Component
 
-## Overview
-
-The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) is a dynamic replacement for the HTML select element. It presents a rich UI to select a single, non-editable value from a predefined list. Features include data binding, filtering, grouping, UI customization, accessibility, and preselected values.
-
 This guide explains how to add the [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component to a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Ensure a valid Syncfusion license is registered in the application and choose a theme (Bootstrap, Fluent, Material, or Tailwind) as part of setup.
 
 To get started quickly with the Blazor DropDownList component, refer to this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList) sample.

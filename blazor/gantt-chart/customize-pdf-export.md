@@ -1258,7 +1258,8 @@ In the following sample, task label template with images and text are exported t
                 if ((context as TaskData).TaskID == 5)
                 {
                     <div class="e-right-label-inner-div" style="height:22px;margin-top:7px;">
-                        <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png           </div>
+                        <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" />
+                    </div>
                 }
                 else
                 {

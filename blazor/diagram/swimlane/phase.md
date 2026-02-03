@@ -22,12 +22,12 @@ The following code example explains how to add a phase to a swimlane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -60,11 +60,11 @@ The following code example explains how to add a phase to a swimlane.
                 }
             };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
              swimlane.Header.Style = new TextStyle()
              {
@@ -85,7 +85,7 @@ The following code example explains how to add a phase to a swimlane.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoWZDwgIxDznSV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseCreation.razor).
 
 ![Phase](Swimlane-images/Swimlane_Phase.PNG).
 
@@ -99,12 +99,12 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 <SfButton Content="Add Phase" OnClick="@AddPhase" />
 <SfButton Content="Remove Phase" OnClick="@RemovePhase" />
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -137,12 +137,12 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
                 }
             };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
 
     private void AddPhase()
     {
-        Swimlane swimlane = SwimlaneCollections[0];
+        Swimlane swimlane = _swimlaneCollections[0];
         Phase newPhase = new Phase()
             {
                 Width = 100,
@@ -158,13 +158,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
     private void RemovePhase()
     {
-        Swimlane swimlane = SwimlaneCollections[0];
+        Swimlane swimlane = _swimlaneCollections[0];
         if (swimlane.Phases.Count > 1)
             swimlane.Phases.RemoveAt(swimlane.Phases.Count - 1);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
              swimlane.Header.Style = new TextStyle()
              {
@@ -186,7 +186,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXroWXXQAIHdICLs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/AddRemovePhaseAtRuntime).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/AddRemovePhaseAtRuntime.razor).
 
 ![Phase Add Remove](Swimlane-images/Phase_Add_Remove.gif)
 
@@ -201,12 +201,12 @@ The following code example shows how to define and customize a phase header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -240,11 +240,11 @@ The following code example shows how to define and customize a phase header.
                 }
             };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
             swimlane.Header.Style = new TextStyle()
             {
@@ -261,7 +261,7 @@ The following code example shows how to define and customize a phase header.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVICNNmAenacKHW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeader).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseHeader.razor).
 
 ![Phase Header](Swimlane-images/Swimlane_Phase_Header.PNG).
 
@@ -272,7 +272,7 @@ The following code example explains how to define a phase header annotation temp
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections">
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections">
     <DiagramTemplates>
         <AnnotationTemplate>
             @if (context is Annotation annotation)
@@ -298,7 +298,7 @@ The following code example explains how to define a phase header annotation temp
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -337,13 +337,13 @@ The following code example explains how to define a phase header annotation temp
                 }
         };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSMjNcKovfbQWR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeaderTemplate).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseHeaderTemplate.razor).
 
 ![Phase Header](Swimlane-images/Swimlane_Phase_Header_Template.PNG).
 
@@ -359,53 +359,59 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
+
 <div class="control-section">
-    <div style="width:80%;">
+    <div style="width:20%;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
-                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
+            <SfSymbolPaletteComponent @ref="_symbolPalette" Height="300px" Width="200px"
+                                      Palettes="@_palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@_symbolMargin">
             </SfSymbolPaletteComponent>
         </div>
     </div>
 </div>
+
 @code
 {
-    //Reference the symbolpreview.
-    DiagramSize SymbolPreview;
-    //Define symbol margin.
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
-    SfSymbolPaletteComponent symbolpalette;
-    //Define palattes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Reference the symbol preview.
+    private DiagramSize _symbolPreview;
+    // Define symbol margin.
+    private SymbolMargin _symbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private SfSymbolPaletteComponent _symbolPalette;
+    // Define palettes collection.
+    private DiagramObjectCollection<Palette> _palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's swimlane-shape collection.
-    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> _swimlaneNodes = new DiagramObjectCollection<NodeBase>();
+
     protected override void OnInitialized()
     {
         InitPaletteModel();
     }
+
     private void InitPaletteModel()
     {
-        Palettes = new DiagramObjectCollection<Palette>();
-        SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+        _palettes = new DiagramObjectCollection<Palette>();
+        _swimlaneNodes = new DiagramObjectCollection<NodeBase>();
         //create a horizontal phase.
         Phase horizontalPhase = new Phase() { ID = "HorizontalPhase", Orientation = Orientation.Horizontal, Width = 80, Height = 1, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
         //create a vertical phase.
         Phase verticalPhase = new Phase() { ID = "VerticalPhase", Orientation = Orientation.Vertical, Width = 1, Height = 80, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
-        SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
+
+        _swimlaneNodes = new DiagramObjectCollection<NodeBase>()
         {
             horizontalPhase,
             verticalPhase
         };
-        Palettes = new DiagramObjectCollection<Palette>()
+
+        _palettes = new DiagramObjectCollection<Palette>()
         {
-            new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
+            new Palette() { Symbols = _swimlaneNodes, Title = "Swimlane Shapes", ID = "SwimlaneShapes" },
         };
-      }
+    }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhSWDDwUHjXBppC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseOrientation).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseOrientation.razor).
 
 ![Phase](Swimlane-images/PhaseOrientation.PNG).
 
