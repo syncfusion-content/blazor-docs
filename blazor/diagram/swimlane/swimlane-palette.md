@@ -21,29 +21,28 @@ The following code shows how to add lanes and phases to a palette.
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">
-    <div style="width:80%;">
+    <div style="width:200px; height: 300px;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
-                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
+            <SfSymbolPaletteComponent @ref="_symbolPalette" Height="300px" Width="200px"
+                                      Palettes="@_palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@_symbolMargin">
             </SfSymbolPaletteComponent>
         </div>
     </div>
 </div>
 
+<AddNodeToPalette />
+
 @code
 {
-    //Reference the symbolnpreview.
-    DiagramSize SymbolPreview;
-    //Define symbol margin.
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
-
-    SfSymbolPaletteComponent symbolpalette;
-
-    //Define palettes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-
-    // Define the palette's swimlane-shape collection.
-    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    // Reference the symbol preview
+    private DiagramSize _symbolPreview;
+    // Define symbol margin
+    private SymbolMargin _symbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private SfSymbolPaletteComponent _symbolPalette;
+    // Define palettes collection
+    private DiagramObjectCollection<Palette> _palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's swimlane-shape collection
+    private DiagramObjectCollection<NodeBase> _swimlaneNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -52,51 +51,50 @@ The following code shows how to add lanes and phases to a palette.
 
     private void InitPaletteModel()
     {
-        Palettes = new DiagramObjectCollection<Palette>();
+        _palettes = new DiagramObjectCollection<Palette>();
 
-        SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
-
-        //Create a horizontal lane.
+        _swimlaneNodes = new DiagramObjectCollection<NodeBase>();
+        //horizontal lane
         Lane horizontalLane = new Lane()
+        {
+            ID = "HorizontalSwimlane",
+            Orientation = Orientation.Horizontal,
+            Height = 100,
+            Width = 150,
+            // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+            Header = new SwimlaneHeader()
             {
-                ID = "HorizontalSwimlane",
-                Orientation = Orientation.Horizontal,
-                Height = 100,
-                Width = 150,
-                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
-                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
-                    Width = 25,
-                    Height = 100
-                },
-            };
+                Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
+                Width = 25,
+                Height = 100
+            },
+        };
 
-        //Create a vertical lane.
+        //vertical lane
         Lane verticalLane = new Lane()
+        {
+            ID = "VerticalSwimlane",
+            Orientation = Orientation.Vertical,
+            Height = 150,
+            Width = 100,
+            // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+            Header = new SwimlaneHeader()
             {
-                ID = "VerticalSwimlane",
-                Orientation = Orientation.Vertical,
-                Height = 150,
+                Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
                 Width = 100,
-                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
-                Header = new SwimlaneHeader()
-                {
-                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
-                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
-                    Width = 100,
-                    Height = 25
-                },
-            };
+                Height = 25
+            },
+        };
 
-        //Create a horizontal phase.
+        //horizontal phase
         Phase horizontalPhase = new Phase() { ID = "HorizontalPhase", Orientation = Orientation.Horizontal, Width = 80, Height = 1, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
 
-        //Create a vertical phase.
+        //vertical phase
         Phase verticalPhase = new Phase() { ID = "VerticalPhase", Orientation = Orientation.Vertical, Width = 1, Height = 80, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
 
-        SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
+        _swimlaneNodes = new DiagramObjectCollection<NodeBase>()
         {
             horizontalLane,
             verticalLane,
@@ -104,16 +102,16 @@ The following code shows how to add lanes and phases to a palette.
             verticalPhase
         };
 
-        Palettes = new DiagramObjectCollection<Palette>()
+        _palettes = new DiagramObjectCollection<Palette>()
         {
-            new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
+            new Palette() { Symbols = _swimlaneNodes, Title = "Swimlane Shapes", ID = "SwimlaneShapes" },
         };
-      }
+    }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeWZXcKcyuCrTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlanePalette)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlanePalette/SwimlanePalette.razor)
 
 ![Swimlane SymbolPalette Shapes](Swimlane-images/Swimlane_SymbolPalette.PNG)
 
