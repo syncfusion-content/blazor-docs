@@ -213,7 +213,7 @@ The following example demonstrates how to dynamically enable and change the `Gri
     </SfDropDownList>
 </div>
 <SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
-    <GridSelectionSettings CellSelectionMode="@CellSelectionModeValue" Type="SelectionType.Multiple" Mode="SelectionMode.Cell"></GridSelectionSettings>
+    <GridSelectionSettings CellSelectionMode="@CellSelectionModeValue" Type="SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
