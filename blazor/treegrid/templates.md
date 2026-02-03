@@ -283,7 +283,7 @@ public class Employee
 
 The empty record template feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows displaying custom content such as images, text, or other components when the TreeGrid has no records to show. It replaces the default message of **No records to display.**
 
-To activate this feature, set the `EmptyRecordTemplate` feature of the TreeGrid. The `EmptyRecordTemplate` feature expects the HTML element or a function that returns the HTML element.
+To activate this feature, define the `EmptyRecordTemplate` within the `TreeGridTemplates` section. This template accepts either an HTML element or a function that returns one.
 
 The following example demonstrates how an image and text can be rendered as a template to indicate that the TreeGrid has no data to display:
 

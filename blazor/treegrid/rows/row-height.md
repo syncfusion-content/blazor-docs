@@ -11,7 +11,7 @@ documentation: ug
 
 The row height of tree grid rows can be customized through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property. The `RowHeight` property changes the row height of the entire tree grid rows.
 
-In the below example, the **RowHeight** is set as *60px*.
+In the below example, the `RowHeight` is set as **60px**.
 
 {% tabs %}
 
@@ -81,7 +81,7 @@ public class TreeData
 
 The row height for a particular row can be customized using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event by adding `row-height` custom class in required row element.
 
-In the below example, the row height for the row with TaskId as '3' is set as '90px' using the `RowDataBound` event.
+In the below example, the row height for the row with **TaskId** as '3' is set as **90px** using the `RowDataBound` event.
 
 {% tabs %}
 

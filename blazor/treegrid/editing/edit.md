@@ -588,9 +588,9 @@ public class TreeData
 
 Perform CRUD operations using the following methods:
 
-* **AddRecordAsync** - Add a new record to the TreeGrid.
-* **UpdateRowAsync** - Update an existing record.
-* **DeleteRecordAsync** - Delete the selected row.
+* [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AddRecordAsync) - Add a new record to the TreeGrid.
+* [UpdateRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_UpdateRowAsync_System_Int32__0_) - Update an existing record.
+* [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DeleteRecordAsync) - Delete the selected row.
 
 {% tabs %}
 
@@ -696,7 +696,7 @@ Use the `Canceling` event to conditionally cancel default CRUD operations.
 
 ### Cancel CRUD operations in Row/Dialog edit mode
 
-For Row or Dialog edit modes, use the [Canceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Canceling) event.
+For Row or Dialog edit modes, use the [Canceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelling) event.
 
 {% tabs %}
 

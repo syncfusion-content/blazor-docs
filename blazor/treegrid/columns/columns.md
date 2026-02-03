@@ -624,7 +624,7 @@ If the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid
 
 Tree Grid column supports the following types:
 * string
-* number
+* integer
 * boolean
 * date
 * datetime
