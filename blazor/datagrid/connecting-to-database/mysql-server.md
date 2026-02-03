@@ -837,9 +837,7 @@ Searching allows the user to find records by entering keywords in the search box
 
 **Instructions:**
 
-1. The search functionality is already enabled in the CustomAdaptor's `ReadAsync` method.
-2. Ensure the toolbar includes the "Search" item.
-3. No additional code changes are required.
+1. Ensure the toolbar includes the "Search" item.
 
 ```cshtml
 <SfGrid TValue="TransactionModel"        
@@ -850,7 +848,7 @@ Searching allows the user to find records by entering keywords in the search box
     <!-- Grid columns configuration -->
 </SfGrid>
 ```
-4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+2. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
 
 ```csharp
 @code {
