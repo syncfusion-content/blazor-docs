@@ -523,7 +523,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
             try
             {
                 // Fetch all reservations from the database
-                IEnumerable<Reservation> dataSource = await _reservationService!.GetReservationsAsync();
+                IEnumerable dataSource = await _reservationService!.GetReservationsAsync();
 
                 // Apply search operation if search criteria exists
                 if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -545,22 +545,6 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
 
                 // Calculate total record count before paging for accurate pagination
                 int totalRecordsCount = dataSource.Cast<Reservation>().Count();
-                DataResult dataObject = new DataResult();
-
-                // Handling Group operation in CustomAdaptor.
-                if (dataManagerRequest.Group != null)
-                {
-                    IEnumerable ResultData = dataSource.ToList();
-                    // Grouping
-                    foreach (var group in dataManagerRequest.Group)
-                    {
-                        ResultData = DataUtil.Group<Reservation>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                    }
-                    dataObject.Result = ResultData;
-                    dataObject.Count = totalRecordsCount;
-                    dataObject.Aggregates = aggregates;
-                    return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-                }
 
                 // Apply paging skip operation
                 if (dataManagerRequest.Skip != 0)
@@ -572,6 +556,15 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
                 if (dataManagerRequest.Take != 0)
                 {
                     dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+                }
+
+                // Handling Group operation in CustomAdaptor.
+                if (dataManagerRequest.Group != null)
+                {
+                    foreach (var group in dataManagerRequest.Group)
+                    {
+                        dataSource = DataUtil.Group<Reservation>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    }
                 }
 
                 // Return the result with total count for pagination metadata
@@ -689,7 +682,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
         {
 
-            IEnumerable<Reservation> dataSource = await _reservationRepository.GetReservationsAsync();
+            IEnumerable dataSource = await _reservationRepository.GetReservationsAsync();
 
             int totalRecordsCount = dataSource.Cast<Reservation>().Count();
 
@@ -785,7 +778,7 @@ Searching allows the user to find records by entering keywords in the search box
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
         {
 
-            IEnumerable<Reservation> dataSource = await _reservationRepository.GetReservationsAsync();
+            IEnumerable dataSource = await _reservationRepository!.GetReservationsAsync();
 
             // Handling search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -866,7 +859,7 @@ Filtering allows the user to restrict data based on column values using a menu i
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
         {
 
-            IEnumerable<Reservation> dataSource = await _reservationRepository.GetReservationsAsync();
+            IEnumerable dataSource = await _reservationRepository.GetReservationsAsync();
 
             // Handling search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -953,7 +946,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
         {
 
-            IEnumerable<Reservation> dataSource = await _reservationRepository.GetReservationsAsync();
+            IEnumerable dataSource = await _reservationRepository.GetReservationsAsync();
 
             // Handling search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1049,7 +1042,7 @@ Grouping organizes records into hierarchical groups based on column values.
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
         {
 
-            IEnumerable<Reservation> dataSource = await _reservationRepository.GetReservationsAsync();
+            IEnumerable dataSource = await _reservationRepository.GetReservationsAsync();
 
             // Handling search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1071,19 +1064,7 @@ Grouping organizes records into hierarchical groups based on column values.
 
             int totalRecordsCount = dataSource.Cast<Reservation>().Count();
 
-            // Handling Grouping
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Reservation>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                var dataObject = new DataResult { Result = ResultData, Count = totalRecordsCount, Aggregates = aggregates };
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
-
-            // Apply paging
+           // Apply paging skip operation
             if (dataManagerRequest.Skip != 0)
             {
                 dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
@@ -1092,6 +1073,15 @@ Grouping organizes records into hierarchical groups based on column values.
             if (dataManagerRequest.Take != 0)
             {
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            }
+
+            // Handling Group operation in CustomAdaptor.
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<Reservation>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
             }
 
             return dataManagerRequest.RequiresCounts 
@@ -1479,16 +1469,16 @@ Here is the complete and final `Home.razor` component with all features integrat
                     <span class="badge badge-info">@data.ReservationId</span>
                 </Template>
             </GridColumn>
-            <GridColumn Field=@nameof(Reservation.GuestName) HeaderText="Guest Name" Width="150" ValidationRules="@(new ValidationRules { Required = true, MinLength = 3 })" EditType="EditType.DefaultEdit" />
-            <GridColumn Field=@nameof(Reservation.GuestEmail) HeaderText="Email" Width="180" EditType="EditType.DefaultEdit" />
-            <GridColumn Field=@nameof(Reservation.CheckInDate) HeaderText="Check-In" Width="150" Format="dd-MMM-yyyy" Type="ColumnType.Date" EditType="EditType.DatePickerEdit" />
-            <GridColumn Field=@nameof(Reservation.CheckOutDate) HeaderText="Check-Out" Width="150" Format="dd-MMM-yyyy" Type="ColumnType.Date" EditType="EditType.DatePickerEdit" />
+            <GridColumn Field=@nameof(Reservation.GuestName) HeaderText="Guest Name" Width="160" ValidationRules="@(new ValidationRules { Required = true, MinLength = 3 })" EditType="EditType.DefaultEdit" />
+            <GridColumn Field=@nameof(Reservation.GuestEmail) HeaderText="Email" Width="200" EditType="EditType.DefaultEdit" />
+            <GridColumn Field=@nameof(Reservation.CheckInDate) HeaderText="Check-In" Width="140" Format="dd-MMM-yyyy" Type="ColumnType.Date" EditType="EditType.DatePickerEdit" />
+            <GridColumn Field=@nameof(Reservation.CheckOutDate) HeaderText="Check-Out" Width="140" Format="dd-MMM-yyyy" Type="ColumnType.Date" EditType="EditType.DatePickerEdit" />
             <GridColumn Field=@nameof(Reservation.RoomType) HeaderText="Room Type" Width="130" EditType="EditType.DropDownEdit" EditorSettings="@RoomDropDownParams" />
-            <GridColumn Field=@nameof(Reservation.RoomNumber) HeaderText="Room #" Width="100" EditType="EditType.DefaultEdit" />
-            <GridColumn Field=@nameof(Reservation.AmountPerDay) HeaderText="Amount/Day" Width="130" Format="N2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" />
-            <GridColumn Field=@nameof(Reservation.NoOfDays) HeaderText="Days" Width="80" TextAlign="TextAlign.Right" AllowEditing="false" />
-            <GridColumn Field=@nameof(Reservation.TotalAmount) HeaderText="Total" Width="120" Format="N2" TextAlign="TextAlign.Right" AllowEditing="false" />
-            <GridColumn Field=@nameof(Reservation.PaymentStatus) HeaderText="Payment" Width="120" EditType="EditType.DropDownEdit" EditorSettings="@PaymentDropDownParams">
+            <GridColumn Field=@nameof(Reservation.RoomNumber) HeaderText="Room #" Width="120" EditType="EditType.DefaultEdit" />
+            <GridColumn Field=@nameof(Reservation.AmountPerDay) HeaderText="Amount/Day" Width="140" Format="N2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" />
+            <GridColumn Field=@nameof(Reservation.NoOfDays) HeaderText="Days" Width="140" TextAlign="TextAlign.Right" AllowEditing="false" />
+            <GridColumn Field=@nameof(Reservation.TotalAmount) HeaderText="Total" Width="140" Format="N2" TextAlign="TextAlign.Right" AllowEditing="false" />
+            <GridColumn Field=@nameof(Reservation.PaymentStatus) HeaderText="Payment" Width="110" EditType="EditType.DropDownEdit" EditorSettings="@PaymentDropDownParams">
                 <Template>
                     @{
                         var status = (context as Reservation)?.PaymentStatus;
@@ -1554,7 +1544,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Reservation> dataSource = await _reservationService!.GetReservationsAsync();
+            IEnumerable dataSource = await _reservationService!.GetReservationsAsync();
 
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
                 dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
@@ -1565,31 +1555,25 @@ Here is the complete and final `Home.razor` component with all features integrat
             if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
                 dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
 
-            IDictionary<string, object>? aggregates = null;
-            if (dataManagerRequest.Aggregates != null)
-                aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-
             int totalRecordsCount = dataSource.Cast<Reservation>().Count();
-            DataResult dataObject = new DataResult();
+
+            if (dataManagerRequest.Skip != 0)
+            {
+                dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+            }
+
+            if (dataManagerRequest.Take != 0)
+            {
+                dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            }
 
             if (dataManagerRequest.Group != null)
             {
-                IEnumerable ResultData = dataSource.ToList();
                 foreach (var group in dataManagerRequest.Group)
                 {
-                    ResultData = DataUtil.Group<Reservation>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    dataSource = DataUtil.Group<Reservation>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
                 }
-                dataObject.Result = ResultData;
-                dataObject.Count = totalRecordsCount;
-                dataObject.Aggregates = aggregates;
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
             }
-
-            if (dataManagerRequest.Skip != 0)
-                dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
-
-            if (dataManagerRequest.Take != 0)
-                dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
 
             return dataManagerRequest.RequiresCounts 
                 ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
