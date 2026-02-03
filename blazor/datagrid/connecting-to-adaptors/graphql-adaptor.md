@@ -1075,6 +1075,9 @@ Searching provides the capability to find specific records by entering keywords 
     <GridPageSettings PageSize="10"></GridPageSettings>
     <!-- Grid columns configuration -->
 </SfGrid>
+@code{
+    private List<object> ToolbarItems = new() { "Search" };
+}
 ```
 
 2. Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle searching:
