@@ -65,7 +65,7 @@ To enable this feature, set the [AllowRowDragAndDrop](https://help.syncfusion.co
 
 ## Multiple row drag and drop
 
-You can drag and drop multiple rows simultaneously in the Gantt Chart component. To enable this functionality, set the [GanttSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html) property to **SelectionType.Multiple** , and set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowRowDragAndDrop) property is set to **true**.
+You can drag and drop multiple rows simultaneously in the Gantt Chart component. To enable this functionality, set the [GanttSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type) property to **SelectionType.Multiple** , and set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowRowDragAndDrop) property is set to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -122,13 +122,13 @@ You can drag and drop multiple rows simultaneously in the Gantt Chart component.
 
 ## Perform row drag and drop action programmatically
 
-To rearrange rows programmatically in the Gantt Chart component, use the [ReorderRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ReorderRowAsync_System_Double_System_Double_System_String_) method. This method accepts the following parameters: 
+To rearrange rows programmatically in the Gantt Chart component, use the [ReorderRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ReorderRowAsync_System_Int32_System_Int32_System_String_) method. This method accepts the following parameters: 
 
 - **FromIndexes**: Indexes of the rows to be dragged.  
 - **ToIndex**: Target index for placement.  
 - **Position**: Drop positions such as above, below, or child.
 
-In the example below, the row at index 2 is moved below the row at index 6 using a button [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event.
+In the example below, the row at index 2 is moved below the row at index 6 using a button `onclick` event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
