@@ -812,7 +812,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the PostgreSQL database
             try
             {
                 // Fetch all purchase orders from the database
-                IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+                IEnumerable dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
 
                 // Apply search operation if search criteria exists
                 if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -960,7 +960,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+            IEnumerable dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
 
             int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
             
@@ -1030,7 +1030,7 @@ Searching allows the user to find purchase order records by entering keywords in
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+            IEnumerable dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1107,7 +1107,7 @@ Filtering allows the user to restrict purchase order data based on column values
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+            IEnumerable dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1190,7 +1190,7 @@ Sorting enables the user to arrange purchase order records in ascending or desce
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+            IEnumerable dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1277,7 +1277,7 @@ Grouping organizes purchase order records into hierarchical groups based on colu
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+            IEnumerable dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1298,20 +1298,6 @@ Grouping organizes purchase order records into hierarchical groups based on colu
             }
 
             int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
-
-            // Handling Grouping
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<PurchaseOrder>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                var dataObject = new DataResult { Result = ResultData, Count = totalRecordsCount, Aggregates = aggregates };
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
-
-            // Handling Paging
             if (dataManagerRequest.Skip != 0)
             {
                 dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
@@ -1321,9 +1307,16 @@ Grouping organizes purchase order records into hierarchical groups based on colu
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
             }
 
-            return dataManagerRequest.RequiresCounts
-                ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates }
-                : (object)dataSource;
+            // Apply grouping operation if group criteria exists
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<PurchaseOrder>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
+            }
+
+            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource;
         }
     }
 }
@@ -1397,78 +1390,78 @@ public class CustomAdaptor : DataAdaptor
 In **Data/PurchaseOrderRepository.cs**, the insert method is implemented as:
 
 ```csharp
-public async Task AddPurchaseOrderAsync(PurchaseOrder value)
-{
-    try
+    public async Task AddPurchaseOrderAsync(PurchaseOrder value)
     {
-        if (value == null)
-            throw new ArgumentNullException(nameof(value), "Purchase Order cannot be null");
-        
-        // Auto-generate the PoNumber if not provided
-        if (string.IsNullOrEmpty(value.PoNumber))
+        try
         {
-            value.PoNumber = await GeneratePoNumberAsync();
+            if (value == null)
+                throw new ArgumentNullException(nameof(value), "Purchase Order cannot be null");
+            
+            // Auto-generate the PoNumber if not provided
+            if (string.IsNullOrEmpty(value.PoNumber))
+            {
+                value.PoNumber = await GeneratePoNumberAsync();
+            }
+            
+            if (value.CreatedAt == default)
+                value.CreatedAt = DateTime.Now;
+
+            if (value.UpdatedAt == default)
+                value.UpdatedAt = DateTime.Now;
+
+            // Set default status if not provided
+            if (string.IsNullOrEmpty(value.Status))
+                value.Status = "Pending";
+
+            _context.PurchaseOrders.Add(value);
+
+            await _context.SaveChangesAsync();
         }
-        
-        if (value.CreatedAt == default)
-            value.CreatedAt = DateTime.Now;
-
-        if (value.UpdatedAt == default)
-            value.UpdatedAt = DateTime.Now;
-
-        // Set default status if not provided
-        if (string.IsNullOrEmpty(value.Status))
-            value.Status = "Pending";
-
-        _context.PurchaseOrders.Add(value);
-
-        await _context.SaveChangesAsync();
-    }
-    catch (DbUpdateException ex)
-    {
-        Console.WriteLine($"Database error while adding purchase order: {ex.Message}");
-        throw;
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error adding purchase order: {ex.Message}");
-        throw;
-    }
-}
-
-/// <summary>
-/// Generates a unique purchase order number based on the current count and date.
-/// Format: PO-YYYY-XXXX (e.g., PO-2026-0001, PO-2026-0002)
-/// </summary>
-/// <returns>A unique purchase order number</returns>
-/// <exception cref="Exception">Thrown when database query fails</exception>
-private async Task<string> GeneratePoNumberAsync()
-{
-    try
-    {
-        // Get the current year
-        int currentYear = DateTime.Now.Year;
-        int count = await _context.PurchaseOrders
-            .Where(p => p.OrderDate.HasValue && p.OrderDate.Value.Year == currentYear)
-            .CountAsync();
-        int nextNumber = count + 1;
-
-        string poNumber = $"PO-{currentYear}-{nextNumber:D4}";
-
-        while (await _context.PurchaseOrders.AnyAsync(p => p.PoNumber == poNumber))
+        catch (DbUpdateException ex)
         {
-            nextNumber++;
-            poNumber = $"PO-{currentYear}-{nextNumber:D4}";
+            Console.WriteLine($"Database error while adding purchase order: {ex.Message}");
+            throw;
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding purchase order: {ex.Message}");
+            throw;
+        }
+    }
 
-        return poNumber;
-    }
-    catch (Exception ex)
+    /// <summary>
+    /// Generates a unique purchase order number based on the current count and date.
+    /// Format: PO-YYYY-XXXX (e.g., PO-2026-0001, PO-2026-0002)
+    /// </summary>
+    /// <returns>A unique purchase order number</returns>
+    /// <exception cref="Exception">Thrown when database query fails</exception>
+    private async Task<string> GeneratePoNumberAsync()
     {
-        Console.WriteLine($"Error generating PoNumber: {ex.Message}");
-        throw;
+        try
+        {
+            // Get the current year
+            int currentYear = DateTime.Now.Year;
+            int count = await _context.PurchaseOrders
+                .Where(p => p.OrderDate.HasValue && p.OrderDate.Value.Year == currentYear)
+                .CountAsync();
+            int nextNumber = count + 1;
+
+            string poNumber = $"PO-{currentYear}-{nextNumber:D4}";
+
+            while (await _context.PurchaseOrders.AnyAsync(p => p.PoNumber == poNumber))
+            {
+                nextNumber++;
+                poNumber = $"PO-{currentYear}-{nextNumber:D4}";
+            }
+
+            return poNumber;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error generating PoNumber: {ex.Message}");
+            throw;
+        }
     }
-}
 
 ```
 
@@ -1476,7 +1469,7 @@ private async Task<string> GeneratePoNumberAsync()
 
 1. The form data is collected and validated in the CustomAdaptor's `InsertAsync()` method.
 2. The `PurchaseOrderRepository.AddPurchaseOrderAsync()` method is called.
-3. The PoNumber is auto-generated if not provided using the `GeneratePoNumberAsync()` helper method.
+3. The PoNumber is auto-generated using the `GeneratePoNumberAsync()` helper method.
 4. Default values are set for timestamps and status.
 5. The new record is added to the `_context.PurchaseOrders` collection.
 6. `SaveChangesAsync()` persists the record to the PostgreSQL database.
@@ -1778,7 +1771,7 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
         {
             try
             {
-                IEnumerable<PurchaseOrder> dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
+                IEnumerable dataSource = await _purchaseOrderService!.GetPurchaseOrdersDataAsync();
 
                 // Apply search operation if search criteria exists
                 if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1799,35 +1792,25 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
                 }
 
                 int totalRecordsCount = dataSource.Cast<PurchaseOrder>().Count();
-
-                // Apply grouping if group criteria exists
-                if (dataManagerRequest.Group != null && dataManagerRequest.Group.Count > 0)
-                {
-                    IEnumerable ResultData = dataSource.ToList();
-                    foreach (var group in dataManagerRequest.Group)
-                    {
-                        ResultData = DataUtil.Group<PurchaseOrder>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                    }
-                    return dataManagerRequest.RequiresCounts
-                        ? new DataResult { Result = ResultData, Count = totalRecordsCount }
-                        : (object)ResultData;
-                }
-
-                // Apply paging skip operation
                 if (dataManagerRequest.Skip != 0)
                 {
                     dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
                 }
-
-                // Apply paging take operation
                 if (dataManagerRequest.Take != 0)
                 {
                     dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
                 }
 
-                return dataManagerRequest.RequiresCounts
-                    ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
-                    : (object)dataSource;
+                // Apply grouping operation if group criteria exists
+                if (dataManagerRequest.Group != null)
+                {
+                    foreach (var group in dataManagerRequest.Group)
+                    {
+                        dataSource = DataUtil.Group<PurchaseOrder>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    }
+                }
+
+                return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource;
             }
             catch (Exception ex)
             {
