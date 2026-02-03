@@ -133,7 +133,7 @@ The Blazor Diagram component supports the [keyboard interaction](https://www.w3.
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> +<kbd>E</kbd> | Align the selected text to the top vertically.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> | Center the selected text vertically.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> | Align the selected text to the bottom vertically.|
-|<kbd>Ctrl</kbd> + <kbd>G</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd> | <kbd>⌘</kbd> + <kbd>G</kbd> or <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>G</kbd> | Group selected shapes together, treating them as a single shape.|
+|<kbd>Ctrl</kbd> + <kbd>G</kbd> | <kbd>⌘</kbd> + <kbd>G</kbd> | Group selected shapes together, treating them as a single shape.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> | Ungroup shapes within a previously grouped selection.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> | Bring the selected element forward in the stacking order.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd>| Send the selected element backward in the stacking order.|
