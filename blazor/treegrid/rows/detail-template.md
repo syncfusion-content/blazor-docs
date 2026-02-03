@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Detail Template in Blazor Tree Grid Component | Syncfusion
-description: Check out here and learn more details about the Detail Template in the Syncfusion Blazor Tree Grid component.
+title: Detail Template in Blazor TreeGrid Component | Syncfusion
+description: Check out here and learn more details about the Detail Template in the Syncfusion Blazor TreeGrid component.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Detail Template in Blazor Tree Grid Component
+# Detail Template in Blazor TreeGrid Component
 
-The detail template provides additional information about a particular row. By expanding the parent row, the child rows are expanded along with their detail template. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DetailTemplate) property accepts either the template string or HTML elements.
+The detail template provides additional information about a particular row. By expanding the parent row, the child rows are expanded along with their detail template. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_DetailTemplate) property accepts either the template string or HTML elements.
 
 {% tabs %}
 
@@ -91,4 +91,14 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor Tree Grid with Detail Template](../images/blazor-treegrid-detail-template.png)
+![Blazor TreeGrid with Detail Template](../images/blazor-treegrid-detail-template.png)
+
+## Limitations
+
+Detail template is not supported with the following features:
+
+* Virtual scrolling
+* Print
+* Row template
+* State persistence
+* Row and Column Spanning
