@@ -28,36 +28,36 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
         // Add node
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ActionsofNodes/AddNode.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVeCXZGVWckeFbe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding a node from the nodes collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHNsqjzuLVLYHV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding a node from the nodes collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)" %}
 
 >**Note:** Node ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
@@ -71,50 +71,51 @@ A node can be added at runtime by adding it to the `Nodes` collection of the Dia
 
 
 <SfButton Content="Add Node" OnClick="@AddNode" />
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" />
 
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
+    private int _count = 1;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED" }
-            };
-        nodes.Add(node);
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
+        _nodes.Add(node);
     }
     //Method to add node at runtime
-    public void AddNode()
+    private void AddNode()
     {
-        Node NewNode = new Node()
-            {
-                ID = "node2",
-                // Position of the node
-                OffsetX = 450,
-                OffsetY = 450,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED" }
-            };
-        nodes.Add(NewNode);
+        Node newNode = new Node()
+        {
+            ID = "node" + ++_count,
+            // Position of the node
+            OffsetX = 450,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
+        _nodes.Add(newNode);
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLoWtXQBWbVEBtv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBxDsADfkUYPoPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/AddNodeAtRuntime)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ActionsofNodes/AddNodeAtRuntime.razor)
 
 ## How to add node with annotations at runtime
 
@@ -127,23 +128,23 @@ The following code explains how to add a node with an annotation at runtime by u
 @using Syncfusion.Blazor.Buttons
 
 
-<SfButton Content="AddLabel" OnClick="@AddLabel" />
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
+<SfButton Content="AddLabel" OnClick="@AddLabelAsync" />
+<SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes">
 </SfDiagramComponent>
 
 @code
 {
     // Reference to diagram.
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
 
     // Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
-    DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> _nodeCollection  = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 100,
@@ -152,13 +153,13 @@ The following code explains how to add a node with an annotation at runtime by u
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     // Method to add node with annotation at runtime.
-    public async void  AddLabel()
+    private async Task AddLabelAsync()
     {
-         Node NewNode = new Node()
+        Node newNode = new Node()
         {
             ID = "node2",
             // Position of the node.
@@ -176,8 +177,8 @@ The following code explains how to add a node with an annotation at runtime by u
                 }
             },
         };
-        NodeCollection.Add(NewNode);
-       await diagram.AddDiagramElementsAsync(NodeCollection);
+        _nodeCollection .Add(newNode);
+        await _diagram.AddDiagramElementsAsync(_nodeCollection );
     }
 }
 ```
@@ -219,51 +220,51 @@ The following code shows how to remove a node at runtime.
 
 <SfButton Content="Remove Node" OnClick="@RemoveNodes" />
 
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" />
 
 @code
 {
     //Defines diagram's Node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
         // Add node
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
-    public void RemoveNodes()
+    private void RemoveNodes()
     {
         // Remove Node at runtime
-        nodes.Remove(nodes[0]);
+        _nodes.Remove(_nodes[0]);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXroCjZGVsEiiFIr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/RemoveNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ActionsofNodes/RemoveNode.razor)
 
 A node can also be removed from the diagram by using the native `RemoveAt` method. Refer to the following example to see how to remove the node at runtime.
 
 ```csharp
-public void RemoveNodes()
+private void RemoveNodes()
 {
     nodes.RemoveAt(0);
 }
 ```
-### How to Clone a Node at Runtime
+## How to Clone a Node at Runtime
 [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes. The following code demonstrates how to clone the nodes during runtime.
 
 ```cshtml
@@ -272,54 +273,54 @@ public void RemoveNodes()
 @using Syncfusion.Blazor.Buttons
 @inject IJSRuntime js
 
-<SfButton Content="Clone Node" OnClick="@CloneNode" />
-<SfDiagramComponent @ref="diagram" Width="50%" Height="500px" @bind-Nodes="NodeCollection"></SfDiagramComponent>
+<SfButton Content="Clone Node" OnClick="@CloneNodeMethod" />
+<SfDiagramComponent @ref="_diagram" Width="50%" Height="500px" @bind-Nodes="_nodeCollection" />
 
 @functions
 {
-
-    SfDiagramComponent diagram;
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
+    
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 200,
+            Height = 100,
+            Width = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                ID = "node1",
-                OffsetX = 100,
-                OffsetY = 200,
-                Height = 100,
-                Width = 100,
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-                    {
-                        new ShapeAnnotation()
-                        {
-                            Content = "node1"
-                        },
-                    },
-                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Process }
-            };
-        NodeCollection.Add(node1);
+                new ShapeAnnotation()
+                {
+                    Content = "node1"
+                },
+            },
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Process }
+        };
+        _nodeCollection.Add(node1);
     }
-    public async Task CloneNode()
+
+    private async Task CloneNodeMethod()
     {
-        Node node = NodeCollection[0].Clone() as Node;
+        Node node = _nodeCollection[0].Clone() as Node;
         node.ID = RandomId();
         node.OffsetX += 25;
         node.OffsetY += 25;
-        await diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { node });
+        await _diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { node });
     }
 
-    internal string RandomId()
+    private string RandomId()
     {
         Random random = new Random();
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
-        return new string(Enumerable.Repeat(chars, 5)
+        const string Chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        return new string(Enumerable.Repeat(Chars, 5)
           .Select(s => s[random.Next(s.Length)]).ToArray());
     }
-
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/CloneNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/CloneNode/CloneNode.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLyWXZchiOJEKsq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Clonning Node](../images/CloneNode.gif)" %}
 
@@ -335,44 +336,45 @@ The following code example explains how to change node properties.
 
 <SfButton Content="Update Node" OnClick="@UpdateNodes" />
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent @ref="_diagram" Width="1000px" Height="500px" Nodes="@_nodes" />
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
-            {
-                ID = "node1",
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-            };
-        nodes.Add(node);
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
+        _nodes.Add(node);
     }
+
     //Method to Update node's width and height at runtime
-    public async void UpdateNodes()
+    private async Task UpdateNodes()
     {
-        Diagram.BeginUpdate();
-        Diagram.Nodes[0].Width = 50;
-        Diagram.Nodes[0].Height = 50;
-        await Diagram.EndUpdateAsync();
+        _diagram.BeginUpdate();
+        _diagram.Nodes[0].Width = 50;
+        _diagram.Nodes[0].Height = 50;
+        await _diagram.EndUpdateAsync();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVSCDNmhWOaZNES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/UpdateNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ActionsofNodes/UpdateNode.razor)
 
 N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdateAsync) methods allow you to stop the continuous update of control and resume it finally.
 
