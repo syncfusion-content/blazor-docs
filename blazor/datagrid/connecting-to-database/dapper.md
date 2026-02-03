@@ -71,7 +71,7 @@ BEGIN
         GuestName VARCHAR(100) NOT NULL,
         GuestEmail VARCHAR(250) NULL,
         CheckInDate DATE NOT NULL,
-        CheckOutDate DATE NOT NULL,
+        CheckOutDate DATE NULL,
         RoomType VARCHAR(100) NULL,
         RoomNumber VARCHAR(20) NULL,
         AmountPerDay DECIMAL(18,2) NULL,
