@@ -645,7 +645,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
             try
             {
                 // Fetch all assets from the database
-                IEnumerable<Asset> dataSource = await _assetService!.GetAssetsAsync();
+                IEnumerable dataSource = await _assetService!.GetAssetsAsync();
 
                 // Apply search operation if search criteria exists
                 if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -680,7 +680,15 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
                     dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
                 }
 
-                // Return the result with total count for pagination metadata
+                // Handling Group operation in CustomAdaptor.
+                if (dataManagerRequest.Group != null)
+                {
+                    foreach (var group in dataManagerRequest.Group)
+                    {
+                        dataSource = DataUtil.Group<Asset>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    }
+                }
+
                 return dataManagerRequest.RequiresCounts
                     ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
                     : (object)dataSource;
@@ -792,10 +800,9 @@ public class CustomAdaptor : DataAdaptor
 
     public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
     {
-        IEnumerable<Asset> dataSource = await _assetService!.GetAssetsAsync();
+        IEnumerable dataSource = await _assetService!.GetAssetsAsync();
 
         int totalRecordsCount = dataSource.Cast<Asset>().Count();
-        DataResult dataObject = new DataResult();
 
         // Handling Paging
         if (dataManagerRequest.Skip != 0)
@@ -890,7 +897,7 @@ Searching allows the user to find records by entering keywords in the search box
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Asset> dataSource = await _assetService!.GetAssetsAsync();
+            IEnumerable dataSource = await _assetService!.GetAssetsAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -971,7 +978,7 @@ public class CustomAdaptor : DataAdaptor
 
     public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
     {
-        IEnumerable<Asset> dataSource = await _assetService!.GetAssetsAsync();
+        IEnumerable dataSource = await _assetService!.GetAssetsAsync();
 
         // Handling Search
         if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1060,7 +1067,7 @@ public class CustomAdaptor : DataAdaptor
 
     public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
     {
-        IEnumerable<Asset> dataSource = await _assetService!.GetAssetsAsync();
+        IEnumerable dataSource = await _assetService!.GetAssetsAsync();
 
         // Handling Search
         if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1154,7 +1161,7 @@ public class CustomAdaptor : DataAdaptor
 
     public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
     {
-        IEnumerable<Asset> dataSource = await _assetService!.GetAssetsAsync();
+        IEnumerable dataSource = await _assetService!.GetAssetsAsync();
 
         // Handling Search
         if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1176,23 +1183,6 @@ public class CustomAdaptor : DataAdaptor
 
         int totalRecordsCount = dataSource.Cast<Asset>().Count();
 
-        // Handling Grouping
-        DataResult dataObject = new DataResult();
-
-        if (dataManagerRequest.Group != null)
-        {
-            IEnumerable ResultData = dataSource.ToList();
-            foreach (var group in dataManagerRequest.Group)
-            {
-                ResultData = DataUtil.Group<Asset>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                //Add custom logic here if needed and remove above method
-            }
-            dataObject.Result = ResultData;
-            dataObject.Count = totalRecordsCount;
-            dataObject.Aggregates = aggregates;
-            return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-        }
-
         // Handling Paging
         if (dataManagerRequest.Skip != 0)
         {
@@ -1204,6 +1194,15 @@ public class CustomAdaptor : DataAdaptor
         {
             dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
             //Add custom logic here if needed and remove above method
+        }
+
+         // Handling Group operation in CustomAdaptor.
+        if (dataManagerRequest.Group != null)
+        {
+            foreach (var group in dataManagerRequest.Group)
+            {
+                dataSource = DataUtil.Group<Asset>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+            }
         }
 
         return dataManagerRequest.RequiresCounts
@@ -1670,7 +1669,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Asset> dataSource = await _assetService!.GetAssetsAsync();
+            IEnumerable dataSource = await _assetService!.GetAssetsAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1690,30 +1689,7 @@ Here is the complete and final `Home.razor` component with all features integrat
                 dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
             }
 
-            // Handling Aggregation
-            IDictionary<string, object>? aggregates = null;
-            if (dataManagerRequest.Aggregates != null)
-            {
-                aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-            }
-
             int totalRecordsCount = dataSource.Cast<Asset>().Count();
-
-            // Handling Grouping
-            DataResult dataObject = new DataResult();
-
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Asset>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                dataObject.Result = ResultData;
-                dataObject.Count = totalRecordsCount;
-                dataObject.Aggregates = aggregates;
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
 
             // Handling Paging
             if (dataManagerRequest.Skip != 0)
@@ -1724,6 +1700,15 @@ Here is the complete and final `Home.razor` component with all features integrat
             if (dataManagerRequest.Take != 0)
             {
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+            }
+
+             // Handling Group operation in CustomAdaptor.
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<Asset>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
             }
 
             return dataManagerRequest.RequiresCounts
