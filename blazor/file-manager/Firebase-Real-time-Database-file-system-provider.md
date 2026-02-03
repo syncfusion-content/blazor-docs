@@ -9,32 +9,34 @@ documentation: ug
 
 # Firebase file system provider
 
+To get started with the Firebase file system provider, ensure that you have a Firebase project, Firebase Realtime Database created, and a service account key (JSON) generated from the Firebase console.
+
 The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the File Manager file system in a cloud database as JSON representation.
 
-### Generate Secret access key from service account
+### Generate a service account key
 
-Follow the given steps to generate the secret access key:
+Follow these steps to generate and download the service account key:
 
-* Click this [link](https://console.firebase.google.com/u/0/?pli=1) to Firebase console and navigate to the project settings.
+* Visit the [Firebase Console](https://console.firebase.google.com/u/0/?pli=1) and open your project.
 
-* And then, navigate to the **Service Accounts** tab in the window.
+* Navigate to the **Project Settings > Service Accounts** tab.
 
-* In the new dialog window, click the **Other service account** option to navigate to the Google service accounts console to generate the secret key.
+* In the new dialog window, click the **All service accounts** option to navigate to the Google service accounts console to generate the secret key.
 
 ![Blazor File Manager displays File System Authentication](images/blazor-filemanager-file-system.png)
 
-* Now, open the Firebase service project from the Google services console, and generate a Secret key.
+* Now, open the Firebase service project from the Google service accounts console and generate a key.
 
-![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key.png)
+![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key-image-1.png)
+![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key-image-2.png)
 
-* After generating the secret key, replace secret key JSON in the access_key.json file in the Firebase Real time Database provider project to enable authentication for performing read and write operations.
+* After generating the key, replace the JSON content in the `access_key.json` file in the Firebase Realtime Database provider project to enable authentication for read and write operations.
 
-To interpolate with the Firebase Real time Database, create a project under Firebase Real time Database, and then enable the **read** and **write** permissions to access the Firebase Database by specifying the rules within the authentication tab of the Firebase project as demonstrated in the following code snippet.
+To integrate with Firebase Realtime Database, create a database under **Firebase Realtime Database** and configure the **read** and **write** permissions by specifying the rules in the **Rules** tab as shown in the following example.
 
 N> By default, rules of a Firebase project will be **false**. To read and write the data, configure the **Rules** as given in the following code snippet in the *Rules* tab in the Firebase Real time Database project.
 
 ```json
-
 {
   /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
   "rules": {
@@ -42,69 +44,87 @@ N> By default, rules of a Firebase project will be **false**. To read and write 
     ".write": "auth!=null"
   }
 }
-
 ```
 
 Then, create a root node and add children to the root node. Refer to the following code snippet for the structure of JSON.
 
 ```json
-
 {
-  "Files" : [ {
-    "caseSensitive" : false,
-    "dateCreated" : "8/22/2019 5:17:55 PM",
-    "dateModified" : "8/22/2019 5:17:55 PM",
-    "filterId" : "0/",
-    "filterPath" : "/",
-    "hasChild" : false,
-    "id" : "5",
-    "isFile" : false,
-    "isRoot" : true,
-    "name" : "Music",
-    "parentId" : "0",
-    "selected" : false,
-    "showHiddenItems" : false,
-    "size" : 0,
-    "type" : "folder"
-  },
-   {
-    "caseSensitive" : false,
-    "dateCreated" : "8/22/2019 5:18:03 PM",
-    "dateModified" : "8/22/2019 5:18:03 PM",
-    "filterId" : "0/",
-    "filterPath" : "/",
-    "hasChild" : false,
-    "id" : "6",
-    "isFile" : false,
-    "isRoot" : true,
-    "name" : "videos",
-    "parentId" : "0",
-    "selected" : false,
-    "showHiddenItems" : false,
-    "size" : 0,
-    "type" : ""
-  }]
- }
-
+  "Files": [
+    {
+      "_fm_selected": false,
+      "caseSensitive": false,
+      "dateCreated": "2026-01-01T09:15:32Z",
+      "dateModified": "2026-01-15T14:48:10Z",
+      "filterPath": "",
+      "hasChild": true,
+      "id": "0",
+      "isFile": false,
+      "isRoot": false,
+      "name": "Files",
+      "showHiddenItems": false,
+      "size": 0,
+      "type": ""
+    },
+    {
+      "caseSensitive": false,
+      "dateCreated": "2026-01-10T11:22:45Z",
+      "dateModified": "2026-01-22T17:55:12Z",
+      "filterId": "0/",
+      "filterPath": "/",
+      "hasChild": false,
+      "id": "5",
+      "isFile": false,
+      "isRoot": true,
+      "name": "Music",
+      "parentId": "0",
+      "selected": false,
+      "showHiddenItems": false,
+      "size": 0,
+      "type": "folder"
+    },
+    {
+      "caseSensitive": false,
+      "dateCreated": "2026-01-05T13:04:27Z",
+      "dateModified": "2026-01-13T12:52:44Z",
+      "filterId": "0/",
+      "filterPath": "/",
+      "hasChild": false,
+      "id": "6",
+      "isFile": false,
+      "isRoot": true,
+      "name": "Videos",
+      "parentId": "0",
+      "selected": false,
+      "showHiddenItems": false,
+      "size": 0,
+      "type": ""
+    }
+  ]
+}
 ```
 
-Here, the `Files` denotes the `rootNode` and the subsequent object refers to the children of the root node. `rootNode` will be taken as the root folder of the file system loaded which will be loaded in File Manager component.
+Here, `Files` denotes the `rootNode`, and the array items represent folders/files in the File Manager file system. The first object typically represents the root folder, and child items reference the root using `parentId`.
 
-After that, clone the [EJ2.ASP.NET Core Firebase Real Time Database File Provider](https://github.com/SyncfusionExamples/ej2-firebase-realtime-database-aspcore-file-provider) and just open the project in Visual Studio and restore the NuGet package.
+In the **Data** tab of your Firebase Realtime Database, locate the project's **API URL**. You can use this URL in your backend configuration code. To upload the file structure, create a **.json** file using the format shown above and import it using the **Import JSON** option.
 
-Register the Firebase Real time Database by assigning *Firebase Real time Database REST API link*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of class `FirebaseRealtimeDBFileProvider` in controller part of the ASP.NET Core application.
+![Firebase Database in Blazor FileManager](images/blazor-filemanager-database.png)
 
-```
+After that, clone the [EJ2.ASP.NET Core Firebase Realtime Database File Provider](https://github.com/SyncfusionExamples/ej2-firebase-realtime-database-aspcore-file-provider), open the project in Visual Studio, and restore the NuGet packages.
 
-void RegisterFirebaseRealtimeDB(string apiUrl, string rootNode, string serviceAccountKeyPath)
+Register Firebase Realtime Database by assigning the *Firebase Realtime Database REST API URL*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of the `FirebaseRealtimeDBFileProvider` class in the controller part of the ASP.NET Core application.
+
+```csharp
+
+this.operation.RegisterFirebaseRealtimeDB("<---API URL--->", "<---RootNode--->", Path.Combine(hostingEnvironment.ContentRootPath, "FirebaseRealtimeDBHelper", "access_key.json"));
 
 ```
 
 **Example:**
 
-```
+```csharp
 
-void RegisterFirebaseRealtimeDB("https://filemanager-c0f6d.firebaseio.com/", "Files", "{give the service account key path}");
+this.operation.RegisterFirebaseRealtimeDB("https://filemanager-c0f6d.firebaseio.com/", "Files", Path.Combine(hostingEnvironment.ContentRootPath, "FirebaseRealtimeDBHelper", "access_key.json"));
 
 ```
 
@@ -116,7 +136,7 @@ In the above code,
 
 * `{give the service account key path}` denotes service account key path which has authentication key for the Firebase Real time Database data.
 
-After configuring the Firebase Real time Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the files in the Firebase Real time Database.
+After configuring the Firebase Real time Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows to manage the files in the Firebase Real time Database.
 
 ```cshtml
 

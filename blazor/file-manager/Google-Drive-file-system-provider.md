@@ -39,7 +39,7 @@ After downloading the `client_secret.json`, copy it into the following paths of 
 * [EJ2FileManagerService > credentials > client_secret.json](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider/blob/master/EJ2GoogleDriveFileProvider/credentials/client_secret.json)
 * [GoogleOAuth2.0Base > credentials > client_secret.json](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider/blob/master/GoogleOAuth2.0Base/credentials/client_secret.json)
 
-After updating the credentials, just build and run the project. Now, the project will be hosted in `http://localhost:{port}`, and it will ask to log on to the Gmail account for which created the client secret credentials. Then, provide permission to access the Google Drive files by clicking the allow access button in the page. Now, just mapping the ajaxSettings property of the File Manager component to the appropriate controller methods will allow to manage the files from the Google Drive.
+After updating the credentials, just build and run the project. Now, the project will be hosted in `http://localhost:{port}`, and it will ask to log on to the Gmail account for which created the client secret credentials. Then, provide permission to access the Google Drive files by clicking the allow access button in the page. Now, just mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods will allow to manage the files from the Google Drive.
 
 ```cshtml
 
