@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Template in Blazor Tree Grid
 
-N> Before adding column template to the tree grid, it is recommended to go through the [template](../templates/#templates) section topic to configure the template.
+N> Before adding column template to the tree grid, it is recommended to go through the [template](../templates#templates-in-blazor-treegrid-component) section topic to configure the template.
 
 To know about **Column Template** in Blazor tree grid Component, you can check this video.
 
@@ -22,6 +22,7 @@ N> The column template feature is used to render the customized element value in
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 @inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
 <div class="col-lg-12 control-section">
     <div class="content-wrapper">
@@ -227,7 +228,7 @@ The following screenshot represents the column Template.
 
 N> * Tree Grid actions such as editing, filtering and sorting etc. will depend upon the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html). If the `Field` is not specified in the
 template column, the tree grid actions cannot be performed.
-<br/> * For Templated tree grid component, [ModelType](../templates/#template-modeltype) property of tree grid should be defined.
+<br/> * For Templated tree grid component, [ModelType](../templates#template-modeltype) property of tree grid should be defined.
 
 ## Using conditions inside template
 
@@ -327,7 +328,7 @@ In the following code, checkbox is rendered based on Discontinued field value in
 The following screenshot represents the Conditional Template.
 ![Blazor Tree Grid with Conditional Template](../images/blazor-treegrid-conditional-template.png)
 
-N> For Templated Tree Grid component, [ModelType](../templates/#template-modeltype) property of Tree Grid should be defined.
+N> For Templated Tree Grid component, [ModelType](../templates#template-modeltype) property of Tree Grid should be defined.
 
 ## Using image inside template
 
@@ -547,6 +548,7 @@ This can be achieved by initially defining an anchor tag inside the column templ
 ```cshtml
 @inject NavigationManager UriHelper
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 
 <SfTreeGrid  DataSource="@Employees" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
@@ -612,7 +614,7 @@ In the above code, the url to be navigated is specified in the Link variable of 
 <br>
 <div><b>Employee ID:</b><div class="details">@EmpID</div></div>
 <div><b>Position:</b><div class="details">@Title</div></div>
-<div>
+</div>
 
 <style>
     .center {

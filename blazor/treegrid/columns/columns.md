@@ -162,7 +162,7 @@ Customize the header element using the [HeaderTemplate](https://help.syncfusion.
             </HeaderTemplate>
         </TreeGridColumn>
         <TreeGridColumn Field="Designation" HeaderText="Designation" Width="120"></TreeGridColumn>
-        <TreeGridColumn Field="EmpID" HeaderText="Progress" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="EmpID" HeaderText="Employee Name" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Country" HeaderText="Priority" Width="100"></TreeGridColumn>
         </TreeGridColumns>
 </SfTreeGrid>
@@ -203,9 +203,10 @@ Customize the header element using the [HeaderTemplate](https://help.syncfusion.
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data {
+namespace TreeGridComponent.Data
+{
 
-public class Employee
+    public class Employee
     {
         public string Name { get; set; }
         public string? FullName { get; set; }
@@ -215,16 +216,17 @@ public class Employee
         public string? Country { get; set; }
         public int? ParentId { get; set; }
         public Employee Treedata { get; set; }
+        public int EmployeeID { get; set; }
 
         public static List<Employee> GetTemplateData()
         {
             List<Employee> DataCollection = new List<Employee>();
-            DataCollection.Add(new Employee { Name = "Robert King",Designation = "Chief Executive Officer",EmpID = "EMP001",Country = "USA",ParentId = null,Treedata = new TreeData() { ID = 21}});
-            DataCollection.Add(new Employee { Name = "David william",Designation = "Vice President",EmpID = "EMP004",Country = "USA",ParentId = 1,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Nancy Davolio",Designation = "Marketing Executive",EmpID = "EMP035",Country = "USA",ParentId = 1,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Andrew Fuller",Designation = "Sales Representative",EmpID = "EMP045",Country = "UK",ParentId = 1,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Anne Dodsworth",FullName = "AnneDodsworth",Designation = "Sales Representative",EmployeeID = 5,EmpID = "EMP091",Country = "USA",ParentId = null,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Michael Suyama",FullName = "MichaelSuyama",Designation = "Sales Representative",EmployeeID = 6,EmpID = "EMP110",Country = "UK",ParentId = 5,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Robert King", Designation = "Chief Executive Officer", EmployeeID= 1,  EmpID = "EMP001", Country = "USA", ParentId = null});
+            DataCollection.Add(new Employee { Name = "David william", Designation = "Vice President", EmployeeID = 2,  EmpID = "EMP004", Country = "USA", ParentId = 1 });
+            DataCollection.Add(new Employee { Name = "Nancy Davolio", Designation = "Marketing Executive", EmployeeID= 3, EmpID = "EMP035", Country = "USA", ParentId = 1 });
+            DataCollection.Add(new Employee { Name = "Andrew Fuller", Designation = "Sales Representative", EmployeeID = 4,EmpID = "EMP045", Country = "UK", ParentId = 1});
+            DataCollection.Add(new Employee { Name = "Anne Dodsworth", FullName = "AnneDodsworth", Designation = "Sales Representative", EmployeeID = 5, EmpID = "EMP091", Country = "USA", ParentId = null });
+            DataCollection.Add(new Employee { Name = "Michael Suyama", FullName = "MichaelSuyama", Designation = "Sales Representative", EmployeeID = 6, EmpID = "EMP110", Country = "UK", ParentId = 5 });
             return DataCollection;
         }
     }

@@ -107,7 +107,9 @@ In the following sample, the dropdown is used as a custom component in the Durat
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.TreeGrid;
+@using  Syncfusion.Blazor.Grids;
 @using  Syncfusion.Blazor.Data;
+@using  Syncfusion.Blazor.DropDowns;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">    
     <TreeGridColumns>
@@ -213,6 +215,7 @@ In the following sample, we have changed the default operator for TaskName colum
 @using  Syncfusion.Blazor.TreeGrid;
 @using  Syncfusion.Blazor.Grids;
 @using  Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">    
     <TreeGridColumns>

@@ -107,7 +107,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
     protected override void OnInitialized()
     {
-        TreeData = SelfReferenceData.GetTree().ToList();
+        TreeData = new SelfReferenceData().GetTree().ToList();
     }
 
     // Implementing custom adaptor by extending the DataAdaptor class
@@ -294,14 +294,10 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
 Custom Adaptor can be created as a component when `DataAdaptor` is extended from `OwningComponentBase`. Custom Adaptor can be created from any of the two versions of the class, `DataAdaptor` and `DataAdaptor<T>`.
 
-Ensure to register your service in **Startup.cs** file.
+Ensure to register your service in **Program.cs** file.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    ...
-    services.AddScoped<SelfReferenceData>();
-}
+builder.Services.AddScoped<SelfReferenceData>();
 ```
 
 The following sample code demonstrates creating Custom Adaptor as a component,
@@ -495,7 +491,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
     protected override void OnInitialized()
     {
-        TreeData = SelfReferenceData.GetTree().ToList();
+        TreeData = new SelfReferenceData().GetTree().ToList();
     }
 
         // Implementing custom adaptor by extending the DataAdaptor class
