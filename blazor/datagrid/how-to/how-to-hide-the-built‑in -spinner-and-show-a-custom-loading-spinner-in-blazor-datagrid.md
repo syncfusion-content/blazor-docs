@@ -33,7 +33,7 @@ The `DataBound` event is triggered after the Grid has fully bound its dataSource
 
 ```css
 .e-grid .e-spinner-pane {
-    display: none !important;
+    display: none;
 }
 ```
 
