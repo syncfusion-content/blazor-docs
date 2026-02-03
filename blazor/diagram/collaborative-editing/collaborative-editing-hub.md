@@ -150,6 +150,15 @@ public class DiagramUpdateMessage
 
 public class DiagramHub : Hub
 {
+    private readonly ILogger<DiagramHub> _logger;
+    private readonly IRedisService _redisService;
+
+    public DiagramHub(ILogger<DiagramHub> logger, IRedisService redisService)
+    {
+        _logger = logger;
+        _redisService = redisService;
+    }
+
     // Triggers the method when the user send the data to other users via signalR
     public async Task BroadcastToOtherUsers(List<string> payloads, long userVersion, List<string>? elementIds, string roomName)
     {
@@ -171,7 +180,7 @@ public class DiagramHub : Hub
                         recentlyTouched.Add(id);
                 }
 
-                List<string> overlaps = elementIds?.Where(id => recentlyTouched.Contains(id)).Distinct().ToList();
+                List<string>? overlaps = elementIds?.Where(id => recentlyTouched.Contains(id)).Distinct().ToList();
                 if (overlaps?.Count > 0)
                 {
                     // Reject and notify user to conflict message
@@ -186,7 +195,7 @@ public class DiagramHub : Hub
             // Store update in Redis history
             DiagramUpdateMessage update = new DiagramUpdateMessage
             {
-                SourceConnectionId = connId,
+                SourceConnectionId = connectionId,
                 Version = serverVersion,
                 ModifiedElementIds = elementIds
             };
@@ -196,15 +205,15 @@ public class DiagramHub : Hub
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex);
+            _logger.LogError(ex, "Error broadcasting diagram updates");
         }
     }
 
     // Compare version from user's interactions and filter the updates.
     private async Task<IReadOnlyList<DiagramUpdateMessage>> GetUpdatesSinceVersionAsync(long sinceVersion, int maxScan = 200)
     {
-        var historyKey = "diagram_updates_history";
-        var length = await _redisService.ListLengthAsync(historyKey);
+        string historyKey = "diagram_updates_history";
+        long length = await _redisService.ListLengthAsync(historyKey);
         if (length == 0) return Array.Empty<DiagramUpdateMessage>();
 
         long start = Math.Max(0, length - maxScan);
@@ -219,7 +228,6 @@ public class DiagramHub : Hub
             var update = JsonSerializer.Deserialize<DiagramUpdateMessage>(item.ToString());
             if (update is not null && update.Version > sinceVersion && update.SourceConnectionId != Context.ConnectionId)
                 results.Add(update);
-            
         }
         results.Sort((a, b) => a.Version.CompareTo(b.Version));
         return results;
