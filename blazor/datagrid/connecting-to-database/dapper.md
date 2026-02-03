@@ -169,12 +169,12 @@ namespace Grid_Dapper.Data
         /// <summary>
         /// Gets or sets the check-in date for the reservation.
         /// </summary>
-        public DateTime CheckInDate { get; set; }
+        public DateTime? CheckInDate { get; set; }
 
         /// <summary>
         /// Gets or sets the check-out date for the reservation.
         /// </summary>
-        public DateTime CheckOutDate { get; set; }
+        public DateTime? CheckOutDate { get; set; }
 
         /// <summary>
         /// Gets or sets the type of room (e.g., Standard, Deluxe, Suite).
@@ -1174,12 +1174,17 @@ public async Task AddReservationAsync(Reservation value)
     if (string.IsNullOrEmpty(value.GuestName))
         throw new ArgumentException("Guest name is required", nameof(value));
 
+    if (value.CheckInDate == null || value.CheckInDate == default)
+    {
+        value.CheckInDate = DateTime.Now;
+    }
+
     string generatedReservationId = await GenerateReservationIdAsync();
     value.ReservationId = generatedReservationId;
 
     if (value.CheckInDate != default && value.CheckOutDate != default)
     {
-        value.NoOfDays = CalculateNoOfDays(value.CheckInDate, value.CheckOutDate);
+        value.NoOfDays = CalculateNoOfDays((DateTime)value.CheckInDate, (DateTime)value.CheckOutDate);
     }
 
     if (value.AmountPerDay.HasValue && value.NoOfDays.HasValue && value.NoOfDays > 0)
@@ -1286,7 +1291,7 @@ public async Task UpdateReservationAsync(Reservation value)
 
         if (value.CheckInDate != default && value.CheckOutDate != default)
         {
-            value.NoOfDays = CalculateNoOfDays(value.CheckInDate, value.CheckOutDate);
+            value.NoOfDays = CalculateNoOfDays((DateTime)value.CheckInDate, (DateTime)value.CheckOutDate);
         }
 
         if (value.AmountPerDay.HasValue && value.NoOfDays.HasValue && value.NoOfDays > 0)
@@ -1341,7 +1346,7 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-In **Data/TicketRepository.cs**, the delete method is implemented as:
+In **Data/ReservationRepository.cs**, the delete method is implemented as:
 
 ```csharp
 public async Task RemoveReservationAsync(int? key)
@@ -1474,7 +1479,7 @@ Here is the complete and final `Home.razor` component with all features integrat
                     <span class="badge badge-info">@data.ReservationId</span>
                 </Template>
             </GridColumn>
-            <GridColumn Field=@nameof(Reservation.GuestName) HeaderText="Guest Name" Width="150" EditType="EditType.DefaultEdit" />
+            <GridColumn Field=@nameof(Reservation.GuestName) HeaderText="Guest Name" Width="150" ValidationRules="@(new ValidationRules { Required = true, MinLength = 3 })" EditType="EditType.DefaultEdit" />
             <GridColumn Field=@nameof(Reservation.GuestEmail) HeaderText="Email" Width="180" EditType="EditType.DefaultEdit" />
             <GridColumn Field=@nameof(Reservation.CheckInDate) HeaderText="Check-In" Width="150" Format="dd-MMM-yyyy" Type="ColumnType.Date" EditType="EditType.DatePickerEdit" />
             <GridColumn Field=@nameof(Reservation.CheckOutDate) HeaderText="Check-Out" Width="150" Format="dd-MMM-yyyy" Type="ColumnType.Date" EditType="EditType.DatePickerEdit" />
@@ -1632,9 +1637,10 @@ Here is the complete and final `Home.razor` component with all features integrat
     /// </summary>
     private static List<Reservation> CustomRooms = new List<Reservation> {
         new Reservation() { RoomType = "Standard Room" },
-        new Reservation() { RoomType = "Deluxe Suite" },
-        new Reservation() { RoomType = "Executive Suite" },
-        new Reservation() { RoomType = "Penthouse" },
+        new Reservation() { RoomType = "Deluxe Room" },
+        new Reservation() { RoomType = "Ocean View" },
+        new Reservation() { RoomType = "Suite" },
+        new Reservation() { RoomType = "Premium Suite" },
     };
 
     /// <summary>
