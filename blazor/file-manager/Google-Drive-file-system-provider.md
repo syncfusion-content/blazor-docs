@@ -26,7 +26,7 @@ To authenticate from the client end, you need to obtain OAuth 2.0 client credent
 
 **Steps to Generate OAuth 2.0 Credentials:**
 
-* Go to the [Google API Console](https://console.developers.google.com).
+* Go to the [Google API Console](https://console.cloud.google.com/apis/dashboard).
 * Create a new project or select an existing project.
 * Enable the **Google Drive API** for your project by selecting **API Library**.
 * Configure the project by selecting the **OAuth consent screen** option. Complete the steps under **App Information, Audience, Contact Information, and Finish** by clicking **Get Started** in the displayed window.
