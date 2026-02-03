@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregate in Blazor TreeGrid Component | Syncfusion
-description: Learn how to configure and customize Aggregates in the Syncfusion Blazor TreeGrid component.
+description: Learn how to configure and display aggregate values such as sum, average, and count in the Syncfusion Blazor TreeGrid component.
 platform: Blazor
 control: Tree Grid
 documentation: ug
