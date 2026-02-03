@@ -7,9 +7,18 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Row Editing in Blazor Tree Grid Component
+# Row Editing
 
-In Row edit mode, when the currently selected record is edited, the entire row is changed to edit state. The cell values of the row can be changed and save edited data to the data source. To enable Row edit, set the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Row**.
+Row editing lets users edit all cells in a row at once. When a row enters edit mode, every editable cell in that row becomes an input control so the user can change values and then save or cancel the changes.
+
+Quick overview:
+- Enable row editing by setting [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) to `Row`.
+- Use `Toolbar` items such as `Add`, `Edit`, `Delete`, `Update`, and `Cancel` to provide common actions.
+- A primary key (`IsPrimaryKey` or `IdMapping`) is required so the TreeGrid can identify rows.
+
+## Minimal example
+
+The example below shows how to enable row editing with a toolbar and a simple data source.
 
 {% tabs %}
 
@@ -68,7 +77,7 @@ public class TreeData
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
             return BusinessObjectCollection;
-        }
+        }   
     }
 }
 
