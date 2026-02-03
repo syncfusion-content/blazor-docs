@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# Entity FrameWork in Blazor Gantt Chart Component
+# Entity Framework in Blazor Gantt Chart Component
 
 You need to follow the below steps to consume data from the **Entity Framework** in the Gantt Chart component.
 
 **Step 1:** The first step is to create a SQL database in your Blazor project. Refer this [link](https://docs.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2019) to create SQL database.
 
-**Step 2:** Install the below packages for Entity Framework Support using Nuget or Package manager console using the below command.
+**Step 2:** Install the below packages for Entity Framework Support using NuGet or Package manager console using the below command.
 
 ```bash
 Install-Package Microsoft.EntityFrameworkCore.Tools
@@ -132,13 +132,13 @@ namespace GanttEF.Models
 
 The following sections will give details about the steps that need to be followed when working with server-side and client-side applications individually. You can also find samples attached at the end of each section for server-side applications and client-side applications.
 
-## Entity framework in server-side application
+## Entity Framework in server-side application
 
 You need to follow the following steps when working with a server-side application.
 
 ### Custom adaptor
 
-In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data, `CustomAdaptor` of DataManager property is used to call the server method. Learn  know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). You can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Check the following code snippet to assign the data source to Gantt.
+In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data, `CustomAdaptor` of DataManager property is used to call the server method. Learn  know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding). You can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Check the following code snippet to assign the data source to Gantt.
 
 ```cshtml
 @using GanttEF.Models
@@ -274,16 +274,16 @@ Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "Exp
 }
 ```
 
-N>You can find the sample for server-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
+N>You can find the sample for server-side application using Entity Framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
 
-## Entity framework in client-side application
+## Entity Framework in client-side application
 
 You need to follow the following steps when working with a client-side application.
 
 ### Custom adaptor
 
 In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the
-remote data, `CustomAdaptor` of DataManager property is used to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). You can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Check the following code snippet to assign the data source to Gantt.
+remote data, `CustomAdaptor` of DataManager property is used to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding). You can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Check the following code snippet to assign the data source to Gantt.
 
 ```cshtml
 @using MyBlazorApp.Shared.DataAccess
@@ -400,4 +400,4 @@ The following sample code explains you about, how to implement CRUD operations f
 
 ```
 
-You can find the sample for client-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-Client-Side-Application-with-EF).
+You can find the sample for client-side application using Entity Framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-Client-Side-Application-with-EF).

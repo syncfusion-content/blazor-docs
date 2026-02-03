@@ -339,7 +339,7 @@ Removing dependency | Once you tap the taskbar with direct dependency, then conf
 
 ## Taskbar editing tooltip
 
-The taskbar editing tooltip can be integrated in Gantt chart by using the [GanttTooltipSettings.ShowTooltipOnEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltipOnEditing) property. By default, this property is set to **true**. The following code example shows how to integrate the `GanttTooltiSettings.ShowTooltipOnEditing` in a Gantt Chart:
+The taskbar editing tooltip can be integrated in Gantt chart by using the [GanttTooltipSettings.ShowTooltipOnEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltipOnEditing) property. By default, this property is set to **true**. The following code example shows how to integrate the `GanttTooltipSettings.ShowTooltipOnEditing` in a Gantt Chart:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -1042,23 +1042,23 @@ To specify custom parameters in a data request, use the `addParams` method of th
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Gantt
-
+ 
 <SfGantt TValue="TaskData" Height="450px" Width="700px" Query=@GanttQuery>
-     <SfDataManager Url="/Home/UrlDatasource" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentID">
-    </GanttTaskFields>
-    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+<SfDataManager Url="/api/Home" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+<GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+                     Progress="Progress" ParentID="ParentID">
+</GanttTaskFields>
+<GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
-
-@code{
-    private string ParamValue = "true";
+ 
+@code {
     private Query GanttQuery { get; set; }
-
-    protected override void OnInitialized() {
-        GanttQuery = new Query().AddParams("ej2gantt", ParamValue);
+ 
+    protected override void OnInitialized()
+    {
+        GanttQuery = new Query().AddParams("TaskID", 1);
     }
-
+ 
     public class TaskData
     {
         public int TaskID { get; set; }
@@ -1072,7 +1072,148 @@ To specify custom parameters in a data request, use the `addParams` method of th
 }
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="TaskDetails.cs" %}
+
+namespace URLAdaptor.Models
+{
+    public class TaskDetails
+    {
+        // Static list to hold order data.
+        public static List<TaskDetails> order = new List<TaskDetails>();
+        // Default constructor.
+        public TaskDetails() { }
+        // Parameterized constructor to initialize order details.
+        public TaskDetails(int TaskID, string TaskName, DateTime StartDate, DateTime EndDate, string Duration, int Progress, int? ParentID)
+        {
+            this.TaskID = TaskID;
+            this.TaskName = TaskName;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.Duration = Duration;
+            this.Progress = Progress;
+            this.ParentID = ParentID;
+        }       
+ 
+        public static List<TaskDetails> GetAllRecords()
+        {
+            List<TaskDetails> Tasks = new List<TaskDetails>()
+            {
+                new TaskDetails() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 7), },
+                new TaskDetails() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+                new TaskDetails() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
+                new TaskDetails() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+                new TaskDetails() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 10), },
+                new TaskDetails() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+                new TaskDetails() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+                new TaskDetails() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+            };
+            return Tasks;
+        }
+ 
+        // Properties representing order details.
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentID { get; set; }        
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="HomeController.cs" %}
+
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.Data;
+using URLAdaptor.Models;
+ 
+namespace URLAdaptor.Controllers
+{    
+    public class HomeController : ControllerBase
+    {
+        /// <summary>
+        /// Retrieve data from the data source.
+        /// </summary>
+        /// <returns>Returns a list of TaskDetails records.</returns>
+        [HttpGet]
+        [Route("api/[controller]")]
+        public List<TaskDetails> GetOrderData()
+        {
+            return TaskDetails.GetAllRecords().ToList();
+        }
+ 
+        /// <summary>
+        /// Handles server-side data operations such as searching, filtering, sorting, paging, and returns the processed data.
+        /// </summary>
+        /// <param name="DataManagerRequest">The request object contains data operation parameters such as search, filter, sort, and pagination details.</param>
+        /// <returns>Returns a response containing the processed data and the total record count.</returns>
+        [HttpPost]
+        [Route("api/[controller]")]
+        public object Post([FromBody] DataManagerRequest DataManagerRequest)
+        {
+            // Retrieve data from the data source (e.g., database).            
+            IQueryable<TaskDetails> data = TaskDetails.GetAllRecords().AsQueryable();
+ 
+            if (DataManagerRequest.Params != null && DataManagerRequest.Params.ContainsKey("TaskID"))
+            {
+                var param = DataManagerRequest.Params["TaskID"];
+                if (int.TryParse(param?.ToString(), out int taskId))
+                {
+                    data = data.Where(d => d.TaskID == taskId);
+                }
+            }
+ 
+            if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
+            {
+                data = DataOperations.PerformSearching(data, DataManagerRequest.Search);
+            }
+ 
+            if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
+            {
+                data = DataOperations.PerformFiltering(data, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
+            }
+ 
+            if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
+            {
+                data = DataOperations.PerformSorting(data, DataManagerRequest.Sorted);
+            }
+ 
+            int totalRecordsCount = data.Count();
+ 
+            if (DataManagerRequest.Skip != 0)
+            {
+                data = DataOperations.PerformSkip(data, DataManagerRequest.Skip);
+            }
+            if (DataManagerRequest.Take != 0)
+            {
+                data = DataOperations.PerformTake(data, DataManagerRequest.Take);
+            }
+ 
+            return new { result = data.ToList(), count = totalRecordsCount };
+        }
+        public class CRUDModel<T> where T : class
+        {
+            public string? action { get; set; }
+            public string? keyColumn { get; set; }
+            public object? key { get; set; }
+            public T? value { get; set; }
+            public List<T>? added { get; set; }
+            public List<T>? changed { get; set; }
+            public List<T>? deleted { get; set; }
+            public IDictionary<string, object>? @params { get; set; }
+        }
+    }
+}
+
+{% endhighlight %}
+
 {% endtabs %}
+
+![Sending Additional Param](images/sending-additional-param.png)
 
 ### Handling HTTP error
 
