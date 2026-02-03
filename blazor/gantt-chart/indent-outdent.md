@@ -49,8 +49,8 @@ The following example shows how to enable built-in indent and outdent actions us
         public int? ParentID { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-        List <TaskData> Tasks = new List <TaskData> () {
+    public static List<TaskData> GetTaskCollection() {
+        List<TaskData> Tasks = new List <TaskData> () {
             new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08) },
             new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
             new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
