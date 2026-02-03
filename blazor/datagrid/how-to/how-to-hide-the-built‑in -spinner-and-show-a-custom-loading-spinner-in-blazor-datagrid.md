@@ -1,15 +1,13 @@
 ---
 layout: post
-title: How to Hide the Built‑in Spinner and Show a Custom Loading Spinner in Blazor DataGrid
- | Syncfusion
-description: Learn How to Hide the Built‑in Spinner and Show a Custom Loading Spinner in Syncfusion Blazor DataGrid
- component to control user interaction with it.
+title: How to Hide the Built in Spinner and Show a Custom Loading Spinner in Blazor DataGrid | Syncfusion
+description: Learn How to Hide the Built in Spinner and Show a Custom Loading Spinner in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# How to Hide the Built‑in Spinner and Show a Custom Loading Spinner in Blazor DataGrid
+# How to Hide the Built‑in Spinner and Show a Custom Loading Spinner
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid displays its default loading spinner while fetching and rendering data. If you want to provide a customized loading experience—such as a full overlay spinner—you can hide the Grid’s built‑in spinner and show your own custom spinner until the Grid finishes loading.
 
