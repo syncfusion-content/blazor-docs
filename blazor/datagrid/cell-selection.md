@@ -313,11 +313,11 @@ To select a single cell programmatically, use the [SelectCellAsync](https://help
 
 <div style="margin-bottom:5px">
     <label style="margin: 5px 5px 0 0"> Enter the row index:</label>
-    <SfNumericTextBox TValue="int" @bind-Value="@RowIndexValue" Width="150px"></SfNumericTextBox>
+    <SfNumericTextBox TValue="int" @bind-Value="@RowIndexValue" Width="150px" Max="3" Min="0"></SfNumericTextBox>
 </div>
 <div style="margin-bottom:5px">
     <label style="margin: 5px 5px 0 0"> Enter the cell index:</label>
-    <SfNumericTextBox TValue="int" @bind-Value="@CellIndexValue" Width="150px"></SfNumericTextBox>
+    <SfNumericTextBox TValue="int" @bind-Value="@CellIndexValue" Width="150px" Max="3" Min="0"></SfNumericTextBox>
 </div>
 <div style="margin-bottom:5px">
     <SfButton OnClick="SelectCells">Select Cell</SfButton>

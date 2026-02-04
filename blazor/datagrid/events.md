@@ -2426,7 +2426,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDragStarting
 
-`RowDragStarting` triggers when a row drag action begins. Use it to validate the drag operation, set drag metadata, or restrict which rows can be dragged.
+[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDragStarting) triggers when a row drag action begins. Use it to validate the drag operation, set drag metadata, or restrict which rows can be dragged.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2520,7 +2520,7 @@ N> The DataGrid continues to evolve with new events. If an event is missing, sub
 
 ## RowDropping
 
-RowDropping triggers while a row is being dropped over a target. Use it to validate the drop target or to prevent dropping on invalid locations.
+[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropping) triggers while a row is being dropped over a target. Use it to validate the drop target or to prevent dropping on invalid locations.
 
 > To cancel the drop, set args.Cancel to true in the RowDropping event handler.
 
