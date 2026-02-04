@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with UrlAdaptor in Syncfusion Blazor DataGrid
+title: Bind data and perform CRUD using UrlAdaptor in Syncfusion Blazor DataGrid
 description: Learn about bind data and performing CRUD operations using UrlAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
@@ -8,7 +8,7 @@ keywords: adaptors, urladaptor, url adaptor, remotedata
 documentation: ug
 ---
 
-# UrlAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# Remote Data Binding with UrlAdaptor in Syncfusion Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid uses the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) to establish communication with REST-based API endpoints for remote data binding.
 
@@ -308,7 +308,7 @@ For projects using **WebAssembly** or **Auto** interactive render modes, ensure 
 
 > Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). For a complete list of packages, refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
-### Step 2: Register Syncfusionsup style="font-size:70%">&reg;</sup> Blazor service
+### Step 2: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service must be registered in the project configuration to enable component rendering and license activation.
 
