@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Query Builder component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor ContextMenu component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Query Builder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -15,7 +15,7 @@ The accessibility compliance for the Blazor Query Builder is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | AAA |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |

@@ -36,10 +36,10 @@ The visibility of the Bezier segment's control points can be enabled or disabled
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@_connectors"></SfDiagramComponent>
 @code {
     //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
         Connector connector1 = new Connector()
@@ -59,10 +59,10 @@ The visibility of the Bezier segment's control points can be enabled or disabled
                 ControlPointsVisibility = ControlPointsVisibility.Intermediate 
             },
         };
-        connectors.Add(connector1);
+        _connectors.Add(connector1);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtreMjDxKTeXVpUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/ControlPointsVisibilitySample.razor).
