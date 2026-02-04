@@ -276,7 +276,7 @@ This configuration ensures that all API endpoints exposed by the **GridControlle
 
 Run the application in Visual Studio. The API will be accessible at a URL similar to **https://localhost:xxxx/api/grid** (where **xxxx** represents the port number). Verify the API returns the expected JSON payload and that responses use the `result` and `count` format when required.
 
-![UrlAdaptor Data](../images/blazor-datagrid-adaptors-data.png)
+![UrlAdaptor Data](../images/blazor-datagrid-urladaptor-data.png)
 
 ## Integrating UrlAdaptor with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
 
