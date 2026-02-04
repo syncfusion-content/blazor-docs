@@ -1496,7 +1496,7 @@ GraphQL is a query language for APIs that allows you to can get exactly what you
 
 ![Binding with GraphQL service](images/GraphQLAdaptor.png) 
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/GraphQLAdaptor)
 
 ### How to Perform CRUD Operations Using Mutations
 
@@ -1761,7 +1761,7 @@ namespace ASPNetCoreGraphQlServer.GraphQl
 }
 
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptorCRUD)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/GraphQLAdaptorCRUD)
 
 ## Entity Framework
 Follow these steps to consume data from **Entity Framework** in the Diagram.
