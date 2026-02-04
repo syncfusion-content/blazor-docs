@@ -17,7 +17,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts (sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use this to inspect or adjust action parameters before execution.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use this to inspect or adjust action parameters before execution.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -64,7 +64,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions (sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use it for post-processing or UI updates.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use it for post-processing or UI updates.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
