@@ -698,7 +698,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
             try
             {
                 // Fetch all tickets from the database
-                IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+                IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
                 // Apply search operation if search criteria exists
                 if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -731,6 +731,15 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
                 if (dataManagerRequest.Take != 0)
                 {
                     dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+                }
+
+                // Handling Grouping
+                if (dataManagerRequest.Group != null)
+                {
+                    foreach (var group in dataManagerRequest.Group)
+                    {
+                        dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    }
                 }
 
                 // Return the result with total count for pagination metadata
@@ -847,7 +856,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
             
@@ -939,7 +948,7 @@ Searching allows the user to find records by entering keywords in the search box
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1016,7 +1025,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1098,7 +1107,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1184,7 +1193,7 @@ Grouping organizes records into hierarchical groups based on column values.
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1206,18 +1215,6 @@ Grouping organizes records into hierarchical groups based on column values.
 
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
 
-            // Handling Grouping
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                var dataObject = new DataResult { Result = ResultData, Count = totalRecordsCount, Aggregates = aggregates };
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
-
             // Handling Paging
             if (dataManagerRequest.Skip != 0)
             {
@@ -1228,8 +1225,17 @@ Grouping organizes records into hierarchical groups based on column values.
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
             }
 
+            // Handling Grouping
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
+            }
+
             return dataManagerRequest.RequiresCounts
-                ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates }
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
                 : (object)dataSource;
         }
     }
@@ -1334,7 +1340,39 @@ public async Task AddTicketAsync(Tickets value)
         throw;
     }
 }
+
+private async Task<string> GeneratePublicTicketIdAsync()
+{
+    try
+    {
+        var existingTickets = await GetTicketsDataAsync();
+
+        int maxNumber = existingTickets
+            .Where(ticket => !string.IsNullOrEmpty(ticket.PublicTicketId) && ticket.PublicTicketId.StartsWith(PublicTicketIdPrefix))
+            .Select(ticket =>
+            {
+                string numberPart = ticket.PublicTicketId.Substring((PublicTicketIdPrefix + PublicTicketIdSeparator).Length);
+                if (int.TryParse(numberPart, out int number))
+                    return number;
+                return 0;
+            })
+            .DefaultIfEmpty(PublicTicketIdStartNumber - 1)
+            .Max();
+        int nextNumber = maxNumber + 1;
+        string newPublicTicketId = $"{PublicTicketIdPrefix}{PublicTicketIdSeparator}{nextNumber}";
+
+        return newPublicTicketId;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error generating ticket ID: {ex.Message}");
+        return $"{PublicTicketIdPrefix}{PublicTicketIdSeparator}{PublicTicketIdStartNumber}";
+    }
+}
 ```
+
+**Helper methods explanation:**
+- `GeneratePublicTicketIdAsync()`: A new PublicTicketId is auto-generated using previously generated PublicTicketId.
 
 **What happens behind the scenes:**
 
@@ -1709,7 +1747,7 @@ Here is the complete and final `Home.razor` component with all features integrat
         /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
             
             // Handling Searching in CustomAdaptor.
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1729,27 +1767,8 @@ Here is the complete and final `Home.razor` component with all features integrat
                 dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
             }
 
-            // Handling Aggregates
-            IDictionary<string, object>? aggregates = null;
-            if (dataManagerRequest.Aggregates != null)
-            {
-                aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-            }
-
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-            DataResult dataObject = new DataResult();
-            // Handling Group operation in CustomAdaptor.
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                dataObject.Result = ResultData;
-                dataObject.Count = totalRecordsCount;
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
+            
             // Handling paging in CustomAdaptor.
             if (dataManagerRequest.Skip != 0)
             {
@@ -1759,7 +1778,17 @@ Here is the complete and final `Home.razor` component with all features integrat
             {
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
             }
-            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } : (object)dataSource;
+
+            // Handling Grouping
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
+            }
+
+            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount } : (object)dataSource;
         }
 
         /// <summary>
