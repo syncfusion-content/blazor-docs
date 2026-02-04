@@ -52,8 +52,8 @@ The following software and tools must be installed before proceeding:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.TreeGrid -Version 24.1.36
-Install-Package Syncfusion.Blazor.Themes -Version 24.1.36
+Install-Package Syncfusion.Blazor.TreeGrid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -97,8 +97,8 @@ cd TreeGridWasmApp
 {% tabs %}
 {% highlight c# tabtitle="Blazor WASM App" %}
 
-dotnet add package Syncfusion.Blazor.TreeGrid --version 24.1.36
-dotnet add package Syncfusion.Blazor.Themes --version 24.1.36
+dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
@@ -140,8 +140,8 @@ cd TreeGridWasmApp
 {% tabs %}
 {% highlight c# tabtitle="Blazor WASM App" %}
 
-dotnet add package Syncfusion.Blazor.TreeGrid --version 24.1.36
-dotnet add package Syncfusion.Blazor.Themes --version 24.1.36
+dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
