@@ -840,7 +840,7 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
 
 The Query property is critical for understanding how data flows. Let's break down each component:
 
-```graphql
+```
 query expenseRecordData($dataManager: DataManagerRequestInput!) {}
 ```
 
@@ -852,7 +852,7 @@ query expenseRecordData($dataManager: DataManagerRequestInput!) {}
   - `: DataManagerRequestInput!` - Type specification
   - `!` - Exclamation mark means this parameter is **required** (not optional)
 
-```graphql
+```
 expenseRecordData(dataManager: $dataManager) {}
 ```
 
@@ -861,7 +861,7 @@ expenseRecordData(dataManager: $dataManager) {}
 - `dataManager: $dataManager` - Passes the $dataManager variable to the resolver
 - The resolver receives this object and uses it to apply filters, sorts, searches, and pagination
 
-```graphql
+```
 count
 result {
     expenseId
@@ -1699,7 +1699,7 @@ Add the toolbar items list in the `@code` block:
 
  **GraphQL Mutation Request:**
 
- ```graphql
+ ```
  mutation create($record: ExpenseRecordInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
    createExpense(record: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
      expenseId
@@ -1886,7 +1886,7 @@ When the Edit action is invoked, the dialog is modified, and the changes are sub
 
 **GraphQL Mutation Request:**
 
-```graphql
+```
 mutation update($record: ExpenseRecordInput!, $action: String!, $primaryColumnName: String!, $primaryColumnValue: String!, $additionalParameters: Any) {
   updateExpense(record: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
     expenseId
@@ -2042,7 +2042,7 @@ public class GraphQLMutation
 
 **GraphQL Mutation Request:**
 
-```graphql
+```
 mutation delete($primaryColumnValue: String!, $additionalParameters: Any) {
   deleteExpense(primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters)
 }
@@ -2180,7 +2180,7 @@ public class GraphQLMutation
 
 GraphQL Mutation Request:
 
-```graphql
+```
 mutation batch($changed: [ExpenseRecordInput!], $added: [ExpenseRecordInput!], $deleted: [ExpenseRecordInput!], $action: String!, $primaryColumnName: String!, $additionalParameters: Any, $dropIndex: Int) {
   batchUpdate(changed: $changed, added: $added, deleted: $deleted, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters, dropIndex: $dropIndex) {
     expenseId
