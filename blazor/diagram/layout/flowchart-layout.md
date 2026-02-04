@@ -44,9 +44,9 @@ Different flowchart symbols have different meanings that are used to represent v
 @code
 {
     //Initialize diagram component.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
     //Initialize flowchart layout settings.
-    FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
+    private FlowchartLayoutSettings _flowchartSettings = new FlowchartLayoutSettings()
     {
         YesBranchDirection = BranchDirection.LeftInFlow,
         NoBranchDirection = BranchDirection.RightInFlow
@@ -54,11 +54,11 @@ Different flowchart symbols have different meanings that are used to represent v
 
     private void OnDataLoaded(object obj)
     {
-        for (int i = 0; i < Diagram.Connectors.Count; i++)
+        for (int i = 0; i < _diagram.Connectors.Count; i++)
         {
-            Connector connector = Diagram.Connectors[i];
-            Node node = Diagram.GetObject(connector.TargetID) as Node;
-            Node srcNode = Diagram.GetObject(connector.SourceID) as Node;
+            Connector connector = _diagram.Connectors[i];
+            Node node = _diagram.GetObject(connector.TargetID) as Node;
+            Node srcNode = _diagram.GetObject(connector.SourceID) as Node;
             if (node.Data != null && node.Data is ItemInfo itemInfo)
             {
                 if (itemInfo.Label != null && itemInfo.Label.Count > 0)
@@ -78,6 +78,7 @@ Different flowchart symbols have different meanings that are used to represent v
             }
         }
     }
+
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject obj)
     {
@@ -86,6 +87,7 @@ Different flowchart symbols have different meanings that are used to represent v
             connector.Type = ConnectorSegmentType.Orthogonal;
         }
     }
+
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -109,6 +111,7 @@ Different flowchart symbols have different meanings that are used to represent v
             };
         }
     }
+
     //Initialize data source collection.
     public List<ItemInfo> DataSource = new List<ItemInfo>(){
         new ItemInfo()
@@ -185,14 +188,15 @@ Different flowchart symbols have different meanings that are used to represent v
         new ItemInfo()
         {
             Id = "8",
-                Name = "End",
-                ParentId = new List<string> { "6","7" },
-                _Shape = "Terminator",
-                _Width = 80,
-                _Height = 35,
-                _Color = "#6CA0DC"
+            Name = "End",
+            ParentId = new List<string> { "6", "7" },
+            _Shape = "Terminator",
+            _Width = 80,
+            _Height = 35,
+            _Color = "#6CA0DC"
         },
     };
+
     public class ItemInfo
     {
         public string Name { get; set; }
@@ -210,7 +214,7 @@ Different flowchart symbols have different meanings that are used to represent v
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVeWjNHTJDuhNZh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor flowchart layout rendered from data source](../images/Flowchart_Layout.png)" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/FlowchartLayout).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/FlowchartLayout/FlowchartLayout.razor).
 
 ## How to Customize Flowchart Layout Orientation
 
@@ -223,10 +227,15 @@ This orientation arranges elements vertically from top to bottom. It is commonly
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram"Height="500px">
+<SfDiagramComponent @ref="_diagram" Height="500px">
     <Layout Type="LayoutType.Flowchart" Orientation="LayoutOrientation.TopToBottom">
     </Layout>
 </SfDiagramComponent>
+
+@code
+{
+    private SfDiagramComponent _diagram;
+}
 ```
 ![Blazor flowchart layout with top-to-bottom orientation](../images/Flowchart_Layout.png)
 
@@ -237,10 +246,15 @@ This `Orientation` arranges elements horizontally from left to right. It is used
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram"Height="500px">
+<SfDiagramComponent @ref="_diagram" Height="500px">
     <Layout Type="LayoutType.Flowchart" Orientation="LayoutOrientation.LeftToRight">
     </Layout>
 </SfDiagramComponent>
+
+@code
+{
+    private SfDiagramComponent _diagram;
+}
 ```
 ![Blazor flowchart layout with left-to-right orientation](../images/Flowchart_LeftToRight.png)
 
@@ -266,7 +280,7 @@ The following table will explain the pictorial representation of the behavior:
 
 >**Note:** If both branch directions are the same, the **Yes** branch is prioritized.
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/FlowchartLayoutSettings).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/FlowchartLayout/FlowchartLayoutSettingsSample.razor).
 
 ### How to Define Custom Yes and No Branch Values
 
@@ -286,9 +300,9 @@ Any text value can be given as a connector text to describe the flow. Also, any 
 @code
 {
     //Initialize diagram component.
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
     //Initialize flowchart layout settings.
-    FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
+    private FlowchartLayoutSettings _flowchartSettings = new FlowchartLayoutSettings()
     {
         YesBranchValues = new List<string> { "Accept", "Yes" },
         NoBranchValues = new List<string> { "Reject", "No" },
@@ -296,11 +310,11 @@ Any text value can be given as a connector text to describe the flow. Also, any 
 
     private void OnDataLoaded(object obj)
     {
-        for (int i = 0; i < Diagram.Connectors.Count; i++)
+        for (int i = 0; i < _diagram.Connectors.Count; i++)
         {
-            Connector connector = Diagram.Connectors[i];
-            Node node = Diagram.GetObject(connector.TargetID) as Node;
-            Node srcNode = Diagram.GetObject(connector.SourceID) as Node;
+            Connector connector = _diagram.Connectors[i];
+            Node node = _diagram.GetObject(connector.TargetID) as Node;
+            Node srcNode = _diagram.GetObject(connector.SourceID) as Node;
             if (node.Data != null && node.Data is ItemInfo itemInfo)
             {
                 if (itemInfo.Label != null && itemInfo.Label.Count > 0)
@@ -320,6 +334,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             }
         }
     }
+
     //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject obj)
     {
@@ -328,6 +343,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             connector.Type = ConnectorSegmentType.Orthogonal;
         }
     }
+
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -351,6 +367,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             };
         }
     }
+
     //Initialize data source collection.
     public List<ItemInfo> DataSource = new List<ItemInfo>(){
         new ItemInfo()
@@ -398,13 +415,14 @@ Any text value can be given as a connector text to describe the flow. Also, any 
         {
             Id = "5",
             Name = "End",
-            ParentId = new List<string> { "4"},
+            ParentId = new List<string> { "4" },
             _Shape = "Terminator",
             _Width = 100,
             _Height = 50,
             _Color = "#6CA0DC"
         },
     };
+
     public class ItemInfo
     {
         public string Name { get; set; }
@@ -418,7 +436,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/CustomYesOrNoBranch).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/FlowchartLayout/CustomYesOrNoBranch.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDroWjZHzziHpvRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor flowchart layout with custom Yes/No branch values](../images/Flowchart_CustomYesOrNoBranches.png)" %}
 

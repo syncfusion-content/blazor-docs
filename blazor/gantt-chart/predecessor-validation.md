@@ -76,8 +76,8 @@ When editing tasks with predecessor links, the [TaskbarEditing](https://help.syn
 
 Argument |Default value |Description
 -----|-----|-----
-args.ValidateMode.RespectLink | false | In this validation mode, the predecessor links get high priority. For example, in FS type, with this mode enabled, when the successor task is moved before the predecessor task’s end date, the editing will be reverted, and dates will be validated based on the dependency links.
-args.ValidateMode.PreserveLinkWithEditing | true | In this validation mode, the taskbar editing will be considered along with the dependency links. This relationship will be maintained by updating the offset value of predecessors.
+args.ValidationMode.RespectLink | false | In this validation mode, the predecessor links get high priority. For example, in FS type, with this mode enabled, when the successor task is moved before the predecessor task’s end date, the editing will be reverted, and dates will be validated based on the dependency links.
+args.ValidationMode.PreserveLinkWithEditing | true | In this validation mode, the taskbar editing will be considered along with the dependency links. This relationship will be maintained by updating the offset value of predecessors.
 
 By default, the [PreserveLinkWithEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ValidateMode.html#Syncfusion_Blazor_Gantt_ValidateMode_PreserveLinkWithEditing) validation mode is enabled, so the predecessors are updated with offset values.
 
@@ -144,7 +144,7 @@ The following code example explains enabling the [RespectLink](https://help.sync
 
 ### Predecessor offset validation
 
-When editing a taskbar, the  [TaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event is triggered with the [EnablePredecessorOffsetValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TaskbarEditingEventArgs-1.html#Syncfusion_Blazor_Gantt_TaskbarEditingEventArgs_1_EnablePredecessorOffsetValidation) argument. When `EnablePredecessorOffsetValidation` is enabled, the taskbar can be dragged without violating the predecessor offset value.
+In Gantt the [AutoUpdatePredecessorOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoUpdatePredecessorOffset) property is used to control whether predecessor offsets are recalculated automatically during task scheduling. When AutoUpdatePredecessorOffset is true (the default), the Gantt component recalculates and updates predecessor offsets whenever task edited that affect scheduling—such as start date, end date, duration, or dependencies—are changed. When set to false, offsets are not recalculated; the Gantt uses the offset values supplied by the data source, allowing offsets to be managed externally or preserved as predefined values. In cases where a task has multiple predecessors, the highest offset value among its predecessors is used and existing offset values from the data source are retained without modification.
 
 The taskbar can be moved above the specified predecessor offset value, but if it is dragged below the offset value, it will revert to the minimum predecessor value.
 
@@ -154,11 +154,10 @@ The taskbar can be moved above the specified predecessor offset value, but if it
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" ProjectStartDate="ProjectStart" ProjectEndDate="ProjectEnd"
- Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel"})">
+         Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })" AutoUpdatePredecessorOffset="false">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate"
                      Duration="Duration" Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
-    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>
-    <GanttEvents TaskbarEditing="TaskbarEditingHandler" TValue="TaskData"></GanttEvents>
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>    
 </SfGantt>
 
 @code {
@@ -170,11 +169,6 @@ The taskbar can be moved above the specified predecessor offset value, but if it
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-    }
-
-    public void TaskbarEditingHandler(TaskbarEditingEventArgs<TaskData> args)
-    {
-        args.EnablePredecessorOffsetValidation = true;
     }
 
     public class TaskData

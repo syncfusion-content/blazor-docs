@@ -28,7 +28,7 @@ The following code illustrates how to configure an automatic layout:
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+<SfDiagramComponent Height="600px" Nodes="@_nodes" Connectors="@_connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
     </Layout>
     <SnapSettings>
@@ -42,12 +42,12 @@ The following code illustrates how to configure an automatic layout:
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     //Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    LayoutType type = LayoutType.ComplexHierarchicalTree;
-    int HorizontalSpacing = 50;
-    int VerticalSpacing = 50;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private LayoutType type = LayoutType.ComplexHierarchicalTree;
+    private int HorizontalSpacing = 50;
+    private int VerticalSpacing = 50;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -67,27 +67,27 @@ The following code illustrates how to configure an automatic layout:
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>()
+        _nodes = new DiagramObjectCollection<Node>()
         {
-            new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="CEO"} } },
-            new Node() { ID="node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="COO"} } },
-            new Node() { ID="node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Marketing Head"} } },
-            new Node() { ID="node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Product Head"} } },
-            new Node() { ID="node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Customer Support Lead"} } },
-            new Node() { ID="node6", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Warehouse Manager"} } },
+            new Node() { ID = "node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "CEO" } } },
+            new Node() { ID = "node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "COO" } } },
+            new Node() { ID = "node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Marketing Head" } } },
+            new Node() { ID = "node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Product Head" } } },
+            new Node() { ID = "node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Customer Support Lead" } } },
+            new Node() { ID = "node6", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Warehouse Manager" } } },
         };
-        connectors = new DiagramObjectCollection<Connector>()
+        _connectors = new DiagramObjectCollection<Connector>()
         {
-            new Connector() { ID="connector1", SourceID="node1", TargetID="node2" },
-            new Connector() { ID="connector2", SourceID="node1", TargetID="node3" },
-            new Connector() { ID="connector3", SourceID="node1", TargetID="node4" },
-            new Connector() { ID="connector4", SourceID="node1", TargetID="node5" },
-            new Connector() { ID="connector5", SourceID="node1", TargetID="node6" }
+            new Connector() { ID = "connector1", SourceID = "node1", TargetID = "node2" },
+            new Connector() { ID = "connector2", SourceID = "node1", TargetID = "node3" },
+            new Connector() { ID = "connector3", SourceID = "node1", TargetID = "node4" },
+            new Connector() { ID = "connector4", SourceID = "node1", TargetID = "node5" },
+            new Connector() { ID = "connector5", SourceID = "node1", TargetID = "node6" }
         };
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/BasicLayout)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/BasicLayout.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLyCtNnJqIyRajV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram hierarchical layout example](../images/BasicLayout.png)" %}
 
@@ -119,23 +119,24 @@ The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 Default values: `HorizontalSpacing` is **30** and `VerticalSpacing` is **30**. Modify these to achieve the required layout density.
 
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"/>
 </SfDiagramComponent>
 
 @code
 {
+    private SfDiagramComponent _diagram;
     // Initializing the Horizontal and Vertical value.
-    int HorizontalSpacing = 60;
-    int VerticalSpacing = 70;
+    private int HorizontalSpacing = 60;
+    private int VerticalSpacing = 70;
 
     // Update the spacing.
-    public void UpdateSpacing()
+    private void UpdateSpacingAsync()
     {
-        Diagram.BeginUpdate();
+        _diagram.BeginUpdate();
         HorizontalSpacing += 10;
         VerticalSpacing += 10;
-        Diagram.EndUpdateAsync();
+        _diagram.EndUpdateAsync();
     }
 }
 ```
@@ -154,14 +155,15 @@ Default values: `HorizontalSpacing` is **30** and `VerticalSpacing` is **30**. M
 | [RightToLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_RightToLeft) | Aligns the layout from right to left. The root node is placed on the right side of the diagram. |
 
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-Orientation="@orientation"/>
 </SfDiagramComponent>
 
 @code
 {
+    private SfDiagramComponent _diagram;
     // Initializing the orientation value.
-    LayoutOrientation orientation = LayoutOrientation.LeftToRight;
+    private LayoutOrientation orientation = LayoutOrientation.LeftToRight;
 }
 ```
 
@@ -186,16 +188,17 @@ The possible values for HorizontalAlignment are:
 | [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Auto) | Aligns the diagram element based on its immediate parent’s horizontal alignment property (default behavior). |
 
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment"></Layout>
 </SfDiagramComponent>
 
 @code
 {
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private SfDiagramComponent _diagram;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
     // Initializing the HorizontalAlignment value.
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Center;
+    private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Center;
 }
 ```
 ![Blazor Diagram layout horizontal alignment centered](../images/LayoutAlignmentCenter.png)
@@ -213,16 +216,17 @@ The possible values for VerticalAlignment are:
 | [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Auto) | Aligns the diagram element based on its immediate parent’s vertical alignment property (default behavior). |
 
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-VerticalAlignment="@verticalAlignment"></Layout>
 </SfDiagramComponent>
 
 @code
 {
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private SfDiagramComponent _diagram;
+    private int HorizontalSpacing = 40;
+    private int VerticalSpacing = 40;
     // Initializing the VerticalAlignment value.
-    VerticalAlignment verticalAlignment = VerticalAlignment.Bottom;
+    private VerticalAlignment verticalAlignment = VerticalAlignment.Bottom;
 }
 ```
 ![Blazor Complex Hierarchical Diagram](../images/LayoutVerticalAlignmentBottom.png)
@@ -242,10 +246,10 @@ You can customize the margin for each side (top, right, bottom, left) using the 
 @code
 {
     // Initializing the Margin.
-    int left = 60;
-    int top = 50;
-    int bottom = 50;
-    int right = 60;
+    private int left = 60;
+    private int top = 50;
+    private int bottom = 50;
+    private int right = 60;
 }
 ```
 
@@ -258,9 +262,14 @@ The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 Here’s an example of how to use this property:
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.ComplexHierarchicalTree" SamePoint="false"></Layout>
 </SfDiagramComponent>
+
+@code
+{
+    private SfDiagramComponent _diagram;
+}
 ```
 ![Blazor Diagram layout with SamePoint disabled](../images/LayoutSamePoint.png)
 

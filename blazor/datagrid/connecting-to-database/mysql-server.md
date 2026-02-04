@@ -614,7 +614,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
             try
             {
                 // Fetch all transactions from the database
-                IEnumerable<TransactionModel> dataSource = await _transactionService!.GetTransactionsAsync();
+                IEnumerable dataSource = await _transactionService!.GetTransactionsAsync();
 
                 // Apply search operation if search criteria exists
                 if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -647,6 +647,16 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
                 if (dataManagerRequest.Take != 0)
                 {
                     dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+                }
+
+                // Handling Group operation in CustomAdaptor.
+                if (dataManagerRequest.Group != null)
+                {
+                    foreach (var group in dataManagerRequest.Group)
+                    {
+                        dataSource = DataUtil.Group<TransactionModel>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                        //Add custom logic here if needed and remove above method
+                    }
                 }
 
                 // Return the result with total count for pagination metadata
@@ -762,7 +772,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();        
+            IEnumerable dataSource = await _transactionService!.GetTransactionsAsync();        
 
             int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
             DataResult dataObject = new DataResult();
@@ -860,7 +870,7 @@ Searching allows the user to find records by entering keywords in the search box
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+            IEnumerable dataSource = await _transactionService!.GetTransactionsAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -940,7 +950,7 @@ public class CustomAdaptor : DataAdaptor
 
     public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
     {
-        IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+        IEnumerable dataSource = await _transactionService!.GetTransactionsAsync();
 
         // Handling Search
         if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1029,7 +1039,7 @@ public class CustomAdaptor : DataAdaptor
 
     public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
     {
-        IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+        IEnumerable dataSource = await _transactionService!.GetTransactionsAsync();
 
         // Handling Search
         if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1122,7 +1132,7 @@ public class CustomAdaptor : DataAdaptor
 
     public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
     {
-        IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+        IEnumerable dataSource = await _transactionService!.GetTransactionsAsync();
 
         // Handling Search
         if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1143,22 +1153,6 @@ public class CustomAdaptor : DataAdaptor
         }
 
         int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
-        DataResult dataObject = new DataResult();
-        // Handling Group operation in CustomAdaptor.
-        if (dataManagerRequest.Group != null)
-        {
-            IEnumerable ResultData = dataSource.ToList();
-            // Grouping
-            foreach (var group in dataManagerRequest.Group)
-            {
-                ResultData = DataUtil.Group<TransactionModel>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                //Add custom logic here if needed and remove above method
-            }
-            dataObject.Result = ResultData;
-            dataObject.Count = totalRecordsCount;
-            dataObject.Aggregates = aggregates;
-            return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-        }
         
         // Handling Paging
         if (dataManagerRequest.Skip != 0)
@@ -1173,11 +1167,19 @@ public class CustomAdaptor : DataAdaptor
             //Add custom logic here if needed and remove above method
         }
 
+        // Handling Group operation in CustomAdaptor.
+        if (dataManagerRequest.Group != null)
+        {
+            foreach (var group in dataManagerRequest.Group)
+            {
+                dataSource = DataUtil.Group<TransactionModel>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+            }
+        }
+
         return dataManagerRequest.RequiresCounts 
             ? new DataResult() { Result = dataSource, Count = totalRecordsCount } 
             : (object)dataSource;
     }
-
 }
 ```
 
@@ -1271,7 +1273,22 @@ public async Task AddTransactionAsync(TransactionModel value)
     _context.Transactions.Update(transaction);
     await _context.SaveChangesAsync();
 }
+
+private string GeneratePublicTransactionId(DateTime? createdAtDate, int primaryKeyId)
+{
+    DateTime dateToUse = createdAtDate ?? DateTime.Now;
+    string datepart = dateToUse.ToString("yyMMdd");
+
+    string formattedId = primaryKeyId.ToString("D5");
+
+    string transactionId = $"{PublicTransactionIdPrefix}{datepart}{formattedId}";
+
+    return transactionId;
+}
 ```
+
+**Helper methods explanation:**
+- `GeneratePublicTransactionId()`: A new TransactionId is generated using createdAtDate and primaryKeyId.
 
 **What happens behind the scenes:**
 
@@ -1592,7 +1609,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable < TransactionModel > dataSource = await _transactionService!.GetTransactionsAsync();
+            IEnumerable dataSource = await _transactionService!.GetTransactionsAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1612,30 +1629,7 @@ Here is the complete and final `Home.razor` component with all features integrat
                 dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
             }
 
-            // Handling Aggregation in CustomAdaptor.
-            IDictionary<string, object>? aggregates = null;
-            if (dataManagerRequest.Aggregates != null) // Aggregation
-            {
-                aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-            }
-
             int totalRecordsCount = dataSource.Cast<TransactionModel>().Count();
-            DataResult dataObject = new DataResult();
-            // Handling Group operation in CustomAdaptor.
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                // Grouping
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<TransactionModel>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                    //Add custom logic here if needed and remove above method
-                }
-                dataObject.Result = ResultData;
-                dataObject.Count = totalRecordsCount;
-                dataObject.Aggregates = aggregates;
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
 
             // Handling Paging
             if (dataManagerRequest.Skip != 0)
@@ -1648,6 +1642,16 @@ Here is the complete and final `Home.razor` component with all features integrat
             {
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
                 //Add custom logic here if needed and remove above method
+            }
+
+            // Handling Group operation in CustomAdaptor.
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<TransactionModel>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    //Add custom logic here if needed and remove above method
+                }
             }
 
             return dataManagerRequest.RequiresCounts 

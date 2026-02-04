@@ -136,7 +136,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add import namespaces
 
-To use the Pivot Table component, open the **~/_Imports.razor** file and include the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces. This allows your app to access the necessary Pivot Table classes and options.
+To use the Pivot Table component, open the **~/Components/_Imports.razor** file and include the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces. This allows your app to access the necessary Pivot Table classes and options.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -166,7 +166,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-To style and enable the Blazor Pivot Table, include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the stylesheet in the `<head>` section and the script at the end of the `<body>` section in the **App.razor** file, as shown below:
+To style and enable the Blazor Pivot Table, include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Add the stylesheet in the `<head>` section and the script at the end of the `<body>` section in the **~/Components/App.razor** file, as shown below:
 
 ```html
 <head>
@@ -217,6 +217,9 @@ For demonstration purposes, a collection of objects containing sales details for
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
+@rendermode InteractiveServer
 
 <SfPivotView TValue="ProductDetails">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -349,8 +352,11 @@ To define each field in its respective axis, configure the following basic prope
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+@rendermode InteractiveServer
+
 <SfPivotView TValue="ProductDetails" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -391,8 +397,11 @@ N> Formatting can only be applied to numeric fields in the value section of the 
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+@rendermode InteractiveServer
+
 <SfPivotView TValue="ProductDetails" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -436,8 +445,11 @@ To enable the field list, set the [ShowFieldList](https://help.syncfusion.com/cr
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+@rendermode InteractiveServer
+
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -479,8 +491,11 @@ Users can also use the grouping bar to sort, filter, or remove fields quickly wi
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+@rendermode InteractiveServer
+
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -522,8 +537,11 @@ The following example shows how to add a field to the filter axis in a Blazor Pi
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+@rendermode InteractiveServer
+
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -573,8 +591,11 @@ Below is a sample code that shows how to set up calculated fields both through c
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+@rendermode InteractiveServer
+
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -621,6 +642,9 @@ The following code example shows how to display a server-side error message to t
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
+@rendermode InteractiveServer
 
 <span class="error">@ErrorDetails</span>
 <SfPivotView TValue="PivotViewData" Width="100%" Height="450" AllowDataCompression="true" EnableVirtualization="true" ShowFieldList="true" ShowGroupingBar="true" MaxNodeLimitInMemberEditor="50">

@@ -11,7 +11,7 @@ documentation: ug
 
 This guide provides practical strategies to enhance the loading performance of the Blazor Gantt Chart component, especially when dealing with large datasets and multiple columns. It provides valuable insights into effective strategies and best practices for binding extensive data sources without encountering performance degradation. It includes actionable tips to ensure smooth data binding and a responsive user experience.
 
-## How to improve loading performance by binding large dataset?
+## How to improve loading performance when binding large dataset?
 
 A Gantt chart consists of rows, columns, and taskbars. For example, binding 10 rows and 10 columns results in rendering 100 elements in the Document Object Model (DOM) of Grid area and 10 elements in the Document Object Model (DOM) of chart area. To ensure optimal loading performance for the component, it is recommended to limit the number of rows and columns rendered. This approach helps in efficiently managing large datasets and enhancing the overall user experience.
 
@@ -48,7 +48,7 @@ To improve performance when working with large datasets, you can disable this au
 ```
 N> When setting `AutoCalculateDateScheduling` property to **false**, you must provide the valid data source; otherwise, the Gantt chart will render with invalid dates.
 
-## How to improve loading performance by binding large data by showing custom text or element?
+## How to improve loading performance when binding large data by showing custom text or element?
 
 When integrating images or custom template elements into Gantt chart columns in the Blazor Gantt Chart, it is recommended to use the [Column Template](https://blazor.syncfusion.com/documentation/gantt-chart/column-template) feature rather than customizing data through event handlers such as [RowDataBound](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) or [QueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events#querycellinfo). These events are triggered for every row and cell during rendering, which can significantly slow down the component’s rendering process, especially with large datasets. Additionally, using these events for custom element rendering can lead to performance degradation over time due to the accumulation of rendered elements.
 

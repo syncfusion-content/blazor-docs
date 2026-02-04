@@ -19,7 +19,7 @@ Supported guidelines include:
 
 | Accessibility Criteria | Compatibility | Description |
 |-----------------------|---------------|-------------|
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> | Supports most WCAG 2.2 guidelines, such as color contrast (1.4.3) and keyboard accessibility (2.1.1), with some limitations in complex interactions. |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | AAA | Supports most WCAG 2.2 guidelines, such as color contrast (1.4.3) and keyboard accessibility (2.1.1), with some limitations in complex interactions. |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> | Complies with most Section 508 requirements, with minor gaps in advanced interactive elements. |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> | Implements ARIA roles (e.g., `role="grid"`, `aria-label`) for compatibility with screen readers like JAWS and NVDA. |
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> | Supports right-to-left (RTL) layouts for languages like Arabic and Hebrew using the `EnableRtl` property. |

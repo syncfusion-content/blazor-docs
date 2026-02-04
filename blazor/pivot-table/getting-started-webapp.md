@@ -156,7 +156,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
+Open the **~/Components/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -228,7 +228,7 @@ N> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appea
 
 ## Initializing Blazor pivot Table component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Floating Action Button component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component to a Razor page located under the Pages folder (e.g., **~/Components/Pages/Home.razor**) in either the **Server** or **Client** project. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 | Interactivity Location | Render Mode | Code |
 | --- | --- | --- |
@@ -266,12 +266,14 @@ For demonstration purposes, a collection of objects containing sales details for
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
-    </PivotViewDataSourceSettings>
+    <PivotViewDataSourceSettings DataSource="@dataSource">
+    </PivotViewDataSourceSettings>
 </SfPivotView>
 
-@code{
+@code {
     public List<ProductDetails> dataSource { get; set; }
     protected override void OnInitialized()
     {
@@ -397,8 +399,10 @@ To define each field in its respective axis, configure the following basic prope
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -439,24 +443,26 @@ N> Formatting can only be applied to numeric fields in the value section of the 
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
+    <PivotViewDataSourceSettings DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
         <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
 </SfPivotView>
 
 @code{
@@ -484,8 +490,10 @@ To enable the field list, set the [ShowFieldList](https://help.syncfusion.com/cr
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -527,24 +535,26 @@ Users can also use the grouping bar to sort, filter, or remove fields quickly wi
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
+    <PivotViewDataSourceSettings DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
         <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
 </SfPivotView>
 
 @code{
@@ -570,26 +580,28 @@ The following example shows how to add a field to the filter axis in a Blazor Pi
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
+    <PivotViewDataSourceSettings DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
             <PivotViewRow Name="Products"></PivotViewRow>
         </PivotViewRows>
         <PivotViewFilters>
             <PivotViewFilter Name="Country"></PivotViewFilter>
         </PivotViewFilters>
-        <PivotViewValues>
+        <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
         <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
 </SfPivotView>
 
 @code{
@@ -621,29 +633,31 @@ Below is a sample code that shows how to set up calculated fields both through c
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Height="300">
-     <PivotViewDataSourceSettings DataSource="@dataSource">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
+    <PivotViewDataSourceSettings DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
             <PivotViewValue Name="Total" Caption="Total Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
             <PivotViewFormatSetting Name="Total" Format="C"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-         <PivotViewCalculatedFieldSettings>
-            <PivotViewCalculatedFieldSetting Name="Total" Formula="@totalPrice"></PivotViewCalculatedFieldSetting>
-        </PivotViewCalculatedFieldSettings>
-    </PivotViewDataSourceSettings>
+        </PivotViewFormatSettings>
+        <PivotViewCalculatedFieldSettings>
+            <PivotViewCalculatedFieldSetting Name="Total" Formula="@totalPrice"></PivotViewCalculatedFieldSetting>
+        </PivotViewCalculatedFieldSettings>
+    </PivotViewDataSourceSettings>
 </SfPivotView>
 
 @code{
@@ -669,6 +683,8 @@ The following code example shows how to display a server-side error message to t
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <span class="error">@ErrorDetails</span>
 <SfPivotView TValue="PivotViewData" Width="100%" Height="450" AllowDataCompression="true" EnableVirtualization="true" ShowFieldList="true" ShowGroupingBar="true" MaxNodeLimitInMemberEditor="50">
@@ -698,7 +714,7 @@ The following code example shows how to display a server-side error message to t
     }
 </style>
 
-@code{
+@code {
     public string ErrorDetails = "";
     public class PivotViewData
     {
