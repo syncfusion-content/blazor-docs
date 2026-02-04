@@ -44,7 +44,7 @@ The [Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/char
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVpXuWryXlXgwKd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Area Chart](../images/chart-types-images/blazor-area-chart.png)" %}
 
-N> Refer to the [Blazor Area Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/area-chart) feature page for more details and explore the [Blazor Area Chart Example](https://blazor.syncfusion.com/demos/chart/area?theme=fluent) to see usage for time-dependent data and trend visualization.
+N> Refer to the [Blazor Area Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/area-chart) feature page for more details and explore the [Blazor Area Chart Example](https://blazor.syncfusion.com/demos/chart/area) to see usage for time-dependent data and trend visualization.
 
 ## Binding data with series
 
