@@ -602,7 +602,7 @@ The `Home.razor` component will display the asset data in a Syncfusion Blazor Da
 - **`@inject AssetRepository`**: Injects the repository to access database methods.
 - **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
 - **`<GridColumns>`**: Defines individual columns in the DataGrid.
-- **`GridPageSettings`**: Configures pagination with 10 records per page.
+- **`<GridPageSettings>`**: Configures pagination with 20 records per page.
 
 The Home component has been updated successfully with DataGrid.
 
