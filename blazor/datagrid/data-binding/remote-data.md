@@ -279,7 +279,7 @@ The example demonstrates modifying the query parameter dynamically. Initially, t
 }
 ```
 
-![Changing Query Dynamically in the Grid](./images/blazor-datagrid-query-update.gif)
+![Changing Query Dynamically in the Grid](../images/blazor-datagrid-query-update.gif)
 
 ## Offline mode
 
