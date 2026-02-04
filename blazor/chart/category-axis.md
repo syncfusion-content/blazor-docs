@@ -11,7 +11,7 @@ documentation: ug
 
 The category axis is used to represent string values instead of integers.
 
-You can learn how to customize the category axis by watching the video below.
+A detailed walkthrough for customizing the category axis is provided in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Mv6MS6fbcNE" %}
 
@@ -183,7 +183,7 @@ The category axis can also be rendered using the data source index values. This 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAiVrVTDrcDBLL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See also
 
