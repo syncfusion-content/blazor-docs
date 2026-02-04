@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD using UrlAdaptor in Syncfusion Blazor DataGrid
+title: Bind data and perform CRUD using UrlAdaptor in Syncfusion DataGrid
 description: Learn about bind data and performing CRUD operations using UrlAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
