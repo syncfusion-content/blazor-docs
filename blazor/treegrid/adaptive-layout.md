@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Adaptive Layout in Blazor TreeGrid Component | Syncfusion
-description: The Blazor TreeGrid will render the adaptive UI filter, sort, and edit dialogs in full screen for a better user experience.
+description: Learn how to use adaptive layout in Syncfusion Blazor TreeGrid to render filter, sort, and edit dialogs in full screen for better user experience.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Adaptive UI Layout in Blazor Tree Grid Component
+# Adaptive UI Layout in Blazor TreeGrid Component
 
-The Tree Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the Tree Grid row elements in the vertical direction.
+The TreeGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the TreeGrid row elements in the vertical direction.
 
 ## Render adaptive dialog
 
-To render adaptive dialog UI in the Tree Grid, set the [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAdaptiveUI) property to true. The Tree Grid will render the filter, sort, and edit dialogs in full screen for a better user experience.
+To render adaptive dialog UI in the TreeGrid, set the [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAdaptiveUI) property to true. When adaptive UI is enabled, filter, sort, and edit dialogs are displayed in full screen for improved usability.
 
 ```csharp
 
@@ -56,4 +56,4 @@ To render adaptive dialog UI in the Tree Grid, set the [EnableAdaptiveUI](https:
 
 ```
 
-![Blazor Tree Grid with Adaptive UI](./images/blazor-treegrid-adaptive.gif)
+![Blazor TreeGrid with Adaptive UI](./images/blazor-treegrid-adaptive.gif)
