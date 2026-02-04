@@ -74,7 +74,7 @@ The Blazor Sankey component followed the [keyboard interaction](https://www.w3.o
 
 The Blazor Sankey component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Sankey component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sankey) in a new window to evaluate the accessibility of the Blazor Sankey component with accessibility tools.
+The accessibility compliance of the Blazor Sankey component is shown in the following sample. Open the sample in a new window to evaluate the accessibility of the Blazor Sankey component with accessibility tools.
 
 ## See also
 
