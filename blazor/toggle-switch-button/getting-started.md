@@ -198,7 +198,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Toggle Switch Bu
 
 <label for="checked" style="padding: 10px 10px 10px 0">USB Tethering</label>
 
-<SfSwitch @bind-Checked="isChecked"></SfSwitch>
+<SfSwitch Name="checked" @bind-Checked="isChecked"></SfSwitch>
 
 @code {
     private bool isChecked = true;
