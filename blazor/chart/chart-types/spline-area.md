@@ -11,7 +11,7 @@ documentation: ug
 
 ## Spline area
 
-[Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) represents time dependent data and visualizes trends at equal intervals, but with data points connected with a smooth line. To render a [spline area](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`SplineArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineArea) in your chart configuration. This indicates that the data should be represented as a spline area chart, where data points are connected by smooth, curved lines (splines) instead of straight lines.
+[Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) represent time dependent data and visualize trends at equal intervals, but with data points connected with a smooth line. To render a [spline area](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`SplineArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineArea) in your chart configuration. This indicates that the data should be represented as a spline area chart, where data points are connected by smooth, curved lines (splines) instead of straight lines.
 
 ```cshtml
 
@@ -28,8 +28,8 @@ documentation: ug
 @code{
     public class ChartData
     {
-        public string X { get; set;}
-        public double Y {get; set;}
+        public string X { get; set; }
+        public double Y { get; set; }
     }
 	
     public List<ChartData> SalesDetails = new List<ChartData>
@@ -52,7 +52,7 @@ documentation: ug
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhfXaCAqYANeOoh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spline Area Chart](../images/chart-types-images/blazor-spline-area-chart.png)" %}
 
-N> Refer to our [Blazor Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Area Chart Example](https://blazor.syncfusion.com/demos/chart/spline-area?theme=bootstrap5) to know how to connect the data points with smooth curves.
+N> Refer to the [Blazor Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Spline Area Chart Example](https://blazor.syncfusion.com/demos/chart/spline-area?theme=bootstrap5) to know how to connect the data points with smooth curves.
 
 ## Binding data with series
 
@@ -73,8 +73,8 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 @code{
     public class ChartData
     {
-        public string X { get; set;}
-        public double Y {get; set;}
+        public string X { get; set; }
+        public double Y { get; set; }
     }
 	
     public List<ChartData> SalesDetails = new List<ChartData>
@@ -120,8 +120,8 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 @code{
     public class ChartData
     {
-        public string X { get; set;}
-        public double Y {get; set;}
+        public string X { get; set; }
+        public double Y { get; set; }
     }
 	
     public List<ChartData> SalesDetails = new List<ChartData>
@@ -170,8 +170,8 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 @code{
     public class ChartData
     {
-        public string X { get; set;}
-        public double Y {get; set;}
+        public string X { get; set; }
+        public double Y { get; set; }
     }
 	
     public List<ChartData> SalesDetails = new List<ChartData>
@@ -566,7 +566,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVJZYCUptJWVhWX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
