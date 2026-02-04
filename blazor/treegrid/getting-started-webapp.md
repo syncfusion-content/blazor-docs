@@ -108,8 +108,8 @@ cd TreeGridApp.Client
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-dotnet add package Syncfusion.Blazor.TreeGrid --version 24.1.36
-dotnet add package Syncfusion.Blazor.Themes --version 24.1.36
+dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
@@ -153,8 +153,8 @@ cd TreeGridApp.Client
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-dotnet add package Syncfusion.Blazor.TreeGrid --version 24.1.36
-dotnet add package Syncfusion.Blazor.Themes --version 24.1.36
+dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
@@ -679,3 +679,4 @@ info: Microsoft.Hosting.Lifetime[0]
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core documentation](https://ej2.syncfusion.com/aspnetcore/documentation/tree-grid/getting-started-core)
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/tree-grid/getting-started-mvc)
+
