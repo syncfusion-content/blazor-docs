@@ -42,6 +42,8 @@ The following software and tools must be installed before proceeding:
 8. Select **.NET 8.0** (or the latest installed version) as the target framework.
 9. Click **Create** to generate the project.
 
+![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
+
 ## Install Syncfusion Blazor TreeGrid
 
 1. Open the **NuGet Package Manager Console**:
