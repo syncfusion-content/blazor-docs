@@ -40,11 +40,13 @@ The following software and tools must be installed before proceeding:
 6. Select the project location and solution settings.
 7. Click **Next** to continue.
 8. Select **.NET 8.0** (or the latest installed version) as the target framework.
-9. Choose the **Interactive render mode**:
+9. Choose the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes)
    - **Auto**: Recommended for this guide
    - **Server**: For server-side rendering only
    - **WebAssembly**: For client-side only
 10. Click **Create** to generate the project.
+
+![Create Blazor Web App](images/blazor-create-web-app.png)
 
 ## Install Syncfusion Blazor TreeGrid
 
@@ -679,4 +681,3 @@ info: Microsoft.Hosting.Lifetime[0]
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core documentation](https://ej2.syncfusion.com/aspnetcore/documentation/tree-grid/getting-started-core)
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/tree-grid/getting-started-mvc)
-
