@@ -59,14 +59,14 @@ The following example demonstrates a node with the text "AllowDrag Within Swimla
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" >
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating" >
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
     // Define diagram's swimlane collection
-    private DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -129,12 +129,12 @@ The following example demonstrates a node with the text "AllowDrag Within Swimla
             }
         };
         // Add swimlane
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
 
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
             swimlane.Header.Style = new TextStyle()
             {
@@ -150,7 +150,7 @@ The following example demonstrates a node with the text "AllowDrag Within Swimla
                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
             }
         }
-        else if (obj is Node node)
+        else if (diagramObject is Node node)
         {
             node.Style = new ShapeStyle()
             {
@@ -167,16 +167,18 @@ The following example demonstrates that a constraint can also be enabled or disa
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<button onclick="@AllowDrag">AllowDrag</button>
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" >
+<SfButton Content="AllowDrag" OnClick="@AllowDrag" />
+<SfDiagramComponent @ref="_diagram" Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating" >
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
     // Define diagram's swimlane collection
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private SfDiagramComponent _diagram;
 
     protected override void OnInitialized()
     {
@@ -219,21 +221,38 @@ The following example demonstrates that a constraint can also be enabled or disa
             }
         };
         // Add swimlane
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
 
-    public void AllowDrag()
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (diagramComponent.SelectionSettings.Nodes.Count > 0)
+        if (diagramObject is Swimlane swimlane)
         {
-            if (diagramComponent.SelectionSettings.Nodes[0].Constraints.HasFlag(NodeConstraints.AllowDragWithinSwimlane))
+            swimlane.Header.Style = new TextStyle()
             {
-                diagramComponent.SelectionSettings.Nodes[0].Constraints &= ~NodeConstraints.AllowDragWithinSwimlane;
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+        }
+    }
+
+    private void AllowDrag()
+    {
+        if (_diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            var node = _diagram.SelectionSettings.Nodes[0];
+            if (node.Constraints.HasFlag(NodeConstraints.AllowDragWithinSwimlane))
+            {
+                node.Constraints &= ~NodeConstraints.AllowDragWithinSwimlane;
 
             }
             else
             {
-                diagramComponent.SelectionSettings.Nodes[0].Constraints |= NodeConstraints.AllowDragWithinSwimlane;
+                node.Constraints |= NodeConstraints.AllowDragWithinSwimlane;
             }
         }
     }
@@ -243,4 +262,4 @@ The following example demonstrates that a constraint can also be enabled or disa
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVeMBiRzuEmRSmS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/AllowDragWithinSwimlane/AllowDragWithinSwimlane)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/Swimlanes/LaneInteraction/AllowDragWithinSwimlane.razor)
