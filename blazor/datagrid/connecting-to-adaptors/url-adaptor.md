@@ -36,10 +36,10 @@ The `UrlAdaptor` is suitable for applications where data operations must be exec
 
 **Intended audience**
 
-* Frontend scenarios that require consistent communication between the Syncfusion® Blazor DataGrid and REST API endpoints.
-* Full-stack solutions where the server processes DataManagerRequest parameters to apply filtering, sorting, paging, searching, or grouping.
+* Frontend scenarios that require consistent communication between the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and REST API endpoints.
+* Full-stack solutions where the server processes `DataManagerRequest` parameters to apply filtering, sorting, paging, searching, or grouping.
 * Enterprise architectures that prioritize scalability, security, and centralized data processing.
-* Applications backed by remote services returning collections in the result and count structure.
+* Applications backed by remote services returning collections in the `result` and `count` structure.
 
 ## Supporting Database List
 
