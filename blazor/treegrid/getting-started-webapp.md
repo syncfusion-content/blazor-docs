@@ -51,7 +51,9 @@ The following software and tools must be installed before proceeding:
 1. Open the **NuGet Package Manager Console**:
    - Navigate to **Tools → NuGet Package Manager → Package Manager Console**
 
-2. Run the following commands in the Package Manager Console:
+2. For projects using **WebAssembly** or **Auto** interactive render modes, ensure these packages are installed in the **Client** project.
+
+3. Run the following commands in the Package Manager Console:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -62,8 +64,10 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-3. Press Enter to execute each command.
-4. Wait for the packages to download and install.
+
+4. Press Enter to execute each command.
+
+5. Wait for the packages to download and install.
 
 {% endtabcontent %}
 
@@ -104,8 +108,8 @@ cd TreeGridApp.Client
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.TreeGrid --version 24.1.36
+dotnet add package Syncfusion.Blazor.Themes --version 24.1.36
 dotnet restore
 
 {% endhighlight %}
@@ -149,8 +153,8 @@ cd TreeGridApp.Client
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.TreeGrid --version 24.1.36
+dotnet add package Syncfusion.Blazor.Themes --version 24.1.36
 dotnet restore
 
 {% endhighlight %}
@@ -246,7 +250,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/App.razor** file in the **Server** project.
 
 ```html
 <head>
