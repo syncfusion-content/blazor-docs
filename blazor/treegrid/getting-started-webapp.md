@@ -190,13 +190,15 @@ The `_Imports.razor` file now contains the necessary Syncfusion namespaces globa
 2. Add the Syncfusion service registration after the existing service configurations:
 
 ```csharp
+using TreeGridApp.Client.Pages;
+using TreeGridApp.Components;
 using Syncfusion.Blazor;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
 
 // Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
@@ -204,19 +206,26 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    app.UseWebAssemblyDebugging();
+}
+else
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
+
 app.UseAntiforgery();
 
+app.MapStaticAssets();
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+    .AddInteractiveServerRenderMode()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(TreeGridApp.Client._Imports).Assembly);
 
 app.Run();
 ```
@@ -230,15 +239,10 @@ app.Run();
 2. Register Syncfusion Blazor service:
 
 ```csharp
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-// Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 await builder.Build().RunAsync();
