@@ -182,7 +182,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 ## Add Syncfusion Blazor TreeGrid component
 
 1. Navigate to the `Pages` folder.
-2. Open `Index.razor`.
+2. Open `Home.razor`.
 3. Replace the content with the following:
 
 ```razor
