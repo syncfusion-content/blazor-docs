@@ -11,7 +11,7 @@ documentation: ug
 
 To get started with the Firebase file system provider, ensure that you have a Firebase project, Firebase Realtime Database created, and a service account key (JSON) generated from the Firebase console.
 
-The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the File Manager file system in a cloud database as JSON representation.
+The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides an efficient way to store the File Manager file system in a cloud database as JSON representation.
 
 ### Generate a service account key
 
@@ -28,6 +28,7 @@ Follow these steps to generate and download the service account key:
 * Now, open the Firebase service project from the Google service accounts console and generate a key.
 
 ![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key-image-1.png)
+
 ![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key-image-2.png)
 
 * After generating the key, replace the JSON content in the `access_key.json` file in the Firebase Realtime Database provider project to enable authentication for read and write operations.
@@ -112,7 +113,7 @@ In the **Data** tab of your Firebase Realtime Database, locate the project's **A
 
 After that, clone the [EJ2.ASP.NET Core Firebase Realtime Database File Provider](https://github.com/SyncfusionExamples/ej2-firebase-realtime-database-aspcore-file-provider), open the project in Visual Studio, and restore the NuGet packages.
 
-Register Firebase Realtime Database by assigning the *Firebase Realtime Database REST API URL*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of the `FirebaseRealtimeDBFileProvider` class in the controller part of the ASP.NET Core application.
+Register Firebase Realtime Database by assigning the **Firebase Realtime Database REST API URL**, **rootNode**, and **serviceAccountKeyPath** parameters in the `RegisterFirebaseRealtimeDB` method of the `FirebaseRealtimeDBFileProvider` class in the controller part of the ASP.NET Core application, in the `FirebaseProviderController.cs` file.
 
 ```csharp
 
@@ -136,7 +137,7 @@ In the above code,
 
 * `{give the service account key path}` denotes service account key path which has authentication key for the Firebase Real time Database data.
 
-After configuring the Firebase Real time Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows to manage the files in the Firebase Real time Database.
+After configuring the Firebase Real time Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows you to manage the files in the Firebase Real time Database.
 
 ```cshtml
 
