@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell Editing in Blazor Tree Grid Component | Syncfusion
-description: Demonstrates cell editing in the Syncfusion Blazor Tree Grid component.
+description: Learn all about Cell Editing in the Syncfusion Blazor Tree Grid, including edit modes, validation, and essential features for efficient data updates.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -78,5 +78,6 @@ public class TreeData
 {% endtabs %}
 
 ![Cell Editing in Blazor TreeGrid](../images/blazor-treegrid-cell-edit.png)
+
 
 **Note:** Cell edit mode is the default editing mode.
