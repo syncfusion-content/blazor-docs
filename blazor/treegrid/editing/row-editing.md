@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Row Editing
+# Row Editing in Blazor Tree Grid Component
 
 Row editing lets users edit all cells in a row at once. When a row enters edit mode, every editable cell in that row becomes an input control so the user can change values and then save or cancel the changes.
 
@@ -84,5 +84,6 @@ public class TreeData
 {% endhighlight %}
 
 {% endtabs %}
+
 
 ![Row Editing in Blazor TreeGrid](../images/blazor-treegrid-row-editing.png)
