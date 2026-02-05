@@ -11,7 +11,7 @@ documentation: ug
 
 To get started with the Azure cloud file system provider, ensure you have an active Microsoft Azure account with a configured Blob Storage service. [Create a Blob Storage container](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal) and add a subfolder to manage files and directories through the File Manager.
 
-The Azure file system provider allows users to access and manage blobs in Azure Blob Storage. To get started, clone the [Azure File Provider](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider):
+The Azure file system provider allows users to access and manage blobs in Azure Blob Storage. To get started, clone the [Azure File Provider](https://github.com/SyncfusionExamples/azure-aspcore-file-provider):
 
 ```bash
 git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider ej2-azure-aspcore-file-provider
@@ -74,6 +74,6 @@ dotnet add package Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core
 
 To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Azure cloud file system provider, initialize the Azure cloud provider in the controller.
 
-To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from `AzureProviderController.cs` in this repository: https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider. You can also find the method-level details for this provider in the same repository.
+To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from [AzureProviderController.cs](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs). You can also find the method-level details for this provider in the same repository.
 
-N> To learn more about the file actions supported by the Azure cloud file system provider, refer to the [key features](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider#key-features).
+N> To learn more about the file actions supported by the Azure cloud file system provider, refer to the [key features](https://github.com/SyncfusionExamples/azure-aspcore-file-provider#key-features).

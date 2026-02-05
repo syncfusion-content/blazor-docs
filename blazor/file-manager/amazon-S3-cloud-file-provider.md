@@ -13,7 +13,7 @@ To get started with the Amazon S3 cloud file provider, ensure that you have an a
 
 To learn more about creating and configuring an Amazon S3 bucket, refer to this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html).
 
-The Amazon **S3** (Simple Storage Service) cloud file provider allows users to access and manage a server-hosted file system as a collection of objects stored in an Amazon S3 bucket. To get started, clone the [Amazon S3 File Provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider):
+The Amazon **S3** (Simple Storage Service) cloud file provider allows users to access and manage a server-hosted file system as a collection of objects stored in an Amazon S3 bucket. To get started, clone the [Amazon S3 File Provider](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider):
 
 ```bash
 git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider ej2-amazon-s3-aspcore-file-provider
@@ -43,6 +43,6 @@ After registering the Amazon client account details, build and run the project. 
 
 To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Amazon S3 cloud file provider, initialize the Amazon S3 cloud file provider in the controller.
 
-To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from `AmazonS3ProviderController.cs` in this repository: https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider. You can also find the method-level details for this provider in the same repository.
+To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from [AmazonS3ProviderController.cs](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs). You can also find the method-level details for this provider in the same repository.
 
-N> To learn more about the file actions supported by the Amazon S3 cloud file provider, refer to the [key features](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider#key-features).
+N> To learn more about the file actions supported by the Amazon S3 cloud file provider, refer to the [key features](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider#key-features).
