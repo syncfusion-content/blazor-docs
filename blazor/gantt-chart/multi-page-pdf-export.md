@@ -1,16 +1,43 @@
 ---
 layout: post
-title: Multipage and Scaling for PDF Export in Syncfusion Blazor Gantt Chart
-description: Specification for enabling multipage PDF export, scaling modes, and header/footer alignment in the Blazor Gantt Chart PDF export.
+title: Multi-Page PDF Export with Scaling in Syncfusion Blazor Gantt Chart
+description: Describes how to export the Blazor Gantt Chart to a multi-page PDF using various scaling modes.
 platform: Blazor
-control: PDF export scaling and multipage
+control: Multi-Page with scaling in PDF Export
 documentation: ug
 ---
 
-# Multipage and Scaling for PDF Export in Blazor Gantt Chart Component
+# Multi-Page PDF Export with Scaling in Blazor Gantt Chart
 
-This document outlines the proposed API and implementation details for enabling multi-page PDF export, flexible scaling, and header/footer alignment in the Blazor Gantt Chart component. These enhancements introduce a structured multi-page export workflow along with two scaling modes, providing greater control over how the Gantt chart is resized and paginated during PDF export using [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html).
-To enable multi-page PDF export, set the `enableMultiPage` property to `true` when invoking the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToPdfAsync_Syncfusion_Blazor_Gantt_GanttPdfExportProperties_) method. By default, the enableMultiPage property is set to false, and the Gantt chart is exported as a single-page PDF.
+Multi-page PDF export supports flexible scaling options and configurable header/footer alignment, allowing the Gantt Chart to be distributed across multiple pages with precise control over how content is resized and paginated. Multi-page export and scaling behavior can be configured using the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
+
+## Enabling Multi-Page PDF Export
+
+To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` property to `true` when calling the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToPdfAsync_Syncfusion_Blazor_Gantt_GanttPdfExportProperties_System_Boolean_) method.
+
+- **Default behavior:** `enableMultiPage = false` exports the entire chart as a single-page PDF.
+- **When enabled:** Content is automatically split across pages based on the selected scaling mode and page settings.
+
+## Scaling
+
+`Scaling` determines how the Gantt Chart is resized during PDF export to optimize visual presentation.
+
+**Property:** `Scaling`  
+**Modes:**
+
+- **`FitToPages`** – Compresses content to fit within a specified total number of PDF pages.  
+  - Use this when you need the exported PDF to fit within a fixed page budget (e.g., 2 pages) for reporting or sharing.  
+  - The exporter automatically computes a uniform scale factor so that the content fits within the target page count, preserving aspect ratio.  
+  - If the specified number of pages is too small for legible output, text and UI elements may appear smaller.
+- **`Percentage`** – Applies a percentage-based uniform scale to the entire chart before pagination.  
+  - Use this when you want predictable downscaling (e.g., scale to 80%) while still allowing content to flow onto multiple pages as needed.  
+  - Horizontal and vertical dimensions scale proportionally to the specified percentage.  
+  - Pagination occurs after scaling is applied.
+
+> **Notes**
+> - `Percentage` prioritizes a known visual scale; page count is a result of content size and page settings.  
+> - `FitToPages` prioritizes a known page count; scale is computed automatically to satisfy the target.  
+> - Page size, orientation, and margins directly affect both scaling results and pagination.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -22,13 +49,12 @@ To enable multi-page PDF export, set the `enableMultiPage` property to `true` wh
 <SfGantt @ref="GanttInstance" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" Toolbar="toolbarItem">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
-    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfExporting="PdfExportingHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
     public SfGantt<TaskData>? GanttInstance { get; set; } = new();
-    private List<object> toolbarItem = new List<Object>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    private bool isFitToPage = true;
+    private List<ToolbarItem> toolbarItem = new List<ToolbarItem>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     private List<TaskData> TaskCollection = GetTaskCollection();
 
     public class TaskData
@@ -59,71 +85,32 @@ To enable multi-page PDF export, set the `enableMultiPage` property to `true` wh
         return Tasks;
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args?.Item?.Id == "PdfExport")
         {
-            var headerContent = new PdfHeaderFooterContent
-            {
-                Type = ContentType.Text,
-                Value = "Gantt Chart PDF Export Header",
-                Position = new PdfPosition { X = 0, Y = 20 },
-                Style = new PdfContentStyle { FontSize = 14, HAlign = PdfHorizontalAlign.Center }
-            };
-            var footerContent = new PdfHeaderFooterContent
-            {
-                Type = ContentType.Text,
-                Value = "Gantt Chart PDF Export Footer",
-                Position = new PdfPosition { X = 0, Y = 20 },
-                Style = new PdfContentStyle { FontSize = 12, HAlign = PdfHorizontalAlign.Center }
-            };
-
-            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties
-            {
-                Header = new PdfHeader { FromTop = 0, Height = 60, Contents = new List<PdfHeaderFooterContent> { headerContent } },
-                Footer = new PdfFooter { FromBottom = 30, Height = 60, Contents = new List<PdfHeaderFooterContent> { footerContent } }
-            };
-
+            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
             await GanttInstance.ExportToPdfAsync(pdfExportProperties, true);
         }
-    }
-
-    public async Task PdfExportingHandler(PdfExportEventArgs args)
-    {
-        if (isFitToPage)
-        {
-            if (args.MultiPageSettings?.TotalPages > 5)
-            {
-                args.MultiPageSettings.ScaleMode = GanttPdfExportScaleMode.FitToPages;
-                args.MultiPageSettings.PageTall = 4;
-                args.MultiPageSettings.PageWide = 2;
-            }
-        }
-        else
-        {
-            args.MultiPageSettings.ScaleMode = GanttPdfExportScaleMode.Percentage;
-            args.MultiPageSettings.ScalePercentage = 50;
-        }
-        await Task.CompletedTask;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## How to export Gantt chart with Scaling property
+## To export Gantt Chart with Scaling property
 
 ### Through FitToPages
 
-Scale the Gantt chart so that columns fit across a specified number of pages, while rows flow vertically across multiple pages. This approach is ideal for scenarios with large time ranges or a high number of columns, where horizontal scrolling should be avoided and column widths must be preserved.
+Scale the Gantt Chart so that columns fit across a specified number of pages, while rows flow vertically across multiple pages. This approach is ideal for scenarios with large time ranges or a high number of columns, where horizontal scrolling should be avoided and column widths must be preserved.
 
 To enable this behavior during PDF export:
 
-- Set `ScaleMode` to `FitToPages` using `GanttPdfExportScaleMode` in [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html).
-- Use `PageWide` to specify the target number of pages across which the chart should fit horizontally.
-- Use `PageTall` to specify the target number of pages over which the content should span vertically.
+- Set [ScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) to [FitToPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) using `GanttPdfExportScaleMode` in [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html).
+- Use [PageWide](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) to specify the target number of pages across which the chart should fit horizontally.
+- Use [PageTall](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) to specify the target number of pages over which the content should span vertically.
 
-These properties provide precise control over how the Gantt chart is scaled and paginated during multi-page PDF export.
+These properties provide precise control over how the Gantt Chart is scaled and paginated during multi-page PDF export.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -140,8 +127,7 @@ These properties provide precise control over how the Gantt chart is scaled and 
 
 @code {
     public SfGantt<TaskData>? GanttInstance { get; set; } = new();
-    private List<object> toolbarItem = new List<Object>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    private bool isFitToPage = true;
+    private List<ToolbarItem> toolbarItem = new List<ToolbarItem>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     private List<TaskData> TaskCollection = GetTaskCollection();
 
     public class TaskData
@@ -172,45 +158,21 @@ These properties provide precise control over how the Gantt chart is scaled and 
         return Tasks;
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args?.Item?.Id == "PdfExport")
         {
-            var headerContent = new PdfHeaderFooterContent
-            {
-                Type = ContentType.Text,
-                Value = "Gantt Chart PDF Export Header",
-                Position = new PdfPosition { X = 0, Y = 20 },
-                Style = new PdfContentStyle { FontSize = 14, HAlign = PdfHorizontalAlign.Center }
-            };
-            var footerContent = new PdfHeaderFooterContent
-            {
-                Type = ContentType.Text,
-                Value = "Gantt Chart PDF Export Footer",
-                Position = new PdfPosition { X = 0, Y = 20 },
-                Style = new PdfContentStyle { FontSize = 12, HAlign = PdfHorizontalAlign.Center }
-            };
-
-            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties
-            {
-                Header = new PdfHeader { FromTop = 0, Height = 60, Contents = new List<PdfHeaderFooterContent> { headerContent } },
-                Footer = new PdfFooter { FromBottom = 30, Height = 60, Contents = new List<PdfHeaderFooterContent> { footerContent } }
-            };
-
+            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
             await GanttInstance.ExportToPdfAsync(pdfExportProperties, true);
         }
     }
-
     public async Task PdfExportingHandler(PdfExportEventArgs args)
     {
-        if (isFitToPage)
+        if (args.MultiPageSettings?.TotalPages > 5)
         {
-            if (args.MultiPageSettings?.TotalPages > 5)
-            {
-                args.MultiPageSettings.ScaleMode = GanttPdfExportScaleMode.FitToPages;
-                args.MultiPageSettings.PageTall = 4;
-                args.MultiPageSettings.PageWide = 2;
-            }
+            args.MultiPageSettings.ScaleMode = GanttPdfExportScaleMode.FitToPages;
+            args.MultiPageSettings.PageTall = 4;
+            args.MultiPageSettings.PageWide = 2;
         }
         await Task.CompletedTask;
     }
@@ -221,7 +183,7 @@ These properties provide precise control over how the Gantt chart is scaled and 
 
 ### Through Percentage
 
-This scaling mode applies a fixed percentage to shrink or enlarge the rendered Gantt chart before pagination. It is useful when minor size adjustments are required or when predictable, manual scaling is preferred over automatic fitting.
+This scaling mode applies a fixed percentage to shrink or enlarge the rendered Gantt Chart before pagination. It is useful when minor size adjustments are required or when predictable, manual scaling is preferred over automatic fitting.
 
 To configure percentage-based scaling during PDF export:
 
@@ -245,8 +207,7 @@ This approach provides precise control over the overall chart size while preserv
 
 @code {
     public SfGantt<TaskData>? GanttInstance { get; set; } = new();
-    private List<object> toolbarItem = new List<Object>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    private bool isPercentage = true;
+    private List<ToolbarItem> toolbarItem = new List<ToolbarItem>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     private List<TaskData> TaskCollection = GetTaskCollection();
 
     public class TaskData
@@ -277,45 +238,27 @@ This approach provides precise control over the overall chart size while preserv
         return Tasks;
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args?.Item?.Id == "PdfExport")
         {
-            var headerContent = new PdfHeaderFooterContent
-            {
-                Type = ContentType.Text,
-                Value = "Gantt Chart PDF Export Header",
-                Position = new PdfPosition { X = 0, Y = 20 },
-                Style = new PdfContentStyle { FontSize = 14, HAlign = PdfHorizontalAlign.Center }
-            };
-            var footerContent = new PdfHeaderFooterContent
-            {
-                Type = ContentType.Text,
-                Value = "Gantt Chart PDF Export Footer",
-                Position = new PdfPosition { X = 0, Y = 20 },
-                Style = new PdfContentStyle { FontSize = 12, HAlign = PdfHorizontalAlign.Center }
-            };
-
-            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties
-            {
-                Header = new PdfHeader { FromTop = 0, Height = 60, Contents = new List<PdfHeaderFooterContent> { headerContent } },
-                Footer = new PdfFooter { FromBottom = 30, Height = 60, Contents = new List<PdfHeaderFooterContent> { footerContent } }
-            };
-
+            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
             await GanttInstance.ExportToPdfAsync(pdfExportProperties, true);
         }
     }
-
     public async Task PdfExportingHandler(PdfExportEventArgs args)
     {
-        if (isPercentage)
-        {
-            args.MultiPageSettings.ScaleMode = GanttPdfExportScaleMode.Percentage;
-            args.MultiPageSettings.ScalePercentage = 50;
-        }
+        args.MultiPageSettings.ScaleMode = GanttPdfExportScaleMode.Percentage;
+        args.MultiPageSettings.ScalePercentage = 50;
         await Task.CompletedTask;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+## Limitations
+
+- Split tasks is not supported.
+- Unscheduled tasks is not supported.
+- Multi task bar is not supported.

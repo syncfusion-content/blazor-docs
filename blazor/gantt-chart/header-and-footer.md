@@ -13,7 +13,45 @@ Customizing headers and footers in PDF exports of the Blazor Gantt Chart compone
 
 ## Write a text in header and footer
 
-Customize text in headers or footers using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) properties in [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html). Set `Type` to **Text**, define `Value` for the text, `Position` for x/y coordinates, and `Style` for color or font size or horizontal alignment using [HAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfContentStyle.html#Syncfusion_Blazor_Grids_PdfContentStyle_HAlign) property.
+Customize the text displayed in the header or footer of the Gantt PDF export using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) properties available in [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html).
+
+### Adding Text to Header or Footer
+
+To render text content in the header or footer:
+
+- Set the **`Type`** property to `Text`.
+- Provide the text to be displayed using the **`Value`** property.
+- Specify the position of the text by configuring the **`Position`** property with appropriate **X** and **Y** coordinates.
+
+### Styling the Text
+
+The appearance of the header or footer text can be customized using the **`Style`** property. The following styling options are supported:
+
+- **DashStyle**  
+  Defines the dash style.
+
+- **FontSize**  
+  Defines the size of the text.
+
+- **HAlign**  
+  Specifies the horizontal alignment of the text. Supported values include `Left`, `Center`, `Right` and `Justify`.
+
+- **VAlign**  
+  Specifies the vertical alignment of the text. Supported values include `Top`, `Middle`, and `Bottom`.
+
+- **PenColor**  
+  Defines the pen color.
+
+- **PenSize**  
+  Defines the pen size.
+
+- **TextBrushColor**  
+  Defines the text brush color.
+
+- **TextPenColor**  
+  Defines the text pen color.
+
+Use these style settings to control text color, font size, and alignment. In particular, the [HAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfContentStyle.html#Syncfusion_Blazor_Grids_PdfContentStyle_HAlign) property can be used to align the text horizontally within the header or footer area for a consistent and professional appearance in the exported PDF.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
