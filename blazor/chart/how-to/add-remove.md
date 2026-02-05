@@ -11,7 +11,7 @@ documentation: ug
 
 # Add or Remove Series in Blazor Charts Component
 
-The chart series can be dynamically added or removed by adding and removing a series to the  [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). Follow the steps below to dynamically add or remove a series.
+The chart series can be dynamically added or removed by adding and removing a series to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). Follow the steps below to dynamically add or remove a series.
 
 **Step 1:**
 
@@ -189,4 +189,4 @@ By clicking the **Add Chart Series** button a new series will be added to the ch
 }
 ```
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

@@ -7,7 +7,7 @@ control: TextBox
 documentation: ug
 ---
 
-# Getting Started with Blazor TextBox component
+# Getting Started with Blazor TextBox component in MAUI App
 
 This guide walks through integrating the Syncfusion® Blazor TextBox component into a .NET MAUI Blazor app using both Visual Studio and Visual Studio Code.
 
@@ -219,5 +219,5 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 
 ## See Also
 
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly app in Visual Studio or .NET CLI: [../getting-started/blazor-webassembly-app](../getting-started/blazor-webassembly-app)
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI: [../getting-started/blazor-web-app](../getting-started/blazor-web-app)
+* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly app in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

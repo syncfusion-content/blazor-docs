@@ -13,7 +13,7 @@ documentation: ug
  
 [Radar](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/radar-chart) series visualizes data in terms of values and angles. It provides option for visual comparison between several quantitative or qualitative aspects of a situation. 
 
-You can learn how to create a Radar chart using Blazor Charts by watching the video below.
+A detailed demonstration of the process for creating a Radar chart using Blazor Charts is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Q5odgrcbSO0" %}
 
@@ -56,7 +56,7 @@ To render a radar chart, set the series [Type](https://help.syncfusion.com/cr/bl
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhfXbrXfzZtZPkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Radar Chart with Line Series](../images/polar-radar/blazor-radar-chart-line-series.png)" %}
 
-N> Refer to our [Blazor Radar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/radar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Radar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Radar type chart.
+N> Refer to the [Blazor Radar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/radar-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Radar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Radar type chart.
 
 ### Draw type
 
@@ -224,7 +224,7 @@ To customize the radius of the [Radar Chart](https://help.syncfusion.com/cr/blaz
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLJNPVjfzqCoYbb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 ## Empty points
 
 Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
@@ -441,7 +441,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrpNlrjpJdmOFva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
