@@ -1179,7 +1179,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You need to follow the below steps to consume data from the **Entity Framework** in our Scheduler component.
 
-To get start quickly about CRUD action using entity framework in our Scheduler, you can check on this video:
+To get start quickly about CRUD action using Entity Framework in our Scheduler, you can check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=QlzdcZTmOrU"%}
@@ -1367,7 +1367,7 @@ Now, the Scheduler can be configured using the `SfDataManager` to interact with 
 }
 ```
 
-N> You can find the working sample on Entity framework [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud-using-restful-service).
+N> You can find the working sample on Entity Framework [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud-using-restful-service).
 
 ## Configuring Scheduler with Google API service
 

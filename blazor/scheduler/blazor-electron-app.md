@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Creating Desktop App using Blazor and Electron Framework | Syncfusion
-description: Check out the documentation for creating desktop application using Blazor and Electron Framework with Syncfusion Blazor Components in Visual Studio.
+title: Creating a Desktop App Using Blazor and Electron | Syncfusion
+description: Learn how to build a Blazor Scheduler desktop application using the Electron framework and Syncfusion Blazor components in Visual Studio.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Creating Desktop Application using Blazor and Electron
+## Creating Desktop Application using Blazor and Electron
 
 This section explains how to create and run a desktop application by using Blazor and the Electron.NET framework with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
