@@ -257,11 +257,9 @@ A connection string contains the information needed to connect the application t
 | Encrypt | Enables encryption for the connection (set to `True` for production environments) |
 | Trust Server Certificate | Whether to trust the server certificate (set to `False` for security) |
 | Application Intent | Set to `ReadWrite` for normal operations or `ReadOnly` for read-only scenarios |
-| Multi Subnet Failover | Used in failover clustering scenarios (typically `False`) ||
+| Multi Subnet Failover | Used in failover clustering scenarios (typically `False`) |
 
 The database connection string has been configured successfully.
-
----
 
 ### Step 5: Create the Repository Class
 
@@ -340,10 +338,10 @@ namespace Grid_Dapper.Data
 }
 ```
 
-**QueryAsync<T>** is a Dapper extension method on IDbConnection that:
+**QueryAsync&lt;T&gt;** is a Dapper extension method on IDbConnection that:
 - Executes a SQL query asynchronously (uses **ADO.NET** async under the hood).
 - Maps each row in the result set to an instance of T (here, Reservation) by matching column names to property names.
-- Returns an **IEnumerable<T>**.
+- Returns an **IEnumerable&lt;T&gt;**.
 
 The repository class manages all interactions with the database and is now ready for implementation.
 
@@ -742,7 +740,7 @@ public async Task<List<Reservation>> GetReservationsAsync()
 - The `DataOperations.PerformSkip()` and `DataOperations.PerformTake()` methods handle pagination.
 - Only the requested page of records is transmitted from the server.
 
-Paging feature is now active with 10 records per page.
+Paging feature is now active with 20 records per page.
 
 ---
 
@@ -1446,7 +1444,7 @@ Now the adaptor supports bulk modifications with database synchronization. All C
 
 ---
 
-## Step 11: Complete code
+### Step 11: Complete code
 
 Here is the complete and final `Home.razor` component with all features integrated:
 
