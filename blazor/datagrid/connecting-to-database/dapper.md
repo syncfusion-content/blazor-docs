@@ -339,6 +339,12 @@ namespace Grid_Dapper.Data
     }
 }
 ```
+
+**QueryAsync<T>** is a Dapper extension method on IDbConnection that:
+- Executes a SQL query asynchronously (uses **ADO.NET** async under the hood).
+- Maps each row in the result set to an instance of T (here, Reservation) by matching column names to property names.
+- Returns an **IEnumerable<T>**.
+
 The repository class manages all interactions with the database and is now ready for implementation.
 
 ---
@@ -1435,6 +1441,8 @@ Now the adaptor supports bulk modifications with database synchronization. All C
 - [UpdateAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Edit existing records in SQL Server
 - [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from SQL Server
 - [BatchUpdateAsync(DataManager, object, object, object, string, string, int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) - Handle bulk operations
+
+ > **ExecuteAsync** is used to run commands that don’t return result sets—typically **INSERT, UPDATE, DELETE, CREATE TABLE,** or **calling stored procedures** that return only the number of affected rows.
 
 ---
 
