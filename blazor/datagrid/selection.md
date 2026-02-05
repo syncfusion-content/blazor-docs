@@ -448,7 +448,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLItyZpnEdccjFY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLRXWhkZYDGcAvU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Drag selection
 
