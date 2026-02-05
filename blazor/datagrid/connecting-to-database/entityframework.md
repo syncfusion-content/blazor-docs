@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor DataGrid with SQL via EF Core and REST API | Syncfusion
-description: Bind SQL Server data to Blazor DataGrid using EF Core and REST API (UrlAdaptor) with CRUD, filtering, sorting, and paging.
+title: Blazor DataGrid with SQL using Entity Framework| Syncfusion
+description: Bind SQL Server data to Blazor DataGrid using Entity Framework core with CRUD, filtering, sorting, and paging.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting SQL Server to Blazor DataGrid via EF Core and REST API
+# Connecting SQL Server to Blazor DataGrid via Entity Framework
 
 The Syncfusion Blazor DataGrid supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
 
@@ -25,11 +25,11 @@ Entity Framework Core (EF Core) is a data access technology for .NET that simpli
 
 **What is Entity Framework Core SQL Server Provider?**
 
-The Microsoft.EntityFrameworkCore.SqlServer package is the provider that connects EF Core to SQL Server, enabling CRUD, transactions, and SQL Server-specific features.
+The Microsoft.EntityFrameworkCore.SqlServer package is the provider that connects Entity Framework core to SQL Server, enabling CRUD, transactions, and SQL Server-specific features.
 
 **What is UrlAdaptor?**
 
-UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all grid operations. The DataGrid sends read, insert, update, delete, and batch requests to controller actions, which use EF Core to access SQL Server.
+UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all grid operations. The DataGrid sends read, insert, update, delete, and batch requests to controller actions, which use Entity Framework core to access SQL Server.
 
 ## Prerequisites
 
@@ -188,7 +188,7 @@ namespace Grid_EF_UrlAdaptor.Data
 
 **Explanation:**
 - `OrderDbContext` inherits from `DbContext` and exposes `DbSet<Order>` to query and save `Order` entities.
-- `modelBuilder.Entity<Order>().ToTable("Order")` ensures EF Core maps the entity to the `Order` table.
+- `modelBuilder.Entity<Order>().ToTable("Order")` ensures Entity Framework core maps the entity to the `Order` table.
 
 The DbContext has been successfully configured.
 
@@ -235,7 +235,7 @@ The database connection string has been configured successfully.
 
 ### Step 6: Create the Grid API Controller
 
-A controller exposes REST API endpoints for the grid to read data. This step adds minimal GET and POST endpoints that return empty results. Additional CRUD and batch endpoints will be added later when configuring UrlAdaptor.
+A controller exposes REST API endpoints for the grid to read data. This step adds minimal `POST` endpoint that return empty results. Additional CRUD and batch endpoints will be added later when configuring UrlAdaptor.
 
 **Instructions:**
 
@@ -261,13 +261,6 @@ namespace Grid_EF_UrlAdaptor.Controllers
             _context = context;
         }
 
-        // GET: api/Grid
-        [HttpGet]
-        public ActionResult<List<Order>> Get()
-        {
-            return Ok(new List<Order>());
-        }
-
         // POST: api/Grid (DataManager read)
         [HttpPost]
         public ActionResult<object> Post([FromBody] DataManagerRequest dataManagerRequest)
@@ -278,7 +271,7 @@ namespace Grid_EF_UrlAdaptor.Controllers
 }
 ```
 
-The controller has been created with basic GET and POST endpoints.
+The controller has been created with basic endpoint.
 
 ### Step 7: Register Services in Program.cs
 
@@ -337,7 +330,7 @@ app.Run();
 **Explanation:**
 
 - `AddControllers()` registers MVC controllers for REST endpoints.
-- `AddDbContext<OrderDbContext>()` configures EF Core to use SQL Server with the `ConnectionString` from appsettings.json.
+- `AddDbContext<OrderDbContext>()` configures Entity Framework core to use SQL Server with the `ConnectionString` from appsettings.json.
 - `MapControllers()` exposes routes like `/api/Grid`.
 - Syncfusion Blazor and Razor components are registered for the UI.
 
@@ -447,7 +440,7 @@ The `Home.razor` component will display the order data in a Syncfusion Blazor Da
 - **`Toolbar`**: "Add", "Edit", "Delete", "Update", "Cancel", "Search" for CRUD and search operations.
 - **`<GridAggregates>`**: Displays summary calculations (Sum, Count, Average, Min, Max) in footer rows. The `<GroupFooterTemplate>` shows aggregates for each group, while `<FooterTemplate>` displays aggregates for the entire grid at the bottom.
 
-> Note: In URL Adaptor, the DataGrid component handles grouping and aggregation operations automatically. Customizable operations like searching, filtering, sorting, and paging can be modified in the controller logic, but grouping and aggregation are managed directly by the datagrid component.
+> In **URL Adaptor**, the DataGrid component handles grouping and aggregation operations automatically.
 
 ### Step 3: Implement the Endpoints for UrlAdaptor
 
@@ -574,7 +567,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 **Instructions:**
 
 1. Ensure the grid has paging enabled with `AllowPaging="true"`.
-2. Configure the page size using `GridPageSettings`.
+2. Configure the page size using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 
 ```cshtml
 <SfGrid TValue="Order" AllowPaging="true">
