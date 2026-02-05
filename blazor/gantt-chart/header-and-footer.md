@@ -19,13 +19,13 @@ Customize the text displayed in the header or footer of the Gantt PDF export usi
 
 To render text content in the header or footer:
 
-- Set the **`Type`** property to `Text`.
-- Provide the text to be displayed using the **`Value`** property.
-- Specify the position of the text by configuring the **`Position`** property with appropriate **X** and **Y** coordinates.
+- Set the `Type` property to `Text`.
+- Provide the text to be displayed using the `Value` property.
+- Specify the position of the text by configuring the `Position` property with appropriate **X** and **Y** coordinates.
 
 ### Styling the Text
 
-The appearance of the header or footer text can be customized using the **`Style`** property. The following styling options are supported:
+The appearance of the header or footer text can be customized using the `Style` property. The following styling options are supported:
 
 - **DashStyle**  
   Defines the dash style.

@@ -22,14 +22,11 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
 
 `Scaling` determines how the Gantt Chart is resized during PDF export to optimize visual presentation.
 
-**Property:** `Scaling`  
-**Modes:**
-
-- **`FitToPages`** – Compresses content to fit within a specified total number of PDF pages.  
+- [FitToPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) – Compresses content to fit within a specified total number of PDF pages.  
   - Use this when you need the exported PDF to fit within a fixed page budget (e.g., 2 pages) for reporting or sharing.  
   - The exporter automatically computes a uniform scale factor so that the content fits within the target page count, preserving aspect ratio.  
   - If the specified number of pages is too small for legible output, text and UI elements may appear smaller.
-- **`Percentage`** – Applies a percentage-based uniform scale to the entire chart before pagination.  
+- [Percentage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) – Applies a percentage-based uniform scale to the entire chart before pagination.  
   - Use this when you want predictable downscaling (e.g., scale to 80%) while still allowing content to flow onto multiple pages as needed.  
   - Horizontal and vertical dimensions scale proportionally to the specified percentage.  
   - Pagination occurs after scaling is applied.
@@ -106,9 +103,9 @@ Scale the Gantt Chart so that columns fit across a specified number of pages, wh
 
 To enable this behavior during PDF export:
 
-- Set [ScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) to [FitToPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) using `GanttPdfExportScaleMode` in [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html).
-- Use [PageWide](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) to specify the target number of pages across which the chart should fit horizontally.
-- Use [PageTall](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) to specify the target number of pages over which the content should span vertically.
+- Set [ScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfMultiPageSettings.html#Syncfusion_Blazor_Gantt_PdfMultiPageSettings_ScaleMode) to [FitToPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) using [GanttPdfExportScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) in [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html).
+- Use [PageWide](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfMultiPageSettings.html#Syncfusion_Blazor_Gantt_PdfMultiPageSettings_PageWide) to specify the target number of pages across which the chart should fit horizontally.
+- Use [PageTall](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfMultiPageSettings.html#Syncfusion_Blazor_Gantt_PdfMultiPageSettings_PageTall) to specify the target number of pages over which the content should span vertically.
 
 These properties provide precise control over how the Gantt Chart is scaled and paginated during multi-page PDF export.
 
@@ -187,8 +184,8 @@ This scaling mode applies a fixed percentage to shrink or enlarge the rendered G
 
 To configure percentage-based scaling during PDF export:
 
-- Set ScaleMode to Percentage using `GanttPdfExportScaleMode` through [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html).
-- Specify the desired scaling factor using the ScalePercentage property.
+- Set [ScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfMultiPageSettings.html#Syncfusion_Blazor_Gantt_PdfMultiPageSettings_ScaleMode) to [Percentage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) using [GanttPdfExportScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) through [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html).
+- Specify the desired scaling factor using the [ScalePercentage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfMultiPageSettings.html#Syncfusion_Blazor_Gantt_PdfMultiPageSettings_ScalePercentage) property.
 
 This approach provides precise control over the overall chart size while preserving layout consistency across exported PDF pages.
 
@@ -259,6 +256,6 @@ This approach provides precise control over the overall chart size while preserv
 
 ## Limitations
 
-- Split tasks is not supported.
-- Unscheduled tasks is not supported.
-- Multi task bar is not supported.
+- Split tasks are not supported.
+- Unscheduled tasks are not supported.
+- Multi task bars are not supported.
