@@ -20,7 +20,7 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
 
 ## Scaling
 
-`Scaling` determines how the Gantt Chart is resized during PDF export to optimize visual presentation.
+`Scaling` determines how the Gantt Chart is resized during PDF export to optimize visual presentation. It includes two different scaling modes.
 
 - [FitToPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) – Compresses content to fit within a specified total number of PDF pages.  
   - Use this when you need the exported PDF to fit within a fixed page budget (e.g., 2 pages) for reporting or sharing.  
