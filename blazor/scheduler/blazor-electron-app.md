@@ -19,7 +19,7 @@ This section explains how to create and run a desktop application by using Blazo
 
 Create a Blazor Server application by using either the CLI or Visual Studio:
 
-* [Create a Blazor Server application by using the CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Create a Blazor Server application by using the CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 * [Create a Blazor Server application by using Visual Studio](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
 
@@ -113,7 +113,7 @@ var app = builder.Build();
 dotnet electronize start
 ```
 
-![Electron app output](images/electron/electron-grid-output.png)
+![Electron app output](images/electron/electron-shedule-output.png)
 
 N> To close the Electron app when the Electron window is closed, add the following code under **// Open the Electron-Window** in step 6 in the **~/Program.cs** file of a .NET 6 application.
 
