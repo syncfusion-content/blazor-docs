@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Command Column Editing in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Command Column Editing in Syncfusion Blazor Tree Grid component and much more details.
+description: Shows how to add built-in and custom command buttons to the Syncfusion Blazor TreeGrid, including CRUD examples and CommandClicked handling.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -94,13 +94,23 @@ public class TreeData
 
 ![Blazor TreeGrid with Command Column](../images/blazor-treegrid-command-column.png)
 
+**Expected behavior**
+
+- Click the **Edit** button in the Manage Records column to enter row edit mode for that row.
+- Click **Save** to commit changes made in edit mode; click **Cancel** to discard changes.
+- Click **Delete** to remove the row from the grid's data source.
+
 ## Custom command
 
 The custom command buttons can be added in a column by using the [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Commands) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component and the action for the custom buttons can be defined in the [CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CommandClicked) event.
 
 The following sample code demonstrates adding custom command in the **Manage Records** column and the `CommandClicked` event which triggers when the command is clicked,
 
-```cshtml
+{% tabs %}
+
+{% highlight razor %}
+
+@using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Grids;
 
@@ -121,44 +131,67 @@ The following sample code demonstrates adding custom command in the **Manage Rec
 </SfTreeGrid>
 
 @code{
-    public class TreeData
+    public List<TreeData.BusinessObject> TreeGridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Use the shared data provider defined earlier in this file
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+
+    public void OnCommandClicked(CommandClickEventArgs<TreeData.BusinessObject> args)
+    {
+        // Read clicked row and command column
+        var row = args.RowData;
+        var cmd = args.CommandColumn; // inspect to determine which command was clicked
+        var id = row?.TaskId;
+
+        // Minimal runnable action: log the clicked row id to console
+        Console.WriteLine($"Details clicked for TaskId: {id}");
+    }
+}
+{% endhighlight %}
+{% highlight c# %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
     {
         public class BusinessObject
         {
-            public int TaskId { get; set; }
-            public string TaskName { get; set; }
-            public int? Duration { get; set; }
-            public int? Progress { get; set; }
-            public int? ParentId { get; set; }
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public int? ParentId { get; set;}
         }
 
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Progress = 80, ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Progress = 77, ParentId = 3 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 5 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 5 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, ParentId = 5 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, ParentId = 5 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,ParentId = 5});
             return BusinessObjectCollection;
         }
     }
-
-    public List<TreeData.BusinessObject> TreeGridData { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
-    }
-    public void OnCommandClicked(CommandClickEventArgs<TreeData.BusinessObject> args)
-    {
-        // Perform required operations here
-    }
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
+
+**Expected behavior**
+
+- Click the **Details** button in the Manage Records column to trigger the `OnCommandClicked` handler.
+- `OnCommandClicked` receives `args.RowData` containing the clicked row's `TaskId`; the sample logs that ID to the console.
+- Replace the `Console.WriteLine` call with application-specific behavior (open dialog, navigate, etc.).
 
 The following image represents the custom command added in the **Manage Records** column of the Tree Grid component,
 ![Blazor TreeGrid with Custom Command](../images/blazor-treegrid-custom-command.png)

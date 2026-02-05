@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AutoFill in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here about auto fill in Syncfusion Blazor TreeGrid component and much more details.
+title: AutoFill Feature in Syncfusion Blazor Tree Grid | Syncfusion
+description: Learn about the AutoFill feature in the Syncfusion Blazor Tree Grid, including how to copy cell values, drag to fill, and improve data entry efficiency.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# AutoFill in Blazor TreeGrid Component
+# AutoFill Feature in Blazor Tree Grid Component
 
 AutoFill Feature allows to copy the data of the selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to the required cells. This feature is enabled by defining [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) property as true.
 
@@ -96,10 +96,11 @@ N> * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 <br/> * It requires the selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) to be `Cell`,  [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CellSelectionMode) to be `Box` and also Batch Editing should be enabled.
 
 The following GIF represent a tree grid with auto fill feature.
-![Auto FIll in Blazor TreeGrid](../images/blazor-treegrid-auto-fill.gif)
+![Animated demo showing AutoFill copying cell values in a TreeGrid](../images/blazor-treegrid-auto-fill.gif)
 
 
 ## Limitations of AutoFill
 
-* Since the string values are not parsed to number and date type, so when the selected string type cells are dragged to the number type cells then it will be displayed as **NaN**. For date type cells, when the selected string type cells are dragged to date type cells then it will be displayed as an **empty cell**.
-* Linear series and the sequential data generations are not supported in this autofill feature.
+String values are not parsed to number or date types. Copying string-type cells into number-type cells displays NaN; into date-type cells leaves the cell empty. Linear series and sequential data generation are not supported.
+
+
