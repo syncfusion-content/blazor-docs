@@ -1182,7 +1182,7 @@ You need to follow the below steps to consume data from the **Entity Framework**
 To get start quickly about CRUD action using entity framework in our Scheduler, you can check on this video:
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=QlzdcZTmOrU-0"%}
+"youtube:https://www.youtube.com/watch?v=QlzdcZTmOrU"%}
 
 ### Create DBContext class
 
