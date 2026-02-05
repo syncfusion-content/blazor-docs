@@ -21,20 +21,20 @@ The following code example illustrates how to create an organizational chart.
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
+<SfDiagramComponent Height="600px" Nodes="@_nodeCollection" Connectors="@_connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@_horizontalSpacing" @bind-VerticalSpacing="@_verticalSpacing">
     </Layout>
 </SfDiagramComponent>
 
 @code 
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     //Defines diagram's node collection.
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
 
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    private int _horizontalSpacing = 40;
+    private int _verticalSpacing = 40;
 
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -53,30 +53,30 @@ The following code example illustrates how to create an organizational chart.
 
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>()
+        _nodeCollection = new DiagramObjectCollection<Node>()
         {
-            new Node() { ID = "node1",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Project Management" } } },
-            new Node() { ID = "node2",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "R&D Team" } } },
-            new Node() { ID = "node3",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Philosophy" } } },
-            new Node() { ID = "node4",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Organization" } } },
-            new Node() { ID = "node5",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Technology" } } },
-            new Node() { ID = "node6",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Funding" } } },
-            new Node() { ID = "node7",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Resource-Allocation" } } },
-            new Node() { ID = "node8",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Targeting" } } },
-            new Node() { ID = "node9",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Evaluation" } } },
-            new Node() { ID = "node10",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "HR-Team" } } },
-            new Node() { ID = "node11",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Recruitment" } } },
-            new Node() { ID = "node12",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Employee-Relation" } } },
-            new Node() { ID = "node13",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Production & Sales Team" } } },
-            new Node() { ID = "node14",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Design" } } },
-            new Node() { ID = "node15",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Operation" } } },
-            new Node() { ID = "node16",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support" } } },
-            new Node() { ID = "node17",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Quality Assurance" } } },
-            new Node() { ID = "node18",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Customer Interaction" } } },
-            new Node() { ID = "node19",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support and Maintenance" } } },
-            new Node() { ID = "node20",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Task Coordination" } } }
+            new Node() { ID = "node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Project Management" } } },
+            new Node() { ID = "node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "R&D Team" } } },
+            new Node() { ID = "node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Philosophy" } } },
+            new Node() { ID = "node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Organization" } } },
+            new Node() { ID = "node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Technology" } } },
+            new Node() { ID = "node6", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Funding" } } },
+            new Node() { ID = "node7", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Resource-Allocation" } } },
+            new Node() { ID = "node8", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Targeting" } } },
+            new Node() { ID = "node9", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Evaluation" } } },
+            new Node() { ID = "node10", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "HR-Team" } } },
+            new Node() { ID = "node11", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Recruitment" } } },
+            new Node() { ID = "node12", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Employee-Relation" } } },
+            new Node() { ID = "node13", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Production & Sales Team" } } },
+            new Node() { ID = "node14", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Design" } } },
+            new Node() { ID = "node15", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Operation" } } },
+            new Node() { ID = "node16", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support" } } },
+            new Node() { ID = "node17", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Quality Assurance" } } },
+            new Node() { ID = "node18", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Customer Interaction" } } },
+            new Node() { ID = "node19", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support and Maintenance" } } },
+            new Node() { ID = "node20", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Task Coordination" } } }
         };        
-        connectors = new DiagramObjectCollection<Connector>()
+        _connectors = new DiagramObjectCollection<Connector>()
         {
             new Connector() { ID = "connector1", SourceID = "node1", TargetID = "node2" },
             new Connector() { ID = "connector2", SourceID = "node1", TargetID = "node10" },
@@ -101,7 +101,7 @@ The following code example illustrates how to create an organizational chart.
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout1)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/OrganizationLayout1.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVIstZxJweMEFvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Chart example](../images/blazor-organization-chart.png)" %}
 
@@ -132,13 +132,13 @@ The layout can be aligned anywhere within the layout bounds or viewport using th
 The following code illustrates how to align the layout at the bottom within the layout bounds.
 
 ```csharp
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
-    <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-VerticalAlignment="@verticalAlignment"></Layout>
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px">
+    <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@_horizontalSpacing" @bind-VerticalSpacing="@_verticalSpacing" @bind-VerticalAlignment="@_verticalAlignment"></Layout>
 </SfDiagramComponent>
 
-int HorizontalSpacing = 40;
-int VerticalSpacing = 40;
-VerticalAlignment verticalAlignment = VerticalAlignment.Bottom;
+private int _horizontalSpacing = 40;
+private int _verticalSpacing = 40;
+private VerticalAlignment _verticalAlignment = VerticalAlignment.Bottom;
 ```
 
 The following table illustrates the different chart orientations and chart types.
@@ -160,22 +160,22 @@ The following code example illustrates how to set the vertical right arrangement
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <DataSourceSettings ID="Id" ParentID="Team" DataSource="@DataSource"></DataSourceSettings>
+    <DataSourceSettings ID="Id" ParentID="Team" DataSource="@_dataSource"></DataSourceSettings>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
         </HorizontalGridLines>
         <VerticalGridLines LineColor="white" LineDashArray="2,2">
         </VerticalGridLines>
     </SnapSettings>
-    <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" GetLayoutInfo="GetLayoutInfo">
+    <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@_horizontalSpacing" @bind-VerticalSpacing="@_verticalSpacing" GetLayoutInfo="GetLayoutInfo">
     </Layout>
 </SfDiagramComponent>
 
 @code
 {
     //Initializing layout.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int _horizontalSpacing = 40;
+    private int _verticalSpacing = 50;
 
     //To configure every subtree of the organizational chart.
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
@@ -213,17 +213,17 @@ The following code example illustrates how to set the vertical right arrangement
         public string Team { get; set; }
         public string Role { get; set; }
     }
-    public object DataSource = new List<object>()
+    private object _dataSource = new List<object>()
     {
-        new OrgChartDataModel() { Id= "1", Role= "General Manager" },
-        new OrgChartDataModel() { Id= "2", Role= "Human Resource Manager", Team= "1" },
-        new OrgChartDataModel() { Id= "3", Role= "Design Manager", Team= "1" },
-        new OrgChartDataModel() { Id= "4", Role= "Operation Manager", Team= "1" },
-        new OrgChartDataModel() { Id= "5", Role= "Marketing Manager", Team= "1" }
+        new OrgChartDataModel() { Id = "1", Role = "General Manager" },
+        new OrgChartDataModel() { Id = "2", Role = "Human Resource Manager", Team = "1" },
+        new OrgChartDataModel() { Id = "3", Role = "Design Manager", Team = "1" },
+        new OrgChartDataModel() { Id = "4", Role = "Operation Manager", Team = "1" },
+        new OrgChartDataModel() { Id = "5", Role = "Marketing Manager", Team = "1" }
     };
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/OrganizationLayout2.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrIsNDxzGyEpDVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)" %}
 
@@ -237,16 +237,16 @@ The layout supports adding some blank space between the layout bounds (or viewpo
 
 ```csharp
 //Initialize the organizational chart layout with Margin.
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px" >
   <Layout Type="LayoutType.HierarchicalTree">
-     <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
+     <LayoutMargin Top="@_top" Left="@_left"></LayoutMargin>
   </Layout>
 </SfDiagramComponent>
 @code
 {
     //Initializing the Margin Top and Left value.
-    int left = 40;
-    int top = 50;
+    private int _left = 40;
+    private int _top = 50;
 }
 ```
 
@@ -259,12 +259,12 @@ The following code illustrates arranging nodes in a **TopToBottom** orientation.
 ```csharp
 //Initialize the layout with layout orientation as BottomToTop in page.
 <SfDiagramComponent Height="600px" Width="500px" >
-    <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
+    <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@_orientation"></Layout>
 </SfDiagramComponent>
 @code
 {
     //Initializing the orientation value.
-    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    private LayoutOrientation _orientation = LayoutOrientation.TopToBottom;
 }
 ```
 
@@ -275,15 +275,15 @@ The layout supports arranging nodes with reference to the position of a fixed no
 ```csharp
 //Initialize the organizational chart layout with FixedNode.
 <SfDiagramComponent Height="600px" Width="500px" >
-    <Layout Type="LayoutType.OrganizationalChart" FixedNode="Node1" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Orientation="@orientation"></Layout>
+    <Layout Type="LayoutType.OrganizationalChart" FixedNode="Node1" @bind-HorizontalSpacing="@_horizontalSpacing" @bind-VerticalSpacing="@_verticalSpacing" @bind-Orientation="@_orientation"></Layout>
 </SfDiagramComponent>
 @code
 {
     //Initializing the orientation value.
-    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    private LayoutOrientation _orientation = LayoutOrientation.TopToBottom;
     //Initializing the Horizontal and Vertical value.
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 50;
+    private int _horizontalSpacing = 40;
+    private int _verticalSpacing = 50;
 }
 
 ```
@@ -300,30 +300,30 @@ The following code example illustrates how to add assistants to the layout.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
-    <DataSourceSettings DataSource="DataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
-        <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
-            <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>               
+<SfDiagramComponent @ref="_diagram" Width="900px" Height="800px" >
+    <DataSourceSettings DataSource="@_dataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
+        <Layout @bind-Type="@_type" @bind-HorizontalSpacing="@_horizontalSpacing" @bind-FixedNode="@_fixedNode" @bind-Orientation="@_oreintation" @bind-VerticalSpacing="@_verticalSpacing" @bind-HorizontalAlignment="@_horizontalAlignment" @bind-VerticalAlignment="@_verticalAlignment" GetLayoutInfo="GetLayoutInfo">
+            <LayoutMargin @bind-Top="@_top" @bind-Bottom="@_bottom" @bind-Right="@_right" @bind-Left="@_left"></LayoutMargin>               
         </Layout>
         <SnapSettings></SnapSettings>
 </SfDiagramComponent>
 
 @code {
-    SfDiagramComponent diagram;
-    double top = 50;
-    double bottom = 50;
-    double right = 50;
-    double left = 50;
-    LayoutType type = LayoutType.OrganizationalChart;
-    LayoutOrientation oreintation = LayoutOrientation.BottomToTop;
-    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
-    int HorizontalSpacing = 30;
-    int VerticalSpacing = 30;
-    private string pattern;
-    Orientation subTreeOrientation = Orientation .Vertical;
-    SubTreeAlignmentType subTreeAlignment= SubTreeAlignmentType.Left;
-    private string FixedNode = null;
+    private SfDiagramComponent? _diagram;
+    private double _top = 50;
+    private double _bottom = 50;
+    private double _right = 50;
+    private double _left = 50;
+    private LayoutType _type = LayoutType.OrganizationalChart;
+    private LayoutOrientation _oreintation = LayoutOrientation.BottomToTop;
+    private HorizontalAlignment _horizontalAlignment = HorizontalAlignment.Auto;
+    private VerticalAlignment _verticalAlignment = VerticalAlignment.Auto;
+    private int _horizontalSpacing = 30;
+    private int _verticalSpacing = 30;
+    private string _pattern;
+    private Orientation _subTreeOrientation = Orientation.Vertical;
+    private SubTreeAlignmentType _subTreeAlignment = SubTreeAlignmentType.Left;
+    private string _fixedNode = null;
 
     public class HierarchicalDetails
     {
@@ -343,27 +343,27 @@ The following code example illustrates how to add assistants to the layout.
         }
         return options;
     }
-    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+    private List<HierarchicalDetails> _dataSource = new List<HierarchicalDetails>()
     {
-        new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
-        new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
-        new HierarchicalDetails()   { Id= "11", Role= "Assistant Manager", Manager= "1", Color= "#71AF17" },
-        new HierarchicalDetails()   { Id= "2", Role= "Human Resource Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-        new HierarchicalDetails()   { Id= "3", Role= "Trainers", Manager= "2", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "4", Role= "Recruiting Team", Manager= "2", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "5", Role= "Finance Asst. Manager", Manager= "2", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "6", Role= "Design Manager", Manager= "1",ChartType= "right", Color= "#1859B7" },
-        new HierarchicalDetails()   { Id= "7", Role= "Design Supervisor", Manager= "6", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "8", Role= "Development Supervisor", Manager= "6", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "9", Role= "Drafting Supervisor", Manager= "6", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "10", Role= "Operation Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-        new HierarchicalDetails()   { Id= "11", Role= "Statistic Department", Manager= "10", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "12", Role= "Logistic Department", Manager= "10", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "16", Role= "Marketing Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
-        new HierarchicalDetails()   { Id= "17", Role= "Oversea sales Manager", Manager= "16", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "18", Role= "Petroleum Manager", Manager= "16", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "20", Role= "Service Dept. Manager", Manager= "16", Color= "#2E95D8" },
-        new HierarchicalDetails()   { Id= "21", Role= "Quality Department", Manager= "16", Color= "#2E95D8" }
+        new HierarchicalDetails()   { Id = "parent", Role = "Board", Color = "#71AF17" },
+        new HierarchicalDetails()   { Id = "1", Role = "General Manager", Manager = "parent", ChartType = "right", Color = "#71AF17" },
+        new HierarchicalDetails()   { Id = "11", Role = "Assistant Manager", Manager = "1", Color = "#71AF17" },
+        new HierarchicalDetails()   { Id = "2", Role = "Human Resource Manager", Manager = "1", ChartType = "right", Color = "#1859B7" },
+        new HierarchicalDetails()   { Id = "3", Role = "Trainers", Manager = "2", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "4", Role = "Recruiting Team", Manager = "2", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "5", Role = "Finance Asst. Manager", Manager = "2", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "6", Role = "Design Manager", Manager = "1", ChartType = "right", Color = "#1859B7" },
+        new HierarchicalDetails()   { Id = "7", Role = "Design Supervisor", Manager = "6", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "8", Role = "Development Supervisor", Manager = "6", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "9", Role = "Drafting Supervisor", Manager = "6", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "10", Role = "Operation Manager", Manager = "1", ChartType = "right", Color = "#1859B7" },
+        new HierarchicalDetails()   { Id = "11", Role = "Statistic Department", Manager = "10", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "12", Role = "Logistic Department", Manager = "10", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "16", Role = "Marketing Manager", Manager = "1", ChartType = "right", Color = "#1859B7" },
+        new HierarchicalDetails()   { Id = "17", Role = "Oversea sales Manager", Manager = "16", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "18", Role = "Petroleum Manager", Manager = "16", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "20", Role = "Service Dept. Manager", Manager = "16", Color = "#2E95D8" },
+        new HierarchicalDetails()   { Id = "21", Role = "Quality Department", Manager = "16", Color = "#2E95D8" }
     };
 }
 ```
@@ -375,9 +375,9 @@ The layout can be refreshed at runtime by calling [DoLayoutAsync](https://help.s
 
 ```csharp
 //Update the layout at runtime.
-diagram.DoLayoutAsync();
+_diagram.DoLayoutAsync();
 
-//Here, diagram is instance of SfDiagramComponent.
+//Here, _diagram is instance of SfDiagramComponent.
 ```
 
 ## See also
