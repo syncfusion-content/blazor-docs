@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Code Mirror integration in Blazor RichTextEditor Component | Syncfusion
-description: Code Mirror integration support in Syncfusion Blazor RichTextEditor component and more.
+title: Code Mirror in Blazor RichTextEditor Component | Syncfusion
+description: Code Mirror in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -17,7 +17,7 @@ This guide explains how to integrate Code Mirror with the Syncfusion Blazor Rich
 
 Before proceeding, ensure you have completed the basic Rich Text Editor setup as outlined in the Getting Started guide. This includes configuring the Blazor project, installing the required packages, importing the necessary CSS files, injecting the modules, and adding the basic editor markup.
 
-Refer to the guide here: [Getting Started with Balzor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
+Refer to the guide here: [Getting Started with Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
 
 ## Key features
 
@@ -156,7 +156,7 @@ Add the script references in your host page before the closing `</body>` tag:
 
 > The host page location varies by project type. Refer to the [RichTextEditor Getting Started](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) guide for the correct host page file path.
 >
-> **Note:** The Code Mirroe CDN script must be loaded before the custom interop file to ensure proper functionality.
+> **Note:** The Code Mirror CDN script must be loaded before the custom interop file to ensure proper functionality.
 
 ## Step 4: Create the Razor Component
 
@@ -178,7 +178,7 @@ Once CodeMirror is integrated with the Rich Text Editor, you can begin using the
   Click the `Source Code` toolbar option in the Rich Text Editor to open the CodeMirror interface.
 
 - Edit HTML with Syntax Highlighting
-  The embedded CodeMirror editor provides syntax highlighting, line numbers, and theme support (Monokai, in this example).
+  The embedded CodeMirror editor provides syntax highlighting, line numbers, and theme support.
 
 - Return to WYSIWYG Mode
   When switching back to Preview or Normal mode, CodeMirror content is synchronized with the editor's main view.
