@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AutoFill in Blazor TreeGrid Component | Syncfusion
+title: AutoFill Feature in Syncfusion Blazor Tree Grid | Syncfusion
 description: Learn about the AutoFill feature in the Syncfusion Blazor Tree Grid, including how to copy cell values, drag to fill, and improve data entry efficiency.
 platform: Blazor
 control: Tree Grid
@@ -102,4 +102,5 @@ The following GIF represent a tree grid with auto fill feature.
 ## Limitations of AutoFill
 
 String values are not parsed to number or date types. Copying string-type cells into number-type cells displays NaN; into date-type cells leaves the cell empty. Linear series and sequential data generation are not supported.
+
 
