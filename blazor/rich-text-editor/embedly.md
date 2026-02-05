@@ -103,7 +103,7 @@ When a user inserts or updates a link in the RichTextEditor:
 Embedly supports embedding from a wide range of sources including:
  
 - Video platforms (YouTube, Vimeo, etc.)
-- Social media (Twitter, Instagram, Facebook, etc.)
+- Social media (Twitter, Facebook, etc.)
 - Articles and blog posts
 - Music services
 - Image galleries
