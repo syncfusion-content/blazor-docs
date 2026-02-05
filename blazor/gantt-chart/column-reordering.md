@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component supports column reordering by dragging a column header to a new position. 
 
-To enable column reordering, set the [GanttColumn.AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowReordering) property to **true** in the Gantt configuration.
+To enable column reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowReordering) property to **true** in the Gantt configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -63,7 +63,7 @@ To enable column reordering, set the [GanttColumn.AllowReordering](https://help.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoNaBoLtfvtQLH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to **false**.
+> You can disable the reordering of a particular column by setting the [GanttColumn.AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_AllowReordering) property to **false**.
 
 ## Reorder columns programmatically
 
@@ -109,9 +109,9 @@ The following demonstrates how to reorder columns by placing **Progress** before
         await this.GanttInstance.ReorderColumnsAsync(new List<string>() { "Duration" }, "Progress");
     }
 
-    public void ReorderColumn()
+    public async Task ReorderColumn()
     {
-        this.GanttInstance.ReorderColumnsAsync(new List<string>(){"TaskName", "StartDate"},"Duration");
+        await GanttInstance.ReorderColumnsAsync(new List<string>(){"TaskName", "StartDate"},"Duration");
     }
 
     public static List<TaskData> GetTaskCollection()

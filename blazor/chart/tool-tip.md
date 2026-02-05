@@ -13,13 +13,13 @@ documentation: ug
 
 When the mouse is moved over a point on the chart, the tooltip will provide information about that point.
 
-You can learn how to add tooltips to Blazor Charts by watching the video below.
+A detailed walkthrough demonstrating how to add and customize tooltip in the chart is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=4g8JTwHuTz4" %}
 
 ## Enable tooltip
 
-When space constraints prevent displaying information using data labels, the tooltip comes in useful. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) can be set to **true** to enable the tooltip.
+When space constraints prevent information from being displayed through data labels, tooltips provide an effective alternative. Tooltips can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
 
 ```cshtml
 
@@ -65,7 +65,7 @@ When space constraints prevent displaying information using data labels, the too
 
 <!-- markdownlint-disable MD013 -->
 
-By default, the tooltip displays information in points for the x and y values. In addition, further information can be displayed in the tooltip. For example, the format **$series.name $point.x** displays series name and point x-value in the tooltip.
+By default, The tooltip displays x and y values of a data point. In addition, further information can be displayed in the tooltip. For example, the format **$series.name $point.x** displays series name and point x-value in the tooltip. The format can be specified using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Format) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
 
 ```cshtml
 
@@ -335,13 +335,13 @@ By enabling the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZretJjTJXQadkbO?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZretJjTJXQadkbO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.png)" %}
 
 ## Displaying tooltip for nearest data point
 
-The [ShowNearestTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_ShowNearestTooltip) property in the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) displays tooltips for the data point nearest to the cursor. It automatically identifies and highlights the closest point within a defined interaction zone, enhancing usability and accessibility, especially when dealing with densely packed or overlapping data points.
+The [ShowNearestTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_ShowNearestTooltip) property in the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) displays tooltip for the data point nearest to the cursor. It automatically identifies and highlights the closest point within a defined interaction zone, enhancing usability and accessibility, especially when dealing with densely packed or overlapping data points.
 
-N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is set to **true** for all series. By disabling this property in a specific `ChartSeries`, you can prevent the tooltip from appearing for the nearest data point in that series.
+N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is set to **false** for all series. When this property is enabled for a specific `ChartSeries`, the tooltip is displayed for the nearest data point in that series.
 
 ```cshtml
 
@@ -390,9 +390,9 @@ N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncf
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBoZJtzTMXtrCZt?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBoZJtzTMXtrCZt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

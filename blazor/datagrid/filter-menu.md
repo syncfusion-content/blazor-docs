@@ -1354,7 +1354,7 @@ In this configuration, the `SfDateRangePicker` is rendered in the filter templat
                 Grid.FilterSettings.Columns.RemoveAll(c => c.Field == "OrderDate");
             }
             // Get all the Grid columns.
-            var columns = await Grid.GetColumns();
+            var columns = await Grid.GetColumnsAsync();
             // Fetch the Uid of OrderDate column.
             string fUid = columns[2].Uid;
             Grid.FilterSettings.Columns.Add(new GridFilterColumn
