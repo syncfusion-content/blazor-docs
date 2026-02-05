@@ -1,0 +1,190 @@
+---
+layout: post
+title: Code Mirror integration in Blazor RichTextEditor Component | Syncfusion
+description: Code Mirror integration support in Syncfusion Blazor RichTextEditor component and more.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
+# Code Mirror Integration in Blazor Rich Text Editor Component
+
+The Syncfusion Blazor Rich Text Editor includes a built‑in HTML source editor through the view-source option, enabling users to view and modify the underlying markup. To enhance this source editing experience, the Code Mirror plugin can be integrated with the editor.
+
+This guide explains how to integrate Code Mirror with the Syncfusion Blazor RichTextEditor to provide a seamless workflow that combines visual WYSIWYG editing with a rich, syntax‑highlighted HTML source editor.
+
+## Prerequisites
+
+Before proceeding, ensure you have completed the basic Rich Text Editor setup as outlined in the Getting Started guide. This includes configuring the Blazor project, installing the required packages, importing the necessary CSS files, injecting the modules, and adding the basic editor markup.
+
+Refer to the guide here: [Getting Started with Balzor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
+
+## Key features
+
+- Replace the Rich Text Editor source textarea with a Code Mirror Editor View.  
+- Preserve editor undo/redo by inserting source changes via the RTE APIs.
+
+## Step 1: Set up the Code Mirror 
+
+Install the required code mirror packages using the following command:
+
+```bash
+npm install codemirror
+```
+
+## Step 2: Add the JavaScript Interop File
+ 
+Create the JavaScript interop module to handle communication between Blazor and Code Mirror.
+ 
+### 2.1 Create the interop file
+ 
+In your Blazor project, create a new folder named `wwwroot/scripts/` and add a file called `code-mirror.js` to include the code shown below.
+
+```javascript
+window.myJsFunction = function (e, sfId) {
+    if (!window.sfBlazor || !sfBlazor.instances) {
+        console.warn('sfBlazor not available');
+        return;
+    }
+
+    const editor = sfBlazor.instances[sfId];
+    if (!editor) {
+        console.warn('Editor instance not found for ID:', sfId);
+        return;
+    }
+
+    const id = editor.dataId + 'mirror-view';
+    const rteContainer = editor.element
+        ? editor.element.querySelector('.e-rte-container')
+        : null;
+
+    if (!rteContainer) {
+        console.warn('RTE container not found');
+        return;
+    }
+
+    let mirrorView = editor.element.querySelector('#' + id);
+
+    // When user switches back from Code view to Preview
+    if (e && e.requestType === 'Preview') {
+        if (myCodeMirror) {
+            editor.value = myCodeMirror.getValue();
+        }
+        rteContainer.classList.remove('e-rte-code-mirror-enabled');
+        editor.focusIn && editor.focusIn();
+        return;
+    }
+
+    // Switch to Code view
+    rteContainer.classList.add('e-rte-code-mirror-enabled');
+    rteContainer.classList.remove('e-source-code-enabled');
+
+    // Create the host div once
+    if (!mirrorView) {
+        mirrorView = document.createElement('div');
+        mirrorView.classList.add('rte-code-mirror');
+        mirrorView.style.display = 'none';
+        mirrorView.id = id;
+        rteContainer.appendChild(mirrorView);
+
+        renderCodeMirror(mirrorView, editor.value == null ? '' : editor.value);
+    } else if (myCodeMirror) {
+        // Update with latest editor content if instance already exists
+        myCodeMirror.setValue(editor.value == null ? '' : editor.value);
+        myCodeMirror.refresh();
+    }
+
+    if (myCodeMirror) {
+        myCodeMirror.focus();
+    }
+
+    function renderCodeMirror(host, content) {
+        if (typeof window.CodeMirror === 'undefined') {
+            console.error('CodeMirror is not loaded');
+            return;
+        }
+
+        myCodeMirror = window.CodeMirror(host, {
+            value: content,
+            theme: 'monokai',
+            lineNumbers: true,
+            mode: 'text/html',
+            lineWrapping: true
+        });
+
+        myCodeMirror.refresh();
+    }
+};
+```
+ 
+### 2.2 Verify file placement
+ 
+Ensure the file is located at:
+ 
+```
+YourProject/
+└── wwwroot/
+    └── scripts/
+        └── code-mirror.js
+```
+
+## Step 3: Add Script Reference in Host Page
+
+Add the script references in your host page before the closing `</body>` tag:
+ 
+```html
+<body>
+    ...
+     <!-- CodeMirror core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" rel="stylesheet" />
+
+    <!-- CodeMirror theme (Monokai) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css" rel="stylesheet" />
+
+    <!-- CodeMirror core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+
+    <!-- CodeMirror language modes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/htmlmixed/htmlmixed.min.js"></script>
+    
+    <script src="/scripts/code-mirror.js"></script>
+    ...
+</body>
+```
+
+> The host page location varies by project type. Refer to the [RichTextEditor Getting Started](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) guide for the correct host page file path.
+>
+> **Note:** The Code Mirroe CDN script must be loaded before the custom interop file to ensure proper functionality.
+
+## Step 4: Create the Razor Component
+
+Create a new Razor component file named **`RichTextEditorWithCodeMirror.razor`** in your **Pages** directory:
+
+{% tabs %}
+{% highlight cshtml %}
+
+{% include_relative code-snippet/code-mirror.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+## How to Use the Integration
+
+Once CodeMirror is integrated with the Rich Text Editor, you can begin using the enhanced source‑editing experience immediately:
+
+- Switch to Source Mode
+  Click the `Source Code` toolbar option in the Rich Text Editor to open the CodeMirror interface.
+
+- Edit HTML with Syntax Highlighting
+  The embedded CodeMirror editor provides syntax highlighting, line numbers, and theme support (Monokai, in this example).
+
+- Return to WYSIWYG Mode
+  When switching back to Preview or Normal mode, CodeMirror content is synchronized with the editor's main view.
+
+## See also
+
+* [Rich Text Editor documentation](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started)
+* [Rich Text Editor events](https://blazor.syncfusion.com/documentation/rich-text-editor/events)
+* [Code Mirror Developer Documentation](https://codemirror.net/)
