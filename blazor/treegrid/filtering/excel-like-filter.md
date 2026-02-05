@@ -60,7 +60,7 @@ namespace TreeGridComponent.Data {
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
@@ -81,7 +81,7 @@ namespace TreeGridComponent.Data {
 
 ## Filter item template
 
-The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterItemTemplate) helps to customize each excel list element or value for display purposes. To access the excel list values inside the `FilterItemTemplate`, you can use the implicit named parameter **context** of [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) type to get list values inside template.
+The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterItemTemplate) helps to customize each excel list element or value for display purposes. To access the excel list values inside the `FilterItemTemplate`, use the implicit named parameter **context** of [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) type to get list values inside template.
 
 {% tabs %}
 
@@ -141,7 +141,7 @@ namespace TreeGridComponent.Data {
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
@@ -162,7 +162,7 @@ namespace TreeGridComponent.Data {
 
 ## Customize the height and width of filter popup
 
-You can customize the height and width of each column’s filter dialog using the CSS style in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event of the tree grid.
+The height and width of each column’s filter dialog can be customized using the CSS style in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event of the tree grid.
 
 Before opening a filter dialog for each column, the `FilterDialogOpening` event will be triggered. At that point, we can set the height and width of filter popup dynamically using CSS.
 
@@ -217,12 +217,12 @@ In the following sample we have set the height and width of the TaskId and TaskN
 
     public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
-        if(Args.ColumnName == "TaskName")
+        if(args.ColumnName == "TaskName")
         {
             IsLarge = true;
             IsSmall = false;
         }
-        else if(Args.ColumnName == "TaskId")
+        else if(args.ColumnName == "TaskId")
         {
             IsSmall = true;
             IsLarge = false;
@@ -281,11 +281,13 @@ namespace TreeGridComponent.Data {
 
 ![Customize the Height and Width of Filter Popup in Blazor Tree Grid](../images/blazor-treegrid-customize-filter-popup.gif)
 
-## Add current selection option to filter checkbox in excel filter dialog
+## Add to current filter
 
-The Excel filter currently filters only the selected items by default. However, when filtering is applied multiple times on the same column, previously filtered values are cleared. To change this behavior and retain previous filter values, we propose adding the **Add Current Selection to Filter** checkbox to the excel filter dialog.
+By default, applying a new filter to a column clears any existing filter criteria for that column. The **Add current selection to filter** option allows for progressively building a filter by combining multiple criteria.
 
-In the following sample, the **Add current selection to filter** checkbox is displayed when data is searched in the search bar of the excel filter dialog.
+When this checkbox is enabled, the newly selected items from the filter dialog are added to the existing filter, rather than replacing it. This is useful for creating a list of items that match several different conditions. For example, after filtering a `Priority` column for "Low", a user can then search for "Normal" and check **Add current selection to filter**. The Tree Grid will then display rows where the priority is either "Low" or "Normal".
+
+This checkbox is displayed in the Excel filter dialog only after a search has been initiated in the dialog's search bar.
 
 {% tabs %}
 

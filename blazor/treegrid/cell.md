@@ -83,9 +83,10 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
-    <TreeGridEvents QueryCellInfo="querycellinfo" TValue="TreeData"></TreeGridEvents>
+       <TreeGridEvents QueryCellInfo="querycellinfo" TValue="TreeData.BusinessObject"></TreeGridEvents>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="90" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="100"></TreeGridColumn>
@@ -108,25 +109,23 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 
 @code{
 
-    public List<TreeData> TreeGridData { get; set; }
+    public List<TreeData.BusinessObject> TreeGridData { get; set; }
 
     protected override void OnInitialized()
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
-
-    private void querycellinfo(QueryCellInfoEventArgs<TreeData> Args)
+    private void querycellinfo(QueryCellInfoEventArgs<TreeData.BusinessObject> Args)
     {
-        if (Args.Column.Field == "Progress" && Args.Data.Progress > 70 && Args.Data.Progress <= 100)
+        var progress = Args?.Data?.Progress ?? 0;
+        if (Args?.Column?.Field == "Progress" && progress > 70 && progress <= 100)
         {
-            String[] s1 = new String[1] { "intro" };
-            Args.Cell.AddClass(s1);
-            }
-        else if (Args.Column.Field == "Progress" && Args.Data.Progress > 20)
+            Args?.Cell?.AddClass("intro");
+        }
+        else if (Args?.Column?.Field == "Progress" && progress > 20)
         {
-            String[] s2 = new String[1] { "intro1" };
-            Args.Cell.AddClass(s2);
-            }
+            Args?.Cell?.AddClass("intro1");
+        }
     }
 }
 
@@ -236,11 +235,11 @@ public class TreeData
 
 {% endtabs %}
 
-![Blaor TreeGrid with Auto Wrap](images/blazor-treegrid-auto-wrap.png)
+![Blazor TreeGrid with Auto Wrap](images/blazor-treegrid-auto-wrap.png)
 
 ## Grid lines
 
-The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GridLines) have option to display cell border and it can be defined by the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GridLines) property.
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GridLines) option controls the display of cell borders and is set via the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GridLines) property.
 
 The available modes of grid lines are:
 
