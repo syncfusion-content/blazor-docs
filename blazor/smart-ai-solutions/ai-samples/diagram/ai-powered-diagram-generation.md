@@ -1,6 +1,17 @@
-# Creating AI-Powered Diagrams in Blazor using Syncfusion Diagram
+---
+layout: post
+title: AI powered Diagram Generation with Blazor Diagram and AI models | Syncfusion
+description: Generate Flow charts, Mind maps and Sequence diagrams using OpenAI, Azure OpenAI, or Ollama with Syncfusion Blazor Diagram. Explore to more details.
+platform: Blazor
+control: AI Integration
+documentation: ug
+keywords: Blazor Diagram, AI embeddings, Memarid, Syncfusion Blazor AI
+--- 
 
-The Syncfusion Blazor Diagram Component can be enhanced with AI-driven features by using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide explains how to create Flowcharts, Mind Maps, and Sequence Diagrams using AI in the Syncfusion Blazor Diagram component. You can use different AI services such as `OpenAI`, `Azure OpenAI`, or `Ollama`. Users can enter natural-language text, and AI automatically generates and renders diagrams.
+
+# Generating AI-Powered Blazor Diagram
+
+The Syncfusion Blazor Diagram Component can be enhanced with AI-driven features by using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide explains how to create Flowchart, Mind Map, and Sequence Diagram using AI within the Syncfusion Blazor Diagram component. Different AI services can be utilized, such as **OpenAI**, **Azure OpenAI,** or **Ollama**. Natural-language text input enables AI to automatically generate and render diagrams.
 
 ## Prerequisites
 
@@ -12,11 +23,12 @@ The Syncfusion Blazor Diagram Component can be enhanced with AI-driven features 
 
 ## How to Create a Blazor Application
 
-To create a Blazor application, follow the Getting Started documentation for [Web App](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app), [Server](https://blazor.syncfusion.com/documentation/diagram/getting-started), [WASM](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-wasm-app), [MAUI](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-maui-app).
+To create a Blazor application, follow the "Getting Started" documentation for [Web App](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app), [Server](https://blazor.syncfusion.com/documentation/diagram/getting-started), [WASM](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-wasm-app), and [MAUI](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-maui-app).
+
 
 ## Install Required NuGet Packages
 
-Ensure the following Syncfusion and AI NuGet packages are installed based on the selected AI service.
+Installation of the following Syncfusion and AI NuGet packages is required, based on the chosen AI service.
 
 {% tabcontents %}
 {% tabcontent Syncfusion Packages %}
@@ -47,39 +59,21 @@ Ensure the following Syncfusion and AI NuGet packages are installed based on the
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Add stylesheet and script resources
-
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference to the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
-
-```html
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-....
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-```
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Configure AI service and Syncfusion Blazor service
 
-Choose one of the following AI services (OpenAI, Azure OpenAI, or Ollama) based on requirements:
+One of the following AI services (OpenAI, Azure OpenAI, or Ollama) should be selected based on project requirements:
 
-* `OpenAI`: Cloud-based, general-purpose AI models with minimal setup.
-* `Azure OpenAI`: Enterprise-grade deployment with enhanced security and scalability.
-* `Ollama`: Self-hosted, privacy-focused AI models.
+* **OpenAI**: Cloud-based, general-purpose AI models with minimal setup.
+* **Azure OpenAI**: Enterprise-grade deployment with enhanced security and scalability.
+* **Ollama**: Self-hosted, privacy-focused AI models.
 
-Follow the instructions for the selected service to register the Syncfusion and AI model in the application.
+Instructions for the chosen service should be followed to register the Syncfusion and AI model within the application.
 
 ### OpenAI
 
-Generate an API key from `OpenAI` and set `openAIAPIKey`. Specify the desired model (for example, gpt-3.5-turbo, gpt-4) in `openAIModel`.
+An API key from **OpenAI** needs to be generated and assigned to `openAIAPIKey`. The desired model (e.g., gpt-3.5-turbo, gpt-4) should be specified for `openAIModel`.
 
-Add the following code to the `~/Program.cs` file:
+Add the following code to the **~/Program.cs** file:
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="10 13-17 20" %}
@@ -91,18 +85,15 @@ using Syncfusion.Blazor.SmartComponents;
 using OpenAI;
 
 ....
-
+var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
 
 // Register OpenAI credentials
-string openAIAPIKey = "OPENAI_API_KEY"; // Use secure storage
+string openAIAPIKey = "OPENAI_API_KEY";
 string openAIModel = "OPENAI_MODEL"; // Specify a valid OpenAI model e.g "gpt-4".
 OpenAIClient openAIClient = new OpenAIClient(openAIAPIKey);
 IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
 builder.Services.AddChatClient(openAIChatClient);
-
-// Register the inference service
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();    
 
 {% endhighlight %}
 
@@ -134,10 +125,8 @@ AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
 IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
 builder.Services.AddChatClient(azureOpenAIChatClient);
 
-// Register the inference service
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-
 var app = builder.Build();
+...
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,9 +135,9 @@ var app = builder.Build();
 
 To use Ollama for self-hosted AI models:
 
-1. **Download and install Ollama**: Visit [Ollama's official website](https://ollama.com) and install the application for the operating system.
-2. **Install a model**: Choose a model from the [Ollama Library](https://ollama.com/library) (for example, `llama2:13b`, `mistral:7b`).
-3. **Configure the application**: Provide the `Endpoint` URL (for example, `http://localhost:11434`) and `ModelName` (for example, `llama2:13b`).
+1. **Download and install Ollama**: Visit [Ollama's official website](https://ollama.com), then install the application for the operating system.
+2. **Install a model**: A model should be chosen from the [Ollama Library](https://ollama.com/library) (for example, `llama2:13b`, `mistral:7b`).
+3. **Configure the application**: The endpoint URL (for example, `http://localhost:11434`) and modelName (for example, `llama2:13b`) need to be provided.
 
 Add the following code to the **~/Program.cs** file:
 
@@ -163,8 +152,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Register Syncfusion blazor service
 builder.Services.AddSyncfusionBlazor();
 
-string ModelName = "MODEL_NAME";
-IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
+string modelName = "MODEL_NAME";
+IChatClient chatClient = new OllamaApiClient("http://localhost:11434", modelName);
 builder.Services.AddChatClient(chatClient);
 
 // Register the inference service
@@ -175,23 +164,21 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-- **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
+>Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
 ## Integrated Diagram with AI
 
 The following diagram features are supported through AI generation:
 
-* Flow chart
-* Mind map
-* Sequence diagram
+* Flowchart
+* Mind Map
+* Sequence Diagram
 
-Each features is generated by varying the AI prompt while maintaining the same rendering pipeline.
-
-This section demonstrates how to integrate the Diagram component with AI, using Flowchart layout creation as an example.
+Each feature is generated by varying the AI prompt while maintaining a consistent rendering pipeline. This section demonstrates the integration of the Diagram component with AI, with Mind Map layout creation serving as an example.
 
 ### Adding the Diagram UI
 
-Create the `Home.razor` file in the `Pages` folder and add the Diagram component.
+Create the **Home.razor** file in the **Pages** folder and add the Diagram component.
 
 {% highlight C# tabtitle="Home.razor" %}
 @using Syncfusion.Blazor.Diagram
@@ -202,7 +189,7 @@ Create the `Home.razor` file in the `Pages` folder and add the Diagram component
 <div style="border: 2px solid #ccc;">
     <div class="diagram-area">
         <SfDiagramComponent ID="diagram-area" @ref="@Diagram" @bind-Height="height" @bind-Width="width">
-            <Layout @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Type="@layoutType"></Layout>
+            <Layout @bind-HorizontalSpacing="@horizontalSpacing" @bind-VerticalSpacing="@verticalSpacing" @bind-Type="@layoutType"></Layout>
             <SfSpinner @ref="@SpinnerRef" Label="Generating diagram...." Type="@SpinnerType.Bootstrap"> </SfSpinner>
         </SfDiagramComponent>
     </div>
@@ -218,8 +205,8 @@ Create the `Home.razor` file in the `Pages` folder and add the Diagram component
     private LayoutType layoutType = LayoutType.FlowChart;
     private string height = "700px";
     private string width = "100%";
-    private int VerticalSpacing = 20;
-    private int HorizontalSpacing = 80;
+    private int verticalSpacing = 20;
+    private int horizontalSpacing = 80;
     
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -235,7 +222,7 @@ Create the `Home.razor` file in the `Pages` folder and add the Diagram component
 
 ### Adding the AI Assist UI
 
-* Create the `DiagramOpenAI.razor` component to add the `AI Assist` button using the [SfFab](https://blazor.syncfusion.com/documentation/floating-action-button/getting-started-with-web-app) component. When the button is clicked, the AI Assist dialog opens and displays suggested prompts, along with an option for the user to enter a custom prompt to generate a diagram.
+Create the **DiagramOpenAI.razor** component to add the **AI Assist** button using the [SfFab](https://blazor.syncfusion.com/documentation/floating-action-button/getting-started-with-web-app) component. Clicking this button opens the **AI Assist** dialog, which displays suggested prompts and provides an option for a custom prompt to generate a diagram.
 
 {% tabs %}
 {% highlight C# tabtitle="DiagramOpenAI.razor" %}
@@ -263,6 +250,7 @@ Create the `Home.razor` file in the `Pages` folder and add the Diagram component
     </DialogTemplates>
     <DialogEvents Closed="@DialogClose"></DialogEvents>
 </SfDialog>
+
 {% endhighlight %}
 
 {% highlight C# tabtitle="DiagramOpenAI.razor.cs" %}
@@ -273,9 +261,9 @@ namespace TextToMindMapDiagram
         public Home Parent;
         public bool ShowAIAssistDialog = false;
         public string OpenAIPrompt;
-        string MobileBankingPrompt = "Mindmap diagram for Mobile banking registration";
-        string OrganizationalResearchPrompt = "Mindmap diagram for Organizational research";
-        string MeetingAgendaPrompt = "Mindmap diagram for Meeting agenda";
+        public string MobileBankingPrompt = "Mindmap diagram for Mobile banking registration";
+        public string OrganizationalResearchPrompt = "Mindmap diagram for Organizational research";
+        public string MeetingAgendaPrompt = "Mindmap diagram for Meeting agenda";
         public void OnFabClicked()
         {
             ShowAIAssistDialog = !ShowAIAssistDialog;
@@ -284,17 +272,15 @@ namespace TextToMindMapDiagram
         {
             ShowAIAssistDialog = false;
         }
-
         public async void GenerateMindMap(string value)
         {
             OpenAIPrompt = value;
             await GetResponseFromAI();
             StateHasChanged();
         }
-
         public async Task GetResponseFromAI()
         {
-           // refer the code in below topic
+           // Please refer to the next topic for the code implementation
         }
     }
 }
@@ -305,7 +291,7 @@ namespace TextToMindMapDiagram
 
 ### AI-Driven Diagram Generation Workflow
 
-* When the user clicks the `Generate` button inside the AI Assist dialog, the `GetResponseFromAI` method is invoked. This method identifies the current diagram features based on layout types (mind map, flowchart, or sequence) and constructs the appropriate system and user prompts. It then calls the AI service using `GetCompletionAsync` method to obtain either Mermaid syntax or tab-indented mind-map lines, sanitizes the AI response by removing code fences and non-Mermaid content, and extracts the valid Mermaid portion. Finally, the extracted Mermaid text is loaded into the Diagram using the [LoadDiagramFromMermaidAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramFromMermaidAsync_System_String_) method.
+When the **Generate** button within the **AI Assist** dialog is clicked, the `GetResponseFromAI` method is invoked. This method identifies current diagram features based on layout types (Mind Map, Flowchart, and Sequence Diagram) and constructs the appropriate system and user prompts. Subsequently, the AI service is called using the `GetCompletionAsync` method to obtain either Mermaid syntax or tab-indented Mind Map lines. The AI response is then sanitized by removing code fences and non-Mermaid content, and the valid Mermaid portion is extracted. Finally, the extracted Mermaid text is loaded into the Diagram using the [LoadDiagramFromMermaidAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramFromMermaidAsync_System_String_) method.
 
 {% tabs %}
 {% highlight C# tabtitle="DiagramOpenAI.razor.cs" %}
@@ -338,13 +324,12 @@ public async Task GetResponseFromAI()
             userPrompt = $"Create a Mermaid flowchart code for the process titled: {OpenAIPrompt}. Include decision points and Yes/No branches. Return only Mermaid code.";
             mermaidStartText = "graph TD";
         }
-        else // Sequence diagram
+        else
         {
-            systemRole = "You are an expert at generating Mermaid sequenceDiagram code. Return ONLY Mermaid sequenceDiagram text.";
-            userPrompt = $"Create a Mermaid sequenceDiagram for: {OpenAIPrompt}. Return only Mermaid code.";
-            mermaidStartText = "sequenceDiagram";
+            systemRole = "You are an expert at generating Mermaid sequence diagram code. Return ONLY Mermaid sequence diagram text.";
+            userPrompt = $"Create a Mermaid sequence diagram for: {OpenAIPrompt}. Return only Mermaid code.";
+            mermaidStartText = "sequencediagram";
         }
-        
         result = await DiagramAIService.GetCompletionAsync(userPrompt, false, systemRole);
         if (result != null)
         {
@@ -379,7 +364,6 @@ namespace AIService
         {
             this._chatClient = client ?? throw new ArgumentNullException(nameof(client));
         }
-
         /// <summary>
         /// Gets a text completion from the Azure OpenAI service.
         /// </summary>
@@ -406,7 +390,6 @@ namespace AIService
                 return "";
             }
         }
-
         public async Task<string> GetChatResponseAsync(ChatParameters options)
         {
             ChatOptions completionRequest = new ChatOptions
@@ -436,20 +419,20 @@ namespace AIService
 
 ## Run the Application
 
-* Start the application to load the empty diagram and the AI Assist button.
-* Click the AI Assist button to open the dialog.
-* Choose a suggested prompt or type own prompt in the text box.
-* Click the Generate (send) button to create the diagram.
-* A loading spinner appears while the AI processes the prompt.
-* Once processing is complete, the generated diagram is displayed.
+- The application should be started to load the empty diagram and the **AI Assist** button.
+- The **AI Assist** button needs to be clicked to open the dialog.
+- A suggested prompt can be chosen, or a custom prompt can be entered into the text box.
+- The **Generate** (send) button should be clicked to create the diagram.
+- A loading spinner is displayed during AI prompt processing.
+- Upon completion of processing, the generated diagram is displayed.
 
->Note: To generate a Mind Map or Flowchart, the [Layout.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property must be set to **Layout.MindMap** or **Layout.FlowChart**. When generating a `Sequence Diagram`, you do not need to set the layout type.
+>Note: To generate a Mind Map or Flowchart, the [Layout.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property must be set to **Layout.MindMap** or **Layout.FlowChart**. When generating a **Sequence Diagram**, setting the layout type is not required. 
 
 ## Error handling and troubleshooting
 
 If the AI service fails to return a valid response, the Diagram displays an error message ("Oops! Please try again!"). Common issues include:
 
-- **Invalid API key or endpoint**: Verify that `openAIApiKey`, `azureOpenAIKey`, or the Ollama `Endpoint` is correct and the service is accessible.
+- **Invalid API key or endpoint**: Verify that `openAIApiKey`, `azureOpenAIKey`, or the Ollama endpoint is correct and the service is accessible.
 - **Model unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
 - **Network issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
@@ -462,7 +445,7 @@ A complete working example is available in the [Syncfusion Blazor AI Samples Git
 
 Explore the AI-powered Smart Diagram in action by visiting the live demo:
 
-👉 [Try the Live Demo for Flow Chart](https://blazor.syncfusion.com/demos/diagram/ai-text-to-flowchart?theme=fluent2)
+👉 [Try the Live Demo for Flowchart](https://blazor.syncfusion.com/demos/diagram/ai-text-to-flowchart?theme=fluent2)
 👉 [Try the Live Demo for Mind Map](https://blazor.syncfusion.com/demos/diagram/ai-text-to-mindmap?theme=fluent2)
 👉 [Try the Live Demo for Sequence Diagram](https://blazor.syncfusion.com/demos/diagram/ai-text-to-sequence-diagram?theme=fluent2)
 
@@ -471,4 +454,4 @@ Explore the AI-powered Smart Diagram in action by visiting the live demo:
 * [Getting Started with Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app)
 * [Flowchart Layout in Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/layout/flowchart-layout)
 * [Mind Map Layout in Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/layout/mind-map)
-* [Sequence Diagram Model in Blazor diagram component](https://blazor.syncfusion.com/documentation/diagram/uml-sequence-diagram)
+* [Sequence Diagram Model in Blazor Diagram component](https://blazor.syncfusion.com/documentation/diagram/uml-sequence-diagram)
