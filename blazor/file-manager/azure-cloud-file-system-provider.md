@@ -36,14 +36,14 @@ public AzureProviderController(IHostingEnvironment hostingEnvironment)
 }
 ```
 
-N> The **blobPath** represents a container path in Azure Blob Storage, and **filePath** refers to the file location path. For example, create a container named **files** in the specified Azure Blob Storage account. Inside that container, create a folder named **Files** that contains all the files and folders to be displayed in the File Manager. Refer to the following paths as an example.
+N> The **blobPath** represents a container path in Azure Blob Storage, and **filePath** refers to the file location path. For example, create a container named **blob** in the specified Azure Blob Storage account. Inside that container, create a folder named **Files** that contains all the files and folders to be displayed in the File Manager. Refer to the following paths as an example.
 
 ```csharp
 public AzureProviderController(IHostingEnvironment hostingEnvironment)
 {
     this.operation = new AzureFileProvider();
-    blobPath = "https://azure_service_account.blob.core.windows.net/files/";
-    filePath = "https://azure_service_account.blob.core.windows.net/files/Files";
+    blobPath = "https://azure_service_account.blob.core.windows.net/blob/";
+    filePath = "https://azure_service_account.blob.core.windows.net/blob/Files";
     ...
 }
 ``` 
