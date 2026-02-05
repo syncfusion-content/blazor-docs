@@ -8,7 +8,6 @@ documentation: ug
 keywords: Blazor Diagram, AI embeddings, Memarid, Syncfusion Blazor AI
 --- 
 
-
 # Generating AI-Powered Blazor Diagram
 
 The Syncfusion Blazor Diagram Component can be enhanced with AI-driven features by using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide explains how to create Flowchart, Mind Map, and Sequence Diagram using AI within the Syncfusion Blazor Diagram component. Different AI services can be utilized, such as **OpenAI**, **Azure OpenAI,** or **Ollama**. Natural-language text input enables AI to automatically generate and render diagrams.
