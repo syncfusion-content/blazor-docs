@@ -363,7 +363,7 @@ namespace AIService
 
         public AzureAIService(IChatClient client)
         {
-            this._chatClient = client ?? throw new ArgumentNullException(nameof(client));
+            this._chatClient = client;
         }
         /// <summary>
         /// Gets a text completion from the Azure OpenAI service.
