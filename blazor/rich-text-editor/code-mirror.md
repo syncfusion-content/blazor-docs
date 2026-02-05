@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Code Mirror in Blazor RichTextEditor Component | Syncfusion
-description: Code Mirror in Syncfusion Blazor RichTextEditor
+description: Learn how to integrate CodeMirror with the Syncfusion Blazor Rich Text Editor to enable advanced code editing, syntax highlighting, and formatting.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
