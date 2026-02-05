@@ -9,7 +9,7 @@ documentation: ug
 
 # Adaptive Layout in Blazor Charts Component
 
-Adaptive layout in Blazor Charts ensures optimal display of chart elements on mobile devices and screens with limited space. By enabling the `EnableAdaptiveRendering` property, the chart automatically adjusts to container size changes, maintaining clear alignment and visibility for elements such as legend, axis titles, axis labels, data labels, chart title, and more.
+Adaptive layout in Blazor Charts ensures optimal display of chart elements on mobile devices and screens with limited space. By enabling the [EnableAdaptiveRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_EnableAdaptiveRendering) property, the chart automatically adjusts to container size changes, maintaining clear alignment and visibility for elements such as legend, axis titles, axis labels, data labels, chart title, and more.
 
 ```cshtml
 
@@ -91,7 +91,7 @@ The table below outlines the behavior of chart elements based on chart height an
 | Zoom Toolkit | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Zoom toolkit is disabled |
 | Datalabel <br> (Column and Bar Chart Types)| | Datalabel rotates based on rectangle size; hidden if it exceeds available size |
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
