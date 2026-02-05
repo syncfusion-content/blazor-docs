@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Code Mirror in Blazor RichTextEditor Component | Syncfusion
-description: Code Mirror in Syncfusion Blazor RichTextEditor component and more.
+description: Code Mirror in Syncfusion Blazor RichTextEditor
 platform: Blazor
 control: RichTextEditor
 documentation: ug
