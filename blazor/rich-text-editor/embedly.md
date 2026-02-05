@@ -81,7 +81,7 @@ Copy the complete component implementation from:
  
 ## How to Use the Integration
  
-1. **Navigate to the component** — Open the page where you created the component (e.g., `/embedlyintegration`)
+1. **Navigate to the component** — Open the page where you created the component (e.g., `/embedly-integration`)
 2. **Insert a link** — Use the RichTextEditor's link tool to insert a URL
 3. **View embed card** — The link automatically renders as an Embedly embed card
 4. **Interact with content** — Click on the embed card to interact with the content (watch videos, view articles, etc.)
@@ -102,7 +102,7 @@ When a user inserts or updates a link in the RichTextEditor:
  
 Embedly supports embedding from a wide range of sources including:
  
-- Video platforms (YouTube, Vimeo, etc.)
+- Video platforms (YouTube, Video, etc.)
 - Social media (Twitter, Facebook, etc.)
 - Articles and blog posts
 - Music services
