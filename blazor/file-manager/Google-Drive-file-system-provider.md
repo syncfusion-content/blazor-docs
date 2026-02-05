@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Google Drive provider in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Google Drive file system provider in Syncfusion Blazor File Manager component and more.
+description: Check out and learn about the Google Drive file system provider in the Syncfusion Blazor File Manager component.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -11,14 +11,11 @@ documentation: ug
 
 To get started with the Google Drive file system provider, ensure that you have a Google account, a project created in the Google API Console with the Google Drive API enabled, and OAuth 2.0 client credentials (**client ID** and **client secret**) downloaded as a `client_secret.json` file.
 
-The Google Drive file system provider allows users to manage files and folders in their Google Drive account. It operates on an ID-based system where each file and folder has a unique ID. To begin, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider) using the following command.
+The Google Drive file system provider allows users to manage files and folders in their Google Drive account. It operates on an ID-based system where each file and folder has a unique ID. To begin, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider) using the following command.
 
-```
-
-git clone https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider  ej2-google-drive-aspcore-file-provider
-
+```bash
+git clone https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider ej2-google-drive-aspcore-file-provider
 cd ej2-google-drive-aspcore-file-provider
-
 ```
 The Google Drive file system provider uses the [Google Drive APIs](https://developers.google.com/drive/api/v3/reference/) for file access, and [OAuth 2.0](https://developers.google.com/identity/protocols/OAuth2) for authentication and authorization.
 
@@ -27,7 +24,7 @@ To authenticate from the client side, you need to obtain OAuth 2.0 client creden
 **Steps to Generate OAuth 2.0 Credentials:**
 
 * Log in to the [Google Cloud Console](https://console.cloud.google.com/).
-* Tap on the drop-down button and select **New project**.
+* Select the drop-down list and choose **New project**.
 * Enable the **Google Drive API** for your project by navigating to **APIs & Services → Library**, then selecting **Google Drive API → Enable**.
 * Configure the project by selecting the **OAuth consent screen** option. Complete the steps under **App Information, Audience, Contact Information, and Finish** by clicking **Get Started** in the displayed window.
 * After completing the above details, click the **Create OAuth client** button. Choose either **Desktop app** or **Web application** as appropriate.
@@ -41,8 +38,7 @@ After downloading the `client_secret.json`, copy it into the following paths of 
 
 After updating the credentials, build and run the project. The project will be hosted at `http://localhost:{port}`, and it will prompt you to sign in with the Google account for which you created the client credentials. Then, grant permission to access Google Drive files by clicking the allow access button on the page. Next, map the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods to manage files in Google Drive.
 
-```cshtml
-
+```razor
 @*Initializing File Manager with Google Drive file system service.*@
 
 @* Replace the hosted port number in the place of "{port}" *@
@@ -58,6 +54,6 @@ After updating the credentials, build and run the project. The project will be h
 
 To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Google Drive file system provider, you need to initialize the Google Drive file system provider in the controller.
 
-To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operation code available in `GoogleDriveProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider/blob/master/EJ2GoogleDriveFileProvider/Controllers/GoogleDriveProviderController.cs). Additionally, you can check out all the required file operation method details for this provider in the same GitHub repository.
+To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from [GoogleDriveProviderController.cs](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider/blob/master/EJ2GoogleDriveFileProvider/Controllers/GoogleDriveProviderController.cs).
 
-N> To learn more about the file actions that you can perform with the Google Drive file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider#key-features)
+N> To learn more about the file actions supported by the Google Drive file system provider, refer to the [key features](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider#key-features).

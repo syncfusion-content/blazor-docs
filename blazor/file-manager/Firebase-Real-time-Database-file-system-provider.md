@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Firebase provider in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Firebase file system provider in Syncfusion Blazor File Manager component and more.
+description: Check out and learn about the Firebase file system provider in the Syncfusion Blazor File Manager component.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 To get started with the Firebase file system provider, ensure that you have a Firebase project, Firebase Realtime Database created, and a service account key (JSON) generated from the Firebase console.
 
-The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides an efficient way to store the File Manager file system in a cloud database as JSON representation.
+The [Firebase Realtime Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides an efficient way to store the File Manager file system in a cloud database as a JSON representation.
 
 ### Generate a service account key
 
@@ -35,7 +35,7 @@ Follow these steps to generate and download the service account key:
 
 To integrate with Firebase Realtime Database, create a database under **Firebase Realtime Database** and configure the **read** and **write** permissions by specifying the rules in the **Rules** tab as shown in the following example.
 
-N> By default, rules of a Firebase project will be **false**. To read and write the data, configure the **Rules** as given in the following code snippet in the *Rules* tab in the Firebase Real time Database project.
+N> By default, Firebase Realtime Database rules are set to `false`. To read and write data, configure the **Rules** as shown in the following snippet in the *Rules* tab.
 
 ```json
 {
@@ -111,36 +111,31 @@ In the **Data** tab of your Firebase Realtime Database, locate the project's **A
 
 ![Firebase Database in Blazor FileManager](images/blazor-filemanager-database.png)
 
-After that, clone the [EJ2.ASP.NET Core Firebase Realtime Database File Provider](https://github.com/SyncfusionExamples/ej2-firebase-realtime-database-aspcore-file-provider), open the project in Visual Studio, and restore the NuGet packages.
+After that, clone the [EJ2.ASP.NET Core Firebase Realtime Database File Provider](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider), open the project in Visual Studio, and restore the NuGet packages.
 
 Register Firebase Realtime Database by assigning the **Firebase Realtime Database REST API URL**, **rootNode**, and **serviceAccountKeyPath** parameters in the `RegisterFirebaseRealtimeDB` method of the `FirebaseRealtimeDBFileProvider` class in the controller part of the ASP.NET Core application, in the `FirebaseProviderController.cs` file.
 
 ```csharp
-
 this.operation.RegisterFirebaseRealtimeDB("<---API URL--->", "<---RootNode--->", Path.Combine(hostingEnvironment.ContentRootPath, "FirebaseRealtimeDBHelper", "access_key.json"));
-
 ```
 
 **Example:**
 
 ```csharp
-
 this.operation.RegisterFirebaseRealtimeDB("https://filemanager-c0f6d.firebaseio.com/", "Files", Path.Combine(hostingEnvironment.ContentRootPath, "FirebaseRealtimeDBHelper", "access_key.json"));
-
 ```
 
 In the above code,
 
-* `https://filemanager-c0f6d.firebaseio.com/` denotes Firebase Real time Database REST API link.
+* `https://filemanager-c0f6d.firebaseio.com/` denotes the Firebase Realtime Database REST API URL.
 
-* `Files` denotes newly created root node in Firebase Real time Database.
+* `Files` denotes the root node created in Firebase Realtime Database.
 
-* `{give the service account key path}` denotes service account key path which has authentication key for the Firebase Real time Database data.
+* `access_key.json` is the service account key used to authenticate to Firebase Realtime Database.
 
-After configuring the Firebase Real time Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows you to manage the files in the Firebase Real time Database.
+After configuring the Firebase Realtime Database service link, build and run the project. The project will be hosted at `http://localhost:{port}`. By mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods, you can manage files in Firebase Realtime Database.
 
-```cshtml
-
+```razor
 @*Initializing File Manager with Firebase Realtime Database service*@
 
 @* Replace the hosted port number in the place of "{port}" *@
@@ -152,12 +147,10 @@ After configuring the Firebase Real time Database service link, build and run th
                              GetImageUrl="http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeGetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
-
-
 ```
 
 To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Firebase file system provider, you need to initialize the Firebase file system provider in the controller.
 
-To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operation code available in the `FirebaseProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider/blob/master/Controllers/FirebaseProviderController.cs). Additionally, you can check out all the required file operation method details for this provider in the same GitHub repository.
+To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from [FirebaseProviderController.cs](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider/blob/master/Controllers/FirebaseProviderController.cs).
 
-N> To learn more about file actions that you can perform with Firebase file system provider, refer to this [link](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider#key-features)
+N> To learn more about the file actions supported by the Firebase file system provider, refer to the [key features](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider#key-features).
