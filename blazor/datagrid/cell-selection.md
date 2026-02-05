@@ -497,6 +497,117 @@ public class OrderDetails
 
 > Cell selection requires the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be set to **Cell** or **Both**, and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be set to **Multiple**.
 
+### Range of Cell selection
+
+Range selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of a continuous set of cells within the grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on a specific range of data.
+
+To achieve range of cell selection, use the [SelectCellsByRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsByRangeAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_ValueTuple_System_Int32_System_Int32___) method. This method selects cells between the specified start and end indexes.
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Inputs
+
+<div style="margin-bottom:5px">
+    <label style="margin: 5px 5px 0 0"> Enter the start row index:</label>
+    <SfNumericTextBox TValue="int" @bind-Value="@StartRowIndexValue" Width="150px"></SfNumericTextBox>
+</div>
+<div style="margin-bottom:5px">
+    <label style="margin: 5px 5px 0 0"> Enter the start column index:</label>
+    <SfNumericTextBox TValue="int" @bind-Value="@StartColumnIndexValue" Width="150px"></SfNumericTextBox>
+</div>
+<div style="margin-bottom:5px">
+    <label style="margin: 5px 5px 0 0"> Enter the end row index:</label>
+    <SfNumericTextBox TValue="int" @bind-Value="@EndRowIndexValue" Width="150px"></SfNumericTextBox>
+</div>
+<div style="margin-bottom:5px">
+    <label style="margin: 5px 5px 0 0"> Enter the end column index:</label>
+    <SfNumericTextBox TValue="int" @bind-Value="@EndColumnIndexValue" Width="150px"></SfNumericTextBox>
+</div>
+<div style="margin-bottom:5px">
+    <SfButton OnClick="SelectCells">Select range of Cell</SfButton>
+</div>
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public int StartRowIndexValue;
+    public int StartColumnIndexValue;
+    public int EndRowIndexValue;
+    public int EndColumnIndexValue;
+
+    public async Task SelectCells()
+    {
+        await Grid.ClearCellSelectionAsync();
+
+        await Grid.SelectCellsByRangeAsync((StartRowIndexValue, StartColumnIndexValue), (EndRowIndexValue, EndColumnIndexValue));
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerId, double freight, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.Freight = freight;
+        this.ShipCountry = shipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhxDVDSWiClYPGH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Get selected row cell indexes
 
 The Syncfusion Blazor DataGrid provides a method to retrieve the collection of selected row and cell indexes for the currently selected cells. This is useful for performing actions or applying logic based on selected cell positions.
