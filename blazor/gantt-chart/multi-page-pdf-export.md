@@ -9,7 +9,7 @@ documentation: ug
 
 # Multi-Page PDF Export with Scaling in Blazor Gantt Chart
 
-Multi-page PDF export supports flexible scaling options and configurable header/footer alignment, allowing the Gantt Chart to be distributed across multiple pages with precise control over how content is resized and paginated. Multi-page export and scaling behavior can be configured using the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
+Multi-page PDF export supports flexible scaling options, allowing the Gantt Chart to be distributed across multiple pages with precise control over how content is resized and paginated. Multi-page export and scaling behavior can be configured using the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
 
 ## Enabling Multi-Page PDF Export
 
