@@ -697,7 +697,7 @@ The following example demonstrates how to repeat the column headers on every pag
         {
             PdfExportProperties ExportProperties = new PdfExportProperties();
             ExportProperties.IsRepeatHeader = true; // Repeats the Grid's header on every page in the PDF document.
-            await this.DefaultGrid.PdfExport(ExportProperties);
+            await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }
     protected override void OnInitialized()
@@ -760,4 +760,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLyXTCdVQgRVfzE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVINuLIyMVDkBoc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

@@ -34,7 +34,7 @@ The following example demonstrates how to enable or disable the Grid and its act
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfButton CssClass="e-flat" @onclick="ToggleGrid">
+<SfButton CssClass="e-flat" onclick="ToggleGrid">
     @(isGridDisabled? "Enable Grid" : "Disable Grid")
 </SfButton>
 
