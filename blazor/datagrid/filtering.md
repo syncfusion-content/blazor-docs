@@ -214,7 +214,7 @@ To apply an initial filter with multiple values for the same column, define the 
 
     public async Task DataBoundHandler()
     {
-        var columns = await Grid.GetColumns();
+        var columns = await Grid.GetColumnsAsync();
 
         if (columns != null && Initialrender == true)
         {
@@ -337,7 +337,7 @@ To apply an initial filter with multiple values for different columns, define th
 
     public async Task DataBoundHandler()
     {
-        var columns = await Grid.GetColumns();
+        var columns = await Grid.GetColumnsAsync();
 
         if (columns != null && Initialrender == true)
         {
