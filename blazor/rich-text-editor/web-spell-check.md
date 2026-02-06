@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spell Checker in Blazor RichTextEditor Component | Syncfusion
-description: Spell Checker support in Syncfusion Blazor RichTextEditor component and more.
+description: Learn how to integrate WProofreader spell-checking support into the Syncfusion Blazor Rich Text Editor, including setup steps, package installation, and usage.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -30,7 +30,7 @@ Refer to the guide here: [Getting Started with Blazor Rich Text Editor](https://
 
 ## Step 1: Set up the WProofreader sdk
 
-For integrating the WProofreader refer the following link : [webspellchecker](https://webspellchecker.com), you need to install the `@webspellchecker/wproofreader-sdk-js` package using NPM:
+For integrating the WProofreader refer the following link : [webspellchecker](https://webspellchecker.com/), you need to install the `@webspellchecker/wproofreader-sdk-js` package using NPM:
 
 ```bash
 npm install @webspellchecker/wproofreader-sdk-js
