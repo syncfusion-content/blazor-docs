@@ -30,7 +30,7 @@ Refer to the guide here: [Getting Started with Blazor Rich Text Editor](https://
 
 ## Step 1: Set up the WProofreader sdk
 
-For integrating the WProofreader refer the following link : [web spell checker](https://webspellchecker.com/), you need to install the `@webspellchecker/wproofreader-sdk-js` package using NPM:
+For integrating the WProofreader refer the following link : [web spell checker](https://webspellchecker.com), you need to install the `@webspellchecker/wproofreader-sdk-js` package using NPM:
 
 ```bash
 npm install @webspellchecker/wproofreader-sdk-js
