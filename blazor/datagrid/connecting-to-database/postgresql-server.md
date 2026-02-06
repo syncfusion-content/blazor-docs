@@ -130,8 +130,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 2. Search for and install each package individually:
    - **Microsoft.EntityFrameworkCore** (version 10.0.2 or later)
    - **Npgsql.EntityFrameworkCore.PostgreSQL** (version 10.0.0 or later)
-   - **Syncfusion.Blazor.Grid** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 **Project File Reference**
 
@@ -696,15 +696,18 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous section.
-2. Import the required namespaces in the `Components/_Imports.razor` file:
+* The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous section.
+* Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+@using Grid_PostgreSQL.Data
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -729,7 +732,6 @@ The `Home.razor` component will display the purchase order data in a Syncfusion 
 ```cshtml
 @page "/"
 @using System.Collections
-@using Grid_PostgreSQL.Data
 @inject PurchaseOrderRepository PurchaseOrderService
 <PageTitle>Purchase Order Management System</PageTitle>
 
@@ -882,8 +884,8 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
+* Open the `Components/Pages/Home.razor` file.
+* Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -897,7 +899,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 </SfGrid>
 ```
 
-3. Add the toolbar items list in the `@code` block:
+* Add the toolbar items list in the `@code` block:
 
 ```csharp
 @code {
@@ -928,9 +930,9 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
 **Instructions:**
 
-1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
-3. No additional code changes are required from the previous steps.
+* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+* No additional code changes are required from the previous steps.
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -942,7 +944,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 </SfGrid>
 ```
 
-4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
 
 ```csharp
 @code {
@@ -1002,7 +1004,7 @@ Searching allows the user to find purchase order records by entering keywords in
 
 **Instructions:**
 
-1. Ensure the toolbar includes the "Search" item.
+* Ensure the toolbar includes the "Search" item.
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder"
@@ -1014,7 +1016,7 @@ Searching allows the user to find purchase order records by entering keywords in
 </SfGrid>
 ```
 
-2. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
 
 ```csharp
 @code {
@@ -1075,8 +1077,8 @@ Filtering allows the user to restrict purchase order data based on column values
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -1091,7 +1093,7 @@ Filtering allows the user to restrict purchase order data based on column values
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
 
 ```csharp
 @code {
@@ -1161,8 +1163,8 @@ Sorting enables the user to arrange purchase order records in ascending or desce
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -1179,7 +1181,7 @@ Sorting enables the user to arrange purchase order records in ascending or desce
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
 
 ```csharp
 @code {
@@ -1249,8 +1251,8 @@ Grouping organizes purchase order records into hierarchical groups based on colu
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -1266,7 +1268,7 @@ Grouping organizes purchase order records into hierarchical groups based on colu
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
 
 ```csharp
 @code {
@@ -1592,7 +1594,7 @@ public class CustomAdaptor : DataAdaptor
         {
             await _purchaseOrderService!.RemovePurchaseOrderAsync(recordId);
         }
-        return value;
+        return value!;
     }
 }
 ```
@@ -1693,8 +1695,6 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
 ```cshtml
 @page "/"
 @using System.Collections
-@using Grid_PostgreSQL.Data
-@using Syncfusion.Blazor.Grids
 @inject PurchaseOrderRepository PurchaseOrderService
 <PageTitle>Purchase Order Management System</PageTitle>
 

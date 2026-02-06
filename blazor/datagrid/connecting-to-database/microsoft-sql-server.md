@@ -118,7 +118,7 @@ For this guide, a Blazor application named **Grid_MSSQL** has been created. Once
 Install-Package Microsoft.EntityFrameworkCore -Version 9.0.0; 
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 9.0.0; 
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 9.0.0; 
-Install-Package Syncfusion.Blazor.Grids -Version {{site.blazorversion}}; 
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}}; 
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
@@ -129,8 +129,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
    - **Microsoft.EntityFrameworkCore** (version 9.0.0 or later)
    - **Microsoft.EntityFrameworkCore.Tools** (version 9.0.0 or later)
    - **Microsoft.EntityFrameworkCore.SqlServer** (version 9.0.0 or later)
-   - **Syncfusion.Blazor.Grids** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -466,7 +466,7 @@ namespace Grid_MSSQL.Data
         /// Adds a new ticket to the database
         /// </summary>
         /// <param name="value">The ticket model to add</param>
-        public async Task AddTicketAsync(Tickets value)
+        public async Task AddTicketAsync(Tickets? value)
         {
             // Handle logic to add a new ticket to the database
         }
@@ -475,7 +475,7 @@ namespace Grid_MSSQL.Data
         /// Updates an existing ticket
         /// </summary>
         /// <param name="value">The ticket model with updated values</param>
-        public async Task UpdateTicketAsync(Tickets value)
+        public async Task UpdateTicketAsync(Tickets? value)
         {
             // Handle logic to update an existing ticket to the database
         }
@@ -585,8 +585,10 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 * Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
 @using Grid_MSSQL.Data
 ```
 
@@ -821,7 +823,7 @@ The toolbar has been successfully added.
 
 ### Step 5: Running the Application
 
-**Step 1: Build the Application**
+**Build the Application**
 
 1. Open the terminal or Package Manager Console.
 2. Navigate to the project directory.
@@ -831,7 +833,7 @@ The toolbar has been successfully added.
 dotnet build
 ```
 
-**Step 2: Run the Application**
+**Run the Application**
 
 Execute the following command:
 
@@ -839,7 +841,7 @@ Execute the following command:
 dotnet run
 ```
 
-**Step 3: Access the Application**
+**Access the Application**
 
 1. Open a web browser.
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
@@ -1338,7 +1340,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/TicketRepository.cs**, the insert method is implemented as:
 
 ```csharp
-public async Task AddTicketAsync(Tickets value)
+public async Task AddTicketAsync(Tickets? value)
 {
     try
     {
@@ -1380,7 +1382,7 @@ private async Task<string> GeneratePublicTicketIdAsync()
             .Where(ticket => !string.IsNullOrEmpty(ticket.PublicTicketId) && ticket.PublicTicketId.StartsWith(PublicTicketIdPrefix))
             .Select(ticket =>
             {
-                string numberPart = ticket.PublicTicketId.Substring((PublicTicketIdPrefix + PublicTicketIdSeparator).Length);
+                string numberPart = ticket.PublicTicketId!.Substring((PublicTicketIdPrefix + PublicTicketIdSeparator).Length);
                 if (int.TryParse(numberPart, out int number))
                     return number;
                 return 0;
@@ -1436,7 +1438,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/TicketRepository.cs**, the update method is implemented as:
 
 ```csharp
-public async Task UpdateTicketAsync(Tickets value)
+public async Task UpdateTicketAsync(Tickets? value)
 {
     try
     {
