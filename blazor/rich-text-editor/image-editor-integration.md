@@ -101,7 +101,7 @@ Copy the complete component implementation from:
 
 ## How to Use the Integration
 
-1. **Navigate to the component** — Open the page where you created the component (e.g., `/imageeditorintegration`)
+1. **Navigate to the component** — Open the page where you created the component (e.g., `/image-editor-integration`)
 2. **Select or upload an image** — Select an existing image from the editor content or upload a new image using the Rich Text Editor’s image tool
 3. **Select and edit** — Click on the image to select it, then click the "Edit Image" button
 4. **Use image tools** — Crop, rotate, filter, annotate, or fine-tune the image as needed
