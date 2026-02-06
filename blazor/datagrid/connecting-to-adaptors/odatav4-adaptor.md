@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with ODataV4Adaptor in Syncfusion Blazor DataGrid
+title: Bind data and perform CRUD using ODataV4Adaptor in Syncfusion DataGrid
 description: Learn about bind data and performing CRUD operations using ODataV4Adaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
@@ -42,7 +42,7 @@ The adaptor also manages request formatting, metadata interpretation, and respon
 
 * **Low‑Code Integration**: Removes the need for custom query building or URL formatting by managing request construction and response parsing internally.
 
-* **Interoperable across platforms**: Any client that understands OData V4 can consume the same service—making it suitable for multi‑platform, enterprise integration scenarios
+* **Cross‑platform compatibility**: Supported by any client that implements OData v4, making it suitable for enterprise‑level integration across multiple platforms.
 
 * **Search Fallback Mechanism**: Enables global search by generating OData `$filter` queries across multiple fields, providing search support even though OData V4 does not include a native search operator.
 
@@ -355,7 +355,8 @@ Add the required theme stylesheet and script references in **~/Components/App.ra
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid establishes remote communication with OData V4 services through the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component. Assigning the service endpoint to the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property defines the entry point for retrieving data, while configuring the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property with [ODataV4Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_ODataV4Adaptor) enables server‑executed operations. This configuration ensures that data actions and CRUD operations are processed according to OData V4 query conventions.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Home.razor" %}
+
 @using ODataV4Adaptor.Client.Models;
 
 <SfGrid TValue="OrdersDetails" Height="348">
@@ -443,7 +444,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using ODataV4Adaptor.Client.Models
 
@@ -523,7 +524,7 @@ builder.Services.AddControllers().AddOData(
         .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using ODataV4Adaptor.Client.Models
 
@@ -599,7 +600,7 @@ app.MapControllers();
 
 app.Run();
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using ODataV4Adaptor.Client.Models
  
@@ -678,7 +679,7 @@ app.MapControllers();
 app.Run();
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using ODataV4Adaptor.Client.Models
 
@@ -731,7 +732,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports **
 To enable editing in the DataGrid, configure the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) and [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) properties to allow adding, editing, and deleting records.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using ODataV4Adaptor.Client.Models
 
