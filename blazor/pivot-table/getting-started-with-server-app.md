@@ -140,14 +140,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add import namespaces
 
-<<<<<<< HEAD
 Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
-=======
-To use the Pivot Table component, open the **~/Components/_Imports.razor** file and include the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces. This allows your app to access the necessary Pivot Table classes and options.
->>>>>>> 9e998dd7816320beaf90152b677eda0d90b786cc
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PivotView
