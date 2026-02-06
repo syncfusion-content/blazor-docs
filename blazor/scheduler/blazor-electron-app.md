@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Creating Desktop Application using Blazor and Electron
+## Creating Desktop Application using Blazor and Electron
 
 This section explains how to create and run a desktop application by using Blazor and the Electron.NET framework with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
