@@ -34,7 +34,7 @@ N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/lega
 
 ## Enable zooming and panning
 
-The Azure Maps layer supports zooming and panning. Zooming provides a closer view of a specific area for detailed analysis, and panning moves the map to focus on a targeted area.
+The Azure Maps layer supports zooming and panning. Zooming provides a closer view of a specific area for detailed analysis, and panning moves the map to focus on a targeted area. To enable zooming, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property to **true** in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). Panning is enabled by default and can be configured using the [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property.
 
 ```cshtml
 

@@ -104,7 +104,7 @@ Customize the above option for multiple markers as shown in the following exampl
 
 ## Tooltip for marker
 
-A tooltip displays additional information about a marker on mouse over or touch end. It can be enabled separately for a layer or marker using the [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html). The [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html#Syncfusion_Blazor_Maps_MapsMarkerTooltipSettings_ValuePath) property specifies the field in the data source and displays that value as tooltip text.
+A tooltip displays additional information about a marker on mouse over or touch end. It can be enabled separately for a layer or marker using the [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html). The `ValuePath` property specifies the field in the data source and displays that value as tooltip text.
 
 ```cshtml
 

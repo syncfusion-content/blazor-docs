@@ -74,7 +74,7 @@ A shapefile can render a vector shape map in the Maps component by providing the
 
 ## Multilayer
 
-A shapefile map, like a GeoJSON map, can be rendered using a multilayer structure, as described in [this section](https://blazor.syncfusion.com/documentation/maps/layers#multilayer). A shapefile map can be added to different layers in the following ways:
+A shapefile map, like a GeoJSON map, can be rendered using a multilayer structure, as described in this [section](https://blazor.syncfusion.com/documentation/maps/layers#multilayer). A shapefile map can be added to different layers in the following ways:
 
 1. Display the shapefile map as a sublayer over online map providers.
 2. Display the shapefile map as a sublayer above the GeoJSON map.
@@ -103,7 +103,7 @@ The following example demonstrates a shapefile map as a sublayer above the GeoJS
 
 ## Customization
 
-Shape characteristics in a shapefile map—such as fill color, border, and projection—can be customized. For details, see the [Maps customization](https://blazor.syncfusion.com/documentation/maps/customization) documentation.
+Shape characteristics in a shapefile map such as fill color, border, and projection can be customized. For details, see the [Maps customization](https://blazor.syncfusion.com/documentation/maps/customization) documentation.
 
 > The examples in the linked topic use a GeoJSON file. Replace the GeoJSON file path with the shapefile path to view the same behavior with shapefiles.
 
