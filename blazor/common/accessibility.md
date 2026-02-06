@@ -120,7 +120,7 @@ Consult the component-specific documents below for details on how Syncfusion<sup
 3D Chart
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -152,7 +152,7 @@ AAA
 Accordion 
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -184,7 +184,7 @@ AAA
 Accumulation Chart
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -216,7 +216,7 @@ Accumulation Chart
 AppBar
 </td>
 <td>
-NA
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -248,7 +248,7 @@ NA
 AI AssistView
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -280,7 +280,7 @@ AAA
 AutoComplete
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -312,7 +312,7 @@ AAA
 Breadcrumb
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -344,7 +344,7 @@ AAA
 Bullet Chart
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -376,7 +376,7 @@ AAA
 Button
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -408,7 +408,7 @@ AAA
 Button Group
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -472,7 +472,7 @@ AA
 Carousel
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -504,7 +504,7 @@ AAA
 Chart
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -536,7 +536,7 @@ AAA
 Chat UI
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -568,7 +568,7 @@ AAA
 CheckBox
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -632,7 +632,7 @@ AA
 Circular Gauge
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -664,7 +664,7 @@ N/A
 Color Picker
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -696,7 +696,7 @@ AAA
 ComboBox
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -728,7 +728,7 @@ AAA
 ContextMenu
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -760,7 +760,7 @@ AAA
 Dashboard
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -792,7 +792,7 @@ N/A
 Grid
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -824,7 +824,7 @@ AAA
 DatePicker
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -856,7 +856,7 @@ AAA
 DateRangePicker
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -888,7 +888,7 @@ AAA
 Datetime Picker
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -920,7 +920,7 @@ AAA
 Diagram
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
@@ -981,42 +981,10 @@ AA
 </tr>
 <tr>
 <td>
-DocumentEditor
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/accessibility/document-editor" target="_blank">Demo</a>
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/document-editor/accessibility" target="_blank">Documentation</a>
-</td>
-</tr>
-<tr>
-<td>
 Dropdown Menu
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1048,7 +1016,7 @@ AAA
 DropDown List
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1080,7 +1048,7 @@ AAA
 Dropdown Tree
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1112,7 +1080,7 @@ AAA
 FileManager
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1144,7 +1112,7 @@ AAA
 File Upload
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1208,7 +1176,7 @@ AA
 Gantt Chart
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1239,7 +1207,7 @@ AAA
 HeatMap Chart
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1272,7 +1240,7 @@ N/A
 In-place editor
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1304,7 +1272,7 @@ AAA
 Image Editor
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1336,7 +1304,7 @@ AAA
 Input Mask
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1368,7 +1336,7 @@ AAA
 Kanban
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1400,7 +1368,7 @@ AAA
 Linear Gauge
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1432,7 +1400,7 @@ N/A
 ListBox
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1464,7 +1432,7 @@ AAA
 ListView
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1496,7 +1464,7 @@ AAA
 Maps
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1528,7 +1496,7 @@ N/A
 Markdown Editor
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
@@ -1560,7 +1528,7 @@ AAA
 Mention
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1592,7 +1560,7 @@ AAA
 Menu Bar
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1624,7 +1592,7 @@ AAA
 Message
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1656,7 +1624,7 @@ AAA
 MultiColumn ComboBox
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
@@ -1688,7 +1656,7 @@ AAA
 MultiSelect Dropdown
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1720,7 +1688,7 @@ AAA
 Numeric TextBox
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1752,7 +1720,7 @@ AAA
 Pager
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -1784,7 +1752,7 @@ AAA
 OTP Input
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Supported">
@@ -1809,38 +1777,6 @@ AAA
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/otp-input/accessibility" target="_blank">Documentation</a>
-</td>
-</tr>
-<tr>
-<td>
-SfPdfViewer
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/accessibility/sfpdfviewer" target="_blank">Demo</a>
-</td>
-<td>
-<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1880,7 +1816,7 @@ AA
 ProgressBar
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1912,7 +1848,7 @@ AAA
 ProgressButton
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1944,7 +1880,7 @@ AAA
 Query Builder
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1976,7 +1912,7 @@ AAA
 RadioButton
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2008,7 +1944,7 @@ AAA
 Range Selector
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2040,7 +1976,7 @@ AAA
 Range Slider
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2072,7 +2008,7 @@ AAA
 Rating
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2104,7 +2040,7 @@ AAA
 Ribbon
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2136,7 +2072,7 @@ AAA
 Rich Text Editor
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2200,7 +2136,7 @@ AA
 Sidebar
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2232,7 +2168,7 @@ AAA
 Signature
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2264,7 +2200,7 @@ N/A
 Skeleton
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2296,7 +2232,7 @@ N/A
 Smith Chart
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2328,7 +2264,7 @@ AAA
 Sparkline
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2360,7 +2296,7 @@ AAA
 Speech To Text
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
@@ -2392,7 +2328,7 @@ AAA
 SpeedDial
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2424,7 +2360,7 @@ AAA
 SplitButton
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2456,7 +2392,7 @@ N/A
 Splitter
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2488,7 +2424,7 @@ AAA
 Stepper
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2520,7 +2456,7 @@ AAA
 Stock Chart
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2552,7 +2488,7 @@ AAA
 Tabs
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2584,7 +2520,7 @@ AAA
 TextBox
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2616,7 +2552,7 @@ AAA
 Timeline
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2648,7 +2584,7 @@ N/A
 TimePicker
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2680,7 +2616,7 @@ AAA
 Toast
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2712,7 +2648,7 @@ N/A
 Toggle Switch Button
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2744,7 +2680,7 @@ N/A
 Toolbar
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2776,7 +2712,7 @@ AAA
 Tooltip
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2808,7 +2744,7 @@ AAA
 TreeGrid
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2840,7 +2776,7 @@ AAA
 TreeMap
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
@@ -2872,7 +2808,7 @@ N/A
 TreeView
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
