@@ -11,7 +11,7 @@ documentation: ug
 
 # Custom Binding in Blazor DataManager Component
 
-Custom binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.htm) component provides a mechanism to implement custom logic for data retrieval and manipulation. It allows defining how data operations are executed by creating a [custom adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor) that overrides default behavior.
+Custom binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component provides a mechanism to implement custom logic for data retrieval and manipulation. It allows defining how data operations are executed by creating a [custom adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor) that overrides default behavior.
 
 Custom binding is applicable in scenarios where:
 
