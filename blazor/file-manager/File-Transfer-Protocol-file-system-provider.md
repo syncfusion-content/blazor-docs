@@ -11,7 +11,7 @@ documentation: ug
 
 To get started with the File Transfer Protocol (FTP) file system provider, ensure you have access to a valid FTP server along with the **host name**, **username**, and **password** credentials.
 
-In ASP.NET Core, the File Transfer Protocol (FTP) file system provider allows users to access a hosted file system as a collection of objects stored on an FTP server. To get started, clone the [EJ2.ASP.NET Core FTP File Provider](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider) using the following command.
+In ASP.NET Core, the File Transfer Protocol (FTP) file system provider allows users to access a hosted file system as a collection of objects stored on an FTP server. To get started, clone the [EJ2.ASP.NET Core FTP File Provider](https://github.com/SyncfusionExamples/ftp-aspcore-file-provider):
 
 ```bash
 git clone https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider.git ej2-ftp-aspcore-file-provider

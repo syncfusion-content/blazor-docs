@@ -11,7 +11,7 @@ documentation: ug
 
 To get started with the Google Drive file system provider, ensure that you have a Google account, a project created in the Google API Console with the Google Drive API enabled, and OAuth 2.0 client credentials (**client ID** and **client secret**) downloaded as a `client_secret.json` file.
 
-The Google Drive file system provider allows users to manage files and folders in their Google Drive account. It operates on an ID-based system where each file and folder has a unique ID. To begin, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider) using the following command.
+The Google Drive file system provider allows users to manage files and folders in their Google Drive account. It operates on an ID-based system where each file and folder has a unique ID. To get started, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider):
 
 ```bash
 git clone https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider ej2-google-drive-aspcore-file-provider

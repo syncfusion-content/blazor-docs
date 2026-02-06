@@ -53,8 +53,6 @@ Then, create a root node and add children to the root node. Refer to the followi
 {
   "Files": [
     {
-      "_fm_selected": false,
-      "caseSensitive": false,
       "dateCreated": "2026-01-01T09:15:32Z",
       "dateModified": "2026-01-15T14:48:10Z",
       "filterPath": "",
@@ -63,15 +61,12 @@ Then, create a root node and add children to the root node. Refer to the followi
       "isFile": false,
       "isRoot": false,
       "name": "Files",
-      "showHiddenItems": false,
       "size": 0,
       "type": ""
     },
     {
-      "caseSensitive": false,
       "dateCreated": "2026-01-10T11:22:45Z",
       "dateModified": "2026-01-22T17:55:12Z",
-      "filterId": "0/",
       "filterPath": "/",
       "hasChild": false,
       "id": "5",
@@ -79,16 +74,12 @@ Then, create a root node and add children to the root node. Refer to the followi
       "isRoot": true,
       "name": "Music",
       "parentId": "0",
-      "selected": false,
-      "showHiddenItems": false,
       "size": 0,
       "type": "folder"
     },
     {
-      "caseSensitive": false,
       "dateCreated": "2026-01-05T13:04:27Z",
       "dateModified": "2026-01-13T12:52:44Z",
-      "filterId": "0/",
       "filterPath": "/",
       "hasChild": false,
       "id": "6",
@@ -96,8 +87,6 @@ Then, create a root node and add children to the root node. Refer to the followi
       "isRoot": true,
       "name": "Videos",
       "parentId": "0",
-      "selected": false,
-      "showHiddenItems": false,
       "size": 0,
       "type": ""
     }
