@@ -37,7 +37,7 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
 | Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
@@ -101,7 +101,7 @@ For this guide, a Blazor application named **Grid_EF_UrlAdaptor** has been creat
 
 **Method 1: Using Package Manager Console**
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to Tools → NuGet Package Manager → Package Manager Console.
 3. Run the following commands:
 
@@ -114,12 +114,12 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 
 **Method 2: Using NuGet Package Manager UI**
 
-1. Open Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution.
+1. Open Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution.
 2. Search for and install each package individually:
    - **Microsoft.EntityFrameworkCore** (version 10.0.2)
    - **Microsoft.EntityFrameworkCore.SqlServer** (version 10.0.2)
-   - **Syncfusion.Blazor.Grid** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -346,8 +346,10 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 2. Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Grid_EF_UrlAdaptor.Data
 ```
 
 3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
@@ -404,7 +406,7 @@ The `Home.razor` component will display the order data in a Syncfusion Blazor Da
                         @{
                             var aggregate = (context as AggregateTemplateContext);
                             <div>
-                                <p>Sum: @aggregate.Sum</p>
+                                <p>Sum: @aggregate?.Sum</p>
                             </div>
                         }
                     </GroupFooterTemplate>
@@ -412,7 +414,7 @@ The `Home.razor` component will display the order data in a Syncfusion Blazor Da
                         @{
                             var aggregate = (context as AggregateTemplateContext);
                             <div>
-                                <p>Sum: @aggregate.Sum</p>
+                                <p>Sum: @aggregate?.Sum</p>
                             </div>
                         }
                     </FooterTemplate>
@@ -560,14 +562,45 @@ It carries the primary key, single entity (Value), and collections (Added, Chang
 
 This controller exposes the endpoints used by `<SfDataManager>` in **Home.razor**. Logic will be added in later steps when wiring CRUD and batch operations.
 
-### Step 4: Implement Paging Feature
+### Step 4: Running the Application
+
+**Build the Application**
+
+1. Open PowerShell or your terminal.
+2. Navigate to the project directory.
+3. Build the application:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+The application will start, and the console will display the local URL (typically `http://localhost:5175` or `https://localhost:5001`).
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to the URL displayed in the console.
+3. The DataGrid application is now running and ready to use.
+
+![Basic DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.png)
+
+
+### Step 5: Implement Paging Feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
 **Instructions:**
 
-1. Ensure the grid has paging enabled with `AllowPaging="true"`.
-2. Configure the page size using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+* Ensure the grid has paging enabled with `AllowPaging="true"`.
+* Configure the page size using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 
 ```cshtml
 <SfGrid TValue="Order" AllowPaging="true">
@@ -580,7 +613,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 </SfGrid>
 ```
 
-3. Update the `Post` action in **Controllers/GridController.cs** to apply only paging using `Skip` and `Take` from `DataManagerRequest`:
+* Update the `Post` action in **Controllers/GridController.cs** to apply only paging using `Skip` and `Take` from `DataManagerRequest`:
 
 ```csharp
 [HttpPost]
@@ -611,13 +644,13 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 - The controller returns the paged `result` and total `count` for correct pager UI.
 - Only paging logic is shown here; other operations will be covered in later steps.
 
-### Step 5: Implement Searching Feature
+### Step 6: Implement Searching Feature
 
 Searching allows the user to find records by entering keywords in the search box, which filters data across all columns.
 
 **Instructions:**
 
-1. Ensure the toolbar includes the "Search" item.
+* Ensure the toolbar includes the "Search" item.
 
 ```cshtml
 <SfGrid TValue="Order" 
@@ -628,7 +661,7 @@ Searching allows the user to find records by entering keywords in the search box
 </SfGrid>
 ```
 
-2. Update the `Post` action in **Controllers/GridController.cs** to handle searching:
+* Update the `Post` action in **Controllers/GridController.cs** to handle searching:
 
 ```csharp
 [HttpPost]
@@ -678,14 +711,14 @@ Searching feature is now active.
 
 ---
 
-### Step 6: Implement Filtering Feature
+### Step 7: Implement Filtering Feature
 
 Filtering allows the user to restrict data based on column values using a menu interface.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Order" 
@@ -698,7 +731,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 </SfGrid>
 ```
 
-3. Update the `Post` action in **Controllers/GridController.cs** to handle filtering:
+* Update the `Post` action in **Controllers/GridController.cs** to handle filtering:
 
 ```csharp
 [HttpPost]
@@ -756,14 +789,14 @@ Filtering feature is now active.
 
 ---
 
-### Step 7: Implement Sorting Feature
+### Step 8: Implement Sorting Feature
 
 Sorting enables the user to arrange records in ascending or descending order based on column values.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Order" 
@@ -777,7 +810,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 </SfGrid>
 ```
 
-3. Update the `Post` action in **Controllers/GridController.cs** to handle sorting:
+* Update the `Post` action in **Controllers/GridController.cs** to handle sorting:
 
 ```csharp
 [HttpPost]
@@ -840,7 +873,7 @@ Sorting feature is now active.
 
 ---
 
-### Step 8: Perform CRUD Operations
+### Step 9: Perform CRUD Operations
 
 CRUD operations (Create, Read, Update, Delete) enable users to manage data directly from the DataGrid. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
 
@@ -888,7 +921,7 @@ public void Insert([FromBody] CRUDModel<Order> value)
 {
     try
     {
-        _context.Orders.Add(value.Value);
+        _context.Orders.Add(value.Value!);
         _context.SaveChanges();
     }
     catch (Exception ex)
@@ -923,10 +956,10 @@ public void Update([FromBody] CRUDModel<Order> value)
 {
     try
     {
-        var existingOrder = _context.Orders.Find(value.Value.OrderID);
+        var existingOrder = _context.Orders.Find(value.Value?.OrderID);
         if (existingOrder != null)
         {
-            _context.Entry(existingOrder).CurrentValues.SetValues(value.Value);
+            _context.Entry(existingOrder).CurrentValues.SetValues(value.Value!);
             _context.SaveChanges();
         }
     }
@@ -963,7 +996,7 @@ public void Delete([FromBody] CRUDModel<Order> value)
 {
     try
     {
-        int orderId = Convert.ToInt32(value.Key.ToString());
+        int orderId = Convert.ToInt32(value.Key?.ToString());
         var order = _context.Orders.Find(orderId);
         if (order != null)
         {
@@ -1050,48 +1083,6 @@ public void Batch([FromBody] CRUDModel<Order> value)
 - The DataGrid refreshes to display all changes.
 
 All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
-
----
-
-## Running the Application
-
-**Step 1: Build the Application**
-
-1. Open PowerShell or your terminal.
-2. Navigate to the project directory.
-3. Build the application:
-
-```powershell
-dotnet build
-```
-
-**Step 2: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-The application will start, and the console will display the local URL (typically `http://localhost:5175` or `https://localhost:5001`).
-
-**Step 3: Access the Application**
-
-1. Open a web browser.
-2. Navigate to the URL displayed in the console.
-3. The DataGrid application is now running and ready to use.
-
-**Available Features**
-
-- **View Data**: All orders from the SQL Server database are displayed in the DataGrid.
-- **Search**: Use the search box to find orders by any field (CustomerID, ShipCity, etc.).
-- **Filter**: Click on column headers to apply filters (equals, contains, etc.).
-- **Sort**: Click on column headers to sort data in ascending or descending order.
-- **Pagination**: Navigate through records using page numbers (10 records per page).
-- **Add**: Click the "Add" button to create a new order.
-- **Edit**: Click the "Edit" button to modify existing orders.
-- **Delete**: Click the "Delete" button to remove orders.
-- **Group**: Drag column headers to the group area to organize data hierarchically.
 
 ---
 

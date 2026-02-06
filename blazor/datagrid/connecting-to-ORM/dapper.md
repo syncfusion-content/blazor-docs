@@ -29,10 +29,10 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
-| Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
 | Microsoft.Data.SqlClient | Latest | SQL Server ADO.NET provider |
 | Dapper | Latest | Lightweight micro-ORM for SQL mapping |
@@ -102,25 +102,25 @@ For this guide, a Blazor application named **Grid_Dapper** has been created. Onc
 
 **Method 1: Using Package Manager Console**
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
 3. Run the following commands:
 
 ```powershell
 Install-Package Microsoft.Data.SqlClient -Version Latest
 Install-Package Dapper -Version Latest
-Install-Package Syncfusion.Blazor.Grids -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}}
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
 **Method 2: Using NuGet Package Manager UI**
 
-1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **Microsoft.Data.SqlClient** (Latest version)
    - **Dapper** (Latest version)
-   - **Syncfusion.Blazor.Grids** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -312,7 +312,7 @@ namespace Grid_Dapper.Data
         /// Adds a new reservation to the database
         /// </summary>
         /// <param name="value">The reservation model to add</param>
-        public async Task AddReservationAsync(Reservation value)
+        public async Task AddReservationAsync(Reservation? value)
         {
             // Handle logic to add a new reservation to the database
         }
@@ -321,7 +321,7 @@ namespace Grid_Dapper.Data
         /// Updates an existing reservation
         /// </summary>
         /// <param name="value">The reservation model with updated values</param>
-        public async Task UpdateReservationAsync(Reservation value)
+        public async Task UpdateReservationAsync(Reservation? value)
         {
             // Handle logic to update an existing reservation to the database
         }
@@ -419,15 +419,17 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
-2. Import the required namespaces in the `Components/_Imports.razor` file:
+* The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
+* Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Grid_Dapper.Data
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -446,8 +448,8 @@ The `Home.razor` component will display the reservation data in a Syncfusion Bla
 
 **Instructions:**
 
-1. Open the file named `Home.razor` in the `Components/Pages` folder.
-2. Add the following code to create a DataGrid with CustomAdaptor:
+* Open the file named `Home.razor` in the `Components/Pages` folder.
+* Add the following code to create a DataGrid with CustomAdaptor:
 
 ```cshtml
 @page "/"
@@ -490,8 +492,8 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the following `CustomAdaptor` class code inside the `@code` block:
+* Open the `Components/Pages/Home.razor` file.
+* Add the following `CustomAdaptor` class code inside the `@code` block:
 
 ```csharp
 @code {
@@ -606,8 +608,8 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
+* Open the `Components/Pages/Home.razor` file.
+* Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
 ```cshtml
 <SfGrid TValue="Reservation" 
@@ -621,7 +623,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 </SfGrid>
 ```
 
-3. Add the toolbar items list in the `@code` block:
+* Add the toolbar items list in the `@code` block:
 
 ```csharp
 @code {
@@ -646,15 +648,43 @@ The toolbar has been successfully added.
 
 ---
 
-### Step 5: Implement Paging Feature
+### Step 5: Running the Application
+
+**Build the Application**
+
+1. Open the terminal or Package Manager Console.
+2. Navigate to the project directory.
+3. Run the following command:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
+3. The reservation management application is now running and ready to use.
+
+![Basic DataGrid displaying reservations from the SQL Server database](../images/blazor-datagrid-dapper.png)
+
+### Step 6: Implement Paging Feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
 **Instructions:**
 
-1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
-3. No additional code changes are required from the previous steps.
+* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+* No additional code changes are required from the previous steps.
 
 ```cshtml
 <SfGrid TValue="Reservation" 
@@ -666,7 +696,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 </SfGrid>
 ```
 
-4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
 
 ```csharp
 @code {
@@ -683,7 +713,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
             set => _reservationRepository = value; 
         }
 
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? Key = null)
         {
 
             IEnumerable dataSource = await _reservationRepository.GetReservationsAsync();
@@ -744,11 +774,11 @@ Paging feature is now active with 20 records per page.
 
 ---
 
-### Step 6: Implement Searching feature
+### Step 7: Implement Searching feature
 
 Searching allows the user to find records by entering keywords in the search box.
 
-1. Ensure the toolbar includes the "Search" item.
+* Ensure the toolbar includes the "Search" item.
 
 ```cshtml
 <SfGrid TValue="Reservation"
@@ -760,7 +790,7 @@ Searching allows the user to find records by entering keywords in the search box
 </SfGrid>
 ```
 
-2. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
 
 ```csharp
 @code {
@@ -779,7 +809,7 @@ Searching allows the user to find records by entering keywords in the search box
             set => _reservationRepository = value; 
         }
 
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? Key = null)
         {
 
             IEnumerable dataSource = await _reservationRepository!.GetReservationsAsync();
@@ -822,14 +852,14 @@ Searching feature is now active.
 
 ---
 
-### Step 7: Implement Filtering feature
+### Step 8: Implement Filtering feature
 
 Filtering allows the user to restrict data based on column values using a menu interface.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Reservation" 
@@ -843,7 +873,7 @@ Filtering allows the user to restrict data based on column values using a menu i
     <!-- Grid columns configuration -->
 </SfGrid>
 ```
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
 
 ```csharp
 @code {
@@ -860,7 +890,7 @@ Filtering allows the user to restrict data based on column values using a menu i
             set => _reservationRepository = value; 
         }
 
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? Key = null)
         {
 
             IEnumerable dataSource = await _reservationRepository.GetReservationsAsync();
@@ -910,14 +940,14 @@ Filtering feature is now active.
 
 ---
 
-### Step 8: Implement Sorting feature
+### Step 9: Implement Sorting feature
 
 Sorting enables the user to arrange records in ascending or descending order based on column values.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Reservation" 
@@ -933,7 +963,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
     <!-- Grid columns configuration -->
 </SfGrid>
 ```
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
 
 ```csharp
 @code {
@@ -947,7 +977,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
             set => _reservationRepository = value; 
         }
 
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? Key = null)
         {
 
             IEnumerable dataSource = await _reservationRepository.GetReservationsAsync();
@@ -1003,14 +1033,14 @@ Sorting feature is now active.
 
 ---
 
-### Step 9: Implement Grouping feature
+### Step 10: Implement Grouping feature
 
 Grouping organizes records into hierarchical groups based on column values.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Reservation" 
@@ -1026,7 +1056,7 @@ Grouping organizes records into hierarchical groups based on column values.
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
 
 ```csharp
 @code {
@@ -1043,7 +1073,7 @@ Grouping organizes records into hierarchical groups based on column values.
             set => _reservationRepository = value; 
         }
 
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? Key = null)
         {
 
             IEnumerable dataSource = await _reservationRepository.GetReservationsAsync();
@@ -1109,7 +1139,7 @@ Grouping feature is now active.
 
 ---
 
-### Step 10: Perform CRUD operations
+### Step 11: Perform CRUD operations
 
 CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **ReservationRepository.cs** to execute SQL commands through Dapper.
 
@@ -1160,7 +1190,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/ReservationRepository.cs**, the insert method is implemented as:
 
 ```csharp
-public async Task AddReservationAsync(Reservation value)
+public async Task AddReservationAsync(Reservation? value)
 {
     if (value == null)
         throw new ArgumentNullException(nameof(value), "Reservation cannot be null");
@@ -1178,7 +1208,7 @@ public async Task AddReservationAsync(Reservation value)
 
     if (value.CheckInDate != default && value.CheckOutDate != default)
     {
-        value.NoOfDays = CalculateNoOfDays((DateTime)value.CheckInDate, (DateTime)value.CheckOutDate);
+        value.NoOfDays = CalculateNoOfDays((DateTime)value.CheckInDate, (DateTime)value.CheckOutDate!);
     }
 
     if (value.AmountPerDay.HasValue && value.NoOfDays.HasValue && value.NoOfDays > 0)
@@ -1267,7 +1297,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/ReservationRepository.cs**, the update method is implemented as:
 
 ```csharp
-public async Task UpdateReservationAsync(Reservation value)
+public async Task UpdateReservationAsync(Reservation? value)
 {
     try
     {
@@ -1285,7 +1315,7 @@ public async Task UpdateReservationAsync(Reservation value)
 
         if (value.CheckInDate != default && value.CheckOutDate != default)
         {
-            value.NoOfDays = CalculateNoOfDays((DateTime)value.CheckInDate, (DateTime)value.CheckOutDate);
+            value.NoOfDays = CalculateNoOfDays((DateTime)value.CheckInDate!, (DateTime)value.CheckOutDate!);
         }
 
         if (value.AmountPerDay.HasValue && value.NoOfDays.HasValue && value.NoOfDays > 0)
@@ -1444,14 +1474,13 @@ Now the adaptor supports bulk modifications with database synchronization. All C
 
 ---
 
-### Step 11: Complete code
+### Step 12: Complete code
 
 Here is the complete and final `Home.razor` component with all features integrated:
 
 ```cshtml
 @page "/"
 @rendermode InteractiveServer
-@using Grid_Dapper.Data
 @inject ReservationRepository ReservationService
 
 <PageTitle>Reservation Management System</PageTitle>
@@ -1486,32 +1515,22 @@ Here is the complete and final `Home.razor` component with all features integrat
             <GridColumn Field=@nameof(Reservation.TotalAmount) HeaderText="Total" Width="140" Format="N2" TextAlign="TextAlign.Right" AllowEditing="false" />
             <GridColumn Field=@nameof(Reservation.PaymentStatus) HeaderText="Payment" Width="110" EditType="EditType.DropDownEdit" EditorSettings="@PaymentDropDownParams">
                 <Template>
-                    @{
-                        var status = (context as Reservation)?.PaymentStatus;
-                        var badgeClass = status?.ToLower() switch
-                        {
-                            "paid" => "e-badge e-badge-success",
-                            "pending" => "e-badge e-badge-warning",
-                            "failed" => "e-badge e-badge-danger",
-                            _ => "e-badge"
-                        };
+                   @{
+                        var data = (Reservation)context;
                     }
-                    <span class="@badgeClass">@status</span>
+                    <span class="@GetPaymentStatusClass(data.PaymentStatus)">
+                        @data.PaymentStatus
+                    </span>
                 </Template>
             </GridColumn>
             <GridColumn Field=@nameof(Reservation.ReservationStatus) HeaderText="Status" Width="120" EditType="EditType.DropDownEdit" EditorSettings="@StatusDropDownParams">
                 <Template>
                     @{
-                        var status = (context as Reservation)?.ReservationStatus;
-                        var badgeClass = status?.ToLower() switch
-                        {
-                            "confirmed" => "e-badge e-badge-success",
-                            "pending" => "e-badge e-badge-warning",
-                            "cancelled" => "e-badge e-badge-danger",
-                            _ => "e-badge"
-                        };
+                        var data = (Reservation)context;
                     }
-                    <span class="@badgeClass">@status</span>
+                    <span class="@GetReservationStatusClass(data.ReservationStatus)">
+                        @data.ReservationStatus
+                    </span>
                 </Template>
             </GridColumn>
         </GridColumns>
@@ -1674,47 +1693,38 @@ Here is the complete and final `Home.razor` component with all features integrat
     {
         Params = new DropDownListModel<object, object>() { DataSource = CustomReservationStatus, Query = new Syncfusion.Blazor.Data.Query() },
     };
+
+    /// <summary>
+    /// CSS class for payment status styling
+    /// </summary>
+    private string GetPaymentStatusClass(string? paymentStatus)
+    {
+        return paymentStatus?.ToLower() switch
+        {
+            "paid" => "payment-paid",
+            "pending" => "payment-pending",
+            "failed" => "payment-failed",
+            "refunded" => "payment-refunded",
+            _ => "payment-pending"
+        };
+    }
+
+    /// <summary>
+    /// CSS class for reservation status styling
+    /// </summary>
+    private string GetReservationStatusClass(string? reservationStatus)
+    {
+        return reservationStatus?.ToLower() switch
+        {
+            "confirmed" => "status-confirmed",
+            "cancelled" => "status-cancelled",
+            "checkedin" => "status-checkedin",
+            "checkedout" => "status-checked-out",
+            _ => "status-confirmed"
+        };
+    }
 }
 ```
----
-
-## Running the Application
-
-**Step 1: Build the Application**
-
-1. Open the terminal or Package Manager Console.
-2. Navigate to the project directory.
-3. Run the following command:
-
-```powershell
-dotnet build
-```
-
-**Step 2: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-**Step 3: Access the Application**
-
-1. Open a web browser.
-2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
-3. The reservation management application is now running and ready to use.
-
-**Available Features**
-
-- **View Data**: All reservations from the SQL Server database are displayed in the DataGrid.
-- **Search**: Use the search box to find reservations by any field.
-- **Filter**: Click on column headers to apply filters.
-- **Sort**: Click on column headers to sort data in ascending or descending order.
-- **Pagination**: Navigate through records using page numbers.
-- **Add**: Click the "Add" button to create a new reservation.
-- **Edit**: Click the "Edit" button to modify existing reservations.
-- **Delete**: Click the "Delete" button to remove reservations.
-
 ---
 
 ## Complete Sample Repository
