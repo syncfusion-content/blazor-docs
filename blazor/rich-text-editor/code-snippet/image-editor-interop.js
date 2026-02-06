@@ -1,7 +1,6 @@
 window.canvasInterop = {
     detectedFormat: null
 };
-
 window.rteInterop = {
     objRef: null,
     onInitialized: function (objRef) {
