@@ -37,7 +37,7 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
 | Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
@@ -101,7 +101,7 @@ For this guide, a Blazor application named **Grid_EF_UrlAdaptor** has been creat
 
 **Method 1: Using Package Manager Console**
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to Tools → NuGet Package Manager → Package Manager Console.
 3. Run the following commands:
 
@@ -114,12 +114,12 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 
 **Method 2: Using NuGet Package Manager UI**
 
-1. Open Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution.
+1. Open Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution.
 2. Search for and install each package individually:
    - **Microsoft.EntityFrameworkCore** (version 10.0.2)
    - **Microsoft.EntityFrameworkCore.SqlServer** (version 10.0.2)
-   - **Syncfusion.Blazor.Grid** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -346,8 +346,10 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 2. Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Grid_EF_UrlAdaptor.Data
 ```
 
 3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
@@ -404,7 +406,7 @@ The `Home.razor` component will display the order data in a Syncfusion Blazor Da
                         @{
                             var aggregate = (context as AggregateTemplateContext);
                             <div>
-                                <p>Sum: @aggregate.Sum</p>
+                                <p>Sum: @aggregate?.Sum</p>
                             </div>
                         }
                     </GroupFooterTemplate>
@@ -412,7 +414,7 @@ The `Home.razor` component will display the order data in a Syncfusion Blazor Da
                         @{
                             var aggregate = (context as AggregateTemplateContext);
                             <div>
-                                <p>Sum: @aggregate.Sum</p>
+                                <p>Sum: @aggregate?.Sum</p>
                             </div>
                         }
                     </FooterTemplate>
@@ -566,8 +568,8 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
 **Instructions:**
 
-1. Ensure the grid has paging enabled with `AllowPaging="true"`.
-2. Configure the page size using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+* Ensure the grid has paging enabled with `AllowPaging="true"`.
+* Configure the page size using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 
 ```cshtml
 <SfGrid TValue="Order" AllowPaging="true">
@@ -580,7 +582,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 </SfGrid>
 ```
 
-3. Update the `Post` action in **Controllers/GridController.cs** to apply only paging using `Skip` and `Take` from `DataManagerRequest`:
+* Update the `Post` action in **Controllers/GridController.cs** to apply only paging using `Skip` and `Take` from `DataManagerRequest`:
 
 ```csharp
 [HttpPost]
@@ -617,7 +619,7 @@ Searching allows the user to find records by entering keywords in the search box
 
 **Instructions:**
 
-1. Ensure the toolbar includes the "Search" item.
+* Ensure the toolbar includes the "Search" item.
 
 ```cshtml
 <SfGrid TValue="Order" 
@@ -628,7 +630,7 @@ Searching allows the user to find records by entering keywords in the search box
 </SfGrid>
 ```
 
-2. Update the `Post` action in **Controllers/GridController.cs** to handle searching:
+* Update the `Post` action in **Controllers/GridController.cs** to handle searching:
 
 ```csharp
 [HttpPost]
@@ -684,8 +686,8 @@ Filtering allows the user to restrict data based on column values using a menu i
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Order" 
@@ -698,7 +700,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 </SfGrid>
 ```
 
-3. Update the `Post` action in **Controllers/GridController.cs** to handle filtering:
+* Update the `Post` action in **Controllers/GridController.cs** to handle filtering:
 
 ```csharp
 [HttpPost]
@@ -762,8 +764,8 @@ Sorting enables the user to arrange records in ascending or descending order bas
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Order" 
@@ -777,7 +779,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 </SfGrid>
 ```
 
-3. Update the `Post` action in **Controllers/GridController.cs** to handle sorting:
+* Update the `Post` action in **Controllers/GridController.cs** to handle sorting:
 
 ```csharp
 [HttpPost]
@@ -888,7 +890,7 @@ public void Insert([FromBody] CRUDModel<Order> value)
 {
     try
     {
-        _context.Orders.Add(value.Value);
+        _context.Orders.Add(value.Value!);
         _context.SaveChanges();
     }
     catch (Exception ex)
@@ -923,10 +925,10 @@ public void Update([FromBody] CRUDModel<Order> value)
 {
     try
     {
-        var existingOrder = _context.Orders.Find(value.Value.OrderID);
+        var existingOrder = _context.Orders.Find(value.Value?.OrderID);
         if (existingOrder != null)
         {
-            _context.Entry(existingOrder).CurrentValues.SetValues(value.Value);
+            _context.Entry(existingOrder).CurrentValues.SetValues(value.Value!);
             _context.SaveChanges();
         }
     }
@@ -963,7 +965,7 @@ public void Delete([FromBody] CRUDModel<Order> value)
 {
     try
     {
-        int orderId = Convert.ToInt32(value.Key.ToString());
+        int orderId = Convert.ToInt32(value.Key?.ToString());
         var order = _context.Orders.Find(orderId);
         if (order != null)
         {

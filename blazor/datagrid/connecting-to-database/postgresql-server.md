@@ -33,7 +33,7 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | PostgreSQL Server | 12 or later | Database server |
 | pgAdmin 4 | Latest | PostgreSQL GUI management tool |
@@ -89,12 +89,12 @@ CREATE TABLE public.PurchaseOrder (
     ApprovedBy VARCHAR(100),
     OrderDate DATE NOT NULL,
     ExpectedDeliveryDate DATE,
-    CreatedAt TIMESTAMP NOT NULL DEFAULT NOW(),
-    UpdatedAt TIMESTAMP NOT NULL DEFAULT NOW()
+    CreatedOn TIMESTAMP NOT NULL DEFAULT NOW(),
+    UpdatedOn TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
 -- Insert Sample Data (Optional)
-INSERT INTO public."PurchaseOrder" ("PoNumber", "VendorID", "ItemName", "ItemCategory", "Quantity", "UnitPrice", "TotalAmount", "Status", "OrderedBy", "ApprovedBy", "OrderDate", "ExpectedDeliveryDate", "CreatedAt", "UpdatedAt")
+INSERT INTO public."PurchaseOrder" ("PoNumber", "VendorID", "ItemName", "ItemCategory", "Quantity", "UnitPrice", "TotalAmount", "Status", "OrderedBy", "ApprovedBy", "OrderDate", "ExpectedDeliveryDate", "CreatedOn", "UpdatedOn")
 VALUES
 ('PO-2025-0001', 'VEN-9001', 'FHD Laptop', 'Electronics', 5, 899.99, 4499.95, 'Pending', 'Alice Johnson', 'Carol Davis', '2025-01-10', '2025-01-20', NOW(), NOW()),
 ('PO-2025-0002', 'VEN-9002', 'Fibre Cables', 'Networking', 100, 15.50, 1550.00, 'Approved', 'Bob Smith', 'Alice Johnson', '2025-01-09', '2025-01-17', NOW(), NOW());
@@ -113,7 +113,7 @@ For this guide, a Blazor application named **Grid_PostgreSQL** has been created.
 
 **Method 1: Using Package Manager Console**
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
 3. Run the following commands:
 
@@ -126,7 +126,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 
 **Method 2: Using NuGet Package Manager UI**
 
-1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **Microsoft.EntityFrameworkCore** (version 10.0.2 or later)
    - **Npgsql.EntityFrameworkCore.PostgreSQL** (version 10.0.0 or later)
@@ -246,13 +246,13 @@ namespace Grid_PostgreSQL.Data
         /// Gets or sets the timestamp indicating when the purchase order record was created.
         /// Auto-set to the current date and time by the database.
         /// </summary>
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedOn { get; set; }
 
         /// <summary>
         /// Gets or sets the timestamp indicating when the purchase order record was last updated.
         /// Auto-updated to the current date and time whenever a modification occurs.
         /// </summary>
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedOn { get; set; }
     }
 }
 ```
@@ -397,14 +397,14 @@ namespace Grid_PostgreSQL.Data
                     .HasColumnType("date")
                     .IsRequired(false);
 
-                entity.Property(e => e.CreatedAt)
-                    .HasColumnName("createdat")
+                entity.Property(e => e.CreatedOn)
+                    .HasColumnName("createdOn")
                     .HasColumnType("timestamp without time zone")
                     .IsRequired(true)
                     .HasDefaultValueSql("NOW()");
 
-                entity.Property(e => e.UpdatedAt)
-                    .HasColumnName("updatedat")
+                entity.Property(e => e.UpdatedOn)
+                    .HasColumnName("updatedOn")
                     .HasColumnType("timestamp without time zone")
                     .IsRequired(true)
                     .HasDefaultValueSql("NOW()");
@@ -421,8 +421,8 @@ namespace Grid_PostgreSQL.Data
                 entity.HasIndex(e => e.OrderedBy)
                     .HasDatabaseName("ix_purchaseorder_orderedby");
 
-                entity.HasIndex(e => e.CreatedAt)
-                    .HasDatabaseName("ix_purchaseorder_createdat");
+                entity.HasIndex(e => e.CreatedOn)
+                    .HasDatabaseName("ix_purchaseorder_createdOn");
 
                 entity.HasIndex(e => new { e.Status, e.OrderDate })
                     .HasDatabaseName("ix_purchaseorder_status_orderdate");
@@ -573,7 +573,7 @@ namespace Grid_PostgreSQL.Data
         /// <summary>
         /// Adds a new purchase order to the database
         /// Auto-generates the PoNumber if not provided
-        /// Sets CreatedAt and UpdatedAt timestamps
+        /// Sets CreatedOn and UpdatedOn timestamps
         /// </summary>
         /// <param name="value">The purchase order model to add</param>
         public async Task AddPurchaseOrderAsync(PurchaseOrder value)
@@ -584,7 +584,7 @@ namespace Grid_PostgreSQL.Data
         /// <summary>
         /// Updates an existing purchase order in the database
         /// Validates that the purchase order exists before updating
-        /// Updates the UpdatedAt timestamp automatically
+        /// Updates the UpdatedOn timestamp automatically
         /// </summary>
         /// <param name="value">The purchase order model with updated values</param>
         public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
@@ -1405,11 +1405,11 @@ In **Data/PurchaseOrderRepository.cs**, the insert method is implemented as:
                 value.PoNumber = await GeneratePoNumberAsync();
             }
             
-            if (value.CreatedAt == default)
-                value.CreatedAt = DateTime.Now;
+            if (value.CreatedOn == default)
+                value.CreatedOn = DateTime.Now;
 
-            if (value.UpdatedAt == default)
-                value.UpdatedAt = DateTime.Now;
+            if (value.UpdatedOn == default)
+                value.UpdatedOn = DateTime.Now;
 
             // Set default status if not provided
             if (string.IsNullOrEmpty(value.Status))
@@ -1528,8 +1528,8 @@ public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
         existingPurchaseOrder.ApprovedBy = value.ApprovedBy;
         existingPurchaseOrder.OrderDate = value.OrderDate;
         existingPurchaseOrder.ExpectedDeliveryDate = value.ExpectedDeliveryDate;
-        existingPurchaseOrder.CreatedAt = value.CreatedAt;
-        existingPurchaseOrder.UpdatedAt = DateTime.Now;
+        existingPurchaseOrder.CreatedOn = value.CreatedOn;
+        existingPurchaseOrder.UpdatedOn = DateTime.Now;
 
         await _context.SaveChangesAsync();
     }
@@ -1558,7 +1558,7 @@ public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
 3. The `PurchaseOrderRepository.UpdatePurchaseOrderAsync()` method is called.
 4. The existing record is retrieved from the database by ID.
 5. All properties are updated with the new values.
-6. The `UpdatedAt` timestamp is automatically set to the current time.
+6. The `UpdatedOn` timestamp is automatically set to the current time.
 7. `SaveChangesAsync()` persists the changes to the PostgreSQL database.
 8. The DataGrid refreshes to display the updated record.
 
@@ -1731,8 +1731,8 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
                 <GridColumn Field="@nameof(PurchaseOrder.ApprovedBy)" HeaderText="Approved By" Width="120"></GridColumn>
                 <GridColumn Field="@nameof(PurchaseOrder.OrderDate)" HeaderText="Order Date" Type="ColumnType.Date" Format="yMd" Width="120"></GridColumn>
                 <GridColumn Field="@nameof(PurchaseOrder.ExpectedDeliveryDate)" HeaderText="Expected Delivery" Type="ColumnType.Date" Format="yMd" Width="140"></GridColumn>
-                <GridColumn Field="@nameof(PurchaseOrder.CreatedAt)" HeaderText="Created At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
-                <GridColumn Field="@nameof(PurchaseOrder.UpdatedAt)" HeaderText="Updated At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.CreatedOn)" HeaderText="Created At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.UpdatedOn)" HeaderText="Updated At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
             </GridColumns>
             
         </SfGrid>
