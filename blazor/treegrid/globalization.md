@@ -3,7 +3,7 @@ layout: post
 title: Globalization in Blazor TreeGrid Component | Syncfusion
 description: Checkout and learn here all about Globalization in Syncfusion Blazor TreeGrid component and much more.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
@@ -15,8 +15,7 @@ documentation: ug
 
 ### Loading translations
 
-The following example demonstrates the Tree Grid in **Deutsch** culture. Here use **LoadLocaleData** method to load the **locale.json** file and **SetCulture** method to set the culture of the Tree Grid.
-
+The following example demonstrates the TreeGrid in **Deutsch** culture. The **LoadLocaleData** method loads the **locale.json** file, and the **SetCulture** method sets the culture of the TreeGrid.
 {% tabs %}
 
 {% highlight razor %}
@@ -148,7 +147,7 @@ public class TreeData
 
 ## Internationalization
 
-The **Internationalization** library is used to globalize number, date, and time values in Tree Grid component using format strings in the **Format**. In the below sample we set the culture and currency using the **SetCulture** and **SetCurrencyCode** methods.
+The **Internationalization** library is used to globalize number, date, and time values in TreeGrid component using format strings in the **Format**.
 
 {% tabs %}
 
@@ -2383,7 +2382,7 @@ N> * In the above sample, **Duration** column is formatted by **NumberFormatOpti
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Tree Grid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the below sample **EnableRtl** method is used to enable RTL in the Tree Grid.
+RTL provides an option to switch the text direction and layout of the TreeGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the below sample **EnableRtl** method is used to enable RTL in the TreeGrid.
 
 {% tabs %}
 
