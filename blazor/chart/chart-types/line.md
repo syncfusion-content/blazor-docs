@@ -13,7 +13,7 @@ documentation: ug
 
 [Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) represents and visualizes the time-dependent data to show the trends at equal intervals.
 
-You can learn how to create a line chart using Blazor Charts by watching the video below.
+A detailed demonstration of the process for creating a line chart using Blazor Charts is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=pZ0unpq0_-c" %}
 
@@ -55,10 +55,10 @@ To render a [Line](https://www.syncfusion.com/blazor-components/blazor-charts/ch
     };
 }
 
-``` 
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLfNkWrgrqqRINz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart.](../images/chart-types-images/blazor-line-chart.png)" %}
 
-N> Refer to our [Blazor Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Line Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Line Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know how to represent time-dependent data, showing trends at equal intervals.
 
 ## Binding data with series
 
@@ -100,7 +100,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
     };
 }
 
-``` 
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLfNkWrgrqqRINz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
@@ -370,7 +370,7 @@ To render a multicolored line series in your chart, define the series [`Type`](h
     };
 }
 
-``` 
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhfZYMLUfkRrUcB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
@@ -418,7 +418,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     };
 }
 
-``` 
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrTjasBgzXXURKs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Fill**
@@ -562,7 +562,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVTDkMhAIHPfJFn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVTDkMhAIHPfJFn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -614,7 +614,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLfDYsrUxgtYVoO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

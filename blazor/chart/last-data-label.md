@@ -13,7 +13,7 @@ The last data label feature highlights the most recent data point in a series by
 
 ## Enable last data label
 
-To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLastDataLabel.html#Syncfusion_Blazor_Charts_ChartLastDataLabel_ShowLabel) property of the `ChartLastDataLabel` configuration to **true** within the series settings.
+To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLastDataLabel.html#Syncfusion_Blazor_Charts_ChartLastDataLabel_ShowLabel) property of the [ChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLastDataLabel.html) configuration to **true** within the series settings.
 
 ```cshtml
 
@@ -58,7 +58,7 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
 
 ## Customization
 
-The appearance of the last data label can be customized using various properties defined across different settings.
+The appearance of the last data label can be customized using the following properties.
 
 In the `ChartLastDataLabel`:
 * [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLastDataLabel.html#Syncfusion_Blazor_Charts_ChartLastDataLabel_Background): Sets the background color of the last data label container.
@@ -129,4 +129,4 @@ In the [ChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

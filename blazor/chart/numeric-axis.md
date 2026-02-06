@@ -13,7 +13,7 @@ documentation: ug
 
 Numeric axis can be used to represent numeric values in a chart. The [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_ValueType) of an axis is [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double) by default.
 
-You can learn how to customize the numeric axis by watching the video below.
+A detailed walkthrough for customizing the numeric axis is provided in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=sZbkeHLqEco" %}
 
@@ -480,7 +480,7 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAiVLrzZGdUeri?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with Custom Label Format](images/numeric-axis/blazor-line-chart-custom-label-format.png)" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
