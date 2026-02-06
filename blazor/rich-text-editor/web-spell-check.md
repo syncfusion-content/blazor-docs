@@ -21,12 +21,7 @@ WProofreader enables real-time spelling, grammar, and style checks inside the Ri
 
 Before proceeding, ensure you have completed the basic Rich Text Editor setup as outlined in the Getting Started guide. This includes configuring the Blazor project, installing the required packages, importing the necessary CSS files, injecting the modules, and adding the basic editor markup.
 
-Refer to the guide here: [Getting Started with Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
-
-## Key features
-- Real-time spelling and grammar suggestions.
-- Multilingual support and custom dictionaries.
-- Cloud and on-premise deployment options.
+Refer to the guide here: [getting started with Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
 
 ## Step 1: Set up the WProofreader sdk
 
