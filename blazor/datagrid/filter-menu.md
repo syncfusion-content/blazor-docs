@@ -1375,6 +1375,11 @@ In this configuration, the `SfDateRangePicker` is rendered in the filter templat
                 });
             Grid.Refresh();
         }
+        else if (args.ColumnName == "OrderDate" && args.FilterPredicates == null)
+        {
+            StartDate = new DateTime();
+            EndDate =  new DateTime();
+        }
     }
     public void ValueChangeHandler(RangePickerEventArgs<DateTime> args)
     {
@@ -1433,7 +1438,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLJCLClyfCMmKmA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBxZsiTzsefFecd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Troubleshoot filter menu operator issue
 
