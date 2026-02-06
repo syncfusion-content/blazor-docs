@@ -184,7 +184,7 @@ AA
 Accumulation Chart
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -977,38 +977,6 @@ AA
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/dialog/accessibility" target="_blank">Documentation</a>
-</td>
-</tr>
-<tr>
-<td>
-DocumentEditor
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/accessibility/document-editor" target="_blank">Demo</a>
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/document-editor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1809,38 +1777,6 @@ AA
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/otp-input/accessibility" target="_blank">Documentation</a>
-</td>
-</tr>
-<tr>
-<td>
-SfPdfViewer
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/accessibility/sfpdfviewer" target="_blank">Demo</a>
-</td>
-<td>
-<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
