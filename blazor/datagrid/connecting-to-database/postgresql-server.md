@@ -924,7 +924,37 @@ The toolbar has been successfully added.
 
 ---
 
-### Step 5: Implement Paging Feature
+### Step 5: Running the Application
+
+**Build the Application**
+
+1. Open the terminal or Package Manager Console in Visual Studio.
+2. Navigate to the project directory.
+3. Run the following command to restore packages and build:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
+3. The Purchase Order Management System is now running and ready to use.
+
+![Basic DataGrid displaying purchase orders from the PostgreSQL Server database](../images/blazor-datagrid-postgresql.png)
+
+---
+
+### Step 6: Implement Paging Feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
@@ -998,7 +1028,7 @@ Paging feature is now active with 10 records per page.
 
 ---
 
-### Step 6: Implement Searching feature
+### Step 7: Implement Searching feature
 
 Searching allows the user to find purchase order records by entering keywords in the search box.
 
@@ -1071,7 +1101,7 @@ Searching feature is now active.
 
 ---
 
-### Step 7: Implement Filtering feature
+### Step 8: Implement Filtering feature
 
 Filtering allows the user to restrict purchase order data based on column values using a menu interface.
 
@@ -1157,7 +1187,7 @@ Filtering feature is now active.
 
 ---
 
-### Step 8: Implement Sorting feature
+### Step 9: Implement Sorting feature
 
 Sorting enables the user to arrange purchase order records in ascending or descending order based on column values.
 
@@ -1245,7 +1275,7 @@ Sorting feature is now active.
 
 ---
 
-### Step 9: Implement Grouping feature
+### Step 10: Implement Grouping feature
 
 Grouping organizes purchase order records into hierarchical groups based on column values, providing a structured view of the data.
 
@@ -1338,7 +1368,7 @@ Grouping feature is now active.
 
 ---
 
-### Step 10: Perform CRUD operations
+### Step 11: Perform CRUD operations
 
 CustomAdaptor methods enable users to create, read, update, and delete purchase order records directly from the DataGrid. Each operation calls corresponding data layer methods in **PurchaseOrderRepository.cs** to execute PostgreSQL commands.
 
@@ -1917,45 +1947,6 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
 8. **CRUD Operations**: Add, Edit, Update, and Delete records with automatic timestamps and PoNumber generation.
 9. **Batch Editing**: Multiple changes can be made and saved atomically.
 10. **Error Handling**: Comprehensive exception handling with meaningful error messages.
-
----
-
-## Running the Application
-
-**Step 1: Build the Application**
-
-1. Open the terminal or Package Manager Console in Visual Studio.
-2. Navigate to the project directory.
-3. Run the following command to restore packages and build:
-
-```powershell
-dotnet build
-```
-
-**Step 2: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-**Step 3: Access the Application**
-
-1. Open a web browser.
-2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
-3. The Purchase Order Management System is now running and ready to use.
-
-### Available Features
-
-- **View Data**: All purchase orders from the PostgreSQL database are displayed in the DataGrid.
-- **Search**: Use the search box to find purchase orders by any field.
-- **Filter**: Click on column headers to apply filters.
-- **Sort**: Click on column headers to sort data in ascending or descending order.
-- **Pagination**: Navigate through records using page numbers.
-- **Add**: Click the "Add" button to create a new purchase order.
-- **Edit**: Click the "Edit" button to modify existing purchase orders.
-- **Delete**: Click the "Delete" button to remove purchase orders.
 
 ---
 

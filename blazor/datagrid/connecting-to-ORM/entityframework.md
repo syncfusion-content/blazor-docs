@@ -562,7 +562,38 @@ It carries the primary key, single entity (Value), and collections (Added, Chang
 
 This controller exposes the endpoints used by `<SfDataManager>` in **Home.razor**. Logic will be added in later steps when wiring CRUD and batch operations.
 
-### Step 4: Implement Paging Feature
+### Step 4: Running the Application
+
+**Build the Application**
+
+1. Open PowerShell or your terminal.
+2. Navigate to the project directory.
+3. Build the application:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+The application will start, and the console will display the local URL (typically `http://localhost:5175` or `https://localhost:5001`).
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to the URL displayed in the console.
+3. The DataGrid application is now running and ready to use.
+
+![Basic DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.png)
+
+
+### Step 5: Implement Paging Feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
@@ -613,7 +644,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 - The controller returns the paged `result` and total `count` for correct pager UI.
 - Only paging logic is shown here; other operations will be covered in later steps.
 
-### Step 5: Implement Searching Feature
+### Step 6: Implement Searching Feature
 
 Searching allows the user to find records by entering keywords in the search box, which filters data across all columns.
 
@@ -680,7 +711,7 @@ Searching feature is now active.
 
 ---
 
-### Step 6: Implement Filtering Feature
+### Step 7: Implement Filtering Feature
 
 Filtering allows the user to restrict data based on column values using a menu interface.
 
@@ -758,7 +789,7 @@ Filtering feature is now active.
 
 ---
 
-### Step 7: Implement Sorting Feature
+### Step 8: Implement Sorting Feature
 
 Sorting enables the user to arrange records in ascending or descending order based on column values.
 
@@ -842,7 +873,7 @@ Sorting feature is now active.
 
 ---
 
-### Step 8: Perform CRUD Operations
+### Step 9: Perform CRUD Operations
 
 CRUD operations (Create, Read, Update, Delete) enable users to manage data directly from the DataGrid. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
 
@@ -1052,48 +1083,6 @@ public void Batch([FromBody] CRUDModel<Order> value)
 - The DataGrid refreshes to display all changes.
 
 All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
-
----
-
-## Running the Application
-
-**Step 1: Build the Application**
-
-1. Open PowerShell or your terminal.
-2. Navigate to the project directory.
-3. Build the application:
-
-```powershell
-dotnet build
-```
-
-**Step 2: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-The application will start, and the console will display the local URL (typically `http://localhost:5175` or `https://localhost:5001`).
-
-**Step 3: Access the Application**
-
-1. Open a web browser.
-2. Navigate to the URL displayed in the console.
-3. The DataGrid application is now running and ready to use.
-
-**Available Features**
-
-- **View Data**: All orders from the SQL Server database are displayed in the DataGrid.
-- **Search**: Use the search box to find orders by any field (CustomerID, ShipCity, etc.).
-- **Filter**: Click on column headers to apply filters (equals, contains, etc.).
-- **Sort**: Click on column headers to sort data in ascending or descending order.
-- **Pagination**: Navigate through records using page numbers (10 records per page).
-- **Add**: Click the "Add" button to create a new order.
-- **Edit**: Click the "Edit" button to modify existing orders.
-- **Delete**: Click the "Delete" button to remove orders.
-- **Group**: Drag column headers to the group area to organize data hierarchically.
 
 ---
 
