@@ -1,4 +1,4 @@
-window.myJsFunction = function (sfId) {
+window.initializeWebSpellChecker = function (sfId) {
     if (!window.sfBlazor || !sfBlazor.instances) {
         console.warn('sfBlazor not available');
         return;
