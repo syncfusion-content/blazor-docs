@@ -25,9 +25,24 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 You can create a **Blazor Server app** using **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
-## Install Blazor DataGrid and Themes NuGet in the app
+![Blazor Server App with Interactive Mode](images/blazor-app-interactive-mode.png)
 
-To add **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid** in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes in Visual Studio
+
+To integrate the Blazor DataGrid component, install the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages in the solution:
+
+1. Open **NuGet Package Manager** in Visual Studio:
+
+    *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+
+2. Search and install the following packages:
+
+    - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+3. For projects using **WebAssembly** or **Auto** interactive render modes, ensure these packages are installed in the **Client** project.
+
+4. Alternatively, use the **Package Manager Console**:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
