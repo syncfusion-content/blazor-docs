@@ -52,7 +52,7 @@ To resolve this, the `RefreshUIAsync()` method must be called in the Dialog's `O
 Create a new Razor component file called `RichTextEditorInDialog.razor` in the Blazor project's `Pages` folder:
 
 {% highlight cshtml %}
-{% include_relative code-snippet/rte-in-dialog.razor %}
+{% include_relative ../code-snippet/rte-in-dialog.razor %}
 {% endhighlight %}
 
 ![Blazor RichTextEditor inside Dialog](../images/blazor-richtexteditor-rte-dialog.png)
