@@ -1,0 +1,40 @@
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
+
+<SfDialog @ref="dialogObj" Width="450px" ShowCloseIcon="true" IsModal="true" Visible="false">
+    <DialogEvents Opened="@DialogOpen"></DialogEvents>
+    <DialogTemplates>
+        <Header>
+            <div>Rich Text Editor In Dialog</div>
+        </Header>
+        <Content>
+            <SfRichTextEditor @ref="rteObj">
+            </SfRichTextEditor>
+        </Content>
+    </DialogTemplates>
+</SfDialog>
+
+@code {
+
+    private SfDialog? dialogObj;
+    private SfRichTextEditor? rteObj;
+
+    private async Task OpenDialog()
+    {
+        if (this.dialogObj != null)
+        {
+            await this.dialogObj.ShowAsync();
+        }
+    }
+
+    private async Task DialogOpen()
+    {
+        if (this.rteObj != null)
+        {
+            await this.rteObj.RefreshUIAsync();
+        }
+    }
+}
