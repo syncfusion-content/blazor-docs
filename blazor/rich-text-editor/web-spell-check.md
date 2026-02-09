@@ -21,7 +21,7 @@ WProofreader enables real-time spelling, grammar, and style checks inside the Ri
 
 Before proceeding, ensure you have completed the basic Rich Text Editor setup as outlined in the Getting Started guide. This includes configuring the Blazor project, installing the required packages, importing the necessary CSS files, injecting the modules, and adding the basic editor markup.
 
-Refer to the guide here: [getting started with Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
+Refer to the guide here: [Getting Started with Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
 
 ## Step 1: Set up the WProofreader sdk
 
@@ -40,7 +40,7 @@ Create the JavaScript interop module to handle communication between Blazor and 
  
 ### 2.1 Create the interop file
  
-In your Blazor project, create a new folder named `wwwroot/scripts/` and add a file called `spell-checker.js` to include the code shown below.
+In your Blazor project, create a new folder named `wwwroot/scripts/` and add a file called `spell-checker.js` to include the code shown below,
 
 {% tabs %}
 {% highlight javascript %}
