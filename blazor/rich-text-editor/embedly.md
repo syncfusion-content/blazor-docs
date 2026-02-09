@@ -15,10 +15,10 @@ By integrating [Embedly](https://www.embedly.com) with the Blazor Rich Text Edit
 
 This documentation provides a complete integration of Embedly with the Rich Text Editor component. Users can:
 
-- Insert links in the editor content
-- Links automatically render as interactive Embedly embed cards
-- Support for various content types (videos, articles, social media, etc.)
-- Interactive embed cards enhance content visibility and engagement
+- Insert links in the editor content.
+- Links automatically render as interactive Embedly embed cards.
+- Support for various content types (videos, articles, social media, etc.).
+- Interactive embed cards enhance content visibility and engagement.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ This documentation provides a complete integration of Embedly with the Rich Text
 
 ## Step 1: Add the JavaScript Interop File
 
-Create the JavaScript interop module to handle link processing and communication between Blazor and Embedly.
+Create a JavaScript interop module to handle link processing and communication between the Blazor Rich Text Editor and Embedly.
 
 ### 1.1 Create the interop file
 
@@ -81,10 +81,10 @@ Copy the complete component implementation from:
 
 ## How to Use the Integration
 
-1. **Navigate to the component** — Open the page where you created the component (e.g., `/embedly-integration`)
-2. **Insert a link** — Use the Rich Text Editor's link tool to insert a URL
-3. **View embed card** — The link automatically renders as an Embedly embed card
-4. **Interact with content** — Click on the embed card to interact with the content (watch videos, view articles, etc.)
+1. **Navigate to the component** — Open the page where you created the component (e.g., `/embedly-integration`).
+2. **Insert a link** — Use the Rich Text Editor's link tool to insert a URL.
+3. **View embed card** — The link automatically renders as an Embedly embed card.
+4. **Interact with content** — Click on the embed card to interact with the content (watch videos, view articles, etc.).
 
 ![Blazor Rich Text Editor with Embedly Integration](./images/blazor-richtexteditor-embedly.png)
 
@@ -92,11 +92,11 @@ Copy the complete component implementation from:
 
 When a user inserts or updates a link in the Rich Text Editor:
 
-1. The `OnActionComplete` event is triggered with `RequestType` set to "Links"
-2. The JavaScript interop method `embedlyInterop.wrapLinkInEmbedlyCard()` is invoked via `JS.InvokeVoidAsync`
-3. The method queries the Rich Text Editor content area using the `.e-rte-content` selector
-4. Each link is wrapped in a `blockquote` element with the `.embedly-card` class
-5. The Embedly library processes the container to render the interactive embed card preview
+1. The `OnActionComplete` event is triggered with `RequestType` set to "Links".
+2. The JavaScript interop method `embedlyInterop.wrapLinkInEmbedlyCard()` is invoked via `JS.InvokeVoidAsync`.
+3. The method queries the Rich Text Editor content area using the `.e-rte-content` selector.
+4. Each link is wrapped in a `blockquote` element with the `.embedly-card` class.
+5. The Embedly library processes the container to render the interactive embed card preview.
 
 ## Supported content
 
