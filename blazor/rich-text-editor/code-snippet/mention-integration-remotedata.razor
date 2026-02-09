@@ -1,6 +1,6 @@
 @using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Data  
+@using Syncfusion.Blazor.Data
 
 <SfRichTextEditor ID="mentionIntegration">
     <p>Hello <span contenteditable="false" class="e-mention-chip"><a href="mailto:maria@gmail.com" title="maria@gmail.com">@@Maria</a></span>,</p>
@@ -9,10 +9,10 @@
 
 <div id="mention_integration">
     <SfMention TItem="EmployeeData"
-           Target="#mentionIntegration .e-rte-content .e-content"
-           SuggestionCount="3"
-           PopupHeight="200px"
-           PopupWidth="250px">
+               Target="#mentionIntegration .e-rte-content .e-content"
+               SuggestionCount="3"
+               PopupHeight="200px"
+               PopupWidth="250px">
         <ItemTemplate>
             <table>
                 <tr>
@@ -20,11 +20,11 @@
                 </tr>
             </table>
         </ItemTemplate>
-    <ChildContent>
-         <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
-        <MentionFieldSettings Text="FirstName"></MentionFieldSettings>
-    </ChildContent>
-</SfMention>
+        <ChildContent>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+            <MentionFieldSettings Text="FirstName"></MentionFieldSettings>
+        </ChildContent>
+    </SfMention>
 </div>
 
 <style>

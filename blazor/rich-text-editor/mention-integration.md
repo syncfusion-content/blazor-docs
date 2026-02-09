@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Integrate Mention component into the Blazor Rich Text Editor
+# Integrate the Mention component into the Blazor Rich Text Editor
 
 The Mention component enables tagging within the Rich Text Editor by linking its suggestion list to the editor's editable area. It leverages the Syncfusion Mention component to offer inline suggestions and insert the chosen tags.
 
