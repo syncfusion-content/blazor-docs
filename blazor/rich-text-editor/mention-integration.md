@@ -119,7 +119,7 @@ The Mention component supports loading data from remote services using the [Data
 
 {% endhighlight %}
 
-N> **Note:** Ensure that Syncfusion.Blazor.Data is imported in your component or page to enable remote data binding with DataManager.
+N> **Note:** Ensure that `Syncfusion.Blazor.Data` is imported in your component or page to enable remote data binding with DataManager.
 
 > [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/mention-integration?theme=bootstrap5)
 
