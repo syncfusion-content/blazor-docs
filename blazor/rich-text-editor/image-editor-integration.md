@@ -16,7 +16,7 @@ The Blazor [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazo
 This documentation provides a complete integration of the Syncfusion Image Editor with the Rich Text Editor component. Users can:
 
 - Select or upload an image in the editor content.
-- Click the "Edit Image" toolbar button to open an image editing dialog.
+- Click the `Edit Image` toolbar button to open an image editing dialog.
 - Edit the image using various tools (crop, zoom, filter, annotate, fine-tune).
 - Replace the original image with the edited version.
 
