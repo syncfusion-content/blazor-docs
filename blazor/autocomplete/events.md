@@ -39,7 +39,7 @@ The `Blur` event is triggered when the input loses focus.
 
     private void BlurHandler(Object args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -74,7 +74,7 @@ The `ValueChange` event is triggered when the AutoComplete value changes.
 
     private void ValueChangeHandler(ChangeEventArgs<string, GameFields> args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 
@@ -109,7 +109,7 @@ The `Closed` event is triggered after the popup has been closed.
 
     private void CloseHandler(ClosedEventArgs args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -143,7 +143,7 @@ The `Created` event is triggered when the component is created.
 
     private void CreatedHandler(Object args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -177,7 +177,7 @@ The `Destroyed` event is triggered when the component is destroyed.
 
     private void DestroyedHandler(Object args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -211,7 +211,7 @@ The `Focus` event is triggered when the input gains focus.
 
     private void FocusHandler(Object args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -245,7 +245,7 @@ The `OnOpen` event is triggered when the popup is opened. If this event is cance
 
     private void OnOpenHandler(BeforeOpenEventArgs args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -280,7 +280,7 @@ The `OnClose` event is triggered before the popup is closed. If this event is ca
 
     private void OnCloseHandler(PopupEventArgs args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -314,7 +314,7 @@ The `DataBound` event is triggered after the data source is populated in the pop
 
     private void DataBoundHandler(DataBoundEventArgs args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -350,7 +350,7 @@ The `Filtering` event is triggered while typing in the input when `AllowFilterin
 
     private void Filteringhandler(FilteringEventArgs args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 
@@ -390,7 +390,7 @@ The `OnActionBegin` event is triggered before fetching data from the remote serv
 
     private void OnActionBeginhandler(ActionBeginEventArgs args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -429,7 +429,7 @@ The `OnActionFailure` event is triggered when the data fetch request from the re
 
     private void OnActionFailurehandler(Exception args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -463,7 +463,7 @@ The `OnValueSelect` event is triggered when a user selects an item in the popup 
 
     private void OnValueSelecthandler(SelectEventArgs<GameFields> args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 ```
@@ -497,7 +497,7 @@ The `Opened` event is triggered when the popup opens.
 
     private void Openedhandler(PopupEventArgs args)
     {
-        // Here, you can customize your logic.
+        //Here, you can write your own logic based on your requirements!
     }
 }
 
