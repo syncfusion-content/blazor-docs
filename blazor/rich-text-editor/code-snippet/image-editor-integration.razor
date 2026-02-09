@@ -120,13 +120,21 @@
     {
         if (firstRender)
         {
-            await jsRuntime.InvokeAsync<bool>("rteInterop.onInitialized", dotNetRef);
+            try
+            {
+                await jsRuntime.InvokeVoidAsync("rteInterop.onInitialized", dotNetRef);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"JS interop initialization failed: {ex.Message}");
+            }
         }
     }
 
     private async Task OnImageEditorClick()
     {
-        if (editorRef == null) {
+        if (editorRef == null) 
+        {
             return;
         }
         await editorRef.SaveSelectionAsync();
@@ -196,7 +204,8 @@
             return;
         }
         var imageDataUrl = await imageEditorRef.GetImageDataUrlAsync();
-        if (string.IsNullOrEmpty(imageDataUrl)) {
+        if (string.IsNullOrEmpty(imageDataUrl))
+        {
             return;
         }
         string newImageHtml =
