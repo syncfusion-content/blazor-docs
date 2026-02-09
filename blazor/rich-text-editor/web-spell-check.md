@@ -23,7 +23,7 @@ Before proceeding, ensure you have completed the basic Rich Text Editor setup as
 
 Refer to the guide here: [Getting Started with Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
 
-## Step 1: Set up the WProofreader sdk
+## Step 1: Set up the WProofreader SDK
 
 For integrating the Spell Checker you need to install the below NPM package:
 

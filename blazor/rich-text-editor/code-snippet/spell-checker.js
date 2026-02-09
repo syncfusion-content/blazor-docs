@@ -19,7 +19,7 @@ window.initializeWebSpellChecker = function (sfId) {
         return;
     }
     window.WEBSPELLCHECKER_CONFIG = {
-        // Get the activation key from your registered account
+        // Replace with your activation key from your registered account
         serviceId: 'Your activation key',
         autoSearch: true,
         lang: 'en_US',
