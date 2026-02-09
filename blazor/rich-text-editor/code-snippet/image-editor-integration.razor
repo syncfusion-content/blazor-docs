@@ -195,15 +195,12 @@
         {
             return;
         }
-
         var imageDataUrl = await imageEditorRef.GetImageDataUrlAsync();
         if (string.IsNullOrEmpty(imageDataUrl)) {
             return;
         }
-
         string newImageHtml =
             $@"<img id=""rteImageID"" style=""width: 300px; height: 200px; transform: rotate(0deg); border: 2px solid #ddd;"" alt=""Edited Image"" src=""{imageDataUrl}"" class=""e-rte-image e-imginline"">";
-
         if (!string.IsNullOrEmpty(currentImageSrc))
         {
             string escapedOldSrc = System.Text.RegularExpressions.Regex.Escape(currentImageSrc);
@@ -218,7 +215,6 @@
         {
             rteValue += newImageHtml;
         }
-
         showDialog = false;
         currentImageSrc = string.Empty;
         StateHasChanged();
