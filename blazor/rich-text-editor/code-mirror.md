@@ -22,7 +22,7 @@ Refer to the guide here: [Getting Started with Blazor Rich Text Editor](https://
 ## Key features
 
 - Replace the Rich Text Editor source textarea with a Code Mirror Editor View.  
-- Preserve editor undo/redo by inserting source changes via the RTE APIs.
+- Preserve editor undo/redo by inserting source changes via the Rich Text Editor APIs.
 
 ## Step 1: Set up the Code Mirror 
 
@@ -36,9 +36,9 @@ npm install codemirror
  
 Create the JavaScript interop module to handle communication between Blazor and Code Mirror.
  
-### 2.1 Create the interop file
+### 2.1 Set up the Code Mirror interop file
  
-In your Blazor project, create a new folder named `wwwroot/scripts/` and add a file called `code-mirror.js` to include the code shown below.
+In your Blazor project, create a new folder named `wwwroot/scripts/` and add a file called `code-mirror.js` to include the code shown below,
 
 {% tabs %}
 {% highlight javascript %}
@@ -103,16 +103,16 @@ Create a new Razor component file named **`RichTextEditorWithCodeMirror.razor`**
 
 ## How to Use the Integration
 
-Once CodeMirror is integrated with the Rich Text Editor, you can begin using the enhanced source‑editing experience immediately:
+Once Code Mirror is integrated with the Rich Text Editor, you can begin using the enhanced source‑editing experience immediately:
 
 - Switch to Source Mode
-  Click the `Source Code` toolbar option in the Rich Text Editor to open the CodeMirror interface.
+  Click the `Source Code` toolbar option in the Rich Text Editor to open the Code Mirror interface.
 
 - Edit HTML with Syntax Highlighting
-  The embedded CodeMirror editor provides syntax highlighting, line numbers, and theme support.
+  The embedded Code Mirror editor provides syntax highlighting, line numbers, and theme support.
 
 - Return to WYSIWYG Mode
-  When switching back to Preview or Normal mode, CodeMirror content is synchronized with the editor's main view.
+  When switching back to Preview or Normal mode, Code Mirror content is synchronized with the editor's main view.
 
 ## See also
 
