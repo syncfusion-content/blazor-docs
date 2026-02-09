@@ -1,4 +1,4 @@
-window.myJsFunction = function (e, sfId) {
+window.initializeCodeMirror = function (e, sfId) {
     if (!window.sfBlazor || !sfBlazor.instances) {
         console.warn('sfBlazor not available');
         return;
