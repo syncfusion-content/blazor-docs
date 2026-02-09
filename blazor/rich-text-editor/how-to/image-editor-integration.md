@@ -59,12 +59,12 @@ Create the JavaScript interop module to handle file selection and communication 
 
 ### 2.1 Create the interop file
 
-In your Blazor project, create a new folder `wwwroot/scripts/` and add a file named `rte-imageeditor-interop.js`.
+In your Blazor project, create a new folder `wwwroot/scripts/` and add a file named `rte-image-editor-interop.js`.
 
 Copy the complete interop implementation from:
 
 {% highlight javascript %}
-{% include_relative code-snippet/image-editor-interop.js %}
+{% include_relative ../code-snippet/image-editor-interop.js %}
 {% endhighlight %}
 
 ### 2.2 Verify file placement
@@ -96,7 +96,7 @@ In your Blazor project's `Pages` folder, create a new file: `ImageEditorIntegrat
 Copy the complete component implementation from:
 
 {% highlight cshtml %}
-{% include_relative code-snippet/image-editor-integration.razor %}
+{% include_relative ../code-snippet/image-editor-integration.razor %}
 {% endhighlight %}
 
 ## How to Use the Integration
