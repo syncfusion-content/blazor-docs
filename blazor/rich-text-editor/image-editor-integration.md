@@ -15,10 +15,10 @@ The Blazor [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazo
 
 This documentation provides a complete integration of the Syncfusion Image Editor with the Rich Text Editor component. Users can:
 
-- Select or upload an image in the editor content
-- Click the "Edit Image" toolbar button to open an image editing dialog
-- Edit the image using various tools (crop, zoom, filter, annotate, fine-tune)
-- Replace the original image with the edited version
+- Select or upload an image in the editor content.
+- Click the "Edit Image" toolbar button to open an image editing dialog.
+- Edit the image using various tools (crop, zoom, filter, annotate, fine-tune).
+- Replace the original image with the edited version.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ builder.Services.Configure<HubOptions>(o => o.MaximumReceiveMessageSize = 1024 *
 
 ## Step 2: Add the JavaScript Interop File
 
-Create the JavaScript interop module to handle file selection and communication between Blazor and the Image Editor.
+Create a JavaScript interop module to handle file selection and communication between the Blazor Rich Text Editor and Image Editor.
 
 ### 2.1 Create the interop file
 
@@ -91,7 +91,7 @@ Add the script reference in your host page before the closing `</body>` tag:
 
 ## Step 4: Create the Razor Component
 
-In your Blazor project's `Pages` folder, create a new file: `ImageEditorIntegration.razor`
+In your Blazor project's `Pages` folder, create a new file: `ImageEditorIntegration.razor`.
 
 Copy the complete component implementation from:
 
@@ -101,11 +101,11 @@ Copy the complete component implementation from:
 
 ## How to Use the Integration
 
-1. **Navigate to the component** — Open the page where you created the component (e.g., `/image-editor-integration`)
-2. **Select or upload an image** — Select an existing image from the editor content or upload a new image using the Rich Text Editor’s image tool
-3. **Select and edit** — Click on the image to select it, then click the "Edit Image" button
-4. **Use image tools** — Crop, rotate, filter, annotate, or fine-tune the image as needed
-5. **Save changes** — Click "Insert" to replace the original image with the edited version
+1. **Navigate to the component** — Open the page where you created the component (e.g., `/image-editor-integration`).
+2. **Select or upload an image** — Select an existing image from the editor content or upload a new image using the Rich Text Editor’s image tool.
+3. **Select and edit** — Click on the image to select it, then click the `Edit Image` button.
+4. **Use image tools** — Crop, rotate, filter, annotate, or fine-tune the image as needed.
+5. **Save changes** — Click "Insert" to replace the original image with the edited version.
 
 ## See also
 
