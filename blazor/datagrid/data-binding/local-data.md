@@ -1117,7 +1117,7 @@ public class OrderData
 
 ## Change datasource dynamically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows changing the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) of the Grid dynamically through an external button. This feature is useful to display different sets of data based on specific actions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows changing the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) of the Grid dynamically through an external button. This feature is useful to display different sets of data based on specific actions.
 
 To implement this:
 
@@ -1593,7 +1593,7 @@ To achieve this, use the [ObservableCollection](https://learn.microsoft.com/en-u
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 @using System.Collections.ObjectModel
-@using BlazorApp3.Data
+@using System.ComponentModel
 
 <div style="margin-bottom:15px">
     <SfButton CssClass="e-outline" OnClick="@AddRecords" Content="Add Data"></SfButton>
@@ -1654,95 +1654,89 @@ To achieve this, use the [ObservableCollection](https://learn.microsoft.com/en-u
 
 {% highlight cs tabtitle="OrdersDetailsObserveData.cs" %}
 
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 
-namespace Observable_Collection.Components.Data
-{
     public class OrdersDetailsObserveData : INotifyPropertyChanged
-{
-
-    public OrdersDetailsObserveData(
-        int orderID, string customerID, int employeeID, double freight, bool verified,
-        DateTime orderDate, string shipCity, string shipName, string shipCountry,
-        DateTime shippedDate, string shipAddress)
     {
-        OrderID = orderID;
-        CustomerID = customerID;
-        EmployeeID = employeeID;
-        Freight = freight;
-        Verified = verified;
-        OrderDate = orderDate;
-        ShipCity = shipCity;
-        ShipName = shipName;
-        ShipCountry = shipCountry;
-        ShippedDate = shippedDate;
-        ShipAddress = shipAddress;
-    }
-
-    public static ObservableCollection<OrdersDetailsObserveData> GetRecords()
-    {
-        var orders = new ObservableCollection<OrdersDetailsObserveData>();
-        int code = 10000;
-
-        for (int i = 1; i < 2; i++)
+        public OrdersDetailsObserveData(
+            int orderID, string customerID, int employeeID, double freight, bool verified,
+            DateTime orderDate, string shipCity, string shipName, string shipCountry,
+            DateTime shippedDate, string shipAddress)
         {
-            orders.Add(new OrdersDetailsObserveData(code + 1, "ALFKI", i + 0, 2.3 * i, false,
-                new DateTime(1991, 5, 15), "Berlin", "Simons bistro", "Denmark",
-                new DateTime(1996, 7, 16), "Kirchgasse 6"));
-
-            orders.Add(new OrdersDetailsObserveData(code + 2, "ANATR", i + 2, 3.3 * i, true,
-                new DateTime(1990, 4, 4), "Madrid", "Queen Cozinha", "Brazil",
-                new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-
-            orders.Add(new OrdersDetailsObserveData(code + 3, "ANTON", i + 1, 4.3 * i, true,
-                new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany",
-                new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
-
-            orders.Add(new OrdersDetailsObserveData(code + 4, "BLONP", i + 3, 5.3 * i, false,
-                new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria",
-                new DateTime(1996, 12, 30), "Magazinweg 7"));
-
-            orders.Add(new OrdersDetailsObserveData(code + 5, "BOLID", i + 4, 6.3 * i, true,
-                new DateTime(1953, 2, 18), "Tsawassen", "Hanari Carnes", "Switzerland",
-                new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
-
-            code += 5;
+            OrderID = orderID;
+            CustomerID = customerID;
+            EmployeeID = employeeID;
+            Freight = freight;
+            Verified = verified;
+            OrderDate = orderDate;
+            ShipCity = shipCity;
+            ShipName = shipName;
+            ShipCountry = shipCountry;
+            ShippedDate = shippedDate;
+            ShipAddress = shipAddress;
         }
 
-        return orders;
-    }
-
-    public int OrderID { get; set; }
-
-    private string customerID;
-    public string CustomerID
-    {
-        get => customerID;
-        set
+        public static ObservableCollection<OrdersDetailsObserveData> GetRecords()
         {
-            customerID = value;
-            NotifyPropertyChanged(nameof(CustomerID));
+            var orders = new ObservableCollection<OrdersDetailsObserveData>();
+            int code = 10000;
+
+            for (int i = 1; i < 2; i++)
+            {
+                orders.Add(new OrdersDetailsObserveData(code + 1, "ALFKI", i + 0, 2.3 * i, false,
+                    new DateTime(1991, 5, 15), "Berlin", "Simons bistro", "Denmark",
+                    new DateTime(1996, 7, 16), "Kirchgasse 6"));
+
+                orders.Add(new OrdersDetailsObserveData(code + 2, "ANATR", i + 2, 3.3 * i, true,
+                    new DateTime(1990, 4, 4), "Madrid", "Queen Cozinha", "Brazil",
+                    new DateTime(1996, 9, 11), "Avda. Azteca 123"));
+
+                orders.Add(new OrdersDetailsObserveData(code + 3, "ANTON", i + 1, 4.3 * i, true,
+                    new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany",
+                    new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
+
+                orders.Add(new OrdersDetailsObserveData(code + 4, "BLONP", i + 3, 5.3 * i, false,
+                    new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria",
+                    new DateTime(1996, 12, 30), "Magazinweg 7"));
+
+                orders.Add(new OrdersDetailsObserveData(code + 5, "BOLID", i + 4, 6.3 * i, true,
+                    new DateTime(1953, 2, 18), "Tsawassen", "Hanari Carnes", "Switzerland",
+                    new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
+
+                code += 5;
+            }
+
+            return orders;
+        }
+
+        public int OrderID { get; set; }
+
+        private string customerID;
+        public string CustomerID
+        {
+            get => customerID;
+            set
+            {
+                customerID = value;
+                NotifyPropertyChanged(nameof(CustomerID));
+            }
+        }
+        int? EmployeeID { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public bool Verified { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public DateTime ShippedDate { get; set; }
+        public string ShipAddress { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
-    int? EmployeeID { get; set; }
-    public double? Freight { get; set; }
-    public string ShipCity { get; set; }
-    public bool Verified { get; set; }
-    public DateTime? OrderDate { get; set; }
-    public string ShipName { get; set; }
-    public string ShipCountry { get; set; }
-    public DateTime ShippedDate { get; set; }
-    public string ShipAddress { get; set; }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    private void NotifyPropertyChanged(string propertyName)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-}
-}
 
 {% endhighlight %}
 {% endtabs %}

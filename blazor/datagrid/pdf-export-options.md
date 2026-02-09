@@ -1833,8 +1833,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> A complete sample is available on [GitHub]
-(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Blazor_Memory_Stream).
+> A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Blazor_Memory_Stream).
 
 ### Converting memory stream to file stream for PDF export
 
@@ -1943,8 +1942,7 @@ To save the exported PDF file locally:
 {% endhighlight %}
 {% endtabs %}
 
-> You can find a complete sample on [GitHub]
-(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/PDF_Converting_Memory_Stream).
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/PDF_Converting_Memory_Stream).
 
 ### Merging two PDF memory streams
 
@@ -2103,5 +2101,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> A complete sample is available on [GitHub]
-(https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Merging_Two_PDF_Memory_Stream).
+> A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Merging_Two_PDF_Memory_Stream).

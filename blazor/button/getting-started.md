@@ -13,7 +13,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get start quickly with Blazor Button component, refer to this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Button) sample.
+To get start quickly with Blazor Button component, refer to this [GitHub](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) sample.
 
 {% tabcontents %}
 
@@ -204,11 +204,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button component
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLftsrepgKpagFy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button Component](./images/blazor-button-component.png)" %}
 
-N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) that shows how to render and configure the button.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Button).
 
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-
-N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) that shows you how to render and configure the button.

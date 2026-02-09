@@ -272,8 +272,6 @@ This following sample shows self-referential data binding in the Gantt Chart by 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLeWDVzBAiIgBkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLeMZLfLAFkPmGF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Defining columns
