@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrate Spell Checker into the Blazor Rich Text Editor Component
 
-WProofreader enables real-time spelling, grammar, and style checks inside the Rich Text Editor editable area. The SDK attaches to the editor content element and provides suggestions without changing the editor workflow.
+[WProofreader](https://wproofreader.com/) enables real-time spelling, grammar, and style checks inside the Rich Text Editor editable area. The SDK attaches to the editor content element and provides suggestions without changing the editor workflow.
 
 ## Key features
 
