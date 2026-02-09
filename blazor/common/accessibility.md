@@ -1656,7 +1656,7 @@ AAA
 MultiColumn ComboBox
 </td>
 <td>
-AAA
+AA
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
