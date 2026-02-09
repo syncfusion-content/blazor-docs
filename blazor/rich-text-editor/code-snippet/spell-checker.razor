@@ -3,18 +3,18 @@
 @using Syncfusion.Blazor.RichTextEditor
 @inject IJSRuntime JS
 
-<SfRichTextEditor ID="@RteId" @ref="rte" Value="@InitialHtml">
+<SfRichTextEditor ID="@rteId" @ref="rte" Value="@InitialHtml">
     <RichTextEditorEvents Created="@Created"></RichTextEditorEvents>
 </SfRichTextEditor>
 
 @code {
     private SfRichTextEditor? rte;
-    private string RteId { get; } = "sfrichtexteditor";
+    private string rteId { get; } = "sfrichtexteditor";
     private string InitialHtml = @"<p>Enter you're text here with real spelling and grammer mistakes to see how WProofreader work. Alot of potential errors will be underlined; hover on the marked wods for instant correction suggesstions.</p>";
 
     private async Task Created()
     {
-        var id = rte?.ID ?? RteId;
-        await JS.InvokeVoidAsync("myJsFunction", id);
+        var id = rte?.ID ?? rteId;
+        await JS.InvokeVoidAsync("initializeWebSpellChecker", id);
     }
 }
