@@ -1,15 +1,15 @@
 @using Syncfusion.Blazor.RichTextEditor
 @inject IJSRuntime _jsRuntime
 
-<SfRichTextEditor ID="@RteId" @bind-Value="Description" @ref="rteObj">
+<SfRichTextEditor ID="@rteId" @bind-Value="description" @ref="rteObj">
     <RichTextEditorToolbarSettings Items="@Tools" />
-    <RichTextEditorEvents OnActionComplete="actionComplete" />
+    <RichTextEditorEvents OnActionComplete="ActionComplete" />
 </SfRichTextEditor>
 
 @code {
     private SfRichTextEditor rteObj;
-    private string Description { get; set; }
-    private string RteId { get; } = "sfrichtexteditor";
+    private string description { get; set; }
+    private string rteId { get; } = "sfrichtexteditor";
 
     private List<ToolbarItemModel> Tools = new()
     {
@@ -27,13 +27,13 @@
         new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
 
-    public async Task actionComplete(ActionCompleteEventArgs args)
+    public async Task ActionComplete(ActionCompleteEventArgs args)
     {
-        var id = rteObj?.ID ?? RteId;
+        var id = rteObj?.ID ?? rteId;
         if (id is null) return;
         if (args.RequestType == "SourceCode" || args.RequestType == "Preview")
         {
-            await _jsRuntime.InvokeVoidAsync("myJsFunction", new { requestType = args.RequestType }, id);
+            await _jsRuntime.InvokeVoidAsync("initializeCodeMirror", new { requestType = args.RequestType }, id);
         }
     }
 }
