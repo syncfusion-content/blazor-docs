@@ -331,6 +331,7 @@ This configuration ensures all API endpoints exposed by **GridController** are a
 
 1. Run the project (<kbd>F5</kbd> or <kbd>Ctrl+F5</kbd>).
 2. Navigate to **https://localhost:<port>/api/grid** (replace <port> with the assigned port).
+3. Verify that the endpoint returns order data.
 
 The endpoint must return a JSON response in the required structure:
 
@@ -386,7 +387,7 @@ using Syncfusion.Blazor;
 builder.Services.AddSyncfusionBlazor();
 ```
 
-> For Blazor Web Apps configured with **WebAssembly** or **Auto** interactive render modes, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service must be registered in both the **Client** and **Server** projects.
+> > For Blazor Web App configured with **WebAssembly** or **Auto** interactive render modes, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service must be registered in the **Program.cs** files of both the **Server** project and the **Client** project.
 
 ### Step 3: Add stylesheet and script resources
 
@@ -413,6 +414,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid establishes
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using UrlAdaptor.Models
+
 <SfGrid TValue="OrderDetails" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
                    Adaptor="Adaptors.UrlAdaptor">
@@ -437,6 +440,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid establishes
         </GridColumn>
     </GridColumns>
 </SfGrid>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -498,7 +502,9 @@ public IActionResult Post([FromBody] DataManagerRequest request)
 {% endhighlight %}
 
 {% highlight razor tabtitle="Home.razor" %}
+
 @using URLAdaptor.Models
+
 <SfGrid TValue="OrderDetails"
         Toolbar="@(new List<string> { "Search" })"
         Height="348">
@@ -574,8 +580,7 @@ public IActionResult Post([FromBody] DataManagerRequest request)
 {% endhighlight %}
 
 {% highlight razor tabtitle="Home.razor" %}
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
+
 @using URLAdaptor.Models
 
 <SfGrid TValue="OrderDetails" AllowFiltering="true" Height="348">
@@ -602,6 +607,7 @@ public IActionResult Post([FromBody] DataManagerRequest request)
         </GridColumn>
     </GridColumns>
 </SfGrid>
+
 {% endhighlight %} 
 {% endtabs %}
 
@@ -645,6 +651,8 @@ public IActionResult Post([FromBody] DataManagerRequest request)
 {% endhighlight %}
 
 {% highlight razor tabtitle="Home.razor" %}
+
+@using UrlAdaptor.Models
 
 <SfGrid TValue="OrderDetails" AllowSorting="true" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
@@ -715,6 +723,8 @@ public IActionResult Post([FromBody] DataManagerRequest request)
 {% endhighlight %}
 
 {% highlight razor tabtitle="Home.razor" %}
+
+@using UrlAdaptor.Models
 
 <SfGrid TValue="OrderDetails" AllowPaging="true" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
@@ -1095,6 +1105,9 @@ public IActionResult CrudUpdate([FromBody] CrudModel<OrderDetails> request)
 {% endhighlight %}
 
 {% highlight razor tabtitle="Home.razor" %}
+
+@using UrlAdaptor.Models
+
 <SfGrid TValue="OrderDetails"
         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })"
         Height="348">
@@ -1128,6 +1141,7 @@ public IActionResult CrudUpdate([FromBody] CrudModel<OrderDetails> request)
         </GridColumn>
     </GridColumns>
 </SfGrid>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1240,6 +1254,9 @@ public IActionResult BatchUpdate([FromBody] CrudModel<OrderDetails> batchModel)
 {% endhighlight %}
 
 {% highlight razor tabtitle="Home.razor" %}
+
+@using UrlAdaptor.Models
+
 <SfGrid TValue="OrderDetails"
         Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })"
         Height="348">
