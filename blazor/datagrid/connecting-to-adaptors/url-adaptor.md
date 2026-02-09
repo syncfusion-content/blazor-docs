@@ -89,7 +89,7 @@ A **Blazor Web App** is required to host the API service that exposes the OData 
 1. Open **Visual Studio 2026**.
 2. Select **Create a new project**.
 3. Choose the **Blazor Web App** template.
-4. Enter the project name as **ODataV4Adaptor**.
+4. Enter the project name as **UrlAdaptor**.
 5. Choose a project location.
 6. Select the appropriate .NET runtime version.
 7. Configure the [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) based on project requirements.
