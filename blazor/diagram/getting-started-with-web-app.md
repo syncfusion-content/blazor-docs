@@ -119,7 +119,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Step 6: How to Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If the interactivity location is `Per page/component` in the web app, define a render mode at the top of the component as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. When creating a Blazor Web App with the interactive mode set to `WebAssembly`, the Syncfusion Blazor Diagram component should be rendered within the client application. If the interactivity location is `Per page/component` in the web app, define a render mode at the top of the component as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -158,11 +158,9 @@ N> If the **Interactivity Location** is set to `Global` and the **Render Mode** 
 
 ## Step 1: How to Create a New Blazor Web App in Visual Studio Code
 
-Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
-
-Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
-
-For example, to create a Blazor Web App with the `Auto` interactive render mode, use the following commands:
+* Open **Visual Studio Code**.
+* Press **Ctrl + `** to open the integrated terminal.
+* Execute the following command to create a **Blazor Web App** with **Auto** [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes):
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -173,6 +171,10 @@ cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
+Alternatively, create **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
 
 ## Step 2: How to Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram and Themes NuGet Packages in the App
 
@@ -267,7 +269,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Step 6: How to Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If the interactivity location is `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. When creating a Blazor Web App with the interactive mode set to `WebAssembly`, the Syncfusion Blazor Diagram component should be rendered within the client application. If the interactivity location is `Per page/component` in the web app, define a render mode at the top of the component as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -294,7 +296,14 @@ N> If the **Interactivity Location** is set to `Global` and the **Render Mode** 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
+How to run the project:
+- Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code. 
+- Ensure the terminal's current directory is the server project folder. 
+- Run the application with:
+```
+dotnet run
+```
+* The running server prints the URL (e.g., https://localhost:5001); open that in a browser to view the rendered SfDiagramComponent.
 
 {% endtabcontent %}
 
@@ -421,7 +430,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Step 6: How to Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. If the interactivity location is `per page/component` in the web app, define a render mode at the top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component to a Razor page located under the Pages folder (e.g., Pages/Home.razor) in either the **Server** or **Client** project. When creating a Blazor Web App with the interactive mode set to `WebAssembly`, the Syncfusion Blazor Diagram component should be rendered within the client application. If the interactivity location is `Per page/component` in the web app, define a render mode at the top of the component as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -448,7 +457,16 @@ N> If the **Interactivity Location** is set to `Global` and the **Render Mode** 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
+Run the app from the command line (Windows) by opening a terminal at the server/project folder (the folder containing the project .csproj that hosts the app) and executing `dotnet run` command.
+
+Ways to open a terminal at the server project folder:
+- File Explorer → navigate to the server project folder → click the address bar, type cmd or PowerShell, press Enter (opens Command Prompt or PowerShell at that path).
+- File Explorer → Shift + Right-click in the folder whitespace → choose "Open PowerShell window here" or "Open in Terminal".
+- Run the application with:
+  ```powershell
+  dotnet run
+  ```
+- The running server prints the URL (e.g., https://localhost:5001); open that in a browser to view the rendered SfDiagramComponent.
 
 {% endtabcontent %}
 
