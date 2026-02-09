@@ -105,7 +105,7 @@ Copy the complete component implementation from:
 2. **Select or upload an image** — Select an existing image from the editor content or upload a new image using the Rich Text Editor’s image tool.
 3. **Select and edit** — Click on the image to select it, then click the `Edit Image` button.
 4. **Use image tools** — Crop, rotate, filter, annotate, or fine-tune the image as needed.
-5. **Save changes** — Click "Insert" to replace the original image with the edited version.
+5. **Save changes** — Click `Insert` to replace the original image with the edited version.
 
 ## See also
 
