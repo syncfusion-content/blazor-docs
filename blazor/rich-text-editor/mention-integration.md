@@ -17,10 +17,10 @@ Before proceeding, complete the base Rich Text Editor setup described in the Get
 
 ## Key features
 
-- Inline mention suggestions bound to the editor editable container
-- Support for local and remote data sources
-- Custom item and display templates
-- Configurable `MinLength`, `SuggestionCount`, and `AllowSpaces`
+- Inline mention suggestions bound to the editor editable container.
+- Support for local and remote data sources.
+- Custom item and display templates.
+- Configurable `MinLength`, `SuggestionCount`, and `AllowSpaces`.
 
 ## Set up the Mention component
 
