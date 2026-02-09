@@ -79,7 +79,7 @@ Add the script references in your host page before the closing `</body>` tag:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/htmlmixed/htmlmixed.min.js"></script>
-    <!--Interop file-->
+    <!-- Interop file -->
     <script src="/scripts/code-mirror.js"></script>
     ...
 </body>
@@ -105,13 +105,13 @@ Create a new Razor component file named **`RichTextEditorWithCodeMirror.razor`**
 
 Once Code Mirror is integrated with the Rich Text Editor, you can begin using the enhanced source‑editing experience immediately:
 
-- Switch to Source Mode
+- **Switch to Source Mode**
   Click the `Source Code` toolbar option in the Rich Text Editor to open the Code Mirror interface.
 
-- Edit HTML with Syntax Highlighting
+- **Edit HTML with Syntax Highlighting**
   The embedded Code Mirror editor provides syntax highlighting, line numbers, and theme support.
 
-- Return to WYSIWYG Mode
+- **Return to WYSIWYG Mode**
   When switching back to Preview or Normal mode, Code Mirror content is synchronized with the editor's main view.
 
 ## See also
