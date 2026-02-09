@@ -26,9 +26,9 @@ The UrlAdaptor enables the Syncfusion<sup style="font-size:70%">&reg;</sup> Blaz
 
 * **Customization**: Serves as the underlying adaptor used by Syncfusion<sup style="font-size:70%">&reg;</sup> data connectors. Custom request headers, authentication mechanisms, or transformation logic can be implemented in the API layer without modifying the adaptor.
 
-* **Scalability**: Well‑suited for enterprise applications that require secure and centralized server‑side execution of operations such as sorting, filtering, paging, grouping, and searching.
+* **Scalability**: Well‑suited for enterprise applications that require secure and centralized server‑side execution of operations such as **sorting**, **filtering**, **searching**, and **paging**.
 
-* **Built‑in data operation support**: Automatically generates structured parameters for all DataGrid operations, enabling the server to receive consistent inputs for actions such as sorting, filtering, searching, paging, and grouping. These parameters are delivered through the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) model, removing the need for manual query construction. After the server processes these inputs and returns the required JSON structure, the DataGrid binds directly to the resulting collection.
+* **Built‑in data operation support**: Automatically generates structured parameters for all DataGrid operations, enabling the server to receive consistent inputs for actions such as **sorting**, **filtering**, **searching**, and **paging**. These parameters are delivered through the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) model, removing the need for manual query construction. After the server processes these inputs and returns the required JSON structure, the DataGrid binds directly to the resulting collection.
 
 ## Who should use UrlAdaptor?
 
@@ -100,32 +100,34 @@ For more guidance, refer to the [Microsoft documentation](https://learn.microsof
 
 ### Step 2: Create a model class
 
-Add a **Models** folder in the server‑side project and create a class named **OrdersDetails.cs**.
+Add a **Models** folder in the server‑side project and create a class named **OrderDetails.cs**.
 
 This class defines the order data structure used by the API service when processing remote data operations through the `UrlAdaptor`.
 
 {% tabs %}
-{% highlight razor tabtitle="OrdersDetails.cs" %}
+{% highlight razor tabtitle="OrderDetails.cs" %}
 
 namespace URLAdaptor.Models
 {
     /// <summary>
-    /// Represents an order record used by the URL adaptor samples.
+    /// Represents an order record used by URL adaptor samples.
     /// </summary>
-    public sealed class OrdersDetails
+    public sealed class OrderDetails
     {
-        // In-memory backing store for demo data (seeded on first access).
-        private static readonly List<OrdersDetails> _data = new();
+        /// <summary>
+        /// In-memory backing store for demonstration data.
+        /// </summary>
+        private static readonly List<OrderDetails> Data = new();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrdersDetails"/> class.
+        /// Initializes a new instance of the <see cref="OrderDetails"/> class.
         /// </summary>
-        public OrdersDetails()
+        public OrderDetails()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrdersDetails"/> class with values.
+        /// Initializes a new instance of the <see cref="OrderDetails"/> class with values.
         /// </summary>
         /// <param name="orderId">Order identifier.</param>
         /// <param name="customerId">Customer identifier.</param>
@@ -138,7 +140,7 @@ namespace URLAdaptor.Models
         /// <param name="shipCountry">Ship-to country.</param>
         /// <param name="shippedDate">Shipped date.</param>
         /// <param name="shipAddress">Ship-to address.</param>
-        public OrdersDetails(
+        public OrderDetails(
             int orderId,
             string customerId,
             int employeeId,
@@ -165,102 +167,85 @@ namespace URLAdaptor.Models
         }
 
         /// <summary>
-        /// Returns the in-memory collection of orders (seeded on first access).
+        /// Returns the in-memory collection of orders.
+        /// Seeding is performed on first access.
         /// </summary>
-        public static List<OrdersDetails> GetAllRecords()
+        /// <remarks>
+        /// Intended for demonstration purposes. Replace with a persistent data source for production scenarios.
+        /// </remarks>
+        /// <returns>A list of <see cref="OrderDetails"/> instances.</returns>
+        public static List<OrderDetails> GetAllRecords()
         {
-            if (_data.Count == 0)
+            if (Data.Count == 0)
             {
-                Seed();
+                int code = 10000;
+
+                for (int i = 1; i < 10; i++)
+                {
+                    Data.Add(new OrderDetails(
+                        code + 1, "ALFKI", i + 0, 2.3 * i, false,
+                        new DateTime(1991, 5, 15), "Berlin", "Simons bistro", "Denmark",
+                        new DateTime(1996, 7, 16), "Kirchgasse 6"));
+
+                    Data.Add(new OrderDetails(
+                        code + 2, "ANATR", i + 2, 3.3 * i, true,
+                        new DateTime(1990, 4, 4), "Madrid", "Queen Cozinha", "Brazil",
+                        new DateTime(1996, 9, 11), "Avda. Azteca 123"));
+
+                    Data.Add(new OrderDetails(
+                        code + 3, "ANTON", i + 1, 4.3 * i, true,
+                        new DateTime(1957, 11, 30), "Colchester", "Frankenversand", "Germany",
+                        new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
+
+                    Data.Add(new OrderDetails(
+                        code + 4, "BLONP", i + 3, 5.3 * i, false,
+                        new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria",
+                        new DateTime(1996, 12, 30), "Magazinweg 7"));
+
+                    Data.Add(new OrderDetails(
+                        code + 5, "BOLID", i + 4, 6.3 * i, true,
+                        new DateTime(1953, 2, 18), "Tsawassen", "Hanari Carnes", "Switzerland",
+                        new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
+
+                    code += 5;
+                }
             }
 
-            return _data;
+            return Data;
         }
 
-        /// <summary>
-        /// Gets or sets the order identifier.
-        /// </summary>
+        /// <summary>Gets or sets the order identifier.</summary>
         public int? OrderId { get; set; }
 
-        /// <summary>
-        /// Gets or sets the customer identifier.
-        /// </summary>
+        /// <summary>Gets or sets the customer identifier.</summary>
         public string? CustomerId { get; set; }
 
-        /// <summary>
-        /// Gets or sets the employee identifier.
-        /// </summary>
+        /// <summary>Gets or sets the employee identifier.</summary>
         public int? EmployeeId { get; set; }
 
-        /// <summary>
-        /// Gets or sets the freight charge.
-        /// </summary>
+        /// <summary>Gets or sets the freight charge.</summary>
         public double? Freight { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ship-to city.
-        /// </summary>
-        public string? ShipCity { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether the order is verified.
-        /// </summary>
+        /// <summary>Gets or sets a value indicating whether the order is verified.</summary>
         public bool? Verified { get; set; }
 
-        /// <summary>
-        /// Gets or sets the order date.
-        /// </summary>
+        /// <summary>Gets or sets the order date.</summary>
         public DateTime OrderDate { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ship-to name.
-        /// </summary>
+        /// <summary>Gets or sets the ship-to city.</summary>
+        public string? ShipCity { get; set; }
+
+        /// <summary>Gets or sets the ship-to name.</summary>
         public string? ShipName { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ship-to country.
-        /// </summary>
+        /// <summary>Gets or sets the ship-to country.</summary>
         public string? ShipCountry { get; set; }
 
-        /// <summary>
-        /// Gets or sets the shipped date.
-        /// </summary>
+        /// <summary>Gets or sets the shipped date.</summary>
         public DateTime ShippedDate { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ship-to address.
-        /// </summary>
+        /// <summary>Gets or sets the ship-to address.</summary>
         public string? ShipAddress { get; set; }
-
-        private static void Seed()
-        {
-            var code = 10000;
-
-            for (var i = 1; i < 10; i++)
-            {
-                _data.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false,
-                    new DateTime(1991, 5, 15), "Berlin", "Simons bistro", "Denmark",
-                    new DateTime(1996, 7, 16), "Kirchgasse 6"));
-
-                _data.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true,
-                    new DateTime(1990, 4, 4), "Madrid", "Queen Cozinha", "Brazil",
-                    new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-
-                _data.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true,
-                    new DateTime(1957, 11, 30), "Colchester", "Frankenversand", "Germany",
-                    new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
-
-                _data.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false,
-                    new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria",
-                    new DateTime(1996, 12, 30), "Magazinweg 7"));
-
-                _data.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true,
-                    new DateTime(1953, 2, 18), "Tsawassen", "Hanari Carnes", "Switzerland",
-                    new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
-
-                code += 5;
-            }
-        }
     }
 }
 
@@ -299,9 +284,9 @@ namespace URLAdaptor.Controllers
         /// </summary>
         /// <returns>The complete set of order records.</returns>
         [HttpGet]
-        public List<OrdersDetails> Get()
+        public List<OrderDetails> Get()
         {
-            return OrdersDetails.GetAllRecords().ToList();
+            return OrderDetails.GetAllRecords().ToList();
         }
 
         /// <summary>
@@ -313,7 +298,7 @@ namespace URLAdaptor.Controllers
         public IActionResult Post()
         {
             // Retrieve data source and convert to queryable.
-            IQueryable<OrdersDetails> dataSource = OrdersDetails.GetAllRecords().AsQueryable();
+            IQueryable<OrderDetails> dataSource = OrderDetails.GetAllRecords().AsQueryable();
 
             // Get total records count.
             int totalRecordsCount = dataSource.Count();
@@ -428,7 +413,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid establishes
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfGrid TValue="OrdersDetails" Height="348">
+<SfGrid TValue="OrderDetails" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
                    Adaptor="Adaptors.UrlAdaptor">
     </SfDataManager>
@@ -494,7 +479,7 @@ To enable server‑side searching with the `UrlAdaptor`, apply search criteria f
 [HttpPost]
 public IActionResult Post([FromBody] DataManagerRequest request)
 {
-    IQueryable<OrdersDetails> dataSource = OrdersDetails.GetAllRecords().AsQueryable();
+    IQueryable<OrderDetails> dataSource = OrderDetails.GetAllRecords().AsQueryable();
 
     // Searching
     if (request?.Search != null && request.Search.Count > 0)
@@ -514,7 +499,7 @@ public IActionResult Post([FromBody] DataManagerRequest request)
 
 {% highlight razor tabtitle="Home.razor" %}
 @using URLAdaptor.Models
-<SfGrid TValue="OrdersDetails"
+<SfGrid TValue="OrderDetails"
         Toolbar="@(new List<string> { "Search" })"
         Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
@@ -566,7 +551,7 @@ To enable server‑side filtering with the `UrlAdaptor`, apply filter conditions
 [HttpPost]
 public IActionResult Post([FromBody] DataManagerRequest request)
 {
-    IQueryable<OrdersDetails> dataSource = OrdersDetails.GetAllRecords().AsQueryable();
+    IQueryable<OrderDetails> dataSource = OrderDetails.GetAllRecords().AsQueryable();
 
     // Filtering
     if (request.Where != null && request.Where.Count > 0)
@@ -593,7 +578,7 @@ public IActionResult Post([FromBody] DataManagerRequest request)
 @using Syncfusion.Blazor.Data
 @using URLAdaptor.Models
 
-<SfGrid TValue="OrdersDetails" AllowFiltering="true" Height="348">
+<SfGrid TValue="OrderDetails" AllowFiltering="true" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
                    Adaptor="Adaptors.UrlAdaptor">
     </SfDataManager>
@@ -641,7 +626,7 @@ To enable server‑side sorting with the `UrlAdaptor`, apply sort descriptors fr
 [HttpPost]
 public IActionResult Post([FromBody] DataManagerRequest request)
 {
-    IQueryable<OrdersDetails> dataSource = OrdersDetails.GetAllRecords().AsQueryable();
+    IQueryable<OrderDetails> dataSource = OrderDetails.GetAllRecords().AsQueryable();
 
     // Sorting
     if (request?.Sorted != null && request.Sorted.Count > 0)
@@ -661,7 +646,7 @@ public IActionResult Post([FromBody] DataManagerRequest request)
 
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfGrid TValue="OrdersDetails" AllowSorting="true" Height="348">
+<SfGrid TValue="OrderDetails" AllowSorting="true" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
                    Adaptor="Adaptors.UrlAdaptor">
     </SfDataManager>
@@ -705,7 +690,7 @@ To enable server‑side paging with the `UrlAdaptor`, apply pagination values fr
 [HttpPost]
 public IActionResult Post([FromBody] DataManagerRequest request)
 {
-    IQueryable<OrdersDetails> dataSource = OrdersDetails.GetAllRecords().AsQueryable();
+    IQueryable<OrderDetails> dataSource = OrderDetails.GetAllRecords().AsQueryable();
 
     // Total count before paging
     int totalRecordsCount = dataSource.Count();
@@ -731,7 +716,7 @@ public IActionResult Post([FromBody] DataManagerRequest request)
 
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfGrid TValue="OrdersDetails" AllowPaging="true" Height="348">
+<SfGrid TValue="OrderDetails" AllowPaging="true" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
                    Adaptor="Adaptors.UrlAdaptor">
     </SfDataManager>
@@ -784,7 +769,7 @@ In this configuration, inline editing is enabled by setting the edit [Mode](http
 
 @using URLAdaptor.Models
 
-<SfGrid TValue="OrdersDetails"
+<SfGrid TValue="OrderDetails"
         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })"
         Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
@@ -906,14 +891,14 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid processes i
 /// Returns the inserted entity when successful; returns HTTP 400 when the request payload is invalid.
 /// </returns>
 [HttpPost("Insert")]
-public IActionResult Insert([FromBody] CrudModel<OrdersDetails> record)
+public IActionResult Insert([FromBody] CrudModel<OrderDetails> record)
 {
     if (record?.Value is null)
     {
         return BadRequest("A valid payload with a non-null value is required.");
     }
 
-    var store = OrdersDetails.GetAllRecords();
+    var store = OrderDetails.GetAllRecords();
     store.Insert(0, record.Value);
 
     return Ok(record.Value);
@@ -941,7 +926,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid processes u
 /// An HTTP 200 response with the updated entity when successful; HTTP 400/404 for invalid input or missing record.
 /// </returns>
 [HttpPost("Update")]
-public IActionResult Update([FromBody] CrudModel<OrdersDetails> record)
+public IActionResult Update([FromBody] CrudModel<OrderDetails> record)
 {
     var updated = record?.Value;
     if (updated is null)
@@ -949,7 +934,7 @@ public IActionResult Update([FromBody] CrudModel<OrdersDetails> record)
         return BadRequest("A valid payload with a non-null value is required.");
     }
 
-    var list = OrdersDetails.GetAllRecords();
+    var list = OrderDetails.GetAllRecords();
     var target = list.FirstOrDefault(o => o.OrderId == updated.OrderId);
     if (target is null)
     {
@@ -987,7 +972,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid handles del
 /// Returns the removed entity when successful; returns HTTP 400/404 otherwise.
 /// </returns>
 [HttpPost("Remove")]
-public IActionResult Remove([FromBody] CrudModel<OrdersDetails> record)
+public IActionResult Remove([FromBody] CrudModel<OrderDetails> record)
 {
     if (record?.Key is null)
     {
@@ -999,7 +984,7 @@ public IActionResult Remove([FromBody] CrudModel<OrdersDetails> record)
         return BadRequest("The key must be a valid integer OrderId.");
     }
 
-    var list = OrdersDetails.GetAllRecords();
+    var list = OrderDetails.GetAllRecords();
     var target = list.FirstOrDefault(o => o.OrderId == orderId);
     if (target is null)
     {
@@ -1039,7 +1024,7 @@ This approach centralizes server‑side logic and simplifies request routing for
 /// Returns the created/updated entity or removed key when successful; returns HTTP 400/404 otherwise.
 /// </returns>
 [HttpPost("CrudUpdate")]
-public IActionResult CrudUpdate([FromBody] CrudModel<OrdersDetails> request)
+public IActionResult CrudUpdate([FromBody] CrudModel<OrderDetails> request)
 {
     if (request is null || string.IsNullOrWhiteSpace(request.Action))
     {
@@ -1048,7 +1033,7 @@ public IActionResult CrudUpdate([FromBody] CrudModel<OrdersDetails> request)
 
     // Normalize action for comparison
     var action = request.Action.Trim().ToLowerInvariant();
-    var list = OrdersDetails.GetAllRecords();
+    var list = OrderDetails.GetAllRecords();
 
     switch (action)
     {
@@ -1110,7 +1095,7 @@ public IActionResult CrudUpdate([FromBody] CrudModel<OrdersDetails> request)
 {% endhighlight %}
 
 {% highlight razor tabtitle="Home.razor" %}
-<SfGrid TValue="OrdersDetails"
+<SfGrid TValue="OrderDetails"
         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })"
         Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
@@ -1173,14 +1158,14 @@ The API endpoint mapped through `BatchUrl` processes these collections sequentia
 /// Returns an HTTP 200 response containing the processed batch payload; returns HTTP 400 for invalid input.
 /// </returns>
 [HttpPost("BatchUpdate")]
-public IActionResult BatchUpdate([FromBody] CrudModel<OrdersDetails> batchModel)
+public IActionResult BatchUpdate([FromBody] CrudModel<OrderDetails> batchModel)
 {
     if (batchModel is null)
     {
         return BadRequest("A valid batch payload is required.");
     }
 
-    var list = OrdersDetails.GetAllRecords();
+    var list = OrderDetails.GetAllRecords();
 
     // Insert
     if (batchModel.Added is { Count: > 0 })
@@ -1255,7 +1240,7 @@ public IActionResult BatchUpdate([FromBody] CrudModel<OrdersDetails> batchModel)
 {% endhighlight %}
 
 {% highlight razor tabtitle="Home.razor" %}
-<SfGrid TValue="OrdersDetails"
+<SfGrid TValue="OrderDetails"
         Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })"
         Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid"
