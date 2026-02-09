@@ -75,7 +75,7 @@ Ensure the file is located at:
 YourProject/
 └── wwwroot/
     └── scripts/
-        └── rte-imageeditor-interop.js
+        └── rte-image-editor-interop.js
 ```
 
 ## Step 3: Add Script Reference in Host Page
@@ -83,7 +83,7 @@ YourProject/
 Add the script reference in your host page before the closing `</body>` tag:
 
 ```html
-<script src="/scripts/rte-imageeditor-interop.js"></script>
+<script src="/scripts/rte-image-editor-interop.js"></script>
 </body>
 ```
 
