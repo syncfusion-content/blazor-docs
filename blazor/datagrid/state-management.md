@@ -127,7 +127,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes an
 
 **Ways to Restore**
 
-1. **Using ResetPersistData Method**
+1. **Using ResetPersistDataAsync Method**
 
     Clears the persisted state from local storage and restores the grid to its original property values.
 
@@ -135,9 +135,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes an
 
     Removes the stored state directly from the browser’s local storage and reloads the grid with its initial configuration.
 
-### Using ResetPersistData Method
+### Using ResetPersistDataAsync Method
 
-The [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) method clears all persisted state data when persistence is enabled and restores the Grid to its original property values.
+The [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) method clears all persisted state data when persistence is enabled and restores the Grid to its original property values.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

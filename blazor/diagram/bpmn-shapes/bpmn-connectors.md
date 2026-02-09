@@ -33,16 +33,16 @@ The following code example explains how to create an association.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors"/>
+<SfDiagramComponent Height="600px" Connectors="@_connectors"/>
 
 @code
 {
     // Create connector and store it in the connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             // Unique Id of the connector.
@@ -56,13 +56,13 @@ The following code example explains how to create an association.
                 Flow = BpmnFlowType.AssociationFlow,
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBeitNHVuzaWWAu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnConnectors/Association)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Association.razor)
 
 ![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.png)
 
@@ -90,16 +90,16 @@ The following code example explains how to create a sequence flow.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors"/>
+<SfDiagramComponent Height="600px" Connectors="@_connectors"/>
 
 @code
 {
     // Create connector and store it in the connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             // Unique Id of the connector.
@@ -113,13 +113,13 @@ The following code example explains how to create a sequence flow.
                 Flow = BpmnFlowType.SequenceFlow,
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIsDjHBuSBuntI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnConnectors/Sequence)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Sequence.razor)
 
 ![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.png) 
 
@@ -149,16 +149,16 @@ The following code example explains how to define a message flow.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors"/>
+<SfDiagramComponent Height="600px" Connectors="@_connectors"/>
 
 @code
 {
     // Create connector and store it in the connector collection.
-    DiagramObjectCollection<Connector> connectors;
+    DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             // Unique Id of the connector.
@@ -172,13 +172,13 @@ The following code example explains how to define a message flow.
                 Flow = BpmnFlowType.MessageFlow,
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSittnhOeEgbiL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnConnectors/Message)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Message.razor)
 
  ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.png)
 
