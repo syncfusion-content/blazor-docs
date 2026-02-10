@@ -178,7 +178,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references within the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references within the `<head>` section of the **~wwwroot/index.html** file.
 
 ```html
 <head>
@@ -195,7 +195,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Initialize the Blazor Pivot Table component
 
-To display the Pivot Table, add the component to the **~/Pages/Index.razor** file. Use the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) component with the specified data type.
+To display the Pivot Table, add the component to the **~/Pages/Home.razor** file. Use the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) component with the specified data type.
 
 {% tabs %}
 {% highlight razor %}
@@ -213,6 +213,8 @@ For demonstration purposes, a collection of objects containing sales details for
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <SfPivotView TValue="ProductDetails">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -345,6 +347,8 @@ To define each field in its respective axis, configure the following basic prope
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
@@ -386,6 +390,8 @@ N> Formatting can only be applied to numeric fields in the value section of the 
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <SfPivotView TValue="ProductDetails" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -432,6 +438,8 @@ To enable the field list, set the [ShowFieldList](https://help.syncfusion.com/cr
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
@@ -475,6 +483,8 @@ Users can also use the grouping bar to sort, filter, or remove fields quickly wi
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
@@ -517,6 +527,8 @@ The following example shows how to add a field to the filter axis in a Blazor Pi
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -569,6 +581,8 @@ Below is a sample code that shows how to set up calculated fields both through c
 {% tabs %}
 {% highlight razor %}
 
+@page "/"
+
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
         <PivotViewColumns>
@@ -617,6 +631,8 @@ The following code example shows how to display a server-side error message to t
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <span class="error">@ErrorDetails</span>
 <SfPivotView TValue="PivotViewData" Width="100%" Height="450" AllowDataCompression="true" EnableVirtualization="true" ShowFieldList="true" ShowGroupingBar="true" MaxNodeLimitInMemberEditor="50">

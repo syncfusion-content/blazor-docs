@@ -33,7 +33,7 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
 | Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
@@ -83,14 +83,14 @@ BEGIN
         Priority VARCHAR(50) NOT NULL DEFAULT 'Medium',
         ResponseDue DATETIME2 NULL,
         DueDate DATETIME2 NULL,
-        CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
-        UpdatedAt DATETIME2 NOT NULL DEFAULT GETDATE()
+        CreatedOn DATETIME2 NOT NULL DEFAULT GETDATE(),
+        UpdatedOn DATETIME2 NOT NULL DEFAULT GETDATE()
     );
 END
 GO
 
 -- Insert Sample Data (Optional)
-INSERT INTO dbo.Tickets (PublicTicketId, Title, Description, Category, Department, Assignee, CreatedBy, Status, Priority, ResponseDue, DueDate, CreatedAt, UpdatedAt)
+INSERT INTO dbo.Tickets (PublicTicketId, Title, Description, Category, Department, Assignee, CreatedBy, Status, Priority, ResponseDue, DueDate, CreatedOn, UpdatedOn)
 VALUES
 ('NET-1001', 'Network Connectivity Issue', 'Users unable to connect to the VPN', 'Network Issue', 'Network Ops', 'John Doe', 'Alice Smith', 'Open', 'High', '2026-01-14 10:00:00', '2026-01-15 17:00:00', '2026-01-13 10:15:30', '2026-01-13 10:15:30'),
 ('NET-1002', 'Server Performance Degradation', 'Email server responding slowly', 'Performance', 'Infrastructure', 'Emily White', 'Bob Johnson', 'InProgress', 'Critical', '2026-01-13 15:00:00', '2026-01-14 17:00:00', '2026-01-13 11:20:10', '2026-01-13 11:20:10');
@@ -110,7 +110,7 @@ For this guide, a Blazor application named **Grid_MSSQL** has been created. Once
 
 **Method 1: Using Package Manager Console**
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
 3. Run the following commands:
 
@@ -118,19 +118,19 @@ For this guide, a Blazor application named **Grid_MSSQL** has been created. Once
 Install-Package Microsoft.EntityFrameworkCore -Version 9.0.0; 
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 9.0.0; 
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 9.0.0; 
-Install-Package Syncfusion.Blazor.Grids -Version {{site.blazorversion}}; 
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}}; 
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
 **Method 2: Using NuGet Package Manager UI**
 
-1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **Microsoft.EntityFrameworkCore** (version 9.0.0 or later)
    - **Microsoft.EntityFrameworkCore.Tools** (version 9.0.0 or later)
    - **Microsoft.EntityFrameworkCore.SqlServer** (version 9.0.0 or later)
-   - **Syncfusion.Blazor.Grids** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -219,12 +219,12 @@ namespace Grid_MSSQL.Data
         /// <summary>
         /// Gets or sets the timestamp indicating when the ticket was created.
         /// </summary>
-        public DateTime? CreatedAt { get; set; }
+        public DateTime? CreatedOn { get; set; }
 
         /// <summary>
         /// Gets or sets the timestamp indicating when the ticket was last updated.
         /// </summary>
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime? UpdatedOn { get; set; }
     }
 }
 ```
@@ -332,12 +332,12 @@ namespace Grid_MSSQL.Data
                     .HasColumnType("datetime2")
                     .IsRequired(false);
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime2")
                     .IsRequired(false)
                     .HasDefaultValueSql("GETDATE()");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime2")
                     .IsRequired(false)
                     .HasDefaultValueSql("GETDATE()");
@@ -349,8 +349,8 @@ namespace Grid_MSSQL.Data
                 entity.HasIndex(e => e.Status)
                     .HasDatabaseName("IX_Status");
 
-                entity.HasIndex(e => e.CreatedAt)
-                    .HasDatabaseName("IX_CreatedAt");
+                entity.HasIndex(e => e.CreatedOn)
+                    .HasDatabaseName("IX_CreatedOn");
 
                 // Table name and schema
                 entity.ToTable("Tickets", schema: "dbo");
@@ -466,7 +466,7 @@ namespace Grid_MSSQL.Data
         /// Adds a new ticket to the database
         /// </summary>
         /// <param name="value">The ticket model to add</param>
-        public async Task AddTicketAsync(Tickets value)
+        public async Task AddTicketAsync(Tickets? value)
         {
             // Handle logic to add a new ticket to the database
         }
@@ -475,7 +475,7 @@ namespace Grid_MSSQL.Data
         /// Updates an existing ticket
         /// </summary>
         /// <param name="value">The ticket model with updated values</param>
-        public async Task UpdateTicketAsync(Tickets value)
+        public async Task UpdateTicketAsync(Tickets? value)
         {
             // Handle logic to update an existing ticket to the database
         }
@@ -581,15 +581,18 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
-2. Import the required namespaces in the `Components/_Imports.razor` file:
+* The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
+* Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+@using Grid_MSSQL.Data
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -698,7 +701,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
             try
             {
                 // Fetch all tickets from the database
-                IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+                IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
                 // Apply search operation if search criteria exists
                 if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -731,6 +734,15 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
                 if (dataManagerRequest.Take != 0)
                 {
                     dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+                }
+
+                // Handling Grouping
+                if (dataManagerRequest.Group != null)
+                {
+                    foreach (var group in dataManagerRequest.Group)
+                    {
+                        dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                    }
                 }
 
                 // Return the result with total count for pagination metadata
@@ -769,8 +781,8 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
+* Open the `Components/Pages/Home.razor` file.
+* Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
 ```cshtml
 <SfGrid TValue="Tickets" 
@@ -784,7 +796,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 </SfGrid>
 ```
 
-3. Add the toolbar items list in the `@code` block:
+* Add the toolbar items list in the `@code` block:
 
 ```csharp
 @code {
@@ -809,15 +821,43 @@ The toolbar has been successfully added.
 
 ---
 
-### Step 5: Implement Paging Feature
+### Step 5: Running the Application
+
+**Build the Application**
+
+1. Open the terminal or Package Manager Console.
+2. Navigate to the project directory.
+3. Run the following command:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
+3. The Network Support Ticket System is now running and ready to use.
+
+![Basic DataGrid displaying tickets from the SQL Server database](../images/blazor-datagrid-sql.png)
+
+### Step 6: Implement Paging Feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
 **Instructions:**
 
-1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
-3. No additional code changes are required from the previous steps.
+* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+* No additional code changes are required from the previous steps.
 
 ```cshtml
 <SfGrid TValue="Tickets" 
@@ -829,7 +869,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 </SfGrid>
 ```
 
-4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
 
 ```csharp
 @code {
@@ -847,7 +887,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
             
@@ -905,13 +945,13 @@ Paging feature is now active with 10 records per page.
 
 ---
 
-### Step 6: Implement Searching feature
+### Step 7: Implement Searching feature
 
 Searching allows the user to find records by entering keywords in the search box.
 
 **Instructions:**
 
-1. Ensure the toolbar includes the "Search" item.
+* Ensure the toolbar includes the "Search" item.
 
 ```cshtml
 <SfGrid TValue="Tickets"
@@ -923,7 +963,7 @@ Searching allows the user to find records by entering keywords in the search box
 </SfGrid>
 ```
 
-2. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
 
 ```csharp
 @code {
@@ -939,7 +979,7 @@ Searching allows the user to find records by entering keywords in the search box
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -978,14 +1018,14 @@ Searching feature is now active.
 
 ---
 
-### Step 7: Implement Filtering feature
+### Step 8: Implement Filtering feature
 
 Filtering allows the user to restrict data based on column values using a menu interface.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Tickets" 
@@ -1000,7 +1040,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
 
 ```csharp
 @code {
@@ -1016,7 +1056,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1063,14 +1103,14 @@ Filtering feature is now active.
 
 ---
 
-### Step 8: Implement Sorting feature
+### Step 9: Implement Sorting feature
 
 Sorting enables the user to arrange records in ascending or descending order based on column values.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Tickets" 
@@ -1087,7 +1127,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
 
 ```csharp
 @code {
@@ -1098,7 +1138,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1150,14 +1190,14 @@ Sorting feature is now active.
 
 ---
 
-### Step 9: Implement Grouping feature
+### Step 10: Implement Grouping feature
 
 Grouping organizes records into hierarchical groups based on column values.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="Tickets" 
@@ -1173,7 +1213,7 @@ Grouping organizes records into hierarchical groups based on column values.
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
 
 ```csharp
 @code {
@@ -1184,7 +1224,7 @@ Grouping organizes records into hierarchical groups based on column values.
 
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
 
             // Handling Search
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1206,18 +1246,6 @@ Grouping organizes records into hierarchical groups based on column values.
 
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
 
-            // Handling Grouping
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                var dataObject = new DataResult { Result = ResultData, Count = totalRecordsCount, Aggregates = aggregates };
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
-
             // Handling Paging
             if (dataManagerRequest.Skip != 0)
             {
@@ -1228,8 +1256,17 @@ Grouping organizes records into hierarchical groups based on column values.
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
             }
 
+            // Handling Grouping
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
+            }
+
             return dataManagerRequest.RequiresCounts
-                ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates }
+                ? new DataResult() { Result = dataSource, Count = totalRecordsCount }
                 : (object)dataSource;
         }
     }
@@ -1249,7 +1286,7 @@ Grouping feature is now active.
 
 ---
 
-### Step 10: Perform CRUD operations
+### Step 11: Perform CRUD operations
 
 CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **TicketRepository.cs** to execute SQL Server commands.
 
@@ -1303,7 +1340,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/TicketRepository.cs**, the insert method is implemented as:
 
 ```csharp
-public async Task AddTicketAsync(Tickets value)
+public async Task AddTicketAsync(Tickets? value)
 {
     try
     {
@@ -1313,11 +1350,11 @@ public async Task AddTicketAsync(Tickets value)
         string generatedPublicTicketId = await GeneratePublicTicketIdAsync();
         value.PublicTicketId = generatedPublicTicketId;
         
-        if (value.CreatedAt == null)
-            value.CreatedAt = DateTime.Now;
+        if (value.CreatedOn == null)
+            value.CreatedOn = DateTime.Now;
 
-        if (value.UpdatedAt == null)
-            value.UpdatedAt = DateTime.Now;
+        if (value.UpdatedOn == null)
+            value.UpdatedOn = DateTime.Now;
 
         _context.Tickets.Add(value);
 
@@ -1334,7 +1371,39 @@ public async Task AddTicketAsync(Tickets value)
         throw;
     }
 }
+
+private async Task<string> GeneratePublicTicketIdAsync()
+{
+    try
+    {
+        var existingTickets = await GetTicketsDataAsync();
+
+        int maxNumber = existingTickets
+            .Where(ticket => !string.IsNullOrEmpty(ticket.PublicTicketId) && ticket.PublicTicketId.StartsWith(PublicTicketIdPrefix))
+            .Select(ticket =>
+            {
+                string numberPart = ticket.PublicTicketId!.Substring((PublicTicketIdPrefix + PublicTicketIdSeparator).Length);
+                if (int.TryParse(numberPart, out int number))
+                    return number;
+                return 0;
+            })
+            .DefaultIfEmpty(PublicTicketIdStartNumber - 1)
+            .Max();
+        int nextNumber = maxNumber + 1;
+        string newPublicTicketId = $"{PublicTicketIdPrefix}{PublicTicketIdSeparator}{nextNumber}";
+
+        return newPublicTicketId;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error generating ticket ID: {ex.Message}");
+        return $"{PublicTicketIdPrefix}{PublicTicketIdSeparator}{PublicTicketIdStartNumber}";
+    }
+}
 ```
+
+**Helper methods explanation:**
+- `GeneratePublicTicketIdAsync()`: A new PublicTicketId is auto-generated using previously generated PublicTicketId.
 
 **What happens behind the scenes:**
 
@@ -1369,7 +1438,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/TicketRepository.cs**, the update method is implemented as:
 
 ```csharp
-public async Task UpdateTicketAsync(Tickets value)
+public async Task UpdateTicketAsync(Tickets? value)
 {
     try
     {
@@ -1394,8 +1463,8 @@ public async Task UpdateTicketAsync(Tickets value)
         existingTicket.Priority = value.Priority;
         existingTicket.ResponseDue = value.ResponseDue;
         existingTicket.DueDate = value.DueDate;
-        existingTicket.CreatedAt = value.CreatedAt;
-        existingTicket.UpdatedAt = DateTime.Now;
+        existingTicket.CreatedOn = value.CreatedOn;
+        existingTicket.UpdatedOn = DateTime.Now;
 
         await _context.SaveChangesAsync();
     }
@@ -1572,14 +1641,13 @@ Now the adaptor supports bulk modifications with atomic database synchronization
 
 ---
 
-### Step 11: Complete Code
+### Step 12: Complete Code
 
 Here is the complete and final `Home.razor` component with all features integrated. This component uses the exact implementation from the Grid_MSSQL project:
 
 ```cshtml
 @page "/"
 @using System.Collections
-@using Grid_MSSQL.Data
 @inject TicketRepository TicketService
 <PageTitle>Network Support Ticket System</PageTitle>
 
@@ -1662,9 +1730,9 @@ Here is the complete and final `Home.razor` component with all features integrat
                     </Template>
                 </GridColumn>
                 
-                <GridColumn Field=@nameof(Tickets.UpdatedAt) HeaderText="Last Modified" Width="200" Type="ColumnType.DateTime" Format="MMM d, yyyy, h:mm tt" EditType="EditType.DateTimePickerEdit"></GridColumn>
+                <GridColumn Field=@nameof(Tickets.UpdatedOn) HeaderText="Last Modified" Width="200" Type="ColumnType.DateTime" Format="MMM d, yyyy, h:mm tt" EditType="EditType.DateTimePickerEdit"></GridColumn>
                 
-                <GridColumn Field=@nameof(Tickets.CreatedAt) HeaderText="Created On" Width="200" Type="ColumnType.DateTime" Format="MMM d, yyyy, h:mm tt" EditType="EditType.DateTimePickerEdit"></GridColumn>
+                <GridColumn Field=@nameof(Tickets.CreatedOn) HeaderText="Created On" Width="200" Type="ColumnType.DateTime" Format="MMM d, yyyy, h:mm tt" EditType="EditType.DateTimePickerEdit"></GridColumn>
             </GridColumns>
         </SfGrid>
     </div>
@@ -1709,7 +1777,7 @@ Here is the complete and final `Home.razor` component with all features integrat
         /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string Key = null)
         {
-            IEnumerable<Tickets> dataSource = await _ticketService!.GetTicketsDataAsync();
+            IEnumerable dataSource = await _ticketService!.GetTicketsDataAsync();
             
             // Handling Searching in CustomAdaptor.
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
@@ -1729,27 +1797,8 @@ Here is the complete and final `Home.razor` component with all features integrat
                 dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
             }
 
-            // Handling Aggregates
-            IDictionary<string, object>? aggregates = null;
-            if (dataManagerRequest.Aggregates != null)
-            {
-                aggregates = DataUtil.PerformAggregation(dataSource, dataManagerRequest.Aggregates);
-            }
-
             int totalRecordsCount = dataSource.Cast<Tickets>().Count();
-            DataResult dataObject = new DataResult();
-            // Handling Group operation in CustomAdaptor.
-            if (dataManagerRequest.Group != null)
-            {
-                IEnumerable ResultData = dataSource.ToList();
-                foreach (var group in dataManagerRequest.Group)
-                {
-                    ResultData = DataUtil.Group<Tickets>(ResultData, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
-                }
-                dataObject.Result = ResultData;
-                dataObject.Count = totalRecordsCount;
-                return dataManagerRequest.RequiresCounts ? dataObject : (object)ResultData;
-            }
+            
             // Handling paging in CustomAdaptor.
             if (dataManagerRequest.Skip != 0)
             {
@@ -1759,7 +1808,17 @@ Here is the complete and final `Home.razor` component with all features integrat
             {
                 dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
             }
-            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount, Aggregates = aggregates } : (object)dataSource;
+
+            // Handling Grouping
+            if (dataManagerRequest.Group != null)
+            {
+                foreach (var group in dataManagerRequest.Group)
+                {
+                    dataSource = DataUtil.Group<Tickets>(dataSource, group, dataManagerRequest.Aggregates, 0, dataManagerRequest.GroupByFormatter);
+                }
+            }
+
+            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount } : (object)dataSource;
         }
 
         /// <summary>
@@ -2088,50 +2147,14 @@ Here is the complete and final `Home.razor` component with all features integrat
 
 ---
 
-## Running the Application
 
-**Step 1: Build the Application**
-
-1. Open the terminal or Package Manager Console.
-2. Navigate to the project directory.
-3. Run the following command:
-
-```powershell
-dotnet build
-```
-
-**Step 2: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-**Step 3: Access the Application**
-
-1. Open a web browser.
-2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
-3. The Network Support Ticket System is now running and ready to use.
-
-**Available Features**
-
-- **View Data**: All tickets from the SQL Server database are displayed in the DataGrid.
-- **Search**: Use the search box to find tickets by any field.
-- **Filter**: Click on column headers to apply filters.
-- **Sort**: Click on column headers to sort data in ascending or descending order.
-- **Pagination**: Navigate through records using page numbers.
-- **Add**: Click the "Add" button to create a new ticket.
-- **Edit**: Click the "Edit" button to modify existing tickets.
-- **Delete**: Click the "Delete" button to remove tickets.
-
----
 
 ## Complete Sample Repository
 
 A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
 
 ---
+
 ## Summary
 
 This guide demonstrates how to:

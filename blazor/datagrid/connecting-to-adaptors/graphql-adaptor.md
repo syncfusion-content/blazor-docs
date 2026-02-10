@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid with GraphQL: CRUD & Data Operations | Syncfusion
+title: Blazor Data Grid with GraphQL using Custom Adaptor | Syncfusion
 description: Build Blazor apps with GraphQL and Syncfusion Data Grid to enable CRUD, filtering, sorting, paging, and grouping for seamless data operations.
 control: DataGrid
 platform: blazor
@@ -28,7 +28,7 @@ Install the following software and packages before starting the process:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | HotChocolate.AspNetCore | 15.1 or later | GraphQL server framework |
 | Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid component |
@@ -54,7 +54,7 @@ NuGet packages are software libraries that add functionality to applications. Th
 
 **Method 1: Using Package Manager Console**
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
 3. Run the following commands:
 
@@ -66,11 +66,11 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 
 **Method 2: Using NuGet Package Manager UI**
 
-1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **HotChocolate.AspNetCore** (version 15.1.12 or later)   
-   - **Syncfusion.Blazor.Grids** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -639,15 +639,21 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Grids package was installed in [**Step 1**](#step-1-install-and-configure-blazor-datagrid-components-with-graphql) of the previous heading.
-2. Import the required namespaces in the `Components/_Imports.razor` file:
+* The Syncfusion.Blazor.Grids package was installed in [**Step 1**](#step-1-install-and-configure-blazor-datagrid-components-with-graphql) of the previous heading.
+* Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Buttons
+@using Grid_GraphQLAdaptor.Models
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -656,7 +662,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 <!-- Syncfusion Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
 Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
@@ -840,7 +846,7 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
 
 The Query property is critical for understanding how data flows. Let's break down each component:
 
-```graphql
+```
 query expenseRecordData($dataManager: DataManagerRequestInput!) {}
 ```
 
@@ -852,7 +858,7 @@ query expenseRecordData($dataManager: DataManagerRequestInput!) {}
   - `: DataManagerRequestInput!` - Type specification
   - `!` - Exclamation mark means this parameter is **required** (not optional)
 
-```graphql
+```
 expenseRecordData(dataManager: $dataManager) {}
 ```
 
@@ -861,7 +867,7 @@ expenseRecordData(dataManager: $dataManager) {}
 - `dataManager: $dataManager` - Passes the $dataManager variable to the resolver
 - The resolver receives this object and uses it to apply filters, sorts, searches, and pagination
 
-```graphql
+```
 count
 result {
     expenseId
@@ -949,8 +955,8 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
+* Open the `Components/Pages/Home.razor` file.
+* Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
 ```cshtml
 <SfGrid TValue="ExpenseRecord" 
@@ -964,7 +970,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 </SfGrid>
 ```
 
-3. Add the toolbar items list in the `@code` block:
+* Add the toolbar items list in the `@code` block:
 
 ```csharp
 @code {
@@ -972,15 +978,45 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 }
 ```
 
-### Step 5: Implement Paging Feature
+### Step 5: Running the Application
+
+**Build the Application**
+
+1. Open the terminal or Package Manager Console.
+2. Navigate to the project directory.
+3. Run the following command:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to `https://localhost:5272` (or the port shown in the terminal).
+3. The Expense Tracker System is now running and ready to use.
+
+![Basic DataGrid displaying expenses from the GraphQL Server](../images/blazor-datagrid-graphql.png)
+
+---
+
+### Step 6: Implement Paging Feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
 **Instructions:**
 
-1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
-3. No additional code changes are required from the previous steps.
+* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+* No additional code changes are required from the previous steps.
 
 
 ```cshtml
@@ -992,7 +1028,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 </SfGrid>
 ```
 
-4. Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle paging:
+* Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle paging:
 
 ```csharp
 namespace Grid_GraphQLAdaptor.Models;
@@ -1059,13 +1095,13 @@ The backend resolver applies **Skip** and **Take**, then returns `count` and the
 ---
 
 
-### Step 6: Implement Searching feature
+### Step 7: Implement Searching feature
 
 Searching provides the capability to find specific records by entering keywords into the search box.
 
 **Instructions:**
 
-1. Ensure the toolbar includes the "Search" item.
+* Ensure the toolbar includes the "Search" item.
 
 ```cshtml
 <SfGrid TValue="ExpenseRecord"
@@ -1077,7 +1113,7 @@ Searching provides the capability to find specific records by entering keywords 
 </SfGrid>
 ```
 
-2. Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle searching:
+* Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle searching:
 
 ```csharp
 namespace Grid_GraphQLAdaptor.Models;
@@ -1144,13 +1180,14 @@ When search text is entered, the DataGrid automatically sends:
 The backend resolver receives this and processes the search filter in the `GetExpenseRecordData` method. Searching feature is now active.
 
 ---
-### Step 7: Implement Sorting feature
+
+### Step 8: Implement Sorting feature
 
 Sorting enables organizing records by selecting column headers, arranging the data in ascending or descending order.
 
 **Instructions:**
 
-1. Ensure the `<SfGrid>` component has [AllowSorting="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting).
+* Ensure the `<SfGrid>` component has [AllowSorting="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting).
 
 ```cshtml
 <SfGrid TValue="ExpenseRecord"
@@ -1163,7 +1200,7 @@ Sorting enables organizing records by selecting column headers, arranging the da
 </SfGrid>
 ```
 
-2. Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle sorting:
+* Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle sorting:
 
 ```csharp
 namespace Grid_GraphQLAdaptor.Models;
@@ -1231,13 +1268,13 @@ The backend resolver receives this and processes the sort specification in the `
 
 ---
 
- ### Step 8: Implement Filtering feature
+### Step 9: Implement Filtering feature
  
  Filtering enables narrowing down records by applying conditions to column values. Filtering can be performed by selecting checkbox-based filters or by using comparison operators such as equals, greater than, less than, and other supported operators.
  
  **Instructions:**
  
- 1. Ensure the ``<SfGrid>`` component has [AllowFiltering="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering).
+ * Ensure the ``<SfGrid>`` component has [AllowFiltering="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering).
  
  ```cshtml
  <SfGrid TValue="ExpenseRecord"
@@ -1251,7 +1288,7 @@ The backend resolver receives this and processes the sort specification in the `
  </SfGrid>
  ```
 
- 2. Update the ``GetExpenseRecordData`` method in the ``GraphQLQuery`` class to handle filtering:
+ * Update the ``GetExpenseRecordData`` method in the ``GraphQLQuery`` class to handle filtering:
 
  ```csharp
  namespace Grid_GraphQLAdaptor.Models;
@@ -1431,13 +1468,14 @@ The backend resolver receives this and processes the sort specification in the `
  The backend resolver receives this and processes the filter conditions in the `GetExpenseRecordData` method using recursive evaluation to handle any depth of nesting. Filtering feature is now active.
 
  ---
-### Step 9: Implement Grouping feature
+
+### Step 10: Implement Grouping feature
 
 Grouping enables organizing and displaying records based on column values. This feature arranges data into expandable and collapsible group hierarchies, improving the ability to analyze and interpret data patterns.
 
 **Instructions:**
 
-1. Ensure the `<SfGrid>` component has [AllowGrouping="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping).
+* Ensure the `<SfGrid>` component has [AllowGrouping="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping).
 
 ```cshtml
 <SfGrid TValue="ExpenseRecord"
@@ -1471,7 +1509,7 @@ The `<CaptionTemplate>` in the grid allows customization of group header text. A
 | `groupData.Count` | Number of records in the group | 5 |
 | `groupData.Field` | The field name being grouped | "Department" |
 
-2. Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle grouping:
+* Update the `GetExpenseRecordData` method in the `GraphQLQuery` class to handle grouping:
 
 ```csharp
 namespace Grid_GraphQLAdaptor.Models;
@@ -1592,7 +1630,7 @@ Add the toolbar items list in the `@code` block:
  
  **Instructions:**
  
- 1. Update the ``GraphQLAdaptorOptions`` in the ``@code`` block to include the Insert mutation:
+ * Update the ``GraphQLAdaptorOptions`` in the ``@code`` block to include the Insert mutation:
 
  ```csharp
  @code {
@@ -1614,7 +1652,7 @@ Add the toolbar items list in the `@code` block:
  }
  ```
 
- 2. Implement the ``CreateExpense`` method in the ``GraphQLMutation`` class:
+ * Implement the ``CreateExpense`` method in the ``GraphQLMutation`` class:
 
  ```csharp
  namespace Grid_GraphQLAdaptor.Models;
@@ -1699,7 +1737,7 @@ Add the toolbar items list in the `@code` block:
 
  **GraphQL Mutation Request:**
 
- ```graphql
+ ```
  mutation create($record: ExpenseRecordInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
    createExpense(record: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
      expenseId
@@ -1796,7 +1834,7 @@ The Update operation enables modifying existing expense records. When the Edit a
 
 **Instructions:**
 
-1. Update the `GraphQLAdaptorOptions` in the `@code` block to include the Update mutation:
+* Update the `GraphQLAdaptorOptions` in the `@code` block to include the Update mutation:
 
 ```csharp
 @code {
@@ -1818,7 +1856,7 @@ The Update operation enables modifying existing expense records. When the Edit a
 }
 ```
 
-2. Implement the `UpdateExpense` method in the `GraphQLMutation` class:
+* Implement the `UpdateExpense` method in the `GraphQLMutation` class:
 
 ```csharp
 namespace Grid_GraphQLAdaptor.Models;
@@ -1886,7 +1924,7 @@ When the Edit action is invoked, the dialog is modified, and the changes are sub
 
 **GraphQL Mutation Request:**
 
-```graphql
+```
 mutation update($record: ExpenseRecordInput!, $action: String!, $primaryColumnName: String!, $primaryColumnValue: String!, $additionalParameters: Any) {
   updateExpense(record: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
     expenseId
@@ -1989,7 +2027,7 @@ The Delete operation enables removing expense records from the system. When the 
 
 **Instructions:**
 
-1. Update the `GraphQLAdaptorOptions` in the `@code` block to include the Delete mutation:
+* Update the `GraphQLAdaptorOptions` in the `@code` block to include the Delete mutation:
 
 ```csharp
 @code {
@@ -2007,7 +2045,7 @@ The Delete operation enables removing expense records from the system. When the 
 }
 ```
 
-2. Implement the `DeleteExpense` method in the `GraphQLMutation` class:
+* Implement the `DeleteExpense` method in the `GraphQLMutation` class:
 
 ```csharp
 namespace Grid_GraphQLAdaptor.Models;
@@ -2042,7 +2080,7 @@ public class GraphQLMutation
 
 **GraphQL Mutation Request:**
 
-```graphql
+```
 mutation delete($primaryColumnValue: String!, $additionalParameters: Any) {
   deleteExpense(primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters)
 }
@@ -2092,7 +2130,7 @@ The Batch Update operation allows adding, updating, and deleting multiple record
 
 **Instructions**:
 
-1. Update the `GraphQLAdaptorOptions` in the `@code` block to include the Batch mutation:
+* Update the `GraphQLAdaptorOptions` in the `@code` block to include the Batch mutation:
 
 ```csharp
 @code {
@@ -2114,7 +2152,7 @@ The Batch Update operation allows adding, updating, and deleting multiple record
 }
 ```
 
-2. Implement the `BatchUpdate` method in the `GraphQLMutation` class:
+* Implement the `BatchUpdate` method in the `GraphQLMutation` class:
 
 ```csharp
 namespace Grid_GraphQLAdaptor.Models;
@@ -2180,7 +2218,7 @@ public class GraphQLMutation
 
 GraphQL Mutation Request:
 
-```graphql
+```
 mutation batch($changed: [ExpenseRecordInput!], $added: [ExpenseRecordInput!], $deleted: [ExpenseRecordInput!], $action: String!, $primaryColumnName: String!, $additionalParameters: Any, $dropIndex: Int) {
   batchUpdate(changed: $changed, added: $added, deleted: $deleted, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters, dropIndex: $dropIndex) {
     expenseId
@@ -2304,33 +2342,6 @@ mutation batch($changed: [ExpenseRecordInput!], $added: [ExpenseRecordInput!], $
   }
 }
 ```
-
-
-## Running the Application
-
-**Step 1: Build the Application**
-
-1. Open the terminal or Package Manager Console.
-2. Navigate to the project directory.
-3. Run the following command:
-
-```powershell
-dotnet build
-```
-
-**Step 2: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-**Step 3: Access the Application**
-
-1. Open a web browser.
-2. Navigate to `https://localhost:5272` (or the port shown in the terminal).
-3. The Expense Tracker System is now running and ready to use.
 
 ---
 
