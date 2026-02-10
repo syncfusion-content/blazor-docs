@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Azure Blob Storage in Blazor File Upload Component | Syncfusion
-description: Checkout and learn here all about uploading files to Azure Blob Storage using Syncfusion Blazor File Upload component and more.
+title: Azure Blob Storage Integration in Blazor File Upload Component | Syncfusion
+description: Learn how to upload files to Azure Blob Storage using the Syncfusion Blazor File Upload component with step-by-step configuration and implementation guidance.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -9,7 +9,17 @@ documentation: ug
 
 # Azure Blob Storage in Blazor File Upload Component
 
-To get started with uploading files to Azure Blob Storage, ensure you have an active Microsoft Azure account with a configured Blob Storage service. The Syncfusion Blazor File Upload component allows you to upload files directly to Azure Blob Storage by configuring the server-side controller to handle Azure operations.
+The Syncfusion Blazor File Upload component enables seamless file uploads directly to Azure Blob Storage by leveraging server-side ASP.NET Core controllers to manage Azure operations. This integration allows developers to store files in Azure Blob Storage without managing local server storage.
+
+## Prerequisites
+
+Before implementing Azure Blob Storage integration, ensure you have:
+
+* An active Microsoft Azure account
+* An Azure Storage Account created in the Azure portal
+* A Blob Container configured within the Storage Account
+* Access keys retrieved from the **Access keys** section of your Storage Account
+* The `Azure.Storage.Blobs` NuGet package available in your project
 
 ## Installing NuGet Package
 
@@ -21,17 +31,17 @@ dotnet add package Azure.Storage.Blobs
 
 ## Configuring Azure Connection String
 
-Add the Azure connection string to your `appsettings.json` file in the Server project:
+Store your Azure connection string securely in the `appsettings.json` file of your Server project:
 
 ```json
 {
   "ConnectionStrings": {
-    "AzureConnectionString": "DefaultEndpointsProtocol=https;AccountName=<--accountName-->;AccountKey=<--accountKey-->;EndpointSuffix=core.windows.net"
+    "AzureConnectionString": "DefaultEndpointsProtocol=https;AccountName=<your-account-name>;AccountKey=<your-account-key>;EndpointSuffix=core.windows.net"
   }
 }
 ```
 
-N> You can get the **Connection string** from the Access keys section of your Azure Storage account in the Azure portal.
+N> Retrieve the **Connection string** from your Azure Storage Account by navigating to **Settings** > **Access keys** in the Azure portal. Never commit connection strings to version control; consider using Azure Key Vault or environment variables for production environments.
 
 ## Server-Side Controller Configuration
 
