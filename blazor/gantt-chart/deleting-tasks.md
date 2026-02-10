@@ -30,9 +30,9 @@ Enable task deletion through the toolbar by setting [GanttEditSettings.AllowDele
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public void DeleteRow()
+    public aync void DeleteRow()
     {
-        this.Gantt.DeleteRecordAsync(2);
+        await Gantt.DeleteRecordAsync(2);
     }
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

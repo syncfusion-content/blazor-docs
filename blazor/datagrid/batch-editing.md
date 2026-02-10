@@ -840,7 +840,7 @@ public class OrderDetails
 ## Provide new item or edited item using events
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid uses **Activator.CreateInstance<TValue>()** to create or clone new record instances during add and edit operations. To support this behavior, the model class and any referenced complex type classes must include parameterless constructors.
-In scenarios where custom logic is required to create a new object, or when object instantiation using **Activator.CreateInstance<TValue>()** is not feasible, a model object instance can be manually provided using events.
+In scenarios where custom logic is required to create a new object, or when object instantiation using **Activator.CreateInstance&lt;TValue&gt;()** is not feasible, a model object instance can be manually provided using events.
 Use the [OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) and [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) events to supply a new object instance during add and cell edit operations, respectively.
 
 * For the add operation, assign the new object to the [OnBatchAdd.DefaultData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.BeforeBatchAddArgs-1.html#Syncfusion_Blazor_Grids_BeforeBatchAddArgs_1_DefaultData) property.
