@@ -11,7 +11,7 @@ documentation: ug
 
 In this section, the list of events of the Gantt Chart component has been provided which will be triggered for appropriate Gantt Chart actions.
 
-The events should be provided to the Gantt Chart using the GanttChartEvents component. When using events of the Gantt Chart, TValue must be provided in the GanttChartEvents component.
+The events should be provided to the Gantt Chart using the GanttEvents component. When using events of the Gantt Chart, TValue must be provided in the GanttEvents component.
 
 ## OnActionFailure
 
@@ -149,8 +149,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-
-    public SfGantt<TaskData> Gantt;
+    
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -208,8 +207,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-
-    public SfGantt<TaskData> Gantt;
+    
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -268,7 +266,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -327,7 +324,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -387,7 +383,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -448,7 +443,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -510,7 +504,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -570,7 +563,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -630,7 +622,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
     
     protected override void OnInitialized()
@@ -672,65 +663,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 }
 ```
 
-## OnRowDragStart
-
-[OnRowDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnRowDragStart) event triggers when row elements drag starts.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
-
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowRowDragAndDrop="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-                     Duration="Duration" Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttEvents OnRowDragStart="OnRowDragStart" TValue="TaskData"></GanttEvents>
-</SfGantt>
-
-@code{
-
-    public SfGantt<TaskData> Gantt;
-    private List<TaskData> TaskCollection { get; set; }
-
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-
-    public void OnRowDragStart(RowDragEventArgs<TaskData> args)
-    {
-        // Here, you can customize your code.
-    }
-
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    private static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>()
-        {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
-        };
-        return Tasks;
-    }
-}
-```
 ## Sorting
 [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Sorting) event triggers  is triggered when a sorting action occurs or when a column is removed from sorting in the Gantt Chart.
 
@@ -897,8 +829,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         return Tasks;
     }
 }
-
-
 ```
 ## Searched 
 
@@ -1013,7 +943,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         return Tasks;
     }
 }
-
 ```
 
 ## RowCreated
@@ -1072,7 +1001,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         return Tasks;
     }
 }
-
 ```
 ##  RowUpdating 
 
@@ -1130,11 +1058,10 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         return Tasks;
     }
 }
-
 ```
 ## RowUpdated 
 
-[RowUpdated ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowUpdated  ) event is triggered after a save action is performed in the Gantt Chart. 
+[RowUpdated ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowUpdated) event is triggered after a save action is performed in the Gantt Chart. 
 
 ```cshtml
 
@@ -1189,7 +1116,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         return Tasks;
     }
 }
-
 ```
 
 ## RowDeleting 
@@ -1197,7 +1123,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDeleting) event is triggered before a delete action is performed in the Gantt Chart. 
 
 ```cshtml
-
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" EnableContextMenu ="true" Toolbar="@(new List<string>() { "Edit", "Delete", "Cancel", "Update" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -1248,7 +1173,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         return Tasks;
     }
 }
-
 ```
 ## RowDeleted
 
@@ -1441,7 +1365,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -1503,7 +1426,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
 
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -1561,7 +1483,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -1619,7 +1540,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -1678,7 +1598,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -1737,7 +1656,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -1797,7 +1715,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -1856,7 +1773,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
     
     protected override void OnInitialized()
@@ -1916,7 +1832,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -1969,7 +1884,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttSelectionSettings Mode="SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
-    <GanttEvents TValue="TaskData" RowSelected="rowSelect"></GanttEvents>
+    <GanttEvents TValue="TaskData" RowSelected="RowSelectedHandler"></GanttEvents>
 </SfGantt>
 
 @code{
@@ -1981,7 +1896,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection();
     }
 
-    public void rowSelect(RowSelectEventArgs<TaskData> args)
+    public void RowSelectedHandler(RowSelectEventArgs<TaskData> args)
     {
         //Here, you can customize your code.
     }
@@ -2033,7 +1948,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -2089,12 +2003,11 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
-    <GanttSelectionSettings Mode="SelectionMode.Cell"></GanttSelectionSettings>
+    <GanttSelectionSettings Mode="SelectionMode.Row"></GanttSelectionSettings>
     <GanttEvents TValue="TaskData" RowDeselected="RowDeselectHandler"></GanttEvents>
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
     
     protected override void OnInitialized()
@@ -2210,7 +2123,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -2271,7 +2183,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -2332,7 +2243,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -2390,7 +2300,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     public List<Object> Toolbaritems = new List<Object>() { "ExpandAll", "CollapseAll"};
     private List<TaskData> TaskCollection { get; set; }
 
@@ -2450,7 +2359,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
      
     protected override void OnInitialized()
@@ -2509,7 +2417,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -2568,7 +2475,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -2618,16 +2524,15 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.TreeGrid
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowRowDragAndDrop="true">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttEvents Collapsed="Collapsed" TValue="TaskData"></GanttEvents>
+    <GanttEvents Collapsed="CollapsedHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -2635,7 +2540,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection();
     }
 
-    public void Collapsed(RowCollapsedEventArgs<TaskData> args)
+    public void CollapsedHandler(RowCollapsedEventArgs<TaskData> args)
     {
         // Here, you can customize your code.
     }
@@ -2677,12 +2582,12 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.TreeGrid
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowRowDragAndDrop="true">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttEvents Collapsing="Collapsed" TValue="TaskData"></GanttEvents>
+    <GanttEvents Collapsing="CollapsingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
@@ -2694,7 +2599,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection();
     }
 
-    public void Collapsed(RowCollapsingEventArgs<TaskData> args)
+    public void CollapsingHandler(RowCollapsingEventArgs<TaskData> args)
     {
         // Here, you can customize your code.
     }
@@ -2740,7 +2645,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
-    <GanttEvents  Expanding="Expanding" TValue="TaskData"></GanttEvents>
+    <GanttEvents  Expanding="ExpandingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 
@@ -2752,7 +2657,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection();
     }
 
-    public void Expanding(RowExpandingEventArgs<TaskData> args)
+    public void ExpandingHandler(RowExpandingEventArgs<TaskData> args)
     {
         // Here, you can customize your code.
     }
@@ -2803,7 +2708,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -2858,11 +2762,10 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttEvents TValue="TaskData" OnCellSave="@SaveHandler"></GanttEvents>
+    <GanttEvents TValue="TaskData" OnCellSave="@OnCellSaveHandler"></GanttEvents>
 </SfGantt>
 
     @code{
-        public SfGantt<TaskData> Gantt;
         private List<TaskData> TaskCollection { get; set; }
 
         protected override void OnInitialized()
@@ -2870,7 +2773,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
             this.TaskCollection = GetTaskCollection();
         }
 
-        public void SaveHandler(CellSaveArgs<TaskData> args)
+        public void OnCellSaveHandler(CellSaveArgs<TaskData> args)
         {
             // Here, you can customize your code.
         }
@@ -2922,7 +2825,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
     @code{
-        public SfGantt<TaskData> Gantt;
         private List<TaskData> TaskCollection { get; set; }
 
         protected override void OnInitialized()
@@ -2982,7 +2884,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -3042,7 +2943,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -3100,7 +3000,6 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -4103,7 +4002,7 @@ The [PdfColumnHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfus
         <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
         <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
     </GanttColumns>
-    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfColumnHeaderQueryCellInfo="PdfHeaderQueryCellInfoHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfColumnHeaderQueryCellInfo="PdfColumnHeaderQueryCellInfoHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
@@ -4122,7 +4021,7 @@ The [PdfColumnHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfus
             await Gantt.ExportToPdfAsync();
         }
     }
-    public void PdfHeaderQueryCellInfoHandler(Syncfusion.Blazor.Gantt.PdfHeaderQueryCellInfoEventArgs args)
+    public void PdfColumnHeaderQueryCellInfoHandler(Syncfusion.Blazor.Gantt.PdfHeaderQueryCellInfoEventArgs args)
     {
        // Here, you can customize your code.
     }
@@ -4255,7 +4154,7 @@ The following code snippet demonstrates how to use the `PdfQueryTimelineCellInfo
         <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
         <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
     </GanttColumns>
-    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfQueryTimelineCellInfo="PPdfQueryTimelineCellInfoHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfQueryTimelineCellInfo="PdfQueryTimelineCellInfoHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
@@ -4273,7 +4172,7 @@ The following code snippet demonstrates how to use the `PdfQueryTimelineCellInfo
             await Gantt.ExportToPdfAsync();
         }
     }
-    public void PPdfQueryTimelineCellInfoHandler(Syncfusion.Blazor.Gantt.PdfQueryTimelineCellInfoEventArgs args)
+    public void PdfQueryTimelineCellInfoHandler(Syncfusion.Blazor.Gantt.PdfQueryTimelineCellInfoEventArgs args)
     {
         if (args.Value == "S")
         {

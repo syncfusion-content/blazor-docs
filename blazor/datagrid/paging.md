@@ -439,7 +439,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNheXEKNqEnQEOmc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * Inside the `Template` RenderFragment, access parameters using the implicit parameter named context, which is of type PagerTemplateContext. For details, see [PagerTemplateContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PagerModel.html#Syncfusion_Blazor_Grids_PagerModel__ctor) API.
+> * Inside the `Template` RenderFragment, access parameters using the implicit parameter named context, which is of type [PagerTemplateContext]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.PagerTemplateContext.html)) API.
 > * Refer to the [Blazor Grid Pager Template](https://blazor.syncfusion.com/demos/datagrid/pager-template) online demo showcasing the Pager Template feature in the Syncfusion Blazor DataGrid.
 
 ## Pager with page size dropdown
