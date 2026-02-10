@@ -93,3 +93,7 @@ Create a new Razor component file named **`RichTextEditorWithSpellChecker.razor`
 ## Additional resources
 
 - WProofreader SDK: https://www.npmjs.com/package/@webspellchecker/wproofreader-sdk-js
+
+## See also
+
+* [GitHub Example - Blazor RichTextEditor with Web Spell Checker](https://github.com/SyncfusionExamples/blazor-richtexteditor-webspellchecker)
