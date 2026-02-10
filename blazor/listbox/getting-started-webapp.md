@@ -245,14 +245,14 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
-<SfListBox TValue="string[]"></SfListBox>
+<SfListBox TValue="string[]" TItem="string[]"></SfListBox>
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Binding data source
 
-After initialization, populate the ListBox using the `DataSource` property. The following uses an array of objects.
+After initialization, populate the ListBox using the `DataSource` property. In the following example, an array of objects is bound and fields are mapped via `ListBoxFieldSettings`.
 
 {% tabs %}
 {% highlight razor %}
