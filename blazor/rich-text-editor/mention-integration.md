@@ -126,3 +126,4 @@ N> **Note:** Ensure that `Syncfusion.Blazor.Data` is imported in your component 
 ## See also
 
 * [Mention](https://blazor.syncfusion.com/documentation/mention/getting-started)
+* [GitHub Example - Blazor RichTextEditor with Mention](https://github.com/SyncfusionExamples/blazor-richtexteditor-mention)
