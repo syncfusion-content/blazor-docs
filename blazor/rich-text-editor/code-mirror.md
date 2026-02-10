@@ -119,3 +119,4 @@ Once Code Mirror is integrated with the Rich Text Editor, you can begin using th
 * [Rich Text Editor documentation](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started)
 * [Rich Text Editor events](https://blazor.syncfusion.com/documentation/rich-text-editor/events)
 * [Code Mirror Developer Documentation](https://codemirror.net/)
+* [GitHub Example - Blazor RichTextEditor with CodeMirror](https://github.com/SyncfusionExamples/blazor-richtexteditor-codemirror)
