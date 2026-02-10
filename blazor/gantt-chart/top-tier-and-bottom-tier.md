@@ -7,7 +7,7 @@ control: Top tier and bottom tier
 documentation: ug
 ---
 
-# Top tier and bottom tier in Blazor Gantt Chart component
+# Top tier and Bottom tier in Blazor Gantt Chart component
 
 The Blazor Gantt Chart component supports a two-tier timeline layout, enabling customization of both the top and bottom tiers through specific configuration options.
 
@@ -197,8 +197,8 @@ These options provide flexibility in presenting timeline data according to proje
             return "Q4";
         }
     }
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
+    public static List<TaskData> GetTaskCollection() {
+    List<TaskData> Tasks = new List<TaskData> () {
         new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 06, 08) },
         new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "20", Progress = 30, ParentID = 1 },
         new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "24", Progress = 40, ParentID = 1 },
