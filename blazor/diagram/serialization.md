@@ -136,7 +136,7 @@ The diagram support to save and load the diagram using a file stream. The below 
     }
 ```
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Serialization/D:\Blazor-UG-Examples\Diagram\Server\Pages\Serialization\SaveAndLoad)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/Serialization/SaveLoad)
 
 ## How to Import and Export Using Mermaid Syntax
 
