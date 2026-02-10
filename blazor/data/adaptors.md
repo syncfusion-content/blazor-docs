@@ -230,7 +230,8 @@ The GraphQL response must return a JSON-formatted response with properties:
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
-<SfGrid TValue="Order" AllowPaging="true" PageSettings="new PageSettings { PageSize = 10 }">
+<SfGrid TValue="Order" AllowPaging="true">
+    <GridPageSettings PageSize="10"></GridPageSettings>
     <SfDataManager Url="https://api.example.com/graphql"
                    GraphQLAdaptorOptions="@adaptorOptions"
                    Adaptor="Adaptors.GraphQLAdaptor">

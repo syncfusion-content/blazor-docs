@@ -21,14 +21,14 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enab
 
 ## Create a Blazor Web App in Visual Studio 2022
 
-A **Blazor Web App** can be created using **Visual Studio** with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+A **Blazor Web App** can be created using **Visual Studio** with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs#blazor-project-templates-and-template-options) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 1. Open **Visual Studio 2022** (version 17.8 or later).
 2. Select **Create a new project**.
 3. Choose **Blazor Web App** from the list of templates and click **Next**.
 4. Specify the **project name**, **location**, and **solution settings**, then click **Next**.
 5. Select the **target framework** as **.NET 8.0 or later** (choose the latest installed version available on the system).
-6. Choose the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs).
+6. Choose the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs#interactivity-location).
 7. Review the remaining options and click **Create** to generate the project.
 
 ![Create Blazor Web App](images/blazor-create-web-app.png)
