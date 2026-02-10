@@ -7,7 +7,7 @@ control: Scheduler
 documentation: ug
 ---
 
-# Connecting ASP.NET Core Minimal API to Syncfusion Blazor Scheduler Component
+# Connecting ASP.NET Core Minimal API to Scheduler Component
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component supports binding data from ASP.NET Core [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis) endpoints hosted within the same application. This approach enables seamless integration of appointment data with full CRUD (Create, Read, Update, Delete) functionality without requiring a separate backend project.
 
