@@ -54,6 +54,7 @@ namespace TreeGridComponent.Data {
         {
             public int TaskId { get; set;}
             public string TaskName { get; set;}
+            public DateTime? StartDate { get; set; }
             public int? Duration { get; set;}
             public int? Progress { get; set;}
             public string Priority { get; set;}
@@ -62,15 +63,15 @@ namespace TreeGridComponent.Data {
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1", StartDate = new DateTime(2017, 08, 12), Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1", StartDate = new DateTime(2017, 03, 2), Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2", StartDate = new DateTime(2017, 03, 6), Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3", StartDate = new DateTime(2017, 03, 9), Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2", StartDate = new DateTime(2017, 09, 12), Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1", StartDate = new DateTime(2017, 04, 5), Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2", StartDate = new DateTime(2017, 04, 8), Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3", StartDate = new DateTime(2017, 04, 12), Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4", StartDate = new DateTime(2017, 05, 12), Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
             return BusinessObjectCollection;
         }
     }
@@ -150,24 +151,24 @@ namespace TreeGridComponent.Data {
         {
             public int TaskId { get; set;}
             public string TaskName { get; set;}
+            public DateTime? StartDate { get; set; }
             public int? Duration { get; set;}
             public int? Progress { get; set;}
             public string Priority { get; set;}
             public int? ParentId { get; set;}
-       
+
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
-            return BusinessObjectCollection;
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1", StartDate = new DateTime(2017, 08, 12), Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1", StartDate = new DateTime(2017, 03, 2), Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2", StartDate = new DateTime(2017, 03, 6), Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3", StartDate = new DateTime(2017, 03, 9), Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2", StartDate = new DateTime(2017, 09, 12), Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1", StartDate = new DateTime(2017, 04, 5), Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2", StartDate = new DateTime(2017, 04, 8), Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3", StartDate = new DateTime(2017, 04, 12), Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4", StartDate = new DateTime(2017, 05, 12), Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
         }
     }
 }
@@ -352,59 +353,12 @@ namespace TreeGridComponent.Data {
         public SelfReferenceData() { }
         public static List<SelfReferenceData> GetTree()
         {
-                tree.Clear();
-                int root = -1;
-                int TaskNameID = 0;
-                int ChildCount = -1;
-                int SubTaskCount = -1;
-                var values = Enum.GetValues(typeof(Prioritize));
-                for (var t = 1; t <= 60; t++)
-                {
-                Random gen = new Random();
-                Random ran = new Random();
-                DateTime start = new DateTime(2021, 06, 07);
-                int range = (DateTime.Today - start).Days;
-                DateTime startingDate = start.AddDays(gen.Next(range));
-                DateTime end = new DateTime(2023, 08, 25);
-                int endrange = (end - DateTime.Today).Days;
-                DateTime endingDate = end.AddDays(gen.Next(endrange));
-                    string progr = (ran.Next() % 3) == 0 ? "Started" : (ran.Next() % 2) == 0 ? "Open" : "In Progress";
-                    bool appr = (ran.Next() % 3) == 0 ? true : (ran.Next() % 2) == 0 ? false : true;
-                    root++; TaskNameID++;
-                    int rootItem = root + 1;
-                    tree.Add(new SelfReferenceData() { TaskID = rootItem, TaskName = "Parent task " + TaskNameID.ToString(), StartDate = startingDate, EndDate = endingDate, IsParent = true, ParentID = null, Progress = progr, Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
-                    int parent = tree.Count;
-                    for (var c = 0; c < 2; c++)
-                    {
-                    DateTime start1 = new DateTime(2021, 07, 09);
-                    int range1 = (DateTime.Today - start1).Days;
-                    DateTime startingDate1 = start1.AddDays(gen.Next(range1));
-                    DateTime end1 = new DateTime(2022, 08, 23);
-                    int endrange1 = (end1 - DateTime.Today).Days;
-                    DateTime endingDate1 = end1.AddDays(gen.Next(endrange1));
-                    root++; ChildCount++;
-                        int parn = parent + c + 1;
-                        progr = (ran.Next() % 3) == 0 ? "In Progress" : (ran.Next() % 2) == 0 ? "Open" : "Validated";
-                        appr = (ran.Next() % 3) == 0 ? true : (ran.Next() % 2) == 0 ? false : true;
-                        int iD = root + 1;
-                        tree.Add(new SelfReferenceData() { TaskID = iD, TaskName = "Child task " + (ChildCount + 1).ToString(), StartDate = startingDate1, EndDate = endingDate1, IsParent = (((parent + c + 1) % 3) == 0), ParentID = rootItem, Progress = progr, Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
-                        if ((((parent + c + 1) % 3) == 0))
-                        {
-                        int immParent = tree.Count;
-                            for (var s = 0; s < 3; s++)
-                            {
-                            DateTime start2 = new DateTime(2021, 05, 05);
-                            int range2 = (DateTime.Today - start2).Days;
-                            DateTime startingDate2 = start2.AddDays(gen.Next(range2));
-                            DateTime end2 = new DateTime(2024, 06, 16);
-                            int endrange2 = (end2 - DateTime.Today).Days;
-                            DateTime endingDate2 = end2.AddDays(gen.Next(endrange2));
-                            root++; SubTaskCount++;
-                                tree.Add(new SelfReferenceData() { TaskID = root + 1, TaskName = "Sub task " + (SubTaskCount + 1).ToString(), StartDate = startingDate2, EndDate = endingDate2, IsParent = false, ParentID = iD, Progress = (immParent % 2 == 0) ? "In Progress" : "Closed", Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
-                            }
-                        }
-                    }
-                }
+            List<SelfReferenceData> tree = new List<SelfReferenceData>();
+            tree.Add(new SelfReferenceData { TaskID = 1, TaskName = "Parent Task 1", StartDate = new DateTime(2024, 02, 04), EndDate = new DateTime(2024, 02, 09), Progress = "50", Priority = Prioritize.High, Duration = 5, ParentID = null });
+            tree.Add(new SelfReferenceData { TaskID = 2, TaskName = "Child Task 1", StartDate = new DateTime(2024, 02, 04), EndDate = new DateTime(2024, 02, 09), Progress = "50", Priority = Prioritize.Low, Duration = 5, ParentID = 1 });
+            tree.Add(new SelfReferenceData { TaskID = 3, TaskName = "Child Task 2", StartDate = new DateTime(2024, 02, 04), EndDate = new DateTime(2024, 02, 09), Progress = "50", Priority = Prioritize.Critical, Duration = 5, ParentID = 1 });
+            tree.Add(new SelfReferenceData { TaskID = 4, TaskName = "Parent Task 2", StartDate = new DateTime(2024, 02, 04), EndDate = new DateTime(2024, 02, 09), Progress = "50", Priority = Prioritize.Low, Duration = 5, ParentID = null });
+            tree.Add(new SelfReferenceData { TaskID = 5, TaskName = "Child Task 3", StartDate = new DateTime(2024, 02, 04), EndDate = new DateTime(2024, 02, 09), Progress = "50", Priority = Prioritize.High, Duration = 5, ParentID = 4 });
             return tree;
         }
     }
@@ -430,7 +384,7 @@ The Blazor TreeGrid filtering functionality allows control over whether uppercas
     <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar" EnableCaseSensitivity="true"> </TreeGridFilterSettings>
     <TreeGridColumns>
-        <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90" IsPrimaryKey />
+        <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90"  IsPrimaryKey="true" />
         <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
         <TreeGridColumn Field=@nameof(TreeTask.ResourceName) HeaderText="Resource Name" Width="180" />
         <TreeGridColumn Field=@nameof(TreeTask.City) HeaderText="City" Width="140" />
@@ -546,10 +500,10 @@ The Blazor TreeGrid filtering functionality can be configured to ignore diacriti
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 <div class="container mt-4">
-    <<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar" IgnoreAccent="true"> </TreeGridFilterSettings>
     <TreeGridColumns>
-        <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90"  IsPrimaryKey />
+        <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90"  IsPrimaryKey="true" />
         <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
         <TreeGridColumn Field=@nameof(TreeTask.ResourceName) HeaderText="Resource Name" Width="180" />
         <TreeGridColumn Field=@nameof(TreeTask.City) HeaderText="City" Width="140" />
@@ -649,5 +603,6 @@ namespace TreeGridComponent.Data {
 
 {% endhighlight %}
 {% endtabs %}
+
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSChikLlQxWZHr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

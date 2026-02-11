@@ -83,7 +83,7 @@ N> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Custom component in filter menu
 
-The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) property of [`Column`] is used to add custom filter components to a particular column. In the following sample the FilterTemplate property is used to add custom components to a particular column. To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
+The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) property of [`Column`] is used to add custom filter components to a particular column. In the following sample the FilterTemplate property is used to add custom components to a particular column. To access the filtered values inside the FilterTemplate, use the implicit named parameter context, which can be cast as `PredicateModel<T>` to get filter values inside the template.
 
 In the following sample, dropdown is used as custom component in the duration column.
 
@@ -92,39 +92,101 @@ In the following sample, dropdown is used as custom component in the duration co
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.TreeGrid;
-@using  Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Grids
 
-<SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">
-    <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.Menu"></TreeGridFilterSettings>   
+<SfTreeGrid @ref="TreeGrid"
+            DataSource="@TreeGridData"
+            IdMapping="TaskId"
+            ParentIdMapping="ParentId"
+            TreeColumnIndex="1"
+            AllowFiltering="true">
+
+    <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.Menu"></TreeGridFilterSettings>
+
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="100"></TreeGridColumn>
-        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="TextAlign.Right" />
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="150" />
+        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Width="120" TextAlign="TextAlign.Right" />
+
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right">
             <FilterTemplate>
-                <SfDropDownList TValue="string"c DataSource="@DropDownData" TItem="string" Value="@((string)(context as PredicateModel).Value)">
-                    <DropDownListEvents ValueChange="change" TValue="string" ></DropDownListEvents>
+                @{
+                    
+                    var predicate = context as PredicateModel;
+
+                    // PredicateModel.Value is object, might be int/int?/string.
+                    int? current = null;
+                    if (predicate?.Value is int i) current = i;
+                    else if (predicate?.Value is int ni) current = ni;
+                    else if (predicate?.Value != null && int.TryParse(predicate.Value.ToString(), out var parsed))
+                        current = parsed;
+                }
+                <SfDropDownList TValue="int?"
+                                TItem="DropItem"
+                                DataSource="@DropDownData"
+                                Placeholder="Select"
+                                Value="@current">
+
+                    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+
+                    <DropDownListEvents TValue="int?"
+                                        TItem="DropItem"
+                                        ValueChange="@OnDurationChange">
+                    </DropDownListEvents>
                 </SfDropDownList>
             </FilterTemplate>
         </TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="60"></TreeGridColumn>
+
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="TextAlign.Right" />
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80" />
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
+    private SfTreeGrid<BusinessObject>? TreeGrid;
 
-    SfTreeGrid<BusinessObject> TreeGrid;
+    public List<BusinessObject> TreeGridData { get; set; } = new();
 
-    public List<BusinessObject> TreeGridData { get; set; }
+    // Dropdown items: int? so we can represent "All" as null
+    public class DropItem
+    {
+        public string Text { get; set; } = "";
+        public int? Value { get; set; }
+    }
+
+    public List<DropItem> DropDownData { get; set; } = new();
 
     protected override void OnInitialized()
     {
-        this.TreeGridData = BusinessObject.GetSelfDataSource().ToList();
+        TreeGridData = BusinessObject.GetSelfDataSource().ToList();
 
+        DropDownData = new List<DropItem>
+        {
+            new() { Text = "10", Value = 10 },
+            new() { Text = "50", Value = 50 },
+            new() { Text = "5",  Value = 5  },
+            new() { Text = "6",  Value = 6  },
+            new() { Text = "4",  Value = 4  },
+            new() { Text = "All", Value = null } // null => clear filter
+        };
     }
 
+    private async Task OnDurationChange(ChangeEventArgs<int?, DropItem> args)
+    {
+        if (TreeGrid is null) return;
+
+        // "All" clears Duration filter
+        if (args?.Value is null)
+        {
+            await TreeGrid.ClearFilteringAsync(new List<string> { "Duration" });
+            return;
+        }
+
+        await TreeGrid.FilterByColumnAsync("Duration", "equal", args.Value);
+    }
 }
 
 {% endhighlight %}
@@ -194,23 +256,26 @@ The default filter operators for a GridColumn can be overridden by using the [Fi
 
     public List<BusinessObject> TreeGridData { get; set; }
 
-    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
-    {
-        if (Args.ColumnName == "TaskName")//Specify Field name
-        {
-            Args.FilterOperators = CustomerIDOperator;
-        }
-    }
-
-    public class Operators
+    public class Operators : IFilterOperator
     {
         public string Value { get; set; }
         public string Text { get; set; }
     }
-    List<object> CustomerIDOperator = new List<object> {
-        new Operators() { Text= "Equal", Value= "equal" },
-        new Operators() { Text= "Contains", Value= "contains" }
+
+    private readonly List<IFilterOperator> taskNameOperators = new()
+    {
+        new Operators { Text = "Equal",    Value = "equal" },
+        new Operators { Text = "Contains", Value = "contains" }
     };
+
+    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
+    {
+
+        if (args.ColumnName == "TaskName")
+        {
+            args.FilterOperators = taskNameOperators;
+        }
+    }
 
     protected override void OnInitialized()
     {
@@ -255,9 +320,9 @@ namespace TreeGridComponent.Data {
 {% endtabs %}
 
 ```cshtml
-@using  Syncfusion.Blazor.TreeGrid;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.Data;
 
 <SfTreeGrid IdMapping="TaskId" DataSource="@TreeGridData" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">
     <TreeGridEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="BusinessObject"></TreeGridEvents>
@@ -271,26 +336,28 @@ namespace TreeGridComponent.Data {
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
     public List<BusinessObject> TreeGridData { get; set; }
 
-    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
-    {
-        if (Args.ColumnName == "TaskName")//Specify Field name
-        {
-            Args.FilterOperators = CustomerIDOperator;
-        }
-    }
-
-    public class Operators
+    public class Operators : IFilterOperator
     {
         public string Value { get; set; }
         public string Text { get; set; }
     }
-    List<object> CustomerIDOperator = new List<object> {
-        new Operators() { Text= "Equal", Value= "equal" },
-        new Operators() { Text= "Contains", Value= "contains" }
+
+    private readonly List<IFilterOperator> CustomerIDOperator = new()
+    {
+        new Operators { Text = "Equal",    Value = "equal" },
+        new Operators { Text = "Contains", Value = "contains" }
     };
+
+    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
+    {
+        if (args.ColumnName == "TaskName")//Specify Field name
+        {
+            args.FilterOperators = CustomerIDOperator;
+        }
+    }
 
     protected override void OnInitialized()
     {
@@ -322,8 +389,6 @@ namespace TreeGridComponent.Data {
         }
     }
 }
-
-```
 
 ## Enable different filter for a column
 
@@ -398,4 +463,5 @@ namespace TreeGridComponent.Data {
 
 ### Limitations of using different filter types in different columns
 
-The different filter types such as Excel, Menu can be defined in different columns of the same tree grid. However, you cannot use these filter types along with filterBar type (default filter type). Because the filterbar type requires UI level changes with other filter types. For all other filter types, icons will be rendered in the column header.
+
+The different filter types such as Excel, Menu can be defined in different columns of the same tree grid. However, these filter types cannot be used along with filterBar type (default filter type).
