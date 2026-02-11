@@ -8,7 +8,7 @@
                 <TabHeader Text="Rich Text Editor 1"></TabHeader>
             </ChildContent>
             <ContentTemplate>
-                <SfRichTextEditor @ref="RteObj" @bind-Value="@editorValue1">
+                <SfRichTextEditor @ref="rteObj" @bind-Value="@editorValue1">
                     <RichTextEditorToolbarSettings></RichTextEditorToolbarSettings>
                 </SfRichTextEditor>
             </ContentTemplate>
@@ -18,7 +18,7 @@
                 <TabHeader Text="Rich Text Editor 2"></TabHeader>
             </ChildContent>
             <ContentTemplate>
-                <SfRichTextEditor @ref="RteObj" @bind-Value="@editorValue2">
+                <SfRichTextEditor @ref="rteObj" @bind-Value="@editorValue2">
                     <RichTextEditorToolbarSettings></RichTextEditorToolbarSettings>
                 </SfRichTextEditor>
             </ContentTemplate>
@@ -28,7 +28,7 @@
                 <TabHeader Text="Rich Text Editor 3"></TabHeader>
             </ChildContent>
             <ContentTemplate>
-                <SfRichTextEditor @ref="RteObj" @bind-Value="@editorValue3">
+                <SfRichTextEditor @ref="rteObj" @bind-Value="@editorValue3">
                     <RichTextEditorToolbarSettings></RichTextEditorToolbarSettings>
                 </SfRichTextEditor>
             </ContentTemplate>
@@ -37,7 +37,7 @@
 </SfTab>  
 
 @code {
-    SfRichTextEditor? RteObj;
+    private SfRichTextEditor? rteObj;
 
     private string? editorValue1 { get; set; }
 
