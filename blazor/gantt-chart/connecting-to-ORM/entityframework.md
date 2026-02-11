@@ -45,9 +45,9 @@ Ensure the following software and packages are installed before proceeding:
 | Microsoft.EntityFrameworkCore | 10.0.2 | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.SqlServer | 10.0.2 | SQL Server provider for Entity Framework Core |
 
-## Setting Up the SQL Server Environment for Entity Framework Core
+## Setting up the SQL Server Environment for Entity Framework Core
 
-### Step 1: Create the Database and Table in SQL Server
+### Step 1: Create the database and table in SQL Server
 
 First, the SQL Server database structure must be created to store task data.
 
@@ -74,11 +74,11 @@ GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'TaskData')
 BEGIN
     CREATE TABLE dbo.TaskData (
-        TaskId INT PRIMARY KEY,
+        TaskID INT PRIMARY KEY,
         TaskName VARCHAR(50) NOT NULL,
         StartDate DATETIME NULL,
         EndDate DATETIME NULL,
-        ParentId INT NULL,
+        ParentID INT NULL,
         Duration VARCHAR(50) NOT NULL,
         Predecessor VARCHAR(50) NULL,
         Progress INT NOT NULL
@@ -87,7 +87,7 @@ END
 GO
 
 -- Insert Sample Data (Optional)
-INSERT INTO TaskData (TaskName, StartDate, EndDate, ParentId, Duration, Predecessor, Progress)
+INSERT INTO TaskData (TaskName, StartDate, EndDate, ParentID, Duration, Predecessor, Progress)
 VALUES
 ('Product concept', '2026-04-02', '2026-04-08', NULL, '5', NULL, 0),
 ('Define the product usage', '2026-04-02', '2026-04-08', 1, '3','1FS', 30),
@@ -96,7 +96,7 @@ GO
 
 After executing this script, the records are stored in the `TaskData` table within the `GanttDB` database. The database is now ready for integration with the Blazor application.
 
-### Step 2: Install Required NuGet Packages
+### Step 2: Install required NuGet packages
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files—such as **Program.cs**, **appsettings.json**, **wwwroot**, and **Components**.
 
@@ -144,11 +144,11 @@ namespace Gantt_EF_UrlAdaptor.Data
     [Table("TaskData")]
     public class TaskDataModel
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public int Progress { get; set; }
         public string? Predecessor { get; set; }
         public string Duration { get; set; }
@@ -159,7 +159,7 @@ namespace Gantt_EF_UrlAdaptor.Data
 **Explanation:**
 - `[Table("TaskData")]` maps the entity explicitly to the SQL table named `TaskData`.
 - Each property represents a column in the table.
-- `TaskId` is the identifier used as the primary key in the table script created earlier.
+- `TaskID` is the identifier used as the primary key in the table script created earlier.
 
 The data model has been successfully created.
 
@@ -198,7 +198,7 @@ namespace Gantt_EF_UrlAdaptor.Data
 
 The DbContext has been successfully configured.
 
-### Step 5: Configure the Connection String
+### Step 5: Configure the connection string
 
 A connection string contains the information needed to connect the application to the SQL Server database, including the server address, database name, and authentication credentials.
 
@@ -279,7 +279,7 @@ namespace Gantt_EF_UrlAdaptor.Controllers
 
 The controller has been created with basic endpoint.
 
-### Step 7: Register Services in Program.cs
+### Step 7: Register services in Program.cs
 
 The `Program.cs` file is where application services are registered and configured. This step enables Entity Framework Core, controllers, Syncfusion Blazor, and maps controller routes.
 
@@ -342,7 +342,7 @@ app.Run();
 
 ## Integrating Syncfusion Blazor Gantt Chart with UrlAdaptor
 
-### Step 1: Install and Configure Blazor Gantt Chart Components
+### Step 1: Install and configure Blazor Gantt Chart Components
 
 Syncfusion is a library that provides pre-built UI components like Gantt Chart, which visualizes project schedules, task hierarchies, dependencies, baselines, and progress on a timeline.
 
@@ -396,7 +396,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
     </SfDataManager>    
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowTaskbarEditing="true" AllowDeleting="true" />
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="90"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
@@ -537,7 +537,7 @@ It carries the primary key, single entity (Value), and collections (Added, Chang
 
 This controller exposes the endpoints used by `<SfDataManager>` in **Home.razor**. Logic will be added in later steps when wiring CRUD and batch operations.
 
-### Step 4: Implement Searching Feature
+### Step 4: Implement searching feature
 
 Searching helps to find records by entering keywords in the search box, which filters data across all columns.
 
@@ -590,7 +590,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 }
 ```
 
-**How Searching Works:**
+**How searching works:**
 
 - When a text is entered in the search box and presses Enter, the Gantt Chart sends a search request to the REST API.
 - The `Post` method receives the search criteria in `dataManagerRequest.Search`.
@@ -601,7 +601,7 @@ Searching feature is now active.
 
 ---
 
-### Step 5: Implement Filtering Feature
+### Step 5: Implement filtering feature
 
 Filtering allows to restrict data based on column values using a menu interface.
 
@@ -612,8 +612,7 @@ Filtering allows to restrict data based on column values using a menu interface.
 
 ```cshtml
 <SfGantt TValue="TaskDataModel"
-        AllowFiltering="true"
-        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+        AllowFiltering="true" >
     <SfDataManager Url="/api/Gantt" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
 </SfGantt>
 ```
@@ -628,12 +627,6 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
     try
     {
         IEnumerable<TaskDataModel> dataSource = GetTaskData();
-
-        // Handling Searching
-        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
-        {
-            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-        }
 
         // Handling Filtering
         if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
@@ -662,7 +655,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 }
 ```
 
-**How Filtering Works:**
+**How filtering works:**
 
 - Click on the filter icon in any column header to open the filter menu.
 - Select filtering criteria (equals, contains, greater than, less than, etc.).
@@ -675,7 +668,7 @@ Filtering feature is now active.
 
 ---
 
-### Step 6: Implement Sorting Feature
+### Step 6: Implement sorting feature
 
 Sorting enables the records to arrange in ascending or descending order based on column values.
 
@@ -686,9 +679,7 @@ Sorting enables the records to arrange in ascending or descending order based on
 
 ```cshtml
 <SfGantt TValue="TaskDataModel"
-        AllowSorting="true"
-        AllowFiltering="true"
-        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+        AllowSorting="true">
     <SfDataManager Url="/api/Gantt"Adaptor="Adaptors.UrlAdaptor"></SfDataManager>    
 </SfGantt>
 ```
@@ -703,19 +694,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
     try
     {
         IEnumerable<TaskDataModel> dataSource = GetTaskData();
-
-        // Handling Searching
-        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
-        {
-            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-        }
-
-        // Handling Filtering
-        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-        {
-            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
-        }
-
+        
         // Handling Sorting
         if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
         {
@@ -743,7 +722,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 }
 ```
 
-**How Sorting Works:**
+**How sorting works:**
 
 - Click on the column header to sort in ascending order.
 - Click again to sort in descending order.
@@ -834,7 +813,7 @@ public void Update([FromBody] CRUDModel<TaskDataModel> value)
 {
     try
     {
-        var existingTask = _context.TaskData.Find(value.Value.TaskId);
+        var existingTask = _context.TaskData.Find(value.Value.TaskID);
         if (existingTask != null)
         {
             _context.Entry(existingTask).CurrentValues.SetValues(value.Value);
@@ -853,7 +832,7 @@ public void Update([FromBody] CRUDModel<TaskDataModel> value)
 1. Clicks the "Edit" button and modifies the record.
 2. The Gantt Chart sends a POST request to `/api/Gantt/Update`.
 3. The `Update` method receives the modified task data in `value.Value`.
-4. The existing task is retrieved from the database by its TaskId.
+4. The existing task is retrieved from the database by its TaskID.
 5. The properties are updated with the new values using `SetValues()`.
 6. `SaveChanges()` persists the changes to the SQL Server database.
 7. The Gantt Chart refreshes to display the updated task.
@@ -874,8 +853,8 @@ public void Delete([FromBody] CRUDModel<TaskDataModel> value)
 {
     try
     {
-        int taskId = Convert.ToInt32(value.Key.ToString());
-        var task = _context.TaskData.Find(taskId);
+        int taskID = Convert.ToInt32(value.Key.ToString());
+        var task = _context.TaskData.Find(taskID);
         if (task != null)
         {
             _context.TaskData.Remove(task);
@@ -894,8 +873,8 @@ public void Delete([FromBody] CRUDModel<TaskDataModel> value)
 1. Select a record and click "Delete".
 2. A confirmation dialog appears (built into the Gantt Chart).
 3. If confirmed, the Gantt Chart sends a POST request to `/api/Gantt/Delete`.
-4. The `Delete` method extracts the TaskId from `value.Key`.
-5. The task is located in the database by its TaskId.
+4. The `Delete` method extracts the TaskID from `value.Key`.
+5. The task is located in the database by its TaskID.
 6. The task is removed from the `_context.TaskData` collection.
 7. `SaveChanges()` executes the DELETE statement in SQL Server.
 8. The Gantt Chart refreshes to remove the deleted task from the UI.
@@ -933,7 +912,7 @@ public void Batch([FromBody] CRUDModel<TaskDataModel> value)
         {
             foreach (var record in value.Deleted)
             {
-                var existingTask = _context.TaskData.Find(record.TaskId);
+                var existingTask = _context.TaskData.Find(record.TaskID);
                 if (existingTask != null)
                 {
                     _context.TaskData.Remove(existingTask);
@@ -1004,7 +983,7 @@ The application will start, and the console will display the local URL (`https:/
 
 ---
 
-## Complete Sample Repository
+## Complete sample repository
 
 A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-Gantt-Chart-component/tree/master/Bindind%20SQL%20database%20using%20EF%20and%20UrlAdaptor).
 
@@ -1027,7 +1006,7 @@ The application now provides a complete solution for managing tasks with a moder
 
 ---
 
-## Alternative Approach: Custom Adaptor
+## Alternative approach: custom adaptor
 
 For a client-side data operations approach without REST API endpoints, refer to the [Blazor Gantt Chart with SQL Server using Entity Framework and Custom Adaptor](https://blazor.syncfusion.com/documentation/Gantt Chart/connecting-to-database/microsoft-sql-server) documentation. This approach executes search, filter, sort, and grouping operations directly in the Blazor component, providing a tightly integrated alternative to the REST API pattern.
 

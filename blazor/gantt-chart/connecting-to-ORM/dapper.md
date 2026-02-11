@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Gantt Chart connected to SQL Server via Dapper | Syncfusion
+title: Blazor Gantt Chart Connected to SQL Server via Dapper | Syncfusion
 description: Bind SQL Server data to Blazor Gantt Chart using Dapper with complete CRUD, filtering, sorting, paging and advanced data operations.
 platform: Blazor
 control: Gantt Chart
@@ -37,7 +37,7 @@ Ensure the following software and packages are installed before proceeding:
 | Microsoft.Data.SqlClient | Latest | SQL Server ADO.NET provider |
 | Dapper | Latest | Lightweight micro-ORM for SQL mapping |
 
-## Setting Up the SQL Server Environment with Dapper
+## Setting up the SQL Server Environment with Dapper
 
 ### Step 1: Create the database and table in SQL Server
 
@@ -66,11 +66,11 @@ GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'TaskData')
 BEGIN
     CREATE TABLE dbo.TaskData (
-        TaskId INT IDENTITY(1,1) PRIMARY KEY,
+        TaskID INT PRIMARY KEY,
         TaskName VARCHAR(50) NOT NULL,
         StartDate DATETIME NULL,
         EndDate DATETIME NULL,
-        ParentId INT NULL,
+        ParentID INT NULL,
         Duration VARCHAR(50) NOT NULL,
         Predecessor VARCHAR(50) NULL,
         Progress INT NOT NULL
@@ -79,7 +79,7 @@ END
 GO
 
 -- Insert Sample Data (Optional)
-INSERT INTO TaskData (TaskName, StartDate, EndDate, ParentId, Duration, Predecessor, Progress)
+INSERT INTO TaskData (TaskName, StartDate, EndDate, ParentID, Duration, Predecessor, Progress)
 VALUES
 ('Product concept', '2026-04-02', '2026-04-08', NULL, '5', NULL, 0),
 ('Define the product usage', '2026-04-02', '2026-04-08', 1, '3','1FS', 30),
@@ -90,7 +90,7 @@ After executing this script, the task data are stored in the `TaskData` table wi
 
 ---
 
-### Step 2: Install Required NuGet Packages
+### Step 2: Install required NuGet packages
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
@@ -142,11 +142,11 @@ namespace GanttDapper.Data
     public class TaskDataModel
     {
         [Key]
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
         public string? Duration { get; set; }    
         public int Progress { get; set; }
@@ -155,13 +155,13 @@ namespace GanttDapper.Data
 ```
 
 **Explanation:**
-- The `[Key]` attribute marks the `TaskId` property as the primary key (a unique identifier for each record).
+- The `[Key]` attribute marks the `TaskID` property as the primary key (a unique identifier for each record).
 - Each property represents a column in the database table.
 - The `?` symbol indicates that a property is nullable (can be empty).
 
 The data model has been successfully created.
 
-### Step 4: Configure the Connection String
+### Step 4: Configure the connection string
 
 A connection string contains the information needed to connect the application to the SQL Server database, including the server address, database name, and credentials.
 
@@ -200,7 +200,7 @@ A connection string contains the information needed to connect the application t
 
 The database connection string has been configured successfully.
 
-### Step 5: Create the Repository Class
+### Step 5: Create the repository class
 
 A repository class is an intermediary layer that handles all database operations. With Dapper, this class uses raw SQL queries with ADO.NET to communicate with the database.
 
@@ -236,7 +236,7 @@ namespace GanttDapper.Data
         {
             try
             {
-                const string query = @"SELECT * FROM [dbo].[TaskData] ORDER BY TaskId DESC";
+                const string query = @"SELECT * FROM [dbo].[TaskData] ORDER BY TaskID DESC";
                 var task = await _connection.QueryAsync<TaskDataModel>(query);
                 return task.ToList();
             }
@@ -268,7 +268,7 @@ namespace GanttDapper.Data
         /// <summary>
         /// Deletes a task from the database
         /// </summary>
-        /// <param name="key">The TaskId to delete</param>
+        /// <param name="key">The TaskID to delete</param>
         public async Task RemoveTaskAsync(int? key)
         {
            // Handle logic to delete an existing task from the database
@@ -286,7 +286,7 @@ The repository class manages all interactions with the database and is now ready
 
 ---
 
-### Step 6: Register Services in Program.cs
+### Step 6: Register services in Program.cs
 
 The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Dapper and the repository pattern.
 
@@ -352,7 +352,7 @@ The service registration has been completed successfully.
 
 ## Integrating Syncfusion Blazor Gantt Chart
 
-### Step 1: Install and Configure Blazor Gantt Chart Component
+### Step 1: Install and configure Blazor Gantt Chart Component
 
 Syncfusion is a library that provides pre-built UI components like Gantt Chart, which visualizes project schedules, task hierarchies, dependencies, baselines, and progress on a timeline.
 
@@ -400,7 +400,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 <SfGantt TValue="TaskData" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttColumns>
         <!-- Columns configuration -->
@@ -421,7 +421,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 The Home component has been updated successfully with Gantt Chart.
 
-### Step 3: Implement the CustomAdaptor
+### Step 3: Implement the custom adaptor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart can bind data from a **SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/Gantt Chart/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 
@@ -575,7 +575,7 @@ The toolbar has been successfully added.
 
 ---
 
-### Step 5: Implement Searching feature
+### Step 5: Implement searching feature
 
 Searching helps to find records by entering keywords in the search box.
 
@@ -643,7 +643,7 @@ Searching feature is now active.
 
 ---
 
-### Step 6: Implement Filtering feature
+### Step 6: Implement filtering feature
 
 Filtering allows to restrict data based on column values using a menu interface.
 
@@ -713,7 +713,7 @@ Filtering feature is now active.
 
 ---
 
-### Step 7: Implement Sorting feature
+### Step 7: Implement sorting feature
 
 Sorting enables the records to arrange in ascending or descending order based on column values.
 
@@ -847,9 +847,9 @@ public async Task AddTaskAsync(TaskDataModel value)
 
     const string query = @"
         INSERT INTO [dbo].[TaskData] 
-        (TaskName, StartDate, EndDate, ParentId, Duration, Predecessor, Progress)
+        (TaskName, StartDate, EndDate, ParentID, Duration, Predecessor, Progress)
         VALUES
-        (@TaskId, @TaskName, @StartDate, @EndDate, @ParentId,
+        (@TaskID, @TaskName, @StartDate, @EndDate, @ParentID,
         @Duration, @Predecessor, @Progress)";
 
     await _connection.ExecuteAsync(query, value);
@@ -893,21 +893,21 @@ public async Task UpdateTaskAsync(TaskDataModel value)
         if (value == null)
             throw new ArgumentNullException(nameof(value), "Task cannot be null");
 
-        if (value.TaskId <= 0)
+        if (value.TaskID <= 0)
             throw new ArgumentException("TaskID must be valid", nameof(value));
 
-        const string checkQuery = "SELECT COUNT(*) FROM [dbo].[TaskDate] WHERE TaskId = @TaskId";
-        var exists = await _connection.QueryFirstOrDefaultAsync<int>(checkQuery, new { value.TaskId });
+        const string checkQuery = "SELECT COUNT(*) FROM [dbo].[TaskDate] WHERE TaskID = @TaskID";
+        var exists = await _connection.QueryFirstOrDefaultAsync<int>(checkQuery, new { value.TaskID });
         
         if (exists == 0)
-            throw new KeyNotFoundException($"Task with ID {value.TaskId} not found");
+            throw new KeyNotFoundException($"Task with ID {value.TaskID} not found");
         
         const string query = @"
             UPDATE [dbo].[TaskData]
             SET TaskName = @TaskName, 
                 StartDate = @StartDate, EndDate = @EndDate, Duration = @Duration,
                 Predecessor = @Predecessor, Progress = @Progress, 
-            WHERE TaskId = @TaskId;"
+            WHERE TaskID = @TaskID;"
 
         await _connection.ExecuteAsync(query, value);
     }
@@ -956,14 +956,14 @@ public async Task RemoveTaskAsync(int? key)
         if (key == null || key <= 0)
             throw new ArgumentException("Task ID cannot be null or invalid", nameof(key));
 
-        const string checkQuery = "SELECT COUNT(*) FROM [dbo].[TaskData] WHERE TaskId = @TaskId";
-        var exists = await _connection.QueryFirstOrDefaultAsync<int>(checkQuery, new { TaskId = key });
+        const string checkQuery = "SELECT COUNT(*) FROM [dbo].[TaskData] WHERE TaskID = @TaskID";
+        var exists = await _connection.QueryFirstOrDefaultAsync<int>(checkQuery, new { TaskID = key });
         
         if (exists == 0)
             throw new KeyNotFoundException($"Task with ID {key} not found");
 
-        const string query = "DELETE FROM [dbo].[TaskData] WHERE TaskId = @TaskId";
-        await _connection.ExecuteAsync(query, new { TaskId = key });
+        const string query = "DELETE FROM [dbo].[TaskData] WHERE TaskID = @TaskID";
+        await _connection.ExecuteAsync(query, new { TaskID = key });
     }
     catch (Exception ex)
     {
@@ -1018,7 +1018,7 @@ public class CustomAdaptor : DataAdaptor
         {
             foreach (var record in (IEnumerable<TaskDataModel>)deleted)
             {
-                await _taskService.RemoveTaskAsync(record.TaskId);
+                await _taskService.RemoveTaskAsync(record.TaskID);
             }
         }
         return key;
@@ -1067,13 +1067,13 @@ Here is the complete and final `Home.razor` component with all features integrat
 
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
 
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 
     <GanttColumns>
-        <GanttColumn Field=@nameof(TaskDataModel.TaskId) HeaderText="Task ID" IsPrimaryKey="true" Width="150" />
+        <GanttColumn Field=@nameof(TaskDataModel.TaskID) HeaderText="Task ID" IsPrimaryKey="true" Width="150" />
         <GanttColumn Field=@nameof(TaskDataModel.TaskName) HeaderText="Task Name" Width="220" />
         <GanttColumn Field=@nameof(TaskDataModel.StartDate) HeaderText="Start Date" Width="170" />
         <GanttColumn Field=@nameof(TaskDataModel.EndDate) HeaderText="End Date" Width="170" />
@@ -1176,7 +1176,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
             if (deletedRecords != null)
                 foreach (var record in (IEnumerable<TaskDataModel>)deletedRecords)
-                    await _taskService!.RemoveTaskAsync((record as TaskDataModel).TaskId);
+                    await _taskService!.RemoveTaskAsync((record as TaskDataModel).TaskID);
 
             return key;
         }
@@ -1222,7 +1222,7 @@ dotnet run
 - **Delete**: Click the "Delete" button to remove task.
 ---
 
-## Complete Sample Repository
+## Complete sample repository
 
 A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-Gantt-Chart-component/tree/master/Binding%20Dapper%20using%20CustomAdaptor).
 
@@ -1236,7 +1236,7 @@ This guide demonstrates how to:
 3. Create data models for database mapping. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings for SQL Server. [🔗](#step-4-configure-the-connection-string)
 5. Implement the repository pattern with Dapper for efficient data access. [🔗](#step-5-create-the-repository-class)
-6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting,  and CRUD operations. [🔗](#step-1-install-and-configure-blazor-Gantt Chart-components)
+6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting,  and CRUD operations. [🔗](#step-1-install-and-configure-blazor-gantt-chart-components)
 7. Handle bulk operations and batch updates. [🔗](#step-8-perform-crud-operations)
 
 The application now provides a complete solution for managing task data with a modern, user-friendly interface using Dapper for high-performance database access.

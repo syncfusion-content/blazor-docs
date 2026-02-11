@@ -31,11 +31,11 @@ namespace URLAdaptor.Models
 {
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public int Progress { get; set; }
         public string? Predecessor { get; set; }
         public string Duration { get; set; } ;
@@ -53,17 +53,17 @@ namespace URLAdaptor.Models
             for (int i = 1; i <= 2; i++)
             {
                 // Create parent task (no separate variable name like parent1/parent2)
-                int parentId = ++x;
+                int parentID = ++x;
 
                 DataCollection.Add(new TaskData()
                 {
-                    TaskId = parentId,
-                    TaskName = "Task " + parentId,          // Parent
+                    TaskID = parentID,
+                    TaskName = "Task " + parentID,          // Parent
                     StartDate = startDate,
                     EndDate = startDate.AddDays(26),
                     Duration = "20",
                     Progress = 0,
-                    ParentId = null,
+                    ParentID = null,
                     Predecessor = null
                 });
 
@@ -80,13 +80,13 @@ namespace URLAdaptor.Models
 
                     DataCollection.Add(new TaskData()
                     {
-                        TaskId = childId,
+                        TaskID = childId,
                         TaskName = "Task " + childId,        // Child
                         StartDate = childStart,
                         EndDate = childStart.AddDays(duration),
                         Duration = duration.ToString(),
                         Progress = 0,
-                        ParentId = parentId,
+                        ParentID = parentID,
                         Predecessor = j > 1 ? (childId - 1) + "FS" : null
                     });
                 }
@@ -245,11 +245,11 @@ The `SfDataManager` offers multiple adaptor options to connect with remote datab
 
 <SfGantt TValue="TaskData" Height="450px">
     <SfDataManager Url="/api/gantt" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>    
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="90"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
@@ -366,11 +366,11 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 <SfGantt TValue="TaskData" Height="450px" Toolbar="@(new List<string>() { "Search" })">
     <SfDataManager Url="/api/gantt" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>    
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="90"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
@@ -436,11 +436,11 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 <SfGantt TValue="TaskData" Height="450px" AllowFiltering="true">
     <SfDataManager Url="/api/gantt" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>   
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="90"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
@@ -503,11 +503,11 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 <SfGantt TValue="TaskData" Height="450px" AllowSorting="true">
     <SfDataManager Url="/api/gantt" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>    
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="90"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
@@ -546,12 +546,12 @@ To enable editing in Blazor Gantt Chart, refer to the editing [documentation](ht
 
 <SfGantt TValue="TaskData" Height="450px" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
     <SfDataManager Url="/api/gantt" InsertUrl="/api/gantt/Insert" UpdateUrl="/api/gantt/Update" RemoveUrl="/api/gantt/Remove" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowTaskbarEditing="true" AllowDeleting="true" />
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="90"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
@@ -654,11 +654,11 @@ public void Update([FromBody] CRUDModel<TaskData> updatedRecord)
     var updatedTask = updatedRecord.value;
     if (updatedTask != null)
     {
-        var data = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskId == updatedTask.TaskId);
+        var data = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == updatedTask.TaskID);
         if (data != null)
         {
             // Update the existing record.
-            data.TaskId = updatedTask.TaskId;
+            data.TaskID = updatedTask.TaskID;
             data.TaskName = updatedTask.TaskName;
             data.StartDate = updatedTask.StartDate;
             data.EndDate = updatedTask.EndDate;
@@ -689,8 +689,8 @@ To delete existing records, use the `RemoveUrl` property to specify the controll
 public void Remove([FromBody] CRUDModel<TaskData> deletedRecord)
 {
     // Get the key value from the deletedRecord.
-    int taskId = int.Parse(deletedRecord.key.ToString()); 
-    var data = TaskData.GetAllRecords().FirstOrDefault(task => task.TaskId == taskId);
+    int taskID = int.Parse(deletedRecord.key.ToString()); 
+    var data = TaskData.GetAllRecords().FirstOrDefault(task => task.TaskID == taskID);
     if (data != null)
     {
         // Remove the record from the data collection.
@@ -723,11 +723,11 @@ public void CrudUpdate([FromBody] CRUDModel<TaskData> request)
     if (request.action == "update")
     {
         var task = request.value;
-        TaskData existingRecord = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskId == task.TaskId);
+        TaskData existingRecord = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == task.TaskID);
         if (existingRecord != null)
         {
             // Update the properties of the existing record.
-            existingRecord.TaskId = task.TaskId;
+            existingRecord.TaskID = task.TaskID;
             existingRecord.TaskName = task.TaskName;
             existingRecord.StartDate = task.StartDate;
             existingRecord.EndDate = task.EndDate;
@@ -744,7 +744,7 @@ public void CrudUpdate([FromBody] CRUDModel<TaskData> request)
     else if (request.action == "remove")
     {
         // Remove the record from the data collection.
-        TaskData.GetAllRecords().Remove(TaskData.GetAllRecords().FirstOrDefault(or => or.TaskId == int.Parse(request.key.ToString())));
+        TaskData.GetAllRecords().Remove(TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == int.Parse(request.key.ToString())));
     }
 }
 
@@ -759,12 +759,12 @@ public void CrudUpdate([FromBody] CRUDModel<TaskData> request)
 
 <SfGantt TValue="TaskData" Height="450px" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" ,"Search" })">
     <SfDataManager Url="/api/gantt" CrudUrl="/api/gantt/CrudUpdate" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowTaskbarEditing="true" AllowDeleting="true" />
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="90"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
@@ -809,12 +809,12 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<TaskData> batchModel)
         // Iterate through each changed record.
         foreach (var changedTask in batchModel.changed)
         {
-            // Find the existing record that matches the changed record's "TaskId".
-            var existingTask = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskId == changedTask.TaskId);
+            // Find the existing record that matches the changed record's "TaskID".
+            var existingTask = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == changedTask.TaskID);
             if (existingTask != null)
             {
                 // Update the properties of the existing record.
-                existingTask.TaskId = changedTask.TaskId;
+                existingTask.TaskID = changedTask.TaskID;
                 existingTask.TaskName = changedTask.TaskName;
                 existingTask.StartDate = changedTask.StartDate;
                 existingTask.EndDate = changedTask.EndDate;
@@ -828,8 +828,8 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<TaskData> batchModel)
         // Iterate through each deleted record.
         foreach (var deletedTask in batchModel.deleted)
         {
-            // Find the existing record that matches the deleted record's "TaskId".
-            var taskToDelete = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskId == deletedTask.TaskId);
+            // Find the existing record that matches the deleted record's "TaskID".
+            var taskToDelete = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == deletedTask.TaskID);
             if (taskToDelete != null)
             {
                 // Remove the matching record from the existing records.
@@ -853,12 +853,12 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<TaskData> batchModel)
 
 <SfGantt TValue="TaskData" Height="450px" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel", "Search" })">
     <SfDataManager Url="/api/gantt" BatchUrl="/api/gantt/BatchUpdate" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowTaskbarEditing="true" AllowDeleting="true" />
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="90"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>

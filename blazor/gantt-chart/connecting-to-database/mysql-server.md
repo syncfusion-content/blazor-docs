@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Gantt Chart connected to MySQL via Entity Framework | Syncfusion
+title: Blazor Gantt Chart Connected to MySQL via Entity Framework | Syncfusion
 description: Bind MySQL data to Blazor Gantt Chart using Entity Framework Core with complete CRUD, filtering, sorting, and advanced data operations.
 platform: Blazor
 control: Gantt Chart
@@ -42,9 +42,9 @@ Ensure the following software and packages are installed before proceeding:
 | Microsoft.EntityFrameworkCore.Tools |10.0.2 or later | Tools for managing database migrations |
 | Pomelo.EntityFrameworkCore.MySql | 10.0.2 or later | MySQL provider for Entity Framework Core |
 
-## Setting Up the MySQL Environment for Entity Framework Core
+## Setting up the MySQL environment for Entity Framework Core
 
-### Step 1: Create the database and Table in MySQL server
+### Step 1: Create the database and table in MySQL server
 
 First, the **MySQL database** structure must be created to store task data.
 
@@ -63,11 +63,11 @@ USE ganttdb;
 
 -- Create TaskData Table
 CREATE TABLE IF NOT EXISTS task_data (
-    TaskId INT AUTO_INCREMENT PRIMARY KEY,
+    TaskID INT AUTO_INCREMENT PRIMARY KEY,
     TaskName VARCHAR(50) NOT NULL, 
     StartDate DATETIME,
     EndDate DATETIME,
-    ParentId INT NULL,
+    ParentID INT NULL,
     Duration VARCHAR(10) NOT NULL,
     Predecessor VARCHAR(100) NULL,   
     Progress INT NOT NULL  
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS task_data (
 
 -- Insert Sample Data (Optional)
 
-INSERT INTO task_data (TaskName, StartDate, EndDate, ParentId, Duration, Predecessor, Progress)
+INSERT INTO task_data (TaskName, StartDate, EndDate, ParentID, Duration, Predecessor, Progress)
 VALUES
 ('Product concept', '2026-04-02', '2026-04-08', NULL, '5', NULL, 0),
 ('Define the product usage', '2026-04-02', '2026-04-08', 1, '3','1FS', 30),
@@ -85,7 +85,7 @@ After executing this script, the task records are stored in the `task_data` tabl
 
 ---
 
-### Step 2: Install Required NuGet Packages
+### Step 2: Install required NuGet packages
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
@@ -134,11 +134,11 @@ namespace GanttMySql.Data
     public class TaskDataModel
     {
         [Key]
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public int? ParentId { get; set; }
+        public int? ParentID { get; set; }
         public string Predecessor { get; set; }
         public string? Duration { get; set; }    
         public int Progress { get; set; }
@@ -148,7 +148,7 @@ namespace GanttMySql.Data
 ```
 
 **Explanation:**
-- The `[Key]` attribute marks the `TaskId` property as the primary key (a unique identifier for each record).
+- The `[Key]` attribute marks the `TaskID` property as the primary key (a unique identifier for each record).
 - Each property represents a column in the database table.
 - The `?` symbol indicates that a property is nullable (can be empty).
 
@@ -201,10 +201,10 @@ namespace GanttMySql.Data
                 entity.ToTable("task_data");
 
                 // Primary Key
-                entity.HasKey(e => e.TaskId);
+                entity.HasKey(e => e.TaskID);
 
                 // Auto-increment for Primary Key
-                entity.Property(e => e.TaskId)
+                entity.Property(e => e.TaskID)
                       .ValueGeneratedOnAdd();
 
                 // TaskName (NOT NULL, VARCHAR(50))
@@ -222,8 +222,8 @@ namespace GanttMySql.Data
                       .HasColumnType("datetime")
                       .IsRequired(false);
 
-                // ParentId (INT, nullable)
-                entity.Property(e => e.ParentId)
+                // ParentID (INT, nullable)
+                entity.Property(e => e.ParentID)
                       .IsRequired(false);
 
                 // Predecessor (VARCHAR(100), nullable)
@@ -242,7 +242,7 @@ namespace GanttMySql.Data
                       .IsRequired();
 
                 // Helpful indexes
-                entity.HasIndex(e => e.ParentId).HasDatabaseName("IX_Task_ParentId");
+                entity.HasIndex(e => e.ParentID).HasDatabaseName("IX_Task_ParentID");
                 entity.HasIndex(e => e.StartDate).HasDatabaseName("IX_Task_StartDate");
             });
         }
@@ -264,7 +264,7 @@ The **TaskDbContext** class is required because:
 
 Without this class, Entity Framework Core will not know where to save data or how to create the task_data table. The DbContext has been successfully configured.
 
-### Step 5: Configure the Connection String
+### Step 5: Configure the connection string
 
 A connection string contains the information needed to connect the application to the MySQL database, including the server address, port, database name, and credentials.
 
@@ -302,7 +302,7 @@ A connection string contains the information needed to connect the application t
 
 The database connection string has been configured successfully.
 
-### Step 6: Create the Repository Class
+### Step 6: Create the repository class
 
 A repository class is an intermediary layer that handles all database operations. This class uses Entity Framework Core to communicate with the database.
 
@@ -340,7 +340,7 @@ namespace GanttMySql.Data
         public async Task<List<TaskDataModel>> GetTasksAsync()
         {
             return await _context.TaskData
-                .OrderByDescending(t => t.TaskId)
+                .OrderByDescending(t => t.TaskID)
                 .ToListAsync();
         }
 
@@ -356,14 +356,14 @@ namespace GanttMySql.Data
         /// <summary>
         /// Updates an existing task in the database.
         /// </summary>
-        /// <param name="task">Updated task data (TaskId must identify an existing task).</param>
+        /// <param name="task">Updated task data (TaskID must identify an existing task).</param>
         public async Task UpdateTaskAsync(TaskDataModel task)
         {
             // Handle logic to update an existing task to the database
         }
 
         /// <summary>
-        /// Deletes a task by TaskId.
+        /// Deletes a task by TaskID.
         /// </summary>
         /// <param name="key">Task identifier to remove; null or invalid values are ignored.</param>
         public async Task RemoveTaskAsync(int? key)
@@ -376,7 +376,7 @@ namespace GanttMySql.Data
 
 The repository class has been created.
 
-### Step 7: Register Services in Program.cs
+### Step 7: Register services in Program.cs
 
 The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Entity Framework Core and the repository pattern.
 
@@ -438,7 +438,7 @@ The service registration has been completed successfully.
 
 ## Integrating Syncfusion Blazor Gantt Chart
 
-### Step 1: Install and Configure Blazor Gantt Chart Components
+### Step 1: Install and configure Blazor Gantt Chart Components
 
 Syncfusion is a library that provides pre-built UI components like Gantt Chart, which visualizes project schedules, task hierarchies, dependencies, baselines, and progress on a timeline.
 
@@ -489,13 +489,13 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
 
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 
     <GanttColumns>
-        <GanttColumn Field=@nameof(TaskDataModel.TaskId) HeaderText="Task ID" IsPrimaryKey="true" Width="150" />
+        <GanttColumn Field=@nameof(TaskDataModel.TaskID) HeaderText="Task ID" IsPrimaryKey="true" Width="150" />
         <GanttColumn Field=@nameof(TaskDataModel.TaskName) HeaderText="Task Name" Width="220" />
         <GanttColumn Field=@nameof(TaskDataModel.StartDate) HeaderText="Start Date" Width="170" />
         <GanttColumn Field=@nameof(TaskDataModel.EndDate) HeaderText="End Date" Width="170" />
@@ -524,7 +524,7 @@ The Home component has been updated successfully with Gantt Chart.
 
 ---
 
-### Step 3: Implement the CustomAdaptor
+### Step 3: Implement the custom adaptor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart can bind data from a **MySQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to `CustomAdaptor` for scenarios that require full control over data operations.
 
@@ -671,7 +671,7 @@ The toolbar has been successfully added.
 ---
 
 
-### Step 5: Implement Searching feature
+### Step 5: Implement searching feature
 
 Searching allows the user to find records by entering keywords in the search box.
 
@@ -740,7 +740,7 @@ Searching feature is now active.
 
 ---
 
-### Step 6: Implement Filtering feature
+### Step 6: Implement filtering feature
 
 Filtering allows the user to restrict data based on column values using a menu interface.
 
@@ -818,7 +818,7 @@ Filtering feature is now active.
 
 ---
 
-### Step 7: Implement Sorting feature
+### Step 7: Implement sorting feature
 
 Sorting enables the user to arrange records in ascending or descending order based on column values.
 
@@ -954,7 +954,7 @@ public async Task AddTaskAsync(TaskData value)
      throw new ArgumentNullException(nameof(task), "Task cannot be null");
 
     // Ensure DB generates identity
-    task.TaskId = 0;
+    task.TaskID = 0;
     
     ApplyDefaults(task);
     
@@ -1022,15 +1022,15 @@ In **Data/TaskRepository.cs**, implement the update method:
 /// <summary>
 /// Updates an existing task in the database.
 /// </summary>
-/// <param name="task">Updated task data (TaskId must identify an existing task).</param>
+/// <param name="task">Updated task data (TaskID must identify an existing task).</param>
 public async Task UpdateTaskAsync(TaskDataModel task)
 {
     if (task == null)
         throw new ArgumentNullException(nameof(task), "Task cannot be null");
 
-    var existing = await _context.TaskData.FindAsync(task.TaskId);
+    var existing = await _context.TaskData.FindAsync(task.TaskID);
     if (existing == null)
-        throw new KeyNotFoundException($"Task with ID {task.TaskId} not found in the database.");
+        throw new KeyNotFoundException($"Task with ID {task.TaskID} not found in the database.");
 
     ApplyDefaults(task);
 
@@ -1040,7 +1040,7 @@ public async Task UpdateTaskAsync(TaskDataModel task)
     existing.Duration = task.Duration;
     existing.Progress = task.Progress;
     existing.Predecessor = task.Predecessor;
-    existing.ParentId = task.ParentId;
+    existing.ParentID = task.ParentID;
 
     await _context.SaveChangesAsync();
 }
@@ -1069,16 +1069,16 @@ public class CustomAdaptor : DataAdaptor
 {
     public override async Task<object> RemoveAsync(DataManager dm, object value, string? keyField, string key)
     {
-        int? taskId = value switch
+        int? taskID = value switch
         {
             int i => i,
             long l => (int)l,
             string s when int.TryParse(s, out var id) => id,
-            TaskDataModel t => t.TaskId,
+            TaskDataModel t => t.TaskID,
             _ => null
         };
 
-        await _taskService!.RemoveTaskAsync(taskId);
+        await _taskService!.RemoveTaskAsync(taskID);
         return value;
     }
 }
@@ -1087,7 +1087,7 @@ In **Data/TaskRepository.cs**, implement the delete method:
 
 ```csharp
 /// <summary>
-/// Deletes a task by TaskId.
+/// Deletes a task by TaskID.
 /// </summary>
 /// <param name="key">Task identifier to remove; null or invalid values are ignored.</param>
 public async Task RemoveTaskAsync(int? key)
@@ -1150,7 +1150,7 @@ In **Home.razor**, implement the `BatchUpdateAsync` method to handle multiple re
             foreach (var record in changed)
             {
                 // Debug (optional)
-                Console.WriteLine($"UPDATE TaskId={record.TaskId}, ParentId={record.ParentId}");
+                Console.WriteLine($"UPDATE TaskID={record.TaskID}, ParentID={record.ParentID}");
                 await _taskService!.UpdateTaskAsync(record);
             }
         }
@@ -1160,9 +1160,9 @@ In **Home.razor**, implement the `BatchUpdateAsync` method to handle multiple re
         foreach (var record in added)
         {
             // Debug (optional)
-            Console.WriteLine($"INSERT TaskId={record.TaskId}, ParentId={record.ParentId}");
+            Console.WriteLine($"INSERT TaskID={record.TaskID}, ParentID={record.ParentID}");
 
-            record.TaskId = 0; // identity insert
+            record.TaskID = 0; // identity insert
             await _taskService!.AddTaskAsync(record);
         }
     }
@@ -1170,7 +1170,7 @@ In **Home.razor**, implement the `BatchUpdateAsync` method to handle multiple re
     if (deletedRecords is IEnumerable<TaskDataModel> deleted)
     {
         foreach (var record in deleted)
-            await _taskService!.RemoveTaskAsync(record.TaskId);
+            await _taskService!.RemoveTaskAsync(record.TaskID);
     }
 
     return key;
@@ -1214,13 +1214,13 @@ Here is the complete and final `Home.razor` component with all features integrat
 
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentId" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentID" Dependency="Predecessor">
     </GanttTaskFields>
 
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 
     <GanttColumns>
-        <GanttColumn Field=@nameof(TaskDataModel.TaskId) HeaderText="Task ID" IsPrimaryKey="true" Width="150" />
+        <GanttColumn Field=@nameof(TaskDataModel.TaskID) HeaderText="Task ID" IsPrimaryKey="true" Width="150" />
         <GanttColumn Field=@nameof(TaskDataModel.TaskName) HeaderText="Task Name" Width="220" />
         <GanttColumn Field=@nameof(TaskDataModel.StartDate) HeaderText="Start Date" Width="170" />
         <GanttColumn Field=@nameof(TaskDataModel.EndDate) HeaderText="End Date" Width="170" />
@@ -1320,16 +1320,16 @@ Here is the complete and final `Home.razor` component with all features integrat
         /// <returns>The removed object.</returns>
         public override async Task<object> RemoveAsync(DataManager dm, object value, string? keyField, string key)
         {
-            int? taskId = value switch
+            int? taskID = value switch
             {
                 int i => i,
                 long l => (int)l,
                 string s when int.TryParse(s, out var id) => id,
-                TaskDataModel t => t.TaskId,
+                TaskDataModel t => t.TaskID,
                 _ => null
             };  
 
-            await _taskService!.RemoveTaskAsync(taskId);
+            await _taskService!.RemoveTaskAsync(taskID);
             return value;
         }   
 
@@ -1351,7 +1351,7 @@ Here is the complete and final `Home.razor` component with all features integrat
                 foreach (var record in changed)
                 {
                     // Debug (optional)
-                    Console.WriteLine($"UPDATE TaskId={record.TaskId}, ParentId={record.ParentId}");
+                    Console.WriteLine($"UPDATE TaskID={record.TaskID}, ParentID={record.ParentID}");
                     await _taskService!.UpdateTaskAsync(record);
                 }
             }   
@@ -1361,9 +1361,9 @@ Here is the complete and final `Home.razor` component with all features integrat
                 foreach (var record in added)
                 {
                     // Debug (optional)
-                    Console.WriteLine($"INSERT TaskId={record.TaskId}, ParentId={record.ParentId}");    
+                    Console.WriteLine($"INSERT TaskID={record.TaskID}, ParentID={record.ParentID}");    
 
-                    record.TaskId = 0; // identity insert
+                    record.TaskID = 0; // identity insert
                     await _taskService!.AddTaskAsync(record);
                 }
             }   
@@ -1371,7 +1371,7 @@ Here is the complete and final `Home.razor` component with all features integrat
             if (deletedRecords is IEnumerable<TaskDataModel> deleted)
             {
                 foreach (var record in deleted)
-                    await _taskService!.RemoveTaskAsync(record.TaskId);
+                    await _taskService!.RemoveTaskAsync(record.TaskID);
             }   
 
             return key;

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD actions with CustomAdaptor in Syncfusion Blazor Gantt Chart
+title: Bind Data and Perform CRUD Actions with CustomAdaptor in Syncfusion Blazor Gantt Chart
 description: Learn all about Custom Binding in the Syncfusion Blazor Gantt Chart and much more.
 platform: Blazor
 control: Gantt Chart
@@ -186,13 +186,13 @@ The following example demonstrates how to implement custom data binding using a 
 
 > If the [DataManagerRequest.RequiresCounts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html#Syncfusion_Blazor_DataManagerRequest_RequiresCounts) property is **true**, the `Read/ReadAsync` method must return a **DataResult** containing both **Result** (a collection of records) and **Count** (the total number of records). When **false**, return only the collection of records.
 
-The following image shows the custom-bind data displayed in the Gantt:
+The following image shows the custom-bind data displayed in the Gantt Chart:
 
 ![Custom Binding in Gantt](../images/blazor-gantt-custom-binding.png)
 
 > If the `Read/ReadAsync` method is not overridden in the custom adaptor, the default read handler will be used.
 
-## Inject Service into Custom Adaptor
+## Inject service into custom adaptor
 
 To inject a service into the custom adaptor for data operations, follow the steps shown below.
 
@@ -334,7 +334,7 @@ The following example demonstrates how to implement searching operation for cust
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor">
     </SfDataManager>
 
-    <GanttTaskFields Id="TaskId"
+    <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
                      EndDate="EndDate"
@@ -342,7 +342,7 @@ The following example demonstrates how to implement searching operation for cust
     </GanttTaskFields>
     
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="100"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Format="d" Width="140"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Format="d" Width="140"></GanttColumn>
@@ -360,7 +360,7 @@ The following example demonstrates how to implement searching operation for cust
 
         Tasks = Enumerable.Range(1, 75).Select(x => new TaskData
         {
-            TaskId = 0+ x,
+            TaskID = 0+ x,
             TaskName = $"Task {0 + x}",
             StartDate = baseDate.AddDays(x % 10),           
             EndDate = baseDate.AddDays((x % 10) + 3),       
@@ -370,7 +370,7 @@ The following example demonstrates how to implement searching operation for cust
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; } = string.Empty;
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -429,7 +429,7 @@ The following example demonstrates how to implement the filtering operation for 
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor">
     </SfDataManager>
 
-    <GanttTaskFields Id="TaskId"
+    <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
                      EndDate="EndDate"
@@ -437,7 +437,7 @@ The following example demonstrates how to implement the filtering operation for 
     </GanttTaskFields>
     
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="100"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Format="d" Width="140"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Format="d" Width="140"></GanttColumn>
@@ -455,7 +455,7 @@ The following example demonstrates how to implement the filtering operation for 
 
         Tasks = Enumerable.Range(1, 75).Select(x => new TaskData
         {
-            TaskId = 0+ x,
+            TaskID = 0+ x,
             TaskName = $"Task {0 + x}",
             StartDate = baseDate.AddDays(x % 10),           
             EndDate = baseDate.AddDays((x % 10) + 3),       
@@ -465,7 +465,7 @@ The following example demonstrates how to implement the filtering operation for 
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -524,7 +524,7 @@ The following example demonstrates how to implement the sorting operation for cu
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor">
     </SfDataManager>
 
-    <GanttTaskFields Id="TaskId"
+    <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
                      EndDate="EndDate"
@@ -532,7 +532,7 @@ The following example demonstrates how to implement the sorting operation for cu
     </GanttTaskFields>
     
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="100"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Format="d" Width="140"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Format="d" Width="140"></GanttColumn>
@@ -550,7 +550,7 @@ The following example demonstrates how to implement the sorting operation for cu
 
         Tasks = Enumerable.Range(1, 75).Select(x => new TaskData
         {
-            TaskId = 0+ x,
+            TaskID = 0+ x,
             TaskName = $"Task {0 + x}",
             StartDate = baseDate.AddDays(x % 10),           
             EndDate = baseDate.AddDays((x % 10) + 3),       
@@ -560,7 +560,7 @@ The following example demonstrates how to implement the sorting operation for cu
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; } = string.Empty;
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -781,7 +781,7 @@ The following example demonstrates how to send additional parameters to the serv
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor">
     </SfDataManager>
 
-    <GanttTaskFields Id="TaskId"
+    <GanttTaskFields Id="TaskID"
                      Name="TaskName"
                      StartDate="StartDate"
                      EndDate="EndDate"
@@ -789,7 +789,7 @@ The following example demonstrates how to send additional parameters to the serv
     </GanttTaskFields>
     
     <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="100"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Format="d" Width="140"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Format="d" Width="140"></GanttColumn>
@@ -799,7 +799,7 @@ The following example demonstrates how to send additional parameters to the serv
 
 @code {
     public static List<TaskData> Tasks { get; set; } = new();
-    public Query Query = new Query().AddParams("TaskId", 1);
+    public Query Query = new Query().AddParams("TaskID", 1);
 
     protected override void OnInitialized()
     {        
@@ -808,7 +808,7 @@ The following example demonstrates how to send additional parameters to the serv
 
         Tasks = Enumerable.Range(1, 75).Select(x => new TaskData
         {
-            TaskId = 0+ x,
+            TaskID = 0+ x,
             TaskName = $"Task {0 + x}",
             StartDate = baseDate.AddDays(x % 10),           
             EndDate = baseDate.AddDays((x % 10) + 3),       
@@ -818,7 +818,7 @@ The following example demonstrates how to send additional parameters to the serv
 
     public class TaskData
     {
-        public int TaskId { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; } = string.Empty;
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
