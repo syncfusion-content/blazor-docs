@@ -1,0 +1,42 @@
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor
+
+@inject IJSRuntime JS
+
+<SfRichTextEditor Placeholder="Click link icon to add URLs">
+    <RichTextEditorToolbarSettings Items="@ToolbarItems"></RichTextEditorToolbarSettings>
+    <RichTextEditorEvents OnActionComplete="@OnActionComplete"></RichTextEditorEvents>
+    <RichTextEditorQuickToolbarSettings />
+    <RichTextEditorContent>
+        <p><strong>Embedly integration automatically transforms plain links into rich, interactive preview cards with titles, descriptions, and thumbnails.</strong></p>
+        <h4>How it works:</h4>
+        <ul>
+            <li><strong>Paste or create links</strong> - Use the CreateLink toolbar button to add URLs to the editor</li>
+            <li><strong>Automatic card rendering</strong> - Links are automatically converted to rich Embedly cards with preview, title, and description</li>
+            <li><strong>Supported content</strong> - Works with articles, videos, images, documents, and other embeddable web content</li>
+        </ul>
+    </RichTextEditorContent>
+</SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> ToolbarItems = new()
+    {
+        new ToolbarItemModel { Command = ToolbarCommand.CreateLink }
+    };
+
+    private async Task OnActionComplete(ActionCompleteEventArgs args)
+    {
+        if (args.RequestType == "Links")
+        {
+            await JS.InvokeVoidAsync("embedlyInterop.wrapLinkInEmbedlyCard");
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initializeEmbedly");
+        }
+    }
+}
