@@ -261,4 +261,4 @@ This approach provides precise control over the overall Gantt Chart size while p
 
 * Split tasks are currently not exported.
 * Unscheduled tasks are not included in the PDF output.
-* Multiple taskbars for a single task are not supported in PDF export.
+* Multiple taskbars for a single row are not supported in PDF export.
