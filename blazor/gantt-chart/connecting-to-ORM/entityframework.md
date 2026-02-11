@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Gantt Chart with SQL using Entity Framework| Syncfusion
+title: Blazor Gantt Chart with SQL using Entity Framework | Syncfusion
 description: Bind SQL Server data to Blazor Gantt Chart using Entity Framework core with CRUD, filtering and sorting.
 platform: Blazor
 control: Gantt Chart
@@ -54,7 +54,7 @@ First, the SQL Server database structure must be created to store task data.
 Instructions:
 1. Open SQL Server Management Studio (SSMS) or any SQL Server client.
 2. Create a new database named `GanttDB`.
-3. Define an `TaskData` table with the specified schema.
+3. Define a `TaskData` table with the specified schema.
 4. Insert sample data for testing.
 
 Run the following SQL script:
@@ -74,12 +74,12 @@ GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'TaskData')
 BEGIN
     CREATE TABLE dbo.TaskData (
-        TaskId INT IDENTITY(1,1) PRIMARY KEY,
+        TaskId INT PRIMARY KEY,
         TaskName VARCHAR(50) NOT NULL,
         StartDate DATETIME NULL,
         EndDate DATETIME NULL,
         ParentId INT NULL,
-        Duration INT NOT NULL,
+        Duration VARCHAR(50) NOT NULL,
         Predecessor VARCHAR(50) NULL,
         Progress INT NOT NULL
     );
@@ -380,8 +380,6 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 2. Replace the entire content with the following code:
 
 ```cshtml
-@page "/"
-@rendermode InteractiveServer
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Data
@@ -411,7 +409,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 **Component Explanation:**
 
-- **`<SfGantt>`**: The Gantt component displays hierarchical tasks, dependencies, baselines, durations, and progress on an interactive timeline for scheduling.
+- **`<SfGantt>`**: The Gantt Chart component displays hierarchical tasks, dependencies, baselines, durations, and progress on an interactive timeline for scheduling.
 - **`<SfDataManager>`**: Manages data communication with REST API endpoints using UrlAdaptor. The `Url` property points to the read endpoint, while `InsertUrl`, `UpdateUrl`, `RemoveUrl`, and `BatchUrl` point to CRUD endpoints.
 - **`AllowFiltering="true"`**: Enables column filtering with menu-based filters.
 - **`AllowSorting="true"`**: Enables column sorting by clicking headers.
@@ -423,7 +421,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 ### Step 3: Implement the Endpoints for UrlAdaptor
 
-The UrlAdaptor communicates with REST API endpoints for gantt operations rather than executing logic in the component. The gantt sends requests to endpoints defined in a controller. Below is the controller structure with the same decorators and signatures as in the project, with placeholder comments to add logic.
+The UrlAdaptor communicates with REST API endpoints for Gantt operations rather than executing logic in the component. The Gantt sends requests to endpoints defined in a controller. Below is the controller structure with the same decorators and signatures as in the project, with placeholder comments to add logic.
 
 Open the file named **Controllers/GanttController.cs** and use the following structure:
 
@@ -541,7 +539,7 @@ This controller exposes the endpoints used by `<SfDataManager>` in **Home.razor*
 
 ### Step 4: Implement Searching Feature
 
-Searching allows the user to find records by entering keywords in the search box, which filters data across all columns.
+Searching helps to find records by entering keywords in the search box, which filters data across all columns.
 
 **Instructions:**
 
@@ -594,7 +592,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 
 **How Searching Works:**
 
-- When the user enters text in the search box and presses Enter, the Gantt Chart sends a search request to the REST API.
+- When a text is entered in the search box and presses Enter, the Gantt Chart sends a search request to the REST API.
 - The `Post` method receives the search criteria in `dataManagerRequest.Search`.
 - The `DataOperations.PerformSearching()` method filters the data based on the search term across all columns.
 - Results are returned and displayed in the Gantt Chart.
@@ -605,7 +603,7 @@ Searching feature is now active.
 
 ### Step 5: Implement Filtering Feature
 
-Filtering allows the user to restrict data based on column values using a menu interface.
+Filtering allows to restrict data based on column values using a menu interface.
 
 **Instructions:**
 
@@ -679,7 +677,7 @@ Filtering feature is now active.
 
 ### Step 6: Implement Sorting Feature
 
-Sorting enables the user to arrange records in ascending or descending order based on column values.
+Sorting enables the records to arrange in ascending or descending order based on column values.
 
 **Instructions:**
 
@@ -759,7 +757,7 @@ Sorting feature is now active.
 
 ### Step 7: Perform CRUD Operations
 
-CRUD operations (Create, Read, Update, Delete) enable users to manage data directly from the Gantt Chart. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
+CRUD operations (Create, Read, Update, Delete) enable the data to manage directly from the Gantt Chart. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
 
 **Instructions:**
 
@@ -813,7 +811,7 @@ public void Insert([FromBody] CRUDModel<TaskDataModel> value)
 
 **What happens behind the scenes:**
 
-1. The user clicks the "Add" button and fills in the form.
+1. Clicks the "Add" button and fills Dialog.
 2. The Gantt Chart sends a POST request to `/api/Gantt/Insert`.
 3. The `Insert` method receives the new task data in `value.Value`.
 4. Entity Framework Core adds the record to the `_context.TaskData` collection.
@@ -852,7 +850,7 @@ public void Update([FromBody] CRUDModel<TaskDataModel> value)
 
 **What happens behind the scenes:**
 
-1. The user clicks the "Edit" button and modifies the record.
+1. Clicks the "Edit" button and modifies the record.
 2. The Gantt Chart sends a POST request to `/api/Gantt/Update`.
 3. The `Update` method receives the modified task data in `value.Value`.
 4. The existing task is retrieved from the database by its TaskId.
@@ -893,7 +891,7 @@ public void Delete([FromBody] CRUDModel<TaskDataModel> value)
 
 **What happens behind the scenes:**
 
-1. The user selects a record and clicks "Delete".
+1. Select a record and click "Delete".
 2. A confirmation dialog appears (built into the Gantt Chart).
 3. If confirmed, the Gantt Chart sends a POST request to `/api/Gantt/Delete`.
 4. The `Delete` method extracts the TaskId from `value.Key`.
@@ -935,7 +933,7 @@ public void Batch([FromBody] CRUDModel<TaskDataModel> value)
         {
             foreach (var record in value.Deleted)
             {
-                var existingTask = _context.TaskData.Find(record.TaskID);
+                var existingTask = _context.TaskData.Find(record.TaskId);
                 if (existingTask != null)
                 {
                     _context.TaskData.Remove(existingTask);
@@ -1022,7 +1020,7 @@ This guide demonstrates how to:
 4. Configure connection strings and register services in Program.cs. [🔗](#step-5-configure-the-connection-string)
 5. Create REST API endpoints in a controller for CRUD operations. [🔗](#step-6-create-the-gantt-api-controller)
 6. Implement searching, filtering, and sorting in the REST API. [🔗](#step-5-implement-searching-feature)
-7. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-8-perform-crud-operations)
+7. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-7-perform-crud-operations)
 8. Handle batch operations for bulk data modifications. [🔗](#step-8-perform-crud-operations)
 
 The application now provides a complete solution for managing tasks with a modern, user-friendly interface using Entity Framework Core with SQL Server and REST API endpoints via UrlAdaptor.

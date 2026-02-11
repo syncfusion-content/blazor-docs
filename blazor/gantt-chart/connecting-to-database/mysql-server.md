@@ -9,11 +9,11 @@ documentation: ug
 
 # Connecting MySQL Server to Blazor Gantt Chart Using Entity Framework
 
-The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) supports binding data from a MySQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) supports binding data from a MySQL Server database using Entity Framework Core (EF Core). This modern approach is more maintainable and type-safe alternative to raw SQL queries.
 
 **What is Entity Framework Core?**
 
-Entity Framework Core (EF Core) is a software tool that simplifies database operations in .NET applications. It serves as a bridge between C# code and databases like MySQL.
+Entity Framework Core (EF Core) is an ORM (object-relational mapper) for .NET that maps C# classes to database tables and LINQ queries to SQL.
 
 **Key Benefits of Entity Framework Core**
 
@@ -262,7 +262,7 @@ The **TaskDbContext** class is required because:
 - It **maps** C# models to actual database tables.
 - It **configures** how data should look inside the database.
 
-Without this class, Entity Framework Core will not know where to save data or how to create the tas_data table. The DbContext has been successfully configured.
+Without this class, Entity Framework Core will not know where to save data or how to create the task_data table. The DbContext has been successfully configured.
 
 ### Step 5: Configure the Connection String
 
@@ -476,8 +476,6 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 2. Add the following code to create a basic Gantt Chart:
 
 ```cshtml
-@page "/"
-@rendermode InteractiveServer
 
 @using System.Collections
 @using Syncfusion.Blazor.Data
@@ -530,7 +528,7 @@ The Home component has been updated successfully with Gantt Chart.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart can bind data from a **MySQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to `CustomAdaptor` for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It handles all data operations including reading, searching, filtering, sorting, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific gantt functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It handles all data operations including reading, searching, filtering, sorting, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific Gantt functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -556,7 +554,7 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
 
         /// <summary>
         /// ReadAsync retrieves records from the database and applies data operations.
-        /// This method executes when the gantt initializes and when filtering, searching, sorting, or paging occurs.
+        /// This method executes when the Gantt initializes and when filtering, searching, sorting, or paging occurs.
         /// </summary>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
@@ -749,7 +747,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 **Instructions:**
 
 1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowFiltering]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering)) property to the `<SfGantt>` component:
+2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) property to the `<SfGantt>` component:
 
 ```cshtml
 <SfGantt TValue="TaskDataModel"       
@@ -932,7 +930,7 @@ Add the toolbar items list in the `@code` block:
 
 Record insertion allows new tasks to be added directly through the Gantt Chart component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the MySQL Server database.
 
-In **Home.razor**, implement the `InsertAsync` method to handle record deletion within the `CustomAdaptor` class:
+In **Home.razor**, implement the `InsertAsync` method to handle record insertion within the `CustomAdaptor` class:
 
 ```csharp
 public class CustomAdaptor : DataAdaptor
@@ -1002,7 +1000,7 @@ Now the new task is persisted to the database and reflected in the gantt.
 
 Record modification allows task details to be updated directly within the Gantt Chart. The adaptor processes the edited row, validates the updated values, and applies the changes to the **MySQL Server database** while ensuring data integrity is preserved.
 
-In **Home.razor**, implement the `UpdateAsync` method to handle record deletion within the `CustomAdaptor` class:
+In **Home.razor**, implement the `UpdateAsync` method to handle record updates within the `CustomAdaptor` class:
 
 
 ```csharp
@@ -1134,27 +1132,28 @@ Batch operations combine multiple insert, update, and delete actions into a sing
 In **Home.razor**, implement the `BatchUpdateAsync` method to handle multiple record updates in a single request within the `CustomAdaptor` class:
 
 ```csharp
-/// <summary>
-/// Applies batch changes: updates, inserts, and deletes using the repository.
-/// </summary>
-/// <param name="dm">The DataManager instance (framework-provided).</param>
-/// <param name="changedRecords">Records that were modified.</param>
-/// <param name="addedRecords">Records that were added.</param>
-/// <param name="deletedRecords">Records that were deleted.</param>
-/// <param name="keyField">Optional key field name.</param>
-/// <param name="key">Key value used by the batch operation.</param>
-/// <returns>A task that yields the batch operation key or result.</returns>
-public override async Task<object> BatchUpdateAsync(DataManager dm, object changedRecords, object addedRecords, object deletedRecords, string? keyField, string key)
-{
-    if (changedRecords is IEnumerable<TaskDataModel> changed)
+    /// <summary>
+    /// Applies batch changes: updates, inserts, and deletes using the repository.
+    /// </summary>
+    /// <param name="dm">The DataManager instance (framework-provided).</param>
+    /// <param name="changedRecords">Records that were modified.</param>
+    /// <param name="addedRecords">Records that were added.</param>
+    /// <param name="deletedRecords">Records that were deleted.</param>
+    /// <param name="keyField">Optional key field name.</param>
+    /// <param name="key">Key value used by the batch operation.</param>
+    /// <param name="dropIndex">Optional drop index for drag-and-drop operations.</param>
+    /// <returns>A task that yields the batch operation key or result.</returns>
+    public override async Task<object> BatchUpdateAsync(DataManager dm, object changedRecords, object addedRecords, object deletedRecords,string? keyField, string key, int? dropIndex)
     {
-        foreach (var record in changed)
+        if (changedRecords is IEnumerable<TaskDataModel> changed)
         {
-            // Debug (optional)
-            Console.WriteLine($"UPDATE TaskId={record.TaskId}, ParentId={record.ParentId}");
-            await _taskService!.UpdateTaskAsync(record);
+            foreach (var record in changed)
+            {
+                // Debug (optional)
+                Console.WriteLine($"UPDATE TaskId={record.TaskId}, ParentId={record.ParentId}");
+                await _taskService!.UpdateTaskAsync(record);
+            }
         }
-    }
 
     if (addedRecords is IEnumerable<TaskDataModel> added)
     {
@@ -1198,12 +1197,10 @@ Now the adaptor supports bulk modifications with atomic database synchronization
 
 ---
 
-### Step 11: Complete code
+### Step 9: Complete code
 Here is the complete and final `Home.razor` component with all features integrated:
 
 ```cshtml
-@page "/"
-@rendermode InteractiveServer
 
 @using System.Collections
 @using Syncfusion.Blazor.Data
@@ -1345,8 +1342,9 @@ Here is the complete and final `Home.razor` component with all features integrat
         /// <param name="deletedRecords">Records that were deleted.</param>
         /// <param name="keyField">Optional key field name.</param>
         /// <param name="key">Key value used by the batch operation.</param>
+        /// <param name="dropIndex">Optional drop index for drag-and-drop operations.</param>
         /// <returns>A task that yields the batch operation key or result.</returns>
-        public override async Task<object> BatchUpdateAsync(DataManager dm, object changedRecords, object addedRecords, object deletedRecords, string? keyField, string key)
+        public override async Task<object> BatchUpdateAsync(DataManager dm, object changedRecords, object addedRecords, object deletedRecords, string? keyField, string key, int? dropIndex)
         {
             if (changedRecords is IEnumerable<TaskDataModel> changed)
             {
@@ -1435,7 +1433,7 @@ This guide demonstrates how to:
 3. Create data models and DbContext for database communication. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
 5. Implement the repository pattern for data access. [🔗](#step-6-create-the-repository-class)
-6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-syncfusion-blazor-grid-components)
+6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-syncfusion-blazor-gantt-components)
 7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
 
 The application now provides a complete solution for managing task data with a modern, user-friendly interface.
