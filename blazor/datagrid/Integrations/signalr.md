@@ -21,7 +21,7 @@ SignalR is an open-source .NET library that simplifies adding real-time web func
 - **Bidirectional**: Support both server-to-client (broadcasting) and client-to-server (commands) communication.
 - **Automatic Transport Selection**: Intelligently choose the best transport protocol (WebSockets, SSE, Long Polling) based on browser and server capabilities.
 - **Scalable Broadcasting**: Efficiently broadcast updates to multiple clients simultaneously using SignalR groups.
-- **Built-in Reconnection**: Automatically handles client reconnection with exponential backoff retry logic.
+- **Built-in Reconnection**: Automatically handles client reconnection with exponential back off retry logic.
 - **No Page Refresh Required**: Update UI dynamically without reloading the page.
 - **Cross-Platform**: Works across browsers, mobile devices, and desktop applications.
 
@@ -585,7 +585,7 @@ The `Home.razor` component displays the stock market data in a Syncfusion DataGr
 - **Connection Status Indicator**: Displays the current connection state (Connected, Connecting, Disconnected).
 - **DataGrid Integration**: Uses the `StockAdaptor` to retrieve and display data.
 - **Real-Time Updates**: Receives "ReceiveStockUpdate" messages from the server and refreshes the grid.
-- **Automatic Reconnection**: Implements exponential backoff retry logic for network resilience.
+- **Automatic Reconnection**: Implements exponential back off retry logic for network resilience.
 
 ### Step 3: Create the CustomAdaptor for SignalR
 
@@ -740,7 +740,7 @@ The hub URL must match exactly with the server-side hub mapping. Any mismatch wi
 - **`.WithUrl(hubUrl, options)`**: Specifies the server hub endpoint and transport configuration.
   - **`HttpTransportType.WebSockets`**: Primary transport using WebSocket protocol (full-duplex, low latency, most efficient).
   - **`HttpTransportType.LongPolling`**: Fallback transport for browsers/environments that don't support WebSockets. SignalR automatically falls back if WebSocket fails.
-- **`.WithAutomaticReconnect()`**: Configures automatic reconnection with exponential backoff intervals:
+- **`.WithAutomaticReconnect()`**: Configures automatic reconnection with exponential back off intervals:
 - **`.Build()`**: Finalizes the configuration and creates the HubConnection instance.
 
 **Why this matters**: 
@@ -1000,7 +1000,7 @@ Here's the complete lifecycle of SignalR communication from component initializa
 ```
 
 **Message Serialization:**
-SignalR automatically serializes and deserializes messages. When calling:
+SignalR automatically serialize and deserialize messages. When calling:
 ```csharp
 hubConnection.On<List<Stock>>("ReceiveStockUpdate", async (stocks) => { ... })
 ```
