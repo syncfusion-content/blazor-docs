@@ -1222,12 +1222,6 @@ dotnet run
 - **Delete**: Click the "Delete" button to remove task.
 ---
 
-## Complete sample repository
-
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-Gantt-Chart-component/tree/master/Binding%20Dapper%20using%20CustomAdaptor).
-
----
-
 ## Summary
 
 This guide demonstrates how to:

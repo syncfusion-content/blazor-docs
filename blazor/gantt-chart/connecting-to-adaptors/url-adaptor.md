@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with UrlAdaptor in Syncfusion Blazor Gantt Chart
+title: Bind Data and Perform CRUD Action with UrlAdaptor in Syncfusion Blazor Gantt Chart
 description: Learn about bind data and performing CRUD operations using UrlAdaptor in Syncfusion Blazor Gantt Chart.
 platform: Blazor
 control: Gantt Chart
@@ -8,13 +8,13 @@ keywords: adaptors, urladaptor, url adaptor, remotedata
 documentation: ug
 ---
 
-# UrlAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart
+# UrlAdaptor in Syncfusion Blazor Gantt Chart
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor that enables communication between remote data services and a UI component. It supports seamless data binding and interaction with custom API services or any remote endpoint via URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place.
 
 This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart, including server‑side data operations and CRUD actions.
 
-## Creating an API Service
+## Creating an API service
  
 To configure a server with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart, follow these steps:
  
@@ -383,7 +383,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {% endhighlight %}
 {% endtabs %}
 
-### Handling filtering operation
+## Handling filtering operation
 
 To handle the filtering operation, ensure that your API endpoint supports custom filtering criteria. Implement the filtering logic on the server side using the `PerformFiltering` method from the `DataOperations` class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming `DataManagerRequest` object.
 

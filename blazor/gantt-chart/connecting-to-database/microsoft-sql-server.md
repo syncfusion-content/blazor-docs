@@ -1433,11 +1433,6 @@ dotnet run
 
 ---
 
-## Complete sample repository
-
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-gantt-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
-
----
 ## Summary
 
 This guide demonstrates how to:

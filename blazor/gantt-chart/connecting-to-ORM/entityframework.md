@@ -983,12 +983,6 @@ The application will start, and the console will display the local URL (`https:/
 
 ---
 
-## Complete sample repository
-
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-Gantt-Chart-component/tree/master/Bindind%20SQL%20database%20using%20EF%20and%20UrlAdaptor).
-
----
-
 ## Summary
 
 This guide demonstrates how to:
