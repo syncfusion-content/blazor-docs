@@ -15,7 +15,7 @@ documentation: ug
 
 ## Horizontal striplines
 
-By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_StripLines) on the vertical axis, one can create a horizontal stripline. Striplines are drawn in the provided start-to-end range, and an axis can have multiple striplines.
+By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) on the vertical axis, one can create a horizontal stripline. Striplines are drawn in the provided start-to-end range, and an axis can have multiple striplines.
 
 ```cshtml
 
@@ -62,7 +62,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Vertical striplines
 
-By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_StripLines) on the horizontal axis, one can create a vertical stripline. Striplines are drawn in the provided start-to-end range, and an axis can have multiple striplines.
+By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) on the horizontal axis, one can create a vertical stripline. Striplines are drawn in the provided start-to-end range, and an axis can have multiple striplines.
 
 ```cshtml
 
@@ -106,7 +106,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Striplines customization
 
-The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_Start) property in a stripline can be used to customize the starting value in that stripline. The [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_End) property customizes the end value in the same way. Both [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_Size) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_Border) properties can be used to customize the stripline's size and border. The [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_ZIndex) property can be used to alter the order of the stripline, determining whether it should be drawn behind or over the series elements.
+The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Start) property in a stripline can be used to customize the starting value in that stripline. The [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_End) property customizes the end value in the same way. Both [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Size) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Border) properties can be used to customize the stripline's size and border. The [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_ZIndex) property can be used to alter the order of the stripline, determining whether it should be drawn behind or over the series elements.
 
 ```cshtml
 
@@ -150,7 +150,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ## Text customization
 
-[TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_TextStyle) and [Rotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_Rotation) properties can be used to customize and rotate the text presented in a stripline. The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_VerticalAlignment) properties can be used to customize the horizontal and vertical alignment of the stripline text.
+[TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_TextStyle) and [Rotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Rotation) properties can be used to customize and rotate the text presented in a stripline. The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_VerticalAlignment) properties can be used to customize the horizontal and vertical alignment of the stripline text.
 
 ```cshtml
 
@@ -204,7 +204,6 @@ To create a stripline in a specific region with respect to a segment (segmented 
 * [SegmentEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentEnd) - Used to change the end value of the segment, which also corresponds to the associated axis.
 * [SegmentAxisName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentAxisName) - Used to specify the name of the associated axis.
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Color) - Used to customize the color for the stripline.
- 
 
 ```cshtml
 
@@ -250,9 +249,9 @@ To create a stripline in a specific region with respect to a segment (segmented 
 
 ## Stripline tooltip
 
-Stripline tooltips provide additional contextual information on interaction with striplines in the chart. To display a tooltip on a stripline, add the **ChartStriplineTooltip** component inside the desired **ChartStripline** and set the **Enable** property to **true**. It is particularly useful for explaining the significance of specific ranges or thresholds marked by striplines.
+Stripline tooltips provide additional contextual information on interaction with striplines in the chart. To display a tooltip on a stripline, add the [ChartStriplineTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html) component inside the desired [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Enable) property to **true**. It is particularly useful for explaining the significance of specific ranges or thresholds marked by striplines.
 
-### Default stripline tooltip code example:
+**Default stripline tooltip code example:**
 
 Below is the simplest way to enable a stripline tooltip using default settings. The tooltip will display on interaction with the stripline.
 
@@ -320,11 +319,11 @@ Below is the simplest way to enable a stripline tooltip using default settings. 
 
 The stripline tooltip offers comprehensive customization options through the following properties:
 
-- **Enable** - A boolean property that enables or disables the stripline tooltip. Default value is **false**.
+- [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Enable) - A boolean property that enables or disables the stripline tooltip. Default value is **false**.
 
-- **Header** - Defines the title text displayed at the top of the tooltip.
+- [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Header) - Defines the title text displayed at the top of the tooltip.
 
-- **Content** - Allows you to specify custom content for the tooltip body using a format string. The format supports token placeholders that are replaced with corresponding values at runtime. Supported tokens:
+- [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Content) - Allows you to specify custom content for the tooltip body using a format string. The format supports token placeholders that are replaced with corresponding values at runtime. Supported tokens:
   - **${stripline.text}** – The stripline label.
   - **${stripline.start}** – The stripline start value.
   - **${stripline.end}** – The stripline end value.
@@ -334,29 +333,29 @@ The stripline tooltip offers comprehensive customization options through the fol
   - **${stripline.segmentAxisName}** – The stripline segment axis name (if applicable).
   - **${stripline.size}** – The stripline size (if applicable).
 
-- **Fill** - Sets the background color of the tooltip. Accepts any valid CSS color value (hex, rgb, rgba, named colors).
+- [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Fill) - Sets the background color of the tooltip. Accepts any valid CSS color value (hex, rgb, rgba, named colors).
 
-- **Opacity** - Controls the transparency level of the tooltip background. Accepts numeric values between 0 (completely transparent) and 1 (completely opaque). The default value is 0.75.
+- [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Opacity) - Controls the transparency level of the tooltip background. Accepts numeric values between 0 (completely transparent) and 1 (completely opaque). The default value is 0.75.
 
-- **ShowHeaderLine** - A boolean property that controls the visibility of the horizontal separator line between the tooltip header and content. Set to **true** to display the line or **false** to hide it.
+- [ShowHeaderLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_ShowHeaderLine) - A boolean property that controls the visibility of the horizontal separator line between the tooltip header and content. Set to **true** to display the line or **false** to hide it.
 
-The **ChartStriplineTooltipTextStyle** component allows you to customize the appearance of text within the tooltip:
+The [ChartStriplineTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html) component allows you to customize the appearance of text within the tooltip:
 
-- **Size** - Specifies the font size of the tooltip text. Accepts pixel values (e.g., "12px").
+- [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipTextStyle_Size) - Specifies the font size of the tooltip text. Accepts pixel values (e.g., "12px").
 
-- **Color** - Defines the text color. Accepts any valid CSS color value.
+- [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipTextStyle_Color) - Defines the text color. Accepts any valid CSS color value.
 
-- **FontFamily** - Sets the font family for the tooltip text. Accepts standard CSS font family values (e.g., "Arial", "Segoe UI", "Roboto").
+- [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipTextStyle_FontFamily) - Sets the font family for the tooltip text. Accepts standard CSS font family values (e.g., "Arial", "Segoe UI", "Roboto").
 
-- **FontWeight** - Controls the thickness of the text.
+- [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipTextStyle_FontWeight) - Controls the thickness of the text.
 
-The **ChartStriplineTooltipBorder** component enables you to add and customize borders around the tooltip:
+The [ChartStriplineTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipBorder.html) component enables you to add and customize borders around the tooltip:
 
-- **Width** - Specifies the thickness of the tooltip border in pixels. Accepts numeric values. Default value is **0**.
+- [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipBorder.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipBorder_Width) - Specifies the thickness of the tooltip border in pixels. Accepts numeric values. Default value is **0**.
 
-- **Color** - Defines the color of the tooltip border. Accepts any valid CSS color value.
+- [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipBorder.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipBorder_Color) - Defines the color of the tooltip border. Accepts any valid CSS color value.
 
-### Customized stripline tooltip code example:
+**Customized stripline tooltip code example:**
 
 ```cshtml
 
@@ -434,7 +433,7 @@ The **ChartStriplineTooltipBorder** component enables you to add and customize b
 
 ![Blazor Chart with Customized Stripline Tooltip](images/strip-line/blazor-chart-stripline-tooltip-customized.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

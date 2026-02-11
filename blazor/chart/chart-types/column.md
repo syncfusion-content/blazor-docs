@@ -13,7 +13,7 @@ documentation: ug
 
 [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time.
 
-You can learn how to create a column chart using Blazor Charts by watching the video below.
+A detailed demonstration of the process for creating a column chart using Blazor Charts is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=IQb0sJPlvZI" %}
 
@@ -370,9 +370,9 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZretpNTBvfSKfSg?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Column Chart with corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZretpNTBvfSKfSg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.png)" %}
 
-We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
+Customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
 ```cshtml
 
@@ -556,7 +556,7 @@ The [ColumnWidthInPixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Grouped column
 
-You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) property to group the data points in the column type charts. Data points with same group name are grouped together.
+Group series using [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) so series with the same group name render together.
 
 ```cshtml
 
@@ -835,9 +835,9 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhJXOCAfqywAsbM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhJXOCAfqywAsbM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

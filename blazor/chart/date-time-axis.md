@@ -15,7 +15,7 @@ documentation: ug
 
 The [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTime) axis uses a date time scale and displays date time values as axis labels in the format specified.
 
-You can learn how to customize the DateTime axis by watching the video below.
+A detailed walkthrough for customizing the dateTime axis is provided in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=vi1nzev22Uc" %}
 
@@ -36,8 +36,8 @@ You can learn how to customize the DateTime axis by watching the video below.
 @code{
     public class ChartData
     {
-        public DateTime XValue { get; set;}
-        public double YValue {get; set;}
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
     }
 	
     public List<ChartData> WeatherReports = new List<ChartData>
@@ -221,7 +221,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrKsBVrpCdNHsgt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart without RangePadding](images/datetime/blazor-line-chart-axis-based-on-range.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVnZLXqBdqfnaMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart without RangePadding](images/datetime/blazor-line-chart-axis-based-on-range.png)" %}
 
 **DateTime - Round**
 
@@ -258,7 +258,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBKWLhrpMRUwuLF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBnZLZKrRHJgzgq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **DateTime - Additional**
 
@@ -273,7 +273,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
                        ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@WeatherReports" XName="@nameof(ChartData.XValue)" YName=@nameof(ChartData.YValue)/>
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line" />
     </ChartSeriesCollection>
 </SfChart>
 
@@ -294,7 +294,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhAMBLhJidRYfmq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLRZVjUBdFmrpNy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Label format
 
@@ -306,10 +306,9 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 <SfChart>
     <ChartPrimaryXAxis LabelFormat="d" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>
-    
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" />        
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line" />    
     </ChartSeriesCollection>
 </SfChart>
 
@@ -330,7 +329,7 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAiVLrzZGdUeri?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Axis Label Formatting in Blazor Line Chart](images/datetime/blazor-line-chart-axis-label-format.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhdXhNgLdCIhTrD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Axis Label Formatting in Blazor Line Chart](images/datetime/blazor-line-chart-axis-label-format.png)" %}
 
 The table below shows the results of applying various popular date and time formats to the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property.
 
@@ -377,7 +376,7 @@ The table below shows the results of applying various popular date and time form
 
 <!-- markdownlint-disable MD033 -->
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
