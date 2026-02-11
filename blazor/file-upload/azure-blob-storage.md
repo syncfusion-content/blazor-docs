@@ -81,43 +81,40 @@ namespace BlazorApp.Server.Controllers
                 {
                     if (file.Length > 0)
                     {
-                        // Create a BlobContainerClient object to interact with the container
-                        var containerClient = new BlobContainerClient(azureConnectionString, ContainerName);
+                        // Create a BlobContainerClient to interact with the Azure Blob Storage container.
+                        // The container name should match the configured container in your Azure Storage Account.
+                        var container = new BlobContainerClient(azureConnectionString, ContainerName);
 
-                        // Create the container if it doesn't exist
-                        var createResponse = await containerClient.CreateIfNotExistsAsync();
+                        // Create the container if it doesn't exist with private access.
+                        // Using PublicAccessType.None ensures files are not publicly accessible.
+                        await container.CreateIfNotExistsAsync(PublicAccessType.None);
 
-                        // Set public access type to Blob if container was just created
-                        if (createResponse != null && createResponse.GetRawResponse().Status == 201)
-                        {
-                            await containerClient.SetAccessPolicyAsync(PublicAccessType.Blob);
-                        }
+                        // Get a reference to the blob using the uploaded file name.
+                        var blob = container.GetBlobClient(file.FileName);
 
-                        // Get a reference to a blob
-                        var blobClient = containerClient.GetBlobClient(file.FileName);
+                        // Delete the blob if it already exists to avoid version conflicts.
+                        await blob.DeleteIfExistsAsync(DeleteSnapshotsOption.IncludeSnapshots);
 
-                        // Delete the blob if it exists
-                        await blobClient.DeleteIfExistsAsync(DeleteSnapshotsOption.IncludeSnapshots);
-
-                        // Upload the file to Azure Blob Storage
+                        // Upload the file to Azure Blob Storage with proper content type.
                         using (var fileStream = file.OpenReadStream())
                         {
-                            await blobClient.UploadAsync(fileStream, new BlobHttpHeaders 
-                            { 
-                                ContentType = file.ContentType 
-                            });
+                            await blob.UploadAsync(fileStream, new BlobHttpHeaders { ContentType = file.ContentType });
                         }
                     }
                 }
 
-                return Ok(new { message = "Files uploaded successfully" });
+                return Ok(new { message = "Files uploaded to Azure Blob Storage successfully" });
             }
             catch (Exception ex)
             {
                 Response.Clear();
-                Response.StatusCode = 400;
-                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File upload failed";
-                return BadRequest(new { error = ex.Message });
+                Response.StatusCode = 500;
+                var feature = Response.HttpContext.Features.Get<IHttpResponseFeature>();
+                if (feature != null)
+                {
+                    feature.ReasonPhrase = $"File upload failed: {ex.Message}";
+                }
+                return StatusCode(500, new { error = ex.Message });
             }
         }
     }
