@@ -663,6 +663,7 @@ Syncfusion is a library that provides pre-built UI components like Scheduler, wh
     @using BlazorSchedulerApp.Services
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Schedule
+    @using Syncfusion.Blazor.Data
     
 {% endhighlight %}
 {% endtabs %}
@@ -779,139 +780,114 @@ The Scheduler component will display appointment data in a Syncfusion Blazor Sch
 {% tabs %}
 {% highlight razor tabtitle="Scheduler.razor" %}
 
-    @page "/scheduler"
+    @page "/"
     @rendermode InteractiveServer
     @inject AppointmentService AppointmentService
 
     <PageTitle>Appointment Scheduler</PageTitle>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+    <SfSchedule TValue="Appointment"
+                @ref="scheduleRef"
+                Height="650px"
+                @bind-SelectedDate="currentDate"
+                @bind-CurrentView="currentView"
+                ShowQuickInfo="true">
 
-                @if (!isLoaded)
-                {
-                    <div class="text-center">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                        <p>Loading appointments...</p>
-                    </div>
-                }
-                else
-                {
-                    <SfSchedule TValue="Appointment" 
-                               @ref="scheduleRef"
-                               Height="650px" 
-                               @bind-SelectedDate="@currentDate"
-                               @bind-CurrentView="@currentView"
-                               ShowQuickInfo="true">
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Agenda"></ScheduleView>
+        </ScheduleViews>
 
-                        <ScheduleViews>
-                            <ScheduleView Option="View.Day"></ScheduleView>
-                            <ScheduleView Option="View.Week"></ScheduleView>
-                            <ScheduleView Option="View.WorkWeek"></ScheduleView>
-                            <ScheduleView Option="View.Month"></ScheduleView>
-                            <ScheduleView Option="View.Agenda"></ScheduleView>
-                        </ScheduleViews>
+        <!-- Data is now bound through DataManager + CustomAdaptor -->
+        <ScheduleEventSettings TValue="Appointment">
+            <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+        </ScheduleEventSettings>
 
-                        <ScheduleEventSettings TValue="Appointment" 
-                                              DataSource="@appointments"
-                                              AllowAdding="true"
-                                              AllowEditing="true"
-                                              AllowDeleting="true">
-                        </ScheduleEventSettings>
-
-                        <ScheduleEvents TValue="Appointment"
-                                       OnActionBegin="OnActionBegin"
-                                       ActionCompleted="OnActionCompleted">
-                        </ScheduleEvents>
-                    </SfSchedule>
-                }
-            </div>
-        </div>
-    </div>
+    </SfSchedule>
 
     @code {
         private SfSchedule<Appointment>? scheduleRef;
-        private List<Appointment> appointments = new List<Appointment>();
         private DateTime currentDate = DateTime.Today;
         private View currentView = View.Week;
-        private bool isLoaded = false;
 
-        protected override async Task OnInitializedAsync()
+        protected override void OnInitialized()
         {
-            await LoadAppointments();
-            isLoaded = true;
+            // Make your DI service available to the CustomAdaptor (created by Syncfusion internally)
+            CustomAdaptor.AppointmentService = AppointmentService;
         }
 
-        private async Task LoadAppointments()
+        /// <summary>
+        /// CustomAdaptor bridges the Scheduler's DataManager with your EF Core service.
+        /// It handles read and CRUD operations by calling AppointmentService.
+        /// </summary>
+        public class CustomAdaptor : DataAdaptor
         {
-            try
-            {
-                appointments = await AppointmentService.GetAllAppointmentsAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error loading appointments: {ex.Message}");
-                appointments = new List<Appointment>();
-            }
-        }
+            /// <summary>
+            /// Set in OnInitialized() above so the adaptor can use DI-backed service.
+            /// </summary>
+            public static AppointmentService? AppointmentService { get; set; }
 
-        private async Task OnActionBegin(ActionEventArgs<Appointment> args)
-        {
-            // Don't interfere with navigation events
-            if (args.ActionType != ActionType.EventCreate && 
-                args.ActionType != ActionType.EventChange && 
-                args.ActionType != ActionType.EventRemove)
+            public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
             {
-                return;
-            }
-        }
+                if (AppointmentService is null)
+                    throw new InvalidOperationException("AppointmentService is not initialized.");
 
-        private async Task OnActionCompleted(ActionEventArgs<Appointment> args)
-        {
-            try
-            {
-                // Process database operations after Syncfusion has updated the UI
-                if (args.ActionType == ActionType.EventCreate)
-                {
-                    if (args.AddedRecords != null && args.AddedRecords.Count > 0)
-                    {
-                        foreach (var appointment in args.AddedRecords)
-                        {
-                            // Save to database and get the database-generated ID
-                            var created = await AppointmentService.CreateAppointmentAsync(appointment);
+                // Fetch all appointments. (You can add server-side filtering/paging if needed.)
+                var data = await AppointmentService.GetAllAppointmentsAsync();
 
-                            // Update the in-memory object with the database ID
-                            appointment.Id = created.Id;
-                        }
-                    }
-                }
-                else if (args.ActionType == ActionType.EventChange)
-                {
-                    if (args.ChangedRecords != null && args.ChangedRecords.Count > 0)
-                    {
-                        foreach (var appointment in args.ChangedRecords)
-                        {
-                            await AppointmentService.UpdateAppointmentAsync(appointment);
-                        }
-                    }
-                }
-                else if (args.ActionType == ActionType.EventRemove)
-                {
-                    if (args.DeletedRecords != null && args.DeletedRecords.Count > 0)
-                    {
-                        foreach (var appointment in args.DeletedRecords)
-                        {
-                            await AppointmentService.DeleteAppointmentAsync(appointment.Id);
-                        }
-                    }
-                }
+                // Return result + total count when RequiresCounts is true
+                return dataManagerRequest.RequiresCounts
+                    ? new DataResult { Result = data, Count = data.Count }
+                    : (object)data;
             }
-            catch (Exception ex)
+
+            public override async Task<object> InsertAsync(DataManager dataManager, object data, string key)
             {
-                Console.WriteLine($"Error in OnActionCompleted: {ex.Message}");
+                if (AppointmentService is null)
+                    throw new InvalidOperationException("AppointmentService is not initialized.");
+
+                var item = data as Appointment ?? throw new ArgumentException("InsertAsync received invalid data type.");
+                // Persist and return the created entity with DB-generated Id
+                var created = await AppointmentService.CreateAppointmentAsync(item);
+                return created;
+            }
+
+            public override async Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
+            {
+                if (AppointmentService is null)
+                    throw new InvalidOperationException("AppointmentService is not initialized.");
+
+                var item = data as Appointment ?? throw new ArgumentException("UpdateAsync received invalid data type.");
+
+                // Optional validation: ensure EndTime >= StartTime
+                if (item.EndTime < item.StartTime)
+                    throw new ArgumentException("End time cannot be earlier than start time.");
+
+                var updated = await AppointmentService.UpdateAppointmentAsync(item);
+                return updated;
+            }
+
+            public override async Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key)
+            {
+                if (AppointmentService is null)
+                    throw new InvalidOperationException("AppointmentService is not initialized.");
+
+                // For Scheduler, "data" is the key value (Id). It can be int or string.
+                int id;
+                if (data is int directId)
+                {
+                    id = directId;
+                }
+                else if (!int.TryParse(data?.ToString(), out id))
+                {
+                    throw new ArgumentException("RemoveAsync received invalid key value.");
+                }
+
+                await AppointmentService.DeleteAppointmentAsync(id);
+                return data;
             }
         }
     }
@@ -920,30 +896,43 @@ The Scheduler component will display appointment data in a Syncfusion Blazor Sch
 
 #### Component Explanation:
 
-- **`@inject AppointmentService`**: Injects the service to access database methods.
-- **`<SfSchedule>`**: The Scheduler component that displays appointments in calendar format.
-- **`<ScheduleViews>`**: Defines available calendar views (Day, Week, Month, Agenda).
-- **`<ScheduleEventSettings>`**: Configures the data source and CRUD permissions.
-- **`<ScheduleEvents>`**: Handles events for create, update, and delete operations.
-- **`OnActionBegin`**: Fires before an action starts (navigation, CRUD).
-- **`OnActionCompleted`**: Fires after an action completes, where database operations are performed.
+- **`@inject AppointmentService`**  
+  Injects the backend service that performs all CRUD operations on the PostgreSQL database using Entity Framework Core.
+
+- **`<SfSchedule>`**  
+  The main Scheduler component that displays appointments in calendar format and supports multiple view modes.
+
+- **`<ScheduleViews>`**  
+  Defines the list of calendar views (Day, Week, WorkWeek, Month, Agenda) available for selection.
+
+- **`<ScheduleEventSettings>`**  
+  Configures the appointment model, enables create/edit/delete actions, and connects the Scheduler to the data source.
+
+- **`<SfDataManager>`**  
+  Binds the Scheduler to the **CustomAdaptor**, which handles data communication.  
+  It enables automatic calls for Read, Insert, Update, and Delete operations.
+
+- **`CustomAdaptor`**  
+  A custom class derived from `DataAdaptor` that executes all database operations by calling the injected `AppointmentService`.  
+  It handles `ReadAsync`, `InsertAsync`, `UpdateAsync`, and `RemoveAsync`.
+
+- **`OnInitialized`**  
+  Assigns the injected `AppointmentService` to the CustomAdaptor so the Scheduler can access database logic when loading.
 
 #### Key Implementation Details:
 
-**Why use OnActionCompleted instead of OnActionBegin?**
-
-- **OnActionBegin**: Fires before Syncfusion updates its UI
-- **OnActionCompleted**: Fires after Syncfusion updates its UI
-
-By handling database operations in `OnActionCompleted`, we allow Syncfusion to update the UI instantly, then persist to the database in the background. This provides a smooth, responsive user experience without visible refreshes.
+- **CustomAdaptor**: Handles all database operations (Read, Insert, Update, Delete) directly through EF Core  
+- **SfDataManager**: Automatically triggers the adaptor methods whenever the Scheduler performs an action  
+- **Scheduler UI**: Updates immediately, while the adaptor persists changes to PostgreSQL
 
 **Event Flow:**
-1. User creates/edits/deletes an appointment
-2. `OnActionBegin` - Does nothing (allows Syncfusion to proceed)
-3. Syncfusion updates UI instantly (no refresh)
-4. `OnActionCompleted` - Saves to database in background
-5. Updates appointment ID from database
 
+1. User creates, edits, or deletes an appointment in the Scheduler  
+2. **SfDataManager** detects the action and triggers the corresponding method in the **CustomAdaptor**  
+3. The Scheduler UI updates immediately without waiting for any database response  
+4. **CustomAdaptor** executes the required database operation (`InsertAsync`, `UpdateAsync`, `RemoveAsync`) through `AppointmentService`  
+5. After saving, the updated appointment data (including database-generated ID) is returned to the Scheduler for syncing
+``
 The Scheduler component has been created successfully.
 
 ### Step 4: Build and Run the Application
@@ -1071,13 +1060,13 @@ AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 This documentation has demonstrated how to:
 
-1. Set up PostgreSQL database with Entity Framework Core
-2. Create a data model for appointments
-3. Configure DbContext and connection string
-4. Implement a service layer for database operations
-5. Register services in Program.cs
-6. Create a Blazor Scheduler component with CRUD functionality
-7. Handle database persistence without visible UI refreshes
+1. Set up a PostgreSQL database and integrate it with Entity Framework Core  
+2. Create the `Appointment` data model and configure the `ApplicationDbContext`  
+3. Configure the PostgreSQL connection string in `appsettings.json`  
+4. Implement a service layer (`AppointmentService`) for all CRUD operations  
+5. Register Syncfusion, DbContext, and services in `Program.cs`  
+6. Build a Blazor Scheduler component connected through `SfDataManager`  
+7. Use a CustomAdaptor to handle all database persistence while keeping the Scheduler UI responsive
 
 The application now provides a professional appointment scheduling system with:
 - Multiple calendar views (Day, Week, Month, Agenda)
