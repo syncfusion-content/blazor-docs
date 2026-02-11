@@ -13,14 +13,14 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid supports gl
 
 ## Localization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid supports localization of static text elements, such as **group drop area text** and **pager information**, can be localized to cultures like **Arabic**, **Deutsch**, **French**, and others.
+The TreeGrid supports localization of static text elements, such as **group drop area text** and **pager information**, can be localized to cultures like **Arabic**, **Deutsch**, **French**, and others.
 
 - Apply localization to replace default UI text with culture-specific translations.
 - Configure localization by referring to the [Blazor Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization).
 
 ### Switch the different localization
 
-- The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows switching the localization from one culture to another at runtime. This is useful when the culture needs to be changed based on user preference or application context. For more details, see [Dynamically set the culture](https://blazor.syncfusion.com/documentation/common/localization#dynamically-set-the-culture).
+- The TreeGrid allows switching the localization from one culture to another at runtime. This is useful when the culture needs to be changed based on user preference or application context. For more details, see [Dynamically set the culture](https://blazor.syncfusion.com/documentation/common/localization#dynamically-set-the-culture).
 
 - To configure localization in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and switch to a different culture (e.g., French, German, Arabic), follow these steps:
 
@@ -227,7 +227,7 @@ In the **Counter.razor** file (or another page, e.g., Index.razor), add code to 
     <SfButton CssClass="e-outline" style="margin-left: 5px;" @onclick='() => ChangeCulture("fr-FR")' Content="Change to French (fr-FR)"></SfButton>
 </div>
 
-<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" AllowSelection=true ParentIdMapping="ParentId" Height="372" AllowFiltering="true" EnableRtl="true" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel" })" AllowSorting="true" AllowMultiSorting="true">
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" AllowSelection=true ParentIdMapping="ParentId" Height="372" AllowFiltering="true" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel" })" AllowSorting="true" AllowMultiSorting="true">
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Cell"></TreeGridEditSettings>
     <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></TreeGridSelectionSettings>
     <TreeGridColumns>
@@ -260,10 +260,10 @@ In the **Counter.razor** file (or another page, e.g., Index.razor), add code to 
 
 **Step 10: Create a Model Class**
 
-Create a **Data** folder and add a **TreeData.cs** file to define the model class for the TreeGrid:
+Create a **Data** folder and add a **WrapData.cs** file to define the model class for the TreeGrid:
 
 {% tabs %}
-{% highlight cs tabtitle="TreeData.cs" %}
+{% highlight cs tabtitle="WrapData.cs" %}
 
 namespace LocalizationSample.Client.Data
 {
@@ -2570,7 +2570,7 @@ N> * In the above sample, **Duration** column is formatted by **NumberFormatOpti
 
 ## Right-to-Left (RTL) in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid
 
-- The Right-to-Left (RTL) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid reverses the layout and text direction from left-to-right to right-to-left, supporting languages like **Arabic**, **Farsi**, and **Urdu**. Enabling RTL improves accessibility and delivers a natural reading experience for these languages.
+- The Right-to-Left (RTL) feature in the TreeGrid reverses the layout and text direction from left-to-right to right-to-left, supporting languages like **Arabic**, **Farsi**, and **Urdu**. Enabling RTL improves accessibility and delivers a natural reading experience for these languages.
 
 - To enable RTL, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableRtl) property to **true** in the TreeGrid component.
 
@@ -2688,10 +2688,10 @@ Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-
 
 **Step 5: Create a Model Class**
 
-Create a **Data** folder and add a **TreeData.cs** file to define the model class for the TreeGrid:
+Create a **Data** folder and add a **WrapData.cs** file to define the model class for the TreeGrid:
 
 {% tabs %}
-{% highlight cs tabtitle="TreeData.cs" %}
+{% highlight cs tabtitle="WrapData.cs" %}
 
 namespace LocalizationSample.Client.Models
 {
