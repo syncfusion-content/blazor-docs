@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tab component in Blazor RichTextEditor | Syncfusion
-description: Learn about tab integration in the Syncfusion Blazor RichTextEditor component and much more.
+description: Learn how to integrate the Syncfusion Blazor Tab component with the Rich Text Editor to enable organized, scalable multi-document editing.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
