@@ -9,145 +9,333 @@ documentation: ug
 
 # Globalization in Blazor TreeGrid Component
 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid supports globalization to make applications accessible across regions and languages. Content can be displayed in the preferred culture with localized texts and culture-aware formats for a better user experience.
+
 ## Localization
 
-[Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid supports localization of static text elements, such as **group drop area text** and **pager information**, can be localized to cultures like **Arabic**, **Deutsch**, **French**, and others.
 
-### Loading translations
+- Apply localization to replace default UI text with culture-specific translations.
+- Configure localization by referring to the [Blazor Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization).
 
-The following example demonstrates the TreeGrid in **Deutsch** culture. The **LoadLocaleData** method loads the **locale.json** file, and the **SetCulture** method sets the culture of the TreeGrid.
+### Switch the different localization
+
+- The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows switching the localization from one culture to another at runtime. This is useful when the culture needs to be changed based on user preference or application context. For more details, see [Dynamically set the culture](https://blazor.syncfusion.com/documentation/common/localization#dynamically-set-the-culture).
+
+- To configure localization in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and switch to a different culture (e.g., French, German, Arabic), follow these steps:
+
+**Step 1: Create a Blazor Web App**
+ 
+Create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs#interactivity-location).
+
+**Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid NuGet Packages**
+ 
+- To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid, open the NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) and install the following packages:
+
+- [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+- [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/)
+
+- For Blazor Web Apps using WebAssembly or Auto render modes, install these packages in the client project.
+ 
+- Alternatively, use the following Package Manager Console commands:
+ 
+```powershell
+Install-Package Syncfusion.Blazor.TreeGrid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
+```
+ 
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) documentation for a complete list of available packages.
+ 
+**Step 3: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service**
+ 
+Open the **~/_Imports.razor** file and import the required namespaces.
+ 
+```cs
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Buttons
+```
+
+- Register the Syncfusion Blazor service in **Program.cs**:
+
+```cs
+    builder.Services.AddServerSideBlazor();
+```
+
+**Step 4: Add Stylesheet and Script Resources**
+ 
+Include the theme stylesheet and script references in the **~/Components/App.razor** file:
+ 
+```html
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+<body>
+    ...
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+```
+ 
+> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) documentation for theme inclusion methods (Static Web Assets, CDN, or CRG). 
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in the Blazor Web App configuration.
+
+**Step 5: Create and Register Localization Service**
+
+Create a **SyncfusionLocalizer.cs** file and add the following code. For detailed steps on creating and registering a localization service, refer to the [Localization](https://blazor.syncfusion.com/documentation/common/localization#create-and-register-localization-service) documentation.
+
 {% tabs %}
+{% highlight cs tabtitle="SyncfusionLocalizer.cs" %}
 
-{% highlight razor %}
+using Syncfusion.Blazor;
 
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.TreeGrid;
-
-<SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" Locale="de-DE" IdMapping="TaskId" AllowSelection="true" ParentIdMapping="ParentId" TreeColumnIndex="1"
-             Toolbar="@(new List<string>() { "Print", "ExpandAll", "CollapseAll" })">
-    <TreeGridPageSettings PageSize="1"></TreeGridPageSettings>
-    <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
-    </TreeGridColumns>
-</SfTreeGrid>
-
-@code{
-    [Inject]
-    IJSRuntime JsRuntime { get; set; }
-
-    public List<TreeData> TreeGridData { get; set; }
-
-    protected override void OnInitialized()
+namespace LocalizationSample.Client
+{
+    public class SyncfusionLocalizer : ISyncfusionStringLocalizer
     {
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
-    }
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (firstRender)
+        // To get the locale key from mapped resources file
+        public string GetText(string key)
         {
-            this.JsRuntime.Sf().LoadLocaleData("locale.json").SetCulture("de-DE");
+            return this.ResourceManager.GetString(key);
+        }
+
+        // To access the resource file and get the exact value for locale key
+
+        public System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                // Replace the ApplicationNamespace with your application name.
+                return LocalizationSample.Client.Resources.SfResources.ResourceManager;
+            }
         }
     }
 }
 
+{% endhighlight %}
+{% endtabs %}
 
+**Step 6: Configure Program.cs**
+
+- **Set the culture of the application:** In the client-side **~/Program.cs**, use JavaScript interop to retrieve the user's culture from local storage. If none is found, set the default to en-US.
+- **Register services:** Register the SyncfusionLocalizer and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in **~/Program.cs**.
+
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
+
+using LocalizationSample.Client;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.JSInterop;
+using Syncfusion.Blazor;
+using System.Globalization;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
+// Register the Syncfusion Blazor services.
+builder.Services.AddSyncfusionBlazor();
+
+// Register the Syncfusion locale service to localize Syncfusion Blazor components.
+builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+var host = builder.Build();
+
+// Setting culture of the application.
+var JsInterop = host.Services.GetRequiredService<IJSRuntime>();
+var Result = await JsInterop.InvokeAsync<string>("cultureInfo.get");
+CultureInfo Culture;
+if (Result != null)
+{
+    Culture = new CultureInfo(Result);
+}
+else
+{
+    Culture = new CultureInfo("en-US");
+    await JsInterop.InvokeVoidAsync("cultureInfo.set", "en-US");
+}
+CultureInfo.DefaultThreadCurrentCulture = Culture;
+CultureInfo.DefaultThreadCurrentUICulture = Culture;
+await host.RunAsync();
 
 {% endhighlight %}
+{% endtabs %}
 
-{% highlight c# %}
+**Step 7: Update Project File**
 
-namespace TreeGridComponent.Data {
+Add the following property to the project file (e.g., LocalizationSample.csproj):
 
-public class TreeData
+```
+<PropertyGroup>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+</PropertyGroup>
+
+```
+ 
+**Step 8: Add JavaScript for Culture Management**
+
+Add the following JavaScript function to **~/Components/App.razor** after the Blazor `<script>` tag and before `</body>` to manage culture in local storage:
+
+{% tabs %}
+{% highlight cs tabtitle="~/Components/App.razor" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="LocalizationSample.styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <HeadOutlet />
+</head>
+<body>
+    <Routes />
+    <script src="_framework/blazor.web.js"></script>
+    <script>
+        window.cultureInfo = {
+            get: () => window.localStorage['BlazorCulture'],
+            set: (value) => window.localStorage['BlazorCulture'] = value
+        };
+    </script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+</html>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 9: Configure Culture Switching with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid** 
+
+In the **Counter.razor** file (or another page, e.g., Index.razor), add code to enable culture switching and display a TreeGrid with buttons to toggle between English (en-US) and French (fr-FR):
+ 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/counter"
+@rendermode InteractiveAuto
+@using System.Globalization
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+@using LocalizationSample.Client.Data
+
+<div style="padding: 10px 10px">
+    <SfButton CssClass="e-outline" @onclick='() => ChangeCulture("en-US")' Content="Change to English (en-US)"></SfButton>
+    <SfButton CssClass="e-outline" style="margin-left: 5px;" @onclick='() => ChangeCulture("fr-FR")' Content="Change to French (fr-FR)"></SfButton>
+</div>
+
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" AllowSelection=true ParentIdMapping="ParentId" Height="372" AllowFiltering="true" EnableRtl="true" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel" })" AllowSorting="true" AllowMultiSorting="true">
+    <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Cell"></TreeGridEditSettings>
+    <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></TreeGridSelectionSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="120" IsPrimaryKey="true" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules() { Required = true })" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules() { Required = true })" Width="260"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="110"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration (In Days)" Width="140" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=Syncfusion.Blazor.Grids.ColumnType.Date Width="140" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType=Syncfusion.Blazor.Grids.EditType.DatePickerEdit></TreeGridColumn>
+        <TreeGridColumn Field="EndDate" HeaderText="End Date" Format="d" Type=Syncfusion.Blazor.Grids.ColumnType.Date Width="140" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType=Syncfusion.Blazor.Grids.EditType.DatePickerEdit></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+    private List<WrapData> TreeData { get; set; } = new List<WrapData>();
+    protected override void OnInitialized()
     {
-       
-            public int TaskId { get; set;}
-            public string TaskName { get; set;}
-            public int? Duration { get; set;}
-            public int? Progress { get; set;}
-            public string Priority { get; set;}
-            public int? ParentId { get; set;}
-      
-        public static List<TreeData> GetSelfDataSource()
+        TreeData = WrapData.GetWrapData().ToList();
+    }
+    private async Task ChangeCulture(string Culture)
+    {
+        await JSRuntime.InvokeVoidAsync("cultureInfo.set", Culture);
+        NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+    }
+}
+ 
+{% endhighlight %}
+{% endtabs %}
+
+
+**Step 10: Create a Model Class**
+
+Create a **Data** folder and add a **TreeData.cs** file to define the model class for the TreeGrid:
+
+{% tabs %}
+{% highlight cs tabtitle="TreeData.cs" %}
+
+namespace LocalizationSample.Client.Data
+{
+    public class WrapData
+    {
+        public int? TaskId { get; set; }
+        public string? TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public int? Duration { get; set; }
+        public string? Progress { get; set; }
+        public string? Priority { get; set; }
+        public bool Approved { get; set; }
+        public int Resources { get; set; }
+        public int? ParentId { get; set; }
+        public static List<WrapData> GetWrapData()
         {
-            List<TreeData> BusinessObjectCollection = new List<TreeData>();
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 2 });
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            List<WrapData> BusinessObjectCollection = new List<WrapData>();
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4871, TaskName = "Planning", StartDate = new DateTime(2025, 3, 2), EndDate = new DateTime(2025, 7, 11), Progress = "Open", Duration = 132, Priority = "Normal", Resources = 6, Approved = false, ParentId = null }); // Mar 2 ? Jul 11
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4872, TaskName = "Plan timeline", StartDate = new DateTime(2025, 3, 4), EndDate = new DateTime(2025, 3, 8), Progress = "In Progress", Duration = 5, Resources = 4, Priority = "Normal", Approved = false, ParentId = 4871 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4873, TaskName = "Plan budget", StartDate = new DateTime(2025, 3, 6), EndDate = new DateTime(2025, 3, 10), Duration = 5, Progress = "Started", Approved = true, Resources = 6, Priority = "Low", ParentId = 4871 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4874, TaskName = "Allocate resources", StartDate = new DateTime(2025, 3, 8), EndDate = new DateTime(2025, 3, 12), Duration = 5, Progress = "Open", Priority = "Critical", Resources = 3, Approved = false, ParentId = 4871 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4875, TaskName = "Planning complete", StartDate = new DateTime(2025, 7, 10), EndDate = new DateTime(2025, 7, 11), Duration = 2, Progress = "Open", Priority = "Low", Resources = 5, ParentId = 4871, Approved = true });
+
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4876, TaskName = "Design", StartDate = new DateTime(2025, 7, 15), EndDate = new DateTime(2025, 9, 20), Progress = "In Progress", Duration = 68, Priority = "High", Resources = 4, Approved = false, ParentId = null });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4877, TaskName = "Software specification", StartDate = new DateTime(2025, 7, 16), EndDate = new DateTime(2025, 7, 25), Duration = 10, Progress = "Started", Resources = 3, Priority = "Normal", ParentId = 4876, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4878, TaskName = "Develop prototype", StartDate = new DateTime(2025, 7, 26), EndDate = new DateTime(2025, 8, 10), Duration = 16, Progress = "In Progress", Resources = 2, Priority = "Critical", ParentId = 4876, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4879, TaskName = "Get approval from customer", StartDate = new DateTime(2025, 8, 11), EndDate = new DateTime(2025, 8, 15), Duration = 5, Progress = "In Progress", Resources = 3, Priority = "Low", Approved = true, ParentId = 4876 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4880, TaskName = "Design complete", StartDate = new DateTime(2025, 9, 18), EndDate = new DateTime(2025, 9, 20), Duration = 3, Progress = "In Progress", Resources = 6, Priority = "Normal", ParentId = 4876, Approved = true });
+
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4881, TaskName = "Implementation phase", StartDate = new DateTime(2025, 9, 21), EndDate = new DateTime(2025, 12, 31), Priority = "Normal", Approved = false, Duration = 102, Resources = 5, Progress = "Started", ParentId = null });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4882, TaskName = "Phase 1", StartDate = new DateTime(2025, 9, 22), EndDate = new DateTime(2025, 10, 15), Priority = "High", Approved = false, Duration = 24, Progress = "Open", Resources = 4, ParentId = 4881 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4883, TaskName = "Implementation module 1", StartDate = new DateTime(2025, 9, 23), EndDate = new DateTime(2025, 10, 14), Priority = "Normal", Duration = 22, Progress = "Started", Resources = 3, Approved = false, ParentId = 4882 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4884, TaskName = "Development task 1", StartDate = new DateTime(2025, 9, 24), EndDate = new DateTime(2025, 9, 28), Duration = 5, Progress = "In Progress", Priority = "High", Resources = 2, ParentId = 4883, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4885, TaskName = "Development task 2", StartDate = new DateTime(2025, 9, 29), EndDate = new DateTime(2025, 10, 3), Duration = 5, Progress = "Closed", Priority = "Low", Resources = 5, ParentId = 4883, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4886, TaskName = "Testing", StartDate = new DateTime(2025, 10, 4), EndDate = new DateTime(2025, 10, 7), Duration = 4, Progress = "Closed", Priority = "Normal", ParentId = 4883, Resources = 1, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4887, TaskName = "Bug fix", StartDate = new DateTime(2025, 10, 8), EndDate = new DateTime(2025, 10, 10), Duration = 3, Progress = "Validated", Priority = "Critical", ParentId = 4883, Resources = 6, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4888, TaskName = "Customer review meeting", StartDate = new DateTime(2025, 10, 11), EndDate = new DateTime(2025, 10, 14), Duration = 4, Progress = "Open", Priority = "High", ParentId = 4883, Resources = 6, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4889, TaskName = "Phase 1 complete", StartDate = new DateTime(2025, 10, 14), EndDate = new DateTime(2025, 10, 15), Duration = 2, Progress = "Closed", Priority = "Low", ParentId = 4883, Resources = 5, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4890, TaskName = "Phase 2", StartDate = new DateTime(2025, 10, 16), EndDate = new DateTime(2025, 11, 15), Priority = "High", Approved = false, Progress = "Open", ParentId = 4881, Resources = 3, Duration = 31 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4891, TaskName = "Implementation module 2", StartDate = new DateTime(2025, 10, 17), EndDate = new DateTime(2025, 11, 14), Priority = "Critical", Approved = false, Progress = "In Progress", ParentId = 4890, Resources = 3, Duration = 29 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4892, TaskName = "Development task 1", StartDate = new DateTime(2025, 10, 18), EndDate = new DateTime(2025, 10, 25), Duration = 8, Progress = "Closed", Priority = "Normal", ParentId = 4891, Resources = 2, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4893, TaskName = "Development task 2", StartDate = new DateTime(2025, 10, 26), EndDate = new DateTime(2025, 11, 2), Duration = 8, Progress = "Closed", Priority = "Critical", ParentId = 4891, Resources = 5, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4894, TaskName = "Testing", StartDate = new DateTime(2025, 11, 3), EndDate = new DateTime(2025, 11, 6), Duration = 4, Progress = "Open", Priority = "High", ParentId = 4891, Resources = 3, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4895, TaskName = "Bug fix", StartDate = new DateTime(2025, 11, 7), EndDate = new DateTime(2025, 11, 10), Duration = 4, Progress = "Validated", Priority = "Low", Approved = false, Resources = 6, ParentId = 4891 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4896, TaskName = "Customer review meeting", StartDate = new DateTime(2025, 11, 11), EndDate = new DateTime(2025, 11, 14), Duration = 4, Progress = "In Progress", Priority = "Critical", ParentId = 4891, Resources = 4, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4897, TaskName = "Phase 2 complete", StartDate = new DateTime(2025, 11, 14), EndDate = new DateTime(2025, 11, 15), Duration = 2, Priority = "Normal", Progress = "Open", ParentId = 4891, Resources = 3, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4898, TaskName = "Phase 3", StartDate = new DateTime(2025, 11, 16), EndDate = new DateTime(2025, 12, 20), Priority = "Normal", Approved = false, Duration = 35, Progress = "In Progress", Resources = 4, ParentId = 4881 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4899, TaskName = "Implementation module 3", StartDate = new DateTime(2025, 11, 17), EndDate = new DateTime(2025, 12, 19), Priority = "High", Approved = false, Duration = 33, Resources = 5, Progress = "Validated", ParentId = 4898 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4900, TaskName = "Development task 1", StartDate = new DateTime(2025, 11, 18), EndDate = new DateTime(2025, 11, 25), Duration = 8, Progress = "Closed", Priority = "Low", Approved = true, Resources = 3, ParentId = 4899 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4901, TaskName = "Development task 2", StartDate = new DateTime(2025, 11, 26), EndDate = new DateTime(2025, 12, 3), Duration = 8, Progress = "Closed", Priority = "Normal", Approved = false, Resources = 2, ParentId = 4899 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4902, TaskName = "Testing", StartDate = new DateTime(2025, 12, 4), EndDate = new DateTime(2025, 12, 10), Duration = 7, Progress = "Closed", Priority = "Critical", ParentId = 4899, Resources = 4, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4903, TaskName = "Bug fix", StartDate = new DateTime(2025, 12, 11), EndDate = new DateTime(2025, 12, 15), Duration = 5, Progress = "Open", Priority = "High", Approved = false, Resources = 3, ParentId = 4899 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4904, TaskName = "Customer review meeting", StartDate = new DateTime(2025, 12, 16), EndDate = new DateTime(2025, 12, 19), Duration = 4, Progress = "In Progress", Priority = "Normal", ParentId = 4899, Resources = 6, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4905, TaskName = "Phase 3 complete", StartDate = new DateTime(2025, 12, 19), EndDate = new DateTime(2025, 12, 20), Duration = 2, Priority = "Critical", Progress = "Open", Resources = 5, ParentId = 4899, Approved = false });
             return BusinessObjectCollection;
         }
     }
 }
 
 {% endhighlight %}
-
-{% highlight json %}
-
-{
-    "de-DE": {
-            "treegrid": {
-                "EmptyRecord": "Keine Aufzeichnungen angezeigt",
-                "ExpandAll": "Alle erweitern",
-                "CollapseAll": "Alles einklappen",
-                "Print": "Drucken",
-                "Pdfexport": "PDF-Export",
-                "Excelexport": "Excel-Export",
-                "Wordexport": "Word-Export",
-                "FilterButton": "Filter",
-                "ClearButton": "klar",
-                "StartsWith": "Beginnt mit",
-                "EndsWith": "Endet mit",
-                "Contains": "Enthält",
-                "Equal": "Gleich",
-                "NotEqual": "Nicht gleich",
-                "LessThan": "Weniger als",
-                "LessThanOrEqual": "Weniger als oder gleich",
-                "GreaterThan": "Größer als",
-                "GreaterThanOrEqual": "Größer als oder gleich",
-                "EnterValue": "Geben Sie den Wert ein",
-                "FilterMenu": "Filter"
-            },
-            "pager": {
-                "currentPageInfo": "{0} von {1} Seiten",
-                "totalItemsInfo": "({0} Beiträge)",
-                "firstPageTooltip": "Zur ersten Seite",
-                "lastPageTooltip": "Zur letzten Seite",
-                "nextPageTooltip": "Zur nächsten Seite",
-                "previousPageTooltip": "Zurück zur letzten Seit",
-                "nextPagerTooltip": "Zum nächsten Pager",
-                "previousPagerTooltip": "Zum vorherigen Pager"
-            },
-            "dropdowns": {
-                "noRecordsTemplate": "Keine Aufzeichnungen gefunden"
-            },
-            "datepicker": {
-                "placeholder": "Wählen Sie ein Datum",
-                "today": "heute"
-            }
-        }	
-    }
-
-{% endhighlight %}
-
 {% endtabs %}
 
+**Step 11: Run the Application**
+ 
+Run the application to display the TreeGrid with localized content and formats based on the selected culture (e.g., en-US or fr-FR). The culture switcher buttons update the UI, such as **pager text** or **currency** formats (e.g., `$` for en-US, `€` for fr-FR).
 
 ![Localization in Blazor TreeGrid](images/blazor-treegrid-localization.png)
 
 ## Internationalization
 
-The **Internationalization** library is used to globalize number, date, and time values in TreeGrid component using format strings in the **Format**.
+The **Internationalization** library is used to globalize number, date, and time values in TreeGrid component using format strings in the **Format**. In the below sample we set the culture and currency using the **SetCulture** and **SetCurrencyCode** methods.
 
 {% tabs %}
 
@@ -2380,131 +2568,195 @@ public class TreeData
 N> * In the above sample, **Duration** column is formatted by **NumberFormatOptions**.
 <br/> * By default, **locale** value is **en-US**. In order to change the **en-US** culture to a different culture, set the **SetCulture** method accordingly.
 
-## Right to left (RTL)
+## Right-to-Left (RTL) in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid
 
-RTL provides an option to switch the text direction and layout of the TreeGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the below sample **EnableRtl** method is used to enable RTL in the TreeGrid.
+- The Right-to-Left (RTL) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid reverses the layout and text direction from left-to-right to right-to-left, supporting languages like **Arabic**, **Farsi**, and **Urdu**. Enabling RTL improves accessibility and delivers a natural reading experience for these languages.
+
+- To enable RTL, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableRtl) property to **true** in the TreeGrid component.
+
+- Follow these steps to configure RTL with a specific culture:
+
+**Step 1: Complete Initial Localization Setup**
+
+Complete **steps 1** through **5** from the [Switching Localization](https://blazor.syncfusion.com/documentation/treegrid/globalization#switch-the-different-localization) guide to set up the Blazor Web App, install NuGet packages, register services, and include theme resources.
+
+**Step 2: Configure ~/Program.cs**
+
+Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor and localization services in **~/Program.cs**:
 
 {% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
 
-{% highlight razor %}
+using LocalizationSample.Client;
+using Syncfusion.Blazor;
 
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.TreeGrid;
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
-<SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" Locale="ar-AE" IdMapping="TaskId" AllowSelection="true" ParentIdMapping="ParentId" TreeColumnIndex="1"
-             Toolbar="@(new List<string>() { "Print", "ExpandAll", "CollapseAll" })">
-    <TreeGridPageSettings PageSize="1"></TreeGridPageSettings>
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3: Set Culture in Blazor Start Option**
+
+* Add the **autostart="false"** attribute to the Blazor `<script>` tag to prevent Blazor from starting automatically.
+* Add the script block below Blazor's `<script>` tag and before the closing `</body>` tag to start Blazor with a specific culture.
+* Use the **Blazor.start** method and set **applicationCulture** to the desired culture code.
+
+{% tabs %}
+{% highlight cs tabtitle="~/Components/App.razor" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="LocalizationSample.styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <HeadOutlet />
+</head>
+<body>
+    <Routes />
+    <script src="_framework/blazor.web.js" autostart="false"></script>
+    <script>
+        Blazor.start({
+            webAssembly: {
+                applicationCulture: 'ar'
+            }
+        });
+    </script>
+</body>
+</html>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 4: Enable or Disable RTL Mode with Toggle Switch**
+
+Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button) to enable or disable RTL dynamically. The switch triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event, which updates the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableRtl) property of the TreeGrid.
+
+{% tabs %}
+{% highlight razor tabtitle="Counter.razor" %}
+
+@page "/counter"
+@rendermode InteractiveAuto
+
+@using LocalizationSample.Client.Models
+
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px;">
+    <label style="margin: 0;">Enable or Disable RTL Mode</label>
+    <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
+</div>
+
+
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskId" AllowSelection=true ParentIdMapping="ParentId" Height="372" AllowFiltering="true" EnableRtl="@IsRtlEnabled" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel" })" AllowSorting="true" AllowMultiSorting="true">
+    <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Cell"></TreeGridEditSettings>
+    <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></TreeGridSelectionSettings>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="StartDate" HeaderText=" Start Date" Format="yMd" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></TreeGridColumn>
-        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="120" IsPrimaryKey="true" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules() { Required = true })" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules() { Required = true })" Width="260"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="110"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration (In Days)" Width="140" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=Syncfusion.Blazor.Grids.ColumnType.Date Width="140" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType=Syncfusion.Blazor.Grids.EditType.DatePickerEdit></TreeGridColumn>
+        <TreeGridColumn Field="EndDate" HeaderText="End Date" Format="d" Type=Syncfusion.Blazor.Grids.ColumnType.Date Width="140" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType=Syncfusion.Blazor.Grids.EditType.DatePickerEdit></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
-    [Inject]
-    IJSRuntime JsRuntime { get; set; }
+@code {
+    private SfTreeGrid<TreeData> TreeGrid;
+    private bool IsRtlEnabled { get; set; } = false;
 
-    public List<TreeData> TreeGridData { get; set; }
-
+    private List<WrapData> TreeData { get; set; } = new List<WrapData>();
     protected override void OnInitialized()
     {
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+        TreeData = WrapData.GetWrapData().ToList();
     }
 
-    protected override void OnAfterRender(bool firstRender)
+    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> Args)
     {
-        if (firstRender)
-        {
-            this.JsRuntime.Sf().EnableRtl(true);
-        }
+        IsRtlEnabled = Args.Checked;
+        TreeGrid.Refresh();
     }
 }
-
+ 
 {% endhighlight %}
+{% endtabs %}
 
-{% highlight c# %}
+**Step 5: Create a Model Class**
 
-namespace TreeGridComponent.Data {
+Create a **Data** folder and add a **TreeData.cs** file to define the model class for the TreeGrid:
 
-public class TreeData
+{% tabs %}
+{% highlight cs tabtitle="TreeData.cs" %}
+
+namespace LocalizationSample.Client.Models
+{
+    public class WrapData
     {
-       
-            public int TaskId { get; set;}
-            public string TaskName { get; set;}
-            public int? Duration { get; set;}
-            public int? Progress { get; set;}
-            public string Priority { get; set;}
-            public int? ParentId { get; set;}
-      
-        public static List<TreeData> GetSelfDataSource()
+        public int? TaskId { get; set; }
+        public string? TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public int? Duration { get; set; }
+        public string? Progress { get; set; }
+        public string? Priority { get; set; }
+        public bool Approved { get; set; }
+        public int Resources { get; set; }
+        public int? ParentId { get; set; }
+        public static List<WrapData> GetWrapData()
         {
-            List<TreeData> BusinessObjectCollection = new List<TreeData>();
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
-            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            List<WrapData> BusinessObjectCollection = new List<WrapData>();
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4871, TaskName = "Planning", StartDate = new DateTime(2025, 3, 2), EndDate = new DateTime(2025, 7, 11), Progress = "Open", Duration = 132, Priority = "Normal", Resources = 6, Approved = false, ParentId = null }); // Mar 2 ? Jul 11
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4872, TaskName = "Plan timeline", StartDate = new DateTime(2025, 3, 4), EndDate = new DateTime(2025, 3, 8), Progress = "In Progress", Duration = 5, Resources = 4, Priority = "Normal", Approved = false, ParentId = 4871 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4873, TaskName = "Plan budget", StartDate = new DateTime(2025, 3, 6), EndDate = new DateTime(2025, 3, 10), Duration = 5, Progress = "Started", Approved = true, Resources = 6, Priority = "Low", ParentId = 4871 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4874, TaskName = "Allocate resources", StartDate = new DateTime(2025, 3, 8), EndDate = new DateTime(2025, 3, 12), Duration = 5, Progress = "Open", Priority = "Critical", Resources = 3, Approved = false, ParentId = 4871 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4875, TaskName = "Planning complete", StartDate = new DateTime(2025, 7, 10), EndDate = new DateTime(2025, 7, 11), Duration = 2, Progress = "Open", Priority = "Low", Resources = 5, ParentId = 4871, Approved = true });
+
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4876, TaskName = "Design", StartDate = new DateTime(2025, 7, 15), EndDate = new DateTime(2025, 9, 20), Progress = "In Progress", Duration = 68, Priority = "High", Resources = 4, Approved = false, ParentId = null });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4877, TaskName = "Software specification", StartDate = new DateTime(2025, 7, 16), EndDate = new DateTime(2025, 7, 25), Duration = 10, Progress = "Started", Resources = 3, Priority = "Normal", ParentId = 4876, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4878, TaskName = "Develop prototype", StartDate = new DateTime(2025, 7, 26), EndDate = new DateTime(2025, 8, 10), Duration = 16, Progress = "In Progress", Resources = 2, Priority = "Critical", ParentId = 4876, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4879, TaskName = "Get approval from customer", StartDate = new DateTime(2025, 8, 11), EndDate = new DateTime(2025, 8, 15), Duration = 5, Progress = "In Progress", Resources = 3, Priority = "Low", Approved = true, ParentId = 4876 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4880, TaskName = "Design complete", StartDate = new DateTime(2025, 9, 18), EndDate = new DateTime(2025, 9, 20), Duration = 3, Progress = "In Progress", Resources = 6, Priority = "Normal", ParentId = 4876, Approved = true });
+
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4881, TaskName = "Implementation phase", StartDate = new DateTime(2025, 9, 21), EndDate = new DateTime(2025, 12, 31), Priority = "Normal", Approved = false, Duration = 102, Resources = 5, Progress = "Started", ParentId = null });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4882, TaskName = "Phase 1", StartDate = new DateTime(2025, 9, 22), EndDate = new DateTime(2025, 10, 15), Priority = "High", Approved = false, Duration = 24, Progress = "Open", Resources = 4, ParentId = 4881 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4883, TaskName = "Implementation module 1", StartDate = new DateTime(2025, 9, 23), EndDate = new DateTime(2025, 10, 14), Priority = "Normal", Duration = 22, Progress = "Started", Resources = 3, Approved = false, ParentId = 4882 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4884, TaskName = "Development task 1", StartDate = new DateTime(2025, 9, 24), EndDate = new DateTime(2025, 9, 28), Duration = 5, Progress = "In Progress", Priority = "High", Resources = 2, ParentId = 4883, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4885, TaskName = "Development task 2", StartDate = new DateTime(2025, 9, 29), EndDate = new DateTime(2025, 10, 3), Duration = 5, Progress = "Closed", Priority = "Low", Resources = 5, ParentId = 4883, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4886, TaskName = "Testing", StartDate = new DateTime(2025, 10, 4), EndDate = new DateTime(2025, 10, 7), Duration = 4, Progress = "Closed", Priority = "Normal", ParentId = 4883, Resources = 1, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4887, TaskName = "Bug fix", StartDate = new DateTime(2025, 10, 8), EndDate = new DateTime(2025, 10, 10), Duration = 3, Progress = "Validated", Priority = "Critical", ParentId = 4883, Resources = 6, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4888, TaskName = "Customer review meeting", StartDate = new DateTime(2025, 10, 11), EndDate = new DateTime(2025, 10, 14), Duration = 4, Progress = "Open", Priority = "High", ParentId = 4883, Resources = 6, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4889, TaskName = "Phase 1 complete", StartDate = new DateTime(2025, 10, 14), EndDate = new DateTime(2025, 10, 15), Duration = 2, Progress = "Closed", Priority = "Low", ParentId = 4883, Resources = 5, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4890, TaskName = "Phase 2", StartDate = new DateTime(2025, 10, 16), EndDate = new DateTime(2025, 11, 15), Priority = "High", Approved = false, Progress = "Open", ParentId = 4881, Resources = 3, Duration = 31 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4891, TaskName = "Implementation module 2", StartDate = new DateTime(2025, 10, 17), EndDate = new DateTime(2025, 11, 14), Priority = "Critical", Approved = false, Progress = "In Progress", ParentId = 4890, Resources = 3, Duration = 29 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4892, TaskName = "Development task 1", StartDate = new DateTime(2025, 10, 18), EndDate = new DateTime(2025, 10, 25), Duration = 8, Progress = "Closed", Priority = "Normal", ParentId = 4891, Resources = 2, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4893, TaskName = "Development task 2", StartDate = new DateTime(2025, 10, 26), EndDate = new DateTime(2025, 11, 2), Duration = 8, Progress = "Closed", Priority = "Critical", ParentId = 4891, Resources = 5, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4894, TaskName = "Testing", StartDate = new DateTime(2025, 11, 3), EndDate = new DateTime(2025, 11, 6), Duration = 4, Progress = "Open", Priority = "High", ParentId = 4891, Resources = 3, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4895, TaskName = "Bug fix", StartDate = new DateTime(2025, 11, 7), EndDate = new DateTime(2025, 11, 10), Duration = 4, Progress = "Validated", Priority = "Low", Approved = false, Resources = 6, ParentId = 4891 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4896, TaskName = "Customer review meeting", StartDate = new DateTime(2025, 11, 11), EndDate = new DateTime(2025, 11, 14), Duration = 4, Progress = "In Progress", Priority = "Critical", ParentId = 4891, Resources = 4, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4897, TaskName = "Phase 2 complete", StartDate = new DateTime(2025, 11, 14), EndDate = new DateTime(2025, 11, 15), Duration = 2, Priority = "Normal", Progress = "Open", ParentId = 4891, Resources = 3, Approved = false });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4898, TaskName = "Phase 3", StartDate = new DateTime(2025, 11, 16), EndDate = new DateTime(2025, 12, 20), Priority = "Normal", Approved = false, Duration = 35, Progress = "In Progress", Resources = 4, ParentId = 4881 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4899, TaskName = "Implementation module 3", StartDate = new DateTime(2025, 11, 17), EndDate = new DateTime(2025, 12, 19), Priority = "High", Approved = false, Duration = 33, Resources = 5, Progress = "Validated", ParentId = 4898 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4900, TaskName = "Development task 1", StartDate = new DateTime(2025, 11, 18), EndDate = new DateTime(2025, 11, 25), Duration = 8, Progress = "Closed", Priority = "Low", Approved = true, Resources = 3, ParentId = 4899 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4901, TaskName = "Development task 2", StartDate = new DateTime(2025, 11, 26), EndDate = new DateTime(2025, 12, 3), Duration = 8, Progress = "Closed", Priority = "Normal", Approved = false, Resources = 2, ParentId = 4899 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4902, TaskName = "Testing", StartDate = new DateTime(2025, 12, 4), EndDate = new DateTime(2025, 12, 10), Duration = 7, Progress = "Closed", Priority = "Critical", ParentId = 4899, Resources = 4, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4903, TaskName = "Bug fix", StartDate = new DateTime(2025, 12, 11), EndDate = new DateTime(2025, 12, 15), Duration = 5, Progress = "Open", Priority = "High", Approved = false, Resources = 3, ParentId = 4899 });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4904, TaskName = "Customer review meeting", StartDate = new DateTime(2025, 12, 16), EndDate = new DateTime(2025, 12, 19), Duration = 4, Progress = "In Progress", Priority = "Normal", ParentId = 4899, Resources = 6, Approved = true });
+            BusinessObjectCollection.Add(new WrapData() { TaskId = 4905, TaskName = "Phase 3 complete", StartDate = new DateTime(2025, 12, 19), EndDate = new DateTime(2025, 12, 20), Duration = 2, Priority = "Critical", Progress = "Open", Resources = 5, ParentId = 4899, Approved = false });
             return BusinessObjectCollection;
         }
     }
 }
 
 {% endhighlight %}
-
-{% highlight json %}
-
-{
-    "ar-AE": {
-        "treegrid": {
-            "EmptyRecord": "لا سجلات لعرضها",
-            "Print": "طباعة",
-            "ExpandAll": "توسيع الكل",
-            "CollapseAll": "انهيار جميع",
-            "FilterButton": "منقي",
-            "ClearButton": "واضح",
-            "StartsWith": "ابدا ب",
-            "EndsWith": "ينتهي مع",
-            "Contains": "يحتوي على",
-            "Equal": "مساو",
-            "NotEqual": "غير متساوي",
-            "LessThan": "أقل من",
-            "LessThanOrEqual": "اصغر من او يساوي",
-            "GreaterThan": "أكثر من",
-            "GreaterThanOrEqual": "أكبر من أو يساوي",
-            "ChooseDate": "اختر تاريخا",
-            "EnterValue": "أدخل القيمة",
-            "FilterMenu": "منقي"
-        },
-        "pager": {
-            "currentPageInfo": "{0} من {1} صفحة",
-            "totalItemsInfo": "({0} العناصر)",
-            "firstPageTooltip": "انتقل إلى الصفحة الأولى",
-            "lastPageTooltip": "انتقل إلى الصفحة الأخيرة",
-            "nextPageTooltip": "انتقل إلى الصفحة التالية",
-            "previousPageTooltip": "انتقل إلى الصفحة السابقة",
-            "nextPagerTooltip": "الذهاب إلى بيجر المقبل",
-            "previousPagerTooltip": "الذهاب إلى بيجر السابقة"
-        },
-        "dropdowns": {
-            "noRecordsTemplate": "لا توجد سجلات"
-        },
-        "datepicker": {
-            "placeholder": "اختر تاريخا",
-            "today": "اليوم"
-        }
-    }
-}
-
-{% endhighlight %}
-
 {% endtabs %}
 
+**Step 6: Run the Application**
+ 
+Run the application to display the TreeGrid with RTL layout and text direction based on the selected culture. Toggling the switch enables or disables RTL mode.
 
 ![Right to Left in Blazor TreeGrid](images/blazor-treegrid-right-to-left.png)
