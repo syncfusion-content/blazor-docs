@@ -40,7 +40,7 @@ The accessibility compliance for the Blazor Block Editor component is outlined b
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are recommended for the Blazor Block Editor to improve discoverability and operability by assistive technologies.
+The following ARIA attributes are recommended for the Blazor Block Editor to improve discoverability and operable by assistive technologies.
 
 | Attribute | Purpose |
 |---|---|
