@@ -186,9 +186,9 @@ The Blazor Gantt Chart supports percentage‑based scaling during PDF export, al
 To configure percentage-based scaling during PDF export:
 
 - Set [ScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfMultiPageSettings.html#Syncfusion_Blazor_Gantt_PdfMultiPageSettings_ScaleMode) to [Percentage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) using [GanttPdfExportScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) through [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html).
-- Specify the desired scaling factor using the [ScalePercentage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfMultiPageSettings.html#Syncfusion_Blazor_Gantt_PdfMultiPageSettings_ScalePercentage) property. A lower percentage applies more compression and reduces the chart size, while a higher percentage applies less compression and increases the chart size.
+- Specify the desired scaling factor using the [ScalePercentage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfMultiPageSettings.html#Syncfusion_Blazor_Gantt_PdfMultiPageSettings_ScalePercentage) property. A lower percentage applies more compression and reduces the Gantt Chart size, while a higher percentage applies less compression and increases the Gantt Chart size.
 
-This approach provides precise control over the overall chart size while preserving layout consistency across exported PDF pages.
+This approach provides precise control over the overall Gantt Chart size while preserving layout consistency across exported PDF pages.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
