@@ -1,26 +1,25 @@
 ---
 layout: post
-title: Access public methods in Blazor TreeGrid Component | Syncfusion
+title: Access public methods of Blazor TreeGrid Component | Syncfusion
 description: Learn here all about accessing public methods in Tree Grid in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Access public methods in Tree Grid in Blazor TreeGrid Component
+# Access Public Methods of Blazor TreeGrid Component
 
 The public methods available in the Tree Grid component can be accessed by using its reference defined in the component initialization.
 
-The following example shows how to invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method on button click using the TreeGrid reference.
+The [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method can be invoked on button click using the TreeGrid reference.
 
 {% tabs %}
 
 {% highlight razor %}
 
-@using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Buttons
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.TreeGrid
 
 <SfButton OnClick="Print" CssClass="e-primary" IsPrimary="true" Content="Print data"></SfButton>
 
@@ -35,7 +34,7 @@ The following example shows how to invoke the [PrintAsync](https://help.syncfusi
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
     SfTreeGrid<TreeData> TreeGrid;
 
     public List<TreeData> TreeGridData { get; set; }
@@ -55,31 +54,28 @@ The following example shows how to invoke the [PrintAsync](https://help.syncfusi
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data {
-
 public class TreeData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public int? Duration { get; set; }
-        public int? Progress { get; set; }
-        public string Priority { get; set; }
-        public int? ParentId { get; set; }
+{
+    public int TaskId { get; set; }
+    public string TaskName { get; set; }
+    public int? Duration { get; set; }
+    public int? Progress { get; set; }
+    public string Priority { get; set; }
+    public int? ParentId { get; set; }
 
-        public static List<TreeData> GetSelfDataSource()
-        {
-            List<TreeData> TreeDataCollection = new List<TreeData>();
-            TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Progress = 80, Priority = "Low", Duration = 50, ParentId = 1 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5 });
-            return TreeDataCollection;
-        }
+    public static List<TreeData> GetSelfDataSource()
+    {
+        List<TreeData> TreeDataCollection = new List<TreeData>();
+        TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+        TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Progress = 80, Priority = "Low", Duration = 50, ParentId = 1 });
+        TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
+        TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
+        TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+        TreeDataCollection.Add(new TreeData() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5 });
+        TreeDataCollection.Add(new TreeData() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5 });
+        TreeDataCollection.Add(new TreeData() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5 });
+        TreeDataCollection.Add(new TreeData() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5 });
+        return TreeDataCollection;
     }
 }
 
@@ -87,4 +83,4 @@ public class TreeData
 
 {% endtabs %}
 
-N> Similarly all the public methods of the Tree Grid can be invoked. The available public methods can be found in this [link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html).
+N> Similarly, all public methods of the Tree Grid can be invoked. A comprehensive list of available methods is available in the [SfTreeGrid API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html).
