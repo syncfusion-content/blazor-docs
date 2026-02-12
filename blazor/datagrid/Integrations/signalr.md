@@ -512,8 +512,8 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-1. The Syncfusion.Blazor package was installed in **Step 1** of the previous heading.
-2. Import the required namespaces in the `Components/_Imports.razor` file:
+* The Syncfusion.Blazor package was installed in **Step 1** of the previous heading.
+* Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
 @using Grid_SignalR.Models
@@ -522,7 +522,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Syncfusion.Blazor.Data
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -542,8 +542,8 @@ The `Home.razor` component displays the stock market data in a Syncfusion DataGr
 
 **Instructions:**
 
-1. Open the file named `Home.razor` in the `Components/Pages` folder.
-2. Add the following complete code for the component:
+* Open the file named `Home.razor` in the `Components/Pages` folder.
+* Add the following complete code for the component:
 
 ```cshtml
 @page "/"
@@ -593,8 +593,8 @@ The CustomAdaptor bridges the Syncfusion DataGrid with SignalR by implementing t
 
 **Instructions:**
 
-1. Inside the `Services` folder, create a new file named **StockAdaptor.cs**.
-2. Define the **StockAdaptor** class with the following code:
+* Inside the `Services` folder, create a new file named **StockAdaptor.cs**.
+* Define the **StockAdaptor** class with the following code:
 
 ```csharp
 using System.Collections;
@@ -1020,8 +1020,8 @@ Add CSS to visualize price changes with color coding and icons.
 
 **Instructions:**
 
-1. Open or create the `Components/Pages/Home.razor.css` file.
-2. Add the following styles:
+* Open or create the `Components/Pages/Home.razor.css` file.
+* Add the following styles:
 
 ```css
 /* Price cell styling */
