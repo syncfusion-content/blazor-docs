@@ -24,7 +24,7 @@ You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio, ei
 
 **2. Create a model class**
  
-Add a new folder named **Models**. Then, add a model class named **TaskData.cs** to represent the Gantt task data.
+Add a new folder named **Models**. Then, add a model class named **TaskData.cs** to represent the Gantt Chart task data.
  
 ```csharp
 namespace URLAdaptor.Models
@@ -177,7 +177,7 @@ To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt C
  
 **1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt and Themes NuGet packages**
  
-To add the Blazor Gantt in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor Gantt Chart in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
 If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
  
@@ -405,16 +405,13 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
     // Retrieve data from the data source.
     IQueryable<TaskData> DataSource = GetTaskData().AsQueryable();
 
-    // Handling filtering operation.
     if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
     {
-        foreach (var condition in DataManagerRequest.Where)
+        // Filtering
+        if (DataManagerRequest.Where[0].Field != null && DataManagerRequest.Where[0].Field == @nameof(TaskData.ParentID)){}
+        else
         {
-            foreach (var predicate in condition.predicates)
-            {
-                DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, predicate.Operator);
-                // Add custom logic here if needed and remove above method.
-            }
+            DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
         }
     }
 
@@ -522,7 +519,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling CRUD operations
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every Gantt action, facilitating server-side operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every action, facilitating server-side operations.
 
 **CRUD operations mapping**
 
@@ -564,7 +561,7 @@ To enable editing in Blazor Gantt Chart, refer to the editing [documentation](ht
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) for the Gantt. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) property is set to **true** for a specific Gantt column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) for the Gantt. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) property is set to **true** for a specific Gantt Chart column, ensuring that its value is unique.
 
 The below class is used to structure data sent during CRUD operations.
 
@@ -785,7 +782,7 @@ To perform batch operation, define the edit [Mode](https://help.syncfusion.com/c
 {% highlight cs tabtitle="GanttController.cs" %}
 
 /// <summary>
-/// Handles CRUD operations when batch editing is enabled in the Gantt.
+/// Handles CRUD operations when batch editing is enabled in the Gantt Chart.
 /// </summary>
 /// <param name="batchModel">The batch model containing the data changes to be processed.</param>
 /// <returns>Returns the result of the CRUD operation.</returns>

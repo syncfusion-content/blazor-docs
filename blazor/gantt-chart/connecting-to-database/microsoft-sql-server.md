@@ -36,8 +36,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.2.1 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | SQL Server | 2021 or later | Database server |
-| Syncfusion.Blazor.Gantt | {{site.blazorversion}} | Gantt Chart and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Gantt Chart components |
+| Syncfusion.Blazor.Gantt | -v {{site.blazorversion}} | Gantt Chart and UI components |
+| Syncfusion.Blazor.Themes | -v {{site.blazorversion}} | Styling for Gantt Chart components |
 | Microsoft.EntityFrameworkCore | 10.0.2 or later | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.Tools | 10.0.2 or later | Tools for managing database migrations |
 | Microsoft.EntityFrameworkCore.SqlServer | 10.0.2 or later | SQL Server provider for Entity Framework Core |
@@ -113,8 +113,8 @@ For this guide, a Blazor application named **GanttMsSql** has been created. Once
 Install-Package Microsoft.EntityFrameworkCore -Version 10.0.2; 
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 10.0.2; 
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 10.0.2; 
-Install-Package Syncfusion.Blazor.Gantt -Version {{site.blazorversion}}; 
-Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Gantt -v {{site.blazorversion}}; 
+Install-Package Syncfusion.Blazor.Themes -v {{site.blazorversion}}
 ```
 
 **Method 2: Using NuGet package manager UI**
@@ -124,8 +124,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
    - **Microsoft.EntityFrameworkCore** (version 10.0.2 or later)
    - **Microsoft.EntityFrameworkCore.Tools** (version 10.0.2 or later)
    - **Microsoft.EntityFrameworkCore.SqlServer** (version 10.0.2 or later)
-   - **Syncfusion.Blazor.Gantt** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **Syncfusion.Blazor.Gantt** (-v {{site.blazorversion}})
+   - **Syncfusion.Blazor.Themes** (-v {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -500,7 +500,7 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 ```
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component's [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
+Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor Gantt Chart
 
@@ -520,7 +520,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 @inject TaskRepository TaskService
 
-<SfGantt TValue="TaskData" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true" EnableContextMenu="true">
+<SfGantt TValue="TaskData" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentID" Dependency="Predecessor">
@@ -545,7 +545,6 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 **Component Explanation:**
 
-- **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component.
 - **`@inject TaskRepository`**: Injects the repository to access database methods.
 - **`<SfGantt>`**: The Gantt Chart component displays hierarchical tasks, dependencies, baselines, durations, and progress on an interactive timeline for scheduling.
 - **`<GanttColumn>`**: Defines individual columns in the Gantt Chart.
@@ -610,9 +609,14 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
 
                 // Apply filter operation if filter criteria exists
                 if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+            {
+                
+                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskData.ParentID)){}
+                else
                 {
-                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
                 }
+            }
 
                 // Apply sort operation if sort criteria exists
                 if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
@@ -654,7 +658,7 @@ The `CustomAdaptor` class has been successfully implemented with all data operat
 
 **Common methods in data operations**
 
-* [ReadAsync(DataManagerRequest)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) - Retrieve and process records (search, filter, sort, page, group)
+* [ReadAsync(DataManagerRequest)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) - Retrieve and process records (search, filter, sort)
 
 * [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) - Applies search criteria to the collection.
 * [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) - Filters data based on conditions.
@@ -722,7 +726,7 @@ Searching allows the user to find records by entering keywords in the search box
     public List<string> ToolbarItems = new List<string> { "Search"};
     
     /// <summary>
-    /// CustomAdaptor class to handle Gantt data operations with SQL using Entity Framework
+    /// CustomAdaptor class to handle Gantt Chart data operations with SQL using Entity Framework
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -809,12 +813,16 @@ Filtering allows the user to restrict data based on column values using a menu i
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
             IEnumerable<TaskData> dataSource = await _taskService!.GetTasksAsync();
-            // Handling Filtering
+
+            // Handling Filtering           
             if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
             {
-                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskData.ParentID)){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                }
             }
-
             int totalRecordsCount = dataSource.Cast<TaskData>().Count();            
             
             return dataManagerRequest.RequiresCounts
@@ -909,7 +917,7 @@ Sorting feature is now active.
 
 CustomAdaptor methods enable users to create, read, update, and delete records directly from the Gantt Chart. Each operation calls corresponding data layer methods in **TaskRepository.cs** to execute SQL Server commands.
 
-Add the Gantt **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+Add the Gantt Chart **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
 ```cshtml
 <SfGantt TValue="TaskData"
@@ -945,7 +953,7 @@ public class CustomAdaptor : DataAdaptor
     {
         if (value is TaskData task)
         {
-            await _taskService!.AddTaskAsync(task);
+            await _taskService!.AddTaskAsync(value);
         }
         return value;
     }
@@ -955,7 +963,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/TaskRepository.cs**, the insert method is implemented as:
 
 ```csharp
-public async Task AddTaskAsync(TaskData value)
+public async Task AddTaskAsync(TaskData task)
 {
      if (task == null)
      throw new ArgumentNullException(nameof(task), "Task cannot be null");
@@ -979,7 +987,7 @@ private static void ApplyDefaults(TaskData task)
     task.StartDate ??= DateTime.Now;
 
     if (string.IsNullOrWhiteSpace(task.Duration))
-        task.Duration = "1 day"; // or "1d"
+        task.Duration = 1; // or "1d"
 
     // Clamp progress 0..100
     if (task.Progress < 0) task.Progress = 0;
@@ -1081,7 +1089,7 @@ public class CustomAdaptor : DataAdaptor
             int i => i,
             long l => (int)l,
             string s when int.TryParse(s, out var id) => id,
-            TaskDatat => t.TaskID,
+            TaskData => t.TaskID,
             _ => null
         };
 
@@ -1136,7 +1144,7 @@ Now tasks are removed from the database and the Gantt Chart UI reflects the chan
 
 **Batch update**
 
-Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring transactional consistency by applying all changes atomically to the SQL Server database.
+Batch operations receive the newly added records along with a set of updated records and deleted records in a single request so every change is applied consistently.
 
 In **Home.razor**, implement the [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) method within the `CustomAdaptor` class:
 
@@ -1220,7 +1228,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
 @inject TaskRepository TaskService
 
-<SfGantt TValue="TaskData" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true" EnableContextMenu="true" 
+<SfGantt TValue="TaskData" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true"
          Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
 
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -1263,7 +1271,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     }
 
     /// <summary>
-    /// Custom DataAdaptor to handle Gantt data operations with MySQL using EF Core.
+    /// Custom DataAdaptor to handle Gantt Chart data operations with MS SQL using EF Core.
     /// Bridges Syncfusion DataManager requests to the repository.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
@@ -1441,6 +1449,6 @@ This guide demonstrates how to:
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
 5. Implement the repository pattern for data access. [🔗](#step-6-create-the-repository-class)
 6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-gantt-components)
-7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
+7. Handle bulk operations and batch updates. [🔗](#step-8-perform-crud-operations)
 
 The application now provides a complete solution for managing tasks with a modern, user-friendly interface integrated with SQL Server.

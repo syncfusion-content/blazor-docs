@@ -32,8 +32,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.2.1 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | SQL Server | 2021 or later | Database server |
-| Syncfusion.Blazor.Gantt | {{site.blazorversion}} | Gantt Chart and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Gantt Chart components |
+| Syncfusion.Blazor.Gantt | -v {{site.blazorversion}} | Gantt Chart and UI components |
+| Syncfusion.Blazor.Themes | -v {{site.blazorversion}} | Styling for Gantt Chart components |
 | Microsoft.Data.SqlClient | Latest | SQL Server ADO.NET provider |
 | Dapper | Latest | Lightweight micro-ORM for SQL mapping |
 
@@ -93,7 +93,7 @@ After executing this script, the task data are stored in the `TaskData` table wi
 ### Step 2: Install required NuGet packages
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
-This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
+This template automatically generates essential starter files such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
 For this guide, a Blazor application named **GanttDapper** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Dapper and SQL Server integration.
 
@@ -104,10 +104,10 @@ For this guide, a Blazor application named **GanttDapper** has been created. Onc
 3. Run the following commands:
 
 ```powershell
-Install-Package Microsoft.Data.SqlClient -Version Latest
+Install-Package Microsoft.Data.SqlClient -v Latest
 Install-Package Dapper -Version Latest
-Install-Package Syncfusion.Blazor.Gantt -Version {{site.blazorversion}}
-Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Gantt -v {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Themes -v {{site.blazorversion}}
 ```
 
 **Method 2: Using NuGet Package Manager UI**
@@ -116,8 +116,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 2. Search for and install each package individually:
    - **Microsoft.Data.SqlClient** (Latest version)
    - **Dapper** (Latest version)
-   - **Syncfusion.Blazor.Gantt** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **Syncfusion.Blazor.Gantt** (-v {{site.blazorversion}})
+   - **Syncfusion.Blazor.Themes** (-v {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -377,7 +377,7 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 ```
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component's [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
+Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor Gantt Chart
 
@@ -397,7 +397,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 @inject TaskRepository TaskService
 
-<SfGantt TValue="TaskData" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true">
+<SfGantt TValue="TaskDataModel" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration" ParentID="ParentID" Dependency="Predecessor">
@@ -444,8 +444,8 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
     }
 
     /// <summary>
-    /// CustomAdaptor class bridges Gantt interactions with database operations.
-    /// This adaptor handles all data retrieval and manipulation for the Gantt.
+    /// CustomAdaptor class bridges Gantt Chart interactions with database operations.
+    /// This adaptor handles all data retrieval and manipulation for the Gantt Chart.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -459,7 +459,7 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
 
         /// <summary>
         /// ReadAsync retrieves records from the database and applies data operations.
-        /// This method executes when the Gantt initializes and when filtering, searching, sorting occurs.
+        /// This method executes when the Gantt Chart initializes and when filtering, searching, sorting occurs.
         /// </summary>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
@@ -477,7 +477,11 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
                 // Apply filter operation if filter criteria exists
                 if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
                 {
-                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                    if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskDataModel.ParentID)){}
+                    else
+                    {
+                        DataSource = DataOperations.PerformFiltering    (DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                    }
                 }
 
                 // Apply sort operation if sort criteria exists
@@ -597,7 +601,7 @@ Searching helps to find records by entering keywords in the search box.
     private List<string> ToolbarItems = new List<string> { "Search"};
     
     /// <summary>
-    /// CustomAdaptor class to handle Gantt data operations with MSSQL with Dapper
+    /// CustomAdaptor class to handle Gantt Chart data operations with MSSQL with Dapper
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -665,7 +669,7 @@ Filtering allows to restrict data based on column values using a menu interface.
 ```csharp
 @code {
     /// <summary>
-    /// CustomAdaptor class to handle Gantt data operations with MSSQL with Dapper
+    /// CustomAdaptor class to handle Gantt Chart data operations with MSSQL with Dapper
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -687,7 +691,11 @@ Filtering allows to restrict data based on column values using a menu interface.
             // Handling Filtering
             if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
             {
-                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where,  dataManagerRequest.Where[0].Operator);
+                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskDataModel.ParentID)){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                }
             }
 
             int totalRecordsCount = dataSource.Cast<TaskDataModel>().Count();            
@@ -735,7 +743,7 @@ Sorting enables the records to arrange in ascending or descending order based on
 ```csharp
 @code {
     /// <summary>
-    /// CustomAdaptor class to handle Gantt data operations with MSSQL with Dapper
+    /// CustomAdaptor class to handle Gantt Chart data operations with MSSQL with Dapper
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -786,7 +794,7 @@ Sorting feature is now active.
 
 CustomAdaptor methods is used to create, read, update, and delete records directly from the Gantt Chart. Each operation calls corresponding data layer methods in **TaskRepository.cs** to execute SQL commands through Dapper.
 
-Add the Gantt **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+Add the Gantt Chart **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
 ```cshtml
 <SfGantt TValue="TaskDataModel"
@@ -860,10 +868,10 @@ public async Task AddTaskAsync(TaskDataModel value)
 
 1. The Dialog data is collected and validated in the CustomAdaptor's `InsertAsync()` method.
 2. The `TaskRepository.AddTaskAsync()` method is called.
-3. Dapper's `ExecuteAsync()` method executes the INSERT query with parameterized values.
+3. Dapper's `ExecuteAsync()` method executes the **INSERT** query with parameterized values.
 4. The Gantt Chart automatically refreshes to display the new record.
 
-Now the new task is persisted to the database and reflected in the gantt.
+Now the new task is persisted to the database and reflected in the Gantt Chart.
 
 **Update**
 
@@ -895,7 +903,7 @@ public async Task UpdateTaskAsync(TaskDataModel value)
         if (value.TaskID <= 0)
             throw new ArgumentException("TaskID must be valid", nameof(value));
 
-        const string checkQuery = "SELECT COUNT(*) FROM [dbo].[TaskDate] WHERE TaskID = @TaskID";
+        const string checkQuery = "SELECT COUNT(*) FROM [dbo].[TaskData] WHERE TaskID = @TaskID";
         var exists = await _connection.QueryFirstOrDefaultAsync<int>(checkQuery, new { value.TaskID });
         
         if (exists == 0)
@@ -923,7 +931,7 @@ public async Task UpdateTaskAsync(TaskDataModel value)
 1. The modified data is collected from the Dialog.
 2. The CustomAdaptor's `UpdateAsync()` method is called.
 3. The `TaskRepository.UpdateTaskAsync()` method validates the task exists.
-4. Dapper's `ExecuteAsync()` method executes the UPDATE query with parameterized values.
+4. Dapper's `ExecuteAsync()` method executes the **UPDATE** query with parameterized values.
 6. The Gantt Chart refreshes to display the updated record.
 
 Now modifications are synchronized to the database and reflected in the Gantt Chart UI.
@@ -978,7 +986,7 @@ public async Task RemoveTaskAsync(int? key)
 2. A confirmation dialog appears (built into the Gantt Chart).
 3. If confirmed, the CustomAdaptor's `RemoveAsync()` method is called.
 4. The `TaskRepository.RemoveTaskAsync()` method validates the task exists.
-5. Dapper's `ExecuteAsync()` method executes the DELETE query.
+5. Dapper's `ExecuteAsync()` method executes the **DELETE** query.
 6. The Gantt Chart refreshes to remove the deleted record from the UI.
 
 Now tasks are removed from the database and the Gantt Chart UI reflects the changes immediately.
@@ -1099,7 +1107,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     }
 
     /// <summary>
-    /// Custom DataAdaptor to handle Gantt data operations with MSSQL using Dapper.
+    /// Custom DataAdaptor to handle Gantt Chart data operations with MSSQL using Dapper.
     /// Bridges Syncfusion DataManager requests to the repository.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
@@ -1119,12 +1127,21 @@ Here is the complete and final `Home.razor` component with all features integrat
         {
             IEnumerable dataSource = await _taskService!.GetTasksAsync();
 
+            //Searching
             if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
                 dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
 
+            // Filtering
             if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+            {                
+                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskDataModel.ParentID)){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                }
+            }
 
+            //Sorting
             if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
                 dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
 

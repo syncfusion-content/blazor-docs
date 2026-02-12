@@ -29,7 +29,7 @@ The Microsoft.EntityFrameworkCore.SqlServer package is the provider that connect
 
 **What is UrlAdaptor?**
 
-UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all gantt operations. The Gantt Chart sends read, insert, update, delete, and batch requests to controller actions, which use Entity Framework core to access SQL Server.
+UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all Gantt Chart operations. The Gantt Chart sends read, insert, update, delete, and batch requests to controller actions, which use Entity Framework core to access SQL Server.
 
 ## Prerequisites
 
@@ -40,8 +40,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.2.1 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | SQL Server | 2021 or later | Database server |
-| Syncfusion.Blazor.Gantt | {{site.blazorversion}} | Gantt Chart and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Gantt Chart components |
+| Syncfusion.Blazor.Gantt | -v {{site.blazorversion}} | Gantt Chart and UI components |
+| Syncfusion.Blazor.Themes | -v {{site.blazorversion}} | Styling for Gantt Chart components |
 | Microsoft.EntityFrameworkCore | 10.0.2 | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.SqlServer | 10.0.2 | SQL Server provider for Entity Framework Core |
 
@@ -100,7 +100,7 @@ After executing this script, the records are stored in the `TaskData` table with
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files—such as **Program.cs**, **appsettings.json**, **wwwroot**, and **Components**.
 
-For this guide, a Blazor application named **Gantt_EF_UrlAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages. These packages enable Entity Framework Core with SQL Server provider and add Syncfusion UI components.
+For this guide, a Blazor application named **GanttEFUrlAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages. These packages enable Entity Framework Core with SQL Server provider and add Syncfusion UI components.
 
 **Method 1: Using Package Manager Console**
 
@@ -111,8 +111,8 @@ For this guide, a Blazor application named **Gantt_EF_UrlAdaptor** has been crea
 ```powershell
 Install-Package Microsoft.EntityFrameworkCore -Version 10.0.2;
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 10.0.2;
-Install-Package Syncfusion.Blazor.Gantt -Version {{site.blazorversion}};
-Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Gantt -v {{site.blazorversion}};
+Install-Package Syncfusion.Blazor.Themes -v {{site.blazorversion}}
 ```
 
 **Method 2: Using NuGet Package Manager UI**
@@ -121,8 +121,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 2. Search for and install each package individually:
    - **Microsoft.EntityFrameworkCore** (version 10.0.2)
    - **Microsoft.EntityFrameworkCore.SqlServer** (version 10.0.2)
-   - **Syncfusion.Blazor.Gantt** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **Syncfusion.Blazor.Gantt** (-v {{site.blazorversion}})
+   - **Syncfusion.Blazor.Themes** (-v {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -139,7 +139,7 @@ A data model is a C# class that represents the structure of a database table. Th
 ```csharp
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Gantt_EF_UrlAdaptor.Data
+namespace GanttEFUrlAdaptor.Data
 {
     [Table("TaskData")]
     public class TaskDataModel
@@ -175,7 +175,7 @@ A `DbContext` is a special class that manages the connection between the applica
 ```csharp
 using Microsoft.EntityFrameworkCore;
 
-namespace Gantt_EF_UrlAdaptor.Data
+namespace GanttEFUrlAdaptor.Data
 {
     public class TaskDbContext : DbContext
     {
@@ -241,7 +241,7 @@ The database connection string has been configured successfully.
 
 ### Step 6: Create the Gantt API Controller
 
-A controller exposes REST API endpoints for the gantt to read data. This step adds minimal `POST` endpoint that return empty results. Additional CRUD and batch endpoints will be added later when configuring UrlAdaptor.
+A controller exposes REST API endpoints for the Gantt Chart to read data. This step adds minimal `POST` endpoint that return empty results. Additional CRUD and batch endpoints will be added later when configuring UrlAdaptor.
 
 **Instructions:**
 
@@ -251,10 +251,10 @@ A controller exposes REST API endpoints for the gantt to read data. This step ad
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
-using Gantt_EF_UrlAdaptor.Data;
+using GanttEFUrlAdaptor.Data;
 using System.Collections.Generic;
 
-namespace Gantt_EF_UrlAdaptor.Controllers
+namespace GanttEFUrlAdaptor.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -289,8 +289,8 @@ The `Program.cs` file is where application services are registered and configure
 2. Add the following code after the line `var builder = WebApplication.CreateBuilder(args);`:
 
 ```csharp
-using Gantt_EF_UrlAdaptor.Components;
-using Gantt_EF_UrlAdaptor.Data;
+using GanttEFUrlAdaptor.Components;
+using GanttEFUrlAdaptor.Data;
 using Microsoft.EntityFrameworkCore;
 using Syncfusion.Blazor;
 
@@ -368,7 +368,7 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 
 For this project, the **fluent** theme is used. A different theme can be selected or customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt component's [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
+Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor Gantt Chart
 
@@ -413,7 +413,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 - **`<SfDataManager>`**: Manages data communication with REST API endpoints using UrlAdaptor. The `Url` property points to the read endpoint, while `InsertUrl`, `UpdateUrl`, `RemoveUrl`, and `BatchUrl` point to CRUD endpoints.
 - **`AllowFiltering="true"`**: Enables column filtering with menu-based filters.
 - **`AllowSorting="true"`**: Enables column sorting by clicking headers.
-- **`<GanttColumns>`**: Defines the columns displayed in the gantt, mapped to `TaskDataModel` properties.
+- **`<GanttColumns>`**: Defines the columns displayed in the Gantt Chart, mapped to `TaskDataModel` properties.
 - **`<GanttEditSettings>`**: Enables adding, deleting and inline editing .
 - **`Toolbar`**: "Add", "Edit", "Delete", "Update", "Cancel", "Search" for CRUD and search operations.
 
@@ -421,18 +421,18 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 ### Step 3: Implement the Endpoints for UrlAdaptor
 
-The UrlAdaptor communicates with REST API endpoints for Gantt operations rather than executing logic in the component. The Gantt sends requests to endpoints defined in a controller. Below is the controller structure with the same decorators and signatures as in the project, with placeholder comments to add logic.
+The UrlAdaptor communicates with REST API endpoints for Gantt Chart operations rather than executing logic in the component. The Gantt Chart sends requests to endpoints defined in a controller. Below is the controller structure with the same decorators and signatures as in the project, with placeholder comments to add logic.
 
 Open the file named **Controllers/GanttController.cs** and use the following structure:
 
 ```csharp
-using Gantt_EF_UrlAdaptor.Data;
+using GanttEFUrlAdaptor.Data;
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.Data;
 using System.Text.Json.Serialization;
 
-namespace Gantt_EF_UrlAdaptor.Controllers
+namespace GanttEFUrlAdaptor.Controllers
 {
     [ApiController]
     public class GanttController : ControllerBase
@@ -631,7 +631,11 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
         // Handling Filtering
         if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
         {
-            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+            if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskDataModel.ParentID)){}
+            else
+            {
+                DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+            }
         }
 
         int totalRecordsCount = dataSource.Count();
@@ -839,7 +843,7 @@ public void Update([FromBody] CRUDModel<TaskDataModel> value)
 
 **Delete (Remove)**
 
-Record deletion allows tasks to be removed directly from the Gantt Chart. The `Delete` endpoint executes the corresponding SQL Server DELETE operation and updates both the database and the gantt.
+Record deletion allows tasks to be removed directly from the Gantt Chart. The `Delete` endpoint executes the corresponding SQL Server DELETE operation and updates both the database and the Gantt Chart.
 
 In **Controllers/GanttController.cs**, the delete method is implemented as:
 
@@ -876,12 +880,12 @@ public void Delete([FromBody] CRUDModel<TaskDataModel> value)
 4. The `Delete` method extracts the TaskID from `value.Key`.
 5. The task is located in the database by its TaskID.
 6. The task is removed from the `_context.TaskData` collection.
-7. `SaveChanges()` executes the DELETE statement in SQL Server.
+7. `SaveChanges()` executes the **DELETE** statement in SQL Server.
 8. The Gantt Chart refreshes to remove the deleted task from the UI.
 
 **Batch Operations (Multiple CRUD in one request)**
 
-Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring transactional consistency.
+Batch operations receive the newly added records along with a set of updated records and deleted records in a single request so every change is applied consistently.
 
 In **Controllers/GanttController.cs**, the batch method is implemented as:
 
@@ -992,9 +996,9 @@ This guide demonstrates how to:
 3. Create data models and DbContext for database communication. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings and register services in Program.cs. [🔗](#step-5-configure-the-connection-string)
 5. Create REST API endpoints in a controller for CRUD operations. [🔗](#step-6-create-the-gantt-api-controller)
-6. Implement searching, filtering, and sorting in the REST API. [🔗](#step-5-implement-searching-feature)
+6. Implement searching, filtering, and sorting in the REST API. [🔗](#step-4-implement-searching-feature)
 7. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-7-perform-crud-operations)
-8. Handle batch operations for bulk data modifications. [🔗](#step-8-perform-crud-operations)
+8. Handle batch operations for bulk data modifications. [🔗](#step-7-perform-crud-operations)
 
 The application now provides a complete solution for managing tasks with a modern, user-friendly interface using Entity Framework Core with SQL Server and REST API endpoints via UrlAdaptor.
 

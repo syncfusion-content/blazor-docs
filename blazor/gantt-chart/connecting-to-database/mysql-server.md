@@ -36,8 +36,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.2.1 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | MySQL Server | 8.0.41 or later | Database server |
-| Syncfusion.Blazor.Gantt | {{site.blazorversion}} | Gantt Chart and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Gantt Chart components |
+| Syncfusion.Blazor.Gantt | -v {{site.blazorversion}} | Gantt Chart and UI components |
+| Syncfusion.Blazor.Themes | -v {{site.blazorversion}} | Styling for Gantt Chart components |
 | Microsoft.EntityFrameworkCore | 10.0.2 or later | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.Tools |10.0.2 or later | Tools for managing database migrations |
 | Pomelo.EntityFrameworkCore.MySql | 10.0.2 or later | MySQL provider for Entity Framework Core |
@@ -102,8 +102,8 @@ For this guide, a Blazor application named **GanttMySql** has been created. Once
 Install-Package Microsoft.EntityFrameworkCore -Version 10.0.2
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 10.0.2
 Install-Package Pomelo.EntityFrameworkCore.MySql -Version 10.0.2
-Install-Package Syncfusion.Blazor.Gantt -Version {{site.blazorversion}}
-Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Gantt -v {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Themes -v {{site.blazorversion}}
 ```
 
 **Method 2: Using NuGet Package Manager UI**
@@ -113,8 +113,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
    - **Microsoft.EntityFrameworkCore** (version 10.0.2 or later)
    - **Microsoft.EntityFrameworkCore.Tools** (version 10.0.2 or later)
    - **Pomelo.EntityFrameworkCore.MySql** (version 10.0.2 or later)
-   - **Syncfusion.Blazor.Gantt** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **Syncfusion.Blazor.Gantt** (-v {{site.blazorversion}})
+   - **Syncfusion.Blazor.Themes** (-v {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -464,7 +464,7 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt component’s [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
+Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor Gantt Chart
 
@@ -484,7 +484,7 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 @inject TaskRepository TaskService
 
-<SfGantt TValue="TaskDataModel" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true" EnableContextMenu="true" 
+<SfGantt TValue="TaskDataModel" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true"
          Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
 
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -513,7 +513,6 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 **Component Explanation:**
 
-- **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component.
 - **`@inject TaskRepository`**: Injects the repository to access database methods.
 - **`<SfGantt>`**: The Gantt Chart component displays hierarchical tasks, dependencies, baselines, durations, and progress on an interactive timeline for scheduling.
 - **`<GanttColumns>`**: Defines individual columns in the Gantt Chart.
@@ -567,11 +566,14 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
                 {
                     dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
                 }
-
-                // Apply filter operation if filter criteria exists
+                // Apply Filter operation if filter criteria exists
                 if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-                {
-                    dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                {                
+                    if (dataManagerRequest.Where[0].Field != null &&    dataManagerRequest.Where[0].Field == @nameof(TaskDataModel. ParentID)){}
+                    else
+                    {
+                        DataSource = DataOperations.PerformFiltering    (DataSource, dataManagerRequest.Where,  dataManagerRequest.Where[0].Operator);
+                    }
                 }
 
                 // Apply sort operation if sort criteria exists
@@ -749,8 +751,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 
 ```cshtml
 <SfGantt TValue="TaskDataModel"       
-        AllowFiltering="true"
-        Toolbar="@ToolbarItems">
+        AllowFiltering="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>    
     <!-- Gantt columns configuration -->
 </SfGantt>
@@ -761,7 +762,6 @@ Filtering allows the user to restrict data based on column values using a menu i
 
 ```csharp
 @code {
-    private List<string> ToolbarItems = new List<string> { "Search"};
     /// <summary>
     /// CustomAdaptor class to handle Gantt Chart data operations with MySQL using Entity Framework
     /// </summary>
@@ -782,16 +782,14 @@ Filtering allows the user to restrict data based on column values using a menu i
         {
             IEnumerable<TaskDataModel> dataSource = await _taskService!.GetTasksAsync();
 
-            // Handling Search
-            if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
-            {
-                dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-            }
-
             // Handling Filtering
             if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-            {
-                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where,  dataManagerRequest.Where[0].Operator);
+            {                
+                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskDataModel.ParentID)){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                }
             }
 
             int totalRecordsCount = dataSource.Cast<TaskDataModel>().Count();            
@@ -827,9 +825,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 
 ```cshtml
 <SfGantt TValue="TaskDataModel"
-        AllowSorting="true" 
-        AllowFiltering="true" 
-        Toolbar="@ToolbarItems">
+        AllowSorting="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <!-- Gantt columns configuration -->
 </SfGantt>
@@ -839,7 +835,6 @@ Sorting enables the user to arrange records in ascending or descending order bas
 
 ```csharp
 @code {
-    private List<string> ToolbarItems = new List<string> { "Search"};
     /// <summary>
     /// CustomAdaptor class to handle Gantt Chart data operations with MySQL using Entity Framework
     /// </summary>
@@ -859,18 +854,6 @@ Sorting enables the user to arrange records in ascending or descending order bas
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key =   null)
         {
             IEnumerable<TaskDataModel> dataSource = await _taskService!.GetTasksAsync();
-
-            // Handling Search
-            if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
-            {
-                dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
-            }
-
-            // Handling Filtering
-            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
-            {
-                dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where,  dataManagerRequest.Where[0].Operator);
-            }
 
              // Handling Sorting
             if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
@@ -903,7 +886,7 @@ Sorting feature is now active.
 
 CustomAdaptor methods enable users to create, read, update, and delete records directly from the Gantt Chart. Each operation calls corresponding data layer methods in **TaskRepository.cs** to execute MySQL commands.
 
-Add the Gantt **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+Add the Gantt Chart **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
 ```cshtml
 <SfGantt TValue="TaskDataModel"
@@ -946,7 +929,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/TaskRepository.cs**, implement the insert method:
 
 ```csharp
-public async Task AddTaskAsync(TaskData value)
+public async Task AddTaskAsync(TaskData task)
 {
      if (task == null)
      throw new ArgumentNullException(nameof(task), "Task cannot be null");
@@ -1207,7 +1190,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
 @inject TaskRepository TaskService
 
-<SfGantt TValue="TaskDataModel" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true" EnableContextMenu="true" 
+<SfGantt TValue="TaskDataModel" Height="500px" Width="100%" AllowSorting="true" AllowFiltering="true"
          Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
 
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -1247,7 +1230,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     }   
 
     /// <summary>
-    /// Custom DataAdaptor to handle Gantt data operations with MySQL using EF Core.
+    /// Custom DataAdaptor to handle Gantt Chart data operations with MySQL using EF Core.
     /// Bridges Syncfusion DataManager requests to the repository.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
@@ -1425,6 +1408,6 @@ This guide demonstrates how to:
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
 5. Implement the repository pattern for data access. [🔗](#step-6-create-the-repository-class)
 6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting and CRUD operations. [🔗](#step-1-install-and-configure-syncfusion-blazor-gantt-components)
-7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
+7. Handle bulk operations and batch updates. [🔗](#step-8-perform-crud-operations)
 
 The application now provides a complete solution for managing task data with a modern, user-friendly interface.
