@@ -40,7 +40,7 @@ Before integrating Amazon S3 with Syncfusion:
 
 #### Create an S3 Bucket
 
- - Log into [AWS Console](https://console.aws.amazon.com/) → Navigate to S3
+ - Log into [AWS Console](https://console.aws.amazon.com) → Navigate to S3
  - Click Create Bucket. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html) for more details.
  - Provide a DNS‑compliant bucket name. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for more details.
  - Choose the AWS region. Click this [link](https://docs.aws.amazon.com/general/latest/gr/s3.html) for more details.
