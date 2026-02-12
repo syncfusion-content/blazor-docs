@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Gantt Chart Connected to SQL Server via Dapper | Syncfusion
-description: Bind SQL Server data to Blazor Gantt Chart using Dapper with complete CRUD, filtering, sorting, paging and advanced data operations.
+description: Bind SQL Server data to Blazor Gantt Chart using Dapper with complete CRUD, filtering, sorting and advanced data operations.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -459,7 +459,7 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
 
         /// <summary>
         /// ReadAsync retrieves records from the database and applies data operations.
-        /// This method executes when the Gantt initializes and when filtering, searching, sorting, or paging occurs.
+        /// This method executes when the Gantt initializes and when filtering, searching, sorting occurs.
         /// </summary>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
@@ -485,8 +485,7 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
                 {
                     dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
                 }
-
-                // Calculate total record count before paging for accurate pagination
+                
                 int totalRecordsCount = dataSource.Cast<TaskDataModel>().Count();
 
                 // Apply skip operation
@@ -524,8 +523,8 @@ The `CustomAdaptor` class has been successfully implemented with all data operat
 * [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) - Applies search criteria to the collection.
 * [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) - Filters data based on conditions.
 * [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) - Sorts data by one or more fields.
-* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records for paging.
-* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records for paging.
+* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records.
+* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records.
 
 ---
 

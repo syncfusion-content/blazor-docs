@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind Data and Perform CRUD Action with UrlAdaptor in Syncfusion Blazor Gantt Chart
+title: Bind UrlAdaptor with CRUD Actions in Blazor Gantt Chart | Syncfusion
 description: Learn about bind data and performing CRUD operations using UrlAdaptor in Syncfusion Blazor Gantt Chart.
 platform: Blazor
 control: Gantt Chart
@@ -38,7 +38,7 @@ namespace URLAdaptor.Models
         public int? ParentID { get; set; }
         public int Progress { get; set; }
         public string? Predecessor { get; set; }
-        public string Duration { get; set; } ;
+        public string Duration { get; set; }
 
         public static List<TaskData> GetAllRecords()
         {
@@ -318,7 +318,7 @@ When you run the application, the Blazor Gantt Chart  will display data fetched 
  
 ![UrlAdaptor Data](../images/url-adaptor.png)
  
-> * The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart supports server-side operations such as **searching**, **sorting**, **filtering**, and **paging**. These can be handled using methods like [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_), and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) from the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
+> * The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart supports server-side operations such as **searching**, **sorting** and **filtering**. These can be handled using methods like [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_), and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) from the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 ## Handling searching operation
@@ -524,7 +524,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every Gantt action, facilitating server-side operations.
 
-**CRUD Operations Mapping**
+**CRUD operations mapping**
 
 CRUD operations within the Gantt Chart can be mapped to server-side controller actions using specific properties:
 
@@ -534,7 +534,7 @@ CRUD operations within the Gantt Chart can be mapped to server-side controller a
 4. **CrudUrl**: Specifies a single URL for all CRUD operations.
 5. **BatchUrl**: Specifies the URL for batch editing.
 
-To enable editing in Blazor Gantt Chart, refer to the editing [documentation](https://blazor.syncfusion.com/documentation/gantt/editing). In the example below, the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) property is configured to display toolbar items for editing purposes.
+To enable editing in Blazor Gantt Chart, refer to the editing [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks). In the example below, the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) property is configured to display toolbar items for editing purposes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -683,7 +683,7 @@ To delete existing records, use the `RemoveUrl` property to specify the controll
 /// Remove a specific data item from the data collection.
 /// </summary>
 /// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
-/// <return>Returns void.</return>
+/// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Remove")]
 public void Remove([FromBody] CRUDModel<TaskData> deletedRecord)

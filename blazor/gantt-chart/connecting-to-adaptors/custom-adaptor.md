@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind Data and Perform CRUD with CustomAdaptor in Syncfusion Blazor Gantt Chart
+title: Bind CustomAdaptor with CRUD Action in Blazor Gantt Chart| Syncfusion
 description: Learn all about CustomAdaptor in the Syncfusion Blazor Gantt Chart and how to handle data loading, searching, filtering, sorting, and CRUD operations.
 platform: Blazor
 control: Gantt Chart
@@ -171,7 +171,6 @@ The following example demonstrates how to implement custom data binding using a 
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
             {
-                //Paging
                 DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
             }
             if (dm.Take != 0)
@@ -212,7 +211,7 @@ The following example demonstrates how to inject a service into the Custom Adapt
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
 
-<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="true">
+<SfGantt TValue="TaskData" Height="450px" Width="1000px">
      <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
@@ -298,7 +297,6 @@ The following example demonstrates how to inject a service into the Custom Adapt
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
             {
-                //Paging
                 DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
             }
             if (dm.Take != 0)
@@ -360,8 +358,8 @@ The following example demonstrates how to implement searching operation for cust
 
         Tasks = Enumerable.Range(1, 75).Select(x => new TaskData
         {
-            TaskID = 0+ x,
-            TaskName = $"Task {0 + x}",
+            TaskID = x,
+            TaskName = $"Task {x}",
             StartDate = baseDate.AddDays(x % 10),           
             EndDate = baseDate.AddDays((x % 10) + 3),       
             Progress = rand.Next(0, 101)                    
@@ -582,7 +580,7 @@ The following example demonstrates how to implement the sorting operation for cu
                 dataSource = DataOperations.PerformSorting(dataSource, dm.Sorted);
             }
 
-            // Count the total number of records (useful if paging/virtualization is enabled).
+            // Count the total number of records 
             int count = dataSource.Count();
 
             // Return result / count as DataResult if requested.
@@ -710,7 +708,6 @@ The following example demonstrates how to implement CRUD operations for custom-b
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
             {
-                //Paging
                 DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
             }
             if (dm.Take != 0)
@@ -761,11 +758,11 @@ Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.Sf
 
 To enable custom parameters in data requests for the Gantt Chart, follow these steps:
 
-1. **Bind the Query Object to the Gantt Chart:**  
+1. **Bind the Query object to the Gantt Chart:**  
     Assign the initialized Query object to the Gantt’s `Query` property.
-2. **Initialize the Query Object:**  
+2. **Initialize the Query object:**  
     Create a new instance of the `Query` class and use the `AddParams` method to add your custom parameters.
-3. **Access Parameters in the Custom Adaptor:**  
+3. **Access parameters in the custom adaptor:**  
     Access the parameters via `Params` inside the custom adaptor and apply them as required for server-side logic.
 
 The following example demonstrates how to send additional parameters to the server.

@@ -506,7 +506,6 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 </SfGantt>
 
-
 @code {
     // CustomAdaptor class will be added in the next step
 }
@@ -516,9 +515,9 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 
 - **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component.
 - **`@inject TaskRepository`**: Injects the repository to access database methods.
-- **`<SfGantt>`**: The Gantt component displays hierarchical tasks, dependencies, baselines, durations, and progress on an interactive timeline for scheduling.
-- **`<GanttColumns>`**: Defines individual columns in the Gantt.
-- **`<GanttEditSettings>`**: Configures Edit settings in Gantt.
+- **`<SfGantt>`**: The Gantt Chart component displays hierarchical tasks, dependencies, baselines, durations, and progress on an interactive timeline for scheduling.
+- **`<GanttColumns>`**: Defines individual columns in the Gantt Chart.
+- **`<GanttEditSettings>`**: Configures Edit settings in Gantt Chart.
 
 The Home component has been updated successfully with Gantt Chart.
 
@@ -528,7 +527,7 @@ The Home component has been updated successfully with Gantt Chart.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart can bind data from a **MySQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to `CustomAdaptor` for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It handles all data operations including reading, searching, filtering, sorting, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific Gantt functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It handles all data operations including reading, searching, filtering, sorting, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific Gantt Chart functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -541,8 +540,8 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
     private static TaskRepository? _taskService { get; set; }
 
     /// <summary>
-    /// CustomAdaptor class bridges Gantt interactions with database operations.
-    /// This adaptor handles all data retrieval and manipulation for the Gantt.
+    /// CustomAdaptor class bridges Gantt Chart interactions with database operations.
+    /// This adaptor handles all data retrieval and manipulation for the Gantt Chart.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -554,7 +553,7 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
 
         /// <summary>
         /// ReadAsync retrieves records from the database and applies data operations.
-        /// This method executes when the Gantt initializes and when filtering, searching, sorting, or paging occurs.
+        /// This method executes when the Gantt Chart initializes and when filtering, searching, sorting occurs.
         /// </summary>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
@@ -581,7 +580,6 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
                     dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
                 }
 
-                // Calculate total record count before paging for accurate pagination
                 int totalRecordsCount = dataSource.Cast<TaskDataModel>().Count();
 
                 // Apply skip operation
@@ -619,12 +617,12 @@ The `CustomAdaptor` class has been successfully implemented with all data operat
 * [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) - Applies search criteria to the collection.
 * [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) - Filters data based on conditions.
 * [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) - Sorts data by one or more fields.
-* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records for paging.
-* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records for paging.
+* [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) - Skips a defined number of records.
+* [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) - Retrieves a specified number of records.
 
 ---
 
-### Step 4: Add Toolbar with CRUD and search options
+### Step 4: Add toolbar with CRUD and search options
 
 The toolbar provides buttons for adding, editing, deleting records, and searching the data.
 
@@ -695,7 +693,7 @@ Searching allows the user to find records by entering keywords in the search box
     private List<string> ToolbarItems = new List<string> { "Search"};
     
     /// <summary>
-    /// CustomAdaptor class to handle gantt data operations with MySQL using Entity Framework
+    /// CustomAdaptor class to handle Gantt Chart data operations with MySQL using Entity Framework
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -765,7 +763,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 @code {
     private List<string> ToolbarItems = new List<string> { "Search"};
     /// <summary>
-    /// CustomAdaptor class to handle gantt data operations with MySQL using Entity Framework
+    /// CustomAdaptor class to handle Gantt Chart data operations with MySQL using Entity Framework
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -843,7 +841,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 @code {
     private List<string> ToolbarItems = new List<string> { "Search"};
     /// <summary>
-    /// CustomAdaptor class to handle gantt data operations with MySQL using Entity Framework
+    /// CustomAdaptor class to handle Gantt Chart data operations with MySQL using Entity Framework
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -994,7 +992,7 @@ private static void ApplyDefaults(TaskDataModel task)
 4. `SaveChangesAsync()` persists the record to the MySQL database.
 5. The Gantt Chart automatically refreshes to display the new record.
 
-Now the new task is persisted to the database and reflected in the gantt.
+Now the new task is persisted to the database and reflected in the Gantt Chart.
 
 **Update**
 
@@ -1056,11 +1054,11 @@ public async Task UpdateTaskAsync(TaskDataModel task)
 6. `SaveChangesAsync()` persists the changes to the MySQL database.
 7. The Gantt Chart refreshes to display the updated record.
 
-Now modifications are synchronized to the database and reflected in the gantt UI.
+Now modifications are synchronized to the database and reflected in the Gantt Chart UI.
 
 **Delete**
 
-Record deletion allows task to be removed directly from the Gantt Chart. The adaptor captures the delete request, executes the corresponding **MySQL DELETE** operation, and updates both the database and the gantt to reflect the removal.
+Record deletion allows task to be removed directly from the Gantt Chart. The adaptor captures the delete request, executes the corresponding **MySQL DELETE** operation, and updates both the database and the Gantt Chart to reflect the removal.
 
 In **Home.razor**, implement the `RemoveAsync` method to handle record deletion within the `CustomAdaptor` class:
 
@@ -1123,7 +1121,7 @@ public async Task RemoveTaskAsync(int? key)
 7. `SaveChangesAsync()` executes the DELETE statement in MySQL.
 8. The Gantt Chart refreshes to remove the deleted record from the UI.
 
-Now tasks are removed from the database and the gantt UI reflects the changes immediately.
+Now tasks are removed from the database and the Gantt Chart UI reflects the changes immediately.
 
 **Batch update**
 
@@ -1287,7 +1285,6 @@ Here is the complete and final `Home.razor` component with all features integrat
 
             int count = dataSource.Cast<TaskDataModel>().Count();   
 
-            // Paging
             if (dm.Skip != 0) dataSource = DataOperations.PerformSkip(dataSource, dm.Skip);
             if (dm.Take != 0) dataSource = DataOperations.PerformTake(dataSource, dm.Take); 
 
@@ -1427,7 +1424,7 @@ This guide demonstrates how to:
 3. Create data models and DbContext for database communication. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
 5. Implement the repository pattern for data access. [🔗](#step-6-create-the-repository-class)
-6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-syncfusion-blazor-gantt-components)
+6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting and CRUD operations. [🔗](#step-1-install-and-configure-syncfusion-blazor-gantt-components)
 7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
 
 The application now provides a complete solution for managing task data with a modern, user-friendly interface.
