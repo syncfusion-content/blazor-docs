@@ -75,6 +75,8 @@ namespace TreeGridComponent.Data {
 
 ![Searching in Blazor TreeGrid](images/blazor-treegrid-search.png)
 
+N> **Performance tip:** Avoid redundant collection conversions like `.ToList().Cast<T>().ToArray()` or calling `.ToList()` when your data is already the correct type. These patterns allocate extra collections and increase memory pressure. Return the appropriate type (`IEnumerable<T>`, `List<T>`, or `T[]`) directly to keep examples simple and efficient.
+
 ## Initial search
 
 To apply search during initial rendering, configure the `Fields`, `Operator`, `Key`, and `IgnoreCase` properties in the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html).
@@ -144,13 +146,13 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Blazor TreeGri with Initial Search](images/blazor-treegrid-initial-search.png)
+![Blazor TreeGrid with Initial Search](images/blazor-treegrid-initial-search.png)
 
 N> By default, the TreeGrid searches all bound column values. To customize this behavior, define the `Fields` property in [TreeGridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Fields) property.
 
 ## Search Operators
 
-The search operator can be defined in the [Operators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Operator) property of the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html) to configure specific searching.
+The search operator is configured via the [Operators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Operator) property on [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html), which lets you choose how values are matched during a search.
 
 The following operators are supported:
 
@@ -255,7 +257,7 @@ By default, the TreeGrid searches all visible columns. To restrict the search to
     var SpecificCols = (new string[] { "TaskId", "Duration" });
 }
 
-<SfTreeGrid IdMapping="TaskId" DataSource="@TreeGridData" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@Tool">
+<SfTreeGrid  @ref="TreeGrid" IdMapping="TaskId" DataSource="@TreeGridData" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@Tool">
     <TreeGridSearchSettings Fields="@SpecificCols"></TreeGridSearchSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -267,6 +269,7 @@ By default, the TreeGrid searches all visible columns. To restrict the search to
 </SfTreeGrid>
 
 @code{
+    SfTreeGrid<BusinessObject> TreeGrid;
     public List<BusinessObject> TreeGridData { get; set; }
     protected override void OnInitialized()
     {
