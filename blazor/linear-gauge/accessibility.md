@@ -15,7 +15,7 @@ The accessibility compliance for the Blazor Linear Gauge component is outlined b
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility) | AAA |
+| [WCAG 2.2 Support](../common/accessibility) | AA |
 | [Section 508 Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | [Screen Reader Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Right-To-Left Support](../common/accessibility) | Not Applicable |

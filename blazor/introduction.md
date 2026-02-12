@@ -442,6 +442,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"><span class="sf-home-icon sf-icon-richtexteditor"></span>Rich Text Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp"><span class="sf-home-icon sf-icon-markdowneditor"></span>Markdown Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started"><span class="sf-home-icon sf-icon-image_editor"></span>Image Editor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started"><span class="sf-home-icon sf-icon-blockeditor"></span>Block Editor</a></div>
         <div><p class="controlcategory">LAYOUT</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dialog/getting-started"><span class="sf-home-icon sf-icon-dialog"></span>Dialog</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp"><span class="sf-home-icon sf-icon-predefineddialogs"></span>Predefined Dialog</a></div>
@@ -453,6 +454,9 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/avatar/getting-started"><span class="sf-home-icon sf-icon-avatar"></span>Avatar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/media-query/getting-started"><span class="sf-home-icon sf-icon-mediaquery"></span>Media Query</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/timeline/getting-started"><span class="sf-home-icon sf-icon-timeline"></span>Timeline</a></div>
+        <div><p class="controlcategory">Smart AI</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started"><span class="sf-home-icon sf-icon-button"></span>Smart Paste Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started"><span class="sf-home-icon sf-icon-textarea"></span>Smart TextArea</a></div>
     </td>
     <td>
         <div><p class="controlcategory-topics">DATA VISUALIZATION</p></div>
@@ -502,7 +506,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/color-picker/getting-started"><span class="sf-home-icon sf-icon-colorpicker"></span>Color Picker</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-upload/getting-started"><span class="sf-home-icon sf-icon-fileupload"></span>File Upload</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-slider/getting-started"><span class="sf-home-icon sf-icon-rangeslider"></span>Range Slider</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp"><span class="sf-home-icon sf-icon-textarea"></span>Textarea</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp"><span class="sf-home-icon sf-icon-textarea"></span>TextArea</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started"><span class="sf-home-icon sf-icon-toggleswitchbutton"></span>Toggle Switch Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/signature/getting-started"><span class="sf-home-icon sf-icon-signature"></span>Signature</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rating/getting-started"><span class="sf-home-icon sf-icon-rating"></span>Rating</a></div>
@@ -549,70 +553,6 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/message/getting-started"><span class="sf-home-icon sf-icon-message"></span>Message</a></div>
     </td>
 </tr>
-</table>
-
-## Smart Component list
-
-<style>
-#table
-{
-border:0 !important;
-line-height: 160% !important;
-}
-
-tr
-{
-border:0 !important;
-}
-
-td
-{
-border:0 !important;
-vertical-align: top;
-}
-
-.controlanchorlink
-{
-font-size: 14px !important;
-text-decoration: none!important;
-text-align: left!important;
-padding: 1px 0px;
-}
-.controlcategory-topics
-{
-font-size: 14px !important;
-font-weight: 500!important;
-border:0 !important;
-line-height: 20px;
-}
-.controlcategory
-{
-font-size: 14px !important;
-font-weight: 500!important;
-border:0 !important;
-text-align: left!important;
-line-height: 20px;
-padding-top: 20px;
-}
-</style>
-
-<table id="table">
-    <tbody>
-        <colgroup>
-            <col style="width: 25%">
-            <col style="width: 25%">
-            <col style="width: 25%">
-            <col style="width: 25%">
-        </colgroup>
-    </tbody>
-    <tr>
-        <td>
-            <div><p class="controlcategory-topics">Smart AI</p></div>
-            <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started">Smart Paste Button</a></div>
-            <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started">Smart TextArea</a></div>
-            <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app">Smart PDF Viewer</a></div>
-        </td>
-    </tr>
 </table>
 
 ## Getting Help
