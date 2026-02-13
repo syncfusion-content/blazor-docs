@@ -35,7 +35,7 @@ Each benefit plays a crucial role in applications dealing with map visualization
 Dapper has almost no overhead. It runs SQL queries directly using ADO.NET under the hood, ensuring fast data access even when working with large datasets used in map layers or marker clustering.
 
 ### **SQLite Control**  
-Since SQLite is a lightweight, file‑based database, Dapper’s raw SQL approach provides full control over the schema, queries, and indexing—helpful when handling geolocation data.
+Since SQLite is a lightweight, file‑based database, Dapper’s raw SQL approach provides full control over the schema, queries, and indexing—helpful when handling geo-location data.
 
 ### **Simple and Lightweight**  
 There is no change tracking or lazy loading. You work directly with SQL, making it a minimalistic and predictable solution ideal for projects where performance matters more than ORM automation.
@@ -44,7 +44,7 @@ There is no change tracking or lazy loading. You work directly with SQL, making 
 Dapper maps query results to C# classes without configuration, letting you easily bind database results such as latitude, longitude, and marker values to the Maps component.
 
 ### **Built-in Security**  
-By default, Dapper uses parameterized SQL commands, offering protection against SQL injection—espe
+By default, Dapper uses parameterized SQL commands, offering protection against SQL injection—especially when you use parameterized queries.
 
 ## Prerequisites
 
