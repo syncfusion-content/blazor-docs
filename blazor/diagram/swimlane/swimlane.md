@@ -25,12 +25,12 @@ To create a swimlane, you have to define the swimlane object and add it to the [
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -40,11 +40,11 @@ To create a swimlane, you have to define the swimlane object and add it to the [
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
         };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
             swimlane.Header.Style = new TextStyle()
             {
@@ -71,7 +71,7 @@ The swimlane appears as follows.
 
 ![Add swimlane](Swimlane-images/Swimlane_Empty.PNG)
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneCreation/SwimlaneCreation).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneCreation/SwimlaneCreation.razor).
 
 >Note: Swimlane elements (phase, lane, and lane children) cannot be added at runtime using [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
@@ -86,12 +86,12 @@ The following code example explains how to define the swimlane header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -109,11 +109,11 @@ The following code example explains how to define the swimlane header.
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
         };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
              swimlane.Header.Style = new TextStyle()
              {
@@ -134,7 +134,7 @@ The following code example explains how to define the swimlane header.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSsjjwUwQKDpUj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeader)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneHeader/SwimlaneHeaderSample.razor)
 
 ![Swimlane Header](Swimlane-images/Swimlane_Header.PNG)
 
@@ -147,12 +147,12 @@ The following code example explains how to customize a swimlane header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -175,11 +175,11 @@ The following code example explains how to customize a swimlane header.
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
         };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
-    private void OnNodeCreating(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject diagramObject)
     {
-        if (obj is Swimlane swimlane)
+        if (diagramObject is Swimlane swimlane)
         {
             foreach (Phase phase in swimlane.Phases)
             {
@@ -195,7 +195,7 @@ The following code example explains how to customize a swimlane header.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLysXtQgmbodbwe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderCustomization)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneHeader/SwimlaneHeaderCustomization.razor)
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Customization.PNG)
 
@@ -206,7 +206,7 @@ The following code example explains how to define a Swimlane header annotation t
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections">
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections">
     <DiagramTemplates>
         <AnnotationTemplate>
             @if (context is Annotation annotation)
@@ -232,7 +232,7 @@ The following code example explains how to define a Swimlane header annotation t
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -262,13 +262,13 @@ The following code example explains how to define a Swimlane header annotation t
             Width = 450,
         };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtreWDXmqwuTgXyU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderTemplate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneHeader/SwimlaneHeaderTemplate.razor)
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Template.PNG)
 
@@ -289,12 +289,12 @@ The following code example explains how to set the orientation of the swimlane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@_swimlaneCollections" />
 
 @code
 {
     //Define diagram's swimlane collection.
-    DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
     {
@@ -305,13 +305,13 @@ The following code example explains how to set the orientation of the swimlane.
             Orientation = Orientation.Horizontal,
         };
         // Add swimlane.
-        SwimlaneCollections.Add(swimlane);
+        _swimlaneCollections.Add(swimlane);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBoWDNwUPZKWhnw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneCreation/SwimlaneOrientation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneCreation/SwimlaneOrientation.razor)
 
 | Orientation | Output |
 |---|---|
@@ -330,13 +330,13 @@ The following example shows how to apply custom spacing using `ChildrenSpacing` 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 <!-- Diagram component rendering a swimlane layout -->
-<SfDiagramComponent Height="600px" Width="90%" Swimlanes="@swimlaneCollections">
+<SfDiagramComponent Height="600px" Width="90%" Swimlanes="@_swimlaneCollections">
 </SfDiagramComponent>
 @code {
     /// <summary>
     /// Collection of swimlanes used in the SfDiagramComponent.
     /// </summary>
-    DiagramObjectCollection<Swimlane> swimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    private DiagramObjectCollection<Swimlane> _swimlaneCollections = new DiagramObjectCollection<Swimlane>();
     /// <summary>
     /// Initializes the swimlane, phases, lanes, and child nodes for the diagram.
     /// </summary>
@@ -361,7 +361,7 @@ The following example shows how to apply custom spacing using `ChildrenSpacing` 
                 OffsetY = 100,
             };
         // Create swimlane structure
-        swimlaneCollections = new DiagramObjectCollection<Swimlane>()
+        _swimlaneCollections = new DiagramObjectCollection<Swimlane>()
         {
             new Swimlane()
             {
@@ -426,7 +426,7 @@ The following example shows how to apply custom spacing using `ChildrenSpacing` 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrosXjmqFjxamFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/ChildrenSpacingProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/ChildrenSpacingProperty/ChildrenSpacingProperty.razor)
 
 
 ## Interaction
