@@ -11,7 +11,7 @@ documentation: ug
 
 ### OverView
 
-The Amazon S3 (Simple Storage Service) cloud file provider enables the Syncfusion Blazor File Manager to access and manage files stored in an Amazon S3 bucket. With this provider, users can perform essential operations such as reading, uploading, renaming, downloading, deleting, and searching directly in S3. It seamlessly with the Syncfusion File Manager UI, giving users a familiar, explorer‑style experience while leveraging Amazon S3’s scalable and highly available object storage.
+The Amazon S3 (Simple Storage Service) cloud file provider enables the Syncfusion Blazor File Manager to access and manage files stored in an Amazon S3 bucket. With this provider, users can perform essential operations such as reading, uploading, renaming, downloading, deleting, and searching directly in S3. It integrates seamlessly with the Syncfusion File Manager UI, giving users a familiar, explorer-style experience while leveraging Amazon S3's scalable and highly available object storage.
 
 ### Table of Contents
 
@@ -23,17 +23,11 @@ The Amazon S3 (Simple Storage Service) cloud file provider enables the Syncfusio
 6. [Configuring Syncfusion File Manager UI](#configure-ui)
 7. [Supported File Operations](#supported-ops)
 8. [Security Recommendations](#security)
-9. [Troubleshooting](#troubleshooting)
-
-<a id="intro-s3"></a>
-### 1. Introduction to amazon S3
-
-Amazon Simple Storage Service (Amazon S3) is an object storage service. It provides features to optimize, organize, and configure access to your data to meet your specific business, organizational, and compliance requirements.
 
 <a id="intro-s3"></a>
 ### 1. Introduction to Amazon S3
 
-Amazon Simple Storage Service (Amazon S3) is AWS’s object storage service for storing and retrieving any amount of data. S3 is durable, scalable, and pay‑as‑you‑go. In this guide the Syncfusion Blazor File Manager connects to S3 through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
+Amazon Simple Storage Service (Amazon S3) is AWS's object storage service for storing and retrieving any amount of data. S3 is durable, scalable, and pay‑as‑you‑go. In this guide the Syncfusion Blazor File Manager connects to S3 through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
 
 <a id="prerequisites"></a>
 ### 2. Prerequisites
@@ -50,7 +44,7 @@ Before you integrate Amazon S3 with the Syncfusion Blazor File Manager, ensure y
 
  - Log into [AWS Console](https://console.aws.amazon.com) -> Navigate to S3
  - Proceed by clicking `Create Bucket`. A bucket is a container for objects. An object is a file and any metadata that describes that file. The Amazon S3 provider requires a top-level root folder in your bucket to place all required files and subfolders inside this root. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html) for more details.
- - Provide a DNS‑compliant bucket name. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for more details.
+ - Provide a DNS-compliant bucket name. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for more details.
  - Choose the AWS region. Click this [link](https://docs.aws.amazon.com/general/latest/gr/s3.html) for more details.
 
 <a id="backend-setup"></a>
