@@ -2,7 +2,7 @@
 
 layout: post
 title: Blazor Maps connected to SQLite via Dapper | Syncfusion
-description: Learn how to bind SQLite data to Syncfusion Blazor Maps using Dapper, with complete explanations for every step including project setup, database creation, Dapper integration, and Maps data binding.
+description: Learn how to bind SQLite data to Syncfusion Blazor Maps using Dappers.
 platform: Blazor
 control: Maps
 documentation: ug
