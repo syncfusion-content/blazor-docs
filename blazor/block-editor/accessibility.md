@@ -44,14 +44,14 @@ The following ARIA attributes are recommended for the Blazor Block Editor to imp
 
 | Attribute | Purpose |
 |---|---|
-| `contenteditable="true"` + `role="textbox"` | Marks the editable block container as an editable text region. The editable region must have an accessible name (use `aria-label` or `aria-labelledby`) to satisfy input-field-name checks. |
-| `aria-label` / `aria-labelledby` | Provides the accessible name for the editor, toolbar, or specific editable region. The running sample is missing this on the main editable container (axe reports `aria-input-field-name`). |
-| `aria-multiline="true"` | Indicates the textbox accepts multiple lines; assists AT in providing correct editing behavior. |
+| `contenteditable="true"` + `role="textbox"` | Marks the editable block container as an editable text region. The editable region must have an accessible name to satisfy input-field-name checks. |
 | `role="toolbar"` | Applied to inline formatting toolbars and action-menu containers to group related controls for assistive technologies. |
-| `aria-pressed` | Indicates toggle state for formatting buttons (e.g., Bold, Italic). |
-| `aria-haspopup` / `aria-controls` / `aria-expanded` | Used by menus and popups (command/context/action menus). `aria-controls` should reference the popup element `id`; `aria-expanded` reflects open/closed state. |
-| `role="grid"` (table blocks) | Table blocks are exposed as a grid/table for screen readers and keyboard navigation; ensure header cells (`th`) and proper `scope`/`headers` attributes are present. |
-| `alt` (on `img`) | Image blocks must include meaningful `alt` text; missing `alt` attributes trigger `image-alt` violations. |
+| `role="grid"` | Table blocks are exposed as a grid/table for screen readers and keyboard navigation; ensure header cells (`th`) and proper `scope`/`headers` attributes are present. |
+| `role="img"` | Ensure accessible name is present for informative images. |
+| `aria-label` / `aria-labelledby` | Provides the accessible name for the editor, toolbar, or specific editable region. The running sample is missing this on the main editable container (axe reports `aria-input-field-name`). |
+| `aria-orientation` | Specifies the orientation of the toolbar. |
+| `aria-disabled` | Indicates whether the toolbar or element is currently disabled and not interactive. |
+| `aria-haspopup` / `aria-expanded` | Used by menus and popups (command/context/action menus). `aria-expanded` reflects open/closed state. |
 | `aria-hidden` | Hides non-interactive or offscreen content (e.g., closed popups) from assistive technologies. |
 
 ## Keyboard interaction
