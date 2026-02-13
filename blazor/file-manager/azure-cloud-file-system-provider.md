@@ -36,12 +36,12 @@ Before you integrate Azure Blob Storage with the Syncfusion Blazor File Manager,
 - An active Microsoft Azure subscription
 - A Storage Account with Blob service enabled
 - A Blob Container and an optional root folder inside that container
-- Azure credentials: `accountName`, `accountKey`, and the target blob container name (blobName)
+- Azure credentials: `accountName`, `accountKey`, and `blobName`
 
 <a id="setup-azure"></a>
 ### 3. Setting Up Azure Blob Storage
 
-- Sign in to the [Azure Portal](https://portal.azure.com/) and [create a Storage account](https://learn.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal) with Blob service enabled.
+- Sign in to the [Azure Portal](https://portal.azure.com/) and [create a storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal) with Blob service enabled.
 - [Create a Blob Container](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?tabs=azure-portal#create-a-container) (example: files). See Azure docs for [container naming rules](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction#naming-and-referencing-containers-blobs-and-metadata).
 
 <a id="backend-setup"></a>
