@@ -11,7 +11,7 @@ documentation: ug
 
 ## Popup resize
 
-Dynamically adjust the size of the popup by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowResize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions are preserved while the component instance remains active.
+Dynamically adjust the size of the popup by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowResize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions are preserved while the component instance remains active.
 
 {% highlight Razor %}
 
@@ -53,11 +53,19 @@ In the following sample, `PopupHeight` is set to `500px`.
 
 Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component’s popup element to control stacking order.
 
+In the following sample, `ZIndex` is set to `2000`.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/popup-setting/popup-zindex.razor %}
+
+{% endhighlight %}
+
 Defaults to `1000`.
 
 ## Show popup on initial loading
 
-Show the popup when the component is initialized by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Created) event.
+Show the popup when the component is initialized by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Created) event.
 
 {% highlight Razor %}
 
@@ -94,6 +102,12 @@ The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.C
 ### Opened event
 
 The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Opened) event triggers when the popup opens.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/popup-setting/opened-event.razor %}
+
+{% endhighlight %}
 
 ### OnClose event
 

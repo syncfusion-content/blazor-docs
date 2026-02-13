@@ -167,6 +167,12 @@ Display a tooltip when hovering over ComboBox options by integrating the Tooltip
 
 In the following code , the CSS style that targets the `.e-list-item` class within the `.e-dropdownbase` class when it is in an active or active and hovered state. It sets the opacity property , which will make the elements appear transparent. This can be used to change the appearance of the dropdown list items when they are in a certain state.
 
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/selectitem-opacity.razor %}
+
+{% endhighlight %}
+
 ![Blazor ComboBox with opacity style](./images/style/blazor_combobox_opacity-style.png)
 
 ## Disable specific items in ComboBox
