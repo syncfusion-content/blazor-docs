@@ -2,7 +2,7 @@
 
 layout: post
 title: Blazor Chart connected to SQLite via Dapper | Syncfusion
-description: Learn how to bind SQLite data to Syncfusion Blazor Charts using Dapper, with complete explanations for every step including project setup, database creation, Dapper integration, and Charts data binding.
+description: Learn how to bind SQLite data to Syncfusion Blazor Charts using Dapper.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -34,7 +34,7 @@ Each benefit plays a crucial role in applications dealing with Chart visualizati
 Dapper has almost no overhead. It runs SQL queries directly using ADO.NET under the hood, ensuring fast data access even when working with large datasets used in chart data.
 
 ### **SQLite Control**  
-Since SQLite is a lightweight, file‑based database, Dapper’s raw SQL approach provides full control over the schema, queries, and indexing—helpful when handling geolocation data.
+Since SQLite is a lightweight, file‑based database, Dapper’s raw SQL approach provides full control over the schema, queries, and indexing—helpful when handling chart data.
 
 ### **Simple and Lightweight**  
 There is no change tracking or lazy loading. You work directly with SQL, making it a minimalistic and predictable solution ideal for projects where performance matters more than ORM automation.
@@ -43,7 +43,7 @@ There is no change tracking or lazy loading. You work directly with SQL, making 
 Dapper charts query results to C# classes without configuration, letting you easily bind database results such as name, SnapChartValues to the Chart component.
 
 ### **Built-in Security**  
-By default, Dapper uses parameterized SQL commands, offering protection against SQL injection—espe
+By default, Dapper uses parameterized SQL commands, offering protection against SQL injection—especially when you use parameterized queries.
 
 ## Prerequisites
 
