@@ -1,63 +1,100 @@
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
-<SfComboBox TValue="string" Query="RemoteDataQuery" TItem="OrdersDetails" >
-    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor" ></SfDataManager>
-    <ComboBoxFieldSettings Value="OrderID" Text="CustomerID"></ComboBoxFieldSettings>
+
+<SfComboBox TValue="string" TItem="OrdersDetails" Placeholder="Select customer">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <ComboBoxFieldSettings Value="CustomerID" Text="CustomerID"></ComboBoxFieldSettings>
 </SfComboBox>
 
-@code{
-
-    public Query RemoteDataQuery = new Query().Select(new List<string> { "OrderID" }).Take(50).RequiresCount();
+@code {
+    public class Orders
+    {
+        public Orders() { }
+        public Orders(int OrderID, string CustomerID)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+        }
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+    }
 
     public class OrdersDetails
     {
         public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        // Example static method to get all records
+        public string? CustomerID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string? ShipCountry { get; set; }
+
         public static List<OrdersDetails> GetAllRecords()
         {
-            var records = new List<OrdersDetails>();
-            for (int i = 1; i <= 250; i++)
+            List<OrdersDetails> order = new List<OrdersDetails>();
+            order.Add(new OrdersDetails() { OrderID = 10248, CustomerID = "VINET", EmployeeID = 5, ShipCountry = "France" });
+            order.Add(new OrdersDetails() { OrderID = 10249, CustomerID = "TOMSP", EmployeeID = 6, ShipCountry = "Germany" });
+            order.Add(new OrdersDetails() { OrderID = 10250, CustomerID = "HANAR", EmployeeID = 4, ShipCountry = "Brazil" });
+            order.Add(new OrdersDetails() { OrderID = 10251, CustomerID = "VICTE", EmployeeID = 3, ShipCountry = "Brazil" });
+            order.Add(new OrdersDetails() { OrderID = 10252, CustomerID = "SUPRD", EmployeeID = 4, ShipCountry = "Belgium" });
+            order.Add(new OrdersDetails() { OrderID = 10253, CustomerID = "HANAR", EmployeeID = 3, ShipCountry = "Brazil" });
+            order.Add(new OrdersDetails() { OrderID = 10254, CustomerID = "CHOPS", EmployeeID = 5, ShipCountry = "Switzerland" });
+            order.Add(new OrdersDetails() { OrderID = 10255, CustomerID = "RICSU", EmployeeID = 9, ShipCountry = "Switzerland" });
+            order.Add(new OrdersDetails() { OrderID = 10256, CustomerID = "WELLI", EmployeeID = 3, ShipCountry = "Austria" });
+            order.Add(new OrdersDetails() { OrderID = 10257, CustomerID = "HILAA", EmployeeID = 4, ShipCountry = "USA" });
+
+            for (int i = 1; i <= 40; i++)
             {
-                records.Add(new OrdersDetails
+                order.Add(new OrdersDetails()
                 {
-                    OrderID = i,
-                    CustomerID = $"Customer {i}"
+                    OrderID = 10300 + i,
+                    CustomerID = $"CUST{i:D3}",
+                    EmployeeID = (i % 9) + 1,
+                    ShipCountry = i % 2 == 0 ? "India" : "USA"
                 });
             }
-            return records;
+
+            return order;
         }
     }
+
     public class CustomAdaptor : DataAdaptor
     {
         static readonly HttpClient client = new HttpClient();
+
         public static List<OrdersDetails> order = OrdersDetails.GetAllRecords();
-        public override async Task<object> ReadAsync(DataManagerRequest dm, string key = null)
+
+        public override object Read(DataManagerRequest dm, string? key = null)
         {
             IEnumerable<OrdersDetails> DataSource = order;
+
             if (dm.Search != null && dm.Search.Count > 0)
             {
-                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);  //Search
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
             }
-            if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
             {
                 DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
             }
-            if (dm.Where != null && dm.Where.Count > 0) //Filtering
+
+            if (dm.Where != null && dm.Where.Count > 0)
             {
                 DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
             }
-            int count = DataSource.Cast<OrdersDetails>().Count();
+
+            int count = DataSource.Count();
+
             if (dm.Skip != 0)
             {
-                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);         //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
             }
+
             if (dm.Take != 0)
             {
                 DataSource = DataOperations.PerformTake(DataSource, dm.Take);
             }
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
-       }
+
+            return dm.RequiresCounts
+                ? new DataResult { Result = DataSource, Count = count }
+                : (object)DataSource;
+        }
     }
 }

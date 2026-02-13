@@ -18,6 +18,7 @@ Bind any native event by adding the corresponding `@on<event>` attribute to the 
 In the following example, the `KeyPressed` method is invoked whenever a key is pressed inside the ComboBox input.
 
 ```cshtml
+@using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
 <SfComboBox TValue="string" TItem="Country" @onkeypress="@KeyPressed" DataSource="@Countries">
@@ -68,6 +69,8 @@ Blazor maps native events to strongly typed argument classes. Choose the handler
 In the following example, the `KeyPressed` method receives `KeyboardEventArgs` and conditionally processes only when the “c” key is pressed.
 
 ```cshtml
+@using Syncfusion.Blazor.DropDowns
+
 <SfComboBox TValue="string" TItem="Country" @onkeypress="@(e => KeyPressed(e))" DataSource="@Countries">
     <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
 </SfComboBox>
