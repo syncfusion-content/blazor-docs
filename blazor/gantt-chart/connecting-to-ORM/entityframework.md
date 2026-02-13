@@ -347,7 +347,7 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 
 **Instructions:**
 
-1. The **Syncfusion.Blazor.Gantt** and **Syncfusion.Blazor.Themes** packages were installed in Step 2 of the previous section.
+1. The **Syncfusion.Blazor.Gantt** and **Syncfusion.Blazor.Themes** packages were installed in [Step 2](#step-2-install-required-nuget-packages) of the previous section.
 2. Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
@@ -371,7 +371,7 @@ Syncfusion components are now configured and ready to use. For additional guidan
 
 ### Step 2: Update the Blazor Gantt Chart
 
-The `Home.razor` component will display the task data in a Syncfusion Blazor Gantt Chart with search, filter, sort, and CRUD capabilities using UrlAdaptor to communicate with REST API endpoints.
+The `Home.razor` component will display the task data in a Gantt Chart with search, filter, sort, and CRUD capabilities using UrlAdaptor to communicate with REST API endpoints.
 
 **Instructions:**
 
@@ -964,7 +964,7 @@ Execute the following command:
 dotnet run
 ```
 
-The application will start, and the console will display the local URL (`https://localhost:7164` replace `7164` with the port shown in the terminal).
+The application will start, and the console will display the local URL `https://localhost:71xx` (Replace `71xx` with the port number shown in the **launchSettings.json**).
 
 **Step 3: Access the Application**
 

@@ -357,7 +357,7 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Gantt package was installed in **Step 2** of the previous heading.
+1. The Syncfusion.Blazor.Gantt package was installed in [Step 2](#step-2-install-required-nuget-packages) of the previous heading.
 2. Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
@@ -380,7 +380,7 @@ Syncfusion components are now configured and ready to use. For additional guidan
 
 ### Step 2: Update the Blazor Gantt Chart
 
-The `Home.razor` component will display the task data in a Syncfusion Blazor Gantt Chart with search, filter, and sorting capabilities.
+The `Home.razor` component will display the task data in a Gantt Chart with search, filter, and sorting capabilities.
 
 **Instructions:**
 
@@ -478,7 +478,7 @@ The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It han
                     if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskDataModel.ParentID)){}
                     else
                     {
-                        DataSource = DataOperations.PerformFiltering    (DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                        DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
                     }
                 }
 
@@ -1090,7 +1090,6 @@ Here is the complete and final `Home.razor` component with all features integrat
 
 > * Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) to **true** for a column that contains unique values.
 > * Set [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsIdentity) to **true** for auto-generated columns to disable editing during add or update operations.
-> * The behavior of default editors can be customized using the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) property of the `GanttColumn` component. [🔗](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html)
 
 ```csharp
 @code {
@@ -1220,7 +1219,7 @@ dotnet run
 **Step 3: Access the Application**
 
 1. Open a web browser.
-2. Navigate to `https://localhost:7164` (Instead of `7164` replace the port number shown in the terminal).
+2. Navigate to `https://localhost:71xx` (Replace `71xx` with the port number shown in the **launchSettings.json**).
 3. The Gantt Chart application is now running and ready to use.
 
 **Available Features**

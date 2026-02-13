@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind CustomAdaptor with CRUD Action in Blazor Gantt Chart| Syncfusion
+title: CustomAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion
 description: Learn all about CustomAdaptor in the Syncfusion Blazor Gantt Chart and how to handle data loading, searching, filtering, sorting, and CRUD operations.
 platform: Blazor
 control: Gantt Chart
@@ -10,7 +10,7 @@ documentation: ug
 
 # Custom Binding in Blazor Gantt Chart
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling manual operations on data. It is useful for implementing custom data binding and editing operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling manual operations on data. It is useful for implementing custom data binding and editing operations in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart).
 
 To implement custom data binding in the Gantt Chart, the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class is used. This abstract class serves as a base class for the custom adaptor.
 
@@ -72,7 +72,7 @@ public abstract class DataAdaptor
 
 ## Data Binding
 
-Custom data binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart is achieved by providing a custom adaptor class and overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) methods of the `DataAdaptor` abstract class.
+Custom data binding in Gantt Chart is achieved by providing a custom adaptor class and overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) methods of the `DataAdaptor` abstract class.
 
 The following example demonstrates how to implement custom data binding using a custom adaptor:
 
@@ -285,13 +285,13 @@ The following example demonstrates how to inject a service into the Custom Adapt
                 // Sorting
                 DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
             }
-            if (dm.Where != null && dm.Where.Count > 0)
+            
+            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
             {
-                // Filtering
-                if (dm.Where[0].Field != null && dm.Where[0].Field == "ParentID"){}
+                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskData.ParentID)){}
                 else
                 {
-                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
                 }
             }
             int count = DataSource.Cast<TaskData>().Count();
@@ -482,7 +482,6 @@ The following example demonstrates how to implement the filtering operation for 
             // Apply filtering if filter criteria are provided.
             if (dm.Where != null && dm.Where.Count > 0)
             {
-                // Filtering
                 if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
                 else
                 {
@@ -700,14 +699,13 @@ The following example demonstrates how to implement CRUD operations for custom-b
             {
                 // Sorting
                 DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
-            }
-            if (dm.Where != null && dm.Where.Count > 0)
+            }        
+            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
             {
-                // Filtering
-                if (dm.Where[0].Field != null && dm.Where[0].Field == "ParentID"){}
+                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskData.ParentID)){}
                 else
                 {
-                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
                 }
             }
             int count = DataSource.Cast<TaskData>().Count();
@@ -757,7 +755,7 @@ The following example demonstrates how to implement CRUD operations for custom-b
 
 ## How to pass additional parameters to custom adaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart allows sending custom parameters along with data requests.This is useful when additional information (e.g., user role, token, or filters) must be sent to the server.
+The Gantt Chart allows sending custom parameters along with data requests.This is useful when additional information must be sent to the server.
 
 Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Query) property of the Gantt Chart along with the [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) method of the `Query` class to send custom parameters.
 

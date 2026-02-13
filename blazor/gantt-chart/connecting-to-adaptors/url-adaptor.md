@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind UrlAdaptor with CRUD Actions in Blazor Gantt Chart | Syncfusion
+title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion
 description: Learn about bind data and performing CRUD operations using UrlAdaptor in Syncfusion Blazor Gantt Chart.
 platform: Blazor
 control: Gantt Chart
@@ -12,11 +12,11 @@ documentation: ug
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor that enables communication between remote data services and a UI component. It supports seamless data binding and interaction with custom API services or any remote endpoint via URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place.
 
-This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart, including server‑side data operations and CRUD actions.
+This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), including server‑side data operations and CRUD actions.
 
 ## Creating an API service
  
-To configure a server with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart, follow these steps:
+To configure a server with the Blazor Gantt Chart, follow these steps:
  
 **1. Create a Blazor web app**
  
@@ -169,11 +169,11 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:xxxx/api/gantt` (where `xxxx` represents the port number). Please verify that the API returns the task data.
+Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:71xx/api/gantt` (where `71xx` represents the port number in the lauchSettings.json). Please verify that the API returns the task data.
 
 ## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart to an API service
  
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart into your project using Visual Studio 2026, follow the below steps:
+To integrate the Blazor Gantt Chart into your project using Visual Studio 2026, follow the below steps:
  
 **1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt and Themes NuGet packages**
  
@@ -318,7 +318,7 @@ When you run the application, the Blazor Gantt Chart  will display data fetched 
  
 ![UrlAdaptor Data](../images/url-adaptor.png)
  
-> * The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart supports server-side operations such as **searching**, **sorting** and **filtering**. These can be handled using methods like [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_), and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) from the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
+> * The Gantt Chart supports server-side operations such as **searching**, **sorting** and **filtering**. These can be handled using methods like [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_), and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) from the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 ## Handling searching operation
@@ -519,7 +519,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling CRUD operations
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every action, facilitating server-side operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every action, facilitating server-side operations.
 
 **CRUD operations mapping**
 
@@ -528,8 +528,7 @@ CRUD operations within the Gantt Chart can be mapped to server-side controller a
 1. **InsertUrl**: Specifies the URL for inserting new data.
 2. **RemoveUrl**: Specifies the URL for removing existing data.
 3. **UpdateUrl**: Specifies the URL for updating existing data.
-4. **CrudUrl**: Specifies a single URL for all CRUD operations.
-5. **BatchUrl**: Specifies the URL for batch editing.
+4. **BatchUrl**: Specifies the URL for batch editing.
 
 To enable editing in Blazor Gantt Chart, refer to the editing [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks). In the example below, the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) property is configured to display toolbar items for editing purposes.
 
@@ -698,172 +697,4 @@ public void Remove([FromBody] CRUDModel<TaskData> deletedRecord)
 {% endhighlight %}
 {% endtabs %}
 
-**Single method for performing all CRUD operations:**
 
-Using the [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl) property, the controller action mapping URL can be specified to perform all CRUD operations on the server side using a single method, instead of specifying separate controller action methods for CRUD (Insert, Update, and Delete) operations.
-
-The following code example illustrates this behavior.
-
-{% tabs %}
-{% highlight cs tabtitle="GanttController.cs" %}
-
-/// <summary>
-/// Handles CRUD (Create, Read, Update, and Delete) operations for a single request using the specified CRUD URL.
-/// </summary>
-/// <param name="request">An object containing the details of the record to be processed and the action to be performed (e.g., Create, Read, Update, and Delete).</param>
-/// <returns>A response indicating the result of the CRUD operation, including success or failure details.</returns>
-[HttpPost]
-[Route("api/[controller]/CrudUpdate")]
-public void CrudUpdate([FromBody] CRUDModel<TaskData> request)
-{
-    // Perform the update operation.
-    if (request.action == "update")
-    {
-        var task = request.value;
-        TaskData existingRecord = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == task.TaskID);
-        if (existingRecord != null)
-        {
-            // Update the properties of the existing record.
-            existingRecord.TaskID = task.TaskID;
-            existingRecord.TaskName = task.TaskName;
-            existingRecord.StartDate = task.StartDate;
-            existingRecord.EndDate = task.EndDate;
-            // Update other properties as needed.
-        }
-    }
-    // Perform the insert operation.
-    else if (request.action == "insert")
-    {
-        // Add the new record to the data collection.
-        TaskData.GetAllRecords().Insert(0, request.value);
-    }
-    // Perform the remove operation.
-    else if (request.action == "remove")
-    {
-        // Remove the record from the data collection.
-        TaskData.GetAllRecords().Remove(TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == int.Parse(request.key.ToString())));
-    }
-}
-
-{% endhighlight %}
-
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
-@using URLAdaptor.Models
-
-<SfGantt TValue="TaskData" Height="450px" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" ,"Search" })">
-    <SfDataManager Url="/api/gantt" CrudUrl="/api/gantt/CrudUpdate" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentID" Dependency="Predecessor">
-    </GanttTaskFields>
-    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowTaskbarEditing="true" AllowDeleting="true" />
-    <GanttColumns>
-        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
-        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration" Width="110"></GanttColumn>
-        <GanttColumn Field="Predecessor" HeaderText="Predecessor" Width="140"></GanttColumn>
-        <GanttColumn Field="Progress" HeaderText="Progress" Width="110"></GanttColumn>
-    </GanttColumns>
-</SfGantt>
-
-{% endhighlight %}
-{% endtabs %}
-
-**Batch operation:**
-
-To perform batch operation, define the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) as **Batch** and specify the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in single request. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **TaskData** table using a single API POST request.
-
-{% tabs %}
-{% highlight cs tabtitle="GanttController.cs" %}
-
-/// <summary>
-/// Handles CRUD operations when batch editing is enabled in the Gantt Chart.
-/// </summary>
-/// <param name="batchModel">The batch model containing the data changes to be processed.</param>
-/// <returns>Returns the result of the CRUD operation.</returns>
-[HttpPost]
-[Route("api/[controller]/BatchUpdate")]
-public IActionResult BatchUpdate([FromBody] CRUDModel<TaskData> batchModel)
-{
-    // Check if there are any added records in the batch model.
-    if (batchModel.added != null)
-    {
-        // Iterate through each added record.
-        foreach (var Record in batchModel.added)
-        {
-            // Insert the added record at the beginning of the existing records.
-            TaskData.GetAllRecords().Insert(0, Record);
-        }
-    }
-    // Check if there are any changed records in the batch model.
-    if (batchModel.changed != null)
-    {
-        // Iterate through each changed record.
-        foreach (var changedTask in batchModel.changed)
-        {
-            // Find the existing record that matches the changed record's "TaskID".
-            var existingTask = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == changedTask.TaskID);
-            if (existingTask != null)
-            {
-                // Update the properties of the existing record.
-                existingTask.TaskID = changedTask.TaskID;
-                existingTask.TaskName = changedTask.TaskName;
-                existingTask.StartDate = changedTask.StartDate;
-                existingTask.EndDate = changedTask.EndDate;
-                // Update other properties as needed.
-            }
-        }
-    }
-    // Check if there are any deleted records in the batch model.
-    if (batchModel.deleted != null)
-    {
-        // Iterate through each deleted record.
-        foreach (var deletedTask in batchModel.deleted)
-        {
-            // Find the existing record that matches the deleted record's "TaskID".
-            var taskToDelete = TaskData.GetAllRecords().FirstOrDefault(or => or.TaskID == deletedTask.TaskID);
-            if (taskToDelete != null)
-            {
-                // Remove the matching record from the existing records.
-                TaskData.GetAllRecords().Remove(taskToDelete);
-            }
-        }
-    }
-
-    // Return the updated batch model as a JSON result.
-    return new JsonResult(batchModel);
-}
-
-{% endhighlight %}
-
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
-@using URLAdaptor.Models
-
-<SfGantt TValue="TaskData" Height="450px" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager Url="/api/gantt" BatchUrl="/api/gantt/BatchUpdate" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentID" Dependency="Predecessor">
-    </GanttTaskFields>
-    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowTaskbarEditing="true" AllowDeleting="true" />
-    <GanttColumns>
-        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="90"></GanttColumn>
-        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="220"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="140" Format="d"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date" Width="140" Format="d"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration" Width="110"></GanttColumn>
-        <GanttColumn Field="Predecessor" HeaderText="Predecessor" Width="140"></GanttColumn>
-        <GanttColumn Field="Progress" HeaderText="Progress" Width="110"></GanttColumn>
-    </GanttColumns>
-</SfGantt>
-
-{% endhighlight %}
-{% endtabs %}

@@ -99,7 +99,7 @@ After executing this script, the records are stored in the `TaskData` table with
 ### Step 2: Install required NuGet packages
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
-This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
+This template automatically generates essential starter file such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
 For this guide, a Blazor application named **GanttMsSql** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and SQL Server integration.
 
@@ -481,7 +481,7 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Gantt package was installed in **Step 2** of the previous heading.
+1. The Syncfusion.Blazor.Gantt package was installed in [Step 2](#step-2-install-required-nuget-packages) of the previous heading.
 2. Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
@@ -504,7 +504,7 @@ Syncfusion components are now configured and ready to use. For additional guidan
 
 ### Step 2: Update the Blazor Gantt Chart
 
-The `Home.razor` component will display the task data in a Syncfusion Blazor Gantt chart with search, filter, and sorting capabilities.
+The `Home.razor` component will display the task data in a Gantt chart with search, filter, and sorting capabilities.
 
 **Instructions:**
 
@@ -556,9 +556,9 @@ The Home component has been updated successfully with Gantt Chart.
 
 ### Step 3: Implement the custom adaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart can bind data from a **SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/gantt/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
+The Gantt Chart can bind data from a **SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/gantt/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It handles all data operations including reading, searching, filtering, sorting and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific Gantt Chart functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the Gantt Chart and the database. It handles all data operations including reading, searching, filtering, sorting and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific Gantt Chart functionality. The Gantt Chart sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -668,7 +668,7 @@ The `CustomAdaptor` class has been successfully implemented with all data operat
 
 ---
 
-### Step 4: Add Toolbar with CRUD and search options
+### Step 4: Add toolbar with CRUD and search options
 
 The toolbar provides buttons for adding, editing, deleting records, and searching the data.
 
@@ -1255,8 +1255,6 @@ Here is the complete and final `Home.razor` component with all features integrat
 
 > * Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) to **true** for a column that contains unique values.
 > * Set [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsIdentity) to **true** for auto-generated columns to disable editing during add or update operations.
-> * The behavior of default editors can be customized using the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) property of the `GanttColumn` component. [🔗](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html)
-
 
 ```csharp
 @code {
@@ -1424,7 +1422,7 @@ dotnet run
 **Step 3: Access the Application**
 
 1. Open a web browser.
-2. Navigate to `https://localhost:xxxx` (`xxxx`- port shown in the terminal).
+2. Navigate to `https://localhost:71xx` (Replace `71xx` with the port number shown in the **launchSettings.json**).
 3. The Gantt Chart is now running and ready to use.
 
 **Available Features**
