@@ -1,0 +1,243 @@
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Popups
+@inject IJSRuntime jsRuntime
+
+<SfRichTextEditor @ref="editorRef" @bind-Value="rteValue">
+    <RichTextEditorToolbarSettings Items="@Items">
+        <RichTextEditorCustomToolbarItems>
+            <RichTextEditorCustomToolbarItem Name="ImageEditor">
+                <Template>
+                    <button class="e-tbar-btn e-btn e-icons edit" id="imageEditor" @onclick="OnImageEditorClick">
+                        <span class="e-btn-icon e-icons e-rte-image-editor"></span>
+                    </button>
+                </Template>
+            </RichTextEditorCustomToolbarItem>
+        </RichTextEditorCustomToolbarItems>
+    </RichTextEditorToolbarSettings>
+    <RichTextEditorQuickToolbarSettings Image="@ImageQuickTools"></RichTextEditorQuickToolbarSettings>
+</SfRichTextEditor>
+
+<input type="file" id="rte-img-upload" style="display:none" accept="image/*" />
+
+<SfDialog @ref="dialogRef" @bind-Visible="@showDialog"
+          Header="Image Editor" Width="80%" Height="80vh" IsModal="true" ShowCloseIcon="true" ZIndex="10000">
+    <DialogEvents Opened="@OnDialogOpened" Closed="@OnDialogClosed" />
+    <DialogTemplates>
+        <Content>
+            @if (isImageEditorOpen)
+            {
+                <SfImageEditor @ref="imageEditorRef" Height="100%" Width="100%" Toolbar="@ImageEditorToolbar">
+                    <ImageEditorEvents Created="@OnEditorCreated" />
+                </SfImageEditor>
+            }
+        </Content>
+    </DialogTemplates>
+    <DialogButtons>
+        <DialogButton Content="Insert" IsPrimary="true" OnClick="@OnSaveReplace" />
+        <DialogButton Content="Cancel" OnClick="@OnCancel" />
+    </DialogButtons>
+    <DialogAnimationSettings Effect="DialogEffect.Zoom" />
+    <DialogPosition X="center" Y="center" />
+</SfDialog>
+
+@code {
+    private SfRichTextEditor? editorRef;
+    private SfDialog? dialogRef;
+    private SfImageEditor? imageEditorRef;
+    private object dotNetRef;
+    private bool showDialog = false;
+    private bool isImageEditorOpen = false;
+    private string currentImageSrc = string.Empty;
+    private string rteValue = @"<h2>Rich Text Editor with Image Editing</h2>
+    <p>This Rich Text Editor allows you to edit images directly within your content. Select any image and use the Edit Image button to access image editing tools.</p>
+    <h4>How to Use</h4>
+    <ol>
+    <li>Click on an image in the editor to select it</li>
+    <li>Click the <strong>Edit Image</strong> button in the main toolbar</li>
+    <li>Use the editing tools: crop, zoom, filter, annotate, and fine-tune</li>
+    <li>Click <strong>Insert</strong> to replace the original image with your edited version</li>
+    </ol>
+    <h4>Available Features</h4>
+    <ul>
+    <li>Crop and resize images</li>
+    <li>Apply filters and adjustments</li>
+    <li>Rotate and flip images</li>
+    <li>Add annotations and drawings</li>
+    <li>Support for JPG, PNG, GIF, and WebP formats</li>
+    </ul>
+    <h4>Sample Image</h4>
+    <p>Select the image below to start editing:</p>
+    <p><img id=""rteImageID"" style=""width: 300px; height: 200px; transform: rotate(0deg); border: 2px solid #ddd;"" alt=""Sample Image"" src=""https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Landscape.png"" class=""e-rte-image e-imginline""></p>";
+
+    private List<ImageEditorToolbarItemModel> ImageEditorToolbar = new()
+    {
+        new ImageEditorToolbarItemModel() { Name = "Open" },
+        new ImageEditorToolbarItemModel() { Name = "Zoom" },
+        new ImageEditorToolbarItemModel() { Name = "Crop" },
+        new ImageEditorToolbarItemModel() { Name = "Annotation" },
+        new ImageEditorToolbarItemModel() { Name = "Finetune" },
+        new ImageEditorToolbarItemModel() { Name = "Filter" },
+        new ImageEditorToolbarItemModel() { Name = "Reset" }
+    };
+
+    private List<ToolbarItemModel> Items = new()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Name = "ImageEditor", TooltipText = "Edit Image" },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.FullScreen }
+    };
+
+    private List<ImageToolbarItemModel> ImageQuickTools = new()
+    {
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Replace },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Align },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Caption },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Remove },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Separator },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.InsertLink },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Display },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.AltText },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Dimension }
+    };
+
+    protected override void OnInitialized()
+    {
+        dotNetRef = DotNetObjectReference.Create<object>(this as object);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                await jsRuntime.InvokeVoidAsync("rteInterop.onInitialized", dotNetRef);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"JS interop initialization failed: {ex.Message}");
+            }
+        }
+    }
+
+    private async Task OnImageEditorClick()
+    {
+        if (editorRef == null) 
+        {
+            return;
+        }
+        await editorRef.SaveSelectionAsync();
+        var selectedHtml = await editorRef.GetSelectedHtmlAsync();
+        if (string.IsNullOrWhiteSpace(selectedHtml) || !selectedHtml.Contains("<img", StringComparison.OrdinalIgnoreCase))
+        {
+            return;
+        }
+        ExtractImageDetails(selectedHtml);
+        showDialog = true;
+        StateHasChanged();
+    }
+
+    private void ExtractImageDetails(string html)
+    {
+        try
+        {
+            var srcMatch = System.Text.RegularExpressions.Regex.Match(
+                html,
+                @"src=['""]?([^'""\s>]+)['""]?",
+                System.Text.RegularExpressions.RegexOptions.IgnoreCase
+            );
+            currentImageSrc = srcMatch.Success ? srcMatch.Groups[1].Value : string.Empty;
+        }
+        catch
+        {
+            currentImageSrc = string.Empty;
+        }
+    }
+
+    private void OnDialogOpened(Syncfusion.Blazor.Popups.OpenEventArgs args)
+    {
+        if (!isImageEditorOpen)
+        {
+            isImageEditorOpen = true;
+            StateHasChanged();
+        }
+    }
+
+    private void OnDialogClosed(Syncfusion.Blazor.Popups.CloseEventArgs args)
+    {
+        isImageEditorOpen = false;
+    }
+
+    private async Task OnEditorCreated()
+    {
+        if (imageEditorRef != null && !string.IsNullOrEmpty(currentImageSrc))
+        {
+            await Task.Delay(100);
+            await imageEditorRef.OpenAsync(currentImageSrc);
+        }
+    }
+
+    [JSInvokable]
+    public async Task FileSelected(string imageUrl)
+    {
+        if (imageEditorRef != null)
+        {
+            await imageEditorRef.OpenAsync(imageUrl);
+        }
+    }
+
+    private async Task OnSaveReplace()
+    {
+        if (imageEditorRef == null || editorRef == null)
+        {
+            return;
+        }
+        var imageDataUrl = await imageEditorRef.GetImageDataUrlAsync();
+        if (string.IsNullOrEmpty(imageDataUrl))
+        {
+            return;
+        }
+        string newImageHtml =
+            $@"<img id=""rteImageID"" style=""width: 300px; height: 200px; transform: rotate(0deg); border: 2px solid #ddd;"" alt=""Edited Image"" src=""{imageDataUrl}"" class=""e-rte-image e-imginline"">";
+        if (!string.IsNullOrEmpty(currentImageSrc))
+        {
+            string escapedOldSrc = System.Text.RegularExpressions.Regex.Escape(currentImageSrc);
+            rteValue = System.Text.RegularExpressions.Regex.Replace(
+                rteValue,
+                @"<img[^>]*src=""?" + escapedOldSrc + @"""?[^>]*>",
+                newImageHtml,
+                System.Text.RegularExpressions.RegexOptions.IgnoreCase
+            );
+        }
+        else
+        {
+            rteValue += newImageHtml;
+        }
+        showDialog = false;
+        currentImageSrc = string.Empty;
+        StateHasChanged();
+    }
+
+    private Task OnCancel()
+    {
+        showDialog = false;
+        return Task.CompletedTask;
+    }
+}
+
+<style>
+    .e-icons.edit::before {
+        content: '\e730';
+    }
+</style>
