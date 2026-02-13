@@ -27,7 +27,7 @@ The Azure Blob Storage cloud file provider enables the Syncfusion Blazor File Ma
 <a id="intro-azure"></a>
 ### 1. Introduction to Azure Blob Storage
 
-Azure Blob Storage is Microsoft Azure’s object storage solution for the cloud, optimized for storing massive amounts of unstructured data. In this guide, the Syncfusion Blazor File Manager connects to Blob Storage through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
+Azure Blob Storage is Microsoft Azure's object storage solution for the cloud, optimized for storing massive amounts of unstructured data. In this guide, the Syncfusion Blazor File Manager connects to Blob Storage through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
 
 <a id="prerequisites"></a>
 ### 2. Prerequisites
@@ -36,15 +36,13 @@ Before you integrate Azure Blob Storage with the Syncfusion Blazor File Manager,
 - An active Microsoft Azure subscription
 - A Storage Account with Blob service enabled
 - A Blob Container and an optional root folder inside that container
-- Azure credentials: accountName, accountKey, and the target blob container name (blobName)
+- Azure credentials: `accountName`, `accountKey`, and the target blob container name (blobName)
 
 <a id="setup-azure"></a>
 ### 3. Setting Up Azure Blob Storage
 
-- Sign in to the Azure Portal and create a Storage Account with Blob service enabled.
-- Create a Blob Container (example: files). See Azure docs for container naming rules.
-- (Recommended) Inside the container, create a root folder (example: Files) to organize the content shown by the File Manager.
-- Note the container URL and, if used, the root folder path.
+- Sign in to the [Azure Portal](https://portal.azure.com/) and [create a Storage account](https://learn.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal) with Blob service enabled.
+- [Create a Blob Container](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?tabs=azure-portal#create-a-container) (example: files). See Azure docs for [container naming rules](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction#naming-and-referencing-containers-blobs-and-metadata).
 
 <a id="backend-setup"></a>
 ### 4. Backend Setup
@@ -61,7 +59,7 @@ N> **NuGet:** Additionally, a [NuGet](https://www.nuget.org/packages/Syncfusion.
 
 Use the following command to install the NuGet package in an application.
 
-```
+```bash
 
  dotnet add package Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core
 

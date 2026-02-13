@@ -112,4 +112,4 @@ N> To learn more about the file actions that can be performed with Amazon S3 Clo
 <a id="security"></a>
 ### 8. Security Recommendations
 
-This Amazon S3 provider for the Syncfusion Blazor File Manager is intended for demonstration and evaluation only. Before using it consult your security team or advisor and complete a security review.
+This Amazon S3 provider for the Syncfusion Blazor File Manager is intended for demonstration and evaluation only. Before using it consult your security team or adviser and complete a security review.
