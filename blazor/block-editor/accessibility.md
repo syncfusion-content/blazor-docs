@@ -44,17 +44,15 @@ The following ARIA attributes are recommended for the Blazor Block Editor to imp
 
 | Attribute | Purpose |
 |---|---|
-| `role="application"` | Applied to the outer editor container when the editor manages keyboard handling and behaves like an application. |
-| `role="textbox"` + `contenteditable="true"` | Marks the editable region; pair with `aria-multiline="true"` for multi-line editing. |
-| `aria-label` | Provides an accessible name for the editor or its regions (connect a visible or offscreen heading). |
-| `aria-placeholder` | Short hint text for empty editing surfaces. |
-| `aria-describedby` | Attach helper text or usage instructions (e.g., keyboard shortcuts). |
-| `role="toolbar"` | Applied to the formatting toolbar container. Use `aria-orientation` when needed. |
-| `aria-pressed` | For toggle toolbar buttons (bold/italic) to indicate on/off state. |
-| `aria-haspopup` / `aria-controls` / `aria-expanded` | For controls that open popups or dialogs; `aria-controls` should reference the popup `id`. |
-| `aria-readonly` / `aria-disabled` | Mark non-editable editor surfaces and disabled toolbar controls. |
-| `aria-hidden` | Hide offscreen or collapsed regions from assistive technologies. |
-| `aria-owns` | Use only when DOM order prevents a meaningful parent/child relationship and explicit ownership is required. |
+| `contenteditable="true"` + `role="textbox"` | Marks the editable block container as an editable text region. The editable region must have an accessible name (use `aria-label` or `aria-labelledby`) to satisfy input-field-name checks. |
+| `aria-label` / `aria-labelledby` | Provides the accessible name for the editor, toolbar, or specific editable region. The running sample is missing this on the main editable container (axe reports `aria-input-field-name`). |
+| `aria-multiline="true"` | Indicates the textbox accepts multiple lines; assists AT in providing correct editing behavior. |
+| `role="toolbar"` | Applied to inline formatting toolbars and action-menu containers to group related controls for assistive technologies. |
+| `aria-pressed` | Indicates toggle state for formatting buttons (e.g., Bold, Italic). |
+| `aria-haspopup` / `aria-controls` / `aria-expanded` | Used by menus and popups (command/context/action menus). `aria-controls` should reference the popup element `id`; `aria-expanded` reflects open/closed state. |
+| `role="grid"` (table blocks) | Table blocks are exposed as a grid/table for screen readers and keyboard navigation; ensure header cells (`th`) and proper `scope`/`headers` attributes are present. |
+| `alt` (on `img`) | Image blocks must include meaningful `alt` text; missing `alt` attributes trigger `image-alt` violations. |
+| `aria-hidden` | Hides non-interactive or offscreen content (e.g., closed popups) from assistive technologies. |
 
 ## Keyboard interaction
 
