@@ -43,7 +43,7 @@ git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provi
 
 ```
 
-N> This Amazon S3 provider for the Syncfusion Blazor File Manager is intended for demonstration and evaluation only. Before using it consult your security team or adviser and complete a security review.
+N> This Amazon S3 provider for the Syncfusion Blazor File Manager is intended for demonstration and evaluation only. Before using it consult your security team and complete a security review.
 
 To initialize a local service and to perform file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `AmazonS3ProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs).
 
@@ -86,7 +86,7 @@ To perform file operations (Read, Create, Rename, Delete, Get file details, Sear
 <a id="supported-ops"></a>
 ## Supported File Operations
 
-We have enabled below list of features that can be performed using amazon provider,
+We have enabled below list of features that can be performed using Amazon File Service provider,
 
 |Operation | Function |
 |---|---|
