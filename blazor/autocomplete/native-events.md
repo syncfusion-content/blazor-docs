@@ -18,6 +18,8 @@ Bind any native event by adding the corresponding `@on{event}` attribute to the 
 In the following example, the `KeyPressed` method is called each time a key is pressed in the input.
 
 ```cshtml
+@using Syncfusion.Blazor.DropDowns
+
 <SfAutoComplete TValue="string" TItem="Country" @onkeypress="@KeyPressed" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
@@ -68,6 +70,8 @@ Blazor provides strongly typed event argument classes that map to native events.
 In the following example, the keypress handler receives `KeyboardEventArgs`. The message is printed only when the “a” key is pressed.
 
 ```cshtml
+@using Syncfusion.Blazor.DropDowns
+
 <SfAutoComplete TValue="string" TItem="Country" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>

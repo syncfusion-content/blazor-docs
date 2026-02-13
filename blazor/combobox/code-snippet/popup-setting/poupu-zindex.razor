@@ -1,21 +1,16 @@
 @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TValue="string" @ref="dropdownObj" TItem="Games" ZIndex="2000" Placeholder="Select a game" DataSource="@LocalData">
+<SfComboBox TValue="string" TItem="Games" ZIndex="2000" Placeholder="Select a game" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
-    <ComboBoxEvents TItem="Games" TValue="string" Created="@CreatedHandler"></ComboBoxEvents>
 </SfComboBox>
 
 @code {
-
-    SfComboBox<string , Games> dropdownObj { get; set; }
-    
-
-    public class Games
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
+  public class Games
+  {
+    public string ID { get; set; }
+    public string Text { get; set; }
+  }
+  List<Games> LocalData = new List<Games> {
     new Games() { ID= "Game1", Text= "American Football" },
     new Games() { ID= "Game2", Text= "Badminton" },
     new Games() { ID= "Game3", Text= "Basketball" },
@@ -27,9 +22,4 @@
     new Games() { ID= "Game9", Text= "Snooker" },
     new Games() { ID= "Game10", Text= "Tennis"},
   };
-
-    private async Task CreatedHandler(Object args)
-    {
-        await dropdownObj.ShowPopupAsync();
-    }
 }
