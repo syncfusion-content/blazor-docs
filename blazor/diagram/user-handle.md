@@ -19,8 +19,8 @@ Enable user handles for selected nodes or connectors by setting [SelectorConstra
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
-                    Nodes="@nodes"
-                    SelectionSettings="@SelectedModel">
+                    Nodes="@_nodes"
+                    SelectionSettings="@_selectedModel">
     <SnapSettings>
         <HorizontalGridLines LineColor="White" LineDashArray="2,2" />
         <VerticalGridLines LineColor="White" LineDashArray="2,2" />
@@ -30,10 +30,10 @@ Enable user handles for selected nodes or connectors by setting [SelectorConstra
 @code
 {
     // Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     // Defines diagram's SelectionSettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects.
@@ -53,17 +53,17 @@ Enable user handles for selected nodes or connectors by setting [SelectorConstra
             Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
         //Add user handle to the collection.
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
-        SelectedModel = new DiagramSelectionSettings()
+        _selectedModel = new DiagramSelectionSettings()
         {
             //Enable userhandle for selected model.
             Constraints = SelectorConstraints.UserHandle,
-            UserHandles = this.UserHandles
+            UserHandles = _userHandles
         };
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
         {
             ID = "node1",
@@ -74,11 +74,11 @@ Enable user handles for selected nodes or connectors by setting [SelectorConstra
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
         };
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/InitializeUserHandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/InitializeUserHandle.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIiNjPeXLREtrf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.png)" %}
 
@@ -95,61 +95,61 @@ The following code explains how to customize user handle click actions.
 @using Syncfusion.Blazor.Diagram
 
 <div>
-    <SfDiagramComponent @ref="Diagram" Height="500px"
-                        Nodes="@nodes"
-                        Connectors="@connectors"
-                        SelectionSettings="@SelectedModel"
+    <SfDiagramComponent @ref="_diagram" Height="500px"
+                        Nodes="@_nodes"
+                        Connectors="@_connectors"
+                        SelectionSettings="@_selectedModel"
                         GetCustomTool="GetCustomTool">
     </SfDiagramComponent>
 </div>
 
 @code
 {
-    public SfDiagramComponent Diagram;
-    public DiagramObjectCollection<Node> nodes { get; set; }
-    public DiagramObjectCollection<Connector> connectors { get; set; }
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes { get; set; }
+    private DiagramObjectCollection<Connector> _connectors { get; set; }
     // Defines diagram's SelectionSettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
-        connectors = new DiagramObjectCollection<Connector>();
+        _nodes = new DiagramObjectCollection<Node>();
+        _connectors = new DiagramObjectCollection<Connector>();
         InitDiagramModel();
     }
 
-    public InteractionControllerBase GetCustomTool(DiagramElementAction action, string id)
+    private InteractionControllerBase GetCustomTool(DiagramElementAction action, string id)
     {
-        return id == "clone" ? new CloneTool(Diagram) : new DeleteTool(Diagram);
+        return id == "clone" ? new CloneTool(_diagram) : new DeleteTool(_diagram);
     }
 
-    public class DeleteTool : InteractionControllerBase
+    private class DeleteTool : InteractionControllerBase
     {
-        SfDiagramComponent diagram;
-        public DeleteTool(SfDiagramComponent diagram) : base(diagram) { this.diagram = diagram; }
+        private SfDiagramComponent _diagram;
+        public DeleteTool(SfDiagramComponent diagram) : base(diagram) { _diagram = diagram; }
         public override void OnMouseUp(DiagramMouseEventArgs args)
         {
-            diagram.Delete();
+            _diagram.Delete();
             base.OnMouseUp(args);
         }
     }
 
-    public class CloneTool : DragController
+    private class CloneTool : DragController
     {
-        SfDiagramComponent diagram;
-        public CloneTool(SfDiagramComponent diagram) : base(diagram) { this.diagram = diagram; }
+        private SfDiagramComponent _diagram;
+        public CloneTool(SfDiagramComponent diagram) : base(diagram) { _diagram = diagram; }
         public override void OnMouseDown(DiagramMouseEventArgs args)
         {
-            diagram.Copy();
-            diagram.Paste();
+            _diagram.Copy();
+            _diagram.Paste();
             base.OnMouseDown(args);
         }
     }
 
     private void InitDiagramModel()
     {
-        var node = new Node()
+        Node node = new Node()
         {
             ID = "Node1",
             OffsetX = 300,
@@ -162,9 +162,9 @@ The following code explains how to customize user handle click actions.
                 new ShapeAnnotation() { Content = "Node" }
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
 
-        var connector = new Connector()
+        Connector connector = new Connector()
         {
             ID = "Connector1",
             SourcePoint = new DiagramPoint() { X = 500, Y = 150 },
@@ -175,8 +175,8 @@ The following code explains how to customize user handle click actions.
                 new PathAnnotation(){ Content = "Connector" }
             }
         };
-        connectors.Add(connector);
-        var cloneHandle = new UserHandle()
+        _connectors.Add(connector);
+        UserHandle cloneHandle = new UserHandle()
         {
             Name = "clone",
             PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
@@ -185,7 +185,7 @@ The following code explains how to customize user handle click actions.
             Visible = true,
             VisibleTarget = VisibleTarget.Node | VisibleTarget.Connector
         };
-        var deleteHandle = new UserHandle()
+        UserHandle deleteHandle = new UserHandle()
         {
             Name = "delete",
             PathData = "M0.54700077,2.2130003 L7.2129992,2.2130003 7.2129992,8.8800011 C7.2129992,9.1920013 7.1049975,9.4570007 6.8879985,9.6739998 6.6709994,9.8910007 6.406,10 6.0939997,10 L1.6659999,10 C1.3539997,10 1.0890004,9.8910007 0.87200136,9.6739998 0.65500242,9.4570007 0.54700071,9.1920013 0.54700077,8.8800011 z M2.4999992,0 L5.2600006,0 5.8329986,0.54600048 7.7599996,0.54600048 7.7599996,1.6660004 0,1.6660004 0,0.54600048 1.9270014,0.54600048 z",
@@ -194,21 +194,21 @@ The following code explains how to customize user handle click actions.
             VisibleTarget = VisibleTarget.Node | VisibleTarget.Connector,
             Visible = true
         };
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle, deleteHandle
         };
-        SelectedModel = new DiagramSelectionSettings()
+        _selectedModel = new DiagramSelectionSettings()
         {
             //Enable userhandle for selected model.
             Constraints = SelectorConstraints.UserHandle,
 
-            UserHandles = this.UserHandles
+            UserHandles = _userHandles
         };
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleClickEvents)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleClickEvents.razor)
 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIMXNloZKBydSJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/UserHandleClickEvents.gif)" %}
@@ -241,16 +241,16 @@ The following code explains how to customize the displacement(margin) of the use
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors" SelectionSettings="@SelectedModel">
+<SfDiagramComponent Height="600px" Connectors="@_connectors" SelectionSettings="@_selectedModel">
 </SfDiagramComponent>
 
 @code
 {
     //Intialize diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     // Defines diagram's SelectionSettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects.
@@ -274,15 +274,15 @@ The following code explains how to customize the displacement(margin) of the use
             VisibleTarget = VisibleTarget.Connector,
         };
         //Add user handle to the collection.
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
-        SelectedModel = new DiagramSelectionSettings()
+        _selectedModel = new DiagramSelectionSettings()
         {
             //Enable userhandle for selected model.
             Constraints = SelectorConstraints.All,
-            UserHandles = this.UserHandles,
+            UserHandles = _userHandles,
 
         };
         Connector connector = new Connector()
@@ -292,13 +292,13 @@ The following code explains how to customize the displacement(margin) of the use
             Type = ConnectorSegmentType.Orthogonal,
             Style = new ShapeStyle() { StrokeColor = "#6495ED" },
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhoiNtPotgQSkmt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleDisplacement)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleDisplacement.razor)
 
 ### How to align the user handle using horizontal and vertical alignment properties
 The `HorizontalAlignment` property sets how the user handle is horizontally aligned at the position based on the Offset. The `VerticalAlignment` property is used to set how the user handle is vertically aligned at the position. These alignment properties provide precise control over the user handle positioning relative to the calculated offset position, allowing for fine-tuned placement and improved visual consistency.
@@ -309,18 +309,16 @@ The following code explains how to customize horizontal and vertical alignment o
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@SelectedModel">
+<SfDiagramComponent Height="600px" Nodes="@_nodes" SelectionSettings="@_selectedModel">
 </SfDiagramComponent>
 
 @code
 {
     //Initialize diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     // Defines diagram's SelectionSettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
-    
-
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
     
     protected override void OnInitialized()
     {
@@ -351,7 +349,7 @@ The following code explains how to customize horizontal and vertical alignment o
             VisibleTarget = VisibleTarget.Node,
         };
         //Add user handle to the collection.
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
@@ -359,11 +357,11 @@ The following code explains how to customize horizontal and vertical alignment o
     
     private void CreateSelectionSettings()
     {
-        SelectedModel = new DiagramSelectionSettings()
+        _selectedModel = new DiagramSelectionSettings()
         {
             //Enable userhandle for selected model.
             Constraints = SelectorConstraints.All,
-            UserHandles = this.UserHandles,
+            UserHandles = _userHandles,
         };
     }
     
@@ -377,14 +375,14 @@ The following code explains how to customize horizontal and vertical alignment o
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrSstXPSZJsYUHb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleAlignment)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleAlignment.razor)
 
 ### How to change the size of the user handle
 
@@ -406,7 +404,7 @@ The following code explains how to customize the appearance of the user handle.
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@SelectedModel">
+<SfDiagramComponent Height="600px" Nodes="@_nodes" SelectionSettings="@_selectedModel">
     <SnapSettings>
         <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
         <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
@@ -416,10 +414,10 @@ The following code explains how to customize the appearance of the user handle.
 @code
 {
     // Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     // Defines diagram's SelectionSettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
 
     protected override void OnInitialized()
     {
@@ -450,17 +448,17 @@ The following code explains how to customize the appearance of the user handle.
             BorderWidth = 3,
         };
         //Add user handle to the collection.
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
-        SelectedModel = new DiagramSelectionSettings()
+        _selectedModel = new DiagramSelectionSettings()
         {
             //Enable userhandle for selected model.
             Constraints = SelectorConstraints.UserHandle,
-            UserHandles = this.UserHandles
+            UserHandles = _userHandles
         };
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
         {
             ID = "node1",
@@ -471,11 +469,11 @@ The following code explains how to customize the appearance of the user handle.
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
         };
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/Style)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/Style.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLesXNvIjJlaqCH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)" %}
 
@@ -496,7 +494,7 @@ The following code example shows how to change the VisibleTarget in the user han
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Buttons
 
-<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes" GetCustomTool="@tools" GetCustomCursor="@cursor" Connectors="@connectors" SelectionSettings="@SelectedModel">
+<SfDiagramComponent @ref="_diagram" Width="1200px" Height="600px" Nodes="@_nodes" GetCustomTool="@Tools" GetCustomCursor="@Cursor" Connectors="@_connectors" SelectionSettings="@_selectedModel">
 </SfDiagramComponent>
 
 <SfButton Content="VisibilityNode" OnClick="@VisibilityNode" />
@@ -506,17 +504,17 @@ The following code example shows how to change the VisibleTarget in the user han
 @code
 {
     //Reference the diagram
-    public SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
     //Intialize diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupNode = new NodeGroup();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private NodeGroup _groupNode = new NodeGroup();
     //Intialize diagram's nodes collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     //Intialize diagram's selectionsettings
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
     //Intialize diagram's userhandle
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
-    public string cursor(DiagramElementAction action, bool active, string handle)
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
+    public string Cursor(DiagramElementAction action, bool active, string handle)
     {
         string cursors = null;
         if (handle == "changeCursor")
@@ -525,87 +523,87 @@ The following code example shows how to change the VisibleTarget in the user han
         }
         return cursors;
     }
-    public InteractionControllerBase tools(DiagramElementAction action, string id)
+    public InteractionControllerBase Tools(DiagramElementAction action, string id)
     {
         InteractionControllerBase tool = null;
         if (id == "clone")
         {
-            tool = new CloneTool(Diagram);
+            tool = new CloneTool(_diagram);
         }
         else if (id == "nodeDelete")
         {
-            tool = new AddDeleteTool(Diagram);
+            tool = new AddDeleteTool(_diagram);
         }
         return tool;
     }
     public class AddDeleteTool : DragController
     {
-        SfDiagramComponent sfDiagram;
-        public AddDeleteTool(SfDiagramComponent Diagram) : base(Diagram)
+        private SfDiagramComponent _diagram;
+        public AddDeleteTool(SfDiagramComponent diagram) : base(diagram)
         {
-            sfDiagram = Diagram;
+            _diagram = diagram;
         }
         public override void OnMouseUp(DiagramMouseEventArgs args)
         {
-            bool GroupAction = false;
-            sfDiagram.BeginUpdate();
-            if (sfDiagram.SelectionSettings.Nodes.Count > 1 || sfDiagram.SelectionSettings.Connectors.Count > 1 ||
-                ((sfDiagram.SelectionSettings.Nodes.Count + sfDiagram.SelectionSettings.Connectors.Count) > 1))
+            bool groupAction = false;
+            _diagram.BeginUpdate();
+            if (_diagram.SelectionSettings.Nodes.Count > 1 || _diagram.SelectionSettings.Connectors.Count > 1 ||
+                ((_diagram.SelectionSettings.Nodes.Count + _diagram.SelectionSettings.Connectors.Count) > 1))
             {
-                GroupAction = true;
+                groupAction = true;
             }
-            if (GroupAction)
+            if (groupAction)
             {
-                sfDiagram.StartGroupAction();
+                _diagram.StartGroupAction();
             }
-            if (sfDiagram.SelectionSettings.Nodes.Count != 0)
+            if (_diagram.SelectionSettings.Nodes.Count != 0)
             {
-                for (var i = sfDiagram.SelectionSettings.Nodes.Count - 1; i >= 0; i--)
+                for (var i = _diagram.SelectionSettings.Nodes.Count - 1; i >= 0; i--)
                 {
-                    Node deleteNode = sfDiagram.SelectionSettings.Nodes[i];
-                    sfDiagram.Nodes.Remove(deleteNode);
+                    Node deleteNode = _diagram.SelectionSettings.Nodes[i];
+                    _diagram.Nodes.Remove(deleteNode);
                 }
             }
-            if (sfDiagram.SelectionSettings.Connectors.Count != 0)
+            if (_diagram.SelectionSettings.Connectors.Count != 0)
             {
-                for (var i = sfDiagram.SelectionSettings.Connectors.Count - 1; i >= 0; i--)
+                for (var i = _diagram.SelectionSettings.Connectors.Count - 1; i >= 0; i--)
                 {
-                    Connector deleteConnector = sfDiagram.SelectionSettings.Connectors[i];
-                    sfDiagram.Connectors.Remove(deleteConnector);
+                    Connector deleteConnector = _diagram.SelectionSettings.Connectors[i];
+                    _diagram.Connectors.Remove(deleteConnector);
                 }
             }
-            if (GroupAction)
+            if (groupAction)
             {
-                sfDiagram.EndGroupAction();
+                _diagram.EndGroupAction();
             }
-            _ = sfDiagram.EndUpdateAsync();
+            _ = _diagram.EndUpdateAsync();
             base.OnMouseUp(args);
             this.InAction = true;
         }
     }
     public class CloneTool : DragController
     {
-        SfDiagramComponent sfDiagram;
-        public CloneTool(SfDiagramComponent Diagram) : base(Diagram)
+        private SfDiagramComponent _diagram;
+        public CloneTool(SfDiagramComponent diagram) : base(diagram)
         {
-            sfDiagram = Diagram;
+            _diagram = diagram;
         }
         public override void OnMouseDown(DiagramMouseEventArgs args)
         {
             NodeBase newObject;
-            if (sfDiagram.SelectionSettings.Nodes.Count > 0)
+            if (_diagram.SelectionSettings.Nodes.Count > 0)
             {
-                newObject = (sfDiagram.SelectionSettings.Nodes[0]).Clone() as Node;
+                newObject = (_diagram.SelectionSettings.Nodes[0]).Clone() as Node;
             }
             else
             {
-                newObject = (sfDiagram.SelectionSettings.Connectors[0]).Clone() as Connector;
+                newObject = (_diagram.SelectionSettings.Connectors[0]).Clone() as Connector;
             }
-            newObject.ID += sfDiagram.Nodes.Count.ToString();
-            sfDiagram.Copy();
-            sfDiagram.Paste();
-            ObservableCollection<IDiagramObject> obj = new ObservableCollection<IDiagramObject>() { sfDiagram.Nodes[sfDiagram.Nodes.Count - 1] as IDiagramObject };
-            sfDiagram.Select(obj);
+            newObject.ID += _diagram.Nodes.Count.ToString();
+            _diagram.Copy();
+            _diagram.Paste();
+            ObservableCollection<IDiagramObject> obj = new ObservableCollection<IDiagramObject>() { _diagram.Nodes[_diagram.Nodes.Count - 1] as IDiagramObject };
+            _diagram.Select(obj);
             base.OnMouseDown(args);
             this.InAction = true;
         }
@@ -644,7 +642,7 @@ The following code example shows how to change the VisibleTarget in the user han
             {
                 Name = "changeCursor",
                 Offset = 0.5,
-                Source = "https://www.w3schools.com/images/w3schools_green.jpg",
+                ImageUrl = "https://www.w3schools.com/images/w3schools_green.jpg",
                 Visible = true,
                 Side = Direction.Bottom,
                 Margin = new DiagramThickness { Top = 0, Bottom = 0, Left = 0, Right = 0 },
@@ -654,13 +652,13 @@ The following code example shows how to change the VisibleTarget in the user han
                 BackgroundColor = "green",
                 BorderWidth = 3,
             };
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle,nodeDelete,changeCursor
         };
-        SelectedModel.UserHandles = UserHandles;
-        nodes = new DiagramObjectCollection<Node>();
-        Node DiagramNode = new Node()
+        _selectedModel.UserHandles = _userHandles;
+        _nodes = new DiagramObjectCollection<Node>();
+        Node diagramNode = new Node()
             {
                 ID = "node1",
                 OffsetX = 100,
@@ -670,8 +668,8 @@ The following code example shows how to change the VisibleTarget in the user han
                 Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" },
                 Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
             };
-        connectors = new DiagramObjectCollection<Connector>();
-        Connector Connector1 = new Connector()
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector1 = new Connector()
             {
                 ID = "connector1",
                 SourcePoint = new DiagramPoint() { X = 250, Y = 250 },
@@ -689,13 +687,13 @@ The following code example shows how to change the VisibleTarget in the user han
             },
                 Type = ConnectorSegmentType.Bezier
             };
-        nodes.Add(DiagramNode);
-        connectors.Add(Connector1);
+        _nodes.Add(diagramNode);
+        _connectors.Add(connector1);
     }
     //Method to sepcifies the userhandle is visible for node
     public void VisibilityNode()
     {
-        foreach (UserHandle userHandle in UserHandles)
+        foreach (UserHandle userHandle in _userHandles)
         {
             userHandle.VisibleTarget = VisibleTarget.Node;
         }
@@ -703,7 +701,7 @@ The following code example shows how to change the VisibleTarget in the user han
     //Method to sepcifies the userhandle is visible for connector
     public void VisibilityConnector()
     {
-        foreach (UserHandle userHandle in UserHandles)
+        foreach (UserHandle userHandle in _userHandles)
         {
             userHandle.VisibleTarget = VisibleTarget.Connector;
         }
@@ -711,7 +709,7 @@ The following code example shows how to change the VisibleTarget in the user han
     //Method to sepcifies the userhandle is visible for connector and node
     public void VisibilityBoth()
     {
-        foreach (UserHandle userHandle in UserHandles)
+        foreach (UserHandle userHandle in _userHandles)
         {
             userHandle.VisibleTarget = VisibleTarget.Node | VisibleTarget.Connector;
         }
@@ -719,7 +717,7 @@ The following code example shows how to change the VisibleTarget in the user han
 }
 
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/VisibleofUserhandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/VisibleofUserhandle.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDheCXXuWinfoVfl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)" %}
 
@@ -734,17 +732,17 @@ The following code demonstrates how to create a user handle using PathData:
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
+<SfDiagramComponent @ref="_diagram" Width="1200px" Height="600px" Nodes="@_nodes" Connectors="@_connectors" SelectionSettings="@_selectedModel"> 
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     // Defines diagram's SelectionSettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects.
@@ -761,17 +759,17 @@ The following code demonstrates how to create a user handle using PathData:
                 VisibleTarget=VisibleTarget.Node
             };
         //Add user handle to the collection.
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
-        SelectedModel = new DiagramSelectionSettings()
+        _selectedModel = new DiagramSelectionSettings()
             {
                 //Enable userhandle for the selected model.
                 Constraints = SelectorConstraints.UserHandle,
-                UserHandles = this.UserHandles
+                UserHandles = _userHandles
             };
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
             {
                 ID = "node1",
@@ -782,7 +780,7 @@ The following code demonstrates how to create a user handle using PathData:
                 Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
                 Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
             };
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
 
         Connector connector1 = new Connector()
         {
@@ -791,13 +789,13 @@ The following code demonstrates how to create a user handle using PathData:
             TargetPoint = new DiagramPoint() { X = 750, Y = 270 },
             Type = ConnectorSegmentType.Orthogonal
         };
-        connectors.Add(connector1);
+        _connectors.Add(connector1);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLeiZZPeXFydqps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeUserHandlePath.razor)
 
 #### 2. ImageUrl Type
 This type renders an image as a user handle using an image URL through the Source property. Specify any web-accessible image URL or base64 encoded image data. This is ideal when want to use existing icons or images.
@@ -807,17 +805,17 @@ The following code demonstrates how to create a user handle using an image URL:
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
+<SfDiagramComponent @ref="_diagram" Width="1200px" Height="600px" Nodes="@_nodes" Connectors="@_connectors" SelectionSettings="@_selectedModel"> 
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     // Defines diagram's SelectionSettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects.
@@ -836,17 +834,17 @@ The following code demonstrates how to create a user handle using an image URL:
             VisibleTarget = VisibleTarget.Node,
         };
         //Add user handle to the collection.
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
-        SelectedModel = new DiagramSelectionSettings()
+        _selectedModel = new DiagramSelectionSettings()
             {
                 //Enable userhandle for the selected model.
                 Constraints = SelectorConstraints.UserHandle,
-                UserHandles = this.UserHandles
+                UserHandles = _userHandles
             };
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
             {
                 ID = "node1",
@@ -857,7 +855,7 @@ The following code demonstrates how to create a user handle using an image URL:
                 Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
                 Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
             };
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
 
         Connector connector1 = new Connector()
         {
@@ -866,13 +864,13 @@ The following code demonstrates how to create a user handle using an image URL:
             TargetPoint = new DiagramPoint() { X = 750, Y = 270 },
             Type = ConnectorSegmentType.Orthogonal
         };
-        connectors.Add(connector1);
+        _connectors.Add(connector1);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhoMjZEWtlIdmFN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeUserHandleImage.razor)
 
 #### 3. Template Type
 This type renders a user handle using a predefined template defined in the UserHandleTemplate section of the diagram. This allows for completely custom HTML content. Customize the appearance of user handles by defining a template in the [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at the tag level. This template will be rendered when neither the PathData nor ImageUrl properties of the user handle are specified. However, if either PathData or ImageUrl is defined, they take precedence, and the template will not be rendered. This allows for flexible styling options while maintaining a clear hierarchy of visual representations for user handles. 
@@ -882,7 +880,7 @@ The following code explains how to define a template for the [UserHandle](https:
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
+<SfDiagramComponent @ref="_diagram" Width="1200px" Height="600px" Nodes="@_nodes" Connectors="@_connectors" SelectionSettings="@_selectedModel"> 
 <DiagramTemplates>
         <UserHandleTemplate>
             @{
@@ -900,12 +898,12 @@ The following code explains how to define a template for the [UserHandle](https:
 
 @code
 {
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     // Defines diagram's SelectionSettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects.
@@ -920,17 +918,17 @@ The following code explains how to define a template for the [UserHandle](https:
                 VisibleTarget=VisibleTarget.Node | VisibleTarget.Connector
             };
         //Add user handle to the collection.
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
-        SelectedModel = new DiagramSelectionSettings()
+        _selectedModel = new DiagramSelectionSettings()
             {
                 //Enable userhandle for the selected model.
                 Constraints = SelectorConstraints.UserHandle,
-                UserHandles = this.UserHandles
+                UserHandles = _userHandles
             };
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
             {
                 ID = "node1",
@@ -941,7 +939,7 @@ The following code explains how to define a template for the [UserHandle](https:
                 Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
                 Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
             };
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
 
         Connector connector1 = new Connector()
         {
@@ -950,11 +948,11 @@ The following code explains how to define a template for the [UserHandle](https:
             TargetPoint = new DiagramPoint() { X = 750, Y = 270 },
             Type = ConnectorSegmentType.Orthogonal
         };
-        connectors.Add(connector1);
+        _connectors.Add(connector1);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeUserHandleTemplate.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrSWDjECDEhxaNC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Template for UserHandle](images/UserHandleTemplate.gif)" %}
 
@@ -977,16 +975,16 @@ Create fixed user handles by defining them in the corresponding node or connecto
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
         {
             OffsetX = 250,
@@ -1009,13 +1007,13 @@ Create fixed user handles by defining them in the corresponding node or connecto
                 },
             }
         };
-        nodes.Add(node1);
+        _nodes.Add(node1);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthSCNZEMXacGTMk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleSample.razor)
 
 ## How to Customize the Fixed User Handle
 
@@ -1048,7 +1046,7 @@ The following code explains how to customize the appearance of fixed user handle
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
+<SfDiagramComponent Height="600px" Connectors="@_connectors">
     <SnapSettings>
         <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
         <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
@@ -1057,11 +1055,11 @@ The following code explains how to customize the appearance of fixed user handle
 
 @code
 {
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
@@ -1084,13 +1082,13 @@ The following code explains how to customize the appearance of fixed user handle
                 }
             },
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBSstjOMMZqFkIF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/ConnectorFixedUserHandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/ConnectorFixedUserHandleSample.razor)
 
 N> The fixed user handle id need to be unique.
 
@@ -1124,7 +1122,7 @@ The following code explains how to customize the node fixed user handle.
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
+<SfDiagramComponent Height="600px" Nodes="@_nodes">
     <SnapSettings>
         <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
         <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
@@ -1134,12 +1132,12 @@ The following code explains how to customize the node fixed user handle.
 @code
 {
     // Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects.
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
         {
             OffsetX = 250,
@@ -1163,13 +1161,13 @@ The following code explains how to customize the node fixed user handle.
                 },
             }
         };
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhIMNDkMsCzaaqE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/Offset)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/Offset.razor)
 
 ## How to Customize Connector Fixed User Handle
 
@@ -1216,7 +1214,7 @@ The following code explains how to customize the connector fixed user handle.
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
+<SfDiagramComponent Height="600px" Connectors="@_connectors">
     <SnapSettings>
         <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
         <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
@@ -1225,11 +1223,11 @@ The following code explains how to customize the connector fixed user handle.
 
 @code
 {
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
@@ -1246,19 +1244,19 @@ The following code explains how to customize the connector fixed user handle.
                     Width = 25,
                     Offset = 0.5,
                     Alignment = FixedUserHandleAlignment.After,
-                    Displacement = new DiagramPoint { Y = 10 },
+                    Displacement = new DiagramPoint() { Y = 10 },
                     Visibility = true, Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
                 }
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjByWtNYiChZlICf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/ConnectorFixedUserHandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/ConnectorFixedUserHandleSample.razor)
 
 ## How to Provide a Template to Fixed User handle
 
@@ -1266,7 +1264,8 @@ Define a custom style for fixed user handles using a template in the [FixedUserH
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes = "@nodes" Connectors="@connectors">
+
+<SfDiagramComponent @ref="_diagram" Height="600px" Nodes="@_nodes" Connectors="@_connectors">
     <DiagramTemplates>
         <FixedUserHandleTemplate>
             @if ((context as FixedUserHandle).ID == "user1" || (context as FixedUserHandle).ID == "user2")
@@ -1280,55 +1279,60 @@ Define a custom style for fixed user handles using a template in the [FixedUserH
 </SfDiagramComponent>
 @code
 {
-    public SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
         Node node1 = new Node()
         {
-            ID="node1",
+            ID = "node1",
             OffsetX = 250,
             OffsetY = 250,
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // A fixed user handle is created and stored in fixed user handle collection of Node.
             FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
-        {
-            new NodeFixedUserHandle()
             {
-                ID = "user1",
+                new NodeFixedUserHandle()
+                {
+                    ID = "user1",
                     Height = 30,
                     Width = 30,
                     Visibility = true,
                     Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
                     Margin = new DiagramThickness() { Left = 30 }, Offset = new DiagramPoint() { X = 1 , Y = 0 }
                 },
-             }
-            };
-        nodes.Add(node1);
+            }
+        };
+        _nodes.Add(node1);
         Connector connector = new Connector
         {
             ID = "connector1",
             Type = ConnectorSegmentType.Orthogonal,
             SourcePoint = new DiagramPoint() { X = 600, Y = 200 },
             TargetPoint = new DiagramPoint() { X = 800, Y = 400 },
-            FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>() { new ConnectorFixedUserHandle() { 
-                ID="user2",
-                Offset = 1, 
-                Alignment = FixedUserHandleAlignment.After, 
-                Displacement = new DiagramPoint() { X = 10}, 
-                Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
-                Width = 30, 
-                Height = 30, 
-            }
+            // A fixed user handle is created and stored in fixed user handle collection of Connector.
+            FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>() 
+            { 
+                new ConnectorFixedUserHandle() 
+                {
+                    ID="user2",
+                    Offset = 1,
+                    Alignment = FixedUserHandleAlignment.After,
+                    Displacement = new DiagramPoint() { X = 10},
+                    Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Width = 30,
+                    Height = 30,
+                }
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeFixedUserHandle)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeFixedUserHandle.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLICNZYWsBxKDOk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Template for FixedUserHandle](images/FixedUserTemplate.png)" %}
 
@@ -1344,27 +1348,27 @@ The Diagram control provides the following event for fixed user handle.
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
-                    FixedUserHandleClick="Changed" Nodes="@nodes" @ref="diagram">
+                    FixedUserHandleClick="Changed" Nodes="@_nodes" @ref="_diagram">
 </SfDiagramComponent>
 
 @code
 {
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
 
     public void Changed(FixedUserHandleClickEventArgs args)
     {
         if ((args.Element as Node).ID == "node1" && args.FixedUserHandle.ID == "user1")
         {
-            diagram.Copy();
-            diagram.Paste();
+            _diagram.Copy();
+            _diagram.Paste();
         }
     }
-
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
         {
             OffsetX = 250,
@@ -1389,13 +1393,13 @@ The Diagram control provides the following event for fixed user handle.
                 },
             }
         };
-        nodes.Add(node1);
+        _nodes.Add(node1);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZheiNXkiCqDgOux?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleEvent.razor)
 
 ## See also
 
