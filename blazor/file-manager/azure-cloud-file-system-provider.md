@@ -55,16 +55,6 @@ git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider 
 
 ```
 
-N> **NuGet:** Additionally, a [NuGet](https://www.nuget.org/packages/Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core) package of **ASP.NET Core Azure file system provider** has been created.
-
-Use the following command to install the NuGet package in an application.
-
-```bash
-
- dotnet add package Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core
-
-```
-
 <a id="register-credentials"></a>
 ### 5. Registering Azure Credentials in the Provider
 
