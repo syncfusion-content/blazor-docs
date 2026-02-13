@@ -482,7 +482,12 @@ The following example demonstrates how to implement the filtering operation for 
             // Apply filtering if filter criteria are provided.
             if (dm.Where != null && dm.Where.Count > 0)
             {
-                dataSource = DataOperations.PerformFiltering(dataSource, dm.Where, dm.Where[0].Operator);
+                // Filtering
+                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                }
             }
 
             // Count the total number of records 
@@ -759,7 +764,7 @@ Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.Sf
 To enable custom parameters in data requests for the Gantt Chart, follow these steps:
 
 1. **Bind the Query object to the Gantt Chart:**  
-    Assign the initialized Query object to the Gantt’s `Query` property.
+    Assign the initialized Query object to the Gantt Chart `Query` property.
 2. **Initialize the Query object:**  
     Create a new instance of the `Query` class and use the `AddParams` method to add your custom parameters.
 3. **Access parameters in the custom adaptor:**  

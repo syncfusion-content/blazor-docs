@@ -98,7 +98,7 @@ After executing this script, the records are stored in the `TaskData` table with
 
 ### Step 2: Install required NuGet packages
 
-Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files—such as **Program.cs**, **appsettings.json**, **wwwroot**, and **Components**.
+Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files such as **Program.cs**, **appsettings.json**, **wwwroot**, and **Components**.
 
 For this guide, a Blazor application named **GanttEFUrlAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages. These packages enable Entity Framework Core with SQL Server provider and add Syncfusion UI components.
 
@@ -237,7 +237,6 @@ A connection string contains the information needed to connect the application t
 | Command Timeout | Command execution timeout in seconds |
 
 The database connection string has been configured successfully.
-
 
 ### Step 6: Create the Gantt API Controller
 
@@ -417,8 +416,6 @@ The `Home.razor` component will display the task data in a Syncfusion Blazor Gan
 - **`<GanttEditSettings>`**: Enables adding, deleting and inline editing .
 - **`Toolbar`**: "Add", "Edit", "Delete", "Update", "Cancel", "Search" for CRUD and search operations.
 
-> In **URL Adaptor**, the Gantt Chart component handles grouping and aggregation operations automatically.
-
 ### Step 3: Implement the Endpoints for UrlAdaptor
 
 The UrlAdaptor communicates with REST API endpoints for Gantt Chart operations rather than executing logic in the component. The Gantt Chart sends requests to endpoints defined in a controller. Below is the controller structure with the same decorators and signatures as in the project, with placeholder comments to add logic.
@@ -547,7 +544,7 @@ Searching helps to find records by entering keywords in the search box, which fi
 
 ```cshtml
 <SfGantt TValue="TaskDataModel"
-        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+        Toolbar="@(new List<string>() { "Search" })">
     <SfDataManager Url="/api/Gantt" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
 </SfGantt>
 ```
@@ -967,7 +964,7 @@ Execute the following command:
 dotnet run
 ```
 
-The application will start, and the console will display the local URL (`https://localhost:xxxx` where`xxxx`- port shown in the terminal).
+The application will start, and the console will display the local URL (`https://localhost:7164` replace `7164` with the port shown in the terminal).
 
 **Step 3: Access the Application**
 
@@ -998,7 +995,7 @@ This guide demonstrates how to:
 5. Create REST API endpoints in a controller for CRUD operations. [🔗](#step-6-create-the-gantt-api-controller)
 6. Implement searching, filtering, and sorting in the REST API. [🔗](#step-4-implement-searching-feature)
 7. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-7-perform-crud-operations)
-8. Handle batch operations for bulk data modifications. [🔗](#step-7-perform-crud-operations)
+8. Handle batch operations for multiple data modifications. [🔗](#step-7-perform-crud-operations)
 
 The application now provides a complete solution for managing tasks with a modern, user-friendly interface using Entity Framework Core with SQL Server and REST API endpoints via UrlAdaptor.
 
@@ -1006,6 +1003,6 @@ The application now provides a complete solution for managing tasks with a moder
 
 ## Alternative approach: custom adaptor
 
-For a client-side data operations approach without REST API endpoints, refer to the [Blazor Gantt Chart with SQL Server using Entity Framework and Custom Adaptor](https://blazor.syncfusion.com/documentation/Gantt Chart/connecting-to-database/microsoft-sql-server) documentation. This approach executes search, filter, sort, and grouping operations directly in the Blazor component, providing a tightly integrated alternative to the REST API pattern.
+For a client-side data operations approach without REST API endpoints, refer to the [Blazor Gantt Chart with SQL Server using Entity Framework and Custom Adaptor](https://blazor.syncfusion.com/documentation/gantt-chart/connecting-to-database/microsoft-sql-server) documentation. This approach executes search, filter and sort operations directly in the Blazor component, providing a tightly integrated alternative to the REST API pattern.
 
 ---

@@ -1204,14 +1204,14 @@ In **Home.razor**, implement the [BatchUpdateAsync](https://help.syncfusion.com/
 - All repository operations persist changes to the SQL Server database.
 - The Gantt Chart refreshes to display the updated, added, and removed records in a single response.
 
-Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor Gantt Chart.
+Now the adaptor supports multiple record modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor Gantt Chart.
 
 **Reference links**
 
 - [InsertAsync(DataManager, object)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) - Create new records in SQL Server
 - [UpdateAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Edit existing records in SQL Server
 - [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from SQL Server
-- [BatchUpdateAsync(DataManager, object, object, object, string, string, int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) - Handle bulk operations
+- [BatchUpdateAsync(DataManager, object, object, object, string, string, int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) - Handle multiple task operations
 
 ---
 
@@ -1449,6 +1449,6 @@ This guide demonstrates how to:
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
 5. Implement the repository pattern for data access. [🔗](#step-6-create-the-repository-class)
 6. Create a Blazor component with a Gantt Chart that supports searching, filtering, sorting, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-gantt-components)
-7. Handle bulk operations and batch updates. [🔗](#step-8-perform-crud-operations)
+7. Handle multiple task operations and batch updates. [🔗](#step-8-perform-crud-operations)
 
 The application now provides a complete solution for managing tasks with a modern, user-friendly interface integrated with SQL Server.
