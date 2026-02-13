@@ -18,15 +18,15 @@ Create a node in a Blazor diagram, define a Node object and add it to the diagra
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
         {
@@ -44,13 +44,13 @@ Create a node in a Blazor diagram, define a Node object and add it to the diagra
             }
         };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZByCjXwfvJVAbsa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/AddMethod.razor)
 
 ## How to Add Nodes Using the AddDiagramElementsAsync Method
 
@@ -62,48 +62,48 @@ The [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="AddDiagramElementMethod" OnClick="@AddDiagramElementMethod" />
+<SfButton Content="AddDiagramElementMethod" OnClick="@AddDiagramElementMethodAsync" />
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px">
+<SfDiagramComponent @ref="_diagram" Width="1000px" Height="500px">
 </SfDiagramComponent>
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
 
-    public async void AddDiagramElementMethod()
+    public async void AddDiagramElementMethodAsync()
     {
         Node node1 = new Node()
+        {
+            OffsetX = 100,
+            OffsetY = 100,
+            Height = 50,
+            Ports = new DiagramObjectCollection<PointPort>()
             {
-                OffsetX = 100,
-                OffsetY = 100,
-                Height = 50,
-                Ports = new DiagramObjectCollection<PointPort>()
+                new PointPort()
                 {
-                    new PointPort()
-                    {
-                        ID="port1",
-                        Visibility = PortVisibility.Visible,
-                        Offset = new DiagramPoint() { X = 1, Y = 0.5},
-                        Height = 10, Width = 10,
-                        Style = new ShapeStyle(){Fill = "yellow", StrokeColor = "yellow"}
-                    }
-                },
-                Width = 100,
-                ID = "node1",
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-            };
+                    ID="port1",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5},
+                    Height = 10, Width = 10,
+                    Style = new ShapeStyle(){Fill = "yellow", StrokeColor = "yellow"}
+                }
+            },
+            Width = 100,
+            ID = "node1",
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+        };
 
         Node node2 = new Node()
-            {
-                OffsetX = 300,
-                OffsetY = 300,
-                Height = 50,
-                Width = 100,
-                ID = "node2",
-                Ports = new DiagramObjectCollection<PointPort>()
+        {
+            OffsetX = 300,
+            OffsetY = 300,
+            Height = 50,
+            Width = 100,
+            ID = "node2",
+            Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
                 {
@@ -112,50 +112,50 @@ The [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
                     Offset = new DiagramPoint() { X = 0, Y = 0.5},
                     Height = 10, Width = 10,
                     Style = new ShapeStyle(){Fill = "yellow", StrokeColor = "yellow"}
-               }
+                }
             },
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-            };
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+        };
 
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            //Source node id of the connector.
+            SourceID = "node1",
+            //source node port id.
+            SourcePortID = "port1",
+            //Target node id of the connector.
+            TargetID = "node2",
+            //Target node port id.
+            TargetPortID = "port2",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                //Source node id of the connector.
-                SourceID = "node1",
-                //source node port id.
-                SourcePortID = "port1",
-                //Target node id of the connector.
-                TargetID = "node2",
-                //Target node port id.
-                TargetPortID = "port2",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                // Type of the connector
-                Type = ConnectorSegmentType.Straight,
-            };
-        DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
-        NodeCollection.Add(node1);
-        NodeCollection.Add(node2);
-        NodeCollection.Add(Connector);
-        await Diagram.AddDiagramElementsAsync(NodeCollection);
+                }
+            },
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            // Type of the connector
+            Type = ConnectorSegmentType.Straight,
+        };
+        DiagramObjectCollection<NodeBase> nodeCollection = new DiagramObjectCollection<NodeBase>();
+        nodeCollection.Add(node1);
+        nodeCollection.Add(node2);
+        nodeCollection.Add(Connector);
+        await _diagram.AddDiagramElementsAsync(nodeCollection);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMXDcJPTQYWFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddDiagramElements)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/AddDiagramElements.razor)
 
 ## How to Clear Nodes and Connectors from the Diagram
 
@@ -166,67 +166,67 @@ The [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Clear" OnClick="@Clear" />
-<SfDiagramComponent @ref="diagram" Width="500px" Height="500px" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors"></SfDiagramComponent>
+<SfDiagramComponent @ref="_diagram" Width="500px" Height="500px" @bind-Nodes="@_nodes" @bind-Connectors="@_connectors"></SfDiagramComponent>
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        Nodes.Add(new Node()
-            {
-                ID = "node1",
-                OffsetX = 100,
-                OffsetY = 100,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            });
-        Nodes.Add(new Node()
-            {
-                ID = "node2",
-                OffsetX = 270,
-                OffsetY = 70,
-                Width = 50,
-                Height = 50,
-            });
-        Nodes.Add(new Node()
-            {
-                ID = "node3",
-                OffsetX = 330,
-                OffsetY = 130,
-                Width = 50,
-                Height = 50,
-            });
-        Nodes.Add(new NodeGroup()
-            {
-                ID = "group",
-                Children = new string[] { "node2", "node3" },
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            });
-        Connectors.Add(new Connector()
-            {
-                SourceID = "node1",
-                TargetID = "group",
-                Style = new ShapeStyle() { StrokeColor = "#6495ED" },
-                TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" } }
-            });
+        _nodes.Add(new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        });
+        _nodes.Add(new Node()
+        {
+            ID = "node2",
+            OffsetX = 270,
+            OffsetY = 70,
+            Width = 50,
+            Height = 50,
+        });
+        _nodes.Add(new Node()
+        {
+            ID = "node3",
+            OffsetX = 330,
+            OffsetY = 130,
+            Width = 50,
+            Height = 50,
+        });
+        _nodes.Add(new NodeGroup()
+        {
+            ID = "group",
+            Children = new string[] { "node2", "node3" },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        });
+        _connectors.Add(new Connector()
+        {
+            SourceID = "node1",
+            TargetID = "group",
+            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+            TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" } }
+        });
     }
     private void Clear()
     {
-        diagram.Clear();
+        _diagram.Clear();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBesjNQpboWvycs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Clear)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/Clear.razor)
 
 ![Blazor Diagram clear](images/blazor-diagram-clear.gif)
 
@@ -239,103 +239,103 @@ The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfD
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Delete" OnClick="@Delete" />
-<SfButton Content="DeletewithArgument" OnClick="@DeletewithArgument" />
+<SfButton Content="DeletewithArgument" OnClick="@DeleteWithArgument" />
 
-<SfDiagramComponent @ref="diagram" Width="500px" Height="500px" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors">
+<SfDiagramComponent @ref="_diagram" Width="500px" Height="500px" @bind-Nodes="@_nodes" @bind-Connectors="@_connectors">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 @code {
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     //Initialize the diagram's nodebase collection
-    DiagramObjectCollection<NodeBase> DiagramElements = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> _diagramElements = new DiagramObjectCollection<NodeBase>();
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            OffsetX = 200,
+            OffsetY = 100,
+            Height = 50,
+            Width = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                OffsetX = 200,
-                OffsetY = 100,
-                Height = 50,
-                Width = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
-        Nodes.Add(node1);
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
+        _nodes.Add(node1);
         Node node2 = new Node()
+        {
+            ID = "node2",
+            OffsetX = 200,
+            OffsetY = 200,
+            Height = 50,
+            Width = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                OffsetX = 200,
-                OffsetY = 200,
-                Height = 50,
-                Width = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
-        Nodes.Add(node2);
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
+        _nodes.Add(node2);
         Node node3 = new Node()
+        {
+            ID = "node3",
+            OffsetX = 200,
+            OffsetY = 300,
+            Height = 50,
+            Width = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node3",
-                OffsetX = 200,
-                OffsetY = 300,
-                Height = 50,
-                Width = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
-        Nodes.Add(node3);
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
+        _nodes.Add(node3);
 
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-                Type = ConnectorSegmentType.Straight,
-            };
-        Connectors.Add(connector1);
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(connector1);
         Connector connector2 = new Connector()
-            {
-                ID = "connector2",
-                SourceID = "node2",
-                TargetID = "node3",
-                Type = ConnectorSegmentType.Straight,
-            };
-        Connectors.Add(connector2);
+        {
+            ID = "connector2",
+            SourceID = "node2",
+            TargetID = "node3",
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(connector2);
         NodeGroup groupNode = new NodeGroup();
         groupNode.Children = new string[] { "node2", "node3" };
-        Nodes.Add(groupNode);
+        _nodes.Add(groupNode);
     }
     //Deletes DiagramElements with null parameter
-    public void Delete()
+    private void Delete()
     {
-        diagram.Delete();
+        _diagram.Delete();
     }
     //Deletes DiagramElements with parameter
-    private void DeletewithArgument()
+    private void DeleteWithArgument()
     {
-        DiagramElements.Add(diagram.Nodes[0]);
-        DiagramElements.Add(diagram.Nodes[1]);
-        diagram.Delete(DiagramElements);
+        _diagramElements.Add(_diagram.Nodes[0]);
+        _diagramElements.Add(_diagram.Nodes[1]);
+        _diagram.Delete(_diagramElements);
     }
 
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLyMZNwplRtkZvS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Delete)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/Delete.razor)
 
 ## How to Reset Diagram Zoom Level
 The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method restores the current zoom level of the diagram page to its default value of 100%. This method is particularly useful when the diagram is in a zoomed-in or zoomed-out state, allowing users to quickly return to the standard view. The following code example demonstrates how to implement the ResetZoom method to restore the diagram's default zoom level.
@@ -361,7 +361,7 @@ The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 </div>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
 
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
@@ -369,76 +369,76 @@ The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
 
     }
 
     public void ZoomIn()
     {
-        diagram.Zoom(1.2, new DiagramPoint { X = 100, Y = 100 });
+        _diagram.Zoom(1.2, new DiagramPoint { X = 100, Y = 100 });
     }
     public void ZoomOut()
     {
-        diagram.Zoom(1 / 1.2, new DiagramPoint { X = 100, Y = 100 });
+        _diagram.Zoom(1 / 1.2, new DiagramPoint { X = 100, Y = 100 });
     }
     private void ResetZoom()
     {
-        diagram.ResetZoom();
+        _diagram.ResetZoom();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDByMttQzaXbtFcK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ResetZoom)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ResetZoom.razor)
 
 ![Blazor Diagram reset zoom methos](images/blazor-diagram-reset-zoom-method.gif)
 
@@ -464,76 +464,75 @@ The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 </div>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
 
     }
     //Method to clear the selected nodes/connectors.
-    public void ClearSelection()
+    private void ClearSelection()
     {
-        diagram.ClearSelection();
+        _diagram.ClearSelection();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDheWZZQzEjtSkVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ClearSelection)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ClearSelection.razor)
 
 ## How to Get Object in the Diagram
 The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetObject_System_String_) method in SfDiagramComponent accepts an ID as a parameter and returns an IDiagramObject. Retrieve a specific connector or node by passing its unique identifier to this method. This powerful functionality allows for easy access and manipulation of diagram elements within your Blazor application.
@@ -557,77 +556,75 @@ The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 </div>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
 
     }
     //Method to get object
-    public void GetObjectMethod()
+    private void GetObjectMethod()
     {
-        Node node = diagram.GetObject("node1") as Node;
-        diagram.Select(new System.Collections.ObjectModel.ObservableCollection<IDiagramObject> (){node});
+        Node node = _diagram.GetObject("node1") as Node;
+        _diagram.Select(new System.Collections.ObjectModel.ObservableCollection<IDiagramObject> (){node});
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVysDjwpPuWVGUI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetObjectMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetObjectMethod.razor)
 
 ## How to Get Page Bounds of the Diagram
 The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetPageBounds_System_Nullable_System_Double__System_Nullable_System_Double__) method is used to retrieve the boundaries of the diagram page. This method allows to obtain essential page dimensions such as width, height, and other relevant values, enabling precise control over the diagram's layout and positioning.
@@ -651,76 +648,75 @@ The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 </div>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
 
     }
     //Method to get pagebounds value
-    public void GetPageBounds()
+    private void GetPageBounds()
     {
-        DiagramRect diagramRect = diagram.GetPageBounds();
+        DiagramRect diagramRect = _diagram.GetPageBounds();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVeiNNGfkUXpFSC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetPageBounds)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetPageBounds.razor)
 
 ## How to Select All Objects in the Diagram
   The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method selects all objects (like nodes, connectors, and groups) in the diagram simultaneously. This feature is particularly useful for performing bulk operations or applying changes to multiple elements at once.
@@ -744,76 +740,75 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 </div>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
 
     }
     //Method to select all objects in the diagram
-    public void SelectAllMethod()
+    private void SelectAllMethod()
     {
-        diagram.SelectAll();
+        _diagram.SelectAll();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVIsjZmzYpWNISa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/SelectAllMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/SelectAllMethod.razor)
 
 ## How to Scale Selected Objects
 The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Scale_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) method resizes a diagram objects proportionally by applying a specified scaling factor. This enables precise control over the size of elements within your diagram.
@@ -837,153 +832,150 @@ The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 </div>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
-
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
     }
     //Method to scale the selected objects in the diagram
-    public void ScaleMethod()
+    private void ScaleMethod()
     {
-        diagram.Scale(diagram.SelectionSettings.Nodes[0], 10, 10, new DiagramPoint(0.5, 0.5));
+        _diagram.Scale(_diagram.SelectionSettings.Nodes[0], 10, 10, new DiagramPoint(0.5, 0.5));
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBIsNZmTYeioDqg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ScaleMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ScaleMethod.razor)
 
 ## How to Get and Customize Cursor Style
 The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomCursor) method create and customize own cursor. Define the cursor style according to your specific requirements, enhancing user interaction with the diagram component.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors" GetCustomCursor="@cursor">    
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors" GetCustomCursor="@Cursor">    
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
          
 
 @code {
-    public SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
-        protected override void OnInitialized()
+    protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
-
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
     }
   
-    public string cursor(DiagramElementAction action, bool active, string handle)
-     {
-       string cursors = null;
+    private string Cursor(DiagramElementAction action, bool active, string handle)
+    {
+        string cursors = null;
         if (action == DiagramElementAction.Select)
         {
             cursors = "crosshair";
         }
         return cursors;
-     }
+    }
  }
  ```
  {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVICjNmfaRXpFsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomCursor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetCustomCursor.razor)
 
 ## How to Use BeginUpdate and EndUpdateAsync
 The [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) method temporarily suspends visual updates to the diagram until the [EndUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdateAsync) method is called. This allows for multiple changes to be made efficiently without triggering unnecessary redraws. When EndUpdateAsync() is invoked, it releases the lock imposed by BeginUpdate(Boolean), resulting in an immediate visual refresh that reflects all accumulated changes to the diagram.
@@ -992,80 +984,79 @@ The [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-    <SfButton Content="PropertyUpdate" OnClick="@PropertyUpdate" />
+    <SfButton Content="PropertyUpdate" OnClick="@PropertyUpdateAsync" />
 
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
-        <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
+         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
 
     }
-    public void PropertyUpdate()
+    private async void PropertyUpdateAsync()
     {
-        diagram.BeginUpdate();
-        diagram.Nodes[0].Height = 150;
-        diagram.Nodes[0].Width = 150;
-        diagram.EndUpdateAsync();
+        _diagram.BeginUpdate();
+        _diagram.Nodes[0].Height = 150;
+        _diagram.Nodes[0].Width = 150;
+        await _diagram.EndUpdateAsync();
 
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjByCXZmzadbzxhm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/BeginAndEndUpdate)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/BeginAndEndUpdate.razor)
 
 ## How to Unselect Diagram Elements
 The [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnSelect_Syncfusion_Blazor_Diagram_IDiagramObject_) method deselects a specific previously selected object. This functionality allows for precise control over selection state of diagram elements.
@@ -1089,76 +1080,75 @@ The [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.S
 </div>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
 
     }
     //Method to unselect the selected objects
-    public void UnSelectMethod()
+    private void UnSelectMethod()
     {
-        diagram.UnSelect(diagram.SelectionSettings.Nodes[0] as IDiagramObject);
+        _diagram.UnSelect(_diagram.SelectionSettings.Nodes[0] as IDiagramObject);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSCjNQfYGbfwMc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/UnSelectMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/UnSelectMethod.razor)
 
 ## How to Clone the Diagram
 
@@ -1183,76 +1173,75 @@ The [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 </div>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
 
     }
     //Method to clone the diagram
-    public void CloneMethod()
+    private void CloneMethod()
     {
-        diagram.Clone();
+        _diagram.Clone();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBoWXXmTEFbzmUx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/CloneMethod)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/CloneMethod.razor)
 
 ## How to Get Custom Tool
 The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) method enables users to create and implement custom tools, extending the functionality of the diagram component. This powerful feature allows for tailored interactions and specialized behaviors within the diagram.
@@ -1260,23 +1249,24 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes" GetCustomTool="@tools" GetCustomCursor="@cursor" Connectors="@connectors" SelectionSettings="@SelectedModel">
+<SfDiagramComponent @ref="@_diagram" Width="1200px" Height="600px" Nodes="@_nodes" GetCustomTool="@Tools" GetCustomCursor="@Cursor" Connectors="@_connectors" SelectionSettings="@_selectedModel">
 </SfDiagramComponent>
 
 @code
 {
     //Reference the diagram
-    public SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
     //Intialize diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupNode = new NodeGroup();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private NodeGroup _groupNode = new NodeGroup();
     //Intialize diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     //Initialize diagram's selectionsettings.
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
    //Initialize the diagram's userhandle.
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
-    public string cursor(DiagramElementAction action, bool active, string handle)
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
+    
+    private string Cursor(DiagramElementAction action, bool active, string handle)
     {
         string cursors = null;
         if (handle == "changeCursor")
@@ -1285,7 +1275,8 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
         }
         return cursors;
     }
-    public InteractionControllerBase tools(DiagramElementAction action, string id)
+
+    private InteractionControllerBase Tools(DiagramElementAction action, string id)
     {
         InteractionControllerBase tool = null;
         if (id == "clone")
@@ -1373,90 +1364,90 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     protected override void OnInitialized()
     {
         UserHandle cloneHandle = new UserHandle()
-            {
-                Name = "clone",
-                PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
-                Offset = 0,
-                Visible = true,
-                Side = Direction.Top,
-                Margin = new DiagramThickness { Top = 0, Bottom = 0, Left = 0, Right = 0 },
-                Size = 30,
-                PathColor = "yellow",
-                BorderColor = "red",
-                BackgroundColor = "green",
-                BorderWidth = 3,
-            };
+        {
+            Name = "clone",
+            PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+            Offset = 0,
+            Visible = true,
+            Side = Direction.Top,
+            Margin = new DiagramThickness { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            Size = 30,
+            PathColor = "yellow",
+            BorderColor = "red",
+            BackgroundColor = "green",
+            BorderWidth = 3,
+        };
         UserHandle nodeDelete = new UserHandle()
             {
-                Name = "nodeDelete",
-                PathData = "M 33.986328 15 A 1.0001 1.0001 0 0 0 33 16 L 33 71.613281 A 1.0001 1.0001 0 0 0 34.568359 72.435547 L 47.451172 63.53125 L 56.355469 85.328125 A 1.0001 1.0001 0 0 0 57.667969 85.871094 L 66.191406 82.298828 A 1.0001 1.0001 0 0 0 66.730469 80.998047 L 57.814453 59.171875 L 73.195312 56.115234 A 1.0001 1.0001 0 0 0 73.708984 54.429688 L 34.708984 15.294922 A 1.0001 1.0001 0 0 0 33.986328 15 z M 35 18.419922 L 70.972656 54.517578 L 56.234375 57.447266 A 1.0001 1.0001 0 0 0 55.503906 58.806641 L 64.503906 80.835938 L 57.826172 83.636719 L 48.832031 61.623047 A 1.0001 1.0001 0 0 0 47.337891 61.177734 L 35 69.707031 L 35 18.419922 z M 37.494141 23.970703 A 0.50005 0.50005 0 0 0 37 24.470703 L 37 58.5 A 0.50005 0.50005 0 1 0 38 58.5 L 38 25.679688 L 51.123047 38.849609 A 0.50005 0.50005 0 1 0 51.832031 38.144531 L 37.853516 24.117188 A 0.50005 0.50005 0 0 0 37.494141 23.970703 z M 53.496094 40.021484 A 0.50005 0.50005 0 0 0 53.146484 40.878906 L 64.898438 52.671875 L 61.359375 53.373047 A 0.50005 0.50005 0 1 0 61.552734 54.353516 L 66.007812 53.470703 A 0.50005 0.50005 0 0 0 66.263672 52.626953 L 53.853516 40.173828 A 0.50005 0.50005 0 0 0 53.496094 40.021484 z M 58.521484 53.941406 A 0.50005 0.50005 0 0 0 58.4375 53.951172 L 51.482422 55.330078 A 0.50005 0.50005 0 0 0 51.117188 56.009766 L 51.794922 57.666016 A 0.50016022 0.50016022 0 1 0 52.720703 57.287109 L 52.273438 56.193359 L 58.632812 54.931641 A 0.50005 0.50005 0 0 0 58.521484 53.941406 z M 53.089844 59.017578 A 0.50005 0.50005 0 0 0 52.630859 59.714844 L 53.037109 60.708984 A 0.50005 0.50005 0 1 0 53.962891 60.332031 L 53.556641 59.335938 A 0.50005 0.50005 0 0 0 53.089844 59.017578 z M 54.300781 61.984375 A 0.50005 0.50005 0 0 0 53.841797 62.679688 L 60.787109 79.679688 A 0.50016068 0.50016068 0 0 0 61.712891 79.300781 L 54.767578 62.302734 A 0.50005 0.50005 0 0 0 54.300781 61.984375 z",
-                Offset = 1,
-                Visible = true,
-                Side = Direction.Left,
-                Margin = new DiagramThickness { Top = 0, Bottom = 0, Left = 0, Right = 0 },
-                Size = 30,
-                PathColor = "yellow",
-                BorderColor = "red",
-                BackgroundColor = "green",
-                BorderWidth = 3,
-            };
+            Name = "nodeDelete",
+            PathData = "M 33.986328 15 A 1.0001 1.0001 0 0 0 33 16 L 33 71.613281 A 1.0001 1.0001 0 0 0 34.568359 72.435547 L 47.451172 63.53125 L 56.355469 85.328125 A 1.0001 1.0001 0 0 0 57.667969 85.871094 L 66.191406 82.298828 A 1.0001 1.0001 0 0 0 66.730469 80.998047 L 57.814453 59.171875 L 73.195312 56.115234 A 1.0001 1.0001 0 0 0 73.708984 54.429688 L 34.708984 15.294922 A 1.0001 1.0001 0 0 0 33.986328 15 z M 35 18.419922 L 70.972656 54.517578 L 56.234375 57.447266 A 1.0001 1.0001 0 0 0 55.503906 58.806641 L 64.503906 80.835938 L 57.826172 83.636719 L 48.832031 61.623047 A 1.0001 1.0001 0 0 0 47.337891 61.177734 L 35 69.707031 L 35 18.419922 z M 37.494141 23.970703 A 0.50005 0.50005 0 0 0 37 24.470703 L 37 58.5 A 0.50005 0.50005 0 1 0 38 58.5 L 38 25.679688 L 51.123047 38.849609 A 0.50005 0.50005 0 1 0 51.832031 38.144531 L 37.853516 24.117188 A 0.50005 0.50005 0 0 0 37.494141 23.970703 z M 53.496094 40.021484 A 0.50005 0.50005 0 0 0 53.146484 40.878906 L 64.898438 52.671875 L 61.359375 53.373047 A 0.50005 0.50005 0 1 0 61.552734 54.353516 L 66.007812 53.470703 A 0.50005 0.50005 0 0 0 66.263672 52.626953 L 53.853516 40.173828 A 0.50005 0.50005 0 0 0 53.496094 40.021484 z M 58.521484 53.941406 A 0.50005 0.50005 0 0 0 58.4375 53.951172 L 51.482422 55.330078 A 0.50005 0.50005 0 0 0 51.117188 56.009766 L 51.794922 57.666016 A 0.50016022 0.50016022 0 1 0 52.720703 57.287109 L 52.273438 56.193359 L 58.632812 54.931641 A 0.50005 0.50005 0 0 0 58.521484 53.941406 z M 53.089844 59.017578 A 0.50005 0.50005 0 0 0 52.630859 59.714844 L 53.037109 60.708984 A 0.50005 0.50005 0 1 0 53.962891 60.332031 L 53.556641 59.335938 A 0.50005 0.50005 0 0 0 53.089844 59.017578 z M 54.300781 61.984375 A 0.50005 0.50005 0 0 0 53.841797 62.679688 L 60.787109 79.679688 A 0.50016068 0.50016068 0 0 0 61.712891 79.300781 L 54.767578 62.302734 A 0.50005 0.50005 0 0 0 54.300781 61.984375 z",
+            Offset = 1,
+            Visible = true,
+            Side = Direction.Left,
+            Margin = new DiagramThickness { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            Size = 30,
+            PathColor = "yellow",
+            BorderColor = "red",
+            BackgroundColor = "green",
+            BorderWidth = 3,
+        };
         UserHandle changeCursor = new UserHandle()
-            {
-                Name = "changeCursor",
-                Offset = 0.5,
-                ImageUrl = "https://www.w3schools.com/images/w3schools_green.jpg",
-                Visible = true,
-                Side = Direction.Bottom,
-                Margin = new DiagramThickness { Top = 0, Bottom = 0, Left = 0, Right = 0 },
-                Size = 30,
-                PathColor = "yellow",
-                BorderColor = "red",
-                BackgroundColor = "green",
-                BorderWidth = 3,
-            };
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        {
+            Name = "changeCursor",
+            Offset = 0.5,
+            ImageUrl = "https://www.w3schools.com/images/w3schools_green.jpg",
+            Visible = true,
+            Side = Direction.Bottom,
+            Margin = new DiagramThickness { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            Size = 30,
+            PathColor = "yellow",
+            BorderColor = "red",
+            BackgroundColor = "green",
+            BorderWidth = 3,
+        };
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle,nodeDelete,changeCursor
         };
-        SelectedModel.UserHandles = UserHandles;
-        nodes = new DiagramObjectCollection<Node>();
+        _selectedModel.UserHandles = _userHandles;
+        _nodes = new DiagramObjectCollection<Node>();
         Node DiagramNode = new Node()
-            {
-                ID = "node1",
-                OffsetX = 100,
-                OffsetY = 100,
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" },
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
-            };
-        connectors = new DiagramObjectCollection<Connector>();
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
+        };
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector Connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 250, Y = 250 },
+            TargetPoint = new DiagramPoint() { X = 350, Y = 350 },
+            Annotations = new DiagramObjectCollection<PathAnnotation>()
             {
-                ID = "connector1",
-                SourcePoint = new DiagramPoint() { X = 250, Y = 250 },
-                TargetPoint = new DiagramPoint() { X = 350, Y = 350 },
-                Annotations = new DiagramObjectCollection<PathAnnotation>()
-            {
-                    new PathAnnotation()
-                    {
-                        ID = "connector1",
-                        Offset = 0,
-                        Visibility = true,
-                        Style = new TextStyle(){ Color ="red", FontSize =12, TextAlign = TextAlign.Right,
-                        },
-                    }
+                new PathAnnotation()
+                {
+                    ID = "connector1",
+                    Offset = 0,
+                    Visibility = true,
+                    Style = new TextStyle(){ Color ="red", FontSize =12, TextAlign = TextAlign.Right,
+                    },
+                }
             },
-                Type = ConnectorSegmentType.Bezier
-            };
-        nodes.Add(DiagramNode);
-        connectors.Add(Connector1);
+            Type = ConnectorSegmentType.Bezier
+        };
+        _nodes.Add(DiagramNode);
+        _connectors.Add(Connector1);
     }
 }
  ```
  {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrIMDjQoNXUmgcU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
- A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomTool)
+ A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetCustomTool.razor)
 
 
 ## How to Zoom and Pan Diagrams
@@ -1478,8 +1469,7 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 </style>
 
 <div id="diagram-space">
-    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
-
+    <SfDiagramComponent @ref="_diagram" Width="600px" Height="600px" Nodes="_nodes" Connectors="_connectors">
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
@@ -1487,79 +1477,78 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 <div id="properties">
     <SfButton Content="Zoom" OnClick="@Zoom" />
     <SfButton Content="Pan" OnClick="@Pan" />
-
 </div>
 
 @code {
     //Reference the diagram
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     //Initialize the diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
 
     protected override void OnInitialized()
     {
         Node node = new Node()
-            {
-                ID = "node1",
-                Width = 50,
-                Height = 50,
-                OffsetX = 350,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 50,
-                Height = 50,
-                OffsetX = 450,
-                OffsetY = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-            };
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
             {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetDecorator = new DecoratorSettings()
-                {
-                    Style = new ShapeStyle()
-                    {
-                        Fill = "#6495ED",
-                        StrokeColor = "#6495ED",
-                    }
-                },
-                TargetID = "node2",
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                },
-                Type = ConnectorSegmentType.Straight,
-            };
-        connectors.Add(Connector);
-        nodes.Add(node);
-        nodes.Add(node2);
-
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        _connectors.Add(Connector);
+        _nodes.Add(node);
+        _nodes.Add(node2);
     }
 
     //Method to zoom the diagram
-    public void Zoom()
+    private void Zoom()
     {
-        diagram.Zoom(1.2, new DiagramPoint { X = 100, Y = 100 });
+        _diagram.Zoom(1.2, new DiagramPoint { X = 100, Y = 100 });
     }
+
     //Method to pan the diagram
-    public void Pan()
+    private void Pan()
     {
-        diagram.Pan(100, 200, new DiagramPoint { X = 100, Y = 100 });
+        _diagram.Pan(100, 200, new DiagramPoint { X = 100, Y = 100 });
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIiXDwyttPZhfR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ZoomAndPan)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ZoomAndPan.razor)
 
 ## How to Refresh the Data Source
 The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RefreshDataSourceAsync) method dynamically updates the diagram layout to reflect any changes made to the underlying data source. This ensures that the visual representation remains synchronized with the most current data.
@@ -1568,18 +1557,19 @@ The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-<SfDiagramComponent @ref="Diagram" Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="@DataSource"></DataSourceSettings>
+<SfDiagramComponent @ref="_diagram" Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="@_dataSource"></DataSourceSettings>
     <Layout Type="LayoutType.MindMap">
         <LayoutMargin Top="20" Left="20"></LayoutMargin>
     </Layout>
 </SfDiagramComponent>
-<SfButton Content="RefreshDataSource" OnClick="@RefreshDataSource" />
+<SfButton Content="RefreshDataSource"OnClick="@RefreshDataSourceAsync"/>
 
 @code
 {
     //Reference the diagram
-    SfDiagramComponent Diagram;
+    private SfDiagramComponent _diagram;
+    
     //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -1598,9 +1588,9 @@ The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         connectors.Type = ConnectorSegmentType.Bezier;
         connectors.Style = new ShapeStyle() { StrokeColor = "#6495ED", StrokeWidth = 2 };
         connectors.TargetDecorator = new DecoratorSettings
-            {
-                Shape = DecoratorShape.None,
-            };
+        {
+            Shape = DecoratorShape.None,
+        };
     }
 
     public class MindMapDetails
@@ -1612,7 +1602,7 @@ The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         public string Fill { get; set; }
     }
 
-    public object DataSource = new List<object>()
+    public object _dataSource = new List<object>()
     {
         new MindMapDetails() { Id= "1",Label="Creativity", ParentId ="", Branch = "Root"},
         new MindMapDetails() { Id= "2",  Label="Brainstorming", ParentId ="1", Branch = "Right" },
@@ -1626,23 +1616,23 @@ The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         new MindMapDetails() { Id= "10", Label= "Ideas", ParentId ="5", Branch = "subRight" },
         new MindMapDetails() { Id= "11", Label= "Engagement", ParentId ="5", Branch = "subRight" },
     };
-    private async Task RefreshDataSource()
+    private async Task RefreshDataSourceAsync()
     {
-        DataSource = new List<object>()
-    {
-        new MindMapDetails() { Id= "1",Label="Creativity", ParentId ="", Branch = "Root"},
-        new MindMapDetails() { Id= "2",  Label="Brainstorming", ParentId ="1", Branch = "Right" },
-        new MindMapDetails() { Id= "3",  Label="Complementing", ParentId ="1", Branch = "Left" },
-        new MindMapDetails() { Id= "4",  Label="Sessions", ParentId ="2", Branch = "subRight" },
-        new MindMapDetails() { Id= "5",  Label="Complementing", ParentId ="2", Branch = "subRight" },
-        };
-        await Diagram.RefreshDataSourceAsync();
-    }
+        _dataSource = new List<object>()
+        {
+            new MindMapDetails() { Id= "1",Label="Creativity", ParentId ="", Branch = "Root"},
+            new MindMapDetails() { Id= "2",  Label="Brainstorming", ParentId ="1", Branch = "Right" },
+            new MindMapDetails() { Id= "3",  Label="Complementing", ParentId ="1", Branch = "Left" },
+            new MindMapDetails() { Id= "4",  Label="Sessions", ParentId ="2", Branch = "subRight" },
+            new MindMapDetails() { Id= "5",  Label="Complementing", ParentId ="2", Branch = "subRight" },
+            };
+            await _diagram.RefreshDataSourceAsync();
+        }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhSCXtQSjiSpCit?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/RefereshDataSource)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/RefereshDataSource.razor)
 
 ## How to Get the Parent of Object
 
@@ -1655,16 +1645,16 @@ The following code illustrates how to set background color for node.
 @using System.Collections.ObjectModel
 
 <input type="button" value="GetParent" @onclick="@GetParent">
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes" />
 
 @code
 {
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -1684,17 +1674,18 @@ The following code illustrates how to set background color for node.
             // Pivot of the node.
             Pivot = new DiagramPoint() { X = 0, Y = 0 }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
+
     private void GetParent()
     {
-        IDiagramObject parent = diagram.Nodes[0].GetParent();
+        IDiagramObject parent = _diagram.Nodes[0].GetParent();
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhyMZZcyNVMWKLP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetParent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetParent.razor)
 
 ## How to Enable the Chunk Message
 
@@ -1709,12 +1700,12 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" EnableChunkMessages="true"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes" EnableChunkMessages="true"/>
 
 @code
 {
     //Initialize the Nodes Collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -1722,28 +1713,28 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
         for(int i=1; i<=200; i++)
         {
             Node node = new Node()
-                {
-                    ID = "node" + i,
-                    OffsetX = count * offsetX,
-                    OffsetY = offsetY,
-                    Width = 100,
-                    Height = 100,
-                    Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
-                        new ShapeAnnotation() { Content = "Annotation for the Node" + i.ToString() }
-                    }
-                };
-                count += 1.5;
-                if (i % 5 == 0)
-                {
-                    count = 1;
-                    offsetX = 100;
-                    offsetY = offsetY + 200;
+            {
+                ID = "node" + i,
+                OffsetX = count * offsetX,
+                OffsetY = offsetY,
+                Width = 100,
+                Height = 100,
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
+                    new ShapeAnnotation() { Content = "Annotation for the Node" + i.ToString() }
                 }
-            nodes.Add(node);
+            };
+            count += 1.5;
+            if (i % 5 == 0)
+            {
+                count = 1;
+                offsetX = 100;
+                offsetY = offsetY + 200;
+            }
+            _nodes.Add(node);
         }
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXreCjjGeZLyqIGr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ChunkMessage)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ChunkMessage.razor)

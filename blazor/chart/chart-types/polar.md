@@ -13,7 +13,7 @@ documentation: ug
 
 [Polar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) series visualizes data in terms of values and angles. It provides options for visual comparison between several quantitative or qualitative aspects of a situation.
 
-You can learn how to create a Polar chart using Blazor Charts by watching the video below.
+A detailed demonstration of the process for creating a Polar chart using Blazor Charts is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Q5odgrcbSO0" %}
 
@@ -91,7 +91,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Draw types
 
@@ -486,8 +486,8 @@ To customize the start angle of the [Polar Chart](https://help.syncfusion.com/cr
     };
 }
 
-``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTDPBZphQtaNHK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTDPBZphQtaNHK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Radius
 
@@ -747,7 +747,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLJDFBtfUpPvAFQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

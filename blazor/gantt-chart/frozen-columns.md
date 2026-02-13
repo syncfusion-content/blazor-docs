@@ -68,7 +68,7 @@ The following example demonstrates setting the `FrozenColumns` value to 2, which
 
 ## Freeze particular column
 
-To freeze a specific column in the Gantt Chart, set the[IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsFrozen) property to **true** on the corresponding [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component.
+To freeze a specific column in the Gantt Chart, set the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsFrozen) property to **true** on the corresponding [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component.
 
 The following example demonstrates that the **TaskID** and **TaskName** columns are frozen.
 

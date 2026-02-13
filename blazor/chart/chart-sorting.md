@@ -52,7 +52,7 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
 
 ## Sorting order
 
-By default, the sorting order will be from ascending to descending. The sorting order can be changed from descending to ascending by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property as **Descending** in the [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
+By default, sorting is applied in **Ascending** order. The sorting order can be changed to descending by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property to **Descending** in [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
 
 ```cshtml
 

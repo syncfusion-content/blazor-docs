@@ -28,7 +28,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
     </ChartSeriesCollection>
 </SfChart>
 
-<SfButton Id="button" Content="Print" @onclick="Print"  IsPrimary="true" CssClass="e-flat"></SfButton>
+<SfButton Id="button" Content="Print" @onclick="Print" IsPrimary="true" CssClass="e-flat"></SfButton>
 
 @code{
 
@@ -118,7 +118,7 @@ Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
                   </SfChart>
             </div>
          </div>
-         <div align="center" class="col-sm-2"  style="height:500px; width:500px">
+         <div align="center" class="col-sm-2" style="height:500px; width:500px">
              <div class="p-5">
                 <SfAccumulationChart EnableAnimation="true">
                     <AccumulationChartBorder Color="transparent"></AccumulationChartBorder>
@@ -259,7 +259,7 @@ The optional parameters for this method are,
     </ChartSeriesCollection>
 </SfChart>
 
-<SfButton Id="button" Content="Export" @onclick="Export"  IsPrimary="true" CssClass="e-flat"></SfButton>
+<SfButton Id="button" Content="Export" @onclick="Export" IsPrimary="true" CssClass="e-flat"></SfButton>
 
 @code{
 
@@ -482,9 +482,9 @@ In the code example below, the chart is exported to Excel format. The exported E
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrStfNGMaalzwin?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrStfNGMaalzwin?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
