@@ -30,13 +30,13 @@ Select an element by clicking it. A single click clears any previous selection a
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" 
+<SfDiagramComponent Height="600px" Nodes="@_nodeCollection" 
     SelectionChanging="OnSelectionChanging" 
     SelectionChanged="OnSelectionChanged">
 </SfDiagramComponent>
 @code
 {
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -47,7 +47,7 @@ Select an element by clicking it. A single click clears any previous selection a
             Width = 100,
             ID = "node",
         };
-        NodeCollection.Add(node);
+        _nodeCollection.Add(node);
     }    
     //To notify selection changing event, before selecting the nodes/connectors in the diagram.
     private void OnSelectionChanging(SelectionChangingEventArgs args)
@@ -64,7 +64,7 @@ Select an element by clicking it. A single click clears any previous selection a
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLSMDtPLbKuecIg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramSelectionEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramSelectionEvent.razor)
 
 ## How to Select a Group
 
@@ -110,16 +110,16 @@ In the following example, the node can be selected with the first click and unse
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@selectionSettings" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" SelectionSettings="@_selectionSettings" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-    DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings() { CanToggleSelection = true };
+    private DiagramObjectCollection<Node> _nodes;
+    private DiagramSelectionSettings _selectionSettings = new DiagramSelectionSettings() { CanToggleSelection = true };
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -129,14 +129,14 @@ In the following example, the node can be selected with the first click and unse
                 Height = 100,
                 Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
             };
-        nodes.Add(node);
+        _nodes.Add(node);
         
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLSiNDbBbpTKpzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/UnSelectSample)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/UnSelectSample.razor)
 
 ![Toggle Selection in Blazor Diagram](images/UnselectSample.gif)
 
@@ -172,18 +172,18 @@ When RubberBandSelectionMode is set to [PartialIntersect](https://help.syncfusio
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Buttons
 
-<SfDiagramComponent @ref="diagram" Width="60%" Height="800px" SelectionSettings="@select" @bind-Connectors="@Connectors" @bind-Nodes="NodeCollection"></SfDiagramComponent>
+<SfDiagramComponent @ref="_diagram" Width="60%" Height="800px" SelectionSettings="@_select" @bind-Connectors="@_connectors" @bind-Nodes="_nodeCollection"></SfDiagramComponent>
 @functions
 {
 
-    public string ID = "diagram";
-    SfDiagramComponent diagram;
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
-    public DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
-    DiagramSelectionSettings select;
+    private string _id = "diagram";
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    private DiagramSelectionSettings _select;
     protected override void OnInitialized()
     {
-        select = new DiagramSelectionSettings()
+        _select = new DiagramSelectionSettings()
          { 
             // Set to CompleteIntersect for precise selection
             RubberBandSelectionMode = RubberBandSelectionMode.CompleteIntersect
@@ -206,7 +206,7 @@ When RubberBandSelectionMode is set to [PartialIntersect](https://help.syncfusio
                         },
                     },
         };
-        NodeCollection.Add(node1);
+        _nodeCollection.Add(node1);
         Node node2 = new Node()
         {
             ID = "node2",
@@ -222,7 +222,7 @@ When RubberBandSelectionMode is set to [PartialIntersect](https://help.syncfusio
                         },
                     },
         };
-        NodeCollection.Add(node2);
+        _nodeCollection.Add(node2);
         NodeGroup group1 = new NodeGroup()
         {
             ID = "group1",
@@ -235,7 +235,7 @@ When RubberBandSelectionMode is set to [PartialIntersect](https://help.syncfusio
                             }
                         },
         };
-        NodeCollection.Add(group1);
+        _nodeCollection.Add(group1);
         Node node3 = new Node()
         {
             ID = "node3",
@@ -251,20 +251,20 @@ When RubberBandSelectionMode is set to [PartialIntersect](https://help.syncfusio
                         },
                     },
         };
-        NodeCollection.Add(node3);
+        _nodeCollection.Add(node3);
         Connector connector = new Connector()
         {
             ID = "connector1",
             SourcePoint = new DiagramPoint() { X = 250, Y = 250 },
             TargetPoint = new DiagramPoint() { X = 350, Y = 350 },
         };
-        Connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hthysXZvLFILllHo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/RubberBandSelectionMode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/RubberBandSelectionModeSample.razor)
 
 ## Getting Current Selected Objects
 Access all currently selected elements through the diagram's SelectionSettings property.
@@ -291,17 +291,18 @@ The DiagramSelectionSettings provides access to:
 @page "/"
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
+@using System.Collections.ObjectModel;
 @using SelectionChangedEventArgs = Syncfusion.Blazor.Diagram.SelectionChangedEventArgs 
 
 <SfButton Content="GetSelectionInfo" OnClick="GetSelectionInfo"></SfButton>
-<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" SelectionChanged="OnSelectionChanged">
+<SfDiagramComponent @ref="_diagram" Height="600px" Nodes="@_nodeCollection" Connectors="@_connectorCollection" SelectionChanged="OnSelectionChanged">
 </SfDiagramComponent>
 @code {
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initailize the diagram's nodes collection
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
     //Initailize the diagram's connector collection
-    public DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectorCollection = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -312,7 +313,7 @@ The DiagramSelectionSettings provides access to:
             Width = 100,
             ID = "node1",
         };
-        NodeCollection.Add(node1);
+        _nodeCollection.Add(node1);
         Connector connector1 = new Connector()
         {
             ID = "connector1",
@@ -320,19 +321,19 @@ The DiagramSelectionSettings provides access to:
             TargetPoint = new DiagramPoint() { X = 400, Y = 300 },
             Type = ConnectorSegmentType.Orthogonal
         };
-        ConnectorCollection.Add(connector1);
+        _connectorCollection.Add(connector1);
     }
     //Event to notify selection changing event after selected the nodes/conenctors in diagram.
     private void OnSelectionChanged(SelectionChangedEventArgs args)
     {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
+        if (_diagram.SelectionSettings.Nodes.Count > 0)
         {
-            Node selectedNode = diagram.SelectionSettings.Nodes[0];
+            Node selectedNode = _diagram.SelectionSettings.Nodes[0];
             //Here you can modified the selected node.
         }
-        if (diagram.SelectionSettings.Connectors.Count > 0)
+        if (_diagram.SelectionSettings.Connectors.Count > 0)
         {
-            Connector selectedConnector = diagram.SelectionSettings.Connectors[0];
+            Connector selectedConnector = _diagram.SelectionSettings.Connectors[0];
             //Here you can modified the selected connector.
         }
     }
@@ -341,8 +342,8 @@ The DiagramSelectionSettings provides access to:
     private void GetSelectionInfo()
     {
         // Get selected nodes
-        var selectedNodes = diagram.SelectionSettings.Nodes;
-        foreach (var node in selectedNodes)
+        ObservableCollection<Node> selectedNodes = _diagram.SelectionSettings.Nodes;
+        foreach (Node node in selectedNodes)
         {
             Console.WriteLine($"Selected Node ID: {node.ID}");
             Console.WriteLine($"Node OffsetX: {node.OffsetX}");
@@ -353,8 +354,8 @@ The DiagramSelectionSettings provides access to:
         }
 
         // Get selected connectors
-        var selectedConnectors = diagram.SelectionSettings.Connectors;
-        foreach (var connector in selectedConnectors)
+        ObservableCollection<Connector> selectedConnectors = _diagram.SelectionSettings.Connectors;
+        foreach (Connector connector in selectedConnectors)
         {
             Console.WriteLine($"Selected Connector ID: {connector.ID}");
             Console.WriteLine($"Connector SourcePoint: X={connector.SourcePoint.X}, Y={connector.SourcePoint.Y}");
@@ -362,18 +363,18 @@ The DiagramSelectionSettings provides access to:
         }
 
         // Get selection bounds information
-        Console.WriteLine($"Selection OffsetX: {diagram.SelectionSettings.OffsetX}");
-        Console.WriteLine($"Selection OffsetY: {diagram.SelectionSettings.OffsetY}");
-        Console.WriteLine($"Selection Width: {diagram.SelectionSettings.Width}");
-        Console.WriteLine($"Selection Height: {diagram.SelectionSettings.Height}");
-        Console.WriteLine($"Selection Rotation: {diagram.SelectionSettings.RotationAngle}");
-        Console.WriteLine($"Selection Pivot: {diagram.SelectionSettings.Pivot}");
+        Console.WriteLine($"Selection OffsetX: {_diagram.SelectionSettings.OffsetX}");
+        Console.WriteLine($"Selection OffsetY: {_diagram.SelectionSettings.OffsetY}");
+        Console.WriteLine($"Selection Width: {_diagram.SelectionSettings.Width}");
+        Console.WriteLine($"Selection Height: {_diagram.SelectionSettings.Height}");
+        Console.WriteLine($"Selection Rotation: {_diagram.SelectionSettings.RotationAngle}");
+        Console.WriteLine($"Selection Pivot: {_diagram.SelectionSettings.Pivot}");
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSsDjFhlxZSZvL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/CurrentSelection)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/CurrentSelection.razor)
 
 ### How to clone the selected nodes and connector at runtime
 
@@ -386,14 +387,13 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
 
 
 <SfButton Content="Clone" OnClick="@Clone" />
-<SfDiagramComponent @ref="diagram" Width="60%" Height="800px" @bind-Connectors="@Connectors" @bind-Nodes="NodeCollection"></SfDiagramComponent>
+<SfDiagramComponent @ref="_diagram" Width="60%" Height="800px" @bind-Connectors="@_connectors" @bind-Nodes="_nodeCollection"></SfDiagramComponent>
 @functions
 {
-    public string ID = "diagram";
-    SfDiagramComponent diagram;
-    public string Height { get; set; } = "700px";
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
-    public DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    private string _id = "diagram";
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -411,7 +411,7 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
                         },
                     },
             };
-        NodeCollection.Add(node1);
+        _nodeCollection.Add(node1);
         Node node2 = new Node()
             {
                 ID = "node2",
@@ -427,7 +427,7 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
                         },
                     },
             };
-        NodeCollection.Add(node2);
+        _nodeCollection.Add(node2);
         NodeGroup group1 = new NodeGroup()
             {
                 ID = "group1",
@@ -440,7 +440,7 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
                             }
                         },
             };
-        NodeCollection.Add(group1);
+        _nodeCollection.Add(group1);
         Node node3 = new Node()
             {
                 ID = "node3",
@@ -456,14 +456,14 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
                         },
                     },
             };
-        NodeCollection.Add(node3);
+        _nodeCollection.Add(node3);
         Connector connector = new Connector()
             {
                 ID = "connector1",
                 SourcePoint = new DiagramPoint() { X = 250, Y = 250 },
                 TargetPoint = new DiagramPoint() { X = 350, Y = 350 },
             };
-        Connectors.Add(connector);
+        _connectors.Add(connector);
         NodeGroup group2 = new NodeGroup()
             {
                 ID = "group2",
@@ -476,14 +476,14 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
                             }
                         },
             };
-        NodeCollection.Add(group2);
+        _nodeCollection.Add(group2);
     }
-    public void Clone()
+    private void Clone()
     {
-        diagram.StartGroupAction();
-        if (diagram.SelectionSettings.Nodes.Count > 0)
+        _diagram.StartGroupAction();
+        if (_diagram.SelectionSettings.Nodes.Count > 0)
         {
-            NodeBase NodeObj = diagram.SelectionSettings.Nodes[0] as NodeBase;
+            NodeBase NodeObj = _diagram.SelectionSettings.Nodes[0] as NodeBase;
             if (NodeObj is NodeGroup gNode)
             {
                 CloneGroup(gNode, false);
@@ -493,40 +493,40 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
                 CloneNode(node, false);
             }
         }
-        if (diagram.SelectionSettings.Connectors.Count > 0)
+        if (_diagram.SelectionSettings.Connectors.Count > 0)
         {
-            NodeBase ConnectorObj = diagram.SelectionSettings.Connectors[0] as NodeBase;
+            NodeBase ConnectorObj = _diagram.SelectionSettings.Connectors[0] as NodeBase;
             if (ConnectorObj is Connector connectorObj)
             {
                 CloneConnector(connectorObj, false);
             }
         }
-        diagram.ClearSelection();
-        diagram.EndGroupAction();
+        _diagram.ClearSelection();
+        _diagram.EndGroupAction();
     }
-    public string CloneGroup(NodeGroup gNode, bool isChild)
+    private string CloneGroup(NodeGroup gNode, bool isChild)
     {
         NodeGroup groupNode = gNode.Clone() as NodeGroup;
         groupNode.ID = RandomId();
         List<string> child = new List<string>();
         foreach (string childID in groupNode.Children)
         {
-            for (int i = 0; i < diagram.Nodes.Count; i++)
+            for (int i = 0; i < _diagram.Nodes.Count; i++)
             {
-                if (childID == diagram.Nodes[i].ID && diagram.Nodes[i] is NodeGroup nodeGroup)
+                if (childID == _diagram.Nodes[i].ID && _diagram.Nodes[i] is NodeGroup nodeGroup)
                 {
                     child.Add(CloneGroup(nodeGroup, true));
                 }
-                else if (childID == diagram.Nodes[i].ID)
+                else if (childID == _diagram.Nodes[i].ID)
                 {
-                    child.Add(CloneNode(diagram.Nodes[i], true));
+                    child.Add(CloneNode(_diagram.Nodes[i], true));
                 }
             }
-            for (int i = 0; i < diagram.Connectors.Count; i++)
+            for (int i = 0; i < _diagram.Connectors.Count; i++)
             {
-                if (childID == diagram.Connectors[i].ID)
+                if (childID == _diagram.Connectors[i].ID)
                 {
-                    child.Add(CloneConnector(diagram.Connectors[i], true));
+                    child.Add(CloneConnector(_diagram.Connectors[i], true));
                 }
             }
         }
@@ -536,12 +536,12 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
             groupNode.OffsetX += 25;
             groupNode.OffsetY += 25;
         }
-        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { groupNode });
+        _diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { groupNode });
         return groupNode.ID;
     }
-    public string CloneNode(Node node, bool isChild)
+    private string CloneNode(Node node, bool isChild)
     {
-        diagram.StartGroupAction();
+        _diagram.StartGroupAction();
         Node nodeChild = node.Clone() as Node;
         nodeChild.ID = RandomId();
         if (!isChild)
@@ -549,13 +549,13 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
             nodeChild.OffsetX += 25;
             nodeChild.OffsetY += 25;
         }
-        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { nodeChild });
-        diagram.EndGroupAction();
+        _diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { nodeChild });
+        _diagram.EndGroupAction();
         return nodeChild.ID;
     }
-    public string CloneConnector(Connector connector, bool isChild)
+    private string CloneConnector(Connector connector, bool isChild)
     {
-        diagram.StartGroupAction();
+        _diagram.StartGroupAction();
         Connector connectorChild = connector.Clone() as Connector;
         connectorChild.ID = RandomId();
         if (!isChild)
@@ -563,12 +563,11 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
             connectorChild.SourcePoint = new DiagramPoint() { X = connectorChild.SourcePoint.X + 25, Y = connectorChild.SourcePoint.Y + 25 };
             connectorChild.TargetPoint = new DiagramPoint() { X = connectorChild.TargetPoint.X + 25, Y = connectorChild.TargetPoint.Y + 25 };
         }
-        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { connectorChild });
-        diagram.EndGroupAction();
+        _diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { connectorChild });
+        _diagram.EndGroupAction();
         return connectorChild.ID;
     }
-
-    internal string RandomId()
+    private string RandomId()
     {
         Random random = new Random();
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
@@ -581,7 +580,7 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVICNXlrlnvNlVu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/CloneSelectedItems)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/CloneSelectedItems.razor)
 ![Grouping in Blazor Diagram](images/CloneSelection.gif)
 
 ### How to Access and Modify Selected Nodes and Connectors at Runtime
@@ -590,15 +589,15 @@ Access and update the properties of selected nodes and connectors using the [Sel
 @page "/"
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection"
+<SfDiagramComponent @ref="_diagram" Height="600px" Nodes="@_nodeCollection" Connectors="@_connectorCollection"
 SelectionChanged="OnSelectionChanged">
 </SfDiagramComponent>
 @code {
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initailize the diagram's nodes collection
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
     //Initailize the diagram's connector collection
-    public DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectorCollection = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -609,7 +608,7 @@ SelectionChanged="OnSelectionChanged">
                 Width = 100,
                 ID = "node1",
             };
-        NodeCollection.Add(node1);
+        _nodeCollection.Add(node1);
         Connector connector1 = new Connector()
             {
                 ID = "connector1",
@@ -617,19 +616,19 @@ SelectionChanged="OnSelectionChanged">
                 TargetPoint = new DiagramPoint() { X = 400, Y = 300 },
                 Type = ConnectorSegmentType.Orthogonal
             };
-        ConnectorCollection.Add(connector1);
+        _connectorCollection.Add(connector1);
     }
     //Event to notify selection changing event after selected the nodes/conenctors in diagram.
     private void OnSelectionChanged(SelectionChangedEventArgs args)
     {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
+        if (_diagram.SelectionSettings.Nodes.Count > 0)
         {
-            Node selectedNode = diagram.SelectionSettings.Nodes[0];
+            Node selectedNode = _diagram.SelectionSettings.Nodes[0];
             //Here you can modified the selected node.
         }
-        if (diagram.SelectionSettings.Connectors.Count > 0)
+        if (_diagram.SelectionSettings.Connectors.Count > 0)
         {
-            Connector selectedConnector = diagram.SelectionSettings.Connectors[0];
+            Connector selectedConnector = _diagram.SelectionSettings.Connectors[0];
             //Here you can modified the selected connector.
         }
     }
@@ -638,7 +637,7 @@ SelectionChanged="OnSelectionChanged">
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBIMDNbBPcaeybR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/SelectedElements)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/SelectedElements.razor)
 ## How to Drag Elements
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements moves every selected element.
@@ -652,13 +651,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" 
+<SfDiagramComponent Height="600px" Nodes="@_nodeCollection" 
     PositionChanging="OnPositionChanging" 
     PositionChanged="OnPositionChanged">
 </SfDiagramComponent>
 @code 
 {
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -669,7 +668,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             Width = 100,
             ID = "node",
         };
-        NodeCollection.Add(node);
+        _nodeCollection.Add(node);
     }    
     //Event to notify while dragging the elements in the diagram.
     private void OnPositionChanging(PositionChangingEventArgs args)
@@ -686,7 +685,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLosXtvrPFdHwTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramPositionEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramPositionEvent.razor)
 For more information about dragging, refer [Node Drag](./nodes/interaction#how-to-drag-the-node)
 
 ## How to Resize Elements
@@ -703,14 +702,14 @@ For more information about dragging, refer [Node Drag](./nodes/interaction#how-t
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" 
+<SfDiagramComponent Height="600px" Nodes="@_nodeCollection" 
     SizeChanging="OnSizeChanging" 
     SizeChanged="OnSizeChanged">
 </SfDiagramComponent>
 
 @code 
 {
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -721,7 +720,7 @@ For more information about dragging, refer [Node Drag](./nodes/interaction#how-t
             Width = 100,
             ID = "node",
         };
-        NodeCollection.Add(node);
+        _nodeCollection.Add(node);
     }    
     //Event to notify while resizing the elements in the diagram.
     private void OnSizeChanging(SizeChangingEventArgs args)
@@ -738,7 +737,7 @@ For more information about dragging, refer [Node Drag](./nodes/interaction#how-t
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVostNPrvOZhuso?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramSizeEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramSizeEvent.razor)
 
 For more information about resizing, refer [Node Resize](./nodes/interaction#how-to-resize-the-node)
 
@@ -759,14 +758,14 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" 
+<SfDiagramComponent Height="600px" Nodes="@_nodeCollection" 
     RotationChanging="OnRotationChanging" 
     RotationChanged="OnRotationChanged">
 </SfDiagramComponent>
 
 @code 
 {
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -777,7 +776,7 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
             Width = 100,
             ID = "node",
         };
-        NodeCollection.Add(node);
+        _nodeCollection.Add(node);
     }    
     //Event to notify while rotating the elements in the diagram.
     private void OnRotationChanging(RotationChangingEventArgs args)
@@ -794,7 +793,7 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBIiZZlhvYIDpvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramRotateEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramRotateEvent.razor)
 
 For more information about resizing, refer [Node Rotate](./nodes/interaction#how-to-rotate-the-node)
 
@@ -819,15 +818,15 @@ For more information, refer [End Point Dragging](./connectors/interactions#end-p
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@Connectors"
+<SfDiagramComponent Height="600px" Nodes="@_nodeCollection" Connectors="@_connectorCollection"
     ConnectionChanging="OnConnectionChanging" 
     ConnectionChanged="OnConnectionChanged">
 </SfDiagramComponent>
 
 @code 
 {
-    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
-    public DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> _nodeCollection = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Connector> _connectorCollection = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -838,7 +837,7 @@ For more information, refer [End Point Dragging](./connectors/interactions#end-p
             Width = 100,
             ID = "node1",
         };
-        NodeCollection.Add(node1);
+        _nodeCollection.Add(node1);
 
         Node node2 = new Node()
         {
@@ -848,9 +847,9 @@ For more information, refer [End Point Dragging](./connectors/interactions#end-p
             Width = 100,
             ID = "node2",
         };
-        NodeCollection.Add(node2);
+        _nodeCollection.Add(node2);
 
-        Connector Connector = new Connector()
+        Connector connector = new Connector()
         {
             ID = "connector1",
             //Source node id of the connector.
@@ -873,7 +872,7 @@ For more information, refer [End Point Dragging](./connectors/interactions#end-p
             // Type of the connector.
             Type = ConnectorSegmentType.Straight,
         };
-        Connectors.Add(Connector);
+        _connectorCollection.Add(connector);
     }    
     //Event to notify while creating the connection between the nodes in the diagram.
     private void OnConnectionChanging(ConnectionChangingEventArgs args)
@@ -890,7 +889,7 @@ For more information, refer [End Point Dragging](./connectors/interactions#end-p
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIiDDFLkXDqWqS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramConnectionEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramConnectionEvent.razor)
 
 ## How to Edit Straight Connector Segments
 
@@ -913,11 +912,11 @@ For more information about straight segment editing, refer [Straight Segment Edi
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@Connectors" SegmentCollectionChange="OnSegmentChange">
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@_connectors" SegmentCollectionChange="OnSegmentChange">
 </SfDiagramComponent>
 @code{
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
 
@@ -963,7 +962,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
             }
 
         };
-        Connectors.Add(connector);
+        _connectors.Add(connector);
     }
     //Event to notify while modifying the segment collection for the connector.
     private void OnSegmentChange(SegmentCollectionChangeEventArgs args)
@@ -974,7 +973,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoiNXFhEtTKrJy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/SegmentEditing)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/SegmentEditing.razor)
 
 For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](./connectors/segments/orthogonal#orthogonal-segment-editing).
 
@@ -1016,15 +1015,14 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Click='@OnClick' />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" Click='@OnClick' />
 
 @code
 {
-    public DiagramObjectCollection<Node> nodes;
-
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -1037,7 +1035,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
             // Add node.
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 
     private void OnClick(ClickEventArgs args)
@@ -1048,7 +1046,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoWNtPgqsPzFca?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/MouseClick)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/MouseClick.razor)
 
 ## How to Customize the Appearance of User Handle
 

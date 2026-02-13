@@ -33,7 +33,7 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | PostgreSQL Server | 12 or later | Database server |
 | pgAdmin 4 | Latest | PostgreSQL GUI management tool |
@@ -89,12 +89,12 @@ CREATE TABLE public.PurchaseOrder (
     ApprovedBy VARCHAR(100),
     OrderDate DATE NOT NULL,
     ExpectedDeliveryDate DATE,
-    CreatedAt TIMESTAMP NOT NULL DEFAULT NOW(),
-    UpdatedAt TIMESTAMP NOT NULL DEFAULT NOW()
+    CreatedOn TIMESTAMP NOT NULL DEFAULT NOW(),
+    UpdatedOn TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
 -- Insert Sample Data (Optional)
-INSERT INTO public."PurchaseOrder" ("PoNumber", "VendorID", "ItemName", "ItemCategory", "Quantity", "UnitPrice", "TotalAmount", "Status", "OrderedBy", "ApprovedBy", "OrderDate", "ExpectedDeliveryDate", "CreatedAt", "UpdatedAt")
+INSERT INTO public."PurchaseOrder" ("PoNumber", "VendorID", "ItemName", "ItemCategory", "Quantity", "UnitPrice", "TotalAmount", "Status", "OrderedBy", "ApprovedBy", "OrderDate", "ExpectedDeliveryDate", "CreatedOn", "UpdatedOn")
 VALUES
 ('PO-2025-0001', 'VEN-9001', 'FHD Laptop', 'Electronics', 5, 899.99, 4499.95, 'Pending', 'Alice Johnson', 'Carol Davis', '2025-01-10', '2025-01-20', NOW(), NOW()),
 ('PO-2025-0002', 'VEN-9002', 'Fibre Cables', 'Networking', 100, 15.50, 1550.00, 'Approved', 'Bob Smith', 'Alice Johnson', '2025-01-09', '2025-01-17', NOW(), NOW());
@@ -113,7 +113,7 @@ For this guide, a Blazor application named **Grid_PostgreSQL** has been created.
 
 **Method 1: Using Package Manager Console**
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
 3. Run the following commands:
 
@@ -126,12 +126,12 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 
 **Method 2: Using NuGet Package Manager UI**
 
-1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **Microsoft.EntityFrameworkCore** (version 10.0.2 or later)
    - **Npgsql.EntityFrameworkCore.PostgreSQL** (version 10.0.0 or later)
-   - **Syncfusion.Blazor.Grid** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 **Project File Reference**
 
@@ -246,13 +246,13 @@ namespace Grid_PostgreSQL.Data
         /// Gets or sets the timestamp indicating when the purchase order record was created.
         /// Auto-set to the current date and time by the database.
         /// </summary>
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedOn { get; set; }
 
         /// <summary>
         /// Gets or sets the timestamp indicating when the purchase order record was last updated.
         /// Auto-updated to the current date and time whenever a modification occurs.
         /// </summary>
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedOn { get; set; }
     }
 }
 ```
@@ -397,14 +397,14 @@ namespace Grid_PostgreSQL.Data
                     .HasColumnType("date")
                     .IsRequired(false);
 
-                entity.Property(e => e.CreatedAt)
-                    .HasColumnName("createdat")
+                entity.Property(e => e.CreatedOn)
+                    .HasColumnName("createdOn")
                     .HasColumnType("timestamp without time zone")
                     .IsRequired(true)
                     .HasDefaultValueSql("NOW()");
 
-                entity.Property(e => e.UpdatedAt)
-                    .HasColumnName("updatedat")
+                entity.Property(e => e.UpdatedOn)
+                    .HasColumnName("updatedOn")
                     .HasColumnType("timestamp without time zone")
                     .IsRequired(true)
                     .HasDefaultValueSql("NOW()");
@@ -421,8 +421,8 @@ namespace Grid_PostgreSQL.Data
                 entity.HasIndex(e => e.OrderedBy)
                     .HasDatabaseName("ix_purchaseorder_orderedby");
 
-                entity.HasIndex(e => e.CreatedAt)
-                    .HasDatabaseName("ix_purchaseorder_createdat");
+                entity.HasIndex(e => e.CreatedOn)
+                    .HasDatabaseName("ix_purchaseorder_createdOn");
 
                 entity.HasIndex(e => new { e.Status, e.OrderDate })
                     .HasDatabaseName("ix_purchaseorder_status_orderdate");
@@ -573,7 +573,7 @@ namespace Grid_PostgreSQL.Data
         /// <summary>
         /// Adds a new purchase order to the database
         /// Auto-generates the PoNumber if not provided
-        /// Sets CreatedAt and UpdatedAt timestamps
+        /// Sets CreatedOn and UpdatedOn timestamps
         /// </summary>
         /// <param name="value">The purchase order model to add</param>
         public async Task AddPurchaseOrderAsync(PurchaseOrder value)
@@ -584,7 +584,7 @@ namespace Grid_PostgreSQL.Data
         /// <summary>
         /// Updates an existing purchase order in the database
         /// Validates that the purchase order exists before updating
-        /// Updates the UpdatedAt timestamp automatically
+        /// Updates the UpdatedOn timestamp automatically
         /// </summary>
         /// <param name="value">The purchase order model with updated values</param>
         public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
@@ -696,15 +696,18 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous section.
-2. Import the required namespaces in the `Components/_Imports.razor` file:
+* The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous section.
+* Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+@using Grid_PostgreSQL.Data
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -729,7 +732,6 @@ The `Home.razor` component will display the purchase order data in a Syncfusion 
 ```cshtml
 @page "/"
 @using System.Collections
-@using Grid_PostgreSQL.Data
 @inject PurchaseOrderRepository PurchaseOrderService
 <PageTitle>Purchase Order Management System</PageTitle>
 
@@ -882,8 +884,8 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
+* Open the `Components/Pages/Home.razor` file.
+* Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -897,7 +899,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 </SfGrid>
 ```
 
-3. Add the toolbar items list in the `@code` block:
+* Add the toolbar items list in the `@code` block:
 
 ```csharp
 @code {
@@ -922,15 +924,45 @@ The toolbar has been successfully added.
 
 ---
 
-### Step 5: Implement Paging Feature
+### Step 5: Running the Application
+
+**Build the Application**
+
+1. Open the terminal or Package Manager Console in Visual Studio.
+2. Navigate to the project directory.
+3. Run the following command to restore packages and build:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
+3. The Purchase Order Management System is now running and ready to use.
+
+![Basic DataGrid displaying purchase orders from the PostgreSQL Server database](../images/blazor-datagrid-postgresql.png)
+
+---
+
+### Step 6: Implement Paging Feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
 **Instructions:**
 
-1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [<GridPageSettings>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
-3. No additional code changes are required from the previous steps.
+* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+* No additional code changes are required from the previous steps.
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -942,7 +974,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 </SfGrid>
 ```
 
-4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
 
 ```csharp
 @code {
@@ -996,13 +1028,13 @@ Paging feature is now active with 10 records per page.
 
 ---
 
-### Step 6: Implement Searching feature
+### Step 7: Implement Searching feature
 
 Searching allows the user to find purchase order records by entering keywords in the search box.
 
 **Instructions:**
 
-1. Ensure the toolbar includes the "Search" item.
+* Ensure the toolbar includes the "Search" item.
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder"
@@ -1014,7 +1046,7 @@ Searching allows the user to find purchase order records by entering keywords in
 </SfGrid>
 ```
 
-2. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
 
 ```csharp
 @code {
@@ -1069,14 +1101,14 @@ Searching feature is now active.
 
 ---
 
-### Step 7: Implement Filtering feature
+### Step 8: Implement Filtering feature
 
 Filtering allows the user to restrict purchase order data based on column values using a menu interface.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -1091,7 +1123,7 @@ Filtering allows the user to restrict purchase order data based on column values
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
 
 ```csharp
 @code {
@@ -1155,14 +1187,14 @@ Filtering feature is now active.
 
 ---
 
-### Step 8: Implement Sorting feature
+### Step 9: Implement Sorting feature
 
 Sorting enables the user to arrange purchase order records in ascending or descending order based on column values.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -1179,7 +1211,7 @@ Sorting enables the user to arrange purchase order records in ascending or desce
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
 
 ```csharp
 @code {
@@ -1243,14 +1275,14 @@ Sorting feature is now active.
 
 ---
 
-### Step 9: Implement Grouping feature
+### Step 10: Implement Grouping feature
 
 Grouping organizes purchase order records into hierarchical groups based on column values, providing a structured view of the data.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -1266,7 +1298,7 @@ Grouping organizes purchase order records into hierarchical groups based on colu
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
 
 ```csharp
 @code {
@@ -1336,7 +1368,7 @@ Grouping feature is now active.
 
 ---
 
-### Step 10: Perform CRUD operations
+### Step 11: Perform CRUD operations
 
 CustomAdaptor methods enable users to create, read, update, and delete purchase order records directly from the DataGrid. Each operation calls corresponding data layer methods in **PurchaseOrderRepository.cs** to execute PostgreSQL commands.
 
@@ -1403,11 +1435,11 @@ In **Data/PurchaseOrderRepository.cs**, the insert method is implemented as:
                 value.PoNumber = await GeneratePoNumberAsync();
             }
             
-            if (value.CreatedAt == default)
-                value.CreatedAt = DateTime.Now;
+            if (value.CreatedOn == default)
+                value.CreatedOn = DateTime.Now;
 
-            if (value.UpdatedAt == default)
-                value.UpdatedAt = DateTime.Now;
+            if (value.UpdatedOn == default)
+                value.UpdatedOn = DateTime.Now;
 
             // Set default status if not provided
             if (string.IsNullOrEmpty(value.Status))
@@ -1526,8 +1558,8 @@ public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
         existingPurchaseOrder.ApprovedBy = value.ApprovedBy;
         existingPurchaseOrder.OrderDate = value.OrderDate;
         existingPurchaseOrder.ExpectedDeliveryDate = value.ExpectedDeliveryDate;
-        existingPurchaseOrder.CreatedAt = value.CreatedAt;
-        existingPurchaseOrder.UpdatedAt = DateTime.Now;
+        existingPurchaseOrder.CreatedOn = value.CreatedOn;
+        existingPurchaseOrder.UpdatedOn = DateTime.Now;
 
         await _context.SaveChangesAsync();
     }
@@ -1556,7 +1588,7 @@ public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
 3. The `PurchaseOrderRepository.UpdatePurchaseOrderAsync()` method is called.
 4. The existing record is retrieved from the database by ID.
 5. All properties are updated with the new values.
-6. The `UpdatedAt` timestamp is automatically set to the current time.
+6. The `UpdatedOn` timestamp is automatically set to the current time.
 7. `SaveChangesAsync()` persists the changes to the PostgreSQL database.
 8. The DataGrid refreshes to display the updated record.
 
@@ -1592,7 +1624,7 @@ public class CustomAdaptor : DataAdaptor
         {
             await _purchaseOrderService!.RemovePurchaseOrderAsync(recordId);
         }
-        return value;
+        return value!;
     }
 }
 ```
@@ -1693,8 +1725,6 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
 ```cshtml
 @page "/"
 @using System.Collections
-@using Grid_PostgreSQL.Data
-@using Syncfusion.Blazor.Grids
 @inject PurchaseOrderRepository PurchaseOrderService
 <PageTitle>Purchase Order Management System</PageTitle>
 
@@ -1731,8 +1761,8 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
                 <GridColumn Field="@nameof(PurchaseOrder.ApprovedBy)" HeaderText="Approved By" Width="120"></GridColumn>
                 <GridColumn Field="@nameof(PurchaseOrder.OrderDate)" HeaderText="Order Date" Type="ColumnType.Date" Format="yMd" Width="120"></GridColumn>
                 <GridColumn Field="@nameof(PurchaseOrder.ExpectedDeliveryDate)" HeaderText="Expected Delivery" Type="ColumnType.Date" Format="yMd" Width="140"></GridColumn>
-                <GridColumn Field="@nameof(PurchaseOrder.CreatedAt)" HeaderText="Created At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
-                <GridColumn Field="@nameof(PurchaseOrder.UpdatedAt)" HeaderText="Updated At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.CreatedOn)" HeaderText="Created At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
+                <GridColumn Field="@nameof(PurchaseOrder.UpdatedOn)" HeaderText="Updated At" Type="ColumnType.DateTime" Format="yMd HH:mm" Width="150"></GridColumn>
             </GridColumns>
             
         </SfGrid>
@@ -1917,45 +1947,6 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
 8. **CRUD Operations**: Add, Edit, Update, and Delete records with automatic timestamps and PoNumber generation.
 9. **Batch Editing**: Multiple changes can be made and saved atomically.
 10. **Error Handling**: Comprehensive exception handling with meaningful error messages.
-
----
-
-## Running the Application
-
-**Step 1: Build the Application**
-
-1. Open the terminal or Package Manager Console in Visual Studio.
-2. Navigate to the project directory.
-3. Run the following command to restore packages and build:
-
-```powershell
-dotnet build
-```
-
-**Step 2: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-**Step 3: Access the Application**
-
-1. Open a web browser.
-2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
-3. The Purchase Order Management System is now running and ready to use.
-
-### Available Features
-
-- **View Data**: All purchase orders from the PostgreSQL database are displayed in the DataGrid.
-- **Search**: Use the search box to find purchase orders by any field.
-- **Filter**: Click on column headers to apply filters.
-- **Sort**: Click on column headers to sort data in ascending or descending order.
-- **Pagination**: Navigate through records using page numbers.
-- **Add**: Click the "Add" button to create a new purchase order.
-- **Edit**: Click the "Edit" button to modify existing purchase orders.
-- **Delete**: Click the "Delete" button to remove purchase orders.
 
 ---
 
