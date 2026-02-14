@@ -496,7 +496,7 @@ namespace RenameImage.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-## Paste images into the editor
+## Paste image into the editor
 
 The Rich Text Editor supports pasting images directly into the editor content. You can paste single or multiple images from your file system directly into the editor.
 
