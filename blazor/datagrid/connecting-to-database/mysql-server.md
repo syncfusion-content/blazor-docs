@@ -33,10 +33,10 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | MySQL Server | 8.0.41 or later | Database server |
-| Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
 | Microsoft.EntityFrameworkCore | 9.0.0 or later | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.Tools | 9.0.0 or later | Tools for managing database migrations |
@@ -73,13 +73,13 @@ CREATE TABLE IF NOT EXISTS transactions (
     CurrencyCode VARCHAR(10) NULL,
     TransactionType VARCHAR(50) NULL,
     PaymentGateway VARCHAR(100) NULL,
-    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    CompletedAt DATETIME NULL,
+    CreatedOn DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CompletedOn DATETIME NULL,
     Status VARCHAR(50) NULL
 );
 
 -- Insert Sample Data (Optional)
-INSERT INTO transactions (TransactionId, CustomerId, OrderId, InvoiceNumber, Description, Amount, CurrencyCode, TransactionType, PaymentGateway, CreatedAt, CompletedAt, Status) VALUES
+INSERT INTO transactions (TransactionId, CustomerId, OrderId, InvoiceNumber, Description, Amount, CurrencyCode, TransactionType, PaymentGateway, CreatedOn, CompletedOn, Status) VALUES
 ('TXN260113001', 1001, 50001, 'INV-2026-001', 'Samsung S25 Ultra', 153399.00, 'INR', 'SALE', 'Razorpay', '2026-01-13 10:15:30', '2026-01-13 10:16:55', 'SUCCESS'),
 ('TXN260113002', 1002, 50002, 'INV-2026-002', 'MacBook Pro M4', 224199.00, 'INR', 'SALE', 'Stripe', '2026-01-13 11:20:10', '2026-01-13 11:21:40', 'SUCCESS');
 ```
@@ -97,7 +97,7 @@ For this guide, a Blazor application named **Grid_MySQL** has been created. Once
 
 **Method 1: Using Package Manager Console**
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
 3. Run the following commands:
 
@@ -105,19 +105,19 @@ For this guide, a Blazor application named **Grid_MySQL** has been created. Once
 Install-Package Microsoft.EntityFrameworkCore -Version 9.0.0
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 9.0.0
 Install-Package Pomelo.EntityFrameworkCore.MySql -Version 9.0.0
-Install-Package Syncfusion.Blazor.Grids -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}}
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
 **Method 2: Using NuGet Package Manager UI**
 
-1. Open **Visual Studio 2022 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **Microsoft.EntityFrameworkCore** (version 9.0.0 or later)
    - **Microsoft.EntityFrameworkCore.Tools** (version 9.0.0 or later)
    - **Pomelo.EntityFrameworkCore.MySql** (version 9.0.0 or later)
-   - **Syncfusion.Blazor.Grids** (version {{site.blazorversion}})
-   - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
 
@@ -196,12 +196,12 @@ namespace Grid_MySQL.Data
         /// <summary>
         /// Gets or sets the timestamp indicating when the transaction was created.
         /// </summary>
-        public DateTime? CreatedAt { get; set; }
+        public DateTime? CreatedOn { get; set; }
 
         /// <summary>
         /// Gets or sets the timestamp indicating when the transaction was completed.
         /// </summary>
-        public DateTime? CompletedAt { get; set; }
+        public DateTime? CompletedOn { get; set; }
 
         /// <summary>
         /// Gets or sets the current status of the transaction (e.g., Pending, Completed, Failed).
@@ -304,11 +304,11 @@ namespace Grid_MySQL.Data
                 entity.Property(e => e.OrderId)
                     .IsRequired(false);
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
                     .IsRequired(false);
 
-                entity.Property(e => e.CompletedAt)
+                entity.Property(e => e.CompletedOn)
                     .HasColumnType("datetime")
                     .IsRequired(false);
 
@@ -345,7 +345,7 @@ A connection string contains the information needed to connect the application t
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;Database=transactiondb;Uid=root;Pwd=Amrish_arjun11;SslMode=None;ConvertZeroDateTime=false;"
+    "DefaultConnection": "Server=localhost;Port=3306;Database=transactiondb;Uid=root;Pwd=mysql@123;SslMode=None;ConvertZeroDateTime=false;"
   },
   "Logging": {
     "LogLevel": {
@@ -412,7 +412,7 @@ namespace Grid_MySQL.Data
         /// <summary>
         /// Adds a new transaction to the database
         /// </summary>
-        public async Task AddTransactionAsync(TransactionModel transaction)
+        public async Task AddTransactionAsync(TransactionModel? transaction)
         {
             // Handle logic to add a new transaction to the database
         }
@@ -420,7 +420,7 @@ namespace Grid_MySQL.Data
         /// <summary>
         /// Updates an existing transaction in the database
         /// </summary>
-        public async Task UpdateTransactionAsync(TransactionModel transaction)
+        public async Task UpdateTransactionAsync(TransactionModel? transaction)
         {
             // Handle logic to update an existing transaction to the database
         }
@@ -506,15 +506,17 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-1. The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
-2. Import the required namespaces in the `Components/_Imports.razor` file:
+* The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous heading.
+* Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
+@using Grid_MySQL.Data
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -534,8 +536,8 @@ The `Home.razor` component will display the transaction data in a Syncfusion Bla
 
 **Instructions:**
 
-1. Open the file named `Home.razor` in the `Components/Pages` folder.
-2. Add the following code to create a basic DataGrid:
+* Open the file named `Home.razor` in the `Components/Pages` folder.
+* Add the following code to create a basic DataGrid:
 
 ```cshtml
 @page "/"
@@ -585,8 +587,8 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the following `CustomAdaptor` class code inside the `@code` block:
+* Open the `Components/Pages/Home.razor` file.
+* Add the following `CustomAdaptor` class code inside the `@code` block:
 
 ```csharp
 @code {
@@ -694,8 +696,8 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
+* Open the `Components/Pages/Home.razor` file.
+* Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options:
 
 ```cshtml
 <SfGrid TValue="TransactionModel" 
@@ -709,7 +711,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 </SfGrid>
 ```
 
-3. Add the toolbar items list in the `@code` block:
+* Add the toolbar items list in the `@code` block:
 
 ```csharp
 @code {
@@ -734,15 +736,43 @@ The toolbar has been successfully added.
 
 ---
 
-### Step 5: Implement Paging Feature
+### Step 5: Running the Application
+
+**Build the Application**
+
+1. Open the terminal or Package Manager Console.
+2. Navigate to the project directory.
+3. Run the following command:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
+3. The transaction management application is now running and ready to use.
+
+![Basic DataGrid displaying transactions from the MySQL Server database](../images/blazor-datagrid-mysql.png)
+
+### Step 6: Implement Paging Feature
 
 Paging divides large datasets into smaller pages to improve performance and usability.
 
 **Instructions:**
 
-1. The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
-2. The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
-3. No additional code changes are required from the previous steps.
+* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+* No additional code changes are required from the previous steps.
 
 ```cshtml
 <SfGrid TValue="TransactionModel" 
@@ -753,7 +783,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
     <!-- Grid columns configuration -->
 </SfGrid>
 ```
-4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle paging:
 
 ```csharp
 @code {  
@@ -831,15 +861,15 @@ Paging feature is now active with 10 records per page.
 
 ---
 
-### Step 6: Implement Searching feature
+### Step 7: Implement Searching feature
 
 Searching allows the user to find records by entering keywords in the search box.
 
 **Instructions:**
 
-1. The search functionality is already enabled in the CustomAdaptor's `ReadAsync` method.
-2. Ensure the toolbar includes the "Search" item.
-3. No additional code changes are required.
+* The search functionality is already enabled in the CustomAdaptor's `ReadAsync` method.
+* Ensure the toolbar includes the "Search" item.
+* No additional code changes are required.
 
 ```cshtml
 <SfGrid TValue="TransactionModel"        
@@ -850,7 +880,7 @@ Searching allows the user to find records by entering keywords in the search box
     <!-- Grid columns configuration -->
 </SfGrid>
 ```
-4. Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle searching:
 
 ```csharp
 @code {
@@ -911,14 +941,14 @@ Searching feature is now active.
 
 ---
 
-### Step 7: Implement Filtering feature
+### Step 8: Implement Filtering feature
 
 Filtering allows the user to restrict data based on column values using a menu interface.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowFiltering]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowFiltering]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="TransactionModel" 
@@ -933,7 +963,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
 
 ```csharp
 /// <summary>
@@ -998,14 +1028,14 @@ Filtering feature is now active.
 
 ---
 
-### Step 8: Implement Sorting feature
+### Step 9: Implement Sorting feature
 
 Sorting enables the user to arrange records in ascending or descending order based on column values.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="TransactionModel" 
@@ -1022,7 +1052,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 </SfGrid>
 ```
 
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
 
 ```csharp
 /// <summary>
@@ -1092,14 +1122,14 @@ Sorting feature is now active.
 
 ---
 
-### Step 9: Implement Grouping feature
+### Step 10: Implement Grouping feature
 
 Grouping organizes records into hierarchical groups based on column values.
 
 **Instructions:**
 
-1. Open the `Components/Pages/Home.razor` file.
-2. Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="TransactionModel" 
@@ -1114,7 +1144,7 @@ Grouping organizes records into hierarchical groups based on column values.
     <!-- Grid columns  -->
 </SfGrid>
 ```
-3. Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
+* Update the `ReadAsync` method in the `CustomAdaptor` class to handle grouping:
 
 
 ```csharp
@@ -1197,7 +1227,7 @@ Grouping feature is now active.
 
 ---
 
-### Step 10: Perform CRUD operations
+### Step 11: Perform CRUD operations
 
 CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **TransactionRepository.cs** to execute MySQL commands.
 
@@ -1237,10 +1267,7 @@ public class CustomAdaptor : DataAdaptor
 {
     public override async Task<object> InsertAsync(DataManager dataManager, object value, string key)
     {
-        if (value is TransactionModel transaction)
-        {
-            await _transactionService!.AddTransactionAsync(transaction);
-        }
+        await _transactionService!.AddTransactionAsync(value as TransactionModel);
         return value;
     }
 }
@@ -1248,25 +1275,25 @@ public class CustomAdaptor : DataAdaptor
 In **Data/TransactionRepository.cs**, implement the insert method:
 
 ```csharp
-public async Task AddTransactionAsync(TransactionModel value)
+public async Task AddTransactionAsync(TransactionModel? transaction)
 {
     if (transaction == null)
         throw new ArgumentNullException(nameof(transaction), "Transaction cannot be null");
 
-    if (transaction.CreatedAt == null)
-        transaction.CreatedAt = DateTime.Now;
+    if (transaction.CreatedOn == null)
+        transaction.CreatedOn = DateTime.Now;
 
     if (string.IsNullOrWhiteSpace(transaction.CurrencyCode))
         transaction.CurrencyCode = "INR";
 
-    string temporaryTransactionId = GeneratePublicTransactionId(transaction.CreatedAt, 99999);
+    string temporaryTransactionId = GeneratePublicTransactionId(transaction.CreatedOn, 99999);
     transaction.TransactionId = temporaryTransactionId;
 
     _context.Transactions.Add(transaction);
 
     await _context.SaveChangesAsync();
 
-    string finalTransactionId = GeneratePublicTransactionId(transaction.CreatedAt, transaction.Id);
+    string finalTransactionId = GeneratePublicTransactionId(transaction.CreatedOn, transaction.Id);
 
     transaction.TransactionId = finalTransactionId;
 
@@ -1274,9 +1301,9 @@ public async Task AddTransactionAsync(TransactionModel value)
     await _context.SaveChangesAsync();
 }
 
-private string GeneratePublicTransactionId(DateTime? createdAtDate, int primaryKeyId)
+private string GeneratePublicTransactionId(DateTime? CreatedOnDate, int primaryKeyId)
 {
-    DateTime dateToUse = createdAtDate ?? DateTime.Now;
+    DateTime dateToUse = CreatedOnDate ?? DateTime.Now;
     string datepart = dateToUse.ToString("yyMMdd");
 
     string formattedId = primaryKeyId.ToString("D5");
@@ -1288,7 +1315,7 @@ private string GeneratePublicTransactionId(DateTime? createdAtDate, int primaryK
 ```
 
 **Helper methods explanation:**
-- `GeneratePublicTransactionId()`: A new TransactionId is generated using createdAtDate and primaryKeyId.
+- `GeneratePublicTransactionId()`: A new TransactionId is generated using CreatedOnDate and primaryKeyId.
 
 **What happens behind the scenes:**
 
@@ -1312,10 +1339,7 @@ public class CustomAdaptor : DataAdaptor
 {
     public override async Task<object> UpdateAsync(DataManager dataManager, object value, string keyField, string key)
     {
-        if (value is TransactionModel transaction)
-        {
-            await _transactionService!.UpdateTransactionAsync(transaction);
-        }
+        await _transactionService!.UpdateTransactionAsync(value as TransactionModel);
         return value;
     }
 }
@@ -1323,7 +1347,7 @@ public class CustomAdaptor : DataAdaptor
 In **Data/TransactionRepository.cs**, implement the update method:
 
 ```csharp
-public async Task UpdateTransactionAsync(TransactionModel value)
+public async Task UpdateTransactionAsync(TransactionModel? transaction)
 {
     if (transaction == null)
         throw new ArgumentNullException(nameof(transaction), "Transaction cannot be null");
@@ -1341,7 +1365,7 @@ public async Task UpdateTransactionAsync(TransactionModel value)
     existingTransaction.CurrencyCode = transaction  .CurrencyCode;
     existingTransaction.TransactionType = transaction.TransactionType;
     existingTransaction.PaymentGateway = transaction.PaymentGateway;
-    existingTransaction.CompletedAt = transaction.CompletedAt;
+    existingTransaction.CompletedOn = transaction.CompletedOn;
     existingTransaction.Status = transaction.Status;
 
     _context.Transactions.Update(existingTransaction);
@@ -1356,7 +1380,7 @@ public async Task UpdateTransactionAsync(TransactionModel value)
 2. The CustomAdaptor's `UpdateAsync()` method is called.
 3. The `TransactionRepository.UpdateTransactionAsync()` method is called.
 4. The existing record is retrieved from the database by ID.
-5. All properties are updated with the new values (except ID and CreatedAt).
+5. All properties are updated with the new values (except ID and CreatedOn).
 6. `SaveChangesAsync()` persists the changes to the MySQL database.
 7. The DataGrid refreshes to display the updated record.
 
@@ -1373,24 +1397,7 @@ public class CustomAdaptor : DataAdaptor
 {
     public override async Task<object> RemoveAsync(DataManager dataManager, object value, string keyField, string key)
     {
-        int? recordId = null;
-        if (value is int intValue)
-        {
-            recordId = intValue;
-        }
-        else if (value is TransactionModel transaction)
-        {
-            recordId = transaction.Id;
-        }
-        else if (int.TryParse(value?.ToString(), out int parsedValue))
-        {
-            recordId = parsedValue;
-        }
-
-        if (recordId.HasValue && recordId.Value > 0)
-        {
-            await _transactionService!.RemoveTransactionAsync(recordId);
-        }
+        await _transactionService!.RemoveTransactionAsync(value as int?);
         return value;
     }
 }
@@ -1500,15 +1507,13 @@ Now the adaptor supports bulk modifications with atomic database synchronization
 
 ---
 
-### Step 11: Complete code
+### Step 12: Complete code
 Here is the complete and final `Home.razor` component with all features integrated:
 
 ```cshtml
+@page "/"
+@rendermode InteractiveServer
 @using System.Collections
-@using Grid_MySQL.Data
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
 @inject TransactionRepository TransactionService
 
 <SfGrid TValue="TransactionModel" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true"
@@ -1554,8 +1559,8 @@ Here is the complete and final `Home.razor` component with all features integrat
             </Template>
         </GridColumn>
         <GridColumn Field=@nameof(TransactionModel.PaymentGateway) HeaderText="Gateway" Width="130" EditType="EditType.DropDownEdit" EditorSettings="@GatewayDropDownParams" />
-        <GridColumn Field=@nameof(TransactionModel.CreatedAt) HeaderText="Created" Width="170" Format="dd-MMM-yy hh:mm tt" TextAlign="TextAlign.Right" Type="ColumnType.DateTime" AllowEditing="false" />
-        <GridColumn Field=@nameof(TransactionModel.CompletedAt) HeaderText="Completed" Width="170" Format="dd-MMM-yy hh:mm tt" TextAlign="TextAlign.Right" Type="ColumnType.DateTime" EditType="EditType.DateTimePickerEdit" />
+        <GridColumn Field=@nameof(TransactionModel.CreatedOn) HeaderText="Created" Width="170" Format="dd-MMM-yy hh:mm tt" TextAlign="TextAlign.Right" Type="ColumnType.DateTime" AllowEditing="false" />
+        <GridColumn Field=@nameof(TransactionModel.CompletedOn) HeaderText="Completed" Width="170" Format="dd-MMM-yy hh:mm tt" TextAlign="TextAlign.Right" Type="ColumnType.DateTime" EditType="EditType.DateTimePickerEdit" />
 
         <GridColumn Field=@nameof(TransactionModel.Status) HeaderText="Status" Width="110" ValidationRules="@(new ValidationRules { Required = true })" EditType="EditType.DropDownEdit" EditorSettings="@StatusDropDownParams">
             <Template>
@@ -1773,44 +1778,6 @@ Here is the complete and final `Home.razor` component with all features integrat
     }
 }
 ```
-
-## Running the Application
-
-**Step 1: Build the Application**
-
-1. Open the terminal or Package Manager Console.
-2. Navigate to the project directory.
-3. Run the following command:
-
-```powershell
-dotnet build
-```
-
-**Step 2: Run the Application**
-
-Execute the following command:
-
-```powershell
-dotnet run
-```
-
-**Step 3: Access the Application**
-
-1. Open a web browser.
-2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
-3. The transaction management application is now running and ready to use.
-
-**Available Features**
-
-- **View Data**: All transactions from the MySQL database are displayed in the DataGrid.
-- **Search**: Use the search box to find transactions by any field.
-- **Filter**: Click on column headers to apply filters.
-- **Sort**: Click on column headers to sort data in ascending or descending order.
-- **Pagination**: Navigate through records using page numbers.
-- **Add**: Click the "Add" button to create a new transaction.
-- **Edit**: Click the "Edit" button to modify existing transactions.
-- **Delete**: Click the "Delete" button to remove transactions.
-
 ---
 
 ## Complete Sample Repository
