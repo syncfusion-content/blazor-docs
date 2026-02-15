@@ -27,7 +27,7 @@ Before you integrate Amazon S3 with the Syncfusion Blazor File Manager, ensure y
 
 ### Create an S3 Bucket
 
- - Open the [AWS Management Console guide](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/getting-started.html) and log into AWS Console -> Navigate to S3.
+ - Open the [AWS Management Console guide](https://docs.aws.amazon.com/awsconsolehelpdocs/) and log into AWS Console -> Navigate to S3.
  - Proceed by clicking `Create Bucket`. A bucket is a container for objects. An object is a file and any metadata that describes that file. The Amazon S3 provider requires a top-level root folder in your bucket to place all required files and subfolders inside this root. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html) for more details.
  - Provide a DNS-compliant bucket name. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for more details.
  - Choose the AWS region. Click this [link](https://docs.aws.amazon.com/general/latest/gr/s3.html) for more details.
