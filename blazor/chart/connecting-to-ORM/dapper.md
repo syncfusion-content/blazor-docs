@@ -2,7 +2,7 @@
 
 layout: post
 title: Blazor Chart connected to SQLite via Dapper | Syncfusion
-description: Learn how to bind SQLite data to Syncfusion Blazor Charts using Dapper.
+description: A step‑by‑step guide to binding SQLite data to Syncfusion Blazor Charts using Dapper, covering setup, database creation, and data binding.
 platform: Blazor
 control: Chart
 documentation: ug
