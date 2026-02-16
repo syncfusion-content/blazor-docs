@@ -177,7 +177,7 @@ This section describes how to configure [SfDataManager](https://help.syncfusion.
 
     Inject the configured `HttpClient` and set the access token in the default request headers:
 
-    ```csharp
+```csharp
     @inject HttpClient _httpClient
 
     @code {
@@ -187,7 +187,7 @@ This section describes how to configure [SfDataManager](https://help.syncfusion.
                     await base.OnInitializedAsync();
             }
     }
-        ```
+```
 
 - **Using the Headers property of SfDataManager:** 
 
