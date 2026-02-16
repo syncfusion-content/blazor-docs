@@ -1379,6 +1379,12 @@ info: Grid_SignalR.Services.StockUpdateBackgroundService[0]
 
 ---
 
+## Complete Sample Repository
+
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/blazor-datagrid-integrations).
+
+---
+
 ## Summary
 
 This guide demonstrates how to:
