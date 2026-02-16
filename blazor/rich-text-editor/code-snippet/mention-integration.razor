@@ -1,7 +1,6 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.RichTextEditor
 
-
 <SfRichTextEditor ID="mentionIntegration">
     <p>Hello 
     <span contenteditable="false" class="e-mention-chip"><a href="mailto:maria@gmail.com" title="maria@gmail.com">@@Maria</a></span>
@@ -59,15 +58,15 @@
     }
     #mention-TemplateList .e-badge-success {
         background-color: #4d841d;
-		color: #fff;
+        color: #fff;
     }
     #mention-TemplateList .e-badge-success.away {
         background-color: #fedd2d;
-		color: #fff;
+        color: #fff;
     }
-	#mention-TemplateList .e-badge-success.busy {
+    #mention-TemplateList .e-badge-success.busy {
         background-color: #de1a1a;
-		color: #fff;
+        color: #fff;
     }
     #mention-TemplateList .e-badge.e-badge-dot {
         height: 10px;
@@ -78,25 +77,25 @@
     }
 </style>
 @code {
-  public class PersonData
-  {  
-    public string Name { get; set; }
-    public string EmailId { get; set; }
-    public string EmployeeImage { get; set;}
-    public string Status { get; set;}
-  }
-  List<PersonData> EmailData = new List<PersonData> {
-    new PersonData() { Name="Selma Rose",  Status = "active", EmployeeImage="2.png", EmailId="selma@gmail.com" },
-    new PersonData() { Name="Russo Kay",  Status = "away", EmployeeImage="8.png", EmailId="russo@gmail.com" },
-    new PersonData() { Name="Camden Kate", Status = "busy", EmployeeImage="9.png", EmailId="camden@gmail.com" },
-    new PersonData() { Name="Garth", Status = "active",  EmployeeImage="7.png", EmailId="garth@gmail.com" },
-    new PersonData() { Name="Ursula Ann", Status = "busy", EmployeeImage="3.png", EmailId="ursula@gmail.com" },
-    new PersonData() { Name="Margaret", Status = "active", EmployeeImage="10.png", EmailId="margaret@gmail.com" },
-    new PersonData() { Name="Laura Grace", Status = "away", EmployeeImage="1.png", EmailId="laura@gmail.com" },
-    new PersonData() { Name="Robert", Status = "busy", EmployeeImage="dp.png", EmailId="robert@gmail.com" },
-    new PersonData() { Name="Albert", Status = "away", EmployeeImage="8.png", EmailId="albert@gmail.com" },
-    new PersonData() { Name="Michale", Status = "active", EmployeeImage="4.png", EmailId="michale@gmail.com" },
-    new PersonData() { Name="Andrew James", Status = "active", EmployeeImage="db.png", EmailId="james@gmail.com" },
-    new PersonData() { Name="William", Status = "active", EmployeeImage="10.png", EmailId="william@gmail.com" }
-  };
+    public class PersonData
+    {
+        public string Name { get; set; }
+        public string EmailId { get; set; }
+        public string EmployeeImage { get; set; }
+        public string Status { get; set; }
+    }
+    List<PersonData> EmailData = new List<PersonData> {
+        new PersonData() { Name = "Selma Rose", Status = "active", EmployeeImage = "2.png", EmailId = "selma@gmail.com" },
+        new PersonData() { Name = "Russo Kay", Status = "away", EmployeeImage = "8.png", EmailId = "russo@gmail.com" },
+        new PersonData() { Name = "Camden Kate", Status = "busy", EmployeeImage = "9.png", EmailId = "camden@gmail.com" },
+        new PersonData() { Name = "Garth", Status = "active", EmployeeImage = "7.png", EmailId = "garth@gmail.com" },
+        new PersonData() { Name = "Ursula Ann", Status = "busy", EmployeeImage = "3.png", EmailId = "ursula@gmail.com" },
+        new PersonData() { Name = "Margaret", Status = "active", EmployeeImage = "10.png", EmailId = "margaret@gmail.com" },
+        new PersonData() { Name = "Laura Grace", Status = "away", EmployeeImage = "1.png", EmailId = "laura@gmail.com" },
+        new PersonData() { Name = "Robert", Status = "busy", EmployeeImage = "dp.png", EmailId = "robert@gmail.com" },
+        new PersonData() { Name = "Albert", Status = "away", EmployeeImage = "8.png", EmailId = "albert@gmail.com" },
+        new PersonData() { Name = "Michael", Status = "active", EmployeeImage = "4.png", EmailId = "michael@gmail.com" },
+        new PersonData() { Name = "Andrew James", Status = "active", EmployeeImage = "db.png", EmailId = "james@gmail.com" },
+        new PersonData() { Name = "William", Status = "active", EmployeeImage = "10.png", EmailId = "william@gmail.com" }
+    };
 }

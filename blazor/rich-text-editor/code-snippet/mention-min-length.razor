@@ -1,9 +1,7 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.RichTextEditor
 
-
 <SfRichTextEditor ID="mentionIntegration">
-
     <p>Hello
         <span contenteditable="false" class="e-mention-chip"><a href="mailto:maria@gmail.com" title="maria@gmail.com">@@Maria</a></span>
     </p>
@@ -23,14 +21,14 @@
     {
         public string Name { get; set; }
         public string EmailId { get; set; }
-        public string EmployeeImage { get; set;}
-        public string Status { get; set;}
+        public string EmployeeImage { get; set; }
+        public string Status { get; set; }
     }
     List<PersonData> EmailData = new List<PersonData> {
-        new PersonData() { Name="Selma Rose",  EmailId="selma@gmail.com" },
-        new PersonData() { Name="Russo Kay",   EmailId="russo@gmail.com" },
-        new PersonData() { Name="Camden Kate", EmailId="camden@gmail.com" },
-        new PersonData() { Name="Garth",  EmailId="garth@gmail.com" },
-        new PersonData() { Name="Ursula Ann", EmailId="ursula@gmail.com" },
+        new PersonData() { Name = "Selma Rose", EmailId = "selma@gmail.com" },
+        new PersonData() { Name = "Russo Kay", EmailId = "russo@gmail.com" },
+        new PersonData() { Name = "Camden Kate", EmailId = "camden@gmail.com" },
+        new PersonData() { Name = "Garth", EmailId = "garth@gmail.com" },
+        new PersonData() { Name = "Ursula Ann", EmailId = "ursula@gmail.com" },
     };
 }
