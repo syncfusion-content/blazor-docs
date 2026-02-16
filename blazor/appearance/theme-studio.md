@@ -3022,3 +3022,24 @@ Design based on Bootstrap 3 theme.
         </tr>
     </tbody>
 </table>
+
+## Overriding Syncfusion Theme Variables Using @use in Sass
+
+To override predefined variables without modifying Syncfusion’s downloaded theme files, the recommended pattern is:
+
+In `Custom.scss file`
+
+### Define your color as a CSS custom property
+
+```css
+:root {
+  --color-test-primary: 124, 86, 118;
+}
+```
+### Map the CSS variable into the Syncfusion theme via @use
+
+```css
+@use 'material3.scss' with (
+  $primary: var(#{'--color-test-primary'})
+);
+```
