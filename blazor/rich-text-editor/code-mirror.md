@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor Rich Text Editor includes a built‑in HTML source editor through the view-source option, enabling users to view and modify the underlying markup. To enhance this source editing experience, the Code Mirror plugin can be integrated with the editor.
 
-This guide explains how to integrate Code Mirror with the Syncfusion Blazor RichTextEditor to provide a seamless workflow that combines visual WYSIWYG editing with a rich, syntax‑highlighted HTML source editor.
+This guide explains how to integrate Code Mirror with the Syncfusion Blazor Rich Text Editor to provide a seamless workflow that combines visual WYSIWYG editing with a rich, syntax‑highlighted HTML source editor.
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ Add the script references in your host page before the closing `</body>` tag:
 </body>
 ```
 
-> The host page location varies by project type. Refer to the [RichTextEditor Getting Started](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) guide for the correct host page file path.
+> The host page location varies by project type. Refer to the [Rich Text Editor Getting Started](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) guide for the correct host page file path.
 >
 > **Note:** The Code Mirror CDN script must be loaded before the custom interop file to ensure proper functionality.
 
@@ -111,7 +111,7 @@ Once Code Mirror is integrated with the Rich Text Editor, you can begin using th
 - **Edit HTML with Syntax Highlighting**
   The embedded Code Mirror editor provides syntax highlighting, line numbers, and theme support.
 
-- **Return to WYSIWYG Mode**
+- **Return to Rich Text Editor Mode**
   When switching back to Preview or Normal mode, Code Mirror content is synchronized with the editor's main view.
 
 ## See also
@@ -119,4 +119,4 @@ Once Code Mirror is integrated with the Rich Text Editor, you can begin using th
 * [Rich Text Editor documentation](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started)
 * [Rich Text Editor events](https://blazor.syncfusion.com/documentation/rich-text-editor/events)
 * [Code Mirror Developer Documentation](https://codemirror.net/)
-* [GitHub Example - Blazor RichTextEditor with CodeMirror](https://github.com/SyncfusionExamples/blazor-richtexteditor-codemirror)
+* [GitHub Example - Blazor Rich Text Editor with CodeMirror](https://github.com/SyncfusionExamples/blazor-richtexteditor-codemirror)
