@@ -17,16 +17,16 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     Created="OnCreated">
 </SfDiagramComponent>
 
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -36,18 +36,18 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
             Width = 100,
             Height = 100
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void OnCreated(object args)
     {
 
-        Diagram.Select(new ObservableCollection<IDiagramObject>() { Diagram.Nodes[0] });
+        _diagram.Select(new ObservableCollection<IDiagramObject>() { _diagram.Nodes[0] });
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDryCDtQpdvIVmCH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/CreatedEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/CreatedEvent.razor)
 
 ## How to Handle Click Events
 
@@ -57,16 +57,16 @@ The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     Click="OnClick">
 </SfDiagramComponent>
 
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -76,7 +76,7 @@ The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
             Width = 100,
             Height = 100
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void OnClick(ClickEventArgs args)
     {
@@ -86,7 +86,7 @@ The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVeMtjcfROiEWpl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/ClickEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/ClickEvent.razor)
 
 ## How to Handle the Key Down Event
 
@@ -97,16 +97,16 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                      KeyDown="@OnKeyDown">
 </SfDiagramComponent>
 
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -116,7 +116,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
             Width = 100,
             Height = 100
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void OnKeyDown(KeyEventArgs args)
     {
@@ -126,7 +126,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthICZNmznawLOVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/KeyDownEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/KeyDownEvent.razor)
 
 ## How to Handle the Key Up Event
 
@@ -136,16 +136,16 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                      KeyUp="@OnKeyUp">
 </SfDiagramComponent>
 
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -155,7 +155,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
             Width = 100,
             Height = 100
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     private void OnKeyUp(KeyEventArgs args)
     {
@@ -165,7 +165,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLyMDDcpmWhdWJy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/KeyUpEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/KeyUpEvent.razor)
 
 ## How to Handle the Drag Start Event
 * The [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is raised when a user begins dragging a symbol from the symbol palette into the diagram canvas. This event provides valuable information about the drag operation initiation. For detailed information about the event arguments and properties available, refer to the [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html).
@@ -174,45 +174,45 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 @using System.Collections.ObjectModel
-<SfSymbolPaletteComponent @ref="PaletteInstance" Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+<SfSymbolPaletteComponent @ref="_paletteInstance" Palettes="@_palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
 </SfSymbolPaletteComponent >
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     DragStart="DragStart">
 </SfDiagramComponent>
 
 @code{
-    SfDiagramComponent Diagram;
-    SfSymbolPaletteComponent PaletteInstance;
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-    DiagramObjectCollection<NodeBase> TNodes = new DiagramObjectCollection<NodeBase>();
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private SfSymbolPaletteComponent _paletteInstance;
+    private DiagramObjectCollection<Palette> _palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<NodeBase> _tNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
     {
-            SymbolInfo SymbolInfo = new SymbolInfo();
-            SymbolInfo.Fit = true;
-            return SymbolInfo;
-          }
+        SymbolInfo SymbolInfo = new SymbolInfo();
+        SymbolInfo.Fit = true;
+        return SymbolInfo;
+    }
     protected override void OnInitialized()
     {
-             TNodes = new DiagramObjectCollection<NodeBase>();
-             Node TNode2 = new Node()
-             { 
-                 ID = "node1", 
-                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision } 
-             };
-            TNodes.Add(TNode2);
-            Palettes = new DiagramObjectCollection<Palette>()
-             {
-                new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
-             };
+        _tNodes = new DiagramObjectCollection<NodeBase>();
+        Node TNode2 = new Node()
+        { 
+            ID = "node1", 
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision } 
+        };
+        _tNodes.Add(TNode2);
+        _palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
+        };
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        PaletteInstance.Targets = new DiagramObjectCollection<SfDiagramComponent>() { };
-        PaletteInstance.Targets.Add(Diagram);
+        _paletteInstance.Targets = new DiagramObjectCollection<SfDiagramComponent>() { };
+        _paletteInstance.Targets.Add(_diagram);
     }
      //Notify the drag start event.
     private void DragStart(DragStartEventArgs args)
@@ -223,7 +223,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhyCjtcfwJSgxiR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/DragStartEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/DragStartEvent.razor)
 
 
 ## How to Handle the Dragging Event
@@ -234,39 +234,39 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 @using System.Collections.ObjectModel
-<SfSymbolPaletteComponent Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
-<SfDiagramComponent @ref="@Diagram"
+<SfSymbolPaletteComponent Palettes="@_palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     Dragging="Dragging">
 </SfDiagramComponent>
 
 </SfSymbolPaletteComponent >
 @code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-    DiagramObjectCollection<NodeBase> TNodes = new DiagramObjectCollection<NodeBase>();
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramObjectCollection<Palette> _palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<NodeBase> _tNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
     {
-            SymbolInfo SymbolInfo = new SymbolInfo();
-            SymbolInfo.Fit = true;
-            return SymbolInfo;
-          }
+        SymbolInfo SymbolInfo = new SymbolInfo();
+        SymbolInfo.Fit = true;
+        return SymbolInfo;
+    }
     protected override void OnInitialized()
     {
-             TNodes = new DiagramObjectCollection<NodeBase>();
-             Node TNode2 = new Node()
-             { 
-                 ID = "node1", 
-                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision } 
-             };
-            TNodes.Add(TNode2);
-            Palettes = new DiagramObjectCollection<Palette>()
-             {
-                new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
-             };
+        _tNodes = new DiagramObjectCollection<NodeBase>();
+        Node TNode2 = new Node()
+        { 
+            ID = "node1", 
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision } 
+        };
+        _tNodes.Add(TNode2);
+        _palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
+        };
     }
      // Notify the dragging event.
     private void Dragging(DraggingEventArgs args)
@@ -277,7 +277,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhSMZZGJcKGJAkd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/DraggingEvent)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/DraggingEvent.razor)
 
 ## How to Handle the DragLeave Event
 * The [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event is raised when a dragged element exits the boundaries of another diagram element. For detailed information about the event arguments, refer to the [DragLeaveEventArgs](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/DragLeaveEvent) documentation and sample code.
@@ -287,43 +287,43 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Diagram.SymbolPalette
-<SfSymbolPaletteComponent Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+<SfSymbolPaletteComponent Palettes="@_palettes" SymbolDragPreviewSize="@_symbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
 </SfSymbolPaletteComponent >
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     DragLeave="DragLeave">
 </SfDiagramComponent>
 
 @code{
-    SfDiagramComponent Diagram;
-    DiagramSize SymbolPreview;
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-    DiagramObjectCollection<NodeBase> TNodes = new DiagramObjectCollection<NodeBase>();
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramSize _symbolPreview;
+    private DiagramObjectCollection<Palette> _palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<NodeBase> _tNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
     {
-            SymbolInfo SymbolInfo = new SymbolInfo();
-            SymbolInfo.Fit = true;
-            return SymbolInfo;
-          }
+        SymbolInfo SymbolInfo = new SymbolInfo();
+        SymbolInfo.Fit = true;
+        return SymbolInfo;
+    }
     protected override void OnInitialized()
     {
-             SymbolPreview = new DiagramSize();
-             SymbolPreview.Width = 80;
-             SymbolPreview.Height = 80;
-             TNodes = new DiagramObjectCollection<NodeBase>();
-             Node TNode2 = new Node()
-             { 
-                 ID = "node1", 
-                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision} 
-             };
-            TNodes.Add(TNode2);
-            Palettes = new DiagramObjectCollection<Palette>()
-             {
-                new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
-             };
+        _symbolPreview = new DiagramSize();
+        _symbolPreview.Width = 80;
+        _symbolPreview.Height = 80;
+        _tNodes = new DiagramObjectCollection<NodeBase>();
+        Node TNode2 = new Node()
+        { 
+            ID = "node1", 
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision} 
+        };
+        _tNodes.Add(TNode2);
+        _palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
+        };
     }
      // Notify the DragLeave event.
     private void DragLeave(DragLeaveEventArgs args)
@@ -334,7 +334,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBoCXNQJwSmzgkQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/DragLeaveEvent.razor)
 
 ## How to Handle the Drag Drop Event
 * The [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event is raised when a user drags a symbol from the symbol palette and drops it onto the diagram's drawing area. This event provides valuable information about the drag and drop operation. To access and utilize the event arguments, refer to the [DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html) documentation, which details the properties and methods available for handling this event effectively.
@@ -344,43 +344,43 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
-<SfSymbolPaletteComponent Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+<SfSymbolPaletteComponent Palettes="@_palettes" SymbolDragPreviewSize="@_symbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
 </SfSymbolPaletteComponent >
-<SfDiagramComponent @ref="@Diagram"
+<SfDiagramComponent @ref="@_diagram"
                     Width="100%"
                     Height="700px"
-                    Nodes="nodes"
+                    Nodes="_nodes"
                     DragDrop="DragDrop">
 </SfDiagramComponent>
 
 @code{
-    SfDiagramComponent Diagram;
-    DiagramSize SymbolPreview;
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-    DiagramObjectCollection<NodeBase> TNodes = new DiagramObjectCollection<NodeBase>();
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SfDiagramComponent _diagram;
+    private DiagramSize _symbolPreview;
+    private DiagramObjectCollection<Palette> _palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<NodeBase> _tNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
     private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
     {
-            SymbolInfo SymbolInfo = new SymbolInfo();
-            SymbolInfo.Fit = true;
-            return SymbolInfo;
-          }
+        SymbolInfo SymbolInfo = new SymbolInfo();
+        SymbolInfo.Fit = true;
+        return SymbolInfo;
+    }
     protected override void OnInitialized()
     {
-             SymbolPreview = new DiagramSize();
-             SymbolPreview.Width = 80;
-             SymbolPreview.Height = 80;
-             TNodes = new DiagramObjectCollection<NodeBase>();
-             Node TNode2 = new Node()
-             { 
-                 ID = "node1", 
-                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision } 
-             };
-            TNodes.Add(TNode2);
-            Palettes = new DiagramObjectCollection<Palette>()
-             {
-                new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
-             };
+        _symbolPreview = new DiagramSize();
+        _symbolPreview.Width = 80;
+        _symbolPreview.Height = 80;
+        _tNodes = new DiagramObjectCollection<NodeBase>();
+        Node TNode2 = new Node()
+        { 
+            ID = "node1", 
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision } 
+        };
+        _tNodes.Add(TNode2);
+        _palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
+        };
     }
      // Notify the DragDrop event.
     private void DragDrop(DropEventArgs args)
@@ -391,7 +391,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVIMNZczQFDlDDa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/DragDrop)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/DragDrop.razor)
 
 ## How to Handle the On Auto Scroll Change Event
 The [OnAutoScrollChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_OnAutoScrollChange) event is raised when changes are detected in the scroll position, extent, or viewport size due to auto-scrolling of diagram elements. This event provides an [AutoScrollChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AutoScrollChangeEventArgs.html) argument containing relevant information.
@@ -406,54 +406,54 @@ These properties allow for fine-tuned control over the auto-scrolling behavior i
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="400px" Width="400px" Nodes="@nodes" Connectors="@connectors" OnAutoScrollChange="AutoScrollChange">
+<SfDiagramComponent Height="400px" Width="400px" Nodes="@_nodes" Connectors="@_connectors" OnAutoScrollChange="AutoScrollChange">
     @* Sets the ScrollSettings for the diagram *@
-    <ScrollSettings EnableAutoScroll=true AutoScrollPadding="@autoScrollBorder" @bind-ScrollLimit="@ScrollLimit">
+    <ScrollSettings EnableAutoScroll=true AutoScrollPadding="@_autoScrollBorder" @bind-ScrollLimit="@_scrollLimit">
     </ScrollSettings>
 </SfDiagramComponent>
 @code
 {
-    ScrollLimitMode ScrollLimit { get; set; } = ScrollLimitMode.Infinity;
-    DiagramObjectCollection<Node> nodes;
+    private ScrollLimitMode _scrollLimit { get; set; } = ScrollLimitMode.Infinity;
+    private DiagramObjectCollection<Node> _nodes;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    DiagramMargin autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+    private DiagramMargin _autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
         Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight,
+            Style = new ShapeStyle()
             {
-                ID = "connector1",
-                // Set the source and target point of the connector.
-                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
-                // Type of the connector segments.
-                Type = ConnectorSegmentType.Straight,
-                Style = new ShapeStyle()
-                {
-                    StrokeColor = "#6495ED",
-                    StrokeWidth = 1
-                },
-            };
-        connectors.Add(Connector);
+                StrokeColor = "#6495ED",
+                StrokeWidth = 1
+            },
+        };
+        _connectors.Add(Connector);
     }
     private void AutoScrollChange(AutoScrollChangeEventArgs args)
     {
@@ -466,7 +466,7 @@ These properties allow for fine-tuned control over the auto-scrolling behavior i
 
 ![Speed Limit control in autoScroll support for node](images/SpeedLimitNodeConnector.gif) 
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/OnAutoScrollChange)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/OnAutoScrollChange.razor)
 
 ## See also
 
