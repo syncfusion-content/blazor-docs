@@ -1,0 +1,49 @@
+@using Syncfusion.Blazor.RichTextEditor
+@inject IJSRuntime _jsRuntime
+
+<SfRichTextEditor ID="@rteId" @bind-Value="description" @ref="rteObj">
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorEvents OnActionComplete="ActionComplete" />
+</SfRichTextEditor>
+
+@code {
+    private SfRichTextEditor rteObj;
+    private string description { get; set; }
+    private string rteId { get; } = "sfrichtexteditor";
+
+    private List<ToolbarItemModel> Tools = new()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.ClearFormat },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.FullScreen },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+    };
+
+    public async Task ActionComplete(ActionCompleteEventArgs args)
+    {
+        var id = rteObj?.ID ?? rteId;
+        if (id is null) return;
+        if (args.RequestType == "SourceCode" || args.RequestType == "Preview")
+        {
+            await _jsRuntime.InvokeVoidAsync("initializeCodeMirror", new { requestType = args.RequestType }, id);
+        }
+    }
+}
+
+<style>
+    .e-rte-code-mirror-enabled .rte-code-mirror {
+        display: block !important; /* Display the Code Mirror view */
+    }
+
+    .e-rte-code-mirror-enabled .e-rte-content {
+        display: none !important; /* Hide the editor area when source code is enabled */
+    }
+</style>
