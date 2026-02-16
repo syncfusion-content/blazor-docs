@@ -113,4 +113,4 @@ Copy the complete component implementation from:
 * [Rich Text Editor documentation](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started)
 * [Image Editor documentation](https://blazor.syncfusion.com/documentation/image-editor/getting-started)
 * [Dialog documentation](https://blazor.syncfusion.com/documentation/dialog/getting-started)
-* [GitHub Example - Blazor RichTextEditor with Image Editor](https://github.com/SyncfusionExamples/blazor-richtexteditor-imageeditor)
+* [GitHub Example - Blazor Rich Text Editor with Image Editor](https://github.com/SyncfusionExamples/blazor-richtexteditor-imageeditor)
