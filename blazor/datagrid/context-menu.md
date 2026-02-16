@@ -590,17 +590,23 @@ The **Copy** menu item is disabled for the **ShipCity** column and remains enabl
         Orders = OrderData.GetAllRecords();
     }
 
-    private void OnContextMenuOpen(ContextMenuOpenEventArgs<OrderData> args)
-    {    
+   private void OnContextMenuOpen(ContextMenuOpenEventArgs<OrderData> args)
+    {
         foreach (var item in args.ContextMenu.Items)
         {
             if (item.Text == "Copy" && args.Column.Field == nameof(OrderData.ShipCity))
             {
                 item.Disabled = true;
             }
+            else
+            {
+                item.Disabled = false;
+
+            }
         }
     }
 }
+
 
 {% endhighlight %}
 
@@ -651,7 +657,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrIiiZySUQfOieR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVdtihYpymYrjox?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Show or hide context menu 
 
