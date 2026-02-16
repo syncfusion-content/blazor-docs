@@ -1801,13 +1801,3 @@ This guide demonstrates how to:
 7. Handle bulk operations and batch updates. [🔗](#step-11-perform-crud-operations)
 
 The application now provides a complete solution for managing project data with a modern, user-friendly interface powered by MongoDB's flexible document database.
-
----
-
-## See Also
-
-* [Getting Started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [MongoDB C# Driver Documentation](https://www.mongodb.com/docs/drivers/csharp/current/)
-* [Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/introduction)
-* [CustomAdaptor in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/custom-binding)
-* [MongoDB CRUD Operations](https://www.mongodb.com/docs/manual/crud/)
