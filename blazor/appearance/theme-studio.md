@@ -3023,10 +3023,12 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-## Overriding Syncfusion Blazor Theme Studio Variables Using @use in Sass
+## Overriding Syncfusion Blazor Theme Studio Variables Using Sass @use + with()
 
-To override predefined variables without modifying Syncfusion Blazor Theme Studio downloaded theme files, the recommended pattern is:
+When using Syncfusion Blazor Theme Studio, you may want to override predefined theme variables without directly editing the generated theme files.
+The cleanest and most Sass‑compliant way to do this is to pair CSS custom properties with Sass variable overrides using:
 
+`@use 'theme.scss' with (...)`
 
 ### Define your color as a CSS custom property
 
@@ -3037,7 +3039,7 @@ Create or update your `Custom.scss` (or any global Sass file):
   --color-test-primary: 124, 86, 118;
 }
 ```
-### Map the CSS variable into the Blazor Theme Studio theme via @use
+### Override Theme Studio variables using @use … with()
 
 Import your generated Theme Studio file (e.g., material3.scss) and override variables via with():
 
@@ -3046,3 +3048,8 @@ Import your generated Theme Studio file (e.g., material3.scss) and override vari
   $primary: var(#{'--color-test-primary'})
 );
 ```
+### Why this pattern works
+
+- `@use` is the modern, recommended Sass import system, ensuring variables are scoped and safely overridden.
+- `with()` injects your custom values before the Theme Studio file compiles, giving you full control without editing generated code.
+- `var(#{…})` enables passing a CSS custom property into a Sass variable, something Sass normally prevents without interpolation.
