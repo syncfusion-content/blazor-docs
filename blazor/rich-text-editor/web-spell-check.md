@@ -74,7 +74,7 @@ Add the script references in your host page before the closing `</body>` tag:
 </body>
 ```
 
-> The host page location varies by project type. Refer to the [RichTextEditor Getting Started](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) guide for the correct host page file path.
+> The host page location varies by project type. Refer to the [Rich Text Editor Getting Started](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) guide for the correct host page file path.
 >
 > **Note:** The Spell Checker script must be loaded before the custom interop file to ensure proper functionality.
 
@@ -96,4 +96,4 @@ Create a new Razor component file named **`RichTextEditorWithSpellChecker.razor`
 
 ## See also
 
-* [GitHub Example - Blazor RichTextEditor with Web Spell Checker](https://github.com/SyncfusionExamples/blazor-richtexteditor-webspellchecker)
+* [GitHub Example - Blazor Rich Text Editor with Web Spell Checker](https://github.com/SyncfusionExamples/blazor-richtexteditor-webspellchecker)
