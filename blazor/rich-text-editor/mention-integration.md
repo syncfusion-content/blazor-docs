@@ -50,7 +50,7 @@ In the following example, the `MinLength` is set to 3, so the suggestion list ap
 
 {% endhighlight %}
 
-![Blazor RichTextEditor mention minimum length](./images/blazor-richtexteditor-mention-min-length.png)
+![Blazor Rich Text Editor mention minimum length](./images/blazor-richtexteditor-mention-min-length.png)
 
 ### Customizing suggestion list count
 
@@ -66,7 +66,7 @@ In the example below, the `SuggestionCount` is set to 5, so only 5 items display
 
 {% endhighlight %}
 
-![Blazor RichTextEditor mention minimum length](./images/blazor-richtexteditor-mention-suggestion-count.png)
+![Blazor Rich Text Editor mention minimum length](./images/blazor-richtexteditor-mention-suggestion-count.png)
 
 ### Customizing suggestion list using templates
 
@@ -105,7 +105,7 @@ In the following sample, we configured the following properties:
 
 {% endhighlight %}
 
-![Blazor RichTextEditor mention integration](./images/blazor-richtexteditor-mention-integration.png)
+![Blazor Rich Text Editor mention integration](./images/blazor-richtexteditor-mention-integration.png)
 
 ## Using Remote Data with Mention in the Rich Text Editor
 
@@ -126,4 +126,4 @@ N> **Note:** Ensure that `Syncfusion.Blazor.Data` is imported in your component 
 ## See also
 
 * [Mention](https://blazor.syncfusion.com/documentation/mention/getting-started)
-* [GitHub Example - Blazor RichTextEditor with Mention](https://github.com/SyncfusionExamples/blazor-richtexteditor-mention)
+* [GitHub Example - Blazor Rich Text Editor with Mention](https://github.com/SyncfusionExamples/blazor-richtexteditor-mention)
