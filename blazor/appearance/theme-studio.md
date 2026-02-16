@@ -3023,20 +3023,23 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-## Overriding Syncfusion Theme Variables Using @use in Sass
+## Overriding Syncfusion Blazor Theme Studio Variables Using @use in Sass
 
-To override predefined variables without modifying Syncfusion’s downloaded theme files, the recommended pattern is:
+To override predefined variables without modifying Syncfusion Blazor Theme Studio downloaded theme files, the recommended pattern is:
 
-In `Custom.scss file`
 
 ### Define your color as a CSS custom property
+
+Create or update your `Custom.scss` (or any global Sass file):
 
 ```css
 :root {
   --color-test-primary: 124, 86, 118;
 }
 ```
-### Map the CSS variable into the Syncfusion theme via @use
+### Map the CSS variable into the Blazor Theme Studio theme via @use
+
+Import your generated Theme Studio file (e.g., material3.scss) and override variables via with():
 
 ```css
 @use 'material3.scss' with (
