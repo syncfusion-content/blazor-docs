@@ -1,0 +1,20 @@
+@page "/spell-checker"
+
+@using Syncfusion.Blazor.RichTextEditor
+@inject IJSRuntime JS
+
+<SfRichTextEditor ID="@rteId" @ref="rte" Value="@initialHtml">
+    <RichTextEditorEvents Created="@Created"></RichTextEditorEvents>
+</SfRichTextEditor>
+
+@code {
+    private SfRichTextEditor? rte;
+    private string rteId { get; } = "sfrichtexteditor";
+    private string initialHtml = @"<p>Enter your text here with real spelling and grammar mistakes to see how WProofreader works. A lot of potential errors will be underlined; hover on the marked words for instant correction suggestions.</p>";
+
+    private async Task Created()
+    {
+        var id = rte?.ID ?? rteId;
+        await JS.InvokeVoidAsync("initializeWebSpellChecker", id);
+    }
+}
