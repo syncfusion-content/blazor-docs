@@ -177,7 +177,7 @@ This section describes how to configure [SfDataManager](https://help.syncfusion.
 
     Inject the configured `HttpClient` and set the access token in the default request headers:
 
-    ```csharp
+```csharp
     @inject HttpClient _httpClient
 
     @code {
@@ -187,7 +187,7 @@ This section describes how to configure [SfDataManager](https://help.syncfusion.
                     await base.OnInitializedAsync();
             }
     }
-        ```
+```
 
 - **Using the Headers property of SfDataManager:** 
 
@@ -279,7 +279,7 @@ The example demonstrates modifying the query parameter dynamically. Initially, t
 }
 ```
 
-![Changing Query Dynamically in the Grid](./images/blazor-datagrid-query-update.gif)
+![Changing Query Dynamically in the Grid](../images/blazor-datagrid-query-update.gif)
 
 ## Offline mode
 
