@@ -16,7 +16,7 @@ Syncfusion AI Tools provide intelligent development assistance for building Blaz
 
 Syncfusion AI Tools come in two powerful configurations:
 
-* **Agentic UI Builder** – A complete toolkit for building user interfaces with Layout, Component, Styling, and Icon tools. Features an intelligent orchestrator that coordinates multi-step workflows automatically.
+* **Agentic UI Builder** – A complete toolkit for building user interfaces with Layout, Component, and Styling tools. Features an intelligent orchestrator that coordinates multi-step workflows automatically.
 * **AI Coding Assistant** – Focused development support with Component tool, plus a streamlined orchestrator for component integration tasks
 
 This guide will help you install and set up the tools so you can start building Blazor applications with AI assistance right away.
