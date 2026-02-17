@@ -48,8 +48,7 @@ Syncfusion AI Tools includes five specialized tools that work together to stream
 * **UI Builder Orchestrator** - Analyzes requirements and coordinates multiple tools to build complete UIs
 * **Layout Tool** - Provides pre-built, responsive UI blocks (headers, footers, sidebars, dashboards, forms)
 * **Component Tool** - Delivers API documentation and implementation guidance for Syncfusion Blazor components
-* **Styling Tool** - Generates theme configurations for Tailwind CSS, Bootstrap, Material, and Fluent with light/dark mode support
-* **Icon Tool** - Offers a comprehensive icon library with component integration patterns and accessibility guidance
+* **Styling Tool** - Generates theme configurations for Tailwind CSS, Bootstrap, Material, and Fluent with light/dark mode support, and also provides a comprehensive icon library with component‑level integration patterns and accessibility guidance.
 
 ## Unlimited Access
 
