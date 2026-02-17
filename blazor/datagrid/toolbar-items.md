@@ -565,7 +565,7 @@ By default, custom toolbar items are aligned on the left. Modify the position by
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhIXaKXmSgAyyhA?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrxNCVYFIkgyyQm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize the text name of custom Toolbar Items with same as default Toolbar Items
 

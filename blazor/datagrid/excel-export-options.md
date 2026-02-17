@@ -896,7 +896,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyDpiXSTLiKArB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVHZWqDtpDNjvmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customizing the background color for a Grid in an exported Excel or CSV document
 

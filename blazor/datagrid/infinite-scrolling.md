@@ -199,7 +199,7 @@ Configure the maximum cached blocks with `MaximumBlocks` (**default: 3**).
     <label> Enable or Disable Cache mode:</label>
     <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
 </div>
-<SfGrid @ref="Grid" DataSource="@TaskData" Height="300" EnableVirtualization="true">
+<SfGrid @ref="Grid" DataSource="@TaskData" Height="300" EnableInfiniteScrolling="true">
     <GridPageSettings PageSize="50"></GridPageSettings>
     <GridInfiniteScrollSettings EnableCache="@IsEnabled"></GridInfiniteScrollSettings>
     <GridColumns>
@@ -264,7 +264,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZreNsUXVSieZxOY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVHNsBuZvztmrck?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Limitations
 
