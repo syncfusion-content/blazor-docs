@@ -3023,7 +3023,7 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-## Overriding Syncfusion Blazor Theme Studio Variables Using Sass @use + with()
+## Overriding Syncfusion Blazor Theme Studio Variables Using Sass `@use` + `with()`
 
 When using Syncfusion Blazor Theme Studio, you may want to override predefined theme variables without directly editing the generated theme files.
 The cleanest and most Sass‑compliant way to do this is to pair CSS custom properties with Sass variable overrides using:
@@ -3039,7 +3039,7 @@ Create or update your `Custom.scss` (or any global Sass file):
   --color-test-primary: 124, 86, 118;
 }
 ```
-### Override Theme Studio variables using @use … with()
+### Override Theme Studio variables using `@use`, `with()`
 
 Import your generated Theme Studio file (e.g., material3.scss) and override variables via with():
 
