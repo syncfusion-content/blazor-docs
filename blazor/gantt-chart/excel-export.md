@@ -109,13 +109,21 @@ DataSource="@TaskCollection" Height="450px" Width="700px">
 
     private async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "GanttContainer_excelexport")
+        if (args.Item.Id == "GanttContainer_excelexport" || args.Item.Id == "GanttContainer_csvexport")
         {
             ExcelExportProperties exportProperties = new ExcelExportProperties
             {
                 DataSource = TaskCollection.Take(4).ToList()
             };
-            await Gantt.ExportToExcelAsync(exportProperties);
+
+            if (args.Item.Id == "GanttContainer_excelexport")
+            {
+                await Gantt.ExportToExcelAsync(exportProperties);
+            }
+            else if (args.Item.Id == "GanttContainer_csvexport")
+            {
+                await Gantt.ExportToCsvAsync(exportProperties);
+            }
         }
     }
 
@@ -388,9 +396,9 @@ To add header and footer content to exported Excel or CSV files in the Gantt com
 @using Syncfusion.Blazor.Navigations
 
 <SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })"
-DataSource="@TaskCollection" Height="450px" Width="700px">
+         DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-    Dependency="Predecessor" ParentID="ParentID">
+                     Dependency="Predecessor" ParentID="ParentID">
     </GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
@@ -406,153 +414,48 @@ DataSource="@TaskCollection" Height="450px" Width="700px">
 
     private async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "GanttContainer_excelexport")
+        if (args?.Item?.Id == "GanttContainer_excelexport")
         {
-             var exportProperties = new ExcelExportProperties();
-            var header = new ExcelHeader { HeaderRows = 8 };
+            var s20 = new ExcelStyle { FontColor = "#C67878", FontSize = 20, HAlign = ExcelHorizontalAlign.Center, Bold = true };
+            var s15 = new ExcelStyle { FontColor = "#C67878", FontSize = 15, HAlign = ExcelHorizontalAlign.Center, Bold = true };
+            var sCB = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center, Bold = true };
+            var sC = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center };
 
-           // Initialize the list of rows for the header.
-            header.Rows = new List<ExcelRow>
+            static ExcelRow R(params ExcelCell[] cells) => new() { Cells = (cells is { Length: > 0 }) ? new List<ExcelCell>(cells) : new List<ExcelCell>() };
+            static ExcelCell C(string v, int span, ExcelStyle st) => new() { ColSpan = span, Value = v, Style = st };
+            static ExcelCell L(string url, string? text, int span, ExcelStyle st) => new() { ColSpan = span, Hyperlink = new Hyperlink { Target = url, DisplayText = text }, Style = st };
+
+            var header = new ExcelHeader
             {
-                // Add a new row to the header with specific cells.
-                new ExcelRow
+                HeaderRows = 8,
+                Rows = new List<ExcelRow>
                 {
-                    // Define the cells within this row.
-                    Cells = new List<ExcelCell>
-                    {
-                        new ExcelCell
-                        {
-                            ColSpan = 4,
-                            Value = "Northwind Traders",
-                            Style = new ExcelStyle
-                            {
-                                FontColor = "#C67878",
-                                FontSize = 20,
-                                HAlign = ExcelHorizontalAlign.Center,
-                                Bold = true
-                            }
-                        }
-                    }
-                },
-                new ExcelRow
-                {
-                    Cells = new List<ExcelCell>
-                    {
-                        new ExcelCell
-                        {
-                            ColSpan = 4,
-                            Value = "2501 Aerial Center Parkway",
-                            Style = new ExcelStyle
-                            {
-                                FontColor = "#C67878",
-                                FontSize = 15,
-                                HAlign = ExcelHorizontalAlign.Center,
-                                Bold = true
-                            }
-                        }
-                    }
-                },
-                new ExcelRow
-                {
-                    Cells = new List<ExcelCell>
-                    {
-                        new ExcelCell
-                        {
-                            ColSpan = 4,
-                            Value = "Suite 200 Morrisville, NC 27560 USA",
-                            Style = new ExcelStyle
-                            {
-                                FontColor = "#C67878",
-                                FontSize = 15,
-                                HAlign =ExcelHorizontalAlign.Center,
-                                Bold = true
-                            }
-                        }
-                    }
-                },
-                new ExcelRow
-                {
-                    Cells = new List<ExcelCell>
-                    {
-                        new ExcelCell
-                        {
-                            ColSpan = 4,
-                            Value = "Tel +1 888.936.8638 Fax +1 919.573.0306",
-                            Style = new ExcelStyle
-                            {
-                                FontColor = "#C67878",
-                                FontSize = 15,
-                                HAlign = ExcelHorizontalAlign.Center,
-                                Bold = true
-                            }
-                        }
-                    }
-                },
-                new ExcelRow
-                {
-                    Cells = new List<ExcelCell>
-                    {
-                        new ExcelCell
-                        {
-                            ColSpan = 4,
-                            Hyperlink = new Hyperlink { Target = "https://www.northwind.com/", DisplayText = "www.northwind.com" },
-                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center }
-                        }
-                    }
-                },
-                new ExcelRow
-                {
-                    Cells = new List<ExcelCell>
-                    {
-                        new ExcelCell
-                        {
-                            ColSpan = 4,
-                            Hyperlink = new Hyperlink { Target = "mailto:support@northwind.com" },
-                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center }
-                        }
-                    }
-                },
-                new ExcelRow { }, 
-                new ExcelRow { }
-            };
-
-            
-            var footer = new ExcelFooter { FooterRows = 4 };
-
-            // Initialize the list of footer rows.
-            footer.Rows = new List<ExcelRow>
-            {
-                new ExcelRow { }, 
-                new ExcelRow { },
-                new ExcelRow
-                {   
-                    // Define the cells within this row.
-                    Cells = new List<ExcelCell>
-                    {
-                        new ExcelCell
-                        {
-                            ColSpan = 4,
-                            Value = "Thank you for your business!",
-                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center, Bold = true }
-                        }
-                    }
-                },
-                new ExcelRow
-                {
-                    Cells = new List<ExcelCell>
-                    {
-                        new ExcelCell
-                        {
-                            ColSpan = 4,
-                            Value = "!Visit Again!",
-                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center, Bold = true }
-                        }
-                    }
+                    R(C("Northwind Traders", 4, s20)),
+                    R(C("2501 Aerial Center Parkway", 4, s15)),
+                    R(C("Suite 200 Morrisville, NC 27560 USA", 4, s15)),
+                    R(C("Tel +1 888.936.8638 Fax +1 919.573.0306", 4, s15)),
+                    R(L("https://www.northwind.com/", "www.northwind.com", 4, sC)),
+                    R(L("mailto:support@northwind.com", null, 4, sC)),
+                    R(), R()
                 }
             };
-            exportProperties.Header = header;
-            exportProperties.Footer = footer;
-            await Gantt.ExportToExcelAsync(exportProperties);
+
+            var footer = new ExcelFooter
+            {
+                FooterRows = 4,
+                Rows = new List<ExcelRow>
+                {
+                    R(), R(),
+                    R(C("Thank you for your business!", 4, sCB)),
+                    R(C("!Visit Again!", 4, sCB))
+                }
+            };
+
+            await Gantt.ExportToExcelAsync(new ExcelExportProperties { Header = header, Footer = footer });
+        }
+        else if (args?.Item?.Id == "GanttContainer_csvexport")
+        {
+            await Gantt.ExportToCsvAsync();
         }
     }
 
@@ -584,7 +487,7 @@ DataSource="@TaskCollection" Height="450px" Width="700px">
         };
         return Tasks;
     }
-}  
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -626,7 +529,7 @@ DataSource="@TaskCollection" Height="450px" Width="700px">
 
     private async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "GanttContainer_excelexport")
+        if (args.Item.Id == "GanttContainer_excelexport" || args.Item.Id == "GanttContainer_csvexport")
         {
             ExcelExportProperties exportProperties = new ExcelExportProperties();
             // Add a new workbook to the Excel document that contains only 1 worksheet.
@@ -636,7 +539,15 @@ DataSource="@TaskCollection" Height="450px" Width="700px">
             exportProperties.Workbook.Worksheets.Add();
             // Define the Gridsheet index where Grid data must be exported.
             exportProperties.GridSheetIndex = 0;
-            await Gantt.ExportToExcelAsync(exportProperties);
+
+            if (args.Item.Id == "GanttContainer_excelexport")
+            {
+                await Gantt.ExportToExcelAsync(exportProperties);
+            }
+            else if (args.Item.Id == "GanttContainer_csvexport")
+            {
+                await Gantt.ExportToCsvAsync(exportProperties);
+            }
         }
     }
 

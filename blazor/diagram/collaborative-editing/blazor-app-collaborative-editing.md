@@ -44,17 +44,17 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
 @inject NavigationManager NavigationManager
 
 @code {
-    private HubConnection? connection;
-    private string roomName = "Syncfusion";
+    private HubConnection? _connection;
+    private string _roomName = "Syncfusion";
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender) 
         { 
-            if (connection == null)
+            if (_connection == null)
             {
                 // Run the hub service and Add your service url like "/diagramHub" in the connection
-                connection = new HubConnectionBuilder()
+                _connection = new HubConnectionBuilder()
                             .WithUrl("<<Your ServiceURL>>", options =>
                             {
                                 options.SkipNegotiation = true;
@@ -63,8 +63,8 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
                             .WithAutomaticReconnect()
                             .Build();
                 // Triggered when the connection to the SignalR Hub is successfully established
-                connection.On<string>("OnConnectedAsync", OnConnectedAsync);
-                await connection.StartAsync();
+                _connection.On<string>("OnConnectedAsync", OnConnectedAsync);
+                await _connection.StartAsync();
             }
         }
     }
@@ -73,7 +73,7 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
         if(!string.IsNullOrEmpty(connectionId))
         {
             // Join the room after connection is established
-            await connection.SendAsync("JoinDiagram", roomName);
+            await _connection!.SendAsync("JoinDiagram", _roomName);
         }
     }
 }
@@ -94,33 +94,29 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
 * Enable [EnableGroupActions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_EnableGroupActions) in [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html) to treat multi-step edits (like drag/resize sequences or batch changes) as a single operation.
 
 ```csharp
-<SfDiagramComponent @ref="@DiagramInstance" ID="@DiagramId" HistoryChanged="@OnHistoryChange" >
+<SfDiagramComponent @ref="_diagramInstance" ID="@_diagramId" HistoryChanged="@OnHistoryChange">
     <DiagramHistoryManager EnableGroupActions="true"></DiagramHistoryManager>
 </SfDiagramComponent>
 
 @code {
-    
-    public SfDiagramComponent DiagramInstance;
-    public DiagramId = "diagram";
-    private string roomName = "Syncfusion";
-    
-    
+    private SfDiagramComponent? _diagramInstance;
+    private string _diagramId = "diagram";
+    private string _roomName = "Syncfusion";
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender) 
         { 
-            if (connection == null)
+            if (_connection == null)
             {
-                ----------------
-                ----------------
+                // Initialize and start the SignalR connection here
+                // ...
+                
                 // Receive remote changes from diagram hub
-                connection.On<List<string>>("ReceiveData", async (diagramChanges) =>
+                _connection.On<List<string>>("ReceiveData", async (diagramChanges) =>
                 {
                     await ApplyRemoteDiagramChanges(diagramChanges);
                 });
-
-                ---------------
-                ---------------
             }
         }
     }
@@ -128,19 +124,22 @@ To enable real-time collaboration, configure SignalR HubConnection in your Blazo
     private async Task ApplyRemoteDiagramChanges(List<string> diagramChanges)
     {
         // Sets diagram updates to current diagram
-        await DiagramInstance.SetDiagramUpdatesAsync(diagramChanges);
+        if (_diagramInstance != null)
+        {
+            await _diagramInstance.SetDiagramUpdatesAsync(diagramChanges);
+        }
     }
     
-    private async void OnHistoryChange(HistoryChangedEventArgs args)
+    private async Task OnHistoryChange(HistoryChangedEventArgs args)
     {
-        if (args != null)
+        if (args != null && _diagramInstance != null)
         {
-            List<string> diagramChanges = DiagramInstance.GetDiagramUpdates(args);
+            List<string> diagramChanges = _diagramInstance.GetDiagramUpdates(args);
             // When EnableGroupActions is enabled, retrieve diagramChanges only after the group action completes.
             if (diagramChanges.Count > 0)
             {
                 // Send changes to the SignalR Hub for broadcasting
-                await connection.SendAsync("BroadcastToOtherUsers", diagramChanges, roomName);
+                await _connection!.SendAsync("BroadcastToOtherUsers", diagramChanges, _roomName);
             }
         }
     }
@@ -153,62 +152,66 @@ To maintain consistency during collaborative editing, each user applies incoming
 
 Add the following code in the Blazor sample application:
 ```csharp
+// Version tracking for optimistic concurrency
+private long _userVersion;
 
-long userVersion;
 protected override async Task OnAfterRenderAsync(bool firstRender)
 {
     if (firstRender) 
     { 
-        if (connection == null)
+        if (_connection == null)
         {
-            --------
-            --------
-            connection.On<List<string>, long>("ReceiveData", async (diagramChanges, serverVersion) =>
+            // Initialize connection and handlers as needed
+            // ...
+            
+            _connection.On<List<string>, long>("ReceiveData", async (diagramChanges, serverVersion) =>
             {
                 await ApplyRemoteDiagramChanges(diagramChanges, serverVersion);
             });
             // Conflict notification
-            connection.On("ShowConflict", ShowConflict);
+            _connection.On("ShowConflict", () => ShowConflict());
 
             // Explicit version sync (optional if version is included in ReceiveData)
-            connection.On<long>("UpdateVersion", UpdateVersion);
-
-            ----------
-            ----------
+            _connection.On<long>("UpdateVersion", UpdateVersion);
         }
     }
 }
 
 private async Task ApplyRemoteDiagramChanges(List<string> diagramChanges, long serverVersion)
 {
-        // Sets diagram updates to current diagram
-    await DiagramInstance.SetDiagramUpdatesAsync(diagramChanges);
-    userVersion = serverVersion;
+    // Sets diagram updates to current diagram
+    if (_diagramInstance != null)
+    {
+        await _diagramInstance.SetDiagramUpdatesAsync(diagramChanges);
+    }
+    _userVersion = serverVersion;
 }
 
 // Capture local changes and send with version and edited IDs
-public async void OnHistoryChange(HistoryChangedEventArgs args)
+public async Task OnHistoryChange(HistoryChangedEventArgs args)
 {
-    List<string> diagramChanges = DiagramInstance.GetDiagramUpdates(args);
-    if (diagramChanges.Count == 0)
+    if (_diagramInstance == null)
+        return;
+
+    List<string> diagramChanges = _diagramInstance.GetDiagramUpdates(args);
+    if (diagramChanges.Count > 0)
     {
         List<string> editedElements = GetEditedElements(args);
-        await connection!.SendAsync("BroadcastToOtherUsers", diagramChanges, userVersion, editedElements, roomName);
+        await _connection!.SendAsync("BroadcastToOtherUsers", diagramChanges, _userVersion, editedElements, _roomName);
     }
 }
 
 private List<string> GetEditedElements(HistoryChangedEventArgs args)
 {
     // Extract and return IDs of affected nodes/connectors from args
-    -------------
-    -------------
+    // TODO: implement extraction logic based on HistoryChangedEventArgs
     return new List<string>();
 }
 
-private void UpdateVersion(long serverVersion) => userVersion = serverVersion;
+private void UpdateVersion(long serverVersion) => _userVersion = serverVersion;
 
 private void ShowConflict()
 {
-    // Display a notication to inform the user their update was rejected due to overlap
+    // Display a notification to inform the user their update was rejected due to overlap
 }
 ```

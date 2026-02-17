@@ -256,7 +256,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ## Value
 
-Set the rating using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property.
+Set the rating value by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property.
 
 {% tabs %}
 {% highlight razor %}

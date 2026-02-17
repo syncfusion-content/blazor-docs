@@ -165,7 +165,7 @@ The remote data can be bound to the 3D chart using the [SfDataManager](https://h
 @using System.Dynamic
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <SfDataManager Url="https://blazor.syncfusion.com/services/development/api/chart" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/chart" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
 
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="LabelPlacement.BetweenTicks"></Chart3DPrimaryXAxis>
 

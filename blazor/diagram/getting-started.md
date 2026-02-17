@@ -25,6 +25,12 @@ This section explains the step-by-step process of integrating the Syncfusion<sup
 
 Create a **Blazor Server App** using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
+![Blazor Server App Creation Template](images/Blazor-server-app-creation.png)
+
+Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) when creating a Blazor Server App.
+
+![Blazor Server App with Interactive Mode](images/blazor-app-interactive-mode.png)
+
 ## Step 2: How to Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram and Themes NuGet Packages in the Blazor Server App
 
 To add **Blazor Diagram** component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).Alternatively, use the following package manager command to achieve the same.
@@ -126,12 +132,11 @@ N> If the Interactivity Location is set to `Global` and the **Render Mode** is `
 
 ## Step 1: How to Create a New Blazor App in Visual Studio Code
 
-Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
-
-Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+* Open **Visual Studio Code**.
+* Press **Ctrl + `** to open the integrated terminal.
+* Execute the following command to create a **Blazor Server App**:
 
 {% tabs %}
-
 {% highlight c# tabtitle="Blazor Server App" %}
 
 dotnet new blazor -o BlazorApp -int Server
@@ -140,6 +145,10 @@ cd BlazorApp
 {% endhighlight %}
 
 {% endtabs %}
+
+N> Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
+Alternatively, create **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
 
 ## Step 2: How to Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram and Themes NuGet Packages in the App
 
@@ -239,7 +248,14 @@ N> If the Interactivity Location is set to `Global` and the **Render Mode** is `
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
+How to run the project:
+- Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code. 
+- Ensure the terminal's current directory is the folder containing the project file. 
+- Run the application with:
+```
+dotnet run
+```
+- The running server prints the URL (e.g., https://localhost:5001); open that in a browser to view the rendered SfDiagramComponent.
 
 {% endtabcontent %}
 
@@ -365,7 +381,16 @@ N> If the Interactivity Location is set to `Global` and the **Render Mode** is `
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
+Run the app from the command line (Windows) by opening a terminal at the project folder (the folder containing the project .csproj that hosts the app) and executing `dotnet run` command.
+
+Ways to open a terminal at the folder containing the project file:
+- File Explorer → navigate to the folder with project file → click the address bar, type cmd or PowerShell, press Enter (opens Command Prompt or PowerShell at that path).
+- File Explorer → Shift + Right-click in the folder whitespace → choose "Open PowerShell window here" or "Open in Terminal".
+- Run the application with:
+  ```powershell
+  dotnet run
+  ```
+- The running server prints the URL (e.g., https://localhost:5001); open that in a browser to view the rendered SfDiagramComponent.
 
 {% endtabcontent %}
 
