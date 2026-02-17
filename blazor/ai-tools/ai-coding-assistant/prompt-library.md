@@ -266,5 +266,5 @@ The Syncfusion Blazor Calendar supports flexible date selection, localization, a
 
 ## See also
 
-* [AI Coding Assistant Overview](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
-* [SyncfusionBlazorAssistant MCP Server](https://blazor.syncfusion.com/documentation/ai-coding-assistant/mcp-server)
+* [AI Coding Assistant - Getting Started](./getting-started)
+* [Agentic UI Builder - Getting Started](../agentic-ui-builder/getting-started)
