@@ -91,7 +91,7 @@ The Component Tool implements specific Syncfusion Blazor components with configu
 
 ### Styling Tool
 
-The Styling Tool applies custom themes, color schemes, and visual treatments across your application. Use #sf_blazor_style for branding and aesthetic customization.
+The Styling Tool applies custom themes, color schemes, visual treatments, and iconography across your application. Use #sf_blazor_style for branding, aesthetic customization, and icon integration.
 
 {% promptcards %}
 {% promptcard Tailwind3 Dark Mode Setup %}
@@ -106,21 +106,14 @@ The Styling Tool applies custom themes, color schemes, and visual treatments acr
 {% promptcard Material3 CSS Variables %}
 #sf_blazor_style Configure the Syncfusion Material 3 theme CSS variables for a custom color palette, elevation shadows, border radius, and component-specific styling properties.
 {% endpromptcard %}
-{% endpromptcards %}
-
-### Icon Tool
-
-The Icon Tool identifies and implements appropriate iconography from Syncfusion's icon library. Use #sf_blazor_icon to enhance visual communication and user interface clarity.
-
-{% promptcards %}
 {% promptcard User Actions & Navigation %}
-#sf_blazor_icon Add appropriate icons for common user interactions in the application toolbar, including editing capabilities, navigation controls, and accessing various options.
+#sf_blazor_style Add appropriate icons for common user interactions in the application toolbar, including editing capabilities, navigation controls, and accessing various options.
 {% endpromptcard %}
 {% promptcard Content Editor Toolbar %}
-#sf_blazor_icon Implement icons for text formatting operations, table manipulation, and image editing tools in the Rich Text Editor.
+#sf_blazor_style Implement icons for text formatting operations, table manipulation, and image editing tools in the Rich Text Editor.
 {% endpromptcard %}
 {% promptcard Analytics Dashboard %}
-#sf_blazor_icon Update icons for data visualization elements, chart representations, and trend indicators in the analytics dashboard.
+#sf_blazor_style Update icons for data visualization elements, chart representations, and trend indicators in the analytics dashboard.
 {% endpromptcard %}
 {% promptcard Document Management %}
 #sf_blazor_icon Find icons for file operations, document processing, printing capabilities, and export functionality in the File Manager toolbar.
