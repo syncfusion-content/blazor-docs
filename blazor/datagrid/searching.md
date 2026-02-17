@@ -286,7 +286,7 @@ Search operators define how the search key is compared to data values. Configure
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheMWibUKtkPFVK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBxjriDJmyEBqlO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Search by external button
 
@@ -533,6 +533,8 @@ By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
     }
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhRtViZpcQIPorp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> For a broader overview, see the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour and the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5).
 
