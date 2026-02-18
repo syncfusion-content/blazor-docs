@@ -29,9 +29,20 @@ Configure the appropriate [Interactive render mode](https://learn.microsoft.com/
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the App
 
-To add the **Blazor MultiSelect DropDown** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the **Blazor MultiSelect DropDown** component in the app, first determine your render mode configuration, then install the NuGet packages in the appropriate project:
 
-If using the `WebAssembly or Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
+| Render Mode | Installation Location |
+|---|---|
+| **Server** | Main project (e.g., `BlazorApp`) |
+| **Auto** | Client project (e.g., `BlazorApp.Client`) |
+| **WebAssembly** | Client project (e.g., `BlazorApp.Client`) |
+
+**Steps:**
+
+1. Identify which render mode you configured when creating the Blazor Web App
+2. Right-click the appropriate project from the table above in Solution Explorer
+3. Open the NuGet package manager (*Manage NuGet Packages...*) 
+4. Search for and install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
@@ -74,11 +85,19 @@ cd BlazorWebApp.Client
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDowns and Themes NuGet in the App
 
-If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
+To install the NuGet packages, first identify your render mode, then navigate to the appropriate project directory:
+
+| Render Mode | Project Directory |
+|---|---|
+| **Server** | Main project root (e.g., `BlazorApp`) |
+| **Auto** | Client project root (e.g., `BlazorApp.Client`) |
+| **WebAssembly** | Client project root (e.g., `BlazorApp.Client`) |
+
+**Steps:**
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+* Navigate to the appropriate project directory based on your render mode (from the table above)
+* Run the following command to install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
 
 {% tabs %}
 
