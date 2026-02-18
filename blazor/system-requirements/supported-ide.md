@@ -1,13 +1,13 @@
 ---
 layout: post
-title: System requirements for Syncfusion Blazor
+title: System requirements for Syncfusion Blazor components
 description: Requirements to develop and run Syncfusion Blazor components, including supported integrated development environments.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# System requirements for Blazor Components
+# System requirements for Blazor Applications
 
 Blazor applications can be developed using the following IDEs or the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

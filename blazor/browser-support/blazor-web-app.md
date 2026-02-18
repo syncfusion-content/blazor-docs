@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Browser support for Syncfusion Blazor
+title: Browser support for Syncfusion Blazor Web App
 description: Supported browsers for Syncfusion Blazor components on Windows, Linux, and macOS for Blazor Web App.
 platform: Blazor
 control: Common

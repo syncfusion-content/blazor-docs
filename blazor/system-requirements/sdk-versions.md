@@ -1,13 +1,13 @@
 ---
 layout: post
-title: System requirements for Syncfusion Blazor
+title: .NET SDK versions for Syncfusion Blazor components
 description: Requirements to develop and run Syncfusion Blazor components, including supported .NET SDK versions.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# System requirements for Blazor Components
+# .NET SDK Compatibility Overview
 
 The table below shows which .NET SDK versions are supported for developing and running Syncfusion Blazor components. Choose an SDK that matches the Syncfusion package version you use; mismatches can cause build or runtime errors.
 
