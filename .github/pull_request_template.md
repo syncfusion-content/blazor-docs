@@ -30,15 +30,6 @@ Explain **what** was updated, added, or removed.
 - [ ] Content improvement (clarity, examples, screenshots)
 - [ ] Other (please describe):
 
-## Checklist
-Before submitting, ensure the following:
-
-- [ ] Spelling and grammar are correct
-- [ ] Navigation and table-of-contents entries updated (if needed)
-- [ ] Added/updated examples or code blocks are valid
-- [ ] Content reviewed by content review team(Optional).
-- [ ] CI checks passing.
-
 ## Reviewer Checklist (Mandatory)
 - [ ] Content changes follow UG/Documentation guidelines
 - [ ] All provided information reviewed and verified
