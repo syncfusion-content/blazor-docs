@@ -1,887 +1,1116 @@
 ---
 layout: post
-title: Bind data from SQL server in Blazor | Syncfusion
-description: Learn how to retrieve data from SQL server, bind it to Syncfusion DataGrid component using Entity Framework, and perform CRUD operations.
+title: Blazor DataGrid with SQL using Entity Framework| Syncfusion
+description: Bind SQL Server data to Blazor DataGrid using Entity Framework core with CRUD, filtering, sorting, and paging.
 platform: Blazor
-component: Common
+control: DataGrid
 documentation: ug
 ---
 
-# Bind Data from SQL Server to Syncfusion® Blazor Components
+# Connecting SQL Server to Blazor DataGrid via Entity Framework
 
-In this section, you can learn how to retrieve data from SQL database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.
-Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft. Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion<sup style="font-size:70%">&reg;</sup> component to perform CRUD operations in a Blazor Server Application.
+The Syncfusion Blazor DataGrid supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
 
-## Prerequisite software
+**What is Entity Framework Core?**
 
-The following software are needed
+Entity Framework Core (EF Core) is a data access technology for .NET that simplifies working with databases like SQL Server by mapping C# classes to database tables and generating SQL at runtime.
 
-* Visual Studio 2022
-* .NET 6.0 or later.
-* SQL Server 2019 or later
+**Key Benefits of Entity Framework Core**
 
-## Create the database
+- Automatic SQL generation with optimized queries
+- Strongly typed models for compile-time safety
+- Parameterization to mitigate SQL injection
+- Migrations to version database schema changes
+- LINQ queries for expressive data access
 
-The first step is to create a Library database and a table named Book to hold a list of books.
+**What is Entity Framework Core SQL Server Provider?**
 
-* Open SQL Server.
-* Now, create a new database named Library.
-* Right-click on the created database and select New Query.
-* Use the following SQL query to create a table named Book.
+The Microsoft.EntityFrameworkCore.SqlServer package is the provider that connects Entity Framework core to SQL Server, enabling CRUD, transactions, and SQL Server-specific features.
 
-```
-Create Table Book(
-Id BigInt Identity(1,1) Primary Key Not Null,
-Name Varchar(200) Not Null,
-Author Varchar(100) Not Null,
-Quantity int,
-Price int Not Null,
-Available bit)
-```
+**What is UrlAdaptor?**
 
-Now, the Book table design will look like below.
+UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all grid operations. The DataGrid sends read, insert, update, delete, and batch requests to controller actions, which use Entity Framework core to access SQL Server.
 
-![Create Table in Blazor](../images/create-table.png)
+## Prerequisites
 
-## Creating Blazor Web App
+Ensure the following software and packages are installed before proceeding:
 
-Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web App.
+| Software/Package | Version | Purpose |
+|-----------------|---------|---------|
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
+| .NET SDK | net10.0 or compatible | Runtime and build tools |
+| SQL Server | 2019 or later | Database server |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Microsoft.EntityFrameworkCore | 10.0.2 | Core framework for database operations |
+| Microsoft.EntityFrameworkCore.SqlServer | 10.0.2 | SQL Server provider for Entity Framework Core |
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+## Setting Up the SQL Server Environment for Entity Framework Core
 
-## Create Blazor Server Application
+### Step 1: Create the Database and Table in SQL Server
 
-Open Visual Studio 2022, select Create a New Project, select Blazor Server App, then click Next.
+First, the SQL Server database structure must be created to store order records.
 
-![Create New Blazor Server Project](../images/create-new-project.png)
+Instructions:
+1. Open SQL Server Management Studio (SSMS) or any SQL Server client.
+2. Create a new database named `OrderDB`.
+3. Define an `Order` table with the specified schema.
+4. Insert sample data for testing.
 
-In the next window, provide the project name as LibraryManagement and click Next.
+Run the following SQL script:
 
-![Give Project name as LibraryManagement in Blazor](../images/project-name.png)
+```sql
+-- Create Database
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'OrderDB')
+BEGIN
+    CREATE DATABASE OrderDB;
+END
+GO
 
-Now, select Target Framework as (.NET 6.0 or .NET 7.0) in the project template and click Create button to create the Blazor Server application.
+USE OrderDB;
+GO
 
-![Create Project in Blazor](../images/create-project.png)
+-- Create [Order] Table
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Order' AND schema_id = SCHEMA_ID('dbo'))
+BEGIN
+    CREATE TABLE dbo.[Order] (
+        OrderID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+        CustomerID NVARCHAR(50) NOT NULL,
+        EmployeeID INT NOT NULL,
+        Freight DECIMAL(18,2) NOT NULL,
+        ShipCity NVARCHAR(100) NOT NULL
+    );
+END
+GO
 
-## Creating DbContext and model class
-
-### DbContext and model class in Blazor Web App
-
-Now, scaffold DbContext and model classes from the existing library database. To perform scaffolding and work with the SQL Server Database in our application, you need to install the following NuGet packages. If you have created a Blazor Web App with the interactive render mode set to `WebAssembly` or `Auto`, ensure to follow these steps:
-
-* Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
-![Create Shared Project](../images/db-shared-project.png)
-
-Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
-
-* Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your app.
-
-   * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
-   * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
-
-Alternatively, you can utilize the following package manager command to achieve the same.
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Microsoft.EntityFrameworkCore.Tools
-
-Install-Package Microsoft.EntityFrameworkCore.SqlServer
-
-{% endhighlight %}
-{% endtabs %}
-
-Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
-
-```
-Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
-
+-- Insert Sample Data (Optional)
+INSERT INTO dbo.[Order] (CustomerID, EmployeeID, Freight, ShipCity)
+VALUES
+(N'ALFKI', 5, 32.50, N'Berlin'),
+(N'BONAP', 7, 120.00, N'Marseille');
+GO
 ```
 
-The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
+After executing this script, the order records are stored in the `Order` table within the `OrderDB` database. The database is now ready for integration with the Blazor application.
 
-   * **Connection string**: Server=localhost;Database=Library;Integrated Security=True
-   * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
-   * **Output directory**: -OutputDir Models
+### Step 2: Install Required NuGet Packages
 
-* After running the above command, **LibraryContext.cs** and **Book.cs** files will be created under the **Models** folder in the `BlazorWebApp.Shared` project as follows.
+Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files—such as **Program.cs**, **appsettings.json**, **wwwroot**, and **Components**.
 
-![Create Shared Project](../images/shared-models.png)
+For this guide, a Blazor application named **Grid_EF_UrlAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages. These packages enable Entity Framework Core with SQL Server provider and add Syncfusion UI components.
 
- You can see that **LibraryContext.cs** file contains the connection string details in the OnConfiguring method.
+**Method 1: Using Package Manager Console**
 
-![Created Connectionstring in Blazor](../images/shared-connection-string.png)
+1. Open Visual Studio 2026.
+2. Navigate to Tools → NuGet Package Manager → Package Manager Console.
+3. Run the following commands:
 
-* Also, include the following code snippet in the **app settings.json** file from server side application.
+```powershell
+Install-Package Microsoft.EntityFrameworkCore -Version 10.0.2;
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 10.0.2;
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}};
+Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
+```
 
-{% tabs %}
-{% highlight C# tabtitle="app settings.json" hl_lines="2 10 11 12" %}
+**Method 2: Using NuGet Package Manager UI**
 
-          // your localhost portal number
-"BaseUri": "https://localhost:7105",
-"Logging": {
-  "LogLevel": {
-    "Default": "Information",
-    "Microsoft.AspNetCore": "Warning"
-  }
-},
-"AllowedHosts": "*",
-"ConnectionStrings": {
-  "LibraryDatabase": "Server={Your server name};Database=Library;Integrated Security=True"
-}
+1. Open Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution.
+2. Search for and install each package individually:
+   - **Microsoft.EntityFrameworkCore** (version 10.0.2)
+   - **Microsoft.EntityFrameworkCore.SqlServer** (version 10.0.2)
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
-{% endhighlight %}
-{% endtabs %}
+All required packages are now installed.
 
-* Add the following code snippet to configure a scoped HttpClient with a base address and **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Program.cs** file in server side application.
+### Step 3: Create the Data Model
 
-{% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="1 2 3 4" %}
+A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the `Order` table.
 
-builder.Services.AddScoped(http => new HttpClient { BaseAddress = new Uri(builder.Configuration.GetSection("BaseUri").Value!) });
-builder.Services.AddDbContext<LibraryContext>(option =>
-                option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
+**Instructions:**
 
-{% endhighlight %}
-{% endtabs %}
+1. Create a new folder named `Data` in the Blazor application project.
+2. Inside the `Data` folder, create a new file named **Order.cs**.
+3. Define the **Order** class with the following code:
 
-* Crete the `DataGridController` in server side application for handle CRUD (Create, Read, Update, Delete) operations for the Book entity.
+```csharp
+using System.ComponentModel.DataAnnotations.Schema;
 
-```cshtml
-using BlazorWebApp.Shared.Models;
-using Microsoft.AspNetCore.Mvc;
-
-namespace BlazorWebApp.Controller
+namespace Grid_EF_UrlAdaptor.Data
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class DataGridController : ControllerBase
+    [Table("Order")]
+    public class Order
     {
-        public DataGridController ()
-        {
-
-        }
-
-        [HttpGet]
-        public async Task<ActionResult<List<Book>>> Get ()
-        {
-            LibraryContext db = new LibraryContext();
-            return db.Books.ToList();
-        }
-
-        [HttpPost]
-
-        public async Task<ActionResult<Book>> Post ( Book value )
-        {
-            LibraryContext db = new LibraryContext();
-            db.Books.Add(value);
-            db.SaveChanges();
-            return Ok(value);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<ActionResult<Book>> Put ( long id, Book updatedBook )
-        {
-            using (LibraryContext db = new LibraryContext())
-            {
-                var existingBook = await db.Books.FindAsync(id);
-
-                if (existingBook == null)
-                {
-                    return NotFound(); // Return 404 Not Found if the book with the given id is not found
-                }
-
-                // Update the properties of the existing book with the values from the updated book
-                existingBook.Name = updatedBook.Name;
-                existingBook.Author = updatedBook.Author;
-                existingBook.Price = updatedBook.Price;
-                existingBook.Quantity = updatedBook.Quantity;
-                // Update other properties as needed
-
-                await db.SaveChangesAsync(); // Save changes to the database
-
-                return Ok(existingBook); // Return the updated book
-            }
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete ( long id )
-        {
-            LibraryContext db = new LibraryContext();
-            var book = db.Books.Find(id);
-
-            if (book == null)
-            {
-                return NotFound();
-            }
-
-            db.Books.Remove(book);
-            db.SaveChanges();
-
-            return NoContent();
-        }
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int EmployeeID { get; set; }
+        public decimal Freight { get; set; }
+        public string ShipCity { get; set; }
     }
 }
-
 ```
 
-Also, make sure to include the `AddControllers` and `MapControllers` methods in the Program.cs file of your server-side application.
+**Explanation:**
+- `[Table("Order")]` maps the entity explicitly to the SQL table named `Order`.
+- Each property represents a column in the table.
+- `OrderID` is the identifier used as the primary key in the table script created earlier.
 
-{% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="2 4" %}
-....
-builder.Services.AddControllers();
-....
-app.MapControllers();
-....
-{% endhighlight %}
-{% endtabs %}
+The data model has been successfully created.
 
-* Create a `Services` folder in the `BlazorWebApp.Shared` project. Inside the `Services` folder, create the ClientServices class. This class will be responsible for interacting with the server-side API to perform operations such as retrieving books, inserting a new book, removing a book, and updating a book.
+### Step 4: Configure the DbContext
 
-{% tabs %}
-{% highlight c# tabtitle="ClientServices.cs" %}
+A `DbContext` is a special class that manages the connection between the application and the SQL Server database. It handles all database operations such as saving, updating, deleting, and retrieving data.
 
-public class ClientServices
-{
-    private readonly HttpClient _httpClient;
+**Instructions:**
 
-    public ClientServices ( HttpClient httpClient )
-    {
-        _httpClient = httpClient;
+1. Inside the `Data` folder, create a new file named **OrderDbContext.cs**.
+2. Define the `OrderDbContext` class with the following code:
 
-    }
-
-    public async Task<List<Book>> GetBooks ()
-    {
-        var result = await _httpClient.GetFromJsonAsync<List<Book>>("https://localhost:7105/api/DataGrid");
-
-        return result;
-    }
-
-
-    public async Task<Book> InsertBook ( Book value )
-    {
-        await _httpClient.PostAsJsonAsync<Book>($"https://localhost:7105/api/DataGrid/", value);
-        return value;
-    }
-    public async Task<bool> RemoveBook ( long bookId )
-    {
-        HttpResponseMessage response = await _httpClient.DeleteAsync($"https://localhost:7105/api/DataGrid/{bookId}");
-
-        return true;
-    }
-
-    public async Task<Book> UpdateBook ( long bookId, Book updatedBook )
-    {
-        HttpResponseMessage response = await _httpClient.PutAsJsonAsync($"https://localhost:7105/api/DataGrid/{bookId}", updatedBook);
-
-        return updatedBook;
-
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-Additionally, make sure to register the `ClientServices` class in both `Program.cs` files of your application.
-
-```
-....
-builder.Services.AddScoped<ClientServices>();
-
-```
-N> To ensure the using correct your's localhost portable number in code snippet.
-
-### DbContext and model class in Blazor Server App
-
-Now, scaffold DbContext and model classes from the existing library database. To perform scaffolding and work with the SQL Server Database in our application, you need to install the following NuGet packages.
-
-* [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
-* [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
-
-Run the following commands in the Package Manager Console.
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Microsoft.EntityFrameworkCore.Tools
-
-Install-Package Microsoft.EntityFrameworkCore.SqlServer
-
-{% endhighlight %}
-{% endtabs %}
-
-Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the LibraryManagement project.
-
-```
-Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
-```
-
-The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
-
-* **Connection string**: Server=localhost;Database=Library;Integrated Security=True
-* **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
-* **Output directory**: -OutputDir Models
-
-After running the above command, **LibraryContext.cs** and **Book.cs** files will be created under the **LibraryManagement.Models** folder as follows.
-
-![Created Model class in Blazor](../images/model-class.png)
-
-You can see that **LibraryContext.cs** file contains the connection string details in the OnConfiguring method.
-
-![Created Connectionstring in Blazor](../images/connection-string.png)
-
-It is not recommended to have a connection string with sensitive information in the **LibraryContext.cs** file, so the connection string is moved to the **app settings.json** file.
-
-![Move connection string to appsettings.json in Blazor](../images/change-connection-string.png)
-
-Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Program.cs** file in .NET 6 and .NET 7 application.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
-
-builder.Services.AddDbContext<LibraryContext>(option =>
-                option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Creating a Data Access Layer
-
-The application is now configured to connect with the library database using Entity Framework. Now, it’s time to consume data from the library database. To do so, you need an interface to fetch data from DbContext to the Blazor application.
-
-To create an interface, right-click on the Models folder and create an interface called **ILibraryService.cs**  like below.
-
-![Create an Interface in Blazor](../images/interface.png)
-
-Create a data access layer LibraryService.cs.
-
-{% highlight c# %}
-
+```csharp
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace LibraryManagement.Models
+namespace Grid_EF_UrlAdaptor.Data
 {
-    public class LibraryService : ILibraryService
+    public class OrderDbContext : DbContext
     {
-        private LibraryContext _context;
-        public LibraryService(LibraryContext context)
+        public OrderDbContext(DbContextOptions<OrderDbContext> options) : base(options) { }
+        public DbSet<Order> Orders { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            // Explicitly map DbSet<Order> to the [Order] table
+            modelBuilder.Entity<Order>().ToTable("Order");
+        }
+    }
+}
+```
+
+**Explanation:**
+- `OrderDbContext` inherits from `DbContext` and exposes `DbSet<Order>` to query and save `Order` entities.
+- `modelBuilder.Entity<Order>().ToTable("Order")` ensures Entity Framework core maps the entity to the `Order` table.
+
+The DbContext has been successfully configured.
+
+### Step 5: Configure the Connection String
+
+A connection string contains the information needed to connect the application to the SQL Server database, including the server address, database name, and authentication credentials.
+
+**Instructions:**
+
+1. Open the **appsettings.json** file in the project root.
+2. Add or verify the `ConnectionStrings` section with the SQL Server connection details:
+
+```json
+{
+  "ConnectionStrings": {
+    "ConnectionString": "Data Source=CustomSQLServer;Initial Catalog=OrderDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
+**Connection String Components:**
+
+| Component | Description |
+|-----------|-------------|
+| Data Source | The SQL Server instance (e.g., `CustomSQLServer`) |
+| Initial Catalog | The database name (`OrderDB`) |
+| Integrated Security | `True` for Windows Authentication |
+| Connect Timeout | Connection timeout in seconds |
+| Encrypt | Enables encryption for the connection |
+| Trust Server Certificate | Whether to trust the server certificate |
+| Application Intent | `ReadWrite` for normal operations |
+| Multi Subnet Failover | Typically `False` unless using multi-subnet clustering |
+| Command Timeout | Command execution timeout in seconds |
+
+The database connection string has been configured successfully.
+
+
+### Step 6: Create the Grid API Controller
+
+A controller exposes REST API endpoints for the grid to read data. This step adds minimal `POST` endpoint that return empty results. Additional CRUD and batch endpoints will be added later when configuring UrlAdaptor.
+
+**Instructions:**
+
+1. Create a new folder named `Controllers` in the project.
+2. Inside the `Controllers` folder, create a new file named **GridController.cs**.
+3. Add the following code:
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using Grid_EF_UrlAdaptor.Data;
+using System.Collections.Generic;
+
+namespace Grid_EF_UrlAdaptor.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class GridController : ControllerBase
+    {
+        private readonly OrderDbContext _context;
+
+        public GridController(OrderDbContext context)
         {
             _context = context;
         }
 
-        public void DeleteBook(long id)
+        // POST: api/Grid (DataManager read)
+        [HttpPost]
+        public ActionResult<object> Post([FromBody] DataManagerRequest dataManagerRequest)
         {
-            try
-            {
-                Book ord = _context.Books.Find(id);
-                _context.Books.Remove(ord);
-                _context.SaveChanges();
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public IEnumerable<Book> GetBooks()
-        {
-            try
-            {
-                return _context.Books.ToList();
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public void InsertBook(Book book)
-        {
-            try
-            {
-                _context.Books.Add(book);
-                _context.SaveChanges();
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public Book SingleBook(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateBook(long id, Book book)
-        {
-            try
-            {
-                var local = _context.Set<Book>().Local.FirstOrDefault(entry => entry.Id.Equals(book.Id));
-                // check if local is not null
-                if (local != null)
-                {
-                    // detach
-                    _context.Entry(local).State = EntityState.Detached;
-                }
-                _context.Entry(book).State = EntityState.Modified;
-                _context.SaveChanges();
-            }
-            catch
-            {
-                throw;
-            }
+            return Ok(new { result = new List<Order>(), count = 0 });
         }
     }
 }
+```
 
-{% endhighlight %}
+The controller has been created with basic endpoint.
 
-#### Register the service in Program.cs
+### Step 7: Register Services in Program.cs
 
-Now, you need to register the **LibraryService** and **ILibraryService** as services in the **Program.cs** file for .NET6 and .NET7 applications. Register the Scoped Services like below.
+The `Program.cs` file is where application services are registered and configured. This step enables Entity Framework Core, controllers, Syncfusion Blazor, and maps controller routes.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+**Instructions:**
 
-builder.Services.AddScoped<ILibraryService, LibraryService>();
-builder.Services.AddDbContext<LibraryContext>(option =>
-                option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
+1. Open the **Program.cs** file at the project root.
+2. Add the following code after the line `var builder = WebApplication.CreateBuilder(args);`:
 
-{% endhighlight %}
-{% endtabs %}
+```csharp
+using Grid_EF_UrlAdaptor.Components;
+using Grid_EF_UrlAdaptor.Data;
+using Microsoft.EntityFrameworkCore;
+using Syncfusion.Blazor;
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in Blazor App
+var builder = WebApplication.CreateBuilder(args);
 
-To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddControllers();
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+// ========== ENTITY FRAMEWORK CORE CONFIGURATION ==========
+// Get connection string from appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("ConnectionString");
+// Register DbContext with SQL Server provider
+builder.Services.AddDbContext<OrderDbContext>(options =>
+{
+    options.UseSqlServer(connectionString);
+});
+// ========================================================
 
-Alternatively, you can utilize the following package manager command to achieve the same.
+var app = builder.Build();
 
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseHsts();
+}
 
-Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
+app.UseHttpsRedirection();
 
-{% endhighlight %}
-{% endtabs %}
+app.UseAntiforgery();
+app.MapControllers();
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+app.Run();
+```
 
-Open **~/_Imports.razor** file and import the following namespace.
+**Explanation:**
 
-{% highlight razor %}
+- `AddControllers()` registers MVC controllers for REST endpoints.
+- `AddDbContext<OrderDbContext>()` configures Entity Framework core to use SQL Server with the `ConnectionString` from appsettings.json.
+- `MapControllers()` exposes routes like `/api/Grid`.
+- Syncfusion Blazor and Razor components are registered for the UI.
 
+## Integrating Syncfusion Blazor DataGrid with UrlAdaptor
+
+### Step 1: Install and Configure Blazor DataGrid Components
+
+Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+
+**Instructions:**
+
+1. The **Syncfusion.Blazor.Grid** and **Syncfusion.Blazor.Themes** packages were installed in Step 2 of the previous section.
+2. Import the required namespaces in the `Components/_Imports.razor` file:
+
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
-
-{% endhighlight %}
-
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your App.
-
-For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your web app.
-
-```cshtml
-
-....
-using Syncfusion.Blazor;
-....
-builder.Services.AddSyncfusionBlazor();
-....
-
+@using Syncfusion.Blazor.Data
+@using Grid_EF_UrlAdaptor.Data
 ```
 
-Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor has different themes. They are:
-
-* Fabric
-* Bootstrap
-* Material
-* High Contrast
-
-In this demo application, the latest theme will be used.
-
-  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 10, .NET 9 and .NET 8.
-
-  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
-  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
-    * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** file for .NET 6.
-
-{% highlight cshtml %}
-
-<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-
-{% endhighlight %}
-
-Also, Include the script reference at the end of the `<body>` of **~/Components/App.razor**(For Blazor Web App) or **Pages/_Host.cshtml** (for Blazor Server App) file as shown below:
+3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
+<!-- Syncfusion Blazor Stylesheet -->
+<link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
+
+<!-- Syncfusion Blazor Scripts -->
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component to an application
 
-In previous steps, you have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, you can add the grid component to the `.razor` page inside the `Pages` folder.
+For this project, the **fluent** theme is used. A different theme can be selected or customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component-included razor page as follows:
+Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
-{% tabs %}
-{% highlight razor %}
+### Step 2: Update the Blazor DataGrid
 
-@* Your App render mode define here *@
-@rendermode InteractiveAuto
+The `Home.razor` component will display the order data in a Syncfusion Blazor DataGrid with search, filter, sort, paging, and CRUD capabilities using UrlAdaptor to communicate with REST API endpoints.
 
-{% endhighlight %}
-{% endtabs %}
+**Instructions:**
 
-{% highlight razor %}
+1. Open the file named `Home.razor` in the `Components/Pages` folder.
+2. Replace the entire content with the following code:
 
-<SfGrid TValue="Book">
-</SfGrid>
+```cshtml
+@page "/"
 
-{% endhighlight %}
+<SfGrid TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true"
+        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })" Width="100%" Height="600px">
+    <SfDataManager Url="http://localhost:5175/api/Grid"
+                   InsertUrl="http://localhost:5175/api/Grid/Insert"
+                   UpdateUrl="http://localhost:5175/api/Grid/Update"
+                   RemoveUrl="http://localhost:5175/api/Grid/Delete"
+                   BatchUrl="http://localhost:5175/api/Grid/BatchUpdate"
+                   Adaptor="Adaptors.UrlAdaptor">
+    </SfDataManager>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
 
-## Bind data to Blazor DataGrid component using Entity Framework
-
-To consume data from the database using **Entity Framework**, you need to inject the LibraryService into the razor page and assign it to the DataGrid’s datasource variable. Here, the **DataSource** property of the DataGrid component is used to bind the SQL data using Entity Framework in the Server-side application
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-@using BlazorWebApp.Shared.Models
-@using BlazorWebApp.Shared.Services
-
-<SfGrid DataSource="@LibraryBooks" TValue="Book">
-</SfGrid>
-
-@code
-{
-    public List<Book> LibraryBooks { get; set; }
-    protected override async Task OnInitializedAsync ()
-    {
-        LibraryBooks = await clientlibrary.GetBooks();
-    }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="Blazor Server App" %}
-
-@using LibraryManagement.Models
-@inject ILibraryService LibraryService
-
-<SfGrid DataSource="@LibraryBooks" TValue="Book">
-</SfGrid>
-
-@code
-{
-    public IEnumerable<Book> LibraryBooks { get; set; }
-    protected override void OnInitialized()
-    {
-        LibraryBooks = LibraryService.GetBooks();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-Grid columns can be defined using the **GridColumn** component. We are going to create columns using the following code. Let us see the properties used and their usage.
-
-* **Field** property specifies the column name of the Book table to display in the grid column.
-* **IsPrimaryKey** property specifies that the given column is a primary key column. Here, Id column is a primary key column.
-* **Visible** property specifies the column visibility. Setting as false will hide the column at the user end.
-* **Width** property specifies the column width.
-* **Format** property helps to format number, currencies, and date in a particular culture. Here, the Price column has been formatted.
-* **DisplayAsCheckBox** property renders checkbox in cells and sets check state based on the property value. Here, Available column is rendered as a checkbox column.
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-@using BlazorWebApp.Shared.Models
-@using BlazorWebApp.Shared.Services
-
-<SfGrid DataSource="@LibraryBooks" TValue="Book">
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
-        <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" IsPrimaryKey="true"
+                    TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
     </GridColumns>
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
+                    <GroupFooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate?.Sum</p>
+                            </div>
+                        }
+                    </GroupFooterTemplate>
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate?.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+    <GridPageSettings PageSize="10"></GridPageSettings>
 </SfGrid>
 
-@code
+```
+
+**Component Explanation:**
+
+- **`<SfGrid>`**: The DataGrid component that displays order data in rows and columns.
+- **`<SfDataManager>`**: Manages data communication with REST API endpoints using UrlAdaptor. The `Url` property points to the read endpoint, while `InsertUrl`, `UpdateUrl`, `RemoveUrl`, and `BatchUrl` point to CRUD endpoints.
+- **`AllowPaging="true"`**: Enables pagination to display records in pages of 10 records each.
+- **`AllowFiltering="true"`**: Enables column filtering with menu-based filters.
+- **`AllowSorting="true"`**: Enables column sorting by clicking headers.
+- **`AllowGrouping="true"`**: Allows grouping by dragging columns to the group area.
+- **`<GridColumns>`**: Defines the columns displayed in the grid, mapped to `Order` model properties.
+- **`<GridPageSettings>`**: Configures pagination with 10 records per page.
+- **`<GridFilterSettings>`**: Configures filter type as `Menu` for dropdown-style filtering.
+- **`<GridEditSettings>`**: Enables inline editing in `Normal` mode (edit one row at a time).
+- **`Toolbar`**: "Add", "Edit", "Delete", "Update", "Cancel", "Search" for CRUD and search operations.
+- **`<GridAggregates>`**: Displays summary calculations (Sum, Count, Average, Min, Max) in footer rows. The `<GroupFooterTemplate>` shows aggregates for each group, while `<FooterTemplate>` displays aggregates for the entire grid at the bottom.
+
+> In **URL Adaptor**, the DataGrid component handles grouping and aggregation operations automatically.
+
+### Step 3: Implement the Endpoints for UrlAdaptor
+
+The UrlAdaptor communicates with REST API endpoints for grid operations rather than executing logic in the component. The grid sends requests to endpoints defined in a controller. Below is the controller structure with the same decorators and signatures as in the project, with placeholder comments to add logic.
+
+Open the file named **Controllers/GridController.cs** and use the following structure:
+
+```csharp
+using Grid_EF_UrlAdaptor.Data;
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.Data;
+using System.Text.Json.Serialization;
+
+namespace Grid_EF_UrlAdaptor.Controllers
 {
-    public List<Book> LibraryBooks { get; set; }
-    protected override async Task OnInitializedAsync ()
+    [ApiController]
+    public class GridController : ControllerBase
     {
-        LibraryBooks = await clientlibrary.GetBooks();
-    }
-}
+        private readonly OrderDbContext _context;
 
-{% endhighlight %}
-{% highlight c# tabtitle="Blazor Server App" %}
-
-@using LibraryManagement.Models
-@inject ILibraryService LibraryService
-
-<SfGrid DataSource="@LibraryBooks" TValue="Book">
-    <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
-        <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code
-{
-    public IEnumerable<Book> LibraryBooks { get; set; }
-    protected override void OnInitialized()
-    {
-        LibraryBooks = LibraryService.GetBooks();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-Now, the data from the SQL server is loaded into the DataGrid component. Refer to the following screenshot for the output of above.
-
-![SQL Server Grid in Blazor](../images/grid-component.png)
-
-## Handling CRUD operations with our Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
-
-You can enable editing in the grid component using the **GridEditSettings** component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
-
-[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing#editing)
-
-Here, inline edit mode and **Toolbar** property are used to show toolbar items for editing.
-While using the DataSource property of Grid, changes will be reflected only in the Grid datasource. To reflect them in the database, handle the CRUD operations externally using the OnActionBegin and OnActionComplete events of Grid.
-
-* **OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, RequestType Save will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally. Since for both Update and Insert action, RequestType will be Save, you can differentiate them by using the Args.Action property, which will indicate the current action.
-* **OnActionComplete** – It will be triggered when certain actions are completed. Here, you can refresh the Grid component with an updated datasource to reflect the changes.
-
-We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionComplete event code with the previous Grid model.
-
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-@rendermode InteractiveAuto
-
-@using Syncfusion.Blazor.Data
-@using BlazorWebApp.Shared.Models
-@using BlazorWebApp.Shared.Services
-
-@inject ClientServices clientlibrary
-
-<SfGrid DataSource="@LibraryBooks" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="Book">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Book"></GridEvents>
-    <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false" ></GridColumn>
-        <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code
-{
-    public List<Book> LibraryBooks { get; set; }
-    protected override async Task OnInitializedAsync ()
-    {
-        LibraryBooks = await clientlibrary.GetBooks();
-    }
-    public async void ActionBeginHandler ( ActionEventArgs<Book> Args )
-    {
-        //Will be triggered when CRUD action is initiated
-    }
-    public async void ActionCompleteHandler ( ActionEventArgs<Book> Args )
-    {
-        //will be triggered when CRUD action is complete.
-        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        public GridController(OrderDbContext context)
         {
-            LibraryBooks = await clientlibrary.GetBooks(); //to fetch the updated data from db to Grid
+            _context = context; // implement logic here
+        }
+
+        /// <summary>
+        /// Returns data with search, filter, sort, and paging operations
+        /// </summary>
+        [HttpPost]
+        [Route("api/[controller]")]
+        public object Post([FromBody] DataManagerRequest dataManagerRequest)
+        {
+            // implement logic here
+            return new { }; // placeholder
+        }
+
+        /// <summary>
+        /// Retrieves all order data from the database
+        /// </summary>
+        [HttpGet]
+        [Route("api/[controller]")]
+        public List<Order> GetOrderData()
+        {
+            // implement logic here
+            return new List<Order>();
+        }
+
+        /// <summary>
+        /// Inserts a new order record
+        /// </summary>
+        [HttpPost("Insert")]
+        [Route("api/[controller]/Insert")]
+        public void Insert([FromBody] CRUDModel<Order> value)
+        {
+            // implement logic here
+        }
+
+        /// <summary>
+        /// Updates an existing order record
+        /// </summary>
+        [HttpPost("Update")]
+        [Route("api/[controller]/Update")]
+        public void Update([FromBody] CRUDModel<Order> value)
+        {
+            // implement logic here
+        }
+
+        /// <summary>
+        /// Deletes an order record
+        /// </summary>
+        [HttpPost("Delete")]
+        [Route("api/[controller]/Delete")]
+        public void Delete([FromBody] CRUDModel<Order> value)
+        {
+            // implement logic here
+        }
+
+        /// <summary>
+        /// Batch operations for Insert, Update, and Delete
+        /// </summary>
+        [HttpPost("Batch")]
+        [Route("api/[controller]/BatchUpdate")]
+        public void Batch([FromBody] CRUDModel<Order> value)
+        {
+            // implement logic here
         }
     }
+
+    /// <summary>
+    /// CRUD Model for handling data operations
+    /// </summary>
+    public class CRUDModel<T> where T : class
+    {
+        [JsonPropertyName("action")]
+        public string? Action { get; set; }
+        [JsonPropertyName("keyColumn")]
+        public string? KeyColumn { get; set; }
+        [JsonPropertyName("key")]
+        public object? Key { get; set; }
+        [JsonPropertyName("value")]
+        public T? Value { get; set; }
+        [JsonPropertyName("added")]
+        public List<T>? Added { get; set; }
+        [JsonPropertyName("changed")]
+        public List<T>? Changed { get; set; }
+        [JsonPropertyName("deleted")]
+        public List<T>? Deleted { get; set; }
+        [JsonPropertyName("params")]
+        public IDictionary<string, object>? Params { get; set; }
+    }
 }
-{% endhighlight %}
-{% highlight c# tabtitle="Blazor Server App" %}
+```
 
-@using LibraryManagement.Models
-@inject ILibraryService LibraryService
+The `CRUDModel<T>` is the payload contract used by UrlAdaptor for insert, update, delete, and batch requests.
+It carries the primary key, single entity (Value), and collections (Added, Changed, Deleted) for batch operations.
 
-<SfGrid DataSource="@LibraryBooks" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="Book">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Book"></GridEvents>
+This controller exposes the endpoints used by `<SfDataManager>` in **Home.razor**. Logic will be added in later steps when wiring CRUD and batch operations.
+
+### Step 4: Running the Application
+
+**Build the Application**
+
+1. Open PowerShell or your terminal.
+2. Navigate to the project directory.
+3. Build the application:
+
+```powershell
+dotnet build
+```
+
+**Run the Application**
+
+Execute the following command:
+
+```powershell
+dotnet run
+```
+
+The application will start, and the console will display the local URL (typically `http://localhost:5175` or `https://localhost:5001`).
+
+**Access the Application**
+
+1. Open a web browser.
+2. Navigate to the URL displayed in the console.
+3. The DataGrid application is now running and ready to use.
+
+![Basic DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.png)
+
+
+### Step 5: Implement Paging Feature
+
+Paging divides large datasets into smaller pages to improve performance and usability.
+
+**Instructions:**
+
+* Ensure the grid has paging enabled with `AllowPaging="true"`.
+* Configure the page size using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
+
+```cshtml
+<SfGrid TValue="Order" AllowPaging="true">
+    <SfDataManager Url="http://localhost:5175/api/Grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false" ></GridColumn>
-        <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
+        <!-- Columns configuration -->
+    </GridColumns>
+
+    <GridPageSettings PageSize="10"></GridPageSettings>
+</SfGrid>
+```
+
+* Update the `Post` action in **Controllers/GridController.cs** to apply only paging using `Skip` and `Take` from `DataManagerRequest`:
+
+```csharp
+[HttpPost]
+[Route("api/[controller]")]
+public object Post([FromBody] DataManagerRequest dataManagerRequest)
+{
+    IEnumerable<Order> dataSource = GetOrderData();
+
+    int totalRecordsCount = dataSource.Count();
+
+    // Handling Paging
+    if (dataManagerRequest.Skip != 0)
+    {
+        dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+    }
+
+    if (dataManagerRequest.Take != 0)
+    {
+        dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+    }
+
+    return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource
+}
+```
+
+**How Paging Works:**
+- The grid posts `Skip` and `Take` to `http://localhost:5175/api/Grid`.
+- The controller returns the paged `result` and total `count` for correct pager UI.
+- Only paging logic is shown here; other operations will be covered in later steps.
+
+### Step 6: Implement Searching Feature
+
+Searching allows the user to find records by entering keywords in the search box, which filters data across all columns.
+
+**Instructions:**
+
+* Ensure the toolbar includes the "Search" item.
+
+```cshtml
+<SfGrid TValue="Order" 
+        AllowPaging="true"
+        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+    <SfDataManager Url="http://localhost:5175/api/Grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+</SfGrid>
+```
+
+* Update the `Post` action in **Controllers/GridController.cs** to handle searching:
+
+```csharp
+[HttpPost]
+[Route("api/[controller]")]
+public object Post([FromBody] DataManagerRequest dataManagerRequest)
+{
+    try
+    {
+        IEnumerable<Order> dataSource = GetOrderData();
+
+        // Handling Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
+
+        int totalRecordsCount = dataSource.Count();
+
+        // Handling Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+        }
+
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+        }
+
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource
+    }
+    catch (Exception ex)
+    {
+        return new { error = ex.Message, innerError = ex.InnerException?.Message };
+    }
+}
+```
+
+**How Searching Works:**
+
+- When the user enters text in the search box and presses Enter, the DataGrid sends a search request to the REST API.
+- The `Post` method receives the search criteria in `dataManagerRequest.Search`.
+- The `DataOperations.PerformSearching()` method filters the data based on the search term across all columns.
+- Results are returned and displayed in the DataGrid with pagination applied.
+
+Searching feature is now active.
+
+---
+
+### Step 7: Implement Filtering Feature
+
+Filtering allows the user to restrict data based on column values using a menu interface.
+
+**Instructions:**
+
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+
+```cshtml
+<SfGrid TValue="Order" 
+        AllowPaging="true" 
+        AllowFiltering="true"
+        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+    <SfDataManager Url="http://localhost:5175/api/Grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+</SfGrid>
+```
+
+* Update the `Post` action in **Controllers/GridController.cs** to handle filtering:
+
+```csharp
+[HttpPost]
+[Route("api/[controller]")]
+public object Post([FromBody] DataManagerRequest dataManagerRequest)
+{
+    try
+    {
+        IEnumerable<Order> dataSource = GetOrderData();
+
+        // Handling Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
+
+        // Handling Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
+
+        int totalRecordsCount = dataSource.Count();
+
+        // Handling Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+        }
+
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+        }
+
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource
+    }
+    catch (Exception ex)
+    {
+        return new { error = ex.Message, innerError = ex.InnerException?.Message };
+    }
+}
+```
+
+**How Filtering Works:**
+
+- Click on the dropdown arrow in any column header to open the filter menu.
+- Select filtering criteria (equals, contains, greater than, less than, etc.).
+- Click the "Filter" button to apply the filter.
+- The `Post` method receives the filter criteria in `dataManagerRequest.Where`.
+- The `DataOperations.PerformFiltering()` method applies the filter conditions to the data.
+- Results are filtered accordingly and displayed in the DataGrid.
+
+Filtering feature is now active.
+
+---
+
+### Step 8: Implement Sorting Feature
+
+Sorting enables the user to arrange records in ascending or descending order based on column values.
+
+**Instructions:**
+
+* Open the `Components/Pages/Home.razor` file.
+* Add the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to the `<SfGrid>` component:
+
+```cshtml
+<SfGrid TValue="Order" 
+        AllowPaging="true" 
+        AllowSorting="true"
+        AllowFiltering="true"
+        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+    <SfDataManager Url="http://localhost:5175/api/Grid"Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+</SfGrid>
+```
+
+* Update the `Post` action in **Controllers/GridController.cs** to handle sorting:
+
+```csharp
+[HttpPost]
+[Route("api/[controller]")]
+public object Post([FromBody] DataManagerRequest dataManagerRequest)
+{
+    try
+    {
+        IEnumerable<Order> dataSource = GetOrderData();
+
+        // Handling Searching
+        if (dataManagerRequest.Search != null && dataManagerRequest.Search.Count > 0)
+        {
+            dataSource = DataOperations.PerformSearching(dataSource, dataManagerRequest.Search);
+        }
+
+        // Handling Filtering
+        if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+        {
+            dataSource = DataOperations.PerformFiltering(dataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+        }
+
+        // Handling Sorting
+        if (dataManagerRequest.Sorted != null && dataManagerRequest.Sorted.Count > 0)
+        {
+            dataSource = DataOperations.PerformSorting(dataSource, dataManagerRequest.Sorted);
+        }
+
+        int totalRecordsCount = dataSource.Count();
+
+        // Handling Paging
+        if (dataManagerRequest.Skip != 0)
+        {
+            dataSource = DataOperations.PerformSkip(dataSource, dataManagerRequest.Skip);
+        }
+
+        if (dataManagerRequest.Take != 0)
+        {
+            dataSource = DataOperations.PerformTake(dataSource, dataManagerRequest.Take);
+        }
+
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = dataSource, Count = totalRecordsCount} : (object)dataSource
+    }
+    catch (Exception ex)
+    {
+        return new { error = ex.Message, innerError = ex.InnerException?.Message };
+    }
+}
+```
+
+**How Sorting Works:**
+
+- Click on the column header to sort in ascending order.
+- Click again to sort in descending order.
+- The `Post` method receives the sort criteria in `dataManagerRequest.Sorted`.
+- The `DataOperations.PerformSorting()` method sorts the data based on the specified column and direction.
+- Records are sorted accordingly and displayed in the DataGrid.
+
+Sorting feature is now active.
+
+---
+
+### Step 9: Perform CRUD Operations
+
+CRUD operations (Create, Read, Update, Delete) enable users to manage data directly from the DataGrid. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
+
+**Instructions:**
+
+1. Update the `<SfGrid>` component in `Home.razor` to include [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html):
+
+```cshtml
+<SfGrid TValue="Order" 
+        AllowPaging="true" 
+        AllowSorting="true"
+        AllowFiltering="true"
+        AllowGrouping="true"
+        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })" 
+        Width="100%" Height="600px">
+    <SfDataManager Url="http://localhost:5175/api/Grid"
+                   InsertUrl="http://localhost:5175/api/Grid/Insert"
+                   UpdateUrl="http://localhost:5175/api/Grid/Update"
+                   RemoveUrl="http://localhost:5175/api/Grid/Delete"
+                   BatchUrl="http://localhost:5175/api/Grid/BatchUpdate"
+                   Adaptor="Adaptors.UrlAdaptor">
+    </SfDataManager>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    <GridColumns>
+        // Add Columns
     </GridColumns>
 </SfGrid>
+```
 
-@code
+**Insert (Create)**
+
+Record insertion allows new orders to be added directly through the DataGrid component. The `Insert` endpoint processes the insertion request and saves the newly created record to the SQL Server database.
+
+In **Controllers/GridController.cs**, the insert method is implemented as:
+
+```csharp
+/// <summary>
+/// Inserts a new order record
+/// </summary>
+[HttpPost("Insert")]
+[Route("api/[controller]/Insert")]
+public void Insert([FromBody] CRUDModel<Order> value)
 {
-    public IEnumerable<Book> LibraryBooks { get; set; }
-    protected override void OnInitialized()
+    try
     {
-        LibraryBooks = LibraryService.GetBooks();
+        _context.Orders.Add(value.Value!);
+        _context.SaveChanges();
     }
-    public void ActionBeginHandler(ActionEventArgs<Book> Args)
+    catch (Exception ex)
     {
-        //Will be triggered when CRUD action is initiated
+        throw new Exception($"Error inserting order: {ex.Message}");
     }
-    public void ActionCompleteHandler(ActionEventArgs<Book> Args)
+}
+```
+
+**What happens behind the scenes:**
+
+1. The user clicks the "Add" button and fills in the form.
+2. The DataGrid sends a POST request to `http://localhost:5175/api/Grid/Insert`.
+3. The `Insert` method receives the new order data in `value.Value`.
+4. Entity Framework Core adds the record to the `_context.Orders` collection.
+5. `SaveChanges()` persists the record to the SQL Server database.
+6. The DataGrid automatically refreshes to display the new order.
+
+**Update (Edit)**
+
+Record modification allows order details to be updated directly within the DataGrid. The `Update` endpoint processes the edited row and applies the changes to the SQL Server database.
+
+In **Controllers/GridController.cs**, the update method is implemented as:
+
+```csharp
+/// <summary>
+/// Updates an existing order record
+/// </summary>
+[HttpPost("Update")]
+[Route("api/[controller]/Update")]
+public void Update([FromBody] CRUDModel<Order> value)
+{
+    try
     {
-        //will be triggered when CRUD action is complete.
-        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        var existingOrder = _context.Orders.Find(value.Value?.OrderID);
+        if (existingOrder != null)
         {
-            LibraryBooks = LibraryService.GetBooks(); //to fetch the updated data from db to Grid
+            _context.Entry(existingOrder).CurrentValues.SetValues(value.Value!);
+            _context.SaveChanges();
         }
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Normal edit mode is the default mode of editing.
-
-### Insert a row
-
-To insert a new row, click the **Add** toolbar button. The new record edit form will look like below.
-
-![After Clicking a Add button in Blazor](../images/add-row.png)
-
-Clicking the **Update** toolbar button will initiate the insert action in Grid. Now, the **OnActionBegin** event will be triggered with a **RequestType** as **Save**. You can insert the record into the database (Book table) by calling the **InsertBook()** method of the `ClientServices` in Blazor Web App(BlazorWebApp.Shared project) and `LibraryService` in Blazor Server App.
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-public async void ActionBeginHandler ( ActionEventArgs<Book> Args )
-{
-     //Will be triggered when CRUD action is initiated
-    if (Args.Action == "Add")
+    catch (Exception ex)
     {
-        // Insert the changes into your database here.
-        await clientlibrary.InsertBook(Args.Data);
+        throw new Exception($"Error updating order: {ex.Message}");
     }
 }
+```
 
-{% endhighlight %}
-{% highlight c# tabtitle="Blazor Server App" %}
+**What happens behind the scenes:**
 
-public void ActionBeginHandler(ActionEventArgs<Book> Args)
+1. The user clicks the "Edit" button and modifies the record.
+2. The DataGrid sends a POST request to `http://localhost:5175/api/Grid/Update`.
+3. The `Update` method receives the modified order data in `value.Value`.
+4. The existing order is retrieved from the database by its ID.
+5. The properties are updated with the new values using `SetValues()`.
+6. `SaveChanges()` persists the changes to the SQL Server database.
+7. The DataGrid refreshes to display the updated order.
+
+**Delete (Remove)**
+
+Record deletion allows orders to be removed directly from the DataGrid. The `Delete` endpoint executes the corresponding SQL Server DELETE operation and updates both the database and the grid.
+
+In **Controllers/GridController.cs**, the delete method is implemented as:
+
+```csharp
+/// <summary>
+/// Deletes an order record
+/// </summary>
+[HttpPost("Delete")]
+[Route("api/[controller]/Delete")]
+public void Delete([FromBody] CRUDModel<Order> value)
 {
-    if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+    try
     {
-        if (Args.Action == "Add")
+        int orderId = Convert.ToInt32(value.Key?.ToString());
+        var order = _context.Orders.Find(orderId);
+        if (order != null)
         {
-            // Insert the changes into your database here.
-            LibraryService.InsertBook(Args.Data);
+            _context.Orders.Remove(order);
+            _context.SaveChanges();
         }
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![After Inserting a record in Grid](../images/after-inserting.png)
-
-### Update a row
-
-To edit a row, select any row and click the **Edit** toolbar button. The edit form will look like below.
-
-![After Clicking a update button in Blazor](../images/update.png)
-
-Now, the Price column value is changed to 125 from 250. Clicking the **Update** toolbar button will initiate the update action and trigger the OnActionBegin event with **Save RequestType**. Here, you can update the record in the Book table by calling the **UpdateBook()** method of the `ClientServices` in Blazor Web App(BlazorWebApp.Shared project) and `LibraryService` in Blazor Server App when **Args.Action** is **Edit**.  Refer to the following code example.
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-public async void ActionBeginHandler ( ActionEventArgs<Book> Args )
-{
-
-    if (Args.Action == "Edit")
+    catch (Exception ex)
     {
-        //Update the changes into your database here.
-        await clientlibrary.UpdateBook(Args.Data.Id, Args.Data);
+        throw new Exception($"Error deleting order: {ex.Message}");
     }
-
 }
+```
 
-{% endhighlight %}
-{% highlight c# tabtitle="Blazor Server App" %}
+**What happens behind the scenes:**
 
-public void ActionBeginHandler(ActionEventArgs<Book> Args)
+1. The user selects an order and clicks "Delete".
+2. A confirmation dialog appears (built into the DataGrid).
+3. If confirmed, the DataGrid sends a POST request to `http://localhost:5175/api/Grid/Delete`.
+4. The `Delete` method extracts the order ID from `value.Key`.
+5. The order is located in the database by its ID.
+6. The order is removed from the `_context.Orders` collection.
+7. `SaveChanges()` executes the DELETE statement in SQL Server.
+8. The DataGrid refreshes to remove the deleted order from the UI.
+
+**Batch Operations (Multiple CRUD in one request)**
+
+Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring transactional consistency.
+
+In **Controllers/GridController.cs**, the batch method is implemented as:
+
+```csharp
+/// <summary>
+/// Batch operations for Insert, Update, and Delete
+/// </summary>
+[HttpPost("Batch")]
+[Route("api/[controller]/BatchUpdate")]
+public void Batch([FromBody] CRUDModel<Order> value)
 {
-    if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+    try
     {
-        if (Args.Action == "Edit")
+        if (value.Changed != null)
         {
-            //Update the changes into your database here.
-            LibraryService.UpdateBook(Args.Data.Id, Args.Data);
+            foreach (var record in value.Changed)
+            {
+                _context.UpdateRange(record);
+            }
         }
+
+        if (value.Added != null)
+        {
+            _context.Orders.AddRange(value.Added);
+        }
+
+        if (value.Deleted != null)
+        {
+            foreach (var record in value.Deleted)
+            {
+                var existingOrder = _context.Orders.Find(record.OrderID);
+                if (existingOrder != null)
+                {
+                    _context.Orders.Remove(existingOrder);
+                }
+            }
+        }
+
+        _context.SaveChanges();
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-The resultant grid will look like below.
-
-![After Updating a record in Blazor](../images/after-update.png)
-
-### Delete a row
-
-To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will initiate the OnActionBegin event with RequestType as Delete. Now, you can delete the record from the database by calling **DeleteBook()** method of `ClientServices` in Blazor Web App(BlazorWebApp.Shared project) and `LibraryService` in Blazor Server App with the selected record`s primary key value. Refer to the following code example.
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-public void ActionBeginHandler(ActionEventArgs<Book> Args)
-{
-    if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
+    catch (Exception ex)
     {
-        //Remove the record from your database
-        LibraryService.DeleteBook(Args.Data.Id);
+        throw new Exception($"Error in batch operations: {ex.Message}");
     }
 }
+```
 
-{% endhighlight %}
-{% highlight c# tabtitle="Blazor Server App" %}
+**What happens behind the scenes:**
 
-public async void ActionBeginHandler ( ActionEventArgs<Book> Args )
-{
-    if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
-    {
-        //Remove the record from your database
-        await clientlibrary.RemoveBook(Args.Data.Id);
-    }
-}
+- The DataGrid collects all added, edited, and deleted records.
+- All changes are sent in a single POST request to `http://localhost:5175/api/Grid/BatchUpdate`.
+- The `Batch` method processes changed records using `UpdateRange()`.
+- The `Batch` method processes added records using `AddRange()`.
+- The `Batch` method processes deleted records using `Remove()`.
+- All operations are saved to the database in a single `SaveChanges()` call for transactional consistency.
+- The DataGrid refreshes to display all changes.
 
-{% endhighlight %}
-{% endtabs %}
+All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
-![Final Project in Blazor](../images/final-gif.gif)
+---
 
-N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
+## Complete Sample Repository
+
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Bindind%20SQL%20database%20using%20EF%20and%20UrlAdaptor).
+
+---
+
+## Summary
+
+This guide demonstrates how to:
+
+1. Create a SQL Server database with order records. [🔗](#step-1-create-the-database-and-table-in-sql-server)
+2. Install necessary NuGet packages for Entity Framework Core and Syncfusion. [🔗](#step-2-install-required-nuget-packages)
+3. Create data models and DbContext for database communication. [🔗](#step-3-create-the-data-model)
+4. Configure connection strings and register services in Program.cs. [🔗](#step-5-configure-the-connection-string)
+5. Create REST API endpoints in a controller for CRUD operations. [🔗](#step-6-create-the-grid-api-controller)
+6. Implement searching, filtering, and sorting in the REST API. [🔗](#step-5-implement-searching-feature)
+7. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-8-perform-crud-operations)
+8. Handle batch operations for bulk data modifications. [🔗](#step-8-perform-crud-operations)
+
+The application now provides a complete solution for managing orders with a modern, user-friendly interface using Entity Framework Core with SQL Server and REST API endpoints via UrlAdaptor.
+
+---
+
+## Alternative Approach: Custom Adaptor
+
+For a client-side data operations approach without REST API endpoints, refer to the [Blazor DataGrid with SQL Server using Entity Framework and Custom Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-database/microsoft-sql-server) documentation. This approach executes search, filter, sort, and grouping operations directly in the Blazor component, providing a tightly integrated alternative to the REST API pattern.
+
+---
