@@ -19,11 +19,11 @@ The Grid offers extensive options to customize cell appearance and functionality
 
 Displaying HTML content in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful when presenting formatted elements such as images, hyperlinks, or tables within a tabular layout. The DataGrid supports rendering HTML tags in both header and content cells.
 
-By default, HTML content is encoded to prevent security vulnerabilities. To render raw HTML, set the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property to **false**. This allows HTML tags to be displayed as intended within the cell.
+By default, HTML content is encoded to prevent security vulnerabilities. To render raw HTML, set the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property to `false`. This allows HTML tags to be displayed as intended within the cell.
 
 To configure:
 
-- Set `DisableHtmlEncode` to **false** in the column definition.
+- Set `DisableHtmlEncode` to `false` in the column definition.
 - Insert HTML tags such as `<img>`, `<a>`, or `<table>` directly into the cell content.
 - Use a [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button)  to dynamically control the encoding behavior.
 - Handle the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event to update the column setting.
@@ -113,21 +113,21 @@ To configure:
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAMZDRBetNXSsV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the DataGrid.
-> * When set to **false**, HTML tags in the column’s data are rendered as HTML.
-> * When set to **true**, HTML tags are encoded and displayed as plain text.
+> * When set to `false`, HTML tags in the column’s data are rendered as HTML.
+> * When set to `true`, HTML tags are encoded and displayed as plain text.
 > * Disabling HTML encoding introduces potential security vulnerabilities. Enable this feature only when using fully trusted and sanitized data sources.
 
 ## Autowrap the Grid content
 
 The auto wrap feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables cell content to wrap to the next line when it exceeds the defined column width. Wrapping occurs at whitespace boundaries between words, ensuring readability without horizontal scrolling. To support auto wrap, define an appropriate width for each column. The column width acts as the maximum boundary for wrapping content.
 
-Enable auto wrap by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrapping behavior using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
+Enable auto wrap by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to `true`. Configure the wrapping behavior using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
 
 Set the **WrapMode** property in `TextWrapSettings` to one of these values:
 
-* **Both** - Wraps text in both header and content cells. This is the default value.
-* **Header** - Wraps text only in header cells.
-* **Content** - Wraps text only in content cells.
+* `Both` - Wraps text in both header and content cells. This is the default value.
+* `Header` - Wraps text only in header cells.
+* `Content` - Wraps text only in content cells.
 
 > * If a column width is not specified, auto wrap adjusts based on the overall Grid width.
 > * Header text without whitespace may not wrap.
@@ -467,8 +467,8 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 
 Styles can be applied to DataGrid cells using CSS selectors. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid assigns class names to each cell element, enabling targeted styling for individual cells or entire columns.
 
-* The **e-rowcell** class is used to style standard row cells.
-* The **e-selectionbackground** class is used to modify the background color of selected rows.
+* The `e-rowcell` class is used to style standard row cells.
+* The `e-selectionbackground` class is used to modify the background color of selected rows.
 
 ```cshtml
 <style>
@@ -669,9 +669,9 @@ Enable clip mode by setting the [ClipMode](https://help.syncfusion.com/cr/blazor
 
 Available ClipMode options:
 
-* **Clip** – Truncates cell content that exceeds the cell boundary.
-* **Ellipsis** – Displays ellipsis when content overflows the cell area.
-* **EllipsisWithTooltip** – Displays ellipsis for overflow content and shows a tooltip on hover.
+* `Clip` – Truncates cell content that exceeds the cell boundary.
+* `Ellipsis` – Displays ellipsis when content overflows the cell area.
+* `EllipsisWithTooltip` – Displays ellipsis for overflow content and shows a tooltip on hover.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -779,7 +779,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports di
 
 ### Show tooltip
 
-Tooltips are displayed for both header and content cells when the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip)  property is set to **true**.
+Tooltips are displayed for both header and content cells when the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip)  property is set to `true`.
 
 By default:
 
@@ -1018,7 +1018,7 @@ public class OrdersDetails
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
     public DateTime OrderDate { get; set; }
-    public double Freight { get; set; }
+    public double Freight { get; set; } 
     public string ShipCity { get; set; }
     public string ShipCountry { get; set; }
     public string Status { get; set; }
@@ -1031,7 +1031,7 @@ public class OrdersDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVetYCVBodvFKAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Custom tooltips are displayed only when the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip) property is set to **true**.
+> Custom tooltips are displayed only when the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip) property is set to `true`.
 
 ### Display custom tooltip for columns
 
@@ -1134,11 +1134,11 @@ Set the `GridLines` property to one of the following values:
 
 | Modes | Description |
 |-------|---------|
-| Both | Displays both horizontal and vertical grid lines.|
-| None | Hides all grid lines.|
-| Horizontal | Displays only horizontal grid lines.|
-| Vertical | Displays only vertical grid lines.|
-| Default | Displays grid lines based on the applied theme.|
+| `Both` | Displays both horizontal and vertical grid lines.|
+| `None` | Hides all grid lines.|
+| `Horizontal` | Displays only horizontal grid lines.|
+| `Vertical` | Displays only vertical grid lines.|
+| `Default` | Displays grid lines based on the applied theme.|
 
 In this configuration, the `GridLines` property is updated dynamically based on the selected value from a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event.
 
