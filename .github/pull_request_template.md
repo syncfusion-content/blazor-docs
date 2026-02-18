@@ -3,17 +3,22 @@ Provide a clear description of the documentation change.
 Explain **what** was updated, added, or removed.
 
 ## Code Studio usage(Mandatory)
-- Code Studio used in this PR/MR? [ ] Yes / [ ] No
-    - If `Yes`: Primary use (choose one)
-        - [ ] Generate new content
-        - [ ] Refactor/improve existing content
-        - [ ] Review assistance (explanations/summaries)
-        - [ ] Other: 
+- Code Studio used in this PR/MR?
+    - [ ] Yes
+    - [ ] No
+- If `Yes`: Primary use (choose one)
+    - [ ] Generate new content
+    - [ ] Refactor/improve existing content
+    - [ ] Review assistance (explanations/summaries)
+    - [ ] Other: 
 
-    - If `No`: Provide Reason 
+- If `No`: Provide Reason 
 
-- Outcome ([ ]Saved time / [ ]Neutral / [ ]Cost time)
-    - If “Cost time” explain in short (1 or 2 lines):
+- Outcome
+    - [ ] Saved time
+    - [ ] Neutral
+    - [ ] Cost time
+- If “Cost time” explain in short (1 or 2 lines):
 
 - [ ] Label Added (cs:used / cs:not-used / cs:blocked)
 
