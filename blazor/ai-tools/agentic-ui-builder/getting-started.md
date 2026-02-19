@@ -24,6 +24,7 @@ Once installed, open your AI assistant in the IDE and describe what you want to 
 
 ```
 #sf_blazor_ui_builder Create a dashboard with a sales data grid and monthly trend chart.
+
 ```
 
 The UI Builder generates complete implementations including layout, components, and styling.
