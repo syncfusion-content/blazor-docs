@@ -39,7 +39,7 @@ Implement individual components with focused API guidance. Ideal for adding comp
 2. **Choose your mode** - `#sf_blazor_ui_builder` for complete UIs or `#SyncfusionblazorAssistant` for component-specific tasks.
 3. **Describe** what you want to build - the AI generates production-ready code that follows best practices.
 
-For detailed setup instructions, see the [Installation Guide](installation.md).
+For detailed setup instructions, see the [Installation Guide](installation).
 
 ## Available Tools
 
@@ -80,7 +80,7 @@ The MCP server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See Also
 
-* [Installation](./installation)
+* [AI Tools - Installation](./installation)
 * [Agentic UI Builder - Getting Started](./agentic-ui-builder/getting-started)
 * [AI Coding Assistant - Getting Started](./ai-coding-assistant/getting-started)
 * [Syncfusion Blazor documentation](https://blazor.syncfusion.com/documentation)

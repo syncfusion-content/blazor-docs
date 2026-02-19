@@ -22,6 +22,7 @@ Activate the AI Coding Assistant in your IDE by using the `#SyncfusionblazorAssi
 
 ```
 #SyncfusionblazorAssistant How do I enable paging and sorting in the Syncfusion Blazor Grid?
+
 ```
 
 > The `#SyncfusionblazorAssistant` command serves as a handle that invokes the `sf_blazor_component` tool, which retrieves component-specific documentation, API references, and implementation examples from the Syncfusion Blazor library. This intelligent routing ensures that your queries are processed with the most relevant context and technical specifications for accurate code generation and guidance.
