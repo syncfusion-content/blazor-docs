@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Connecting Elasticsearch to Blazor Data Grid Using Elastic.Clients.Elasticsearch
+# Connecting Elasticsearch to Blazor Data Grid Using ES library
 
 The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from an Elasticsearch index using the Elastic.Clients.Elasticsearch library. This modern approach provides full-text search capabilities, advanced filtering, and high-performance data operations.
 
@@ -1069,7 +1069,7 @@ private static Query BuildLeafQuery(string field, string? op, object? value, boo
 
 - When the user enters text in the search box and presses Enter, the DataGrid sends a search request.
 - The `ReadAsync` method receives the search criteria in `dataManagerRequest.Search`.
-- The repository's `SearchAndFilterAsync` method processes search through `BuildEsQueryFromDm()` method.
+- The repository's `SearchAndFilterAsync` method processes search through `BuildEsQueryFromDm` method.
 - `BuildEsQueryFromDm` calls `BuildLeafQuery` for each search field to create specific query objects.
 - The search term is converted into Elasticsearch queries appropriate to each field type.
 - Results are returned and displayed in the DataGrid.
@@ -1361,7 +1361,7 @@ private static List<SortOptions> BuildEsSorts(List<Sort>? sorted)
   - Maps field name to appropriate Elasticsearch field (with keyword subfield if needed)
   - Converts direction to Elasticsearch `SortOrder` enum
   - Creates `SortOptions` for each sort criterion
-- All sort options are added to the Elasticsearch search query via `.Sort()`
+- All sort options are added to the Elasticsearch search query via `Sort`method
 - Elasticsearch returns results sorted by the specified fields in the specified order
 - Results are displayed in the DataGrid in sorted order
 
