@@ -1971,7 +1971,7 @@ Now the adaptor supports bulk modifications with efficient Elasticsearch synchro
 
 ## Complete Repository Implementation
 
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/blazor-datagrid-integrations/tree/master/Binding%20Elasticsearch%20using%20CustomAdaptor).
 
 ---
 
