@@ -2,16 +2,21 @@
 @using Syncfusion.Blazor.Buttons
 
 <div>
-    <SfMultiSelect @ref="comboObj" TValue="string[]" TItem="Games" Width="300px" Placeholder="Select a game" @bind-Value="@multiSelectValue" DataSource="@LocalData">
+    <SfMultiSelect @ref="comboObj" TValue="string[]" TItem="Games" Width="300px"
+                   Placeholder="Select a game" @bind-Value="@multiSelectValue" DataSource="@LocalData">
         <MultiSelectFieldSettings Value="ID" Text="Game"></MultiSelectFieldSettings>
     </SfMultiSelect>
 </div>
-<div>
+
+<div style="margin-top: 15px;">
     <SfButton Content="Click to get the value" OnClick="OnBtnClick"></SfButton>
 </div>
 
+
+
 @code {
     public string[] multiSelectValue { get; set; }
+    public List<Games> SelectedGameItems { get; set; }
 
     SfMultiSelect<string[], Games> comboObj;
 
@@ -34,9 +39,20 @@
         new Games() { ID= "Game10", Game= "Tennis"},
     };
 
-    public void OnBtnClick()
+    public async Task OnBtnClick ()
     {
-        var MultiSelectValue = comboObj.GetDataByValueAsync(multiSelectValue);
-        Console.WriteLine(MultiSelectValue);
+        if (comboObj != null && multiSelectValue != null && multiSelectValue.Length > 0)
+        {
+          
+            SelectedGameItems = await comboObj.GetDataByValueAsync(multiSelectValue);
+
+            if (SelectedGameItems != null)
+            {
+                foreach (var item in SelectedGameItems)
+                {
+                    Console.WriteLine($"Selected - ID: {item.ID}, Game: {item.Game}");
+                }
+            }
+        }
     }
 }

@@ -68,7 +68,7 @@ The following example demonstrates an array of integers as the data source.
 
 Bind object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute and map the value field via [MultiSelectFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value). Set `TItem` to the data item type and `TValue` to the value field type.
 
-In the following example, the `Name` column is mapped to the Value field.
+In the following example, the `ID` column is mapped to the Value field, and `TValue` is set to the data type of the ID field (`string`).
 
 {% highlight cshtml %}
 
@@ -96,7 +96,7 @@ Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 N> If `TValue` is a non-nullable type, the clear button sets the default value of that type (for example, `0` for `int`). If `TValue` is a nullable type (for example, `int?`), the clear button sets the Value to `null`.
 
-The following example uses `string` as `TValue`, so clearing sets the value to `null`.
+The following example uses `int?` as `TValue`, so clearing sets the value to `null`.
 
 {% highlight cshtml %}
 
@@ -121,7 +121,7 @@ Create a `MultiSelect.razor` file as a parent component. Add parameters for the 
 @typeparam TValue;
 @typeparam TItem;
 
-<SfMultiSelect TValue="TValue[]" Width="300px" TItem="TItem" @bind-Value="@DDLValue" Placeholder="Please select a value" DataSource="@customData">
+<SfMultiSelect TValue="TValue" Width="300px" TItem="TItem" @bind-Value="@DDLValue" Placeholder="Please select a value" DataSource="@customData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -129,7 +129,7 @@ Create a `MultiSelect.razor` file as a parent component. Add parameters for the 
 [Parameter]
 public List<TItem> customData { get; set; }
 [Parameter]
-public TValue[] DDLValue { get; set; }
+public TValue DDLValue { get; set; }
 [Parameter]
 public EventCallback<TValue> DDLValueChanged { get; set; }
 }
@@ -141,9 +141,9 @@ public EventCallback<TValue> DDLValueChanged { get; set; }
 
 Render the generic MultiSelect with the required `TValue` and `TItem` in the respective Razor components.
 
-In this example, the MultiSelect is rendered with `TValue` as `string` in `Index.razor` and with `TValue` as `int?` in `Counter.razor`.
+In this example, the MultiSelect is rendered with `TValue` as `string` in `Home.razor` and with `TValue` as `int?` in `Counter.razor`.
 
-**[Index.razor]**
+**[Home.razor]**
 
 {% tabs %}
 {% highlight razor %}
@@ -151,7 +151,7 @@ In this example, the MultiSelect is rendered with `TValue` as `string` in `Index
 <MultiSelect TValue="string[]" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
 </MultiSelect>
 
-@code{
+@code {
     public string[] value { get; set; } = new string[] { "Game1" };
 
     public class Games
@@ -159,7 +159,8 @@ In this example, the MultiSelect is rendered with `TValue` as `string` in `Index
         public string ID { get; set; }
         public string Text { get; set; }
     }
-    List<Games> LocalData = new List<Games> {
+    List<Games> LocalData = new List<Games> 
+    {
         new Games() { ID= "Game1", Text= "American Football" },
         new Games() { ID= "Game2", Text= "Badminton" },
         new Games() { ID= "Game3", Text= "Basketball" },
@@ -184,28 +185,28 @@ In this example, the MultiSelect is rendered with `TValue` as `string` in `Index
 <MultiSelect TValue="int?[]" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
 </MultiSelect>
 
-@code{
+@code {
 
-public int?[] value { get; set; } = new int?[] { 3 };
-public class Games
-{
-    public int? ID { get; set; }
-    public string Text { get; set; }
-}
-List<Games> LocalData = new List<Games> {
-    new Games() { ID= 1, Text= "American Football" },
-    new Games() { ID= 2, Text= "Badminton" },
-    new Games() { ID= 3, Text= "Basketball" },
-    new Games() { ID= 4, Text= "Cricket" },
-    new Games() { ID= 5, Text= "Football" },
-    new Games() { ID= 6, Text= "Golf" },
-    new Games() { ID= 7, Text= "Hockey" },
-    new Games() { ID= 8, Text= "Rugby"},
-    new Games() { ID= 9, Text= "Snooker" },
-    new Games() { ID= 10, Text= "Tennis"},
+    public int?[] value { get; set; } = new int?[] { 3 };
+    public class Games
+    {
+        public int? ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> 
+    {
+        new Games() { ID= 1, Text= "American Football" },
+        new Games() { ID= 2, Text= "Badminton" },
+        new Games() { ID= 3, Text= "Basketball" },
+        new Games() { ID= 4, Text= "Cricket" },
+        new Games() { ID= 5, Text= "Football" },
+        new Games() { ID= 6, Text= "Golf" },
+        new Games() { ID= 7, Text= "Hockey" },
+        new Games() { ID= 8, Text= "Rugby"},
+        new Games() { ID= 9, Text= "Snooker" },
+        new Games() { ID= 10, Text= "Tennis"},
     };
 }
-
 
 {% endhighlight %}
 {% endtabs %}

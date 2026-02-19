@@ -23,8 +23,8 @@
         new Games() { ID= "Game9", Text= "Snooker" },
         new Games() { ID= "Game10", Text= "Tennis"},
     };
-    public void OnValueChange(MultiSelectChangeEventArgs<string[]> args)
+    public void OnValueChange ( MultiSelectChangeEventArgs<string[]> args )
     {
-        Console.WriteLine("The multiselect Value is: ", args.Value);
+        Console.WriteLine($"Selected: {string.Join(", ", args.Value ?? new string[] { })}");
     }
 }
