@@ -27,6 +27,7 @@ Explain **what** was updated, added, or removed.
 - [ ] Other (please describe):
 
 ## Reviewer Checklist (Mandatory)
+- [ ] Reviewed the provided Code Studio usages related information
 - [ ] Content changes follow UG/Documentation guidelines
 - [ ] All provided information reviewed and verified
 - [ ] Links and previews checked
