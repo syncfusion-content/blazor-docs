@@ -208,6 +208,11 @@ A data model is a C# class that represents the structure of a database table. Th
             /// Stores dates when the recurring appointment should not occur.
             /// </summary>
             public string? RecurrenceException { get; set; }
+
+            /// <summary>
+            /// points to parent series Id 
+            /// </summary>
+            public int? FollowingID { get; set; }
         }
     }
 {% endhighlight %}
@@ -302,6 +307,12 @@ A `DbContext` is a special class that manages the connection between the applica
                     // Configure recurrence-related properties
                     entity.Property(e => e.RecurrenceRule)
                         .HasMaxLength(50);
+                    // Helpful index: find all edited occurrences for a parent quickly
+                    entity.HasIndex(e => e.RecurrenceID);
+                
+                    entity.Property(x => x.FollowingID);
+
+                    entity.HasIndex(x => x.FollowingID);
                 });
             }
         }
@@ -889,6 +900,28 @@ The Scheduler component will display appointment data in a Syncfusion Blazor Sch
                 await AppointmentService.DeleteAppointmentAsync(id);
                 return data;
             }
+            public override async Task<object> BatchUpdateAsync(DataManager dataManager,object changedRecords, object addedRecords, object deletedRecords,string keyField, string key, int? dropIndex)
+             {
+                 if (AppointmentService is null)
+                     throw new InvalidOperationException("AppointmentService is not initialized.");
+
+                 // Cast the payloads defensively
+                 var changed = (changedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
+                 var added = (addedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
+                 var deleted = (deletedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
+
+                 foreach (var a in changed)
+                     await AppointmentService.UpdateAppointmentAsync(a);
+
+                 foreach (var a in added)
+                     await AppointmentService.CreateAppointmentAsync(a);
+
+                 foreach (var a in deleted)
+                     await AppointmentService.DeleteAppointmentAsync(a.Id);
+
+                 var data = await AppointmentService.GetAllAppointmentsAsync();
+                 return new DataResult { Result = data, Count = data.Count };
+             }
         }
     }
 {% endhighlight %}
@@ -914,7 +947,7 @@ The Scheduler component will display appointment data in a Syncfusion Blazor Sch
 
 - **`CustomAdaptor`**  
   A custom class derived from `DataAdaptor` that executes all database operations by calling the injected `AppointmentService`.  
-  It handles `ReadAsync`, `InsertAsync`, `UpdateAsync`, and `RemoveAsync`.
+  It handles `ReadAsync`, `InsertAsync`, `UpdateAsync`,`RemoveAsync`, and `BatchUpdateAsync`.
 
 - **`OnInitialized`**  
   Assigns the injected `AppointmentService` to the CustomAdaptor so the Scheduler can access database logic when loading.
