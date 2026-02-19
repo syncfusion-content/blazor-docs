@@ -24,7 +24,6 @@ The accessibility compliance for the Blazor Dashboard Layout component is outlin
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Keyboard Navigation Support | Not applicable |
-| [Axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
