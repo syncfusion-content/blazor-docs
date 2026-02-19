@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Connecting Firebase Realtime Database to Blazor Data Grid Using REST API
+# Connecting Firebase Realtime Database to Blazor Data Grid
 
 The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a Firebase Realtime Database using the REST API. This approach provides a lightweight, language-agnostic solution for working with cloud-hosted JSON databases without requiring external SDKs.
 
@@ -734,7 +734,7 @@ The Home component has been successfully updated with the DataGrid and CustomAda
 
 ### Step 3: Implement the CustomAdaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **Firebase Firestore** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to `CustomAdaptor` for scenarios that require full control over data operations.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **Firebase Realtime** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to `CustomAdaptor` for scenarios that require full control over data operations.
 
 The `CustomAdaptor` is a bridge between the DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
@@ -941,7 +941,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 @code {  
     
     /// <summary>
-    /// CustomAdaptor class to handle grid data operations with Firebase Firestore
+    /// CustomAdaptor class to handle grid data operations with Firebase Realtime
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -981,31 +981,64 @@ Fetches book data by calling the **GetBooksAsync** method, which is implemented 
 
 ```csharp
 /// <summary>
-/// Retrieves all books from the Firestore database
+/// Retrieves all books from the Realtime database
 /// </summary>
 /// <returns>List of all books</returns>
 public async Task<List<Book>> GetBooksAsync()
 {
     try
     {
-        var query = _firestoreDb.Collection(BooksCollection);
-        var snapshot = await query.GetSnapshotAsync();
+        string url = BuildUrl(BooksNode);
+        var response = await _httpClient.GetAsync(url);
 
-        var books = new List<Book>();
-        foreach (var doc in snapshot.Documents)
+        if (response.IsSuccessStatusCode)
         {
-            var book = doc.ConvertTo<Book>();
-            if (book != null)
+            string content = await response.Content.ReadAsStringAsync();
+            
+            if (content == "null")
             {
-                book.BookId = doc.Id; // Use Firestore document ID
-                books.Add(book);
+                return new List<Book>();
             }
-        }
 
-        return books;
+            var options = new JsonSerializerOptions 
+            { 
+                PropertyNameCaseInsensitive = true 
+            };
+
+            var booksDict = JsonSerializer.Deserialize<Dictionary<string, Book>>(content, options);
+            
+            if (booksDict == null || booksDict.Count == 0)
+            {
+                return new List<Book>();
+            }
+
+            return booksDict.Select(item => new Book
+            {
+                BookId = item.Key,
+                Title = item.Value.Title,
+                Author = item.Value.Author,
+                ISBN = item.Value.ISBN,
+                Category = item.Value.Category,
+                PublishDate = item.Value.PublishDate,
+                Language = item.Value.Language,
+                TotalCopies = item.Value.TotalCopies,
+                AvailableCopies = item.Value.AvailableCopies,
+                Location = item.Value.Location,
+                BorrowedBy = item.Value.BorrowedBy,
+                Status = item.Value.Status,
+                LastUpdated = item.Value.LastUpdated
+            }).ToList();
+        }
+        else
+        {
+            string errorContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Firebase API Error: {response.StatusCode} - {errorContent}");
+            return new List<Book>();
+        }
     }
     catch (Exception ex)
     {
+        Console.WriteLine($"Error fetching books: {ex.Message}");
         throw new Exception($"Error fetching books: {ex.Message}");
     }
 }
@@ -1049,7 +1082,7 @@ Searching allows the user to find records by entering keywords in the search box
     private List<string> ToolbarItems = new List<string> { "Search"};
     
     /// <summary>
-    /// CustomAdaptor class to handle grid data operations with Firebase Firestore
+    /// CustomAdaptor class to handle grid data operations with Firebase Realtime
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -1129,7 +1162,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 
 ```csharp
 /// <summary>
-/// CustomAdaptor class to handle grid data operations with Firebase Firestore
+/// CustomAdaptor class to handle grid data operations with Firebase Realtime
 /// </summary>
 public class CustomAdaptor : DataAdaptor
 {
@@ -1218,7 +1251,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 
 ```csharp
 /// <summary>
-/// CustomAdaptor class to handle grid data operations with Firebase Firestore
+/// CustomAdaptor class to handle grid data operations with Firebase Realtime
 /// </summary>
 public class CustomAdaptor : DataAdaptor
 {
@@ -1311,7 +1344,7 @@ Grouping organizes records into hierarchical groups based on column values.
 
 ```csharp
 /// <summary>
-/// CustomAdaptor class to handle grid data operations with Firebase Firestore
+/// CustomAdaptor class to handle grid data operations with Firebase Realtime
 /// </summary>
 public class CustomAdaptor : DataAdaptor
 {
@@ -1390,7 +1423,7 @@ Grouping feature is now active.
 
 ### Step 11: Perform CRUD Operations
 
-CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **FirebaseService.cs** to execute Firestore commands.
+CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **FirebaseService.cs** to execute commands.
 
 Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
@@ -1421,7 +1454,7 @@ Add the toolbar items list in the `@code` block:
 
 **Insert**
 
-Record insertion allows new books to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the Firebase Firestore database.
+Record insertion allows new books to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the Firebase Realtime database.
 
 In **Home.razor**, implement the `InsertAsync` method to handle record insertion within the `CustomAdaptor` class:
 
@@ -1523,14 +1556,14 @@ private async Task<string> GenerateBookIdAsync()
 2. The `FirebaseService.InsertBookAsync()` method is called.
 3. A unique BookId is auto-generated if not provided.
 4. The LastUpdated is set to the current UTC time.
-5. `PutAsync()` adds the document to the Firestore collection.
+5. `PutAsync()` adds the document to the Realtime collection.
 6. The DataGrid automatically refreshes to display the new record.
 
 Now the new book is persisted to the database and reflected in the grid.
 
 **Update**
 
-Record modification allows book details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **Firebase Firestore** database while ensuring data integrity is preserved.
+Record modification allows book details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **Firebase Realtime** database while ensuring data integrity is preserved.
 
 In **Home.razor**, implement the `UpdateAsync` method to handle record updates within the `CustomAdaptor` class:
 
@@ -1602,7 +1635,7 @@ Now modifications are synchronized to the database and reflected in the grid UI.
 
 **Delete**
 
-Record deletion allows books to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **Firestore DELETE** operation, and updates both the database and the grid to reflect the removal.
+Record deletion allows books to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **DELETE** operation, and updates both the database and the grid to reflect the removal.
 
 In **Home.razor**, implement the `RemoveAsync` method to handle record deletion within the `CustomAdaptor` class:
 
@@ -1661,7 +1694,7 @@ public async Task<bool> DeleteBookAsync(string? bookId)
 2. A confirmation dialog appears (built into the DataGrid).
 3. If confirmed, the CustomAdaptor's `RemoveAsync()` method is called.
 4. The `FirebaseService.DeleteBookAsync()` method is called.
-5. `DeleteAsync()` removes the document from the Firestore collection.
+5. `DeleteAsync()` removes the document from the Realtime collection.
 6. The method returns true if the document was deleted successfully.
 7. The DataGrid refreshes to remove the deleted record from the UI.
 
@@ -1669,7 +1702,7 @@ Now books are removed from the database and the grid UI reflects the changes imm
 
 **Batch Update**
 
-Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring transactional consistency by applying all changes atomically to the Firebase Firestore database.
+Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring transactional consistency by applying all changes atomically to the Firebase Realtime database.
 
 In **Home.razor**, implement the `BatchUpdateAsync` method to handle multiple record updates in a single request within the `CustomAdaptor` class:
 
@@ -1722,15 +1755,15 @@ public class CustomAdaptor : DataAdaptor
 - Each modified record is processed using `FirebaseService.UpdateBookAsync()`.
 - Each newly added record is saved using `FirebaseService.InsertBookAsync()`.
 - Each deleted record is removed using `FirebaseService.DeleteBookAsync()`.
-- All service operations persist changes to the Firebase Firestore database.
+- All service operations persist changes to the Firebase Realtime database.
 - The DataGrid refreshes to display the updated, added, and removed records in a single response.
 
 Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
 **Reference links**
-- [InsertAsync(DataManager, object)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) - Create new records in Firestore
-- [UpdateAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Edit existing records in Firestore
-- [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from Firestore
+- [InsertAsync(DataManager, object)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) - Create new records in Realtime database
+- [UpdateAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Edit existing records in Realtime database
+- [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from Realtime database
 - [BatchUpdateAsync(DataManager, object, object, object, string, string, int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) - Handle bulk operations
 
 ---
