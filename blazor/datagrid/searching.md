@@ -86,7 +86,7 @@ To provide a search box in the UI, add the Search item to the toolbar using the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqMDUXsngnslOp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The clear icon appears in the grid search box when focused or after typing a character. Selecting the clear icon removes the text and resets the search results.
+> The clear icon appears in the Grid search box when focused or after typing a character. Selecting the clear icon removes the text and resets the search results.
 
 ## Initial search
 
@@ -97,8 +97,8 @@ By default, search is performed after the grid renders and a search action is tr
 | Fields       | Specifies the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) that participate in the search.                     |
 | Operator     | Specifies the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) used for comparison.                            |
 | Key          | Specifies the initial search text.                                                                                                                                                                                  |
-| IgnoreCase   | [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreCase) sets case-insensitive search when true.                   |
-| IgnoreAccent | [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) ignores diacritic characters during search when true. |
+| IgnoreCase   | [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreCase) sets case-insensitive search when `true`.                   |
+| IgnoreAccent | [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) ignores diacritic characters during search when `true`. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -174,7 +174,7 @@ By default, search is performed after the grid renders and a search action is tr
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKWZUXimSvcekD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> By default, the grid searches all visible columns. To limit search to specific fields, set the `Fields` property of `GridSearchSettings`.
+> By default, the Grid searches all visible columns. To limit search to specific fields, set the `Fields` property of `GridSearchSettings`.
 
 ## Search operators
 
@@ -182,10 +182,10 @@ Search operators define how the search key is compared to data values. Configure
 
 | Operator   | Description                                             |
 |------------|---------------------------------------------------------|
-| StartsWith | Checks whether a value begins with the specified value. |
-| EndsWith   | Checks whether a value ends with the specified value.   |
-| Contains   | Checks whether a value contains the specified value.    |
-| Equal      | Checks whether a value is equal to the specified value. |
+| `StartsWith` | Checks whether a value begins with the specified value. |
+| `EndsWith`   | Checks whether a value ends with the specified value.   |
+| `Contains`   | Checks whether a value contains the specified value.    |
+| `Equal`      | Checks whether a value is equal to the specified value. |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -290,7 +290,7 @@ Search operators define how the search key is compared to data values. Configure
 
 ## Search by external button
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports programmatic search, enabling custom search triggers such as external buttons. Use the grid’s [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method and pass the search text.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports programmatic search, enabling custom search triggers such as external buttons. Use the Grid’s [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method and pass the search text.
 
 Steps:
 
@@ -462,7 +462,7 @@ By default, the search scans all visible columns. To restrict the search to spec
 
 ## Disable search for particular column
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to `false`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -538,7 +538,7 @@ N> For a broader overview, see the [Blazor DataGrid](https://www.syncfusion.com/
 
 ## Ignore accents in search
 
-By default, the DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to **true**. This improves usability when data contains diacritic characters.
+By default, the DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to `true`. This improves usability when data contains diacritic characters.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
