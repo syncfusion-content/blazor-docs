@@ -486,6 +486,130 @@ namespace Grid_ElasticSearch.Data
 
 The Elasticsearch initialization service creates the index with field mappings and bulk-indexes seed data on application startup.
 
+**Verify Creation of Index**
+
+To view basic index information, navigate to `http://localhost:9200/inventory-items/`:
+
+```json
+{
+  "aliases" : { },
+  "mappings" : {
+    "properties" : {
+      "itemId" : {
+        "type" : "integer"
+      },
+      "sku" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword"
+          }
+        }
+      },
+      "unitPrice" : {
+        "type" : "double"
+      },
+      // Continues to Remaining mapped fields
+    }
+  },
+  "settings" : {
+    "index" : {
+      "routing" : {
+        "allocation" : {
+          "include" : {
+            "_tier_preference" : "data_content"
+          }
+        }
+      },
+      "number_of_shards" : "1",
+      "provided_name" : "inventory-items",
+      "creation_date" : "1739957234567",
+      "number_of_replicas" : "0",
+      "uuid" : "AbcDefGhijKlmnOpqrStUvWxYz123456",
+      "version" : {
+        "created" : "9030099"
+      }
+    }
+  }
+}
+```
+
+This confirms that:
+- The index `inventory-items` exists with correct field mappings
+- All fields are properly mapped (integer, text, double, date types)
+- Text fields have both `text` and `keyword` subfields for flexible searching and exact filtering
+- The index is configured with 1 shard and 0 replicas as specified
+
+**Verify Indexed Data in Elasticsearch**
+
+After the application is running, verify that the data has been successfully indexed in Elasticsearch by checking the index via the REST API.
+
+**Instructions:**
+
+1. Open a web browser and navigate to `http://localhost:9200/inventory-items/_search`.
+2. A login dialog appears. Enter the credentials:
+   - **Username**: `elastic`
+   - **Password**: The password from Elasticsearch setup
+3. After authentication, the browser displays a JSON response showing all indexed documents in the `inventory-items` index:
+
+```json
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 2,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "inventory-items",
+        "_id" : "1001",
+        "_score" : 1.0,
+        "_source" : {
+          "itemId" : 1001,
+          "sku" : "SKU-001",
+          "itemName" : "Dell Monitor 27\"",
+          // .. other fields
+        }
+      },
+      {
+        "_index" : "inventory-items",
+        "_id" : "1002",
+        "_score" : 1.0,
+        "_source" : {
+          "itemId" : 1002,
+          "sku" : "SKU-002",
+          "itemName" : "Office Chair Pro",
+          // .. other fields
+        }
+      }
+    ]
+  }
+}
+```
+
+**Response Explanation:**
+
+- **`took`**: Query execution time in milliseconds (2 ms in this example)
+- **`timed_out`**: Whether the query timed out (false = completed successfully)
+- **`_shards`**: Shard statistics showing successful shards and failures
+- **`hits.total.value`**: Total number of documents matching the query (2 documents indexed)
+- **`hits.hits`**: Array of matching documents
+  - **`_index`**: Name of the index containing the document
+  - **`_id`**: Unique document ID (matches the ItemId from inventory data)
+  - **`_score`**: Relevance score for the document
+  - **`_source`**: The actual document data containing all inventory fields
+
+---
+
 ### Step 9: Create the Inventory Data Service
 
 The inventory data service manages static, in-memory inventory data.
