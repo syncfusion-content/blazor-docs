@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Prompt Library - Agentic UI Builder
 
-The Syncfusion Blazor Agentic UI Builder Prompt Library provides professionally crafted prompts to streamline your Blazor application development. These prompts leverage the power of AI to generate complete applications, individual components, custom styling, and more - all optimized for Syncfusion's comprehensive Blazor component suite.
+Speed up Blazor development with ready-made prompts for common scenarios. Use them to generate complete applications, components, layouts, and custom styling.
 
 ## How to Use
 
@@ -53,7 +53,7 @@ This section provides targeted prompt examples for directly invoking individual 
 
 ### Layout Tool
 
-The Layout Tool orchestrates page structure, element positioning, and responsive behavior. Use #sf_blazor_layout when working with spatial arrangement and viewport adaptation.
+The Layout tool orchestrates page structure, element positioning, and responsive behavior. Use #sf_blazor_layout when working with spatial arrangement and viewport adaptation.
 
 {% promptcards %}
 {% promptcard Book Library Statistics Panel %}
@@ -72,7 +72,7 @@ The Layout Tool orchestrates page structure, element positioning, and responsive
 
 ### Component Tool
 
-The Component Tool implements specific Syncfusion Blazor components with configured properties and event handlers. Use #sf_blazor_component for targeted component integration.
+The Component tool implements specific Syncfusion Blazor components with configured properties and event handlers. Use #sf_blazor_component for targeted component integration.
 
 {% promptcards %}
 {% promptcard Advanced Data Grid Setup %}
@@ -91,7 +91,7 @@ The Component Tool implements specific Syncfusion Blazor components with configu
 
 ### Styling Tool
 
-The Styling Tool applies custom themes, color schemes, visual treatments, and iconography across your application. Use #sf_blazor_style for branding, aesthetic customization, and icon integration.
+The Styling tool applies custom themes, color schemes, visual treatments, and iconography across your application. Use #sf_blazor_style for branding, aesthetic customization, and icon integration.
 
 {% promptcards %}
 {% promptcard Tailwind3 Dark Mode Setup %}
@@ -124,4 +124,3 @@ The Styling Tool applies custom themes, color schemes, visual treatments, and ic
 
 * [Agentic UI Builder - Getting Started](./getting-started)
 * [AI Coding Assistant - Getting Started](../ai-coding-assistant/getting-started)
-* [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Documentation](https://blazor.syncfusion.com/documentation)
