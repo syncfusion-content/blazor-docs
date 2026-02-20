@@ -446,6 +446,10 @@ namespace VideoUpload.Controllers
 {% endhighlight %}
 {% endtabs %}
 
+## Paste video into the editor
+
+The Rich Text Editor supports pasting video files directly into the editor content. You can paste single or multiple video files from your file system directly into the editor.
+
 ## See also
 
 * [How to edit the quick toolbar settings](../toolbar#video-quick-toolbar)
