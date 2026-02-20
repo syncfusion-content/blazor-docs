@@ -124,7 +124,7 @@ Markers can be rendered using a template. Use the [MarkerTemplate](https://help.
 
 ## Customization
 
-Use the following properties and classes in [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to customize markers in the Maps component.
+Use the following properties and class in [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to customize markers in the Maps component.
 
 * [MapsMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerBorder.html) - Customizes the border color and width for markers.
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Fill) - Applies a fill color to markers.
