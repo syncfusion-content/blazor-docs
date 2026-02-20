@@ -14,7 +14,7 @@ The **Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant** is 
 
 ## Installation
 
-Follow the [Installation Guide](../installation) to set up the MCP Tools in your development environment.
+Follow the [Installation Guide](../installation) to set up the MCP server in your development environment.
 
 ## Usage
 
