@@ -17,13 +17,11 @@ Firebase Firestore is a cloud-hosted, NoSQL database that stores data in flexibl
 
 **Key Benefits of Firebase Firestore**
 
-- **Cloud-Hosted**: No infrastructure management required; automatic scaling and maintenance
-- **Real-Time Synchronization**: Automatic updates when data changes across connected clients
-- **Flexible Schema**: Store documents with different structures in the same collection without predefined schemas
-- **Global Scale**: Distributed architecture with automatic replication and backups
-- **Security Rules**: Built-in security with fine-grained access control at the document and field level
-- **Rich Query Language**: Supports complex queries, aggregation, and indexing
-- **Offline Support**: Client-side caching with automatic sync when connectivity is restored
+- **Cloud-Hosted**: No infrastructure management required; automatic scaling and maintenance.
+- **Flexible Schema**: Store documents with different structures in the same collection without predefined schemas.
+- **Global Scale**: Distributed architecture with automatic replication and backups.
+- **Security Rules**: Built-in security with fine-grained access control at the document and field level.
+- **Rich Query Language**: Supports complex queries, aggregation, and indexing.
 
 **What is Google.Cloud.Firestore?**
 
@@ -47,32 +45,32 @@ Ensure the following software, accounts, and packages are in place before procee
 
 ### Step 1: Create a Firebase Project and Firestore Database
 
-Firebase projects host your Firestore database and manage authentication, storage, and other cloud services.
+Firebase projects host Firestore databases and handle authentication, storage, and other cloud services.
 
 **Instructions:**
 
 1. **Access Firebase Console**
-   - Navigate to [Firebase Console](https://console.firebase.google.com/)
-   - Sign in with your Google account
+   - Navigate to [Firebase Console](https://console.firebase.google.com/).
+   - Sign in with your Google account.
 
 2. **Create a New Firebase Project**
-   - Click **"Add Project"** button
-   - Enter a project name (e.g., `LibraryManagement`)
-   - Accept the default settings or customize as needed
-   - Click **"Create Project"** and wait for completion
+   - Click **"Add Project"** button.
+   - Enter a project name (e.g., `LibraryManagement`).
+   - Accept the default settings or customize as needed.
+   - Click **"Create Project"** and wait for completion.
 
 3. **Create a Firestore Database**
-   - In the Firebase Console, navigate to **"Build"** → **"Firestore Database"**
-   - Click **"Create Database"** button
-   - **Location**: Select the closest region to your users (e.g., `us-east1`)
-   - **Security Rules**: Start with **"Start in test mode"** for development (production requires authentication)
-   - Click **"Create"** and wait for the database to initialize
+   - In the Firebase Console, navigate to **"Build"** → **"Firestore Database"**.
+   - Click **"Create Database"** button.
+   - **Location**: Choose the region closest to users (e.g., `us-east1`).
+   - **Security Rules**: Start with **"Start in test mode"** for development (production requires authentication).
+   - Click **"Create"** and wait for the database to initialize.
 
 4. **Create a Collection and Add Sample Data**
-   - In Firestore Console, click **"+ Start collection"** button
-   - **Collection ID**: `Books`
-   - Click **"Next"**
-   - Click **"Auto ID"** to generate a document ID
+   - In Firestore Console, click **"+ Start collection"** button.
+   - **Collection ID**: `Books`.
+   - Click **"Next"**.
+   - Click **"Auto ID"** to generate a document ID.
    - Add the following sample document fields:
 
 **Sample Book Document:**
@@ -102,24 +100,24 @@ The Firestore database is now ready with the `Books` collection and sample data.
 
 ### Step 2: Generate Service Account Key for Authentication
 
-Service account keys enable server-side applications (like your Blazor backend) to authenticate with Firebase.
+Service account keys allow server-side applications (for example, a Blazor backend) to authenticate with Firebase.
 
 **Instructions:**
 
 1. **Access Google Cloud Console**
-   - In Firebase Console, click the **Settings gear icon** (⚙️) in the top-left
-   - Select **"Project Settings"**
-   - Navigate to the **"Service Accounts"** tab
+   - In Firebase Console, click the **Settings gear icon** (⚙️) in the top-left.
+   - Select **"Project Settings"**.
+   - Navigate to the **"Service Accounts"** tab.
 
 2. **Generate a New Private Key**
-   - Click the **"Generate New Private Key"** button
-   - A JSON file (`serviceAccountKey.json`) will be automatically downloaded
-   - **Important**: Save this file securely—it contains sensitive credentials
+   - Click the **"Generate New Private Key"** button.
+   - A JSON file (`serviceAccountKey.json`) will be automatically downloaded.
+   - **Important**: Save this file securely—it contains sensitive credentials.
 
 3. **Store the Service Account Key**
-   - For **development**: Place the JSON file in your project root or a secure location
-   - For **production**: Use environment variables or Azure Key Vault to store sensitive credentials
-   - **Never commit** this file to version control (add to `.gitignore`)
+   - For **development**: Put the JSON file in the project root or a secure location.
+   - For **production**: Use environment variables or Azure Key Vault to store sensitive credentials.
+   - **Never commit** this file to version control (add to `.gitignore`).
 
 The service account key is now available for authentication.
 
@@ -127,36 +125,34 @@ The service account key is now available for authentication.
 
 ### Step 3: Enable Required APIs in Google Cloud Console
 
-Firestore requires specific APIs to be enabled in your Google Cloud project.
+Enable the required APIs in the Google Cloud project for Firestore.
 
 **Instructions:**
 
 1. **Access Google Cloud Console**
-   - Open [Google Cloud Console](https://console.cloud.google.com/)
-   - Select your Firebase project
+   - Open [Google Cloud Console](https://console.cloud.google.com/).
+   - Select the Firebase project.
 
 2. **Navigate to APIs**
-   - Go to **"APIs & Services"** → **"Library"**
-   - Search for **"Firestore API"**
-   - Click on the result
-   - Click **"Enable"** button
+   - Go to **"APIs & Services"** → **"Library"**.
+   - Search for **"Firestore API"**.
+   - Click on the result.
+   - Click **"Enable"** button.
 
 3. **Verify Cloud Firestore API is Active**
-   - Go to **"APIs & Services"** → **"Enabled APIs & services"**
-   - Confirm **"Cloud Firestore API"** is in the list
+   - Go to **"APIs & Services"** → **"Enabled APIs & services"**.
+   - Confirm **"Cloud Firestore API"** is in the list.
 
-The required APIs are now enabled for your application.
+Required APIs are now enabled for the application.
 
 ---
 
 ### Step 4: Install Required NuGet Packages
 
-NuGet packages are software libraries that add functionality to the Blazor application. These packages enable Firebase Firestore integration and Syncfusion DataGrid components.
+Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
+This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-**Prerequisites for this step:**
-- A new Blazor Web Application created using the default template
-- The project automatically generates essential files: `Program.cs`, `appsettings.json`, `wwwroot` folder, and `Components` folder
-- For this guide, a Blazor application named **Grid_Firebase** has been created
+For this guide, a Blazor application named **Grid_Firebase_Firestore** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the Blazor application. These packages enable Firebase Firestore integration and Syncfusion DataGrid components.
 
 **Method 1: Using Package Manager Console**
 
@@ -175,7 +171,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **Google.Cloud.Firestore** (version 3.7.0 or later)
-   - **[Syncfusion.Blazor.Grid]((https://www.nuget.org/packages/Syncfusion.Blazor.Grid/))** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
    - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
@@ -196,7 +192,7 @@ A data model is a C# class that represents the structure of a Firestore document
 using System;
 using Google.Cloud.Firestore;
 
-namespace Grid_Firebase.Models
+namespace Grid_Firebase_Firestore.Models
 {
     /// <summary>
     /// Represents a book record in the library management system.
@@ -366,9 +362,9 @@ A Firebase connection requires the path to the service account key file. This co
 
 **Important Security Notes:**
 
-- **Development**: Place the `serviceAccountKey.json` file in your project root
-- **Production**: Use environment variables or secure credential storage (Azure Key Vault, AWS Secrets Manager)
-- **Never Commit**: Add `serviceAccountKey.json` to `.gitignore` to prevent accidentally uploading credentials to version control
+- **Development**: Place the `serviceAccountKey.json` file in the project root.
+- **Production**: Use environment variables or secure credential storage (Azure Key Vault, AWS Secrets Manager).
+- **Never Commit**: Add `serviceAccountKey.json` to `.gitignore` to prevent accidentally uploading credentials to version control.
 
 **Example .gitignore entry:**
 
@@ -394,9 +390,9 @@ The Firebase service class manages database connections and operations with Fire
 
 ```csharp
 using Google.Cloud.Firestore;
-using Grid_Firebase.Models;
+using Grid_Firebase_Firestore.Models;
 
-namespace Grid_Firebase.Services
+namespace Grid_Firebase_Firestore.Services
 {
     /// <summary>
     /// Service class for Firebase Firestore database operations
@@ -508,25 +504,25 @@ Bulk data import is essential for loading large volumes of data into Firebase Fi
 
 **Overview of Bulk Import:**
 
-Bulk import allows you to:
-- **Initial Data Seeding**: Load initial datasets when launching an application
-- **Data Migration**: Migrate data from legacy systems to Firestore
-- **Batch Processing**: Regular imports of bulk data from JSON files
-- **Testing**: Load test data for development environments
+Bulk import allows to:
+- **Initial Data Seeding**: Load initial datasets when launching an application.
+- **Data Migration**: Migrate data from legacy systems to Firestore.
+- **Batch Processing**: Regular imports of bulk data from JSON files.
+- **Testing**: Load test data for development environments.
 
 **Firestore Limits:**
-- **Batch Size**: Maximum 500 documents per batch write
-- **Document Size**: Up to 1 MB per document
-- **Rate Limits**: 25,000 writes per second per database
-- **Atomicity**: All-or-nothing semantics per batch using transactions
+- **Batch Size**: Maximum 500 documents per batch write.
+- **Document Size**: Up to 1 MB per document.
+- **Rate Limits**: 25,000 writes per second per database.
+- **Atomicity**: All-or-nothing semantics per batch using transactions.
 
 **How Bulk Import Works:**
 
-1. **Data Chunking**: Split large datasets into 500-document batches (Firestore limit)
-2. **Validation**: Validate each document before import
-3. **Atomic Transactions**: Use transactions to ensure consistency (all-or-nothing)
-4. **Error Handling**: Continue processing batches even if one fails
-5. **Progress Tracking**: Report progress to UI for user feedback
+1. **Data Chunking**: Split large datasets into 500-document batches (Firestore limit).
+2. **Validation**: Validate each document before import.
+3. **Atomic Transactions**: Use transactions to ensure consistency (all-or-nothing).
+4. **Error Handling**: Continue processing batches even if one fails.
+5. **Progress Tracking**: Report progress to UI for user feedback.
 
 **Sample JSON data format:**
 
@@ -830,15 +826,6 @@ public async Task<bool> BulkImportBooksAsync(List<Book> books)
     }
 }
 ```
-
-**Key Features Implemented**
-
-File Upload: Users can select and upload JSON files  
-Validation: All books are validated before import  
-Batch Processing: Large datasets are split into 500-document batches  
-Atomic Transactions: Each batch uses transactions for consistency  
-Auto-Refresh: Grid automatically refreshes after successful import  
-
 ---
 
 ### Step 9: Register Services in Program.cs
@@ -851,8 +838,8 @@ The `Program.cs` file is where application services are registered and configure
 2. Add the following code after the line `var builder = WebApplication.CreateBuilder(args);`:
 
 ```csharp
-using Grid_Firebase.Components;
-using Grid_Firebase.Services;
+using Grid_Firebase_Firestore.Components;
+using Grid_Firebase_Firestore.Services;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -889,7 +876,7 @@ app.Run();
 
 **Explanation:**
 
-- **`using Grid_Firebase.Services;`**: Imports the namespace to access the `FirebaseService` class
+- **`using Grid_Firebase_Firestore.Services;`**: Imports the namespace to access the `FirebaseService` class
 - **`builder.Services.AddSyncfusionBlazor();`**: Registers Syncfusion Blazor services globally
 - **`builder.Services.AddScoped<FirebaseService>();`**: Registers `FirebaseService` with scoped lifetime (creates a new instance per HTTP request)
 
@@ -909,8 +896,8 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 * Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
-@using Grid_Firebase.Models
-@using Grid_Firebase.Services
+@using Grid_Firebase_Firestore.Models
+@using Grid_Firebase_Firestore.Services
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
@@ -927,9 +914,9 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+> For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+> Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ---
 
@@ -959,6 +946,7 @@ The `Home.razor` component displays the book data in a Syncfusion Blazor DataGri
                <SfGrid @ref="_grid" TValue="Book" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" Toolbar="@ToolbarItems">
                   <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 
+                  <GridPageSettings PageSize="10"></GridPageSettings>                    
                   <GridColumns>
                      //columns configuration
                   </GridColumns>
@@ -979,6 +967,9 @@ The `Home.razor` component displays the book data in a Syncfusion Blazor DataGri
 - **`@inject FirebaseService`**: Injects the FirebaseService to access database methods
 - **`<SfGrid>`**: The DataGrid component that displays books in rows and columns
 - **`<GridColumns>`**: Defines individual columns with field mappings, types, and formatting
+- **`AllowPaging`, `AllowSorting`, `AllowFiltering`, `AllowGrouping`**: Enable grid features
+- **`<GridEditSettings>`**: Configures add, edit, and delete operations
+- **`Toolbar`**: Provides buttons for CRUD and search operations
 
 The Home component has been successfully updated with the DataGrid and CustomAdaptor.
 
@@ -2513,7 +2504,7 @@ This guide demonstrates how to:
 3. Enable required Google Cloud APIs for Firestore access. [🔗](#step-3-enable-required-apis-in-google-cloud-console)
 4. Install necessary NuGet packages for Google.Cloud.Firestore and Syncfusion. [🔗](#step-4-install-required-nuget-packages)
 5. Create data models mapping to Firestore document structure. [🔗](#step-5-create-the-data-model)
-6. Configure service account paths. [🔗](#step-6-configure-the-firebase-connection-string)
+6. Configure service account paths and register services in Program.cs. [🔗](#step-6-configure-the-firebase-connection-string)
 7. Implement the Firebase service class for Firestore CRUD operations. [🔗](#step-7-create-the-firebase-service-class)
 8. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, grouping, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
 9. Handle bulk operations and batch updates. [🔗](#step-11-perform-crud-operations)

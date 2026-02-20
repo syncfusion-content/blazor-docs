@@ -17,18 +17,18 @@ Firebase Realtime Database is a cloud-hosted, NoSQL database that stores data as
 
 **Key Benefits of Firebase Realtime Database**
 
-- **Simple Setup**: Minimal configuration required; no complex SDKs or dependencies
-- **REST API Access**: Language-agnostic HTTP endpoints for CRUD operations
-- **Real-Time Synchronization**: Automatic updates via WebSocket connections and polling mechanisms
-- **Hierarchical JSON Structure**: Familiar JSON format for organizing and accessing data
-- **Low Latency**: Optimized for fast read/write operations with automatic sync
-- **Offline Capabilities**: Built-in offline persistence with automatic synchronization when connectivity is restored
-- **Flexible Security Rules**: Fine-grained access control at the database path level
-- **Lightweight Integration**: No heavy SDK installation; works directly with HttpClient
+- **Simple Setup**: Minimal configuration required; no complex SDKs or dependencies.
+- **REST API Access**: Language-agnostic HTTP endpoints for CRUD operations.
+- **Real-Time Synchronization**: Automatic updates via WebSocket connections and polling mechanisms.
+- **Hierarchical JSON Structure**: Familiar JSON format for organizing and accessing data.
+- **Low Latency**: Optimized for fast read/write operations with automatic sync.
+- **Offline Capabilities**: Built-in offline persistence with automatic synchronization when connectivity is restored.
+- **Flexible Security Rules**: Fine-grained access control at the database path level.
+- **Lightweight Integration**: No heavy SDK installation; works directly with HttpClient.
 
 **What is Firebase Realtime Database REST API?**
 
-**Firebase Realtime Database REST API** is a set of HTTP endpoints that allow applications to interact with the Realtime Database directly via standard REST calls (GET, POST, PUT, DELETE, PATCH). This approach is ideal for .NET applications where you want to avoid SDK dependencies and maintain direct control over network requests.
+**Firebase Realtime Database REST API**  is a set of HTTP endpoints that allow applications to access the Realtime Database directly using standard REST calls (**GET, POST, PUT, DELETE, PATCH**). Ideal for .NET applications that require direct control over network requests and need to avoid SDK dependencies.
 
 ## Prerequisites
 
@@ -48,34 +48,34 @@ Ensure the following software, accounts, and packages are in place before procee
 
 ### Step 1: Create a Firebase Project and Realtime Database
 
-Firebase projects host your Realtime Database and manage authentication, storage, and other cloud services.
+Firebase projects host the Realtime Database and manage authentication, storage, and other cloud services.
 
 **Instructions:**
 
 1. **Access Firebase Console**
-   - Navigate to [Firebase Console](https://console.firebase.google.com/)
-   - Sign in with your Google account
+   - Navigate to [Firebase Console](https://console.firebase.google.com/).
+   - Sign in with your Google account.
 
 2. **Create a New Firebase Project**
-   - Click the **"Add Project"** button
-   - Enter project name: `librarymanagement` (or your preferred name)
-   - Accept the terms and click **"Create Project"** and wait for completion
+   - Click the **"Add Project"** button.
+   - Enter project name: `librarymanagement` (or preferred name).
+   - Accept the terms and click **"Create Project"** and wait for completion.
 
 3. **Create a Realtime Database**
-   - In the Firebase Console, navigate to **"Build"** → **"Realtime Database"**
-   - Click **"Create Database"** button
-   - Choose your database location (select the location closest to your users)
-   - Set security rules to **"Start in Test Mode"** for development (update rules for production)
-   - Click **"Enable"** and wait for the database to initialize
+   - In the Firebase Console, navigate to **"Build"** → **"Realtime Database"**.
+   - Click **"Create Database"** button.
+   - Choose the database location (select the location closest to the users).
+   - Set security rules to **"Start in Test Mode"** for development (update rules for production).
+   - Click **"Enable"** and wait for the database to initialize.
 
 4. **Note the Database URL**
-   - After creation, you will see your database URL displayed at the top: `https://your-project-id-default-rtdb.firebaseio.com/`
-   - Save this URL; you'll need it for configuration
+   - After creation, the database URL appears at the top: `https://your-project-id-default-rtdb.firebaseio.com/`
+   - Save the URL - required for configuration.
 
 5. **Create the Database Structure**
-   - In the Realtime Database Console, you'll see an empty root node
-   - Click the **"+" (Add)** button to create a new node named **"Books"**
-   - This creates the hierarchical structure: `root/Books/`
+   - In the Realtime Database Console, an empty root node appears.
+   - Click the **"+" (Add)** button to create a new node named **"Books"**.
+   - This creates the hierarchical structure: `root/Books/`.
 
 6. **Add Sample Data (Using Data Import or Manual Entry)**
    - The database structure will be populated with sample data in **Step 3** using the JSON file
@@ -86,25 +86,25 @@ The Realtime Database structure is now ready with the `Books` node.
 
 ### Step 2: Generate Database Secret for Authentication
 
-Database secrets enable secure REST API access to your Realtime Database.
+Database secrets enable secure REST API access to the Realtime Database.
 
 **Instructions:**
 
 1. **Access Project Settings**
-   - In Firebase Console, click the **Settings gear icon** (⚙️) in the top-left
-   - Select **"Project Settings"**
-   - Navigate to the **"Service Accounts"** tab
+   - In Firebase Console, click the **Settings gear icon** (⚙️) in the top-left.
+   - Select **"Project Settings"**.
+   - Navigate to the **"Service Accounts"** tab.
 
 2. **Generate Database Secret**
-   - Scroll down to **"Realtime Database Secrets"** section
-   - Click the **"Show"** button next to the database secret
-   - Copy the secret key (this is your authentication token)
-   - **Important**: Save this secret securely—it grants full access to your database
+   - Scroll down to **"Realtime Database Secrets"** section.
+   - Click the **"Show"** button next to the database secret.
+   - Copy the secret key (this is the authentication token).
+   - **Important**: Save this secret securely—it grants full access to the database.
 
 3. **Store the Database Secret**
-   - For **development**: Store in `appsettings.Development.json` or `appsettings.json`
-   - For **production**: Use secure credential storage (Azure Key Vault, AWS Secrets Manager)
-   - **Never commit** secrets to version control (add to `.gitignore`)
+   - For **development**: Store in `appsettings.Development.json` or `appsettings.json`.
+   - For **production**: Use secure credential storage (Azure Key Vault, AWS Secrets Manager).
+   - **Never commit** secrets to version control (add to `.gitignore`).
 
 The database secret is now available for REST API authentication.
 
@@ -112,12 +112,12 @@ The database secret is now available for REST API authentication.
 
 ### Step 3: Configure Initial Data Import
 
-Initial data seeding populates your Realtime Database with sample book records for development and testing.
+Initial data seeding adds sample book records to the Realtime Database for development and testing.
 
 **Instructions:**
 
 1. **Prepare Sample Data File**
-   - Create or obtain a JSON file in your project root
+   - Create or obtain a JSON file in the project root.
    - The file should contain the database structure with sample records:
 
 ```json
@@ -179,18 +179,18 @@ Initial data seeding populates your Realtime Database with sample book records f
    - The database should now display the hierarchical structure:
    - `root > Books > BOOK001, BOOK002, BOOK003` (and their respective fields)
 
-The sample data is now loaded into your Realtime Database.
+The sample data is now loaded into the Realtime Database.
 
 ---
 
 ### Step 4: Update Database Security Rules
 
-Security rules control read/write access to your Realtime Database paths.
+Security rules control read/write access to the Realtime Database paths.
 
 **Instructions:**
 
 1. **Access Security Rules**
-   - In Realtime Database Console, click the **"Rules"** tab at the top
+   - In Realtime Database Console, click the **"Rules"** tab at the top.
 
 2. **Update Rules for Development**
    - For **development testing**, replace the default rules with:
@@ -391,17 +391,17 @@ A Firebase Realtime Database connection requires the database URL and authentica
 
 | Setting | Value | Purpose |
 |---------|-------|---------|
-| `Firebase:RealtimeDatabaseURL` | `https://your-project-id-default-rtdb.firebaseio.com/` | Base URL of your Realtime Database (with trailing slash) |
-| `Firebase:DatabaseSecret` | Your database secret | Authentication token for REST API access |
+| `Firebase:RealtimeDatabaseURL` | `https://your-project-id-default-rtdb.firebaseio.com/` | Base URL of the Realtime Database (with trailing slash). |
+| `Firebase:DatabaseSecret` | Custom database secret | Authentication token for REST API access. |
 
 **Important Security Notes:**
 
-- **Development**: Store secrets in `appsettings.Development.json` (local machine only)
+- **Development**: Store secrets in `appsettings.Development.json` (local machine only).
 - **Production**: Use secure credential storage:
   - Azure Key Vault
   - AWS Secrets Manager
   - Environment variables
-- **Never Commit**: Add `appsettings.*.json` with secrets to `.gitignore`
+- **Never Commit**: Add `appsettings.*.json` with secrets to `.gitignore`.
 
 **Example .gitignore entry:**
 
