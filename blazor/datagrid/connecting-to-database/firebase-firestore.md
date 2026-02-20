@@ -2492,7 +2492,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
 ## Complete Sample Repository
 
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MongoDB%20using%20CustomAdaptor).
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20Firebase%20FirestoreDB%20using%20CustomAdaptor).
 
 ---
 
