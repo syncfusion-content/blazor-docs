@@ -123,7 +123,7 @@ The auto wrap feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Bl
 
 Enable auto wrap by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to `true`. Configure the wrapping behavior using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
 
-Set the **WrapMode** property in `TextWrapSettings` to one of these values:
+Set the `WrapMode` property in `TextWrapSettings` to one of these values:
 
 * `Both` - Wraps text in both header and content cells. This is the default value.
 * `Header` - Wraps text only in header cells.
@@ -561,7 +561,7 @@ Styles can be applied to DataGrid cells using CSS selectors. The Syncfusion<sup 
 
 ### property-based customization
 
-Cell styles can also be customized using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. This property accepts a dictionary of name–value pairs to apply custom CSS classes or inline styles to Grid cells.
+Cell styles can also be customized using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. This property accepts a dictionary of name-value pairs to apply custom CSS classes or inline styles to Grid cells.
 
 ```cshtml
 <style>
@@ -573,7 +573,7 @@ Cell styles can also be customized using the [CustomAttributes](https://help.syn
 </style>
 ```
 
-In this configuration, the `CustomAttributes` property of the **ShipCity** column is set to apply the custom-css class to all cells in that column.
+In this configuration, the `CustomAttributes` property of the "ShipCity" column is set to apply the custom-css class to all cells in that column.
 
 ```cshtml
 <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" Width="100"></GridColumn>
@@ -667,7 +667,7 @@ The clip mode feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Bl
 
 Enable clip mode by setting the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the desired column.
 
-Available ClipMode options:
+Three types of clipMode are available:
 
 * `Clip` – Truncates cell content that exceeds the cell boundary.
 * `Ellipsis` – Displays ellipsis when content overflows the cell area.
@@ -769,9 +769,9 @@ Available ClipMode options:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAiMZUrUOzmfhI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property is set to **Ellipsis** by default.
+> * The [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property is set to `Ellipsis` by default.
 > * When the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property is defined for a column, clip mode is automatically applied if the content exceeds the specified width.
-> * If clip mode is applied without tooltip support, essential data will be hidden from view. To ensure accessibility and data visibility, **Ellipsis** or **EllipsisWithTooltip** must be used when truncation occurs.
+> * If clip mode is applied without tooltip support, essential data will be hidden from view. To ensure accessibility and data visibility, `Ellipsis` or `EllipsisWithTooltip` must be used when truncation occurs.
 
 ## Tooltip
 
@@ -1037,7 +1037,7 @@ public class OrdersDetails
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports displaying custom tooltips for columns using the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) component. This feature enables the presentation of additional contextual information when hovering over column content.
 
-To enable custom tooltips, use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature and render the tooltip component within the template definition.
+To enable custom tooltips, use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature and render the `Tooltip` component within the template definition.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
