@@ -667,7 +667,7 @@ The clip mode feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Bl
 
 Enable clip mode by setting the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the desired column.
 
-Three types of clipMode are available:
+Three types of ClipMode are available:
 
 * `Clip` – Truncates cell content that exceeds the cell boundary.
 * `Ellipsis` – Displays ellipsis when content overflows the cell area.
