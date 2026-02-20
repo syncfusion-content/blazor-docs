@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrating Syncfusion Blazor PDF Viewer with Blazor Web App
-description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer (SfPdfViewer2) component into a Blazor Web App project created in Auto render mode, including NuGet installation, service registration, and component usage.
+description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer (SfPdfViewer2) component into a Blazor Web App project created in Auto render mode.
 platform: Blazor
 control: Common
 documentation: ug
