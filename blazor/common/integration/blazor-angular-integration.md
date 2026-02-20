@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Blazor Angular integration | Syncfusion
-description: Learn how to integrate Syncfusion Blazor components into an Angular app using Blazor Custom Elements, enabling Angular to seamlessly render Blazor components.
+description: Learn how to integrate Syncfusion Blazor components into an Angular application using Blazor Custom Elements for seamless UI rendering.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
