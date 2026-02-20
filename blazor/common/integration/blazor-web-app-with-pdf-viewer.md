@@ -23,6 +23,7 @@ If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install
 
 * Ensure you’re in the project root directory where your `.csproj` file is located.
 * Run the following command to install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
+* Before installing the Syncfusion.Blazor.Themes package, ensure that it is not already installed in your project.
 
 ```
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
@@ -30,7 +31,6 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
 
 ```
-Make sure the Syncfusion.Blazor.Themes package is installed in your project — if it’s not already present, the command above will safely add it for you.
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details. Always verify the latest versions on nuget.org before installation.
 
