@@ -246,7 +246,7 @@ Cell customization can be achieved through these approaches:
 
 To customize the appearance of cells, use the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event. This event is triggered during the rendering of each cell and provides access to cell-specific information.
 
-In this setup, the column is checked to confirm if it corresponds to the **Freight** field, and a CSS class is applied based on the cell’s value.
+In this setup, the column is checked to confirm if it corresponds to the "Freight" field, and a CSS class is applied based on the cell’s value.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -349,7 +349,7 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLgjvivAmfpAZcD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-* Using the `QueryCellInfo` event, the appearance of the **Freight** column can be customized based on value ranges. Each range is styled with distinct text and background colors using refined CSS.
+* Using the `QueryCellInfo` event, the appearance of the "Freight" column can be customized based on value ranges. Each range is styled with distinct text and background colors using refined CSS.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
