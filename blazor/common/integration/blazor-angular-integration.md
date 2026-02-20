@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Angular integration | Syncfusion
-description: Learn how to integrate Syncfusion Blazor components into an Angular app using Blazor Custom Elements, enabling Angular to seamlessly render Blazor-based UI.
+description: Learn how to integrate Syncfusion Blazor components into an Angular app using Blazor Custom Elements, enabling Angular to seamlessly render Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 This guide demonstrates how to use **Syncfusion Blazor components** inside an **Angular** application.
 
-Blazor and Angular are two different web technologies—Blazor uses .NET and Razor components, while Angular uses TypeScript and HTML. Normally, these frameworks cannot share UI components. However, **Blazor Custom Elements** make this possible. A Custom Element turns a Blazor component into a standard HTML tag that Angular can recognize and render.
+Blazor and Angular are two different web technologies. Blazor uses .NET and Razor components, while Angular uses TypeScript and HTML. Normally, these frameworks cannot share UI components. However, **Blazor Custom Elements** make this possible. A Custom Element turns a Blazor component into a standard HTML tag that Angular can recognize and render.
 
-## Prerequisite Software
+## Prerequisite
 
 * .NET 10 SDK 
 * Node.js 18+ 
@@ -31,29 +31,29 @@ If you already have a Blazor project, proceed to the package installation sectio
 
 ### Install Custom Elements packages
 
-To enable Custom Elements, install the required Microsoft packages:
+To enable Custom Elements, install the required Microsoft packages.
 
 ```
 dotnet add package Microsoft.AspNetCore.Components.Web --version 10.0.3 
 dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0.3 
 ```
 
-Alternatively, install them using the NuGet Package Manager:
+Alternatively, install them using the NuGet Package Manager.
 
 ```
 Microsoft.AspNetCore.Components.Web 
 Microsoft.AspNetCore.Components.CustomElements 
 ```
 
-### Register it as a Custom Element 
+### Register it as a Custom Elements 
 
-Add the following line inside **Program.cs** to expose the component as a Custom Element:
+Add the following line inside **Program.cs** to expose the component as a Custom Elements.
 
 ```
 builder.RootComponents.RegisterCustomElement<SfxGridWasm.Pages.OrdersGrid>("sf-orders-grid"); 
 ```
 
-## Integrating the Custom Element in Angular 
+## Integrating the Custom Elements in Angular 
 
 ### Create the Angular app 
 
@@ -67,7 +67,7 @@ ng new AngularApp --standalone
 
 Blazor and Angular run on different local servers. To allow Angular to load Blazor files, you must create a proxy file. 
 
-Create a new file named **proxy.conf.json** inside the **Angular project’s src/ folder** and add the following content:
+Create a new file named **proxy.conf.json** inside the Angular project’s **src/** folder and add the below content.
 
 ```
 { 
@@ -95,7 +95,7 @@ Create a new file named **proxy.conf.json** inside the **Angular project’s src
 
 ```
 
-Then update the start script in **package.json**: 
+Then update the start script in **package.json**.
 
 ```
 "start": "ng serve --proxy-config proxy.conf.json" 
@@ -138,7 +138,7 @@ export class AppComponent {}
 
 ```
 
-CUSTOM_ELEMENTS_SCHEMA allows Angular to accept unknown HTML tags such as <sf-orders-grid>. 
+[CUSTOM_ELEMENTS_SCHEMA](https://angular.dev/api/core/CUSTOM_ELEMENTS_SCHEMA) allows Angular to accept unknown HTML tags such as `<sf-orders-grid>`. 
 
 ## Running Both Applications 
 
