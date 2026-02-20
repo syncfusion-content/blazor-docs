@@ -121,9 +121,10 @@ The Mention component supports loading data from remote services using the [Data
 
 N> **Note:** Ensure that `Syncfusion.Blazor.Data` is imported in your component or page to enable remote data binding with DataManager.
 
-> [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/mention-integration?theme=bootstrap5)
-
 ## See also
 
 * [Mention](https://blazor.syncfusion.com/documentation/mention/getting-started)
+* [Rich Text Editor documentation](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started)
+* [Rich Text Editor events](https://blazor.syncfusion.com/documentation/rich-text-editor/events)
+* [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/mention-integration?theme=bootstrap5)
 * [GitHub Example - Blazor Rich Text Editor with Mention](https://github.com/SyncfusionExamples/blazor-richtexteditor-mention)
