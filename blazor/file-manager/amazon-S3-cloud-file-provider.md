@@ -9,12 +9,10 @@ documentation: ug
 
 # Amazon S3 cloud file provider
 
-<a id="intro-s3"></a>
 ## Introduction to Amazon S3
 
 Amazon Simple Storage Service (Amazon S3) is AWS's object storage service for storing and retrieving any amount of data. S3 is durable, scalable, and pay‑as‑you‑go. In this guide the Syncfusion Blazor File Manager connects to S3 through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
 
-<a id="prerequisites"></a>
 ## Prerequisites
 
 Before you integrate Amazon S3 with the Syncfusion Blazor File Manager, ensure you have:
@@ -22,7 +20,6 @@ Before you integrate Amazon S3 with the Syncfusion Blazor File Manager, ensure y
  - A configured S3 Bucket
  - AWS credentials: `awsAccessKeyId`, `awsSecretAccessKeyId`, `bucketRegion`, `awsRegion`.
 
-<a id="setup-s3"></a>
 ## Setting Up Amazon S3
 
 ### Create an S3 Bucket
@@ -32,7 +29,6 @@ Before you integrate Amazon S3 with the Syncfusion Blazor File Manager, ensure y
  - Provide a DNS-compliant bucket name. Click this [link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) for more details.
  - Choose the AWS region. Click this [link](https://docs.aws.amazon.com/general/latest/gr/s3.html) for more details.
 
-<a id="backend-setup"></a>
 ## Backend Setup
 
 Clone the [Amazon S3 File Provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider) using the following command,
@@ -47,7 +43,6 @@ N> This Amazon S3 provider for the Syncfusion Blazor File Manager is intended fo
 
 To initialize a local service and to perform file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `AmazonS3ProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs).
 
-<a id="register-credentials"></a>
 ## Registering S3 Credentials in the Provider
 
 After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register Amazon S3 client account details like **bucketName**, **awsAccessKeyId**, **awsSecretAccessKeyId** and **awsRegion** details in **RegisterAmazonS3** method in the `AmazonS3ProviderController.cs` file to perform the file operations.
@@ -58,7 +53,6 @@ this.operation.RegisterAmazonS3("<---bucketName--->", "<---awsAccessKeyId--->", 
 
 ```
 
-<a id="configure-ui"></a>
 ## Configuring Syncfusion File Manager UI
 
 To configure File Manager component, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search and install **Syncfusion.Blazor.FileManager** and **Syncfusion.Blazor.Themes**. Integrate the FileManager component by pasting the below code in your .razor file of the Blazor application. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app) for more details.
@@ -83,7 +77,6 @@ Now, build and run the Amazon File Service provider project. It will be hosted i
 
 To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Amazon S3 cloud file provider, you need to initialize the Amazon S3 cloud file provider in the controller.
 
-<a id="supported-ops"></a>
 ## Supported File Operations
 
 We have enabled below list of features that can be performed using Amazon File Service provider,
