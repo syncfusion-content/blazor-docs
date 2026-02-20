@@ -139,6 +139,11 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer compo
 </tr>
 <tr>
 <td></td>
+<td>Server</td>
+<td>@rendermode InteractiveServer</td>
+</tr>
+<tr>
+<td></td>
 <td>None</td>
 <td>---</td>
 </tr>
