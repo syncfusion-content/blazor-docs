@@ -14,10 +14,10 @@ Speed up Blazor development with ready-made prompts for common scenarios. Use th
 
 ## How to Use
 
-Ensure that the Syncfusion MCP server is configured and running before executing prompts.
+Ensure that the Syncfusion MCP Server is configured and running before executing prompts.
 
 * Select a prompt that aligns with your development requirements.
-* Copy the complete prompt, including the handle (e.g., #sf_blazor_ui_builder).
+* Copy the complete prompt, including the tool (e.g., #sf_blazor_ui_builder).
 * Customize the prompt for your specific use case.
 * Execute the prompt through the MCP Server.
 * Validate all generated code through thorough testing before production deployment.
