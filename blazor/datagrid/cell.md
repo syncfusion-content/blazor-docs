@@ -459,7 +459,7 @@ In this setup, the column is checked to confirm if it corresponds to the "Freigh
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNroZyCqJkbikUBx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the DataGrid.
+> * The `QueryCellInfo` event is triggered for every cell in the DataGrid.
 > * Frequent use of this event to modify a large number of cells significantly impacts Grid performance.
 > * Use this event selectively and optimize logic to avoid unnecessary rendering overhead.
 
@@ -769,7 +769,7 @@ Three types of clipMode are available:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAiMZUrUOzmfhI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property is set to `Ellipsis` by default.
+> * The `Columns.ClipMode` property is set to `Ellipsis` by default.
 > * When the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property is defined for a column, clip mode is automatically applied if the content exceeds the specified width.
 > * If clip mode is applied without tooltip support, essential data will be hidden from view. To ensure accessibility and data visibility, `Ellipsis` or `EllipsisWithTooltip` must be used when truncation occurs.
 
