@@ -83,7 +83,7 @@ In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/
 
 ## Customization
 
-The following options in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) customize the appearance of data labels:
+The following properties in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) customize the appearance of data labels:
 
 - [MapsLayerDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelBorder.html): Configures label border color and width.
 - [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Fill): Sets the label background color.
@@ -137,13 +137,13 @@ Animate data labels on initial render by setting the [AnimationDuration](https:/
 
 ## Smart labels
 
-Handle labels that intersect shape borders by using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property. Available options:
+Manage labels that intersect shape borders by using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property. Available options:
 
 - None
 - Hide
 - Trim
 
-```cshtml
+```
 
 @using Syncfusion.Blazor.Maps
 
@@ -164,12 +164,13 @@ Handle labels that intersect shape borders by using the [SmartLabelMode](https:/
 
 ## Intersect action
 
-Handle labels that intersect with other labels by using the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property. Available options:
+Manage labels that intersect with other labels by using the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property. Available options:
 
 - None
 - Hide
 - Trim
-```cshtml
+
+```
 
 @using Syncfusion.Blazor.Maps
 

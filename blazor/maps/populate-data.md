@@ -9,7 +9,7 @@ documentation: ug
 
 # Populate Data in Blazor Maps Component
 
-This section explains how to supply data inputs and provide them to the Maps component.
+This section describes how to provide data inputs and pass them to the Maps component.
 
 ## Geometry types
 
