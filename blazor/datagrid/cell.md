@@ -112,7 +112,7 @@ To configure:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAMZDRBetNXSsV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the DataGrid.
+> * The `DisableHtmlEncode` property disables HTML encoding for the corresponding column in the DataGrid.
 > * When set to `false`, HTML tags in the column’s data are rendered as HTML.
 > * When set to `true`, HTML tags are encoded and displayed as plain text.
 > * Disabling HTML encoding introduces potential security vulnerabilities. Enable this feature only when using fully trusted and sanitized data sources.
