@@ -29,8 +29,8 @@ N> License registration is not required if you reference Syncfusion<sup style="f
 
 Generate license keys from the following Syncfusion account pages:
 
-* **License & Downloads**: https://syncfusion.com/account/downloads
-* **Trial & Downloads**: https://www.syncfusion.com/account/manage-trials/downloads
+* [License & Downloads](https://syncfusion.com/account/downloads)
+* [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads)
 
 ![License and Downloads page showing Get Community License Key](images/get-community-license-key.png)
 
