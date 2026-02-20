@@ -34,19 +34,15 @@ If you already have a Blazor project, continue to package installation. Otherwis
 To enable Custom Elements, install the required Microsoft packages:
 
 ```
-
 dotnet add package Microsoft.AspNetCore.Components.Web --version 10.0.3 
 dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0.3 
-
 ```
 
 Alternatively, install them using the NuGet Package Manager:
 
 ```
-
 Microsoft.AspNetCore.Components.Web 
 Microsoft.AspNetCore.Components.CustomElements 
-
 ```
 
 ### Register it as a Custom Element 
@@ -54,9 +50,7 @@ Microsoft.AspNetCore.Components.CustomElements
 Add the following line inside **Program.cs** to expose the component as a Custom Element:
 
 ```
-
 builder.RootComponents.RegisterCustomElement<SfxGridWasm.Pages.OrdersGrid>("sf-orders-grid"); 
-
 ```
 
 ## Integrating the Custom Element in Angular 
@@ -66,9 +60,7 @@ builder.RootComponents.RegisterCustomElement<SfxGridWasm.Pages.OrdersGrid>("sf-o
 If you already have an Angular project, move to the next step. Otherwise, create one using the Angular CLI. 
 
 ```
-
 ng new AngularApp --standalone 
-
 ```
 
 ### Configure Angular proxy 
@@ -78,7 +70,6 @@ Blazor and Angular run on different local servers. To allow Angular to load Blaz
 Create a new file named **proxy.conf.json** inside the Angular project’s src/ folder and add the following content:
 
 ```
-
 { 
 
   "/blazor": { 
@@ -107,9 +98,7 @@ Create a new file named **proxy.conf.json** inside the Angular project’s src/ 
 Then update the start script in **package.json**: 
 
 ```
-
 "start": "ng serve --proxy-config proxy.conf.json" 
-
 ```
 
 ### Load Syncfusion & Blazor runtime scripts
@@ -117,10 +106,8 @@ Then update the start script in **package.json**:
 These scripts are required for loading both the Blazor runtime and Syncfusion components. Add them to Angular’s **index.html** file.
 
 ```
-
 <link rel="stylesheet" href="/blazor/_content/Syncfusion.Blazor.Themes/bootstrap5.css" /> 
 <script src="/blazor/_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"></script> 
-
 ```
 WebAssembly:
 
