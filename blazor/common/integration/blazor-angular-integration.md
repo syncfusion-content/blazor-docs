@@ -1,19 +1,17 @@
 ---
 layout: post
 title: Blazor Angular integration | Syncfusion
-description: Learn how to integrate Blazor syncfusion components with angular.
+description: Learn how to integrate Blazor Syncfusion components with Angular.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion Blazor Components in Angular Using Blazor Custom Elements 
+# Integrating Syncfusion Blazor Components in Angular
 
-This guide demonstrates how to use **Syncfusion Blazor components** inside an **Angular** application. 
+This guide demonstrates how to use **Syncfusion Blazor components** inside an **Angular** application through **Blazor Custom Elements**, allowing Angular to render Blazor-based UI components.
 
-Blazor and Angular are two different web technologies. Blazor uses .NET and Razor components, while Angular uses TypeScript and HTML. Normally, these frameworks cannot share UI components. However, **Blazor Custom Elements** make this possible. A Custom Element turns a Blazor component into a normal HTML tag that Angular can recognize and display. 
-
-## Prerequisite software
+## Prerequisite Software
 
 * .NET 10 SDK 
 * Node.js 18+ 
@@ -23,9 +21,9 @@ Blazor and Angular are two different web technologies. Blazor uses .NET and Razo
 
 ### Create the project
 
-If you already have a Blazor project, continue to package installation. Otherwise, create one using Syncfusion’s Blazor getting‑started guides  
+If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion’s Blazor getting‑started guides.
 
-[Web Assembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+[WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
 [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
@@ -67,13 +65,13 @@ ng new AngularApp --standalone
 
 Blazor and Angular run on different local servers. To allow Angular to load Blazor files, you must create a proxy file. 
 
-Create a new file named **proxy.conf.json** inside the Angular project’s src/ folder and add the following content:
+Create a new file named **proxy.conf.json** inside the **Angular project’s src/ folder** and add the following content:
 
 ```
 { 
 
   "/blazor": { 
-    "target": "http://localhost:5021", //Here share the hosted url of blazor 
+    "target": "http://localhost:5021", // Provide the hosted URL of the Blazor application. 
     "secure": false, 
     "changeOrigin": true, 
     "logLevel": "debug", 
@@ -103,7 +101,7 @@ Then update the start script in **package.json**:
 
 ### Load Syncfusion & Blazor runtime scripts
 
-These scripts are required for loading both the Blazor runtime and Syncfusion components. Add them to Angular’s **index.html** file.
+These scripts are required to load the Blazor runtime and Syncfusion components. Add them to Angular’s **index.html** file.
 
 ```
 <link rel="stylesheet" href="/blazor/_content/Syncfusion.Blazor.Themes/bootstrap5.css" /> 
@@ -121,11 +119,9 @@ Server:
 <script src="/blazor/_framework/blazor.server.js"></script> 
 ```
 
-###  Use the custom element in Angular
+### Use the custom element in Angular
 
-Now that everything is configured, you can display your Blazor component inside Angular. 
-
-Here, define the schemas and custom element tag in the **app.ts** file. 
+Define the schemas and the custom element tag in the **app.ts** file. 
 
 ```
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; 
@@ -140,13 +136,13 @@ export class AppComponent {}
 
 ```
 
-CUSTOM_ELEMENTS_SCHEMA allows Angular to accept unknown HTML tags like <sf-orders-grid>. 
+CUSTOM_ELEMENTS_SCHEMA allows Angular to accept unknown HTML tags such as <sf-orders-grid>. 
 
 ## Running Both Applications 
 
 You can run both apps separately or together. 
 
-### Options 1: Run separately 
+### Option 1: Run separately 
 
 Blazor host:
 
@@ -161,27 +157,27 @@ npm start
 ```
 Open the Angular development URL to see the Blazor Grid inside Angular. 
 
-N> Start the Blazor application first so Angular can load its resources through the proxy.
+N> Start the Blazor application first so that Angular can load its resources through the proxy.
 
-### Options 2:  Run both with concurrently 
+### Option 2: Run both using the concurrently package 
 
 ```
 npm install --save-dev concurrently 
 ```
 
-N> Install this package once
+N> Install this package only once.
 
 Add the following scripts to  **package.json**
 
 ```
-"start:blazor": "dotnet watch run --project ../SfxGridWasm", //Here share the blazor project name 
+"start:blazor": "dotnet watch run --project ../SfxGridWasm", //Replace this with your Blazor project name. 
 
 "start:ng": "ng serve --proxy-config proxy.conf.json", 
 
 "start:all": "concurrently -k -n BLAZOR,ANGULAR -c cyan,green \"npm:start:blazor\" \"npm:start:ng\"", 
 ```
 
-Then, Run both with one command:  
+Then, run both with one command:  
 
 ```
  npm run start:all 
