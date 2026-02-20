@@ -67,7 +67,7 @@ Refer the following steps to create a Form and validate it.
 {% endtabs %}
 
 * `EditForm` is Blazor's component for creating a forms.
-* `Model` links to the data model (RegistrationModel) from form fiels.
+* `Model` links to the data model (RegistrationModel) from form fields.
 * `OnValidSubmit` triggers only when all the validation rules passed.
 
 **Step 2:** Validation components
