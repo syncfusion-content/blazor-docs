@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Integration with Other Syncfusion Products: Using Blazor with PDF Viewer
+# Integrating Syncfusion Blazor PDF Viewer into a Blazor Web App
 
 This article explains how to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor PDF Viewer` component into a Blazor Web App using [Visual Studio Code](https://code.visualstudio.com/). Before proceeding, ensure you have set up a Blazor Web App in `Auto` render mode. For detailed instructions on creating a Blazor Web App in `Auto` mode using Visual Studio Code, refer to the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code).
 
@@ -15,28 +15,22 @@ The following steps guide you through integrating the Syncfusion<sup style="font
 
 ## Prerequisites
 
-* .NET SDK: Use the latest .NET version (e.g., .NET 10 or .NET 11 preview, as applicable for your project; check compatibility with Syncfusion versions).
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements): Ensure your development environment meets the system requirements for Blazor components.
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet Packages in the App
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
 * Run the following command to install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
 
-{% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
-
+```
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
 
-{% endhighlight %}
-
-{% endtabs %}
+```
+Make sure the Syncfusion.Blazor.Themes package is installed in your project — if it’s not already present, the command above will safely add it for you.
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details. Always verify the latest versions on nuget.org before installation.
 
@@ -48,14 +42,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 Open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SfPdfViewer` namespaces.
 
-{% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
-
+```
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
@@ -102,7 +93,7 @@ await builder.Build().RunAsync();
 
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Before adding the stylesheet reference, ensure no Syncfusion theme (e.g. bootstrap5.css, material.css, etc.) is already included in the `<head>` section to avoid duplicate or conflicting styles, then include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` tag in the **~/Components/App.razor** file as shown below:
 
 ```html
 <head>
@@ -160,6 +151,9 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
+Add the Syncfusion® PDF Viewer component in a `.razor` file within the **client project**.  
+You can either modify an existing file or create a new `.razor` file in the `Pages` folder or in `Components/Pages` depending on your project structure.
+
 {% tabs %}
 {% highlight razor %}
 
@@ -173,44 +167,14 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-### Move the Razor file to the Client project
-In a Blazor Web App using Auto or WebAssembly render mode, interactive components such as the Syncfusion SfPdfViewer2 must reside in the client project (typically named <YourApp>.Client) to function correctly.
-Follow these steps:
-
-* Move the Razor file that contains the <SfPdfViewer2> component (for example, Home.razor, Index.razor, or any custom page) from the main project’s Pages folder (or Components/Pages folder, depending on your project structure) to the corresponding folder in the client project — usually <YourApp>.Client/Pages or <YourApp>.Client/Components/Pages.
-* If the target folder or file does not already exist in the client project:
-    1. Create the necessary folder structure in the client project (e.g., Pages or Components/Pages).
-    2. Move or paste the .razor file into that location.
-
-After moving the file, ensure the following:
-
-* The client project’s ~/_Imports.razor file includes the required Syncfusion namespaces (as configured earlier).
-* If using per-page/component interactivity, the appropriate render mode directive remains at the top of the file:
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-(or @rendermode InteractiveWebAssembly if preferred).
 
 ###  Run the Application
 
-1. Open the terminal in VS Code (`Ctrl + ``).
-2. Navigate to your project root (where the main `.csproj` is):
-3. Run the app:
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
+```
 
 dotnet run
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer component in the default web browser.
 
