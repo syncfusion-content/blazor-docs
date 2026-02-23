@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Installation Guide | Syncfusion MCP Tools
-description: Step-by-step guide to install and set up the Syncfusion Blazor MCP Tools server in VS Code, Cursor, and Code Studio for AI-powered Blazor development.
+title: Installation Guide | Syncfusion MCP Server
+description: Step-by-step guide to install and set up the Syncfusion Blazor MCP server in VS Code, Cursor, and Code Studio for AI-powered Blazor development.
 control: Installation
 platform: blazor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion MCP Tools
+# Installing Syncfusion MCP Server
 
-Syncfusion MCP Tools provide AI-powered assistance for building Blazor applications with Syncfusion components. This guide will help you install and configure the MCP server in your development environment.
+Syncfusion MCP Server provide AI-powered assistance for building Blazor applications with Syncfusion components. This guide will help you install and configure the MCP server in your development environment.
 
 ## Available Modes
 
-The Syncfusion MCP Tools offer two modes:
+The Syncfusion MCP Server offer two modes:
 
 * **Agentic UI Builder** – Complete toolkit for building user interfaces with Layout, Component, and Styling tools. Coordinates multi-step workflows automatically.
 * **AI Coding Assistant** – Provides contextual component documentation, code snippets, and configuration examples to accelerate development and reduce documentation lookups.
@@ -69,17 +69,17 @@ Obtain your Syncfusion API key before proceeding:
 
 ## Generic MCP Server Settings
 
-All MCP clients require these standard settings for the Syncfusion MCP server:
+All MCP clients require these standard settings for the Syncfusion MCP Server:
 
 * **npm package name**: `@syncfusion/blazor-assistant`  
 * **Type**: `stdio` (standard input/output transport)  
 * **Command**: `npx`  
 * **Arguments**: `-y`  
-* **Server name**: `syncfusion-blazor-mcp`
+* **Server name**: `sf-blazor-mcp`
 
 ## Setting up in MCP Clients
 
-Syncfusion MCP Tools can be configured at two levels:
+Syncfusion MCP Server can be configured at two levels:
 
 * **Global-level**—Server is available across all projects in your IDE
 * **Workspace-level**—Server is available only for a specific project or workspace
@@ -88,7 +88,7 @@ The following sections provide detailed setup instructions for popular developme
 
 ### Global Configuration
 
-Configure the Syncfusion MCP server globally to make it available across all workspaces in your IDE.
+Configure the Syncfusion MCP Server globally to make it available across all workspaces in your IDE.
 
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
@@ -134,7 +134,7 @@ Create a `.vscode/mcp.json` file in your workspace with the MCP server configura
 
 {
   "servers": {
-    "syncfusion-blazor-mcp": {
+    "sf-blazor-mcp": {
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "@syncfusion/blazor-assistant@latest"],
@@ -154,7 +154,7 @@ Create a `.cursor/mcp.json` file in your workspace with the MCP server configura
 
 {
   "mcpServers": {
-    "syncfusion-blazor-mcp": {
+    "sf-blazor-mcp": {
       "command": "npx",
       "args": ["-y", "@syncfusion/blazor-assistant@latest"],
       "env": {
@@ -169,7 +169,7 @@ Create a `.cursor/mcp.json` file in your workspace with the MCP server configura
 {% endhighlight %}
 {% endtabs %}
 
-**Verify Installation:** Check your editor's MCP server list for `syncfusion-blazor-mcp` appears with a "Connected" status to confirm successful installation.
+**Verify Installation:** Check your editor's MCP Server list for `sf-blazor-mcp` appears with a "Connected" status to confirm successful installation.
 
 ## What's Next
 
@@ -202,6 +202,6 @@ Product support is available through the following media.
 
 ## See also
 
-* [MCP Tools Overview](./overview)
+* [MCP Server Overview](./overview)
 * [Agentic UI Builder - Getting Started](./agentic-ui-builder/getting-started)
 * [AI Coding Assistant - Getting Started](./ai-coding-assistant/getting-started)
