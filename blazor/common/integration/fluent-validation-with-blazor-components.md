@@ -1,110 +1,50 @@
 ---
 layout: post
-title: Fluent UI Validation in Syncfusion Blazor components
+title: Fluent UI and Validation with Syncfusion Blazor components
 description: Checkout and learn about the documentation for building an accessible Fluent UI registration form using Syncfusion Blazor components in Blazor Server App.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Fluent UI Validation with Blazor Components
+# Integrating Fluent UI Component and Validation with Blazor Components
 
-This section briefly explains how to include a **Fluent UI Registration Form** using Syncfusion Blazor components in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
-
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+This guide demonstrates how to integrate **Fluent UI Component** and validation with **Syncfusion Blazor components** to create a **Registration Form** in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Create a new Blazor App in Visual Studio
 
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+A Blazor Server application can be created in Visual Studio by using the following link:
 
-Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) when creating a Blazor Server App.
+* [Create a Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
-## Install NuGet packages in the App
+## Install Required NuGet Packages
 
-Open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Microsoft.FluentUI.AspNetCore.Components](https://www.nuget.org/packages/microsoft.FluentUI.AspNetCore.Components), [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/), [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/), and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+### Step 1: Install Syncfusion Packages
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install the following packages:
 
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+* Syncfusion.Blazor.Inputs
+* Syncfusion.Blazor.Buttons
+* Syncfusion.Blazor.Popups
+* Syncfusion.Blazor.Themes
 
-Install-Package Microsoft.FluentUI.AspNetCore.Components -Version 4.14.0
+Alternatively, run the following commands in the Package Manager Console:
+
+```powershell
 Install-Package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Popups -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
-
-## Add Import Namespaces
-
-Open the **~/_Imports.razor** file and import the following namespaces.
-
-{% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Buttons
-@using Microsoft.FluentUI.AspNetCore.Components
-
-{% endhighlight %}
-{% endtabs %}
-
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
-
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of the Blazor Server App.
-
-{% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
-
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-....
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add stylesheet and script resources
-
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
-
-```html
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-....
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
+### Step 2: Install Fluent UI Package
 
-## Add Form Component
+Search and install [Microsoft.FluentUI.AspNetCore.Components](https://www.nuget.org/packages/microsoft.FluentUI.AspNetCore.Components).
 
-Add the Form component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the page.
+Alternatively, run the following command in the Package Manager Console:
 
-N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
-
-```razor
-@* desired render mode define here *@
-@rendermode InteractiveServer
+```powershell
+Install-Package Microsoft.FluentUI.AspNetCore.Components -Version 4.14.0
 ```
 
 ## Step-by-Step Code Explanation
@@ -122,24 +62,32 @@ The `EditForm` component is a Blazor component that manages form state, validati
     <h2>Registration Form</h2>
 
     <EditForm Model="@RegistrationModel" OnValidSubmit="@HandleValidSubmit">
+        <!-- Form fields go here -->
+    </EditForm>
 </div>
 
 @code {
     private RegistrationFormModel RegistrationModel = new();
 
-    private void HandleValidSubmit()
+    private async Task HandleValidSubmit()
     {
         // Handle form submission
-        Console.WriteLine("Form submitted successfully!");
+    }
+    public class RegistrationFormModel
+    {
+        public string FirstName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public bool AgreeToTerms { get; set; } = false;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-### **Step 2:** Add Validation
+### **Step 2:** Add Validation Components
 
-Form validation ensures that users provide valid data before submission. Syncfusion and Fluent UI offer built-in validation components:
+Form validation ensures that users provide valid data before submission. Add the following validation components:
 
 * **DataAnnotationsValidator** - Automatically validates form fields using C# data annotation attributes such as `[Required]`, `[EmailAddress]`, `[StringLength]`, etc.
 * **FluentValidationSummary** - Displaying validation errors in one place helps users quickly identify and fix issues.
@@ -151,17 +99,33 @@ Form validation ensures that users provide valid data before submission. Syncfus
 
 ### **Step 3:** Add Form Input Fields
 
-Add text input fields using the Syncfusion `SfTextArea` component to collect user information. The `@bind-Value` directive enables two-way data binding, automatically synchronizing user input with the form model. The `ValidationMessage` component displays validation errors when required fields are empty.
+Add text input fields using the Syncfusion `SfTextBox` component to collect user information. The `@bind-Value` directive enables two-way data binding, automatically synchronizing user input with the form model. The `ValidationMessage` component displays validation errors when required fields are empty.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea @bind-Value="@RegistrationModel.FirstName"
+<SfTextBox @bind-Value="@RegistrationModel.FirstName"
             Label="First Name"
             Placeholder="Enter your first name"
             Required="true"
             aria-label="First Name" />
 <ValidationMessage For="@(() => RegistrationModel.FirstName)" />
+
+<SfTextBox @bind-Value="@RegistrationModel.Email"
+            Label="Email Address"
+            Type="InputType.Email"
+            Placeholder="your.email@example.com"
+            Required="true"
+            aria-label="Email Address" />
+<ValidationMessage For="@(() => RegistrationModel.Email)" />
+
+<SfTextBox @bind-Value="@RegistrationModel.Password"
+            Label="Password"
+            Type="InputType.Password"
+            Placeholder="Enter a strong password"
+            Required="true"
+            aria-label="Password" />
+<ValidationMessage For="@(() => RegistrationModel.Password)" />
 
 {% endhighlight %}
 {% endtabs %}
@@ -192,27 +156,28 @@ Add submit and clear buttons to complete the form. The **Register button** (Subm
 
 ## Integrating Fluent UI Validation with Blazor Components
 
-The following code example demonstrates how to integrate Fluent UI validation with Syncfusion Blazor components for a complete registration form.
+The following code example demonstrates how to integrate Fluent UI component and validation with Syncfusion Blazor components for a complete registration form.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Home.razor" %}
 
 @page "/"
 
-@using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 @using Microsoft.FluentUI.AspNetCore.Components
+@using Syncfusion.Blazor.Popups
 
 <div class="form-container">
-    <h2>Fluent UI Registration Form</h2>
+    <h2>Registration Form</h2>
 
     <EditForm Model="@RegistrationModel" OnValidSubmit="@HandleValidSubmit">
         <DataAnnotationsValidator />
         <FluentValidationSummary Model="@RegistrationModel.FirstName" />
         <div class="form-group">
-            <SfTextArea @bind-Value="@RegistrationModel.FirstName"
+            <label>First Name:</label>
+            <SfTextBox @bind-Value="@RegistrationModel.FirstName"
                         Label="First Name"
                         Placeholder="Enter your first name"
                         Required="true"
@@ -221,9 +186,10 @@ The following code example demonstrates how to integrate Fluent UI validation wi
         </div>
 
         <div class="form-group">
-            <SfTextArea @bind-Value="@RegistrationModel.Email"
+            <label>E-mail Id:</label>
+            <SfTextBox @bind-Value="@RegistrationModel.Email"
                         Label="Email Address"
-                        Type="email"
+                        Type="InputType.Email"
                         Placeholder="your.email@example.com"
                         Required="true"
                         aria-label="Email Address" />
@@ -231,9 +197,10 @@ The following code example demonstrates how to integrate Fluent UI validation wi
         </div>
 
         <div class="form-group">
-            <SfTextArea @bind-Value="@RegistrationModel.Password"
+            <label>Password:</label>
+            <SfTextBox @bind-Value="@RegistrationModel.Password"
                         Label="Password"
-                        Type="password"
+                        Type="InputType.Password"
                         Placeholder="Enter a strong password"
                         Required="true"
                         aria-label="Password" />
@@ -251,22 +218,38 @@ The following code example demonstrates how to integrate Fluent UI validation wi
             <SfButton Type="ButtonType.Submit" Appearance="Appearance.Accent">
                 Register
             </SfButton>
+             
             <SfButton Type="ButtonType.Button" Appearance="Appearance.Neutral" OnClick="@ResetForm">
                 Clear
             </SfButton>
         </div>
+        <SfDialog Target="#target" @ref="DialogObj" Width="300px" Visible="false" ShowCloseIcon="true">
+            <DialogTemplates>
+                <Header>Status</Header>
+                <Content>@DialogContent</Content>
+            </DialogTemplates>
+            <DialogButtons>
+                <DialogButton Content="OK" IsPrimary="true" OnClick="@OnOkClick" />
+            </DialogButtons>
+        </SfDialog>
     </EditForm>
 </div>
 
 @code {
     private RegistrationFormModel RegistrationModel = new();
-
-    private void HandleValidSubmit()
+    private SfDialog DialogObj { get; set; }
+    private string DialogContent { get; set; } = "Loading...";
+    private void OnOkClick()
     {
-        // Handle form submission
-        Console.WriteLine("Form submitted successfully!");
+        // Place your OK logic here
+        RegistrationModel = new();
     }
 
+    private async Task HandleValidSubmit()
+    {
+        DialogContent = "Form Submitted Successfully!";
+        await DialogObj.ShowAsync();
+    }
     private void ResetForm()
     {
         RegistrationModel = new();
@@ -300,6 +283,7 @@ The following code example demonstrates how to integrate Fluent UI validation wi
     }
 
     .form-group {
+        margin-top:20px;
         margin-bottom: 1.5rem;
     }
 
@@ -315,4 +299,3 @@ The following code example demonstrates how to integrate Fluent UI validation wi
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the complete registration form in the default web browser.
 
-<!-- N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common). -->
