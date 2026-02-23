@@ -84,7 +84,30 @@ The `ValueChange` event is triggered when the MultiSelect value changes due to s
 The `Closed` event is triggered after the popup is closed and is useful for post-close logic.
 
 ```cshtml
+<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
+    <MultiSelectEvents TItem="GameFields" TValue="string[]" Closed="@OnClosed"></MultiSelectEvents>
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
+@code {
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<GameFields> Games = new List<GameFields>()
+    {
+        new GameFields(){ ID = "Game1", Text = "American Football" },
+        new GameFields(){ ID = "Game2", Text = "Badminton" },
+        new GameFields(){ ID = "Game3", Text = "Basketball" },
+        new GameFields(){ ID = "Game4", Text = "Cricket" },
+    };
+    private void OnClosed ( ClosedEventArgs args )
+    {
+        // You can run logic when the dropdown popup closes.
+    }
+}
 ```
 
 ## Created
