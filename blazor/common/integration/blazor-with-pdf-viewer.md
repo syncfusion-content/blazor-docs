@@ -52,10 +52,6 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) version 3.119.2. Ensure this version is referenced.
 * dotnet add package SkiaSharp.Views.Blazor -v 3.119.2
 
-{% endtabcontent %}
-
-{% endtabcontents %}
-
 ### Add Import Namespaces
 
 Depending on your project type and interactive render mode, open the appropriate **~/_Imports.razor** file and add the required Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces.
