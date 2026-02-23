@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fluent UI Validation in Syncfusion Blazor components
-description: Checkout and learn about the documentation for building an accessible Fluent UI styled registration form using Syncfusion Blazor components in Blazor Server App.
+description: Checkout and learn about the documentation for building an accessible Fluent UI registration form using Syncfusion Blazor components in Blazor Server App.
 platform: Blazor
 component: Common
 documentation: ug
@@ -315,4 +315,4 @@ The following code example demonstrates how to integrate Fluent UI validation wi
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the complete registration form in the default web browser.
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common).
+<!-- N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common). -->
