@@ -26,7 +26,6 @@ Supported guidelines include:
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> | Meets WCAG 2.2 minimum contrast ratios for text and visual elements. |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> | Ensures touch-based navigation and compatibility with mobile screen readers. |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> | Supports standard keyboard interactions (e.g., Tab, Arrow keys), with limitations in some advanced features like filtering. |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> | Passes most Axe-core checks, with minor issues in specific ARIA configurations. |
 
 <style>
     .post .post-content img {
