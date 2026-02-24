@@ -29,7 +29,7 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 ## Preselected value on OnInitializedAsync
 
-Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value in the [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle method. The following sample binds the value during initial rendering.
+Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value in the [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0#component-initialization-oninitializedasync) lifecycle method. The following sample binds the value during initial rendering.
 
 {% highlight cshtml %}
 
@@ -41,7 +41,7 @@ Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https:/
 
 ## Programmatically change the selected value
 
-Change the component value programmatically by referencing the component instance via the [`@ref`](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute. The following sample changes the value from a button click handler.
+Change the component value programmatically by referencing the component instance via the [`@ref`](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-10.0#ref) attribute. The following sample changes the value from a button click handler.
 
 {% highlight cshtml %}
 
