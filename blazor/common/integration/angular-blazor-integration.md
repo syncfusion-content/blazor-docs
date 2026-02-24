@@ -182,6 +182,6 @@ N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 dotnet run
 ```
 
-Once the compilation is complete, open your browser and navigate to the hosted link(http://localhost:xxxx/) to view your application with the integrated Syncfusion® Data Grid component:
+Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® Data Grid component:
 
 ![Blazor DataGrid Component](../images/Angular-Blazor-Integration.png)
