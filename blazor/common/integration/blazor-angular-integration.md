@@ -47,7 +47,9 @@ Microsoft.AspNetCore.Components.CustomElements
 
 ### Add Syncfusion component
 
-Add **OrdersGrid.razor** file to incorporate the Syncfusion® Data Grid component: 
+Add **.razor** file to incorporate the Syncfusion® Data Grid component:
+
+In this example, the file name used is **OrdersGrid.razor**
 
 ```
 @using Syncfusion.Blazor.Grids
@@ -87,11 +89,15 @@ Add **OrdersGrid.razor** file to incorporate the Syncfusion® Data Grid componen
 
 ### Register it as a Custom Elements 
 
-Add the following line inside **Program.cs** to expose the component as a Custom Elements.
+To use your Razor component inside an Angular application, you must register it as a **Blazor Custom Element**. This registration exposes your **.razor** file as a standard HTML tag.
+
+Any Razor component that you want to use in Angular must be registered inside the **Program.cs** file. Add the following line:
 
 ```
 builder.RootComponents.RegisterCustomElement<SfxGridWasm.Pages.OrdersGrid>("sf-orders-grid"); 
 ```
+
+This line registers the **OrdersGrid** component as a custom element named `<sf-orders-grid>`, making it available for use within your Angular application.
 
 ## Integrating the Custom Elements in Angular 
 
