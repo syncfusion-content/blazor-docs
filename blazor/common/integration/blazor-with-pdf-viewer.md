@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Integrating Syncfusion Blazor PDF Viewer in Blazor Web App(Auto, Server), Blazor WASM
+title: Blazor PDF Viewer Integration
 description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer (SfPdfViewer2) into Blazor Web App and Blazor WebAssembly (WASM) App.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer
+# Integrating Syncfusion® Blazor PDF Viewer
 
 This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)**,`SfPdfViewer2`  into the following project types:
 * Blazor Web App (interactive render modes: Auto, WebAssembly, or Server)
@@ -18,11 +18,21 @@ This guide uses [Visual Studio Code](https://code.visualstudio.com/). If you hav
 ### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements): Make sure your development environment meets the required system specifications for using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
-* For Blazor WASM or Blazor Web App using Auto or WebAssembly modes, install SkiaSharp/WASM tool workloads(required for client‑side rendering):
-    * dotnet workload install wasm-tools
-    * dotnet workload install wasm-tools-net8
-    * dotnet workload install wasm-tools-net9
-    * dotnet workload install wasm-tools-net10
+* For Blazor WASM or Blazor Web App using Auto or WebAssembly modes, install SkiaSharp/WASM tool workloads(required for client‑side rendering). Install only the workload that matches your .NET version.
+
+Example (choose one based on your target .NET version):
+
+```
+# .NET 8
+dotnet workload install wasm-tools-net8
+
+# .NET 9
+dotnet workload install wasm-tools-net9
+
+# .NET 10
+dotnet workload install wasm-tools-net10
+
+```
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet Packages in the App
 
@@ -54,16 +64,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor
 
 Add Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces in the appropriate **~/_Imports.razor** file depending on the project type:
 
-**Blazor Web App**
-
-| Interactive Render Mode | Description |
+| Project Type | File to add namespaces |
 | -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** from the client project.|
-| Server | Open **~/Components/_Imports.razor**.|
-
-**Standalone Blazor WASM**
-
-Add the following in **~/_Imports.razor**:
+| WebAssembly or Auto | **~/_Imports.razor** from the client project |
+| Server | **~/Components/_Imports.razor** |
+| Standalone Blazor WASM | **~/_Imports.razor** |
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -219,7 +224,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer component
 
-Add the `SfPdfViewer2` component to a `Razor` page within your app: 
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component to a `Razor` page within your app: 
 
 **Blazor Web App (WebAssembly or Auto Render Mode)**
 Add to a `.razor` file inside the `client` project’s `Pages` folder.
