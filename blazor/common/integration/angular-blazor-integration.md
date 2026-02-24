@@ -149,7 +149,7 @@ Add this target block to your Blazor project’s **.csproj** file:
   </Target>
 ```
 
-### Load Web Component scripts in Blazor
+### Load Web Component scripts/ themes in Blazor
 
  The generated Angular files (main.js and styles.css) are referenced inside the Blazor host page. This is required for the Web Component to initialize and render correctly inside the Blazor layout. 
 
@@ -178,4 +178,10 @@ N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 
 ## Running the Applications 
 
+```
 dotnet run
+```
+
+Once the compilation is complete, open your browser and navigate to the hosted link(http://localhost:xxxx/) to view your application with the integrated Syncfusion® Data Grid component:
+
+![Blazor DataGrid Component](../images/Angular-Blazor-Integration.png)
