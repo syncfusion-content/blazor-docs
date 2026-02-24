@@ -257,3 +257,5 @@ dotnet run
 
 The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer in your default browser.
 
+![Blazor App with SfPdfViewer rendering in browser](/blazor/common/integration/images/Blazor-PDF-Viewer-Integration.png)
+
