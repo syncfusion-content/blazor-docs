@@ -77,11 +77,6 @@ import { AppComponent} from './app/app';
 import { createApplication, provideHttpClient } from '@angular/platform-browser';
 import { createCustomElement } from '@angular/elements';
 
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR SYNCFUSION_LICENSE_KEY');
-
-
 (async () => {
   try {
     const app = await createApplication({
@@ -179,27 +174,8 @@ You can place the <sf-grid> HTML tag directly inside any **.razor**(e.g Index.ra
 <sf-grid></sf-grid> 
 ```
 
->N `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
+N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 
 ## Running the Applications 
 
 dotnet run
-
-## Troubleshooting
-
-**Custom element not defined**  
-• Ensure `main.js` is loaded after Blazor scripts.
-
-**Grid not rendering**  
-• Ensure `GridModule` is imported into the Angular component.
-
-**404 errors for JS/CSS**  
-• Verify MSBuild copied the Angular output into `wwwroot/lib/sf-grid`.
-
-**Styles missing**  
-• Place `<link rel="stylesheet">` above script tags.
-
-**Angular build failing**  
-• Ensure Node.js 18+ is installed.
-• Run `npm ci` to restore modules.
-
