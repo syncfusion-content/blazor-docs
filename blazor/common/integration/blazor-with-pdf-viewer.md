@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrating Syncfusion® Blazor PDF Viewer
+title: Syncfusion® Blazor PDF Viewer Integration
 description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer (SfPdfViewer2) into Blazor Web App and Blazor WebAssembly (WASM) App.
 platform: Blazor
 control: Common
