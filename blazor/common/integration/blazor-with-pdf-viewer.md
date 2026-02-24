@@ -7,9 +7,9 @@ control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® Blazor PDF Viewer
+# Integrating Syncfusion® PDF Viewer in Blazor Applications
 
-This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)**,`SfPdfViewer2`  into the following project types:
+This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)**,`SfPdfViewer2` into the following project types:
 * Blazor Web App (interactive render modes: Auto, WebAssembly, or Server)
 * Blazor WebAssembly (WASM) App
 
@@ -58,15 +58,13 @@ dotnet restore
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details. Verify the latest versions before installation.
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) version 3.119.2. Ensure this version is referenced.
-
 ### Add Required Namespaces
 
 Add Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces in the appropriate **~/_Imports.razor** file depending on the project type:
 
 | Project Type | File to add namespaces |
 | -- | -- |
-| WebAssembly or Auto | **~/_Imports.razor** from the client project |
+| WebAssembly or Auto | **~/_Imports.razor** in the client project |
 | Server | **~/Components/_Imports.razor** |
 | Standalone Blazor WASM | **~/_Imports.razor** |
 
@@ -102,7 +100,7 @@ builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 
-var app = builder.Build();
+...
 ...
 
 {% endhighlight %}
@@ -121,8 +119,8 @@ builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container
 builder.Services.AddSyncfusionBlazor();
 
-var app = builder.Build();
-....
+...
+...
 
 {% endhighlight %}
 
@@ -142,8 +140,8 @@ builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container
 builder.Services.AddSyncfusionBlazor();
 
-var app = builder.Build();
-....
+...
+...
 
 {% endhighlight %}
 
@@ -162,7 +160,9 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 // Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
+
+...
+...
 
 {% endhighlight %}
 
@@ -174,7 +174,11 @@ Before adding the stylesheet, make sure no other Syncfusion<sup style="font-size
 
 **Blazor Web App**
 
-Add these references to `~/Components/App.razor:` 
+Add the following stylesheet and script references in the `~/Components/App.razor:` 
+
+**Standalone WASM**
+
+Add the same stylesheet and script references to `wwwroot/index.html`.
 
 {% tabs %}
 {% highlight html hl_lines="3 7" %}
@@ -191,11 +195,6 @@ Add these references to `~/Components/App.razor:`
 
 {% endhighlight %}
 {% endtabs %}
-
-**Standalone WASM**
-
-Add the same references to `wwwroot/index.html`.
-
 
 ### Configure Render Mode (Blazor Web App)
 
@@ -224,16 +223,13 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component to a `Razor` page within your app: 
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component to a `.razor` file within your app: 
 
 **Blazor Web App (WebAssembly or Auto Render Mode)**
 Add to a `.razor` file inside the `client` project’s `Pages` folder.
 
-**Blazor Web App (Server Render Mode)**
-Add to `~/Components/Pages/Home.razor` (or another page under Components/Pages).
-
-**Blazor Web App (Standalone WASM)**
-Add to `~/Pages/Home.razor` (or any page under Pages)
+**Blazor Web App (Server Render Mode) or Standalone WASM**
+Add to `~/Pages/Home.razor` or any `.razor` file under under the `Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
