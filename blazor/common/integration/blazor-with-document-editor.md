@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Integrating Syncfusion Blazor Document Editor in Blazor Web App, Blazor Server, and Blazor WASM
-description: Step-by-step guide to integrate Syncfusion Blazor Document Editor (SfDocumentEditorContainer) into Blazor Web App (Auto/Server/WebAssembly), Blazor Server, and standalone Blazor WebAssembly projects. 
+title: Integrating Syncfusion Blazor Document Editor
+description: Step-by-step guide to integrate Syncfusion Blazor Document Editor into Blazor Web App, Blazor Server, and Blazor WebAssembly projects.
 platform: Blazor
 control: Document Editor
 documentation: ug
@@ -32,11 +32,11 @@ The component provides Microsoft Word-like editing features: formatting, tables,
 
 - Open **Visual Studio** → **Create a new project**.
 - Search for and select:
-  - **Blazor Web App** (for modern .NET 8+ with render modes)
+  - **Blazor Web App** (for modern .NET 8/9/10 with render modes)
   - **Blazor Server App** (for classic server-side)
   - **Blazor WebAssembly App** (for standalone WASM)
 - Configure [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) (Auto / Server / WebAssembly) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) (Global / Per page/component) when applicable.
-- Alternatively, use the **[Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)** / **[Template Studio](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs)** for pre-configured setup.
+- Alternatively, use the **[Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)** / **[Template](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs)** for pre-configured setup.
 
 ## Install NuGet Packages
 
@@ -63,9 +63,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 Use Visual Studio Code with the .NET SDK installed.
 
-- For **Blazor Web App** (e.g., Auto mode): Use **[Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)** or manually create via template (but follow VS steps above if possible).
+- For **Blazor App**: Use **[Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)** or manually create via [Template](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc.) 
 - Open terminal in VS Code (**Ctrl + `**) and navigate to desired folder.
-- For **standalone Blazor WASM** or **Blazor Server**, refer to Syncfusion VS Code extension documentation for project creation assistance.
 
 ## Install NuGet Packages
 
