@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion Angular Components in Blazor
 
-This guide explains how to render **Syncfusion Angular components** inside a **Blazor application** by packaging the Angular component as a **Custom Element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, Angular Custom Elements allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
+This guide explains how to render **Syncfusion Angular components** inside a **Blazor application** by packaging the Angular component as a **Custom Element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, **Angular Custom Elements** allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ export class AppComponent {
 
 ### Register the Angular component as a Custom Element
 
-The Angular component is converted into a Web Component by registering it with customElements.define(). After this registration, the component is available as a standalone HTML element such as `<sf-grid>` that Blazor can display. 
+The Angular component is converted into a Web Component by registering it with **customElements.define()**. After this registration, the component is available as a standalone HTML element such as `<sf-grid>` that Blazor can display. 
 
 Add the following code inside **main.ts** to expose the component as a Custom Elements.
 
