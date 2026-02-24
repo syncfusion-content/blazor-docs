@@ -25,9 +25,9 @@ Blazor and Angular are two different web technologies. Blazor uses .NET and Razo
 
 If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion’s Blazor getting‑started guides.
 
-[WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-[Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 ### Install Custom Elements packages
 
@@ -43,6 +43,46 @@ Alternatively, install them using the NuGet Package Manager.
 ```
 Microsoft.AspNetCore.Components.Web 
 Microsoft.AspNetCore.Components.CustomElements 
+```
+
+### Add Syncfusion component
+
+Add **OrdersGrid.razor** file to incorporate the Syncfusion® Data Grid component: 
+
+```
+@using Syncfusion.Blazor.Grids
+ @namespace BlazorServerHost.Pages
+
+<SfGrid DataSource="@Orders" >
+<GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Width="100"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
 ```
 
 ### Register it as a Custom Elements 
@@ -101,9 +141,9 @@ Then update the start script in **package.json**.
 "start": "ng serve --proxy-config proxy.conf.json" 
 ```
 
-### Load Syncfusion & Blazor runtime scripts
+### Load Blazor runtime and Syncfusion theme/scripts
 
-These scripts are required to load the Blazor runtime and Syncfusion components. Add them to Angular’s **index.html** file.
+The Blazor runtime and Syncfusion scripts/themes are required to load Syncfusion Blazor components inside Angular. Add the following to your Angular project’s **index.html** file.
 
 ```
 <link rel="stylesheet" href="/blazor/_content/Syncfusion.Blazor.Themes/bootstrap5.css" /> 
@@ -185,3 +225,6 @@ Then, run both with one command:
  npm run start:all 
 ```
 
+Once the compilation completes, open your browser and navigate to http://localhost:4200/ to see your application with the integrated Syncfusion® Data Grid component:
+
+[Blazor DataGrid Component](../images/Blazor-Angular-Integration.png)
