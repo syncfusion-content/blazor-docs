@@ -1657,6 +1657,7 @@ To achieve this, use the [ObservableCollection](https://learn.microsoft.com/en-u
 
     public class OrdersDetailsObserveData : INotifyPropertyChanged
     {
+
         public OrdersDetailsObserveData(
             int orderID, string customerID, int employeeID, double freight, bool verified,
             DateTime orderDate, string shipCity, string shipName, string shipCountry,
@@ -1737,6 +1738,7 @@ To achieve this, use the [ObservableCollection](https://learn.microsoft.com/en-u
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+
 
 {% endhighlight %}
 {% endtabs %}

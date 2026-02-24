@@ -29,10 +29,8 @@ N> License registration is not required if you reference Syncfusion<sup style="f
 
 Generate license keys from the following Syncfusion account pages:
 
-* **License & Downloads**: https://syncfusion.com/account/downloads
-* **Trial & Downloads**: https://www.syncfusion.com/account/manage-trials/downloads
-
-![License and Downloads page showing Get Community License Key](images/get-community-license-key.png)
+* [License & Downloads](https://syncfusion.com/account/downloads)
+* [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads)
 
 N> * Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are **version and platform specific**. Refer to the [KB](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products) to generate the license key for the required version and platform.
 * Refer to this [KB](https://www.syncfusion.com/kb/8951/which-version-syncfusion-license-key-should-i-use-in-my-application) to know which version of the Syncfusion<sup style="font-size:70%">&reg;</sup> license key should be used in the application.

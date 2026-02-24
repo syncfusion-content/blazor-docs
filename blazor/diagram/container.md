@@ -21,14 +21,14 @@ To create a container, define a [Container](https://help.syncfusion.com/cr/blazo
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes">
 </SfDiagramComponent>
 
 @code
 {
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -38,13 +38,13 @@ To create a container, define a [Container](https://help.syncfusion.com/cr/blazo
             ID = "container",
             Height = 300, Width = 500, OffsetX = 500, OffsetY = 300,
         };
-        nodes.Add(container);
+        _nodes.Add(container);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBICtDmzpHBjmkf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerNode).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerNode.razor).
 
 
 >**Note:** The container ID should be unique, begin with a letter, and not contain spaces or special characters (such as underscores or symbols).
@@ -56,56 +56,56 @@ To add child elements to a container, define the child nodes and assign their ID
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes">
 </SfDiagramComponent>
 
 @code
 {
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            Height = 60,
+            Width = 100,
+            OffsetX = 400,
+            OffsetY = 300,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                ID = "node1",
-                Height = 60,
-                Width = 100,
-                OffsetX = 400,
-                OffsetY = 300,
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-                {
-                    new ShapeAnnotation(){ Content = "Process"}
-                }
-            };
+                new ShapeAnnotation(){ Content = "Process"}
+            }
+        };
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 60,
+            Width = 100,
+            OffsetX = 600,
+            OffsetY = 300,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                ID = "node2",
-                Height = 60,
-                Width = 100,
-                OffsetX = 600,
-                OffsetY = 300,
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-                {
-                    new ShapeAnnotation(){ Content = "Process"}
-                }
-            };
+                new ShapeAnnotation(){ Content = "Process"}
+            }
+        };
         Container container = new Container()
         {
             ID = "container",
             Height = 300, Width = 500, OffsetX = 500, OffsetY = 300,
             Children = new string[] { "node1", "node2" }
         };
-        nodes.Add(node1);
-        nodes.Add(node2);
-        nodes.Add(container);
+        _nodes.Add(node1);
+        _nodes.Add(node2);
+        _nodes.Add(container);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLeijXGTpdvrBys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerSample).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerSample.razor).
 
 ### How to Customize Container Header
 
@@ -116,73 +116,73 @@ The following example shows how to define a container header and customize its a
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes">
 </SfDiagramComponent>
 
 @code
 {
-    public SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     //Initialize the node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
+        {
+            ID = "node1",
+            Height = 60,
+            Width = 100,
+            OffsetX = 400,
+            OffsetY = 300,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                Height = 60,
-                Width = 100,
-                OffsetX = 400,
-                OffsetY = 300,
-                Style = new ShapeStyle()
-                {
-                    Fill = "CornflowerBlue",
-                }
-            };
+                Fill = "CornflowerBlue",
+            }
+        };
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 60,
+            Width = 100,
+            OffsetX = 600,
+            OffsetY = 300,
+            Style = new ShapeStyle()
             {
-                ID = "node2",
-                Height = 60,
-                Width = 100,
-                OffsetX = 600,
-                OffsetY = 300,
-                Style = new ShapeStyle()
-                {
-                    Fill = "CornflowerBlue",
-                }
-            };
+                Fill = "CornflowerBlue",
+            }
+        };
         Container container = new Container()
+        {
+            ID = "container",
+            Header = new ContainerHeader()
             {
-                ID = "container",
-                Header = new ContainerHeader()
+                ID = "containerHeader",
+                Height = 40,
+                Annotation = new ShapeAnnotation()
                 {
-                    ID = "containerHeader",
-                    Height = 40,
-                    Annotation = new ShapeAnnotation()
-                    {
-                        Content = "Container Title",
-                        Style = new TextStyle() { FontSize = 18, Bold = true, Color = "#343434" }
-                    },
-                    Style = new TextStyle()
-                    {
-                        Fill = "CornflowerBlue"
-                    }
+                    Content = "Container Title",
+                    Style = new TextStyle() { FontSize = 18, Bold = true, Color = "#343434" }
                 },
-                Height = 300,
-                Width = 500,
-                OffsetX = 500,
-                OffsetY = 300,
-                Children = new string[] { "node1", "node2" }
-            };
-        nodes.Add(node1);
-        nodes.Add(node2);
-        nodes.Add(container);
+                Style = new TextStyle()
+                {
+                    Fill = "CornflowerBlue"
+                }
+            },
+            Height = 300,
+            Width = 500,
+            OffsetX = 500,
+            OffsetY = 300,
+            Children = new string[] { "node1", "node2" }
+        };
+        _nodes.Add(node1);
+        _nodes.Add(node2);
+        _nodes.Add(container);
     }
 } 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBIMXZmTTwgGvNM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerHeaderSample).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerHeaderSample.razor).
 
 ![Blazor Diagram Container Header](images/ContainerImages/ContainerWithHeader.png)
 
@@ -201,8 +201,8 @@ The following code example shows how to define containers and add them to the sy
 <div class="control-section">
     <div style="width:254px;">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="250px"
-                                      Palettes="@Palettes" SymbolHeight="100" SymbolWidth="100" SymbolMargin="@SymbolMargin">
+            <SfSymbolPaletteComponent @ref="@_symbolPalette" Height="300px" Width="250px"
+                                      Palettes="@_palettes" SymbolHeight="100" SymbolWidth="100" SymbolMargin="@_symbolMargin">
             </SfSymbolPaletteComponent>
         </div>
     </div>
@@ -210,13 +210,13 @@ The following code example shows how to define containers and add them to the sy
 
 @code
 {
-    SfSymbolPaletteComponent symbolpalette;
+    private SfSymbolPaletteComponent _symbolPalette;
     //Define symbol margin.
-    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    private SymbolMargin _symbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
     //Define palattes collection.
-    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    private DiagramObjectCollection<Palette> _palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's container-shape collection.
-    DiagramObjectCollection<NodeBase> ContainerNodes = new DiagramObjectCollection<NodeBase>();
+    private DiagramObjectCollection<NodeBase> _containerNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
     {
@@ -225,9 +225,9 @@ The following code example shows how to define containers and add them to the sy
 
     private void InitPaletteModel()
     {
-        Palettes = new DiagramObjectCollection<Palette>();
+        _palettes = new DiagramObjectCollection<Palette>();
 
-        ContainerNodes = new DiagramObjectCollection<NodeBase>();
+        _containerNodes = new DiagramObjectCollection<NodeBase>();
 
         // Create container with header
         Container container = new Container()
@@ -263,22 +263,22 @@ The following code example shows how to define containers and add them to the sy
             Style = new ShapeStyle() { Fill = "CornflowerBlue" }
         };
 
-        ContainerNodes = new DiagramObjectCollection<NodeBase>()
+        _containerNodes = new DiagramObjectCollection<NodeBase>()
         {
             container,
             containerWithoutHeader,
         };
 
-        Palettes = new DiagramObjectCollection<Palette>()
+        _palettes = new DiagramObjectCollection<Palette>()
         {
-            new Palette(){Symbols = ContainerNodes, Title="Container Shapes", ID="ContainerShapes" },
+            new Palette(){Symbols = _containerNodes, Title="Container Shapes", ID="ContainerShapes" },
         };
       }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtreMNtcpzlVcyaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerPalette).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerPalette.razor).
 
 ![Blazor Diagram Container Palette](images/ContainerImages/ContainerPalette.png)
 
