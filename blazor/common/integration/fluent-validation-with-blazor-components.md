@@ -26,7 +26,6 @@ Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manage
 * Syncfusion.Blazor.Inputs
 * Syncfusion.Blazor.Buttons
 * Syncfusion.Blazor.Popups
-* Syncfusion.Blazor.Themes
 
 Alternatively, run the following commands in the Package Manager Console:
 
@@ -34,7 +33,6 @@ Alternatively, run the following commands in the Package Manager Console:
 Install-Package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Popups -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
 
 ### Step 2: Install Fluent UI Package
