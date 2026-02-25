@@ -36,7 +36,7 @@ Follow the steps below to locate and install the Syncfusion<sup style="font-size
 
 3. When a Blazor package is selected, the right side panel displays detailed information about that package.
 
-4. By default, the latest version is selected. Select the required version from the available options, click **Install** and accept the license terms. The package will be added to the Blazor application.
+4. By default, the latest version is selected. To install a specific release, select the required version from the available options, click **Install** and accept the license terms. The package will be added to the Blazor application.
 
     ![Install a Syncfusion Blazor package from the Package Manager UI](images/InstallNuGet.png)
 
