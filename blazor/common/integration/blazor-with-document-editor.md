@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Data Grid with Document Editor in Blazor Apps
 
-This guide explains how to integrate the **Syncfusion® Blazor Document Editor** (Word Processor – `SfDocumentEditorContainer`)together with the **Syncfusion® Blazor Data Grid**(`SfGrid`) into:
+This guide explains how to integrate the **Syncfusion® Blazor Document Editor** (Word Processor – `SfDocumentEditorContainer`) together with the **Syncfusion® Blazor Data Grid**(`SfGrid`) into:
 
 - **Blazor Web App** (.NET 8 / 9 / 10) using interactive render modes (**Auto**, **WebAssembly**, **Server**)
 - **Blazor Server App**
@@ -22,7 +22,6 @@ The component provides Microsoft Word-like editing features: formatting, tables,
 ## Prerequisites
 
 - [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements): Make sure your development environment meets the required system specifications for using Syncfusion Blazor components.
-
 
 {% tabcontents %}
 
@@ -201,9 +200,7 @@ Before adding the stylesheet, make sure no other Syncfusion theme CSS (e.g., boo
 </body>
 ```
 
-(Choose other themes like material, tailwind, etc., if preferred.)
-
-## Add Document Editor Component
+## Configure Render Mode
 
 If Interactivity location is set to `Per page/component`, specify a render mode at the top of each `~Pages/*.razor` component as needed:
 
