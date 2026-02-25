@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind data and perform CRUD actions with CustomAdaptor in Syncfusion Blazor DataGrid
-description: Learn all about Custom Binding in the Syncfusion Blazor DataGrid and much more.
+title: Blazor DataGrid – CustomAdaptor | Syncfusion
+description: Learn how to bind data, apply DataManager operations, and perform full CRUD processing using a CustomAdaptor in the Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
@@ -96,11 +96,11 @@ A `CustomAdaptor` enables specialized logic for processing each DataManager oper
 
 * **Support for custom data operations**: Enables application‑specific logic for **searching**, **sorting**, **filtering**, **paging**, **grouping**, **aggregates**, and **CRUD** actions.
 
-* **Integration with non‑standard services**: Suitable for legacy APIs, custom endpoints, or backends that do not follow OData or Web API conventions.
+* **Integration with non‑standard services**: Suitable for legacy APIs, custom endpoints, or back‑ends that do not follow OData or Web API conventions.
 
 * **Server‑side logic and rules**: Allows execution of validation, transformations, and domain‑level rules before sending data to the DataGrid.
 
-* **Flexible data‑access layer**: Integrates cleanly with domain services, microservices, and custom business layers.
+* **Flexible data‑access layer**: Integrates cleanly with domain services, micro services, and custom business layers.
 
 * **Custom request handling**: Supports additional parameters, headers, tokens, and payload customization.
 
@@ -111,7 +111,7 @@ A `CustomAdaptor` enables specialized logic for processing each DataManager oper
 A `CustomAdaptor` is suited for applications that require data‑processing workflows beyond the capabilities of built‑in Syncfusion<sup style="font-size:70%">&reg;</sup> adaptors. It is appropriate when the data source applies specialized operational rules, expects custom request parameters, or delivers data in formats that must be aligned with the DataGrid’s requirements.
 Typical adoption scenarios include:
 
-* Environments that rely on custom REST endpoints, microservices, or legacy systems with domain‑specific data‑exchange structures.
+* Environments that rely on custom REST endpoints, micro services, or legacy systems with domain‑specific data‑exchange structures.
 * Architectures where backend logic performs preprocessing, validation, or transformations before data is consumed by the DataGrid.
 * Solutions requiring tenant‑aware filtering, role‑based shaping, or contextual query parameters that must be integrated into each data request.
 * Workflows where data must be enriched, normalized, or structured before being returned as a collection for DataGrid rendering.
