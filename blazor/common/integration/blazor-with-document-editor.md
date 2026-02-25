@@ -34,8 +34,9 @@ The component provides Microsoft Word-like editing features: formatting, tables,
   - **Blazor Web App** (for modern .NET 8/9/10 with render modes)
   - **Blazor Server App** (for classic server-side)
   - **Blazor WebAssembly App** (for standalone WASM)
-- Configure [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) (Auto / Server / WebAssembly) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) (Global / Per page/component) when applicable.
-- Alternatively, use the **[Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)** / **[Template](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs)** for pre-configured setup.
+- Configure [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) (Auto / Server / WebAssembly) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) (Global / Per page/component) when applicable. Follow the Syncfusion guide for creating and setting up a **Blazor App** in Visual Studio:  
+  [Getting started with Syncfusion Blazor App – Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio) 
+- Alternatively, use the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) / [Template](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) for pre-configured setup.
 
 ## Install NuGet Packages
 
@@ -66,8 +67,13 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Use Visual Studio Code with the .NET SDK installed.
 
-- For **Blazor App**: Use **[Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)** or manually create via **[Template](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc.)** 
-- Open terminal in VS Code (**Ctrl + `**) and navigate to desired folder.
+- For **Blazor App** (Blazor App in .NET 8/9/10+):  
+  Follow the official Syncfusion guide for creating and setting up a **Blazor App** in Visual Studio Code:  
+  [Getting started with Syncfusion Blazor App – Visual Studio Code](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code)  
+
+- Alternatively, manually create via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+- Open terminal in VS Code (**Ctrl + `**) and navigate to your desired folder.
 
 ## Install NuGet Packages
 
@@ -233,7 +239,7 @@ Add the Syncfusion Document Editor and Data Grid components to a `.razor` file w
 Add to a `.razor` file inside the `client` project’s `Pages` folder.
 
 **Blazor Web App (Server Render Mode) or Standalone WASM**
-Add to `~/Pages/Home.razor` or any `.razor` file under under the `Pages` folder.
+Add to `~/Pages/Home.razor` or any `.razor` file under the `Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
