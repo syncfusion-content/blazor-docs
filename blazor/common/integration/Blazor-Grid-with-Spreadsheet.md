@@ -22,12 +22,8 @@ This guidance applies to the following Blazor project types:
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create a project.
 
----
-
 ## Prerequisites
 Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion® Blazor components.
-
----
 
 ## Install Required Syncfusion Packages
 Install the necessary Syncfusion packages based on your project type.
