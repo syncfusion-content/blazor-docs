@@ -249,7 +249,7 @@ Add to `~/Pages/Home.razor` or any `.razor` file under under the `Pages` folder.
               Width="100%">
 </SfPdfViewer2>
 
-<h1>Data Grid</h1>
+<h1>DataGrid</h1>
 
 <SfGrid DataSource="@Orders" />
 
