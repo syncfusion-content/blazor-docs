@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Integrating Syncfusion Blazor Document Editor
-description: Step-by-step guide to integrate Syncfusion Blazor Document Editor into Blazor Web App, Blazor Server, and Blazor WebAssembly projects.
+title: Syncfusion® Blazor Document Editor and Data Grid Integration
+description: Step-by-step guide to integrating Syncfusion Blazor Document Editor and Data Grid in Blazor applications.
 platform: Blazor
-control: Document Editor
+control: common
 documentation: ug
 ---
 
-# Integrating Syncfusion® Blazor Document Editor
+# Integrating Syncfusion® Data Grid with Document Editor in Blazor Apps
 
-This guide explains how to integrate the **Syncfusion® Blazor Document Editor** (Word Processor – `SfDocumentEditorContainer`) into:
+This guide explains how to integrate the **Syncfusion® Blazor Document Editor** (Word Processor – `SfDocumentEditorContainer`)together with the **Syncfusion® Blazor Data Grid**(`SfGrid`) into:
 
 - **Blazor Web App** (.NET 8 / 9 / 10) using interactive render modes (**Auto**, **WebAssembly**, **Server**)
-- **Blazor Server** App
-- **Standalone Blazor WebAssembly** (WASM) App
+- **Blazor Server App**
+- **Standalone Blazor WebAssembly(WASM) App**
 
 The component provides Microsoft Word-like editing features: formatting, tables, images, headers/footers, **change tracking**, **comments/collaboration**, and **SFDT/Word import/export**.
 
@@ -21,7 +21,7 @@ The component provides Microsoft Word-like editing features: formatting, tables,
 
 ## Prerequisites
 
-- [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements)
+- [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements): Make sure your development environment meets the required system specifications for using Syncfusion Blazor components.
 
 
 {% tabcontents %}
@@ -42,8 +42,9 @@ The component provides Microsoft Word-like editing features: formatting, tables,
 
 - Go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 - Search and install:
-  - `Syncfusion.Blazor.WordProcessor` -v {{ site.releaseversion }}
-  - `Syncfusion.Blazor.Themes` -v {{ site.releaseversion }}
+  * [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
+  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
+  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 
 **For Blazor Web App (WebAssembly / Auto modes)** → install in the **Client** project.
 
@@ -52,8 +53,11 @@ Alternatively, use Package Manager Console:
 {% highlight powershell tabtitle="Package Manager Console" %}
 Install-Package Syncfusion.Blazor.WordProcessor -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
+
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details. Verify the latest versions before installation.
 
 {% endtabcontent %}
 
@@ -63,7 +67,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 Use Visual Studio Code with the .NET SDK installed.
 
-- For **Blazor App**: Use **[Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)** or manually create via [Template](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc.) 
+- For **Blazor App**: Use **[Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)** or manually create via **[Template](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc.)** 
 - Open terminal in VS Code (**Ctrl + `**) and navigate to desired folder.
 
 ## Install NuGet Packages
@@ -74,10 +78,13 @@ Use Visual Studio Code with the .NET SDK installed.
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
 dotnet add package Syncfusion.Blazor.WordProcessor -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
 {% endhighlight %}
 {% endtabs %}
+
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details. Verify the latest versions before installation.
 
 {% endtabcontent %}
 
@@ -85,19 +92,22 @@ dotnet restore
 
 ## Add Required Namespaces
 
-Add to the appropriate `_Imports.razor` file:
+Add Syncfusion namespaces in the appropriate **~/_Imports.razor** file depending on the project type:
 
 - Blazor Web App:
-  - WebAssembly / Auto → `~/Client/_Imports.razor`
-  - Server → `~/Components/_Imports.razor` or root `_Imports.razor`
-- Standalone WASM / Server → `~/_Imports.razor`
+  * WebAssembly / Auto → `~/Client/_Imports.razor`
+  * Server → `~/Components/_Imports.razor` or root `_Imports.razor`
+- Standalone WASM App/ Server App → `~/_Imports.razor`
 
 ```razor
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DocumentEditor
+@using Syncfusion.Blazor.Grids
 ```
 
 ## Register Syncfusion Blazor Service
+
+Register the Syncfusion Blazor service in your app’s **~/Program.cs**.
 
 {% tabcontents %}
 
@@ -169,11 +179,13 @@ await builder.Build().RunAsync();
 
 ## Add Stylesheet and Script Resources
 
+Before adding the stylesheet, make sure no other Syncfusion theme CSS (e.g., bootstrap5.css, material.css) is already referenced to avoid conflicts.
+
 **Blazor Web App** → add to `~/Components/App.razor` (or `~/App.razor`)
 
 **Standalone WASM** → add to `wwwroot/index.html`
 
-**Blazor Server** (older style) → add to `~/Pages/_Host.cshtml` or `~/Pages/_Layout.cshtml`
+**Blazor Server** → add to `~/Pages/_Host.cshtml` or `~/Pages/_Layout.cshtml`
 
 ```html
 <head>
@@ -181,8 +193,11 @@ await builder.Build().RunAsync();
 </head>
 
 <body>
-    ...
-    <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js"></script>
+
+   	<!-- Syncfusion Blazor Document Editor control's script reference-->
+	<script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
+	<!-- Syncfusion Blazor DataGrid control's script reference -->
+	<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 ```
 
@@ -199,6 +214,8 @@ If Interactivity location is set to `Per page/component`, specify a render mode 
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
+**Example (per page):**
+
 {% tabs %}
 {% highlight razor %}
 
@@ -210,11 +227,56 @@ If Interactivity location is set to `Per page/component`, specify a render mode 
 
 N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default. No per‑page directive is necessary.
 
-```razor
-<SfDocumentEditorContainer EnableToolbar="true" Height="600px" Width="100%" />
-```
-Note: By default, the SfDocumentEditorContainer component initializes an SfDocumentEditor instance internally. If you like to use the events of SfDocumentEditor component, then you can set UseDefaultEditor property as false and define your own SfDocumentEditor instance with event hooks in the application (Razor file).
+## Add Syncfusion Blazor Document Editor component and Data Grid component
 
+
+Add the Syncfusion Document Editor and Data Grid components to a `.razor` file within your app: 
+
+**Blazor Web App (WebAssembly or Auto Render Mode)**
+Add to a `.razor` file inside the `client` project’s `Pages` folder.
+
+**Blazor Web App (Server Render Mode) or Standalone WASM**
+Add to `~/Pages/Home.razor` or any `.razor` file under under the `Pages` folder.
+
+{% tabs %}
+{% highlight razor %}
+
+@page "/"
+
+<h1>DocumentEditor</h1>
+
+<SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
+
+<h1>DataGrid</h1>
+
+<SfGrid DataSource="@Orders" />
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Note: By default, the SfDocumentEditorContainer component initializes an SfDocumentEditor instance internally. If you like to use the events of SfDocumentEditor component, then you can set UseDefaultEditor property as false and define your own SfDocumentEditor instance with event hooks in the application (Razor file).
 
 ## Run the Application
 
@@ -222,3 +284,5 @@ Note: By default, the SfDocumentEditorContainer component initializes an SfDocum
 - VS Code: Run via `dotnet run` in terminal or use launch profile.
 
 The Document Editor renders with full editing capabilities. Initial WASM load may take a few seconds due to component size.
+
+![Blazor DataGrid with Document Editor](../images/DocumentEditor-With-DataGrid.png)
