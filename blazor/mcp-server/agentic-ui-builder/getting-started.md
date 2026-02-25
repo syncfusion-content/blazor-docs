@@ -14,7 +14,7 @@ The **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI Builder** uses 
 
 ## Installation
 
-Follow the [Installation Guide](../installation) to set up the MCP Tools in your development environment.
+Follow the [Installation Guide](../installation) to set up the MCP server in your development environment.
 
 ## Usage
 
@@ -27,7 +27,7 @@ Once installed, open your AI assistant in the IDE and describe what you want to 
 
 The UI Builder generates complete implementations including layout, components, and styling.
 
-> Note: Using the `#sf_blazor_ui_builder` handle ensures the Agentic UI Builder is invoked directly. Alternatively, you can use natural language without the handle—just make sure to include the "Syncfusion" keyword in your prompt so the AI model can automatically recognize and call the appropriate generator.
+> Note: Using the `#sf_blazor_ui_builder` tool ensures the Agentic UI Builder is invoked directly. Alternatively, you can use natural language without the tool - just make sure to include the "Syncfusion" keyword in your prompt so the AI model can automatically recognize and call the appropriate generator.
 
 ## Individual Tools
 

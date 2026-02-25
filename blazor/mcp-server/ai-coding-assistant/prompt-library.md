@@ -17,7 +17,7 @@ Speed up your Blazor projects using these ready-made prompts for popular Syncfus
 Before starting, make sure your MCP Server is set up and running.
 
 * Choose a prompt that fits your need.
-* Copy the full prompt with the #sf_blazor_assistant handle.
+* Copy the full prompt with the #sf_blazor_assistant tool.
 * Customize the prompt for your specific use case.
 * Execute via the MCP Server.
 * Always check and test the code before adding it to your project.
