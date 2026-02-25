@@ -55,7 +55,7 @@ To configure File Manager component, open the NuGet package manager in Visual St
 
 Now, build and run the Amazon File Service provider project. It will be hosted at `http://localhost:{port}`. Map the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) of the File Manager component to the AmazonS3Provider controller endpoints (Url, UploadUrl, DownloadUrl, GetImageUrl) to manage objects in your S3 bucket.
 
-```razor
+```cshtml
 @*Initializing File Manager with Amazon service*@
 
 @* Replace the hosted port number in the place of "{port}" *@
