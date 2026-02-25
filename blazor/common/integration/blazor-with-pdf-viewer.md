@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® Data Grid with PDF Viewer in Blazor Applications
+# Integrating Syncfusion® Data Grid with PDF Viewer in Blazor Apps
 
 This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)**,`SfPdfViewer`, together with the **Syncfusion® Blazor Data Grid**, `SfGrid`, in the following project types:
 * Blazor Web App (interactive render modes: Auto, WebAssembly, or Server)
