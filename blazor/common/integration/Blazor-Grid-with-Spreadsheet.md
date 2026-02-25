@@ -1,3 +1,13 @@
+---
+layout: post
+title: Syncfusion® Blazor Spreadsheet and Data Grid Integration
+description: Step-by-step guide to integrating the Syncfusion Blazor Spreadsheet and Data Grid in Blazor applications.
+platform: Blazor
+control: Common
+documentation: ug
+
+---
+
 # Integrating Blazor DataGrid Component into the Spreadsheet
 
 This guide demonstrates how to integrate the **Syncfusion® Blazor DataGrid** with the **Syncfusion® Blazor Spreadsheet** component to enable a data workflow within a Blazor application.
