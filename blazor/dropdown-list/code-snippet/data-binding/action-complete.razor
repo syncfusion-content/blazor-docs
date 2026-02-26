@@ -3,7 +3,7 @@
 
 <SfDropDownList TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
-    <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></DropDownListEvents>
+    <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionComplete="@OnActionCompletehandler"></DropDownListEvents>
     <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"></DropDownListFieldSettings>
 </SfDropDownList>
 
@@ -25,7 +25,7 @@
         public string ShipAddress { get; set; }
     }
 
-    private void OnActionBeginhandler(ActionBeginEventArgs args)
+    private void OnActionCompletehandler ( ActionCompleteEventArgs<OrderDetails> args )
     {
         // Here, you can customize your code.
     }
