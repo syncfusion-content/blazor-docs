@@ -52,11 +52,11 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2022 or Visual Studio 2025 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | Syncfusion.Blazor.Maps | {{site.blazorversion}} | Maps and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Maps components |
-| Microsoft.Data.Sqlite | Latest | SQL Server ADO.NET provider |
+| Microsoft.Data.Sqlite | Latest | SQLite ADO.NET provider |
 | Dapper | Latest | Lightweight micro-ORM for SQL mapping |
 
 ### Step 1: Create the Blazor Server Project
@@ -74,7 +74,7 @@ This template automatically generates essential starter files—such as **Progra
 
 For this guide, a Blazor application named **Maps_Dappers** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Dapper and SQL Server integration.
 
-**Method 1: Using Package Manager Console**
+**Method 2.1: Using Package Manager Console**
 
 1. Open Visual Studio 2026.
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
@@ -87,7 +87,7 @@ Install-Package Syncfusion.Blazor.Maps -Version {{site.blazorversion}}
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
-**Method 2: Using NuGet Package Manager UI**
+**Method 2.2: Using NuGet Package Manager UI**
 
 1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
@@ -100,7 +100,7 @@ All required packages are now installed.
 
 ### Step 3: Add Syncfusion to the App
 
-**Method 1: Register Syncfusion in Program.cs**
+**Method 3.1: Register Syncfusion in Program.cs**
 
 ```
 using Syncfusion.Blazor;
@@ -120,7 +120,7 @@ builder.Services.AddSingleton<IDbConnectionFactory, SqliteConnectionFactory>();
 builder.Services.AddScoped<ICityRepository, CityRepository>();
 
 ```
-**Method 2: Add Syncfusion CSS**
+**Method 3.2: Add Syncfusion CSS**
 In Pages/Component/App.razor, in the <head> section add the theme CSS. Either use a CDN or local package css:
 
 ```
@@ -200,7 +200,6 @@ namespace Maps_Dappers.Services
                 ('United Kingdom', 18, 51.5074, -0.1278),
                 ('Mexico', 16, 19.4326, -99.1332),
                 ('Japan', 31, 35.6762, 139.6503),
-                ('Mexico', 26, 19.4326, -99.1332),
                 ('Brazil', 13, -15.7939, -47.8828),
                 ('Germany', 11, 52.5200, 13.4050),
                 ('Russia', 8, 55.7558, 37.6173),
@@ -225,18 +224,7 @@ Create Models/City.cs:
 // POCO model that maps to the Cities table columns
 public class City
 {
-    // Primary key (SQLite INTEGER PRIMARY KEY maps to long)
-    public long Id { get; set; }
-
-    // Display name for the location (not nullable)
-    public string Name { get; set; } = default!;
-
-    // Geographic coordinates used by the Maps marker layer
-    public double Latitude { get; set; }
-    public double Longitude { get; set; }
-
-    // Optional numerical value used for custom visualizations (nullable)
-    public int? SnapChartValues { get; set; }
+    // ... rest of code
 }
 ```
 **Repository (Dapper)**
@@ -257,8 +245,7 @@ Create Services/CityRepository.cs:
 // Repository abstraction for city data retrieval using Dapper
 public interface ICityRepository
 {
-    // Returns all City rows. Cancellation token is optional for async calls.
-    Task<IEnumerable<City>> GetAllAsync(CancellationToken ct = default);
+    //// ... rest of code
 }
 
 // Simple Dapper-based implementation of ICityRepository
@@ -296,7 +283,6 @@ This step integrates the data from SQLite directly into the Syncfusion Map.
   - **Latitude**
   - **Longitude**
   - **Name**
-  - **SnapChartValues** (optional custom value)
 
 Each database entry becomes a real marker on the map.  
 Tooltips are enabled to show the city name when hovered.
@@ -305,7 +291,9 @@ Tooltips are enabled to show the city name when hovered.
 Create a page Pages/Home.razor:
 
 ```
+@page "/"
 @using Maps_Dappers.Services
+@using Syncfusion.Blazor.Maps
 @inject ICityRepository Repo
 
 <SfMaps>
@@ -362,15 +350,15 @@ dotnet run
 **Access the Application**
 
 1. Open a web browser.
-2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
+2. Navigate to the URL shown in the terminal output (typically `https://localhost:5001` or `http://localhost:5000`).
 3. After running, the Syncfusion Map renders with markers taken directly from SQLite, confirming full integration between the map UI and the database backend using Dapper.
 
 ### Summary
 
-1. A new Blazor Server project is created using .NET 8 in Visual Studio. [🔗](#step-1-Create-the-Blazor-Server-Project)
-2. Required NuGet packages are installed: SQLite provider, Dapper, Syncfusion Blazor Maps, and Syncfusion Themes. [🔗](#step-2-Install-Required-NuGet-Packages)
-3. Syncfusion services are registered in Program.cs, and the appropriate theme stylesheet is added to the project. [🔗](#step-3-Add-Syncfusion-to-the-App)
-4. A SQLite database setup is implemented through a connection factory, which creates the database file, generates the Cities table, and seeds initial sample data on first run. [🔗](#step-4-Create-the-SQLite-Database)
-5. A City model is defined, and a Dapper-based repository retrieves city records from the SQLite database. [🔗](#step-5-Dapper-Model-and-Repository)
-6. The Syncfusion Maps component is added to a Razor page, loading world map shapes and binding database data to map markers using latitude and longitude values. [🔗](#step-6-Add-the-Syncfusion-Map-Component)
-7. The application is built and executed, displaying a world map in the browser with markers sourced directly from the SQLite database. [🔗](#step-7-Running-the-Application)
+1. A new Blazor Server project is created using .NET 8 in Visual Studio. [🔗](#step-1-create-the-blazor-server-project)
+2. Required NuGet packages are installed: SQLite provider, Dapper, Syncfusion Blazor Maps, and Syncfusion Themes. [🔗](#step-2-install-required-nuget-packages)
+3. Syncfusion services are registered in Program.cs, and the appropriate theme stylesheet is added to the project. [🔗](#step-3-add-syncfusion-to-the-app)
+4. A SQLite database setup is implemented through a connection factory, which creates the database file, generates the Cities table, and seeds initial sample data on first run. [🔗](#step-4-create-the-sqLite-database)
+5. A City model is defined, and a Dapper-based repository retrieves city records from the SQLite database. [🔗](#step-5-dapper-model-and-repository)
+6. The Syncfusion Maps component is added to a Razor page, loading world map shapes and binding database data to map markers using latitude and longitude values. [🔗](#step-6-add-the-syncfusion-map-component)
+7. The application is built and executed, displaying a world map in the browser with markers sourced directly from the SQLite database. [🔗](#step-7-running-the-application)
