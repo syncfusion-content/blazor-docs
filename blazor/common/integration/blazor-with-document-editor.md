@@ -15,8 +15,6 @@ This guide uses [Visual Studio Code](https://code.visualstudio.com/). If you hav
 
 ## Prerequisites
 
-* .NET SDK and Visual Studio Code installed.
-
 * [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements): Make sure your development environment meets the required system specifications for using Syncfusion Blazor components.
 
 ## Create Project
@@ -31,7 +29,6 @@ cd BlazorWebAppServer
 
 {% endhighlight %}
 {% endtabs %}
-
 
 Alternatively, manually create via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
