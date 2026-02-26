@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Key Features
+title: Key Features in Syncfusion Blazor components
 description: A concise tour of the most important capabilities in Syncfusion’s Blazor UI component suite.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Key Features
+# Key Features in Syncfusion® Blazor components
 
 This page highlights the capabilities that make Syncfusion Blazor Components a strong foundation for production Blazor apps.
 
@@ -48,11 +48,11 @@ This page highlights the capabilities that make Syncfusion Blazor Components a s
 
 - Flexible data binding to in-memory collections, `IQueryable`, and REST endpoints.
 - Data operations (filter, sort, group, aggregate, page) on client or server.
-- Adapters for various backends via a unified data manager pattern.
+- Adapters for various back ends via a unified data manager pattern.
 
 ## Developer productivity
 
 - Strongly typed parameters and events with IntelliSense.
 - Templating for cells, headers, items, and toolbars.
-- Consistent APIs and event lifecycles across components.
+- Consistent APIs and event life cycles across components.
 - Extensive samples and API reference.
