@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion® Blazor Spreadsheet and Data Grid Integration
-description: Step-by-step guide to integrating the Syncfusion Blazor Spreadsheet and Data Grid in Blazor applications.
+title: Syncfusion® Blazor Spreadsheet and DataGrid Integration
+description: Step-by-step guide to integrating the Syncfusion Blazor Spreadsheet and DataGrid in Blazor applications.
 platform: Blazor
 control: Common
 documentation: ug
@@ -14,58 +14,22 @@ This guide demonstrates how to integrate the **Syncfusion® Blazor DataGrid** wi
 
 The workflow includes exporting grid data to an Excel file, opening the file through Spreadsheet UI, and performing interactive editing.
 
-This guidance applies to the following Blazor project types:
-* Blazor Web App 
-  * Render modes: Auto, WebAssembly, Server
-* Blazor WebAssembly (WASM)
-* Blazor Server
-
-If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create a project.
+If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
 ## Prerequisites
 Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion® Blazor components.
 
 ## Install Required Syncfusion Packages
-Install the necessary Syncfusion packages based on your project type.
 
-### Installation Locations
-| Project Type | Where to Install Packages | Notes |
-|--------------|---------------------------|-------|
-| Blazor Web App – Auto | Client project | Components execute in client context |
-| Blazor Web App – Server | Server project | Components run on server |
-| Blazor WebAssembly | Main project | All packages go into the WASM project |
-| Blazor Server | Main project | Executes entirely on server |
+To add the Blazor DataGrid and Spreadsheet components to the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install the NuGet packages listed below.
 
-### Install via CLI
-
-{% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
-
-dotnet add package Syncfusion.Blazor.Spreadsheet -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Install via NuGet
 * [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet)
- * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
- * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 ## Add Required Namespaces
-Add these namespaces to the appropriate `/_Imports.razor` file depending on the project type:
 
-| Project Type | Where to Install Packages | 
-|--------------|---------------------------|
-| WebAssembly or Auto | ~/_Imports.razor in the client project |
-| Server | ~/Components/_Imports.razor |
-| Standalone Blazor WASM | ~/_Imports.razor |
-
-Add the following namespaces: 
+Open the `~Components/_Imports.razor` file and import the below namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -79,10 +43,10 @@ Add the following namespaces:
 
 ## Register Syncfusion Blazor Service
 
-Register the Syncfusion Blazor Service in the `Program.cs` file of your Blazor App.
+Register the Syncfusion Blazor Service in the `Program.cs` file of your Blazor Server App.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" hl_lines="1 5" %}
+{% highlight razor tabtitle="~/Program.cs" hl_lines="1 8" %}
 
 using Syncfusion.Blazor;
 
@@ -101,13 +65,7 @@ app.Run();
 
 ## Add Stylesheet and Script Resources
 
-Add the Syncfusion theme CSS and required scripts to the **host page** for your project type. Use one of the supported themes (e.g., bootstrap5.css). The Spreadsheet requires its specific script in addition to the core script. 
-
-| Project Type | File to add scripts & stylesheet | 
-|--------------|---------------------------|
-| WebAssembly or Auto | ~/Components/App.razor |
-| Server | wwwroot/index.html |
-| Standalone Blazor WASM | Pages/_Host.cshtml |
+Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. The Spreadsheet requires its specific script in addition to the core script. 
 
 {% tabs %}
 {% highlight html  %}
@@ -129,31 +87,9 @@ Add the Syncfusion theme CSS and required scripts to the **host page** for your 
 
 ## Integrating DataGrid and Spreadsheet
 
-If your Blazor Web App uses **Per page/Component Interactivity**, you must specify the appropriate **@rendermode** directive at the top of the component. 
+Add Spreadsheet and DataGrid component into the any **.razor** file.  
 
-You may choose one of the following based on your scenario: 
-
-* InteractiveAuto — Automatically selects WASM or Server 
-* InteractiveWebAssembly — Forces client-side execution 
-* InteractiveServer — Forces server-side execution 
-
-N> If Global interactivity is configured in **App.razor**, this directive is not required 
-
-**Example (per page):**
-
-{% tabs %}
-{% highlight razor %}
-
-@* Define the desired render mode here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-
-Add Spreadsheet and Data Grid component into the any **.razor** file.  
-
-The example below displays a **Data Grid** with sample data, exports to Excel, and lets users open the exported file in **Spreadsheet** via the ribbon (File → Open). 
+The example below displays a **DataGrid** with sample data, exports to Excel, and lets users open the exported file in **Spreadsheet** via the ribbon (File → Open). 
 
 {% tabs %}
 {% highlight razor %}
