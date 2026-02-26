@@ -23,7 +23,7 @@ N>
 
 ## Size for container
 
-The chart can be scaled to fit the container. As shown below, the size can be set using CSS.
+The chart can be scaled to fit the container. As shown in the below example, the size can be set using CSS.
 
 ```cshtml
 
@@ -69,7 +69,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ### In pixel
 
-The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties can be set in pixel as shown below.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties can be set in pixel as shown in the below example.
 
 ```cshtml
 
@@ -147,7 +147,7 @@ By setting the values of [Width](https://help.syncfusion.com/cr/blazor/Syncfusio
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLUMrVLAEHSsNxA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Chart Size in Percentage](images/chart-dimensions/blazor-chart-size-in-percentage.png)" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

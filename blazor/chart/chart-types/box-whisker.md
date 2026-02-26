@@ -355,7 +355,7 @@ In Box and Whisker series, [ShowMean](https://help.syncfusion.com/cr/blazor/Sync
     };
 }
 
-``` 
+```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLTjlrtyAViHspW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
@@ -409,7 +409,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ### Point render
 
-The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
+Use the [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event to customize individual points before rendering.
 
 ```cshtml
 
