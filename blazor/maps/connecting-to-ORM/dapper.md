@@ -218,7 +218,7 @@ namespace Maps_Dappers.Services
 
 Represents data stored in the SQLite table. Each property corresponds to a column in the database. The model is used for strongly‑typed mapping when binding to the Maps component.
 
-Create Models/City.cs:
+Create Services/City.cs:
 
 ```
 // POCO model that maps to the Cities table columns
