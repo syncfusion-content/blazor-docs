@@ -2,7 +2,7 @@
 
 layout: post
 title: Blazor Chart connected to SQLite via Dapper | Syncfusion
-description: A step‑by‑step guide to binding SQLite data to Syncfusion Blazor Charts using Dapper, covering setup, database creation, and data binding.
+description: Learn how to bind SQLite data to Syncfusion Blazor Charts using Dapper. This step-by-step guide covers project setup, database creation, and data binding with code examples.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -51,7 +51,7 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
+| Visual Studio 2022 or Visual Studio 2025 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | Syncfusion.Blazor.Charts | {{site.blazorversion}} | Chart and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Chart components |
@@ -75,7 +75,7 @@ This template automatically generates essential starter files—such as **Progra
 
 For this guide, a Blazor application named **Chart_Dappers** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Dapper and SQL Server integration.
 
-**Method 1: Using Package Manager Console**
+**Method 2.1: Using Package Manager Console**
 
 1. Open Visual Studio 2026.
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
@@ -90,7 +90,7 @@ Install-Package Syncfusion.Blazor.Charts -Version {{site.blazorversion}}
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
-**Method 2: Using NuGet Package Manager UI**
+**Method 2.2: Using NuGet Package Manager UI**
 
 1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
@@ -103,7 +103,7 @@ All required packages are now installed.
 
 ### Step 3: Add Syncfusion to the App
 
-**Method 1: Register Syncfusion in Program.cs**
+**Method 3.1: Register Syncfusion in Program.cs**
 
 > Register Syncfusion and your DB services in the dependency injection container. `AddSyncfusionBlazor()` enables Syncfusion components across the app. The `IDbConnectionFactory` and `ICityRepository` registrations make database access injectable.
 
@@ -123,7 +123,7 @@ builder.Services.AddSingleton<IDbConnectionFactory, SqliteConnectionFactory>();
 builder.Services.AddScoped<ICityRepository, CityRepository>();
 
 ```
-**Method 2: Add Syncfusion CSS**
+**Method 3.2: Add Syncfusion CSS**
 In Pages/Component/App.razor, in the <head> section add the theme CSS. Either use a CDN or local package css:
 
 ```
@@ -196,7 +196,6 @@ namespace Charts_Dappers.Services
                 ('United Kingdom', 18),
                 ('Mexico', 16),
                 ('Japan', 31),
-                ('Mexico', 26),
                 ('Brazil', 13),
                 ('Germany', 11),
                 ('Russia', 8),
@@ -221,11 +220,12 @@ Create Models/City.cs:
 > This is a simple POCO (Plain Old CLR Object) model. Dapper will map query columns to these properties by name.
 
 ```
-public class City
-{
-    public long Id { get; set; }
-    public string Name { get; set; } = default!;
-    public int? SnapChartValues { get; set; }
+namespace Charts_Dappers.Models { 
+    public class City { 
+        public long Id { get; set; } 
+        public string Name { get; set; } = default!; 
+        public int? SnapChartValues { get; set; } 
+    } 
 }
 ```
 **Repository (Dapper)**
@@ -290,6 +290,7 @@ Create a page Pages/Home.razor:
 > This Razor page injects the repository, fetches the `cities` on initialization, and binds them to an `SfChart` series. The X axis uses `Name` and the Y axis uses `SnapChartValues`.
 
 ```
+@page "/"
 @rendermode InteractiveServer
 @using Syncfusion.Blazor.Charts
 @using Charts_Dappers.Services
@@ -313,7 +314,7 @@ Create a page Pages/Home.razor:
     }
 }
 ```
-How markers are bound: We set DataSource="cities" where each City object contains Name and SnapChartValues.
+How the chart is bound: We set DataSource = "cities", where each City object contains a Name and SnapChartValues, which are used to populate the column series.
 
 ### Step 7: Running the Application
 
@@ -338,15 +339,15 @@ dotnet run
 **Access the Application**
 
 1. Open a web browser.
-2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
-3. After running, the Syncfusion Chart renders with markers taken directly from SQLite, confirming full integration between the chart UI and the database backend using Dapper.
+2. Navigate to the URL shown in the terminal output (typically `https://localhost:5001` or `http://localhost:5000`).
+3. After running, the Syncfusion Chart renders with data points taken directly from SQLite, confirming full integration between the chart UI and the database backend using Dapper.
 
 ### Summary
 
-1. A new Blazor Server project is created using .NET 8 in Visual Studio. [🔗](#step-1-Create-the-Blazor-Server-Project)
-2. Required NuGet packages are installed: SQLite provider, Dapper, Syncfusion Blazor Charts, and Syncfusion Themes. [🔗](#step-2-Install-Required-NuGet-Packages)
-3. Syncfusion services are registered in Program.cs, and the appropriate theme stylesheet is added to the project. [🔗](#step-3-Add-Syncfusion-to-the-App)
-4. A SQLite database setup is implemented through a connection factory, which creates the database file, generates the Cities table, and seeds initial sample data on first run. [🔗](#step-4-Create-the-SQLite-Database)
-5. A City model is defined, and a Dapper-based repository retrieves city records from the SQLite database. [🔗](#step-5-Dapper-Model-and-Repository)
-6. The Syncfusion Charts component is added to a Razor page, binding database data to chart using Name and SnapChartValues values. [🔗](#step-6-Add-the-Syncfusion-Charts-Component)
-7. The application is built and executed, displaying a Column chart in the browser with markers sourced directly from the SQLite database. [🔗](#step-7-Running-the-Application)
+1. A new Blazor Server project is created using .NET 8 in Visual Studio. [🔗](#step-1-create-the-blazor-server-project)
+2. Required NuGet packages are installed: SQLite provider, Dapper, Syncfusion Blazor Charts, and Syncfusion Themes. [🔗](#step-2-install-required-nuget-packages)
+3. Syncfusion services are registered in Program.cs, and the appropriate theme stylesheet is added to the project. [🔗](#step-3-add-syncfusion-to-the-app)
+4. A SQLite database setup is implemented through a connection factory, which creates the database file, generates the Cities table, and seeds initial sample data on first run. [🔗](#step-4-create-the-sqlite-database)
+5. A City model is defined, and a Dapper-based repository retrieves city records from the SQLite database. [🔗](#step-5-dapper-model-and-repository)
+6. The Syncfusion Charts component is added to a Razor page, binding database data to chart using Name and SnapChartValues values. [🔗](#step-6-add-the-syncfusion-charts-component)
+7. The application is built and executed, displaying a Column chart in the browser with markers sourced directly from the SQLite database. [🔗](#step-7-running-the-application)
