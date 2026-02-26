@@ -215,7 +215,7 @@ namespace Charts_Dappers.Services
 
 Represents data stored in the SQLite table. Each property corresponds to a column in the database. The model is used for strongly‑typed mapping when binding to the Charts component.
 
-Create Models/City.cs:
+Create Services/City.cs:
 
 > This is a simple POCO (Plain Old CLR Object) model. Dapper will map query columns to these properties by name.
 
