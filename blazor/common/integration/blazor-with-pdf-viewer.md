@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Syncfusion® Blazor PDF Viewer and Data Grid Integration
-description: Step-by-step guide to integrating the Syncfusion Blazor PDF Viewer and Data Grid in Blazor applications.
+title: Syncfusion® Blazor PDF Viewer and DataGrid Integration
+description: Step-by-step guide to integrating the Syncfusion Blazor PDF Viewer and DataGrid in Blazor applications.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® Data Grid with PDF Viewer in Blazor Apps
+# Integrating Syncfusion® DataGrid with PDF Viewer in Blazor Apps
 
-This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)**,`SfPdfViewer`, together with the **Syncfusion® Blazor Data Grid**, `SfGrid`, in the following project types:
+This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)**,`SfPdfViewer`, together with the **Syncfusion® Blazor DataGrid**, `SfGrid`, in the following project types:
 * Blazor Web App (interactive render modes: Auto, WebAssembly, or Server)
 * Blazor WebAssembly (WASM) App
 
@@ -34,7 +34,7 @@ dotnet workload install wasm-tools-net10
 
 ```
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer, Data Grid, and Themes NuGet Packages
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer, DataGrid, and Themes NuGet Packages
 
 If your Blazor Web App is using the `WebAssembly` or `Auto` render modes, ensure that all package installations are performed inside the `client` project.
 
@@ -177,7 +177,7 @@ Before adding the stylesheet, make sure no other Syncfusion<sup style="font-size
 
 **Blazor Web App**
 
-Add the following stylesheet and script references in the `~/Components/App.razor:` 
+Add the following stylesheet and script references in the `~/Components/App.razor`. 
 
 **Standalone WASM**
 
@@ -192,10 +192,10 @@ Add the same stylesheet and script references to `wwwroot/index.html`.
 </head>
 
 <body>
-    <!-- Syncfusion Blazor PDF Viewer control's script reference-->
+    <!-- Syncfusion Blazor PDF Viewer component script -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 
-    <!-- Syncfusion Blazor DataGrid control's script reference -->
+    <!-- Syncfusion Blazor Core script (required for most components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
@@ -227,9 +227,9 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer component and Data Grid component
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer component and DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) and Data Grid components to a `.razor` file within your app: 
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) and DataGrid components to a `.razor` file within your app: 
 
 **Blazor Web App (WebAssembly or Auto Render Mode)**
 Add to a `.razor` file inside the `client` project’s `Pages` folder.
