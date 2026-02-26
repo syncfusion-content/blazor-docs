@@ -76,9 +76,9 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 </head>
 
 <body>
-    <!-- Syncfusion Blazor DataGrid control's script reference -->
+    <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-    <!-- Syncfusion Blazor PDF Viewer control's script reference-->
+    <!-- Syncfusion Blazor PDF Viewer component's script reference-->
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js"></script>
 </body>
 
@@ -165,9 +165,7 @@ The example below displays a **DataGrid** with sample data, exports to Excel, an
 
 ## Run the Application
 
-```
-dotnet run
-```
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, Spreadsheet components in the default web browser.
 
 **Expected Behavior**
 * DataGrid renders with sample records.
