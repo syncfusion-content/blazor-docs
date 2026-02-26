@@ -24,11 +24,11 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is an enterpr
 
 ## What’s included
 
-- Data-bound components like Data Grid, Tree Grid, Charts, Scheduler, Pivot Table, and more.
-- Form inputs, editors, pickers, menus, navigation, and layout components.
-- Rich visualization: 2D/3D charts, gauges, maps, heatmaps, and sparklines.
+- Data bound components like DataGrid, TreeGrid, Charts, Scheduler, Pivot Table, and more.
+- Form inputs, Editors, Pickers, Menus, Navigation, and Layout components.
+- Rich visualization: 2D/3D Charts, Gauges, Maps, Heatmaps, and Sparklines.
 - File processing via companion .NET libraries for PDF, Word, and Excel (server-side usage).
-- Theming system with multiple built-in themes and CSS variables for fine-grained control.
+- Theming system with multiple built-in themes and CSS variables for fine grained component.
 
 ## How it fits into Blazor
 

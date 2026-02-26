@@ -13,34 +13,34 @@ This page highlights the capabilities that make Syncfusion Blazor Components a s
 
 ## Comprehensive UI coverage
 
-- 2D/3D charts, gauges, maps, heatmaps, and business dashboards.
-- Data-centric components such as Data Grid, Tree Grid, Pivot Table, and Scheduler.
-- Forms, editors, inputs, menus, navigation, dialogs, and notifications.
-- Rich text, markdown, image editing, and advanced pickers.
+- Data-centric components such as DataGrid, TreeGrid, Pivot Table, and Scheduler.
+- 2D/3D Charts, Gauges, Maps, Heatmaps, and business dashboards.
+- Forms, Editors, Inputs, Menus, Navigation, Dialogs, and Notifications.
+- Rich text editor, Image editor and advanced Pickers.
 
 ## Performance and scalability
 
 - Row and column virtualization for large datasets.
 - Incremental rendering and lazy loading where applicable.
 - Efficient re-rendering tuned to Blazor’s diffing model.
-- Lightweight resource delivery with theme and feature-level packages.
+- Lightweight resource delivery with theme and feature level packages.
 
 ## Accessibility and usability
 
-- WCAG-compliant semantics with ARIA attributes.
+- WCAG compliant semantics with ARIA attributes.
 - Full keyboard interaction patterns and focus management.
-- High-contrast and RTL (right-to-left) support.
-- Screen-reader friendly markup and labels.
+- High contrast and RTL (right-to-left) support.
+- Screen reader friendly markup and labels.
 
 ## Globalization and localization
 
-- Culture-aware date, time, number, and currency formatting.
+- Culture aware date, time, number, and currency formatting.
 - Localizable strings and messages across components.
 - RTL layouts and bidirectional text rendering.
 
 ## Styling and theming
 
-- Multiple built-in themes and CSS variables for fine-tuning.
+- Multiple built-in themes and CSS variables for fine tuning.
 - Consistent design tokens for spacing, color, and typography.
 - Supports CSS isolation and utility-first approaches.
 

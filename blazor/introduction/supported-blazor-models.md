@@ -19,7 +19,7 @@ Blazor Web App introduces server-side rendering (SSR) with interactive render mo
 - WebAssembly: UI logic executes on the client in the browser’s WebAssembly runtime.
 - Auto: Starts with server interactivity and progressively enhances to WebAssembly when ready.
 
-Benefits
+*Benefits*
 
 - Fast first paint with SSR and progressive interactivity.
 - SEO friendly markup generation on the server.
@@ -31,7 +31,7 @@ Benefits
 - Very small download footprint and quick startup.
 - Centralized resource usage; ideal for controlled environments.
 
-Considerations
+*Considerations*
 
 - Requires reliable connectivity; latency affects perceived responsiveness.
 - Server resources scale with concurrent users.
@@ -42,7 +42,7 @@ Considerations
 - Works offline once assets are cached.
 - Can enable AOT (ahead-of-time) compilation for faster runtime performance.
 
-Considerations
+*Considerations*
 
 - Larger initial download compared to Server.
 - Some operations (e.g., file processing) may require server APIs.
