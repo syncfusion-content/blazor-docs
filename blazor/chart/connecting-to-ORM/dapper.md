@@ -220,7 +220,7 @@ Create Models/City.cs:
 > This is a simple POCO (Plain Old CLR Object) model. Dapper will map query columns to these properties by name.
 
 ```
-namespace Charts_Dappers.Models { 
+namespace Charts_Dappers.Services { 
     public class City { 
         public long Id { get; set; } 
         public string Name { get; set; } = default!; 
