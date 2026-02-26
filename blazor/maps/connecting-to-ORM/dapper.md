@@ -221,10 +221,16 @@ Represents data stored in the SQLite table. Each property corresponds to a colum
 Create Services/City.cs:
 
 ```
-// POCO model that maps to the Cities table columns
-public class City
+namespace Maps_Dappers.Services
 {
-    // ... rest of code
+    public class City
+    {
+        public long Id { get; set; }
+        public string Name { get; set; } = default!;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public int? SnapChartValues { get; set; }
+    }
 }
 ```
 **Repository (Dapper)**
