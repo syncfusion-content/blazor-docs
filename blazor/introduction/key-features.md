@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Key Features in Syncfusion Blazor components
-description: A concise tour of the most important capabilities in Syncfusion’s Blazor UI component suite.
+description: Explore Syncfusion Blazor UI components performance, accessibility, theming, data binding, and developer productivity for scalable apps.
 platform: Blazor
 control: Common
 documentation: ug

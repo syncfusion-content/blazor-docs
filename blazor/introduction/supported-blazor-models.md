@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Blazor components support blazor models.
-description: Learn how Syncfusion Blazor Components run across Blazor Server, Blazor WebAssembly, and the Blazor Web App (.NET 8, .NET 9, and .NET 10) render modes, with notes on Hybrid hosting.
+description: Overview of how Syncfusion Blazor components run across Blazor Server, WebAssembly, Blazor Web App (.NET 8, 9 and 10) and Hybrid hosting models.
 platform: Blazor
 control: Common
 documentation: ug
