@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Creating Desktop Apps using Blazor and Electron.NET (using ElectronNET.Core)
-description: Check out the documentation for creating a desktop application using Blazor Server and the modern ElectronNET.Core framework with Syncfusion Blazor Components.
+title: Creating Desktop Apps with Syncfusion Grid in Blazor Web App & Electron
+description: Learn how to create a desktop application using a Blazor Web App with Interactive Server render mode and the modern ElectronNET.Core framework, integrated with Syncfusion Blazor Grid and themes.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Creating Desktop Application using Blazor and Electron
+# Creating a Desktop Application using Blazor Web App, Electron, and Syncfusion DataGrid
 
-This section explains how to create and run a cross‑platform desktop application using **Blazor Server** and the **ElectronNET.Core** framework with **Syncfusion<sup style="font-size:70%">®</sup> Blazor components**.
+This section explains how to build a cross‑platform desktop application using a **Blazor Web App with Interactive Server render mode**, the **ElectronNET.Core** framework, and Syncfusion<sup style="font-size:70%">®</sup> Blazor DataGrid inside an Electron shell.
 
-N> ElectronNET.Core is the modern fork of the Electron.NET approach that supports recent .NET versions. This guide targets **Blazor Server (server interactivity)** inside an Electron shell.
+N> ElectronNET.Core is the modern fork of the Electron.NET approach that supports recent .NET versions. 
 
 ## What is Electron?
 
@@ -24,18 +24,18 @@ N> ElectronNET.Core is the modern fork of the Electron.NET approach that support
 - Supported OS (for .NET 8 or later): Windows 10+, macOS 12+, Ubuntu 20.04+
 - Editor/IDE: Visual Studio 2022 or later, or VS Code
 
-## Create a Blazor Server Application
+## Create a Blazor Web App (Interactive Server)
 
-Create a new **Blazor Web App** (with **Server** interactivity) using the .NET CLI or Visual Studio.
+Create a new **Blazor Web App** with **Server interactivity** using the .NET CLI or Visual Studio.
 
-N> In .NET 8+, the recommended approach is the unified **Blazor Web App** template with **Interactive Server** render mode. This guide uses server-side interactivity.
+N> In .NET 8+, the unified **Blazor Web App** template with **Interactive Server** render mode is the recommended way to build server‑interactive apps that use components like the **Syncfusion Blazor DataGrid**.
 
 - [Create a Blazor Server application by using the CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli)  
 - [Create a Blazor Server application by using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet Packages
 
-From the project folder (where the `.csproj` is located), install:
+From the project folder (where the `.csproj` is located), install the **Grid** and **Themes** packages:
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
