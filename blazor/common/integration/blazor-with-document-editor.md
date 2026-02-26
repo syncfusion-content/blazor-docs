@@ -49,6 +49,7 @@ The component provides Microsoft Word-like editing features: formatting, tables,
 **For Blazor Web App (WebAssembly / Auto modes)** → install in the **Client** project.
 
 Alternatively, use Package Manager Console:
+
 {% tabs %}
 {% highlight powershell tabtitle="Package Manager Console" %}
 Install-Package Syncfusion.Blazor.WordProcessor -Version {{ site.releaseversion }}
@@ -73,19 +74,20 @@ Use Visual Studio Code with the .NET SDK installed.
 
 - Alternatively, manually create via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-- Open terminal in VS Code (**Ctrl + `**) and navigate to your desired folder.
-
 ## Install NuGet Packages
 
 - Open integrated terminal (**Ctrl + `**).
 - Navigate to project folder (where `.csproj` is, or **Client** subfolder for Web App WebAssembly/Auto).
 - Run:
+
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
+
 dotnet add package Syncfusion.Blazor.WordProcessor -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -104,11 +106,15 @@ Add Syncfusion namespaces in the appropriate **~/_Imports.razor** file depending
   * Server → `~/Components/_Imports.razor` or root `_Imports.razor`
 - Standalone WASM App/ Server App → `~/_Imports.razor`
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DocumentEditor
 @using Syncfusion.Blazor.Grids
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Register Syncfusion Blazor Service
 
@@ -199,9 +205,9 @@ Before adding the stylesheet, make sure no other Syncfusion theme CSS (e.g., boo
 
 <body>
 
-   	<!-- Syncfusion Blazor Document Editor control's script reference-->
+   	<!-- Syncfusion Blazor Document Editor component's script reference-->
 	<script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
-	<!-- Syncfusion Blazor DataGrid control's script reference -->
+	<!-- Syncfusion Blazor DataGrid component's script reference -->
 	<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 ```
@@ -231,7 +237,6 @@ If Interactivity location is set to `Per page/component`, specify a render mode 
 N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default. No per‑page directive is necessary.
 
 ## Add Syncfusion Blazor Document Editor component and Data Grid component
-
 
 Add the Syncfusion Document Editor and Data Grid components to a `.razor` file within your app: 
 
@@ -279,7 +284,7 @@ Add to `~/Pages/Home.razor` or any `.razor` file under the `Pages` folder.
 {% endhighlight %}
 {% endtabs %}
 
-Note: By default, the SfDocumentEditorContainer component initializes an SfDocumentEditor instance internally. If you like to use the events of SfDocumentEditor component, then you can set UseDefaultEditor property as false and define your own SfDocumentEditor instance with event hooks in the application (Razor file).
+Note: By default, the `SfDocumentEditorContainer` component initializes an `SfDocumentEditor` instance internally. If you like to use the events of `SfDocumentEditor` component, then you can set `UseDefaultEditor` property as **false** and define your own `SfDocumentEditor` instance with event hooks in the application (Razor file).
 
 ## Run the Application
 
@@ -287,5 +292,6 @@ Note: By default, the SfDocumentEditorContainer component initializes an SfDocum
 - VS Code: Run via `dotnet run` in terminal or use launch profile.
 
 The Document Editor renders with full editing capabilities. Initial WASM load may take a few seconds due to component size.
+
 
 ![Blazor DataGrid with Document Editor](../images/DocumentEditor-With-DataGrid.png)
