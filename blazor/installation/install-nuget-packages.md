@@ -111,7 +111,7 @@ The **Package Manager Console** saves NuGet package installation time since ther
     Install-Package Syncfusion.Blazor.Grid -ProjectName SyncfusionBlazorApp
     ```
 
-3. By default, the package will be installed with latest version. To install a specific Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor release, specify -Version parameter with the Package Manager Console command.
+3. By default, the package will be installed with latest version. To install a specific Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor release, specify `-Version` parameter with the Package Manager Console command.
 
     ```powershell
     Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
