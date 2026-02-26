@@ -234,4 +234,4 @@ dotnet run
 * Spreadsheet displays the workbook for editing.
 
 **OutPut:**
-![Blazor DataGrid With Spreadsheet](./images/Datagrid%20with%20spreadsheet.gif)
+![Blazor DataGrid With Spreadsheet](./images/Datagrid-with-spreadsheet.webp)
