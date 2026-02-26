@@ -9,9 +9,32 @@ documentation: ug
 
 # Welcome to Syncfusion® Blazor Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is an enterprise-grade, native UI components library for creating Blazor WebAssembly and Blazor Server applications. Built specifically for Blazor, the components are lightweight, responsive, and touch-friendly to support modern web applications.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is an enterprise-grade, native UI components library for creating Blazor WebAssembly and Blazor Server applications. Built specifically for Blazor, the components are lightweight, responsive, and touch-friendly to support modern web applications. The library is engineered for performance, keyboard-first accessibility, and global reach, with rich data visualization and productivity components.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+
+## Why teams choose us?
+
+- Enterprise coverage: A wide range of UI, data visualization, and editor components to cover dashboards, forms, documents, and line-of-business workflows.
+- Built for performance: Virtualization, lazy loading, lightweight payloads, and efficient rendering patterns for large datasets.
+- Production UX: Responsive layouts, high DPI rendering, touch support, and extensive keyboard interactions.
+- Global by default: Localization, internationalization, and right-to-left (RTL) support.
+- Accessible: WCAG-compliant semantics, ARIA attributes, and contrast-aware theming.
+- Tooling and docs: Extensive samples, API reference, and guidance to get productive quickly.
+
+## What’s included
+
+- Data bound components like DataGrid, TreeGrid, Charts, Scheduler, Pivot Table, and more.
+- Form inputs, Editors, Pickers, Menus, Navigation, and Layout components.
+- Rich visualization: 2D/3D Charts, Gauges, Maps, Heatmaps, and Sparklines.
+- File processing via companion .NET libraries for PDF, Word, and Excel (server-side usage).
+- Theming system with multiple built-in themes and CSS variables for fine grained component.
+
+## How it fits into Blazor
+
+- Works across Blazor Server, Blazor WebAssembly, and Blazor Web App (.NET 8, .NET 9, and .NET 10) render modes.
+- Plays well with dependency injection, routing, and cascading values.
+- Uses JavaScript interop only where it adds value (DOM/canvas/complex layout), keeping your app primarily in C# and Razor.
 
 ## How to best read this user guide
 
