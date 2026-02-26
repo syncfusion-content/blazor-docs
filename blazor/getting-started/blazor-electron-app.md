@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Creating Desktop App using Blazor and Electron Framework | Syncfusion
-description: Check out the documentation for creating desktop application using Blazor and Electron Framework with Syncfusion Blazor Components in Visual Studio.
+title: Creating Desktop Apps using Blazor and Electron.NET (using ElectronNET.Core)
+description: Check out the documentation for creating a desktop application using Blazor Server and the modern ElectronNET.Core framework with Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,148 +9,175 @@ documentation: ug
 
 # Creating Desktop Application using Blazor and Electron
 
-This section explains how to create and run a desktop application by using Blazor and the Electron.NET framework with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to create and run a cross‑platform desktop application using **Blazor Server** and the **ElectronNET.Core** framework with **Syncfusion<sup style="font-size:70%">®</sup> Blazor components**.
+
+N> ElectronNET.Core is the modern fork of the Electron.NET approach that supports recent .NET versions. This guide targets **Blazor Server (server interactivity)** inside an Electron shell.
 
 ## What is Electron?
 
 [Electron](https://www.electronjs.org/) is a framework for building cross-platform desktop applications with web technologies. It utilizes `Node.js` and the `Chromium` rendering engine to run a web application in a desktop shell.
 
-## Create a Blazor server-side application
+## Prerequisites
 
-Create a Blazor Server application by using either the CLI or Visual Studio:
+- .NET 10 SDK (LTS) 
+- Node.js 22.x or later
+- Supported OS for .NET 10: Windows 10+, macOS 12+, Ubuntu 20.04+
+- Editor/IDE: Visual Studio 2022 or later, or VS Code
 
-* [Create a Blazor Server application by using the CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+## Create a Blazor Server Application
 
-* [Create a Blazor Server application by using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+Create a new **Blazor Web App** (with **Server** interactivity) using the .NET CLI or Visual Studio.
 
-N> This setup does not work with target frameworks greater than .NET 6. For details and troubleshooting, see this [GitHub thread](https://github.com/ElectronNET/Electron.NET/issues/837#issuecomment-1985434060).
+N> In .NET 8+, the recommended approach is the unified **Blazor Web App** template with **Interactive Server** render mode. This guide uses server-side interactivity.
 
-## Configure Electron in Blazor App
+- [Create a Blazor Server application by using the CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli)  
+- [Create a Blazor Server application by using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
-Run the following commands in either the **Visual Studio Developer Command Prompt** or a **command-line interface (CLI)** based on the development environment.
+## Configure Electron.NET in Your Blazor App (using ElectronNET.Core)
 
-1.Install [ElectronNET.API](https://www.nuget.org/packages/ElectronNET.API/) NuGet package in the application.
+Run the following commands in either the **Visual Studio Developer Command Prompt** or any **command-line interface (CLI)**.
 
-```
-dotnet add package ElectronNET.API
-```
-
-2.Create a local .NET tool manifest file by running the following command. This creates a manifest file at **~/.config/dotnet-tools.json** in the current project.
-
-```
-dotnet new tool-manifest
-```
-
-![.NET tool manifest file](images/electron/net-tool-manifest.png)
-
-3.Install the tool locally in the project by running the below command.
-
-```
-dotnet tool install ElectronNET.CLI
-```
-
-![Electron.NET CLI installation](images/electron/net-cli.png)
-
-4.Run the below command to configure Electron.NET manifest tool and update the launch profile of the application.
-
-```
-dotnet electronize init
-```
-![Update launch profile for Electron.NET](images/electron/update-launch-profile.png)
-
-5.To integrate `Electron.NET` in the application add the below code in **~/Program.cs** file of the application.
+### 1. Install the ElectronNET.Core NuGet packages
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="2 9 10" %}
 
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package ElectronNET.Core
+dotnet add package ElectronNET.Core.AspNet
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### 2. Update Program.cs to Integrate Electron.NET
+
+Replace `YourProjectName` in the code below with your actual root namespace used by the App component (see `App.razor` or `_Imports.razor`).
+
+{% tabs %}
+{% highlight c# tabtitle="NET 10 (~/Program.cs)" hl_lines="2 3 4 5 15 18 21 22 23 24 25 26 27 28 29 30 32 34 35 36 40 49" %}
+
+...
 using Syncfusion.Blazor;
+using Syncfusion.Licensing;
 using ElectronNET.API;
+using ElectronNET.API.Entities;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 ...
+
+// Syncfusion licensing
+SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+...
+
+// Syncfusion services
 builder.Services.AddSyncfusionBlazor();
+
+// Electron services
 builder.Services.AddElectron();
-builder.WebHost.UseElectron(args);
 
-var app = builder.Build();
-....
+// Electron window bootstrap (modern ElectronNET.Core)
+builder.UseElectron(args, async () =>
+{
+    var options = new BrowserWindowOptions
+    {
+        Width = 1200,
+        Height = 800,
+        Show = false,
+        AutoHideMenuBar = true,
+        // IsRunningBlazor = true,   // Optional: enable if Blazor script loading issues occur.
+    };
+
+    var window = await Electron.WindowManager.CreateWindowAsync(options);
+
+    window.OnReadyToShow += () => window.Show();
+    window.OnClosed += () => Electron.App.Quit();
+});
+
+...
+
+app.UseStaticFiles(); // Required for serving assets like _content/ (Syncfusion).
+
+...
+
+// app.UseHttpsRedirection();   <-- Do NOT enable for Electron app
+
+...
+
+// Map the root Razor Components app
+app.MapRazorComponents<YourProjectName.Components.App>()
+    .AddInteractiveServerRenderMode();
+
+app.Run();
 
 {% endhighlight %}
 {% endtabs %}
 
-6.To open the Electron window add the below code in the **~/Program.cs** file of .NET 6 applications.
+
+### 3. Add Runtime Identifiers to Support Cross‑Platform Builds
+
+Add the following property to your project’s `.csproj` file:
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="9 10 12 13 14 15" %}
 
-using ElectronNET.API;
+{% highlight c# tabtitle="csproj" hl_lines="3"  %}
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-...
-builder.WebHost.UseElectron(args);
-
-if (HybridSupport.IsElectronActive)
-{
-    // Open the Electron-Window here
-    Task.Run(async () => {
-        var window = await Electron.WindowManager.CreateWindowAsync();
-    });
-}
-
-var app = builder.Build();
-....
+<PropertyGroup>
+    ...
+    <RuntimeIdentifiers>win-x64;linux-x64;osx-x64;osx-arm64</RuntimeIdentifiers>
+</PropertyGroup>
 
 {% endhighlight %}
+
 {% endtabs %}
 
-7.Run the application using the below command.
+### 4. Add electron-builder.json (Required for ElectronNET.Core)
 
-```
-dotnet electronize start
-```
-
-![Electron app output](images/electron/electron-grid-output.png)
-
-N> To close the Electron app when the Electron window is closed, add the following code under **// Open the Electron-Window** in step 6 in the **~/Program.cs** file of a .NET 6 application.
+ElectronNET.Core requires this file for packaging your desktop application.
+Create a file named `electron-builder.json` inside your project’s `Properties` folder and add the following code.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="14 15 16" %}
 
-using ElectronNET.API;
+{% highlight c# tabtitle="~/electron-builder.json" %}
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-...
-builder.WebHost.UseElectron(args);
-
-if (HybridSupport.IsElectronActive)
 {
-    // Open the Electron-Window
-    Task.Run(async () => {
-        var window = await Electron.WindowManager.CreateWindowAsync();
-        window.OnClosed += () => {
-            Electron.App.Quit();
-        };
-    });
+  "appId": "com.companyname.blazorelectronapp",
+  "productName": "Blazor Electron App",
+  "directories": {
+    "output": "dist-electron"
+  },
+  "files": [
+    "**/*"
+  ],
+  "win": {
+    "target": "nsis"
+  },
+  "mac": {
+    "target": "dmg"
+  },
+  "linux": {
+    "target": "AppImage"
+  }
 }
 
-var app = builder.Build();
-....
-
 {% endhighlight %}
+
 {% endtabs %}
 
-8.Run the following commands to create production builds for each platform.
+
+### Run the application
 
 ```
-dotnet electronize build /target win
-dotnet electronize build /target osx
-dotnet electronize build /target linux
+dotnet run
+```
+![Blazor Electron App with .NET 10](images/blazor-server-electron.png)
+
+### Publish and Build Desktop Packages
+
+```
+Windows: dotnet publish -r win-x64 -c Release
+macOS: dotnet publish -r osx-x64 -c Release
+Linux: dotnet publish -r linux-x64 -c Release
 ```
 
-N> [View the complete Blazor Server Electron application with Syncfusion<sup style="font-size:70%">&reg;</sup> components on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)
