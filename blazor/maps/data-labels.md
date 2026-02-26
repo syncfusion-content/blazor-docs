@@ -83,7 +83,7 @@ In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/
 
 ## Customization
 
-The following properties in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) customize the appearance of data labels:
+Customize the appearance of data labels using the following properties in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html):
 
 - [MapsLayerDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelBorder.html): Configures label border color and width.
 - [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Fill): Sets the label background color.
