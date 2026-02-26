@@ -113,10 +113,16 @@ Add the Syncfusion theme CSS and required scripts to the **host page** for your 
 {% highlight html  %}
 
 <head>
+     <!-- Syncfusion theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js"></script>
 </head>
+
+<body>
+    <!-- Syncfusion Blazor DataGrid control's script reference -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+    <!-- Syncfusion Blazor PDF Viewer control's script reference-->
+    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js"></script>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -160,7 +166,7 @@ The example below displays a **Data Grid** with sample data, exports to Excel, a
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Spreadsheet
 
-<h3>Simple Blazor DataGrid ➜ Spreadsheet Preview</h3>
+<h3>Blazor DataGrid ➜ Spreadsheet Preview</h3>
 
 <div class="mb-2">
     <SfButton CssClass="e-primary" @onclick="PreviewGridInSpreadsheet">Export Grid in Excel</SfButton>
@@ -168,7 +174,7 @@ The example below displays a **Data Grid** with sample data, exports to Excel, a
 </div>
 
 <h5>DataGrid</h5>
-<SfGrid TItem="Order" @ref="GridRef" DataSource="Orders" AllowPaging="true" AllowExcelExport="true">
+<SfGrid TItem="Order" @ref="GridRef" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" />
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" IsPrimaryKey="true" />
@@ -233,5 +239,5 @@ dotnet run
 * In the Spreadsheet, open it via **Ribbon → File → Open**.
 * Spreadsheet displays the workbook for editing.
 
-**OutPut:**
+**Output:**
 ![Blazor DataGrid With Spreadsheet](./images/Datagrid-with-spreadsheet.webp)
