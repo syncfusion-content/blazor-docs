@@ -27,14 +27,14 @@ The following code example illustrates how to customize the tooltip for nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" />
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -50,11 +50,11 @@ The following code example illustrates how to customize the tooltip for nodes.
             Tooltip = new DiagramTooltip(){Content="NodeTooltip"},
             Constraints = NodeConstraints.Default|NodeConstraints.Tooltip,
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipForSpecificNode.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeMXXFTQypyUzV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node](images/blazor-diagram-nodetooltip.png)" %}
 
@@ -63,15 +63,15 @@ The following code example illustrates how to customize the tooltip for connecto
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="_connectors" />
 @code
 {
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
-        connector = new DiagramObjectCollection<Connector>();
-        Connector connectors = new Connector()
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
             ID = "Connector1",
             SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
@@ -79,11 +79,11 @@ The following code example illustrates how to customize the tooltip for connecto
             Tooltip = new DiagramTooltip(){Content="ConnectorTooltip"},
             Constraints =  ConnectorConstraints.Default|ConnectorConstraints.Tooltip ,
         };
-        connector.Add(connectors);
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificConnector)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipForSpecificConnector.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIsNXlpcxcfGTS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node](images/blazor-diagram-connectortooltip.png)" %}
 
@@ -114,17 +114,17 @@ The following code example sets the tooltip position for the nodes.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Node Position" OnClick="@PositionChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" />
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
 
         //Intialize diagram's nodes collection
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -140,18 +140,18 @@ The following code example sets the tooltip position for the nodes.
                 Tooltip = new DiagramTooltip() { Content = "NodeTooltip", Position = Position.TopCenter },
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     //Change position at run time.
     private void PositionChange()
     {
-        nodes[0].Tooltip.Position = Position.RightCenter;
+        _nodes[0].Tooltip.Position = Position.RightCenter;
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVestDPfwQykRfi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipPositionforNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipPositionforNode.razor)
 
 The following code example sets the tooltip position for the connectors.
 
@@ -161,18 +161,18 @@ The following code example sets the tooltip position for the connectors.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Connector Position" OnClick="@PositionChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="_connectors" />
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's connectors collection
 
-        connector = new DiagramObjectCollection<Connector>();
-        Connector connectors = new Connector()
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
             {
                 ID = "Connector1",
                 SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
@@ -180,18 +180,18 @@ The following code example sets the tooltip position for the connectors.
                 Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip", Position = Position.TopCenter },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        connector.Add(connectors);
+        _connectors.Add(connector);
     }
     //Change position at run time.
     private void PositionChange()
     {
-        connector[0].Tooltip.Position = Position.RightCenter;
+        _connectors[0].Tooltip.Position = Position.RightCenter;
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrysttvfwvHiBTt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipPositionForConnector)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipPositionForConnector.razor)
 
 ## How to Set Tooltip Content for Nodes and Connectors
 
@@ -205,16 +205,16 @@ The following code example sets the tooltip content for the nodes.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Node Content" OnClick="@ContentChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" />
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -230,18 +230,18 @@ The following code example sets the tooltip content for the nodes.
                 Tooltip = new DiagramTooltip() { Content = "NodeTooltip" },
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     //Change Content at run time.
     private void ContentChange()
     {
-        nodes[0].Tooltip.Content = "UpdateTooltipContent";
+        _nodes[0].Tooltip.Content = "UpdateTooltipContent";
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBeitZbzcPOcYHs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipContentForNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipContentForNode.razor)
 
 The following code example sets the tooltip content for the connectors.
 
@@ -251,15 +251,15 @@ The following code example sets the tooltip content for the connectors.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Connector Content" OnClick="@ContentChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="_connectors" />
 @code
 {
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
-        connector = new DiagramObjectCollection<Connector>();
-        Connector connectors = new Connector()
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
             {
                 ID = "Connector1",
                 SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
@@ -267,18 +267,18 @@ The following code example sets the tooltip content for the connectors.
                 Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip" },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        connector.Add(connectors);
+        _connectors.Add(connector);
     }
     //Change Content at run time.
     private void ContentChange()
     {
-        connector[0].Tooltip.Content = "UpdateTooltipContent";
+        _connectors[0].Tooltip.Content = "UpdateTooltipContent";
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrSijXPTmEUTPOS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipContentForConnector)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipContentForConnector.razor)
 
 ## How to Shows or Hides the Tip Pointer for Tooltip
 
@@ -292,16 +292,16 @@ The following code example is used to set the tooltip tip pointer for nodes.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Node TipPointer" OnClick="@TipPointerChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" />
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -318,18 +318,18 @@ The following code example is used to set the tooltip tip pointer for nodes.
                 Tooltip = new DiagramTooltip() { Content = "NodeTooltip", ShowTipPointer = true },
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     //Change TipPointer at run time.
     private void TipPointerChange()
     {
-        nodes[0].Tooltip.ShowTipPointer = false;
+        _nodes[0].Tooltip.ShowTipPointer = false;
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBeMDZbTcEmCQNg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TipPointerForNodeTooltip)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TipPointerForNodeTooltip.razor)
 
 The following code example is used to set the tooltip tip pointer for connectors.
 
@@ -339,17 +339,17 @@ The following code example is used to set the tooltip tip pointer for connectors
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Connector TipPointer" OnClick="@TipPointerChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="_connectors" />
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's connectors collection
-        connector = new DiagramObjectCollection<Connector>();
-        Connector connectors = new Connector()
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
             {
                 ID = "Connector1",
                 SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
@@ -358,18 +358,18 @@ The following code example is used to set the tooltip tip pointer for connectors
                 Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip", ShowTipPointer = true },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        connector.Add(connectors);
+        _connectors.Add(connector);
     }
     //Change the TipPointer at run time.
     private void TipPointerChange()
     {
-        connector[0].Tooltip.ShowTipPointer = false;
+        _connectors[0].Tooltip.ShowTipPointer = false;
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIsjXFzvDVUdbt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TipPointerForConnectorTooltip)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TipPointerForConnectorTooltip.razor)
 
 ## How to Customize Tooltip Using Template
 For advanced customization of tooltip content or to create a unique visual structure, use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_TooltipTemplate) property of the `SfDiagramComponent`. This enables tailored tooltip elements that enhance the user experience and provide more detailed or context-specific information.
@@ -380,7 +380,7 @@ The following code example illustrates how to add formatted template content to 
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" >
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" >
     <DiagramTemplates>
         <TooltipTemplate>
             @{
@@ -395,12 +395,12 @@ The following code example illustrates how to add formatted template content to 
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -416,13 +416,13 @@ The following code example illustrates how to add formatted template content to 
                 Tooltip = new DiagramTooltip(),
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZroCDZPfltRCJGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipTemplateForNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipTemplateForNode.razor)
 
 
 The following code example illustrates how to add formatted template content to the tooltip for connectors.
@@ -432,7 +432,7 @@ The following code example illustrates how to add formatted template content to 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="connector">
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="_connectors">
     <DiagramTemplates>
         <TooltipTemplate>
             @{
@@ -447,14 +447,14 @@ The following code example illustrates how to add formatted template content to 
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
         //Intialize diagram's connectors collection
 
-        connector = new DiagramObjectCollection<Connector>();
-        Connector connectors = new Connector()
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
             {
                 ID = "Connector1",
                 SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
@@ -462,13 +462,13 @@ The following code example illustrates how to add formatted template content to 
                 Tooltip = new DiagramTooltip(),
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        connector.Add(connectors);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBSCjjbTbjOotkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipTemplateForConnector)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipTemplateForConnector.razor)
 
 >**Note:**  When the content propoerty of the tooltip is also defined with the template for either node , connector or diagram, only the  content will get rendered. The template content will get rendered only when the content property is undefined.
 
@@ -484,16 +484,16 @@ The following code example illustrates how to set animation for tooltip on nodes
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Node Animation" OnClick="@AnimationChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes" />
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
         //Initialize the diagram's nodes collection
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -517,12 +517,12 @@ The following code example illustrates how to set animation for tooltip on nodes
                 },
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
     //Change the Animation at run time.
     private void AnimationChange()
     {
-        nodes[0].Tooltip.AnimationSettings = new AnimationModel()
+        _nodes[0].Tooltip.AnimationSettings = new AnimationModel()
             {
                 Open = new TooltipAnimationSettings() { Effect = Effect.FadeZoomIn, Duration = 100 },
                 Close = new TooltipAnimationSettings() { Effect = Effect.FadeZoomOut, Duration = 50 }
@@ -532,7 +532,7 @@ The following code example illustrates how to set animation for tooltip on nodes
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrSMjDFJPMyHtcE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipAnimationForNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipAnimationForNode.razor)
 
 The following code example illustrates how to set animation for tooltips on connectors.
 
@@ -542,17 +542,17 @@ The following code example illustrates how to set animation for tooltips on conn
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="Connector Animation" OnClick="@AnimationChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="_connectors" />
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
         //Initialize diagram's connectors collection
-        connector = new DiagramObjectCollection<Connector>();
-        Connector connectors = new Connector()
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
             {
                 ID = "Connector1",
                 SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
@@ -568,12 +568,12 @@ The following code example illustrates how to set animation for tooltips on conn
                 },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        connector.Add(connectors);
+        _connectors.Add(connector);
     }
     //Change the Animation at run time.
     private void AnimationChange()
     {
-        connector[0].Tooltip.AnimationSettings = new AnimationModel()
+        _connectors[0].Tooltip.AnimationSettings = new AnimationModel()
             {
                 Open = new TooltipAnimationSettings() { Effect = Effect.ZoomIn, Duration = 500 },
                 Close = new TooltipAnimationSettings() { Effect = Effect.ZoomOut, Duration = 500 }
@@ -583,7 +583,7 @@ The following code example illustrates how to set animation for tooltips on conn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrosZtbJbBrVkMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipAnimationForConnector)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipAnimationForConnector.razor)
 
 ## How to Customize Tooltip Open Mode
 
@@ -607,17 +607,17 @@ The following code example illustrates how to set the open mode for tooltips on 
 <SfButton Content="Show CustomTooltip" OnClick="@show" />
 <SfButton Content="Hide CustomTooltip" OnClick="@hide" />
 
-<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent @ref="@_diagram" Width="1000px" Height="500px" Nodes="@_nodes" />
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -678,26 +678,26 @@ The following code example illustrates how to set the open mode for tooltips on 
                 Tooltip = new DiagramTooltip() { Content = "Click", OpensOn = "Click" },
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
-        nodes.Add(node);
-        nodes.Add(node1);
-        nodes.Add(node2);
-        nodes.Add(node3);
+        _nodes.Add(node);
+        _nodes.Add(node1);
+        _nodes.Add(node2);
+        _nodes.Add(node3);
     }
     //Method to show tooltip
     private void show()
     {
-        diagram.ShowTooltipAsync(diagram.Nodes[2] as NodeBase);
+        _diagram.ShowTooltipAsync(_diagram.Nodes[2] as NodeBase);
     }
     //Method to hide tooltip
     private void hide()
     {
-        diagram.HideTooltipAsync(diagram.Nodes[2] as NodeBase);
+        _diagram.HideTooltipAsync(_diagram.Nodes[2] as NodeBase);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrIMDjbTFKBVIss?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipOpenModeForNode)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipOpenModeForNode.razor)
 
 |![ToolTip During hover the node with open mode](images/blazor-diagram-openmodenodetooltip.gif) | 
 
@@ -710,18 +710,18 @@ The following code example illustrates how to set the open mode for tooltips on 
 
 <SfButton Content="Show CustomTooltip" OnClick="@show" />
 <SfButton Content="Hide CustomTooltip" OnClick="@hide" />
-<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Connectors="connector" />
+<SfDiagramComponent @ref="@_diagram" Width="1000px" Height="500px" Connectors="_connectors" />
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connector;
+    private DiagramObjectCollection<Connector> _connectors;
     //Refrence the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-        connector = new DiagramObjectCollection<Connector>();
-        Connector connectors = new Connector()
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
             {
                 ID = "Connector1",
                 SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
@@ -729,7 +729,7 @@ The following code example illustrates how to set the open mode for tooltips on 
                 Tooltip = new DiagramTooltip() { Content = "Auto", OpensOn = "Auto" },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        Connector connectors1 = new Connector()
+        Connector connector1 = new Connector()
             {
                 ID = "Connector2",
                 SourcePoint = new DiagramPoint() { X = 300, Y = 200 },
@@ -737,7 +737,7 @@ The following code example illustrates how to set the open mode for tooltips on 
                 Tooltip = new DiagramTooltip() { Content = "Hover", OpensOn = "Hover" },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        Connector connectors2 = new Connector()
+        Connector connector2 = new Connector()
             {
                 ID = "Connector3",
                 SourcePoint = new DiagramPoint() { X = 500, Y = 200 },
@@ -745,7 +745,7 @@ The following code example illustrates how to set the open mode for tooltips on 
                 Tooltip = new DiagramTooltip() { Content = "Custom", OpensOn = "Custom" },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        Connector connectors3 = new Connector()
+        Connector connector3 = new Connector()
             {
                 ID = "Connector4",
                 SourcePoint = new DiagramPoint() { X = 700, Y = 200 },
@@ -753,26 +753,26 @@ The following code example illustrates how to set the open mode for tooltips on 
                 Tooltip = new DiagramTooltip() { Content = "Click", OpensOn = "Click" },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        connector.Add(connectors);
-        connector.Add(connectors1);
-        connector.Add(connectors2);
-        connector.Add(connectors3);
+        _connectors.Add(connector);
+        _connectors.Add(connector1);
+        _connectors.Add(connector2);
+        _connectors.Add(connector3);
     }
     //Method to show tooltip
     private void show()
     {
-        diagram.ShowTooltipAsync(diagram.Connectors[2] as NodeBase);
+        _diagram.ShowTooltipAsync(_diagram.Connectors[2] as NodeBase);
     }
     //Method to hide tooltip
     private void hide()
     {
-        diagram.HideTooltipAsync(diagram.Connectors[2] as NodeBase);
+        _diagram.HideTooltipAsync(_diagram.Connectors[2] as NodeBase);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBeWNXPpPAcouxu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipOpenModeForConnector)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipOpenModeForConnector.razor)
 
 ## How to Enable Sticky Mode
 
@@ -788,17 +788,17 @@ The following code example demonstrates how to set `IsSticky` property to **true
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
-<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent @ref="@_diagram" Width="1000px" Height="500px" Nodes="@_nodes" />
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -814,11 +814,11 @@ The following code example demonstrates how to set `IsSticky` property to **true
                 Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true },
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/StickyForNode.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhSijNbTvfeFFpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node with Stikcy Mode](images/StickyNode.png)" %}
 
@@ -828,17 +828,17 @@ The following code example demonstrates how to set `IsSticky` property to **true
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
-<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Connectors="connectors" />
+<SfDiagramComponent @ref="@_diagram" Width="1000px" Height="500px" Connectors="_connectors" />
 @code
 {
     //Define diagram's connectors collection
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> _connectors;
     //Refrence the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
             {
                 ID = "Connector1",
@@ -847,11 +847,11 @@ The following code example demonstrates how to set `IsSticky` property to **true
                 Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true  },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/StickyForConnector.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjByCDDFpvysxzPr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node with Stikcy Mode](images/StickyConnector.png)" %}
 
@@ -867,15 +867,15 @@ By default, tooltips are not displayed. Need to explicitly configure the tooltip
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
-                    Nodes="@nodes"
-                    SelectionSettings="@SelectedModel">
+                    Nodes="@_nodes"
+                    SelectionSettings="@_selectedModel">
 </SfDiagramComponent>
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
         UserHandle cloneHandle = new UserHandle()
@@ -888,12 +888,12 @@ By default, tooltips are not displayed. Need to explicitly configure the tooltip
             Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
             Tooltip = new DiagramTooltip() { Content = "CloneNode" }
         };
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
-        SelectedModel.UserHandles = UserHandles;
-        nodes = new DiagramObjectCollection<Node>();
+        _selectedModel.UserHandles = _userHandles;
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
         {
             ID = "node1",
@@ -904,11 +904,11 @@ By default, tooltips are not displayed. Need to explicitly configure the tooltip
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
         };
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleTooltip)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserhandleTooltip.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLosDtlTlSozUTB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Tooltip for UserHandle](images/UserHandleTooltip.gif)" %}
 
@@ -926,15 +926,15 @@ The following code example demonstrates how to set `IsSticky` property to **true
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
-                    Nodes="@nodes"
-                    SelectionSettings="@SelectedModel">
+                    Nodes="@_nodes"
+                    SelectionSettings="@_selectedModel">
 </SfDiagramComponent>
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
+    private DiagramSelectionSettings _selectedModel = new DiagramSelectionSettings();
+    private DiagramObjectCollection<UserHandle> _userHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
         UserHandle cloneHandle = new UserHandle()
@@ -947,12 +947,12 @@ The following code example demonstrates how to set `IsSticky` property to **true
             Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
             Tooltip = new DiagramTooltip() { Content = "CloneNode",IsSticky = true }
         };
-        UserHandles = new DiagramObjectCollection<UserHandle>()
+        _userHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
-        SelectedModel.UserHandles = UserHandles;
-        nodes = new DiagramObjectCollection<Node>();
+        _selectedModel.UserHandles = _userHandles;
+        _nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
         {
             ID = "node1",
@@ -963,11 +963,11 @@ The following code example demonstrates how to set `IsSticky` property to **true
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
         };
-        nodes.Add(diagramNode);
+        _nodes.Add(diagramNode);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleIsSticky/)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleIsSticky.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhesXNlflyEQBvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.png)" %}
 
@@ -978,15 +978,15 @@ The diagram component offers robust tooltip functionality for [FixedUserHandles]
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
         {
             OffsetX = 250,
@@ -1009,11 +1009,11 @@ The diagram component offers robust tooltip functionality for [FixedUserHandles]
                 },
             }
         };
-        nodes.Add(node1);
+        _nodes.Add(node1);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleTooltip)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleTooltip.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZheCjNFJbPKBivq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)" %}
 
@@ -1026,15 +1026,15 @@ The following code example demonstrates how to set `IsSticky` property to true f
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private DiagramObjectCollection<Node> _nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
         {
             OffsetX = 250,
@@ -1057,11 +1057,11 @@ The following code example demonstrates how to set `IsSticky` property to true f
                 },
             }
         };
-        nodes.Add(node1);
+        _nodes.Add(node1);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleIsSticky)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleIsSticky.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLyiXjbzvEDcPUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](images/FixedUserHandleIsSticky.png)" %}
 
@@ -1076,14 +1076,14 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes"  />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@_nodes"  />
 @code
 {
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
     
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -1108,7 +1108,7 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
                 } 
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
         Node node2 = new Node()
         {
              ID = "node2",
@@ -1134,11 +1134,11 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
                  }
              }
         };
-        nodes.Add(node2);  
+        _nodes.Add(node2);  
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/TooltipForSpecificPort)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/TooltipForSpecificPort.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthysNZbfPaIKgsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the port](./images/PortTooltip.gif)" %}
 
@@ -1156,17 +1156,17 @@ The following code example demonstrates how to set `IsSticky` property to **true
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
-<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent @ref="@_diagram" Width="1000px" Height="500px" Nodes="@_nodes" />
 @code
 {
     //Define diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Node> _nodes;
     //Reference the diagram
-    SfDiagramComponent diagram;
+    private SfDiagramComponent _diagram;
     protected override void OnInitialized()
     {
         //Intialize diagram's nodes collection
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
             {
                 ID = "node1",
@@ -1193,11 +1193,11 @@ The following code example demonstrates how to set `IsSticky` property to **true
                 }
                 },
             };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/PortIsSticky/PortIsSticky.razor)
 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLoMttPJlkudJEW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](./images/PortIsSticky.png)" %}

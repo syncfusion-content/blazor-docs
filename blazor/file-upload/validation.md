@@ -109,12 +109,12 @@ The provided code snippet demonstrates a Blazor form for editing employee inform
  
     public async Task HandleValidSubmit()  
     {  
-        await this.UploadObj.Upload(); // Upload the selected file manually  
+        await this.UploadObj.UploadAsync(); // Upload the selected file manually  
  
     }   
     public async Task HandleInvalidSubmit() 
     { 
-         await this.UploadObj.Upload(); // Upload the selected file manually  
+         await this.UploadObj.UploadAsync(); // Upload the selected file manually  
     }  
 } 
 ```
@@ -165,12 +165,12 @@ The provided code snippet demonstrates a Blazor form for editing employee inform
  
     public async Task HandleValidSubmit()  
     {  
-        await this.UploadObj.Upload(); // Upload the selected file manually  
+        await this.UploadObj.UploadAsync(); // Upload the selected file manually  
  
     }   
     public async Task HandleInvalidSubmit() 
     { 
-         await this.UploadObj.Upload(); // Upload the selected file manually  
+         await this.UploadObj.UploadAsync(); // Upload the selected file manually  
     }  
 } 
 ```

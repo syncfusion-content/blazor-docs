@@ -23,7 +23,7 @@ Scroll settings allows to read the scroll status, [CurrentZoom](https://help.syn
 
 ## How to Define Scroll Status
 
-Diagram allows to pan the diagram before loading so that any desired region of a large diagram can be viewed. Programmatically pan the diagram with the [HorizontalOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_HorizontalOffset) and [VerticalOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_VerticalOffset) properties of scroll settings. The following code illustrates how to pan the diagram programmatically.
+Diagram allows to pan the diagram before loading so that any desired region of a large diagram can be viewed. Programmatically pan the diagram with the `HorizontalOffset` and `VerticalOffset` properties of scroll settings. The following code illustrates how to pan the diagram programmatically.
 
 In the following example, the vertical scroll bar is scrolled down by 50 pixels and the horizontal scroll bar is scrolled to right by 100 pixels.
 
@@ -38,7 +38,7 @@ In the following example, the vertical scroll bar is scrolled down by 50 pixels 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhysjXFTzpvVLgh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollSettings)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollSettingsSample.razor)
 ## How to Update Scroll Status
 
 Programmatically change the scroll offsets at runtime by using the external button click. The following code illustrates how to change the scroll offsets at runtime.
@@ -47,28 +47,28 @@ Programmatically change the scroll offsets at runtime by using the external butt
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="UpdateScrollValues" OnClick="@updateScrollValues" />
+<SfButton Content="UpdateScrollValues" OnClick="@UpdateScrollValues" />
 <SfDiagramComponent Height="600px">
     @* Sets the ScrollSettings for the diagram *@
-    <ScrollSettings HorizontalOffset="@horizontalOffset" VerticalOffset="@verticalOffset">
+    <ScrollSettings HorizontalOffset="@_horizontalOffset" VerticalOffset="@_verticalOffset">
     </ScrollSettings>
 </SfDiagramComponent>
 
 @code {
-    public double horizontalOffset { get; set; } = 100;
-    public double verticalOffset { get; set; } = 100;
+    private double _horizontalOffset { get; set; } = 100;
+    private double _verticalOffset { get; set; } = 100;
 
-    public void updateScrollValues()
+    private void UpdateScrollValues()
     {
         //Update scroll settings.
-        verticalOffset = 400;
-        horizontalOffset = 200;
+        _verticalOffset = 400;
+        _horizontalOffset = 200;
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVIWNDFzfeFyPFB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollStatus)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollStatus.razor)
 
 ## How to Handle the Scroll Changed Event 
 
@@ -83,23 +83,24 @@ The Diagram control provides the following event for scroll settings.
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="UpdateScrollValues" OnClick="@updateScrollValues" />
+<SfButton Content="UpdateScrollValues" OnClick="@UpdateScrollValues" />
 <SfDiagramComponent Height="600px" ScrollChanged="ScrollChanged">
     @* Sets the ScrollSettings for the diagram *@
-    <ScrollSettings HorizontalOffset="@horizontalOffset" VerticalOffset="@verticalOffset">
+    <ScrollSettings HorizontalOffset="@_horizontalOffset" VerticalOffset="@_verticalOffset">
     </ScrollSettings>
 </SfDiagramComponent>
 
 @code{
-    public double horizontalOffset { get; set; } = 100;
-    public double verticalOffset { get; set; } = 100;
+    private double _horizontalOffset { get; set; } = 100;
+    private double _verticalOffset { get; set; } = 100;
 
-    public void updateScrollValues()
+    private void UpdateScrollValues()
     {
         //Update the scroll settings.
-        verticalOffset = 400;
-        horizontalOffset = 200;
+        _verticalOffset = 400;
+        _horizontalOffset = 200;
     }
+
     private void ScrollChanged(ScrollChangedEventArgs args)
     {
 
@@ -121,54 +122,55 @@ The auto-scroll behavior in the diagram can be enabled or disabled by using the 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="400px" Width="400px" Nodes="@nodes" Connectors="@connectors">
+<SfDiagramComponent Height="400px" Width="400px" Nodes="@_nodes" Connectors="@_connectors">
     @* Sets the ScrollSettings for the diagram *@
-    <ScrollSettings EnableAutoScroll=true @bind-ScrollLimit="@scrollLimit">
+    <ScrollSettings EnableAutoScroll=true @bind-ScrollLimit="@_scrollLimit">
     </ScrollSettings>
 </SfDiagramComponent>
 @code
 {
-    ScrollLimitMode scrollLimit { get; set; } = ScrollLimitMode.Infinity;
+    ScrollLimitMode _scrollLimit { get; set; } = ScrollLimitMode.Infinity;
     //Defines diagram's node collection.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
-        nodes.Add(node);
-        Connector Connector = new Connector()
+        _nodes.Add(node);
+        Connector connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight,
+            Style = new ShapeStyle()
             {
-                ID = "connector1",
-                // Set the source and target point of the connector.
-                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-                TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
-                // Type of the connector segments.
-                Type = ConnectorSegmentType.Straight,
-                Style = new ShapeStyle()
-                {
-                    StrokeColor = "#6495ED",
-                    StrokeWidth = 1
-                },
-            };
-        connectors.Add(Connector);
+                StrokeColor = "#6495ED",
+                StrokeWidth = 1
+            },
+        };
+        _connectors.Add(connector);
     }
 }
 ```
@@ -180,54 +182,54 @@ The auto-scrolling region is limited using [ScrollLimit](https://help.syncfusion
 
 |![AutoScroll support for node](images/AutoScroll.gif) | 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/AutoScroll)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/AutoScroll.razor)
 
 ## How to Set Auto Scroll Padding
 The [AutoScrollPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_AutoScrollPadding) is used to specify the maximum distance between the object and the diagram's edge that will trigger auto-scrolling. When auto-scrolling is enabled, the diagram viewport will automatically scroll in the direction of the mouse movement when the user drags a node or connector to the edge of the viewport. The padding to start the auto-scrolling at the edge can be controlled by setting `AutoScrollPadding` property.
 
-N> The default value is 20 pixels.
+N> The default value is **20 pixels**.
 
 The following example illustrates how to set auto scroll padding.
 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Width="600px" Nodes="@nodes">
+<SfDiagramComponent Height="600px" Width="600px" Nodes="@_nodes">
     @* Sets the ScrollSettings for the diagram *@
-    <ScrollSettings EnableAutoScroll=true AutoScrollPadding="@autoScrollBorder">
+    <ScrollSettings EnableAutoScroll=true AutoScrollPadding="@_autoScrollBorder">
     </ScrollSettings>
 </SfDiagramComponent>
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-    DiagramMargin autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
+    private DiagramObjectCollection<Node> _nodes;
+    private DiagramMargin _autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBIWttvzTGEtyEB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/AutoScrollPadding)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/AutoScrollPadding.razor)
 
 
 ## How to Limit Scrolling Area
@@ -247,17 +249,17 @@ The following example illustrates how to specify the scroll limit.
 
 <SfDiagramComponent Height="600px">
     @* Sets the ScrollLimit of scroll settings *@
-     <ScrollSettings @bind-ScrollLimit="@scrollLimit" ></ScrollSettings>
+     <ScrollSettings @bind-ScrollLimit="@_scrollLimit" ></ScrollSettings>
 </SfDiagramComponent>
 
 @code{
-    ScrollLimitMode scrollLimit { get; set; } = ScrollLimitMode.Infinity;
+    private ScrollLimitMode _scrollLimit { get; set; } = ScrollLimitMode.Infinity;
 }
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtryiNXPzflwBSak?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollLimit)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollLimit.razor)
 
 To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html).
 
@@ -269,46 +271,46 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 ## How to Set Scroll Padding
 The [ScrollPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollPadding) property in the scroll settings allows you to extend the scrollable region based on the [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit), when an element is interacted with at the edges of the viewport. It defines the maximum distance between the object and the edge of the diagram area, ensuring smoother navigation and interaction. This behavior enhances the user experience, particularly in large diagrams where users may need to move or extend elements across different sections of the canvas.
 
-N> The default value is 0 pixels.
+N> The default value is **0 pixels**.
 
 The following example illustrates how to sets scroll padding.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="600px" Width="600px" Nodes="@nodes">
+<SfDiagramComponent Height="600px" Width="600px" Nodes="@_nodes">
     @* Sets the ScrollSettings for the diagram *@
-    <ScrollSettings ScrollPadding="@ScrollBorder">
+    <ScrollSettings ScrollPadding="@_scrollBorder">
     </ScrollSettings>
 </SfDiagramComponent>
 @code
 {
-    DiagramMargin ScrollBorder = new DiagramMargin() { Left = 100, Right = 100, Top = 100, Bottom = 100 };
-    DiagramObjectCollection<Node> nodes;
+    private DiagramMargin _scrollBorder = new DiagramMargin() { Left = 100, Right = 100, Top = 100, Bottom = 100 };
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollPadding)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollPadding.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSCZDFJpkPdyYI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scroll Padding support for node](images/ScrollPadding.png)" %}
 
@@ -317,40 +319,40 @@ Scrolling beyond any particular rectangular area can be restricted using the [Sc
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Width="70%" Height="300px" Nodes="@nodes">
-    <ScrollSettings  ScrollableArea="@scrollableArea" ScrollLimit="ScrollLimitMode.Limited">
+<SfDiagramComponent Width="70%" Height="300px" Nodes="@_nodes">
+    <ScrollSettings  ScrollableArea="@_scrollableArea" ScrollLimit="ScrollLimitMode.Limited">
     </ScrollSettings>
 </SfDiagramComponent>
 @code
 {
-    DiagramRect scrollableArea = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
-    DiagramObjectCollection<Node> nodes;
+    private DiagramRect _scrollableArea = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 300,
+            OffsetY = 50,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
             {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 300,
-                OffsetY = 50,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                }
-            };
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
         // Add node.
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLeCZjlJesCAUEE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollableArea)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollableArea.razor)
 ## How to Handle Scroll Settings Property Changes Using Callback Methods
 
 * CurrentZoomChanged : Specifies the callback to be triggered when the current zoom value changes.

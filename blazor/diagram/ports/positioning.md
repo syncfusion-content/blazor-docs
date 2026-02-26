@@ -23,16 +23,15 @@ Use [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Poi
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
-        // A node is created and stored in nodes collection.
+        _nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in _nodes collection.
         Node node = new Node()
         {
             // Position of the node.
@@ -60,11 +59,11 @@ Use [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Poi
                 }
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Positioning/PortOffset)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Positioning/PortOffset.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVoiDXGrosCrFqt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Port positioned using Offset values in Blazor Diagram](../images/blazor-diagram-port-offset.png)" %}
 
@@ -102,18 +101,18 @@ The following code example demonstrates how to set path position for a connector
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
+<SfDiagramComponent Height="600px" Connectors="@_connectors">
 </SfDiagramComponent>
 
 @code
 {
     //Define diagram's connector collection
-    DiagramObjectCollection<Connector> connectors;
+    private DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
     {
         // A connector is created and stored in connectors collection.
-        connectors = new DiagramObjectCollection<Connector>();
+        _connectors = new DiagramObjectCollection<Connector>();
 
         // Create connector
         Connector connector = new Connector()
@@ -133,13 +132,13 @@ The following code example demonstrates how to set path position for a connector
                 }
             }
         };
-        connectors.Add(connector);
+        _connectors.Add(connector);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBeCjtGVyLtTfkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortPathPosition)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ConnectorPort/ConnectorPortPathPosition.razor)
 
 ## How to Change Horizontal and Vertical Alignment
 
@@ -164,16 +163,15 @@ The following code shows how to align ports.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
-        // A node is created and stored in nodes array.
+        _nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in _nodes array.
         Node node = new Node()
         {
             // Position of the node.
@@ -202,11 +200,11 @@ The following code shows how to align ports.
                 }
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Positioning/PortHorizontalVerticalAlignment)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Positioning/PortHorizontalVerticalAlignment.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXryMDDQBerYgNVs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing port alignment relative to offset in Blazor Diagram](../images/blazor-diagram-port-position.png)" %}
 
@@ -220,16 +218,15 @@ N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Cen
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {
-    DiagramObjectCollection<Node> nodes;
-
+    private DiagramObjectCollection<Node> _nodes;
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
-        // A node is created and stored in nodes array.
+        _nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in _nodes array.
         Node node = new Node()
         {
             // Position of the node.
@@ -259,11 +256,11 @@ N> The default values for `HorizontalAlignment` and `VerticalAlignment` are `Cen
                 }
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Positioning/PortMargin)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Positioning/PortMargin.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhIWtXQhIAzipUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Port with Margin](../images/blazor-diagram-port-margin.png)" %}
 
