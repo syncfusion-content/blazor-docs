@@ -33,17 +33,21 @@ If you already have a Blazor project, proceed to the package installation sectio
 
 To enable Custom Elements, install the required Microsoft packages.
 
-```
+{% tabs %}
+
 dotnet add package Microsoft.AspNetCore.Components.Web --version 10.0.3 
 dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0.3 
-```
+
+{% endtabs %}
 
 Alternatively, install them using the NuGet Package Manager.
 
-```
+{% tabs %}
+
 Microsoft.AspNetCore.Components.Web 
 Microsoft.AspNetCore.Components.CustomElements 
-```
+
+{% endtabs %}
 
 ### Add Syncfusion component
 
@@ -51,9 +55,11 @@ Add **.razor** file to incorporate the Syncfusion® Data Grid component:
 
 In this example, the file name used is **OrdersGrid.razor**
 
-```
+{% tabs %}
+{% highlight razor tabtitle="OrdersGrid.razor" %}
+
 @using Syncfusion.Blazor.Grids
- @namespace BlazorServerHost.Pages
+@namespace BlazorServerHost.Pages
 
 <SfGrid DataSource="@Orders" >
 <GridColumns>
@@ -85,7 +91,9 @@ In this example, the file name used is **OrdersGrid.razor**
         public double? Freight { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Register it as a Custom Elements 
 
@@ -93,9 +101,13 @@ To use your Razor component inside an Angular application, you must register it 
 
 Any Razor component that you want to use in Angular must be registered inside the **Program.cs** file. Add the following line:
 
-```
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
 builder.RootComponents.RegisterCustomElement<SfxGridWasm.Pages.OrdersGrid>("sf-orders-grid"); 
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 This line registers the **OrdersGrid** component as a custom element named `<sf-orders-grid>`, making it available for use within your Angular application.
 
@@ -115,7 +127,9 @@ Blazor and Angular run on different local servers. To allow Angular to load Blaz
 
 Create a new file named **proxy.conf.json** inside the Angular project’s **src/** folder and add the below content.
 
-```
+{% tabs %}
+{% highlight json tabtitle="proxy.conf.json" %}
+
 { 
 
   "/blazor": { 
@@ -139,22 +153,33 @@ Create a new file named **proxy.conf.json** inside the Angular project’s **src
   } 
 } 
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Then update the start script in **package.json**.
 
-```
+{% tabs %}
+{% highlight json tabtitle="package.json" %}
+
 "start": "ng serve --proxy-config proxy.conf.json" 
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Load Blazor runtime and Syncfusion theme/scripts
 
 The Blazor runtime and Syncfusion scripts/themes are required to load Syncfusion Blazor components inside Angular. Add the following to your Angular project’s **index.html** file.
 
-```
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <link rel="stylesheet" href="/blazor/_content/Syncfusion.Blazor.Themes/bootstrap5.css" /> 
 <script src="/blazor/_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"></script> 
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 WebAssembly:
 
 ```
@@ -171,7 +196,9 @@ Server:
 
 Define the schemas and the custom element tag in the **app.ts** file. 
 
-```
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; 
 
 @Component({ 
@@ -182,7 +209,9 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 export class AppComponent {} 
 
-```
+{% endhighlight %}
+{% endtabs %}
+
 
 [CUSTOM_ELEMENTS_SCHEMA](https://angular.dev/api/core/CUSTOM_ELEMENTS_SCHEMA) allows Angular to accept unknown HTML tags such as `<sf-orders-grid>`. 
 
@@ -217,13 +246,17 @@ N> Install this package only once.
 
 Add the following scripts to  **package.json**
 
-```
+{% tabs %}
+{% highlight json tabtitle="package.json" %}
+
 "start:blazor": "dotnet watch run --project ../SfxGridWasm", //Replace this with your Blazor project name. 
 
 "start:ng": "ng serve --proxy-config proxy.conf.json", 
 
 "start:all": "concurrently -k -n BLAZOR,ANGULAR -c cyan,green \"npm:start:blazor\" \"npm:start:ng\"", 
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Then, run both with one command:  
 
