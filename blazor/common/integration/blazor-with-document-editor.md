@@ -84,7 +84,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-
+{% endtabs %}
 
 ## Add Stylesheet and Script Resources
 
@@ -96,7 +96,6 @@ Add the theme CSS and Syncfusion scripts in `~/App.razor`:
 </head>
 
 <body>
-
    	<!-- Syncfusion Blazor Document Editor component's script reference-->
 	<script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 	<!-- Syncfusion Blazor DataGrid component's script reference -->
