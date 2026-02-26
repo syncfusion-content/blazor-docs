@@ -7,17 +7,16 @@ control: File Upload
 documentation: ug
 ---
 
-# Chunk Upload in Blazor File Upload Component
+# Chunk Upload in Blazor File Upload Component 
 
-### Description
+### Description 
 
 Chunk Upload in the Syncfusion Blazor File Upload component allows you to upload large files by splitting them into smaller, manageable chunks. This process significantly improves reliability, especially over unreliable networks, by reducing the impact of network interruptions. If a part of the file fails to upload, only that specific chunk needs to be re-transmitted, rather than the entire file. This feature is particularly useful for handling large media files, database backups, or any other substantial data transfers where interruptions are a concern. The Uploader sends these chunks to the server using AJAX, enabling the ability to pause, resume, and retry failed chunk uploads.
 
 **Use Case:** Imagine a user uploading a 2GB video file. Without chunking, a network hiccup or browser crash during the upload would require the user to restart the entire upload from the beginning. With chunk upload, the file is broken into smaller pieces (e.g., 10MB each). If the upload fails at the 500MB mark, only the 51st chunk (and subsequent chunks) needs to be re-uploaded, saving significant time and improving user experience.
 
-**Note:**
-* **The chunk upload works exclusively with asynchronous uploads.**
-* **Chunk upload will only be activated when the selected file size is greater than the specified `ChunkSize`. Otherwise, files will be uploaded using the normal (non-chunked) upload mechanism.**
+> * The chunk upload works exclusively with asynchronous uploads. 
+> * Chunk upload will only be activated when the selected file size is greater than the specified `ChunkSize`. Otherwise, files will be uploaded using the normal (non-chunked) upload mechanism.
 
 ## Chunk Configuration
 
@@ -28,8 +27,6 @@ The following properties allow for further control over the chunk upload process
 *   **[`ChunkSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_ChunkSize)**: Sets the size of each chunk in bytes. Larger files will be divided based on this size.
 *   **[`RetryAfterDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RetryAfterDelay)**: Specifies the delay in milliseconds before attempting a retry after a chunk upload fails. The default is 500 milliseconds.
 *   **[`RetryCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RetryCount)**: Defines the number of times the component will attempt to retry a failed chunk upload. By default, it retries 3 times. If all retries fail, the upload is aborted, and the `Failure` event is triggered.
-
-### Code Example - Enabling Chunk Upload
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -111,9 +108,9 @@ Users can cancel an ongoing file upload using the cancel icon in the UI or progr
 
 If an upload fails (e.g., due to server error), the pause icon transforms into a retry icon. Clicking this icon will retry the failed chunk request from where it left off. However, if you explicitly cancel an upload and then retry, the file upload action will restart from the beginning.
 
-**Note:**
-*   **Chunk upload retry:** Retries to upload the failed request from the point of failure.
-*   **Default upload retry:** Retries to upload the entire failed file again from the beginning.
+
+> * **Chunk upload retry:** Retries to upload the failed request from the point of failure.
+> * **Default upload retry:** Retries to upload the entire failed file again from the beginning.
 
 ### Public Methods:
 
