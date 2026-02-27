@@ -15,10 +15,14 @@ This documentation explains how to create a Blazor Server application that hosts
 
 ## Prerequisites
 
-Before starting, ensure you have the following installed:
+Install the following software and packages before starting the process:
 
-- **.NET SDK 8.0 or later** 
-- **Visual Studio 2022 (v17.8+) or later** or **Visual Studio Code** with C# extension
+| Software/Package | Version | Purpose |
+|-----------------|---------|---------|
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
+| .NET SDK | net10.0 or compatible | Runtime and build tools |
+| Syncfusion.Blazor.Schedule | Latest Version | Scheduler component |
+| Syncfusion.Blazor.Themes | Latest Version | Styling for Scheduler |
 
 ## Binding data from Minimal API endpoints
 
@@ -26,14 +30,14 @@ This section explains how to create an ASP.NET Core Minimal API backend within a
 
 ### Step 1: Create a Blazor Web App
 
-Create a **Blazor Web App** using Visual Studio 2022 or .NET CLI.
+Create a **Blazor Web App** using Visual Studio 2026 or .NET CLI.
 
-**Using Visual Studio 2022:**
-1. Open Visual Studio 2022
+**Using Visual Studio 2026:**
+1. Open Visual Studio 2026
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **BlazorSchedulerApp**
-5. Select **.NET 8.0** as the target framework
+5. Select **.NET 10.0** as the target framework
 6. Set **Interactive render mode** to **Server**
 7. Set **Interactivity location** to **Per page/component**
 8. Click **Create**
@@ -55,7 +59,14 @@ Install the Syncfusion Blazor packages using the .NET CLI:
 dotnet add package Syncfusion.Blazor.Schedule
 dotnet add package Syncfusion.Blazor.Themes
 ```
+The installed packages are reflected in the `BlazorSchedulerApp.csproj` file:
 
+```xml
+<ItemGroup>
+    <PackageReference Include="Syncfusion.Blazor.Schedule" Version="*" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
+</ItemGroup>
+```
 > After installing packages, build the project to ensure all dependencies are restored correctly: `dotnet build`
 
 ## Step 3: Add Import Namespaces
@@ -72,25 +83,8 @@ Open the **Components/_Imports.razor** file and import the `Syncfusion.Blazor` a
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of your Blazor Web App.
-
-{% tabs %}
-{% highlight csharp tabtitle="Program.cs" %}
-
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddSyncfusionBlazor();
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 5: Add stylesheet and script resources
+## Step 4: Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **/Components/App.razor** file as shown below:
 
@@ -106,7 +100,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-### Step 6: Create the Appointment Model
+### Step 5: Create the Appointment Model
 
 Create a model class to represent scheduler appointments with all required properties.
 
@@ -154,7 +148,7 @@ Open the **Components/_Imports.razor** file and import the `BlazorSchedulerApp.M
 
 > **Note**: All properties use default values to avoid null reference issues. The API will handle generating unique IDs for new appointments.
 
-### Step 7: Create the Appointment Service
+### Step 6: Create the Appointment Service
 
 Implement a service layer to handle HTTP communication with the Minimal API endpoints.
 
@@ -277,7 +271,7 @@ Open the **Components/_Imports.razor** file and import the `BlazorSchedulerApp.S
 {% endtabs %}
 
 
-### Step 8: Configure Application Services
+### Step 7: Configure Application Services
 
 The `Program.cs` file must be updated to register required services, including Syncfusion Blazor components, HttpClient, CORS, and Razor components.This section configures the foundational services used across the Scheduler application.
 
@@ -369,7 +363,7 @@ The `Program.cs` file must be updated to register required services, including S
 {% endhighlight %}
 {% endtabs %}
 
-### Step 9: Create Minimal API Endpoints
+### Step 8: Create Minimal API Endpoints
 
 Update `Program.cs` to define Minimal API endpoints for CRUD operations.
 
@@ -453,7 +447,7 @@ Update `Program.cs` to define Minimal API endpoints for CRUD operations.
 - Perfect for small APIs within the same application
 
 
-### Step 10: Create the Scheduler Component
+### Step 9: Create the Scheduler Component
 
 Replace the contents of `Home.razor` with the following Blazor Scheduler component that provides full CRUD functionality.
 
@@ -572,7 +566,7 @@ The `OnActionBegin` event fires before any Scheduler action completes, allowing 
 4. Control exactly when and how data is saved
 
 
-### Step 11: Run the Application
+### Step 10: Run the Application
 
 **Step 1: Build the Application**
 
@@ -598,11 +592,11 @@ dotnet watch
 
 **Step 3: Access the Scheduler**
 
-The application will start at `http://localhost:5235` (or the port configured in your `launchSettings.json`).
+The application will start at `http://localhost:5175` (or the port configured in your `launchSettings.json`).
 
 Open your browser and navigate to:
 ```
-http://localhost:5235/scheduler
+http://localhost:5175
 ```
 
 
