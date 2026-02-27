@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Convert a Blazor Project to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor
+# Convert a Blazor Project to Syncfusion® Blazor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor conversion extension for Visual Studio Code converts an existing Blazor application into a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web application by automatically adding required NuGet packages and configuring themes.
 
@@ -15,7 +15,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor conversion extension
 
 Use the following steps to convert an existing Blazor application to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application:
 
-1. In Visual Studio Code, Open an existing Blazor application or create a new Blazor application.
+1. In Visual Studio Code, open an existing Blazor application or create a new Blazor application.
 
    Supported application types:
    - Blazor Web App (Server or WebAssembly rendering)
@@ -27,21 +27,19 @@ Use the following steps to convert an existing Blazor application to a Syncfusio
 
     ![Context menu showing Convert to Syncfusion Blazor Application option](images/Conversion.png)
 
-3. In the Command Palette, select **Select Blazor Version** from the available commands.
-
-4. Choose the desired Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor version from the dropdown list (displays versions available on `nuget.org`).
+3. In the Command Palette, select **Select Blazor Version** and choose the desired Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor version from the dropdown list (displays versions available on `nuget.org`).
 
     ![Command Palette showing Blazor version selection](images/VersionSelection.png)
 
-5. After version selection, the Command Palette will display available themes. Select the preferred theme (e.g., Material, Bootstrap, Tailwind, Fluent and HighContrast).
+4. After version selection, the Command Palette will display available themes. Select the preferred theme (e.g., Material, Bootstrap, Tailwind, Fluent and HighContrast).
 
     ![Command Palette showing theme selection options](images/ChooseThemes.png)
 
    N> The conversion process will run automatically. This may take a few moments as NuGet packages are downloaded and the project is configured.
 
-6. After conversion completes, the application is configured with the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages and the selected theme stylesheet.
+5. After conversion completes, the application is configured with the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages and the selected theme stylesheet.
 
-7. If the trial setup or NuGet packages from `nuget.org`, register the Syncfusion® license key in the application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to the application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
+6. If the trial setup or NuGet packages from `nuget.org`, register the Syncfusion® license key in the application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to the application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
 
 ## NuGet Packages
 
