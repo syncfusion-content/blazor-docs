@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Connecting PostgreSQL to Blazor Scheduler Using Entity Framework
 
-The Syncfusion® Blazor Scheduler component supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries for managing appointments and calendar events.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries for managing appointments and calendar events.
 
 ## What is Entity Framework Core?
 
@@ -129,94 +129,94 @@ A data model is a C# class that represents the structure of a database table. Th
 2. Inside the **Models** folder, create a new file named `Appointment.cs`.
 3. Define the `Appointment` class with the following code:
 
-{% tabs %}
-{% highlight csharp tabtitle="Appointment.cs" %}
+    {% tabs %}
+    {% highlight csharp tabtitle="Appointment.cs" %}
 
-    using System.ComponentModel.DataAnnotations;
+        using System.ComponentModel.DataAnnotations;
 
-    namespace BlazorSchedulerApp.Models
-    {
-        /// <summary>
-        /// Represents an appointment record mapped to the 'Appointments' table in the database.
-        /// This model defines the structure of appointment-related data used throughout the application.
-        /// </summary>
-        public class Appointment
+        namespace BlazorSchedulerApp.Models
         {
             /// <summary>
-            /// Gets or sets the unique identifier for the appointment record.
-            /// This is the primary key and auto-incremented by the database.
+            /// Represents an appointment record mapped to the 'Appointments' table in the database.
+            /// This model defines the structure of appointment-related data used throughout the application.
             /// </summary>
-            [Key]
-            public int Id { get; set; }
+            public class Appointment
+            {
+                /// <summary>
+                /// Gets or sets the unique identifier for the appointment record.
+                /// This is the primary key and auto-incremented by the database.
+                /// </summary>
+                [Key]
+                public int Id { get; set; }
 
-            /// <summary>
-            /// Gets or sets the subject or title of the appointment.
-            /// Maximum length of 200 characters.
-            /// </summary>
-            [StringLength(200)]
-            public string Subject { get; set; } = string.Empty;
+                /// <summary>
+                /// Gets or sets the subject or title of the appointment.
+                /// Maximum length of 200 characters.
+                /// </summary>
+                [StringLength(200)]
+                public string Subject { get; set; } = string.Empty;
 
-            /// <summary>
-            /// Gets or sets the detailed description of the appointment.
-            /// Maximum length of 500 characters.
-            /// </summary>
-            [StringLength(500)]
-            public string Description { get; set; } = string.Empty;
+                /// <summary>
+                /// Gets or sets the detailed description of the appointment.
+                /// Maximum length of 500 characters.
+                /// </summary>
+                [StringLength(500)]
+                public string Description { get; set; } = string.Empty;
 
-            /// <summary>
-            /// Gets or sets the start date and time of the appointment.
-            /// This field is required.
-            /// </summary>
-            [Required]
-            public DateTime StartTime { get; set; }
+                /// <summary>
+                /// Gets or sets the start date and time of the appointment.
+                /// This field is required.
+                /// </summary>
+                [Required]
+                public DateTime StartTime { get; set; }
 
-            /// <summary>
-            /// Gets or sets the end date and time of the appointment.
-            /// This field is required.
-            /// </summary>
-            [Required]
-            public DateTime EndTime { get; set; }
+                /// <summary>
+                /// Gets or sets the end date and time of the appointment.
+                /// This field is required.
+                /// </summary>
+                [Required]
+                public DateTime EndTime { get; set; }
 
-            /// <summary>
-            /// Gets or sets the location where the appointment takes place.
-            /// Maximum length of 200 characters.
-            /// </summary>
-            [StringLength(200)]
-            public string Location { get; set; } = string.Empty;
+                /// <summary>
+                /// Gets or sets the location where the appointment takes place.
+                /// Maximum length of 200 characters.
+                /// </summary>
+                [StringLength(200)]
+                public string Location { get; set; } = string.Empty;
 
-            /// <summary>
-            /// Gets or sets a value indicating whether the appointment spans the entire day.
-            /// </summary>
-            public bool IsAllDay { get; set; }
+                /// <summary>
+                /// Gets or sets a value indicating whether the appointment spans the entire day.
+                /// </summary>
+                public bool IsAllDay { get; set; }
 
-            /// <summary>
-            /// Gets or sets the recurrence rule for repeating appointments.
-            /// Uses iCalendar RRULE format (e.g., "FREQ=DAILY;INTERVAL=1").
-            /// Maximum length of 50 characters.
-            /// </summary>
-            [StringLength(50)]
-            public string RecurrenceRule { get; set; } = string.Empty;
+                /// <summary>
+                /// Gets or sets the recurrence rule for repeating appointments.
+                /// Uses iCalendar RRULE format (e.g., "FREQ=DAILY;INTERVAL=1").
+                /// Maximum length of 50 characters.
+                /// </summary>
+                [StringLength(50)]
+                public string RecurrenceRule { get; set; } = string.Empty;
 
-            /// <summary>
-            /// Gets or sets the ID of the parent appointment in a recurrence series.
-            /// Links recurring appointment instances to their parent.
-            /// </summary>
-            public int? RecurrenceID { get; set; }
+                /// <summary>
+                /// Gets or sets the ID of the parent appointment in a recurrence series.
+                /// Links recurring appointment instances to their parent.
+                /// </summary>
+                public int? RecurrenceID { get; set; }
 
-            /// <summary>
-            /// Gets or sets the exception dates for recurring appointments.
-            /// Stores dates when the recurring appointment should not occur.
-            /// </summary>
-            public string? RecurrenceException { get; set; }
+                /// <summary>
+                /// Gets or sets the exception dates for recurring appointments.
+                /// Stores dates when the recurring appointment should not occur.
+                /// </summary>
+                public string? RecurrenceException { get; set; }
 
-            /// <summary>
-            /// points to parent series Id 
-            /// </summary>
-            public int? FollowingID { get; set; }
+                /// <summary>
+                /// points to parent series Id 
+                /// </summary>
+                public int? FollowingID { get; set; }
+            }
         }
-    }
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
 #### Explanation:
 
@@ -241,84 +241,84 @@ A `DbContext` is a special class that manages the connection between the applica
 2. Inside the **Data** folder, create a new file named `ApplicationDbContext.cs`.
 3. Define the `ApplicationDbContext` class with the following code:
 
-{% tabs %}
-{% highlight csharp tabtitle="ApplicationDbContext.cs" %}
+    {% tabs %}
+    {% highlight csharp tabtitle="ApplicationDbContext.cs" %}
 
-    using Microsoft.EntityFrameworkCore;
-    using BlazorSchedulerApp.Models;
+        using Microsoft.EntityFrameworkCore;
+        using BlazorSchedulerApp.Models;
 
-    namespace BlazorSchedulerApp.Data
-    {
-        /// <summary>
-        /// DbContext for Appointment entity
-        /// Manages database connections and entity configurations for the Appointment Scheduler
-        /// This context bridges the application with PostgreSQL database
-        /// </summary>
-        public class ApplicationDbContext : DbContext
+        namespace BlazorSchedulerApp.Data
         {
             /// <summary>
-            /// Initializes a new instance of the ApplicationDbContext class.
+            /// DbContext for Appointment entity
+            /// Manages database connections and entity configurations for the Appointment Scheduler
+            /// This context bridges the application with PostgreSQL database
             /// </summary>
-            /// <param name="options">The options to be used by a DbContext</param>
-            public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-                : base(options)
+            public class ApplicationDbContext : DbContext
             {
-            }
-
-            /// <summary>
-            /// Gets or sets the DbSet for Appointment entities.
-            /// Represents the collection of all appointments in the database.
-            /// </summary>
-            public DbSet<Appointment> Appointments { get; set; } = null!;
-
-            /// <summary>
-            /// Configures the entity mappings, constraints, and database-specific configurations.
-            /// This method is called by Entity Framework Core during model creation.
-            /// </summary>
-            /// <param name="modelBuilder">Provides a simple API for configuring the EF model</param>
-            protected override void OnModelCreating(ModelBuilder modelBuilder)
-            {
-                base.OnModelCreating(modelBuilder);
-
-                // Configure the Appointment entity
-                modelBuilder.Entity<Appointment>(entity =>
+                /// <summary>
+                /// Initializes a new instance of the ApplicationDbContext class.
+                /// </summary>
+                /// <param name="options">The options to be used by a DbContext</param>
+                public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+                    : base(options)
                 {
-                    // Define primary key
-                    entity.HasKey(e => e.Id);
+                }
 
-                    // Configure string properties with max length constraints
-                    entity.Property(e => e.Subject)
-                        .IsRequired()
-                        .HasMaxLength(200);
+                /// <summary>
+                /// Gets or sets the DbSet for Appointment entities.
+                /// Represents the collection of all appointments in the database.
+                /// </summary>
+                public DbSet<Appointment> Appointments { get; set; } = null!;
 
-                    entity.Property(e => e.Description)
-                        .HasMaxLength(500);
+                /// <summary>
+                /// Configures the entity mappings, constraints, and database-specific configurations.
+                /// This method is called by Entity Framework Core during model creation.
+                /// </summary>
+                /// <param name="modelBuilder">Provides a simple API for configuring the EF model</param>
+                protected override void OnModelCreating(ModelBuilder modelBuilder)
+                {
+                    base.OnModelCreating(modelBuilder);
 
-                    entity.Property(e => e.Location)
-                        .HasMaxLength(200);
+                    // Configure the Appointment entity
+                    modelBuilder.Entity<Appointment>(entity =>
+                    {
+                        // Define primary key
+                        entity.HasKey(e => e.Id);
 
-                    // Configure required date/time properties
-                    entity.Property(e => e.StartTime)
-                        .IsRequired();
+                        // Configure string properties with max length constraints
+                        entity.Property(e => e.Subject)
+                            .IsRequired()
+                            .HasMaxLength(200);
 
-                    entity.Property(e => e.EndTime)
-                        .IsRequired();
+                        entity.Property(e => e.Description)
+                            .HasMaxLength(500);
 
-                    // Configure recurrence-related properties
-                    entity.Property(e => e.RecurrenceRule)
-                        .HasMaxLength(50);
-                    // Helpful index: find all edited occurrences for a parent quickly
-                    entity.HasIndex(e => e.RecurrenceID);
-                
-                    entity.Property(x => x.FollowingID);
+                        entity.Property(e => e.Location)
+                            .HasMaxLength(200);
 
-                    entity.HasIndex(x => x.FollowingID);
-                });
+                        // Configure required date/time properties
+                        entity.Property(e => e.StartTime)
+                            .IsRequired();
+
+                        entity.Property(e => e.EndTime)
+                            .IsRequired();
+
+                        // Configure recurrence-related properties
+                        entity.Property(e => e.RecurrenceRule)
+                            .HasMaxLength(50);
+                        // Helpful index: find all edited occurrences for a parent quickly
+                        entity.HasIndex(e => e.RecurrenceID);
+
+                        entity.Property(x => x.FollowingID);
+
+                        entity.HasIndex(x => x.FollowingID);
+                    });
+                }
             }
         }
-    }
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
 #### Explanation:
 
@@ -386,155 +386,155 @@ A service class is an intermediary layer that handles all database operations. T
 2. Inside the **Services** folder, create a new file named `AppointmentService.cs`.
 3. Define the `AppointmentService` class with the following code:
 
-{% tabs %}
-{% highlight csharp tabtitle="AppointmentService.cs" %}
+    {% tabs %}
+    {% highlight csharp tabtitle="AppointmentService.cs" %}
 
-    using Microsoft.EntityFrameworkCore;
-    using BlazorSchedulerApp.Data;
-    using BlazorSchedulerApp.Models;
+        using Microsoft.EntityFrameworkCore;
+        using BlazorSchedulerApp.Data;
+        using BlazorSchedulerApp.Models;
 
-    namespace BlazorSchedulerApp.Services
-    {
-        /// <summary>
-        /// Service class for Appointment entity using Entity Framework Core
-        /// Handles all CRUD operations and business logic for appointments
-        /// Communicates with PostgreSQL database through ApplicationDbContext
-        /// </summary>
-        public class AppointmentService
+        namespace BlazorSchedulerApp.Services
         {
-            private readonly ApplicationDbContext _context;
-
-            public AppointmentService(ApplicationDbContext context)
-            {
-                _context = context;
-            }
-
             /// <summary>
-            /// Retrieves all appointments from the database
+            /// Service class for Appointment entity using Entity Framework Core
+            /// Handles all CRUD operations and business logic for appointments
+            /// Communicates with PostgreSQL database through ApplicationDbContext
             /// </summary>
-            /// <returns>List of all appointments</returns>
-            public async Task<List<Appointment>> GetAllAppointmentsAsync()
+            public class AppointmentService
             {
-                try
-                {
-                    return await _context.Appointments.ToListAsync();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error getting appointments: {ex.Message}");
-                    return new List<Appointment>();
-                }
-            }
+                private readonly ApplicationDbContext _context;
 
-            /// <summary>
-            /// Retrieves a single appointment by ID
-            /// </summary>
-            /// <param name="id">The appointment ID to retrieve</param>
-            /// <returns>The appointment if found, otherwise null</returns>
-            public async Task<Appointment?> GetAppointmentByIdAsync(int id)
-            {
-                try
+                public AppointmentService(ApplicationDbContext context)
                 {
-                    return await _context.Appointments.FindAsync(id);
+                    _context = context;
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error getting appointment: {ex.Message}");
-                    return null;
-                }
-            }
 
-            /// <summary>
-            /// Creates a new appointment in the database
-            /// </summary>
-            /// <param name="appointment">The appointment model to add</param>
-            /// <returns>The created appointment with database-generated ID</returns>
-            public async Task<Appointment> CreateAppointmentAsync(Appointment appointment)
-            {
-                try
+                /// <summary>
+                /// Retrieves all appointments from the database
+                /// </summary>
+                /// <returns>List of all appointments</returns>
+                public async Task<List<Appointment>> GetAllAppointmentsAsync()
                 {
-                    // Reset Id to 0 to let database generate it
-                    appointment.Id = 0;
-
-                    // Provide default subject if empty
-                    if (string.IsNullOrWhiteSpace(appointment.Subject))
+                    try
                     {
-                        appointment.Subject = "Add Title";
+                        return await _context.Appointments.ToListAsync();
                     }
-
-                    _context.Appointments.Add(appointment);
-                    await _context.SaveChangesAsync();
-                    return appointment;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error creating appointment: {ex.Message}");
-                    throw;
-                }
-            }
-
-            /// <summary>
-            /// Updates an existing appointment in the database
-            /// </summary>
-            /// <param name="appointment">The appointment model with updated values</param>
-            /// <returns>The updated appointment</returns>
-            public async Task<Appointment> UpdateAppointmentAsync(Appointment appointment)
-            {
-                try
-                {
-                    // Provide default subject if empty
-                    if (string.IsNullOrWhiteSpace(appointment.Subject))
+                    catch (Exception ex)
                     {
-                        appointment.Subject = "Add Title";
+                        Console.WriteLine($"Error getting appointments: {ex.Message}");
+                        return new List<Appointment>();
                     }
+                }
 
-                    // Detach any existing tracked entity with same Id to avoid tracking conflicts
-                    var existingEntity = _context.Appointments.Local
-                        .FirstOrDefault(e => e.Id == appointment.Id);
-                    if (existingEntity != null)
+                /// <summary>
+                /// Retrieves a single appointment by ID
+                /// </summary>
+                /// <param name="id">The appointment ID to retrieve</param>
+                /// <returns>The appointment if found, otherwise null</returns>
+                public async Task<Appointment?> GetAppointmentByIdAsync(int id)
+                {
+                    try
                     {
-                        _context.Entry(existingEntity).State = EntityState.Detached;
+                        return await _context.Appointments.FindAsync(id);
                     }
-
-                    _context.Entry(appointment).State = EntityState.Modified;
-                    await _context.SaveChangesAsync();
-                    return appointment;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error updating appointment: {ex.Message}");
-                    throw;
-                }
-            }
-
-            /// <summary>
-            /// Deletes an appointment from the database
-            /// </summary>
-            /// <param name="id">The appointment ID to delete</param>
-            /// <returns>True if deletion was successful, otherwise false</returns>
-            public async Task<bool> DeleteAppointmentAsync(int id)
-            {
-                try
-                {
-                    var appointment = await _context.Appointments.FindAsync(id);
-                    if (appointment != null)
+                    catch (Exception ex)
                     {
-                        _context.Appointments.Remove(appointment);
+                        Console.WriteLine($"Error getting appointment: {ex.Message}");
+                        return null;
+                    }
+                }
+
+                /// <summary>
+                /// Creates a new appointment in the database
+                /// </summary>
+                /// <param name="appointment">The appointment model to add</param>
+                /// <returns>The created appointment with database-generated ID</returns>
+                public async Task<Appointment> CreateAppointmentAsync(Appointment appointment)
+                {
+                    try
+                    {
+                        // Reset Id to 0 to let database generate it
+                        appointment.Id = 0;
+
+                        // Provide default subject if empty
+                        if (string.IsNullOrWhiteSpace(appointment.Subject))
+                        {
+                            appointment.Subject = "Add Title";
+                        }
+
+                        _context.Appointments.Add(appointment);
                         await _context.SaveChangesAsync();
-                        return true;
+                        return appointment;
                     }
-                    return false;
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error creating appointment: {ex.Message}");
+                        throw;
+                    }
                 }
-                catch (Exception ex)
+
+                /// <summary>
+                /// Updates an existing appointment in the database
+                /// </summary>
+                /// <param name="appointment">The appointment model with updated values</param>
+                /// <returns>The updated appointment</returns>
+                public async Task<Appointment> UpdateAppointmentAsync(Appointment appointment)
                 {
-                    Console.WriteLine($"Error deleting appointment: {ex.Message}");
-                    return false;
+                    try
+                    {
+                        // Provide default subject if empty
+                        if (string.IsNullOrWhiteSpace(appointment.Subject))
+                        {
+                            appointment.Subject = "Add Title";
+                        }
+
+                        // Detach any existing tracked entity with same Id to avoid tracking conflicts
+                        var existingEntity = _context.Appointments.Local
+                            .FirstOrDefault(e => e.Id == appointment.Id);
+                        if (existingEntity != null)
+                        {
+                            _context.Entry(existingEntity).State = EntityState.Detached;
+                        }
+
+                        _context.Entry(appointment).State = EntityState.Modified;
+                        await _context.SaveChangesAsync();
+                        return appointment;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error updating appointment: {ex.Message}");
+                        throw;
+                    }
+                }
+
+                /// <summary>
+                /// Deletes an appointment from the database
+                /// </summary>
+                /// <param name="id">The appointment ID to delete</param>
+                /// <returns>True if deletion was successful, otherwise false</returns>
+                public async Task<bool> DeleteAppointmentAsync(int id)
+                {
+                    try
+                    {
+                        var appointment = await _context.Appointments.FindAsync(id);
+                        if (appointment != null)
+                        {
+                            _context.Appointments.Remove(appointment);
+                            await _context.SaveChangesAsync();
+                            return true;
+                        }
+                        return false;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error deleting appointment: {ex.Message}");
+                        return false;
+                    }
                 }
             }
         }
-    }
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
 #### Service Layer Benefits:
 
@@ -561,75 +561,71 @@ The `Program.cs` file is where application services are registered and configure
 1. Open the `Program.cs` file at the project root.
 2. Add the following code:
 
-{% tabs %}
-{% highlight csharp tabtitle="Program.cs" %}
+    {% tabs %}
+    {% highlight csharp tabtitle="Program.cs" %}
 
-    using BlazorSchedulerApp.Components;
-    using BlazorSchedulerApp.Data;
-    using BlazorSchedulerApp.Services;
-    using Microsoft.EntityFrameworkCore;
-    using Syncfusion.Blazor;
+        using BlazorSchedulerApp.Components;
+        using BlazorSchedulerApp.Data;
+        using BlazorSchedulerApp.Services;
+        using Microsoft.EntityFrameworkCore;
+        using Syncfusion.Blazor;
 
-    // Configure AppContext to handle DateTime timestamps for PostgreSQL
-    // This prevents double UTC conversion issues
-    AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
-    var builder = WebApplication.CreateBuilder(args);
+        var builder = WebApplication.CreateBuilder(args);
 
-    // Add services to the container
-    builder.Services.AddRazorComponents()
-        .AddInteractiveServerComponents();
+        builder.Services.AddRazorComponents()
+            .AddInteractiveServerComponents();
 
-    // ========== SYNCFUSION BLAZOR CONFIGURATION ==========
-    // Register Syncfusion Blazor service
-    builder.Services.AddSyncfusionBlazor();
+        builder.Services.AddSyncfusionBlazor();
 
-    // ========== ENTITY FRAMEWORK CORE CONFIGURATION ==========
-    // Get connection string from appsettings.json
-    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-    if (string.IsNullOrEmpty(connectionString))
-    {
-        throw new InvalidOperationException("Connection string 'DefaultConnection' not found in configuration.");
-    }
-
-    // Register DbContext with PostgreSQL provider (Npgsql)
-    builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    {
-        options.UseNpgsql(connectionString);
-
-        // Enable detailed error messages in development
-        if (builder.Environment.IsDevelopment())
+        if (string.IsNullOrEmpty(connectionString))
         {
-            options.EnableSensitiveDataLogging();
-            options.EnableDetailedErrors();
+            throw new InvalidOperationException("Connection string 'DefaultConnection' not found in configuration.");
         }
-    });
 
-    // Register Application Services for dependency injection
-    builder.Services.AddScoped<AppointmentService>();
-    // =======================================================
+        builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        {
+            options.UseNpgsql(connectionString);
 
-    var app = builder.Build();
+            if (builder.Environment.IsDevelopment())
+            {
+                options.EnableSensitiveDataLogging();
+                options.EnableDetailedErrors();
+            }
+        });
 
-    // Configure the HTTP request pipeline
-    if (!app.Environment.IsDevelopment())
-    {
-        app.UseExceptionHandler("/Error", createScopeForErrors: true);
-        app.UseHsts();
-    }
+        builder.Services.AddScoped<AppointmentService>();
 
-    app.UseHttpsRedirection();
-    app.UseAntiforgery();
+        var app = builder.Build();
 
-    app.MapStaticAssets();
-    app.MapRazorComponents<App>()
-        .AddInteractiveServerRenderMode();
+        AppServices.Root = app.Services;
 
-    app.Run();
+        // Configure the HTTP request pipeline
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseExceptionHandler("/Error", createScopeForErrors: true);
+            app.UseHsts();
+        }
 
-{% endhighlight %}
-{% endtabs %}
+        app.UseHttpsRedirection();
+        app.UseAntiforgery();
+
+        app.MapStaticAssets();
+        app.MapRazorComponents<App>()
+            .AddInteractiveServerRenderMode();
+
+        app.Run();
+
+        public static class AppServices
+        {
+            public static IServiceProvider? Root { get; set; }
+        }
+
+    {% endhighlight %}
+    {% endtabs %}
 
 #### Explanation:
 
@@ -641,6 +637,7 @@ The `Program.cs` file is where application services are registered and configure
 - **`EnableDetailedErrors()`**: Provides more detailed error messages during development.
 - **`AddScoped<AppointmentService>`**: Registers the service as a scoped service, creating a new instance for each HTTP request.
 - **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
+- **`AppServices.Root`**: app.Services: Stores the application's root service provider so the CustomAdaptor can create new DI scopes for resolving services at runtime.
 
 The service registration has been completed successfully.
 
@@ -656,67 +653,67 @@ Syncfusion is a library that provides pre-built UI components like Scheduler, wh
 
 2. Import the required namespaces in the `Components/_Imports.razor` file:
 
-{% tabs %}
-{% highlight razor tabtitle="_Imports.razor" %}
+    {% tabs %}
+    {% highlight razor tabtitle="_Imports.razor" %}
 
-    @using System.Net.Http
-    @using System.Net.Http.Json
-    @using Microsoft.AspNetCore.Components.Forms
-    @using Microsoft.AspNetCore.Components.Routing
-    @using Microsoft.AspNetCore.Components.Web
-    @using static Microsoft.AspNetCore.Components.Web.RenderMode
-    @using Microsoft.AspNetCore.Components.Web.Virtualization
-    @using Microsoft.JSInterop
-    @using BlazorSchedulerApp
-    @using BlazorSchedulerApp.Components
-    @using BlazorSchedulerApp.Components.Layout
-    @using BlazorSchedulerApp.Models
-    @using BlazorSchedulerApp.Services
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Schedule
-    @using Syncfusion.Blazor.Data
-    
-{% endhighlight %}
-{% endtabs %}
+        @using System.Net.Http
+        @using System.Net.Http.Json
+        @using Microsoft.AspNetCore.Components.Forms
+        @using Microsoft.AspNetCore.Components.Routing
+        @using Microsoft.AspNetCore.Components.Web
+        @using static Microsoft.AspNetCore.Components.Web.RenderMode
+        @using Microsoft.AspNetCore.Components.Web.Virtualization
+        @using Microsoft.JSInterop
+        @using BlazorSchedulerApp
+        @using BlazorSchedulerApp.Components
+        @using BlazorSchedulerApp.Components.Layout
+        @using BlazorSchedulerApp.Models
+        @using BlazorSchedulerApp.Services
+        @using Syncfusion.Blazor
+        @using Syncfusion.Blazor.Schedule
+        @using Syncfusion.Blazor.Data
+
+    {% endhighlight %}
+    {% endtabs %}
 
 3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
-{% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
 
-    <!DOCTYPE html>
-    <html lang="en">
+        <!DOCTYPE html>
+        <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <base href="/" />
-        <ResourcePreloader />
-        <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
-        <link rel="stylesheet" href="@Assets["app.css"]" />
-        <link rel="stylesheet" href="@Assets["BlazorSchedulerApp.styles.css"]" />
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <base href="/" />
+            <ResourcePreloader />
+            <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
+            <link rel="stylesheet" href="@Assets["app.css"]" />
+            <link rel="stylesheet" href="@Assets["BlazorSchedulerApp.styles.css"]" />
 
-        <!-- Syncfusion Blazor Stylesheet -->
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.3.css" rel="stylesheet" />
+            <!-- Syncfusion Blazor Stylesheet -->
+            <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.3.css" rel="stylesheet" />
 
-        <ImportMap />
-        <link rel="icon" type="image/png" href="favicon.png" />
-        <HeadOutlet />
-    </head>
+            <ImportMap />
+            <link rel="icon" type="image/png" href="favicon.png" />
+            <HeadOutlet />
+        </head>
 
-    <body>
-        <Routes />
-        <ReconnectModal />
-        <script src="@Assets["_framework/blazor.web.js"]"></script>
+        <body>
+            <Routes />
+            <ReconnectModal />
+            <script src="@Assets["_framework/blazor.web.js"]"></script>
 
-        <!-- Syncfusion Blazor Scripts -->
-        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    </body>
+            <!-- Syncfusion Blazor Scripts -->
+            <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+        </body>
 
-    </html>
-    
-{% endhighlight %}
-{% endtabs %}
+        </html>
+
+    {% endhighlight %}
+    {% endtabs %}
 
 #### Theme Options:
 
@@ -743,7 +740,9 @@ Before creating the Scheduler component, generate Entity Framework Core migratio
     CREATE DATABASE "SchedulerEvents";
     ```
 
-2. **Generate the migration**. Open a terminal in the project directory and run:
+2. **Generate the migration**:
+
+    Open a terminal in the project directory and run:
 
     ```bash
     cd BlazorSchedulerApp
@@ -755,7 +754,7 @@ This creates three files in the `Migrations/` folder:
 - `<timestamp>_InitialCreate.Designer.cs` - Migration metadata
 - `ApplicationDbContextModelSnapshot.cs` - Current model state snapshot
 
-> **Note**: The `<timestamp>` is automatically generated by EF Core based on the current date and time. Your files will have a different timestamp.
+    > **Note**: The `<timestamp>` is automatically generated by EF Core based on the current date and time. Your files will have a different timestamp.
 
 3. **Apply the migration** to create tables in the database:
 
@@ -771,11 +770,11 @@ This creates three files in the `Migrations/` folder:
 
 > **Note**: The "Failed executing DbCommand" message on first run is normal. It means the `__EFMigrationsHistory` table doesn't exist yet. EF Core will create it automatically.
 
-4. **Verify migration success** using pgAdmin or psql:
+5. **Verify migration success** using pgAdmin or psql:
 
-```bash
-psql -U postgres -d SchedulerEvents -c "\dt"
-```
+    ```bash
+    psql -U postgres -d SchedulerEvents -c "\dt"
+    ```
 
 The database schema has been created successfully.
 
@@ -785,152 +784,150 @@ The Scheduler component will display appointment data in a Syncfusion Blazor Sch
 
 #### Instructions:
 
-1. Create a new file named `Scheduler.razor` in the `Components/Pages` folder.
-2. Add the following code to create the Scheduler:
+1. Replace the contents of `Home.razor` in the `Components/Pages` folder with the following Blazor Scheduler component that provides full CRUD functionality.
 
-{% tabs %}
-{% highlight razor tabtitle="Scheduler.razor" %}
 
-    @page "/"
-    @rendermode InteractiveServer
-    @inject AppointmentService AppointmentService
+    {% tabs %}
+    {% highlight razor tabtitle="Home.razor" %}
 
-    <PageTitle>Appointment Scheduler</PageTitle>
-
-    <SfSchedule TValue="Appointment"
-                @ref="scheduleRef"
-                Height="650px"
-                @bind-SelectedDate="currentDate"
-                @bind-CurrentView="currentView"
-                ShowQuickInfo="true">
-
-        <ScheduleViews>
-            <ScheduleView Option="View.Day"></ScheduleView>
-            <ScheduleView Option="View.Week"></ScheduleView>
-            <ScheduleView Option="View.WorkWeek"></ScheduleView>
-            <ScheduleView Option="View.Month"></ScheduleView>
-            <ScheduleView Option="View.Agenda"></ScheduleView>
-        </ScheduleViews>
-
-        <!-- Data is now bound through DataManager + CustomAdaptor -->
-        <ScheduleEventSettings TValue="Appointment">
-            <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-        </ScheduleEventSettings>
-
-    </SfSchedule>
-
-    @code {
-        private SfSchedule<Appointment>? scheduleRef;
-        private DateTime currentDate = DateTime.Today;
-        private View currentView = View.Week;
-
-        protected override void OnInitialized()
-        {
-            // Make your DI service available to the CustomAdaptor (created by Syncfusion internally)
-            CustomAdaptor.AppointmentService = AppointmentService;
-        }
-
-        /// <summary>
-        /// CustomAdaptor bridges the Scheduler's DataManager with your EF Core service.
-        /// It handles read and CRUD operations by calling AppointmentService.
-        /// </summary>
-        public class CustomAdaptor : DataAdaptor
-        {
-            /// <summary>
-            /// Set in OnInitialized() above so the adaptor can use DI-backed service.
-            /// </summary>
-            public static AppointmentService? AppointmentService { get; set; }
-
-            public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
+        @page "/"
+        @rendermode InteractiveServer
+        
+        <PageTitle>Appointment Scheduler</PageTitle>
+        
+        <SfSchedule TValue="Appointment"
+                    @ref="scheduleRef"
+                    Height="650px"
+                    @bind-SelectedDate="currentDate"
+                    @bind-CurrentView="currentView"
+                    ShowQuickInfo="true">
+        
+            <ScheduleViews>
+                <ScheduleView Option="View.Day"></ScheduleView>
+                <ScheduleView Option="View.Week"></ScheduleView>
+                <ScheduleView Option="View.WorkWeek"></ScheduleView>
+                <ScheduleView Option="View.Month"></ScheduleView>
+                <ScheduleView Option="View.Agenda"></ScheduleView>
+            </ScheduleViews>
+        
+            <ScheduleEventSettings TValue="Appointment">
+                <SfDataManager Adaptor="Adaptors.CustomAdaptor" AdaptorInstance="@typeof(CustomAdaptor)">
+                </SfDataManager>
+            </ScheduleEventSettings>
+        
+        </SfSchedule>
+        
+        @code {
+            private SfSchedule<Appointment>? scheduleRef;
+            private DateTime currentDate = DateTime.Today;
+            private View currentView = View.Week;
+        
+            public class CustomAdaptor : DataAdaptor
             {
-                if (AppointmentService is null)
-                    throw new InvalidOperationException("AppointmentService is not initialized.");
-
-                // Fetch all appointments. (You can add server-side filtering/paging if needed.)
-                var data = await AppointmentService.GetAllAppointmentsAsync();
-
-                // Return result + total count when RequiresCounts is true
-                return dataManagerRequest.RequiresCounts
-                    ? new DataResult { Result = data, Count = data.Count }
-                    : (object)data;
-            }
-
-            public override async Task<object> InsertAsync(DataManager dataManager, object data, string key)
-            {
-                if (AppointmentService is null)
-                    throw new InvalidOperationException("AppointmentService is not initialized.");
-
-                var item = data as Appointment ?? throw new ArgumentException("InsertAsync received invalid data type.");
-                // Persist and return the created entity with DB-generated Id
-                var created = await AppointmentService.CreateAppointmentAsync(item);
-                return created;
-            }
-
-            public override async Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
-            {
-                if (AppointmentService is null)
-                    throw new InvalidOperationException("AppointmentService is not initialized.");
-
-                var item = data as Appointment ?? throw new ArgumentException("UpdateAsync received invalid data type.");
-
-                // Optional validation: ensure EndTime >= StartTime
-                if (item.EndTime < item.StartTime)
-                    throw new ArgumentException("End time cannot be earlier than start time.");
-
-                var updated = await AppointmentService.UpdateAppointmentAsync(item);
-                return updated;
-            }
-
-            public override async Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key)
-            {
-                if (AppointmentService is null)
-                    throw new InvalidOperationException("AppointmentService is not initialized.");
-
-                // For Scheduler, "data" is the key value (Id). It can be int or string.
-                int id;
-                if (data is int directId)
+                public override async Task<object> ReadAsync(DataManagerRequest dm, string? key = null)
                 {
-                    id = directId;
+                    if (AppServices.Root is null)
+                        throw new InvalidOperationException("AppServices.Root is not initialized. Ensure Program.cs sets it after building the app.");
+        
+                    using var scope = AppServices.Root.CreateScope();
+                    var svc = scope.ServiceProvider.GetRequiredService<AppointmentService>();
+        
+                    var data = await svc.GetAllAppointmentsAsync();
+        
+                    return dm.RequiresCounts
+                        ? new DataResult { Result = data, Count = data.Count }
+                        : (object)data;
                 }
-                else if (!int.TryParse(data?.ToString(), out id))
+        
+                public override async Task<object> InsertAsync(DataManager mgr, object data, string key)
                 {
-                    throw new ArgumentException("RemoveAsync received invalid key value.");
+                    if (AppServices.Root is null)
+                        throw new InvalidOperationException("AppServices.Root is not initialized.");
+        
+                    using var scope = AppServices.Root.CreateScope();
+                    var svc = scope.ServiceProvider.GetRequiredService<AppointmentService>();
+        
+                    var item = data as Appointment ?? throw new ArgumentException("InsertAsync received invalid data type.");
+                    var created = await svc.CreateAppointmentAsync(item);
+                    return created;
                 }
-
-                await AppointmentService.DeleteAppointmentAsync(id);
-                return data;
+        
+                public override async Task<object> UpdateAsync(DataManager mgr, object data, string keyField, string key)
+                {
+                    if (AppServices.Root is null)
+                        throw new InvalidOperationException("AppServices.Root is not initialized.");
+        
+                    using var scope = AppServices.Root.CreateScope();
+                    var svc = scope.ServiceProvider.GetRequiredService<AppointmentService>();
+        
+                    var item = data as Appointment ?? throw new ArgumentException("UpdateAsync received invalid data type.");
+                    if (item.EndTime < item.StartTime)
+                        throw new ArgumentException("End time cannot be earlier than start time.");
+        
+                    var updated = await svc.UpdateAppointmentAsync(item);
+                    return updated;
+                }
+        
+                public override async Task<object> RemoveAsync(DataManager mgr, object data, string keyField, string key)
+                {
+                    if (AppServices.Root is null)
+                        throw new InvalidOperationException("AppServices.Root is not initialized.");
+        
+                    using var scope = AppServices.Root.CreateScope();
+                    var svc = scope.ServiceProvider.GetRequiredService<AppointmentService>();
+        
+                    int id;
+                    if (data is int directId)
+                    {
+                        id = directId;
+                    }
+                    else if (!int.TryParse(data?.ToString(), out id))
+                    {
+                        throw new ArgumentException("RemoveAsync received invalid key value.");
+                    }
+        
+                    await svc.DeleteAppointmentAsync(id);
+                    return data;
+                }
+        
+                public override async Task<object> BatchUpdateAsync(
+                    DataManager mgr,
+                    object changedRecords,
+                    object addedRecords,
+                    object deletedRecords,
+                    string keyField,
+                    string key,
+                    int? dropIndex)
+                {
+                    if (AppServices.Root is null)
+                        throw new InvalidOperationException("AppServices.Root is not initialized.");
+        
+                    using var scope = AppServices.Root.CreateScope();
+                    var svc = scope.ServiceProvider.GetRequiredService<AppointmentService>();
+        
+                    var changed = (changedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
+                    var added = (addedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
+                    var deleted = (deletedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
+        
+                    foreach (var a in changed)
+                        await svc.UpdateAppointmentAsync(a);
+        
+                    foreach (var a in added)
+                        await svc.CreateAppointmentAsync(a);
+        
+                    foreach (var a in deleted)
+                        await svc.DeleteAppointmentAsync(a.Id);
+        
+                    var data = await svc.GetAllAppointmentsAsync();
+                    return new DataResult { Result = data, Count = data.Count };
+                }
             }
-            public override async Task<object> BatchUpdateAsync(DataManager dataManager,object changedRecords, object addedRecords, object deletedRecords,string keyField, string key, int? dropIndex)
-             {
-                 if (AppointmentService is null)
-                     throw new InvalidOperationException("AppointmentService is not initialized.");
-
-                 // Cast the payloads defensively
-                 var changed = (changedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
-                 var added = (addedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
-                 var deleted = (deletedRecords as IEnumerable<object>)?.Cast<Appointment>()?.ToList() ?? new();
-
-                 foreach (var a in changed)
-                     await AppointmentService.UpdateAppointmentAsync(a);
-
-                 foreach (var a in added)
-                     await AppointmentService.CreateAppointmentAsync(a);
-
-                 foreach (var a in deleted)
-                     await AppointmentService.DeleteAppointmentAsync(a.Id);
-
-                 var data = await AppointmentService.GetAllAppointmentsAsync();
-                 return new DataResult { Result = data, Count = data.Count };
-             }
         }
-    }
-{% endhighlight %}
-{% endtabs %}
+    
+    {% endhighlight %}
+    {% endtabs %}
 
 #### Component Explanation:
-
-- **`@inject AppointmentService`**  
-  Injects the backend service that performs all CRUD operations on the PostgreSQL database using Entity Framework Core.
 
 - **`<SfSchedule>`**  
   The main Scheduler component that displays appointments in calendar format and supports multiple view modes.
@@ -946,11 +943,9 @@ The Scheduler component will display appointment data in a Syncfusion Blazor Sch
   It enables automatic calls for Read, Insert, Update, and Delete operations.
 
 - **`CustomAdaptor`**  
-  A custom class derived from `DataAdaptor` that executes all database operations by calling the injected `AppointmentService`.  
+  A custom class derived from `DataAdaptor` that executes all database operations by using the `AppointmentService`.  
   It handles `ReadAsync`, `InsertAsync`, `UpdateAsync`,`RemoveAsync`, and `BatchUpdateAsync`.
 
-- **`OnInitialized`**  
-  Assigns the injected `AppointmentService` to the CustomAdaptor so the Scheduler can access database logic when loading.
 
 #### Key Implementation Details:
 
@@ -963,7 +958,7 @@ The Scheduler component will display appointment data in a Syncfusion Blazor Sch
 1. User creates, edits, or deletes an appointment in the Scheduler  
 2. **SfDataManager** detects the action and triggers the corresponding method in the **CustomAdaptor**  
 3. The Scheduler UI updates immediately without waiting for any database response  
-4. **CustomAdaptor** executes the required database operation (`InsertAsync`, `UpdateAsync`, `RemoveAsync`) through `AppointmentService`  
+4. **CustomAdaptor** executes the required database operation (`InsertAsync`, `UpdateAsync`, `RemoveAsync`,and `BatchUpdateAsync`) through `AppointmentService`  
 5. After saving, the updated appointment data (including database-generated ID) is returned to the Scheduler for syncing
 ``
 The Scheduler component has been created successfully.
@@ -996,15 +991,15 @@ dotnet watch
 
 #### Access the Scheduler
 
-The application will start on a port configured in `launchSettings.json` (typically `http://localhost:5xxx`).
+The application will start on a port configured in `launchSettings.json` (typically `http://localhost:xxxx`).
 
 Open your browser and navigate to:
 ```
-http://localhost:5075/scheduler
+http://localhost:xxxx
 
 ```
 
-> **Note**: Replace `<port>` with the actual port number shown in the terminal output when the application starts.
+> **Note**: Replace `xxxx` with the actual port number shown in the terminal output when the application starts.
 
 You can now perform CRUD operations on the scheduler:
 - **Create**: Click on a time slot or use the "+" button
