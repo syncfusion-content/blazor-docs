@@ -29,10 +29,10 @@ Install the following software and packages before starting the process:
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
-| .NET SDK | net8.0 or compatible | Runtime and build tools |
+| .NET SDK | net10.0 or compatible | Runtime and build tools |
 | HotChocolate.AspNetCore | 15.1.12 or later | GraphQL server framework |
-| Syncfusion.Blazor.Schedule | 32.2.4 | SCheduler component |
-| Syncfusion.Blazor.Themes | 32.2.4 | Styling for Scheduler |
+| Syncfusion.Blazor.Schedule | Latest Version | Scheduler component |
+| Syncfusion.Blazor.Themes | Latest Version | Styling for Scheduler |
 
 ## Setting Up the GraphQL Backend
 
@@ -46,7 +46,7 @@ Create a **Blazor Web App** using Visual Studio 2026 or .NET CLI.
 2. Go to **File → New → Project**.
 3. Search for and select **ASP.NET Core Empty** (C#).
 4. Name the project (example: `GraphQLServer`).
-5. Select **.NET 8.0** as the target framework
+5. Select **.NET 10.0** as the target framework
 6. Click **Create**
 
 **Using .NET CLI:**
@@ -82,7 +82,7 @@ This creates a minimal ASP.NET Core app with just `Program.cs`.
     { 
        options.AddPolicy("AllowSpecificOrigin", builder => 
        {
-           builder.WithOrigins("http://localhost:xxxx") // xxxx represents Blazor app port no
+           builder.WithOrigins("http://localhost:5194") // 5194 represents Blazor app port no
            .AllowAnyHeader() 
             .AllowAnyMethod() 
             .AllowCredentials().Build(); 
@@ -523,7 +523,7 @@ Create a **Blazor Web App** using Visual Studio 2026 or .NET CLI.
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **BlazorSchedulerApp**
-5. Select **.NET 8.0** as the target framework
+5. Select **.NET 10.0** as the target framework
 6. Set **Interactive render mode** to **Server**
 7. Set **Interactivity location** to **Per page/component**
 8. Click **Create**
@@ -557,8 +557,8 @@ The installed packages are reflected in the `BlazorSchedulerApp.csproj` file:
 
 ```xml
 <ItemGroup>
-    <PackageReference Include="Syncfusion.Blazor.Schedule" Version="32.2.4" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="32.2.4" />
+    <PackageReference Include="Syncfusion.Blazor.Schedule" Version="*" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
 </ItemGroup>
 ```
 
@@ -574,14 +574,19 @@ All required packages are now installed.
 @using Syncfusion.Blazor.Data
 ```
 
-#### Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+#### Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and `<body>`section to add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
-<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.3.css" rel="stylesheet" />
+<head>
+    <!-- Syncfusion Blazor Stylesheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.3.css" rel="stylesheet" />
+</head>
+<body>
 
-<!-- Syncfusion Blazor Scripts -->
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!-- Syncfusion Blazor Scripts -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+</body>
 ```
 For this project, the bootstrap5.3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
@@ -694,12 +699,12 @@ The `Home.razor` component will display the appointment data in a Syncfusion Bla
 - **`<ScheduleEventSettings>`**: Configures how events (appointments) are bound and managed. This is where data binding (via `SfDataManager`) and CRUD settings are typically placed.
 
 
-The `SfDataManager` component connects the Scheduler to the GraphQL backend using the adaptor options configured below:
+In the `Home.razor`, `SfDataManager` component connects the Scheduler to the GraphQL backend using the adaptor options configured below:
 
 ```cshtml
-<SfDataManager Url="http://localhost:xxxx/graphql" 
+<SfDataManager Url="http://localhost:5070/graphql" 
                GraphQLAdaptorOptions="@adaptorOptions" 
-               Adaptor="Adaptors.GraphQLAdaptor"> // xxxx repesents backend port no
+               Adaptor="Adaptors.GraphQLAdaptor"> 
 </SfDataManager>
 ```
 
