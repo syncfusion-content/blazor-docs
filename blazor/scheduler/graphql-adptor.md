@@ -57,15 +57,7 @@ cd GraphQLServer
 
 This creates a minimal ASP.NET Core app with just `Program.cs`.
 
-### Step 2: Install the Required NuGet Package
-
-1. Open **Tools → NuGet Package Manager → Package Manager Console**.
-2. Run this command:
-
-    ```powershell
-    Install-Package HotChocolate.AspNetCore -Version 15.1.12
-    ```
-#### Method 2: Using .NET CLI
+### Step 2: Install the Required NuGet Package using .NET CLI
 
 1. Open a terminal in the project directory and run:
 
@@ -550,18 +542,7 @@ Before installing the necessary NuGet packages, a new Blazor Web Application mus
 
 For this guide, a Blazor application named **BlazorSchedulerApp** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application.
 
-#### Method 1: Using Package Manager Console
-
-1. Open Visual Studio 2026.
-2. Navigate to **Tools** → **NuGet Package Manager** → **Package Manager Console**.
-3. Run the following commands:
-
-```powershell
-Install-Package Syncfusion.Blazor.Schedule
-Install-Package Syncfusion.Blazor.Themes
-```
-
-#### Method 2: Using .NET CLI
+#### Using .NET CLI
 
 Open a terminal in the project directory and run:
 
@@ -585,7 +566,7 @@ All required packages are now installed.
 
 > **Note**: After installing packages, build the project to ensure all dependencies are restored correctly: `dotnet build`
 
-* Import the required namespaces in the `Components/_Imports.razor` file:
+#### Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
 @using Syncfusion.Blazor
@@ -593,7 +574,7 @@ All required packages are now installed.
 @using Syncfusion.Blazor.Data
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+#### Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -604,7 +585,7 @@ All required packages are now installed.
 ```
 For this project, the bootstrap5.3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-* Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+#### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of your Blazor Web App.
 
@@ -631,6 +612,7 @@ Syncfusion components are now configured and ready to use. For additional guidan
 A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the `Appointments` table.
 
 ```csharp
+
 public class Appointment
 {
     public int Id { get; set; }
@@ -672,36 +654,37 @@ The `Home.razor` component will display the appointment data in a Syncfusion Bla
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
 2. Add the following code to create a basic Scheduler:
 [Home.razor]
-```cshtml
-@page "/"
-@rendermode InteractiveServer
 
-<SfSchedule TValue="Appointment" 
-             @bind-SelectedDate="@CurrentDate" 
-             Width="100%" 
-             Height="650px">
+    ```cshtml
+    @page "/"
+    @rendermode InteractiveServer
     
-    <ScheduleViews>
-        <ScheduleView Option="View.Day"></ScheduleView>
-        <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek"></ScheduleView>
-        <ScheduleView Option="View.Month"></ScheduleView>
-        <ScheduleView Option="View.Agenda"></ScheduleView>
-    </ScheduleViews>
-
-    <ScheduleEventSettings TValue="Appointment" AllowEditFollowingEvents="true">
-        <SfDataManager Url="http://localhost:5070/graphql"
-                       Adaptor="Adaptors.GraphQLAdaptor"
-                       GraphQLAdaptorOptions="@adaptorOptions">
-        </SfDataManager>
-    </ScheduleEventSettings>
-
-</SfSchedule>
-
-@code {
-    // GraphQLAdaptorOptions will be added in the next step
-}
-```
+    <SfSchedule TValue="Appointment" 
+                 @bind-SelectedDate="@CurrentDate" 
+                 Width="100%" 
+                 Height="650px">
+        
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Agenda"></ScheduleView>
+        </ScheduleViews>
+    
+        <ScheduleEventSettings TValue="Appointment" AllowEditFollowingEvents="true">
+            <SfDataManager Url="http://localhost:5070/graphql"
+                           Adaptor="Adaptors.GraphQLAdaptor"
+                           GraphQLAdaptorOptions="@adaptorOptions">
+            </SfDataManager>
+        </ScheduleEventSettings>
+    
+    </SfSchedule>
+    
+    @code {
+        // GraphQLAdaptorOptions will be added in the next step
+    }
+    ```
 
 ### Component Explanation:
 
@@ -763,94 +746,94 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
 2. Scroll to the `@code` block at the bottom of the file.
 3. Add the following complete configuration:
 
-[Home.razor]
-```csharp
-@code {
-  private DateTime CurrentDate = new DateTime(2026, 2, 12);
-  /// <summary>
-  /// GraphQLAdaptorOptions configures how the Scheduler communicates with the GraphQL backend.
-  /// This object contains the query, mutation operations, and endpoint URL.
-  /// </summary>
-  private GraphQLAdaptorOptions adaptorOptions = new GraphQLAdaptorOptions
-  {
-    Query = @"
-            query appointmentsData($dataManager: DataManagerRequestInput!){
-                appointmentsData(dataManager: $dataManager) {
-                    count,
-                    result { 
-                        Id, 
-                        Subject, 
-                        Location, 
-                        StartTime, 
-                        EndTime, 
-                        Description, 
-                        IsAllDay,
-                        RecurrenceRule,
-                        RecurrenceException,
-                        RecurrenceID
-
+    [Home.razor]
+    ```csharp
+    @code {
+      private DateTime CurrentDate = new DateTime(2026, 2, 12);
+      /// <summary>
+      /// GraphQLAdaptorOptions configures how the Scheduler communicates with the GraphQL backend.
+      /// This object contains the query, mutation operations, and endpoint URL.
+      /// </summary>
+      private GraphQLAdaptorOptions adaptorOptions = new GraphQLAdaptorOptions
+      {
+        Query = @"
+                query appointmentsData($dataManager: DataManagerRequestInput!){
+                    appointmentsData(dataManager: $dataManager) {
+                        count,
+                        result { 
+                            Id, 
+                            Subject, 
+                            Location, 
+                            StartTime, 
+                            EndTime, 
+                            Description, 
+                            IsAllDay,
+                            RecurrenceRule,
+                            RecurrenceException,
+                            RecurrenceID
+    
+                        }
                     }
-                }
-            }",
-
-    Mutation = new GraphQLMutation
-    {
-      Insert = @"
-                mutation create($record: AppointmentInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
-                  createAppointment(appointment: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
-                    Id, Subject, Location, StartTime, EndTime, Description, IsAllDay,RecurrenceRule,RecurrenceException,RecurrenceID
-                  }
                 }",
-
-      Update = @"
-                mutation update($record: AppointmentInput!, $action: String!, $primaryColumnName: String!, $primaryColumnValue: Int!, $additionalParameters: Any) {
-                  updateAppointment(appointment: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
-                    Id, Subject, Location, StartTime, EndTime, Description, IsAllDay,RecurrenceRule,RecurrenceException,RecurrenceID
-                  }
-                }",
-
-      Delete = @"
-                mutation delete($primaryColumnValue: Int!, $action: String!, $primaryColumnName: String!, $additionalParameters: Any) {
-                  deleteAppointment(primaryColumnValue: $primaryColumnValue, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters) {
-                    Id, Subject, Location, StartTime, EndTime, Description, IsAllDay,RecurrenceRule,RecurrenceException,RecurrenceID
-                  }
-                }",
-      Batch = @"
-    mutation batch(
-      $added: [AppointmentInput!],
-      $changed: [AppointmentInput!],
-      $deleted: [AppointmentInput!], 
-      $action: String,
-      $primaryColumnName: String,
-      $additionalParameters: Any
-    ) {
-      batchAppointment(
-        added: $added,
-        changed: $changed,
-        deleted: $deleted,
-        action: $action,
-        primaryColumnName: $primaryColumnName,
-        additionalParameters: $additionalParameters
-      ) {
-        Id
-        Subject
-        Location
-        StartTime
-        EndTime
-        Description
-        IsAllDay
-        RecurrenceRule
-        RecurrenceException
-        RecurrenceID
-      }
-    }"
-    },
-
-
-    ResolverName = "AppointmentsData"
-  };
-}
-```
+    
+        Mutation = new GraphQLMutation
+        {
+          Insert = @"
+                    mutation create($record: AppointmentInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
+                      createAppointment(appointment: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
+                        Id, Subject, Location, StartTime, EndTime, Description, IsAllDay,RecurrenceRule,RecurrenceException,RecurrenceID
+                      }
+                    }",
+    
+          Update = @"
+                    mutation update($record: AppointmentInput!, $action: String!, $primaryColumnName: String!, $primaryColumnValue: Int!, $additionalParameters: Any) {
+                      updateAppointment(appointment: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
+                        Id, Subject, Location, StartTime, EndTime, Description, IsAllDay,RecurrenceRule,RecurrenceException,RecurrenceID
+                      }
+                    }",
+    
+          Delete = @"
+                    mutation delete($primaryColumnValue: Int!, $action: String!, $primaryColumnName: String!, $additionalParameters: Any) {
+                      deleteAppointment(primaryColumnValue: $primaryColumnValue, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters) {
+                        Id, Subject, Location, StartTime, EndTime, Description, IsAllDay,RecurrenceRule,RecurrenceException,RecurrenceID
+                      }
+                    }",
+          Batch = @"
+        mutation batch(
+          $added: [AppointmentInput!],
+          $changed: [AppointmentInput!],
+          $deleted: [AppointmentInput!], 
+          $action: String,
+          $primaryColumnName: String,
+          $additionalParameters: Any
+        ) {
+          batchAppointment(
+            added: $added,
+            changed: $changed,
+            deleted: $deleted,
+            action: $action,
+            primaryColumnName: $primaryColumnName,
+            additionalParameters: $additionalParameters
+          ) {
+            Id
+            Subject
+            Location
+            StartTime
+            EndTime
+            Description
+            IsAllDay
+            RecurrenceRule
+            RecurrenceException
+            RecurrenceID
+          }
+        }"
+        },
+    
+    
+        ResolverName = "AppointmentsData"
+      };
+    }
+    ```
 **GraphQL Query Structure Explained in Detail**
 
 The Query property is critical for understanding how data flows. Let's break down each component:
