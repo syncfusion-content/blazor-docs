@@ -75,7 +75,7 @@ In the following example, `Code.ID` is mapped to [DropDownListFieldSettings.Valu
 
 ### Expando object binding
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the DropDown List component. Ensure the dynamic member names match the field mappings configured in FieldSettings.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the DropDown List component. Ensure the dynamic member names match the field mappings configured in FieldSettings.
 
 {% highlight cshtml %}
 
@@ -99,7 +99,7 @@ Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/commo
 
 ### Dynamic object binding
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the DropDown List component. As with ExpandoObject, ensure member names correspond to the mapped Text and Value fields.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the DropDown List component. As with ExpandoObject, ensure member names correspond to the mapped Text and Value fields.
 
 {% highlight cshtml %}
 
@@ -123,7 +123,7 @@ Bind enum values to the DropDown List. The following example shows how to displa
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the DropDown List component. The following example shows retrieving a string value from enumeration data using a `ValueTuple`.
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the DropDown List component. The following example shows retrieving a string value from enumeration data using a `ValueTuple`.
 
 {% highlight cshtml %}
 
