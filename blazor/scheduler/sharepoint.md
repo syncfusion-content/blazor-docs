@@ -134,7 +134,7 @@ With these steps complete, your `my-project` SharePoint Framework solution is re
           OverwriteReadOnlyFiles="true" Condition="'@(DotnetRuntimeFileGz)' != ''" />
   </Target>
 ```
-**step 3:**  Remove the route structure and make Syncfusion Blazor Scheduler to directly render in `App.razor` itself.
+**Step 3:** Remove the route structure and make Syncfusion Blazor Scheduler to directly render in `App.razor` itself.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -187,7 +187,7 @@ With these steps complete, your `my-project` SharePoint Framework solution is re
 dotnet publish -c Release
 ```
 
-**Step 4** Upload published files to SharePoint document library
+**Step 5:** Upload published files to SharePoint document library
 
 Upload contents of:
 
