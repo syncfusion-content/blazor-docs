@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® DataGrid with Document Editor in Blazor App
 
-This guide shows how to integrate the **Syncfusion® Blazor Document Editor** (WordProcessor) together with the **Syncfusion® Blazor DataGrid** in a Blazor Web App using `Server` interactivity.
+This guide shows how to integrate the **[Syncfusion® Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)** (WordProcessor) together with the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using `Server` interactivity.
 
 ## Prerequisites
 
