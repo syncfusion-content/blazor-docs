@@ -38,7 +38,7 @@ The following example shows how to add a TomTom map. Generate an API key using t
 
 **Enable zooming and panning**
 
-Tile map layers support zooming and panning. Zooming provides a closer view for detailed analysis. Panning moves the map to focus on a specific area.
+Tile map layers support zooming and panning. Zooming provides a closer view for detailed analysis. Panning moves the map to focus on a specific area. To enable zooming, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property to **true** in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). Panning is enabled by default and can be configured using the [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property.
 
 ```cshtml
 

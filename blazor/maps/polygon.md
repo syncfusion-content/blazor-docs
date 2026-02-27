@@ -15,7 +15,7 @@ The Maps component supports adding polygon shapes to a geometry map or an online
 
 A polygon shape can be rendered over the map layer by defining the [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) property in the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag in the Maps component. The `Points` property uses a collection of latitude and longitude values to define the polygon shape.
 
-The `MapsPolygon` tag provides the following properties for customizing polygon shapes in the Maps component.
+The `MapsPolygon` tag supports the following properties for polygon appearance and styling:
 
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Fill) - Changes the color of the polygon shape.
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Opacity) - Changes the opacity of the polygon shape.
@@ -25,7 +25,7 @@ The `MapsPolygon` tag provides the following properties for customizing polygon 
 
 > Multiple polygon shapes can be included inside the [MapsPolygons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygons.html) tag.
 
-The following example shows how to customize a polygon shape on a geometry map.
+The following example demonstrates customizing a polygon on a geometry map.
 
 ```cshtml
 
