@@ -7,17 +7,15 @@ control: common
 documentation: ug
 ---
 
-# Integrating Syncfusion® DataGrid with Document Editor in Blazor Apps
+# Integrating Syncfusion® DataGrid with Document Editor in Blazor App
 
-This guide shows how to integrate the **Syncfusion® Blazor Document Editor** (WordProcessor) together with the **Syncfusion® Blazor DataGrid** in a Blazor Web App using `Server` render mode.
-
-This guide uses [Visual Studio Code](https://code.visualstudio.com/). If you haven’t created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) instructions for Visual Studio Code, then return to this article.
+This guide shows how to integrate the **Syncfusion® Blazor Document Editor** (WordProcessor) together with the **Syncfusion® Blazor DataGrid** in a Blazor Web App using `Server` interactivity.
 
 ## Prerequisites
 
 * [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements): Make sure your development environment meets the required system specifications for using Syncfusion Blazor components.
 
-## Create Project
+## Create a project
 
 Create a Blazor Web App using Server render mode. Open the terminal and run the command:
 
@@ -29,8 +27,6 @@ cd BlazorWebAppServer
 
 {% endhighlight %}
 {% endtabs %}
-
-Alternatively, manually create via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 ## Install NuGet Packages
 
@@ -48,8 +44,6 @@ dotnet restore
 {% endtabs %}
 
 > Do not install `Syncfusion.Blazor` together with `Syncfusion.Blazor.WordProcessor`. They conflict and produce ambiguity errors.
-
-> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details. Verify the latest versions before installation.
 
 ## Add Required Namespaces
 
@@ -103,29 +97,17 @@ Add the theme CSS and Syncfusion scripts in `~/App.razor`:
 </body>
 ```
 
-## Configure Render Mode(Per-Page / Component Interactivity)
+## Configure Render Mode
 
 If your app’s interactivity location is set to `Per page/component`, add a render mode directive at the top of `~Pages/*.razor` where you need interactivity. 
-
-| Interactivity location | RenderMode | Code |
-| --- | --- | --- |
-| Per page/component | Auto | @rendermode InteractiveAuto |
-|  | WebAssembly | @rendermode InteractiveWebAssembly |
-|  | Server | @rendermode InteractiveServer |
-|  | None | --- |
-
-**Example for server render mode use:**
 
 {% tabs %}
 {% highlight razor %}
 
-@* Define the desired render mode here *@
 @rendermode InteractiveServer
 
 {% endhighlight %}
 {% endtabs %}
-
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default. No per‑page directive is necessary.
 
 ## Add Syncfusion Blazor Document Editor component and DataGrid component
 
