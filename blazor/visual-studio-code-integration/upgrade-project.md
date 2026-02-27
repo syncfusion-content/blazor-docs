@@ -23,7 +23,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration extension 
 
 2. In the Explorer panel, right-click the project file (`.csproj`) and select **Migrate Syncfusion Blazor Application to another version** from the context menu.
 
-    ![VS Code context menu with 'Migrate Syncfusion Blazor Application' option](images/Migration.png)
+    ![Context menu showing Migrate Syncfusion Blazor Application option](images/Migration.png)
 
     N> The Migration option is available only when the project already references Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
 
