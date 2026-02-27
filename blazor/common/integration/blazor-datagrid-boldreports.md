@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Integrating Blazor DataGrid Component with Bold Reports® (Report Viewer)
+# Integrating Blazor DataGrid Component with Bold Report Viewer
 
 This guide explains how to integrate the Syncfusion Blazor DataGrid with the Bold Report Viewer to display grid data inside RDLC/RDL reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
 
@@ -109,9 +109,9 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 ## Add a sample report
 
-### Create boldreports-interop.js
+### Create bold-reports-interop.js
 
-Create a `boldreports-interop.js` file inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer JavaScript control.
+Create a `bold-reports-interop.js` file inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer JavaScript control.
 
 {% tabs %}
 {% highlight js tabtitle="boldreports-interop.js"  %}
