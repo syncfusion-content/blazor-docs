@@ -58,7 +58,7 @@ documentation: ug
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTtEsUyZmdwAXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Bar Chart](../images/chart-types-images/blazor-stacked-bar-chart.png)" %}
 
-N> Refer to our [Blazor Stacked Bar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Bar Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap5) to know how to to render and configure the Stacked Bar type chart.
+N> Refer to the [Blazor Stacked Bar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Stacked Bar Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap5) to know how to to render and configure the Stacked Bar type chart.
 
 ## Binding data with series
 
@@ -451,9 +451,9 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLIXzXpqbHxThSx?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Stacked bar chart with corner radius](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLIXzXpqbHxThSx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked bar chart with corner radius](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius.png)" %}
 
-We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
+Customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -793,7 +793,7 @@ The stack labels can be customized using the `ChartStackLabelSettings` propertie
 * [Ry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Ry) - Specifies the rounded corner radius along the Y-axis (vertical direction) for the stack label background. The default value is **5**.
 * [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelSettings.html#Syncfusion_Blazor_Charts_ChartStackLabelSettings_Angle) - Specifies the rotation angle for stack labels in degrees. The default value is **0**.
 
-We can customize the font of the stack labels using the [ChartStackLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html) properties as given below:
+Customize the font of the stack labels using the [ChartStackLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html) properties as given below:
 
 * [TextAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_TextAlignment) - Customizes the alignment of the text within the stack label.
 * [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_FontFamily) - Customizes the font family for the stack label text.
@@ -802,12 +802,12 @@ We can customize the font of the stack labels using the [ChartStackLabelFont](ht
 * [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_FontWeight) - Customizes the font weight of the stack label text.
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelFont.html#Syncfusion_Blazor_Charts_ChartStackLabelFont_Color) - Customizes the color of the stack label text.
 
-We can customize the border of the stack labels using the [ChartStackLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelBorder.html) properties as given below:
+Customize the border of the stack labels using the [ChartStackLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelBorder.html) properties as given below:
 
 * [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelBorder.html#Syncfusion_Blazor_Charts_ChartStackLabelBorder_Width) - Specifies the width of the border around the stack label.
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDefaultBorder.html#Syncfusion_Blazor_Charts_ChartDefaultBorder_Color) - Specifies the color of the border around the stack label.
 
- To customize the margin, we can use the [ChartStackLabelMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html) properties as given below:
+ To customize the margin, use the [ChartStackLabelMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html) properties as given below:
 
 * [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Bottom) - Specifies the bottom margin of the stack label.
 * [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStackLabelMargin.html#Syncfusion_Blazor_Charts_ChartStackLabelMargin_Top) - Specifies the top margin of the stack label.
@@ -998,7 +998,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLztOMgIiFJUSqt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

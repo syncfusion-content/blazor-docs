@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Legends and its customization in Syncfusion Blazor Charts component and much more.
+description: Checkout and learn here all about the Legend and its customization in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The [legend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) provides information on the series shown in the chart.
 
-You can learn how to add legend to Blazor Charts by watching the video below.
+A detailed walkthrough demonstrating how to add and customize legend in the chart is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=mra9AP4HBPc" %}
 
@@ -70,7 +70,7 @@ To display the legend for the chart, set the [Visible](https://help.syncfusion.c
 
 <!-- markdownlint-disable MD036 -->
 
-The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom) or [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position of the chart using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Position) property. By default, the legend appears at the bottom of the chart.
+The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom) or [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position of the chart using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Position) property. By default, the legend appears at the **bottom** of the chart.
 
 ```cshtml
 
@@ -169,7 +169,7 @@ The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Lege
 
 ## Legend Reverse
 
-You can reverse the order of the legend items by using the [Reverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Reverse) property. By default, legend for the first series in the collection will be placed first.
+The order of the legend items can be reversed by using the [Reverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Reverse) property. By default, legend for the first series in the collection will be placed first.
 
 ```cshtml
 
@@ -324,7 +324,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ### Legend Size
 
-When the legend is placed on the top or bottom of the chart, it takes up 20% - 25% of the chart's height, and 20% - 25% of the chart's width when it is positioned on the left or right side of the chart. So, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Height) properties can be used to adjust the default legend size.
+When the legend is placed on the top or bottom of the chart, it takes up 20% - 25% of the chart's height, and 20% - 25% of the chart's width when it is positioned on the left or right side of the chart. So, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Height) properties can be used to adjust the legend size.
 
 ```cshtml
 
@@ -476,7 +476,7 @@ The [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ### Legend Paging
 
-When the legend items exceed legend bounds, paging will be enabled by default. End user can view each legend item using the navigation buttons to navigate between pages.
+When the legend items exceed the available legend bounds, paging is enabled by default. Navigation buttons allow the legend items to be viewed across multiple pages.
 
 ```cshtml
 
@@ -773,7 +773,7 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
 ```
 ![Legend Template in Blazor Column Chart](images/legend/blazor-column-chart-legend-template.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

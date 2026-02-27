@@ -13,7 +13,7 @@ documentation: ug
 
 [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series is used to represent the **Low**, **High**, **Open** and **Closing** values over time.
 
-You can learn how to create a HiloOpenClose chart using Blazor Charts by watching the video below.
+A detailed demonstration of the process for creating a HiloOpenClose chart using Blazor Charts is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=KDOI77kV34Q" %}
 
@@ -59,7 +59,7 @@ You can learn how to create a HiloOpenClose chart using Blazor Charts by watchin
 
 You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding can be found [here](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName), [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_High), [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Low), [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Open) and [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Close) properties.
 
-```cshtml 
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -313,7 +313,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhzDlBDpbdSnHLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

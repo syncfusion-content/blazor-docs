@@ -66,7 +66,7 @@ documentation: ug
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLgCLrnzdoaeqgs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Range Column Chart](../images/chart-types-images/blazor-range-column-chart.png)" %}
 
-N> Refer to our [Blazor Range Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Range Column Chart Example](https://blazor.syncfusion.com/demos/chart/range-column?theme=bootstrap5) to know how to show variations in the data values for a given time.
+N> Refer to the [Blazor Range Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Range Column Chart Example](https://blazor.syncfusion.com/demos/chart/range-column?theme=bootstrap5) to know how to show variations in the data values for a given time.
 
 ## Binding data with series
 
@@ -177,7 +177,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVTjPsuPHANPsBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the range column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the range column series. By configuring this property with gradient values will create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 ```cshtml
 
@@ -518,9 +518,9 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBSDTtTAfxgaRes?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Range Column Chart with corner radius](../images/chart-types-images/blazor-range-column-corner-radius.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBSDTtTAfxgaRes?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Range Column Chart with corner radius](../images/chart-types-images/blazor-range-column-corner-radius.png)" %}
 
-We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
+Customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
 ```cshtml
 

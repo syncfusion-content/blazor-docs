@@ -319,4 +319,4 @@ The [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```
 
 Here is a preview sample demonstrating the accessibility customization support for all chart elements:
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhfXnWhVHFlrqSz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhfXnWhVHFlrqSz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

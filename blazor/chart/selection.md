@@ -123,7 +123,7 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Cluster
 
-By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) property to **Cluster**, one can select the points in all series that correspond to the same index.
+By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) property to Cluster, data points across all series that share the same index can be selected.
 
 ```cshtml
 
@@ -173,7 +173,7 @@ By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 **DragXY, DragX and DragY**
 
-Set [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) to **DragXY** to retrieve a group of data under a specific region.
+Set [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SelectionMode) to **DragXY** to select a group of data under a specific region.
 
 * DragXY - Allows to select data with respect to horizontal and vertical axis.
 * DragX - Allows to select data with respect to horizontal axis.
@@ -260,13 +260,13 @@ N> To select a rectangular area on a chart using a touch device, quickly double-
 
 ## Multiple selection
 
-Multiple points or series can be selected by setting the [IsMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsMultiSelect) property to **true**.
+Multiple points or series can be selected by setting the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_AllowMultiSelection) property to **true**.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Series" IsMultiSelect="true">
+<SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Series" AllowMultiSelection="true">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
@@ -376,7 +376,7 @@ A point or series can be selected programmatically on a chart using the [Selecte
 
 ## Legend Selection
 
-A point or series can be selected through legend using the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property.
+A point or series can be selected through legend by default. This feature can be disabled by setting the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility)  property to **false**.
 
 ```cshtml
 
@@ -493,7 +493,7 @@ The custom style can be applied to selected points or series using the [Selectio
 
 ![Blazor Column Chart with Custom Style Selection](images/selection/blazor-chart-custom-style-selection.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

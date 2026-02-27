@@ -80,7 +80,7 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ## Enable zooming and panning
 
-The Bing Maps layer supports zooming and panning. Zooming provides a closer view of a specific region for detailed analysis. Panning moves the map to focus on the target area.
+The Bing Maps layer supports zooming and panning. Zooming provides a closer view of a specific region for detailed analysis. Panning moves the map to focus on the target area. To enable zooming, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property to **true** in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). Panning is enabled by default and can be configured using the [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property.
 
 ```cshtml
 

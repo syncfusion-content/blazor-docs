@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Charts Component
 
-In this section, we have provided a list of chart component events that will be triggered for appropriate chart actions.
+This section provides a list of chart component events that are triggered by corresponding chart actions.
 
 The events should be provided to the chart using [ChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
@@ -995,9 +995,45 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
     public void Export()
     {
-        chart.Export(ExportType.JPEG, "Charts");
+        chart.ExportAsync(ExportType.JPEG, "Charts");
     }
     public void ExportCompleteEvent(ExportEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+## OnPrintComplete
+
+[OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPrintComplete) event triggers after completion of the print operation.
+This event has no arguments.
+
+```
+
+@using Syncfusion.Blazor.Charts
+
+<button class="btn-success" @onclick="Print">Print</button>
+<SfChart @ref="chart">
+    <ChartEvents OnPrintComplete="OnPrintComplete" />
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public SfChart chart;
+
+    public void Print()
+    {
+        chart.PrintAsync();
+    }
+
+    public void OnPrintComplete()
     {
         // Here, you can customize your code.
     }
@@ -1130,6 +1166,8 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
 The following properties are available in the [LegendClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html).
 
 * [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_LegendShape) – Specifies the shape of the legend item.
+* [LegendText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_LegendText) – Specifies the shape of the legend item.
+* [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_Series) – Specifies the series.
 
 ```cshtml
 
@@ -1297,7 +1335,7 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
 
 ## Loaded
 
-`Loaded` event triggers after chart load.
+[Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Loaded) event triggers after chart load.
 
 ```cshtml
 
@@ -1509,4 +1547,4 @@ The following properties are available in the [SharedTooltipRenderEventArgs](htt
 
 ```
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

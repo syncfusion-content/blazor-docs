@@ -22,7 +22,7 @@ Gradients can be applied to:
 
 ## Linear gradient
 
-A linear gradient blends colors along a straight path from a defined start point to an end point. Configure it by adding `ChartLinearGradient` inside the target element (Series, Trendline, or Indicator) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using `X1`, `Y1`, `X2`, and `Y2` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the `ChartGradientColorStop` property.
+A linear gradient blends colors along a straight path from a defined start point to an end point. Configure it by adding [ChartLinearGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLinearGradient.html) inside the target element (Series, Trendline, or Indicator) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using `X1`, `Y1`, `X2`, and `Y2` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the [ChartGradientColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartGradientColorStop.html) property.
 
 In the `ChartLinearGradient`:
 ```
@@ -41,7 +41,7 @@ In the `ChartGradientColorStop`:
 
 ### Series
 
-Apply a linear gradient to a series by adding `ChartLinearGradient` inside the target Series. The same gradient is applied to the series markers, legend symbol and tooltip marker for visual consistency.
+Apply a linear gradient to a series by adding [ChartLinearGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLinearGradient.html) inside the target Series. The same gradient is applied to the series markers, legend symbol and tooltip marker for visual consistency.
 
 ```
 
@@ -97,7 +97,7 @@ Apply a linear gradient to a series by adding `ChartLinearGradient` inside the t
 
 ### Trendlines
 
-Apply a linear gradient to a trendline by adding `ChartLinearGradient` inside the target Trendline.
+Apply a linear gradient to a trendline by adding [ChartLinearGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLinearGradient.html) inside the target Trendline.
 
 ```
 
@@ -162,7 +162,7 @@ Apply a linear gradient to a trendline by adding `ChartLinearGradient` inside th
 
 ### Technical Indicators
 
-Apply a linear gradient to a technical indicator by adding `ChartLinearGradient` inside the target Indicator.
+Apply a linear gradient to a technical indicator by adding [ChartLinearGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLinearGradient.html) inside the target Indicator.
 
 ```
 
@@ -231,7 +231,7 @@ Apply a linear gradient to a technical indicator by adding `ChartLinearGradient`
 
 ## Radial gradient
 
-A radial gradient blends colors outward from a central point, creating a circular or elliptical color progression. Configure it by adding `ChartRadialGradient` inside the target element (Series, Trendline, or Indicator) and define one or more color stops to control how colors transition from the center to the outer edge. Set the gradient’s center, optional focal point, and radius using `ChartRadialGradient` properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the `ChartGradientColorStop` property.
+A radial gradient blends colors outward from a central point, creating a circular or elliptical color progression. Configure it by adding [ChartRadialGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRadialGradient.html) inside the target element (Series, Trendline, or Indicator) and define one or more color stops to control how colors transition from the center to the outer edge. Set the gradient’s center, optional focal point, and radius using [ChartRadialGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRadialGradient.html) properties. The color stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using the [ChartGradientColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartGradientColorStop.html) property.
 
 In the `ChartRadialGradient`:
 ```
@@ -251,7 +251,7 @@ In the `ChartGradientColorStop`:
 
 ### Series
 
-Apply a radial gradient to a series by adding `ChartRadialGradient` inside the target Series. The same gradient is applied to the series markers, legend symbol and tooltip marker for visual consistency.
+Apply a radial gradient to a series by adding [ChartRadialGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRadialGradient.html) inside the target Series. The same gradient is applied to the series markers, legend symbol and tooltip marker for visual consistency.
 
 ```
 
@@ -305,7 +305,7 @@ Apply a radial gradient to a series by adding `ChartRadialGradient` inside the t
 ```
 ![Blazor Column Chart with Radial Gradient](images/gradient/blazor-column-chart-radial-gradient.png)
 
-N> Radial gradients can also be applied to Trendlines and Technical Indicators in the same way by placing a `ChartRadialGradient` with color stops inside the target `ChartTrendline` or `ChartIndicator`.
+N> Radial gradients can also be applied to Trendlines and Technical Indicators in the same way by placing a [ChartRadialGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRadialGradient.html) with color stops inside the target `ChartTrendline` or `ChartIndicator`.
 
 ## See also
 
