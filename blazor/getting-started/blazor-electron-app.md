@@ -79,7 +79,7 @@ Register the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor se
 Before using the code snippet below, replace `BlazorElectronApp` with the root namespace of your application, which is specified in `App.razor` or `_Imports.razor` file.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs)" hl_lines="2 3 4 10 13 16 17 18 19 20 21 22 23 24 25 27 29 30 31 35 44" %}
+{% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs)" hl_lines="2 3 4 10 13 16 17 18 19 20 21 22 23 24 25 27 29 30 31 35 45" %}
 
 ...
 using Syncfusion.Blazor;
@@ -119,7 +119,8 @@ app.UseStaticFiles(); // Required for serving assets like _content/ (Syncfusion)
 
 ...
 
-// app.UseHttpsRedirection();   <-- Do NOT enable for Electron app
+// Disable for Electron: it runs on http://localhost, and HTTPS redirection can cause redirect/certificate issues.
+// app.UseHttpsRedirection();
 
 ...
 
