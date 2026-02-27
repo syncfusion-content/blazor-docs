@@ -6,7 +6,7 @@
 
 @code {
 
-   public object LocalData { get; set; } = new Vegetables().VegetablesList();
+    public IEnumerable<Vegetables> LocalData { get; set; } = new Vegetables().VegetablesList();
 
     public class Vegetables
     {

@@ -129,6 +129,7 @@ The MultiSelect supports retrieving data from remote services by using the `Data
 The following sample displays the first six orders from the `Orders` table of the `Northwind` OData v4 service.
 
 ```cshtml
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -166,8 +167,9 @@ Use the `WebApiAdaptor` to bind the MultiSelect with Web API endpoints that foll
 ```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
 
-<SfMultiSelect TValue="string[]" Placeholder="Select a Employee" Query="@Query">
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
     <MultiSelectFieldSettings Text="FirstName" Value="EmployeeID"></MultiSelectFieldSettings>
 </SfMultiSelect>
@@ -271,6 +273,7 @@ To avoid a postback for every action, load all data during initialization and pr
 ```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
 
 <SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true Offline=true></SfDataManager>
@@ -294,7 +297,7 @@ To avoid a postback for every action, load all data during initialization and pr
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the MultiSelect component. The following code shows how to get a string value from enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the MultiSelect component. The following code shows how to get a string value from enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0).
 
 ```csharp
 
@@ -311,7 +314,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 ## Binding ExpandoObject
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the MultiSelect component. In the following example, `ExpandoObject` is bound to a collection of vehicles.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the MultiSelect component. In the following example, `ExpandoObject` is bound to a collection of vehicles.
 
 ```csharp
 
@@ -342,7 +345,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ## Binding DynamicObject
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the MultiSelect component. In the following example, `DynamicObject` is bound to a collection of customers.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the MultiSelect component. In the following example, `DynamicObject` is bound to a collection of customers.
 
 ```csharp
 
@@ -392,7 +395,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ## Binding ObservableCollection
 
-Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the MultiSelect component. The following example `Observable Data` is bound to a collection of colors data.
+Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0) data to the MultiSelect component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 

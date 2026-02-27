@@ -27,7 +27,7 @@ The following example demonstrates filtering with local data in the DropDown Lis
 
 For remote data, a filter request is sent to the server for each keystroke. Shape the query on the server side to return the filtered results.
 
-The following example demonstrates filtering with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+The following example demonstrates filtering with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property.
 
 {% highlight cshtml %}
 
