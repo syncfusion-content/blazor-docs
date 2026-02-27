@@ -25,7 +25,7 @@ Set the boolean [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Disabled state
 
-Set the boolean [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Enabled) property to enable or disable the component entirely.
+Set the boolean [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Enabled) property to enable or disable the component entirely.
 
 {% highlight cshtml %}
 

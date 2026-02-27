@@ -108,7 +108,7 @@ In the following example, `Code.ID` is mapped to [ComboBoxFieldSettings.Value](h
 
 ### Expando object binding
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the ComboBox. The following example binds a collection of vehicle objects.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the ComboBox. The following example binds a collection of vehicle objects.
 
 {% highlight cshtml %}
 
@@ -132,7 +132,7 @@ Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/commo
 
 ### Dynamic object binding
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) instances to the ComboBox. The following example binds a collection of customers.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) instances to the ComboBox. The following example binds a collection of customers.
 
 {% highlight cshtml %}
 
@@ -156,7 +156,7 @@ Bind enum data and display description values from enumeration members.
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data. The following example shows how to extract and display a string value using `ValueTuple`.
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data. The following example shows how to extract and display a string value using `ValueTuple`.
 
 {% highlight cshtml %}
 
