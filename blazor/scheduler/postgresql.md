@@ -110,8 +110,8 @@ The installed packages are reflected in the `BlazorSchedulerApp.csproj` file:
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Syncfusion.Blazor.Schedule" Version="32.2.3" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="32.2.3" />
+    <PackageReference Include="Syncfusion.Blazor.Schedule" Version="*" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
 </ItemGroup>
 ```
 
