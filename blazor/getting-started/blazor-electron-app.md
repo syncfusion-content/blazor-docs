@@ -165,7 +165,7 @@ dotnet restore
 
 ### 2. Update Program.cs to Integrate Electron.NET
 
-Replace `YourProjectName` in the code below with your actual root namespace used by the App component (see `App.razor` or `_Imports.razor`).
+Replace `BlazorElectronApp` in the code below with the root namespace of your application as specified in the `App.razor` or `_Imports.razor` file.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs)" hl_lines="2 3 4 10 13 16 17 18 19 20 21 22 23 24 25 27 29 30 31 35 44" %}
@@ -213,7 +213,7 @@ app.UseStaticFiles(); // Required for serving assets like _content/ (Syncfusion)
 ...
 
 // Map the root Razor Components app
-app.MapRazorComponents<YourProjectName.Components.App>()
+app.MapRazorComponents<BlazorElectronApp.Components.App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
