@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Creating a Desktop App Using Blazor and the Electron Framework | Syncfusion
-description: Learn how to build a cross‑platform desktop application using a Blazor Server App and the Electron.NET.Core framework, integrated with Syncfusion Blazor DataGrid and themes.
+description: Learn to build a cross‑platform desktop app using a Blazor Server App with ElectronNET.Core and Syncfusion Blazor DataGrid components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Creating a Blazor Server Electron Desktop Application with Syncfusion DataGrid
+# Creating a Blazor Server Electron Desktop App with Syncfusion® DataGrid
 
 This section explains how to build a cross‑platform desktop application using a **Blazor Server App**, the **ElectronNET.Core** framework, and Syncfusion<sup style="font-size:70%">®</sup> Blazor DataGrid inside an Electron shell.
 
