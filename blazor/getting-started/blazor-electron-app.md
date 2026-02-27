@@ -7,15 +7,16 @@ component: Common
 documentation: ug
 ---
 
-# Creating a Blazor Server Electron Desktop App
+# Creating a Blazor Desktop App with Electron
 
-This section explains how to build a cross‑platform desktop application using a **Blazor Server App**, the **ElectronNET.Core** framework, and Syncfusion<sup style="font-size:70%">®</sup> Blazor DataGrid inside an Electron shell.
+This guide explains how to create a cross‑platform desktop application by combining a **Blazor Server App** with the **ElectronNET.Core** framework and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as the DataGrid within an Electron‑powered desktop environment.
 
 N> ElectronNET.Core is the modern fork of the Electron.NET approach that supports recent .NET versions. 
 
 ## What is Electron?
 
 [Electron](https://www.electronjs.org/) is a framework for building cross-platform desktop applications with web technologies. It utilizes `Node.js` and the `Chromium` rendering engine to run a web application in a desktop shell.
+ElectronNET.Core bridges the Blazor Server app and the Electron shell by hosting an internal Kestrel server and loading it inside a Chromium window. The Electron main process communicates with the Blazor backend through this local server, enabling desktop‑native features without altering the application's architecture.
 
 ## Prerequisites
 
@@ -26,22 +27,34 @@ N> ElectronNET.Core is the modern fork of the Electron.NET approach that support
 
 ## Create a Blazor Server App
 
-Create a **Blazor Server App** using the .NET CLI or Visual Studio.
+Run the following commands in the **command-line interface (CLI)**.
 
-- [Create a Blazor Server application by using the CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli)  
-- [Create a Blazor Server application by using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazor -o BlazorApp -int Server
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
 
-From the project folder (where the `.csproj` is located), install the **Grid** and **Themes** packages:
+From the project folder (where the `.csproj` is located), install the Syncfusion<sup style="font-size:70%">&reg;</sup> **Grid**, **Themes**, and **ElectronNET.Core** packages:
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+ * [ElectronNET.Core](https://www.nuget.org/packages/ElectronNET.Core)
+ * [ElectronNET.Core.AspNet](https://www.nuget.org/packages/ElectronNET.Core.AspNet)
 
 {% tabs %}
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+
+dotnet add package ElectronNET.Core
+dotnet add package ElectronNET.Core.AspNet
+
 dotnet restore
 
 {% endhighlight %}
@@ -60,112 +73,10 @@ Open **~/_Imports.razor** and import the required Syncfusion<sup style="font-siz
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> and Electron Services
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in your app’s **~/Program.cs**.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs)" hl_lines="3 10" %}
-
-....
-....
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-....
-....
-builder.Services.AddSyncfusionBlazor();
-
-....
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add stylesheet and script resources
-
-Before adding the stylesheet, make sure no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (e.g., bootstrap5.css, material.css) is already referenced to avoid conflicts.
-
-Add the following stylesheet and script references in the `~/App.razor`. 
-
-{% tabs %}
-{% highlight html hl_lines="4 10" %}
-
-<head>
-    ...
-    <!-- Syncfusion theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-
-<body>
-    ...
-    <!-- Syncfusion Blazor Core script (required for most components, including DataGrid) -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-
-{% endhighlight %}
-{% endtabs %}
-
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
-
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components to a `.razor` file within your app.
-
-{% tabs %}
-{% highlight razor %}
-
-@rendermode InteractiveServer
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" />
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 10).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Configure Electron.NET in Your Blazor App (using ElectronNET.Core)
-
-Run the following commands in either the **Visual Studio Developer Command Prompt** or any **command-line interface (CLI)**.
-
-### 1. Install the ElectronNET.Core NuGet packages
-
-{% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
-
-dotnet add package ElectronNET.Core
-dotnet add package ElectronNET.Core.AspNet
-dotnet restore
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### 2. Update Program.cs to Integrate Electron.NET
-
-Replace `BlazorElectronApp` in the code below with the root namespace of your application as specified in the `App.razor` or `_Imports.razor` file.
+Register the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service and configure the ElectronNET.Core integration in your app’s **~/Program.cs** file.
+Before using the code snippet below, replace `BlazorElectronApp` with the root namespace of your application, which is specified in `App.razor` or `_Imports.razor` file.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs)" hl_lines="2 3 4 10 13 16 17 18 19 20 21 22 23 24 25 27 29 30 31 35 44" %}
@@ -221,7 +132,32 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-### 3. Add Runtime Identifiers to Support Cross‑Platform Builds
+## Add stylesheet and script resources
+
+Before adding the stylesheet, make sure no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (e.g., bootstrap5.css, material.css) is already referenced to avoid conflicts.
+
+Add the following stylesheet and script references in the `~/App.razor`. 
+
+{% tabs %}
+{% highlight html hl_lines="4 10" %}
+
+<head>
+    ...
+    <!-- Syncfusion theme style sheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+<body>
+    ...
+    <!-- Syncfusion Blazor Core script (required for most components, including DataGrid) -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Add Runtime Identifiers to Support Cross‑Platform Builds
 
 Add the following property to your project’s `.csproj` file:
 
@@ -238,7 +174,7 @@ Add the following property to your project’s `.csproj` file:
 
 {% endtabs %}
 
-### 4. Add electron-builder.json (Required for ElectronNET.Core)
+## Add electron-builder.json (Required for ElectronNET.Core)
 
 ElectronNET.Core requires this file for packaging your desktop application.
 Create a file named `electron-builder.json` inside your project’s `Properties` folder and add the following code.
@@ -271,6 +207,43 @@ Create a file named `electron-builder.json` inside your project’s `Properties`
 
 {% endtabs %}
 
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
+
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components to a `.razor` file within your app.
+
+{% tabs %}
+{% highlight razor %}
+
+@rendermode InteractiveServer
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" />
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Run the application
 
 ```
@@ -279,6 +252,8 @@ dotnet run
 ![Blazor Electron App](images/blazor-server-electron.png)
 
 ### Publish and Build Desktop Packages
+
+These commands publish for the x64 architecture. Change the runtime identifier (for example, osx‑arm64, linux‑arm64) as needed.
 
 ```
 Windows: dotnet publish -r win-x64 -c Release
