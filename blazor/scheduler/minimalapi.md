@@ -66,6 +66,7 @@ Open the **Components/_Imports.razor** file and import the `Syncfusion.Blazor` a
 {% highlight razor tabtitle="Components/_Imports.razor" %}
 
 @using Syncfusion.Blazor
+
 @using Syncfusion.Blazor.Schedule
 
 {% endhighlight %}
@@ -102,9 +103,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 <body>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-    //Blazor Scheduler Component script reference.
-    <!-- <script src="_content/Syncfusion.Blazor.Schedule/scripts/sf-schedule.min.js" type="text/javascript"></script> -->
 </body>
 ```
 
