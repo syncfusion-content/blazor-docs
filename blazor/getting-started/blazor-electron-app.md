@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Creating a Blazor Server Electron Desktop App with Syncfusion® DataGrid
+# Creating a Blazor Server Electron Desktop App
 
 This section explains how to build a cross‑platform desktop application using a **Blazor Server App**, the **ElectronNET.Core** framework, and Syncfusion<sup style="font-size:70%">®</sup> Blazor DataGrid inside an Electron shell.
 
