@@ -56,11 +56,11 @@ Ensure the following software and packages are installed before proceeding:
 
 * Open Command Prompt.
 * Navigate to the Elasticsearch bin directory:
-   ```cmd
+   ```powershell
    cd C:\elasticsearch-9.3.0\bin
    ```
 * Run the Elasticsearch batch file:
-   ```cmd
+   ```powershell
    elasticsearch.bat
    ```
 * The startup process takes approximately 1-2 minutes. Once initialization completes, the console displays:
