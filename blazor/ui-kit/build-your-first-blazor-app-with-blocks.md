@@ -192,7 +192,7 @@ Now that **BlazorServerApp** is set up with the desired theme configuration, the
 
 The Simple Sign in block uses Syncfusion<sup style="font-size:70%">&reg;</sup> components like TextBox, CheckBox, and Button. Follow these steps to add the required packages:
 
-1. Open the **BlazorServerApp.csproj** file and add the required nuget packages: Syncfusion.Blazor.Buttons and Syncfusion.Blazor.Inputs. For more details about other Syncfusion® Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor).
+1. Open the **BlazorServerApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Syncfusion® Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor).
 
   ![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.png)
 
@@ -202,13 +202,9 @@ The Simple Sign in block uses Syncfusion<sup style="font-size:70%">&reg;</sup> c
     dotnet restore
     ```
 
-3. Import the required namespaces in the **_Imports.razor** file (located in the Components folder):
+3. Import the required namespaces `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs` in the **_Imports.razor** file (located in the Components folder):
 
-    ```razor
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Buttons
-    @using Syncfusion.Blazor.Inputs
-    ```
+    ![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.png)
 
 4. Now, copy the required Razor (HTML) code for the Sign in block from the [online demo](https://blazor.syncfusion.com/essential-ui-kit) or [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) into your app as outlined in the previous section.
 
