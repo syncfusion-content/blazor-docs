@@ -1,22 +1,20 @@
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Popups;
 
-<SfTooltip @ref="TooltipObj" ID="Tooltip" Target=".e-list-item .name[title]">
-</SfTooltip>
 
 <SfDropDownList TItem="GameFields" TValue="string" Placeholder="Select a game" DataSource="@Games">
     <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
     <DropDownListTemplates TItem="GameFields">
-            <ItemTemplate>
-                    <div class="name" title="@((context as GameFields).Text)"> @((context as GameFields).Text) </div>
-            </ItemTemplate>
-        </DropDownListTemplates>
-    <DropDownListEvents TValue="string" TItem="GameFields" Opened="OnOpen" OnClose="OnClose"></DropDownListEvents>
+        <ItemTemplate>
+            <SfTooltip Target=".custom-item" Content="@context.Text">
+                <div class="custom-item">@context.Text</div>
+            </SfTooltip>
+        </ItemTemplate>
+    </DropDownListTemplates>
 </SfDropDownList>
 
-@code{
+@code {
 
-    SfTooltip TooltipObj;
     public Boolean isOpen { get; set; } = false;
     
     public class GameFields
@@ -38,21 +36,4 @@
         new GameFields(){ ID= "Game10", Text= "Tennis"},
     };
 
-    public void OnOpen(PopupEventArgs args)
-    {
-        isOpen = true;
-    }
-
-    public void OnClose(PopupEventArgs args)
-    {
-        TooltipObj.CloseAsync();
-    }
-    
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (isOpen)
-        {
-            await TooltipObj.RefreshAsync();
-        }
-    }
 }
