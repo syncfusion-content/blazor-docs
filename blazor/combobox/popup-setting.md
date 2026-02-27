@@ -57,7 +57,7 @@ In the following sample, `ZIndex` is set to `2000`.
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/popup-setting/popup-zindex.razor %}
+{% include_relative code-snippet/popup-setting/poupu-zindex.razor %}
 
 {% endhighlight %}
 
