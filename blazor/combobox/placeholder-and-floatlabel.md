@@ -11,7 +11,7 @@ documentation: ug
 
 ## Placeholder
 
-Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Placeholder) property to display a hint describing the expected value in the input. In the following example, “Select a game” is set as the placeholder, which applies the corresponding attribute to the input element in the DOM.
+Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display a hint describing the expected value in the input. In the following example, “Select a game” is set as the placeholder, which applies the corresponding attribute to the input element in the DOM.
 
 {% highlight cshtml %}
 

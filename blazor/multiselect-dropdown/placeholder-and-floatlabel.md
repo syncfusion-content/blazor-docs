@@ -78,3 +78,5 @@ Customize the component color when it is focused by targeting its CSS class `.e-
 {% endhighlight %}
 
 ![Blazor MultiSelect Dropdown focus color](./images/style/blazor_multiselect_focus-color.png)
+
+N> The above example works correctly with the Material3 theme. If you use a different theme, you may need to adjust the CSS classes accordingly.
