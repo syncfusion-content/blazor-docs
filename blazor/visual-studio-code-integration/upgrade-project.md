@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Upgrade a project to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> version
+# Upgrade a Project to the latest Syncfusion® Version
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration extension for Visual Studio Code enables upgrading an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application to a newer Essential Studio<sup style="font-size:70%">&reg;</sup> release by updating NuGet package references and theme links automatically.
 
