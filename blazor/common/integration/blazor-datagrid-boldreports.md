@@ -512,8 +512,8 @@ Inject **IJSRuntime**, render DataGrid and invoke this JavaScript interop with t
 </div>
 
 <style>
-.e-reportviewer-pageview {
-    padding:22px !important;
+#viewer_OrdersTable, #viewer_ReportTitle {
+    padding-left:22px;
 }
 </style>
 
