@@ -7,55 +7,65 @@ control: Common
 documentation: ug
 ---
 
-# Converting Blazor Extension for Visual Studio Code
+# Convert a Blazor Project to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor conversion add-in for Visual Studio Code converts an existing Blazor application into a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web application by adding the required NuGet packages and themes.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor conversion extension for Visual Studio Code converts an existing Blazor application into a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web application by automatically adding required NuGet packages and configuring themes.
 
-N> The Syncfusion® Blazor Web Application Project Conversion utility is available from `v17.4.0.39`.
+## Steps to Convert the Application
 
-Use the following steps to run the Syncfusion<sup style="font-size:70%">&reg;</sup> project conversion in an existing Blazor Web application:
+Use the following steps to convert an existing Blazor application to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application:
 
-1. In Visual Studio Code, open an existing Blazor Web application or create a new Blazor Web application.
+1. In Visual Studio Code, Open an existing Blazor application or create a new Blazor application.
 
-2. In Explorer (Workspace), right-click the project file and select **Convert to Syncfusion Blazor Application...** from the context menu. Refer the screenshot below.
+   Supported application types:
+   - Blazor Web App (Server or WebAssembly rendering)
+   - Blazor Server App
+   - Blazor WebAssembly App (standalone or ASP.NET Core hosted)
+   - Blazor WebAssembly App (Progressive Web Application)
 
-    ![Context menu showing Convert to Syncfusion Blazor Application command](images/Conversion.PNG)
+2. In the Explorer panel, right-click the project file (`.csproj`) and select **Convert to Syncfusion Blazor App...** from the context menu.
 
-3. From the Command Palette, choose **Select Blazor Version** (version published on `nuget.org`).
+    ![Context menu showing Convert to Syncfusion Blazor Application option](images/Conversion.png)
 
-    ![Palette showing selection of Blazor version](images/VersionSelection.PNG)
+3. In the Command Palette, select **Select Blazor Version** from the available commands.
 
-4. From the palette, choose the desired Syncfusion theme.
+4. Choose the desired Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor version from the dropdown list (displays versions available on `nuget.org`).
 
-    ![Palette showing selection of Syncfusion themes](images/ChooseThemes.PNG)
+    ![Command Palette showing Blazor version selection](images/VersionSelection.png)
 
-5. The application is configured with the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages and themes.
+5. After version selection, the Command Palette will display available themes. Select the preferred theme (e.g., Material, Bootstrap, Tailwind, Fluent and HighContrast).
 
-6. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
+    ![Command Palette showing theme selection options](images/ChooseThemes.png)
+
+   N> The conversion process will run automatically. This may take a few moments as NuGet packages are downloaded and the project is configured.
+
+6. After conversion completes, the application is configured with the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages and the selected theme stylesheet.
+
+7. If the trial setup or NuGet packages from `nuget.org`, register the Syncfusion® license key in the application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to the application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
 
 ## NuGet Packages
 
-Based on the application type, the following NuGet packages are added as dependencies.
+During conversion, the required NuGet packages are automatically added to the application based on the application type.
 
-| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages  | Application type  |
+| NuGet Packages | Application Types |
+|---------|---------|
+| `Syncfusion.Blazor` | Blazor Web App (Server or WebAssembly),  <br/> Blazor WebAssembly App (all variants) |
+
+The packages are added to the application's `.csproj` file as shown below:
+
+![Project file showing Syncfusion NuGet package references](images/NugetPackage.png)
+
+## Theme Configuration
+
+During conversion, the selected Syncfusion<sup style="font-size:70%">&reg;</sup> theme stylesheet is automatically added in the following locations based on the application type.
+
+### Theme File Locations
+
+| Application Type | Theme File Location |
 |---|---|
-| `Syncfusion.Blazor`  | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (Progressive Web Application)|
-| `Syncfusion.Blazor.PdfViewerServer.Windows`  | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App  |
-| `Syncfusion.Blazor.WordProcessor`  | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (Progressive Web Application)|
-
-The packages are added to the application as shown below.
-
-![Project file showing Syncfusion NuGet package references](images/NuGetPackage.png)
-
-## Theme links
-
-During conversion, the selected Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme is added in the following locations based on the application type.
-
-| Application type  | File location  |
-|---|---|
-| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App | ~/Components/App.razor |
-| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App | {Project location}/Pages/_Host.cshtml |
-| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (Progressive Web Application)| {Client Project location}/wwwroot/index.html  |
-| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
+| **Blazor Web App** (Server or WebAssembly) | `Components/App.razor` |
+| **Blazor WebAssembly** (standalone) | `wwwroot/index.html` |
+| **Blazor WebAssembly** (ASP.NET Core hosted) | Client project: `wwwroot/index.html` |
+| **Blazor WebAssembly** (Progressive Web Application) | `wwwroot/index.html` |
 
 ![Example showing where the theme link is added in the project](images/CDNLink.png)
