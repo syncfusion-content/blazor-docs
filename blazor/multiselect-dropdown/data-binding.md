@@ -75,7 +75,7 @@ In the following example, the `Code.ID` field and `Country.CountryID` field from
 
 ### Expando object binding
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the MultiSelect component. In the following example, the `ExpandoObject` is bound to a collection of vehicles.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the MultiSelect component. In the following example, the `ExpandoObject` is bound to a collection of vehicles.
 
 {% highlight cshtml %}
 
@@ -99,7 +99,7 @@ Bind [ObservableCollection](https://blazor.syncfusion.com/documentation/common/d
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the MultiSelect component. In the following example, the `DynamicObject` is bound to  collection of customer data.
+Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the MultiSelect component. In the following example, the `DynamicObject` is bound to  collection of customer data.
 
 {% highlight cshtml %}
 
@@ -123,7 +123,7 @@ Convert enum values into a list of strings and bind them to the [DataSource](htt
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the MultiSelect component. The following example shows how to obtain a string value from enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the MultiSelect component. The following example shows how to obtain a string value from enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0).
 
 {% highlight cshtml %}
 
