@@ -36,27 +36,27 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2022 | 17.8 or later | Development IDE with Blazor workload |
-| .NET SDK | 9.0 or later | Runtime and build tools |
-| PostgreSQL Server | 14 or later | Database server |
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
+| .NET SDK | net10.0 or compatible | Runtime and build tools |
+| PostgreSQL Server | 12 or later | Database server |
 | pgAdmin 4 | Latest | PostgreSQL GUI management tool |
-| Syncfusion.Blazor.Schedule | 32.1.25 or later | Scheduler and UI components |
-| Syncfusion.Blazor.Themes | 32.1.25 or later | Styling for Scheduler components |
-| Npgsql.EntityFrameworkCore.PostgreSQL | 9.0.2 or later | PostgreSQL provider for Entity Framework Core |
-| Microsoft.EntityFrameworkCore.Design | 9.0.0 or later | Design-time tools for migrations |
+| Syncfusion.Blazor.Schedule | 32.2.3 | Scheduler and UI components |
+| Syncfusion.Blazor.Themes | 32.2.3 | Styling for Scheduler components |
+| Npgsql.EntityFrameworkCore.PostgreSQL | 10.0.2 or later | PostgreSQL provider for Entity Framework Core |
+| Microsoft.EntityFrameworkCore.Design | 10.0.0 or later | Design-time tools for migrations |
 
 ## Setting Up the PostgreSQL Environment for Entity Framework Core
 
 ### Step 1: Create a Blazor Web App
 
-Create a **Blazor Web App** using Visual Studio 2022 or .NET CLI.
+Create a **Blazor Web App** using Visual Studio 2026 or .NET CLI.
 
-**Using Visual Studio 2022 or later:**
-1. Open Visual Studio 2022
+**Using Visual Studio 2026 or later:**
+1. Open Visual Studio 2026
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **BlazorSchedulerApp**
-5. Select **.NET 9.0** as the target framework
+5. Select **.NET 10.0** as the target framework
 6. Set **Interactive render mode** to **Server**
 7. Set **Interactivity location** to **Per page/component**
 8. Click **Create**
@@ -77,7 +77,7 @@ For this guide, a Blazor application named **BlazorSchedulerApp** has been creat
 
 #### Method 1: Using Package Manager Console
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2026.
 2. Navigate to **Tools** → **NuGet Package Manager** → **Package Manager Console**.
 3. Run the following commands:
 
