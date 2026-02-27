@@ -40,8 +40,8 @@ Ensure the following software and packages are installed before proceeding:
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | PostgreSQL Server | 12 or later | Database server |
 | pgAdmin 4 | Latest | PostgreSQL GUI management tool |
-| Syncfusion.Blazor.Schedule | 32.2.3 | Scheduler and UI components |
-| Syncfusion.Blazor.Themes | 32.2.3 | Styling for Scheduler components |
+| Syncfusion.Blazor.Schedule | Latest Version | Scheduler and UI components |
+| Syncfusion.Blazor.Themes | Latest Version | Styling for Scheduler components |
 | Npgsql.EntityFrameworkCore.PostgreSQL | 10.0.2 or later | PostgreSQL provider for Entity Framework Core |
 | Microsoft.EntityFrameworkCore.Design | 10.0.0 or later | Design-time tools for migrations |
 
@@ -570,14 +570,22 @@ The `Program.cs` file is where application services are registered and configure
         using Microsoft.EntityFrameworkCore;
         using Syncfusion.Blazor;
 
+        // Configure AppContext to handle DateTime timestamps for PostgreSQL
+
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
         var builder = WebApplication.CreateBuilder(args);
 
+        // Add services to the container
+
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents();
 
+        // Register Syncfusion Blazor service
+
         builder.Services.AddSyncfusionBlazor();
+
+        // Get connection string from appsettings.json
 
         var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -656,17 +664,6 @@ Syncfusion is a library that provides pre-built UI components like Scheduler, wh
     {% tabs %}
     {% highlight razor tabtitle="_Imports.razor" %}
 
-        @using System.Net.Http
-        @using System.Net.Http.Json
-        @using Microsoft.AspNetCore.Components.Forms
-        @using Microsoft.AspNetCore.Components.Routing
-        @using Microsoft.AspNetCore.Components.Web
-        @using static Microsoft.AspNetCore.Components.Web.RenderMode
-        @using Microsoft.AspNetCore.Components.Web.Virtualization
-        @using Microsoft.JSInterop
-        @using BlazorSchedulerApp
-        @using BlazorSchedulerApp.Components
-        @using BlazorSchedulerApp.Components.Layout
         @using BlazorSchedulerApp.Models
         @using BlazorSchedulerApp.Services
         @using Syncfusion.Blazor
@@ -676,41 +673,21 @@ Syncfusion is a library that provides pre-built UI components like Scheduler, wh
     {% endhighlight %}
     {% endtabs %}
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` and `<body>`section to add:
 
     {% tabs %}
     {% highlight razor tabtitle="App.razor" %}
 
-        <!DOCTYPE html>
-        <html lang="en">
-
         <head>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <base href="/" />
-            <ResourcePreloader />
-            <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
-            <link rel="stylesheet" href="@Assets["app.css"]" />
-            <link rel="stylesheet" href="@Assets["BlazorSchedulerApp.styles.css"]" />
-
             <!-- Syncfusion Blazor Stylesheet -->
             <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.3.css" rel="stylesheet" />
-
-            <ImportMap />
-            <link rel="icon" type="image/png" href="favicon.png" />
-            <HeadOutlet />
         </head>
-
         <body>
-            <Routes />
-            <ReconnectModal />
-            <script src="@Assets["_framework/blazor.web.js"]"></script>
 
             <!-- Syncfusion Blazor Scripts -->
             <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-        </body>
 
-        </html>
+        </body>
 
     {% endhighlight %}
     {% endtabs %}
@@ -798,8 +775,8 @@ The Scheduler component will display appointment data in a Syncfusion Blazor Sch
         <SfSchedule TValue="Appointment"
                     @ref="scheduleRef"
                     Height="650px"
-                    @bind-SelectedDate="currentDate"
-                    @bind-CurrentView="currentView"
+                    @bind-SelectedDate="@currentDate"
+                    @bind-CurrentView="@currentView"
                     ShowQuickInfo="true">
         
             <ScheduleViews>
