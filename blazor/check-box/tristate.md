@@ -34,3 +34,5 @@ This allows the component to correctly represent all three states.
     private bool? isChecked = true;
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhdjrhQCVRnEcqM?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[TriState in CheckBox](./images/blazor-checkbox-tristate.png)" %}
