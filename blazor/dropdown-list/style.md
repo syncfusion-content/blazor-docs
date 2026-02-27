@@ -89,6 +89,8 @@ Customize the dropdown icon for a specific component by adding a custom class th
 
 ![Blazor DropDownList with dropdown icon using CssClass](./images/style/blazor_dropdown_dropdown-icon.png)
 
+N> The above sample displays the custom icon correctly when using the Material theme. If you are using a different Syncfusion theme, you may need to adjust the content value or override the corresponding theme‑specific icon class to ensure the custom icon appears properly.
+
 ## Customizing the appearance of container element
 
 Customize the appearance of the container element within the dropdown list component by targeting its CSS class `.e-input`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
