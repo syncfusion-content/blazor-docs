@@ -11,34 +11,34 @@ documentation: ug
 
 The index value of a selected row or cell in the Blazor TreeGrid component can be retrieved using the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method of the TreeGrid component.
 
-The following example demonstrates how to use the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method on a button click to return the selected row cell indexes.
+When the button is clicked, the **GetSelectedRowCellIndexesAsync** method prints the selected row and cell indexes in the console.
 
 {% tabs %}
 
 {% highlight razor %}
 
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.Buttons;
-@using Syncfusion.Blazor.Grids;
-@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.TreeGrid
 
 <SfButton OnClick="SelectedRowCellIndex" CssClass="e-primary" IsPrimary="true" Content="Get selected rowcell index"></SfButton>
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridSelectionSettings Mode=SelectionMode.Cell></TreeGridSelectionSettings>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
     SfTreeGrid<TreeData> TreeGrid;
 
     public List<TreeData> TreeGridData { get; set; }
+
 
     protected override void OnInitialized()
     {
@@ -48,6 +48,16 @@ The following example demonstrates how to use the [GetSelectedRowCellIndexesAsyn
     public async Task SelectedRowCellIndex()
     {
         var value = await this.TreeGrid.GetSelectedRowCellIndexesAsync();
+        if(value.Count > 0)
+        {
+            var selected = value[0];
+            Console.WriteLine($"Selected Row is {selected.Item1} and the Selected Cell is {selected.Item2}");
+        }
+        else
+        {
+            Console.WriteLine("No cell is selected.");
+        }
+
     }
 }
 
@@ -55,33 +65,30 @@ The following example demonstrates how to use the [GetSelectedRowCellIndexesAsyn
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data {
+ public class TreeData
+ {
+     public int TaskId { get; set; }
+     public string TaskName { get; set; }
+     public int? Duration { get; set; }
+     public int? Progress { get; set; }
+     public string Priority { get; set; }
+     public int? ParentId { get; set; }
 
-public class TreeData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public int? Duration { get; set; }
-        public int? Progress { get; set; }
-        public string Priority { get; set; }
-        public int? ParentId { get; set; }
-
-        public static List<TreeData> GetSelfDataSource()
-        {
-            List<TreeData> TreeDataCollection = new List<TreeData>();
-            TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Progress = 80, Priority = "Low", Duration = 50, ParentId = 1 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5 });
-            return TreeDataCollection;
-        }
-    }
-}
+     public static List<TreeData> GetSelfDataSource()
+     {
+         List<TreeData> TreeDataCollection = new List<TreeData>();
+         TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+         TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Progress = 80, Priority = "Low", Duration = 50, ParentId = 1 });
+         TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
+         TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
+         TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+         TreeDataCollection.Add(new TreeData() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5 });
+         TreeDataCollection.Add(new TreeData() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5 });
+         TreeDataCollection.Add(new TreeData() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5 });
+         TreeDataCollection.Add(new TreeData() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5 });
+         return TreeDataCollection;
+     }
+ }
 
 {% endhighlight %}
 
