@@ -147,7 +147,7 @@ The [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 <SfButton CssClass="e-primary" OnClick="@(async() =>await Grid.ResetPersistDataAsync())">Restore Grid State</SfButton>
 
-<SfGrid @ref="Grid" ID="OrderDetails" DataSource="@Orders" Height="315" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true">
+<SfGrid @ref="Grid" ID="OrderDetails" DataSource="@Orders" Height="315" EnablePersistence="true" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
@@ -215,7 +215,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVetwXgrJTvTIlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVHtWrktGTkADQZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Clearing local storage
 
