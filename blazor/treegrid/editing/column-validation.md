@@ -69,8 +69,7 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,
             TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,
-            TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null,
-            IsParent = true,});
+            TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,
             TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,
