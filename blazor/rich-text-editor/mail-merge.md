@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Mail merge in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about Mail merge in Syncfusion Blazor RichTextEditor control and much more.
+description: Checkout and learn here all about Mail merge in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Mail merge in Blazor Rich Text Editor Control
+# Mail merge in Blazor Rich Text Editor Component
 
 The Mail merge feature in Blazor Rich Text Editor enables developers to create dynamic, personalized documents by inserting placeholders (merge fields) into the editor content. These placeholders are later replaced with actual data at runtime, making it ideal for generating letters, invoices, and bulk communication templates.
 
