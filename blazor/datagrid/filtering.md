@@ -463,7 +463,6 @@ IsNull |Returns the values that are null. |String &#124; Number &#124; Date
 IsNotNull |Returns the values that are not null. |String &#124; Number &#124; Date
 IsEmpty |Returns the values that are empty. |String
 IsNotEmpty |Returns the values that are not empty. |String
-Between |Filter the values based on the range between the start and end specified values. |Number &#124; Date
 
 > By default, the **Operator** value is **Equal** in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of `GridFilterSettings`.
 
