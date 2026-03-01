@@ -9,35 +9,39 @@ documentation: ug
 
 # Cell edit type and its params in Blazor Tree Grid Component
 
-The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) is used to customize the edit type of the particular column. The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) can be set based on the data type of the column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tree Grid supports multiple edit types that allow customization of the editing behavior for individual columns. The edit type of a particular column is configured using the `TreeGridColumn.EditType` property and its related edit parameters can be set using `TreeGridColumn.EditorSettings` (or the `Edit.params` model).
 
-* [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) component for integers, double, and decimal data types.
+## Default cell edit type editors
 
-* [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) component for string data type.
+The Tree Grid provides built-in editors that are applied based on a column's data type. Set the editor explicitly using the `TreeGridColumn.EditType` property. The common default edit types include:
 
-* [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) component for list data type.
+| Component                                                                                      | Edit Type Value      | Description                                                                                                   |
+|------------------------------------------------------------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------|
+| [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)          | DefaultEdit          | Renders a `SfTextBox` for columns with string data types.                                                     |
+| [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit          | Renders a `SfNumericTextBox` for numeric data types such as int, double, and decimal.                        |
+| [`SfDropDownList`](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | DropDownEdit         | Renders a `SfDropDownList` for string data types with predefined options.                                     |
+| [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit          | Renders a `SfCheckBox` for boolean data types.                                                                 |
+| [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit       | Renders a `SfDatePicker` for date data types.                                                                  |
+| [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit   | Renders a `SfDateTimePicker` for date-time data types.                                                         |
 
-* [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) component for date values.
+```cs
+<TreeGridColumns>
+    <TreeGridColumn Field="TaskName" HeaderText="Task Name" EditType="EditType.DefaultEdit" Width="160"></TreeGridColumn>
+    <TreeGridColumn Field="ShipCountry" HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="130"></TreeGridColumn>
+    <TreeGridColumn Field="OrderTime" HeaderText="Order Time" EditType="EditType.DateTimePickerEdit" Format="dd/MM/yyyy hh:mm a" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></TreeGridColumn>
+    <TreeGridColumn Field="Freight" HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" Width="120"></TreeGridColumn>
+    <TreeGridColumn Field="OrderDate" HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="dd/MM/yyyy" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></TreeGridColumn>
+    <TreeGridColumn Field="IsVerified" HeaderText="Verified" DisplayAsCheckBox="true" EditType="EditType.BooleanEdit" Width="120"></TreeGridColumn>
+</TreeGridColumns>
+```
 
-* [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) component for datetime type.
+## Customizing the default editors
 
-* [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) component for boolean type.
+The behavior of default editors in the Tree Grid can be customized through the column's `EditorSettings` (for example, using `StringEditCellParams`, `NumericEditCellParams`, `DropDownEditCellParams`, etc.). When more advanced customization is required, use an `EditTemplate` to render custom components within the edit form.
 
-* [TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) component for TimeOnly data type.
+> The properties available via `EditorSettings` are limited to the options exposed by the corresponding edit param classes. To apply additional customizations beyond the supported properties, use `EditTemplate`.
 
-Also, the model of the [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) component can be customized through the [TreeGridColumn.Edit.params](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Edit).
-
-The following table describes cell edit type component and their corresponding edit params of the column.
-
-Component |Example
------|-----
-[NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) | @(new { @params = new { format = "n"} })
-[TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) | -
-[DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | @(new { @params = new { value = "Germany"} })
-[DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | @(new { @params = new { format = "yyyy-MM-dd"} })
-[DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | @(new { @params = new { strictMode = true} })
-[Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | @(new { @params = new { checked = true} })
-[TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) | @(new { @params = new { format = "HH:mm:ss"} })
+The rest of this document describes edit templates and examples specific to the Tree Grid component.
 
 {% tabs %}
 
@@ -119,7 +123,7 @@ public class TreeData
 
 ![Cell Editing in Blazor TreeGrid](../images/blazor-treegrid-cell-editing.png)
 
-N> If edit type is not defined in the column, then it will be considered as the **stringedit** type (Textbox component).
+> **Note:** If a column's edit type is not defined, the editor defaults to the **stringedit** type (Textbox component).
 
 ## Cell Edit Template
 
@@ -379,7 +383,7 @@ public class TreeData
 
 ### Using NumericTextBox in EditTemplate
 
-You can render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
+Render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component for numeric edit fields using an `EditTemplate`.
 
 In the following sample, the `SfNumericTextBox` component is rendered in the `EditTemplate` for the **Duration** column.
 
@@ -480,7 +484,7 @@ Render the [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
                     <TreeGridColumn Field="StartDate" HeaderText=" Start Date" TextAlign="TextAlign.Right" Width="130" Format="hh:mm tt" DefaultValue="DateTime.Now" Type="ColumnType.DateTime">
                         <EditTemplate>
                             <SfTimePicker TValue="DateTime?" @bind-Value="@((context as SelfReferenceData).StartDate)"
-                                            AllowEdit="true" Format="hh:mm:tt" CssClass="CustomDateCSS" ShowClearButton="true"></SfTimePicker>
+                                            AllowEdit="true" Format="hh:mm tt" CssClass="CustomDateCSS" ShowClearButton="true"></SfTimePicker>
                         </EditTemplate>
                     </TreeGridColumn>
                     <TreeGridColumn Field="Progress" HeaderText="Progress" Width="150"></TreeGridColumn>
@@ -592,7 +596,7 @@ In the following image, `SfTimePicker` component is rendered with the `EditTempl
 
 ### Using MultiSelect dropdown in EditTemplate
 
-You can able to render [SfMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). In the below sample we have rendered `SfMultiSelect` component in `EditTemplate` for ChosenItems column.
+Render the [SfMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component in an `EditTemplate` for multi-selection fields. The example below renders the `SfMultiSelect` component in an `EditTemplate` for the `ChosenItems` column.
 
 {% tabs %}
 
