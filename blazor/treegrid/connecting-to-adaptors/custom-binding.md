@@ -3,17 +3,17 @@ layout: post
 title: Custom Binding in Blazor TreeGrid Component | Syncfusion
 description: Checkout and learn here all about custom binding in Syncfusion Blazor TreeGrid component and much more.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Custom Binding in Blazor TreeGrid Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the TreeGrid component.
 
-N> Only [Self-Referential type data](https://blazor.syncfusion.com/documentation/treegrid/data-binding#self-referential-data-bindingflat-data) is supported with custom binding in tree grid
+N> Only [Self-Referential type data](https://blazor.syncfusion.com/documentation/treegrid/data-binding#self-referential-data-bindingflat-data) is supported with custom binding in TreeGrid
 
-For implementing custom data binding in the Tree Grid, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor.
+For implementing custom data binding in the TreeGrid, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor.
 
 The **DataAdaptor** abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
@@ -73,9 +73,8 @@ public abstract class DataAdaptor
 
 ## Data binding
 
-The custom data binding can be performed in the Tree Grid component by providing the custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
+The custom data binding can be performed in the TreeGrid component by providing the custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
 
-The following sample code demonstrates implementing custom data binding using custom adaptor,
 
 {% tabs %}
 
@@ -107,7 +106,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
     protected override void OnInitialized()
     {
-        TreeData = SelfReferenceData.GetTree().ToList();
+        TreeData = new SelfReferenceData().GetTree().ToList();
     }
 
     // Implementing custom adaptor by extending the DataAdaptor class
@@ -215,7 +214,7 @@ N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read
 
 ## Inject service into Custom Adaptor
 
-If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
+To inject a service into the custom adaptor and use it, register the adaptor and service in Program.cs as shown below.
 
 Initially, the CustomAdaptor class must be added as AddScoped in `Program.cs` file.
 
@@ -225,7 +224,6 @@ builder.Services.AddScoped<CustomAdaptor>();
 builder.Services.AddScoped<ServiceClass>();
 ```
 
-The following sample code demonstrates injecting service into Custom Adaptor,
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -252,7 +250,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
     public class CustomAdaptor : DataAdaptor
     {
-        //here you can inject your service
+        // Injected service instance
         [Inject]
         public TaskDataAccessLayer context { get; set; } = new TaskDataAccessLayer();
         // Performs data Read operation
@@ -294,17 +292,12 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
 Custom Adaptor can be created as a component when `DataAdaptor` is extended from `OwningComponentBase`. Custom Adaptor can be created from any of the two versions of the class, `DataAdaptor` and `DataAdaptor<T>`.
 
-Ensure to register your service in **Startup.cs** file.
+Register required services in **Program.cs** file.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    ...
-    services.AddScoped<SelfReferenceData>();
-}
+builder.Services.AddScoped<SelfReferenceData>();
 ```
 
-The following sample code demonstrates creating Custom Adaptor as a component,
 
 {% tabs %}
 
@@ -453,16 +446,15 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 
 ## CRUD operation
 
-The CRUD operations for the custom bounded data in the Tree Grid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
+The CRUD operations for the custom bounded data in the TreeGrid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
 
 * **Insert/InsertAsync**
 * **Remove/RemoveAsync**
 * **Update/UpdateAsync**
 * **BatchUpdate/BatchUpdateAsync**
 
-N> While using batch editing in tree grid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
+N> While using batch editing in TreeGrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
 
-The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
 {% tabs %}
 
@@ -495,7 +487,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
     protected override void OnInitialized()
     {
-        TreeData = SelfReferenceData.GetTree().ToList();
+        TreeData = new SelfReferenceData().GetTree().ToList();
     }
 
         // Implementing custom adaptor by extending the DataAdaptor class
