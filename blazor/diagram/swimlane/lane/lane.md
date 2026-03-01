@@ -77,6 +77,8 @@ The following code example explains how to define a swimlane with lane.
 ``` 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Lane/LaneCreation.razor).
 
+>Note:If you set a fixed swimlane height and the combined height of the swimlane header and lanes is less than the swimlane’s height, an extra lane is automatically created to fill the remaining space. To avoid this, either remove the fixed swimlane height or ensure the header and lane heights together equal the swimlane height.
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoCNNwLozzxYUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Lane](../Swimlane-images/Swimlane_Lane.PNG)" %}
 
 ## How to Create and Customize Lane Header
