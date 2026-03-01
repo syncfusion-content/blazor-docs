@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Rows in Blazor Tree Grid Component | Syncfusion
-description: Check out here and learn more about rows in the Syncfusion Blazor Tree Grid component and much more details.
+title: Rows in Blazor TreeGrid Component | Syncfusion
+description: Learn how to set row styles, heights, hover effects, pinning, and more in the Syncfusion Blazor TreeGrid component for enhanced row customization.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Rows in Blazor Tree Grid Component
+# Rows in Blazor TreeGrid Component
 
-The row represents record details fetched from the data source.
+Each row represents a single record from a data source and displays values for the fields of that record in a tabular format. Rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid support interaction such as selection, editing, sorting, filtering, and event-driven behaviors.
 
-## Customize rows
+## Customize rows styles
 
 The appearance of a row can be customized by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event. The `RowDataBound` event triggers for every row. In the event handler, the **args** is achieved which contains the details of the row.
 
@@ -21,6 +21,7 @@ The appearance of a row can be customized by using the [RowDataBound](https://he
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
  <SfTreeGrid DataSource="@TreeGridData" ParentIdMapping="ParentId" IdMapping="TaskId" TreeColumnIndex="1">
     <TreeGridEvents RowDataBound="OnRowDataBound" TValue="TreeData"></TreeGridEvents>
@@ -102,11 +103,11 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Blazor Tree Grid Rows](../images/blazor-treegrid-row-customization.png)
+![Customizing Blazor TreeGrid Rows](../images/blazor-treegrid-row-customization.png)
 
 ## Styling alternate rows
 
- The tree grid's alternative rows' background color can be changed by overriding the **.e-altrow** class.
+ The TreeGrid's alternative rows background color can be changed by overriding the `.e-altrow` class.
 
 ```css
 .e-treegrid .e-altrow {
@@ -114,7 +115,6 @@ public class TreeData
 }
 ```
 
-Refer to the following example.
 
 {% tabs %}
 
@@ -184,13 +184,12 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Alternate Rows in Blazor Tree Grid](../images/blazor-treegrid-alternate-rows-customization.png)
+![Customizing Alternate Rows in Blazor TreeGrid](../images/blazor-treegrid-alternate-rows-customization.png)
 
 ## Accessing row model information programmatically
 
-The Blazor Tree Grid Component provides a method called [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) that can be used to obtain the values associated with row model details. These details include the level, expanded status, child records status of a record.
+The Blazor TreeGrid Component provides a method called [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel__0_) that can be used to obtain the values associated with row model details. These details include the level, expanded status, child records status of a record.
 
-This is demonstrated in the below sample code where the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method is called on button click which returns the value of the row model details of the passed record.
 
 {% tabs %}
 
@@ -224,12 +223,13 @@ This is demonstrated in the below sample code where the [GetRowModel](https://he
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    public async Task TreeProps()
+    public Task TreeProps()
     {
-        var treeProps = await this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]);
+        var treeProps = this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]);
         var level = treeProps.Level;
         var expanded = treeProps.IsExpanded;
         var childRecords = treeProps.HasChildRecords;
+        return Task.CompletedTask;
     }
 }
 
