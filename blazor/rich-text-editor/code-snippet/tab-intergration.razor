@@ -1,0 +1,47 @@
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfTab ID="tab">
+    <TabItems>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Rich Text Editor 1"></TabHeader>
+            </ChildContent>
+            <ContentTemplate>
+                <SfRichTextEditor @ref="rteObj" @bind-Value="@editorValue1">
+                    <RichTextEditorToolbarSettings></RichTextEditorToolbarSettings>
+                </SfRichTextEditor>
+            </ContentTemplate>
+        </TabItem>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Rich Text Editor 2"></TabHeader>
+            </ChildContent>
+            <ContentTemplate>
+                <SfRichTextEditor @ref="rteObj" @bind-Value="@editorValue2">
+                    <RichTextEditorToolbarSettings></RichTextEditorToolbarSettings>
+                </SfRichTextEditor>
+            </ContentTemplate>
+        </TabItem>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Rich Text Editor 3"></TabHeader>
+            </ChildContent>
+            <ContentTemplate>
+                <SfRichTextEditor @ref="rteObj" @bind-Value="@editorValue3">
+                    <RichTextEditorToolbarSettings></RichTextEditorToolbarSettings>
+                </SfRichTextEditor>
+            </ContentTemplate>
+        </TabItem>
+    </TabItems>
+</SfTab>  
+
+@code {
+    private SfRichTextEditor? rteObj;
+
+    private string? editorValue1 { get; set; }
+
+    private string? editorValue2 { get; set; }
+
+    private string? editorValue3 { get; set; }
+}
