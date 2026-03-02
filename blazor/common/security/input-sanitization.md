@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Input Sanitization in Syncfusion Blazor Components
-description: Learn how to implement secure input sanitization when using Syncfusion Blazor components.
+description: Discover effective techniques for securely sanitizing user input in Syncfusion Blazor components to protect your application from unsafe data.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Input Sanitization in Syncfusion Blazor Components
+# Input Sanitization with Syncfusion Blazor Components
 
 Input sanitization protects applications from malformed or malicious user input by validating, cleaning, and transforming data before it is processed. Syncfusion Blazor components provide rich client‑side validation capabilities, but all input must still be validated and sanitized on the server to maintain a complete security boundary. This guide explains how to implement secure and consistent input sanitization patterns when working with Syncfusion Blazor components.
 
