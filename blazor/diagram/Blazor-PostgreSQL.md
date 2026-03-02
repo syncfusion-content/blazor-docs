@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Loading Blazor Diagram from PostgreSQL database | Syncfusion®
-description: How to fetch organizational data from PostgreSQL and bind it to the Syncfusion Blazor Diagram using the included .NET API backend. Covers Blazor Server and Blazor WebAssembly (WASM) samples.
+description: Fetch organizational data from PostgreSQL and bind it to a .NET API-backed Syncfusion Blazor Diagram for Server and WASM samples.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -29,7 +29,7 @@ The Blazor pages use a small `LayoutService` to call the API and bind results to
 
 - .NET SDK 10.0 or later
 - PostgreSQL 12.x or later
-- (Optional) `dotnet-ef` tool if you want to run migrations manually: `dotnet tool install --global dotnet-ef`
+- (Optional) the `dotnet-ef` CLI (install with `dotnet tool install --global dotnet-ef`) if you want to run migrations manually.
 - A running PostgreSQL server and credentials for a user that can create databases (or create the database manually with pgAdmin)
 
 ## PostgreSQL database setup
@@ -142,7 +142,7 @@ SET role = EXCLUDED.role,
 Run a **SELECT** query to confirm the data insertion:
 
 ```sql
-SELECT * FROM org_chart_layout ORDER BY id;
+SELECT * FROM org_chart_layout;
 ```
 
 The query should return 18 rows. Parent–child relationships are indicated by the **parent_id** column, which references the **id** of the parent node (NULL for root nodes).
@@ -164,7 +164,7 @@ dotnet build
 dotnet ef database update
 ```
 
-If the database does not exist, `dotnet ef database update` (with proper DB server access) will create the database and apply the migration that defines the `orgchart_layout` table and seed rows (the seed is configured with `HasData` in the `AppDbContext`). If `dotnet ef` is not installed, install it with:
+If the database does not exist, `dotnet ef database update` (with proper DB server access) will create the database and apply the migration that defines the `org_chart_layout` table and seed rows (the seed is configured with `HasData` in the `AppDbContext`). If **Entity Framework** is not installed, install it with:
 
 ```powershell
 dotnet tool install --global dotnet-ef
@@ -175,7 +175,7 @@ Alternatively create the DB manually (Option A) and then run `dotnet ef database
 ## Backend implementation (Api project)
 
 - DbContext: [Api/Data/AppDbContext.cs](Api/Data/AppDbContext.cs)
-  - Configures the `orgchart_layout` table, column mappings, index on `parent_id`, and `HasData` seed.
+  - Configures the `org_chart_layout` table, column mappings, index on `parent_id`, and `HasData` seed.
 - Model: [Shared/Models/LayoutNode.cs](Shared/Models/LayoutNode.cs)
   - C# shape used by both API and Blazor apps.
 - Connection string: [Api/appsettings.Development.json](Api/appsettings.Development.json)
@@ -265,7 +265,10 @@ dotnet run
 
 - API connection errors:
   - Verify PostgreSQL server is running and the connection string in [Api/appsettings.Development.json](Api/appsettings.Development.json) is correct.
-  - If the DB does not exist, create it manually or use `dotnet ef database update`.
+  - If the DB does not exist, create it manually or use:
+  ```powershell
+  dotnet ef database update
+  ```
 
 - CORS errors:
   - Confirm the API CORS policy in [Api/Program.cs](Api/Program.cs) includes the Blazor app origin (adjust if necessary).
