@@ -216,17 +216,13 @@ The UI Kit blocks may include images, icons, and other static assets. Follow the
 
 2. Copy the entire `assets` folder into the project's **wwwroot** directory:
 
-![]
-
 ## Steps to Run the App
 
-With **BlazorServerApp** set up with Razor markup, CSS (if applicable), C# (if applicable), and assets (optional), build and run the app. Run the following command in the terminal:
+With **BlazorServerApp** set up with Razor markup, CSS (if applicable), C# (if applicable), and assets (optional), build and run the app. Run the following command in the terminal; a localhost URL will be provided by the Blazor development server.
 
 ```bash
 dotnet run
 ```
-
-The Blazor development server will compile your application and provide a localhost URL (typically `https://localhost:5001` or similar).
 
 ![Build and launch the app](images/build-and-launch-the-app.png)
 
