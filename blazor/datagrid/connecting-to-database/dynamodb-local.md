@@ -9,14 +9,14 @@ documentation: ug
 
 # Connecting DynamoDB to Blazor Data Grid Using AWS SDK
 
-The [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from AWS DynamoDB using the AWS SDK for .NET. This approach provides a flexible, scalable, and serverless solution for working with cloud-based databases without requiring a traditional database server.
+The [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from AWS DynamoDB using the AWS SDK for .NET. This approach provides a flexible, scalable, and server less solution for working with cloud-based databases without requiring a traditional database server.
 
 **What is DynamoDB?**
 
-Amazon DynamoDB is a fully managed, serverless NoSQL database service provided by AWS. Unlike traditional relational databases that use tables and rows, DynamoDB uses a key-value and document data model, making it ideal for applications that require low-latency, high-throughput operations at any scale.
+Amazon DynamoDB is a fully managed, server less NoSQL database service provided by AWS. Unlike traditional relational databases that use tables and rows, DynamoDB uses a key-value and document data model, making it ideal for applications that require low-latency, high-throughput operations at any scale.
 
 **Key Characteristics:**
-- **Serverless Architecture**: No need to provision or manage database servers
+- **Server-less Architecture**: No need to provision or manage database servers
 - **Fully Managed**: AWS handles all maintenance, backups, and patches
 - **NoSQL Model**: Stores data in flexible documents (similar to JSON)
 - **On-Demand or Provisioned Billing**: Choose between flexible pricing models
@@ -29,7 +29,7 @@ Amazon DynamoDB is a fully managed, serverless NoSQL database service provided b
 - **High Availability**: Data automatically replicated across multiple availability zones
 - **Flexible Data Model**: Store complex, nested data structures without predefined schemas
 - **Built-in Security**: Encryption at rest and in transit, IAM access control
-- **Serverless**: No infrastructure management required
+- **Server-less**: No infrastructure management required
 - **DynamoDB Local**: Free local emulator for development and testing
 
 ---
