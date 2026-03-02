@@ -18,34 +18,35 @@ By the end of this tutorial, the reader will be able to:
 * Build a filterable sidebar with checkboxes and accordions.
 * Combine multiple components to create a polished application.
 
-
-
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create the Blazor Web App
 
-Create a new Blazor Web App.
+Create a new Blazor Web App (server rendering) by following the Syncfusion's Blazor guide.
 
-```bash
-dotnet new blazor -o StayReservation
-cd StayReservation
-```
-
-Choose the "Blazor Web App" template. For this project, use the **Interactive Server** render mode for simplicity.
+* [Blazor Web App (server render mode)](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 ## Add and configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 
 Next, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor libraries to the project. Packages are required for the Scheduler, navigation elements (such as Sidebar and Accordion), and input components.
 
-Install the essential Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages:
+Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule), [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations), [Syncfusion.Blazor.Notifications](https://www.nuget.org/packages/Syncfusion.Blazor.Notifications), [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs), and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes).
 
-```bash
-dotnet add package Syncfusion.Blazor.Schedule
-dotnet add package Syncfusion.Blazor.Notifications
-dotnet add package Syncfusion.Blazor.Themes
-```
+Alternatively, use the following Package Manager commands.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Schedule -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Notifications -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 Configure the app to recognize and style the Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
@@ -60,39 +61,24 @@ Configure the app to recognize and style the Syncfusion<sup style="font-size:70%
 
 2.  **Add theme and script references**
 
-    Open `Components/App.razor`. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> theme stylesheet and the script reference for component interactivity. The example uses the `tailwind.css` theme.
+    Open `Components/App.razor`. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> theme stylesheet and the script reference for component interactivity. This example uses the `tailwind.css` theme.
 
     ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Stay Reservation</title>
-        <base href="/" />
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-        <link href="css/site.css" rel="stylesheet" />
-        <link href="StayReservation.styles.css" rel="stylesheet" />
+        ....
         <link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
         <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-        <HeadOutlet @rendermode="@InteractiveServer" />
+        ....
     </head>
+    ....
     
-    <body>
-        <Routes @rendermode="@InteractiveServer" />
-        ...
-    </body>
-    </html>
     ```
 
 3.  **Add namespace imports**
 
-    To avoid adding `@using` directives in each component, add the commonly used Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces to the `_Imports.razor` file.
+    Open the **~/_Imports.razor** file and import the following namespaces.
 
     ```csharp
-    @using StayReservation
-    @using StayReservation.Components
     @using Syncfusion.Blazor.Schedule
     @using Syncfusion.Blazor.Navigations
     @using Syncfusion.Blazor.Buttons
@@ -245,7 +231,7 @@ When a checkbox is clicked, its state is updated in the `AppointmentService`. We
 
 This is the core of the application. Configure the `<SfSchedule>` component to display reservations grouped by floor.
 
-Create a new file: `Components/Pages/Schedule.razor`.
+Create a new Razor component file at `Components/Pages/Schedule.razor`.
 
 The Scheduler needs two main pieces of data:
 1.  A list of **resources**—in our case, the hotel floors.
@@ -253,7 +239,7 @@ The Scheduler needs two main pieces of data:
 
 The appointment and resource data come from `AppointmentService`.
 
-The complete code for `Schedule.razor` is available in the GitHub repository at the following link: [`Schedule.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Schedule.razor). You may reuse the full code as needed.
+The complete `Schedule.razor` code is available in the GitHub repository at the following link: [`Schedule.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Schedule.razor). You may reuse the full code as needed.
 
 ```html
 @inject AppointmentService Service
@@ -353,7 +339,7 @@ Connect the checkboxes in the sidebar to the data displayed in the scheduler. Si
 
 Use the following code to implement the filtering logic in `Components/Pages/Sidebar.razor`:
 
-The complete code for `Sidebar.razor` is available in the GitHub repository at the following link: [`Sidebar.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Sidebar.razor). You may reuse the full code as needed.
+The complete `Sidebar.razor` code is available in the GitHub repository at the following link: [`Sidebar.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Sidebar.razor). You may reuse the full code as needed.
 
 ```csharp
 @code {
@@ -621,9 +607,9 @@ Bind the `OnActionBegin` event of the `SfSchedule` component to a method that ha
 
 ## GitHub and demo references
 
-The complete code for this example is available in the GitHub repository: https://github.com/syncfusion/blazor-showcase-stay-reservation
+The complete code for this example is available in the [GitHub repository](https://github.com/syncfusion/blazor-showcase-stay-reservation).
 
-Try the live demo: https://blazor.syncfusion.com/showcase/stay-reservation
+Try the live demo: [https://blazor.syncfusion.com/showcase/stay-reservation](https://blazor.syncfusion.com/showcase/stay-reservation)
 
 ## Summary
 
