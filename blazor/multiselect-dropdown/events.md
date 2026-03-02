@@ -84,7 +84,30 @@ The `ValueChange` event is triggered when the MultiSelect value changes due to s
 The `Closed` event is triggered after the popup is closed and is useful for post-close logic.
 
 ```cshtml
+<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
+    <MultiSelectEvents TItem="GameFields" TValue="string[]" Closed="@OnClosed"></MultiSelectEvents>
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
+@code {
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<GameFields> Games = new List<GameFields>()
+    {
+        new GameFields(){ ID = "Game1", Text = "American Football" },
+        new GameFields(){ ID = "Game2", Text = "Badminton" },
+        new GameFields(){ ID = "Game3", Text = "Basketball" },
+        new GameFields(){ ID = "Game4", Text = "Cricket" },
+    };
+    private void OnClosed ( ClosedEventArgs args )
+    {
+        // You can run logic when the dropdown popup closes.
+    }
+}
 ```
 
 ## Created
@@ -191,7 +214,32 @@ The `Focus` event is triggered when the input gains focus. Use it to customize f
 The `OnOpen` event is triggered before the popup opens. This event is cancelable; cancel it to keep the popup closed.
 
 ```cshtml
+@using Syncfusion.Blazor.DropDowns
 
+<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
+    <MultiSelectEvents TItem="GameFields" TValue="string[]" OnOpen="@OpenHandler"></MultiSelectEvents>
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<GameFields> Games = new List<GameFields>()
+    {
+        new GameFields(){ ID = "Game1", Text = "American Football" },
+        new GameFields(){ ID = "Game2", Text = "Badminton" },
+        new GameFields(){ ID = "Game3", Text = "Basketball" },
+        new GameFields(){ ID = "Game4", Text = "Cricket" },
+    };
+    private void OpenHandler ( BeforeOpenEventArgs args )
+    {
+        // You can run logic when the before the popup opens.
+    }
+}
 ```
 
 ## OnClose
@@ -199,8 +247,32 @@ The `OnOpen` event is triggered before the popup opens. This event is cancelable
 The `OnClose` event is triggered before the popup closes. This event is cancelable; cancel it to keep the popup open.
 
 ```cshtml
+@using Syncfusion.Blazor.DropDowns;
 
+<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
+    <MultiSelectEvents TItem="GameFields" TValue="string[]" OnClose="@CloseHandler"></MultiSelectEvents>
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
+@code {
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<GameFields> Games = new List<GameFields>()
+    {
+        new GameFields(){ ID = "Game1", Text = "American Football" },
+        new GameFields(){ ID = "Game2", Text = "Badminton" },
+        new GameFields(){ ID = "Game3", Text = "Basketball" },
+        new GameFields(){ ID = "Game4", Text = "Cricket" },
+    };
+    private void CloseHandler ( PopupEventArgs args )
+    {
+        // You can run logic when the before the popup close.
+    }
+}
 ```
 
 ## DataBound
@@ -385,7 +457,32 @@ The `OnValueSelect` event is triggered when a user selects an item in the popup 
 The `Opened` event is triggered after the popup has opened. Use it to run logic that requires rendered popup content.
 
 ```cshtml
+@using Syncfusion.Blazor.DropDowns;
 
+<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
+    <MultiSelectEvents TItem="GameFields" TValue="string[]" Opened="@OnOpenedHandler"></MultiSelectEvents>
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<GameFields> Games = new List<GameFields>()
+    {
+        new GameFields(){ ID = "Game1", Text = "American Football" },
+        new GameFields(){ ID = "Game2", Text = "Badminton" },
+        new GameFields(){ ID = "Game3", Text = "Basketball" },
+        new GameFields(){ ID = "Game4", Text = "Cricket" },
+    };
+    private void OnOpenedHandler ( PopupEventArgs args )
+    {
+        // The popup has just opened; run post-open logic here.
+    }
+}
 ```
 
 ## ChipSelected

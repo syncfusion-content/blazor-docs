@@ -168,7 +168,7 @@ The Syncfusion File Upload component provides several events to help you control
 - Prevent specific files from being uploaded
 
 ```cshtml
-<SfUploader @ref="uploader" ID="chunkFile">
+<SfUploader ID="chunkFile">
     <UploaderEvents BeforeUpload="BeforeUploadHandler"></UploaderEvents>
      <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save" RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
 </SfUploader>

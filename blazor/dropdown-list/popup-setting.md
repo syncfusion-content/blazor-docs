@@ -142,7 +142,7 @@ Adjust the popup height based on available viewport space by handling the window
 {% endhighlight %}
 
 {% tabs %}
-{% highlight razor tabtitle="Layout.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <script>
     window.addEventListener("resize", function (e) {
