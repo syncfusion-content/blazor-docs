@@ -315,7 +315,6 @@ The Blazor Report Viewer requires a Web API service to process the RDL, RDLC, an
 * Right-click the project and select **Add > New** Item from the context menu.
 
 * In the Add New Item dialog, select **API Controller Empty** class and name it as `BoldReportsAPIController.cs`.
-![Add new controller](./images/add-new-api-controller.png)
 
 * Click Add.
 
