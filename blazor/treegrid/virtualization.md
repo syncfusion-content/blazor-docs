@@ -335,7 +335,7 @@ By default, the TreeGrid renders twice as many records as the defined height per
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVqCBiKKxvhUzUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVHXBLThJiOQFnr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> When the OverscanCount is set to 5, five buffer rows are rendered on the first and last pages. In between pages, a total of ten buffer rows (five before and five after) are rendered around the visible rows.
 
