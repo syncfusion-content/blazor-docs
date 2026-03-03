@@ -151,11 +151,23 @@
 			</li>
 		</ul>
 	</li>
-	<li>AI Coding Assistant
+	<li>MCP Server
 		<ul>
-			<li><a href="/blazor/ai-coding-assistant/overview">Overview</a></li>
-			<li><a href="/blazor/ai-coding-assistant/mcp-server">MCP Server</a></li>
-			<li><a href="/blazor/ai-coding-assistant/prompt-library">Prompt Library</a></li>
+			<li><a href="/blazor/mcp-server/overview">Overview</a></li>
+			<li><a href="/blazor/mcp-server/installation">Installation</a></li>
+			<li>Agentic UI Builder
+				<ul>
+					<li><a href="/blazor/mcp-server/agentic-ui-builder/getting-started">Getting Started</a></li>
+					<li><a href="/blazor/mcp-server/agentic-ui-builder/prompt-library">Prompt Library</a></li>
+				</ul>
+			</li>
+			<li>AI Coding Assistant
+				<ul>
+					<li><a href="/blazor/mcp-server/ai-coding-assistant/getting-started">Getting Started</a></li>
+					<li><a href="/blazor/mcp-server/ai-coding-assistant/prompt-library">Prompt Library</a></li>
+				</ul>
+			</li>
+			<li><a href="/blazor/mcp-server/release-notes">Release Notes</a></li>
 		</ul> 
 	</li>
 	<li>Smart (AI) Solutions
@@ -2167,6 +2179,8 @@
 					<li><a href="/blazor/datagrid/connecting-to-database/sqlite-server">SQLite Server</a></li>
 					<li><a href="/blazor/datagrid/connecting-to-database/mongodb-server">MongoDB Server</a></li>
 					<li><a href="/blazor/datagrid/connecting-to-database/mariadb-server">MariaDB Server</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-database/firebase-firestore">Firebase (Firestore DB)</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-database/firebase-realtime">Firebase (Realtime DB)</a></li>
 				</ul>
 			</li>
 			<li>Connecting to ORM
@@ -2178,6 +2192,7 @@
 			<li>Connecting to Backends
 				<ul>
 					<li><a href="/blazor/datagrid/connecting-to-backends/signalr">SignalR</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-backends/elasticsearch">Elasticsearch</a></li>
 				</ul>
 			</li>
 			<li>
@@ -3241,9 +3256,25 @@
 					</li>
 				</ul>
 			</li>
-			<li> <a href="/blazor/gantt-chart/data-binding">Data Binding</a>
+			<li> 
+				<a href="/blazor/gantt-chart/data-binding">Data Binding</a>
+			</li>
+			<li>Connecting to Adaptors
 				<ul>
-						<li> <a href="/blazor/gantt-chart/custom-binding">Custom Binding</a></li>
+					<li><a href="/blazor/gantt-chart/connecting-to-adaptors/url-adaptor">URL Adaptor</a></li>
+					<li><a href="/blazor/gantt-chart/connecting-to-adaptors/custom-adaptor">Custom Adaptor</a></li>
+				</ul>
+			</li>
+			<li>Connecting to Database
+				<ul>
+					<li><a href="/blazor/gantt-chart/connecting-to-database/microsoft-sql-server">Microsoft SQL Server</a></li>
+					<li><a href="/blazor/gantt-chart/connecting-to-database/mysql-server">MySQL Server</a></li>
+				</ul>
+			</li>
+			<li>Connecting to ORM
+				<ul>
+					<li><a href="/blazor/gantt-chart/connecting-to-ORM/entityframework">Entity Framework</a></li>
+					<li><a href="/blazor/gantt-chart/connecting-to-ORM/dapper">Dapper (Micro ORM) </a></li>
 				</ul>
 			</li>			
 			<li>
@@ -3296,7 +3327,6 @@
 					<li><a href="/blazor/gantt-chart/splitting-and-merging-tasks">Splitting and Merging Tasks</a></li>
 					<li><a href="/blazor/gantt-chart/indent-outdent">Indent and Outdent</a></li>
 					<li><a href="/blazor/gantt-chart/column-validation">Column Validation</a></li>
-					<li><a href="/blazor/gantt-chart/entity-framework">Entity Framework</a></li>
 				</ul>
 			</li>
 			<li> <a href="/blazor/gantt-chart/scrolling">Scrolling</a>
@@ -3336,6 +3366,7 @@
 				<ul>
 					<li> <a href="/blazor/gantt-chart/header-and-footer">Header and Footer</a> </li>
 					<li> <a href="/blazor/gantt-chart/customize-pdf-export">Customize PDF Export</a> </li>
+					<li> <a href="/blazor/gantt-chart/multi-page-pdf-export">Multi-Page PDF Export</a> </li>
 				</ul>
 			</li>
 			<li> <a href="/blazor/gantt-chart/timezone">Timezone</a></li>
@@ -4468,6 +4499,12 @@
 				</ul>
 			</li>
 			<li> <a href="/blazor/scheduler/data-binding">Data Binding</a></li>
+			<li>Scheduler Integrations
+			<ul>
+			<li><a href="/blazor/scheduler/graphql-adptor">GraphQL</a></li>
+			<li><a href="/blazor/scheduler/minimalapi">MinimalAPI</a></li>
+			</ul>
+			</li>
 			<li> <a href="/blazor/scheduler/crud-actions">CRUD Actions</a></li>
 			<li> <a href="/blazor/scheduler/virtual-scrolling">Virtual Scrolling</a></li>
 			<li> <a href="/blazor/scheduler/editor-template">Editor Window Customization</a></li>
@@ -5246,6 +5283,8 @@
 				<ul>
 				<li>Weekly Release
 					<ul>
+						<li><a href="/blazor/release-notes/32.2.8">32.2.8</a></li>
+						<li><a href="/blazor/release-notes/32.2.7">32.2.7</a></li>
 						<li><a href="/blazor/release-notes/32.2.5">32.2.5</a></li>
 						<li><a href="/blazor/release-notes/32.2.4">32.2.4</a></li>
 						<li><a href="/blazor/release-notes/32.1.25">32.1.25</a></li>
@@ -5255,8 +5294,9 @@
 						<li><a href="/blazor/release-notes/32.1.21">32.1.21</a></li>					
 						<li><a href="/blazor/release-notes/32.1.20">32.1.20</a></li>
 					</ul>
-					</li><li><a href="/blazor/release-notes/32.2.3">32.2.3 Service Pack Release</a></li>
-					<li><a href="/blazor/release-notes/32.1.19">32.1.19 Main Release</a></li>
+				</li>
+				<li><a href="/blazor/release-notes/32.2.3">32.2.3 Service Pack Release</a></li>
+				<li><a href="/blazor/release-notes/32.1.19">32.1.19 Main Release</a></li>
 				</ul>
 			</li>
 			<li>2025 Volume 3 - 31.*
