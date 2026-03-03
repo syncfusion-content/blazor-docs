@@ -660,4 +660,4 @@ A complete, working sample implementation is available in the [GitHub repository
 - Don't cancel navigation actions in `OnActionBegin`
 - Verify Syncfusion script is loaded
 
-To learn more about the functionality of the Schedule component, refer to the [documentation](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
+To learn more about the functionality of the Schedule component, refer to the [documentation](https://blazor.syncfusion.com/documentation/scheduler/getting-started).
