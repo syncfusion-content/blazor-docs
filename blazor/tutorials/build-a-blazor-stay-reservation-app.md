@@ -24,7 +24,7 @@ By the end of this tutorial, the reader will be able to:
 
 ## Create the Blazor Web App
 
-Create a new Blazor Web App (**Server** rendering) by following command in the integrated terminal.
+Create a new Blazor Web App (**Server** rendering) by using the following command in the integrated terminal or command prompt.
 
 {% tabs %}
 {% highlight c# %}
@@ -44,11 +44,11 @@ Install the following essential Syncfusion® Blazor NuGet packages:
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.Schedule -Version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Notifications -Version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Schedule --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Notifications --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Navigations --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Inputs --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
