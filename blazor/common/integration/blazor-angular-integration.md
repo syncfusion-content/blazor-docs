@@ -262,4 +262,4 @@ Then, run both with one command:
 
 Once the compilation completes, open your browser and navigate to http://localhost:4200/ to see your application with the integrated Syncfusion® Data Grid component:
 
-![Blazor DataGrid Component](../images/Blazor-Angular-Integration.webp)
+![Blazor DataGrid Component](../images/blazor-angular-integration.webp)

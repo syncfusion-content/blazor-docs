@@ -208,4 +208,4 @@ dotnet run
 
 Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® Data Grid component:
 
-![Blazor DataGrid Component](../images/Angular-Blazor-Integration.webp)
+![Blazor DataGrid Component](../images/angular-blazor-integration.webp)
