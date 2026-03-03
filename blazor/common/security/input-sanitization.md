@@ -390,7 +390,7 @@ Reject invalid models and log structured details for security monitoring. Log an
 if (!ModelState.IsValid)
 {
     _logger.LogWarning("Validation failed: {@Errors}", ModelState
-        .Where(kvp => kvp.Value?.Errors.Count > 0)
+        .Where(k => k.Value?.Errors.Count > 0)
         .ToDictionary(k => k.Key, v => v.Value!.Errors.Select(e => e.ErrorMessage)));
 
     return BadRequest(ModelState);
