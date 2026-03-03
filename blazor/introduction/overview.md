@@ -202,7 +202,7 @@ padding-top: 20px;
 .sf-icon-powerpoint:before {
     content: "\e728";
 }
-.sf-icon-inplace-editor:before {
+.sf-icon-in-place-editor:before {
     content: "\e729";
 }
 .sf-icon-autocomplete:before {
@@ -283,7 +283,7 @@ padding-top: 20px;
 .sf-icon-3dchart:before {
     content: "\e754";
 }
-.sf-icon-otp-input:before {
+.sf-icon-one-time-password-input:before {
     content: "\e755";
 }
 .sf-icon-aiassist-view:before {
@@ -524,10 +524,10 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started"><span class="sf-home-icon sf-icon-toggle-switch-button"></span>Toggle Switch Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/signature/getting-started"><span class="sf-home-icon sf-icon-signature"></span>Signature</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rating/getting-started"><span class="sf-home-icon sf-icon-rating"></span>Rating</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp"><span class="sf-home-icon sf-icon-otp-input"></span>OTP Input</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp"><span class="sf-home-icon sf-icon-one-time-password-input"></span>OTP Input</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app"><span class="sf-home-icon sf-icon-speechtotext"></span>Speech To Text</a></div>
         <div><p class="controlcategory">FORMS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started"><span class="sf-home-icon sf-icon-inplace-editor"></span>In-place Editor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started"><span class="sf-home-icon sf-icon-in-place-editor"></span>In-place Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/query-builder/getting-started"><span class="sf-home-icon sf-icon-query-builder"></span>Query Builder</a></div>
 		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/data-form/getting-started"><span class="sf-home-icon sf-icon-data_form"></span>Data Form</a></div>
         <div><p class="controlcategory">Interactive chat</p></div>
