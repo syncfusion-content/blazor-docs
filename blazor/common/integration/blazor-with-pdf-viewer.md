@@ -291,4 +291,4 @@ dotnet run
 
 The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer and DataGrid in your default browser.
 
-![Blazor DataGrid with PDF Viewer](images/Blazor-DataGrid-with-PDF-Viewer-Integration.png)
+![Blazor DataGrid with PDF Viewer](images/blazor-datagrid-with-pdf-viewer-integration.webp)
