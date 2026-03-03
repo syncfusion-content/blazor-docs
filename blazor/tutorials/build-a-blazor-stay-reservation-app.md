@@ -24,26 +24,31 @@ By the end of this tutorial, the reader will be able to:
 
 ## Create the Blazor Web App
 
-Create a new Blazor Web App (server rendering) by following the Syncfusion's Blazor guide.
+Create a new Blazor Web App (**Server** rendering) by following command in the integrated terminal.
 
-* [Blazor Web App (server render mode)](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+{% tabs %}
+{% highlight c# %}
+
+dotnet new blazor -o StayReservation -int Server
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add and configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 
 Next, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor libraries to the project. Packages are required for the Scheduler, navigation elements (such as Sidebar and Accordion), and input components.
 
-Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule), [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations), [Syncfusion.Blazor.Notifications](https://www.nuget.org/packages/Syncfusion.Blazor.Notifications), [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs), and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes).
-
-Alternatively, use the following Package Manager commands.
+Install the following essential Syncfusion® Blazor NuGet packages:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.Schedule -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Notifications -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Schedule -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Notifications -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
