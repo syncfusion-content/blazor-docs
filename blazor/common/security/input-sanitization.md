@@ -17,17 +17,17 @@ Input sanitization protects applications from malformed or malicious user input 
 
 Client-side validation improves the user experience by providing immediate feedback and reducing unnecessary server calls. Syncfusion components offer built‑in features such as `MaxLength`, `masked input`, and `form‑bound validation`. These client-side checks help users correct mistakes early, but they should never be considered authoritative.
 
-### Revalidate on the Server
+### Re-validate on the Server
 
-Server-side validation must always be performed regardless of the client’s behavior. The server should enforce rules using **DataAnnotations**, allowlists, HTML sanitization libraries, and `ModelState` validation. Even if the client reports valid data, the server must treat all inputs as untrusted.
+Server-side validation must always be performed regardless of the client’s behavior. The server should enforce rules using **DataAnnotations**, allow-lists, HTML sanitization libraries, and `ModelState` validation. Even if the client reports valid data, the server must treat all inputs as untrusted.
 
 ### Canonicalize Inputs
 
 Before validation, normalize incoming data—trim whitespace, normalize Unicode, decode entities, and standardize encodings. Canonicalizing inputs prevents attackers from exploiting encoded variations or visually deceptive input forms.
 
-### Prefer Allowlisting
+### Prefer Allow-listing
 
-Whenever possible, define explicitly which characters, MIME types, or data formats are allowed. Blocklisting harmful patterns is incomplete and bypassable, whereas allowlisting offers predictable and secure boundaries.
+Whenever possible, define explicitly which characters, MIME types, or data formats are allowed. Block-listing harmful patterns is incomplete and by-passable, whereas allow-listing offers predictable and secure boundaries.
 
 ## DataAnnotations Model Validation
 
@@ -88,15 +88,11 @@ Syncfusion components integrate naturally with Blazor’s form validation and gi
 <EditForm EditContext="@editContext" OnValidSubmit="@OnSubmit">
     <DataAnnotationsValidator />
     
-
     <SfTextBox @bind-Value="formModel.Email" Placeholder="Enter valid Email address" />
     <ValidationMessage For="() => formModel.Email" />
 
     <button type="submit">Save</button>
 </EditForm>
-
-
-@using Microsoft.AspNetCore.Components.Forms
 
 @code {
     public class UserRecord
@@ -206,7 +202,7 @@ Syncfusion's **Uploader** component offers client-side validation for file type 
         {
             if (file.FileInfo is not null && file.File is not null)
             {
-                var path = file.FileInfo.Name; // ✅ Consider a safe path: Path.Combine(_env.WebRootPath, "uploads", file.FileInfo.Name)
+                var path = Path.Combine(_env.WebRootPath, "uploads", file.FileInfo.Name)
                 using var filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
             }
@@ -333,10 +329,9 @@ The following example demonstrates sanitization patterns in a Syncfusion **DataG
                 <Template Context="itemContext">
                     @{
                         var item = (UserRecord)itemContext;
-                        var sanitized = item?.NotesHtml ?? string.Empty; // rely on Syncfusion RTE sanitizer
                     }
                     <div title="Preview (sanitized at render)">
-                        @((MarkupString)sanitized)
+                        @((MarkupString)item.NotesHtml)
                     </div>
                 </Template>
 
@@ -391,7 +386,6 @@ The following example demonstrates sanitization patterns in a Syncfusion **DataG
 Reject invalid models and log structured details for security monitoring. Log anomalies (e.g., repeated failed validations, suspicious payload shapes) at appropriate levels and avoid storing raw malicious input without redaction.
 
 {% tabs %}
-{% highlight razor %}
 
 if (!ModelState.IsValid)
 {
@@ -402,7 +396,6 @@ if (!ModelState.IsValid)
     return BadRequest(ModelState);
 }
 
-{% endhighlight %}
 {% endtabs %}
 
 Logging validation failures provides visibility into suspicious behavior while preventing harmful data from entering the system.
