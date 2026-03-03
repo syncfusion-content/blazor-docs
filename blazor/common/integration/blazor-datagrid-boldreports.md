@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Blazor DataGrid Component with Bold Report Viewer
 
-This guide explains how to integrate the Syncfusion Blazor DataGrid with the Bold Report Viewer to display grid data inside RDLC/RDL reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
+This guide explains how to integrate the Syncfusion® Blazor DataGrid with the Bold Report Viewer to display grid data inside RDLC/RDL reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
@@ -493,8 +493,7 @@ Inject **IJSRuntime**, render DataGrid and invoke this JavaScript interop with t
 
 <div class="container mt-5">
     <h2>Orders Data Grid & Bold Reports Integration</h2>
-    
-    
+        
     <SfButton CssClass="e-primary mt-3" IsPrimary="true" OnClick="@OpenReport">
         Open RDLC Report
     </SfButton>
@@ -576,8 +575,14 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 **Expected Behavior**
 * DataGrid renders with sample records.
-* Clicking **Open RDlC Report** sends the grid data to the Web API.
+* Clicking **Open RDLC Report** sends the grid data to the Web API.
 * The Bold Report Viewer loads and displays the report.
 
 **Output:**
 ![Blazor DataGrid with Bold Report Viewer](./images/data-grid-boldreport.webp)
+
+## See also
+
+* [How to use the Bold Reports Report Viewer in a Blazor WebAssembly App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-web-assembly-application/)
+* [How to use the Bold Reports Report Viewer in a Blazor Server App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-server-application/)
+* [Learn about Blazor reporting components in Bold Reports](https://www.boldreports.com/blog/blazor-reporting-components)
