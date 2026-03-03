@@ -29,7 +29,7 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 ## Preselected value on OnInitializedAsync
 
-Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value in the [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle method. The following sample binds the value during initial rendering.
+Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value in the [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0#component-initialization-oninitializedasync) lifecycle method. The following sample binds the value during initial rendering.
 
 {% highlight cshtml %}
 
@@ -41,7 +41,7 @@ Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https:/
 
 ## Programmatically change the selected value
 
-Change the component value programmatically by referencing the component instance via the [`@ref`](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute. The following sample changes the value from a button click handler.
+Change the selected value programmatically using two-way binding with [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value). Updating the bound field in any event handler (like a button click) will immediately reflect in the SfDropDownList.
 
 {% highlight cshtml %}
 
@@ -109,7 +109,7 @@ Programmatically move focus using the [FocusAsync](https://help.syncfusion.com/c
 
 {% endhighlight %}
 
-## Programmatically trigger onChange event
+## Programmatically trigger ValueChange event
 
 The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event can be invoked manually using the `DropDownListEvents` instance (obtained via `@ref`). In the following example, `ValueChange` is invoked inside the `Created` event handler to demonstrate manual triggering.
 

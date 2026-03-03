@@ -114,7 +114,7 @@ These positions can be aligned using **Near**, **Center**, or **Far** with the [
 
 ```
 
-N> Refer [code block](#legend-mode) to know the property value of `securityCouncilDetails`.
+N> Refer [code block](#interactive-mode) to know the property value of `securityCouncilDetails`.
 
 ![Changing Legend Position in Blazor Maps](./images/Legend/blazor-maps-legend-position.png)
 
