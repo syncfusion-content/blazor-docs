@@ -11,11 +11,11 @@ documentation: ug
 
 Syncfusion® provides a Code Generator component for the Blazor platform, allowing you to quickly insert component code into the desired location within a Razor file. The Syncfusion® extension automatically adds the necessary Syncfusion® components along with the required namespaces, styles, and NuGet references. The Code Generator is a simple wizard that interacts with data models and integrates Syncfusion® components with the required features into your application.
 
-Use the following steps to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to a Blazor application in **Visual Studio 2022**:
+Use the following steps to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to a Blazor application in either **Visual Studio 2022** or **Visual Studio 2026**:
 
 N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Code Generator, verify that the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension is installed in Visual Studio (Extensions -> Manage Extensions -> Installed). If it is not installed, follow the steps in the [download and installation](download-and-installation) topic.
 
-1. Open an existing Blazor application or create a new one in Visual Studio 2022.
+1. Open an existing Blazor application or create a new Blazor application in either Visual Studio 2022 or Visual Studio 2026.
 
 2. To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Code Generator wizard from a Razor file, use one of the following options:
 
