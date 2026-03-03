@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Convert a Blazor Project to Syncfusion® Blazor
+# Convert a Blazor Application to Syncfusion® Blazor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor conversion is a **Visual Studio** add-in that converts an existing Blazor application into a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application by installing the required NuGet packages and adding the selected theme stylesheet to the project layout.
 
