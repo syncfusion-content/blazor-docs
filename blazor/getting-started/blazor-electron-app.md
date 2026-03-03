@@ -250,7 +250,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components to 
 ```
 dotnet run
 ```
-![Blazor Electron App](images/blazor-server-electron.png)
+![Blazor Electron App](images/blazor-server-electron.webp)
 
 ### Publish and Build Desktop Packages
 
