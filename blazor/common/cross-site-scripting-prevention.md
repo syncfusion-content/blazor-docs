@@ -11,11 +11,11 @@ documentation: ug
 
 ## Overview
 
-Cross-Site Scripting (XSS) is one of the most common and critical web application security vulnerabilities. This guide provides comprehensive security guidance for protecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications from XSS attacks, including built-in sanitization features, server-side validation strategies, and component-specific best practices.
+Cross-Site Scripting (XSS) is one of the most common and critical web application vulnerabilities. This guide explains how to protect Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications from XSS attacks using built-in client-side sanitization, server-side validation and sanitization, Content Security Policy (CSP), and component-specific best practices.
 
 ## What is Cross-Site Scripting (XSS)?
 
-Cross-Site Scripting (XSS) is a security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. These scripts execute in the victim's browser with the same privileges as legitimate application code, potentially leading to:
+XSS allows attackers to inject and execute malicious scripts in a victim’s browser with the same privileges as your app, which can lead to:
 
 - **Session hijacking** - Stealing authentication tokens or cookies
 - **Data theft** - Accessing sensitive user information
@@ -83,7 +83,7 @@ Syncfusion Blazor components that accept or display user content are potential X
    - Copy-paste from untrusted sources
 
 5. **Stored malicious data**
-   - Database records with unescaped HTML
+   - Database records with HTML/JS
    - Configuration files
    - Cached content
 
@@ -112,13 +112,13 @@ Effective XSS prevention requires multiple layers of defense:
 
 ### 1. Output Encoding
 
-Always encode user content when rendering:
+Render user text as text, not HTML.
 
 ```razor
-@* Safe - Blazor automatically encodes text *@
+@* Safe - Blazor automatically encodes *@
 <p>@userInput</p>
 
-@* UNSAFE - Bypasses encoding *@
+@* UNSAFE - Bypasses encoding; only safe if sanitized *@
 <p>@((MarkupString)userInput)</p>
 ```
 
@@ -148,20 +148,17 @@ public class CommentValidator : AbstractValidator<Comment>
 
 ### 3. HTML Sanitization
 
-Remove or neutralize dangerous HTML elements:
+Remove or neutralize dangerous HTML.
 
 ```csharp
 // Server-side sanitization before storing
+using Ganss.Xss;
+
 public string SanitizeHtml(string input)
 {
     var sanitizer = new HtmlSanitizer();
     sanitizer.AllowedTags.Clear();
-    sanitizer.AllowedTags.Add("p");
-    sanitizer.AllowedTags.Add("b");
-    sanitizer.AllowedTags.Add("i");
-    sanitizer.AllowedTags.Add("u");
-    sanitizer.AllowedTags.Add("br");
-    
+    sanitizer.AllowedTags.UnionWith(new[] { "p", "b", "i", "u", "br" });
     return sanitizer.Sanitize(input);
 }
 ```
@@ -180,7 +177,7 @@ When enabled (default: `true`), the sanitizer:
 
 1. Removes `<script>` tags and their content
 2. Strips event handler attributes (`onclick`, `onerror`, `onload`, etc.)
-3. Removes `javascript:` protocol from links
+3. Removes javascript: and other unsafe protocols
 4. Neutralizes potentially dangerous HTML elements
 5. Preserves safe formatting tags (`<p>`, `<b>`, `<i>`, `<ul>`, etc.)
 
@@ -198,7 +195,7 @@ The following Syncfusion Blazor components support the `EnableHtmlSanitizer` pro
 
 ### Limitations of Client-Side Sanitization
 
-> **Important:** Client-side sanitization alone is **NOT sufficient** for security. `EnableHtmlSanitizer` provides user experience benefits and defense-in-depth, but cannot replace server-side validation.
+> **Important:** Client-side sanitization alone is `NOT sufficient` for security. `EnableHtmlSanitizer` provides user experience benefits and defense-in-depth, but cannot replace server-side validation.
 
 **Why client-side sanitization is insufficient:**
 
@@ -207,13 +204,14 @@ The following Syncfusion Blazor components support the `EnableHtmlSanitizer` pro
 3. **API vulnerability** - Direct API calls bypass client-side checks
 4. **Zero trust principle** - Never trust client-side validation
 
-**When to use EnableHtmlSanitizer:**
+Use EnableHtmlSanitizer to:
+- Improve user experience by catching accidental HTML
+- Add an extra defense layer (defense-in-depth)
+- Provide immediate feedback without server round-trip
 
-- ✅ Improve user experience by catching accidental HTML
-- ✅ Add an extra defense layer (defense-in-depth)
-- ✅ Provide immediate feedback without server round-trip
-- ❌ **NOT** as sole security mechanism
-- ❌ **NOT** as replacement for server-side sanitization
+Do not use it as:
+- The sole security mechanism
+- A replacement for server-side sanitization
 
 ## Server-Side Sanitization (Authoritative)
 
@@ -223,12 +221,12 @@ Server-side sanitization is the **authoritative and required** defense against X
 
 **HtmlSanitizer** (Recommended for .NET)
 
-```bash
+```
 dotnet add package HtmlSanitizer
+
 ```
 
-**Ganss.XSS** features:
-- Comprehensive XSS protection
+Key features:
 - Configurable allow/deny lists
 - CSS sanitization
 - Active maintenance and security updates
@@ -260,16 +258,11 @@ public class ContentService
         
         // Allow safe attributes
         _sanitizer.AllowedAttributes.Clear();
-        _sanitizer.AllowedAttributes.Add("href");
-        _sanitizer.AllowedAttributes.Add("src");
-        _sanitizer.AllowedAttributes.Add("alt");
-        _sanitizer.AllowedAttributes.Add("title");
+        _sanitizer.AllowedAttributes.UnionWith(new[] { "href","src","alt","title" });
         
-        // Restrict URL schemes
+       // Restrict URL schemes (avoid data: unless you trust sources)
         _sanitizer.AllowedSchemes.Clear();
-        _sanitizer.AllowedSchemes.Add("http");
-        _sanitizer.AllowedSchemes.Add("https");
-        _sanitizer.AllowedSchemes.Add("mailto");
+        _sanitizer.AllowedSchemes.UnionWith(new[] { "http","https","mailto" });
     }
 
     // Sanitize before storing
@@ -348,64 +341,77 @@ public class CommentsController : ControllerBase
 
 ### RichTextEditor and BlockEditor
 
-Rich text editors are high-risk components requiring both client and server-side protection.
+Rich text editors are high-risk and require both client- and server-side protection.
 
 **BlockEditor with EnableHtmlSanitizer:**
 
 ```razor
-@using Syncfusion.Blazor.BlockEditor
+@using Syncfusion.Blazor.BlockEditor;
 
-<SfBlockEditor @bind-Value="@EditorContent"
-               EnableHtmlSanitizer="true"
-               Created="OnEditorCreated">
-</SfBlockEditor>
-
-<button @onclick="SaveContent">Save</button>
-
+<div id="container">
+    <SfBlockEditor Blocks="@BlocksData" EnableHtmlSanitizer="true"></SfBlockEditor>
+</div>
 @code {
-    private string EditorContent { get; set; }
-
-    private async Task SaveContent()
+    private List<BlockModel> BlocksData = new()
     {
-        // CRITICAL: Always sanitize on server before storing
-        await ContentService.SaveAsync(EditorContent);
-    }
+        new BlockModel
+        {
+            BlockType = BlockType.Paragraph,
+            Content = new()
+            {
+                new ContentModel
+                {
+                    ContentType = ContentType.Text,
+                    Content = "Safe content here"
+                }
+            }
+        }
+    };
 }
 ```
 
-**RichTextEditor example:**
+**RichTextEditor with server-side sanitization on save:**
 
 ```razor
 @using Syncfusion.Blazor.RichTextEditor
+@using System.Net.Http.Json
+@inject HttpClient Http
 
 <SfRichTextEditor @bind-Value="@ArticleContent"
                   EnableHtmlSanitizer="true">
     <RichTextEditorToolbarSettings Items="@Tools" />
 </SfRichTextEditor>
 
+<button class="e-btn e-primary" @onclick="SaveArticle">Save</button>
+
 @code {
-    private string ArticleContent { get; set; }
-    
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    private string ArticleContent { get; set; } = string.Empty;
+
+    private List<ToolbarItemModel> Tools = new()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Bold },
         new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        // Limit available tools to reduce risk
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline }
     };
+
+    private class SanitizedContent
+    {
+        public string CleanContent { get; set; } = string.Empty;
+    }
 
     private async Task SaveArticle()
     {
         // Server-side sanitization required
-        var sanitized = await Http.PostAsJsonAsync("api/articles/sanitize", 
+        var response = await Http.PostAsJsonAsync("api/articles/sanitize",
             new { content = ArticleContent });
-        
-        if (sanitized.IsSuccessStatusCode)
+        if (response.IsSuccessStatusCode)
         {
-            var result = await sanitized.Content.ReadFromJsonAsync<SanitizedContent>();
-            await StoreInDatabase(result.CleanContent);
+            var result = await response.Content.ReadFromJsonAsync<SanitizedContent>();
+            await StoreInDatabase(result!.CleanContent);
         }
     }
+
+    private Task StoreInDatabase(string cleanHtml) => Task.CompletedTask;
 }
 ```
 
@@ -435,38 +441,36 @@ Grid templates must render only server-sanitized content.
 
 ```razor
 @using Ganss.Xss
+@using System.Net.Http.Json
+@inject HttpClient Http
 
 <SfGrid DataSource="@Comments">
     <GridColumns>
-        <GridColumn Field="@nameof(Comment.Author)" HeaderText="Author" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Comment.Author)" HeaderText="Author" Width="150" />
         <GridColumn HeaderText="Comment" Width="400">
-            <Template>
-                @{
-                    var comment = (context as Comment);
-                    // Render server-sanitized content
-                    @((MarkupString)comment.SanitizedContent)
-                }
+            <Template Context="comment">
+                @((MarkupString)comment.SanitizedContent)
             </Template>
         </GridColumn>
-        <GridColumn Field="@nameof(Comment.CreatedAt)" HeaderText="Date" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Comment.CreatedAt)" HeaderText="Date" Width="150" Format="d" TextAlign="TextAlign.Center" />
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    private List<Comment> Comments { get; set; }
-    private HtmlSanitizer sanitizer = new HtmlSanitizer();
+    private List<Comment> Comments { get; set; } = new();
+    private readonly HtmlSanitizer sanitizer = new HtmlSanitizer();
 
     protected override async Task OnInitializedAsync()
     {
-        // Fetch and sanitize server-side
-        var rawComments = await Http.GetFromJsonAsync<List<Comment>>("api/comments");
-        
-        Comments = rawComments.Select(c => new Comment
+        var raw = await Http.GetFromJsonAsync<List<Comment>>("api/comments") ?? new();
+        // Re-sanitize as defense-in-depth
+        Comments = raw.Select(c => new Comment
         {
             Id = c.Id,
             Author = c.Author,
             Content = c.Content,
-            SanitizedContent = sanitizer.Sanitize(c.Content), // Sanitize here
+            SanitizedContent = sanitizer.Sanitize(c.Content),
             CreatedAt = c.CreatedAt
         }).ToList();
     }
@@ -475,9 +479,9 @@ Grid templates must render only server-sanitized content.
 public class Comment
 {
     public int Id { get; set; }
-    public string Author { get; set; }
-    public string Content { get; set; }
-    public string SanitizedContent { get; set; } // For rendering
+    public string Author { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
+    public string SanitizedContent { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
 }
 ```
@@ -488,11 +492,8 @@ public class Comment
 <SfGrid DataSource="@Comments">
     <GridColumns>
         <GridColumn Field="@nameof(Comment.Content)" HeaderText="Comment">
-            <Template>
-                @{
-                    var comment = (context as Comment);
-                    @comment.Content @* Safe - Blazor auto-encodes *@
-                }
+            <Template Context="comment">
+                @comment.Content @* Safe - Blazor auto-encodes *@
             </Template>
         </GridColumn>
     </GridColumns>
@@ -510,41 +511,37 @@ Similar principles apply to ListView:
             CssClass="e-list-template"
             EnableVirtualization="true">
     <ListViewFieldSettings Text="Content" Id="Id"></ListViewFieldSettings>
-    <ListViewTemplates TValue="ChatMessage">
-        <Template>
-            @{
-                var message = (context as ChatMessage);
-                <div class="message-container">
-                    <div class="message-header">
-                        <strong>@message.Sender</strong>
-                        <span class="timestamp">@message.Timestamp.ToShortTimeString()</span>
-                    </div>
-                    <div class="message-body">
-                        @* Only render server-sanitized content as HTML *@
-                        @if (message.IsHtml)
-                        {
-                            @((MarkupString)message.SanitizedContent)
-                        }
-                        else
-                        {
-                            @message.Content @* Plain text - auto-encoded *@
-                        }
-                    </div>
+    <ListViewTemplates>
+        <Template Context="message">
+            <div class="message-container">
+                <div class="message-header">
+                    <strong>@message.Sender</strong>
+                    <span class="timestamp">@message.Timestamp.ToShortTimeString()</span>
                 </div>
-            }
+                <div class="message-body">
+                    @if (message.IsHtml)
+                    {
+                        @((MarkupString)message.SanitizedContent)
+                    }
+                    else
+                    {
+                        @message.Content @* Plain text - auto-encoded *@
+                    }
+                </div>
+            </div>
         </Template>
     </ListViewTemplates>
 </SfListView>
 
 @code {
-    private List<ChatMessage> Messages { get; set; }
+    private List<ChatMessage> Messages { get; set; } = new();
 
     public class ChatMessage
     {
         public int Id { get; set; }
-        public string Sender { get; set; }
-        public string Content { get; set; }
-        public string SanitizedContent { get; set; }
+        public string Sender { get; set; } = string.Empty;
+        public string Content { get; set; } = string.Empty;
+        public string SanitizedContent { get; set; } = string.Empty;
         public bool IsHtml { get; set; }
         public DateTime Timestamp { get; set; }
     }
@@ -557,39 +554,42 @@ Chat applications require special attention due to real-time user input:
 
 ```razor
 @using Syncfusion.Blazor.InteractiveChat
+@using Ganss.Xss
+@using System.Net.Http.Json
+@inject HttpClient Http
 
-<SfChatUI Messages="@ChatMessages"
-          User="@CurrentUser"
-          MessageSend="OnMessageSend">
-</SfChatUI>
+<SfChat Messages="@ChatMessages"
+        User="@CurrentUser"
+        MessageSend="OnMessageSend">
+</SfChat>
 
 @code {
     private List<ChatMessage> ChatMessages = new();
     private UserModel CurrentUser = new() { ID = "user1", User = "John Doe" };
-    private HtmlSanitizer sanitizer = new HtmlSanitizer();
+    private readonly HtmlSanitizer sanitizer = new HtmlSanitizer();
 
-    private async Task OnMessageSend(MessageSendEventArgs args)
+    private async Task OnMessageSend(ChatMessageSendEventArgs args)
     {
-        // Sanitize message before adding to chat
-        var sanitizedText = sanitizer.Sanitize(args.Message.Text);
-        
-        var message = new ChatMessage
+        // Sanitize outgoing user text
+        var clean = sanitizer.Sanitize(args.Message.Text);
+
+        var msg = new ChatMessage
         {
-            Text = sanitizedText,
+            Text = clean,
             Author = CurrentUser,
             Timestamp = DateTime.Now
         };
 
-        // Send to server for validation and storage
-        await Http.PostAsJsonAsync("api/chat/messages", message);
-        
-        ChatMessages.Add(message);
+        // Persist to server (server sanitizes again before store)
+        await Http.PostAsJsonAsync("api/chat/messages", msg);
+
+        ChatMessages.Add(msg);
     }
 
     protected override async Task OnInitializedAsync()
     {
-        // Load messages - assume already sanitized server-side
-        ChatMessages = await Http.GetFromJsonAsync<List<ChatMessage>>("api/chat/messages");
+        // Load messages (assumed already sanitized on server)
+        ChatMessages = await Http.GetFromJsonAsync<List<ChatMessage>>("api/chat/messages") ?? new();
     }
 }
 ```
@@ -602,83 +602,92 @@ AI-powered components introduce additional risks:
 
 ```razor
 @using Syncfusion.Blazor.SmartComponents
+@using Ganss.Xss
 
 <SfSmartPasteButton Content="Smart Paste"
-                     TargetSelector="#description"
-                     OnPasteComplete="OnSmartPasteComplete">
+                    TargetSelector="#description"
+                    PasteComplete="OnSmartPasteComplete">
 </SfSmartPasteButton>
 
-<SfTextBox @bind-Value="@Description" 
+<SfTextBox @bind-Value="@Description"
            ID="description"
            Multiline="true">
 </SfTextBox>
 
 @code {
-    private string Description { get; set; }
+    private string Description { get; set; } = string.Empty;
 
     private async Task OnSmartPasteComplete(SmartPasteEventArgs args)
     {
-        // CRITICAL: Sanitize AI-generated or pasted content
+        // Sanitize AI-generated or pasted content
         var sanitizer = new HtmlSanitizer();
         Description = sanitizer.Sanitize(args.PastedContent);
-        
-        // Validate before proceeding
+
         if (ContainsSuspiciousContent(Description))
         {
-            // Show warning or reject
             Description = string.Empty;
             await ShowWarning("Pasted content contains potentially unsafe elements");
         }
     }
 
-    private bool ContainsSuspiciousContent(string content)
+    private static bool ContainsSuspiciousContent(string content)
     {
         var suspicious = new[] { "<script", "javascript:", "onerror=", "onload=" };
         return suspicious.Any(s => content.Contains(s, StringComparison.OrdinalIgnoreCase));
     }
+
+    private Task ShowWarning(string message) => Task.CompletedTask;
 }
 ```
 
-**AI AssistView:**
+### AI AssistView
+
+AI-powered components must sanitize both prompts and responses:
 
 ```razor
 @using Syncfusion.Blazor.InteractiveChat
+@using Ganss.Xss
 
 <SfAIAssistView Prompts="@PromptSuggestions"
-                PromptRequest="OnPromptRequest"
-                ResponseReceived="OnResponseReceived">
+                PromptRequest="OnPromptRequest">
 </SfAIAssistView>
 
 @code {
+    private List<AssistViewPrompt> PromptSuggestions { get; set; } = new();
+    private readonly HtmlSanitizer sanitizer = new HtmlSanitizer();
+
     private async Task OnPromptRequest(AssistViewPromptRequestedEventArgs args)
     {
-        // Sanitize user prompt before sending to AI
-        var sanitizer = new HtmlSanitizer();
+        // Sanitize user prompt
         args.Prompt = sanitizer.Sanitize(args.Prompt);
+
+        // Get AI response (from API/service)
+        var aiResponse = await GetAIResponse(args.Prompt);
         
-        // Send to secure API endpoint
-        var response = await Http.PostAsJsonAsync("api/ai/prompt", new { 
-            prompt = args.Prompt 
-        });
-        
-        args.Response = await response.Content.ReadAsStringAsync();
+        // Sanitize AI response before displaying
+        args.Response = sanitizer.Sanitize(aiResponse);
     }
 
-    private void OnResponseReceived(AssistViewResponseEventArgs args)
+    private Task<string> GetAIResponse(string prompt)
     {
-        // Sanitize AI response before displaying
-        var sanitizer = new HtmlSanitizer();
-        args.Response = sanitizer.Sanitize(args.Response);
+        // Call AI service
+        return Task.FromResult("AI response here");
     }
 }
 ```
 
+**Key Security Points:**
+- Sanitize user prompt before processing
+- Sanitize AI-generated response before display
+- Both client-side and server-side sanitization recommended
+
 ### Toast and Dialog with HTML Content
 
-Notification components displaying HTML must sanitize content:
+Toast supports client-side sanitization.
 
 ```razor
 @using Syncfusion.Blazor.Notifications
+@using Ganss.Xss
 
 <SfToast @ref="ToastObj"
          EnableHtmlSanitizer="true">
@@ -686,18 +695,48 @@ Notification components displaying HTML must sanitize content:
 </SfToast>
 
 @code {
-    private SfToast ToastObj;
+    private SfToast ToastObj = default!;
+    private readonly HtmlSanitizer sanitizer = new();
 
     private async Task ShowNotification(string userMessage)
     {
-        // Even with EnableHtmlSanitizer, sanitize server-side first
-        var sanitized = await SanitizeOnServer(userMessage);
-        
+        // Still sanitize server-side when persisting or receiving from APIs
+        var sanitized = sanitizer.Sanitize(userMessage);
         await ToastObj.ShowAsync(new ToastModel
         {
             Content = sanitized,
             CssClass = "e-toast-info"
         });
+    }
+}
+```
+
+**Dialog (HTML content safely rendered):**
+
+```razor
+@using Syncfusion.Blazor.Popups
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<SfDialog @ref="DialogRef"
+          Header="Notice"
+          ShowCloseIcon="true"
+          IsModal="true"
+          Width="400px"
+          EnableHtmlSanitizer="true"
+          Content="@DialogContent">
+</SfDialog>
+
+<button class="e-btn" @onclick="() => OpenDialogAsync(UserProvidedHtml)">Open dialog</button>
+
+@code {
+    private SfDialog DialogRef = default!;
+    private string DialogContent { get; set; } = string.Empty;
+
+    private async Task OpenDialogAsync(string rawHtml)
+    {
+        DialogContent = await SanitizeOnServer(rawHtml);
+        await DialogRef.ShowAsync();
     }
 
     private async Task<string> SanitizeOnServer(string content)
@@ -705,6 +744,9 @@ Notification components displaying HTML must sanitize content:
         var response = await Http.PostAsJsonAsync("api/sanitize", new { content });
         return await response.Content.ReadAsStringAsync();
     }
+
+    // Example user content
+    private string UserProvidedHtml => "<p><b>Hello</b> world</p>";
 }
 ```
 
@@ -916,8 +958,6 @@ public static class SanitizerConfiguration
 ### Syncfusion Documentation
 - [Content Security Policy for Blazor](./content-security-policy)
 - [Input Validation](./input-validation)
-- [Rich Text Editor Security](../rich-text-editor/prevent-cross-site-scripting)
-- [Block Editor Cross-Site Scripting Prevention](../block-editor/editor-security/cross-site-script)
 
 ### Security Best Practices
 - [OWASP XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
@@ -945,4 +985,4 @@ XSS protection in Syncfusion Blazor applications requires a multi-layered approa
 
 By following these guidelines and implementing defense-in-depth strategies, you can build secure Blazor applications that protect your users from XSS attacks while maintaining rich, interactive user experiences.
 
-> **Remember:** Security is not a one-time task but an ongoing process. Regularly review your code, conduct security audits, and stay informed about emerging threats and best practices.
+Security is not a one-time task but an ongoing process. Regularly review your code, conduct security audits, and stay informed about emerging threats and best practices.
