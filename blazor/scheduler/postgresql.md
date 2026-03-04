@@ -67,6 +67,7 @@ dotnet new blazor -n BlazorSchedulerApp --interactivity Server
 cd BlazorSchedulerApp
 ```
 
+
 > Configure the Interactive render mode to **InteractiveServer** during project creation as the Scheduler requires interactivity for CRUD operations.
 
 ### Step 2: Install Required NuGet Packages
@@ -114,6 +115,7 @@ The installed packages are reflected in the `BlazorSchedulerApp.csproj` file:
     <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
 </ItemGroup>
 ```
+
 
 All required packages are now installed.
 
@@ -359,6 +361,7 @@ A connection string contains the information needed to connect the application t
       "AllowedHosts": "*"
     }
     ```
+
 
 #### Connection String Components:
 
@@ -739,6 +742,7 @@ This creates three files in the `Migrations/` folder:
     dotnet ef database update
     ```
 
+
 **What happens during update:**
 1. Connects to PostgreSQL using connection string from `appsettings.json`
 2. Creates `__EFMigrationsHistory` table to track applied migrations
@@ -966,6 +970,7 @@ Or use watch mode for automatic reload during development:
 dotnet watch
 ```
 
+
 #### Access the Scheduler
 
 The application will start on a port configured in `launchSettings.json` (typically `http://localhost:xxxx`).
@@ -975,6 +980,7 @@ Open your browser and navigate to:
 http://localhost:xxxx
 
 ```
+
 
 > **Note**: Replace `xxxx` with the actual port number shown in the terminal output when the application starts.
 
@@ -1040,16 +1046,6 @@ A complete, working sample implementation is available in the [GitHub repository
 ```csharp
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 ```
-
-### Scheduler Not Loading
-
-**Error**: Spinner shows indefinitely
-
-**Solutions**:
-- Check that `AppointmentService` is registered in `Program.cs`
-- Verify database connection string is correct
-- Check console for errors in `LoadAppointments()` method
-- Ensure migrations have been applied: `dotnet ef database update`
 
 ## Summary
 
