@@ -30,9 +30,11 @@ If you already have an Angular project, proceed to custom elements package insta
 To enable Angular Custom Elements, install the package below: 
 
 {% tabs %}
+{% highlight C# tabtitle="Package Manager" %} 
 
 npm i @angular/elements
 
+{% endhighlight %}
 {% endtabs %}
 
 This package enables exporting Angular components as Web Components. This allows Blazor to load Angular UI using a simple HTML tag. 
@@ -106,11 +108,9 @@ import { createCustomElement } from '@angular/elements';
 
 The Angular production build generates JavaScript and CSS files that represent the Web Component.
 
-{% tabs %}
-
+```
 ng build --configuration production --output-hashing=none
-
-{% endtabs %}
+```
 
 ## Integrating the Custom Elements in Blazor 
 
@@ -120,19 +120,15 @@ If you already have a Blazor project, move to the next step. Otherwise, create o
 
 **Blazor WebAssembly:**
 
-{% tabs %}
-
+```
 dotnet new blazorwasm -o BlazorHost
-
-{% endtabs %}
+```
 
 **Blazor Server:**
 
-{% tabs %}
-
+```
 dotnet new blazorserver -o BlazorHost
-
-{% endtabs %}
+```
 
 ### Add MSBuild automation to build & copy Angular output
 
@@ -192,7 +188,7 @@ Reference the stylesheet and script in the `<head>` of the **Pages/_Host.cshtml*
 
 ###  Use the Angular Custom Element in Blazor
 
-You can place the <sf-grid> HTML tag directly inside any **.razor**(e.g Index.razor) component. 
+You can place the <sf-grid> HTML tag directly inside any **.razor** (e.g Index.razor) component. 
 
 {% tabs %}
 {% highlight razor tabtitle=".razor" %}
@@ -206,12 +202,10 @@ N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 
 ## Running the Applications 
 
-{% tabs %}
-
+```
 dotnet run
-
-{% endtabs %}
+```
 
 Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® Data Grid component:
 
-![Blazor DataGrid Component](../images/Angular-Blazor-Integration.png)
+![Blazor DataGrid Component](../images/angular-blazor-integration.webp)
