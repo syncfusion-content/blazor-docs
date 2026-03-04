@@ -25,7 +25,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration extension 
 
     ![Context menu showing Migrate Syncfusion Blazor Application option](images/Migration.png)
 
-    N> The Migration option is available only when the project already references Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
+    N> The Migration option becomes available only after the project references the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
 
 3. In the Command Palette, select **Select Blazor Version** and choose the desired Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor version from the list (displays versions available on `nuget.org`).
 
