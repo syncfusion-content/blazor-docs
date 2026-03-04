@@ -1,44 +1,25 @@
 ---
 layout: post
 title: Syncfusion® Blazor PDF Viewer and DataGrid Integration
-description: Step-by-step guide to integrating the Syncfusion Blazor PDF Viewer and DataGrid in Blazor applications.
+description: Step-by-step guide to integrating the Syncfusion Blazor PDF Viewer and DataGrid in Blazor Web App (Server).
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® DataGrid with PDF Viewer in Blazor Apps
+# Integrating Syncfusion® DataGrid with PDF Viewer in Web App (Server)
 
-This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)**,`SfPdfViewer`, together with the **Syncfusion® Blazor DataGrid**, `SfGrid`, in the following project types:
-* Blazor Web App (interactive render modes: Auto, WebAssembly, or Server)
-* Blazor WebAssembly (WASM) App
+This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)** together with the **Syncfusion® Blazor DataGrid** in a Blazor Web App using the Server render mode.
 
 This guide uses [Visual Studio Code](https://code.visualstudio.com/). If you haven’t created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) instructions for Visual Studio Code, then return to this article.
 
 ### Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements): Make sure your development environment meets the required system specifications for using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
-* For Blazor WASM or Blazor Web App using Auto or WebAssembly modes, install SkiaSharp/WASM tool workloads(specifically required for client‑side rendering of the Syncfusion PDF Viewer). Install only the workload that matches your .NET version.
-
-Example (choose one based on your target .NET version):
-
-```
-# .NET 8
-dotnet workload install wasm-tools-net8
-
-# .NET 9
-dotnet workload install wasm-tools-net9
-
-# .NET 10
-dotnet workload install wasm-tools-net10
-
-```
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements): Ensure your development environment meets the required system specifications for using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer, DataGrid, and Themes NuGet Packages
 
-If your Blazor Web App is using the `WebAssembly` or `Auto` render modes, ensure that all package installations are performed inside the `client` project.
-
-From the project folder (where the `.csproj` is located), install:
+From the Server project folder (where the `.csproj` is located), install the required packages:
  * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -62,13 +43,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ### Add Required Namespaces
 
-Add Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces in the appropriate **~/_Imports.razor** file depending on the project type:
-
-| Project Type | File to add namespaces |
-| -- | -- |
-| WebAssembly or Auto | **~/_Imports.razor** in the client project |
-| Server | **~/Components/_Imports.razor** |
-| Standalone Blazor WASM | **~/_Imports.razor** |
+Add Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces in the server project's **~/Components/_Imports.razor** file:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -82,9 +57,7 @@ Add Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces in the appropria
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in your app’s **~/Program.cs**.
-
-For Blazor Web App with `WebAssembly` or `Auto` render modes, register in both **~/Program.cs** files (Server and Client).
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in your server app’s **~/Program.cs**.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
@@ -107,81 +80,11 @@ builder.Services.AddSyncfusionBlazor();
 ...
 
 {% endhighlight %}
-
-{% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
-
-...
-...
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddRazorComponents()
-.AddInteractiveWebAssemblyComponents();
-
-builder.Services.AddMemoryCache();
-//Add Syncfusion Blazor service to the container
-builder.Services.AddSyncfusionBlazor();
-
-...
-...
-
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs) Auto" hl_lines="3 9 11 13" %}
-
-...
-...
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddRazorComponents()
-.AddInteractiveServerComponents() .AddInteractiveWebAssemblyComponents();
-
-builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
-
-builder.Services.AddMemoryCache();
-//Add Syncfusion Blazor service to the container
-builder.Services.AddSyncfusionBlazor();
-
-...
-...
-
-{% endhighlight %}
-
-{% highlight C# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs) Standalone WASM" hl_lines="3 9 13" %}
-
-...
-...
-using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddMemoryCache();
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-// Add Syncfusion Blazor service to the container.
-builder.Services.AddSyncfusionBlazor();
-
-...
-...
-
-{% endhighlight %}
-
 {% endtabs %}
 
 ### Add stylesheet and script resources
 
-Before adding the stylesheet, make sure no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (e.g., bootstrap5.css, material.css) is already referenced to avoid conflicts.
-
-**Blazor Web App**
-
-Add the following stylesheet and script references in the `~/Components/App.razor`. 
-
-**Standalone WASM**
-
-Add the same stylesheet and script references to `wwwroot/index.html`.
+Add the following stylesheet and script references in the server app's `~/Components/App.razor` (inside the head/body as appropriate). Ensure no other Syncfusion theme CSS (e.g., bootstrap5.css, material.css) is referenced to avoid conflicts.
 
 {% tabs %}
 {% highlight html hl_lines="3 8 11" %}
@@ -202,45 +105,30 @@ Add the same stylesheet and script references to `wwwroot/index.html`.
 {% endhighlight %}
 {% endtabs %}
 
-### Configure Render Mode (Blazor Web App)
+### Configure Render Mode (Server)
 
-If Interactivity location is set to `Per page/component`, specify a render mode at the top of each `~Pages/*.razor` component as needed:
-
-| Interactivity location | RenderMode | Code |
-| --- | --- | --- |
-| Per page/component | Auto | @rendermode InteractiveAuto |
-|  | WebAssembly | @rendermode InteractiveWebAssembly |
-|  | Server | @rendermode InteractiveServer |
-|  | None | --- |
-
-
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default. No per‑page directive is necessary.
-
-**Example (per page):**
+For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each `~Pages/*.razor` file that requires interactive Server components:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Per‑page directive (Server)" %}
 
 @* Define the desired render mode here *@
-@rendermode InteractiveAuto
+@rendermode InteractiveServer
 
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer component and DataGrid component
+N> If the `interactivity location` is set to `Global` and the app is configured for Server render mode, no per‑page directive is required.
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) and DataGrid components to a `.razor` file within your app: 
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer and DataGrid components
 
-**Blazor Web App (WebAssembly or Auto Render Mode)**
-Add to a `.razor` file inside the `client` project’s `Pages` folder.
-
-**Blazor Web App (Server Render Mode) or Standalone WASM**
-Add to `~/Pages/Home.razor` or any `.razor` file under under the `Pages` folder.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) and DataGrid components to a `.razor` file in the server project's `Pages` folder (for example, `~/Pages/Home.razor`):
 
 {% tabs %}
 {% highlight razor %}
 
 @page "/"
+@rendermode InteractiveServer
 
 <h1>PDF Viewer</h1>
 
@@ -291,4 +179,4 @@ dotnet run
 
 The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer and DataGrid in your default browser.
 
-![Blazor DataGrid with PDF Viewer](images/Blazor-DataGrid-with-PDF-Viewer-Integration.png)
+![Blazor DataGrid with PDF Viewer](images/blazor-datagrid-with-pdf-viewer-integration.webp)
