@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JWT Authentication for Syncfusion® Blazor (WebAssembly & Server)
-description: Step-by-step guide to JWT Authentication for Syncfusion® Blazor DataGrid (WebAssembly & Server)
+description: Guide to setting up JWT authentication for Syncfusion Blazor DataGrid with secure API access and token handling.
 platform: Blazor
 control: Common
 documentation: ug
@@ -34,7 +34,7 @@ xxxxx.yyyy.zzzzz
 
 - **Decoupled**: Works well when your Blazor client calls a separate API.
 - **Stateless**: No server session to maintain; authorization is embedded in the token.
-- **Interoperable**: Any client that can send HTTP headers can use it.
+- **Interpretable**: Any client that can send HTTP headers can use it.
 
 > Note: For **Blazor Server** apps that render UI on the server, cookie-based auth is often simpler. JWT shines when calling **separate APIs** (from Blazor WASM or Server).
 
