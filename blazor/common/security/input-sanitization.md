@@ -231,7 +231,6 @@ Syncfusion's **Uploader** component offers client-side validation for file type 
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Sanitizing HTML from Syncfusion Rich Text Editor
 
 Syncfusion's Rich Text Editor sanitizes content on the client, but developers must also sanitize HTML again on the server before storing or re-rendering it.
