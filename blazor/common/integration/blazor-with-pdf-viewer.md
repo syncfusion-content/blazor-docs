@@ -109,8 +109,10 @@ Add the following stylesheet and script references in the server app's `~/Compon
 
 For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each `~Pages/*.razor` file that requires interactive Server components:
 
+**Per‑page directive (Server)**
+
 {% tabs %}
-{% highlight razor tabtitle="Per‑page directive (Server)" %}
+{% highlight razor %}
 
 @* Define the desired render mode here *@
 @rendermode InteractiveServer
