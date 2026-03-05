@@ -27,7 +27,7 @@ xxxxx.yyyy.zzzzz
 - **Payload** – contains claims (e.g., `sub`, `name`, `role`, `exp`).
 - **Signature** – computed using the header + payload + secret (or private key) to prevent tampering.
 
-![Blazor DataGrid with jwt](../images/authorization.webp)
+![Blazor DataGrid with jwt](../images/authentication.webp)
 
 ### Why JWT for Blazor?
 
