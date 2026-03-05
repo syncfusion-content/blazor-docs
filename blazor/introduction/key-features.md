@@ -13,46 +13,46 @@ This page highlights the capabilities that make Syncfusion Blazor Components a s
 
 ## Comprehensive UI coverage
 
-- Data-centric components such as DataGrid, TreeGrid, Pivot Table, and Scheduler.
-- 2D/3D Charts, Gauges, Maps, Heatmaps, and business dashboards.
-- Forms, Editors, Inputs, Menus, Navigation, Dialogs, and Notifications.
-- Rich text editor, Image editor and advanced Pickers.
+- Components for data: DataGrid, TreeGrid, Pivot Table, and Scheduler.
+- 2D and 3D Charts, Gauges, Maps, and Heatmaps.
+- Common UI building blocks: Forms, Editors, Inputs, Menus, Navigation, Dialogs, and Notifications.
+- Rich text and Image editors and advanced Pickers.
 
 ## Performance and scalability
 
-- Row and column virtualization for large datasets.
-- Incremental rendering and lazy loading where applicable.
-- Efficient re-rendering tuned to Blazor’s diffing model.
-- Lightweight resource delivery with theme and feature level packages.
+- Row and column virtualization for large data sets.
+- Incremental rendering and lazy loading where helpful.
+- Quickly updates only the parts of the UI that changed.
+- Lightweight, focused theme and feature packages to reduce load.
 
 ## Accessibility and usability
 
-- WCAG compliant semantics with ARIA attributes.
-- Full keyboard interaction patterns and focus management.
-- High contrast and RTL (right-to-left) support.
+- WCAG compliant markup with ARIA attributes.
+- Full keyboard support and clear focus management.
+- High contrast and right-to-left (RTL) layout support.
 - Screen reader friendly markup and labels.
 
 ## Globalization and localization
 
-- Culture aware date, time, number, and currency formatting.
-- Localizable strings and messages across components.
-- RTL layouts and bidirectional text rendering.
+- Culture aware formats for dates, times, numbers, and currency.
+- All user visible text can be localized.
+- Supports RTL layouts and bidirectional text.
 
 ## Styling and theming
 
-- Multiple built-in themes and CSS variables for fine tuning.
-- Consistent design tokens for spacing, color, and typography.
-- Supports CSS isolation and utility-first approaches.
+- Several built-in themes and CSS variables for easy tweaks.
+- Consistent tokens for spacing, color, and fonts.
+- Works with CSS isolation and utility-first approaches.
 
 ## Data and integration
 
-- Flexible data binding to in-memory collections, `IQueryable`, and REST endpoints.
-- Data operations (filter, sort, group, aggregate, page) on client or server.
-- Adapters for various back ends via a unified data manager pattern.
+- Bind data to in-memory collections, `IQueryable`, or REST APIs.
+- Support for filtering, sorting, grouping, aggregating, and paging on client or server.
+- Adapters for different back ends through a single data manager pattern.
 
 ## Developer productivity
 
 - Strongly typed parameters and events with IntelliSense.
-- Templating for cells, headers, items, and toolbars.
-- Consistent APIs and event life cycles across components.
-- Extensive samples and API reference.
+- Templates for cells, headers, items, and toolbars.
+- Consistent APIs and event lifecycles across components.
+- Large sample library and full API reference.
