@@ -54,5 +54,5 @@ This page highlights the capabilities that make Syncfusion Blazor Components a s
 
 - Strongly typed parameters and events with IntelliSense.
 - Templates for cells, headers, items, and toolbars.
-- Consistent APIs and event lifecycles across components.
+- Consistent APIs and event life cycles across components.
 - Large sample library and full API reference.
