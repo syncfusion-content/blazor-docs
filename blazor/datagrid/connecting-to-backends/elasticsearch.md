@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Connecting Elasticsearch to Blazor Data Grid Using ES library
+# Connecting Blazor Data Grid to Elasticsearch
 
 The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from an Elasticsearch index using the Elastic.Clients.Elasticsearch library. This modern approach provides full-text search capabilities, advanced filtering, and high-performance data operations.
 
