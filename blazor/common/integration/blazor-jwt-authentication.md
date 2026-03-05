@@ -1,20 +1,19 @@
 ---
 layout: post
-title: JWT Authentication for Syncfusion® Blazor (WebAssembly & Server)
+title: JWT Authentication in Syncfusion® Blazor 
 description: Guide to setting up JWT authentication for Syncfusion Blazor DataGrid with secure API access and token handling.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# JWT Authentication in Blazor WebAssembly and Blazor Server
+# JWT Authentication in Blazor
 
-This article explains how to use **JSON Web Tokens (JWT)** for authentication in Blazor WebAssembly (WASM) and Blazor Server applications. It covers backend API configuration, token generation/validation, client login flow, secure storage, attaching tokens to requests, refreshing tokens, protecting pages, and security considerations. Code snippets are provided and adapted from a **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** example.
-
+This guide walks you through creating a minimal, working Blazor JWT demo: an ASP.NET Core Web API that issues JWTs and a Blazor WebAssembly client that logs in, stores the token, and calls a protected API to display orders in a [Syncfusion DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
 ## Introduction to JWT
 
-**JSON Web Token (JWT)** is a compact, URL-safe way to represent claims between two parties. A server issues a signed token after a successful login; the client attaches this token in the `Authorization: Bearer <token>` header when calling protected APIs. The server validates the token signature and claims to authorize the request.
+**JSON Web Token (JWT)**  is a compact, signed token containing claims that clients send as `Authorization: Bearer <token>` to authenticate API requests.
 
 ### Structure: Header, Payload, Signature
 
@@ -28,7 +27,7 @@ xxxxx.yyyy.zzzzz
 - **Payload** – contains claims (e.g., `sub`, `name`, `role`, `exp`).
 - **Signature** – computed using the header + payload + secret (or private key) to prevent tampering.
 
-![Blazor DataGrid with jwt](../images/Authorization.webp)
+![Blazor DataGrid with jwt](../images/authorization.webp)
 
 ### Why JWT for Blazor?
 
@@ -36,23 +35,63 @@ xxxxx.yyyy.zzzzz
 - **Stateless**: No server session to maintain; authorization is embedded in the token.
 - **Interpretable**: Any client that can send HTTP headers can use it.
 
-> Note: For **Blazor Server** apps that render UI on the server, cookie-based auth is often simpler. JWT shines when calling **separate APIs** (from Blazor WASM or Server).
+## Create the solution and projects
 
-### Prerequisites
+Create a solution with two projects: Api (Minimal API) and Client (Blazor WASM).
 
-- .NET 10 SDK 
-- Blazor WASM or Blazor Server project
-- A Web API project (Minimal APIs or MVC) to issue and validate JWTs
+{% tabs %}
+{% highlight bash tabtitle="Terminal" %}
 
+// Create solution folder and move into it
+mkdir BlazorJwtDemo
+cd BlazorJwtDemo
+
+// Create a solution file
+dotnet new sln -n BlazorJwtDemo
+
+// Create the Web API (Minimal API)
+dotnet new web -n Api
+
+// Create the Blazor WebAssembly app
+dotnet new blazorwasm -n Client
+
+// Add both projects to the solution
+dotnet sln add .\Api\Api.csproj
+dotnet sln add .\Client\Client.csproj
+
+{% endhighlight %}
+{% endtabs %}
+
+## Install NuGet packages
+
+Install required packagare for Web API and Blazor WebAssembly app
+
+{% tabs %}
+{% highlight bash tabtitle="Terminal" %}
+
+# Api
+cd Api
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+dotnet add package System.IdentityModel.Tokens.Jwt
+
+# Client
+cd ..\Client
+dotnet add package Microsoft.Extensions.Http
+dotnet add package Microsoft.AspNetCore.Components.Authorization
+dotnet add package System.IdentityModel.Tokens.Jwt
+dotnet add package Blazored.LocalStorage
+dotnet add package Syncfusion.Blazor
+dotnet add package Syncfusion.Blazor.Themes
+dotnet restore
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configuring the Backend API
 
-Below is a **Minimal API** that issues and validates JWTs.
-
-### Token generation
+Configure JWT bearer authentication and CORS in `Api/Program.cs`.
 
 ```csharp
-// Program.cs (API)
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -106,8 +145,15 @@ var app = builder.Build();
 app.UseCors(CorsPolicy);
 app.UseAuthentication();
 app.UseAuthorization();
+app.Run();
 
-record LoginRequest(string Username, string Password);
+```
+
+### Token generation
+
+Implement a POST endpoint /api/auth/login in `Api/Program.cs` that validates credentials, builds claims, signs a JWT, and returns it.
+
+```csharp
 
 // Issue access token (and, optionally, refresh token).
 app.MapPost("/api/auth/login", ([FromBody] LoginRequest req) =>
@@ -141,6 +187,7 @@ app.MapPost("/api/auth/login", ([FromBody] LoginRequest req) =>
     return Results.Unauthorized();
 });
 
+public record LoginRequest(string Username, string Password);
 // Protected data endpoint.
 public record Order(int OrderID, string CustomerID, string ShipCountry)
 {
@@ -154,7 +201,6 @@ public record Order(int OrderID, string CustomerID, string ShipCountry)
     };
 }
 
-app.Run();
 ```
 
 ### Validation
@@ -164,21 +210,16 @@ The `AddJwtBearer` configuration ensures tokens are checked for:
 - **Signature** with your signing key
 - **Expiration**
 
-## Setting Up Blazor to Use JWT (WebAssembly)
+## Blazor WebAssembly Client Configuration
 
-Your Blazor WASM app will:
-1) Provide a **Login page** that calls the API to obtain a JWT.
-2) **Store** the token securely (demo uses Local Storage).
-3) Attach the token via a **DelegatingHandler** for every API request.
-4) Optionally parse **roles/claims** for UI authorization.
-5) Handle **refresh**/**logout**.
+This section explains how to configure your Blazor WebAssembly (WASM) app to use JWT authentication, Syncfusion UI components, local storage, and a secured HttpClient that automatically attaches the JWT to every API request.
 
-### Program.cs (WASM)
+### Client Setup
 
-Register services in Program.cs (WASM):
+Register Syncfusion, local storage, auth state provider, and an `HttpClient` that attaches the JWT in `Client/Program.cs`.
+
 
 ```csharp
-// Program.cs (Client - WASM)
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -200,7 +241,7 @@ builder.Services.AddBlazoredLocalStorage();
 
 builder.Services.AddTransient<AuthMessageHandler>();
 
-var apiBase = new Uri("http://localhost:5005/");
+var apiBase = new Uri("http://localhost:XXXX/");
 
 builder.Services.AddHttpClient("ApiClient", client =>
 {
@@ -211,11 +252,11 @@ builder.Services.AddHttpClient("ApiClient", client =>
 
 await builder.Build().RunAsync();
 ```
+### AuthMessageHandler – Attach JWT
 
-### DelegatingHandler to attach JWT
+This handler reads the JWT from local storage and attaches it to outgoing HTTP requests in `Client/Services/AuthMessageHandler.cs`
 
 ```csharp
-// Client/Services/AuthMessageHandler.cs
 using System.Net.Http.Headers;
 using Blazored.LocalStorage;
 
@@ -241,9 +282,13 @@ namespace Client.Services
 }
 ```
 
-### Login page logic
+### Login Page – Authenticate and Store JWT
 
-```razor
+Create a simple login UI that posts credentials to the API and saves the JWT into local storage in `Client/Pages/Login.razor`.
+
+{% tabs %}
+{% highlight razor tabtitle="Login.razor" %}
+
 @page "/login"
 @using Microsoft.Extensions.DependencyInjection
 @inject IHttpClientFactory ClientFactory
@@ -306,246 +351,61 @@ namespace Client.Services
 
     public class TokenResponse { public string? token { get; set; } }
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add Syncfusion Assets and Imports
+
+**Add Syncfusion CSS & script**
+
+Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in `wwwroot/index.html`.
+
+```html
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
 ```
 
-### Storing JWT (secure storage)
+**Add Import Namespaces**
 
-For demos, **Local Storage** is fine. For production:
-- Prefer **short-lived access tokens** in **memory** and use a **refresh token** in an **HttpOnly** cookie (safer against XSS).
-- If you must use Local Storage/Session Storage, harden against XSS and keep token TTL short.
+Open the `Client/_Imports.razor` file in the client project and import the namespaces.
 
-### Attaching JWT to HTTP Requests
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-Already handled via `AuthMessageHandler`. Configure your components to use the named client:
-
-```razor
-@page "/orders"
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
-@using Microsoft.Extensions.DependencyInjection
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add Syncfusion DataGrid
+
+This page loads Syncfusion Datagrid orders from a protected API endpoint using the JWT-bearing HttpClient in `Client/Pages/Orders.razor`.
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+@page "/orders"
+@using Syncfusion.Blazor.Grids
 @inject IHttpClientFactory ClientFactory
 
-<h3>Orders (JWT protected)</h3>
-
+<h3>Orders</h3>
 <SfGrid TValue="Order" AllowPaging="true" AllowSorting="true" Height="400px">
-  <SfDataManager Url="api/orders"
-                 Adaptor="Adaptors.UrlAdaptor"
-                 HttpClientInstance="@_apiClient" />
-
+    <SfDataManager Url="api/orders" Adaptor="Adaptors.UrlAdaptor" HttpClientInstance="@_apiClient" />
     <GridColumns>
-        <GridColumn Field="OrderID"     HeaderText="Order ID"   TextAlign="TextAlign.Center" Width="120" />
-        <GridColumn Field="CustomerID"  HeaderText="Customer"   Width="150" />
-        <GridColumn Field="ShipCountry" HeaderText="Country"    Width="150" />
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="CustomerID" HeaderText="Customer" Width="150" />
+        <GridColumn Field="ShipCountry" HeaderText="Country" Width="150" />
     </GridColumns>
-</SfGrid>
-
-@code {
-    private HttpClient? _apiClient;
-
-    protected override void OnInitialized()
-        => _apiClient = ClientFactory.CreateClient("ApiClient");
-
-    public class Order
-    {
-        public int    OrderID      { get; set; }
-        public string? CustomerID  { get; set; }
-        public string? ShipCountry { get; set; }
-    }
-}
-```
-
-### Using HttpClient interceptors
-
-You can centralize 401 handling and refresh in the `AuthMessageHandler`. Example skeleton:
-
-```csharp
-protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
-{
-    var token = await storage.GetItemAsync<string>("jwtToken");
-    if (!string.IsNullOrWhiteSpace(token))
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-    var response = await base.SendAsync(request, ct);
-
-    if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-    {
-        // Option 1: navigate to /login
-        // Option 2: attempt refresh flow then retry the original request
-    }
-
-    return response;
-}
-```
-
-## Role and Claim Extraction
-
-To show role-based UI or protect routes, parse the token on the client and feed claims into `AuthenticationStateProvider`.
-
-**Auth state provider (minimal):**
-
-```csharp
-// Client/Services/JwtAuthStateProvider.cs
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Components.Authorization;
-
-public class JwtAuthStateProvider : AuthenticationStateProvider
-{
-    private readonly ILocalStorageService storage;
-    public JwtAuthStateProvider(ILocalStorageService storage) => this.storage = storage;
-
-    public override async Task<AuthenticationState> GetAuthenticationStateAsync()
-    {
-        var token = await storage.GetItemAsync<string>("jwtToken");
-        var identity = new ClaimsIdentity();
-
-        if (!string.IsNullOrWhiteSpace(token))
-        {
-            var handler = new JwtSecurityTokenHandler();
-            var jwt = handler.ReadJwtToken(token);
-
-            if (jwt.ValidTo > DateTime.UtcNow)
-            {
-                identity = new ClaimsIdentity(jwt.Claims, authenticationType: "jwt");
-            }
-        }
-
-        var user = new ClaimsPrincipal(identity);
-        return new AuthenticationState(user);
-    }
-
-    public void NotifyUserAuthentication() => NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
-}
-```
-
-**Register + use in Program.cs (WASM):**
-
-```csharp
-builder.Services.AddAuthorizationCore();
-builder.Services.AddScoped<AuthenticationStateProvider, JwtAuthStateProvider>();
-```
-
-**Consume in UI:**
-
-```razor
-<AuthorizeView Roles="Admin">
-    <p>Welcome Admin!</p>
-</AuthorizeView>
-```
-
-**Protect routes:**
-
-```razor
-// App.razor
-<CascadingAuthenticationState>
-    <Router AppAssembly="@typeof(Program).Assembly">
-        <Found Context="routeData">
-            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        </Found>
-        <NotFound>
-            <LayoutView Layout="@typeof(MainLayout)">
-                <p role="alert">Sorry, there's nothing at this address.</p>
-            </LayoutView>
-        </NotFound>
-    </Router>
-</CascadingAuthenticationState>
-```
-
-
-
-## Refreshing Tokens
-
-**Recommended pattern (production):**
-- Short-lived **access token** (e.g., 5–15 minutes) stored in memory or local storage.
-- Long-lived **refresh token** stored in an **HttpOnly, Secure, SameSite=Strict** cookie.
-- On 401 (or nearing expiry), call `/api/auth/refresh` to get a new access token.
-
-**API – Refresh endpoint (conceptual):**
-
-```csharp
-app.MapPost("/api/auth/refresh", (HttpContext http) =>
-{
-    // Read refresh token from HttpOnly cookie
-    var refresh = http.Request.Cookies["refreshToken"];
-    if (string.IsNullOrWhiteSpace(refresh)) return Results.Unauthorized();
-
-    // Validate refresh token (lookup store, check revocation/expiry, user mapping)
-    // If valid, issue new access token (and optionally rotate refresh token)
-
-    var newAccessToken = "..."; // issue JWT as in login
-    return Results.Ok(new { token = newAccessToken });
-});
-```
-
-Client-side logic: when receiving 401, attempt refresh flow, update stored tokens, and retry original request. Handle refresh failures by forcing re-login.
-
-> Note: Implement refresh tokens with care (store server-side, mark revoked, use rotation, bind to client/device).
-
-## Logout Mechanism
-
-* Client: clear stored tokens (memory/local storage/session) and redirect to login.
-* Server: invalidate refresh tokens (remove from DB or mark revoked).
-
-**Example logout client-side:**
-```razor
-<button @onclick="Logout">Logout</button>
-
-@code {
-    [Inject] Blazored.LocalStorage.ILocalStorageService Storage { get; set; } = default!;
-    [Inject] NavigationManager Nav { get; set; } = default!;
-
-    private async Task Logout()
-    {
-        await Storage.RemoveItemAsync("jwtToken");
-        Nav.NavigateTo("/login", forceLoad: true);
-    }
-}
-```
-
-If you issued refresh tokens via cookies, also call an API endpoint to **invalidate** the refresh token server-side and **clear the cookie**.
-
-
-## Protecting Pages
-
-- Use `<AuthorizeRouteView>` to prevent navigation to pages without a valid auth state.
-- Use `<AuthorizeView>` to show/hide content based on roles/claims.
-
-
-## Security Considerations
-
-- Always use HTTPS in production.
-- Prefer short-lived access tokens and use refresh tokens for long sessions.
-- Store refresh tokens server-side or as HttpOnly, secure cookies to reduce XSS risk.
-- Use `SameSite` and `Secure` cookie flags when using cookies.
-- Protect against XSS: sanitize inputs, use CSP, avoid injecting HTML.
-- Validate tokens server-side (issuer, audience, signature, expiry).
-- Implement token revocation for logout or compromised tokens (maintain blacklist or token store).
-- Use strong secrets or asymmetric keys, and rotate them when needed.
-
-## Code Samples
-
-Example grid page that uses the `ApiClient`:
-
-```razor
-@page "/orders"
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Grids
-@inject IHttpClientFactory ClientFactory
-
-<h3>Orders (JWT protected)</h3>
-
-<SfGrid TValue="Order" AllowPaging="true" AllowSorting="true" Height="400px">
-  <SfDataManager Url="api/orders"
-                 Adaptor="Adaptors.UrlAdaptor"
-                 HttpClientInstance="@_apiClient" />
-  <GridColumns>
-    <GridColumn Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-    <GridColumn Field="CustomerID" HeaderText="Customer" Width="150"></GridColumn>
-    <GridColumn Field="ShipCountry" HeaderText="Country" Width="150"></GridColumn>
-  </GridColumns>
 </SfGrid>
 
 @code {
@@ -554,9 +414,34 @@ Example grid page that uses the `ApiClient`:
 
     public class Order { public int OrderID { get; set; } public string? CustomerID { get; set; } public string? ShipCountry { get; set; } }
 }
-```
+
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run and Test the Application
+
+Follow these steps to verify that your API and Blazor WebAssembly client work together with JWT authentication and the Syncfusion DataGrid:
+
+1. Start the API
+    * Open a terminal in the Api project folder.
+    * Run the command: `dotnet run`.
+    * The API will start and listen on its configured URL.
+2. Start the Blazor Client  
+    * Open a terminal in the Client project folder.
+    * Run the command: `dotnet run`.
+    * The Blazor dev server will display a local URL—open it in the browser. 
+Shelldotnet run
+3. Login
+    * Navigate to /login on the client app.
+    * Sign in using:
+            Username: admin
+            Password: admin123
+    * After logging in, the JWT token is saved in local storage.
+admin / admin123.
+4. View Protected Data
+    * Navigate to /orders.
+    * The Syncfusion DataGrid now loads protected API data using the stored JWT.
+
 
 ![Blazor DataGrid with jwt output](../images/jwt-with-datagrid.webp)
-
-* The examples above are intentionally minimal to show the core ideas. 
-* For production, use secure storage patterns, HTTPS-only cookies for refresh tokens, server-side token stores, and robust user management (ASP.NET Core Identity or external identity providers).
