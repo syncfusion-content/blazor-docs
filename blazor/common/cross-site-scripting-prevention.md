@@ -558,10 +558,10 @@ Chat applications require special attention due to real-time user input:
 @using System.Net.Http.Json
 @inject HttpClient Http
 
-<SfChat Messages="@ChatMessages"
+<SfChatUI Messages="@ChatMessages"
         User="@CurrentUser"
         MessageSend="OnMessageSend">
-</SfChat>
+</SfChatUI>
 
 @code {
     private List<ChatMessage> ChatMessages = new();
@@ -649,7 +649,7 @@ AI-powered components must sanitize both prompts and responses:
 @using Ganss.Xss
 
 <SfAIAssistView Prompts="@PromptSuggestions"
-                PromptRequest="OnPromptRequest">
+                PromptRequested="OnPromptRequest">
 </SfAIAssistView>
 
 @code {
