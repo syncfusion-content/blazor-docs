@@ -29,7 +29,9 @@ To enable custom value input, set the [AllowCustomValue](https://help.syncfusion
 4. The user must **explicitly select** this custom item from the dropdown list to add it to the selection.
 5. Only after the item is selected does it appear in the `Value` collection.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]"
@@ -45,7 +47,10 @@ To enable custom value input, set the [AllowCustomValue](https://help.syncfusion
         "United States", "United Kingdom", "Germany", "France", "Japan", "Australia"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBRZVVmJwrlKrlU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custom value creation in MultiSelect Dropdown](./images/custom-value/Custom_value_creation_in_MultiSelect_Dropdown.gif)" %}
 
 N> If the user types text and does not select the created custom item from the dropdown, the item is **not** added to the `Value` collection. Selecting the item from the list is mandatory to complete the addition.
@@ -56,7 +61,9 @@ When the `TItem` is a complex class, custom values are handled by creating a new
 
 Use the [CustomValueSpecifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_CustomValueSpecifier) event to supply fully populated custom object instances, including any additional properties that matter for your application logic.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="int[]"
@@ -98,7 +105,10 @@ Use the [CustomValueSpecifier](https://help.syncfusion.com/cr/blazor/Syncfusion.
         public string Department { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLHjhVcTviXCvho?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custom value with complex object types](./images/custom-value/Custom_value_with_complex_object_types.gif)" %}
 
 N> The `Value` field, the `Text` field, and the `Value` property must be of type `string` when custom value is enabled and no `CustomValueSpecifier` event is used. For non-string value types (such as `int`), you must handle the `CustomValueSpecifier` event and manually set `args.NewData` with the correct typed value.
@@ -121,7 +131,9 @@ The [CustomValueSpecifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 The following example rejects any custom value shorter than three characters.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]"
@@ -160,7 +172,9 @@ The following example rejects any custom value shorter than three characters.
         public string Label { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBnZrVmpvquBJnk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[CustomValueSpecifier event-Validating custom input](./images/custom-value/CustomValueSpecifier_event_Validating_custom_input.gif)" %}
 
@@ -174,7 +188,9 @@ Custom values work in all visual modes except `CheckBox`. The display of selecte
 
 Selected custom values are displayed as chips that collapse into an overflow indicator when the component loses focus.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SfMultiSelect TValue="string[]"
                TItem="string"
                DataSource="@Skills"
@@ -189,13 +205,17 @@ Selected custom values are displayed as chips that collapse into an overflow ind
         "JavaScript", "TypeScript", "Blazor", "React", "Angular"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Box mode
 
 Custom values appear as permanent box-style chips, always visible regardless of focus state.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SfMultiSelect TValue="string[]"
                TItem="string"
                DataSource="@Skills"
@@ -210,13 +230,17 @@ Custom values appear as permanent box-style chips, always visible regardless of 
         "JavaScript", "TypeScript", "Blazor", "React", "Angular"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Delimiter mode
 
 Selected custom values are rendered as delimiter-separated text, visually identical to predefined selections.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SfMultiSelect TValue="string[]"
                TItem="string"
                DataSource="@Skills"
@@ -232,7 +256,9 @@ Selected custom values are rendered as delimiter-separated text, visually identi
         "JavaScript", "TypeScript", "Blazor", "React", "Angular"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrdNrLGzYqWkNxO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Visual mode behavior](./images/custom-value/Visual_mode_behavior.gif)" %}
 
@@ -248,7 +274,9 @@ When [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 2. If no exact match exists, a custom item appears at the top of the filtered results.
 3. The user selects the custom item from the dropdown.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]"
@@ -265,7 +293,9 @@ When [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
         "Apple", "Banana", "Cherry", "Durian", "Elderberry", "Fig", "Grape"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Custom value with HideSelectedItem
 
@@ -275,7 +305,9 @@ When [HideSelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 - After selection: The custom item is hidden from the dropdown list.
 - After deselection: The custom item reappears in the dropdown.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SfMultiSelect TValue="string[]"
                TItem="string"
                DataSource="@Languages"
@@ -290,13 +322,17 @@ When [HideSelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         "English", "Spanish", "French", "German", "Mandarin"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Custom value with MaximumSelectionLength
 
 Custom values count toward the [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_MaximumSelectionLength) limit. When the maximum is reached, the component prevents further selection, including custom items that appear in the dropdown list.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SfMultiSelect TValue="string[]"
                TItem="string"
                DataSource="@Categories"
@@ -311,13 +347,17 @@ Custom values count toward the [MaximumSelectionLength](https://help.syncfusion.
         "Technology", "Health", "Finance", "Education", "Travel"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Custom value with virtualization
 
 When [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableVirtualization) is enabled, custom values receive special internal tracking to maintain their position at the top of the virtual list even as the user scrolls through a large dataset. Custom items are preserved in the component's internal virtual data collections and are not lost during scrolling.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]"
@@ -339,13 +379,17 @@ When [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         public string Name { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Two-way binding with custom values
 
 Custom values fully participate in two-way binding. After a custom item is selected, it is added to the bound `Value` property. Changes to the `Value` property from code also correctly reflect custom values in the UI.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]"
@@ -366,14 +410,19 @@ Custom values fully participate in two-way binding. After a custom item is selec
         "Blazor", "ASP.NET Core", "Entity Framework", "SignalR", "gRPC"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 N> Empty or whitespace-only input does not create a custom item. The component ignores such input silently.
 
 ## Handling the ValueChange event with custom values
 
 The `ValueChanged` or the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html) event fires after a custom value is selected and added to the selection. The event arguments include both predefined and custom values in the `Value` collection without distinction.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]"
@@ -402,7 +451,9 @@ The `ValueChanged` or the [ValueChange](https://help.syncfusion.com/cr/blazor/Sy
         // args.Value contains both predefined and custom selected values
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Keyboard interaction
 
