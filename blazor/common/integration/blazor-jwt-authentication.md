@@ -35,9 +35,9 @@ xxxxx.yyyy.zzzzz
 - **Stateless**: No server session to maintain; authorization is embedded in the token.
 - **Interpretable**: Any client that can send HTTP headers can use it.
 
-## Create the solution and projects
+## Create a solution and projects
 
-Create a solution with two projects: Api (Minimal API) and Client (Blazor WASM).
+Create a solution with two projects: API (Minimal API) and Client (Blazor WASM).
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -45,16 +45,12 @@ Create a solution with two projects: Api (Minimal API) and Client (Blazor WASM).
 // Create solution folder and move into it
 mkdir BlazorJwtDemo
 cd BlazorJwtDemo
-
 // Create a solution file
 dotnet new sln -n BlazorJwtDemo
-
-// Create the Web API (Minimal API)
+// Create a Web API (Minimal API)
 dotnet new web -n Api
-
-// Create the Blazor WebAssembly app
+// Create a Blazor WebAssembly app
 dotnet new blazorwasm -n Client
-
 // Add both projects to the solution
 dotnet sln add .\Api\Api.csproj
 dotnet sln add .\Client\Client.csproj
@@ -101,7 +97,7 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// CORS: allow the Blazor client dev origin
+// CORS: allow the Blazor client dev origin.
 const string CorsPolicy = "DevClient";
 builder.Services.AddCors(options =>
 {
@@ -112,7 +108,7 @@ builder.Services.AddCors(options =>
               .AllowCredentials());
 });
 
-// JWT setup (use secure secrets in production!)
+// JWT setup (use secure secrets in production!).
 var jwtKey   = builder.Configuration["Jwt:Key"]     ?? "dev-secret-key-change-me-please-123456";
 var issuer   = builder.Configuration["Jwt:Issuer"]  ?? "SyncGridJwtDemo";
 var audience = builder.Configuration["Jwt:Audience"]?? "SyncGridJwtDemoAudience";
@@ -200,7 +196,6 @@ public record Order(int OrderID, string CustomerID, string ShipCountry)
         new(10005, "BLONP", "France"),
     };
 }
-
 ```
 
 ### Validation
@@ -218,7 +213,6 @@ This section explains how to configure your Blazor WebAssembly (WASM) app to use
 
 Register Syncfusion, local storage, auth state provider, and an `HttpClient` that attaches the JWT in `Client/Program.cs`.
 
-
 ```csharp
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -234,7 +228,6 @@ builder.RootComponents.Add<App>("#app");
 
 builder.Services.AddSyncfusionBlazor();
 
-// Authorization/Authentication support for Blazor WASM
 builder.Services.AddAuthorizationCore();
 
 builder.Services.AddBlazoredLocalStorage();
@@ -252,6 +245,7 @@ builder.Services.AddHttpClient("ApiClient", client =>
 
 await builder.Build().RunAsync();
 ```
+
 ### AuthMessageHandler – Attach JWT
 
 This handler reads the JWT from local storage and attaches it to outgoing HTTP requests in `Client/Services/AuthMessageHandler.cs`
@@ -348,7 +342,6 @@ Create a simple login UI that posts credentials to the API and saves the JWT int
             message = ex.Message;
         }
     }
-
     public class TokenResponse { public string? token { get; set; } }
 }
 
@@ -415,13 +408,12 @@ This page loads Syncfusion Datagrid orders from a protected API endpoint using t
     public class Order { public int OrderID { get; set; } public string? CustomerID { get; set; } public string? ShipCountry { get; set; } }
 }
 
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Run and Test the Application
 
-Follow these steps to verify that your API and Blazor WebAssembly client work together with JWT authentication and the Syncfusion DataGrid:
+Follow these steps to verify that your API and Blazor WebAssembly client work together with JWT authentication and the Syncfusion DataGrid.
 
 1. Start the API
     * Open a terminal in the API project folder.
@@ -441,6 +433,5 @@ admin / admin123.
 4. View Protected Data
     * Navigate to /orders.
     * The Syncfusion DataGrid now loads protected API data using the stored JWT.
-
 
 ![Blazor DataGrid with jwt output](../images/jwt-with-datagrid.webp)
