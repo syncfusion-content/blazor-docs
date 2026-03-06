@@ -111,7 +111,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 ### Create interop file
 
-Create a interop js (in this example used as `boldreports-interop.js` file name) inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer JavaScript control.
+Create a interop js (in this example used as `bold-reports-interop.js` file name) inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer JavaScript control.
 
 {% tabs %}
 {% highlight js tabtitle="boldreports-interop.js"  %}
