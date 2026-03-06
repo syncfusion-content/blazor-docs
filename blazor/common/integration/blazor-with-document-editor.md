@@ -168,4 +168,4 @@ dotnet run
 
 The app launches and renders the Syncfusion® Blazor Document Editor and DataGrid in your default browser.
 
-![Blazor DataGrid with Document Editor](../images/documentEditorwithdatagrid.webp)
+![Blazor DataGrid with Document Editor](../images/document-editor-wit-datagrid.webp)
