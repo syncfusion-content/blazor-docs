@@ -57,13 +57,11 @@ The packages are added to the application's `.csproj` file as shown below:
 
 During conversion, the selected Syncfusion<sup style="font-size:70%">&reg;</sup> theme stylesheet is automatically added in the following locations based on the application type.
 
-### Theme File Locations
-
 | Application Type | Theme File Location |
 |---|---|
-| **Blazor Web App** (Server or WebAssembly) | `Components/App.razor` |
-| **Blazor WebAssembly** (standalone) | `wwwroot/index.html` |
-| **Blazor WebAssembly** (ASP.NET Core hosted) | Client project: `wwwroot/index.html` |
-| **Blazor WebAssembly** (Progressive Web Application) | `wwwroot/index.html` |
+| Blazor Web App (Server or WebAssembly) | `Components/App.razor` |
+| Blazor WebAssembly (standalone) | `wwwroot/index.html` |
+| Blazor WebAssembly (ASP.NET Core hosted) | **Client project:** `wwwroot/index.html` |
+| Blazor WebAssembly (Progressive Web Application) | `wwwroot/index.html` |
 
 ![Example showing where the theme link is added in the project](images/CDNLink.png)
