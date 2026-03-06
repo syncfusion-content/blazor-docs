@@ -39,7 +39,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install required packages
+## Install Required Packages
 
 From the project folder (where the `.csproj` is located), install the Syncfusion<sup style="font-size:70%">&reg;</sup> **Grid**, **Themes**, and the **ElectronNET.Core** packages.
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
@@ -126,7 +126,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add Stylesheet and Script Resources
 
 Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (e.g., bootstrap5.css, material.css) is already referenced to avoid conflicts.
 
@@ -239,7 +239,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components to 
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
+### Run the Application
 
 ```
 dotnet run
