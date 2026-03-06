@@ -64,16 +64,13 @@ Add Syncfusion namespaces to your project-level `_Imports.razor`.
 Register the Syncfusion Blazor service in your app’s **~/Program.cs**.
 
 {% tabs %}
-{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="1 7" %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="1 5" %}
 
 using Syncfusion.Blazor;
-
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
 builder.Services.AddSyncfusionBlazor();
-
 var app = builder.Build();
 ....
 
@@ -120,11 +117,8 @@ Add the Syncfusion Document Editor and DataGrid components to a `.razor` file wi
 @rendermode InteractiveServer
 
 <h1>DocumentEditor</h1>
-
 <SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
-
 <h1>DataGrid</h1>
-
 <SfGrid DataSource="@Orders" />
 
 @code{
@@ -140,7 +134,7 @@ Add the Syncfusion Document Editor and DataGrid components to a `.razor` file wi
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-
+                                                                
     public class Order {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
@@ -156,7 +150,7 @@ Add the Syncfusion Document Editor and DataGrid components to a `.razor` file wi
 
 ## Run the Application
 
-Run from the project root.
+Use the following command to run the application in the browser.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -168,4 +162,4 @@ dotnet run
 
 The app launches and renders the Syncfusion® Blazor Document Editor and DataGrid in your default browser.
 
-![Blazor DataGrid with Document Editor](images/document-editor-wit-datagrid.webp)
+![Blazor DataGrid with Document Editor](images/documenteditor-with-datagrid.webp)
