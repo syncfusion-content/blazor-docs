@@ -187,7 +187,7 @@ With these steps complete, your `my-project` SharePoint Framework solution is re
 dotnet publish -c Release
 ```
 
-**Step 5:** Upload published files to SharePoint Document Library or Site Assets,
+**Step 5:** Upload published files to SharePoint Document Library or Site Assets.
 
 Upload contents of:
 
@@ -315,7 +315,7 @@ export default class BlazorAppWebPart extends BaseClientSideWebPart<{}> {
 **Note:** Ensure the referred files link are reachable. 
 
 ## Set up Tenant Domain for SPFx
-The following configuration ensures that your SPFx solution loads the SharePoint Workbench for your specific tenant. Replace {tenantDomain} with your actual SharePoint tenant domain (e.g., syncfusion.sharepoint.com).
+The following configuration ensures that your SPFx solution loads the SharePoint Workbench for your specific tenant. Replace {tenantDomain} with your actual SharePoint tenant domain.
 
 `config/serve.json`
 ```bash
