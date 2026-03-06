@@ -17,7 +17,7 @@ This guide shows how to integrate the **[Syncfusion® Blazor Document Editor](ht
 
 ## Create a project
 
-Create a Blazor Web App using Server render mode. Open the terminal and run the command:
+Create a Blazor Web App using Server render mode. Open the terminal and run the command.
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -30,7 +30,7 @@ cd BlazorWebAppServer
 
 ## Install NuGet Packages
 
-Open the integrated terminal in the project folder (where the `.csproj` is) and run:
+Open the integrated terminal in the project folder (where the `.csproj` is) and run.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -47,7 +47,7 @@ dotnet restore
 
 ## Add Required Namespaces
 
-Add Syncfusion namespaces to your project-level `_Imports.razor`:
+Add Syncfusion namespaces to your project-level `_Imports.razor`.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -64,16 +64,13 @@ Add Syncfusion namespaces to your project-level `_Imports.razor`:
 Register the Syncfusion Blazor service in your app’s **~/Program.cs**.
 
 {% tabs %}
-{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="1 7" %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="1 5" %}
 
 using Syncfusion.Blazor;
-
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
 builder.Services.AddSyncfusionBlazor();
-
 var app = builder.Build();
 ....
 
@@ -82,7 +79,7 @@ var app = builder.Build();
 
 ## Add Stylesheet and Script Resources
 
-Add the theme CSS and Syncfusion scripts in `~/App.razor`:
+Add the theme CSS and Syncfusion scripts in `~/App.razor`.
 
 ```html
 <head>
@@ -111,7 +108,7 @@ If your app’s interactivity location is set to `Per page/component`, add a ren
 
 ## Add Syncfusion Blazor Document Editor component and DataGrid component
 
-Add the Syncfusion Document Editor and DataGrid components to a `.razor` file within your app: 
+Add the Syncfusion Document Editor and DataGrid components to a `.razor` file within your app. 
 
 {% tabs %}
 {% highlight razor %}
@@ -120,11 +117,8 @@ Add the Syncfusion Document Editor and DataGrid components to a `.razor` file wi
 @rendermode InteractiveServer
 
 <h1>DocumentEditor</h1>
-
 <SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
-
 <h1>DataGrid</h1>
-
 <SfGrid DataSource="@Orders" />
 
 @code{
@@ -140,7 +134,7 @@ Add the Syncfusion Document Editor and DataGrid components to a `.razor` file wi
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-
+                                                                
     public class Order {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
@@ -152,11 +146,11 @@ Add the Syncfusion Document Editor and DataGrid components to a `.razor` file wi
 {% endhighlight %}
 {% endtabs %}
 
-Note: By default, the `SfDocumentEditorContainer` component initializes an `SfDocumentEditor` instance internally. If you like to use the events of `SfDocumentEditor` component, then you can set `UseDefaultEditor` property as **false** and define your own `SfDocumentEditor` instance with event hooks in the application (Razor file).
+> By default, the `SfDocumentEditorContainer` component initializes an `SfDocumentEditor` instance internally. If you like to use the events of `SfDocumentEditor` component, then you can set `UseDefaultEditor` property as **false** and define your own `SfDocumentEditor` instance with event hooks in the application (Razor file).
 
 ## Run the Application
 
-Run from the project root:
+Use the following command to run the application in the browser.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -168,4 +162,4 @@ dotnet run
 
 The app launches and renders the Syncfusion® Blazor Document Editor and DataGrid in your default browser.
 
-![Blazor DataGrid with Document Editor](../images/DocumentEditor-With-DataGrid.png)
+![Blazor DataGrid with Document Editor](images/documenteditor-with-datagrid.webp)

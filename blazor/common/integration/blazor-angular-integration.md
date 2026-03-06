@@ -33,21 +33,17 @@ If you already have a Blazor project, proceed to the package installation sectio
 
 To enable Custom Elements, install the required Microsoft packages.
 
-{% tabs %}
-
+```
 dotnet add package Microsoft.AspNetCore.Components.Web --version 10.0.3 
 dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0.3 
-
-{% endtabs %}
+```
 
 Alternatively, install them using the NuGet Package Manager.
 
-{% tabs %}
-
+```
 Microsoft.AspNetCore.Components.Web 
 Microsoft.AspNetCore.Components.CustomElements 
-
-{% endtabs %}
+```
 
 ### Add Syncfusion component
 
@@ -266,4 +262,4 @@ Then, run both with one command:
 
 Once the compilation completes, open your browser and navigate to http://localhost:4200/ to see your application with the integrated Syncfusion® DataGrid component:
 
-![Blazor DataGrid Component](../images/Blazor-Angular-Integration.png)
+![Blazor DataGrid Component](../images/blazor-angular-integration.webp)

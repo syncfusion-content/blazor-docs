@@ -15,14 +15,15 @@ N> ElectronNET.Core is the modern fork of the Electron.NET approach that support
 
 ## What is Electron?
 
-[Electron](https://www.electronjs.org/) is a framework for building cross-platform desktop applications with web technologies. It utilizes `Node.js` and the `Chromium` rendering engine to run a web application in a desktop shell.
-ElectronNET.Core bridges the Blazor Server app and the Electron shell by hosting an internal Kestrel server and loading it inside a Chromium window. The Electron main process communicates with the Blazor backend through this local server, enabling desktop‑native features without altering the application's architecture.
+[Electron](https://www.electronjs.org/) is a framework for building cross-platform desktop applications using web technologies. It uses `Node.js` and the `Chromium` rendering engine to run a web application inside a desktop environment.
+
+ElectronNET.Core connects a Blazor Server app with the Electron shell by hosting an internal Kestrel server and loading it in a Chromium window. The Electron main process communicates with the Blazor backend through this local server, enabling desktop‑native features without requiring changes to the application’s architecture.
 
 ## Prerequisites
 
 - .NET 8 or later (LTS)
 - Node.js 22.x or later
-- Supported OS (for .NET 8 or later): Windows 10+, macOS 12+, Ubuntu 20.04+
+- Supported OS (for .NET 8 or later): Windows 10 or later, macOS 12 or later, Ubuntu 20.04 or later
 - Editor/IDE: Visual Studio 2022 or later, or VS Code
 
 ## Create a Blazor Server App
@@ -38,16 +39,16 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
+## Install Required Packages
 
-From the project folder (where the `.csproj` is located), install the Syncfusion<sup style="font-size:70%">&reg;</sup> **Grid**, **Themes**, and **ElectronNET.Core** packages:
+From the project folder (where the `.csproj` is located), install the Syncfusion<sup style="font-size:70%">&reg;</sup> **Grid**, **Themes**, and the **ElectronNET.Core** packages.
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
  * [ElectronNET.Core](https://www.nuget.org/packages/ElectronNET.Core)
  * [ElectronNET.Core.AspNet](https://www.nuget.org/packages/ElectronNET.Core.AspNet)
 
 {% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -62,7 +63,7 @@ dotnet restore
 
 ## Add Required Namespaces
 
-Open **~/_Imports.razor** and import the required Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces.
+Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor namespaces in **~/_Imports.razor**.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -75,26 +76,24 @@ Open **~/_Imports.razor** and import the required Syncfusion<sup style="font-siz
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> and Electron Services
 
-Register the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service and configure the ElectronNET.Core integration in your app’s **~/Program.cs** file.
-Before using the code snippet below, replace `BlazorElectronApp` with the root namespace of your application, which is specified in `App.razor` or `_Imports.razor` file.
+Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service and configure ElectronNET.Core in your **~/Program.cs** file.
+
+Before using the code snippet, update the namespace by replacing `BlazorElectronApp` with the namespace used in your application. You can find the correct namespace in `App.razor` or `_Imports.razor`.
+
+For example, if your application is named `MyApp`, use `MyApp.Components.App`.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs)" hl_lines="2 3 4 10 13 16 17 18 19 20 21 22 23 24 25 27 29 30 31 35 45" %}
+{% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs)" hl_lines="2 3 4 7 9 11 12 13 14 15 16 17 18 19 20 22 24 25 26 28 34" %}
 
 ...
 using Syncfusion.Blazor;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
-
 ...
-...
-
 // Syncfusion services
 builder.Services.AddSyncfusionBlazor();
-
 // Electron services
 builder.Services.AddElectron();
-
 // Electron window bootstrap (modern ElectronNET.Core)
 builder.UseElectron(args, async () =>
 {
@@ -112,18 +111,12 @@ builder.UseElectron(args, async () =>
     window.OnReadyToShow += () => window.Show();
     window.OnClosed += () => Electron.App.Quit();
 });
-
 ...
-
 app.UseStaticFiles(); // Required for serving assets like _content/ (Syncfusion).
-
-...
 
 // Disable for Electron: it runs on http://localhost, and HTTPS redirection can cause redirect/certificate issues.
 // app.UseHttpsRedirection();
-
 ...
-
 // Map the root Razor Components app
 app.MapRazorComponents<BlazorElectronApp.Components.App>()
     .AddInteractiveServerRenderMode();
@@ -133,11 +126,11 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add Stylesheet and Script Resources
 
-Before adding the stylesheet, make sure no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (e.g., bootstrap5.css, material.css) is already referenced to avoid conflicts.
+Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (e.g., bootstrap5.css, material.css) is already referenced to avoid conflicts.
 
-Add the following stylesheet and script references in the `~/App.razor`. 
+Add the following stylesheet and script references in `~/App.razor`. 
 
 {% tabs %}
 {% highlight html hl_lines="4 10" %}
@@ -160,7 +153,9 @@ Add the following stylesheet and script references in the `~/App.razor`.
 
 ## Add Runtime Identifiers to Support Cross‑Platform Builds
 
-Add the following property to your project’s `.csproj` file:
+The `RuntimeIdentifiers` property specifies the target platforms for the application and enables .NET to restore the necessary platform‑specific assets. This configuration allows the application to be built and packaged for Windows, Linux, and macOS from a single project.
+
+To enable this, add the following property to your project’s `.csproj` file.
 
 {% tabs %}
 
@@ -177,8 +172,7 @@ Add the following property to your project’s `.csproj` file:
 
 ## Add electron-builder.json (Required for ElectronNET.Core)
 
-ElectronNET.Core requires this file for packaging your desktop application.
-Create a file named `electron-builder.json` inside your project’s `Properties` folder and add the following code.
+ElectronNET.Core uses the electron-builder.json file to configure packaging settings for desktop builds. Create a file named `electron-builder.json` in your project’s `Properties` folder and add the following content.
 
 {% tabs %}
 
@@ -245,7 +239,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid components to 
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
+### Run the Application
 
 ```
 dotnet run
@@ -254,7 +248,7 @@ dotnet run
 
 ### Publish and Build Desktop Packages
 
-These commands publish for the x64 architecture. Change the runtime identifier (for example, osx‑arm64, linux‑arm64) as needed.
+The following commands publish the application for the x64 architecture. Update the runtime identifier as needed (for example, osx-arm64 or linux-arm64) to target other platforms.
 
 ```
 Windows: dotnet publish -r win-x64 -c Release
