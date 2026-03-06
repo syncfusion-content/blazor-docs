@@ -11,11 +11,11 @@ documentation: ug
 
 ## Overview
 
-Cross-Site Scripting (XSS) is one of the most common security problems in web applications. This guide explains how to protect Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application from XSS attacks. It covers built-in client-side sanitization, server-side validation, Content Security Policy (CSP), and best practices for specific components.
+Cross-Site Scripting (XSS) is one of the most common security problems in web applications. This guide explains how to protect Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application from XSS attacks. It covers built-in client-side sanitization, server-side validation, and safe usage guidelines for components that handle user‑generated content.
 
 ## What is Cross-Site Scripting (XSS)?
 
-XSS allows attackers to inject and execute malicious scripts in a victim's browser with the same privileges as your app, which can lead to:
+XSS is a vulnerability where attackers insert harmful code into your application, causing it to run in the user’s browser with the same access level as your app. This can result in
 
 - **Session hijacking** - Stealing authentication tokens or cookies
 - **Data theft** - Accessing sensitive user information
@@ -26,31 +26,33 @@ XSS allows attackers to inject and execute malicious scripts in a victim's brows
 ### Types of XSS Attacks
 
 1. **Stored XSS** - The attacker saves malicious code in your database, and it runs whenever another user loads the affected page. This is the most dangerous type.
-2. **Reflected XSS** - The malicious code is sent through a URL or form input and immediately reflected back to the user.
+2. **Reflected XSS** - The harmful script is delivered through a URL or form input and is immediately sent back in the response, causing it to execute in the user’s browser.
 3. **DOM-based XSS** - Client-side scripts read unsafe data and write it directly into the page.
 
 ## Why XSS Matters in Blazor Applications
 
-### Blazor Server vs. Blazor WebAssembly
+Blazor Server and Blazor WebAssembly come with different types of XSS risks.
 
-Each Blazor hosting model has different XSS risks.
+### Blazor Server
 
-**Blazor Server:**
-- All logic runs on the server, which makes it easier to apply centralized validation.
-- If XSS occurs, an attacker could hijack the SignalR connection.
+- All logic runs on the server, so validation is easier, but XSS can still happen if unsafe content is displayed.
+- If an XSS attack happens, an attacker could potentially take control of the SignalR connection that Blazor depends on.
 - The user's session state and backend resources could be compromised.
 
-**Blazor WebAssembly:**
-- The entire application runs in the browser, giving scripts full access to the DOM.
-- API tokens and credentials stored on the client side can be exposed.
-- Server-side validation is not automatically enforced.
-- The attack surface is larger because more code runs in the browser.
+### Blazor WebAssembly
+
+- The entire application runs directly in the browser, giving malicious scripts full access to the DOM if they are injected.
+- Sensitive data like API tokens or client‑side credentials can be exposed more easily.
+- Server‑side validation doesn’t apply automatically, so extra care is needed.
+- Running a larger part of the app in the browser makes it more exposed to security risks.
 
 ## XSS Threat Model and Attack Vectors
 
 ### Common Attack Vectors
 
-XSS attacks can enter your application through multiple paths. User input such as comments, chat messages, and form fields is the most direct entry point, but external data from third-party APIs, uploaded files, or RSS feeds carries the same risk. HTML templates that render dynamic content and paste operations — where users bring in content from other websites — can silently introduce malicious scripts. Even data already stored in your database can be a threat if it was saved before proper sanitization was in place, as it may get rendered to other users long after the original submission.
+XSS can get into your app in many different ways. The most common source is user input such as comments, chat messages, or anything a person types into a form.
+Data from APIs, uploaded files, or text copied from other websites can also contain harmful scripts.
+Even information already stored in your database might be unsafe if it was not cleaned before being saved.
 
 ### Example Attack Payloads
 
@@ -73,13 +75,13 @@ XSS attacks can enter your application through multiple paths. User input such a
 
 ## How to Prevent XSS Attacks
 
-Effective XSS prevention requires multiple layers of defense:
+Protecting your application from XSS requires using several layers of defense.
 
 ### 1. Output Encoding
 
-Blazor automatically converts special characters in user input into plain display text. For example, a `<script>` tag will appear as visible text on the page instead of running as code.
+Blazor automatically turns special characters in user input into safe, readable text. For example, a `<script>` tag will appear as visible text on the page instead of running as code.
 
-Use `@userInput` to render plain text safely. Only use `MarkupString` when the HTML has already been sanitized on the server.
+Use `@userInput` whenever you want to safely display text on the page. Only use `MarkupString` when the HTML has already been sanitized on the server.
 
 ```razor
 @* Safe - Blazor automatically encodes *@
@@ -91,15 +93,15 @@ Use `@userInput` to render plain text safely. Only use `MarkupString` when the H
 
 ### 2. Input Validation
 
-Validating user input as soon as it arrives helps stop harmful content, such as `<script>` tags, from being saved or passed to other users. This is your first line of defense and blocks unsafe data early before it moves deeper into your application.
+Validating user input as soon as it is received helps prevent harmful content, such as `<script>` tags, from being stored or sent to other users. This acts as an early safety check and helps stop harmful data before it reaches deeper parts of your application.
 
-Follow these practices when validating input:
+Follow these practices when validating input.
 
 - Always validate on the server side, not just the client side.
-- Set maximum length limits on all input fields.
-- Use strong typing with data annotations.
-- Reject input that contains obviously malicious patterns.
-- For file uploads, check the file type, size, and content before processing.
+- Set maximum length limits for every input field.
+- Use strong typing along with data annotation attributes.
+- Block input that clearly contains suspicious or harmful content.
+- For file uploads, verify the file type, file size, and actual file content before processing.
 
 
 ```csharp
@@ -124,7 +126,7 @@ public class CommentValidator : AbstractValidator<Comment>
 
 ### 3. HTML Sanitization
 
-If your application lets users enter rich HTML content (for example, through a rich text editor), you need to sanitize that content. Sanitization removes unsafe tags and attributes while keeping safe formatting elements like `<p>`, `<b>`, and `<br>`.
+If your app allows users to enter rich HTML, such as through a rich text editor, you must sanitize it. Sanitization removes harmful or unsafe HTML while keeping safe formatting tags like `<p>`, `<b>`, and `<br>`.
 
 Only the HTML tags you explicitly allow are kept. Always sanitize content before saving it to the database and again before displaying it, including content that comes from external sources.
 
@@ -132,35 +134,37 @@ Only the HTML tags you explicitly allow are kept. Always sanitize content before
 
 The `EnableHtmlSanitizer` property is available in the Syncfusion **RichTextEditor** and **BlockEditor** components. It provides built-in client-side XSS protection.
 
-##### How EnableHtmlSanitizer Works
+#### How EnableHtmlSanitizer Works
 
-When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer does the following:
+When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer does the following.
 
 1. Removes `<script>` tags and their content
-2. Strips event handler attributes such as `onclick`, `onerror`, and `onload`
-3. Removes javascript: and other unsafe protocols
+2. Removes event handler attributes such as `onclick`, `onerror`, and `onload`
+3. Blocks unsafe protocols like javascript: scheme
 4. Neutralizes other potentially dangerous HTML elements
 5. Preserves safe formatting tags (`<p>`, `<b>`, `<i>`, `<ul>`, etc.)
 
-> **Important:** Client-side sanitization alone is `NOT sufficient` for security. `EnableHtmlSanitizer` provides user experience benefits and defense-in-depth, but cannot replace server-side validation.
+> **Important:** Client-side sanitization alone cannot keep your application fully secure. The `EnableHtmlSanitizer` feature helps with basic cleanup and improves safety, but you still need server-side sanitization to properly protect your application.
 
-**Why client-side sanitization is insufficient:**
+#### Why Client-Side Sanitization Is Not Enough
 
-1. **Bypass potential** - Attackers can disable JavaScript or modify requests
-2. **No database protection** - Malicious content can still be stored
-3. **API vulnerability** - Direct API calls bypass client-side checks
-4. **Zero trust principle** - Never trust client-side validation
+1. **Bypass potential** - Attackers can disable JavaScript or modify requests before they reach the server.
+2. **No database protection** - Even if the UI blocks harmful HTML, attackers can still send malicious content that gets stored in your database.
+3. **API vulnerability** - API calls made directly to the backend skip all client-side checks.
+4. **Zero trust principle** - Client side validation should never be trusted as a complete security measure.
 
-Use `EnableHtmlSanitizer` to:
-- Catch accidental HTML and improve the user experience
-- Add an extra defense layer on top of server-side sanitization
-- Give users immediate feedback without waiting for a server response
+#### When to Use EnableHtmlSanitizer
 
-Do not use it as:
-- The only security mechanism in your application
-- A replacement for server-side sanitization
+- To catch accidental HTML and improve the user experience
+- To provide an extra layer of defense on top of server side sanitization
+- To give immediate feedback without waiting for a server round trip
 
-**BlockEditor with EnableHtmlSanitizer:**
+#### When Not to Use EnableHtmlSanitizer
+
+- As the only security mechanism in your app
+- As a replacement for server side sanitization
+
+#### BlockEditor with EnableHtmlSanitizer
 
 ```razor
 @using Syncfusion.Blazor.BlockEditor;
@@ -187,7 +191,7 @@ Do not use it as:
 }
 ```
 
-**RichTextEditor with server-side sanitization on save:**
+#### RichTextEditor with Client‑Side and Server‑Side Sanitization
 
 ```razor
 @using Syncfusion.Blazor.RichTextEditor
@@ -232,17 +236,19 @@ Do not use it as:
 }
 ```
 
-#### Safe HTML Rendering in Data Components
+### Safe HTML Rendering in Data Components
 
-Components that display user-generated or database content, such as **DataGrid** and **ListView**, follow the same rule: only render HTML that has been sanitized on the server, or use Blazor's automatic encoding for plain text output.
+Components that display user-generated or database content, such as **DataGrid** and **ListView**, follow the same rule: only render HTML that has been sanitized on the server, or display plain text which Blazor encodes automatically.
 
-##### DataGrid Templates
+#### DataGrid Templates
 
-Grid templates must render only server-sanitized content.
+Grid templates should display only content that has already been sanitized on the server. Any unsanitized HTML must never be rendered directly.
 
-**UNSAFE - Direct HTML rendering:**
+#### UNSAFE - Direct HTML Rendering
 
-The following example renders raw HTML content directly from the data source using `MarkupString`, which bypasses Blazor's built-in encoding and exposes the application to XSS attacks if the content contains malicious scripts.
+The example below shows a scenario that should never be used. It renders raw HTML from the data source using `MarkupString`, which bypasses Blazor’s HTML encoding.
+
+If the content includes malicious scripts, it can lead to `XSS (Cross‑Site Scripting)` attacks.
 
 ```razor
 @* NEVER DO THIS *@
@@ -260,9 +266,11 @@ The following example renders raw HTML content directly from the data source usi
 </SfGrid>
 ```
 
-**SAFE - Sanitized MarkupString (server-side sanitization via API):**
+#### SAFE - Sanitized MarkupString (Server-Side Sanitization via API)
 
-The following example fetches content that has already been sanitized on the server. The `SanitizedContent` property holds only clean, safe HTML, so rendering it with `MarkupString` is secure because harmful tags and attributes have already been removed before the data reaches the browser.
+In this example, the HTML content is cleaned and sanitized on the server before it is returned by the API.
+
+The `SanitizedContent` property contains only safe HTML, so rendering it with `MarkupString` is secure.
 
 ```razor
 @using System.Net.Http.Json
@@ -300,9 +308,9 @@ public class Comment
 }
 ```
 
-**Alternative - Text-only rendering:**
+#### Alternative - Text-Only Rendering
 
-If your use case does not require HTML formatting, simply render the content as plain text. Blazor automatically encodes all special characters, ensuring no injected scripts can execute regardless of what the data source contains.
+If HTML formatting is not required, render the content as plain text. Blazor automatically encodes all special characters, ensuring no injected scripts can execute regardless of what the data source contains.
 
 ```razor
 <SfGrid DataSource="@Comments">
@@ -316,9 +324,9 @@ If your use case does not require HTML formatting, simply render the content as 
 </SfGrid>
 ```
 
-##### ListView with Custom Templates
+#### ListView with Custom Templates
 
-The same safe rendering rules apply to ListView when displaying user-generated content:
+The same safe rendering rules apply to ListView when displaying user-generated content.
 
 The following example conditionally renders content based on whether the message contains HTML. When `IsHtml` is `true`, only pre-sanitized content stored in `SanitizedContent` is rendered as markup. Otherwise, plain text is displayed using Blazor's automatic encoding. This keeps all messages safe regardless of their format.
 
@@ -365,12 +373,6 @@ The following example conditionally renders content based on whether the message
     }
 }
 ```
-
-### 4. Content Security Policy (CSP)
-
-A CSP is a browser security mechanism that specifies which scripts and resources are trusted and allowed to run. Even if malicious code bypasses other security layers, a properly configured CSP can still prevent it from executing.
-
-For additional Blazor‑specific details, refer to the [Content Security Policy documentation](./content-security-policy).
 
 ## Server-Side Sanitization (Authoritative)
 
