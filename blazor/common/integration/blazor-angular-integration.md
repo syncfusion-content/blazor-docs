@@ -51,7 +51,7 @@ Microsoft.AspNetCore.Components.CustomElements
 
 ### Add Syncfusion component
 
-Add **.razor** file to incorporate the Syncfusion® Data Grid component:
+Add **.razor** file to incorporate the Syncfusion® DataGrid component:
 
 In this example, the file name used is **OrdersGrid.razor**
 
@@ -232,7 +232,7 @@ Angular app:
 ```
 npm start
 ```
-Open the Angular development URL to see the Blazor Grid inside Angular. 
+Open the Angular development URL to see the Blazor DataGrid component inside Angular. 
 
 N> Start the Blazor application first so that Angular can load its resources through the proxy.
 
@@ -264,6 +264,6 @@ Then, run both with one command:
  npm run start:all 
 ```
 
-Once the compilation completes, open your browser and navigate to http://localhost:4200/ to see your application with the integrated Syncfusion® Data Grid component:
+Once the compilation completes, open your browser and navigate to http://localhost:4200/ to see your application with the integrated Syncfusion® DataGrid component:
 
 ![Blazor DataGrid Component](../images/Blazor-Angular-Integration.png)

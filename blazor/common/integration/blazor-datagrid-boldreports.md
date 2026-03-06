@@ -109,9 +109,9 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 ## Add a sample report
 
-### Create bold-reports-interop.js
+### Create interop file
 
-Create a `bold-reports-interop.js` file inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer JavaScript control.
+Create a interop js (in this example used as `boldreports-interop.js` file name) inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer JavaScript control.
 
 {% tabs %}
 {% highlight js tabtitle="boldreports-interop.js"  %}
@@ -508,12 +508,6 @@ Inject **IJSRuntime**, render DataGrid and invoke this JavaScript interop with t
     
     <div id="viewer" style="height:80vh; margin-top:20px;"></div>
 </div>
-
-<style>
-#viewer_OrdersTable, #viewer_ReportTitle {
-    padding-left:22px;
-}
-</style>
 
 @code{
     public List<Order> Orders { get; set; } = [];
