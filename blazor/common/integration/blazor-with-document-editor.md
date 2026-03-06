@@ -17,7 +17,7 @@ This guide shows how to integrate the **[Syncfusion® Blazor Document Editor](ht
 
 ## Create a project
 
-Create a Blazor Web App using Server render mode. Open the terminal and run the command:
+Create a Blazor Web App using Server render mode. Open the terminal and run the command.
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -30,7 +30,7 @@ cd BlazorWebAppServer
 
 ## Install NuGet Packages
 
-Open the integrated terminal in the project folder (where the `.csproj` is) and run:
+Open the integrated terminal in the project folder (where the `.csproj` is) and run.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -47,7 +47,7 @@ dotnet restore
 
 ## Add Required Namespaces
 
-Add Syncfusion namespaces to your project-level `_Imports.razor`:
+Add Syncfusion namespaces to your project-level `_Imports.razor`.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -82,7 +82,7 @@ var app = builder.Build();
 
 ## Add Stylesheet and Script Resources
 
-Add the theme CSS and Syncfusion scripts in `~/App.razor`:
+Add the theme CSS and Syncfusion scripts in `~/App.razor`.
 
 ```html
 <head>
@@ -111,7 +111,7 @@ If your app’s interactivity location is set to `Per page/component`, add a ren
 
 ## Add Syncfusion Blazor Document Editor component and DataGrid component
 
-Add the Syncfusion Document Editor and DataGrid components to a `.razor` file within your app: 
+Add the Syncfusion Document Editor and DataGrid components to a `.razor` file within your app. 
 
 {% tabs %}
 {% highlight razor %}
@@ -152,11 +152,11 @@ Add the Syncfusion Document Editor and DataGrid components to a `.razor` file wi
 {% endhighlight %}
 {% endtabs %}
 
-Note: By default, the `SfDocumentEditorContainer` component initializes an `SfDocumentEditor` instance internally. If you like to use the events of `SfDocumentEditor` component, then you can set `UseDefaultEditor` property as **false** and define your own `SfDocumentEditor` instance with event hooks in the application (Razor file).
+> By default, the `SfDocumentEditorContainer` component initializes an `SfDocumentEditor` instance internally. If you like to use the events of `SfDocumentEditor` component, then you can set `UseDefaultEditor` property as **false** and define your own `SfDocumentEditor` instance with event hooks in the application (Razor file).
 
 ## Run the Application
 
-Run from the project root:
+Run from the project root.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -168,4 +168,4 @@ dotnet run
 
 The app launches and renders the Syncfusion® Blazor Document Editor and DataGrid in your default browser.
 
-![Blazor DataGrid with Document Editor](../images/DocumentEditor-With-DataGrid.png)
+![Blazor DataGrid with Document Editor](images/document-editor-wit-datagrid.webp)
