@@ -53,7 +53,7 @@ This section explains how to create and run a Microsoft Teams application (Tab A
 4. After a successful build, the output window prompts to create the My365Agent application. Click Add to add the created application.
 ![Newly created Teams application](images/MSTeams/new-teams-app.webp)
 5. Click Open to create the new Microsoft application with a personal tab.
-![New Teams application with a personal tab](images/MSTeams/new-app-personal-tab.png)
+![New Teams application with a personal tab](images/MSTeams/new-app-personal-tab.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban and Themes NuGet in the App
 
@@ -208,6 +208,6 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban comp
 {% endhighlight %}
 {% endtabs %}
 
-![Microsoft Teams application with Syncfusion Blazor controls](images/MSTeams/output-msteams-syncfusion.png)
+![Microsoft Teams application with Syncfusion Blazor controls](images/MSTeams/output-msteams-syncfusion.webp)
 
 N> [View the complete Microsoft Teams application with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
