@@ -64,7 +64,7 @@ dotnet sln add .\Client\Client.csproj
 
 ## Install NuGet packages
 
-Install required packagare for Web API and Blazor WebAssembly app
+Install required packages for Web API and Blazor WebAssembly app
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -424,14 +424,13 @@ This page loads Syncfusion Datagrid orders from a protected API endpoint using t
 Follow these steps to verify that your API and Blazor WebAssembly client work together with JWT authentication and the Syncfusion DataGrid:
 
 1. Start the API
-    * Open a terminal in the Api project folder.
+    * Open a terminal in the API project folder.
     * Run the command: `dotnet run`.
     * The API will start and listen on its configured URL.
 2. Start the Blazor Client  
     * Open a terminal in the Client project folder.
     * Run the command: `dotnet run`.
     * The Blazor dev server will display a local URL—open it in the browser. 
-Shelldotnet run
 3. Login
     * Navigate to /login on the client app.
     * Sign in using:
