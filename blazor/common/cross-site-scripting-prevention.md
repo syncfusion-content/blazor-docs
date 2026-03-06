@@ -105,21 +105,32 @@ Follow these practices when validating input.
 
 
 ```csharp
-public class CommentValidator : AbstractValidator<Comment>
-{
-    public CommentValidator()
-    {
-        RuleFor(x => x.Content)
-            .NotEmpty()
-            .MaximumLength(5000)
-            .Must(BeValidContent)
-            .WithMessage("Comment contains potentially unsafe content");
-    }
+using System;
+using System.ComponentModel.DataAnnotations;
 
-    private bool BeValidContent(string content)
+public class Comment
+{
+    [Required(ErrorMessage = "Comment is required.")]
+    [StringLength(5000, ErrorMessage = "Comment must be 5000 characters or fewer.")]
+    [SafeContent(ErrorMessage = "Comment contains potentially unsafe content.")]
+    public string Content { get; set; } = string.Empty;
+}
+
+public sealed class SafeContentAttribute : ValidationAttribute
+{
+    protected override ValidationResult IsValid(object value, ValidationContext context)
     {
-        // Reject obvious script tags
-        return !content.Contains("<script", StringComparison.OrdinalIgnoreCase);
+        var s = (value as string)?.Trim() ?? string.Empty;
+
+        if (s.IndexOf("<script", StringComparison.OrdinalIgnoreCase) >= 0)
+            return new ValidationResult(ErrorMessage);
+
+        if (s.IndexOf("onerror=", StringComparison.OrdinalIgnoreCase) >= 0 ||
+            s.IndexOf("onload=",  StringComparison.OrdinalIgnoreCase) >= 0 ||
+            s.IndexOf("javascript:", StringComparison.OrdinalIgnoreCase) >= 0)
+            return new ValidationResult(ErrorMessage);
+
+        return ValidationResult.Success!;
     }
 }
 ```
@@ -130,9 +141,9 @@ If your app allows users to enter rich HTML, such as through a rich text editor,
 
 Only the HTML tags you explicitly allow are kept. Always sanitize content before saving it to the database and again before displaying it, including content that comes from external sources.
 
-#### Built-in Sanitization with Syncfusion Components
+#### Built-in Sanitization with Syncfusion<sup style="font-size:70%">&reg;</sup> Components
 
-The `EnableHtmlSanitizer` property is available in the Syncfusion **RichTextEditor** and **BlockEditor** components. It provides built-in client-side XSS protection.
+The `EnableHtmlSanitizer` property is available in the Syncfusion<sup style="font-size:70%">&reg;</sup> **RichTextEditor** and **BlockEditor** components. It provides built-in client-side XSS protection.
 
 #### How EnableHtmlSanitizer Works
 
