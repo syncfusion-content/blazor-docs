@@ -46,7 +46,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Ensure the package [Microsoft.AspNetCore.Components.WebView.Wpf](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebView.Wpf) is installed at version `8.0.16` or later. For details, see the package page in NuGet.
 
-![WPF Blazor App NuGet package reference](images/wpf/wpf-blazor-package-reference.png)
+![WPF Blazor App NuGet package reference](images/wpf/wpf-blazor-package-reference.webp)
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
@@ -130,8 +130,8 @@ Add a Syncfusion Blazor component to any Razor file in the Blazor project. The e
 
 In the Visual Studio toolbar, click the Start button (or press <kbd>F5</kbd>) to build and run the application.
 
-![Build and run WPF Blazor App](images/wpf/start-button.png)
+![Build and run WPF Blazor App](images/wpf/start-button.webp)
 
-![WPF Blazor App with Syncfusion Blazor Components](images/wpf/wpf-blazor-datagrid.png)
+![WPF Blazor App with Syncfusion Blazor Components](images/wpf/wpf-blazor-datagrid.webp)
 
 N> View Sample in [GitHub](https://github.com/SyncfusionExamples/blazor-general-cross-platform-wpf)
