@@ -174,4 +174,4 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 * Spreadsheet displays the workbook for editing.
 
 **Output:**
-![Blazor DataGrid With Spreadsheet](./images/Datagrid-with-spreadsheet.webp)
+![Blazor DataGrid With Spreadsheet](images/datagrid-with-spreadsheet.webp)
