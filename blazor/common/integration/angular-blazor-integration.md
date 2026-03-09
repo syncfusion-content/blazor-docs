@@ -41,7 +41,7 @@ This package enables exporting Angular components as Web Components. This allows
 
 ### Add Syncfusion component
 
-Update your **src/app/app.ts** file to incorporate the Syncfusion® Grid component: 
+Update your **src/app/app.ts** file to incorporate the Syncfusion® DataGrid component: 
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -206,6 +206,6 @@ N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 dotnet run
 ```
 
-Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® Data Grid component:
+Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® DataGrid component:
 
 ![Blazor DataGrid Component](../images/angular-blazor-integration.webp)
