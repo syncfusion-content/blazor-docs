@@ -32,10 +32,6 @@ Ensure the following software and packages are available:
 
 - Blazor Server host (contains API/controller, DbContext and seed): [BlazorServerStyle](BlazorServerStyle)
 - Blazor WASM host (server + client folders): [BlazorWASMStyle/BlazorWASMStyle](BlazorWASMStyle/BlazorWASMStyle)
-- Model (Server): [BlazorServerStyle/Models/LayoutNode.cs](BlazorServerStyle/Models/LayoutNode.cs)
-- Model (WASM): [BlazorWASMStyle/BlazorWASMStyle/Models/LayoutNode.cs](BlazorWASMStyle/BlazorWASMStyle/Models/LayoutNode.cs)
-
-Note: this sample places the API controller and EF Core `DbContext` inside the host projects (see each host's `Controllers/` and `Data/` folders). There is no separate `Api` project in this workspace.
 
 ## Database setup
 
@@ -117,12 +113,8 @@ Both Blazor hosts call a small `LayoutService` that requests `/api/layout` and r
 
 Key files:
 
-- Shared model: [Shared/Models/LayoutNode.cs](Shared/Models/LayoutNode.cs)
 - Blazor Server (hosts API + pages): [BlazorServerStyle/Program.cs](BlazorServerStyle/Program.cs), [BlazorServerStyle/Components/Pages/Home.razor](BlazorServerStyle/Components/Pages/Home.razor), [BlazorServerStyle/Services/LayoutService.cs](BlazorServerStyle/Services/LayoutService.cs)
 - Blazor WASM (host + client): [BlazorWASMStyle/BlazorWASMStyle/Program.cs](BlazorWASMStyle/BlazorWASMStyle/Program.cs), [BlazorWASMStyle/BlazorWASMStyle/BlazorWASMStyle.Client/Program.cs](BlazorWASMStyle/BlazorWASMStyle/BlazorWASMStyle.Client/Program.cs), [BlazorWASMStyle/BlazorWASMStyle/BlazorWASMStyle.Client/Services/LayoutService.cs](BlazorWASMStyle/BlazorWASMStyle/BlazorWASMStyle.Client/Services/LayoutService.cs)
-
- - Model (Server): [BlazorServerStyle/Models/LayoutNode.cs](BlazorServerStyle/Models/LayoutNode.cs)
- - Model (WASM): [BlazorWASMStyle/BlazorWASMStyle/Models/LayoutNode.cs](BlazorWASMStyle/BlazorWASMStyle/Models/LayoutNode.cs)
 
 ### Host configuration snippets
 
@@ -241,6 +233,7 @@ public class LayoutService
 2. Apply migrations and seed (choose the host project that contains `Migrations`):
 
 ```powershell
+dotnet tool install --global dotnet-ef
 cd src/BlazorServerStyle
 dotnet restore
 dotnet build
@@ -269,13 +262,13 @@ Typical WASM host URLs in this workspace are `http://localhost:5252` and `https:
 
 ## Troubleshooting
 
-- API connection errors: confirm PostgreSQL is running and [Api/appsettings.Development.json](Api/appsettings.Development.json) contains correct credentials.
-- CORS errors: check CORS configuration in [Api/Program.cs](Api/Program.cs) and ensure the Blazor host origin is allowed.
+- API connection errors: confirm PostgreSQL is running and [appsettings.Development.json](appsettings.Development.json) contains correct credentials.
+- CORS errors: check CORS configuration in [Program.cs](Program.cs) and ensure the Blazor host origin is allowed.
 - No data in diagram: open `/api/layout` in a browser or Postman to confirm JSON is returned; verify `LayoutService` base address.
 
 ## Next steps / customization
 
-- Change API origin: update CORS in [Api/Program.cs](Api/Program.cs) and `LayoutService` base address in the Blazor hosts.
+- Change API origin: update CORS in [Program.cs](Program.cs) and `LayoutService` base address in the Blazor hosts.
 - Modify seed data: edit `AppDbContext.OnModelCreating()` and create a new migration:
 
 ```powershell
