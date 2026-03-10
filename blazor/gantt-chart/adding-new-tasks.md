@@ -20,7 +20,7 @@ Enable task addition through the toolbar by setting [EditSettings.AllowAdding](h
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true"></GanttEditSettings>
 </SfGantt>
@@ -41,7 +41,7 @@ Enable task addition through the toolbar by setting [EditSettings.AllowAdding](h
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -66,7 +66,7 @@ Enable task addition through the toolbar by setting [EditSettings.AllowAdding](h
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLIjkMxqOcLSDUD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> **Note**: A unique `TaskID` is required to avoid silent failures. Use the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OnActionFailure) event to handle errors like invalid input or duplicate IDs.
+> **Note**: A unique `TaskID` is required to avoid silent failures. Use the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event to handle errors like invalid input or duplicate IDs.
 
 ## Adding tasks via context menu
 
@@ -77,7 +77,7 @@ Enable context menu task addition by setting [EnableContextMenu](https://help.sy
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" EnableContextMenu="true" Width="900px" HighlightWeekends="true">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
@@ -98,7 +98,7 @@ Enable context menu task addition by setting [EnableContextMenu](https://help.sy
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -127,7 +127,7 @@ Enable context menu task addition by setting [EnableContextMenu](https://help.sy
 
 ## Adding tasks programmatically
 
-Tasks can be added programmatically using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method, specifying the task’s position with the [RowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.RowPosition.html) enum (**Top**, **Bottom**, **Above**, **Below**, or **Child**) and an optional `RowIndex`. The task data must include a unique `TaskID`. For example, adding a task as a child creates a subtask under a parent row, updating the project hierarchy. Verify dependencies to avoid issues like circular references.
+Tasks can be added programmatically using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Int32__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__System_Object_) method, specifying the task’s position with the [RowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.RowPosition.html) enum (**Top**, **Bottom**, **Above**, **Below**, or **Child**) and an optional `RowIndex`. The task data must include a unique `TaskID`. For example, adding a task as a child creates a subtask under a parent row, updating the project hierarchy. Verify dependencies to avoid issues like circular references.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -136,7 +136,7 @@ Tasks can be added programmatically using the [AddRecordAsync](https://help.sync
 @using Syncfusion.Blazor.Buttons
 <SfButton @onclick="AddRow">Add Row</SfButton>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true"></GanttEditSettings>
 </SfGantt>
@@ -165,7 +165,7 @@ Tasks can be added programmatically using the [AddRecordAsync](https://help.sync
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()

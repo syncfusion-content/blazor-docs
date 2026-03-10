@@ -563,7 +563,7 @@ Complex data binding can be enabled by adding the [Expand](https://help.syncfusi
 
 ### Complex data generation using ExpandoObject 
 
-[ExpandoObject](https://blazor.syncfusion.com/documentation/datagrid/data-binding/data-binding#expandoobject-binding) is used when properties need to be added dynamically at runtime. This is suitable for scenarios where the data structure is not fixed.
+[ExpandoObject](https://blazor.syncfusion.com/documentation/datagrid/data-binding/local-data#expandoobject-complex-data-binding) is used when properties need to be added dynamically at runtime. This is suitable for scenarios where the data structure is not fixed.
 
 Complex data binding can be achieved by using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property when working with ExpandoObject.
 
@@ -618,7 +618,7 @@ Complex data binding can be achieved by using the **dot (.)** operator in the [F
 
 ### Complex data generation using DynamicObject
 
-[DynamicObject](https://blazor.syncfusion.com/documentation/datagrid/data-binding#dynamicobject-binding) is used when custom logic for property access or dynamic behavior is required.
+[DynamicObject](https://blazor.syncfusion.com/documentation/datagrid/column-rendering#complex-data-generation-using-dynamicobject) is used when custom logic for property access or dynamic behavior is required.
 
 Complex data binding can be achieved by using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field)  property when working with DynamicObject.
 

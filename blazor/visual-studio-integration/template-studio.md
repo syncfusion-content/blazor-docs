@@ -13,7 +13,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> provides the Blazor Template St
 
 The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2026**:
 
-> **Note:** The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extensions for Visual Studio 2026 are available only for Essential Studio<sup style="font-size:70%">&reg;</sup> versions 20.3.0.56 and earlier.
+> **Note:** The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extensions for Visual Studio 2026 are available only for Essential Studio<sup style="font-size:70%">&reg;</sup> versions 31.2.10 and later.
 
 N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfusion® Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If it is not installed, follow the steps in the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) topic.
 
@@ -25,17 +25,17 @@ N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfu
 
      Choose **Extension -> Syncfusion® -> Essential Studio® for Blazor -> Create New Syncfusion Project...** from the **Visual Studio menu**.
 
-     ![CreateMenu](images/createmenu.png)
+     ![CreateMenu](images/createmenu.webp)
 
      **Option 2**
 
      Choose **File -> New -> Project** from the menu. This opens the new project dialog. Find Syncfusion<sup style="font-size:70%">&reg;</sup> templates for Blazor by selecting the **Syncfusion** project type filter or by entering **Syncfusion** in the search box.
 
-     ![CreateNewWindow](images/createnewwindow.png)
+     ![CreateNewWindow](images/createnewwindow.webp)
 
 3. Select the **Syncfusion® Blazor Template Studio** and click **Next**.
 
-     ![CreateNewWizard](images/createnewwizard.png)
+     ![CreateNewWizard](images/createnewwizard.webp)
 
 4. The Syncfusion® Blazor Template Studio wizard will be launched to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor app.
 
@@ -74,17 +74,17 @@ N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfu
     </tbody>
     </table>
 
-    ![WebAppTemplate](images/webapptemplate.png)
+    ![WebAppTemplate](images/webapptemplate.webp)
 
      In the **Syncfusion Blazor WebAssembly App** project type, choose Progressive Web Application (PWA).
 
-     ![WASMTemplate](images/wasmtemplate.png)
+     ![WASMTemplate](images/wasmtemplate.webp)
 
      > **Note:** The Progressive Web Application option is available when .NET 8.0 or later is installed.
 
 5. Click either **Next** or the **Controls** tab. The Syncfusion® Blazor components you can add to the application are listed.
 
-     ![Controls Section](images/controlssection1.png)
+     ![Controls Section](images/controlssection1.webp)
 
      Choose the required control(s) by clicking the corresponding control box.
 
@@ -109,21 +109,21 @@ N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfu
 
      If you choose the **Blazor Web App** application type, you can customize the Interactivity type and Interactivity location options.
 
-     ![WebAppConfiguration](images/webappconfig.png)
+     ![WebAppConfiguration](images/webappconfig.webp)
 
      If you choose the **Blazor WebAssembly App** application type, you can enable or disable the Progressive Web Application option.
 
-     ![WASMConfiguration](images/wasmconfig.png)
+     ![WASMConfiguration](images/wasmconfig.webp)
 
      **Project details section**
 
      You can change the configuration details below in the Project Details section to change the application type, remove control(s) from the selected controls, or change the configurations.
 
-     ![ProjectDetails](images/rightsideprojectdetails.png)
+     ![ProjectDetails](images/rightsideprojectdetails.webp)
 
 8. Click **Create**. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application is created with the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages, styles, and the render code for the selected Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
-     ![Readme](images/readme.png)
+     ![Readme](images/readme.webp)
 
 9. The generated project is configured with the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package version, selected theme, namespaces, chosen authentication, and component render code for the selected components.
 
@@ -143,29 +143,29 @@ We need to register the created application in the Google API Console for Indivi
 
 2. Click Create Credentials and OAuth Client Id.
 
-    ![Google API console credentials page](images/googelapiconsolecredentials.png)
+    ![Google API console credentials page](images/googelapiconsolecredentials.webp)
 
-    ![Google API Oauth client Id](images/oauthclientid.png)
+    ![Google API Oauth client Id](images/oauthclientid.webp)
 
 3. Select Application type as Web Application in client Id creation.
 
-    ![ApplicationType](images/clientidapplicationtype.png)
+    ![ApplicationType](images/clientidapplicationtype.webp)
 
 4. Add your publish URL link as an Authorized URI and login URL as Redirected URI.
 
-    ![RedirectedURI](images/redirecteduri.png)
+    ![RedirectedURI](images/redirecteduri.webp)
 
 5. Click save then OAuth client id will be created and copy that credential.
 
-    ![ClientIdCreation](images/clientidcreation.png)
+    ![ClientIdCreation](images/clientidcreation.webp)
 
 6. Add that Client Id, and RedirectUri in appsettings.json file of your application.
 
-    ![ClinetIdConfiguration](images/clinetidconfiguration.png)
+    ![ClinetIdConfiguration](images/clinetidconfiguration.webp)
 
 7. Change the build configuration bind as google from Local in program.cs file.
 
-    ![buildconfigurationbind](images/buildconfigurationbind.png)
+    ![buildconfigurationbind](images/buildconfigurationbind.webp)
 
 ### Microsoft Identity Platform Authentication
 
@@ -177,27 +177,27 @@ We need to register the created application in the Google API Console for Indivi
 
 2. Click New Registration in App Registration page.
 
-    ![AppRegistration](images/appregistration.png)
+    ![AppRegistration](images/appregistration.webp)
 
 3. Give name of the application and selected supported type as single tenant.
 
-    ![Name and supported Account type](images/namesupportedaccounttype.png)
+    ![Name and supported Account type](images/namesupportedaccounttype.webp)
 
 4. Dropdown the page, select platform as web and give your application Redirect URI like {Redirect URI}/signin-oidc and click Register.
 
-    ![Platform and Redirect URI](images/aadredirecteduri.png)
+    ![Platform and Redirect URI](images/aadredirecteduri.webp)
 
 5. App will be registered, go to the Authentication page and tick Id token check box.
 
-    ![Access token and Id token](images/authenticationcheckbox1.png)
+    ![Access token and Id token](images/authenticationcheckbox1.webp)
 
 6. Get client tenant id and application id form overview page.
 
-    ![Clinet tenat id](images/clinettenantid.png)
+    ![Clinet tenat id](images/clinettenantid.webp)
 
 7. Configure those client tenant id, application id, and domain in your application appsettings.json file.
 
-    ![Project configuration](images/configuration2.png)
+    ![Project configuration](images/configuration2.webp)
 
 #### Web Application and Progressive Web Application
 
@@ -207,33 +207,33 @@ We need to register the created application in the Google API Console for Indivi
 
 2. Click New Registration in App Registration page.
 
-    ![AppRegistration](images/appregistration.png)
+    ![AppRegistration](images/appregistration.webp)
 
 3. Give name of the application and selected supported type as single tenant.
 
-    ![Name and supported Account type](images/namesupportedaccounttype.png)
+    ![Name and supported Account type](images/namesupportedaccounttype.webp)
 
 4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
 
-    ![Platform and Redirect URI](images/aadredirecteduri.png)
+    ![Platform and Redirect URI](images/aadredirecteduri.webp)
 
 5. App will be registered, go to the Authentication page and tick Access token an Id token check box.
 
-    ![Access token and Id token](images/authenticationcheckbox.png)
+    ![Access token and Id token](images/authenticationcheckbox.webp)
 
 6. Migrate the API by clicking the highlighted arrow like in below image.
 
-    ![API Migration](images/migration1.png)
+    ![API Migration](images/migration1.webp)
 
-    ![Migration configuration](images/migration2.png)
+    ![Migration configuration](images/migration2.webp)
 
 7. Get client tenant id and application id form overview page.
 
-    ![Clinet tenat id](images/clinettenantid.png)
+    ![Clinet tenat id](images/clinettenantid.webp)
 
 8. Configure those client tenant id and application id in your application appsettings.json file.
 
-    ![Clinet ID and Tenant ID configuration](images/clinettenantidconfiguration.png)
+    ![Clinet ID and Tenant ID configuration](images/clinettenantidconfiguration.webp)
 
 #### ASP.NET Core Hosted Web Application, and ASP.NET Core Hosted with Progressive Web Application
 
@@ -245,33 +245,33 @@ We need to register the created application in the Google API Console for Indivi
 
 2. Click New Registration in App Registration page.
 
-    ![AppRegistration](images/appregistration.png)
+    ![AppRegistration](images/appregistration.webp)
 
 3. Give name of the application and selected supported type as single tenant.
 
-    ![Name and supported Account type](images/namesupportedaccounttype.png)
+    ![Name and supported Account type](images/namesupportedaccounttype.webp)
 
 4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
 
-    ![Platform and Redirect URI](images/aadredirecteduri.png)
+    ![Platform and Redirect URI](images/aadredirecteduri.webp)
 
 5. App will be registered, go to the Authentication page and tick Access token an Id token check box.
 
-    ![Access token and Id token](images/authenticationcheckbox.png)
+    ![Access token and Id token](images/authenticationcheckbox.webp)
 
 6. Migrate the API by clicking the highlighted arrow like in below image.
 
-    ![API Migration](images/migration1.png)
+    ![API Migration](images/migration1.webp)
 
-    ![Migration configuration](images/migration2.png)
+    ![Migration configuration](images/migration2.webp)
 
 7. Get client tenant id and application id form overview page.
 
-    ![Clinet tenat id](images/clinettenantid.png)
+    ![Clinet tenat id](images/clinettenantid.webp)
 
 8. Configure those client tenant id and application id in your application appsettings.json file.
 
-    ![Clinet ID and Tenant ID configuration](images/clinettenantidconfiguration.png)
+    ![Clinet ID and Tenant ID configuration](images/clinettenantidconfiguration.webp)
 
 ##### Server project Registration and configuration
 
@@ -281,55 +281,55 @@ We need to register the created application in the Google API Console for Indivi
 
 2. Click New Registration in App Registration page.
 
-    ![Server App Registration](images/appregistration.png)
+    ![Server App Registration](images/appregistration.webp)
 
 3. Give name of the application and selected supported type as single tenant.
 
-    ![Name and supported Account type](images/namesupportedaccounttype.png)
+    ![Name and supported Account type](images/namesupportedaccounttype.webp)
 
 4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
 
-    ![Server Platform and Redirect URI](images/aadredirecteduri.png)
+    ![Server Platform and Redirect URI](images/aadredirecteduri.webp)
 
 5. App will be registered, go to the Authentication page and tick Access token an Id token check box.
 
-    ![Access token and Id token](images/authenticationcheckbox.png)
+    ![Access token and Id token](images/authenticationcheckbox.webp)
 
 6. Migrate the API by clicking the highlighted arrow like in below image.
 
-    ![API Migration](images/migration1hostedserver.png)
+    ![API Migration](images/migration1hostedserver.webp)
 
-    ![Migration configuration](images/migration2hostedserver.png)
+    ![Migration configuration](images/migration2hostedserver.webp)
 
 7. Add a scope API in Expose an API page.
 
-    ![Add scope API](images/addscopeapi.png)
+    ![Add scope API](images/addscopeapi.webp)
 
 8. Give scope name, admin consent display name, and admin consent description and click Add scope. Scope API will be created, copy those scope API Value.
 
-    ![Add scope API configuration](images/addscopeapi1.png)
+    ![Add scope API configuration](images/addscopeapi1.webp)
 
 9. Get client tenant id and application id form overview page.
 
-    ![Clinet tenat id](images/clinettenantid.png)
+    ![Clinet tenat id](images/clinettenantid.webp)
 
 10. Configure those client tenant id, application id, added scope api id, and domain in your application appsettings.json file.
 
-    ![Project configuration](images/configuration1.png)
+    ![Project configuration](images/configuration1.webp)
 
 11. Configure the scope API in client application program.cs file below highlighted place.
 
-    ![Scope API configuration](images/scopeapiconfiguration.png)
+    ![Scope API configuration](images/scopeapiconfiguration.webp)
 
 ### Run application
 
 You can run the application and see the Syncfusion® components you selected. Select a component to see component output.
 
-![Blazor Template output page](images/homepage.png)
+![Blazor Template output page](images/homepage.webp)
 
 You can select a culture language in combo box at top right on the output page to apply the culture in the application.
 
-![Blazor Template output page](images/localization.png)
+![Blazor Template output page](images/localization.webp)
 
 N> **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio wizard.
 
@@ -363,35 +363,35 @@ Open a command prompt in your project directory and execute the following comman
 
 1.	Launch the application and register by submitting your email address and creating a password.
 
-    ![Register the WebApp](images/webappregister.png)
+    ![Register the WebApp](images/webappregister.webp)
 
 2.	Confirm your registration by clicking **Click here to confirm your account.**
 
-    ![Confirming the WebApp registration](images/webappregisterconfirmation.png)
+    ![Confirming the WebApp registration](images/webappregisterconfirmation.webp)
 
 3.	Submit your registered email address and password to log in to the application.
 
-    ![LogIn to the WebApp](images/webapplogin.png)
+    ![LogIn to the WebApp](images/webapplogin.webp)
 
 #### Server Application, ASP.NET Core hosted Web Application, and Progressive Web Application with ASP.NET Core hosted
 
 1. For register the application, submit your email address and create a password.
 
-    ![Register the application](images/registerapplication.png)
+    ![Register the application](images/registerapplication.webp)
 
 2. Confirming registration by clicking **Click here to confirm your account.**
 
-    ![Register the confirmation](images/registerconfirmation.png)
+    ![Register the confirmation](images/registerconfirmation.webp)
 
 3. Submit your registered email address and password to login the application.
 
-    ![login to the application](images/login.png)
+    ![login to the application](images/login.webp)
 
 #### Web Application and Progressive Web Application
 
 1. Login to the application using Gmail accounts.
 
-    ![Google login](images/googlelogin.png)
+    ![Google login](images/googlelogin.webp)
 
 ### Microsoft Identity Platform
 
@@ -401,5 +401,5 @@ Open a command prompt in your project directory and execute the following comman
 
 2. Accept permission request of your application.
 
-    ![Accept permission](images/microsoftauthentication.png)
+    ![Accept permission](images/microsoftauthentication.webp)
 

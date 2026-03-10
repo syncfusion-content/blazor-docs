@@ -17,7 +17,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts (sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), and more). Use this to inspect or adjust action parameters before execution.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use this to inspect or adjust action parameters before execution.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -64,7 +64,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions (sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), etc.) finish. Use it for post-processing or UI updates.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use it for post-processing or UI updates.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -118,7 +118,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 <SfGrid TValue="Order">
     <GridEvents OnActionFailure="ActionFailureHandler" TValue="Order"></GridEvents>
-    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orderss/" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders/" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -2426,7 +2426,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDragStarting
 
-`RowDragStarting` triggers when a row drag action begins. Use it to validate the drag operation, set drag metadata, or restrict which rows can be dragged.
+[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDragStarting) triggers when a row drag action begins. Use it to validate the drag operation, set drag metadata, or restrict which rows can be dragged.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2520,7 +2520,7 @@ N> The DataGrid continues to evolve with new events. If an event is missing, sub
 
 ## RowDropping
 
-RowDropping triggers while a row is being dropped over a target. Use it to validate the drop target or to prevent dropping on invalid locations.
+[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropping) triggers while a row is being dropped over a target. Use it to validate the drop target or to prevent dropping on invalid locations.
 
 > To cancel the drop, set args.Cancel to true in the RowDropping event handler.
 

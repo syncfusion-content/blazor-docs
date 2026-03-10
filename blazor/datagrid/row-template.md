@@ -191,7 +191,7 @@ public class EmployeeData
 
 ## Row template with formatting
 
-Typically, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format). When using row templates, values rendered inside the template are not affected by `Columns.Format`.
+Typically, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). When using row templates, values rendered inside the template are not affected by `Columns.Format`.
 
 To format values inside a row template, apply .NET formatting in the template (for example, using `ToString` with a format string) or invoke a helper method to produce the desired output such as dates, currency, or custom text.
 

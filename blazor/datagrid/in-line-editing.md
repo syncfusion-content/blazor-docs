@@ -699,7 +699,7 @@ Grid.DeleteRecordAsync();
 <SfButton CssClass="e-outline" Content="Delete Multiple" OnClick="GridDeleteAction" style="margin-bottom:5px"></SfButton>
 <SfGrid DataSource="@OrderData" AllowSelection="true" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>

@@ -25,7 +25,7 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 
 ## Disabled state
 
-Specify a boolean value for the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Enabled) property to indicate whether the component is enabled.
+Specify a boolean value for the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Enabled) property to indicate whether the component is enabled.
 
 {% highlight cshtml %}
 
@@ -141,7 +141,7 @@ Customize the popup’s appearance by targeting list item selectors within the p
 
 ## Change the HTML attributes
 
-Add additional HTML attributes such as styles and class to the root element using the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_HtmlAttributes) property, which accepts any number of key–value pairs.
+Add additional HTML attributes such as styles and class to the root element using the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_HtmlAttributes) property, which accepts any number of key–value pairs.
 
 {% highlight cshtml %}
 
@@ -171,7 +171,7 @@ In the following code , the CSS style that targets the `.e-list-item` class with
 
 ## Disable specific items in ComboBox
 
-Prevent certain items from being selected by marking them disabled via a custom class on the popup using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_CssClass) property, and then applying styles or script logic. In the following example, a single list item is disabled using JavaScript interop.
+Prevent certain items from being selected by marking them disabled via a custom class on the popup using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property, and then applying styles or script logic. In the following example, a single list item is disabled using JavaScript interop.
 
 {% tabs %}
 {% highlight razor %}

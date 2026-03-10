@@ -20,16 +20,16 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -43,13 +43,13 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
             // Sets the shape to activity.
             Shape = new BpmnExpandedSubProcess()
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLIiXXdLYuCAIfE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnExpandedSubProcess/BpmnExpandedSubProcess)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/BpmnExpandedSubProcessSample.razor)
 
 ![BPMN Expanded Sub-Process shape in Blazor Diagram.](../images/Bpmn-ExpandedSubProcess.png)
 
@@ -63,46 +63,46 @@ The following code example explains how to add a BPMN node to an BPMN Expanded S
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize node collection with Node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
-            {
-                ID = "node1",
-                OffsetX = 300,
-                OffsetY = 300,
-                Width = 70,
-                Height = 70,
-                Shape = new BpmnActivity() { ActivityType = BpmnActivityType.Task }
-            };
-        nodes.Add(node1);
+        {
+            ID = "node1",
+            OffsetX = 300,
+            OffsetY = 300,
+            Width = 70,
+            Height = 70,
+            Shape = new BpmnActivity() { ActivityType = BpmnActivityType.Task }
+        };
+        _nodes.Add(node1);
         Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 300,
+            OffsetX = 500,
+            OffsetY = 300,
+            Height = 300,
+            Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
+            Shape = new BpmnExpandedSubProcess()
             {
-                ID = "node2",
-                Width = 300,
-                OffsetX = 500,
-                OffsetY = 300,
-                Height = 300,
-                Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
-                Shape = new BpmnExpandedSubProcess()
-                {
-                    Children = new DiagramObjectCollection<string>() { "node1" }
-                }
-            };
-        nodes.Add(node2);
+                Children = new DiagramObjectCollection<string>() { "node1" }
+            }
+        };
+        _nodes.Add(node2);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBoitNxAtXgsIWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnExpandedSubProcess/AddChildren)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/AddChildren.razor)
 
 
 ![ExpandedSubProcess BPMN Shape](../images/Bpmn-ExpandedSubProcess-WithChildren.png)
@@ -128,16 +128,16 @@ The following image shows how to add BPMN node into the BPMN ExpandedSubProcess 
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@_nodes"/>
 
 @code
 {       
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -154,13 +154,13 @@ The following image shows how to add BPMN node into the BPMN ExpandedSubProcess 
                 Loop = BpmnLoopCharacteristic.Standard,
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSCXtnAjCCJzPT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessLoop)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessLoop.razor)
 
 ![Standard ExpandedSubProcess BPMN Shape](../images/Bpmn-Task-Loop-Standard.png)  
 
@@ -182,16 +182,16 @@ The following table describes the available loop types for an Expanded Sub-Proce
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -208,13 +208,13 @@ The following table describes the available loop types for an Expanded Sub-Proce
                 IsCompensation = true,
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBystZxqXilLbOk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessCompensation)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessCompensation.razor)
 
 
  ![IsCompensationActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-Task-Compensation.png)
@@ -227,16 +227,16 @@ An Ad-Hoc Expanded Sub-Process is a group of tasks that are executed in any orde
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -253,13 +253,13 @@ An Ad-Hoc Expanded Sub-Process is a group of tasks that are executed in any orde
                 IsAdhoc = true,
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBSsXjnKTCBmLLc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessAdhoc)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessAdhoc.razor)
 
 
 ![IsAdHocActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-ExpandedSub-Process-Adhoc.png)
@@ -272,16 +272,16 @@ The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
 
 @code
 {
     // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        _nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node.
@@ -298,13 +298,13 @@ The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
                 SubProcessType = BpmnSubProcessType.Event
             }
         };
-        nodes.Add(node);
+        _nodes.Add(node);
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVoCZjRAziQIRel?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessType)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessType.razor)
 
 ![Event Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Event.png)
 

@@ -43,11 +43,11 @@ You can create a **Blazor WebAssembly Standalone App** using Visual Studio via [
 
 * Replace the `ClientId` with the OAuth 2.0 client ID of your created project.
 
-![OAuth 2.0 client ID](images/oauth-client-id.png)
+![OAuth 2.0 client ID](images/oauth-client-id.webp)
 
 * The `RedirectUri` (https://<example.com>/authentication/login-callback) must be registered in the Google APIs console as shown below.
 
-![OAuth RedirectUri](images/oauth-rediredt-uri.png)
+![OAuth RedirectUri](images/oauth-rediredt-uri.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
@@ -130,7 +130,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the default web browser.
 
 
-![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
+![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.webp)
 
 
 ## See Also

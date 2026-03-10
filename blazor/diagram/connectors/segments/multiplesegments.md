@@ -11,19 +11,19 @@ documentation: ug
 
 ## How to Create Connectors with Multiple Segments
 
-Connectors can include a sequence of segment objects. To create a connector with multiple segments, define and add the segments to the [connector.Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) collection. The following code example illustrates how to create a connector with multiple segments.
+Connectors can include a sequence of segment objects. To create a connector with multiple segments, define the segments with [ConnectorSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) class and add the segments to the [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection. The following code example illustrates how to create a connector with multiple segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@_connectors">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
     //Defines diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> _connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
@@ -54,11 +54,11 @@ Connectors can include a sequence of segment objects. To create a connector with
             },
         };
         //Add the connector into connectors' collection.
-        connectors.Add(connector1);
+        _connectors.Add(connector1);
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/MultipleSegments)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/MultipleSegments.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMXDnKoKLrXqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Multiple Segment](../../images/blazor-diagram-multiple-segment.png)" %}
 

@@ -597,7 +597,7 @@ To implement a custom filter component, define a template using the `FilterTempl
     {
         if(args.Value== null)
         {
-            await Grid.ClearFiltering();
+            await Grid.ClearFilteringAsync();
         }
         else
         {
@@ -610,7 +610,7 @@ To implement a custom filter component, define a template using the `FilterTempl
     {
         if (args.Value == "All" || args.Value == null)
         {
-            await Grid.ClearFiltering();
+            await Grid.ClearFilteringAsync();
         }
         else
         { 
@@ -625,7 +625,7 @@ To implement a custom filter component, define a template using the `FilterTempl
     {
         if (args.Value == null)
         {
-            await Grid.ClearFiltering();
+            await Grid.ClearFilteringAsync();
         }
         else
         {
@@ -640,7 +640,7 @@ To implement a custom filter component, define a template using the `FilterTempl
     {
         if(args.Value == null)
         {
-            await Grid.ClearFiltering();
+            await Grid.ClearFilteringAsync();
         }
         else
         {
@@ -657,7 +657,7 @@ To implement a custom filter component, define a template using the `FilterTempl
     {
         if (args.Value == null)
         {
-            await Grid.ClearFiltering();
+            await Grid.ClearFilteringAsync();
         }
         else
         {

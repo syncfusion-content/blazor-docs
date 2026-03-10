@@ -204,6 +204,7 @@ The following example demonstrates how to persist checkbox selections when the G
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
 
 <SfGrid AllowSelection="true" AllowPaging="true" AllowSorting="true" AllowFiltering="true" TValue="OrdersDetails">
     <SfDataManager Url="https://blazor.syncfusion.com/services/development/odata/gridodatav4service" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>

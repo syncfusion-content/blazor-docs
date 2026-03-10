@@ -84,7 +84,7 @@ public class TaskDetails
 
 At initial load, the Grid renders a specified number of data blocks (pages), which equates to the `InitialBlocks` value multiplied by the page size.
 
-Configure this using [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html). By default, three pages are rendered initially. Afterwards, additional data is buffered and loaded based on page size or the number of rows that fit within the given height.
+Configure this using [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_InitialBlocks) on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html). By default, three pages are rendered initially. Afterwards, additional data is buffered and loaded based on page size or the number of rows that fit within the given height.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -277,7 +277,7 @@ public class TaskDetails
 * Lazy load grouping with infinite scrolling does not support cache mode; infinite scrolling applies only to parent-level caption rows in this scenario.
 * In normal grouping, infinite scrolling is not supported for child items during expand/collapse; all child items load when caption rows are toggled.
 * Aggregates and total group items reflect the current view items; this is expected with on-demand data loading.
-* Programmatic selection using [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) and [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__) is not supported in infinite scrolling.
+* Programmatic selection using [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) and [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__System_Boolean_) is not supported in infinite scrolling.
 * Infinite scrolling is not compatible with:
     1. Batch editing
     2. Normal editing

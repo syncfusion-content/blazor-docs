@@ -11,11 +11,11 @@ documentation: ug
 
 Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart.
 
-You can learn how to add annotations to Blazor Charts by watching the video below.
+A detailed walkthrough demonstrating how to add and customize annotations in the chart is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=TpUoXrYlCkU" %}
-
- The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows to add annotations to the chart. Specify the ID of the element that needs to be displayed in the chart area by using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property of the annotation.
+ 
+ The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property is used to add annotations to the chart. [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html) content can be defined by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_ContentTemplate) property, which allows custom HTML content to be rendered at a specified coordinate within the chart area.
 
 ```cshtml
 
@@ -167,7 +167,7 @@ The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ![Inserting Annotation using Coordinate in Blazor Column Chart](images/annotation/blazor-column-chart-coordinate-annotation.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

@@ -192,7 +192,7 @@ When the [TaskMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gant
 
 ## Unscheduled tasks
 
-Unscheduled tasks are planned for a project without any definite schedule dates. The Gantt control supports rendering the unscheduled tasks. You can create or update the tasks with anyone of start date, end date, and duration values or none. You can enable or disable the unscheduled tasks by using the [AllowUnscheduledTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowUnscheduledTasks) property. The following images represent the various types of unscheduled tasks in Gantt.
+Unscheduled tasks are planned for a project without any definite schedule dates. The Gantt control supports rendering the unscheduled tasks. You can create or update the tasks with any one of start date, end date, and duration values or none. You can enable or disable the unscheduled tasks by using the [AllowUnscheduledTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowUnscheduledTasks) property. The following images represent the various types of unscheduled tasks in Gantt.
 
 Taskbar state |Auto |Manual
 -----|-----|-----
@@ -385,14 +385,14 @@ In Gantt Chart, the task's duration value can be measured by the following durat
 * Hour
 * Minute
 
-In Gantt, we can define duration unit for whole project by using [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DurationUnit) property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value. And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
+In Gantt, we can define duration unit for whole project by using [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_DurationUnit) property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value. And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
 
 * Using `DurationUnit` property, to map the duration unit data source field.
 * Defining the duration unit value along with the duration field in the data source.
 
 ### Mapping the duration unit field
 
-The below code snippet explains the mapping of duration unit data source field to the Gantt control using the [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DurationUnit) property.
+The below code snippet explains the mapping of duration unit data source field to the Gantt control using the [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_DurationUnit) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -446,7 +446,7 @@ The below code snippet explains the mapping of duration unit data source field t
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBoCNsehHsMykiH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The default value of the [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DurationUnit) property is `day`.
+> The default value of the [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_DurationUnit) property is `day`.
 
 ### Defining duration unit along with duration field
 

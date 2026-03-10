@@ -41,7 +41,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` is updated to version `8.0.16` or later.
 
-![Winforms Blazor App NuGet package reference](images/winforms/winforms-blazor-package-reference.png)
+![Winforms Blazor App NuGet package reference](images/winforms/winforms-blazor-package-reference.webp)
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list and component mapping.
 
@@ -96,4 +96,4 @@ Add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component to any R
 
 In the Visual Studio toolbar, select the start button to build and run the app.
 
-![WinForms Blazor App with Syncfusion Blazor Components](images/winforms/winforms-blazor-calendar.png)
+![WinForms Blazor App with Syncfusion Blazor Components](images/winforms/winforms-blazor-calendar.webp)

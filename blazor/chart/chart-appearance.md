@@ -160,8 +160,6 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
 
-Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
-
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
@@ -247,7 +245,7 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 ## Chart title
 
-The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property can be used to give the chart a title in-order to provide information about the data displayed.
+A chart title can be specified using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property to convey information about the displayed data.
 
 ```cshtml
 
@@ -332,7 +330,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIjzjTrISHobHi?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIjzjTrISHobHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.png)" %}
 
 When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Y) properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
 
@@ -375,7 +373,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoXTtfLyEQbMWr?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoXTtfLyEQbMWr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.png)" %}
 
 ## Chart subtitle
 

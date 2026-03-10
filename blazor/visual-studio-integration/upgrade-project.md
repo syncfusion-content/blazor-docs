@@ -7,46 +7,52 @@ control: Common
 documentation: ug
 ---
 
-# Upgrading Syncfusion® Blazor application to latest version
+# Upgrade a Project to the latest Syncfusion® Version
 
-The Syncfusion® Blazor project migration wizard for Visual Studio updates an existing Syncfusion® Blazor application from one Essential Studio® version to another by upgrading the corresponding Syncfusion® Blazor NuGet packages. This reduces manual effort and helps keep projects current.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for Visual Studio updates an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application to a newer Essential Studio<sup style="font-size:70%">&reg;</sup> release by automatically updating NuGet package references and theme links.
 
-The steps below describe how to upgrade the Syncfusion® version in a Syncfusion® Blazor application using Visual Studio 2022.
+## Steps to migrate the project
 
-N> Before using the Syncfusion® Blazor Project Migration, verify that the Syncfusion® Blazor Template Studio extension is installed in Visual Studio (Extensions -> Manage Extensions -> Installed). If the extension is not installed, install it by following the instructions in the [download and installation](download-and-installation) help topic.
+1. Open the existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application in **Visual Studio 2022** or **Visual Studio 2026**.
 
-1. Open the Syncfusion® Blazor application that uses Syncfusion® components in Visual Studio 2022.
+    Supported application types:
+    - Blazor Web App (Server or WebAssembly rendering)
+    - Blazor Server App
+    - Blazor WebAssembly App (standalone or ASP.NET Core hosted)
+    - Blazor WebAssembly App (Progressive Web Application)
 
 2. Open the Migration Wizard using one of the following options:
 
-    **Option 1**
+    **Option 1:**
 
-    Choose **Extensions -> Syncfusion® -> Essential Studio® for Blazor -> Migrate Project…** from the Visual Studio 2022 menu.
+    Choose **Extensions -> Syncfusion® -> Essential Studio® for Blazor -> Migrate Project…** from the Visual Studio menu.
 
-    ![Open the Migrate Project wizard from the Extensions menu in Visual Studio](images/MigrationMenu.PNG)
+    ![Open the Migrate Project wizard from the Extensions menu in Visual Studio](images/MigrationMenu.webp)
 
-    **Option 2**
+    **Option 2:**
 
-    In **Solution Explorer**, right-click the project, select **Syncfusion® Blazor**, and then choose **Migrate Syncfusion® Blazor project from another version...**
+    In **Solution Explorer**, right-click the project, select **Syncfusion® Blazor**, then choose **Migrate Syncfusion® Blazor project from another version...**
 
-    ![Open the Migrate Project wizard from the Solution Explorer context menu](images/MigrationAddin.png)
+      ![Open the Migrate Project wizard from the Solution Explorer context menu](images/MigrationAddin.webp)
 
-3. In the Syncfusion® Project Migration window, select the required Syncfusion® Blazor version to migrate to.
+    N> The Migration option becomes available only after the project references the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
 
-    N> Versions are loaded from the Syncfusion® Blazor NuGet packages published on [NuGet.org](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and require an active internet connection.
+3. In the Syncfusion® Project Migration window, select the desired Syncfusion® Blazor version to migrate to.
 
-    ![Syncfusion Blazor Project Migration wizard with version selection](images/Migration.png)
+    ![Syncfusion Blazor Project Migration wizard with version selection](images/Migration.webp)
 
-4. Select the **Enable a backup before migrating** checkbox to create a project backup, and then choose the backup location.
+    N> Versions are loaded from the Syncfusion® Blazor NuGet packages available on [NuGet.org](https://www.nuget.org/) and require an active internet connection.
 
-5. After the migration completes, a confirmation message is displayed.
+4. (Optional) Select **Enable a backup before migrating** to create a backup of the original project and choose a backup location.
 
-    ![Migration succeeded message after completing the project migration](images/MigrationSuccess.png)
+5. After migration completes, a confirmation message is displayed.
 
-    If a backup was enabled, the original project is saved to the specified backup path after migration, as shown below.
+    ![Migration succeeded message after completing the project migration](images/MigrationSuccess.webp)
 
-    ![Backup location of the original project created during migration](images/Backuplocation.png)
+    If a backup was created, the original project will be saved to the specified backup path.
 
-6. The Syncfusion® Blazor NuGet packages are updated to the selected version in the Syncfusion® Blazor application.
+    ![Backup location for the original project created during conversion](images/Backuplocation.webp)
 
-7. If using a trial setup or packages from NuGet.org, a Syncfusion® license key must be registered with the application. Syncfusion® introduced license registration starting with the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Refer to the [licensing overview and key generation guide](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key. For details about the licensing changes introduced in Essential Studio®, see the [2018 Volume 2 announcement](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx).
+6. The migration updates the Syncfusion® Blazor NuGet package references in the application's `.csproj` to the selected version.
+
+7. If using trial setup or NuGet packages from `nuGet.org`, register the Syncfusion® license key in the application. Syncfusion® introduced license registration in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. See the [licensing overview and key generation guide](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register Syncfusion® license key. For details about the licensing changes introduced in Essential Studio®, see the [2018 Volume 2 announcement](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2).

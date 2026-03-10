@@ -683,7 +683,10 @@ By default, grouping is performed based on the raw values. Alternatively, numeri
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();       
-    public OrderData() {
+    public OrderData()
+    {
+        
+    }
     public OrderData(int? OrderID,string CustomerID, DateTime? OrderDate, double? Freight)
     {
         this.OrderID = OrderID;    
