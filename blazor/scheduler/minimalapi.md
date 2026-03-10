@@ -69,21 +69,16 @@ The installed packages are reflected in the `BlazorSchedulerApp.csproj` file:
 ```
 > After installing packages, build the project to ensure all dependencies are restored correctly: `dotnet build`
 
-## Step 3: Add Import Namespaces
+### Step 3: Add Import Namespaces
 
 Open the **Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Schedule` namespaces.
 
-{% tabs %}
-{% highlight razor tabtitle="Components/_Imports.razor" %}
-
+```cshtml
 @using Syncfusion.Blazor   
 @using Syncfusion.Blazor.Schedule
+```
 
-{% endhighlight %}
-{% endtabs %}
-
-
-## Step 4: Add stylesheet and script resources
+### Step 4: Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **/Components/App.razor** file as shown below:
 
@@ -103,36 +98,32 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Create a model class to represent scheduler appointments with all required properties.
 
-{% tabs %}
-{% highlight csharp tabtitle="Models/AppointmentData.cs" %}
 
-    namespace BlazorSchedulerApp.Models;
+[Models/AppointmentData.cs]
 
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; } = string.Empty;
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; } = string.Empty;
-        public bool IsAllDay { get; set; }
-        public string? RecurrenceRule { get; set; }
-        public int? RecurrenceID { get; set; }
-        public string? RecurrenceException { get; set; }
-    }
-{% endhighlight %}
-{% endtabs %}
+```csharp
+namespace BlazorSchedulerApp.Models;
+
+public class AppointmentData
+{
+    public int Id { get; set; }
+    public string Subject { get; set; }
+    public string Location { get; set; } = string.Empty;
+    public DateTime StartTime { get; set; }
+    public DateTime EndTime { get; set; }
+    public string Description { get; set; } = string.Empty;
+    public bool IsAllDay { get; set; }
+    public string? RecurrenceRule { get; set; }
+    public int? RecurrenceID { get; set; }
+    public string? RecurrenceException { get; set; }
+}
+```
 
 Open the **Components/_Imports.razor** file and import the `BlazorSchedulerApp.Models` namespaces.
 
-{% tabs %}
-{% highlight razor tabtitle="Components/_Imports.razor" %}
-
+```cshtml
 @using BlazorSchedulerApp.Models
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 **Key Properties Explanation:**
 
@@ -151,292 +142,281 @@ Open the **Components/_Imports.razor** file and import the `BlazorSchedulerApp.M
 
 Implement a service layer to handle HTTP communication with the Minimal API endpoints.
 
-{% tabs %}
-{% highlight csharp tabtitle="Services/AppointmentService.cs" %}
+[Services/AppointmentService]
 
-    using BlazorSchedulerApp.Models;
-    using System.Net.Http.Json;
+```csharp
+using BlazorSchedulerApp.Models;
+using System.Net.Http.Json;
 
-    namespace BlazorSchedulerApp.Services;
+namespace BlazorSchedulerApp.Services;
 
-    public class AppointmentService
+public class AppointmentService
+{
+    private readonly HttpClient _httpClient;
+
+    public AppointmentService(HttpClient httpClient)
     {
-        private readonly HttpClient _httpClient;
+        _httpClient = httpClient;
+    }
 
-        public AppointmentService(HttpClient httpClient)
+    /// <summary>
+    /// Retrieves all appointments from the API
+    /// </summary>
+    public async Task<List<AppointmentData>> GetAppointmentsAsync()
+    {
+        try
         {
-            _httpClient = httpClient;
+            var result = await _httpClient.GetFromJsonAsync<List<AppointmentData>>("/api/appointments");
+            return result ?? new List<AppointmentData>();
         }
-
-        /// <summary>
-        /// Retrieves all appointments from the API
-        /// </summary>
-        public async Task<List<AppointmentData>> GetAppointmentsAsync()
+        catch (Exception ex)
         {
-            try
-            {
-                var result = await _httpClient.GetFromJsonAsync<List<AppointmentData>>("/api/appointments");
-                return result ?? new List<AppointmentData>();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error fetching appointments: {ex.Message}");
-                return new List<AppointmentData>();
-            }
-        }
-
-        /// <summary>
-        /// Retrieves a single appointment by ID
-        /// </summary>
-        public async Task<AppointmentData?> GetAppointmentByIdAsync(int id)
-        {
-            try
-            {
-                return await _httpClient.GetFromJsonAsync<AppointmentData>($"/api/appointments/{id}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error fetching appointment: {ex.Message}");
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Creates a new appointment via the API
-        /// </summary>
-        public async Task<AppointmentData?> CreateAppointmentAsync(AppointmentData appointment)
-        {
-            try
-            {
-                var response = await _httpClient.PostAsJsonAsync("/api/appointments", appointment);
-                if (response.IsSuccessStatusCode)
-                {
-                    return await response.Content.ReadFromJsonAsync<AppointmentData>();
-                }
-                return null;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error creating appointment: {ex.Message}");
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Updates an existing appointment via the API
-        /// </summary>
-        public async Task<bool> UpdateAppointmentAsync(int id, AppointmentData appointment)
-        {
-            try
-            {
-                var response = await _httpClient.PutAsJsonAsync($"/api/appointments/{id}", appointment);
-                return response.IsSuccessStatusCode;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error updating appointment: {ex.Message}");
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Deletes an appointment via the API
-        /// </summary>
-        public async Task<bool> DeleteAppointmentAsync(int id)
-        {
-            try
-            {
-                var response = await _httpClient.DeleteAsync($"/api/appointments/{id}");
-                return response.IsSuccessStatusCode;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error deleting appointment: {ex.Message}");
-                return false;
-            }
+            Console.WriteLine($"Error fetching appointments: {ex.Message}");
+            return new List<AppointmentData>();
         }
     }
-{% endhighlight %}
-{% endtabs %}
+
+    /// <summary>
+    /// Retrieves a single appointment by ID
+    /// </summary>
+    public async Task<AppointmentData?> GetAppointmentByIdAsync(int id)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<AppointmentData>($"/api/appointments/{id}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching appointment: {ex.Message}");
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Creates a new appointment via the API
+    /// </summary>
+    public async Task<AppointmentData?> CreateAppointmentAsync(AppointmentData appointment)
+    {
+        try
+        {
+            var response = await _httpClient.PostAsJsonAsync("/api/appointments", appointment);
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadFromJsonAsync<AppointmentData>();
+            }
+            return null;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error creating appointment: {ex.Message}");
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Updates an existing appointment via the API
+    /// </summary>
+    public async Task<bool> UpdateAppointmentAsync(int id, AppointmentData appointment)
+    {
+        try
+        {
+            var response = await _httpClient.PutAsJsonAsync($"/api/appointments/{id}", appointment);
+            return response.IsSuccessStatusCode;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating appointment: {ex.Message}");
+            return false;
+        }
+    }
+
+    /// <summary>
+    /// Deletes an appointment via the API
+    /// </summary>
+    public async Task<bool> DeleteAppointmentAsync(int id)
+    {
+        try
+        {
+            var response = await _httpClient.DeleteAsync($"/api/appointments/{id}");
+            return response.IsSuccessStatusCode;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting appointment: {ex.Message}");
+            return false;
+        }
+    }
+}
+```
 
 Open the **Components/_Imports.razor** file and import the `BlazorSchedulerApp.Services` namespaces.
 
-{% tabs %}
-{% highlight razor tabtitle="Components/_Imports.razor" %}
-
+```cshtml
 @using BlazorSchedulerApp.Services
-
-{% endhighlight %}
-{% endtabs %}
-
+```
 
 ### Step 7: Configure Application Services
 
 The `Program.cs` file must be updated to register required services, including Syncfusion Blazor components, HttpClient, CORS, and Razor components.This section configures the foundational services used across the Scheduler application.
 
-{% tabs %}
-{% highlight csharp tabtitle="Program.cs" %}
+[Program.cs]
 
-    using BlazorSchedulerApp.Components;
-    using BlazorSchedulerApp.Models;
-    using BlazorSchedulerApp.Services;
-    using Microsoft.AspNetCore.Components;
-    using Syncfusion.Blazor;
+```csharp
+using BlazorSchedulerApp.Components;
+using BlazorSchedulerApp.Models;
+using BlazorSchedulerApp.Services;
+using Microsoft.AspNetCore.Components;
+using Syncfusion.Blazor;
 
-    var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
-    // Add services to the container.
-    builder.Services.AddRazorComponents()
-        .AddInteractiveServerComponents();
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 
-    // Add HttpClient for AppointmentService
-    builder.Services.AddScoped(sp =>
+// Add HttpClient for AppointmentService
+builder.Services.AddScoped(sp =>
+{
+    var navigationManager = sp.GetRequiredService<NavigationManager>();
+    return new HttpClient
     {
-        var navigationManager = sp.GetRequiredService<NavigationManager>();
-        return new HttpClient
-        {
-            BaseAddress = new Uri(navigationManager.BaseUri)
-        };
-    });
-    builder.Services.AddScoped<AppointmentService>();
-
-    // Add Syncfusion Blazor service
-    builder.Services.AddSyncfusionBlazor();
-
-    // Configure CORS
-    builder.Services.AddCors(options =>
-    {
-        options.AddDefaultPolicy(policy =>
-        {
-            policy.AllowAnyOrigin()
-                  .AllowAnyMethod()
-                  .AllowAnyHeader();
-        });
-    });
-
-    var app = builder.Build();
-
-    // In-memory data storage for appointments
-    var appointments = new List<AppointmentData>
-    {
-        new AppointmentData
-        {
-            Id = 1,
-            Subject = "Team Meeting",
-            Location = "Conference Room A",
-            StartTime = DateTime.Today.AddHours(10),
-            EndTime = DateTime.Today.AddHours(11),
-            Description = "Weekly team sync-up meeting"
-        },
-        new AppointmentData
-        {
-            Id = 2,
-            Subject = "Client Presentation",
-            Location = "Boardroom",
-            StartTime = DateTime.Today.AddDays(1).AddHours(14),
-            EndTime = DateTime.Today.AddDays(1).AddHours(16),
-            Description = "Quarterly review with client"
-        },
-        new AppointmentData
-        {
-            Id = 3,
-            Subject = "Project Planning",
-            Location = "Room 301",
-            StartTime = DateTime.Today.AddDays(2).AddHours(9),
-            EndTime = DateTime.Today.AddDays(2).AddHours(10).AddMinutes(30),
-            Description = "Planning session for new project"
-        }
+        BaseAddress = new Uri(navigationManager.BaseUri)
     };
+});
+builder.Services.AddScoped<AppointmentService>();
 
-    // Configure the HTTP request pipeline.
-    if (!app.Environment.IsDevelopment())
+// Add Syncfusion Blazor service
+builder.Services.AddSyncfusionBlazor();
+
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
     {
-        app.UseExceptionHandler("/Error", createScopeForErrors: true);
-        app.UseHsts();
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
+var app = builder.Build();
+
+// In-memory data storage for appointments
+var appointments = new List<AppointmentData>
+{
+    new AppointmentData
+    {
+        Id = 1,
+        Subject = "Team Meeting",
+        Location = "Conference Room A",
+        StartTime = DateTime.Today.AddHours(10),
+        EndTime = DateTime.Today.AddHours(11),
+        Description = "Weekly team sync-up meeting"
+    },
+    new AppointmentData
+    {
+        Id = 2,
+        Subject = "Client Presentation",
+        Location = "Boardroom",
+        StartTime = DateTime.Today.AddDays(1).AddHours(14),
+        EndTime = DateTime.Today.AddDays(1).AddHours(16),
+        Description = "Quarterly review with client"
+    },
+    new AppointmentData
+    {
+        Id = 3,
+        Subject = "Project Planning",
+        Location = "Room 301",
+        StartTime = DateTime.Today.AddDays(2).AddHours(9),
+        EndTime = DateTime.Today.AddDays(2).AddHours(10).AddMinutes(30),
+        Description = "Planning session for new project"
     }
+};
 
-    app.UseHttpsRedirection();
-    app.UseAntiforgery();
-    app.UseCors();
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseHsts();
+}
 
-{% endhighlight %}
-{% endtabs %}
+app.UseHttpsRedirection();
+app.UseAntiforgery();
+app.UseCors();
+```
 
 ### Step 8: Create Minimal API Endpoints
 
 Update `Program.cs` to define Minimal API endpoints for CRUD operations.
 
-{% tabs %}
-{% highlight csharp tabtitle="Program.cs" %}
+[Program.cs]
 
-    // GET: Get all appointments
-    app.MapGet("/api/appointments", () =>
-    {
-        return Results.Ok(appointments);
-    })
-    .WithName("GetAppointments");
+```csharp
+// GET: Get all appointments
+app.MapGet("/api/appointments", () =>
+{
+    return Results.Ok(appointments);
+})
+.WithName("GetAppointments");
 
-    // GET: Get appointment by ID
-    app.MapGet("/api/appointments/{id}", (int id) =>
-    {
-        var appointment = appointments.FirstOrDefault(a => a.Id == id);
-        return appointment is not null ? Results.Ok(appointment) : Results.NotFound();
-    })
-    .WithName("GetAppointmentById");
+// GET: Get appointment by ID
+app.MapGet("/api/appointments/{id}", (int id) =>
+{
+    var appointment = appointments.FirstOrDefault(a => a.Id == id);
+    return appointment is not null ? Results.Ok(appointment) : Results.NotFound();
+})
+.WithName("GetAppointmentById");
 
-    // POST: Create new appointment
-    app.MapPost("/api/appointments", (AppointmentData appointment) =>
-    {
-        appointment.Id = appointments.Any() ? appointments.Max(a => a.Id) + 1 : 1;
-        appointments.Add(appointment);
-        return Results.Created($"/api/appointments/{appointment.Id}", appointment);
-    })
-    .WithName("CreateAppointment");
+// POST: Create new appointment
+app.MapPost("/api/appointments", (AppointmentData appointment) =>
+{
+    appointment.Id = appointments.Any() ? appointments.Max(a => a.Id) + 1 : 1;
+    appointments.Add(appointment);
+    return Results.Created($"/api/appointments/{appointment.Id}", appointment);
+})
+.WithName("CreateAppointment");
 
-    // PUT: Update appointment
-    app.MapPut("/api/appointments/{id}", (int id, AppointmentData updatedAppointment) =>
-    {
-        var appointment = appointments.FirstOrDefault(a => a.Id == id);
-        if (appointment is null)
-            return Results.NotFound();
+// PUT: Update appointment
+app.MapPut("/api/appointments/{id}", (int id, AppointmentData updatedAppointment) =>
+{
+    var appointment = appointments.FirstOrDefault(a => a.Id == id);
+    if (appointment is null)
+        return Results.NotFound();
 
-        appointment.Subject = updatedAppointment.Subject;
-        appointment.Location = updatedAppointment.Location;
-        appointment.StartTime = updatedAppointment.StartTime;
-        appointment.EndTime = updatedAppointment.EndTime;
-        appointment.Description = updatedAppointment.Description;
-        appointment.IsAllDay = updatedAppointment.IsAllDay;
-        appointment.RecurrenceRule = updatedAppointment.RecurrenceRule;
-        appointment.RecurrenceID = updatedAppointment.RecurrenceID;
-        appointment.RecurrenceException = updatedAppointment.RecurrenceException;
+    appointment.Subject = updatedAppointment.Subject;
+    appointment.Location = updatedAppointment.Location;
+    appointment.StartTime = updatedAppointment.StartTime;
+    appointment.EndTime = updatedAppointment.EndTime;
+    appointment.Description = updatedAppointment.Description;
+    appointment.IsAllDay = updatedAppointment.IsAllDay;
+    appointment.RecurrenceRule = updatedAppointment.RecurrenceRule;
+    appointment.RecurrenceID = updatedAppointment.RecurrenceID;
+    appointment.RecurrenceException = updatedAppointment.RecurrenceException;
 
-        return Results.Ok(appointment);
-    })
-    .WithName("UpdateAppointment");
+    return Results.Ok(appointment);
+})
+.WithName("UpdateAppointment");
 
-    // DELETE: Delete appointment
-    app.MapDelete("/api/appointments/{id}", (int id) =>
-    {
-        var appointment = appointments.FirstOrDefault(a => a.Id == id);
-        if (appointment is null)
-            return Results.NotFound();
+// DELETE: Delete appointment
+app.MapDelete("/api/appointments/{id}", (int id) =>
+{
+    var appointment = appointments.FirstOrDefault(a => a.Id == id);
+    if (appointment is null)
+        return Results.NotFound();
 
-        appointments.Remove(appointment);
-        return Results.NoContent();
-    })
-    .WithName("DeleteAppointment");
+    appointments.Remove(appointment);
+    return Results.NoContent();
+})
+.WithName("DeleteAppointment");
 
-    // ============= End of Minimal API Endpoints =============
+// ============= End of Minimal API Endpoints =============
 
-    app.MapStaticAssets();
-    app.MapRazorComponents<App>()
-        .AddInteractiveServerRenderMode();
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
 
-    app.Run();
-{% endhighlight %}
-{% endtabs %}
-
-
+app.Run();
+```
 
 **Minimal API Benefits:**
 
@@ -450,99 +430,97 @@ Update `Program.cs` to define Minimal API endpoints for CRUD operations.
 
 Replace the contents of `Home.razor` with the following Blazor Scheduler component that provides full CRUD functionality.
 
-{% tabs %}
-{% highlight razor tabtitle="Components/Pages/Home.razor" %}
+[Home.razor]
 
-    @page "/"
-    @rendermode InteractiveServer
-    @inject AppointmentService AppointmentService
+```cshtml
+@page "/"
+@rendermode InteractiveServer
+@inject AppointmentService AppointmentService
     
-    <PageTitle>Appointment Scheduler</PageTitle>
+<PageTitle>Appointment Scheduler</PageTitle>
     
-    <div class="scheduler-container">
+<div class="scheduler-container">
     
-        <SfSchedule TValue="AppointmentData" 
-                    @ref="ScheduleRef"
-                    Height="650px" 
-                    @bind-SelectedDate="@CurrentDate"
-                    @bind-CurrentView="@CurrentView"
-                    ShowQuickInfo="true">
+    <SfSchedule TValue="AppointmentData" 
+                @ref="ScheduleRef"
+                Height="650px" 
+                @bind-SelectedDate="@CurrentDate"
+                @bind-CurrentView="@CurrentView"
+                ShowQuickInfo="true">
             
-            <ScheduleViews>
-                <ScheduleView Option="View.Day"></ScheduleView>
-                <ScheduleView Option="View.Week"></ScheduleView>
-                <ScheduleView Option="View.WorkWeek"></ScheduleView>
-                <ScheduleView Option="View.Month"></ScheduleView>
-                <ScheduleView Option="View.Agenda"></ScheduleView>
-            </ScheduleViews>
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Agenda"></ScheduleView>
+        </ScheduleViews>
     
-            <ScheduleEventSettings TValue="AppointmentData" DataSource="@Appointments">
-            </ScheduleEventSettings>
+        <ScheduleEventSettings TValue="AppointmentData" DataSource="@Appointments">
+        </ScheduleEventSettings>
     
-            <ScheduleEvents TValue="AppointmentData" OnActionBegin="OnActionBegin">
-            </ScheduleEvents>
-        </SfSchedule>
-    </div>
+        <ScheduleEvents TValue="AppointmentData" OnActionBegin="OnActionBegin">
+        </ScheduleEvents>
+    </SfSchedule>
+</div>
     
-    @code {
-        private SfSchedule<AppointmentData>? ScheduleRef;
-        private DateTime CurrentDate = DateTime.Today;
-        private View CurrentView = View.Week;
-        private List<AppointmentData> Appointments = new();
-    
-        protected override async Task OnInitializedAsync()
-        {
-            await LoadAppointments();
-        }
-    
-        private async Task LoadAppointments()
-        {
-            Appointments = await AppointmentService.GetAppointmentsAsync();
-            StateHasChanged();
-        }
-    
-        private async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
-        {
-            try
-            {
-                if (args.ActionType == ActionType.EventCreate && args.AddedRecords != null && args.AddedRecords.Any())
-                {
-                    foreach (var appointment in args.AddedRecords)
-                    {
-                        var created = await AppointmentService.CreateAppointmentAsync(appointment);
-                        if (created != null)
-                        {
-                            // Update the appointment with the server-generated ID
-                            appointment.Id = created.Id;
-                        }
-                    }
-                }
-                else if (args.ActionType == ActionType.EventChange && args.ChangedRecords != null && args.ChangedRecords.Any())
-                {
-                    foreach (var appointment in args.ChangedRecords)
-                    {
-                        await AppointmentService.UpdateAppointmentAsync(appointment.Id, appointment);
-                    }
-                }
-                else if (args.ActionType == ActionType.EventRemove && args.DeletedRecords != null && args.DeletedRecords.Any())
-                {
-                    foreach (var appointment in args.DeletedRecords)
-                    {
-                        await AppointmentService.DeleteAppointmentAsync(appointment.Id);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in OnActionBegin: {ex.Message}");
-                args.Cancel = true;
-            }
-        }
-    
+@code {
+    private SfSchedule<AppointmentData>? ScheduleRef;
+    private DateTime CurrentDate = DateTime.Today;
+    private View CurrentView = View.Week;
+    private List<AppointmentData> Appointments = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAppointments();
     }
 
-{% endhighlight %}
-{% endtabs %}
+    private async Task LoadAppointments()
+    {
+        Appointments = await AppointmentService.GetAppointmentsAsync();
+        StateHasChanged();
+    }
+
+    private async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
+    {
+        try
+        {
+            if (args.ActionType == ActionType.EventCreate && args.AddedRecords != null && args.AddedRecords.Any())
+            {
+                foreach (var appointment in args.AddedRecords)
+                {
+                    var created = await AppointmentService.CreateAppointmentAsync(appointment);
+                    if (created != null)
+                    {
+                        // Update the appointment with the server-generated ID
+                        appointment.Id = created.Id;
+                    }
+                }
+            }
+            else if (args.ActionType == ActionType.EventChange && args.ChangedRecords != null && args.ChangedRecords.Any())
+            {
+                foreach (var appointment in args.ChangedRecords)
+                {
+                    await AppointmentService.UpdateAppointmentAsync(appointment.Id, appointment);
+                }
+            }
+            else if (args.ActionType == ActionType.EventRemove && args.DeletedRecords != null && args.DeletedRecords.Any())
+            {
+                foreach (var appointment in args.DeletedRecords)
+                {
+                    await AppointmentService.DeleteAppointmentAsync(appointment.Id);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in OnActionBegin: {ex.Message}");
+            args.Cancel = true;
+        }
+    }
+
+}
+```
 
 **Key Implementation Details:**
 
@@ -641,23 +619,5 @@ A complete, working sample implementation is available in the [GitHub repository
 - Verify theme CSS in `App.razor`: `_content/Syncfusion.Blazor.Themes/tailwind3.css`
 - Clear browser cache
 - Check Syncfusion.Blazor.Themes package is installed
-
-### Duplicate Appointments Created
-
-**Issue**: Creating one appointment makes multiple copies
-
-**Fix**:
-- Remove duplicate `OnActionBegin` handlers
-- Don't call `LoadAppointments()` inside `OnActionBegin`
-- Let Scheduler manage the appointments list
-
-### Navigation Controls Don't Work
-
-**Issue**: View switching buttons unresponsive
-
-**Fix**:
-- Check `@bind-CurrentView` and `@bind-SelectedDate` are set
-- Don't cancel navigation actions in `OnActionBegin`
-- Verify Syncfusion script is loaded
 
 To learn more about the functionality of the Schedule component, refer to the [documentation](https://blazor.syncfusion.com/documentation/scheduler/getting-started).
