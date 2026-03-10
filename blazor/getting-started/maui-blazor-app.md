@@ -130,11 +130,11 @@ Add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any R
 In the Visual Studio toolbar, select **Windows Machine** to build and run the app.
 Ensure the run profile is set to `Windows Machine` before starting the app.
 
-![Build and run MAUI Blazor App](images/maui/windows-machine-mode.png)
+![Build and run MAUI Blazor App](images/maui/windows-machine-mode.webp)
 
 N> To run the application on Android or iOS, refer to [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0#run-the-app-in-the-android-emulator) for setup instructions.
 
-![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.png)
+![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.webp)
 
 N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-App-using-Syncfusion-Blazor-Components).
 
@@ -152,7 +152,7 @@ In the following example, images are added under the `images` folder in the `www
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI Blazor App with added image](images\maui\maui-image.jpeg)
+![MAUI Blazor App with added image](images\maui\maui-image.webp)
 
 ## Troubleshooting
 
@@ -160,7 +160,7 @@ In the following example, images are added under the `images` folder in the `www
 
 If the error dialog “There were deployment errors” appears, enable Developer Mode. For more details, refer to [Enable your device for development](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 
-![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
+![Enable developer mode in system settings](images/maui/enable-developer-mode.webp)
 
 <hr/>
 

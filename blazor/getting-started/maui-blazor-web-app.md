@@ -30,7 +30,7 @@ Visual Studio provides the **[.NET MAUI Blazor Hybrid and Web App](https://learn
 
 Create a **.NET MAUI Blazor Hybrid and Blazor Web App** in Visual Studio using the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0).
 
-![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.png)
+![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
@@ -120,11 +120,11 @@ Add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any R
 
 In the Visual Studio toolbar, select the **Windows Machine** target to build and run the `.Maui` app. To build and run the `.Web` app, select the **IIS Express** target.
 
-![Build and run MAUI Blazor App](images/maui/windows-machine-mode.png)
+![Build and run MAUI Blazor App](images/maui/windows-machine-mode.webp)
 
 N> To run the application on Android or iOS, refer to [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-9.0#run-the-app-in-the-android-emulator) for emulator or device setup.
 
-![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.png)
+![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.webp)
 
 N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-Hybrid-with-Blazor-Web-App-using-Syncfuion-Blazor-Components).
 
