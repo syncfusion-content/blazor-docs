@@ -1,0 +1,40 @@
+@using Syncfusion.Blazor.MarkdownConverter
+@using Syncfusion.Blazor.RichTextEditor
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Markdown Input</h3>
+            <SfRichTextEditor @bind-Value="markdownText" Height="300px" EditorMode="EditorMode.Markdown">
+            </SfRichTextEditor>
+        </div>
+        <div class="col-md-6">
+            <h3>HTML Output</h3>
+            <div class="preview-panel border p-3">
+                @if (!string.IsNullOrEmpty(htmlOutput))
+                {
+                    <div>@((MarkupString)htmlOutput)</div>
+                }
+                else
+                {
+                    <p class="text-muted">HTML preview will appear here...</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string markdownContent = "# Hello World\n\nThis is **Markdown** text.";
+    private string htmlOutput = "";
+
+    protected override void OnInitialized()
+    {
+        ConvertMarkdown();
+    }
+
+    private void ConvertMarkdown()
+    {
+        htmlOutput = SfMarkdownConverter.ToHtml(markdownContent);
+    }
+}

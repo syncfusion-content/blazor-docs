@@ -1,0 +1,40 @@
+@using Syncfusion.Blazor.MarkdownConverter
+@using Syncfusion.Blazor.RichTextEditor
+
+<div class="container">
+    <SfRichTextEditor @bind-Value="markdownContent" Height="300px" EditorMode="EditorMode.Markdown">
+    </SfRichTextEditor>
+    <button @onclick="ConvertWithGfm" class="btn btn-primary mt-2">Convert with GFM</button>
+
+    <div class="preview-panel border p-3 mt-3">
+        @if (!string.IsNullOrEmpty(htmlOutput))
+        {
+            <div>@((MarkupString)htmlOutput)</div>
+        }
+    </div>
+</div>
+
+@code {
+    private string markdownContent = @"# GFM Features Demo
+
+## Tables
+| Feature | Status |
+|---------|--------|
+| Tables | ✓ |
+| Task Lists | ✓ |
+
+## Task Lists
+- [x] Completed task
+- [ ] Incomplete task
+
+## Strikethrough
+This is ~~strikethrough~~ text.";
+    
+    private string htmlOutput = "";
+
+    private void ConvertWithGfm()
+    {
+        var options = new MarkdownConverterOptions { Gfm = true };
+        htmlOutput = SfMarkdownConverter.ToHtml(markdownContent, options);
+    }
+}

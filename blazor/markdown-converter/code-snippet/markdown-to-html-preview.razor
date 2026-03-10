@@ -1,0 +1,162 @@
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.MarkdownConverter
+@using Syncfusion.Blazor.Layouts
+
+<div class="control-section">
+    <div id="splitter-rte-markdown-preview">
+        <SfSplitter Height="450px" Width="100%">
+            <SplitterPanes>
+                <SplitterPane Size="50%" Min="40%" Max="70%" Resizable="true">
+                    <ContentTemplate>
+                        <div class="splitter-default-content pane1">
+                                <SfRichTextEditor Height="100%"
+                                                  EditorMode="EditorMode.Markdown"
+                                                  SaveInterval="1"
+                                                  @bind-Value="@MarkdownValue" @ref="EditorRef">
+                                    <RichTextEditorToolbarSettings Items="@Tools" EnableFloating="false" Type="ToolbarType.Expand">
+                                    </RichTextEditorToolbarSettings>
+                                    <RichTextEditorMarkdownOptions ListSyntax="@ListSyntax" />
+                                    <RichTextEditorEvents ValueChange="@OnValueChange" />
+                                </SfRichTextEditor>
+                        </div>
+                    </ContentTemplate>
+                </SplitterPane>
+                <SplitterPane Size="50%" Min="40%" Resizable="true">
+                    <ContentTemplate>
+                        <div class="heading right" style="height:100%; display:flex; flex-direction:column;">
+                            <div>
+                                <h6 class="title"><b>Markdown Preview</b></h6>
+                            </div>
+                            <div class="splitter-default-content source-code pane2"
+                                 style="flex:1; min-height:100%; box-sizing:border-box;">
+                                @((MarkupString)(HtmlValue ?? ""))
+                            </div>
+                        </div>
+                    </ContentTemplate>
+                </SplitterPane>
+            </SplitterPanes>
+            <SplitterEvents OnResizeStop="@OnResizing"></SplitterEvents>
+        </SfSplitter>
+    </div>
+</div>
+
+@code {
+    private SfRichTextEditor? EditorRef;
+    private bool IsPreview { get; set; }
+    private string? HtmlValue { get; set; }
+    private MarkdownConverterOptions? Pipeline { get; set; }
+    private string MarkdownValue { get; set; } = @"The sample is added to showcase **markdown editing**.
+Type or edit the content and apply formatting to view markdown formatted content.
+We can add our own custom formation syntax for the Markdown formation, [sample link](https://blazor.syncfusion.com/demos/rich-text-editor/markdown-custom-format).
+The Markdown Converter is used in this sample to convert markdown into HTML content.";
+    
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Blockquote },
+        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+    };
+    
+    private Dictionary<string, string> ListSyntax { get; set; } = new Dictionary<string, string>()
+    {
+        { "OL", "1., 2., 3." }
+    };
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        Pipeline = new MarkdownConverterOptions { Gfm = true, LineBreak = true, Silent = false };
+        this.HtmlValue = await SfMarkdownConverter.ToHtmlAsync(MarkdownValue, Pipeline);
+        StateHasChanged();
+    }
+    
+    private async void OnValueChange(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
+    {
+        if (args.Value == null)
+        {
+            this.HtmlValue = null;
+        }
+        else
+        {
+            this.HtmlValue = await SfMarkdownConverter.ToHtmlAsync(MarkdownValue, Pipeline);
+        }
+        StateHasChanged();
+    }
+    
+    private void OnResizing()
+    {
+        EditorRef?.RefreshUIAsync();
+    }
+}
+
+<style>
+    #splitter-rte-markdown-preview .e-splitter {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    #splitter-rte-markdown-preview .e-pane {
+        position: relative !important;
+        display: block !important;
+    }
+    .splitter-default-content.pane1,
+    .splitter-default-content.pane2 {
+        height: 100%;
+        overflow-x: hidden;
+    }
+    /* Preview pane styles */
+    .heading {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        color: #333333;
+        letter-spacing: 1px;
+        padding-left: 10px;
+        text-align: center;
+        margin: 15px 0;
+        flex-shrink: 0;
+    }
+    .splitter-default-content.source-code {
+        padding: 20px;
+        flex: 1;
+        min-height: 100%;
+        box-sizing: border-box;
+    }
+    .e-richtexteditor .e-rte-content .e-content {
+        min-height: 150px;
+    }
+    .e-richtexteditor .e-rte-content {
+        overflow: hidden;
+    }
+    .e-content td,
+    .e-content th {
+        border: 1px solid #bdbdbd;
+        padding: 0 5px;
+    }
+    .e-icon-btn .e-md-preview::before {
+        content: '\e345';
+    }
+    .e-icon-btn .e-preview::before {
+        content: '\e350';
+    }
+    .bootstrap4 .e-icon-btn .e-md-preview::before {
+        content: '\e787';
+    }
+    .bootstrap4 .e-icon-btn .e-preview::before {
+        content: '\e790';
+    }
+</style>
