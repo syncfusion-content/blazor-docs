@@ -19,43 +19,43 @@ This guide demonstrates how to build a **Blazor Web App with authentication** us
 
 * Open Visual Studio 2022 and select **Create a new project** from the start screen.
 
-![Create-new-project](images/create-project.png)
+![Create-new-project](images/create-project.webp)
 
 ## Choose Project Template
 
 * Select the **Blazor Web App** template using Visual Studio via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), and then click **Next**.
 
-![Create-blazor-web-app-template](images/blazor-web-template.jpeg)
+![Create-blazor-web-app-template](images/blazor-web-template.webp)
 
 ## Configure Project Settings
 
 * In the project configuration settings, choose **Blazor Server, WebAssembly, or Auto** as the render mode. Ensure the **Configure for HTTPS** option is enabled, and select **Individual Accounts** as the authentication type before clicking **Create**. This enables authentication support without persisting user data in a local database.
 
-![Project-setting](images/project-setting.png)
+![Project-setting](images/project-setting.webp)
 
 ## Finalize Project Creation
 
 Click **Create** to generate the Blazor Web App. After the project is created, run the app and locate the **Register** button.
 
-![Click-register](images/register-button.png)
+![Click-register](images/register-button.webp)
 
 ## Register a User
 
 * Enter the required details, such as **email address** and **password**, in the registration form, and then click **Register** to complete account creation.
 
-![Enter-register-details](images/register-details.jpg)
+![Enter-register-details](images/register-details.webp)
 
 ## Apply Database Migrations
 
 After registration completes, click **Apply Migrations** to create the database schema and configure account-related tables and settings.
 
-![Apply-migration](images/apply-migration.jpg)
+![Apply-migration](images/apply-migration.webp)
 
 ## Verify Login
 
 After migrations are applied, refresh the page. The home page displays the signed-in user’s email address and a **Logout** option.
 
-![Verify-login](images/verify-login.png)
+![Verify-login](images/verify-login.webp)
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can be integrated within the **AuthorizeView** component as shown in the following steps.
 
@@ -144,7 +144,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This opens the default web browser and displays the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component within the app interface.
 
 
-![Blazor Calendar Component](images/sync-components-auth.jpg)
+![Blazor Calendar Component](images/sync-components-auth.webp)
 
 N> For a complete implementation, download the demo project from the [GitHub repository](https://github.com/SyncfusionExamples/blazor-authentication).
 
