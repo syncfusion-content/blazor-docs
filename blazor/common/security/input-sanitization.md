@@ -172,8 +172,6 @@ The encoded value ensures the Grid displays safe text without interpreting any m
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrxDAitJvkRyhWu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Custom Sanitization
-
 ## See Also
 
 * [Paste Clean-up in Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/paste-cleanup)
