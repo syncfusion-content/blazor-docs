@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Hide the Built in Spinner and Show a Custom Loading Spinner in Blazor DataGrid | Syncfusion
+title: Hide Built-in Spinner and Show Custom Loading Spinner in Blazor DataGrid |Syncfusion
 description: Learn How to Hide the Built in Spinner and Show a Custom Loading Spinner in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
