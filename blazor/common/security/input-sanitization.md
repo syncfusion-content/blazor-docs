@@ -95,7 +95,39 @@ To disable the built-in sanitizer (not recommended for untrusted content), set t
 
 {% endhighlight %}
 
-Disabling the sanitizer allows raw HTML to be accepted and rendered; ensure you apply server-side validation or other sanitization when disabling. If you disable the sanitizer, consider using a server-side library (for example, HtmlSanitizer) before storing or rendering user HTML.
+Disabling the sanitizer allows raw HTML to be accepted and rendered; ensure you apply server-side validation or other sanitization when disabling. 
+
+### Block Editor
+
+The Block Editor allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user-generated content may include HTML-like input or potentially unsafe markup, enable the built-in sanitizer using the `EnableHtmlSanitizer` property to ensure only safe content is rendered.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.BlockEditor
+
+<sfblockeditor enablehtmlsanitizer="true">
+</sfblockeditor>
+
+{% endhighlight %}
+{% endtabs %}
+
+When the EnableHtmlSanitizer property is enabled, the Block Editor automatically removes unsafe tags and attributes such as `<script>` tags, event attributes (like onload, onclick), javascript: URLs, and other harmful markup before rendering content. This ensures that only clean and trusted HTML remains in the editor output.
+
+To disable the built-in sanitizer (not recommended for untrusted input), set the property to false:
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.BlockEditor
+
+<sfblockeditor enablehtmlsanitizer="false">
+</sfblockeditor>
+
+{% endhighlight %}
+{% endtabs %}
+
+Disabling sanitization allows raw HTML to be inserted and rendered by the Block Editor. 
 
 ## How to Sanitize Input in Blazor
 
@@ -176,3 +208,4 @@ The encoded value ensures the Grid displays safe text without interpreting any m
 
 * [Paste Clean-up in Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/paste-cleanup)
 * [Content Security Policy (CSP)](https://blazor.syncfusion.com/documentation/common/content-security-policy)
+* [Paste Clean-up in Blazor Blcok Editor](https://sfblazor.azurewebsites.net/staging/documentation/block-editor/paste-cleanup)
