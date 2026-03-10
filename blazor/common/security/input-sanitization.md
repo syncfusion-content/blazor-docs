@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Input Sanitization in Syncfusion Blazor Components
+title: Input Sanitization with Syncfusion Blazor Components
 description: Discover effective techniques for securely sanitizing user input in Syncfusion Blazor components to protect your application from unsafe data.
 platform: Blazor
 control: Common
