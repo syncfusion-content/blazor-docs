@@ -25,15 +25,15 @@ Use the following steps to convert an existing Blazor application to a Syncfusio
 
 2. In the Explorer panel, right-click the project file (`.csproj`) and select **Convert to Syncfusion Blazor App...** from the context menu.
 
-    ![Context menu showing Convert to Syncfusion Blazor Application option](images/Conversion.png)
+    ![Context menu showing Convert to Syncfusion Blazor Application option](images/conversion.webp)
 
 3. In the Command Palette, select **Select Blazor Version** and choose the desired Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor version from the dropdown list (displays versions available on `nuget.org`).
 
-    ![Command Palette showing Blazor version selection](images/VersionSelection.png)
+    ![Command Palette showing Blazor version selection](images/versionselection.webp)
 
 4. After version selection, the Command Palette will display available themes. Select the preferred theme (e.g., Material, Bootstrap, Tailwind, Fluent and HighContrast).
 
-    ![Command Palette showing theme selection options](images/ChooseThemes.png)
+    ![Command Palette showing theme selection options](images/choosethemes.webp)
 
    N> The conversion process will run automatically. This may take a few moments as NuGet packages are downloaded and the project is configured.
 
@@ -51,7 +51,7 @@ During conversion, the required NuGet packages are automatically added to the ap
 
 The packages are added to the application's `.csproj` file as shown below:
 
-![Project file showing Syncfusion NuGet package references](images/NugetPackage.png)
+![Project file showing Syncfusion NuGet package references](images/nugetpackage.webp)
 
 ## Theme Configuration
 
@@ -64,4 +64,4 @@ During conversion, the selected Syncfusion<sup style="font-size:70%">&reg;</sup>
 | Blazor WebAssembly (ASP.NET Core hosted) | **Client project:** `wwwroot/index.html` |
 | Blazor WebAssembly (Progressive Web Application) | `wwwroot/index.html` |
 
-![Example showing where the theme link is added in the project](images/CDNLink.png)
+![Example showing where the theme link is added in the project](images/CDNLink.webp)
