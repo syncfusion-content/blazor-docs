@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Markdown Converter in Blazor Server App
+title: Getting Started with Markdown Converter in Blazor App | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor Markdown Converter Component in Blazor Server App.
 platform: Blazor
 control: MarkdownConverter
