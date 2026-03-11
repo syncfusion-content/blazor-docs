@@ -306,7 +306,7 @@ For large Markdown documents, use the asynchronous method to prevent UI thread b
 The Blazor MarkdownConverter component supports the following features:
 
 * **CommonMark Syntax**: Full support for standard Markdown syntax including headings, paragraphs, lists, code blocks, and more.
-* **GitHub Flavored Markdown (GFM)**: Optional support for tables, task lists, strikethrough, and enhanced autolinks.
+* **GitHub Flavored Markdown (GFM)**: Optional support for tables, task lists, strikethrough, and enhanced auto links.
 * **Line Break Handling**: Convert single line breaks to `<br />` tags.
 * **Error Handling**: Graceful error handling with silent mode option to return partial output instead of throwing exceptions.
 * **Performance**: Optimized for small to medium-sized documents with synchronous conversion and supports asynchronous conversion for large documents.

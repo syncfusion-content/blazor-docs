@@ -7,7 +7,7 @@ control: MarkdownConverter
 documentation: ug
 ---
 
-# Getting Started with Blazor MarkdownConverter Component in Blazor Server App
+# Getting Started with Blazor MarkdownConverter in Blazor Server App
 
 This section briefly explains about how to include `Blazor MarkdownConverter` component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -301,7 +301,7 @@ For large Markdown documents, use the asynchronous method to prevent UI thread b
 The Blazor MarkdownConverter component supports the following features:
 
 * **CommonMark Syntax**: Full support for standard Markdown syntax including headings, paragraphs, lists, code blocks, and more.
-* **GitHub Flavored Markdown (GFM)**: Optional support for tables, task lists, strikethrough, and enhanced autolinks.
+* **GitHub Flavored Markdown (GFM)**: Optional support for tables, task lists, strikethrough, and enhanced auto links.
 * **Line Break Handling**: Convert single line breaks to `<br />` tags.
 * **Error Handling**: Graceful error handling with silent mode option to return partial output instead of throwing exceptions.
 * **Performance**: Optimized for small to medium-sized documents with synchronous conversion and supports asynchronous conversion for large documents.
