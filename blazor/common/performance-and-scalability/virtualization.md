@@ -511,7 +511,6 @@ Virtualization requires:
 </div>
 ```
 
-
 ## File Manager Virtualization
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component supports UI Virtualization to efficiently load and display large numbers of files and folders. Instead of rendering all items at once, only the elements that fit inside the visible viewport are displayed. Additional items are loaded automatically as the user scrolls.
