@@ -89,12 +89,16 @@ public Task DataBoundHandler()
         z-index: 1000; /* Ensure this is higher than the grid rows */
         pointer-events: none; /* Prevent interaction with the grid while spinning */
     }
-
-    .e-grid .e-spinner-pane {
-        display: none; /* hides the built-in grid spinner */
-    }
-
 </style>
+
+@if(ShowSpinner)
+{
+  <style>
+        .e-grid .e-spinner-pane {
+            display: none; /* hides the built-in grid spinner */
+        }
+  </style>
+}
 
 @code 
 {
@@ -121,4 +125,4 @@ public Task DataBoundHandler()
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLHtVNqAlYyiykJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrxDAsipUDHRpDj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
