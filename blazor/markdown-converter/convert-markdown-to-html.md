@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markdown to HTML Blazor MarkdownConverter | Syncfusion
-description: Learn how to convert Markdown to HTML using Blazor MarkdownConverter in Syncfusion with customization options and examples.
+title: Markdown to HTML Blazor Markdown Converter | Syncfusion
+description: Learn how to convert Markdown to HTML using Blazor Markdown Converter in Syncfusion with customization options and examples.
 platform: Blazor
 control: MarkdownConverter
 documentation: ug
 ---
 
-# Convert Markdown To HTML using MarkdownConverter
+# Convert Markdown To HTML using Markdown Converter
 
 The Markdown Converter is a simple and fast tool that converts Markdown text into clean HTML. This makes it easy to display well-structured content on web pages and applications with consistent formatting.
 
@@ -51,7 +51,7 @@ SfMarkdownConverter.ToHtmlAsync(markdown: string, options?: MarkdownConverterOpt
 
 ## Real-time Markdown Editing and Preview with Splitter
 
-The below sample demonstrates how to use the [Syncfusion RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) along with the MarkdownConverter to convert Markdown content into HTML with real-time preview. This setup allows seamless editing and instant conversion of Markdown content.
+The below sample demonstrates how to use the [Syncfusion RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) along with the Markdown Converter to convert Markdown content into HTML with real-time preview. This setup allows seamless editing and instant conversion of Markdown content.
 
 To make the experience seamless, the [Syncfusion Splitter control](https://blazor.syncfusion.com/documentation/splitter/split-panes) is used to display the editor and preview side-by-side.
 
@@ -65,7 +65,7 @@ To make the experience seamless, the [Syncfusion Splitter control](https://blazo
 
 ## Basic Markdown to HTML Conversion
 
-The below example demonstrates how to use the Blazor MarkdownConverter to convert Markdown content into HTML. This setup allows real-time conversion of Markdown to HTML with customizable options.
+The below example demonstrates how to use the Blazor Markdown Converter to convert Markdown content into HTML. This setup allows real-time conversion of Markdown to HTML with customizable options.
 
 {% tabs %}
 {% highlight razor %}
@@ -145,7 +145,7 @@ string htmlWithSilentMode = SfMarkdownConverter.ToHtml(markdownContent, silentOp
 
 ## Summary
 
-The Syncfusion Blazor MarkdownConverter provides a simple yet powerful way to convert Markdown to HTML with various customization options. Whether you need basic conversion or advanced GFM support, the component handles your requirements efficiently in both Blazor Server and Blazor WebAssembly environments.
+The Syncfusion Blazor Markdown Converter provides a simple yet powerful way to convert Markdown to HTML with various customization options. Whether you need basic conversion or advanced GFM support, the component handles your requirements efficiently in both Blazor Server and Blazor WebAssembly environments.
 
 - Use `ToHtml()` for synchronous conversion of small to medium-sized documents
 - Use `ToHtmlAsync()` for asynchronous processing of large documents
