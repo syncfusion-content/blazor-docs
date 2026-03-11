@@ -343,7 +343,7 @@ This functionality is particularly useful in applications where quickly finding 
 {% endhighlight %}
 {% endtabs %}
 
-![Semantic Search with Blazor ComboBox](images/semantic-search.gif)
+![Semantic Search with Blazor ComboBox](images/semantic-search.webp)
 
 ## Error Handling and Troubleshooting
 
