@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with the MarkdownConverter in Blazor | Syncfusion
-description: Check out and learn about getting started with the MarkdownConverter in the Blazor WebAssembly Application.
+title: Getting Started with the Markdown Converter in Blazor | Syncfusion
+description: Check out and learn about getting started with the Markdown Converter in the Blazor WebAssembly Application.
 platform: Blazor
 control: MarkdownConverter
 documentation: ug
 ---
 
-# Getting Started with MarkdownConverter in Blazor
+# Getting Started with Markdown Converter in Blazor
 
-This section explains how to include `Blazor MarkdownConverter` in a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to include `Blazor Markdown Converter` in a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -25,9 +25,9 @@ Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates
 
 ![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Converter NuGet in the App
 
-To add the Blazor MarkdownConverter component, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install `Syncfusion.Blazor.MarkdownConverter`. Alternatively, run the following command in the Package Manager Console to achieve the same.
+To add the Blazor Markdown Converter component, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install `Syncfusion.Blazor.MarkdownConverter`. Alternatively, run the following command in the Package Manager Console to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -64,7 +64,7 @@ cd BlazorApp
 
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Converter NuGet in the App
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the terminal is in the project root directory where the `.csproj` file is located.
@@ -112,9 +112,9 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Converter NuGet in the App
 
-To add the **Blazor MarkdownConverter** component to the application, run the following command in a command prompt (Windows), command shell (Linux), or terminal (macOS) to install the `Syncfusion.Blazor.MarkdownConverter` NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
+To add the **Blazor Markdown Converter** component to the application, run the following command in a command prompt (Windows), command shell (Linux), or terminal (macOS) to install the `Syncfusion.Blazor.MarkdownConverter` NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -143,11 +143,11 @@ Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor.MarkdownCon
 {% endhighlight %}
 {% endtabs %}
 
-## Use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter
+## Use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Converter
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter provides static utility methods to convert Markdown text to HTML. You can use it from any Blazor component without registering services.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Converter provides static utility methods to convert Markdown text to HTML. You can use it from any Blazor component without registering services.
 
-### Use MarkdownConverter in a Blazor Component
+### Use Markdown Converter in a Blazor Component
 
 In the following example, Markdown content is converted to HTML using the `SfMarkdownConverter.ToHtml` method for synchronous conversion or `SfMarkdownConverter.ToHtmlAsync` for asynchronous conversion.
 
@@ -187,7 +187,7 @@ In the following example, Markdown content is converted to HTML using the `SfMar
 {% endhighlight %}
 {% endtabs %}
 
-### Use MarkdownConverter with Options
+### Use Markdown Converter with Options
 
 You can customize the conversion behavior using `MarkdownConverterOptions`.
 
@@ -287,7 +287,7 @@ For large Markdown documents, use the asynchronous method to prevent UI thread b
 
 ## Features
 
-The Blazor MarkdownConverter component supports the following features:
+The Blazor Markdown Converter component supports the following features:
 
 * **CommonMark Syntax**: Full support for standard Markdown syntax including headings, paragraphs, lists, code blocks, and more.
 * **GitHub Flavored Markdown (GFM)**: Optional support for tables, task lists, strikethrough, and enhanced auto links.
@@ -298,4 +298,4 @@ The Blazor MarkdownConverter component supports the following features:
 
 ## Notes
 
-N> The MarkdownConverter component does not require any external stylesheet or script resources. All conversion is performed server-side using C# with no client-side dependencies.
+N> The Markdown Converter component does not require any external stylesheet or script resources. All conversion is performed server-side using C# with no client-side dependencies.
