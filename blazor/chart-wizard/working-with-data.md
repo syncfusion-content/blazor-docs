@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Working with data | Blazor ChartWizard Component | Syncfusion
-description: Check out and learn how to add and configure the Syncfusion Blazor ChartWizard component.
+description: Check out and learn how to add and configure the Syncfusion Blazor ChartWizard component and much more.
 platform: Blazor
 control: ChartWizard
 documentation: ug
 ---
 
-# Working with Data in Blazor Charts Component
+# Working with Data in Blazor ChartWizard Component
 
 The primary configuration for the wizard is provided via the `ChartSettings`. Key properties:
 

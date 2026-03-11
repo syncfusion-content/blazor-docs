@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Serialization | Blazor ChartWizard Component | Syncfusion
-description: Checkout and learn here all about Serialization in Syncfusion Blazor ChartWizard component and much more.
+description: Check out and learn here all about serialization in Syncfusion Blazor ChartWizard component and much more.
 platform: Blazor
 control: ChartWizard
 documentation: ug
 ---
 
-## Serialization
+# Serialization in Blazor ChartWizard Component
 
 `SfChartWizard` exposes two convenient APIs to persist and restore the entire chart configuration:
 
@@ -84,4 +84,4 @@ N>
 
 ## See also
 
-- Explore the [Chart Wizard Demo]() for interactive samples.
+- Explore the [Chart Wizard Demo]("Demo_Link") for interactive samples.

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Appearance | Blazor ChartWizard Component | Syncfusion
-description: Customize appearance of the ChartWizard component including themes and layout.
+description: Check out and learn how to customize the appearance of the Blazor ChartWizard component including themes and layout.
 platform: Blazor
 control: ChartWizard
 documentation: ug
 ---
 
-# Appearance Customization
+# Appearance in Blazor ChartWizard Component
 
 This topic describes appearance-related properties for the `SfChartWizard` component and shows examples for applying them.
 
