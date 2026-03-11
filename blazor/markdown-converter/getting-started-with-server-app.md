@@ -31,7 +31,7 @@ Configure the appropriate [Interactive render mode](https://learn.microsoft.com/
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter NuGet in the App
 
-To add the **Blazor MarkdownConverter** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.MarkdownConverter](https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter/). Alternatively, run the following command in the Package Manager Console to achieve the same.
+To add the **Blazor MarkdownConverter** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install `Syncfusion.Blazor.MarkdownConverter`. Alternatively, run the following command in the Package Manager Console to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -72,7 +72,7 @@ cd BlazorApp
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure in the project root directory where the `.csproj` file is located.
-* Run the following command to install [Syncfusion.Blazor.MarkdownConverter](https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter/) NuGet package and ensure all dependencies are installed.
+* Run the following command to install `Syncfusion.Blazor.MarkdownConverter` NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ cd BlazorApp
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter NuGet in the App
 
-To add the **Blazor MarkdownConverter** component to the application, run the following command in a command prompt (Windows), command shell (Linux), or terminal (macOS) to install the [Syncfusion.Blazor.MarkdownConverter](https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
+To add the **Blazor MarkdownConverter** component to the application, run the following command in a command prompt (Windows), command shell (Linux), or terminal (macOS) to install the Syncfusion.`Blazor.MarkdownConverter` NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -153,7 +153,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter pr
 
 ### Use MarkdownConverter in a Blazor Component
 
-In the following example, Markdown content is converted to HTML using the [SfMarkdownConverter.ToHtml](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MarkdownConverter.SfMarkdownConverter.html#Syncfusion_Blazor_MarkdownConverter_SfMarkdownConverter_ToHtml_System_String_Syncfusion_Blazor_MarkdownConverter_MarkdownConverterOptions_) method for synchronous conversion or [SfMarkdownConverter.ToHtmlAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MarkdownConverter.SfMarkdownConverter.html#Syncfusion_Blazor_MarkdownConverter_SfMarkdownConverter_ToHtmlAsync_System_String_Syncfusion_Blazor_MarkdownConverter_MarkdownConverterOptions_) for asynchronous conversion. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `Home.razor` page.
+In the following example, Markdown content is converted to HTML using the `SfMarkdownConverter.ToHtml` method for synchronous conversion or `SfMarkdownConverter.ToHtmlAsync` for asynchronous conversion. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `Home.razor` page.
 
 N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
 
@@ -200,7 +200,7 @@ N> If an Interactivity Location is set to `Global` and the **Render Mode** is se
 
 ### Use MarkdownConverter with Options
 
-You can customize the conversion behavior using [MarkdownConverterOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MarkdownConverter.MarkdownConverterOptions.html).
+You can customize the conversion behavior using `MarkdownConverterOptions`.
 
 {% tabs %}
 {% highlight razor %}

@@ -29,7 +29,7 @@ Configure the appropriate [Interactive render mode](https://learn.microsoft.com/
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter NuGet in the App
 
-To add the **Blazor MarkdownConverter** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.MarkdownConverter](https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter).
+To add the **Blazor MarkdownConverter** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install `Syncfusion.Blazor.MarkdownConverter`.
 
 If using the `WebAssembly or Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
@@ -77,7 +77,7 @@ If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your `.csproj` file is located.
-* Run the following command to install [Syncfusion.Blazor.MarkdownConverter](https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter) NuGet package and ensure all dependencies are installed.
+* Run the following command to install `Syncfusion.Blazor.MarkdownConverter` NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -128,7 +128,7 @@ cd BlazorWebApp.Client
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter NuGet in the App
 
-Here's an example of how to add the **Blazor MarkdownConverter** component to the application by using the following command in a command prompt (Windows), terminal (Linux and macOS), or PowerShell to install the [Syncfusion.Blazor.MarkdownConverter](https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
+Here's an example of how to add the **Blazor MarkdownConverter** component to the application by using the following command in a command prompt (Windows), terminal (Linux and macOS), or PowerShell to install the `Syncfusion.Blazor.MarkdownConverter` NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
 
@@ -165,7 +165,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MarkdownConverter pr
 
 ### Use MarkdownConverter in a Blazor Component
 
-In the following example, Markdown content is converted to HTML using the [SfMarkdownConverter.ToHtml](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MarkdownConverter.SfMarkdownConverter.html#Syncfusion_Blazor_MarkdownConverter_SfMarkdownConverter_ToHtml_System_String_Syncfusion_Blazor_MarkdownConverter_MarkdownConverterOptions_) method for synchronous conversion or [SfMarkdownConverter.ToHtmlAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MarkdownConverter.SfMarkdownConverter.html#Syncfusion_Blazor_MarkdownConverter_SfMarkdownConverter_ToHtmlAsync_System_String_Syncfusion_Blazor_MarkdownConverter_MarkdownConverterOptions_) for asynchronous conversion.
+In the following example, Markdown content is converted to HTML using the `SfMarkdownConverter.ToHtml` method for synchronous conversion or `SfMarkdownConverter.ToHtmlAsync` for asynchronous conversion.
 
 {% tabs %}
 {% highlight razor %}
@@ -205,7 +205,7 @@ In the following example, Markdown content is converted to HTML using the [SfMar
 
 ### Use MarkdownConverter with Options
 
-You can customize the conversion behavior using [MarkdownConverterOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MarkdownConverter.MarkdownConverterOptions.html).
+You can customize the conversion behavior using `MarkdownConverterOptions`.
 
 {% tabs %}
 {% highlight razor %}
