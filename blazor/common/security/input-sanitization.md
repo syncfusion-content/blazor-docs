@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-Input sanitization is a critical security practice in Syncfusion Blazor applications that handle user-generated content. Syncfusion Blazor components include built-in HTML sanitization (enabled by default in most cases) to safely process and render potentially untrusted content. This guide explains how these features work, focusing especially on the **Rich Text Editor**(using `EnableHtmlSanitizer` property), and provides guidance for other components such as **DataGrid**.
+Input sanitization is a critical security practice in Syncfusion Blazor applications that handle user-generated content. Syncfusion Blazor components include built-in HTML sanitization (enabled by default in most cases) to safely process and render potentially untrusted content. This guide explains how these features work, focusing especially on the **Rich Text Editor**, **Block Editor** (using `EnableHtmlSanitizer` property), and provides guidance for other components such as **DataGrid**.
 
 ## What is Input Sanitization
 
@@ -21,7 +21,7 @@ Input sanitization is the process of parsing and filtering HTML content from unt
 
 Blazor applications often accept text input, file uploads, dialog content, and query parameters. Users may intentionally or accidentally submit HTML or script content that may execute unexpectedly when rendered as HTML.
 
-If untrusted content is not sanitized, it may:
+If untrusted content is rendered as HTML, it can:              
 
 * Execute malicious JavaScript
 * Alter UI layout or behavior
@@ -51,7 +51,7 @@ Both attacks rely on causing the application to interpret malicious markup as le
 
 ## Built-In Sanitization Features
 
-Several Syncfusion Blazor components include HTML sanitization capabilities to prevent harmful script or markup from being processed. Components that accept or render HTML content such as the Rich Text Editor have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.
+Several Syncfusion Blazor components include HTML sanitization capabilities to prevent harmful script or markup from being processed. Components that accept or render HTML content such as the Rich Text Editor, Block Editor have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering. Other components such as Tooltip, Toast, Dialog, and HTML‑templated controls such as DataGrid also apply the sanitization to ensure user‑provided HTML is safe.
 
 When this property is enabled, the Rich Text Editor component automatically filters out unsafe markup before rendering the content. 
 
@@ -106,8 +106,8 @@ The Block Editor allows users to create structured content such as paragraphs, h
 
 @using Syncfusion.Blazor.BlockEditor
 
-<sfblockeditor enablehtmlsanitizer="true">
-</sfblockeditor>
+<SfBlockEditor EnableHtmlSanitizer="true">
+</SfBlockEditor>
 
 {% endhighlight %}
 {% endtabs %}
@@ -121,8 +121,8 @@ To disable the built-in sanitizer (not recommended for untrusted input), set the
 
 @using Syncfusion.Blazor.BlockEditor
 
-<sfblockeditor enablehtmlsanitizer="false">
-</sfblockeditor>
+<SfBlockEditor EnableHtmlSanitizer="false">
+</SfBlockEditor>
 
 {% endhighlight %}
 {% endtabs %}
@@ -134,6 +134,8 @@ Disabling sanitization allows raw HTML to be inserted and rendered by the Block 
 When you only need to display plain text (not HTML), the safest approach is to HTML encode user input. Encoding converts characters like <, >, and & into harmless text representations so the browser will not interpret them as HTML or scripts. This ensures that even if the user enters malicious markup, it is displayed as text, not executed.
 
 ```
+@using System.Text.Encodings.Web
+
 @code {
     string userInput = "<script>alert('XSS')</script> Hello!";
     string safeText = System.Net.WebUtility.HtmlEncode(userInput);
@@ -141,7 +143,7 @@ When you only need to display plain text (not HTML), the safest approach is to H
 
 Output:
 
-<script>alert('XSS')</script> Hello! //treated as text, not executed
+&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt; Hello!
 ```
 
 Displaying the encoded text ensures it is treated as plain text.
@@ -162,19 +164,23 @@ The following example demonstrates sanitizing text before binding it to the Grid
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
+@using System.Text.Encodings.Web
 
+<div class="input-row">
+    <SfTextBox @bind-Value="UserText" Placeholder="Enter text" CssClass="w-100"></SfTextBox>
 
-<SfTextBox @bind-Value="UserText" Placeholder="Enter text"></SfTextBox>
+    <SfButton CssClass="e-primary" OnClick="ProcessInputAsync" Type="Button">
+        Submit
+    </SfButton>
+</div>
 
-<SfButton CssClass="e-primary" OnClick="ProcessInput">
-    Submit
-</SfButton>
-
+<div class="mt-2">
 <SfGrid @ref="UserGrid" DataSource="Items" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="Content" HeaderText="User Content" Width="200"></GridColumn>
     </GridColumns>
 </SfGrid>
+</div>
 
 @code {
     public string UserText { get; set; } = string.Empty;
@@ -202,10 +208,10 @@ The following example demonstrates sanitizing text before binding it to the Grid
 
 The encoded value ensures the Grid displays safe text without interpreting any malicious input.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrxDAitJvkRyhWu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBdDKiCUIgKSIYz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See Also
 
-* [Paste Clean-up in Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/paste-cleanup)
 * [Content Security Policy (CSP)](https://blazor.syncfusion.com/documentation/common/content-security-policy)
-* [Paste Clean-up in Blazor Blcok Editor](https://sfblazor.azurewebsites.net/staging/documentation/block-editor/paste-cleanup)
+* [Paste Clean-up in Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/paste-cleanup)
+* [Paste Clean-up in Blazor Block Editor](https://blazor.syncfusion.com/documentation/block-editor/paste-cleanup)
