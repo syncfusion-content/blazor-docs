@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-Input sanitization is a critical security practice in Syncfusion Blazor applications that handle user-generated content. Syncfusion Blazor components include built-in HTML sanitization (enabled by default in most cases) to safely process and render potentially untrusted content. This guide explains how these features work, focusing especially on the **Rich Text Editor**, **Block Editor** (using `EnableHtmlSanitizer` property), and provides guidance for other components such as **DataGrid**.
+Input sanitization is a critical security practice in Syncfusion Blazor applications that handle user-generated content. Syncfusion Blazor components include built-in HTML sanitization (enabled by default in most cases) to safely process and render potentially untrusted content. This guide explains how these features work, focusing especially on the **Rich Text Editor**, **Block Editor** (using `EnableHtmlSanitizer` property), and **DataGrid**.
 
 ## What is Input Sanitization
 
