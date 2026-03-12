@@ -35,7 +35,7 @@ The following code example shows the rendering of built-in Syncfusion<sup style=
 <SfIcon Name="IconName.Italic"></SfIcon>
 ```
 
-![Blazor Icon Component](./images/icons/icon.png)
+![Blazor Icon Component](./images/icons/icon.webp)
 
 ### Icon size
 
@@ -71,7 +71,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 <SfIcon Name="IconName.Italic" Size="IconSize.Large"></SfIcon>
 ```
 
-![Icon size customization Blazor Icon Component](./images/icons/icon-size.png)
+![Icon size customization Blazor Icon Component](./images/icons/icon-size.webp)
 
 N> The `Size` property is applicable only when defining the icon using `Name` property. Otherwise, use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
 
@@ -91,7 +91,7 @@ N> The `Size` property is applicable only when defining the icon using `Name` pr
 <SfIcon Name="IconName.AlignMiddle" Title="AlignMiddle"></SfIcon>
 ```
 
-![ToolTip for Blazor Icon Component](./images/icons/icon-title.png)
+![ToolTip for Blazor Icon Component](./images/icons/icon-title.webp)
 
 ### Icon appearance customization 
 
@@ -117,7 +117,7 @@ The following example code demonstrates the custom font-size and color for icons
 </style>
 ```
 
-![Blazor Icon Component Customization](./images/icons/custom-icon.png)
+![Blazor Icon Component Customization](./images/icons/custom-icon.webp)
 
 ### Third‑party icons integration
 
@@ -149,7 +149,7 @@ Example link tag:
 <SfIcon IconCss="oi oi-bluetooth"></SfIcon>
 ```
 
-![Load custom icon in Blazor Icon Component](./images/icons/icon-css.png)
+![Load custom icon in Blazor Icon Component](./images/icons/icon-css.webp)
 
 ### HTML attribute support
 
@@ -182,7 +182,7 @@ The following example shows how to integrate the icons with Syncfusion<sup style
 <SfButton IconCss="e-icons e-chevron-down-fill" Content="Show dropdown" IconPosition="IconPosition.Right"></SfButton>
 ```
 
-![Using Icons with Blazor Button Component](./images/icons/button-integration.png)
+![Using Icons with Blazor Button Component](./images/icons/button-integration.webp)
 
 
 ## Use icons directly in an HTML element

@@ -27,6 +27,10 @@ N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scaf
 
     ![Scaffolded add-in from server project](images/Add_scaffold_Serverside.png)
 
+    If the application type is **Blazor Hosted**, right-click the **Controllers** folder from **{Project Name}.Server** application in the Solution Explorer, click **Add**, and then select **New Scaffolded Item...**.
+
+    ![Scaffolded add-in from the hosted project](images/Add_scaffold_hosted.png)
+
 2. In the **Add New Scaffolded Item** dialog, select **Syncfusion Blazor Scaffolder** and then click **Add**.
 
     ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/Syncfusion_scaffolder.png)
@@ -61,6 +65,14 @@ N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scaf
 
         However, if you wish to perform CRUD operations, you need to provide a valid link that handles these operations. This link should point to an endpoint or service capable of managing the database operations required by your application. By providing this link, you ensure that your application can effectively interact with the back-end service to perform CRUD operations.
 
+    For a **Blazor Server** application, both local data and remote data types are available.
+
+    ![Choose required selected control features for the serverside project](images/Feature_Window_serverside.png)
+
+    For a **Hosted Application**, only the remote data type is available.
+
+    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted.png)
+
 5. In the Syncfusion<sup style="font-size:70%">&reg;</sup> UI Scaffolder, the dialog for the selected component features opens. Choose the required features, update the necessary data fields, and then click **Add**.
 
     ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted_feature.png)
@@ -93,17 +105,13 @@ N> Verify that at least one Entity Framework model exists. If your application l
 
 Install the **syncfusion.scaffolding** tool globally using the following command.
 
-   ```
-   dotnet tool install -g syncfusion.scaffolding
-   ```
+   ```dotnet tool install -g syncfusion.scaffolding```
 
 ## Update command-line scaffolding
 
 Update the **syncfusion.scaffolding** tool globally using the following command.
 
-   ```
-   dotnet tool update -g syncfusion.scaffolding
-   ```
+   ```dotnet tool update -g syncfusion.scaffolding```
 
 ## Add a scaffolded item from the command line
 
