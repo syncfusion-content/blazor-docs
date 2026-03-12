@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® DataGrid with PDF Viewer in Web App (Server)
 
-This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)** together with the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid** in a Blazor Web App using the Server render mode.
+This article explains how to integrate the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next‑Gen)** together with the **Syncfusion® Blazor DataGrid** in a Blazor Web App using the Server render mode.
 
 This guide uses [Visual Studio Code](https://code.visualstudio.com/). If you haven’t created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) instructions for Visual Studio Code, then return to this article.
 
