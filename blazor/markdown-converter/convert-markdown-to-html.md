@@ -49,20 +49,6 @@ SfMarkdownConverter.ToHtmlAsync(markdown: string, options?: MarkdownConverterOpt
 | `LineBreak`  | Enables or disables conversion of **single line breaks** into `<br />` elements.                 | `bool`     | `false`     |
 | `Silent`     | Enables or disables **error suppression**, skipping invalid Markdown instead of throwing errors. | `bool`     | `false`     |
 
-## Real-time Markdown Editing and Preview with Splitter
-
-The below sample demonstrates how to use the [Syncfusion RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) along with the Markdown Converter to convert Markdown content into HTML with real-time preview. This setup allows seamless editing and instant conversion of Markdown content.
-
-To make the experience seamless, the [Syncfusion Splitter control](https://blazor.syncfusion.com/documentation/splitter/split-panes) is used to display the editor and preview side-by-side.
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/markdown-to-html-preview.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Basic Markdown to HTML Conversion
 
 The below example demonstrates how to use the Blazor Markdown Converter to convert Markdown content into HTML. This setup allows real-time conversion of Markdown to HTML with customizable options.
@@ -115,6 +101,20 @@ Example with GFM features:
 {% highlight razor %}
 
 {% include_relative code-snippet/markdown-to-html-gfm.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Real-time Markdown Editing and Preview with Splitter
+
+The below sample demonstrates how to use the [Syncfusion RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started) along with the Markdown Converter to convert Markdown content into HTML with real-time preview. This setup allows seamless editing and instant conversion of Markdown content.
+
+To make the experience seamless, the [Syncfusion Splitter control](https://blazor.syncfusion.com/documentation/splitter/split-panes) is used to display the editor and preview side-by-side.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/markdown-to-html-preview.razor %}
 
 {% endhighlight %}
 {% endtabs %}

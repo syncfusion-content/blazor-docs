@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with the Markdown Converter in Blazor | Syncfusion
+title: Getting Started with Markdown Converter in Blazor | Syncfusion
 description: Check out and learn about getting started with the Markdown Converter in the Blazor WebAssembly Application.
 platform: Blazor
 control: MarkdownConverter
