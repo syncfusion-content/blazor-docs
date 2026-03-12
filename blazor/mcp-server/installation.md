@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation Guide | Syncfusion MCP Server
+title: Installation Guide | Syncfusion Blazor MCP Server
 description: Step-by-step guide to install and set up the Syncfusion Blazor MCP server in VS Code, Cursor, and Code Studio for AI-powered Blazor development.
 control: Installation
 platform: blazor
