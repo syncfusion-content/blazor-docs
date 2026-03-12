@@ -64,13 +64,15 @@ public Task DataBoundHandler()
     <div class="e-spin-overlay" style="display: @(ShowSpinner ? "block" : "none");">
         <Syncfusion.Blazor.Spinner.SfSpinner @bind-Visible="@ShowSpinner"></Syncfusion.Blazor.Spinner.SfSpinner>
     </div>
-    <SfGrid TValue="OrderData" ID="OrdersGrid" AllowPaging="true">
-        <SfDataManager Url="https://services.odata.org/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor"></SfDataManager>
-        <GridEvents DataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
+    <SfGrid TValue="APIGridOrder">
+        <SfDataManager Url="https://blazor.syncfusion.com/services/development/api/GridWebApi" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+        <GridEvents DataBound="DataBoundHandler" TValue="APIGridOrder"></GridEvents>
         <GridColumns>
-            <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-            <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer Name" Width="130"></GridColumn>
-            <GridColumn Field="@nameof(OrderData.EmployeeID)" HeaderText="Employee ID" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(APIGridOrder.EmployeeID) HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(APIGridOrder.FirstName) HeaderText="First Name" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(APIGridOrder.Designation) HeaderText=" Designation" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+            <GridColumn Field=@nameof(APIGridOrder.ReportsTo) HeaderText="ReportsTo" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(APIGridOrder.Country) HeaderText="Country" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
         </GridColumns>
     </SfGrid>
 </div>
@@ -92,26 +94,40 @@ public Task DataBoundHandler()
     }
 </style>
 
-@if(ShowSpinner)
+@if (ShowSpinner)
 {
-  <style>
+    <style>
         .e-grid .e-spinner-pane {
             display: none; /* hides the built-in grid spinner */
         }
-  </style>
+    </style>
 }
 
-@code 
+@code
 {
     public bool ShowSpinner { get; set; } = true;
 
     public bool IsLoading { get; set; } = true;
 
-    public class OrderData
+    public class APIGridOrder
     {
-        public int OrderID { get; set; }
-        public string? CustomerID { get; set; }
-        public int EmployeeID { get; set; }
+        public APIGridOrder()
+        {
+
+        }
+        public APIGridOrder(string employeeId, string firstName, string designation, string country, string reportsTo)
+        {
+            this.EmployeeID = employeeId;
+            this.FirstName = firstName;
+            this.Designation = designation;
+            this.ReportsTo = reportsTo;
+            this.Country = country;
+        }
+        public string EmployeeID { get; set; }
+        public string ReportsTo { get; set; }
+        public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
     }
 
     public async Task DataBoundHandler()
@@ -123,7 +139,8 @@ public Task DataBoundHandler()
         }
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrxDAsipUDHRpDj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhRjUWVpislfAyD?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
