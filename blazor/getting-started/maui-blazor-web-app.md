@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrating Blazor Component with a .NET MAUI Blazor Hybrid and Web App
+title: Steps to create a .NET MAUI Blazor Hybrid and Web App and integrate Syncfusion Blazor components.
 description: Check out the documentation for getting started with .NET MAUI Blazor Hybrid and Blazor Web App and Syncfusion Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
@@ -9,17 +9,17 @@ documentation: ug
 
 # Integrating Blazor Component with a .NET MAUI Blazor Hybrid and Web App
 
-This section explains how to create and run a **.NET MAUI Blazor Hybrid** app together with a **Blazor Web App** using [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
+This section explains how to create and run a **.NET MAUI Blazor Hybrid App** together with a **Blazor Web App** using [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
 
 ## What is .NET MAUI Blazor Hybrid and Web App?
 
-A **.NET MAUI Blazor Hybrid app** is a native application for Windows, Android, iOS, and macOS. It uses Blazor pages inside a WebView to display the UI.
+A **.NET MAUI Blazor Hybrid App** is a native application for Windows, Android, iOS, and macOS. It uses Blazor pages inside a WebView to display the UI.
 
 A **.NET MAUI Blazor Web App** uses a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used in a Blazor WebAssembly app, a Blazor Server app, and a .NET MAUI Blazor app. This makes it easy to build one UI and use it across mobile, desktop, and web platforms. 
 
 By sharing UI components between native and web apps, this pattern ensures consistent user experiences, maximizes code reuse, and simplifies maintenance for applications targeting multiple environments.
 
-Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0)** project template. You can use this template to quickly create a MAUI Hybrid app together with a Blazor Web App in one solution. 
+Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0)** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution. 
 
 ## Prerequisites
 
@@ -35,13 +35,13 @@ Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn
 3. Search for **.NET MAUI Blazor Hybrid and Web App**.
 4. Select the template and create the project.
 
-The template generates the shared RCL, MAUI app, and Web App.
+The template generates the shared RCL, .NET MAUI app, and Web App.
 
 ![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the App
 
-To add the Syncfusion DataGrid.
+Follow these steps to add the Syncfusion DataGrid.
 
 1. Open (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
 2. Search for and install.
@@ -52,7 +52,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Syncfusion Namespaces
 
-Open **~/.Maui/_Imports.razor** (or the MAUI project root) and **~/Components/_Imports.razor** in the Blazor Web App to add the Syncfusion namespaces.
+Open both of the following files and add the Syncfusion namespaces.
+
+* `~/.Maui/_Imports.razor`
+* `~/Components/_Imports.razor` (Blazor Web App)
 
 ```cshtml
 
@@ -96,7 +99,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -114,6 +117,9 @@ Add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any R
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" />
 
