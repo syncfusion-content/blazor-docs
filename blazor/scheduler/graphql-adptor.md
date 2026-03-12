@@ -42,7 +42,7 @@ Create a **ASP.NET Core Empty** server project using Visual Studio
 2. Go to **File → New → Project**.
 3. Search for and select **ASP.NET Core Empty** (C#).
 4. Name the project (example: `GraphQLServer`).
-5. Select **.NET 8.0 or compatible ** as the target framework
+5. Select **.NET 8.0 or compatible** as the target framework
 6. Click **Create**
 
 This creates a minimal ASP.NET Core app with just `Program.cs`.
@@ -514,7 +514,7 @@ The GraphQL Mutation class has been successfully created and is ready to handle 
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **BlazorSchedulerApp**
-5. Select **.NET 8.0** as the target framework
+5. Select **.NET 8.0 or compatible** as the target framework
 6. Set **Interactive render mode** to **Server**
 7. Set **Interactivity location** to **Per page/component**
 8. Click **Create**
