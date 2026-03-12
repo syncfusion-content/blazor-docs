@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Working with data | Blazor ChartWizard Component | Syncfusion
-description: Check out and learn how to add and configure the Syncfusion Blazor ChartWizard component and much more.
+title: Working with data | Blazor Chart Wizard Component | Syncfusion
+description: Check out and learn here all about working with data in Syncfusion Blazor Chart Wizard component, it's elements and more.
 platform: Blazor
-control: ChartWizard
+control: Chart Wizard
 documentation: ug
 ---
 
-# Working with Data in Blazor ChartWizard Component
+# Working with Data in Blazor Chart Wizard Component
 
-The primary configuration for the wizard is provided via the `ChartSettings`. Key properties:
+The primary configuration for the chart wizard is provided via the `ChartSettings`. Key properties:
 
 - `DataSource` (IEnumerable<Object>) — Provide the collection of data objects used by the chart. Each object should contain fields referenced by `CategoryFields` and `SeriesFields`.
 - `CategoryFields` (IEnumerable<string>) — One or more field names from the data objects used for the category (x-axis) values. Example: `new List<string>{ "Country" }` or `new[] { "Month" }`.
@@ -20,16 +20,16 @@ The primary configuration for the wizard is provided via the `ChartSettings`. Ke
 
 - Single-category, single-series chart
 
-```razor
+```
 <ChartSettings DataSource="@SalesData"
                CategoryFields="@(new[]{ "Month" })"
                SeriesFields="@(new[]{ "Sales" })"
                SeriesType="ChartWizardSeriesType.Column" />
 ```
 
-- Multi-series chart (stacked or grouped)
+- Multi-series chart
 
-```razor
+```
 <ChartSettings DataSource="@OlympicsData"
                CategoryFields="@(new[]{ "Country" })"
                SeriesFields="@(new[]{ "Gold", "Silver", "Bronze" })"
@@ -39,6 +39,11 @@ The primary configuration for the wizard is provided via the `ChartSettings`. Ke
 N>
 * The order of `SeriesFields` determines the default series ordering.
 * `CategoryFields` can contain multiple fields when composing nested/grouped categories; the wizard will combine them as specified.
+
+
+## List Binding
+
+An IEnumerable object can be assigned to the `DataSource` property of the `ChartSettings`.
 
 ```
 
@@ -85,8 +90,57 @@ N>
 
 ```
 
-> ![ChartWizard working with data](images/chart-wizard-working-with-data.png)
+![Chart Wizard working with data - list binding](images/chart-wizard-working-with-data-list.png)
+
+## ObservableCollection
+
+The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
+
+```
+@using Syncfusion.Blazor.ChartWizard
+@using System.Collections.ObjectModel
+
+<div class="control-section">
+    <SfChartWizard>
+        <ChartSettings DataSource="@OlympicsDataSource"
+                    CategoryFields="@categories"
+                    SeriesFields="@chartSeries"
+                    SeriesType="ChartWizardSeriesType.Bar" />
+    </SfChartWizard>
+</div>
+
+@code {
+    private readonly List<string> chartSeries = new() { "Gold", "Silver", "Bronze" };
+    private readonly List<string> categories = new() { "CountryCode" };
+    private ObservableCollection<OlympicsData>? OlympicsDataSource;
+
+    public class OlympicsData
+    {
+        public string? CountryCode { get; set; }
+        public double Gold { get; set; }
+        public double Silver { get; set; }
+        public double Bronze { get; set; }
+        public static ObservableCollection<OlympicsData> GetData()
+        {
+            return new ObservableCollection<OlympicsData>
+            {
+                new OlympicsData { CountryCode = "GBR", Gold = 27, Silver = 23, Bronze = 17 },
+                new OlympicsData { CountryCode = "CHN", Gold = 26, Silver = 18, Bronze = 26 },
+                new OlympicsData { CountryCode = "AUS", Gold = 8, Silver = 11, Bronze = 10 },
+                new OlympicsData { CountryCode = "RUS", Gold = 19, Silver = 18, Bronze = 19 }
+            };
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        OlympicsDataSource = OlympicsData.GetData();
+    }
+}
+
+```
+![Chart Wizard working with data - observable data binding](images/chart-wizard-working-with-data-observable.png)
 
 ## See also
 
-- Explore the [Chart Wizard Demo]("Demo_Link") for interactive samples.
+- Explore the `Chart Wizard Demo` for interactive samples.
