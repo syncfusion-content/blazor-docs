@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Markdown Converter in Blazor Server App
 
-This section briefly explains about how to include `Blazor Markdown Converter` component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This guide explains how to include the Blazor Markdown Converter component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -71,7 +71,7 @@ cd BlazorApp
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Converter NuGet in the App
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure in the project root directory where the `.csproj` file is located.
+* Ensure you're in the project root directory where the `.csproj` file is located.
 * Run the following command to install `Syncfusion.Blazor.MarkdownConverter` NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
