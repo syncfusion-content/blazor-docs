@@ -9,11 +9,11 @@ documentation: ug
 
 # Using Blazor with JWT Authentication
 
-This guide shows how to secure the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a Blazor Web App with Interactive Server rendering using JWT (JSON Web Token) authentication. You will configure JWT on the server, request a token from the client, attach it to Syncfusion DataManager requests, and protect your grid API with `Authorize` attribute.
+This guide shows how to secure the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a Blazor Web App with Interactive Server rendering using JWT (JSON Web Token) authentication.
 
 ## What is JWT (JSON Web Token)?
 
-A JSON Web Token (JWT) is a compact, digitally signed string that identifies a user and authorizes API calls. It contains claims (such as user ID and name) and an expiry, so the server can trust the request for a limited time.
+A JSON Web Token (JWT) is a compact, digitally signed string that identifies a user and authorizes API calls. 
 
 ### Structure: Header, Payload, Signature
 
@@ -21,24 +21,31 @@ A JWT contains three parts:
 
 - **Header** – declares the signing algorithm and token type (e.g., `{ "alg": "HS256", "typ": "JWT" }`).
 - **Payload** – contains claims (e.g., `sub`, `name`, `role`, `exp`).
-- **Signature** – computed using the header + payload + secret (or private key) to prevent tampering.
+- **Signature** – computed using the header, payload, and secret (or private key) to prevent tampering.
 
 ## Why Use JWT in Blazor?
 
-Syncfusion components make HTTP requests to your API under the hood. JWT attaches a trusted identity to each request and prevents unauthorized access without relying on server‑side session state.
+Syncfusion components make HTTP requests to your API internally. JWT allows each request to carry a trusted identity and prevents unauthorized access without relying on server-side session state.
 
 ## Create a Blazor Web App (Interactive Server)
 
-Create a new **Blazor Web App** and select **Interactive Server** rendering. Install the Syncfusion Blazor packages, and add the required style and script references as outlined in the [Getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio) documentation.
-
+Create a new **Blazor Web App** and select **Interactive Server** rendering mode. Install the Syncfusion Blazor packages, and add the required style and script references as outlined in the [Getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio) documentation.
 
 ## Add JWT Authentication
 
 This section explains how to enable JWT authentication in your Blazor Web App. 
 
+### Install Required Packages for JWT
+
+To add the JWT authentication in the app, open the NuGet Package Manager in Visual StudioFrom **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, install:
+
+```razor
+Microsoft.AspNetCore.Authentication.JwtBearer;
+```
+
 ### Configuring JWT in appsettings.json
 
-In this step, you define the JWT settings that the server uses to sign and validate authentication tokens.
+Define the JWT settings that the server will use to sign and validate authentication tokens.
 
 ```csharp
 {
@@ -48,20 +55,11 @@ In this step, you define the JWT settings that the server uses to sign and valid
     "Audience": "BlazorJWTClient"
   }
 }
-
-```
-
-### Install Required Packages for JWT
-
-In **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, install:
-
-```csharp
-Microsoft.AspNetCore.Authentication.JwtBearer;
 ```
 
 ### Token generation
 
-This part explains how to generate a JWT token on the server using a custom TokenService in `Services/TokenService.cs`.
+This section describes how to generate a JWT token on the server using a custom TokenService in `Services/TokenService.cs`.
 
 ```csharp
 using System.IdentityModel.Tokens.Jwt;
@@ -108,11 +106,12 @@ namespace BlazorJWT.Services
     }
 }
 ```
-### Getting the Token (AuthController.cs)
+### Getting the Token
 
-AuthController exposes an API endpoint that returns a JWT token for the requesting user in `~/Controllers/AuthController.cs`.
+AuthController exposes an API endpoint that returns a JWT token for the requesting user.
 
 ```csharp
+// ~/Controllers/AuthController.cs
 using BlazorJWT.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -136,7 +135,7 @@ public class AuthController : ControllerBase
 ```
 ### Adding JWT Middleware 
 
-This step registers the JWT authentication and authorization middleware so that API requests can be validated in `Program.cs`.
+ Registers JWT authentication and authorization middleware so that API requests can be validated. Add these configurations in `Program.cs`.
 
 ```csharp
 using System.Text;
@@ -198,9 +197,47 @@ app.Run();
 
 This section shows how to fetch a JWT token from the server, attach it to Syncfusion DataManager requests and securely load data into the DataGrid using authenticated API calls.
 
+**1. Install Syncfusion® Blazor DataGrid and Themes NuGet packages**
+
+To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+
+**2. Register Syncfusion® Blazor service**
+
+Open the **~/_Imports.razor** file and import the required namespaces.
+
+```razor
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+```
+
+**3. Register the Syncfusion® Blazor service in the ~/Program.cs file**
+
+```razor
+using Syncfusion.Blazor;
+ 
+builder.Services.AddSyncfusionBlazor();
+```
+
+**4. Add stylesheet and script resources**
+
+Include the theme stylesheet and script references in the `App.razor` file.
+
+```razor
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
+</head>
+....
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+```
+
 ### Create Sample Data Model
 
-Create sample records for the DataGrid to display in `~/Models/OrdersDetails.cs`.
+Create sample records for the DataGrid in `~/Models/OrdersDetails.cs` file.
 
 ```csharp
 namespace BlazorJWT.Models;
@@ -233,9 +270,10 @@ public class OrdersDetails
 ```
 ### Protecting the Syncfusion DataGrid API
 
-This step secures the API endpoint used by the DataGrid so only authenticated requests can access data. The `Authorize` attribute ensures only users with a valid token can load grid data in `~/Controllers/GridController.cs`.
+Secures the API endpoint used by the DataGrid so only authenticated requests can access data. The `Authorize` attribute ensures only users with a valid token can load grid data.
 
 ```csharp
+// ~/Controllers/GridController.cs
 using BlazorJWT.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -263,13 +301,11 @@ public class GridController : ControllerBase
 }
 ```
 
-
 ###  Requesting Token and Loading Syncfusion DataGrid
 
 This section explains how the Blazor component requests the JWT token and refreshes the DataGrid after authentication.
 
 ```csharp
-
 var tokenRes = await Http.PostAsync("api/auth/token?user=username", null);
 jwt = json["token"];
 isDataManagerEnabled = true;
@@ -278,7 +314,7 @@ await grid.Refresh();
 
 ### Adding JWT to Syncfusion DataManager Headers
 
-Here you attach the JWT token to HTTP headers so the DataManager can send authenticated API requests.
+Attach the JWT token to HTTP headers so the DataManager can send authenticated requests.
 
 ```csharp
 // Razor page
@@ -310,7 +346,7 @@ Here you attach the JWT token to HTTP headers so the DataManager can send authen
 
 @code {
     private SfGrid<OrdersDetails>? grid;
-    // Grid is visible; DataManager is enabled only after token is retrieved.
+    // DataManager is enabled only after token is retrieved.
     private bool isDataManagerEnabled = false;
     private string? jwt;
     private string? error;
@@ -345,4 +381,4 @@ Here you attach the JWT token to HTTP headers so the DataManager can send authen
     }
 }
 ```
-The complete application flow ensures the grid loads only after the user is authenticated using a valid JWT.
+The complete application flow ensures the DataGrid loads only after the user is authenticated using a valid JWT.
