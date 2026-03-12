@@ -7,30 +7,32 @@ control: Common
 documentation: ug
 ---
 
-# Upgrading Syncfusion® Blazor application to new version
+# Upgrade a Project to the latest Syncfusion® Version
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for Visual Studio Code enables upgrading an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration extension for Visual Studio Code enables upgrading an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application to a newer Essential Studio<sup style="font-size:70%">&reg;</sup> release by updating NuGet package references and theme links automatically.
 
-N> The Syncfusion Blazor Web Application project migration utility is available from version `v17.4.0.39`.
+## Steps to migrate the project
 
-Use the following steps to migrate an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Application.
+1. in Visual Studio Code, open an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application or create a new Blazor application.
 
-1. In Visual Studio Code, open an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Application or create a new one.
+   Supported application types:
+   - Blazor Web App (Server or WebAssembly rendering)
+   - Blazor Server App
+   - Blazor WebAssembly App (standalone or ASP.NET Core hosted)
+   - Blazor WebAssembly App (Progressive Web Application)
 
-2. In Explorer (Workspace), right-click the project file and select **Migrate Syncfusion® Blazor Application to another version...** from the context menu. Refer to the screenshot below.
+2. In the Explorer panel, right-click the project file (`.csproj`) and select **Migrate Syncfusion Blazor Application to another version** from the context menu.
 
-    ![Context menu showing Migrate Syncfusion Blazor Application command](images/Migration.PNG)
+    ![Context menu showing Migrate Syncfusion Blazor Application option](images/migration.webp)
 
-    N> The Migration option is available only when the application already references Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages.
+    N> The Migration option becomes available only after the project references the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
 
-3. From the Command Palette, choose **Select Blazor Version** and pick the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package version published on `nuget.org`.
+3. In the Command Palette, select **Select Blazor Version** and choose the desired Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor version from the list (displays versions available on `nuget.org`).
 
-    ![Palette showing selection of Syncfusion Blazor version](images/VersionSelection.PNG)
+    ![Command Palette showing Syncfusion version selection](images/versionselection.webp)
 
-4. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package references and theme links are updated to the selected version in the application.
+4. After conversion completes, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package references is updated to the selected version in the application.
 
-    ![Project file updated with new Syncfusion NuGet package versions](images/NuGetPackage.png)
+    ![Project file updated with Syncfusion NuGet package references](images/nuGetpackage.webp)
 
-    ![Theme link updated to the selected version](images/CDNLink.png)
-
-5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
+5. If the trial setup or NuGet packages from `nuget.org`, register the Syncfusion® license key in the application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to the application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
