@@ -7,14 +7,30 @@
             <h3>Markdown Input</h3>
             <SfRichTextEditor @bind-Value="markdownContent" Height="300px" EditorMode="EditorMode.Markdown">
             </SfRichTextEditor>
-            <button @onclick="ConvertAsync" class="btn btn-primary mt-2">Convert Asynchronously</button>
+            <button @onclick="ConvertAsync" class="btn btn-primary mt-2" disabled="@isConverting">
+                @if (isConverting)
+                {
+                    <span>Converting...</span>
+                }
+                else
+                {
+                    <span>Convert Asynchronously</span>
+                }
+            </button>
         </div>
         <div class="col-md-6">
             <h3>HTML Output</h3>
             <div class="preview-panel border p-3">
                 @if (isConverting)
                 {
-                    <p class="text-info">Converting...</p>
+                    <p class="text-info">
+                        <span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>
+                        Converting...
+                    </p>
+                }
+                else if (conversionError)
+                {
+                    <p class="text-danger">@errorMessage</p>
                 }
                 else if (!string.IsNullOrEmpty(htmlOutput))
                 {
@@ -30,6 +46,9 @@
 </div>
 
 @code {
+    /// <summary>
+    /// The markdown content for conversion.
+    /// </summary>
     private string markdownContent = @"# Large Document
 
 ## Section 1
@@ -41,14 +60,67 @@ Multiple paragraphs and sections for demonstration.
 ## Section 3
 More content to demonstrate asynchronous processing.";
     
-    private string htmlOutput = "";
+    /// <summary>
+    /// The HTML output after conversion.
+    /// </summary>
+    private string htmlOutput = string.Empty;
+    
+    /// <summary>
+    /// Flag indicating if conversion is in progress.
+    /// </summary>
     private bool isConverting = false;
+    
+    /// <summary>
+    /// Flag indicating if conversion error occurred.
+    /// </summary>
+    private bool conversionError = false;
+    
+    /// <summary>
+    /// Error message if conversion failed.
+    /// </summary>
+    private string errorMessage = string.Empty;
 
+    /// <summary>
+    /// Converts markdown asynchronously to prevent UI thread blocking.
+    /// </summary>
     private async Task ConvertAsync()
     {
+        // Input validation
+        if (string.IsNullOrWhiteSpace(markdownContent))
+        {
+            htmlOutput = string.Empty;
+            return;
+        }
+
         isConverting = true;
-        var options = new MarkdownConverterOptions { Gfm = true };
-        htmlOutput = await SfMarkdownConverter.ToHtmlAsync(markdownContent, options);
-        isConverting = false;
+        conversionError = false;
+        errorMessage = string.Empty;
+
+        try
+        {
+            // Create options for conversion
+            var options = new MarkdownConverterOptions 
+            { 
+                Gfm = true,
+                LineBreak = false,
+                Silent = false
+            };
+
+            // Perform async conversion
+            htmlOutput = await SfMarkdownConverter.ToHtmlAsync(markdownContent, options);
+        }
+        catch (Exception ex)
+        {
+            conversionError = true;
+            errorMessage = $"Error converting markdown: {System.Net.WebUtility.HtmlEncode(ex.Message)}";
+            Console.Error.WriteLine($"Markdown conversion error: {ex.Message}");
+            htmlOutput = string.Empty;
+        }
+        finally
+        {
+            isConverting = false;
+            // Ensure UI updates after async operation
+            StateHasChanged();
+        }
     }
 }

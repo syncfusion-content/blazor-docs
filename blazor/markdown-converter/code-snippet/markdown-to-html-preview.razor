@@ -9,15 +9,16 @@
                 <SplitterPane Size="50%" Min="40%" Max="70%" Resizable="true">
                     <ContentTemplate>
                         <div class="splitter-default-content pane1">
-                                <SfRichTextEditor Height="100%"
-                                                  EditorMode="EditorMode.Markdown"
-                                                  SaveInterval="1"
-                                                  @bind-Value="@MarkdownValue" @ref="EditorRef">
-                                    <RichTextEditorToolbarSettings Items="@Tools" EnableFloating="false" Type="ToolbarType.Expand">
-                                    </RichTextEditorToolbarSettings>
-                                    <RichTextEditorMarkdownOptions ListSyntax="@ListSyntax" />
-                                    <RichTextEditorEvents ValueChange="@OnValueChange" />
-                                </SfRichTextEditor>
+                            <SfRichTextEditor Height="100%"
+                                              EditorMode="EditorMode.Markdown"
+                                              SaveInterval="1"
+                                              @bind-Value="@MarkdownValue" 
+                                              @ref="EditorRef">
+                                <RichTextEditorToolbarSettings Items="@Tools" EnableFloating="false" Type="ToolbarType.Expand">
+                                </RichTextEditorToolbarSettings>
+                                <RichTextEditorMarkdownOptions ListSyntax="@ListSyntax" />
+                                <RichTextEditorEvents ValueChange="@OnValueChange" />
+                            </SfRichTextEditor>
                         </div>
                     </ContentTemplate>
                 </SplitterPane>
@@ -29,7 +30,18 @@
                             </div>
                             <div class="splitter-default-content source-code pane2"
                                  style="flex:1; min-height:100%; box-sizing:border-box;">
-                                @((MarkupString)(HtmlValue ?? ""))
+                                @if (isConverting)
+                                {
+                                    <p class="text-info">Converting...</p>
+                                }
+                                else if (!string.IsNullOrEmpty(HtmlValue))
+                                {
+                                    @((MarkupString)HtmlValue)
+                                }
+                                else
+                                {
+                                    <p class="text-muted">Preview will appear here...</p>
+                                }
                             </div>
                         </div>
                     </ContentTemplate>
@@ -41,15 +53,37 @@
 </div>
 
 @code {
+    /// <summary>
+    /// Reference to the RichTextEditor component.
+    /// </summary>
     private SfRichTextEditor? EditorRef;
-    private bool IsPreview { get; set; }
+    
+    /// <summary>
+    /// The converted HTML output.
+    /// </summary>
     private string? HtmlValue { get; set; }
+    
+    /// <summary>
+    /// Markdown converter options.
+    /// </summary>
     private MarkdownConverterOptions? Pipeline { get; set; }
+    
+    /// <summary>
+    /// Flag indicating if conversion is in progress.
+    /// </summary>
+    private bool isConverting = false;
+    
+    /// <summary>
+    /// The markdown content being edited.
+    /// </summary>
     private string MarkdownValue { get; set; } = @"The sample is added to showcase **markdown editing**.
 Type or edit the content and apply formatting to view markdown formatted content.
 We can add our own custom formation syntax for the Markdown formation, [sample link](https://blazor.syncfusion.com/demos/rich-text-editor/markdown-custom-format).
 The Markdown Converter is used in this sample to convert markdown into HTML content.";
     
+    /// <summary>
+    /// Toolbar items configuration for the editor.
+    /// </summary>
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Bold },
@@ -69,35 +103,84 @@ The Markdown Converter is used in this sample to convert markdown into HTML cont
         new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
     
+    /// <summary>
+    /// List syntax configuration for markdown.
+    /// </summary>
     private Dictionary<string, string> ListSyntax { get; set; } = new Dictionary<string, string>()
     {
         { "OL", "1., 2., 3." }
     };
     
+    /// <summary>
+    /// Initializes the component after render.
+    /// </summary>
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);
-        Pipeline = new MarkdownConverterOptions { Gfm = true, LineBreak = true, Silent = false };
-        this.HtmlValue = await SfMarkdownConverter.ToHtmlAsync(MarkdownValue, Pipeline);
-        StateHasChanged();
+        
+        if (firstRender)
+        {
+            try
+            {
+                Pipeline = new MarkdownConverterOptions 
+                { 
+                    Gfm = true, 
+                    LineBreak = true, 
+                    Silent = false 
+                };
+                
+                HtmlValue = await SfMarkdownConverter.ToHtmlAsync(MarkdownValue, Pipeline);
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Initial markdown conversion error: {ex.Message}");
+            }
+        }
     }
     
-    private async void OnValueChange(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
+    /// <summary>
+    /// Handles value changes in the markdown editor.
+    /// Uses Task instead of void to properly handle async operations.
+    /// </summary>
+    private async Task OnValueChange(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
-        if (args.Value == null)
+        try
         {
-            this.HtmlValue = null;
+            isConverting = true;
+            
+            if (args.Value == null)
+            {
+                this.HtmlValue = null;
+            }
+            else
+            {
+                MarkdownValue = args.Value;
+                this.HtmlValue = await SfMarkdownConverter.ToHtmlAsync(MarkdownValue, Pipeline);
+            }
+            
+            StateHasChanged();
         }
-        else
+        catch (Exception ex)
         {
-            this.HtmlValue = await SfMarkdownConverter.ToHtmlAsync(MarkdownValue, Pipeline);
+            Console.Error.WriteLine($"Markdown conversion error: {ex.Message}");
+            HtmlValue = $"<p class='alert alert-danger'>Error: {System.Net.WebUtility.HtmlEncode(ex.Message)}</p>";
         }
-        StateHasChanged();
+        finally
+        {
+            isConverting = false;
+        }
     }
     
-    private void OnResizing()
+    /// <summary>
+    /// Handles splitter resize events to refresh the editor UI.
+    /// </summary>
+    private async Task OnResizing()
     {
-        EditorRef?.RefreshUIAsync();
+        if (EditorRef != null)
+        {
+            await EditorRef.RefreshUIAsync();
+        }
     }
 }
 
