@@ -1,6 +1,6 @@
 ---
 title: Authentication and Authorization in Syncfusion Blazor Components
-description: Learn how to secure Syncfusion Blazor components using authentication and authorization in Blazor Server and WebAssembly applications.
+description: Learn how to secure Syncfusion Blazor components with authentication and authorization in Blazor Server and WebAssembly applications.
 platform: blazor
 component: common
 documentation: ug
@@ -8,15 +8,17 @@ documentation: ug
 
 # Authentication and Authorization in Syncfusion Blazor Components
 
-Authentication verifies the identity of a user, while authorization determines the level of access and actions the user can perform. Syncfusion Blazor components support both UI-level and data-level security, allowing you to control what users see and which operations they can perform. This guide explains how to secure Syncfusion Blazor components using authentication and authorization. It demonstrates UI-level and data-level security with examples from the DataGrid, Scheduler, and TreeView components.
+This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It includes examples of UI-level and data-level security using the DataGrid, Scheduler, and TreeView components.
+
+Authentication verifies the identity of a user, while authorization determines the level of access and actions the user can perform. Syncfusion Blazor components integrate with Blazor's authentication and authorization to provide UI-level and data-level security. This lets you control what users see and the operations they can perform.
 
 ## Authentication
 
-Authentication establishes who the user is within your Blazor application. Blazor typically uses cookie based authentication for Server apps and token-based systems or BFF(Backend-for-Frontend) patterns for WebAssembly. Syncfusion components consume user identity information through Blazor's `AuthenticationStateProvider` to securely load or restrict data.
+Authentication establishes who the user is within your Blazor application. Blazor apps often use cookie-based authentication for Server apps. For WebAssembly apps, use token-based systems or the Backend-for-Frontend (BFF) pattern, where a server handles auth for the client. Syncfusion components access user identity information through Blazor's `AuthenticationStateProvider` to securely load data or restrict features based on the user's identity.
 
 ## Authorization
 
-Authorization determines which Syncfusion components or features a user is allowed to access after successful authentication. Blazor enables authorization through role checks, policies, and UI filtering with <AuthorizeView>. Syncfusion components use these values to enable or disable features, hide UI, or protect API-driven data access.
+Authorization determines which Syncfusion components or features a user is allowed to access after successful authentication. Blazor supports authorization using role checks (verifying user group membership), policies (custom rules), and UI filtering with the <AuthorizeView> component. Syncfusion components integrate these to conditionally enable features.
 
 ## Key Differences Between Authentication and Authorization
 
@@ -24,17 +26,17 @@ The following table summarizes the functional and behavioral differences between
 
 | Aspect               | Authentication                           | Authorization                                  |
 |----------------------|-------------------------------------------|------------------------------------------------|
-| **Purpose**          | Verify the user identity            | Grant/deny access to resources / features                |
+| **Purpose**          | Verifies user identity            | Grants or denies access to resources and features.                |
 | **Timing**           | Happens first                             | Happens after authentication                   |
-| **Blazor Tools**     | `AuthenticationStateProvider`             | `<AuthorizeView>`, `[Authorize]`               |
-| **Syncfusion Integration** | Add Bearer token to `SfDataManager.Headers` for remote data | Show/hide components and toggle features per role/policy     |
+| **Blazor Tools**     | `AuthenticationStateProvider`             | `<AuthorizeView>`, `Authorize`               |
+| **Syncfusion Integration** | Add Bearer token to `SfDataManager.Headers` for remote data | Show/hide components and toggle features per role or policy     |
 
 ## Applying Authentication and Authorization to Syncfusion Components
 
 Syncfusion components can be secured at two layers:
 
-* **UI-Level Authorization**: Use `<AuthorizeView>` to conditionally render components based on user roles.
-* **Data-Level Authentication**: Pass Bearer tokens to `SfDataManager` when requesting protected API data.
+**UI-Level Authorization**: Use `<AuthorizeView>` to conditionally render components based on user roles.
+**Data-Level Authentication**: Pass Bearer tokens to `SfDataManager` when requesting protected API data.
 
 Combine both layers for complete protection. 
 
@@ -42,9 +44,7 @@ N> This authentication and authorization pattern applies to all Syncfusion compo
 
 ## Using Syncfusion Components
 
-All examples use `<AuthorizeView>` for UI-level security and `SfDataManager` with Bearer tokens for data-level authentication. 
-
-**Prerequisites**: For setting up a Blazor Server or WebAssembly app with ASP.NET Core Identity, refer to [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication). This guide assumes Identity is already configured in your project.
+All examples use `<AuthorizeView>` for UI-level security and `SfDataManager` with Bearer tokens for data-level authentication.  
 
 ### DataGrid
 
@@ -55,25 +55,23 @@ The DataGrid can be secured by limiting visibility to authenticated users and en
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@inject HttpClient HttpClient
-@inject IJSRuntime JS
- 
+@inject IConfiguration Configuration
+
 <h3> DataGrid</h3>
 
 <AuthorizeView>
     <Authorized Context="authContext">
-      
             <SfGrid TValue="Order" AllowPaging="true">
-            <GridPageSettings PageSize="10"></GridPageSettings>
-            <SfDataManager Headers="@HeaderData" Url="/api/proxy/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
-            <GridColumns>
-                <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
-                <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150"></GridColumn>
-                <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-                <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120"></GridColumn>
-            </GridColumns>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders/" Adaptor="Adaptors.WebApiAdaptor" Headers="@HeaderData"></SfDataManager>
+                <GridPageSettings PageSize="10"></GridPageSettings>
+                <GridColumns>
+                    <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
+                    <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150"></GridColumn>
+                    <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
+                    <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120"></GridColumn>
+                </GridColumns>
             </SfGrid>
-       
+
         <p>Hello, @authContext.User.Identity?.Name!</p>
     </Authorized>
     <NotAuthorized>
@@ -83,10 +81,15 @@ The DataGrid can be secured by limiting visibility to authenticated users and en
 </AuthorizeView>
 
 @code {
-    
-    // Use an empty header collection — proxy will add token if configured on the server.
     private Dictionary<string, string> HeaderData { get; } = new Dictionary<string, string>();
 
+    protected override Task OnInitializedAsync()
+    {
+        var token = Configuration["ExternalApi:BearerToken"];
+        if (!string.IsNullOrEmpty(token)) HeaderData["Authorization"] = $"Bearer {token}";
+        return base.OnInitializedAsync();
+    }
+    
     public class Order
     {
         public int? OrderID { get; set; }
@@ -108,13 +111,13 @@ The Scheduler component supports secure viewing and editing based on user roles,
 
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
-@using System.Net.Http.Headers
-
+@inject IConfiguration Configuration
 
 <AuthorizeView>
     <Authorized>
         <SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@currentDate" Readonly="true">
-            <ScheduleEventSettings TValue="AppointmentData" DataSource="@appointments">
+            <ScheduleEventSettings TValue="AppointmentData">
+                <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/schedule" Headers="@HeaderData" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
                 <ScheduleViews>
                     <ScheduleView Option="View.Month"></ScheduleView>
                 </ScheduleViews>
@@ -129,24 +132,13 @@ The Scheduler component supports secure viewing and editing based on user roles,
 
 @code {
     DateTime currentDate = DateTime.Today;
-   // Use a local list and fetch from the proxy in OnInitializedAsync.
-   private Dictionary<string, string> HeaderData { get; } = new Dictionary<string, string>();
-   private List<AppointmentData> appointments = new();
-
-    protected override async Task OnInitializedAsync()
-    {
-        try
+       private Dictionary<string, string> HeaderData { get; } = new Dictionary<string, string>();
+   
+        protected override void OnInitialized()
         {
-            // Our proxy returns the schedule array (or extracts it), so fetch and bind directly.
-            var result = await Http.GetFromJsonAsync<List<AppointmentData>>("http://localhost:5287/api/proxy/Schedule");
-            if (result != null) appointments = result;
+            var token = Configuration["ExternalApi:BearerToken"];
+            if (!string.IsNullOrEmpty(token)) HeaderData["Authorization"] = $"Bearer {token}";
         }
-        catch (Exception ex)
-        {
-            // Log to server console for now
-            Console.WriteLine($"Failed loading schedule: {ex.Message}");
-        }
-    }
 
 
     public class AppointmentData
@@ -177,7 +169,7 @@ The TreeView component supports secure rendering by only displaying the hierarch
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
 <AuthorizeView>
-    <Authorized>
+    <Authorized Context="context">
         <SfTreeView TValue="MailItem" AllowDragAndDrop="@canEdit">
             <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded">
             </TreeViewFieldsSettings>
@@ -236,6 +228,6 @@ The TreeView component supports secure rendering by only displaying the hierarch
 
 ## See Also
 
-* [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication) 
+* [Blazor Server App with Authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&preserve-view=true&tabs=visual-studio) 
 * [AuthenticationStateProvider](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authenticationstateprovider) 
 
