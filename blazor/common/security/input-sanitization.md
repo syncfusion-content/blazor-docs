@@ -43,7 +43,7 @@ Sanitizing user input ensures that only safe and expected values are stored or d
 
 ## Built-In Sanitization Features
 
-Several Syncfusion Blazor components include HTML sanitization capabilities to prevent harmful script or markup from being processed. Components that accept or render HTML content such as the Rich Text Editor, Block Editor have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.Components like Tooltip, Toast, and Dialog automatically apply sanitization when rendering HTML templates. For DataGrid, manual encoding is recommended for user-provided content. This ensures that any user provided HTML is safe.
+Several Syncfusion Blazor components include HTML sanitization capabilities to prevent harmful script or markup from being processed. Components that accept or render HTML content such as the Rich Text Editor, Block Editor have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering. Components like Tooltip, Toast, and Dialog automatically apply sanitization when rendering HTML templates. For DataGrid, manual encoding is recommended for user-provided content. This ensures that any user provided HTML is safe.
 
 In the example shown, the sanitizer removes embedded scripts and event based attacks to prevent malicious code execution. It strips `<script>` tags, inline event handlers, JavaScript URLs, and dangerous elements like `<iframe>` or `<object>` to ensure that only safe HTML is displayed.
 
@@ -86,13 +86,7 @@ To disable the built-in sanitizer (not recommended for untrusted content), set t
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor EnableHtmlSanitizer="false" @bind-Value="Content"></SfRichTextEditor>
-
-@code {
-    
-private string Content { get; set; } = "<p>Welcome</p><img src=x onerror=\"alert('xss')\"><script>alert('XSS')</script>";
-
-}
+<SfRichTextEditor EnableHtmlSanitizer="false" ></SfRichTextEditor>
 
 {% endhighlight %}
 
