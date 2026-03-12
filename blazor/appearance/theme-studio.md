@@ -17,34 +17,34 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are developed
 
 1. Open [Blazor Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3) application.
 2. The Theme Studio application page can be divided into two sections: the controls preview section on the left, and the theme customization section on the right.
-![Theme Studio two-sections](images/two-pane.png)
+![Theme Studio two-sections](images/two-pane.webp)
 3. Click the color pickers in the theme customization section to select your desired colors.
-![Theme Studio color picker](images/colorpicker.png)
+![Theme Studio color picker](images/colorpicker.webp)
 4. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are rendered with the newly selected colors in the preview section after selecting a custom color from the picker.
-![Theme Studio customized](images/customized.png)
+![Theme Studio customized](images/customized.webp)
 
 ### Filter a specific list of components
 
 Using the theme studio, you can apply custom themes to a list of specific controls. This option is used when you integrate a selective list of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in your application. The theme studio will filter the selected controls and customize the final output for the controls’ styles alone by reducing the final output file size.
 
 1. Click the Filter icon at the top-right corner, and select the controls whose theme you want to customize.
-![Theme Studio filter-icon](images/filter-icon.png)
+![Theme Studio filter-icon](images/filter-icon.webp)
 2. Click the Apply button in the Filter dialog. Now, only the selected controls will be rendered in the controls preview section.
-![Theme Studio filter-dialog](images/filter-dialog.png)
+![Theme Studio filter-dialog](images/filter-dialog.webp)
 3. Now, you can customize the colors in the theme customization section for the controls selected.
-![Theme Studio filter-customized](images/filter-customized.png)
+![Theme Studio filter-customized](images/filter-customized.webp)
 
 ### Download the customized theme
 
 You can download the custom styles after customizing the theme colors.
 
 1. Click the Download button at the top-right corner, and the Download dialog will appear.
-![Theme Studio download-icon](images/download-icon.png)
+![Theme Studio download-icon](images/download-icon.webp)
 2. Assign a theme name in the File Name field, and click the Download button.
-![Theme Studio download-dialog](images/download-dialog.png)
+![Theme Studio download-dialog](images/download-dialog.webp)
 3. The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. The current settings are stored in the `settings.json` file.
 
-![Theme Studio output-files](images/output-files.png)
+![Theme Studio output-files](images/output-files.webp)
 
 N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS without Google Fonts dependencies. Lightweight theme files (for example, fluent2-lite.css) optimize performance by excluding larger styles. When using a customized CSS file, remove other Syncfusion base theme references (CDN or local) to avoid duplicate or conflicting styles.
 
@@ -71,13 +71,13 @@ You can directly use the customized CSS file in the web application.
 If you need to change your application theme and UI design in the future, do not customize the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the Theme Studio application.
 
 1. Click the Import icon at the top-right corner.
-![Theme Studio import-icon](images/import-icon.png)
+![Theme Studio import-icon](images/import-icon.webp)
 2. The Import Theme dialog will open. Click the Browse button and select the `settings.json` file you exported previously.
-![Theme Studio import dialog](images/import-dialog.png)
+![Theme Studio import dialog](images/import-dialog.webp)
 3. Click the Import button.
-![Theme Studio imported-settings](images/imported-settings.png)
+![Theme Studio imported-settings](images/imported-settings.webp)
 4. The stored data will be reflected in the Theme Studio application. Now, you can change the theme colors based on your latest design and export the theme again.
-![Theme Studio filter-customized](images/filter-customized.png)
+![Theme Studio filter-customized](images/filter-customized.webp)
 5. The exported file contains your latest changes. You can just replace the older custom style with a new style to refresh your application.
 
 ## Common Variables

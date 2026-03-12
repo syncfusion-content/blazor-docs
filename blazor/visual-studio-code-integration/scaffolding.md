@@ -15,7 +15,7 @@ The scaffolding UI allows you to select the type of data source binding, Syncfus
 N> Check that at least one Entity Framework model exists, and the application has been compiled once. If no Entity Framework model exists in your application, refer to this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to generate the Entity Framework model. After the model file has been added, check that the required DBContext and properties are added. Now, build the application, and try scaffolding. If any changes made in the model properties, rebuild the application once before perform scaffolding.
 
 
-N> The Syncfusion® Blazor Scaffolder is available from `v17.4.0.39`
+N> The Syncfusion® Blazor Scaffolder is available from `v32.2.3`
 
 ## Add a scaffolded item
 
@@ -25,15 +25,15 @@ N> Before use the Syncfusion® Blazor Scaffolder, check whether the **Syncfusion
 
 1. If the application type is **Blazor ServerSide**, In the File Explorer section right click the project's **.csproj** file and then click **Syncfusion® Blazor UI Scaffolder**.
 
-    ![Scaffolded add-in from server project](images/Add_scaffold_Serverside.png)
+    ![Scaffolded add-in from server project](images/add_scaffold_serverside.webp)
 
     If the application type is **Blazor Hosted**, right-click the **.csproj** file from **{Project Name}.Server** application in the File Explorer, click **Syncfusion® Blazor UI Scaffolder**.
 
-    ![Scaffolded add-in from the hosted project](images/Add_scaffold_hosted.png)
+    ![Scaffolded add-in from the hosted project](images/add_scaffold_hosted.webp)
 
 2. Syncfusion® Blazor Scaffolder UI will be launched, select the desired control to perform scaffolding, and then click **Next**.
 
-    ![Choose required control](images/Control_Window.png)
+    ![Choose required control](images/control_window.webp)
 
 3. The Configurations for the selected control will be displayed in the configurations Tab. As per the application requirements, follow these steps to set up your application.
 
@@ -43,7 +43,7 @@ N> Before use the Syncfusion® Blazor Scaffolder, check whether the **Syncfusion
 
         To set up your application with local data, first enter the **Controller/Service name** and then enter the **Razor page name**. Next, select the required **Model class** for the active application and choose the relevant **Data context class**.
 
-        ![Choose required Model](images/Model_Window_Local.png)
+        ![Choose required Model](images/model_window_local.webp)
 
     2. Remote Data
 
@@ -51,7 +51,7 @@ N> Before use the Syncfusion® Blazor Scaffolder, check whether the **Syncfusion
 
         N> In the DataGrid and TreeGrid controls, when selecting the **URL adaptor** in the **Adaptor type**, an additional **Remote service** option will appear. You need to select either the **Localhost URL** or **API URL**. If you select the Localhost URL, enter the **Controller/Service** name. Then, select the required Model class for the active application and choose the relevant **Data context class**. If you select the **API URL**, enter the valid **URL**. Next, enter the **TValue**.
 
-        ![Choose required Model](images/Model_Window_Remote.png)
+        ![Choose required Model](images/model_window_remote.webp)
 
         When using adaptor types in Blazor scaffolding, it's important to note that we provide default adaptor links for sample purposes only. These default links are intended to help you understand how the adaptors work, but they do not perform CRUD (Add, Edit, Update, Delete) operations. Instead, these default links act as placeholders to demonstrate the integration process.
 
@@ -60,21 +60,21 @@ N> Before use the Syncfusion® Blazor Scaffolder, check whether the **Syncfusion
 
 4. In the Syncfusion® Blazor Scaffolder, Choose the required features, update the necessary data fields, and then click **Add**.
 
-    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted_feature.png)
+    ![Choose required selected control features for the hosted project](images/fetaure_window_hosted_feature.webp)
 
 5. With the selected features of the Syncfusion control, the **Controller/Service** file and the corresponding **Razor** files are generated.
 
     If you select **Local Data**, the service file and razor file will be added to the application.
 
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_local_data.png)
+    ![Required Controller and Razor files added in the project for the selected control](images/files_for_local_data.webp)
 
     If you select **Remote Data with Localhost URL**, the controller file and razor file will be added to the application.
 
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data.png)
+    ![Required Controller and Razor files added in the project for the selected control](images/files_for_remote_data.webp)
 
     If you choose **Remote Data with Web API adaptor types**, the razor file will be added to the application.
 
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data_adaptor.png)
+    ![Required Controller and Razor files added in the project for the selected control](images/files_for_remote_data_adaptor.webp)
 
 6. Then, add navigation to the created razor file based on your requirement to open on the webpage.
 
