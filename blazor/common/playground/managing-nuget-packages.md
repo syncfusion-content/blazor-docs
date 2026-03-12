@@ -20,7 +20,7 @@ N> Uninstall the `Syncfusion.Blazor` package before installing individual packag
 
 For example, uninstall `Syncfusion.Blazor` and install the latest [Syncfusion.Blazor.Calendars](https://blazor.syncfusion.com/documentation/nuget-packages#syncfusionblazorcalendars).
 
-![Syncfusion Blazor Playground with NuGet Package](images/adding_package.gif)
+![Syncfusion Blazor Playground with NuGet Package](images/adding_package.webp)
 
 * Add rendering code in the editor.
 
@@ -35,7 +35,7 @@ For example, uninstall `Syncfusion.Blazor` and install the latest [Syncfusion.Bl
 
 Click the `Remove` button next to the installed package details to uninstall it.
 
-![Syncfusion Blazor Playground with Delete Package](images/delete_Package.gif)
+![Syncfusion Blazor Playground with Delete Package](images/delete_Package.webp)
 
 ### Control NuGet versioning
 
@@ -43,4 +43,4 @@ Upgrade or downgrade packages by searching for the package name and selecting a 
 
 N> Maintain consistent versions across all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages to avoid compatibility issues.
 
-![Syncfusion Blazor Playground with Upgrade and Downgrade](images/upgrade_downgrade.gif)
+![Syncfusion Blazor Playground with Upgrade and Downgrade](images/upgrade_downgrade.webp)

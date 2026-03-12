@@ -637,7 +637,7 @@ Select text → Choose AI action → Dialog opens → AI processes → Updated c
 
 A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
-![Rich Text Editor AI Assistant - Output](../../ai/images/richtexteditor-ai-assistant.png)
+![Rich Text Editor AI Assistant - Output](../../ai/images/richtexteditor-ai-assistant.webp)
 
 ## Error Handling and Troubleshooting
 

@@ -17,3 +17,4 @@ The extension provides the following capabilities in Visual Studio Code:
 - [Code snippets](code-snippet): Inserts Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component snippets and common scenarios into the Razor editor.
 - [Convert project](convert-project): Converts an existing Blazor application to use Syncfusion Blazor by adding the necessary NuGet packages and resources.
 - [Upgrade project](upgrade-project): Upgrades an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another.
+- [Scaffolding](scaffolding): Simplifies the process of adding views and controller action methods for Syncfusion® Blazor **DataGrid, Tree Grid, Charts, Scheduler and Diagram** controls in Blazor applications. 

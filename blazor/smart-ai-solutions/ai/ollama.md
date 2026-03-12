@@ -283,7 +283,7 @@ namespace OllamaExample.Components.Pages
 }
 ```
 
-![Smart Data Restructuring Output](images/adaptive-datastructuring.gif)
+![Smart Data Restructuring Output](images/adaptive-datastructuring.webp)
 
 ## How It Works
 

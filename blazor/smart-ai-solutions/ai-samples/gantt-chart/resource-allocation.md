@@ -611,4 +611,4 @@ When handling large datasets, ensure the Ollama server has sufficient resources 
 
 A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
-![Resource allocation](../../ai/images/resource-allocation.gif)
+![Resource allocation](../../ai/images/resource-allocation.webp)
