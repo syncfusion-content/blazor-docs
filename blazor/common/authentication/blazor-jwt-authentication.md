@@ -37,10 +37,10 @@ This section explains how to enable JWT authentication in your Blazor Web App.
 
 ### Install Required Packages for JWT
 
-To add the JWT authentication in the app, open the NuGet Package Manager in Visual StudioFrom **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, install:
+To add the JWT authentication in the app, open the NuGet Package Manager in Visual Studio from **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, and install the required package.
 
 ```razor
-Microsoft.AspNetCore.Authentication.JwtBearer;
+Microsoft.AspNetCore.Authentication.JwtBearer
 ```
 
 ### Configuring JWT in appsettings.json
@@ -226,7 +226,7 @@ Include the theme stylesheet and script references in the `App.razor` file.
 ```razor
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 ....
 <body>
