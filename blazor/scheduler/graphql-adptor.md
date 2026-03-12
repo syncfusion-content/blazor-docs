@@ -98,6 +98,7 @@ This creates a minimal ASP.NET Core app with just `Program.cs`.
 
     app.Run();
     ```
+    
 ### Step 4: Create a Data Source for Appointments and define resolver
 
 The following code creates a simple in-memory data source with a list of `Appointment` objects in the `GraphQLQuery` class and define the return type to bind data to the Blazor Scheduler, the resolver must return data using the `ReturnType<T>` class with `Count`, `Result`, and `Aggregates` properties.  
@@ -839,6 +840,7 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
       };
     }
     ```
+
 **GraphQL Query Structure Explained in Detail**
 
 The Query property is critical for understanding how data flows. Let's break down each component:
@@ -892,9 +894,10 @@ appointmentsData(dataManager: $dataManager) {}
     - `StartTime` / `EndTime` → event timing (must be ISO 8601 format)  
     - `Description` → optional event details  
     - `IsAllDay` → determines if the event spans the full day
-    - `RecurrenceRule` → string that defines the repeat pattern (iCalendar RRULE format, e.g., "FREQ=DAILY;INTERVAL=1;COUNT=10").
-    - `RecurrenceException` → string containing comma-separated dates/times (in UTC format like yyyyMMdd or yyyyMMddTHHmmssZ) to exclude from the series.
-    - `RecurrenceID` → nullable integer (int?) that links an edited/deleted occurrence back to its parent recurring series.
+    - `RecurrenceRule` → string that defines the repeat pattern (iCalendar RRULE format, e.g., "FREQ=DAILY;INTERVAL=1;COUNT=10")
+    - `RecurrenceException` → string containing comma-separated dates/times (in UTC format like yyyyMMdd or yyyyMMddTHHmmssZ) to exclude from the series
+    - `RecurrenceID` → nullable integer (int?) that links an edited/deleted occurrence back to its parent recurring series
+
 ---
 
 **Response Structure Example**
@@ -997,6 +1000,7 @@ In your Scheduler app:
     ```powershell
     dotnet build
     ```
+
 **Run the Application**
 
 1. First, run the GraphQL server (this must be running before the Blazor app):
@@ -1007,8 +1011,8 @@ In your Scheduler app:
     ```powershell
     dotnet run
     ```
-- Now listening on: http://localhost:5070 (or similar — check the console output)
-- Note the HTTP port (e.g. 5070) — you'll need it for the Blazor app.
+    - Now listening on: http://localhost:5070 (or similar — check the console output)
+    - Note the HTTP port (e.g. 5070) — you'll need it for the Blazor app.
 
 
 2. In a separate terminal, run the Blazor Scheduler application:
@@ -1019,7 +1023,7 @@ In your Scheduler app:
     ```powershell
         dotnet run
     ```
-- The Blazor app will typically start on http://localhost:5194 (or similar — check the console output).
+    - The Blazor app will typically start on http://localhost:5194 (or similar — check the console output).
 
 **Access the Application**
 
