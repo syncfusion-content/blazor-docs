@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Blazor Scheduler in SharePoint Framework
 
-This article provides a step-by-step guide for setting up a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project and integrating the Syncfusion<sup style="font-size:70%">®</sup> Blazor Scheduler component.
+This article provides a step-by-step guide for setting up a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project and integrating the [Syncfusion<sup style="font-size:70%">®</sup> Blazor Scheduler component](https://www.syncfusion.com/blazor-components/blazor-scheduler).
 
 SharePoint Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
@@ -340,3 +340,9 @@ The output will appear as follows:
 ![Scheduler Component](./images/blazor-scheduler-sharepoint-output.png)
 
 > Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-integrate-Syncfusion-Blazor-Scheduler-with-Sharepoint.git)
+
+## See also
+
+* [Syncfusion<sup style="font-size:70%">®</sup> Blazor Scheduler component](https://www.syncfusion.com/blazor-components/blazor-scheduler)
+* [Getting Started with the Syncfusion<sup style="font-size:70%">®</sup> Blazor Scheduler component](https://blazor.syncfusion.com/documentation/scheduler/getting-started)
+* [Getting Started with the Syncfusion<sup style="font-size:70%">®</sup> Blazor UI components](https://blazor.syncfusion.com/documentation/introduction)
