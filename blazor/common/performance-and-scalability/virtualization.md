@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor — Syncfusion
-description: Learn how Syncfusion Blazor components use UI virtualization to render only what's visible, enabling smooth scrolling and fast load times with very large datasets.
+description: Learn how Syncfusion Blazor components use UI virtualization to render only visible content for smooth scrolling and fast load times with large data.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,58 +11,33 @@ documentation: ug
 
 ## Overview
 
-Virtualization is a technique used to make UI components faster and more efficient, especially when working with large amounts of data. Instead of rendering every single row, column, or item at once, the component creates only the elements currently visible on the screen. As the user scrolls, the component reuses (recycles) existing UI elements and loads the next set of data when it is needed.
-
-This approach helps achieve:
-
-* Faster initial load, because only a small part of the data is shown at first.
-* Smoother scrolling, even with thousands of records.
-* Lower memory usage, since the browser doesn't hold the entire UI in the DOM.
-* Better performance at scale, allowing grids and lists to handle very large datasets without slowing down.
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components offer reliable virtualization features that keep your app running smoothly, even when handling tens of thousands of items.
+Virtualization improves performance by rendering only the UI elements that are visible in the viewport and reusing DOM elements during scrolling. This reduces initial render time, memory usage, and DOM size, resulting in smooth scrolling and responsive interactions even with very large datasets.
 
 ### Components Supporting Virtualization
 
-*   **DataGrid** – Row virtualization, column virtualization, virtual scrolling, infinite scrolling
-*   **ListView** – UI/DOM virtualization
-*   **File Manager** – UI/DOM virtualization in Details and Large Icons views
+* **DataGrid** – Supports Row virtualization, column virtualization, buffered rendering (overscan), virtual loading placeholders (mask row), frozen columns with virtualization, and infinite scrolling.
+* **ListView** – Supports UI virtualization with window or container scrolling modes.
+* **File Manager** – Supports UI virtualization in both **Details** and **Large Icons** views.
+
+N> A few more components also support virtualization, but only key examples are listed here.
 
 ### Advantages of Virtualization
 
-| Benefit                   | Explanation                                    |
-| ------------------------- | ---------------------------------------------- | 
-| Faster initial load       | Only visible items are rendered                | 
-| Reduced DOM weight        | Minimizes memory usage                         | 
-| Smoother scrolling        | Reused elements provide stable navigation      | 
-| Scalable                  | Performs well with 10,000+ records             | 
+| Benefit              | Explanation                                       |
+|----------------------|---------------------------------------------------|
+| Faster initial load  | Renders only the items visible in the viewport    |
+| Reduced DOM size     | Keeps the DOM size small and reduces memory usage |
+| Smoother scrolling   | Reuses DOM elements to avoid frequent reflows     |
+| Scalable             | Performs well with tens of thousands of records   |
 
-### Types of Virtualization 
+### Types of Virtualization
 
-| Type                      | Components                       | Description                                                                 |
-| ------------------------- | -------------------------------- | --------------------------------------------------------------------------- |
-| UI/DOM Virtualization     | ListView, File Manager           | Only visible items are rendered; others are removed or reused               |
-| Row Virtualization        | DataGrid                         | Renders visible rows and loads more on scroll                               |  
-| Column Virtualization     | DataGrid                         | Renders visible columns, loads more on horizontal scroll                    |
-| Infinite Scrolling        | DataGrid                         | Loads additional blocks of data on reaching end of scroll                   |
-
-## General Implementation Principles
-
-### 1. Set a fixed viewport
-
-Give the component a fixed **height** (and a fixed **width** if you are virtualizing columns). This enables accurate viewport and item calculations.
-
-### 2. Use predictable row or item sizes
-
-Virtualization works best when each row or item has a consistent height. This allows smooth scrolling and accurate positioning.
-
-### 3. Use Overscan/Buffer When Available
-
-The `OverscanCount` setting in the DataGrid loads a few extra rows outside the visible area, which reduces flicker and makes scrolling feel more natural.
-
-### 4. Prepare Data for Progressive Loading
-
-If your data comes from a server, the API should support loading small slices (using skip/take or paging) instead of returning the entire dataset at once. This keeps the app fast even with huge datasets.
+| Type                  | Components            | Description                                                            |
+|-----------------------|-----------------------|------------------------------------------------------------------------|
+| UI Virtualization     | ListView, File Manager| Renders only visible items; others are removed or reused               |
+| Row Virtualization    | DataGrid              | Renders rows in the viewport and loads more during vertical scrolling  |
+| Column Virtualization | DataGrid              | Renders columns in view and loads more during horizontal scrolling     |
+| Infinite Scrolling    | DataGrid              | Loads additional data blocks when the end of the content is reached    |
 
 ## DataGrid Virtualization
 
@@ -70,19 +45,19 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports ad
 
 ### Row Virtualization
 
-Row virtualization renders only the rows visible in the viewport and dynamically loads new rows during scroll. A **fixed pixel height** is required for correct calculations.
+Row virtualization improves grid performance when working with large datasets by rendering only the rows that are visible in the viewport. As you scroll vertically, the DataGrid loads and reuses rows instead of creating every row at once. This reduces initial load time, lowers memory usage, and keeps scrolling smooth.
 
-**Key Features**
+### Configure Row Virtualization
 
-*   Faster initial rendering
-*   Reduced memory usage due to a smaller DOM
-*   Cached records enable smooth backward scrolling
+To use row virtualization:
 
-### Example
+* Set `EnableVirtualization="true"` on the grid.
+* Assign a fixed pixel Height (for example, Height="300").
+* (Optional) Use `PageSize` to control the size of each data block.
+* Ensure all rows have the same height by avoiding text wrapping or variable-height templates.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@TaskData" Height="300" EnableVirtualization="true">
@@ -103,7 +78,6 @@ Row virtualization renders only the rows visible in the viewport and dynamically
         TaskData = TaskDetails.GenerateData(1000);
     }  
 }
-
 {% endhighlight %}
 
 {% highlight cs tabtitle="TaskDetails.cs" %}
@@ -138,319 +112,317 @@ public class TaskDetails
     public int Estimation { get; set; }
     public string Status { get; set; }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 ### Row Virtualization Limitations
 
-* Features like batch editing, detail templates, row templates, and autofill do not work with row virtualization.
-* You can copy, paste, and drag items only in the rows that are currently visible on the screen.
-* Selecting individual cells is not supported.
-* Rows cannot have different heights, all rows must be the same height.
-* Group expand/collapse states are not saved unless you enable the PersistGroupState option.
-* Text wrapping is not allowed because row height must stay the same for all rows.
-* Some browsers limit how tall a scrollable area can be, which may affect extremely large datasets.
+* Features like batch editing, detail templates, row templates, and autofill are not supported.
+* Copy/paste and drag operations work only on rows currently visible in the viewport.
+* Individual cell selection is not supported.
+* All rows must have a fixed, identical height.
+* Group expand/collapse states are not preserved unless `PersistGroupState` is enabled.
+* Text wrapping is not allowed because row height must remain consistent.
+* Some browsers limit maximum scrollable height, which may affect extremely large datasets.
 
 ### Column Virtualization
 
-Column virtualization renders only the columns that are currently visible on the screen. When you scroll horizontally, the grid renders more columns as you move. This helps the DataGrid load faster and use less memory when working with wide tables that contain many columns.
+Column virtualization improves performance when a DataGrid contains many columns. Instead of rendering all columns at once, the grid renders only the columns currently visible in the viewport. As you scroll horizontally, the next set of columns loads automatically. This results in faster rendering, lower memory usage, and smoother scrolling.
 
-**Requirements:**
+### Configure Column Virtualization
 
-* Each column must use a pixel-based width.
-* Percentage column widths are not supported.
-* If a width is not provided, the DataGrid assumes `200px`.
+To use column virtualization:
 
-### Example
+* Set `EnableColumnVirtualization="true"` on the grid.
+* Assign a fixed pixel width to each column using the `Width` property.
+* Avoid percentage‑based widths, as they are not supported.
+* If no width is defined, the grid uses the default width of `200px`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="GridData" Height="300px" EnableColumnVirtualization="true">
+<SfGrid DataSource="@GridData" Height="300" EnableColumnVirtualization="true">
     <GridColumns>
-        <GridColumn Field=@nameof(VirtualData.SNo) HeaderText="S.No" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD1) HeaderText="Player Name" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD2) HeaderText="Year" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD3) HeaderText="Stint" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD4) HeaderText="TMID" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD5) HeaderText="LGID" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD6) HeaderText="GP" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD7) HeaderText="GS" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD8) HeaderText="Minutes" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD9) HeaderText="Points" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD10) HeaderText="oRebounds" Width="130" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD11) HeaderText="dRebounds" Width="130" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD12) HeaderText="Rebounds" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD13) HeaderText="Assists" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD14) HeaderText="Steals" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD15) HeaderText="Blocks" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD16) HeaderText="Turnovers" Width="130" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD17) HeaderText="PF" Width="130" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD18) HeaderText="fgAttempted" Width="150" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD19) HeaderText="fgMade" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD20) HeaderText="ftAttempted" Width="150" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD21) HeaderText="ftMade" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD22) HeaderText="ThreeAttempted" Width="150" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD23) HeaderText="ThreeMade" Width="130" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD24) HeaderText="PostGP" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD25) HeaderText="PostGS" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD26) HeaderText="PostMinutes" Width="120" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD27) HeaderText="PostPoints" Width="130" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD28) HeaderText="PostoRebounds" Width="130" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD29) HeaderText="PostdRebounds" Width="130" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(VirtualData.FIELD30) HeaderText="PostRebounds" Width="130" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="@nameof(VirtualData.SNo)"  Width="140" />
+        <GridColumn Field="@nameof(VirtualData.Name)" Width="150" />
+        <GridColumn Field="@nameof(VirtualData.Year)" Width="120" />
+    </GridColumns>
+</SfGrid>
+
+
+@code {
+    public List<VirtualData> GridData { get; set; } = VirtualData.GenerateData();
+}
+{% endhighlight %}
+
+{% highlight cs tabtitle="VirtualData.cs" %}
+public class VirtualData
+{
+    public int SNo { get; set; }
+    public string Name { get; set; }
+    public int Year { get; set; }
+
+    public static List<VirtualData> GenerateData()
+    {
+        var list = new List<VirtualData>();
+        for (int i = 1; i <= 1000; i++)
+            list.Add(new VirtualData { SNo = i, Name = "Player " + i, Year = 2000 + (i % 20) });
+        return list;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Column Virtualization Limitations
+
+* Cell selection is not supported.
+* The **Ctrl + Home** and **Ctrl + End** keyboard shortcuts do not work.
+* Features that work only inside the visible area (viewport):
+  * Column resizing
+  * Column chooser
+  * Auto-fit
+  * Clipboard
+  * Column menu
+* Features that are NOT compatible with column virtualization:
+  * Grouping
+  * Batch editing
+  * Column virtualization cannot be combined with infinite scrolling
+  * Stacked headers
+  * Row template / detail template
+  * Hierarchy grid
+  * Autofill
+
+### Overscan (Buffered Rendering)
+
+Overscan makes scrolling smoother by rendering a few extra rows above and below the visible area of the grid. These extra rows act as a buffer so the grid does not need to frequently update the DOM while you scroll. This reduces flickering and helps the grid feel more responsive.
+
+### Configure Overscan
+
+To use overscan:
+
+* Set the `OverscanCount` property to control how many extra rows should be rendered above and below the visible area.
+* Use a higher value for smoother scrolling, especially with fast scroll actions.
+* Use a lower value if you want to minimize memory usage and keep the DOM size small.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Height="315" OverscanCount="5" EnableVirtualization="true" EnableColumnVirtualization="true">
+    <GridPageSettings PageSize="50"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer" Width="150" />
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Type="ColumnType.Date" Format="d" TextAlign="TextAlign.Right" Width="130" />
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<VirtualData> GridData { get; set; }
+    public List<OrderDetails> OrderData { get; set; }
+
     protected override void OnInitialized()
     {
-        GridData = VirtualData.GenerateData();
-    }   
+        OrderData = OrderDetails.GetAllRecords(1000);
+    }
 }
-
 {% endhighlight %}
 
-{% highlight cs tabtitle="VirtualData.cs" %}
-
-public class VirtualData
+{% highlight cs tabtitle="OrderDetails.cs" %}
+public class OrderDetails
 {
-    public VirtualData(int sNo, string field1, int field2, int field3, int field4, int field5, int field6, int field7, int field8, int field9, int field10, int field11, int field12, int field13, int field14, int field15, int field16, int field17, int field18, int field19, int field20, int field21, int field22, int field23, int field24, int field25, int field26, int field27, int field28, int field29, int field30)
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime OrderDate { get; set; }
+    public decimal Freight { get; set; }
+
+    public static List<OrderDetails> GetAllRecords(int count)
     {
-        SNo = sNo;
-        FIELD1 = field1;
-        FIELD2 = field2;
-        FIELD3 = field3;
-        FIELD4 = field4;
-        FIELD5 = field5;
-        FIELD6 = field6;
-        FIELD7 = field7;
-        FIELD8 = field8;
-        FIELD9 = field9;
-        FIELD10 = field10;
-        FIELD11 = field11;
-        FIELD12 = field12;
-        FIELD13 = field13;
-        FIELD14 = field14;
-        FIELD15 = field15;
-        FIELD16 = field16;
-        FIELD17 = field17;
-        FIELD18 = field18;
-        FIELD19 = field19;
-        FIELD20 = field20;
-        FIELD21 = field21;
-        FIELD22 = field22;
-        FIELD23 = field23;
-        FIELD24 = field24;
-        FIELD25 = field25;
-        FIELD26 = field26;
-        FIELD27 = field27;
-        FIELD28 = field28;
-        FIELD29 = field29;
-        FIELD30 = field30;
-    }    
-    public static List<VirtualData> GenerateData()
-    {
-        var virtualData = new List<VirtualData>();
-        var random = new Random();
-        var names = new[] {
-            "hardire", "abramjo01", "aubucch01", "Hook", "Rumpelstiltskin", "Belle", "Emma", "Regina", "Aurora", "Elsa", 
-            "Anna", "Snow White", "Prince Charming", "Cora", "Zelena", "August", "Mulan", "Graham", "Discord", "Will", 
-            "Robin Hood", "Jiminy Cricket", "Henry", "Neal", "Red", "Aaran", "Aaren", "Aarez", "Aarman", "Aaron", "Aaron-James", 
-            "Aarron", "Aaryan", "Aaryn", "Aayan", "Aazaan", "Abaan", "Abbas", "Abdallah", "Abdalroof", "Abdihakim", "Abdirahman", 
-            "Abdisalam", "Abdul", "Abdul-Aziz", "Abdulbasir", "Abdulkadir", "Abdulkarem", "Abdulkhader", "Abdullah", 
-            "Abdul-Majeed", "Abdulmalik", "Abdul-Rehman", "Abdur", "Abdurraheem", "Abdur-Rahman", "Abdur-Rehmaan", "Abel", 
-            "Abhinav", "Abhisumant", "Abid", "Abir", "Abraham", "Abu", "Abubakar", "Ace", "Adain", "Adam", "Adam-James", 
-            "Addison", "Addisson", "Adegbola", "Adegbolahan", "Aden", "Adenn", "Adie", "Adil", "Aditya", "Adnan", "Adrian", 
-            "Adrien", "Aedan", "Aedin", "Aedyn", "Aeron", "Afonso", "Ahmad", "Ahmed", "Ahmed-Aziz", "Ahoua", "Ahtasham", 
-            "Aiadan", "Aidan", "Aiden", "Aiden-Jack", "Aiden-Vee"
-        };
-        for (var i = 0; i < 1000; i++)
+        var list = new List<OrderDetails>();
+        var rnd = new Random(1);
+        for (int i = 1; i <= count; i++)
         {
-            virtualData.Add(new VirtualData(
-                i + 1,
-                names[random.Next(names.Length)],
-                1967 + (i % 10),
-                random.Next(200),
-                random.Next(100),
-                random.Next(2000),
-                random.Next(1000),
-                random.Next(100),
-                random.Next(10),
-                random.Next(10),
-                random.Next(100),
-                random.Next(100),
-                random.Next(1000),
-                random.Next(10),
-                random.Next(10),
-                random.Next(1000),
-                random.Next(200),
-                random.Next(300),
-                random.Next(400),
-                random.Next(500),
-                random.Next(700),
-                random.Next(800),
-                random.Next(1000),
-                random.Next(2000),
-                random.Next(150),
-                random.Next(1000),
-                random.Next(100),
-                random.Next(400),
-                random.Next(600),
-                random.Next(500),
-                random.Next(300)
-            ));
+            list.Add(new OrderDetails
+            {
+                OrderID = i,
+                CustomerID = "CUS-" + (1000 + i),
+                OrderDate = DateTime.Today.AddDays(-i),
+                Freight = Math.Round((decimal)rnd.NextDouble() * 500m, 2)
+            });
         }
-        return virtualData;
+        return list;
     }
-    public int SNo { get; set; }
-    public string FIELD1 { get; set; }
-    public int FIELD2 { get; set; }
-    public int FIELD3 { get; set; }
-    public int FIELD4 { get; set; }
-    public int FIELD5 { get; set; }
-    public int FIELD6 { get; set; }
-    public int FIELD7 { get; set; }
-    public int FIELD8 { get; set; }
-    public int FIELD9 { get; set; }
-    public int FIELD10 { get; set; }
-    public int FIELD11 { get; set; }
-    public int FIELD12 { get; set; }
-    public int FIELD13 { get; set; }
-    public int FIELD14 { get; set; }
-    public int FIELD15 { get; set; }
-    public int FIELD16 { get; set; }
-    public int FIELD17 { get; set; }
-    public int FIELD18 { get; set; }
-    public int FIELD19 { get; set; }
-    public int FIELD20 { get; set; }
-    public int FIELD21 { get; set; }
-    public int FIELD22 { get; set; }
-    public int FIELD23 { get; set; }
-    public int FIELD24 { get; set; }
-    public int FIELD25 { get; set; }
-    public int FIELD26 { get; set; }
-    public int FIELD27 { get; set; }
-    public int FIELD28 { get; set; }
-    public int FIELD29 { get; set; }
-    public int FIELD30 { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> The `OverscanCount` property supports both local and remote data.
+
+### VirtualMaskRow (Loading Placeholders)
+
+VirtualMaskRow shows placeholder cells while the grid loads new data during virtualization. This helps users understand that data is still being fetched, especially with large datasets or when scrolling triggers data loads.
+
+When `VirtualMaskRow` is enabled, the grid reuses existing DOM elements and displays placeholders until real data becomes available.
+
+### Configure VirtualMaskRow
+
+To show loading placeholders:
+
+* Set `EnableVirtualMaskRow="true"`.
+* Row virtualization (EnableVirtualization) or column virtualization (EnableColumnVirtualization) must be enabled for this feature.
+* For the best results, set both `PageSize` and `RowHeight` so the grid can calculate loading areas correctly.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Height="400" RowHeight="38" EnableVirtualMaskRow="true" EnableVirtualization="true" EnableColumnVirtualization="true">
+    <GridPageSettings PageSize="32"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer" Width="150" />
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Type="ColumnType.Date" Format="d" TextAlign="TextAlign.Right" Width="130" />
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderDetails> OrderData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Load a sufficiently large set to experience virtualization & placeholders.
+        OrderData = OrderDetails.GetAllRecords(1000);
+    }
+}
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime OrderDate { get; set; }
+    public decimal Freight { get; set; }
+
+    public static List<OrderDetails> GetAllRecords(int count)
+    {
+        var list = new List<OrderDetails>();
+        var rnd = new Random(1);
+
+        for (int i = 1; i <= count; i++)
+        {
+            list.Add(new OrderDetails
+            {
+                OrderID = i,
+                CustomerID = "CUS-" + (1000 + i),
+                OrderDate = DateTime.Today.AddDays(-i),
+                Freight = Math.Round((decimal)rnd.NextDouble() * 500m, 2)
+            });
+        }
+
+        return list;
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-
-### Column Virtualization Limitations
-
-* Cell selection is not supported
-* Keyboard shortcuts Ctrl + Home and Ctrl + End keyboard shortcuts do not work with column virtualization
-* Features that work only inside the visible area (viewport):
-    * Column resizing
-    * Column chooser
-    * Auto-fit
-    * Clipboard
-    * Column menu
-
-* Features that are NOT compatible with column virtualization:
-    * Grouping
-    * Batch editing
-    * Column virtualization combined with infinite scrolling
-    * Stacked headers
-    * Row template / detail template
-    * Hierarchy grid
-    * Autofill
-
-### Overscan (Buffered Rendering)
-
-`OverscanCount` allows the DataGrid to render a small set of extra rows before and after the rows that are currently visible on the screen.
-
-This extra buffer helps the grid scroll more smoothly, because it reduces how often new data needs to be loaded or the DOM needs to be updated. It also helps prevent flicker during scrolling.
-
-Overscan applies during both the grid’s initial load and while using virtual scrolling.
-
-```
-
-<SfGrid DataSource="@OrderData"
-        Height="315"
-        EnableVirtualization="true"
-        OverscanCount="5"
-        EnableColumnVirtualization="true">
-</SfGrid>
-
-```
-
-### VirtualMaskRow (Loading Placeholders)
-
-When virtualization is enabled, the DataGrid can display placeholder cells while new data is loading. These placeholders help users understand that the content is still being fetched, which is useful when working with large datasets or when data loads as you scroll. 
-
-To turn this feature on, set `EnableVirtualMaskRow="true"`. When enabled, the grid reuses existing DOM elements and shows placeholder cells until the new data is rendered.
-
-This feature works only when row virtualization `(EnableVirtualization)` or column virtualization `(EnableColumnVirtualization)` is enabled. For the best results, also set `PageSize` and `RowHeight`.
-
-```
-
-<SfGrid DataSource="@OrderData"
-        Height="315"
-        EnableVirtualization="true"
-        EnableVirtualMaskRow="true">
-</SfGrid>
-
-```
-
 ### Frozen Columns with Virtualization
 
-Frozen columns stay fixed in place, while the rest of the columns scroll horizontally. When used together with virtualization, the DataGrid can efficiently render both frozen and movable columns, even when working with large datasets.
+Frozen columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allow certain columns to stay fixed while the rest of the columns scroll horizontally. When combined with virtualization, the grid renders only the rows and columns that are currently visible, while the frozen columns remain in place on the left or right side. This helps improve performance without affecting usability.
 
-**How it works**
+### Configure Frozen Columns with Virtualization
 
-* Column Virtualization renders only the columns that are currently visible on the screen, while frozen columns remain fixed.
-* Row Virtualization renders only the rows currently in view and can display placeholder cells while new data loads (if enabled). 
-* When both types of virtualization are enabled, placeholder cells appear for both rows and columns until their data is loaded.
+To use frozen columns with virtualization:
 
-**How to enable frozen columns with virtualization**
+* Set `IsFrozen="true"` on the columns you want to freeze.
+* Use `Freeze="Left"` or `Freeze="Right"` to choose the freeze direction.
+* Enable row virtualization using `EnableVirtualization="true"`.
+* Enable column virtualization using `EnableColumnVirtualization="true"`.
+* Assign a fixed pixel width to every column (required for column virtualization).
+* Use a fixed grid `height` to maintain smooth row virtualization.
 
-1. Set columns as frozen:
-Use `IsFrozen="true"` and `set Freeze="Left"` or `Freeze="Right"` for the columns you want to freeze.
-2. Enable virtualization:
-Turn on both `EnableVirtualization="true"` and `EnableColumnVirtualization="true"`.
 
-```
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
 
-<GridColumn Field="PlayerName"
-            IsFrozen="true"
-            Freeze="FreezeDirection.Left"
-            Width="140" />
+<SfGrid DataSource="@Players" Height="320"
+        EnableVirtualization="true"
+        EnableColumnVirtualization="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(PlayerDetails.PlayerName) HeaderText="Player" IsFrozen="true" Freeze="FreezeDirection.Left" Width="140" />
+        <GridColumn Field=@nameof(PlayerDetails.Rank) HeaderText="Rank" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(PlayerDetails.Country) HeaderText="Country" Width="150" />
+        <GridColumn Field=@nameof(PlayerDetails.Age) HeaderText="Age" TextAlign="TextAlign.Right" Width="100" />
+        <GridColumn Field=@nameof(PlayerDetails.Points) HeaderText="Points" TextAlign="TextAlign.Right" Width="120" />
+    </GridColumns>
+</SfGrid>
 
-```
+@code {
+    public List<PlayerDetails> Players { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Players = PlayerDetails.GenerateData(2000);
+    }
+}
+{% endhighlight %}
+
+{% highlight cs tabtitle="PlayerDetails.cs" %}
+public class PlayerDetails
+{
+    public string PlayerName { get; set; }
+    public int Rank { get; set; }
+    public string Country { get; set; }
+    public int Age { get; set; }
+    public int Points { get; set; }
+
+    public static List<PlayerDetails> GenerateData(int count)
+    {
+        var list = new List<PlayerDetails>();
+        var rnd = new Random(2);
+        string[] countries = { "USA", "UK", "IND", "AUS", "CAN", "GER", "FRA" };
+        for (int i = 1; i <= count; i++)
+        {
+            list.Add(new PlayerDetails
+            {
+                PlayerName = "Player " + i,
+                Rank = i,
+                Country = countries[i % countries.Length],
+                Age = 18 + (i % 20),
+                Points = 1000 + rnd.Next(0, 5000)
+            });
+        }
+        return list;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ### Infinite Scrolling
 
-Infinite scrolling allows the DataGrid to load data as you scroll, so you can work with very large datasets without slowing down the page. When the scrollbar reaches the bottom, the grid automatically loads the next set of rows, creating a smooth and continuous browsing experience.
+Infinite scrolling allows the DataGrid to load more data automatically as you scroll downward. Instead of loading all records at once, the grid loads data in blocks, which keeps performance fast and scrolling smooth even with very large datasets.
 
-**How it works**
+### Configure Infinite Scrolling
 
-* The grid loads data block by block.
-* A block is the same size as the grid’s PageSize.
-* If PageSize is not set, the grid calculates the block size based on the viewport height and row height.
+To use infinite scrolling:
 
-**Requirements**
+* Set `EnableInfiniteScrolling="true"` on the grid.
+* Assign a fixed pixel `height` to the grid (for example, Height="300").
+* Use `PageSize` to control how many rows load in each block.
 
-The grid must have a fixed `Height` when `EnableInfiniteScrolling` is enabled. This allows the DataGrid to calculate how many rows fit in the visible area (viewport) and determine when to load the next set of data.
+### Infinite Scrolling Limitations
 
-**Key features**
+* Requires a fixed grid height for proper block calculation.
+* Grouping, batch editing, and Row virtualization cannot be used with infinite scrolling.
+* Rows must have a consistent height for accurate block loading.
+* Data loads only when scrolling reaches the bottom of the viewport.
 
-* Requires a fixed Height for the grid container.
-* `InitialBlocks` controls how many blocks load at the beginning.
-* `EnableCache` reuses data that was already loaded.
-* `MaximumBlocks` helps manage memory usage .
-
-### Example
-
-```
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@TaskData" Height="300" EnableInfiniteScrolling="true">
@@ -471,83 +443,148 @@ The grid must have a fixed `Height` when `EnableInfiniteScrolling` is enabled. T
         TaskData = TaskDetails.GenerateData(5000);
     }  
 }
+{% endhighlight %}
 
-```
+{% highlight cs tabtitle="TaskDetails.cs" %}
+public class TaskDetails
+{
+    public static List<TaskDetails> GenerateData(int count)
+    {
+        var names = new List<string> { "TOM", "Hawk", "Jon", "Chandler", "Monica", "Rachel", "Phoebe", "Gunther", "Ross", "Geller", "Joey", "Bing", "Tribbiani", "Janice", "Bong", "Perk", "Green", "Ken", "Adams" };
+        var hours = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        var designations = new List<string> { "Manager", "Engineer 1", "Engineer 2", "Developer", "Tester" };
+        var statusValues = new List<string> { "Completed", "Open", "In Progress", "Review", "Testing" };
+        var random = new Random();
+        var result = new List<TaskDetails>();
+        // Generate random data.
+        for (int i = 0; i < count; i++)
+        {
+            result.Add(new TaskDetails
+            {
+                TaskID = i + 1,
+                Engineer = names[random.Next(names.Count)],
+                Designation = designations[random.Next(designations.Count)],
+                Estimation = hours[random.Next(hours.Count)],
+                Status = statusValues[random.Next(statusValues.Count)]
+            });
+        }
+        return result;
+    }
+    public int TaskID { get; set; }
+    public string Engineer { get; set; }
+    public string Designation { get; set; }
+    public int Estimation { get; set; }
+    public string Status { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## ListView Virtualization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView supports UI virtualization to efficiently display large lists by rendering only the items currently visible in the viewport. The component reuses existing DOM elements as the user scrolls, helping maintain smooth performance even with thousands of items.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView supports UI virtualization which renders only the items visible in the viewport. This improves performance when working with large datasets.
+
+### Configure ListView Virtualization
+
+Virtualization can be enabled using the `EnableVirtualization="true"` property.
+
+```html
+
+@using Syncfusion.Blazor.Lists
+
+<SfListView DataSource="@ListData" EnableVirtualization="true">
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
+</SfListView>
+
+@code{
+    List<DataModel> ListData = new List<DataModel>();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        ListData.Add(new DataModel { Text = "Nancy", Id = "0" });
+        ListData.Add(new DataModel { Text = "Andrew", Id = "1" });
+        ListData.Add(new DataModel { Text = "Janet", Id = "2" });
+        ListData.Add(new DataModel { Text = "Margaret", Id = "3" });
+        ListData.Add(new DataModel { Text = "Steven", Id = "4" });
+        ListData.Add(new DataModel { Text = "Laura", Id = "5" });
+        ListData.Add(new DataModel { Text = "Robert", Id = "6" });
+        ListData.Add(new DataModel { Text = "Michael", Id = "7" });
+        ListData.Add(new DataModel { Text = "Albert", Id = "8" });
+        ListData.Add(new DataModel { Text = "Nolan", Id = "9" });
+
+        for (int i = 10; i < 1000; i++)
+        {
+            int index = new Random().Next(0, 10);
+            ListData.Add(new DataModel
+            {
+                Text = ListData[index].GetType().GetProperty("Text").GetValue(ListData[index], null).ToString(),
+                Id = i.ToString()
+            });
+        }
+    }
+
+    public class DataModel
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+    }
+}
+
+```
 
 ### Scroll Modes
 
 ListView offers two scrolling behaviors when virtualization is enabled:
 
 1. Window Scroll (Default)
-
-* Used automatically when no Height is specified.
-* Scrolling is controlled by the browser window.
-
+   * Used automatically when no Height is specified.
+   * Scrolling is controlled by the browser window.
 2. Container Scroll
+   * Activated when a pixel‑based Height is defined.
+   * The ListView scrolls inside its own container instead of the window.
 
-* Activated when a pixel‑based Height is defined.
-* The ListView scrolls inside its own container instead of the window.
+### ListView Virtualization Limitations
 
-### Requirements
-
-Virtualization requires:
-
-* A `Height` value in pixels (e.g., Height="300").
-* Percentage heights ("100%") are not supported unless the ListView is wrapped inside a parent container with a fixed pixel height.
-
-```
-<div style="height:320px">
-    <SfListView DataSource="@Contacts"
-                EnableVirtualization="true"
-                Height="320">
-        <ListViewFieldSettings TValue="Contact"
-                               Id="Id"
-                               Text="Name" />
-    </SfListView>
-</div>
-```
+Requires a pixel-based `height`. Percentage heights are not supported unless the ListView is placed inside a fixed-height parent container.
 
 ## File Manager Virtualization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component supports UI Virtualization to efficiently load and display large numbers of files and folders. Instead of rendering all items at once, only the elements that fit inside the visible viewport are displayed. Additional items are loaded automatically as the user scrolls.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> File Manager supports UI virtualization to efficiently load large numbers of files and folders without affecting performance. It renders only the items visible in the viewport, enabling smooth navigation even when directories contain thousands of entries. Virtualization works in both Details and Large Icons views.
 
-This improves performance significantly when working with directories that contain thousands of files.
+The component determines which items to display based on the **height** and **width** of the viewport. As the user scrolls, the File Manager loads additional files and folders according to the available visible area.
 
-### How Virtualization Works
+### Configure File Manager Virtualization
 
-The File Manager looks at the size of the visible area (the part you can currently see on the screen). It then shows only the files and folders that fit inside that space.
-As you scroll:
+To enable virtualization, set the `EnableVirtualization` property to `true`. The example below demonstrates virtualization applied in the Details view
 
-* More items load automatically when you reach new areas.
-* Existing on‑screen elements are reused, so the browser doesn’t have to create everything from scratch.
-* Scrolling stays smooth, even if the folder contains thousands of items.
-
-### Configuration
-
-```
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.FileManager
 
-<SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.Details" EnableVirtualization="true">
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
-        </FileManagerAjaxSettings>        
-    </SfFileManager>
-```
+<SfFileManager TValue="FileManagerDirectoryContent"
+               View="ViewType.Details"
+               EnableVirtualization="true">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+{% endhighlight %}
+{% endtabs %}
 
-### Limitations
+### File Manager Virtualization Limitations
 
-* Programmatic selection using the `SelectAllAsync` method is not supported with virtual scrolling.
-* The keyboard shortcut `CTRL+A` will only select the files and directories that are currently visible within the viewport, rather than selecting all files and directories in the entire directory tree.
-* Selected file items are not maintained while scrolling and view switching, considering the performance of the component.
+* Programmatic selection using `SelectAllAsync` is not supported when virtualization is enabled.
+* Pressing `CTRL + A` selects only the files and folders currently visible in the viewport, not all items in the directory.
+* Selected items are not preserved while scrolling or when switching between views, to maintain optimal performance.
 
+## See Also
 
+For complete working examples, detailed explanations, and additional configuration options, refer to the following documentation pages.
 
-
-
-
+* [DataGrid – Virtual Scrolling & Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+* [DataGrid – Infinite Scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling)
+* [ListView – Virtualization](https://blazor.syncfusion.com/documentation/listview/virtualization)
+* [File Manager – Virtualization](https://blazor.syncfusion.com/documentation/file-manager/virtualization)
