@@ -65,7 +65,7 @@ public Task DataBoundHandler()
         <Syncfusion.Blazor.Spinner.SfSpinner @bind-Visible="@ShowSpinner"></Syncfusion.Blazor.Spinner.SfSpinner>
     </div>
     <SfGrid TValue="APIGridOrder">
-        <SfDataManager Url="https://blazor.syncfusion.com/services/development/api/GridWebApi" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/GridWebApi" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
         <GridEvents DataBound="DataBoundHandler" TValue="APIGridOrder"></GridEvents>
         <GridColumns>
             <GridColumn Field=@nameof(APIGridOrder.EmployeeID) HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
@@ -143,4 +143,4 @@ public Task DataBoundHandler()
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhRjUWVpislfAyD?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxXACVfWJEKtCM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
