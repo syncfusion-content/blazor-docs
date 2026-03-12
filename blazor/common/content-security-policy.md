@@ -23,7 +23,7 @@ Now we have introduced **strict CSP compatibility** for **over 80 components**. 
 
 This enhancement allows developers to enforce modern, secure browser policies more easily while retaining full component capabilities in Blazor Server, WebAssembly, and hybrid (Auto) render modes.
 
-### Recommended CSP Directives for Syncfusion Blazor Components 
+### Recommended CSP Directives for Strict Csp implemented Syncfusion Blazor Components 
 
 #### For Blazor Interactive Server App
 
@@ -65,25 +65,28 @@ This enhancement allows developers to enforce modern, secure browser policies mo
 If your application includes Syncfusion components that are not explicitly marked as Strict CSP implemented, you must include the style-src 'unsafe-inline' directive in your Content Security Policy.
 
 Refer to the list of supported components to verify Strict CSP compatibility. We have also outlined the features that currently require additional CSP directives.
+### Component Categories Overview
 
-| Category                        | Fully Strict CSP Compliant                  | Partial CSP Compliance                          |                                 |
-|---------------------------------|---------------------------------------------|-------------------------------------------------|---------------------------------|
-|                                 |                                             | **HTML Attributes Support**                     | **Other Functionalities**       |
-| **DATA MANAGEMENT**             | DataGrid, Pager                             |                                                 | Pivot Table, Tree Grid, Query Builder, ListView |
-| **DATA VISUALIZATION**          | QRCodeGenerator, TreeMap                    |                                                 | Charts, 3D Chart, Stock Chart, Circular Gauge, Linear Gauge, HeatMap Chart, Range Selector, Bullet Chart, Sparkline Charts, Sankey, Smith Chart, Barcode Generator |
-| **SCHEDULING & CALENDARS**      | Gantt Chart, Calendar                       | DatePicker, DateRangePicker, DateTime Picker, TimePicker | Scheduler                       |
-| **DROPDOWNS**                   | Dropdown Tree                               |                                                 | Dropdown List, MultiSelect Dropdown, ListBox, ComboBox, AutoComplete, Mention, MultiColumn ComboBox |
-| **FILE VIEWERS & EDITORS**      |                                             | File Manager (SanitizeHtmlAttributes issue)     | Rich Text Editor, Image Editor, Markdown Editor, In-place Editor, File Upload |
-| **LAYOUT**                      | Dashboard Layout, Splitter, Stepper, Tabs, Accordion |                                         | Dialog, Tooltip, Card, Media Query, Timeline, Avatar, Predefined Dialogs |
-| **INPUTS**                      | Radio Button, CheckBox, Toggle Switch Button, Floating Action Button, Speed Dial, Progress Button | TextBox, TextArea, Numeric TextBox, Input Mask, DatePicker, DateRangePicker, DateTime Picker, TimePicker | Range Slider, OTP Input, Color Picker, Signature, Rating, Chips |
-| **DIAGRAMS AND MAPS**           |                                             |                                                 | Diagram, Maps                   |
-| **BUTTONS & ACTIONS**           | Button, Split Button, Dropdown Menu         |                                                 | Button Group, Color Palette     |
-| **NOTIFICATIONS**               | Toast, Message, Skeleton                    |                                                 | Progress Bar, Badge, Spinner    |
-| **NAVIGATION**                  | Ribbon                                      | TreeView            | Tabs, Sidebar, Toolbar, Context Menu, AppBar, Breadcrumb, Carousel, Stepper, File Manager |
-| **FORMS**                       |                                             |                                                 | Data Form                       |
-| **KANBAN**                      |                                             |                                                 | Kanban                          |
-| **INTERACTIVE CHAT**            | AIAssistView, Speech To Text                |         |                                 |
-| **SMART COMPONENTS**            | Smart Paste Button, Smart TextArea (preview)  |                                          |  |
+The Syncfusion Blazor suite organizes its 145+ components into logical categories. Below is an updated overview highlighting CSP compliance status based on the latest verification:
+
+| Category                        | Fully Strict CSP Compliant                                                                 | Partial CSP Compliance                                                                 |                                 |
+|---------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|---------------------------------|
+|                                 |                                                                                            | **HTML Attributes Support**                                                            | **Other Functionalities**       |
+| **DATA MANAGEMENT**             | DataGrid, Pager, Tree Grid, Query Builder, ListBox                                        |                                                                                        | ListView, Pivot Table           |
+| **DATA VISUALIZATION**          | QRCodeGenerator, BarcodeGenerator, TreeMap, Linear Gauge                                   |                                                                                        | Charts, 3D Charts, Stock Chart, BulletChart, Range Selector, Sankey, Smith Chart, Sparkline Charts |
+| **SCHEDULING & CALENDARS**      | Calendar                                                                                   | DatePicker, DateRangePicker, DateTime Picker, TimePicker                               | Scheduler, Gantt Chart (RTE sample issue) |
+| **DROPDOWNS**                   | Dropdown Tree, ListBox, Mention                                                            | AutoComplete, ComboBox, Dropdown List, MultiColumn ComboBox, MultiSelect Dropdown     |                                 |
+| **FILE VIEWERS & EDITORS**      | File Upload, ImageEditor                                                                   |                                                                                        | Rich Text Editor, In-place Editor |
+| **LAYOUT**                      | Dashboard Layout, Splitter, Stepper, Tabs, Accordion, Card, Toolbar                        | AppBar, Breadcrumb, Carousel, Context Menu, Dialog, Tooltip                           | Timeline, Avatar, MediaQuery    |
+| **INPUTS**                      | Radio Button, CheckBox, Toggle Switch Button, Floating Action Button, Speed Dial, Progress Button, Button, ButtonGroup, Color Picker, Range Slider, Rating, Signature, Data Form | TextBox, TextArea, Numeric TextBox, Input Mask, DatePicker, DateRangePicker, DateTime Picker, TimePicker, OtpInput | Chips                           |
+| **DIAGRAMS AND MAPS**           |                                                                                            |                                                                                        | Diagram, Maps (style-related), Circular Gauge (style-related), Heatmap Chart (style-related) |
+| **BUTTONS & ACTIONS**           | Split Button                                                                               | Dropdown Menu                                                                          |                                 |
+| **NOTIFICATIONS**               | Toast, Message, Skeleton, Spinner                                                          | Badge (accordion console error)                                                        | Progress Bar                    |
+| **NAVIGATION**                  | Ribbon, AIAssistView, Speech To Text                                                       | TreeView (EnableVirtualization issue)                                                  | Sidebar, Menu Bar, File Manager |
+| **FORMS**                       |                                                                                            |                                                                                        |                                 |
+| **KANBAN**                      |                                                                                            |                                                                                        | Kanban                          |
+| **INTERACTIVE CHAT**            |                                                                                            | AIAssistView, Speech To Text                                            |                                 |
+| **SMART COMPONENTS**            |  Smart Paste Button, Smart TextArea (preview)                                         |                                                                                        | |
 
 
 Certain components are not currently fully compliant with Strict CSP requirements. Applications using the components listed below must include the style-src 'unsafe-inline' directive as part of their CSP configuration.
