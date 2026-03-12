@@ -19,23 +19,23 @@ This guide explains how to create a Razor Class Library (RCL) that includes Sync
 
 - [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a Razor Class Library in Visual Studio 2022
+## Create a Razor Class Library in Visual Studio
 
 1. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ![new project in aspnetcore blazor](images/VS2022/new-project-2022.png)
+    ![new project in aspnetcore blazor](images/VS2022/new-project.webp)
 
 2. Select **Razor Class Library** from the template, and then click the **Next** button.
 
-    ![razor class template](images/VS2022/razor-project-configuration-2022.png)
+    ![razor class template](images/VS2022/razor-project-configuration.webp)
 
 3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-    ![razor class project configuration](images/VS2022/razor-class-template-2022.png)
+    ![razor class project configuration](images/VS2022/razor-class-template.webp)
 
 4. Select the target Framework **.NET 8** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
 
-    ![select framework](images/VS2022/blazor-select-template-rcl-2022.png)
+    ![select framework](images/VS2022/blazor-select-template-rcl.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
@@ -146,19 +146,19 @@ You can create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAsse
 
 1. Now, Right-click the solution, and then select Add/Existing Project.
 
-    ![razor class library in blazor app](images/blazor-configure.png)
+    ![razor class library in blazor app](images/blazor-configure.webp)
 
 2. Add the **Razor Class Library** project by selecting the `RazorClassLibrary.csproj` file.
 
-    ![add RCL in blazor app](images/blazor-razor-configure.png)
+    ![add RCL in blazor app](images/blazor-razor-configure.webp)
 
     N> The Razor Class Library project is added to the existing Blazor Application.
 
 3. Right-click the Blazor App project, and then select Add/Project reference. Now, click the checkbox and configure the **Razor Class Library**.
 
-    ![reference manager in blazor app](images/reference-manager.png)
+    ![reference manager in blazor app](images/reference-manager.webp)
 
-    ![select RCL to configure blazor app](images/configure-razor.png)
+    ![select RCL to configure blazor app](images/configure-razor.webp)
 
 ## Importing Razor Class Library in the Blazor Application
 
@@ -212,4 +212,4 @@ You can create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAsse
 
 5. Run the application, The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component will be rendered in the default web browser.
 
-    ![RCL output](images/RCL-output.png)
+    ![RCL output](images/RCL-output.webp)

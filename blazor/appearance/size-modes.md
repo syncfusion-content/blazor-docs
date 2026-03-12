@@ -158,7 +158,7 @@ Follow below steps to change the size mode for an application at runtime.
     }
     ```
 
-    ![change-size-mode-for-application-at-runtime](images/change-size-mode-for-application-at-runtime.gif)
+    ![change-size-mode-for-application-at-runtime](images/change-size-mode-for-application-at-runtime.webp)
 
     N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
@@ -218,7 +218,7 @@ Refer to the following code, where the e-bigger class is added to enable touch m
 }
 ```
 
-![change-size-mode-for-a-control-at-runtime](images/change-size-mode-for-a-control-at-runtime.gif)
+![change-size-mode-for-a-control-at-runtime](images/change-size-mode-for-a-control-at-runtime.webp)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 

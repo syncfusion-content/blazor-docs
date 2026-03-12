@@ -57,7 +57,7 @@ For example, **ChildComponent.razor**:
 ```
 * Press the Run button to execute the code and see the component rendered.
 
-![Syncfusion Blazor Playground with Child Component](images/child_component.gif)
+![Syncfusion Blazor Playground with Child Component](images/child_component.webp)
 
 ## Remove a child component
 

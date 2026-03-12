@@ -350,7 +350,7 @@ namespace OpenAIExample.Components.Pages
 }
 ```
 
-![Anomaly Detection Output](images/anomaly-detection.gif)
+![Anomaly Detection Output](images/anomaly-detection.webp)
 
 ## How It Works
 
