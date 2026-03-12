@@ -24,35 +24,31 @@ documentation: ug
 
 ## Prerequisites
 
-Install the following software and packages before starting the process:
+[System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) | 17.14 or later | Development IDE with Blazor workload |
-| [.NET SDK](https://dotnet.microsoft.com/en-us/) | net8.0 or compatible | Runtime and build tools |
 | [HotChocolate.AspNetCore](https://www.nuget.org/packages/HotChocolate.AspNetCore) | 15.1.12 or later | GraphQL server framework |
 | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule/)| Latest Version | Scheduler component |
 | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) | Latest Version | Styling for Scheduler |
 
 ## Setting Up the GraphQL Backend
 
-### Step 1: Create a New ASP.NET Core Empty Project as the GraphQL Server
+### Step 1: Create a New ASP.NET Core Project as the GraphQL Server
 
-Create a **ASP.NET Core Empty** server project using Visual Studio 2022
+Create a **ASP.NET Core Empty** server project using Visual Studio
 
-**Using Visual Studio 2022 or later:**
-
-1. Open **Visual Studio 2022** (or newer).
+1. Open **Visual Studio**.
 2. Go to **File → New → Project**.
 3. Search for and select **ASP.NET Core Empty** (C#).
 4. Name the project (example: `GraphQLServer`).
-5. Select **.NET 8.0** as the target framework
+5. Select **.NET 8.0 or compatible ** as the target framework
 6. Click **Create**
 
 This creates a minimal ASP.NET Core app with just `Program.cs`.
 
 
-### Step 2: Install HotChocolate.AspNetCore Nuget package in the server project
+### Step 2: Install required backend package
 
 To add the [HotChocolate](https://chillicream.com/docs/hotchocolate/v15) package to the server project, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install  [HotChocolate.AspNetCore](https://www.nuget.org/packages/HotChocolate.AspNetCore).
 
@@ -64,7 +60,7 @@ Install-Package HotChocolate.AspNetCore -Version 15.1.12
 
 ### Step 3: Configuring the GraphQL server app
 
-1. Create GraphQLQuery and GraphQLMutation classes to define the GraphQL resolver and mutation methods, respectively.
+1. Create [GraphQLQuery](https://graphql.org/learn/queries/) and [GraphQLMutation](https://graphql.org/learn/mutations/) classes to define the GraphQL resolver and mutation methods, respectively.
 2. Implement the following configuration code to set up GraphQL query and mutation types and enable CORS.
 
     [program.cs]
@@ -512,12 +508,9 @@ The GraphQL Mutation class has been successfully created and is ready to handle 
 
 ## Integrating Syncfusion Blazor Scheduler
 
-### Step 1: Create a Blazor Web App
+### Step 1: Create a Blazor Web App using Visual Studio
 
-Create a **Blazor Web App** using Visual Studio 2022
-
-**Using Visual Studio 2022 or later:**
-1. Open Visual Studio 2022
+1. Open Visual Studio
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **BlazorSchedulerApp**
