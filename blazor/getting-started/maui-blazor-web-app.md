@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Integrating Blazor Component with a .NET MAUI Blazor Hybrid and Web App
+# Integrating Blazor with .NET MAUI Blazor Hybrid and Web App
 
 This section explains how to create and run a **.NET MAUI Blazor Hybrid App** together with a **Blazor Web App** using [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
 
@@ -54,7 +54,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 Open both of the following files and add the Syncfusion namespaces.
 
-* `~/.Maui/_Imports.razor`
+* `~/.Maui/Components/_Imports.razor`
 * `~/Components/_Imports.razor` (Blazor Web App)
 
 ```cshtml
@@ -85,7 +85,6 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in 
 
     // Add services to the container.
     builder.Services.AddRazorComponents()
-        .AddInteractiveServerComponents();
     builder.Services.AddSyncfusionBlazor();
     ....
 
