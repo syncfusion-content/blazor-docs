@@ -304,7 +304,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 * After a successful login, the user should be able to view the Syncfusion components such as **DataGrid, Scheduler, and TreeView** while navigating across different pages.
 
 **Output:**
-![Blazor Authentication And Authorization](./images/authentication-authorization.webp)
+![Blazor Authentication And Authorization](./authentication-authorization.webp)
 
 ## See Also
 
