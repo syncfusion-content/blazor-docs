@@ -9,29 +9,29 @@ documentation: ug
 
 # Context Menu in Blazor TreeGrid Component
 
-The Tree Grid has options to show the context menu when right clicked on it. To enable this feature, define either default or custom item in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) property.
+The TreeGrid has options to show the context menu when right clicked on it. Enable this feature by defining default or custom items in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) property.
 
 The following table lists the default context menu items,
 
 Items |Description
 -----|-----
-`AutoFit` | Auto fit the current column.
-`AutoFitAll` | Auto fit all columns.
+`AutoFit` | Auto-fit the current column.
+`AutoFitAll` | Auto-fit all columns.
 `Edit` | Edit the current record.
 `Delete` | Delete the current record.
 `Save` | Save the edited record.
 `Cancel` | Cancel the edited state.
 `Copy` | Copy the selected records.
-`PdfExport` | Export the Tree Grid data as Pdf document.
-`ExcelExport` | Export the Tree Grid data as Excel document.
-`CsvExport` | Export the Tree Grid data as CSV document.
+`PdfExport` | Export TreeGrid data as a PDF document.
+`ExcelExport` | Export TreeGrid data as a Excel document.
+`CsvExport` | Export TreeGrid data as a CSV document.
 `SortAscending` | Sort the current column in ascending order.
 `SortDescending` | Sort the current column in descending order.
 `FirstPage` | Go to the first page.
 `PrevPage` | Go to the previous page.
 `LastPage` | Go to the last page.
 `NextPage` | Go to the next page.
-`AddRow` | Add new row to the Tree Grid.
+`AddRow` | Add new row to the TreeGrid.
 
 The following sample code demonstrates enabling context menu with its default items,
 
@@ -68,7 +68,7 @@ The following sample code demonstrates enabling context menu with its default it
     protected override void OnInitialized()
     {
         TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 50000, Progress = 70, ParentId = null, Priority = "High", Approved = true });
-        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child Task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal", Approved = false });
         TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 500000, Progress = 65, ParentId = 1, Priority = "Critical", Approved = true });
         TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 609890, Progress = 77, ParentId = null, Priority = "Low", Approved = false });
         TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9778686, Progress = 25, ParentId = 4, Priority = "Normal", Approved = true });
@@ -85,8 +85,6 @@ The following sample code demonstrates enabling context menu with its default it
 ## Custom context menu items
 
 The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ContextMenuItemClicked) event.
-
-The following sample code demonstrates defining custom context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ContextMenuItemClicked) event,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -121,7 +119,7 @@ The following sample code demonstrates defining custom context menu item and its
     protected override void OnInitialized()
     {
         TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 50000, Progress = 70, ParentId = null, Priority = "High" });
-        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal" });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child Task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal" });
         TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 500000, Progress = 65, ParentId = 1, Priority = "Critical" });
         TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 609890, Progress = 77, ParentId = null, Priority = "Low" });
         TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9778686, Progress = 25, ParentId = 4, Priority = "Normal" });
@@ -131,11 +129,11 @@ The following sample code demonstrates defining custom context menu item and its
         TreeData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 778907897, Progress = 70, ParentId = 7, Priority = "Low" });
     }
 
-    public void OnContextMenuClick(ContextMenuClickEventArgs args)
+    public async Task OnContextMenuClick(ContextMenuClickEventArgs<BusinessObject> args)
     {
         if (args.Item.Id == "copywithheader")
         {
-            this.TreeGrid.CopyAsync(true);
+            await this.TreeGrid.CopyAsync(true);
         }
     }
 }
