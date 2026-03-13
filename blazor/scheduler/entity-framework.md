@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Scheduler with Entity Framework Core | Syncfusion
-description: This documentation provides a step‑by‑step guide for building a Syncfusion Blazor Scheduler with Entity Framework Core to manage and display scheduling data within the application.
+description: This documentation offers a step‑by‑step guide to building a Syncfusion Blazor Scheduler integrated with Entity Framework Core for managing scheduling data.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -13,25 +13,22 @@ This [Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor Scheduler](https:
 
 ## Prerequisites
 
-- [.NET](https://dotnet.microsoft.com/download/dotnet) SDK (>=8) Verify with:
+- **.NET SDK** (>=8) Verify with:
     ```bash
     dotnet --version
     ```
-- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) or LocalDB available. The guide uses LocalDB connection by default.
-- A code editor ([Visual Studio](https://visualstudio.microsoft.com/vs/) / [VS Code](https://code.visualstudio.com/)).
+- **SQL Server** or LocalDB available. The guide uses LocalDB connection by default.
+- A code editor (Visual Studio / VS Code).
 
 ## Creating new project
 
-### Step 1: Create a Blazor Web App
+### Step 1: Create a Blazor Web App using Visual Studio
 
-Create a **Blazor Web App** using Visual Studio 2022.
-
-**Using Visual Studio 2022 or later:**
-1. Open Visual Studio 2022
+1. Open Visual Studio
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **SfSchedulerApp**
-5. Select **.NET 10.0** as the target framework
+5. Select **.NET 8.0 or Compatible** as the target framework
 6. Set **Interactive render mode** to **Server**
 7. Set **Interactivity location** to **Per page/component**
 8. Click **Create**
