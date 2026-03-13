@@ -80,7 +80,7 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| DataGrid, Pager, Tree Grid, Query Builder | — | Pivot Table |
+| DataGrid, Pager, Tree Grid, Query Builder | — | [Pivot Table]() |
 
 ---
 
