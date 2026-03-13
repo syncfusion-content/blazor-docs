@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Smart RichTextEditor in Web App
+title: Getting Started with Syncfusion Smart Rich Text Editor in Web App
 description: Learn how to create and run Syncfusion Blazor Smart RichTextEditor component in Blazor Web App with server interactivity.
 platform: Blazor
 control: Smart RichTextEditor
@@ -303,6 +303,6 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 ## See also
 
 * [Getting Started with Smart Rich Text Editor in Server App](getting-started.md)
-* [Rich Text Editor Documentation](https://blazor.syncfusion.com/documentation/rich-text-editor/)
+* [Rich Text Editor Documentation](https://blazor.syncfusion.com/documentation/rich-text-editor)
 * [AI Features and Customization](ai-features.md)
 * [Blazor Web App Documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid)
