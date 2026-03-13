@@ -3,7 +3,7 @@ layout: post
 title: Blazor Scheduler with GraphQL using Hot Chocolate | Syncfusion
 description: Connect Syncfusion’s Blazor Scheduler to a Hot Chocolate GraphQL backend for optimized CRUD, typed queries, and a responsive, scalable .NET application.
 control: Scheduler
-platform: blazor
+platform: Blazor
 documentation: ug
 ---
 
@@ -677,7 +677,7 @@ The `Home.razor` component will display the appointment data in a Syncfusion Bla
     }
     ```
 
-### Component Explanation:
+**Component Explanation:**
 
 - **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component, allowing real-time updates and user interactions (such as adding, editing, or deleting appointments) without full page reloads.
 - **`<SfSchedule>`**: The main Scheduler component that displays appointments in various calendar views (Day, Week, Work Week, Month, Agenda, etc.).
