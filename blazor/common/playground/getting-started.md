@@ -75,7 +75,7 @@ You can create a Blazor component in Blazor playground by following the given st
 ```
 * Press the Run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
-![Syncfusion Blazor Playground](images/blazor_component.png)
+![Syncfusion Blazor Playground](images/blazor_component.webp)
 
 ## Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
@@ -101,4 +101,4 @@ Blazor Playground is preconfigured with the `Syncfusion.Blazor` package, stylesh
 
 * Press the Run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the Result view.
 
-![Syncfusion Blazor Playground with Calendar component](images/syncfusion_component.png)
+![Syncfusion Blazor Playground with Calendar component](images/syncfusion_component.webp)

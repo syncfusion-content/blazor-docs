@@ -17,7 +17,7 @@ The steps below will assist you to create your **Syncfusion Blazor Application**
 
 N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfusion® Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If it is not installed, follow the steps in the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) topic.
 
-1. Open Visual Studio 2026.
+1. Open Visual Studio 2022 or 2026.
 
 2. To create a Syncfusion® Blazor application, use either one of the following options:
 

@@ -447,7 +447,7 @@ if (card.Category == "Delivered" || card.Category == "Served")
 
 A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
-![Kanban AI Assistant - Output](../../ai/images/sentiment-analysis.png)
+![Kanban AI Assistant - Output](../../ai/images/sentiment-analysis.webp)
 
 ## Error Handling and Troubleshooting
 

@@ -13,7 +13,7 @@ documentation: ug
 
 Blazor Playground lets users customize the appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by choosing a theme from the dropdown available via the **Output Theme** button.
 
-![Syncfusion Blazor Playground with theme](images/Output_Theme.gif)
+![Syncfusion Blazor Playground with theme](images/output_theme.webp)
 
 ## Explore the code editor 
 
@@ -35,13 +35,13 @@ Blazor Playground lets users customize the appearance of Syncfusion<sup style="f
 
 During compilation, any errors or warnings are displayed with their corresponding line numbers for efficient identification and resolution.
 
-![Syncfusion Blazor Playground with error console](images/ErrorConsole.png)
+![Syncfusion Blazor Playground with error console](images/errorconsole.webp)
 
 ## Sharing code
 
 Click the Share button to generate a unique URL for collaboration and discussion. The dialog presents two sections: **Shared Link** and **Embed Link**.
 
-![Syncfusion Blazor Playground with save code snippet](images/Save_Snippet.png)
+![Syncfusion Blazor Playground with save code snippet](images/save_snippet.webp)
 
 ## Embedding code
 
@@ -53,11 +53,11 @@ Embed links provide customization options:
 
 For example, enable all options in an embed link. 
 
-![Syncfusion Blazor Playground with all embed options](images/Embed_enableall.png)
+![Syncfusion Blazor Playground with all embed options](images/embed_enableall.webp)
 
 For example, show only the result view and disable all other options.
 
-![Syncfusion Blazor Playground with result view](images/Embed_Result.png)
+![Syncfusion Blazor Playground with result view](images/Embed_Result.webp)
 
 ## Handling static assets
 
@@ -65,4 +65,4 @@ Manage CSS and JavaScript files for styling and scripting your application in Bl
 * Add CDN links for static assets through the **Static Assets** tab in the **NuGet Asset Manager**.
 * Include the CDN link in your code files (for example, `__Index.razor`) to apply styles or scripts.
 
-![Syncfusion Blazor Playground with static assets](images/static_assets.gif)
+![Syncfusion Blazor Playground with static assets](images/static_assets.webp)

@@ -15,11 +15,11 @@ This guide explains how to add a Syncfusion<sup style="font-size:70%">&reg;</sup
 
 2. Right-click the project and select `Manage NuGet Packages`.
 
-    ![Manage NuGet package on ASP.NET Core MVC app](images/asp-mvc-manage-nuget-package.png)
+    ![Manage NuGet package on ASP.NET Core MVC app](images/asp-mvc-manage-nuget-package.webp)
 
 3. Search for the `Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes` NuGet packages and install them.
 
-    ![Installing Syncfusion Blazor Grid NuGet package](images/asp-mvc-install-nuget.png)
+    ![Installing Syncfusion Blazor Grid NuGet package](images/asp-mvc-install-nuget.webp)
 
 4. Register Blazor Server and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in the `~/Program.cs` file.
 
@@ -122,7 +122,7 @@ This guide explains how to add a Syncfusion<sup style="font-size:70%">&reg;</sup
 
 11. Run the application by pressing `F5`. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component is rendered in the ASP.NET Core MVC application.
 
-    ![Syncfusion Blazor Grid component rendered on ASP.NET Core MVC application](images/asp-mvc-grid.png)
+    ![Syncfusion Blazor Grid component rendered on ASP.NET Core MVC application](images/asp-mvc-grid.webp)
 
 ## See Also
 

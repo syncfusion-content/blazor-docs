@@ -352,7 +352,7 @@ namespace AzureOpenAIExample.Components.Pages
 }
 ```
 
-![Natural Language Query Output](images/natural-languagequery.gif)
+![Natural Language Query Output](images/natural-languagequery.webp)
 
 ## How It Works
 
