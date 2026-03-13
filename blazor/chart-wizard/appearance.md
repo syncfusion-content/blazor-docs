@@ -7,11 +7,13 @@ control: Chart Wizard
 documentation: ug
 ---
 
-# Appearance in Blazor Chart Wizard Component
 
-This topic describes appearance-related properties for the `Chart Wizard` component and shows examples for applying them.
+# Customizing Appearance in the Blazor Chart Wizard Component
 
-## Chart Wizard Appearance Properties
+This guide explains how to tailor the appearance of the `Chart Wizard` component in Blazor. Discover the available properties and see practical examples for each customization option.
+
+
+## Appearance Properties Overview
 
 | Property                | Type    | Default    | Description |
 |-------------------------|---------|------------|-------------|
@@ -23,7 +25,7 @@ This topic describes appearance-related properties for the `Chart Wizard` compon
 
 ### Width and Height
 
-Sets the horizontal and vertical size of the `Chart Wizard`, allowing pixel values for fixed dimensions or percentage values for responsive layouts.
+You can control the size of the `Chart Wizard` by specifying the `Width` and `Height` properties. Use pixel values for fixed sizing or percentages for responsive layouts.
 
 ### In percentage
 
@@ -68,6 +70,7 @@ Sets the horizontal and vertical size of the `Chart Wizard`, allowing pixel valu
 }
 
 ```
+
 ![Chart Wizard dimensions in percentage](images/chart-wizard-dimension-in-percentage.png)
 
 ### In pixel
@@ -113,11 +116,13 @@ Sets the horizontal and vertical size of the `Chart Wizard`, allowing pixel valu
 }
 
 ```
+
 ![Chart Wizard dimensions in pixel](images/chart-wizard-dimension-in-pixel.png)
+
 
 ### Theme
 
-Set the `Theme` property to apply built-in themes for the chart.
+The `Theme` property applies a built-in visual style to the chart. Choose from available themes to match the application's look and feel.
 
 ```
 
@@ -160,14 +165,16 @@ Set the `Theme` property to apply built-in themes for the chart.
 }
 
 ```
+
 ![Chart Wizard appearance theme](images/chart-wizard-appearance-theme.png)
 
-N>
-The `Theme` property will set the respective built-in theme for the chart not for the overall ChartWizard UI. To ensure the consistent theme update, kindly check out the theme section in [Getting started](./getting-started.md).
+
+N> The `Theme` property applies the selected theme to the chart area, not the entire Chart Wizard UI. For a consistent look across the whole component, refer to the theme section in [Getting started](./getting-started.md).
+
 
 ### EnableRtl
 
-When `true`, enables right-to-left layout for languages such as Arabic or Hebrew. Affects alignment of header, panel, and controls.
+Set `EnableRtl` to `true` to support right-to-left languages such as Arabic or Hebrew. This option automatically adjusts the alignment of headers, panels, and controls for RTL layouts.
 
 ```
 
@@ -210,11 +217,13 @@ When `true`, enables right-to-left layout for languages such as Arabic or Hebrew
 }
 
 ```
-![Chart Wizard apperance Rtl](images/chart-wizard-appearance-rtl.png)
+
+![Chart Wizard appearance RTL](images/chart-wizard-appearance-rtl.png)
+
 
 ### PropertyPanelExpanded
 
-Controls whether the property panel is expanded on initial render. Set to `false` to start with a collapsed panel.
+The `PropertyPanelExpanded` property controls whether the property panel is open when the Chart Wizard first loads. Set it to `false` to start with the panel collapsed, giving more space to the chart area.
 
 ```
 
@@ -257,9 +266,11 @@ Controls whether the property panel is expanded on initial render. Set to `false
 }
 
 ```
-![Chart Wizard apperance property panel](images/chart-wizard-appearance-property-panel.png)
+
+![Chart Wizard appearance property panel](images/chart-wizard-appearance-property-panel.png)
 
 
-## See also
 
-- Explore the `Chart Wizard Demo` for interactive samples.
+## See Also
+
+- Explore the [Chart Wizard Demo](#) for interactive samples.

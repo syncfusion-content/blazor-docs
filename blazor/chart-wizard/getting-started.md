@@ -296,7 +296,7 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 Blazor Chart Wizard has built-in themes that can be used to change the appearance of the chart.
 
 ### Prerequisites
-In order to apply theme update for the overall Chart Wizard UI, include the theme stylesheet (this can be accessed from NuGet through Static Web Assets) in the <head> tag in the App.razor file as shown below:
+In order to apply same theme update for the overall Chart Wizard UI, include the same theme stylesheet (this can be accessed from NuGet through Static Web Assets) in the <head> tag in the App.razor file as shown below:
 
 {% tabs %}
 {% highlight razor %}

@@ -9,11 +9,12 @@ documentation: ug
 
 # Print and Export in Blazor Chart Wizard Component
 
-The ChartWizard supports exporting the current chart to common file formats. Available export options include `PNG`, `JPEG`, `SVG`, `PDF`, `CSV`, `XLSX`, `PRINT`.
+The Chart Wizard support the export of current chart to a variety of popular file formats. Supported export options include: `PNG`, `JPEG`, `SVG`, `PDF`, `CSV`, `XLSX`, and `PRINT`.
 
-### Configuring export options
 
-`ChartExportSettings` in `ChartSettings` provides a declarative way to configure export behavior. `ChartExportSettings` has the following properties:
+## Configuring Export Options
+
+Configure export behavior declaratively using the `ChartExportSettings` within `ChartSettings`. The main properties include:
 
 - `FileName` — Sets the file name of the export.
 - `Width` — Sets the requested output width in pixels for image/PDF exports.
@@ -64,16 +65,19 @@ The ChartWizard supports exporting the current chart to common file formats. Ava
 }
 
 ```
+
 ![Chart Wizard export](images/chart-wizard-export.png)
 
-N>
-`PRINT`: Opens the browser print dialog and prints the rendered chart. This option invokes the print workflow (it does not produce a downloadable file) and is useful for creating physical copies or printing to PDF via the browser's print-to-PDF capability.
+
+N> `PRINT` opens the browser's print dialog and prints the rendered chart. This does not generate a downloadable file, but is ideal for creating physical copies or printing to PDF using your browser's print-to-PDF feature.
+
 
 ![Chart Wizard print](images/chart-wizard-print.png)
 
-## Customizing the exported chart using Exporting event
 
-When an export is initiated the component raises an `Exporting` event and provides a `ChartExportingEventArgs` instance. Fields available on `ChartExportingEventArgs` include:
+## Customizing the Exported Chart with the Exporting Event
+
+When an export is triggered, the component fires an `Exporting` event and supplies a `ChartExportingEventArgs` instance. You can use this to customize the export process. Available fields include:
 
 - `FileName` — sets the filename to use for the exported file (without extension). The component will append the appropriate extension for the selected export type.
 - `Cancel` — set to `true` to cancel the export operation.
@@ -81,9 +85,11 @@ When an export is initiated the component raises an `Exporting` event and provid
 - `Height` — sets height in pixels to use for the exported output (when supported by the export type).
 - `Orientation` — sets page orientation for printable exports (`Portrait` or `Landscape`). Applies primarily to PDF/Print workflows.
 
-The following example shows how to handle the `Exporting` event.
+
+Here’s an example of handling the `Exporting` event:
 
 ```
+
 
 @using Syncfusion.Blazor.ChartWizard
 
@@ -146,11 +152,13 @@ The following example shows how to handle the `Exporting` event.
 }
 ```
 
+
 N>
-- Use `args.Cancel = true` to prevent exporting.
-- `FileName` should not include the file extension; the component will append the proper extension for the selected `ExportType`.
-- Data export formats such as `CSV` and `XLSX` export the underlying data table and do not use `Width`/`Height`/`Orientation`.
+- Use `args.Cancel = true` to prevent exporting when needed.
+- The `FileName` property should not include a file extension; the component will add the correct extension based on the selected `ExportType`.
+- Data export formats like `CSV` and `XLSX` export the underlying data table and do not use `Width`, `Height`, or `Orientation`.
 
-## See also
 
-- Explore the `Chart Wizard Demo` for interactive samples.
+## See Also
+
+- Explore the [Chart Wizard Demo](#) for interactive samples.

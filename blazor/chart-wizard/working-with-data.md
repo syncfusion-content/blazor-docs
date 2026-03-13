@@ -11,14 +11,14 @@ documentation: ug
 
 The primary configuration for the chart wizard is provided via the `ChartSettings`. Key properties:
 
-- `DataSource` (IEnumerable<Object>) — Provide the collection of data objects used by the chart. Each object should contain fields referenced by `CategoryFields` and `SeriesFields`.
-- `CategoryFields` (IEnumerable<string>) — One or more field names from the data objects used for the category (x-axis) values. Example: `new List<string>{ "Country" }` or `new[] { "Month" }`.
-- `SeriesFields` (IEnumerable<string>) — One or more numeric field names to render as series. Provide multiple names when creating multi-series charts (e.g., `new[]{ "Gold", "Silver", "Bronze" }`).
-- `SeriesType` (ChartWizardSeriesType) — Selects the chart type that the wizard will use for rendering series. Common values: `Bar`, `Column`, `Line`, `Area`, `Pie`, etc.
+- `DataSource` (`IEnumerable<Object>`) — Supplies the collection of data objects for the chart. Each object should have fields referenced by `CategoryFields` and `SeriesFields`.
+- `CategoryFields` (`IEnumerable<string>`) — Specifies one or more field names from your data objects to use as category (x-axis) values. Example: `new List<string>{ "Country" }` or `new[] { "Month" }`.
+- `SeriesFields` (`IEnumerable<string>`) — Lists one or more numeric field names to render as chart series. Use multiple names for multi-series charts (e.g., `new[]{ "Gold", "Silver", "Bronze" }`).
+- `SeriesType` (`ChartWizardSeriesType`) — Selects the chart type for rendering series. Common values include `Bar`, `Column`, `Line`, `Area`, `Pie`, and more.
 
-## Configuring fields
+## Configuring Fields
 
-- Single-category, single-series chart
+- **Single-category, single-series chart**
 
 ```
 <ChartSettings DataSource="@SalesData"
@@ -27,7 +27,8 @@ The primary configuration for the chart wizard is provided via the `ChartSetting
                SeriesType="ChartWizardSeriesType.Column" />
 ```
 
-- Multi-series chart
+
+- **Multi-series chart**
 
 ```
 <ChartSettings DataSource="@OlympicsData"
@@ -36,14 +37,14 @@ The primary configuration for the chart wizard is provided via the `ChartSetting
                SeriesType="ChartWizardSeriesType.Bar" />
 ```
 
-N>
-* The order of `SeriesFields` determines the default series ordering.
-* `CategoryFields` can contain multiple fields when composing nested/grouped categories; the wizard will combine them as specified.
 
+N>
+- The order of `SeriesFields` determines the default series ordering.
+- `CategoryFields` can include multiple fields for nested or grouped categories; the wizard will combine them as specified.
 
 ## List Binding
 
-An IEnumerable object can be assigned to the `DataSource` property of the `ChartSettings`.
+Any IEnumerable object can be assigned to the `DataSource` property of the `ChartSettings`.
 
 ```
 
@@ -89,6 +90,7 @@ An IEnumerable object can be assigned to the `DataSource` property of the `Chart
 }
 
 ```
+
 
 ![Chart Wizard working with data - list binding](images/chart-wizard-working-with-data-list.png)
 
@@ -139,8 +141,10 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 }
 
 ```
+
 ![Chart Wizard working with data - observable data binding](images/chart-wizard-working-with-data-observable.png)
 
-## See also
 
-- Explore the `Chart Wizard Demo` for interactive samples.
+## See Also
+
+- Explore the [Chart Wizard Demo](#) for interactive samples.

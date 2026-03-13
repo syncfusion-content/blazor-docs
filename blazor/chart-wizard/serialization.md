@@ -9,31 +9,31 @@ documentation: ug
 
 # Serialization in Blazor Chart Wizard Component
 
-`SfChartWizard` provides two methods to persist and restore the entire chart wizard configuration:
+The `Chart Wizard` component makes it simple to save and restore your entire chart wizard configuration. This is useful for persisting user settings, sharing chart setups, or restoring previous states.
 
-- `SaveChart()` - serializes the current chart state (settings, series, axes, titles, styles, etc.) and return the JSON string.
-- `LoadChartAsync(string data)` - loads chart configuration from a JSON string produced by `SaveChart()` and applies it to the wizard instance.
+Serialization can be achieved using the following key methods:
+
+- `SaveChart()` — Serializes the current chart state (including settings, series, axes, titles, styles, and more) and returns it as a JSON string.
+- `LoadChartAsync(string data)` — Loads a chart configuration from a JSON string (produced by `SaveChart()`) and applies it to the wizard instance.
 
 N>
-- The serialized JSON contains the full runtime state of the chart wizard settings. Use this string to persist configuration to a database, file, or browser storage.
-- `LoadChartAsync` resets the chart settings to defaults and then applies values from the JSON.
-- `SaveChart()` returns a plain JSON string; `LoadChartAsync` expects the same shape produced by `SaveChart()`.
+- The serialized JSON captures the full runtime state of the chart wizard. You can store this string in a database, file, or browser storage for later use.
+- `LoadChartAsync` resets the chart to its default state before applying the values from the JSON.
+- Always use the JSON string produced by `SaveChart()` as input for `LoadChartAsync()`.
 
 ```
 
 @using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
-	<div class="toolbar-container">
-		<div>
-			<button class="btn btn-primary" @onclick="SaveChartAsync">Save
-			</button>
-			<button class="btn btn-primary" @onclick="OpenChartAsync">Load
-			</button>
-		</div>
-	</div>
+    <div class="toolbar-container">
+        <div>
+            <button class="btn btn-primary" @onclick="SaveChartAsync">Save</button>
+            <button class="btn btn-primary" @onclick="OpenChartAsync">Load</button>
+        </div>
+    </div>
     <div class="content-wrapper">
-        <SfChartWizard @ref="ChartWizard" Width="100%"> 
+        <SfChartWizard @ref="ChartWizard" Width="100%">
             <ChartSettings DataSource="@Top10Cities" CategoryFields="@categories" SeriesFields="@chartSeries" SeriesType="@chartWizardSeriesType">
             </ChartSettings>
         </SfChartWizard>
@@ -90,8 +90,10 @@ N>
 }
 
 ```
+
 ![Chart Wizard serialization](images/chart-wizard-serialization.png)
 
-## See also
 
-- Explore the `Chart Wizard Demo` for interactive samples.
+## See Also
+
+- Explore the [Chart Wizard Demo](#) for interactive samples.
