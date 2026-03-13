@@ -50,9 +50,11 @@ Blazor Server and Blazor WebAssembly come with different types of XSS risks.
 
 ### Common Attack Vectors
 
-XSS can get into your app in many different ways. The most common source is user input such as comments, chat messages, or anything a person types into a form.
-Data from APIs, uploaded files, or text copied from other websites can also contain harmful scripts.
-Even information already stored in your database might be unsafe if it was not cleaned before being saved.
+XSS can enter an application in many different ways. The most common source is user input, such as comments, chat messages, or any data that users type into forms.
+
+Data received from APIs, uploaded files, or text copied from other websites can also contain harmful scripts.
+
+Even information already stored in the database may be unsafe if it was not validated or sanitized before being saved.
 
 ### Example Attack Payloads
 
@@ -85,7 +87,8 @@ Blazor automatically turns special characters in user input into safe, readable 
 
 Use `@userInput` whenever you want to safely display text on the page. Only use `MarkupString` when the HTML has already been sanitized on the server.
 
-```
+```html
+
 @* Safe - Blazor automatically encodes *@
 <p>@userInput</p>
 
@@ -182,7 +185,7 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
 
 #### BlockEditor with EnableHtmlSanitizer
 
-```
+```csharp
 
 @using Syncfusion.Blazor.BlockEditor;
 
@@ -211,7 +214,7 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
 
 #### RichTextEditor with Client‑Side and Server‑Side Sanitization
 
-```
+```csharp
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.Net.Http.Json
@@ -270,7 +273,7 @@ The example below shows a scenario that should never be used. It renders raw HTM
 
 If the content includes malicious scripts, it can lead to `XSS (Cross‑Site Scripting)` attacks.
 
-```
+```csharp
 
 @* NEVER DO THIS *@
 <SfGrid DataSource="@Comments">
@@ -294,7 +297,7 @@ In this example, the HTML content is cleaned and sanitized on the server before 
 
 The `SanitizedContent` property contains only safe HTML, so rendering it with `MarkupString` is secure.
 
-```
+```csharp
 
 @using System.Net.Http.Json
 @inject HttpClient Http
@@ -336,7 +339,7 @@ public class Comment
 
 If HTML formatting is not required, render the content as plain text. Blazor automatically encodes all special characters, ensuring no injected scripts can execute regardless of what the data source contains.
 
-```
+```csharp
 
 <SfGrid DataSource="@Comments">
     <GridColumns>
@@ -356,7 +359,7 @@ The same safe rendering rules apply to ListView when displaying user-generated c
 
 The following example conditionally renders content based on whether the message contains HTML. When `IsHtml` is `true`, only pre-sanitized content stored in `SanitizedContent` is rendered as markup. Otherwise, plain text is displayed using Blazor's automatic encoding. This keeps all messages safe regardless of their format.
 
-```
+```csharp
 
 @using Syncfusion.Blazor.Lists
 
