@@ -40,7 +40,7 @@ N> This [polyfill](https://github.com/Daddoon/Blazor.Polyfill/releases/tag/3.0.8
 
 3. Run the application in IE11. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component renders in IE11 when polyfills are correctly configured.
 
-    ![Syncfusion component rendering on IE11](images/rendering-component-on-ie11.png)
+    ![Syncfusion component rendering on IE11](images/rendering-component-on-ie11.webp)
 
 ## See Also
 

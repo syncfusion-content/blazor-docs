@@ -435,7 +435,7 @@ private void GoToBacklogBoardView()
 
 A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
-![Kanban AI Assistant - Output](../../ai/images/smart-task-suggestion.png)
+![Kanban AI Assistant - Output](../../ai/images/smart-task-suggestion.webp)
 
 ## Error Handling and Troubleshooting
 

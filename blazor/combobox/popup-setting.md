@@ -11,7 +11,7 @@ documentation: ug
 
 ## Popup resize
 
-Dynamically adjust the size of the popup by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowResize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions are preserved while the component instance remains active.
+Dynamically adjust the size of the popup by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowResize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions are preserved while the component instance remains active.
 
 {% highlight Razor %}
 

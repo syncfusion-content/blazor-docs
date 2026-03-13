@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor Accumulation Chart in Server | Syncfusion
+title: Getting Stared with Blazor Accumulation Chart | Syncfusion
 description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor WebAssembly App.
 platform: Blazor
 control: Accumulation Chart

@@ -9,7 +9,7 @@ documentation: ug
 
 # Connect Syncfusion Blazor Scheduler with GraphQL using Hot Chocolate
 
-GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
+[GraphQL](https://graphql.org/learn/introduction/) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
 **Traditional REST APIs** and **GraphQL** differ mainly in how data is requested and returned: **REST APIs expose** multiple endpoints that return fixed data structures, often including unnecessary fields and requiring several requests to fetch related data, while **GraphQL** uses a single endpoint where queries define the exact fields needed, enabling precise responses and allowing related data to be retrieved efficiently in one request. This makes **GraphQL** especially useful for **Blazor Scheduler integration**, the **reason** is data‑centric UI components require well‑structured and selective datasets to support efficient operations, reduce network calls, and improve overall performance.
 
@@ -24,50 +24,43 @@ GraphQL is a query language that allows applications to request exactly the data
 
 ## Prerequisites
 
-Install the following software and packages before starting the process:
+[System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
-| .NET SDK | net10.0 or compatible | Runtime and build tools |
-| HotChocolate.AspNetCore | 15.1.12 or later | GraphQL server framework |
-| Syncfusion.Blazor.Schedule | Latest Version | Scheduler component |
-| Syncfusion.Blazor.Themes | Latest Version | Styling for Scheduler |
+| [HotChocolate.AspNetCore](https://www.nuget.org/packages/HotChocolate.AspNetCore) | 15.1.12 or later | GraphQL server framework |
+| [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule/)| Latest Version | Scheduler component |
+| [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) | Latest Version | Styling for Scheduler |
 
 ## Setting Up the GraphQL Backend
 
-### Step 1: Create a New ASP.NET Core Empty Project as the GraphQL Server
+### Step 1: Create a New ASP.NET Core Project as the GraphQL Server
 
-Create a **Blazor Web App** using Visual Studio 2026 or .NET CLI.
+Create a **ASP.NET Core Empty** server project using Visual Studio
 
-**Using Visual Studio 2026 or later:**
-
-1. Open **Visual Studio 2026** (or newer).
+1. Open **Visual Studio**.
 2. Go to **File → New → Project**.
 3. Search for and select **ASP.NET Core Empty** (C#).
 4. Name the project (example: `GraphQLServer`).
-5. Select **.NET 10.0** as the target framework
+5. Select **.NET 8.0 or compatible ** as the target framework
 6. Click **Create**
-
-**Using .NET CLI:**
-```bash
-dotnet new web -o GraphQLServer
-cd GraphQLServer
-```
 
 This creates a minimal ASP.NET Core app with just `Program.cs`.
 
-### Step 2: Install the Required NuGet Package using .NET CLI
 
-1. Open a terminal in the project directory and run:
+### Step 2: Install required backend package
 
-    ```bash
-    dotnet add package HotChocolate.AspNetCore --version 15.1.12
-    ```
+To add the [HotChocolate](https://chillicream.com/docs/hotchocolate/v15) package to the server project, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install  [HotChocolate.AspNetCore](https://www.nuget.org/packages/HotChocolate.AspNetCore).
+
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
+
+```
+Install-Package HotChocolate.AspNetCore -Version 15.1.12
+```
 
 ### Step 3: Configuring the GraphQL server app
 
-1. Create GraphQLQuery and GraphQLMutation classes to define the GraphQL resolver and mutation methods, respectively.
+1. Create [GraphQLQuery](https://graphql.org/learn/queries/) and [GraphQLMutation](https://graphql.org/learn/mutations/) classes to define the GraphQL resolver and mutation methods, respectively.
 2. Implement the following configuration code to set up GraphQL query and mutation types and enable CORS.
 
     [program.cs]
@@ -515,25 +508,16 @@ The GraphQL Mutation class has been successfully created and is ready to handle 
 
 ## Integrating Syncfusion Blazor Scheduler
 
-### Step 1: Create a Blazor Web App
+### Step 1: Create a Blazor Web App using Visual Studio
 
-Create a **Blazor Web App** using Visual Studio 2026 or .NET CLI.
-
-**Using Visual Studio 2026 or later:**
-1. Open Visual Studio 2026
+1. Open Visual Studio
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **BlazorSchedulerApp**
-5. Select **.NET 10.0** as the target framework
+5. Select **.NET 8.0** as the target framework
 6. Set **Interactive render mode** to **Server**
 7. Set **Interactivity location** to **Per page/component**
 8. Click **Create**
-
-**Using .NET CLI:**
-```bash
-dotnet new blazor -n BlazorSchedulerApp --interactivity Server
-cd BlazorSchedulerApp
-```
 
 > Configure the Interactive render mode to **InteractiveServer** during project creation as the Scheduler requires interactivity for CRUD operations.
 
@@ -543,13 +527,14 @@ Before installing the necessary NuGet packages, a new Blazor Web Application mus
 
 For this guide, a Blazor application named **BlazorSchedulerApp** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application.
 
-#### Using .NET CLI
+To add the **Blazor Scheduler** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-Open a terminal in the project directory and run:
 
-```bash
-dotnet add package Syncfusion.Blazor.Schedule
-dotnet add package Syncfusion.Blazor.Themes
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
+
+```
+Install-Package Syncfusion.Blazor.Schedule
+Install-Package Syncfusion.Blazor.Themes
 ```
 
 #### Project File Reference
