@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Steps to create a .NET MAUI Blazor Hybrid and Web App and integrate Syncfusion Blazor components.
-description: Check out the documentation for getting started with .NET MAUI Blazor Hybrid and Blazor Web App and Syncfusion Blazor Components in Visual Studio and much more.
+title: Integrating Syncfusion Blazor Components in .NET MAUI and Web Apps
+description: Steps to create a .NET MAUI Blazor Hybrid and Blazor Web App and integrate Syncfusion Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -154,6 +154,7 @@ N> To run the application on Android or iOS, refer to [MAUI Getting Started](htt
 
 ![MAUI Blazor App with Syncfusion Blazor Components](../common/images/maui-blazor-datagrid.webp)
 
+N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-Hybrid-with-Blazor-Web-App-using-Syncfuion-Blazor-Components).
 
 ## See also
 
