@@ -6,7 +6,7 @@ component: common
 documentation: ug
 ---
 
-# Authentication and Authorization in Syncfusion Blazor Components
+# Securing Syncfusion Blazor Components with Authentication and Authorization
 
 This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the DataGrid and Scheduler for both, and the TreeView for UI-level only.
 
