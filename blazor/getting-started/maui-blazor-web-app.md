@@ -77,7 +77,7 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in 
     ....
 
 {% endhighlight %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="1 8" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="1 7" %}
 
     using Syncfusion.Blazor;
     
