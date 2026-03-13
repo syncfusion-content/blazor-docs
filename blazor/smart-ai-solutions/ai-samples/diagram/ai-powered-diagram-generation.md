@@ -14,11 +14,11 @@ The Syncfusion Blazor Diagram Component can be enhanced with AI-driven features 
 
 ## Prerequisites
 
-    * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-    * One of the following AI services:
-        * [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key)
-        * [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
-        * Ollama (self‑hosted)
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* One of the following AI services:
+    * [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key)
+    * [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
+    * Ollama (self‑hosted)
 
 ## How to Create a Blazor Application
 

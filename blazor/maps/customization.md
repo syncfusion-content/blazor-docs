@@ -234,7 +234,7 @@ Customize the border of each shape by using [BorderColorValuePath](https://help.
     };
 
     public List<Data> ShapeColor = new List<Data> {
-        new Data { Continent  "North America", Color = "#71B081", Width = 2 , BorderColor = "#CCFFE5" },
+        new Data { Continent = "North America", Color = "#71B081", Width = 2 , BorderColor = "#CCFFE5" },
         new Data { Continent = "South America", Color = "#5A9A77", Width = 2 , BorderColor = "red" },
         new Data { Continent = "Africa", Color = "#498770", Width = 2 , BorderColor = "#FFCC99" },
         new Data { Continent = "Europe", Color = "#39776C" , Width = 2 , BorderColor = "#66B2FF" },
