@@ -56,7 +56,7 @@ Open **~/_Imports.razor** file in the Components folder and import the `Syncfusi
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="10 11 12 24" %}
+{% highlight C# tabtitle="Blazor Web App Server" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -65,31 +65,16 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-    
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseAntiforgery();
-
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
-
-app.Run();
+....
 
 {% endhighlight %}
 {% endtabs %}
+
 
 ## Configure AI Service
 
@@ -115,7 +100,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="5 6 7 8 9 27 28 29 30 31 32 33" %}
+{% highlight C# tabtitle="Blazor Web App" hl_lines="4 5 6 7 8 9 27 28 29 30 31 32 33" %}
 
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.SmartRichTextEditor;
@@ -137,8 +122,7 @@ OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
 IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
 builder.Services.AddChatClient(openAIChatClient);
 
-builder.Services.AddSyncfusionSmartComponents()
-.InjectOpenAIInference();
+builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 var app = builder.Build();
 
@@ -168,7 +152,7 @@ Install-Package Azure.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="5 6 7 8 9 27 28 29 30 31 32 33 34 35 36 37" %}
+{% highlight C# tabtitle="Blazor Web App" hl_lines="4 5 6 7 8 9 17 18 19 20 21 22 23 24 25 26 27" %}
 
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.SmartRichTextEditor;
@@ -195,12 +179,66 @@ AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
 IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
 builder.Services.AddChatClient(azureOpenAIChatClient);
 
-builder.Services.AddSyncfusionSmartComponents()
-.InjectOpenAIInference();
+builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 var app = builder.Build();
 
 // ... rest of configuration
+
+{% endhighlight %}
+{% endtabs %}
+
+### Ollama
+
+To use Ollama for running self-hosted models:
+
+1. **Download and install Ollama**  
+   Visit [Ollama's official website](https://ollama.com) and install the application appropriate for your operating system.
+
+2. **Install the desired model from the Ollama library**  
+   You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`, etc.).
+
+3. **Configure your application**
+
+   - Provide the `Endpoint` URL where the model is hosted (e.g., `http://localhost:11434`).
+   - Set `ModelName` to the specific model you installed (e.g., `llama2:13b`).
+
+* Install the following NuGet packages to your project:
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+Install-Package Microsoft.Extensions.AI
+Install-Package OllamaSharp
+
+{% endhighlight %}
+
+{% endtabs %}
+
+* Add the following settings to the **~/Program.cs** file in your Blazor Server app.
+
+{% tabs %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="5 6 10 11 12 13 14 15" %}
+
+using Syncfusion.Blazor.SmartRichTextEditor;
+using Syncfusion.Blazor.AI;
+using Microsoft.Extensions.AI;
+using OllamaSharp;
+var builder = WebApplication.CreateBuilder(args);
+
+....
+
+builder.Services.AddSyncfusionBlazor();
+
+string ModelName = "MODEL_NAME";
+IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
+builder.Services.AddChatClient(chatClient);
+
+builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
+
+var app = builder.Build();
+....
 
 {% endhighlight %}
 {% endtabs %}
@@ -235,17 +273,17 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Tex
 @rendermode InteractiveServer
 @using Syncfusion.Blazor.SmartRichTextEditor
 
-<PageTitle>Home</PageTitle>
-
-<h1>Smart RichTextEditor Demo</h1>
-
-<SfSmartRichTextEditor @bind-Value="editorContent" 
-                      Placeholder="Start typing or use AI assistance to enhance your content...">
+<SfSmartRichTextEditor>
+    <h2>Welcome to Smart Rich Text Editor</h2>
+    <p>This editor showcases AI-assisted content enhancement. Try selecting text and utilizing the AI tools to refine your writing.</p>
+    <p>Use the <strong>Smart Action</strong> dropdown toolbar to summarize, expand, or adjust the tone. Press <kbd>Alt</kbd>+<kbd>Enter</kbd> to open the AI Query dialog.</p>
+    <ul>
+       <li><strong>Purpose:</strong> Create clear and concise documentation snippets.</li>
+       <li><strong>Tone:</strong> Professional yet approachable.</li>
+       <li><strong>Example:</strong> Transform this paragraph into bullet points using AI.</li>
+    </ul>
+    <AssistViewSettings Placeholder="Start typing or use AI assistance to enhance your content..." />
 </SfSmartRichTextEditor>
-
-@code {
-    private string editorContent = "";
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -257,6 +295,8 @@ N> Notice the `@rendermode InteractiveServer` directive on the page. This is req
 * Start typing content and use the AI tools in the toolbar to enhance your editing experience.
 
 * Use <kbd>Alt</kbd>+<kbd>Enter</kbd> to open the AI Query dialog for content improvement.
+
+![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.gif)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 

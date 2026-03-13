@@ -111,7 +111,7 @@ Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Servic
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="4 11" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -154,7 +154,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="4 5 6 10 12 13 14 15 16 17 18" %}
 
 using Syncfusion.Blazor.SmartRichTextEditor;
 using Syncfusion.Blazor.AI;
@@ -172,8 +172,7 @@ OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
 IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
 builder.Services.AddChatClient(openAIChatClient);
 
-builder.Services.AddSyncfusionSmartComponents()
-.InjectOpenAIInference();
+builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 var app = builder.Build();
 ....
@@ -202,7 +201,7 @@ Install-Package Azure.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13 14 15 16 17 18 19 20 21" %}
 
 using Syncfusion.Blazor.SmartRichTextEditor;
 using Syncfusion.Blazor.AI;
@@ -226,16 +225,13 @@ AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
 IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
 builder.Services.AddChatClient(azureOpenAIChatClient);
 
-builder.Services.AddSyncfusionSmartComponents()
-.InjectOpenAIInference();
+builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 var app = builder.Build();
 ....
 
 {% endhighlight %}
 {% endtabs %}
-
-N> From version 28.2.33 to 30.2.6, the Azure.AI.OpenAI package has been removed from the SmartComponents dependency. To use Azure OpenAI, please install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) package separately in your Blazor application.
 
 ### Ollama
 
@@ -268,7 +264,7 @@ Install-Package OllamaSharp
 * Add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="5 6 10 11 12 13 14 15" %}
 
 using Syncfusion.Blazor.SmartRichTextEditor;
 using Syncfusion.Blazor.AI;
@@ -284,8 +280,7 @@ string ModelName = "MODEL_NAME";
 IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
 builder.Services.AddChatClient(chatClient);
 
-builder.Services.AddSyncfusionSmartComponents()
-.InjectOpenAIInference();
+builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 var app = builder.Build();
 ....
@@ -324,12 +319,17 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Tex
 
 @using Syncfusion.Blazor.SmartRichTextEditor
 
-<SfSmartRichTextEditor @bind-Value="editorContent" Placeholder="Start typing or use AI assistance to enhance your content...">
+<SfSmartRichTextEditor>
+    <h2>Welcome to Smart Rich Text Editor</h2>
+    <p>This editor showcases AI-assisted content enhancement. Try selecting text and utilizing the AI tools to refine your writing.</p>
+    <p>Use the <strong>Smart Action</strong> dropdown toolbar to summarize, expand, or adjust the tone. Press <kbd>Alt</kbd>+<kbd>Enter</kbd> to open the AI Query dialog.</p>
+    <ul>
+       <li><strong>Purpose:</strong> Create clear and concise documentation snippets.</li>
+       <li><strong>Tone:</strong> Professional yet approachable.</li>
+       <li><strong>Example:</strong> Transform this paragraph into bullet points using AI.</li>
+    </ul>
+    <AssistViewSettings Placeholder="Start typing or use AI assistance to enhance your content..." />
 </SfSmartRichTextEditor>
-
-@code {
-    private string editorContent = "";
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -339,6 +339,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Tex
 * Start typing content and use the AI tools in the toolbar to enhance your editing experience.
 
 * Use <kbd>Alt</kbd>+<kbd>Enter</kbd> to open the AI Query dialog for content improvement.
+
+![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.gif)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
