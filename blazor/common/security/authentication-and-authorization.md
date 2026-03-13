@@ -8,13 +8,13 @@ documentation: ug
 
 # Authentication and Authorization in Syncfusion Blazor Components
 
-This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the DataGrid and Scheduler for both, and the TreeView for UI-level only..
+This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the DataGrid and Scheduler for both, and the TreeView for UI-level only.
 
 Authentication verifies a user's identity. Authorization then determines the access levels and actions the user can perform. Syncfusion Blazor components integrate with Blazor's built-in authentication and authorization features to enable both UI-level and data-level security.
 
 ## Authentication
 
-Authentication establishes who the user is within your Blazor application. Blazor apps often use cookie-based authentication—where a server stores user session information (temporary data about the logged-in user) in browser cookies for Server-hosted apps. For WebAssembly (client-side) apps, use token-based systems like JSON Web Tokens (JWTs) secure strings that prove identity without storing sensitive data on the client. Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. This pattern keeps sensitive logic server-side, reducing client exposure.
+Authentication establishes who the user is within your Blazor application. Blazor apps often use cookie-based authentication where a server stores user session information in browser cookies for Server-hosted apps. For WebAssembly apps, use token-based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. This pattern keeps sensitive logic server-side, reducing client exposure.
 
 Syncfusion components access user identity information through Blazor's `AuthenticationStateProvider`. This allows secure data loading or feature restriction based on the user's identity.
 
@@ -41,8 +41,8 @@ The following table summarizes the functional and behavioral differences between
 
 Syncfusion components can be secured at two layers:
 
-**UI-Level Authorization**: Use `<AuthorizeView>` to conditionally render components based on user roles.
-**Data-Level Authentication**: Use authentication tokens (Bearer tokens) in `SfDataManager` to enforce access to protected API data.
+* **UI-Level Authorization**: Use `<AuthorizeView>` to conditionally render components based on user roles.
+* **Data-Level Authentication**: Use authentication tokens (Bearer tokens) in `SfDataManager` to enforce access to protected API data.
 
 For full security, combine UI-level and data-level approaches. The following examples demonstrate this with Syncfusion components.
 
