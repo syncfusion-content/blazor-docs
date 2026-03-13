@@ -6,7 +6,7 @@ component: common
 documentation: ug
 ---
 
-# Syncfusion Blazor Security with Authentication and Authorization
+# Authentication and Authorization for Syncfusion Blazor Components
 
 This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the DataGrid and Scheduler for both, and the TreeView for UI-level only.
 
@@ -64,7 +64,7 @@ If you already have a Blazor project, proceed to the package installation sectio
 
 * [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Authentication and Authorizaiton](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-5.0&tabs=visual-studio-code#server-side-blazor-authentication)
+* [Authentication and Authorization](https://learn.microsoft.com/en-us/aspnet/core/blazor/security)
 
 **1. Wrap the application's router in App.razor:**
 
