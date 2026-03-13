@@ -499,7 +499,7 @@ public class OrderDetails
 
 ### Range of Cell selection
 
-Range selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of a continuous set of cells within the grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on a specific range of data.
+To select a range of cells in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of a continuous set of cells within the grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on a specific range of data.
 
 To achieve a range of cell selection, use the [SelectCellsByRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsByRangeAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_ValueTuple_System_Int32_System_Int32___) method. It selects a range of cells starting from the specified start index and ending at the specified end index.
 
