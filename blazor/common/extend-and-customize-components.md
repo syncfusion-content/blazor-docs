@@ -82,7 +82,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can be extend
     <SyncButton Content="Danger" Styles="SyncButton.ButtonStyles.Danger"></SyncButton>
     ```
 
-    ![Output of extending a Syncfusion Blazor component example](images/extend-sync-component.png)
+    ![Output of extending a Syncfusion Blazor component example](images/extend-sync-component.webp)
 
 ## Use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component within another Blazor component
 
@@ -154,7 +154,7 @@ A Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component can be imple
     <TodoList></TodoList>
     ```
 
-    ![Render Syncfusion Blazor components within another component](images/todolist.gif)
+    ![Render Syncfusion Blazor components within another component](images/todolist.webp)
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component dynamically
 

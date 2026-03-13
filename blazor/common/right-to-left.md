@@ -55,7 +55,7 @@ await builder.Build().RunAsync();
 
 The above configuration enables RTL globally for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. For illustration, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component is displayed with Right-To-Left (RTL).
 
-![Blazor DataGrid rendered in a right-to-left layout](images/rtegrid.png)
+![Blazor DataGrid rendered in a right-to-left layout](images/rtegrid.webp)
 
 ## Enable RTL for an individual component
 
@@ -92,4 +92,4 @@ In the following example, RTL is enabled for the `SfDropDownList` component by s
 
 ```
 
-![Blazor DropDownList rendered in a right-to-left layout](images/righttoleft.png)
+![Blazor DropDownList rendered in a right-to-left layout](images/righttoleft.webp)
