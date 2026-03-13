@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Data Binding and CRUD Operations for Blazor Components Using WebApiAdaptor
+# Data Binding and CRUD Operations in Blazor WebApiAdaptor
 
 This article demonstrates data retrieval from a WebAPI controller and binding to the DataGrid component through the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) of `SfDataManager`, including support for CRUD operations.
 
