@@ -31,17 +31,17 @@ N> Before using the Syncfusion® Blazor Project Conversion, verify that the Sync
 
     Choose **Extensions -> Syncfusion® -> Essential Studio® for Blazor -> Convert Project...** from the Visual Studio menu.
 
-    ![Open Convert Project from the Extensions menu in Visual Studio](images/ConversionMenu.webp)
+    ![Open Convert Project from the Extensions menu in Visual Studio](images/ConversionMenu.png)
 
     **Option 2:**
 
     In Solution Explorer, right-click the project, select **Syncfusion® Blazor**, then choose **Convert to Syncfusion® Blazor application...**
 
-    ![Open Convert Project from the Solution Explorer context menu](images/ConversionAddin.webp)
+    ![Open Convert Project from the Solution Explorer context menu](images/ConversionAddin.png)
 
 3. In the Syncfusion® Blazor Project Conversion window, select the desired Syncfusion® Blazor version and the preferred theme to apply to the application.
 
-     ![Syncfusion Blazor Project Conversion wizard with version and theme selection](images/Conversion.webp)
+     ![Syncfusion Blazor Project Conversion wizard with version and theme selection](images/Conversion.png)
 
      N> Versions are loaded from the Syncfusion® Blazor NuGet packages available on [NuGet.org](https://www.nuget.org/) and require an active internet connection.
 
@@ -49,11 +49,11 @@ N> Before using the Syncfusion® Blazor Project Conversion, verify that the Sync
 
 5. After conversion completes, a confirmation message is displayed.
 
-    ![Conversion succeeded message after completing the conversion](images/ConversionSuccess.webp)
+    ![Conversion succeeded message after completing the conversion](images/ConversionSuccess.png)
 
     If a backup was created, the original project will be saved to the specified backup path.
 
-    ![Backup location for the original project created during conversion](images/Backuplocation.webp)
+    ![Backup location for the original project created during conversion](images/Backuplocation.png)
 
 6. After conversion completes, the application is configured with the required Syncfusion® Blazor NuGet packages and the selected theme stylesheet.
 

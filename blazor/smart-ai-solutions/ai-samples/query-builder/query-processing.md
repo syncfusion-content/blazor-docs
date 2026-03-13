@@ -490,7 +490,7 @@ The **Natural Language Querying** feature in the Query Builder allows users to c
 {% endhighlight %}
 {% endtabs %}
 
-![Natural Query Language Processing with Blazor Query Builder](images/natural-query-language-process.gif)
+![Natural Query Language Processing with Blazor Query Builder](images/natural-query-language-process.webp)
 
 ## Error Handling and Troubleshooting
 
