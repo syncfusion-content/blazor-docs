@@ -71,11 +71,11 @@ N> Refer to [this table](#blazor-form-validation-supported-components) for Blazo
 
     **Validation Failure:**
 
-    ![Validation error status in Blazor](images/validation-error.png)
+    ![Validation error status in Blazor](images/validation-error.webp)
 
     **Validation Success:**
 
-    ![Validation success status in Blazor](images/validation-success.png)
+    ![Validation success status in Blazor](images/validation-success.webp)
 
     N> Green color border around the textbox indicates validation success state and Red color indicates validation failure state.
 
@@ -98,7 +98,7 @@ N> Refer to [this table](#blazor-form-validation-supported-components) for Blazo
     </EditForm>
     ```
 
-    ![Validation message for individual input component in Blazor](images/validation-message.png)
+    ![Validation message for individual input component in Blazor](images/validation-message.webp)
 
 6. The `EditForm` submit events [OnValidSubmit](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.onvalidsubmit?view=aspnetcore-8.0) and [OnInvalidSubmit](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.oninvalidsubmit?view=aspnetcore-8.0) provide the `EditContext` on validation success or failure.
 
@@ -1051,7 +1051,7 @@ Custom validation logic can be implemented by applying [custom attributes](https
 }
 ```
 
-![Custom attribute data annotation validation in Blazor](images/custom-attribute-validation.png)
+![Custom attribute data annotation validation in Blazor](images/custom-attribute-validation.webp)
 
 ### Validate Syncfusion<sup style="font-size:70%">&reg;</sup> components inside another component
 
