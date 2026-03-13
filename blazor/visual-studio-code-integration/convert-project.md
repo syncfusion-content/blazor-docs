@@ -64,4 +64,4 @@ During conversion, the selected Syncfusion<sup style="font-size:70%">&reg;</sup>
 | Blazor WebAssembly (ASP.NET Core hosted) | **Client project:** `wwwroot/index.html` |
 | Blazor WebAssembly (Progressive Web Application) | `wwwroot/index.html` |
 
-![Example showing where the theme link is added in the project](images/CDNLink.webp)
+![Example showing where the theme link is added in the project](images/cdnlink.webp)
