@@ -91,6 +91,12 @@ The `Prompts` collection stores all the prompts and responses generated.
 
 ![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
 
+### Update response as markdown
+
+The AI AssistView supports rendering responses as **Markdown** content, which is automatically converted to HTML using the built-in [Markdown Converter](https://blazor.syncfusion.com/documentation/markdown-editor/markdown-preview). When you pass markdown-formatted text in the response, it will be displayed as formatted HTML in the AI AssistView. The streaming of markdown content happens seamlessly with built-in support for dynamic rendering.
+
+You can use markdown syntax like **bold**, *italic*, headings, lists, code blocks, and links to format your responses.
+
 ## Adding prompt suggestions
 
 You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property, to add the suggestions in both initial and on-demand which help users to refine their prompts. Additionally, custom header can be set for suggestions further enhancing the user experience.
@@ -206,3 +212,8 @@ You can use the [ResponseIconCss](https://help.syncfusion.com/cr/blazor/Syncfusi
 ```
 
 ![Blazor AI AssistView ResponseIconCss](./images/assistview-response-icon.png)
+
+## Enable scroll to bottom icon
+
+You can use the [enableScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_enableScrollToBottom) property to show or hide the scroll-to-bottom indicator. By default, this property is `true`. When enabled, a floating icon/button appears when the user scrolls away from the bottom of the conversation. Clicking this icon smoothly scrolls the view to the bottom to display the latest response.
+
