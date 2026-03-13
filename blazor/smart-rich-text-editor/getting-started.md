@@ -28,7 +28,8 @@ You can create a **Blazor Server App** using Visual Studio via [Microsoft Templa
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SmartComponents and Themes NuGet in the App
 
-To add **Blazor Smart Rich Text Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SmartRichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.SmartRichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+
+To add **Blazor Smart Rich Text Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SmartRichTextEditor](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartRichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -347,4 +348,4 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor in Blazor Web App](getting-started-webapp.md)
-* [RichTextEditor Documentation](https://blazor.syncfusion.com/documentation/rich-text-editor/overview)
+* [RichTextEditor Documentation](https://blazor.syncfusion.com/documentation/rich-text-editor/)
