@@ -8,47 +8,114 @@ documentation: ug
 
 # Authentication and Authorization in Syncfusion Blazor Components
 
-This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It includes examples of UI-level and data-level security using the DataGrid, Scheduler, and TreeView components.
+This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the DataGrid and Scheduler for both, and the TreeView for UI-level only..
 
-Authentication verifies the identity of a user, while authorization determines the level of access and actions the user can perform. Syncfusion Blazor components integrate with Blazor's authentication and authorization to provide UI-level and data-level security. This lets you control what users see and the operations they can perform.
+Authentication verifies a user's identity. Authorization then determines the access levels and actions the user can perform. Syncfusion Blazor components integrate with Blazor's built-in authentication and authorization features to enable both UI-level and data-level security.
 
 ## Authentication
 
-Authentication establishes who the user is within your Blazor application. Blazor apps often use cookie-based authentication for Server apps. For WebAssembly apps, use token-based systems or the Backend-for-Frontend (BFF) pattern, where a server handles auth for the client. Syncfusion components access user identity information through Blazor's `AuthenticationStateProvider` to securely load data or restrict features based on the user's identity.
+Authentication establishes who the user is within your Blazor application. Blazor apps often use cookie-based authentication—where a server stores user session information (temporary data about the logged-in user) in browser cookies for Server-hosted apps. For WebAssembly (client-side) apps, use token-based systems like JSON Web Tokens (JWTs) secure strings that prove identity without storing sensitive data on the client. Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. This pattern keeps sensitive logic server-side, reducing client exposure.
+
+Syncfusion components access user identity information through Blazor's `AuthenticationStateProvider`. This allows secure data loading or feature restriction based on the user's identity.
 
 ## Authorization
 
-Authorization determines which Syncfusion components or features a user is allowed to access after successful authentication. Blazor supports authorization using role checks (verifying user group membership), policies (custom rules), and UI filtering with the <AuthorizeView> component. Syncfusion components integrate these to conditionally enable features.
+Authorization determines which Syncfusion components or features a user is allowed to access after successful Authentication. Blazor supports authorization via:
+
+* **Role checks:** Verify user group membership (e.g., 'Admin').
+* **Policies:** Custom rules, such as requiring multiple roles or claims (key-value attributes in the user's identity, like 'department=Engineering').
+* **UI filtering:** Use the `<AuthorizeView>` component to show or hide content.
 
 ## Key Differences Between Authentication and Authorization
 
-The following table summarizes the functional and behavioral differences between authentication and authorization in a Blazor and Syncfusion context:
+The following table summarizes the functional and behavioral differences between Authentication and Authorization in a Blazor and Syncfusion context:
 
-| Aspect               | Authentication                           | Authorization                                  |
-|----------------------|-------------------------------------------|------------------------------------------------|
-| **Purpose**          | Verifies user identity            | Grants or denies access to resources and features.                |
-| **Timing**           | Happens first                             | Happens after authentication                   |
-| **Blazor Tools**     | `AuthenticationStateProvider`             | `<AuthorizeView>`, `Authorize`               |
-| **Syncfusion Integration** | Add Bearer token to `SfDataManager.Headers` for remote data | Show/hide components and toggle features per role or policy     |
+| Aspect | Authentication | Authorization |
+|---|---|---|
+| **Purpose** | Verifies user identity. | Grants or denies access to resources and features. |
+| **Timing**  | Happens first | Happens after Authentication |
+| **Blazor Tools** | `AuthenticationStateProvider` | `<AuthorizeView>`, `[Authorize]` |
+| **Syncfusion Integration** | Access user identity via `AuthenticationStateProvider` for data loading. | Use `<AuthorizeView>` to show/hide components. Add tokens to `SfDataManager.Headers` for API calls. |
 
 ## Applying Authentication and Authorization to Syncfusion Components
 
 Syncfusion components can be secured at two layers:
 
 **UI-Level Authorization**: Use `<AuthorizeView>` to conditionally render components based on user roles.
-**Data-Level Authentication**: Pass Bearer tokens to `SfDataManager` when requesting protected API data.
+**Data-Level Authentication**: Use authentication tokens (Bearer tokens) in `SfDataManager` to enforce access to protected API data.
 
-Combine both layers for complete protection. 
+For full security, combine UI-level and data-level approaches. The following examples demonstrate this with Syncfusion components.
 
-N> This authentication and authorization pattern applies to all Syncfusion components (Grid, Charts, Scheduler, TreeView, etc.). The examples shown can be adapted to any Syncfusion component by using the same `<AuthorizeView>` and `SfDataManager` pattern.
+N> This `<AuthorizeView>` and `SfDataManager` pattern applies to most data-bound Syncfusion components, such as Grid, Charts, Scheduler, and TreeView. For non-data-bound ones (e.g., Button), use only `<AuthorizeView>`.
 
 ## Using Syncfusion Components
 
-All examples use `<AuthorizeView>` for UI-level security and `SfDataManager` with Bearer tokens for data-level authentication.  
+All examples use `<AuthorizeView>` for UI-level security. DataGrid and Scheduler also include `SfDataManager` with Bearer tokens for data-level Authentication. TreeView uses local data.
+
+### Prerequisite
+
+Components such as `AuthorizeView`, `AuthenticationStateProvider`, and token-based data requests require the Blazor authentication pipeline to be configured.
+
+**Install Required Package:**
+
+In your project directory, run **dotnet add package Microsoft.AspNetCore.Identity.UI** to enable Identity services.
+
+**1. Wrap the application's router in App.razor:**
+
+{% tabs %}
+{% highlight razor %}
+<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(App).Assembly" />
+</CascadingAuthenticationState>
+
+{% endhighlight %}
+{% endtabs %}
+
+**2. Inject the authentication provider where needed (eg., in a .razor file):**
+
+{% tabs %}
+{% highlight razor %}
+
+@inject AuthenticationStateProvider AuthStateProvider
+
+{% endhighlight %}
+{% endtabs %}
+
+**3. Register authentication services in Program.cs:**
+
+{% tabs %}
+{% highlight cs %}
+
+using Microsoft.AspNetCore.Identity.UI;
+
+...
+builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
+    .AddCookie(IdentityConstants.ApplicationScheme);
+
+builder.Services.AddAuthorization();
+builder.Services.AddCascadingAuthenticationState();
+builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+
+{% endhighlight %}
+{% endtabs %}
 
 ### DataGrid
 
-The DataGrid can be secured by limiting visibility to authenticated users and enabling editing only for users with elevated roles. Tokens included in the SfDataManager headers allow the grid to securely load data from protected APIs. This ensures both UI behavior and data access align with authorization requirements.
+The DataGrid can be secured by limiting visibility to authenticated users and enabling editing only for users with elevated roles. Include tokens in the `SfDataManager.Headers` property. This lets the grid load data securely from protected APIs. It aligns UI behavior (via `<AuthorizeView>`) with data access rules.
+
+N> For testing, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control. For production, Retrieve dynamic tokens from `AuthenticationStateProvider`.
+
+{% tabs %}
+{% highlight json %}
+
+{
+  "ExternalApi": {
+    "BearerToken": "YOUR-TOKEN-HERE"
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight razor %}
@@ -83,11 +150,11 @@ The DataGrid can be secured by limiting visibility to authenticated users and en
 @code {
     private Dictionary<string, string> HeaderData { get; } = new Dictionary<string, string>();
 
-    protected override Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
         var token = Configuration["ExternalApi:BearerToken"];
         if (!string.IsNullOrEmpty(token)) HeaderData["Authorization"] = $"Bearer {token}";
-        return base.OnInitializedAsync();
+        await base.OnInitializedAsync();
     }
     
     public class Order
@@ -104,7 +171,7 @@ The DataGrid can be secured by limiting visibility to authenticated users and en
 
 ### Scheduler
 
-The Scheduler component supports secure viewing and editing based on user roles, allowing you to restrict modification permissions while still displaying the schedule to authenticated users. It retrieves data through SfDataManager, ensuring that only authorized users receive protected event information. This approach combines UI control and backend security to safeguard sensitive scheduling data.
+The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized users get protected data from the API.
 
 {% tabs %}
 {% highlight razor %}
@@ -115,7 +182,7 @@ The Scheduler component supports secure viewing and editing based on user roles,
 
 <AuthorizeView>
     <Authorized>
-        <SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@currentDate" Readonly="true">
+        <SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@currentDate">
             <ScheduleEventSettings TValue="AppointmentData">
                 <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/schedule" Headers="@HeaderData" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
                 <ScheduleViews>
@@ -132,13 +199,14 @@ The Scheduler component supports secure viewing and editing based on user roles,
 
 @code {
     DateTime currentDate = DateTime.Today;
-       private Dictionary<string, string> HeaderData { get; } = new Dictionary<string, string>();
+    private Dictionary<string, string> HeaderData { get; } = new Dictionary<string, string>();
    
-        protected override void OnInitialized()
-        {
-            var token = Configuration["ExternalApi:BearerToken"];
-            if (!string.IsNullOrEmpty(token)) HeaderData["Authorization"] = $"Bearer {token}";
-        }
+    protected override async Task OnInitializedAsync()
+    {
+        var token = Configuration["ExternalApi:BearerToken"];
+        if (!string.IsNullOrEmpty(token)) HeaderData["Authorization"] = $"Bearer {token}";
+        await base.OnInitializedAsync();
+    }
 
 
     public class AppointmentData
@@ -160,17 +228,16 @@ The Scheduler component supports secure viewing and editing based on user roles,
 
 ### TreeView
 
-The TreeView component supports secure rendering by only displaying the hierarchical view to authenticated users. Drag-and-drop or editing features can be restricted based on user roles, allowing greater control over modification of hierarchical data. This ensures sensitive structures are accessible only to users with appropriate permissions.
+The following TreeView example demonstrates a Blazor Server App configured with authentication, ensuring that the entire TreeView component is only accessible to authenticated users.
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Navigations
-@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <AuthorizeView>
     <Authorized Context="context">
-        <SfTreeView TValue="MailItem" AllowDragAndDrop="@canEdit">
+        <SfTreeView TValue="MailItem">
             <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded">
             </TreeViewFieldsSettings>
         </SfTreeView>
@@ -187,7 +254,7 @@ The TreeView component supports secure rendering by only displaying the hierarch
 </AuthorizeView>
 
 @code {
-    private bool canEdit = false;
+  
     
     public class MailItem
     {
@@ -198,17 +265,11 @@ The TreeView component supports secure rendering by only displaying the hierarch
         public bool HasSubFolders { get; set; }
     }
 
-    List<MailItem> MyFolder = new();
+    List<MailItem> MyFolder = new List<MailItem>();
 
-    protected override async Task OnInitializedAsync()
+   protected override void OnInitialized()
     {
-        // Retrieve current user's authentication state
-        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-        var user = authState.User;
-        
-        // Check if user has permission to edit (drag/drop enabled only for Editors)
-        canEdit = user.IsInRole("Editor");
-        
+             
         // Load hierarchical folder data
         LoadFolderData();
     }
@@ -228,6 +289,6 @@ The TreeView component supports secure rendering by only displaying the hierarch
 
 ## See Also
 
-* [Blazor Server App with Authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&preserve-view=true&tabs=visual-studio) 
-* [AuthenticationStateProvider](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authenticationstateprovider) 
+* [Blazor Server App with Authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&tabs=visual-studio) 
+* [AuthenticationStateProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authenticationstateprovider?view=aspnetcore-10.0) 
 
