@@ -33,7 +33,7 @@ In the solution, add a new project using the [Razor Class Library](https://blazo
 - Move Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package references from the Blazor Web App `.csproj` to the RCL `.csproj`.
 - Move `Components/Pages` and `Components/Layouts` to the Razor Class Library. Add the necessary namespaces in the RCL’s `_Imports.razor` file.
 
-![Folders to move into the RCL](images/server-folders.png)
+![Folders to move into the RCL](images/server-folders.webp)
 
 ### 4. Add project references and register services
 
@@ -58,4 +58,4 @@ Finally, update the `_Imports.razor` file to include the necessary namespaces fr
 
 In the Visual Studio toolbar, select the target (for example, **Windows Machine**) to build and run the app.
 
-![Build and run the .NET MAUI Blazor Hybrid App](images/windows-machine-mode.png)
+![Build and run the .NET MAUI Blazor Hybrid App](images/windows-machine-mode.webp)
