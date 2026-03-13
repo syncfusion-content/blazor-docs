@@ -6,7 +6,7 @@ component: common
 documentation: ug
 ---
 
-# Securing Syncfusion Blazor Components with Authentication and Authorization
+# Syncfusion Blazor Security with Authentication and Authorization
 
 This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the DataGrid and Scheduler for both, and the TreeView for UI-level only.
 
@@ -101,7 +101,7 @@ builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuth
 
 ### DataGrid
 
-The DataGrid can be secured by limiting visibility to authenticated users and enabling editing only for users with elevated roles. Include tokens in the `SfDataManager.Headers` property. This lets the grid load data securely from protected APIs. It aligns UI behavior (via `<AuthorizeView>`) with data access rules.
+The DataGrid can be secured by using the `SfDataManager.Headers` property, which allows the grid to load data securely from protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
 
 N> For testing, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control. For production, Retrieve dynamic tokens from `AuthenticationStateProvider`.
 
