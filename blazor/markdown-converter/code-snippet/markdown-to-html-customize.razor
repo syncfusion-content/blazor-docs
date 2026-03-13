@@ -7,19 +7,19 @@
             <h3>Markdown Converter Options</h3>
             <div class="options-panel border p-3">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" @bind="enableGfm" @onchange="OnOptionsChanged" id="gfmOption" />
+                    <input class="form-check-input" type="checkbox" checked="@enableGfm" @onchange="@((Microsoft.AspNetCore.Components.ChangeEventArgs args) => OnOptionsChanged(args, "gfm"))" id="gfmOption" />
                     <label class="form-check-label" for="gfmOption">
                         Enable GitHub Flavored Markdown (GFM)
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" @bind="enableLineBreak" @onchange="OnOptionsChanged" id="lineBreakOption" />
+                    <input class="form-check-input" type="checkbox" checked="@enableLineBreak" @onchange="@((Microsoft.AspNetCore.Components.ChangeEventArgs args) => OnOptionsChanged(args, "linebreak"))" id="lineBreakOption" />
                     <label class="form-check-label" for="lineBreakOption">
                         Convert single line breaks to &lt;br /&gt;
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" @bind="enableSilent" @onchange="OnOptionsChanged" id="silentOption" />
+                    <input class="form-check-input" type="checkbox" checked="@enableSilent" @onchange="@((Microsoft.AspNetCore.Components.ChangeEventArgs args) => OnOptionsChanged(args, "silent"))" id="silentOption" />
                     <label class="form-check-label" for="silentOption">
                         Enable Silent Mode (suppress errors)
                     </label>
@@ -141,8 +141,22 @@ This is a paragraph with **bold** and *italic* text.
     /// <summary>
     /// Handles conversion options changes.
     /// </summary>
-    private void OnOptionsChanged(ChangeEventArgs args)
+    private void OnOptionsChanged(Microsoft.AspNetCore.Components.ChangeEventArgs args, string optionName)
     {
+        bool updatedValue = (bool)args.Value;
+
+        switch (optionName)
+        {
+            case "gfm":
+                enableGfm = updatedValue;
+                break;
+            case "linebreak":
+                enableLineBreak = updatedValue;
+                break;
+            case "silent":
+                enableSilent = updatedValue;
+                break;
+        }
         ConvertMarkdown();
     }
 }
