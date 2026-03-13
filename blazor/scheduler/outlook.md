@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Scheduler with Microsoft Outlook Integration | Syncfusion
-description: Integrate the Syncfusion Blazor Scheduler with Outlook Calendar using Microsoft Graph API and Azure AD (Microsoft Entra ID) for smooth, real‑time calendar syncing.
+description: Connect the Syncfusion Blazor Scheduler to Outlook Calendar using Microsoft Graph API and Azure AD (Entra ID) for seamless, real‑time event synchronization.
 control: Scheduler
 platform: blazor
 documentation: ug
@@ -85,6 +85,7 @@ You must create a **Client Secret** for server-side authentication with Microsof
    - **Description**: e.g., *"BlazorAppSecret"*
    - **Expires**: Choose 6 months, 12 months, or 24 months.
 4. Click **Add**.
+5. Copy the **Secret Value** immediately — it cannot be viewed again later.
 
 
 ### Step 4: Note the Azure AD(Microsoft Entra ID) Configuration Values
@@ -262,7 +263,7 @@ The `Program.cs` file is responsible for configuring authentication, distributed
 
 - **`AddMicrosoftIdentityWebApp()`** – Enables Azure AD(Microsoft Entra ID) authentication using the `AzureAd` config.
 - **`EnableTokenAcquisitionToCallDownstreamApi()` + `AddDistributedTokenCaches()`** – Gets and persists MSAL tokens for calling Microsoft Graph.
-- **`FileDistributedCache`** – Simple local token cache (use Redis/SQL in production).
+- **`FileDistributedCache`** – Simple local token cache.
 - **`AddMicrosoftIdentityUI()`** – Adds built-in sign-in/sign-out pages.
 - **Blazor Setup** – `AddRazorComponents()`, `AddInteractiveServerComponents()`, and `AddServerSideBlazor().AddMicrosoftIdentityConsentHandler()` enable interactive UI and consent handling.
 - **Middleware** – `UseAuthentication()` and `UseAuthorization()` secure the app.
@@ -329,7 +330,7 @@ Update the placeholders with your tenant and app registration details.
 
 ### Step 5: Create the Service Class
 
-The `FileDistributedCache` class provides a lightweight, file‑based implementation of `IDistributedCache` used for local or development scenarios. It allows Microsoft Identity Web to persist MSAL tokens across application restarts without requiring external cache providers such as Redis or SQL Server. This is suitable for development environments but not recommended for production applications.
+The `FileDistributedCache` class provides a lightweight, file‑based implementation of `IDistributedCache` used for local or development scenarios. It allows Microsoft Identity Web to persist MSAL tokens across application restarts without requiring external cache providers. This is suitable for development environments but not recommended for production applications.
 
 #### Instructions:
 
@@ -350,7 +351,6 @@ The `FileDistributedCache` class provides a lightweight, file‑based implementa
     namespace BlazorSchedulerApp.Services
     {
         // Minimal file-backed IDistributedCache for local/dev scenarios.
-        // Not recommended for production: use Redis/SQL distributed cache instead.
         public class FileDistributedCache : IDistributedCache
         {
             private readonly string _directory;
