@@ -63,8 +63,8 @@ In your project directory, run **dotnet add package Microsoft.AspNetCore.Identit
 If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion’s Blazor getting‑started guides.
 
 * [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-
 * [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Authentication and Authorizaiton](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-5.0&tabs=visual-studio-code#server-side-blazor-authentication)
 
 **1. Wrap the application's router in App.razor:**
 
@@ -293,6 +293,18 @@ The following TreeView example demonstrates a Blazor Server App configured with 
 
 {% endhighlight %}
 {% endtabs %}
+
+## Run the Application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
+
+**Expected Behavior**
+* Syncfusion components should render **only for authorized users**.
+* If the user is not authenticated, the application should display **Register or Login** options instead of the Syncfusion components.
+* After a successful login, the user should be able to view the Syncfusion components such as **DataGrid, Scheduler, and TreeView** while navigating across different pages.
+
+**Output:**
+![Blazor Authentication And Authorization](./images/authentication-authorization.webp)
 
 ## See Also
 
