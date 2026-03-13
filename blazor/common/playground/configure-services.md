@@ -104,4 +104,4 @@ namespace Playground.User
 ```
 * Press the Run button to execute the code. The output appears in the result view.
 
-![Syncfusion Blazor Playground with adding services](images/add_services.gif)
+![Syncfusion Blazor Playground with adding services](images/add_services.webp)

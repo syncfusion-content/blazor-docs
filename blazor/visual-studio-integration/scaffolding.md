@@ -25,19 +25,19 @@ N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scaf
 
 1. For a **Blazor Server** application, right-click the **Pages** folder in Solution Explorer, select **Add**, and then choose **New Scaffolded Item...**
 
-    ![Scaffolded add-in from server project](images/Add_scaffold_Serverside.png)
+    ![Scaffolded add-in from server project](images/Add_scaffold_Serverside.webp)
 
     If the application type is **Blazor Hosted**, right-click the **Controllers** folder from **{Project Name}.Server** application in the Solution Explorer, click **Add**, and then select **New Scaffolded Item...**.
 
-    ![Scaffolded add-in from the hosted project](images/Add_scaffold_hosted.png)
+    ![Scaffolded add-in from the hosted project](images/Add_scaffold_hosted.webp)
 
 2. In the **Add New Scaffolded Item** dialog, select **Syncfusion Blazor Scaffolder** and then click **Add**.
 
-    ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/Syncfusion_scaffolder.png)
+    ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/Syncfusion_scaffolder.webp)
 
 3. In the Syncfusion<sup style="font-size:70%">&reg;</sup> UI Scaffolder dialog, select the desired component to scaffold, and then click **Next**.
 
-    ![Choose required control](images/Control_Window.png)
+    ![Choose required control](images/Control_Window.webp)
 
 4. The Syncfusion<sup style="font-size:70%">&reg;</sup> UI Scaffolder dialog for the selected component appears. Follow these steps to configure the application.
 
@@ -47,7 +47,7 @@ N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scaf
 
         To use local data, enter the **Controller/Service name** and the **Razor page name**. Then select the required **Model class** and the corresponding **Data context class**. Click **Next** to continue.
 
-        ![Choose required Model](images/Model_Window_Local.png)
+        ![Choose required Model](images/Model_Window_Local.webp)
 
         N> Adaptor types are available in Blazor scaffolding for remote data.
 
@@ -57,7 +57,7 @@ N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scaf
 
         N> In the DataGrid and TreeGrid controls, when selecting the **URL adaptor** in the **Adaptor type**, an additional **Remote service** option will appear. You need to select either the **Localhost URL** or **API URL**. If you select the Localhost URL, enter the **Controller/Service** name. Then, select the required Model class for the active application and choose the relevant **Data context class**. Finally, click **Next** to continue. If you select the **API URL**, enter the valid **URL**. Next, enter the **TValue**. Finally, click **Next** to continue.
 
-        ![Choose required Model](images/Model_Window_Remote.png)
+        ![Choose required Model](images/Model_Window_Remote.webp)
 
         When using adaptor types in Blazor scaffolding, it's important to note that we provide default adaptor links for sample purposes only. These default links are intended to help you understand how the adaptors work, but they do not perform CRUD (Add, Edit, Update, Delete) operations. Instead, these default links act as placeholders to demonstrate the integration process.
 
@@ -67,29 +67,29 @@ N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scaf
 
     For a **Blazor Server** application, both local data and remote data types are available.
 
-    ![Choose required selected control features for the serverside project](images/Feature_Window_serverside.png)
+    ![Choose required selected control features for the serverside project](images/Feature_Window_serverside.webp)
 
     For a **Hosted Application**, only the remote data type is available.
 
-    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted.png)
+    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted.webp)
 
 5. In the Syncfusion<sup style="font-size:70%">&reg;</sup> UI Scaffolder, the dialog for the selected component features opens. Choose the required features, update the necessary data fields, and then click **Add**.
 
-    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted_feature.png)
+    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted_feature.webp)
 
 6. Based on the selected features, the **Controller/Service** file and the corresponding **Razor** files are generated.
 
     If **Local data** is selected, the service file and Razor file are added to the application.
 
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_local_data.png)
+    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_local_data.webp)
 
     If **Remote data with Localhost URL** is selected, the controller file and Razor file are added to the application.
 
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data.png)
+    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data.webp)
 
     If **Remote data with Web API adaptor** is selected, the Razor file is added to the application.
 
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data_adaptor.png)
+    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data_adaptor.webp)
 
 7. Then, add navigation to the created razor file based on your requirement to open on the webpage.
 
@@ -123,7 +123,7 @@ N> Before adding a scaffolded item from the command line, verify that the **dotn
 
     **syncfusion_scaffold**
 
-    ![CommandLine Scaffold Available Controls](images/AvailableControl.png)
+    ![CommandLine Scaffold Available Controls](images/AvailableControl.webp)
 
 2. To add a scaffolded item from the command line, use the following syntax.
 
@@ -149,19 +149,19 @@ N> Before adding a scaffolded item from the command line, verify that the **dotn
 
 3. Running `syncfusion_scaffold [control]` displays the available parameters for the specified component.
 
-    ![control parameter details](images/controlparameter.png)
+    ![control parameter details](images/controlparameter.webp)
 
 4. Run the following command to generate controller and view files from the command line by passing the required arguments for the specified component.
 
     ```syncfusion_scaffold {controlName} --project "{projectFileNamewithPath}" --model {model} -dc {dbContext} -cname {controllerName} -vname {viewName} [controlMantoryParameter] [controlMantatoryParameterValue]```
 
-    ![CommandLine Scaffold](images/commandline.png)
+    ![CommandLine Scaffold](images/commandline.webp)
 
 5. After generation, the controller and view files are created successfully, and the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and styles are added to render the component.
 
-    ![Blazor added Files](images/blazorfile.png)
+    ![Blazor added Files](images/blazorfile.webp)
 
-    ![Blazor Service Changes](images/blazorstyle.png)
+    ![Blazor Service Changes](images/blazorstyle.webp)
 
 <!-- markdownlint-disable MD026 -->
 
