@@ -454,7 +454,7 @@ dotnet run
 Open the app in your browser on the port shown in the console
 
 ## Output
-![Blazor Entity Framework Output](images/Schedule-Blazor-EF-Output.png)
+![Blazor Entity Framework Output](images/blazor-scheduler-EF-Output.png)
 
 > For additional help, see the [Blazor Entity Framework sample on GitHub](https://github.com/SyncfusionExamples/blazor-scheduler-crud-using-restful-service)
 
