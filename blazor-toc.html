@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ul class="treeview">  
-	<li>
-		<a href="/blazor/introduction">Introduction</a>
+	<li>Introduction
+		<ul>
+			<li><a href="/blazor/introduction/overview">Overview</a></li>
+			<li><a href="/blazor/introduction/key-features">Key Features</a></li>
+			<li><a href="/blazor/introduction/supported-blazor-models">Supported Blazor Models</a></li>
+		</ul>
 	</li>
 	<li>Getting Started
 		<ul>
@@ -50,8 +54,7 @@
 			<li><a href="/blazor/getting-started/winforms-blazor-app">WinForms</a></li>
 		</ul>
 	</li>
-	<li>
-		UI Kit
+	<li>UI Kit
 		<ul>
 			<li><a href="/blazor/ui-kit/overview">Overview</a></li>
 			<li><a href="/blazor/ui-kit/getting-started">Getting Started</a></li>
@@ -287,7 +290,7 @@
 			</li>
 		</ul>
 	</li>
-	<li>Integration
+<li>Integration
 		<ul>
 			<li>Authentication and Authorization
 				<ul>
@@ -301,7 +304,7 @@
 			</li>
 			<li>Integration with Other Syncfusion Products
 				<ul>
-                    <li>
+					<li>
 						<a href="/blazor/common/integration/blazor-datagrid-boldreports">DataGrid with Bold Report Viewer</a>
 					</li>
 					<li>
@@ -310,10 +313,10 @@
 					<li>
 						<a href="/blazor/common/integration/blazor-grid-with-spreadsheet">DataGrid with Spreadsheet</a>
 					</li>
-      				<li>
-						<a href="/blazor/common/integration/blazor-with-document-editor">DataGrid with Document Editor</a>
-					</li>
-				</ul>
+          <li>
+          	<a href="/blazor/common/integration/blazor-with-document-editor">DataGrid with Document Editor</a>
+				  </li>
+        </ul>
 			</li>
 			<li>Cross Framework
 				<ul>	
@@ -825,6 +828,7 @@
 			<li><a href="/blazor/block-editor/globalization">Globalization</a></li>
 			<li><a href="/blazor/block-editor/keyboard-shortcuts">Keyboard Shortcuts</a></li>
 			<li><a href="/blazor/block-editor/appearance">Appearance</a></li>
+			<li><a href="/blazor/block-editor/accessibility">Accessibility</a></li>
 			<li><a href="/blazor/block-editor/events">Events</a></li>
 			<li>Editor Security
 				<ul>
@@ -4198,11 +4202,7 @@
 				<ul>
 					<li> <a href="/blazor/rich-text-editor/mention-integration">Mention Integration</a></li>
 					<li> <a href="/blazor/rich-text-editor/slash-commands">Slash Commands</a></li>
-					<li> <a href="/blazor/rich-text-editor/mail-merge">Mail Merge Integration</a></li>
-					<li> <a href="/blazor/rich-text-editor/web-spell-check">Web Spell Checker</a></li>
-					<li> <a href="/blazor/rich-text-editor/code-mirror">Code Mirror</a></li>
-					<li> <a href="/blazor/rich-text-editor/embedly">Embedly</a></li>
-					<li> <a href="/blazor/rich-text-editor/image-editor-integration">Image Editor Integration</a></li> 
+					<li> <a href="/blazor/rich-text-editor/mail-merge">Mail Merge Integration</a></li>	
 				</ul>
 			</li>
 			<li>Validation and Security
@@ -4260,6 +4260,7 @@
             <li> <a href="/blazor/sankey/legend">Legend</a></li>
             <li> <a href="/blazor/sankey/customization">Customization</a></li>
             <li> <a href="/blazor/sankey/print-export">Print and Export</a></li>
+            <li> <a href="/blazor/sankey/accessibility">Accessibility</a></li>
             <li> <a href="/blazor/sankey/events">Events</a></li>
 		</ul>
 	</li>
@@ -4286,9 +4287,7 @@
 			<li> <a href="/blazor/scheduler/data-binding">Data Binding</a></li>
 			<li>Integrations
 			<ul>
-			<li><a href="/blazor/scheduler/graphql-adptor">GraphQL</a></li>
-			<li><a href="/blazor/scheduler/minimalapi">MinimalAPI</a></li>
-			<li><a href="/blazor/scheduler/postgresql">PostgreSQL Server</a></li>
+			<li><a href="/blazor/scheduler/entity-framework">Entity Framework</a></li>
 			</ul>
 			</li>
 			<li> <a href="/blazor/scheduler/crud-actions">CRUD Actions</a></li>
@@ -5292,11 +5291,22 @@
 			</li>
 		</ul>
 	</li>
-	<li>
-		<a href="/blazor/system-requirements">System Requirements</a>
-	</li>
-	<li>
-		<a href="/blazor/browser-support">Browser Support</a>
+	<li>System Requirements and Browser Support
+		<ul>
+			<li>Prerequisites
+				<ul>
+					<li><a href="/blazor/system-requirements/sdk-versions">.NET SDK Versions</a></li>
+					<li><a href="/blazor/system-requirements/supported-ide">Supported IDEs</a></li>
+				</ul>
+			</li>
+			<li>Browser Support
+				<ul>
+					<li><a href="/blazor/browser-support/blazor-web-app">Blazor Web App</a></li>
+					<li><a href="/blazor/browser-support/blazor-webassembly">Blazor WebAssembly</a></li>
+					<li><a href="/blazor/browser-support/blazor-server">Blazor Server</a></li>
+				</ul>
+			</li>
+		</ul>
 	</li>
 	<li>
 		<a href="/blazor/nuget-packages">NuGet Packages</a>
@@ -5310,10 +5320,6 @@
 				<ul>
 				<li>Weekly Release
 					<ul>
-						<li><a href="/blazor/release-notes/32.2.9">32.2.9</a></li>
-						<li><a href="/blazor/release-notes/32.2.8">32.2.8</a></li>
-						<li><a href="/blazor/release-notes/32.2.7">32.2.7</a></li>
-						<li><a href="/blazor/release-notes/32.2.5">32.2.5</a></li>
 						<li><a href="/blazor/release-notes/32.2.4">32.2.4</a></li>
 						<li><a href="/blazor/release-notes/32.1.25">32.1.25</a></li>
 						<li><a href="/blazor/release-notes/32.1.24">32.1.24</a></li>
@@ -5322,9 +5328,8 @@
 						<li><a href="/blazor/release-notes/32.1.21">32.1.21</a></li>					
 						<li><a href="/blazor/release-notes/32.1.20">32.1.20</a></li>
 					</ul>
-				</li>
-				<li><a href="/blazor/release-notes/32.2.3">32.2.3 Service Pack Release</a></li>
-				<li><a href="/blazor/release-notes/32.1.19">32.1.19 Main Release</a></li>
+					</li><li><a href="/blazor/release-notes/32.2.3">32.2.3 Service Pack Release</a></li>
+					<li><a href="/blazor/release-notes/32.1.19">32.1.19 Main Release</a></li>
 				</ul>
 			</li>
 			<li>2025 Volume 3 - 31.*
