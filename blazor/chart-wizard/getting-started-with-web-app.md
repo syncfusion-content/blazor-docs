@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Chart Wizard Component in WebApp
+title: Getting Started with Blazor Chart Wizard Component in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor Chart Wizard Component in Blazor Web App.
 platform: Blazor
 component: Chart Wizard
@@ -338,7 +338,7 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 ![Chart Wizard Example](images/chart-wizard-getting-started-example.png)
 
 ## Theme
-Blazor Chart Wizard has built-in themes that can be used to change the apperance of the chart.
+Blazor Chart Wizard has built-in themes that can be used to change the appearance of the chart.
 
 ### Prerequisites
 In order to apply theme update for the overall Chart Wizard UI, include the theme stylesheet (this can be accessed from NuGet through Static Web Assets) in the <head> tag in the App.razor file as shown below:

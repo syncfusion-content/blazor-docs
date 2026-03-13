@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Chart Wizard Component in Blazor Server App
+# Getting Started with Blazor Chart Wizard Component in Server App
 
 This section briefly explains about how to include `Blazor Chart Wizard` component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -293,7 +293,7 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 ![Chart Wizard Example](images/chart-wizard-getting-started-example.png)
 
 ## Theme
-Blazor Chart Wizard has built-in themes that can be used to change the apperance of the chart.
+Blazor Chart Wizard has built-in themes that can be used to change the appearance of the chart.
 
 ### Prerequisites
 In order to apply theme update for the overall Chart Wizard UI, include the theme stylesheet (this can be accessed from NuGet through Static Web Assets) in the <head> tag in the App.razor file as shown below:
