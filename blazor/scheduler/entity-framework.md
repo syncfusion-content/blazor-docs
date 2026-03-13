@@ -1,23 +1,23 @@
 ---
 layout: post
 title: Blazor Scheduler with Entity Framework Core | Syncfusion
-description: Step-by-step user guide to build a Blazor Server application from scratch integrating Syncfusion Blazor Scheduler with Entity Framework Core.
+description: This documentation provides a step‑by‑step guide for building a Syncfusion Blazor Scheduler with Entity Framework Core to manage and display scheduling data within the application.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Syncfusion Blazor Scheduler Integration with OData v4 and Entity Framework Core
+# Syncfusion Blazor Scheduler Integration with OData v4 and EF Core
 
-This [Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) enables users to seamlessly manage and synchronize event data between the **Scheduler** and an [**Entity Framework**](https://learn.microsoft.com/ef/core/) Core–backed [**OData v4**](https://www.odata.org/documentation/) service. The Scheduler retrieves existing appointments from the OData API and displays them in an interactive, user-friendly calendar interface.
+This [Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) enables users to seamlessly manage and synchronize event data between the **Scheduler** and an **Entity Framework** Core–backed [**OData v4**](https://www.odata.org/documentation/) service. The Scheduler retrieves existing appointments from the OData API and displays them in an interactive, user-friendly calendar interface.
 
 ## Prerequisites
 
-- **[.NET](https://dotnet.microsoft.com/download/dotnet)** SDK (>=8) Verify with:
+- [.NET](https://dotnet.microsoft.com/download/dotnet) SDK (>=8) Verify with:
     ```bash
     dotnet --version
     ```
-- **[SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** or LocalDB available. The guide uses LocalDB connection by default.
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) or LocalDB available. The guide uses LocalDB connection by default.
 - A code editor ([Visual Studio](https://visualstudio.microsoft.com/vs/) / [VS Code](https://code.visualstudio.com/)).
 
 ## Creating new project
