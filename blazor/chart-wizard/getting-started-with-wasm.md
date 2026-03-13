@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Getting Stared | Blazor Chart Wizard Component in WASM | Syncfusion
+title: Getting Started | Blazor Chart Wizard Component in WASM | Syncfusion
 description: Checkout and learn about getting started with Syncfusion Blazor Chart Wizard in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
+keywords: chart wizard, blazor, chart
 ---
 
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started with Blazor Chart Wizard Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Chart Wizard]() component in a Blazor WebAssembly (WASM) App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include the Blazor Chart Wizard component in a Blazor WebAssembly (WASM) App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -31,7 +32,7 @@ Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart Wizard NuGet in the App
 
-To add the **Blazor Chart Wizard** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.ChartWizard](). Alternatively, run the following commands in the Package Manager Console to achieve the same.
+To add the **Blazor Chart Wizard** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install `Syncfusion.Blazor.ChartWizard`. Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}

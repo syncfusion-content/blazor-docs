@@ -5,6 +5,7 @@ description: Check out and learn how to customize the appearance of the Blazor C
 platform: Blazor
 control: Chart Wizard
 documentation: ug
+keywords: chart wizard, blazor, chart
 ---
 
 
@@ -228,7 +229,7 @@ The `PropertyPanelExpanded` property controls whether the property panel is open
 ```
 
 <div class="control-section">
-    <SfChartWizard PropertyPanel="false">
+    <SfChartWizard PropertyPanelExpanded="false">
         <ChartSettings DataSource="@OlympicsDataSource"
                        CategoryFields="@categories"
                        SeriesType="ChartWizardSeriesType.Bar"

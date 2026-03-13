@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Getting Stared | Blazor Chart Wizard Component | Syncfusion
+title: Getting Started | Blazor Chart Wizard Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Chart Wizard component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
+keywords: chart wizard, blazor, chart
 ---
 
 <!-- markdownlint-disable MD040 -->

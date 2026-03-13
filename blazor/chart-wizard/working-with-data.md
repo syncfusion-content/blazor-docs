@@ -5,6 +5,7 @@ description: Check out and learn here all about working with data in Syncfusion 
 platform: Blazor
 control: Chart Wizard
 documentation: ug
+keywords: chart wizard, blazor, chart
 ---
 
 # Working with Data in Blazor Chart Wizard Component

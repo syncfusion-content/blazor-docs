@@ -5,6 +5,7 @@ description: Check out and learn here all about print and export in Syncfusion B
 platform: Blazor
 control: Chart Wizard
 documentation: ug
+keywords: chart wizard, blazor, chart
 ---
 
 # Print and Export in Blazor Chart Wizard Component

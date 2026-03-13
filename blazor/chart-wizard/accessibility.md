@@ -5,6 +5,7 @@ description: Checkout and learn here all about Accessibility using Keyboard navi
 platform: Blazor
 control: Chart Wizard
 documentation: ug
+keywords: chart wizard, blazor, accessibility
 ---
 
 # Accessibility in Blazor Chart Wizard Component
