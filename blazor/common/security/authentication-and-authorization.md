@@ -14,7 +14,7 @@ Authentication verifies a user's identity. Authorization then determines the acc
 
 ## Authentication
 
-Authentication establishes who the user is within your Blazor application. Blazor apps often use cookie-based authentication where a server stores user session information in browser cookies for Server-hosted apps. For WebAssembly apps, use token-based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. This pattern keeps sensitive logic server-side, reducing client exposure.
+Authentication verifies a user's identity in your Blazor application. Blazor apps often use cookie-based authentication where a server stores user session information in browser cookies for Server-hosted apps. For WebAssembly apps, use token-based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. This pattern keeps sensitive logic server-side, reducing client exposure.
 
 Syncfusion components access user identity information through Blazor's `AuthenticationStateProvider`. This allows secure data loading or feature restriction based on the user's identity.
 
@@ -60,6 +60,12 @@ Components such as `AuthorizeView`, `AuthenticationStateProvider`, and token-bas
 
 In your project directory, run **dotnet add package Microsoft.AspNetCore.Identity.UI** to enable Identity services.
 
+If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion’s Blazor getting‑started guides.
+
+* [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+
+* [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
 **1. Wrap the application's router in App.razor:**
 
 {% tabs %}
@@ -87,6 +93,7 @@ In your project directory, run **dotnet add package Microsoft.AspNetCore.Identit
 {% highlight cs %}
 
 using Microsoft.AspNetCore.Identity.UI;
+using Syncfusion.Blazor;
 
 ...
 builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
@@ -95,7 +102,9 @@ builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
 builder.Services.AddAuthorization();
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
-
+// Syncfusion services are registered by component packages
+ builder.Services.AddSyncfusionBlazor();
+ 
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,7 +112,7 @@ builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuth
 
 The DataGrid can be secured by using the `SfDataManager.Headers` property, which allows the grid to load data securely from protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
 
-N> For testing, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control. For production, Retrieve dynamic tokens from `AuthenticationStateProvider`.
+N> For testing, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control. For production, retrieve dynamic tokens from `AuthenticationStateProvider`.
 
 {% tabs %}
 {% highlight json %}
@@ -208,7 +217,6 @@ The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized
         await base.OnInitializedAsync();
     }
 
-
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -268,8 +276,7 @@ The following TreeView example demonstrates a Blazor Server App configured with 
     List<MailItem> MyFolder = new List<MailItem>();
 
    protected override void OnInitialized()
-    {
-             
+   {
         // Load hierarchical folder data
         LoadFolderData();
     }
