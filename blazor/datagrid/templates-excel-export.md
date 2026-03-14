@@ -260,6 +260,165 @@ public class OrderData
 
 ![Exporting with group caption template](./images/group-caption.gif)
 
+## Exporting and aligning the group caption template
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports aligning exported grouped data along with a custom caption template in an Excel document. This feature enables you to apply custom formatting and horizontal alignment to group captions, providing enhanced visual presentation and improved readability of exported hierarchical data in Excel spreadsheets.
+
+To align and customize group caption text in the exported Excel document:
+
+1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to trigger the export.
+2. Use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method to export the Grid.
+3. Handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event to customize and align the group caption text.
+4. Use the **args.Cell.CellStyle.HAlign** property to specify the horizontal alignment of the group caption text.
+5. Utilize the **Syncfusion.ExcelExport.HAlignType** enumeration to assign alignment values such as **Left**, **Center**, **Right**, or **Justify**.
+6. Optionally, apply additional styling properties like **Bold**, **FontColor**, or **FontSize** using the **args.Cell.CellStyle** object.
+
+> * To customize both the content and alignment of group caption text during Excel export, use the `ExcelGroupCaptionTemplateInfo` event.
+> * The `HAlignType` enumeration supports **Left**, **Center**, **Right**, **Justify**, **General**, **Fill**, **CenterAcrossSelection**, and **Distributed** alignment options.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+
+<SfGrid DataSource="@PickList" @ref="Grid" ID="Grid" AllowGrouping="true" Width="70%" AllowExcelExport="true" Toolbar="@(new List<string> {  "ExcelExport", "CsvExport"})">
+    <GridEvents TValue=ProductInfo OnToolbarClick="ToolbarClick" ExcelAggregateTemplateInfo="ExcelAggregateTemplateInfoHandler" ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionInfoHandler"></GridEvents>
+    <GridGroupSettings Columns="@(new[] { "ProductGroup" })" ShowDropArea="false">
+        <CaptionTemplate>
+            @{
+                var group = context as CaptionTemplateContext;
+            }
+            <span>
+                <b>@group.Key</b>
+            </span>
+        </CaptionTemplate>
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field="ProductGroup"> </GridColumn>
+        <GridColumn Field="@nameof(ProductInfo.Style)" HeaderText="Style Code" Width="90" />
+        <GridColumn Field="@nameof(ProductInfo.Style_Description)" HeaderText="Style Description" Width="150" />
+        <GridColumn Field="@nameof(ProductInfo.Size)" HeaderText="Size" Width="90" />
+        <GridColumn Field="@nameof(ProductInfo.Product_Colour)" HeaderText="Colour" Width="90" />
+        <GridColumn Field="@nameof(ProductInfo.Stock_Qty_Transfer)" HeaderText="Qty" Width="90" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" />
+    </GridColumns>
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field="Stock_Qty_Transfer" Type="AggregateType.Sum">
+                    <GroupFooterTemplate Context="context">
+                        @{
+                            var agg = (AggregateTemplateContext)context;
+                        }
+                        <div class="cfw-bold">
+                            Total: @agg.Sum
+                        </div>
+                    </GroupFooterTemplate>
+                    <FooterTemplate Context="context">
+                        @{
+                            var aggregate = (AggregateTemplateContext)context;
+                        }
+                        <div class="cfw-bold">
+                            Grand Total: @aggregate.Sum
+                        </div>
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+</SfGrid>
+@code 
+{
+    private SfGrid<ProductInfo> Grid;
+    private List<ProductInfo> PickList { get; set; }
+
+    protected override void OnInitialized()
+    {
+        PickList = ProductInfo.GetPickListData();
+    }
+
+    private async Task ToolbarClick(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")  //Id is combination of Grid's ID and itemname.
+        {
+            await Grid.ExportToExcelAsync();
+        }
+    }
+
+    public void ExcelGroupCaptionInfoHandler(ExcelCaptionTemplateArgs args)
+    {
+        args.Cell.CellStyle.HAlign = Syncfusion.ExcelExport.HAlignType.Center; // to align the text to center.
+        args.Cell.CellStyle.Bold = true; // to set the text to Bold.
+        args.Cell.Value = args.Key; // to modify the text inside the group caption template.
+    }
+
+    public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs args)
+    {
+        if (args.AggregateType == AggregateTemplateType.Footer)
+        {
+            args.Cell.Value = string.Format("Grand Total: {0}", args.Value);
+        }
+        else if (args.AggregateType == AggregateTemplateType.GroupFooter)
+        {
+            args.Cell.Value = string.Format("Total: {0}", args.Value);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="ProductInfo.cs" %}
+
+public class ProductInfo
+{
+    public ProductInfo(string productGroup, string style, string styleDescription, string size, string productColour, int stockQtyTransfer)
+    {
+        this.ProductGroup = productGroup;
+        this.Style = style;
+        this.Style_Description = styleDescription;
+        this.Size = size;
+        this.Product_Colour = productColour;
+        this.Stock_Qty_Transfer = stockQtyTransfer;
+    }
+
+    public static List<ProductInfo> GetPickListData()
+    {
+        return new List<ProductInfo>
+        {
+            new ProductInfo("Shirts", "SH-001", "Classic Oxford Shirt", "M", "White", 25),
+            new ProductInfo("Shirts", "SH-001", "Classic Oxford Shirt", "L", "White", 30),
+            new ProductInfo("Shirts", "SH-001", "Classic Oxford Shirt", "XL", "Blue", 20),
+            new ProductInfo("Shirts", "SH-002", "Casual Linen Shirt", "S", "Beige", 15),
+            new ProductInfo("Shirts", "SH-002", "Casual Linen Shirt", "M", "Beige", 22),
+            new ProductInfo("Trousers", "TR-101", "Slim Fit Chinos", "30", "Navy", 28),
+            new ProductInfo("Trousers", "TR-101", "Slim Fit Chinos", "32", "Navy", 35),
+            new ProductInfo("Trousers", "TR-101", "Slim Fit Chinos", "34", "Khaki", 24),
+            new ProductInfo("Trousers", "TR-103", "Denim Jeans", "32", "Dark Blue", 40),
+            new ProductInfo("Jackets", "JK-201", "Leather Bomber Jacket", "M", "Brown", 10),
+            new ProductInfo("Jackets", "JK-203", "Denim Jacket", "S", "Light Blue", 11),
+            new ProductInfo("Accessories", "AC-301", "Leather Belt", "32", "Brown", 45),
+            new ProductInfo("Accessories", "AC-301", "Leather Belt", "34", "Brown", 50),
+            new ProductInfo("Accessories", "AC-301", "Leather Belt", "36", "Black", 38),
+            new ProductInfo("Accessories", "AC-302", "Cotton Scarf", "One Size", "Grey", 27),
+            new ProductInfo("Accessories", "AC-304", "Sunglasses", "One Size", "Tortoise", 36)
+        };
+    }
+
+    public string ProductGroup { get; set; }
+    public string Style { get; set; }
+    public string Style_Description { get; set; }
+    public string Size { get; set; }
+    public string Product_Colour { get; set; }
+    public int Stock_Qty_Transfer { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBHXqizgKYRhRUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Exporting with group caption template by customizing the alignment](./images/GroupCaptionAlignment.gif)
+
 ## Exporting with detail template
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting both parent and child (detail) records including nested data to an Excel document.
