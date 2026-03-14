@@ -30,7 +30,7 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
 ### In percentage
 
-```
+```cshtml
 
 <div class="control-section">
     <SfChartWizard Width="60%" Height="">
@@ -48,8 +48,8 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
     public class OlympicsData
     {
-        public string Country { get; set; }
-        public string CountryCode { get; set; }
+        public string? Country { get; set; }
+        public string? CountryCode { get; set; }
         public int Gold { get; set; }
         public int Silver { get; set; }
         public int Bronze { get; set; }
@@ -76,7 +76,7 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
 ### In pixel
 
-```
+```cshtml
 
 <div class="control-section">
     <SfChartWizard Width="650px" Height="400px">
@@ -94,8 +94,8 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
     public class OlympicsData
     {
-        public string Country { get; set; }
-        public string CountryCode { get; set; }
+        public string? Country { get; set; }
+        public string? CountryCode { get; set; }
         public int Gold { get; set; }
         public int Silver { get; set; }
         public int Bronze { get; set; }
@@ -125,7 +125,7 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
 The `Theme` property applies a built-in visual style to the chart. Choose from available themes to match the application's look and feel.
 
-```
+```cshtml
 
 <div class="control-section">
     <SfChartWizard Theme="Theme.Material3">
@@ -143,8 +143,8 @@ The `Theme` property applies a built-in visual style to the chart. Choose from a
 
     public class OlympicsData
     {
-        public string Country { get; set; }
-        public string CountryCode { get; set; }
+        public string? Country { get; set; }
+        public string? CountryCode { get; set; }
         public int Gold { get; set; }
         public int Silver { get; set; }
         public int Bronze { get; set; }
@@ -177,7 +177,7 @@ N> The `Theme` property applies the selected theme to the chart area, not the en
 
 Set `EnableRtl` to `true` to support right-to-left languages such as Arabic or Hebrew. This option automatically adjusts the alignment of headers, panels, and controls for RTL layouts.
 
-```
+```cshtml
 
 <div class="control-section">
     <SfChartWizard EnableRtl="true">
@@ -195,8 +195,8 @@ Set `EnableRtl` to `true` to support right-to-left languages such as Arabic or H
 
     public class OlympicsData
     {
-        public string Country { get; set; }
-        public string CountryCode { get; set; }
+        public string? Country { get; set; }
+        public string? CountryCode { get; set; }
         public int Gold { get; set; }
         public int Silver { get; set; }
         public int Bronze { get; set; }
@@ -226,7 +226,7 @@ Set `EnableRtl` to `true` to support right-to-left languages such as Arabic or H
 
 The `PropertyPanelExpanded` property controls whether the property panel is open when the Chart Wizard first loads. Set it to `false` to start with the panel collapsed, giving more space to the chart area.
 
-```
+```cshtml
 
 <div class="control-section">
     <SfChartWizard PropertyPanelExpanded="false">
@@ -244,8 +244,8 @@ The `PropertyPanelExpanded` property controls whether the property panel is open
 
     public class OlympicsData
     {
-        public string Country { get; set; }
-        public string CountryCode { get; set; }
+        public string? Country { get; set; }
+        public string? CountryCode { get; set; }
         public int Gold { get; set; }
         public int Silver { get; set; }
         public int Bronze { get; set; }

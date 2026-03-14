@@ -83,7 +83,7 @@ Any IEnumerable object can be assigned to the `DataSource` property of the `Char
 
     public class OlympicsData
     {
-        public string Country { get; set; }
+        public string? Country { get; set; }
         public int Gold { get; set; }
         public int Silver { get; set; }
         public int Bronze { get; set; }

@@ -5,6 +5,7 @@ description: Check out and learn here all about serialization in Syncfusion Blaz
 platform: Blazor
 control: Chart Wizard
 documentation: ug
+keywords: chart wizard, blazor, serialization
 ---
 
 # Serialization in Blazor Chart Wizard Component
@@ -21,7 +22,7 @@ N>
 - `LoadChartAsync` resets the chart to its default state before applying the values from the JSON.
 - Always use the JSON string produced by `SaveChart()` as input for `LoadChartAsync()`.
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.ChartWizard
 

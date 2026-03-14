@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started | Blazor Chart Wizard Component in WASM | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Blazor Chart Wizard in Blazor WebAssembly (WASM) App using Visual Studio and more.
+description: Check out and learn about getting started with Syncfusion Blazor Chart Wizard in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
@@ -181,9 +181,8 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 <head>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-    //Blazor Chart Wizard Component script reference.
-    <!-- <script src="_content/Syncfusion.Blazor.Charts/scripts/sf-chart-wizard.min.js" type="text/javascript"></script> -->
+    <!-- Blazor Chart Wizard Component script reference.-->
+     <!-- <script src="_content/Syncfusion.Blazor.ChartWizard/scripts/sf-chart-wizard.min.js" type="text/javascript"></script> -->
 </head>
 ```
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.

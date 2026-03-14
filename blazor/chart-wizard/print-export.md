@@ -22,7 +22,7 @@ Configure export behavior declaratively using the `ChartExportSettings` within `
 - `Height` — Sets the requested output height in pixels for image/PDF exports.
 - `Orientation` — Sets the page orientation for PDF/print (`Portrait` or `Landscape`).
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.ChartWizard
 
