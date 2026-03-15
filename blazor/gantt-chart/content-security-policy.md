@@ -9,7 +9,7 @@ documentation: ug
 
 # Gantt Chart Strict CSP Feature Limitations
 
-The Syncfusion Blazor **Gantt Chart** component supports **strict CSP** for its core functionality, enabling most default operations—such as task scheduling, timeline rendering, dependency management, resource allocation, and basic editing—without requiring `'unsafe-inline'` in the `style-src` directive.
+The Syncfusion® Blazor **Gantt Chart** component supports **strict CSP** for its core functionality, enabling most default operations—such as task scheduling, timeline rendering, dependency management, resource allocation, and basic editing—without requiring `'unsafe-inline'` in the `style-src` directive.
 
 However, certain rich content and advanced formatting features rely on dynamic inline styles generated at runtime, which are blocked in a fully strict CSP environment.
 
@@ -65,5 +65,5 @@ Include 'unsafe-inline' in style-src to enable rich formatting in the Notes fiel
 ### Future Improvements
  - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
 
- - Syncfusion is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
-Track the latest **Syncfusion Blazor release notes and weekly patches for CSP-related updates and announcements.
+ - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
+Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.

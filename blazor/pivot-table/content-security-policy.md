@@ -9,7 +9,7 @@ documentation: ug
 
 # Pivot Table Strict CSP Feature Limitations
 
-The Syncfusion Blazor **Pivot Table**  component supports **strict CSP** for its core functionality, allowing most default operations without `'unsafe-inline'` in `style-src`. However, certain advanced visualization and formatting features still rely on dynamic inline styles, which are blocked under a fully strict CSP configuration.
+The Syncfusion® Blazor **Pivot Table**  component supports **strict CSP** for its core functionality, allowing most default operations without `'unsafe-inline'` in `style-src`. However, certain advanced visualization and formatting features still rely on dynamic inline styles, which are blocked under a fully strict CSP configuration.
 
 This document outlines the specific features that require the `style-src 'unsafe-inline'` directive and provides guidance on CSP configurations with and without those features.
 
@@ -72,5 +72,5 @@ HTML<meta http-equiv="Content-Security-Policy"
 
 These security limitations for the listed features (Pivot Chart integration, conditional formatting, and related styling behaviors) will be addressed in **future weekly security patch releases**. 
 
-Syncfusion is actively working toward full strict CSP compatibility across all features of the Pivot Table component, eliminating the need for 'unsafe-inline' entirely.
-Track the latest Syncfusion Blazor release notes and weekly patches for CSP-related updates and announcements.
+Syncfusion® is actively working toward full strict CSP compatibility across all features of the Pivot Table component, eliminating the need for 'unsafe-inline' entirely.
+Track the latest Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.

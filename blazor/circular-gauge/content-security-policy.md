@@ -9,7 +9,7 @@ documentation: ug
 
 # Circular Gauge Strict CSP Feature Limitations
 
-The Syncfusion Blazor **Circular Gauge** component supports **strict CSP** for its core functionality, allowing most default operations such as rendering axes, ticks, labels, ranges, pointers, annotations, legends, tooltips, and multiple axes—without requiring `'unsafe-inline'` in the `style-src` directive.
+The Syncfusion® Blazor **Circular Gauge** component supports **strict CSP** for its core functionality, allowing most default operations such as rendering axes, ticks, labels, ranges, pointers, annotations, legends, tooltips, and multiple axes—without requiring `'unsafe-inline'` in the `style-src` directive.
 
 However, animation-related features rely on dynamic runtime style manipulations (likely involving inline styles or CSS transitions applied via JavaScript) to achieve smooth sequential rendering effects, which are blocked under a fully strict CSP configuration.
 
@@ -70,6 +70,6 @@ Include 'unsafe-inline' in style-src to enable animation features:
 ### Future Improvements
  - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
 
- - Syncfusion is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
+ - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
 
- - Track the latest **Syncfusion Blazor release notes and weekly patches for CSP-related updates and announcements.
+ - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.

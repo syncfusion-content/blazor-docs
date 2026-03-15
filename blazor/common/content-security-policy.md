@@ -17,15 +17,15 @@ CSP directives should be included in the `<head>` tag of the application's webpa
 
 * For **Blazor WebAssembly Standalone App**, inside the `<head>` of the **wwwroot/index.html** file.
 
-Syncfusion Blazor components now offer improved support for strict **Content Security Policy (CSP)** implementations, strengthening application security against threats like cross-site scripting (XSS) and data injection attacks.
+Syncfusion® Blazor components now offer improved support for strict **Content Security Policy (CSP)** implementations, strengthening application security against threats like cross-site scripting (XSS) and data injection attacks.
 
 Now we have introduced **strict CSP compatibility** for **over 80 components**. Default functionalities across these components now operate seamlessly under a strict CSP configuration without requiring unsafe directives such as `'unsafe-eval'` or `'unsafe-inline'` in many scenarios. 
 
 This enhancement allows developers to enforce modern, secure browser policies more easily while retaining full component capabilities in Blazor Server, WebAssembly, and hybrid (Auto) render modes.
 
-### Recommended CSP Directives for Strict Csp implemented Syncfusion Blazor Components 
+### Recommended CSP Directives for Strict Csp implemented Syncfusion® Blazor Components 
 
-The following CSP configurations are **tested and recommended** for Syncfusion Blazor components that support strict CSP (Refer Supported list below).
+The following CSP configurations are **tested and recommended** for Syncfusion® Blazor components that support strict CSP (Refer Supported list below).
 
 #### For Blazor Interactive Server App
 
@@ -62,7 +62,7 @@ The following CSP configurations are **tested and recommended** for Syncfusion B
 ```
 > **Note:**  The [wasm-unsafe-eval](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) source expression is mandatory for Blazor WebAssembly and Blazor Web App applications, as it enables the browser to compile and execute WebAssembly modules required by the Blazor Mono runtime on the client. Without this directive, modern browsers will block WebAssembly execution, preventing the Blazor runtime from initializing correctly.
 
-If your application includes Syncfusion components that are not explicitly marked as Strict CSP implemented, you must include the **style-src 'unsafe-inline' directive** in your Content Security Policy.
+If your application includes Syncfusion® components that are not explicitly marked as Strict CSP implemented, you must include the **style-src 'unsafe-inline' directive** in your Content Security Policy.
 
 Refer to the list of supported components to verify Strict CSP compatibility. We have also outlined the features that currently require additional CSP directives.
 
@@ -72,7 +72,7 @@ Below is an updated overview highlighting CSP compliance status based on the lat
 
 >**Important:** HTMLAttribute/InputAttributes Parameter Limitations Under Strict CSP
 When using a strict Content Security Policy (CSP), support for inline style attributes is not currently available. Support for inline style attributes will be added in a future weekly patch release.
-Please refer to upcoming Syncfusion release notes for updates.
+Please refer to upcoming Syncfusion® release notes for updates.
 
 
 
@@ -202,4 +202,4 @@ Some components are not currently fully compliant with Strict CSP requirements. 
 
  - Apply the strictest CSP policy feasible for your application
  - Avoid using 'unsafe-inline' unless explicitly required
- - Track Syncfusion release notes for CSP-related improvements
+ - Track Syncfusion® release notes for CSP-related improvements

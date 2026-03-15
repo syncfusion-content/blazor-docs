@@ -9,7 +9,7 @@ documentation: ug
 
 # TreeView Strict CSP Feature Limitations
 
-The Syncfusion Blazor **TreeView** component supports **strict CSP** for its core functionality, enabling most default operations—such as hierarchical data binding, node selection, expansion/collapse, drag-and-drop, checkboxes, multi-selection, node editing, context menu integration, templates, icons/images, accessibility, keyboard navigation, and lazy loading—without requiring `'unsafe-inline'` in the `style-src` directive.
+The Syncfusion® Blazor **TreeView** component supports **strict CSP** for its core functionality, enabling most default operations—such as hierarchical data binding, node selection, expansion/collapse, drag-and-drop, checkboxes, multi-selection, node editing, context menu integration, templates, icons/images, accessibility, keyboard navigation, and lazy loading—without requiring `'unsafe-inline'` in the `style-src` directive.
 
 However, the **[virtualization](virtualization.md)** feature relies on dynamic runtime style manipulations (typically for precise positioning, sizing of virtualized containers, scroll calculations, and DOM recycling), which apply inline styles via JavaScript and are blocked under a fully strict CSP configuration.
 
@@ -65,6 +65,6 @@ Include **'unsafe-inline'** in **style-src** to enable the virtualization featur
 ### Future Improvements
  - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
 
- - Syncfusion is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
+ - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
 
- - Track the latest **Syncfusion Blazor release notes and weekly patches for CSP-related updates and announcements.
+ - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.
