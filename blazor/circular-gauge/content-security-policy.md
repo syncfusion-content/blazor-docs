@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Circular Gauge - Strict CSP Feature Limitations - Syncfusion
-description: Details on features in Syncfusion Blazor Circular Gauge that require CSP relaxation
+description: Details on features in Circular Gauge that require CSP relaxation
 platform: Blazor
 control: Circular Gauge
 documentation: ug

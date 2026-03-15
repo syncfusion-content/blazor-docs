@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pivot Table - Strict CSP Feature Limitations - Syncfusion
-description: Details on features in Syncfusion Blazor Pivot Table that require CSP relaxation
+description: Details on features in Pivot Table that require CSP relaxation
 platform: Blazor
 control: Pivot Table
 documentation: ug
