@@ -80,7 +80,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Style Attributes Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| DataGrid, Pager, Tree Grid, Query Builder | ListView | [Pivot Table](../pivot-table/content-security-policy.md) |
+| DataGrid, Pager, Tree Grid, DataForm, Query Builder | ListView | [Pivot Table](../pivot-table/content-security-policy.md) |
 
 ---
 
@@ -111,11 +111,11 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 ---
 
-### Notifications and DataForm
+### Notifications
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-|Toast, Spinner, Message, Skeleton, ProgressBar, DataForm, Badge | - | - |
+|Toast, Spinner, Message, Skeleton, ProgressBar, Badge | - | - |
 
 ---
 
@@ -123,7 +123,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant |HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| BarcodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy.md), Maps, Heamap Chart |
+| BarcodeGenerator, QRCodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy.md), [Maps](../maps/content-security-policy.md), [Heamap Chart](../heatmap-chart/content-security-policy.md) |
 
 ---
 
