@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TreeView - Strict CSP Feature Limitations - Syncfusion
-description: Details on features in TreeView that require CSP relaxation
+description: Details on Syncfusion Blazor features in TreeView that require Content Security Policy (CSP) relaxation.
 platform: Blazor
 control: TreeView
 documentation: ug
