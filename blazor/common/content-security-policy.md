@@ -78,9 +78,9 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 ### Data Management
 
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
+| Fully Strict CSP Compliant | HTML Attributes (Style Attributes Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| DataGrid, Pager, Tree Grid, Query Builder | — | [Pivot Table]() |
+| DataGrid, Pager, Tree Grid, Query Builder | ListView | [Pivot Table](../pivot-table/content-security-policy.md) |
 
 ---
 
@@ -89,7 +89,7 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| Scheduler, Calendar, Gantt Chart | DatePicker, DateRangePicker, DateTime Picker, TimePicker | — |
+| Scheduler, Calendar | DatePicker, DateRangePicker, DateTime Picker, TimePicker | [Gantt Chart](../gantt-chart/content-security-policy.md) |
 
 ---
 
@@ -98,7 +98,7 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| File Upload | Imageditor | |
+| File Upload | Imageditor |- |
 
 ---
 
@@ -107,7 +107,7 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| Dashboard Layout, Splitter, Card, Timeline | Dialog, Tooltip |  |
+| Dashboard Layout, Timeline, Avatar, Media Query | Dialog, Predefined Dialog,  Splitter, Tooltip | - |
 
 ---
 
@@ -115,7 +115,7 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-|Toast, Spinner, Message, Skeleton, ProgressBar, DataForm |  | — |
+|Toast, Spinner, Message, Skeleton, ProgressBar, DataForm, Badge | - | - |
 
 ---
 
@@ -123,7 +123,7 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 | Fully Strict CSP Compliant |HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| BarcodeGenerator, Linear Gauge, TreeMap |  — | Circular Gauge, Maps |
+| BarcodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy.md), Maps, Heamap Chart |
 
 ---
 
@@ -140,7 +140,7 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-|Dropdown Tree, Mention, ListBox | MultiColumn Combobox, Dropdown List, AutoComplete, ComboBox, Multiselect Dropdown | — |
+|Mention, ListBox | MultiColumn Combobox, Dropdown List, AutoComplete, ComboBox, Multiselect Dropdown, Dropdown Tree | - |
    
 ---
 
@@ -158,7 +158,7 @@ Please refer to upcoming Syncfusion release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| |TreeView | |
+| Ribbon     | Accordion, Stepper, Breadcrumb, AppBar, Carousal, Context Menu, Sidebar, MenuBar, Tabs, Toolbar,  | [TreeView](../treeview/content-security-policy.md) |
 
 ---
 
@@ -191,9 +191,9 @@ Some components are not currently fully compliant with Strict CSP requirements. 
 | Category                          | Components                                                                
 |-----------------------------------|----------------------------------------------------------------------------|
 | **Charts & Advanced Visualizations** | Charts, 3D Charts, Stock Chart, BulletChart, Range Selector, Sankey,Sparkline Charts, Smith Chart, Diagram 
-| **Editors and Kanban**                  | Block Editor , RichtextEditor, Kanban                                                                                                                  |
+| **Editors and Kanban**                  | Block Editor , RichtextEditor Kanban                                                                                                                  |
 | **Interactive Chat**              | Chat UI                                                                    |
-
+| **File Management and Card**        | File Manager, Card                                                               |
 
 
 >**Important:** CSP compliance remains a key security priority. We are actively working toward achieving complete Strict CSP compatibility for all components, and updates will be provided incrementally through upcoming security patch releases.
