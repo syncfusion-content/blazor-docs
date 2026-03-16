@@ -19,6 +19,8 @@ With virtualization enabled, large datasets feel easier and faster to work with,
 
 ## Prerequisites and Setup
 
+Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion® Blazor components.
+
 All examples in this document are based on a Blazor Server application.
 
 **1. Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages**
