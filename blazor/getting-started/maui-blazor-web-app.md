@@ -1,23 +1,25 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Blazor Hybrid and Web App | Syncfusion
-description: Check out the documentation for getting started with .NET MAUI Blazor Hybrid and Blazor Web App and Syncfusion Blazor Components in Visual Studio and much more.
+title: Integrating Syncfusion Blazor Components in .NET MAUI and Web App
+description: Steps to create a .NET MAUI Blazor Hybrid and Blazor Web App and integrate Syncfusion Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Blazor Hybrid and Web App
+# Integrating Blazor with .NET MAUI Blazor Hybrid and Web App
 
-This section explains how to create and run a .NET Multi-platform Blazor App UI (.NET MAUI with Blazor Web App) using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to create and run a **.NET MAUI Blazor Hybrid App** together with a **Blazor Web App** using [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
 
 ## What is .NET MAUI Blazor Hybrid and Web App?
 
-[.NET MAUI Blazor Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0) is a hybrid application that leverages a Razor Class Library (RCL) to define reusable Blazor components. These components are shared between a Blazor WebAssembly or Server App and a .NET MAUI Blazor App. This approach enables a unified web-based UI that can be **reused across mobile, desktop, and browser platforms**.
+A **.NET MAUI Blazor Hybrid App** is a native application for Windows, Android, iOS, and macOS. It uses Blazor pages inside a WebView to display the UI.
+
+A **.NET MAUI Blazor Web App** uses a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used in a Blazor WebAssembly app, a Blazor Server app, and a .NET MAUI Blazor app. This makes it easy to build one UI and use it across mobile, desktop, and web platforms. 
 
 By sharing UI components between native and web apps, this pattern ensures consistent user experiences, maximizes code reuse, and simplifies maintenance for applications targeting multiple environments.
 
-Visual Studio provides the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0)** template to create a .NET MAUI Blazor Hybrid app with a Blazor Web App.
+Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0)** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution. 
 
 ## Prerequisites
 
@@ -28,37 +30,42 @@ Visual Studio provides the **[.NET MAUI Blazor Hybrid and Web App](https://learn
 
 ## Create a new .NET MAUI Blazor Hybrid and Blazor Web App in Visual Studio
 
-Create a **.NET MAUI Blazor Hybrid and Blazor Web App** in Visual Studio using the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0).
+1. Open **Visual Studio**.
+2. Click **Create a new project**.
+3. Search for **.NET MAUI Blazor Hybrid and Web App**.
+4. Select the template and create the project.
+
+The template generates the shared RCL, .NET MAUI app, and Web App.
 
 ![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.webp)
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the App
 
-To add the Blazor Calendar component in the app’s shared folder, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, use the following Package Manager commands:
+Follow these steps to add the Syncfusion DataGrid.
 
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
+1. Open (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
+2. Search for and install.
+ * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+ * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add Syncfusion Namespaces
 
-Open **~/_Imports.razor** in both the `.Maui` and `.Web` Apps and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces.
+Open both of the following files and add the Syncfusion namespaces.
+
+* `~/.Maui/Components/_Imports.razor`
+* `~/Components/_Imports.razor` (Blazor Web App)
 
 ```cshtml
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Grids
 
 ```
+## Register Syncfusion Blazor Service
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both the `MauiProgram.cs` file of the MAUI Blazor App and the `~/Program.cs` file of the Blazor Web App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both the `MauiProgram.cs` file of the MAUI Blazor App and the `~/Program.cs` file of the Blazor Web App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 4" %}
@@ -70,7 +77,7 @@ Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor servic
     ....
 
 {% endhighlight %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="1 8" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="1 7" %}
 
     using Syncfusion.Blazor;
     
@@ -78,7 +85,6 @@ Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor servic
 
     // Add services to the container.
     builder.Services.AddRazorComponents()
-        .AddInteractiveServerComponents();
     builder.Services.AddSyncfusionBlazor();
     ....
 
@@ -92,7 +98,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -106,14 +112,35 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-Add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any Razor file. In this example, the Calendar component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
+Add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any Razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
 
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Calendars
+@page "/"
+@using Syncfusion.Blazor.Grids
 
-<SfCalendar TValue="DateTime"></SfCalendar>
+<SfGrid DataSource="@Orders" />
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 5).Select(x => new Order()
+        {
+            OrderID = 0 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +151,7 @@ In the Visual Studio toolbar, select the **Windows Machine** target to build and
 
 N> To run the application on Android or iOS, refer to [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-9.0#run-the-app-in-the-android-emulator) for emulator or device setup.
 
-![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.webp)
+![MAUI Blazor App with Syncfusion Blazor Components](../common/images/maui-blazor-datagrid.webp)
 
 N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-Hybrid-with-Blazor-Web-App-using-Syncfuion-Blazor-Components).
 
