@@ -26,8 +26,7 @@ Syncfusion components make HTTP requests to your API internally. JWT allows each
 ## Prerequisites
 
 - .NET SDK 8.0 or above.
-- Visual Studio 2022 or newer with ASP.NET and web development workload.
-
+- Visual Studio 2022 ++.
 
 ## Create a Blazor Web App (Interactive Server)
 
@@ -53,7 +52,7 @@ Define the JWT settings that the server will use to sign and validating authenti
 ```json
 {
   "Jwt": {
-    "Key": "REPLACE_WITH_A_LONG_RANDOM_SECRET_32+_CHARS", // Note: For production, do not store secrets in appsettings.json. Use environment variables or a secret store (for example Azure Key Vault).
+    "Key": "REPLACE_WITH_A_LONG_RANDOM_SECRET_32+_CHARS", // Do not store secrets in appsettings.json for production; use environment variables or Key Vault.
     "Issuer": "BlazorJWT",
     "Audience": "BlazorJWTClient"
   }
@@ -130,6 +129,7 @@ public class AuthController : ControllerBase
     [HttpPost("token")]
     public IActionResult Token([FromQuery] string user = "user123")
     {
+        // Demo only: validate user credentials here (e.g., check password, use Identity).
         var jwt = _tokenService.IssueToken(user, name: user);
         return Ok(new { token = jwt });
     }
