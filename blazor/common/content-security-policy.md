@@ -149,7 +149,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation|
 |----------------------------|------------------------|--------------------------|
-| RangeSlider, Radio Button, Checkbox, Speech to text | In-Place Editor, TextBox, TextArea, Numeric TextBox, OtpInput, Inputmask, Color picker, Color palatte | -  |
+| RangeSlider, Radio Button, Checkbox, Speech to text, Rating | In-Place Editor, TextBox, TextArea, Numeric TextBox, OtpInput, Inputmask, Color picker, Color palatte | -  |
 
 ---
 
