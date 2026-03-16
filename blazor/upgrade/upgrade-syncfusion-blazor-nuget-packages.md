@@ -19,7 +19,7 @@ The NuGet Package Manager UI in Visual Studio allows you install, uninstall, and
 
 1. Right-click on the Blazor application or solution in the Solution Explorer tab, and choose **Manage NuGet Packages...**
 
-    ![Manage NuGet Packages add-in](images/ManageNuGet.png)
+    ![Manage NuGet Packages add-in](images/ManageNuGet.webp)
 
     As an alternative, after opening the Blazor application in Visual Studio, go to the **Tools** menu and after hovering **NuGet Package Manager**, select **Manage NuGet Packages for Solution...**
 
@@ -29,11 +29,11 @@ The NuGet Package Manager UI in Visual Studio allows you install, uninstall, and
 
 3. By default, the latest version is selected. Optionally choose a specific version, then select **Update** and accept the license terms. The package will be upgraded in the selected Blazor project.
 
-    ![Blazor Upgrade](images/NuGetUpgrade.png)
+    ![Blazor Upgrade](images/NuGetUpgrade.webp)
 
     To update multiple packages, select the corresponding checkboxes and choose **Update** to upgrade multiple Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages in the application.
 
-    ![Blazor Upgrade](images/MultipleNuGetUpgrade.png)
+    ![Blazor Upgrade](images/MultipleNuGetUpgrade.webp)
 
 ## Upgrade NuGet packages through Dotnet (.NET) CLI
 
@@ -49,7 +49,7 @@ The **Package Manager Console** saves NuGet packages upgrade time since you don'
 
 1. To show the Package Manager Console, open your Blazor application in Visual Studio and navigate to **Tools** in the Visual Studio menu and after hovering **NuGet Package Manager**, select **Package Manager Console**.
 
-    ![Package Manager Console](images/console.png)
+    ![Package Manager Console](images/console.webp)
 
 2. The Package Manager Console opens at the bottom of Visual Studio. Run the following NuGet update commands to update Syncfusion Blazor NuGet packages.
 
@@ -73,6 +73,6 @@ The **Package Manager Console** saves NuGet packages upgrade time since you don'
 
     ```Update-Package Syncfusion.Blazor.Grid -Version 19.2.0.44```
 
-    ![Package Manager Console Output](images/UpdateConsole.png)
+    ![Package Manager Console Output](images/UpdateConsole.webp)
 
 4. The NuGet Package Manager updates the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package and any required dependencies.
