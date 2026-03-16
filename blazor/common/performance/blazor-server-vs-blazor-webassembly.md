@@ -1,8 +1,9 @@
 ---
+layout: post
 title: Blazor Server vs WebAssembly – Syncfusion Components Guide
-description: Compare Blazor Server and WebAssembly hosting models and how Syncfusion components behave in each.
+description: Compare Blazor Server and WebAssembly hosting models, performance trade-offs, and how Syncfusion Blazor components behave in each scenario.
 platform: blazor
-component: common
+control: common
 documentation: ug
 ---
 
@@ -15,7 +16,7 @@ Blazor is a framework for building interactive web UIs using C#. It supports two
 
 A hosting model specifies whether the Blazor app executes on the server or in the browser (WebAssembly). Syncfusion Blazor components support both hosting models. Choosing the appropriate model ensures the best balance of performance and responsiveness for your scenario.
 
-In Blazor Server, the app executes on the server and sends UI diffs to the browser over a SignalR circuit. SignalR provides the real-time connection used to transmit UI updates and events. In Blazor WebAssembly, the app runs entirely in the browser using .NET assemblies downloaded to the client.
+In Blazor Server, the app executes on the server and sends UI updates to the browser over a SignalR circuit. SignalR provides the real-time connection used to transmit UI updates and events. In Blazor WebAssembly, the app runs entirely in the browser using .NET assemblies downloaded to the client.
 
 This guide explains both Blazor Server and Blazor WebAssembly hosting models, including performance considerations, how to choose between them, and tuning tips for scalability and responsiveness.
 
@@ -32,7 +33,7 @@ This guide explains both Blazor Server and Blazor WebAssembly hosting models, in
 
 Blazor Server starts faster with a minimal client payload, making it ideal when Syncfusion components appear immediately (for example, forms or lightweight dashboards).
 
-Blazor WebAssembly requires downloading the .NET runtime and app assemblies, increasing startup time. Reduce this by using **lazy loading** (loading assemblies only when needed) and **AOT compilation**. Ahead-of-Time (AOT) compilation is available only for Blazor WebAssembly apps. It increases payload size but improves runtime performance for CPU-intensive operations. See [Microsoft Blazor performance guidance](https://learn.microsoft.com/aspnet/core/blazor/performance?view=aspnetcore-10.0).
+Blazor WebAssembly requires downloading the .NET runtime and app assemblies, increasing startup time. Reduce this by using **lazy loading** (loading assemblies only when needed) and **AOT compilation**. Blazor WebAssembly supports Ahead-of-Time (AOT) compilation, which compiles .NET code into native WebAssembly. AOT increases download size but can significantly improve runtime performance for CPU‑heavy tasks. See [Microsoft Blazor performance guidance](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/?view=aspnetcore-10.0).
 
 For component-specific guidance, refer to the following documentation:
 * [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
@@ -40,9 +41,9 @@ For component-specific guidance, refer to the following documentation:
 
 ### Interaction Speed
 
-Blazor Server routes events (grid editing, scheduler drags) over SignalR potentially slower on poor networks.
+Blazor Server routes events (grid editing, scheduler drags) over SignalR, potentially slower on poor networks.
 
-Blazor WebAssembly delivers near instant responses for client heavy Syncfusion features like Chart zooming, Diagram interactions, HeatMap selections, and Maps panning.
+Blazor WebAssembly delivers near-instant responses for client heavy Syncfusion features like Chart zooming, Diagram interactions, HeatMap selections, and Maps panning.
 
 ## Scalability
 
@@ -87,7 +88,7 @@ Choose **Blazor WebAssembly** when:
 * Enable row virtualization in data-intensive components to minimize rendered items and SignalR updates:
 
 ```  
- <SfDataGrid ... Virtualization="true">
+<SfDataGrid ... Virtualization="true">
 ```
 
 Refer to [DataGrid Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling).
@@ -97,11 +98,10 @@ Refer to [DataGrid Virtualization](https://blazor.syncfusion.com/documentation/d
 ```
 @foreach (var item in Items)
 {
-  <li @key="item.Id">@item.Name</li>
+  <li @key=item.Id>@item.Name</li>
 }
 ```
-
-* Optimize SignalR with compression and reconnection policies. Refer to [SignalR Configuration guidance](https://learn.microsoft.com/aspnet/core/blazor/fundamentals/signalr?view=aspnetcore-10.0)
+* Optimize SignalR with compression and reconnection policies. Refer to [SignalR Configuration guidance](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/signalr/?view=aspnetcore-10.0)
 
 ### Blazor WebAssembly
 
@@ -113,5 +113,6 @@ Refer to [DataGrid Virtualization](https://blazor.syncfusion.com/documentation/d
 
 **See also**
 
-* [Blazor Hosting Models](https://learn.microsoft.com/aspnet/core/blazor/hosting-models?view=aspnetcore-10.0)
+* [Blazor Hosting Models](https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models/?view=aspnetcore-10.0)
 * [Syncfusion Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
