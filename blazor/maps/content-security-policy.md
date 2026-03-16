@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Maps - Strict CSP Feature Limitations - Syncfusion
-description: Details on features in Syncfusion Blazor Maps that require Content Security Policy (CSP) relaxation
+description: Details on features in Syncfusion Blazor Maps Component that require Content Security Policy (CSP) relaxation
 platform: Blazor
 control: Maps
 documentation: ug
