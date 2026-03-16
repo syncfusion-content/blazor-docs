@@ -10,12 +10,20 @@ platform: Blazor
 
 # How to Bind Data Using Dapper and Perform CRUD Operations
 
-In this section, you can learn how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a `Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid` Component, and perform CRUD operations.
+In this section, you will learn step by step how to:
+
+* Consume data from a SQL Server database using Dapper, a lightweight object mapper.
+* Bind the retrieved data to the Syncfusion® Blazor DataGrid component so that records can be displayed in a structured grid format.
+* Perform CRUD operations (Create, Read, Update, Delete) directly from the DataGrid by connecting it with a custom adaptor that interacts with the database.
+
+This approach combines the simplicity and performance of Dapper for data access with the rich UI features of the Syncfusion® Blazor DataGrid, enabling you to build a responsive and interactive application that supports inline editing, sorting, filtering, and paging.
+
 
 ## Prerequisite software
 
-* Visual Studio 2022.
-* MS SQL Server.
+* Visual Studio 2026 (or later) installed and configured for Blazor development.
+
+* MS SQL Server (2017 or later) available to host the sample database.
 
 ## Creating Blazor application
 
@@ -25,7 +33,7 @@ In this section, you can learn how to consume data from a database using [Dapper
 
 First, create a database named `BugTracker` and a table named `Bugs` to hold the list of bugs.
 
-1. Open SQL Server 2017 / latest version.
+1. Open SQL Server 2022 / latest version.
 2. Now, create a new database named `BugTracker`.
 3. Right-click on the created database and select New Query.
 4. Use the following SQL query to create a table named Bugs.
