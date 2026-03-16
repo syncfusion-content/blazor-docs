@@ -168,8 +168,6 @@ Adjust list item background and text colors for focused, active, and hovered sta
 
 ![Blazor DropDownList with custom item state colors](./images/style/blazor_dropdown_outline-theme.png)
 
-> Note: The above sample displays results using the Material theme. To customize the background color of list items in other Syncfusion themes, override the theme-specific list item CSS selectors or target them within a custom CssClass applied to the component to ensure the customization applies correctly across that theme.
-
 ## Customizing the appearance of pop-up element
 
 Customize popup appearance by targeting popup and list item selectors (for example, `.e-list-item.e-item-focus`) and applying styles such as background and borders.
@@ -180,7 +178,7 @@ Customize popup appearance by targeting popup and list item selectors (for examp
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized popup appearance](./images/style/blazor_dropdown_outline-theme.png)
+![Blazor DropDownList with customized popup appearance](./images/style/blazor_dropdown_appearance-of-popup-element.png)
 
 ## Change the HTML attributes
 
@@ -296,7 +294,7 @@ Prevent selection of specific items by applying custom CSS classes to the popup 
 {% include_relative code-snippet/style/disable-listitem.razor %}
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <script>
     window.disable = function (id) { 
@@ -327,7 +325,7 @@ In the following example, the `Opened` event is used to call the `AddAttribute` 
 {% include_relative code-snippet/style/add-attribute-listitem.razor %}
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <script> 
     function AddAttribute(datasource, id) { 
