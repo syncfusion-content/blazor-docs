@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor — Syncfusion
-description: Learn how Syncfusion Blazor components use UI row & column virtualization, Overscan, virtual placeholders, frozen columns, and infinite scrolling for large datasets.
+description: Learn how Syncfusion Blazor components use row and column virtualization, Overscan, virtual placeholders, frozen columns, and infinite scrolling.
 platform: Blazor
 control: Common
 documentation: ug
@@ -122,7 +122,7 @@ The following major Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor comp
 | UI Virtualization                 | ListView, File Manager, TreeView| Renders only the visible items                                                                                  |
 | Row Virtualization                | DataGrid, Gantt Chart, TreeGrid | Renders rows in the viewport and loads more during vertical scrolling                                           |
 | Column Virtualization             | DataGrid, Gantt Chart, TreeGrid | Renders columns in view and loads more during horizontal scrolling                                              |
-| Timeline Virtualization           | Gantt Chart                     | Virtualizes timeline segments (time units) to efficiently render large project timelines                        |
+| Timeline Virtualization           | Gantt Chart                     | Optimizes timeline segments (time units) to efficiently render large project timelines                          |
 | Cell Placeholder (VirtualMaskRow) | DataGrid, TreeGrid              | Shows placeholder cells while fetching or rendering virtualized content, improving perceived loading smoothness |
 | Infinite Scrolling                | DataGrid                        | Loads additional data blocks when the end of the content is reached                                             |
 
