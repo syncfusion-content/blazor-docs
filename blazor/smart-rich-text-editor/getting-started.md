@@ -20,7 +20,7 @@ This section briefly explains about how to include [Blazor Smart Rich Text Edito
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * OpenAI or Azure OpenAI Account
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor App in Visual Studio
 
@@ -50,7 +50,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * OpenAI or Azure OpenAI Account
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor App in Visual Studio Code
 
@@ -334,7 +334,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Tex
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart RichTextEditor component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component in your default web browser.
 
 * Start typing content and use the AI tools in the toolbar to enhance your editing experience.
 

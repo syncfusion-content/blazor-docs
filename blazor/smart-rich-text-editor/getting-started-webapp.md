@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Getting Started with Syncfusion Smart Rich Text Editor in Web App
-description: Learn how to create and run Syncfusion Blazor Smart RichTextEditor component in Blazor Web App with server interactivity.
+description: Learn how to create and run Syncfusion Blazor Smart Rich Text Editor component in Blazor Web App with server interactivity.
 platform: Blazor
-control: Smart RichTextEditor
+control: Smart Rich Text Editor
 documentation: ug
 ---
 
@@ -17,7 +17,7 @@ This section briefly explains about how to include [Blazor Smart Rich Text Edito
 * OpenAI or Azure OpenAI Account
 * Visual Studio 2022 or later
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor Components are compatible with `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor Web App in Visual Studio
 
@@ -290,7 +290,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Tex
 
 N> Notice the `@rendermode InteractiveServer` directive on the page. This is required for Blazor Web App to enable server-side interactivity.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart RichTextEditor component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component in your default web browser.
 
 * Start typing content and use the AI tools in the toolbar to enhance your editing experience.
 
