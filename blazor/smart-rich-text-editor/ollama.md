@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ollama Configuration for Blazor Smart Rich Text Editor | Syncfusion
-description: Learn how to configure Ollama for Syncfusion Blazor Smart Rich Text Editor component.
+description: Step-by-step guide to configure Ollama for the Syncfusion Blazor Smart Rich Text Editor, covering installation, client setup, and usage examples for local AI.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -301,8 +301,8 @@ IChatClient chatClient = useForCode ? codeClient : generalClient;
 
 3. **Choose Efficient Models**
    - Mistral is fastest
-   - Orca-mini for lightweight deployment
-   - Dolphin-mixtral for best quality
+   - `orca-mini` for lightweight deployment
+   - `dolphin-mixtral` for best quality
 
 4. **Implement Caching**
    - Cache common prompts
@@ -339,7 +339,7 @@ ollama pull mistral
 ```
 
 **Out of memory errors**
-- Use smaller models (orca-mini, mistral)
+- Use smaller models (`orca-mini`, `mistral`)
 - Close other applications
 - Restart Ollama service
 
@@ -358,8 +358,8 @@ ollama pull mistral
 | General editing | Mistral | Fast, good quality | Less context |
 | Content creation | Llama 2 | Balanced | Larger model |
 | Code assistance | Neural-chat | Good reasoning | Slower |
-| Lightweight | Orca-mini | Very fast | Limited capability |
-| Best quality | Dolphin-mixtral | Excellent | Resource heavy |
+| Lightweight | `orca-mini` | Very fast | Limited capability |
+| Best quality | `dolphin-mixtral` | Excellent | Resource heavy |
 
 ## Security Considerations
 

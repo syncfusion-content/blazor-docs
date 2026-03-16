@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Inference Backend for Blazor Smart Rich Text Editor | Syncfusion
-description: Learn how to configure custom AI inference backends for the Syncfusion Blazor Smart Rich Text Editor component.
+title: Custom Inference Backend for Syncfusion Smart Rich Text Editor
+description: Learn how to configure custom AI inference back-ends for the Syncfusion Blazor Smart Rich Text Editor component.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Custom Inference Backend
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor supports custom inference backends, allowing you to integrate with proprietary AI services or internal AI infrastructure.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor supports custom inference back-ends, allowing you to integrate with proprietary AI services or internal AI infrastructure.
 
 ## Overview
 
-Custom backends enable:
+Custom back-ends enable:
 
 - Integration with internal AI services
 - Compliance with corporate data policies
@@ -237,7 +237,7 @@ builder.Services.AddSingleton<IChatClient>(customBackend);
 
 ## Streaming Responses
 
-For better UX with custom backends:
+For better UX with custom back-ends:
 
 ```csharp
 public class StreamingCustomAIBackend : IChatClient
