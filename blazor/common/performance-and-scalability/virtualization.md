@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor — Syncfusion
-description: Learn how Syncfusion Blazor components use UI, row & column virtualization, Overscan, virtual placeholders, frozen columns, and infinite scrolling for large datasets.
+description: Learn how Syncfusion Blazor components use UI row & column virtualization, Overscan, virtual placeholders, frozen columns, and infinite scrolling for large datasets.
 platform: Blazor
 control: Common
 documentation: ug
