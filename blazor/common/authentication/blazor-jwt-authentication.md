@@ -26,7 +26,7 @@ Syncfusion components make HTTP requests to your API internally. JWT allows each
 ## Prerequisites
 
 - .NET SDK 8.0 or above.
-- Visual Studio 2022 ++.
+- Visual Studio 2022 or newer with ASP.NET and web development workload.
 
 ## Create a Blazor Web App (Interactive Server)
 
@@ -52,7 +52,7 @@ Define the JWT settings that the server will use to sign and validating authenti
 ```json
 {
   "Jwt": {
-    "Key": "REPLACE_WITH_A_LONG_RANDOM_SECRET_32+_CHARS", // Do not store secrets in appsettings.json for production; use environment variables or Key Vault.
+    "Key": "REPLACE_WITH_A_LONG_RANDOM_SECRET_32+_CHARS", // Note: For production, do not store secrets in appsettings.json. Use environment variables or a secret store (for example Azure Key Vault).
     "Issuer": "BlazorJWT",
     "Audience": "BlazorJWTClient"
   }
@@ -102,7 +102,6 @@ namespace BlazorJWT.Services
                 notBefore: DateTime.UtcNow.AddMinutes(-1),
                 expires: DateTime.UtcNow.AddMinutes(30),
                 signingCredentials: creds);
-
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
@@ -129,7 +128,7 @@ public class AuthController : ControllerBase
     [HttpPost("token")]
     public IActionResult Token([FromQuery] string user = "user123")
     {
-        // Demo only: validate user credentials here (e.g., check password, use Identity).
+
         var jwt = _tokenService.IssueToken(user, name: user);
         return Ok(new { token = jwt });
     }
@@ -246,9 +245,7 @@ public class OrdersDetails
     public string? CustomerID { get; set; }
     public string? ShipCity { get; set; }
     public string? ShipCountry { get; set; }
-
     private static List<OrdersDetails>? _data;
-
     public static List<OrdersDetails> GetAllRecords()
     {
         if (_data is null)
@@ -353,7 +350,6 @@ Attach the JWT token to HTTP headers so the DataManager can send authenticated r
     private async Task LoadGridWithToken()
     {
         error = null;
-
         try
         {
             var baseUri = new Uri(Nav.BaseUri);
