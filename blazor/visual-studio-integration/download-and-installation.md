@@ -36,13 +36,13 @@ The following steps describe how to install the Syncfusion<sup style="font-size:
 
 3. In the **Online** tab, search for **Syncfusion Blazor**.
 
-    ![Manage Extensions window showing Syncfusion Blazor search results](images/OnlineExtension.png)
+    ![Manage Extensions window showing Syncfusion Blazor search results](images/onlineextension.webp)
 
 4. Click **Download** for the **Syncfusion Blazor Template Studio** extension.
 
 5. Close all Visual Studio instances to begin the installation process. A VSIX installation prompt appears.
 
-    ![VSIX Installer prompting to modify Visual Studio](images/VSIXinstallation.png)
+    ![VSIX Installer prompting to modify Visual Studio](images/vsixinstallation.webp)
 
 6. Click **Modify**.
 
@@ -50,7 +50,7 @@ The following steps describe how to install the Syncfusion<sup style="font-size:
 
 8. In the **Extensions** menu, access the Syncfusion<sup style="font-size:70%">&reg;</sup> extensions in Visual Studio.
 
-    ![SyncfusionMenu](images/SyncfusionMenu.png)
+    ![SyncfusionMenu](images/syncfusionmenu.webp)
 
 ## Install from the Visual Studio Marketplace
 
@@ -64,11 +64,11 @@ The following steps illustrate how to download and install the Syncfusion<sup st
 
 3. Double-click the downloaded VSIX file to install. In the VSIX Installer, select the Visual Studio instance(s) to install the extension.
 
-    ![VSIX Installer showing Visual Studio instance selection](images/VSIXinstallation1.png)
+    ![VSIX Installer showing Visual Studio instance selection](images/vsixinstallation1.webp)
 
 4. Click the **Modify** button.
 
 5. After installation completes, open Visual Studio. The Syncfusion<sup style="font-size:70%">&reg;</sup> extensions are available under the **Extensions** menu.
 
 
-     ![SyncfusionMenu](images/SyncfusionMenu.png)
+     ![SyncfusionMenu](images/syncfusionmenu.webp)
