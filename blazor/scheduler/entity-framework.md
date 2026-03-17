@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Scheduler — EF Core + OData v4 | Syncfusion
-description: This documentation provides a step-by-step guide for integrating Syncfusion Blazor Scheduler with Entity Framework Core and OData v4 for managing scheduling data.
+description: This documentation provides a step-by-step guide for integrating Syncfusion Blazor Scheduler with EF Core and OData v4 for managing scheduling data.
 platform: Blazor
 control: Scheduler
 documentation: ug
