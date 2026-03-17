@@ -220,7 +220,7 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 ### Monitor Usage
 
-Visit [OpenAI Platform Usage](https://platform.openai.com/account/usage) to monitor:
+Visit [OpenAI Platform Usage](https://platform.openai.com/usage/) to monitor:
 - Total API usage
 - Cost tracking
 - Request count
