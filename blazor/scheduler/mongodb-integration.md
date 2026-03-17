@@ -870,10 +870,10 @@ Open a web browser and navigate to the URL shown in the terminal (typically `htt
 
 ### Output Preview
 Syncfusion Blazor Scheduler
-![*image illustrating Syncfusion Blazor Scheduler*](./images/blazor-scheduler-mongodb-output.png)
+![image illustrating Syncfusion Blazor Scheduler](./images/blazor-scheduler-mongodb-output.png)
 
 MongoDB Records
-![*image illustrating Syncfusion Blazor Scheduler events in MongoDB*](./images/blazor-scheduler-mongodb-db.png)
+![image illustrating Syncfusion Blazor Scheduler events in MongoDB](./images/blazor-scheduler-mongodb-db.png)
 
 ---
 
