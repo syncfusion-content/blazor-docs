@@ -3,7 +3,7 @@ layout: post
 title: Blazor Scheduler with Microsoft Outlook Integration | Syncfusion
 description: Connect the Syncfusion Blazor Scheduler to Outlook Calendar using Microsoft Graph API and Azure AD (Entra ID) for seamless, real‑time event synchronization.
 control: Scheduler
-platform: blazor
+platform: Blazor
 documentation: ug
 ---
 
@@ -21,12 +21,10 @@ The Syncfusion [Blazor Scheduler](https://www.syncfusion.com/blazor-components/b
 
 ## Prerequisites
 
-Install the following software and packages before starting the process:
+[System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) | 17.14 or later | Development IDE with Blazor workload |
-| [.NET SDK](https://dotnet.microsoft.com/en-us/) | net8.0 or compatible | Runtime and build tools |
 | [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)| Latest Version | Scheduler component |
 | [Microsoft.Identity.Web](https://www.nuget.org/packages/Microsoft.Identity.Web/)| 4.5.0 | Library that simplifies Azure AD(Microsoft Entra ID) authentication in ASP.NET Core |
 | [Microsoft.Identity.Web.UI](https://www.nuget.org/packages/Microsoft.Identity.Web.UI/)| 4.5.0 | Provides ready‑made UI pages for Azure AD(Microsoft Entra ID) sign‑in in ASP.NET Core |
@@ -102,29 +100,26 @@ You must create a **Client Secret** for server-side authentication with Microsof
 
 3. Go to **Certificates & secrets** and Copy the **Secret Value** .
 
-4. Keep this values secure, as it will be referenced in the `appsettings.json` file.
+4. Keep these values secure, as it will be referenced in the `appsettings.json` file.
 
 ---
 
 ## Integrating Syncfusion Blazor Scheduler
 
-### Step 1: Create a Blazor Web App
+### Step 1: Create a Blazor Web App using Visual Studio
 
-Create a **Blazor Web App** using Visual Studio 2022
-
-**Using Visual Studio 2022 or later:**
-1. Open Visual Studio 2022
+1. Open Visual Studio 
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **BlazorSchedulerApp**
-5. Select **.NET 8.0** as the target framework
+5. Select **.NET 8.0 or compatible** as the target framework
 6. Set **Interactive render mode** to **Server**
 7. Set **Interactivity location** to **Per page/component**
 8. Click **Create**
 
 > Configure the Interactive render mode to **InteractiveServer** during project creation as the Scheduler requires interactivity for CRUD operations.
 
-### Step 2: Install Required NuGet Packages and Configure Blazor Scheduler Component with GraphQL
+### Step 2: Install required NuGet Packages and Configure Blazor Scheduler Component with Microsoft Graph
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files—such as `Program.cs`, `appsettings.json`, the `wwwroot` folder, and the `Components` folder.
 
@@ -139,7 +134,6 @@ Alternatively, run the following commands in the Package Manager Console to achi
 Install-Package Syncfusion.Blazor
 Install-Package Microsoft.Identity.Web
 Install-Package Microsoft.Identity.Web.UI
-
 ```
 
 #### Project File Reference
@@ -166,7 +160,7 @@ All required packages are now installed.
 @using Microsoft.Identity.Web
 ```
 
-#### Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and `<body>`section to add:
+#### Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and `<body>` section to add:
 
 ```html
 <head>
@@ -295,7 +289,7 @@ Update the placeholders with your tenant and app registration details.
 }
 ```
 
-### Explanation of the JSON Configuration
+#### Explanation of the JSON Configuration
 
 - **`Instance`**  
   Specifies the base URL used by Azure AD(Microsoft Entra ID) for authentication.  
@@ -753,7 +747,7 @@ The `Home.razor` component is responsible for rendering the Syncfusion Scheduler
     }
     ```
 
-### Component Explanation:
+#### Component Explanation:
 
 - **`@rendermode InteractiveServer`**  
   Enables Blazor interactive server‑side rendering, allowing real‑time UI updates for Scheduler actions such as create, edit, and delete without page reloads.
@@ -856,4 +850,4 @@ This guide demonstrates how to:
 3. Build and Run the Application. [🔗](#step-7-build-and-run-the-application)
 4. Complete Sample Repository. [🔗](#complete-sample-repository)
 
-The application now provides a complete solution for managing appointments using a modern Syncfusion Blazor Scheduler fully integrated with Microsoft Graph for real-time calendar synchronization
+The application now provides a complete solution for managing appointments using a modern Syncfusion Blazor Scheduler fully integrated with Microsoft Graph for real-time Outlook calendar synchronization
