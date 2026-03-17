@@ -218,14 +218,6 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 4. **Monitor Usage**: Track API calls and costs
 5. **Batch Operations**: Process multiple requests efficiently
 
-### Monitor Usage
-
-Visit [OpenAI Platform Usage](https://platform.openai.com/usage/) to monitor:
-- Total API usage
-- Cost tracking
-- Request count
-- Token consumption
-
 ## Security Best Practices
 
 1. **Never hardcode API keys** - Use environment variables or secure configuration
