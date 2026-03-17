@@ -44,7 +44,7 @@ Visit [Ollama's Official Website](https://ollama.com) and download the installer
 #### macOS
 
 1. Download the macOS installer
-2. Open the `.dmg` file
+2. Open the `.dmg file`
 3. Drag Ollama to Applications folder
 4. Launch from Applications
 
@@ -301,8 +301,8 @@ IChatClient chatClient = useForCode ? codeClient : generalClient;
 
 3. **Choose Efficient Models**
    - Mistral is fastest
-   - `orca-mini` for lightweight deployment
-   - `dolphin-mixtral` for best quality
+   - `Orca-mini` for lightweight deployment
+   - `Dolphin-mixtral` for best quality
 
 4. **Implement Caching**
    - Cache common prompts
@@ -358,8 +358,8 @@ ollama pull mistral
 | General editing | Mistral | Fast, good quality | Less context |
 | Content creation | Llama 2 | Balanced | Larger model |
 | Code assistance | Neural-chat | Good reasoning | Slower |
-| Lightweight | `orca-mini` | Very fast | Limited capability |
-| Best quality | `dolphin-mixtral` | Excellent | Resource heavy |
+| Lightweight | Orca-mini | Very fast | Limited capability |
+| Best quality | Dolphin-mixtral | Excellent | Resource heavy |
 
 ## Security Considerations
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenAI Configuration for Blazor Smart Rich Text Editor | Syncfusion
-description: Step-by-step guide to configure OpenAI for the Syncfusion Blazor Smart Rich Text Editor: API keys, client setup, DI registration, usage examples, and best practices.
+description: Configure OpenAI for Syncfusion Blazor Smart Rich Text Editor: API keys, client setup, DI registration, usage examples, and best practices.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -34,7 +34,7 @@ OpenAI offers various models for different use cases:
 - `gpt-3.5-turbo`: Fast and cost-effective
 - `gpt-3.5-turbo-16k`: Extended context window
 
-> **Note**: Model availability and names may change. Refer to [OpenAI model list](https://platform.openai.com/docs/models/overview) for current options.
+> **Note**: Model availability and names may change. Refer to [OpenAI documentation](https://developers.openai.com/api/docs/models) for current options.
 
 ## Installation
 
@@ -199,8 +199,8 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 - Implement request throttling
 - Check usage limits on OpenAI account
 
--**Model Not Found Error**
-- Verify model name is correct (check [model list](https://platform.openai.com/docs/models/overview))
+**Model Not Found Error**
+- Verify model name is correct (check [model list](https://developers.openai.com/api/docs/models))
 - Ensure model is available in your region/account
 
 **No Response from AI**
@@ -220,7 +220,7 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 ### Monitor Usage
 
-Visit [OpenAI Platform Usage](https://platform.openai.com/account/usage) to monitor:
+Visit [OpenAI Platform Usage](https://platform.openai.com/usage) to monitor:
 - Total API usage
 - Cost tracking
 - Request count
@@ -241,4 +241,4 @@ Visit [OpenAI Platform Usage](https://platform.openai.com/account/usage) to moni
 * [AI Features and Customization](ai-features.md)
 * [Azure OpenAI Configuration](azure-openai-service.md)
 * [Ollama Configuration](ollama.md)
-* [OpenAI Documentation](https://platform.openai.com/docs/)
+* [OpenAI Documentation](https://developers.openai.com/api/docs)
