@@ -139,7 +139,9 @@ public class AuthController : ControllerBase
 
  Register JWT authentication and authorization middleware to validate incoming API requests. Add these configurations in `Program.cs`.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="~/Program.cs" %}
+
 using System.Text;
 using BlazorJWT.Components;
 using BlazorJWT.Services;
@@ -189,7 +191,8 @@ app.MapRazorComponents<App>()
    .AddInteractiveServerRenderMode();
 app.Run();
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Connecting Syncfusion DataGrid with JWT token
 
@@ -203,26 +206,36 @@ To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual 
 
 Open the **~/_Imports.razor** file and import the required namespaces.
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **3. Register the Syncfusion® Blazor service in the ~/Program.cs file**
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="~/Program.cs" %}
+
 // Program.cs
 using Syncfusion.Blazor;
  
 builder.Services.AddSyncfusionBlazor();
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **4. Add stylesheet and script resources**
 
 Include the theme stylesheet and script references in the `App.razor` file.
 
-```razor
+{% tabs %}
+{% highlight html  %}
+
 <head>
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
@@ -230,7 +243,9 @@ Include the theme stylesheet and script references in the `App.razor` file.
 <body>
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Create sample data model
 
@@ -308,8 +323,9 @@ await grid.Refresh();
 
 Attach the JWT token to HTTP headers so the DataManager can send authenticated requests.
 
-```csharp
-// Razor page
+{% tabs %}
+{% highlight razor %}
+
 @page "/"
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -362,7 +378,7 @@ Attach the JWT token to HTTP headers so the DataManager can send authenticated r
             await Task.Yield();
             if (grid is not null)
             {
-                await grid.Refresh(); // Triggers the first data request using the DataManager and headers
+                await grid.Refresh(); // Triggers the first data request using the DataManager and headers.
             }
         }
         catch (Exception ex)
@@ -372,5 +388,8 @@ Attach the JWT token to HTTP headers so the DataManager can send authenticated r
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 The complete application flow ensures the DataGrid loads only after the user is authenticated using a valid JWT.
