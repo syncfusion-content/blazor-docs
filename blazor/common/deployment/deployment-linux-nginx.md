@@ -44,7 +44,7 @@ cd publish
 dotnet SfBlazorApp.dll --urls "http://0.0.0.0:5000"
 ```
 
-![Publish Blazor Web App](../images/publish-blazor-app.jpg)
+![Publish Blazor Web App](../images/publish-blazor-app.webp)
 
 ## Configure NGINX to Proxy Requests
 
@@ -102,7 +102,7 @@ http://<your-vm-ip>/
 
 You should now see your Blazor Web app running successfully with Syncfusion components!
 
-![Output-Linux](../images/output-linux.png)
+![Output-Linux](../images/output-linux.webp)
 
 ## See also
 
