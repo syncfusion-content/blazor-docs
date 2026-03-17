@@ -23,17 +23,17 @@ N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Code
 
     To generate a specific component code, right-click in the Razor editor at the desired line and select **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Code Generator...**
 
-    ![CodeGeneratorCommand](images/Code-Generator-Command.PNG)
+    ![CodeGeneratorCommand](images/code-generator-command.webp)
 
     **Option 2:**
 
     Place the cursor at the required line in the .razor file, then choose **Extensions -> Syncfusion -> Essential Studio for Blazor -> Syncfusion Blazor Code Generator…** from the Visual Studio menu.
 
-    ![CodeGeneratorMenu](images/Code-Generator-Menu.PNG)
+    ![CodeGeneratorMenu](images/code-generator-menu.webp)
 
 3. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Code Generator wizard opens. Choose the required component.
 
-    ![CodeGeneratorWizard](images/Code-Generator-MainWizard.png)
+    ![CodeGeneratorWizard](images/code-generator-mainwizard.webp)
 
     **Data Binding:** Data operation fields will be visible if the selected component has data. The data will be listed from your application. It interacts with data models and reduces the amount of time spent developing your application. You can choose the required Data Model Class, Data Source, Id, and more from your application.
 
@@ -43,11 +43,11 @@ N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Code
 
     Click **Insert** to generate the selected component render mode and insert it at the cursor location.
 
-    ![ComponentRenderCode](images/Code-Generator-ComponentRenderCode.PNG)
+    ![ComponentRenderCode](images/code-generator-componentrendercode.webp)
 
 4. In the Output window, select **Syncfusion Blazor Code Generator** from the **Show output from** list to review the changes applied to the application.
 
-    ![OutputWindow](images/Code-Generator-OutputWindow.PNG)
+    ![OutputWindow](images/code-generator-outputwindow.webp)
 
 5. The selected Syncfusion® Blazor component code is inserted into the active Razor file, and the application is configured with the latest NuGet package, styles, and namespaces required for the selected component.
 

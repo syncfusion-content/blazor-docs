@@ -28,16 +28,16 @@ The steps below describe how to install the Syncfusion<sup style="font-size:70%"
 2. Navigate to **View > Extensions**, and the Manage Extensions option will appear on the left side of the window.
 3. In the search box, enter Syncfusion Blazor to find the Syncfusion Blazor extension in the Marketplace.
 
-     ![Extensions view showing Syncfusion Blazor extension search results](images/Extension.png)
+     ![Extensions view showing Syncfusion Blazor extension search results](images/extension.webp)
 
 4. Select **Blazor VSCode Extensions - Syncfusion**, and click **Install**.
 5. Reload Visual Studio Code after installation by using the **Reload Window** command from the Command Palette. Open the Command Palette with **Ctrl+Shift+P**, then run Reload Window.
 
-     ![Command Palette highlighting the Reload Window command](images/Reload-Window.png)
+     ![Command Palette highlighting the Reload Window command](images/reload-window.webp)
 
 6. Now, you can create a new Syncfusion® Blazor application by using the Syncfusion® Blazor extensions from the Visual Studio Code Palette Find the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio: Launch** from Visual Studio Code commands to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio wizard.
 
-     ![Command Palette showing Syncfusion Blazor Template Studio](images/CreateProjectPalette.png)
+     ![Command Palette showing Syncfusion Blazor Template Studio](images/createprojectpalette.webp)
 
 ## Install from the Visual Studio Code Marketplace
 
@@ -48,11 +48,11 @@ The steps below describe how to download and install the extension from the Visu
 3. In Visual Studio Code, click **Install** on the **Blazor VSCode Extensions - Syncfusion** page.
 4. Reload Visual Studio Code after installation by using the **Reload Window** command from the Command Palette. Open the Command Palette with **Ctrl+Shift+P**, then run Reload Window.
 
-     ![Command Palette highlighting the Reload Window command](images/Reload-Window.png)
+     ![Command Palette highlighting the Reload Window command](images/reload-window.webp)
 
 5. Now, you can create a new Syncfusion® Blazor application by using the Syncfusion® Blazor extensions from the Visual Studio Code Palette Find the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio: Launch** from Visual Studio Code commands to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio wizard.
 
-     ![Command Palette showing Syncfusion Blazor Template Studio](images/CreateProjectPalette.png)
+     ![Command Palette showing Syncfusion Blazor Template Studio](images/createprojectpalette.webp)
 
 ## Manually Installing an Extension in Visual Studio Code
 
@@ -61,13 +61,13 @@ The steps below describe how to install the Syncfusion Blazor extension manually
 1. Download the SyncfusionInc.Blazor-VSCode-Extensions.vsix file from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions).
 2. In Visual Studio Code, open the Extensions view by clicking the Extensions icon in the Activity Bar.
 
-      ![Extensions icon highlighted in the Activity Bar](images/ExtensionIcon.png)
+      ![Extensions icon highlighted in the Activity Bar](images/extensionicon.webp)
 
 3. Click the More Actions (ellipsis) button in the top-right of the Extensions view, and select Install from VSIX.
 
-      ![Extensions view More Actions menu with Install from VSIX option](images/InstallVsix.png)
+      ![Extensions view More Actions menu with Install from VSIX option](images/installvsix.webp)
 
 4. Browse to the downloaded SyncfusionInc.Blazor-VSCode-Extensions.vsix file and complete the installation.
 
 
-      ![File selection dialog for SyncfusionInc.Blazor-VSCode-Extensions.vsix](images/DownloadVsix.png)
+      ![File selection dialog for SyncfusionInc.Blazor-VSCode-Extensions.vsix](images/downloadvsix.webp)
