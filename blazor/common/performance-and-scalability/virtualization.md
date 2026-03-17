@@ -114,12 +114,12 @@ For Server render mode, if your app's interactivity location is set to `Per page
 
 The following major Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide built‑in virtualization support to efficiently handle large datasets.
 
-* **DataGrid** – Supports Row virtualization, column virtualization, buffered rendering (Overscan), virtual loading placeholders (mask row), frozen columns with virtualization, and infinite scrolling.
-* **ListView** – Supports UI virtualization with window or container scrolling modes.
-* **File Manager** – Supports UI virtualization in both Details and Large Icons views.
-* **TreeView** – Provides UI virtualization to render only visible nodes, significantly boosting performance in large hierarchical structures.  
-* **Gantt Chart** – Includes row virtualization, timeline virtualization, and column virtualization to efficiently render large project schedules and complex timelines. 
-* **TreeGrid** – Offers row virtualization, column virtualization, and cell placeholders (VirtualMaskRow) for smoother loading with large hierarchical data.
+* **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** – Supports Row virtualization, column virtualization, buffered rendering (Overscan), virtual loading placeholders (mask row), frozen columns with virtualization, and infinite scrolling.
+* **[ListView](https://www.syncfusion.com/blazor-components/blazor-listview)** – Supports UI virtualization with window or container scrolling modes.
+* **[File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)** – Supports UI virtualization in both Details and Large Icons views.
+* **[TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview)** – Provides UI virtualization to render only visible nodes, significantly boosting performance in large hierarchical structures.  
+* **[Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)** – Includes row virtualization, timeline virtualization, and column virtualization to efficiently render large project schedules and complex timelines. 
+* **[TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid)** – Offers row virtualization, column virtualization, and cell placeholders (VirtualMaskRow) for smoother loading with large hierarchical data.
 
 ## Advantages of Virtualization
 
