@@ -94,7 +94,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
 ## Add Syncfusion Blazor component
 
@@ -112,8 +112,10 @@ Add a Syncfusion Blazor component to any Razor file in the Blazor project. The e
     {
         Orders = Enumerable.Range(1, 5).Select(x => new Order()
         {
-            OrderID = 0 + x,
+            OrderID = 1000 + x,
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
 
@@ -121,7 +123,8 @@ Add a Syncfusion Blazor component to any Razor file in the Blazor project. The e
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 }
 
