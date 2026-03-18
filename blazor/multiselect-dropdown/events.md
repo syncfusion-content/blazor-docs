@@ -174,15 +174,15 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 </SfMultiSelect>
 
 @code {
-    public class Country { public string CustomerID { get; set; } public string ContactName { get; set; } }
+    public class Country 
+    { 
+        public string CustomerID { get; set; } 
+        public string ContactName { get; set; } 
+    }
 
     private void OnActionBegin(ActionBeginEventArgs args)
     {
-        if (args.EventName == "filtering" && args.Query != null)
-        {
-            // Add extra filter for active records only
-            args.Query.AddParams("onlyActive", true);
-        }
+        Console.WriteLine("OnActionBegin event triggered");
     }
 }
 ```
@@ -209,7 +209,11 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 </SfMultiSelect>
 
 @code {
-    public class Employee { public int ID { get; set; } public string Name { get; set; } }
+    public class Employee 
+    { 
+        public int ID { get; set; } 
+        public string Name { get; set; } 
+    }
 
     private List<Employee> Employees = new()
     {
@@ -242,7 +246,11 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 </SfMultiSelect>
 
 @code {
-    public class Product { public int ProductID { get; set; } public string ProductName { get; set; } }
+    public class Product 
+    {
+        public int ProductID { get; set; } 
+        public string ProductName { get; set; } 
+    }
 
     private string errorMessage = "";
 
