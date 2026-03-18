@@ -11,11 +11,11 @@ documentation: ug
 
 The Syncfusion Blazor [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started) component exposes a rich set of events that allow developers to interact with and respond to various lifecycle moments — from data loading and popup open/close, to item selection, chip tagging, custom values, filtering, and clearing. All events are defined through the [`MultiSelectEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html) child component, which is added inside [`SfMultiSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html).
 
-> **Note:** All event handlers must be registered inside the [`<MultiSelectEvents>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html) tag within [`<SfMultiSelect>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html). Both [`TValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) and [`TItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) type parameters must match the parent [`SfMultiSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html).
+N> All event handlers must be registered inside the `<MultiSelectEvents>` tag within `<SfMultiSelect>`. Both `TValue` and `TItem` type parameters must match the parent `SfMultiSelect`.
 
 ## Registering events
 
-Events are registered by adding [`<MultiSelectEvents>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html) as a child of [`<SfMultiSelect>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) and assigning handler methods to the appropriate event parameters.
+Events are registered by adding `<MultiSelectEvents>` as a child of `<SfMultiSelect>` and assigning handler methods to the appropriate event parameters.
 
 ```razor
 @using Syncfusion.Blazor.DropDowns;
@@ -229,7 +229,7 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnActionFailure) event fires when a remote data fetch operation fails (for example, due to a network error or server exception). Use it to display error messages or implement retry logic.
 
-**Event argument:** `Exception`
+**Event argument:** [`Exception`](https://learn.microsoft.com/en-us/dotnet/api/system.exception?view=net-10.0)
 
 ```razor
 @using Syncfusion.Blazor.DropDowns;
@@ -415,7 +415,7 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 | `OldValue` | `TValue` | The previous selected value(s) before the change. |
 | `IsInteracted` | `bool` | `true` if the change was triggered by user interaction. |
 
-> **Note:** By default, [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) is fired on every selection or removal. Set [EnableChangeOnBlur](https://blazor.syncfusion.com/documentation/multiselect-dropdown/api-sfMultiSelect) to `true` to fire [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) only when the component loses focus.
+N> By default, `ValueChange` is fired after changing the value selections and when the component loses focus, since [EnableChangeOnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableChangeOnBlur) is `true` by default. Set `EnableChangeOnBlur` to `false` to fire `ValueChange` immediately upon selection change.
 
 ```razor
 @using Syncfusion.Blazor.DropDowns;
@@ -802,7 +802,7 @@ The [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 | `PreventDefaultAction` | `bool` | Set to `true` to disable the default built-in filtering and apply custom logic instead. |
 | `Cancel` | `bool` | Set to `true` to cancel the filter operation entirely. |
 
-> **Note:** When implementing custom filtering, set `args.PreventDefaultAction = true` and then call `await multiSelectRef.FilterAsync(filteredData, query)` to apply your own filter result.
+N> When implementing custom filtering, set `args.PreventDefaultAction = true` and then call `await multiSelectRef.FilterAsync(filteredData, query)` to apply your own filter result.
 
 **Built-in filtering:**
 
@@ -826,7 +826,7 @@ The [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 }
 ```
 
-**Custom filtering with `FilterAsync`:**
+**Custom filtering with [`FilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FilterAsync_System_Collections_Generic_IEnumerable__1__Syncfusion_Blazor_Data_Query_Syncfusion_Blazor_DropDowns_FieldSettingsModel_):**
 
 ```razor
 @using Syncfusion.Blazor.DropDowns;
@@ -970,7 +970,7 @@ The [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
 }
 ```
 
-> **Note:** The [`OnResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnResizeStart) and [`OnResizeStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnResizeStop) events are only triggered when `AllowResize="true"` is set on the [`SfMultiSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component.
+N> The `OnResizeStart` and `OnResizeStop` events are only triggered when `AllowResize="true"` is set on the `SfMultiSelect` component.
 
 ---
 
@@ -980,31 +980,31 @@ The following table summarizes all available events in the [`MultiSelectEvents`]
 
 | Event | Event Argument | Description |
 |---|---|---|
-| [`Created`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `object` | Fires once when the component finishes initialization. |
-| [`Destroyed`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `object` | Fires when the component is torn down. |
-| [`Focus`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `object` | Fires when the component receives focus. |
-| [`Blur`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `object` | Fires when the component loses focus. |
-| [`OnActionBegin`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `ActionBeginEventArgs` | Fires before a data fetch operation starts. |
-| [`OnActionComplete`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `ActionCompleteEventArgs<TItem>` | Fires after data fetch completes successfully. |
-| [`OnActionFailure`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `Exception` | Fires when a remote data fetch fails. |
-| [`DataBound`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `DataBoundEventArgs` | Fires after the data source is fully bound to the popup list. |
-| [`OnOpen`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `BeforeOpenEventArgs` | Fires before the popup opens; supports cancellation. |
-| [`Opened`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `PopupEventArgs` | Fires after the popup has fully opened. |
-| [`OnClose`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `PopupEventArgs` | Fires before the popup closes; supports cancellation. |
-| [`Closed`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `ClosedEventArgs` | Fires after the popup has fully closed. |
-| [`ValueChange`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `MultiSelectChangeEventArgs<TValue>` | Fires when the selected value changes. |
-| [`OnValueSelect`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `SelectEventArgs<TItem>` | Fires when an item is selected; supports cancellation. |
-| [`OnValueRemove`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `RemoveEventArgs<TItem>` | Fires before a selected value is removed; supports cancellation. |
-| [`ValueRemoved`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `RemoveEventArgs<TItem>` | Fires after a selected value is removed. |
-| [`SelectingAll`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `SelectingAllEventArgs<TItem>` | Fires before select-all or deselect-all; supports cancellation. |
-| [`SelectedAll`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `SelectAllEventArgs<TItem>` | Fires after select-all or deselect-all completes. |
-| [`OnChipTag`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `TaggingEventArgs<TItem>` | Fires before an item is rendered as a chip; supports CSS customization. |
-| [`ChipSelected`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `ChipSelectedEventArgs<TItem>` | Fires when a chip is clicked/selected. |
-| [`Cleared`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `MouseEventArgs` | Fires after all selected values are cleared. |
-| [`Filtering`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `FilteringEventArgs` | Fires on every keystroke in the filter box. |
-| [`CustomValueSpecifier`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `CustomValueEventArgs<TItem>` | Fires when a user enters a custom value not present in the data source. |
-| [`OnResizeStart`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `object` | Fires when popup resize begins (requires `AllowResize="true"`). |
-| [`OnResizeStop`](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events) | `object` | Fires when popup resize ends (requires `AllowResize="true"`). |
+| [`Created`](#created) | `object` | Fires once when the component finishes initialization. |
+| [`Destroyed`](#destroyed) | `object` | Fires when the component is torn down. |
+| [`Focus`](#focus) | `object` | Fires when the component receives focus. |
+| [`Blur`](#blur) | `object` | Fires when the component loses focus. |
+| [`OnActionBegin`](#onactionbegin) | `ActionBeginEventArgs` | Fires before a data fetch operation starts. |
+| [`OnActionComplete`](#onactioncomplete) | `ActionCompleteEventArgs<TItem>` | Fires after data fetch completes successfully. |
+| [`OnActionFailure`](#onactionfailure) | `Exception` | Fires when a remote data fetch fails. |
+| [`DataBound`](#databound) | `DataBoundEventArgs` | Fires after the data source is fully bound to the popup list. |
+| [`OnOpen`](#onopen) | `BeforeOpenEventArgs` | Fires before the popup opens; supports cancellation. |
+| [`Opened`](#opened) | `PopupEventArgs` | Fires after the popup has fully opened. |
+| [`OnClose`](#onclose) | `PopupEventArgs` | Fires before the popup closes; supports cancellation. |
+| [`Closed`](#closed) | `ClosedEventArgs` | Fires after the popup has fully closed. |
+| [`ValueChange`](#valuechange) | `MultiSelectChangeEventArgs<TValue>` | Fires when the selected value changes. |
+| [`OnValueSelect`](#onvalueselect) | `SelectEventArgs<TItem>` | Fires when an item is selected; supports cancellation. |
+| [`OnValueRemove`](#onvalueremove) | `RemoveEventArgs<TItem>` | Fires before a selected value is removed; supports cancellation. |
+| [`ValueRemoved`](#valueremoved) | `RemoveEventArgs<TItem>` | Fires after a selected value is removed. |
+| [`SelectingAll`](#selectingall) | `SelectingAllEventArgs<TItem>` | Fires before select-all or deselect-all; supports cancellation. |
+| [`SelectedAll`](#selectedall) | `SelectAllEventArgs<TItem>` | Fires after select-all or deselect-all completes. |
+| [`OnChipTag`](#onchiptag) | `TaggingEventArgs<TItem>` | Fires before an item is rendered as a chip; supports CSS customization. |
+| [`ChipSelected`](#chipselected) | `ChipSelectedEventArgs<TItem>` | Fires when a chip is clicked/selected. |
+| [`Cleared`](#cleared) | `MouseEventArgs` | Fires after all selected values are cleared. |
+| [`Filtering`](#filtering) | `FilteringEventArgs` | Fires on every keystroke in the filter box. |
+| [`CustomValueSpecifier`](#customvaluespecifier) | `CustomValueEventArgs<TItem>` | Fires when a user enters a custom value not present in the data source. |
+| [`OnResizeStart`](#onresizestart) | `object` | Fires when popup resize begins (requires `AllowResize="true"`). |
+| [`OnResizeStop`](#onresizestop) | `object` | Fires when popup resize ends (requires `AllowResize="true"`). |
 
 ---
 
