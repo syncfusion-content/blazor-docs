@@ -18,7 +18,7 @@ OAuth 2.0 is an authorization framework that enables applications to obtain limi
 OAuth provides:
 
 - **Secure login using external providers**
-- **No need to store usernames/passwords**
+- **No need to store user name/password**
 - **Short‑lived authorization tokens**
 - **Minimal developer‑side security concerns**
 
