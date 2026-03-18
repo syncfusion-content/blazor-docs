@@ -29,11 +29,14 @@ The Block Editor supports multiple block types, each offering different formatti
 | Checklist                               | Interactive to-do lists with checkable items.                               |
 | BulletList                              | Unordered lists with bullet points.                                         |
 | NumberedList                            | Ordered lists with sequential numbering.                                    |
+| Code                                    | Formatted code blocks with syntax highlighting.                             |
 | Quote                                   | Styled block for quotations.                                                |
 | Callout                                 | Highlighted block for important information.                                |
 | Divider                                 | Horizontal separator line.                                                  |
 | CollapsibleParagraph and CollapsibleHeading1-4    | Content blocks that can be expanded or collapsed to show or hide their children. |
 | Image                                   | Block for displaying images.                                                |
+
+> For blocks such as `Code`, `Callout`, `Table`, `Image`, and `Collapsible`, the first Backspace/Delete action applies an overlay selection to the block, and the second action removes the block content. This ensures consistent and predictable handling of block deletion across these types.
 
 ## Configure indent
 
