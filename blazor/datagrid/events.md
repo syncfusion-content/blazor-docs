@@ -791,8 +791,9 @@ N> All events should be configured within a single **GridEvents** component.
 ## DetailsCollapsing
 
 [DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) triggers when a detail template row is clicked to collapse. Use it to control collapsing row or prevent it in specific cases.
+
 ```cshtml
- @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 
 <SfGrid DataSource="@Employees" Height="265px">
