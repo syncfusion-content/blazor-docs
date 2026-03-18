@@ -576,7 +576,7 @@ N> All events should be configured within a single **GridEvents** component.
 ```
 ## DetailsExpanding
 
-[DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) triggers when a detail template row is clicked to expand. The action can be cancelled by setting the `Cancel` property on the event args. Use this event to validate whether a row should expand or to prepare data before expansion.
+[DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) triggers when a detail template row is clicked to expand. Use it to control expanding row or prevent it in specific cases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -619,7 +619,7 @@ N> All events should be configured within a single **GridEvents** component.
 
     public void DetailsExpandingHandler(DetailsExpandingEventArgs<EmployeeData> args)
     {
-        // Example: cancel expansion for specific rows by setting args.Cancel = true and args.Data to the data object of the row being expanded.
+        // Use args.Data/args.Cancel to control expanding row.
     }
 
     public class EmployeeData
@@ -683,7 +683,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsExpanded
 
-[DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) triggers after a detail template row has finished expanding. Use this event to initialize child components, load remote data for the expanded detail, or run post-expansion UI logic.
+[DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) triggers after a detail template row has finished expanding. Use it to run logic that depends on the expanded detail view.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -790,8 +790,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsCollapsing
 
-[DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) triggers when a detail template row is clicked to collapse. The collapse can be cancelled by setting the `Cancel` property on the event args.
-
+[DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) triggers when a detail template row is clicked to collapse. Use it to control collapsing row or prevent it in specific cases.
 ```cshtml
  @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -833,8 +832,7 @@ N> All events should be configured within a single **GridEvents** component.
 
     public void DetailsCollapsingHandler(DetailsCollapsingEventArgs<EmployeeData> args)
     {
-        // Example: if unsaved changes detected in the detail, prevent collapse:
-        // ((dynamic)args).Cancel = true; // cast and set Cancel when a typed args object is available
+        // Use args.Data/args.Cancel to control collapsing row.
     }
 
     public class EmployeeData
@@ -898,7 +896,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsCollapsed
 
-[DetailsCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) triggers after a detail template row has fully collapsed. Use this event to clean up resources, stop timers, or update the UI after detail content is hidden.
+[DetailsCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) triggers after a detail template row has fully collapsed. Use it to clean up resources, stop timers, or update the UI after the detail content is hidden.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -941,7 +939,7 @@ N> All events should be configured within a single **GridEvents** component.
 
     public void DetailsCollapsedHandler(DetailsCollapsedEventArgs<EmployeeData> args)
     {
-        // Clean up or update the UI after collapse.
+        // Handle post-collapse behavior here.
     }
 
     public class EmployeeData
