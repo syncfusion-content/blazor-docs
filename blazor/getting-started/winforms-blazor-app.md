@@ -126,6 +126,6 @@ Add a Syncfusion Blazor component to any Razor file in the Blazor project. The e
 {% endhighlight %}
 {% endtabs %}
 
-In the Visual Studio toolbar, select the start button to build and run the app.
+In the Visual Studio toolbar, click the start button to build and run the app.
 
 ![WinForms Blazor App with Syncfusion Blazor Components](images/winforms/winforms-blazor-datagrid.webp)
