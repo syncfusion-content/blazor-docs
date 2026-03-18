@@ -13,7 +13,7 @@ This section explains how to create and run a WinForms Blazor App (.NET WinForms
 
 ## What is WinForms Blazor App?
 
-A WinForms Blazor app hosts a Blazor web app inside a Windows Forms Application using the `BlazorWebView` control. This enables a Blazor Web App to integrate with desktop platform features and UI controls. The `BlazorWebView` control can be added on any form in the WinForms app and pointed to the Blazor app's root component. Blazor components executes in the .NET process and render their web UI into the embedded web view control. WinForms Blazor apps run on platforms supported by WinForms (Windows).
+A WinForms Blazor app hosts a Blazor web app inside a Windows Forms Application using the `BlazorWebView` control. This enables a Blazor Web App to integrate with desktop platform features and UI controls. The `BlazorWebView` control can be added on any form in the WinForms app and pointed to the Blazor app's root component. Blazor components execute in the .NET process and render their web UI into the embedded web view control. WinForms Blazor apps run on platforms supported by WinForms (Windows).
 
 Visual Studio provides the **WinForms Application** template to create WinForms Blazor Apps.
 
@@ -47,7 +47,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
+Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -75,7 +75,7 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in 
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet in the <head> and the script at the end of the <body> in the **~wwwroot/index.html** file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet in the `<head>` and the script at the end of the `<body>` in the **~wwwroot/index.html** file as shown below:
 
 ```html
 <head>
@@ -89,7 +89,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
