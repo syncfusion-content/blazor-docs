@@ -16,7 +16,6 @@ The export behavior can be customized using the [ExcelExportProperties](https://
 * Exporting specific columns.
 * Including or excluding hidden columns.
 * Exporting with a custom data source.
-* Enabling filters in the exported Excel or CSV document.
 * Changing the file name.
 * Adding headers and footers.
 * Exporting multiple Grids.
