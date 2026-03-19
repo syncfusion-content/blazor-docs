@@ -606,5 +606,5 @@ dotnet run
 4. Click **Register** and create a new account (email and password).
 5. After registration, you will be automatically logged in.
 6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Syncfusion components.
-7. Click **Logout** to end the session and verify that accessing the secure pages redirects back to the login page.
+7. Click **Logout** to end the session and verify that accessing the secure pages redirects back to the login page. 
 
