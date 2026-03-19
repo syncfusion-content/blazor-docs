@@ -279,7 +279,7 @@ To align and customize group caption text in the exported Excel document:
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
-<SfGrid DataSource="@PickList" @ref="Grid" ID="Grid" AllowGrouping="true" Width="70%" AllowExcelExport="true" Toolbar="@(new List<string> {  "ExcelExport", "CsvExport"})">
+<SfGrid DataSource="@PickList" @ref="Grid" ID="Grid" AllowGrouping="true" Width="70%" AllowExcelExport="true" Toolbar="@(new List<string> {  "ExcelExport" })">
     <GridEvents TValue=ProductInfo OnToolbarClick="ToolbarClick" ExcelAggregateTemplateInfo="ExcelAggregateTemplateInfoHandler" ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionInfoHandler"></GridEvents>
     <GridGroupSettings Columns="@(new[] { "ProductGroup" })" ShowDropArea="false">
         <CaptionTemplate>
@@ -412,7 +412,7 @@ public class ProductInfo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBHXqizgKYRhRUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdXKMYVbPmnvEo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Exporting with group caption template by customizing the alignment](./images/GroupCaptionAlignment.gif)
 
