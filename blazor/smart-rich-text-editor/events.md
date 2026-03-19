@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AssistViewSettings Events in Syncfusion Smart Rich Text Editor
-description: Reference showing AssistViewSettings events, arguments, and usage examples. Learn how to handle prompt submissions, streaming responses, popup lifecycle events, and toolbar interactions programmatically.
+description: Reference for AssistViewSettings events, arguments, and examples to handle prompt submissions, streaming responses, popup lifecycle, and toolbar actions.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
