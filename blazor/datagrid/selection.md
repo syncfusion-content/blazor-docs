@@ -130,7 +130,7 @@ To configure selection mode, set the [GridSelectionSettings.Mode](https://help.s
 * `Cell`: Enables cell selection only.
 * `Both`: Enables simultaneous row and cell selection.
 
-The following example demonstrates dynamically enabling and changing the `GridselectionSettings.Mode` using the `DropDownList`:
+The following example demonstrates dynamically enabling and changing the `GridSelectionSettings.Mode` using the `DropDownList`:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -239,7 +239,7 @@ Tapping on a row selects it immediately, providing efficient single-row selectio
 
 Multiple rows can be selected by tapping a row, which triggers a popup as shown in the image. Once the popup is tapped, additional rows can be selected by tapping the required rows, enabling efficient multi-row interaction.
 
-![Multi row selection](../images/selection.jpg) 
+![Multi row selection](../images/sselection.jpg) 
 
 **Multi-row or cell selection**
 
