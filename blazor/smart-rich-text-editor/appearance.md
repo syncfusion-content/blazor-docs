@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customizing AI Assistant Popup | Syncfusion Blazor Smart Rich Text Editor
-description: Learn how to customize the AI Assistant popup styling with CSS animations and processing states.
+title: Customize AI Assistant Popup in Syncfusion Smart Rich Text Editor
+description: Step-by-step guidance for customizing the AI Assistant popup appearance, including CSS selectors, animation examples, responsive sizing, and processing state styles.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -55,7 +55,7 @@ In this example, we customize the AI Assistant popup appearance by targeting the
 </style>
 ```
 
-![Blazor Smart Rich Text Editor AI AssistView Custom Class](./images/ai-assistview-custom-class.png)
+![Blazor Smart Rich Text Editor AI AssistView Custom Class](./images/smart-rich-text-editor-ai-assistview-custom-class.png)
 
 
 This shows how to customize the assistant by targeting the `.e-rte-aiquery-dialog.e-aiassistview` selector for fine-grained control over the popup's appearance.

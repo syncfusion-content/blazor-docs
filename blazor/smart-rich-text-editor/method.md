@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AssistViewSettings Methods | Syncfusion Blazor Smart Rich Text Editor
-description: Quick reference for AI Assistant methods with simple definitions and code examples.
+title: AssistViewSettings Methods in Syncfusion Smart Rich Text Editor
+description: Comprehensive reference for AssistViewSettings public methods with examples. Shows how to programmatically show or hide the AI popup, execute prompts, stream or update responses, and manage conversation history.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug

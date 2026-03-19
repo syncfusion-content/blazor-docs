@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AssistViewSettings Events & Callbacks | Syncfusion Blazor Smart Rich Text Editor
-description: Quick reference for AI Assistant events with simple definitions and code examples.
+title: AssistViewSettings Events in Syncfusion Smart Rich Text Editor
+description: Reference showing AssistViewSettings events, arguments, and usage examples. Learn how to handle prompt submissions, streaming responses, popup lifecycle events, and toolbar interactions programmatically.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug

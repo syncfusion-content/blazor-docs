@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AssistViewSettings Properties | Syncfusion Blazor Smart Rich Text Editor
-description: Quick reference for AI Assistant properties with simple definitions and code examples.
+title: AssistViewSettings Properties in Syncfusion Smart Rich Text Editor
+description: Reference of AssistViewSettings properties with concise definitions and examples. Covers configuring AI commands, popup sizing, placeholders, predefined prompts and suggestions, toolbar templates, banner templates, and history limits.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -44,8 +44,8 @@ Use the `Commands` property to configure each `AICommands` entry, including its 
 
 ## PopupMaxHeight
 **Type:** `string` | **Default:** `"400"`
-Maximum height for the AI Assistant popup. Accepts CSS units (e.g., `800px`, `80vh`, `100%`) or numeric values (treated as pixels).
-Sets the maximum height of the AI Assistant popup. Accepts CSS values like "800px", "80vh", "100%".
+
+Sets the maximum height of the AI Assistant popup. Accepts CSS height values or numbers (treated as pixels).
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -58,8 +58,8 @@ Sets the maximum height of the AI Assistant popup. Accepts CSS values like "800p
 
 ## PopupWidth
 **Type:** `string` | **Default:** `"600"`
-Width of the AI Assistant popup. Accepts CSS units (px, %, vw) or numeric values (converted to pixels); use `auto` for responsive sizing.
-Sets the width of the AI Assistant popup. Accepts CSS values or numeric values.
+
+Sets the width of the AI Assistant popup. Accepts CSS width values or numbers (treated as pixels).
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -72,8 +72,8 @@ Sets the width of the AI Assistant popup. Accepts CSS values or numeric values.
 
 ## Placeholder
 **Type:** `string` | **Default:** `"Ask AI to rewrite or generate content."`
-Hint text shown inside the AI prompt input to guide users on what they can ask the assistant.
-Sets the placeholder text in the AI prompt input field.
+
+Specifies the placeholder text shown in the AI Assistant prompt textarea.
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -86,8 +86,8 @@ Sets the placeholder text in the AI prompt input field.
 
 ## Prompts
 **Type:** `List<AssistViewPrompt>`
-A collection of predefined prompt/response templates that can be loaded into the assistant to provide starters or canned workflows.
-Predefined prompt-response pairs to preload in the AI Assistant.
+
+Defines a collection of predefined prompts and their corresponding responses. These prompt/response templates can be loaded into the AI Assistant to provide starter prompts or predefined workflows.
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -117,8 +117,8 @@ Predefined prompt-response pairs to preload in the AI Assistant.
 
 ## Suggestions
 **Type:** `List<string>`
-Short suggestion chips presented to users for one-tap prompts (e.g., "Fix grammar", "Make shorter").
-Quick-start suggestion chips shown in the AI Assistant.
+
+Defines suggestion prompts displayed in the AI Assistant popup.
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -143,8 +143,8 @@ Quick-start suggestion chips shown in the AI Assistant.
 
 ## MaxPromptHistory
 **Type:** `int` | **Default:** `20`
-Maximum number of conversation entries to retain; oldest entries are removed when the limit is exceeded.
-Maximum number of saved conversations. Oldest entries are removed when exceeded.
+
+Defines the maximum number of conversation entries retained in the editor's history. When this limit is exceeded, the oldest entries are automatically removed.
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -157,9 +157,8 @@ Maximum number of saved conversations. Oldest entries are removed when exceeded.
 ---
 
 ## BannerTemplate
-**Type:** `RenderFragment?`
-RenderFragment used to render a custom banner at the top of the assistant, useful for branding, status, or short instructions.
-Custom template for the banner at the top of the AI Assistant sidebar.
+
+Specifies the template for the banner in the AI Assistant popup, useful for branding, status, or short instructions.
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -179,8 +178,8 @@ Custom template for the banner at the top of the AI Assistant sidebar.
 
 ## HeaderToolbarSettings
 **Type:** `RenderFragment?`
-RenderFragment that defines toolbar items in the assistant header (close, settings, etc.).
-Toolbar configuration for the header of the AI Assistant sidebar.
+
+Configures the toolbar in the header section of the AI Assistant interface.
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -201,9 +200,8 @@ Toolbar configuration for the header of the AI Assistant sidebar.
 
 ## PromptToolbarSettings
 **Type:** `RenderFragment?`
-RenderFragment for toolbar items shown below the prompt input (edit, copy, save, etc.).
-Toolbar configuration below the prompt input area.
 
+Configures the toolbar below of the prompt input area section.
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
@@ -224,8 +222,8 @@ Toolbar configuration below the prompt input area.
 
 ## ResponseToolbarSettings
 **Type:** `RenderFragment?`
-RenderFragment for actions associated with AI responses (regenerate, copy, insert, feedback buttons).
-Toolbar configuration for AI response actions.
+
+Configures the toolbar in the AI response viewer section.
 
 ```razor
 @using Syncfusion.Blazor.SmartRichTextEditor
