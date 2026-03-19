@@ -1687,6 +1687,102 @@ public class OrderData
 
 > A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting_Memory_Stream/Exporting_Stream).
 
+### Enable filtering in exported file
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [Syncfusion XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
+
+This method is helpful when the exported **Excel** file needs to support data analysis, sorting, and filtering immediately after download, without requiring any additional manual setup.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+
+@using System.Dynamic
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using System.IO
+@using Syncfusion.XlsIO
+@inject IJSRuntime JSRuntime
+@inject HttpClient client
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code 
+{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 9).Select(x => new Order()
+        {
+            OrderID = x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            ExcelExportProperties ExportProperties = new ExcelExportProperties();
+
+            using var stream = await DefaultGrid.ExportToExcelAsync(asMemoryStream: true, ExportProperties);
+            var copyOfStream = new MemoryStream(stream.ToArray());
+
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+
+                IWorkbook workbook = application.Workbooks.Open(copyOfStream);
+                IWorksheet worksheet = workbook.Worksheets[0];
+                worksheet.Name = "Orders";
+                // enable filtering in excel file
+                worksheet.AutoFilters.FilterRange = worksheet.UsedRange; 
+
+                using (MemoryStream outputStream = new MemoryStream())
+                {
+                    workbook.SaveAs(outputStream);
+                    await JSRuntime.InvokeVoidAsync("saveAsFile", "GridExport.xlsx", Convert.ToBase64String(outputStream.ToArray()));
+                }
+            }
+        }
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="Javascript.js" %}
+
+function saveAsFile(filename, bytesBase64) {
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = "data:application/octet-stream;base64," + bytesBase64;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Converting Memory Stream to File Stream for Excel Export
 
 The Excel Export feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows exporting Grid data to an Excel workbook. In scenarios where the exported document needs to be saved as a physical file on the system, the memory stream can be converted into a file stream. This is useful when storing or processing the file outside the browser context.
