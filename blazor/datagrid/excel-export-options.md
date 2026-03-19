@@ -1688,7 +1688,7 @@ public class OrderData
 
 ### Enable filtering in exported file
 
-The Syncfusion® Blazor `DataGrid` supports exporting data as a memory stream, which allows further manipulation of the exported Excel workbook before it is delivered to the client. Using the Syncfusion XlsIO library, Excel features such as AutoFilter can be programmatically enabled so that the downloaded file opens with filtering options available on the column headers.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting data as a memory stream, which allows further manipulation of the exported Excel workbook before it is delivered to the client. Using the Syncfusion XlsIO library, Excel features such as AutoFilter can be programmatically enabled so that the downloaded file opens with filtering options available on the column headers.
 
 This approach is particularly useful when the exported Excel file is expected to support post‑export data analysis, sorting, and filtering without requiring additional user configuration.
 
@@ -1735,7 +1735,8 @@ This approach is particularly useful when the exported Excel file is expected to
                 IWorkbook workbook = application.Workbooks.Open(copyOfStream);
                 IWorksheet worksheet = workbook.Worksheets[0];
                 worksheet.Name = "Orders";
-                worksheet.AutoFilters.FilterRange = worksheet.UsedRange; // enable filtering in excel file...
+                // enable filtering in excel file
+                worksheet.AutoFilters.FilterRange = worksheet.UsedRange; 
 
                 using (MemoryStream outputStream = new MemoryStream())
                 {
