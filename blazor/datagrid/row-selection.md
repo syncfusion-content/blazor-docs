@@ -9,13 +9,13 @@ documentation: ug
 
 # Row Selection in Blazor DataGrid
 
-Row selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables interactive selection of individual rows or ranges of rows. Selection can be performed using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on specific rows within the grid.
+Row selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides interactive selection of specific rows or ranges of rows within the DataGrid. Row selection can be performed effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when highlighting, manipulating, or performing actions on specific rows within the DataGrid.
 
-> To enable row selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to **Row** or **Both**. This property determines the selection mode of the grid.
+> To enable row selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to **Row** or **Both**. This property determines the selection mode of the DataGrid.
 
 ## Single row selection
 
-Single row selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of one row at a time. This feature is useful for focusing on specific rows or performing actions on the data within a particular row.
+Single row selection provides selecting a single row at a time within the DataGrid. This feature is useful when focusing on specific rows or performing actions on the data within a particular row.
 
 To enable single row selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to **Row** and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type)  property to **Single**. This configuration allows only one row to be selected at a time.
 
@@ -98,7 +98,7 @@ public class OrderDetails
 
 ## Multiple row selection
 
-Multiple row selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection of multiple rows within the grid. This feature is valuable when actions need to be performed on several rows simultaneously or when focusing on specific data segments.
+Multiple row selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection of multiple rows within the DataGrid. This feature is valuable when actions need to be performed on several rows simultaneously or when focusing on specific data segments.
 
 To enable multiple row selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode)  property to **Row** and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Multiple**. This configuration allows multiple rows to be selected at a time.
 
@@ -181,7 +181,8 @@ public class OrderDetails
 
 ## Select row at initial rendering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection of a specific row during the initial rendering of the grid. This feature is useful for highlighting or pre-selecting a particular row when the grid loads. To achieve this, use the [SelectedRowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectedRowIndex) property.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection of a specific row during the initial rendering of the DataGrid. This feature is useful for highlighting or pre-selecting a particular row when the DataGrid loads. To achieve this, use the [SelectedRowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectedRowIndex) property.
+
 The following example demonstrates how to select a row during the initial rendering:
 
 {% tabs %}
@@ -257,9 +258,9 @@ public class OrderDetails
 
 ## Select rows in any page based on index value
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection of rows across different pages based on their index value. This feature is useful for performing actions such as highlighting, styling, or executing operations on rows regardless of their location within the paginated grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection of rows across different pages based on their index value. This feature is useful for performing actions such as highlighting, styling, or executing operations on rows regardless of their location within the paginated DataGrid.
 
-To achieve this, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method along with the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method. By handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), logic can be implemented to navigate to the desired page and select the row based on its index.
+To achieve this, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method along with the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method. By handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), logic can be implemented to navigate to the desired page and select the row based on its index.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -377,6 +378,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows mult
 
 To enable simple multiple row selection, set the [GridSelectionSettings.EnableSimpleMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableSimpleMultiRowSelection) property to **true**.
 
+The following example demonstrates how to configure multiple row selection with a single click on the grid row using `EnableSimpleMultiRowSelection` property:
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -463,13 +466,15 @@ public class OrderDetails
 
 ## Select row via programmatically
 
-Single row selection, multiple row selection, and range selection can be performed externally in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid using built-in methods. This feature enables interaction with specific rows programmatically.
+Single row selection, multiple row selection, and range of row selection can be performed externally in the DataGrid using built-in methods. This feature allows interacting with specific rows within the DataGrid programmatically.
 
 ### Single row selection
 
 Single row selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows selection of one row at a time. This is useful for focusing on specific rows or performing actions on the data within a particular row.
 
 To achieve single row selection, use the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__) method. This method allows programmatic selection of a specific row by specifying its index.
+
+The example below demonstrates single row selection in the DataGrid. The row index is obtained from a [SfNumericTextBox ](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) and passed to the `SelectRowAsync` method. Upon clicking the "Select Row" button, the corresponding row is selected:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -655,9 +660,11 @@ public class OrderDetails
 
 ### Range of rows selection
 
-Range selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of a continuous set of rows within the grid. This feature is useful for performing actions on multiple rows simultaneously or focusing on a specific range of data.
+Range selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of a continuous set of rows within the DataGrid. This feature is useful for performing actions on multiple rows simultaneously or focusing on a specific range of data.
 
 To achieve range selection, use the [SelectRowsByRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsByRangeAsync_System_Int32_System_Nullable_System_Int32__) method. This method selects rows between the specified start and end indexes.
+
+The following example demonstrates selecting a range of rows within the DataGrid by obtaining the selected rows start index and end index through `SfTextBox`. Then pass these start index and end index as arguments to the `SelectRowsByRange` method. When the "Select Rows" button is clicked, a range of rows is selected within the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -750,10 +757,10 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhINfiIdMXhvlal?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Select Grid rows based on certain condition
+## Select rows conditionally
 
 Specific rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be programmatically selected based on custom conditions. This feature is useful for dynamically highlighting or manipulating rows based on data-driven logic.
-To implement conditional row selection, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method within the DataBound event of the grid.
+To implement conditional row selection, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method within the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid.
 
 The [GetCurrentViewRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecordsAsync)  method is used to retrieve the current page records. A condition is applied to these records, and rows that meet the condition are selected during initial rendering.
 
@@ -855,11 +862,13 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVeXIjeIHNkaocG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## How to get selected row indexes 
+## Get selected row indexes
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows retrieval of the indexes of currently selected rows. This feature is useful when performing actions or operations specifically on selected rows.
 
 To achieve this, use the [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync) method. It returns an array of numbers representing the indexes of the selected rows.
+
+The following example demonstrates getting selected row indexes using the `GetSelectedRowIndexes` method: 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -951,13 +960,15 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSXojzHLZfAtKS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## How to get selected records on various pages 
-
+## Get selected records on various pages 
+ 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows retrieval of selected records even when navigating to different pages. This feature is useful when working with large datasets and enables actions to be performed on selected records across multiple pages.
 
 To persist selection across pages, enable the [PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) configuration.
 
 To retrieve selected records from different pages, use the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method. This method returns an array of selected records.
+
+The following example demonstrates how to retrieve selected records from various pages using the `GetSelectedRecordsAsync` method and display "Order ID" values of the selected records in a dialog when the "Show Selected Records" button is clicked:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1054,13 +1065,15 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLyNotfnVyUShmR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> To persist the Grid selection, it is necessary to define any one of the columns as a primary key using the [GridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
+> To persist the DataGrid selection, it is necessary to define any one of the columns as a primary key using the [GridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
-## How to get selected records  
+## Get selected records 
 
 The get selected records feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows retrieval of data from selected rows. This is useful when performing actions on selected data or displaying specific information based on selected rows.
 
 To retrieve the selected records, use the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method. This method returns an array of objects representing the selected records.
+
+The following example displays the selected row count using the `GetSelectedRecords` method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1167,6 +1180,8 @@ public class OrderDetails
 Clearing row selection programmatically in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful when removing existing row selections based on application logic or user actions. To achieve this, use the [ClearRowSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearRowSelectionAsync) method.
 
 The `ClearRowSelectionAsync` method is applicable when the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) is set to **Multiple** or **Single**.
+
+The following example demonstrates clearing row selection by calling the `ClearRowSelectionAsync` method in the button click event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
