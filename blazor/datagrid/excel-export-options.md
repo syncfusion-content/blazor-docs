@@ -1718,6 +1718,16 @@ This approach is particularly useful when the exported **Excel** file is expecte
     private SfGrid<Order> DefaultGrid;
     public List<Order> Orders { get; set; }
 
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 9).Select(x => new Order()
+        {
+            OrderID = x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_excelexport")
@@ -1745,16 +1755,6 @@ This approach is particularly useful when the exported **Excel** file is expecte
                 }
             }
         }
-    }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 9).Select(x => new Order()
-        {
-            OrderID = x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-        }).ToList();
     }
 
     public class Order
