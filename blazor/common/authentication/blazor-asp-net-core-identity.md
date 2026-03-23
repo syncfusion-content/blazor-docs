@@ -1,6 +1,6 @@
 ---
 title: ASP.NET Core Identity with Blazor Interactive Server | Syncfusion
-description: Step-by-step guide to use ASP.NET Core Identity for Blazor Server with Syncfusion components (DataGrid, Charts).
+description: Guide to configure ASP.NET Core Identity in an Interactive Server Blazor app and protect Syncfusion components (DataGrid, Charts).
 platform: blazor
 component: common
 documentation: ug
