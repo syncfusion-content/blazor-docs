@@ -19,13 +19,13 @@ N> Before use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Projec
 
 2. In Solution Explorer, right-click the project, choose **Syncfusion Blazor**, and then select **Migrate Syncfusion Blazor project from another version...** to open the Migration Wizard.
 
-    ![Open the Syncfusion Blazor Migration Wizard from Solution Explorer](images/MigrationAddin.png)
+    ![Open the Syncfusion Blazor Migration Wizard from Solution Explorer](images/migrationaddin.webp)
 
 3. In the Syncfusion<sup style="font-size:70%">&reg;</sup> Project Migration window, select the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor version to migrate to.
 
     N> Versions are loaded from Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages on [NuGet.org](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and require internet connectivity.
 
-    ![Select the target Syncfusion Blazor version in the Migration Wizard](images/Migration.png)
+    ![Select the target Syncfusion Blazor version in the Migration Wizard](images/migration.webp)
 
 4. Select **Migrate**. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages are updated to the chosen version in the project.
 
