@@ -26,7 +26,7 @@ Azure Functions scale independently from the UI and require minimal operational 
 * Azure CLI
 * Visual Studio 2022 or VS Code with C# extension
 
-Ensure the .NET SDK and Functions Core [Tools compatibility](https://learn.microsoft.com/azure/azure-functions/functions-run-local).
+Ensure the .NET SDK and Azure Functions Core Tools are compatible.
 
 ## Secure Azure Functions
 
@@ -62,17 +62,11 @@ var req = new HttpRequestMessage(HttpMethod.Get, "/api/orders?...");
 req.Headers.Add("x-functions-key", "YOUR_FUNCTION_KEY");
 await Http.SendAsync(req);
 ```
-For production, prefer Entra ID (Azure AD) bearer tokens and managed identities.
+For production, prefer Microsoft Entra ID (Azure AD) bearer tokens and managed identities.
 
-### EasyAuth / Entra ID
+### EasyAuth / Microsoft Entra ID
 
-Register an application in Entra ID and configure the Function App Authentication provider (EasyAuth) to require tokens, or keep EasyAuth off and validate JWTs inside functions with `Microsoft.IdentityModel.Tokens`. For production, Entra ID and managed identities provide better security and auditability than function keys.
-
-Refer to the below:
- 
-* [Microsoft Entra ID App Registration](https://learn.microsoft.com/azure/active-directory/develop/quickstart-register-app)
-* [App Service Authentication (EasyAuth)](https://learn.microsoft.com/azure/app-service/overview-authentication-authorization)
-* [Functions CORS and app settings](https://learn.microsoft.com/azure/azure-functions/functions-how-to-use-azure-function-app-settings#cors)
+Register an application in Microsoft Entra ID and configure the Function App Authentication provider (EasyAuth) to require tokens, or keep EasyAuth off and validate JWTs inside functions with `Microsoft.IdentityModel.Tokens`. For production, Microsoft Entra ID and managed identities provide better security than function keys.
 
 Use EasyAuth (platform) for standard token validation; validate JWTs in-function when you need custom claims or fine‑grained checks.
 
@@ -95,7 +89,7 @@ func new --name OrdersApi --template "HTTP trigger" --authlevel function
 
 ### Add NuGet packages (client and functions)
 
-**Client: Syncfusion and optional MSAL for Entra ID auth**
+**Client: Syncfusion packages**
 
 ```
 cd Client
