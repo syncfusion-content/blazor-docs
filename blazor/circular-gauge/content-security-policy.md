@@ -19,12 +19,12 @@ This document outlines the specific animation features that require the `style-s
 
 The following features in the Circular Gauge currently **require** `style-src 'unsafe-inline'` to function correctly:
 
- **[Animation Features](./content-security-policy.md)**  
+ **[Animation Features](./animations.md)**  
   All animation capabilities, controlled primarily via the `AnimationDuration` property (on the `SfCircularGauge` component) and optionally via `CircularGaugePointerAnimation` for individual pointers, depend on dynamic inline styles or style injections for smooth transitions.  
   When animation is enabled (`AnimationDuration > 0`), the component animates elements sequentially: axis line → ticks and labels → ranges → pointers → annotations. Pointers can have individual animation durations.  
   Disabling animation (default: `AnimationDuration = 0`) renders the gauge instantly without transitions.
 
-> **Note:** Core features supports fully under strict CSP without requiring `'unsafe-inline'`.
+> **Note:** Core features are fully supported under strict CSP without requiring `'unsafe-inline'`.
 
 ## Recommended CSP Configurations
 

@@ -94,7 +94,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 ---
 
 
-### File Viewers & Editors & File management
+### File Viewers & Editors & File Management
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
@@ -123,7 +123,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant |HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| BarcodeGenerator, QRCodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy.md), [Maps](../maps/content-security-policy.md), [Heamap Chart](../heatmap-chart/content-security-policy.md) |
+| BarcodeGenerator, QRCodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy.md), [Maps](../maps/content-security-policy.md), [Heatmap Chart](../heatmap-chart/content-security-policy.md) |
 
 ---
 
@@ -172,7 +172,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 ---
 
-### INTERACTIVE CHAT
+### Interactive Chat
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
