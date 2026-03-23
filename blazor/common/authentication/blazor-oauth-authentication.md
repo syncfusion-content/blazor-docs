@@ -44,7 +44,6 @@ OAuth provides:
 4. Copy the generated **Client ID** and **Client Secret**
 5. Add them to your *appsettings.json*:
 
-
 ```json
 "Authentication": {
   "GitHub": {
