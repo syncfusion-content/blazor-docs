@@ -23,7 +23,7 @@ Now we have introduced **strict CSP compatibility** for **over 80 components**. 
 
 This enhancement allows developers to enforce modern, secure browser policies more easily while retaining full component capabilities in Blazor Server, WebAssembly, and hybrid (Auto) render modes.
 
-### Recommended CSP Directives for Strict Csp implemented Syncfusion® Blazor Components 
+### Recommended CSP Directives for Strict CSP implemented Syncfusion® Blazor Components 
 
 The following CSP configurations are **tested and recommended** for Syncfusion® Blazor components that support strict CSP (Refer Supported list below).
 
