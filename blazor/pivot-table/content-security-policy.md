@@ -51,8 +51,8 @@ Use this configuration when you can disable or avoid the limited features listed
 ### Relaxed CSP Configuration (Full Feature Enabled)
 Include 'unsafe-inline' in style-src to enable all features:
 
-```
-HTML<meta http-equiv="Content-Security-Policy"
+```HTML
+<meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
                default-src 'self';
                connect-src 'self' https: ws: wss:;
@@ -70,7 +70,8 @@ HTML<meta http-equiv="Content-Security-Policy"
 
 ### Future Improvements
 
-These security limitations for the listed features (Pivot Chart integration, conditional formatting, and related styling behaviors) will be addressed in **future weekly security patch releases**. 
+ - These security limitations for the listed features (Pivot Chart integration, conditional formatting, and related styling behaviors) will be addressed in **future weekly security patch releases**. 
 
-Syncfusion® is actively working toward full strict CSP compatibility across all features of the Pivot Table component, eliminating the need for 'unsafe-inline' entirely.
-Track the latest Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.
+ - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Pivot Table component, eliminating the need for 'unsafe-inline' entirely.
+
+ - Track the latest Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.

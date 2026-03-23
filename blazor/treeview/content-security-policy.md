@@ -63,8 +63,7 @@ Include **'unsafe-inline'** in **style-src** to enable the virtualization featur
 >Use this configuration only when handling very large datasets requiring virtualization for optimal performance and memory efficiency. This maintains strong overall protection while allowing the dynamic styling needed for virtualization.
 
 ### Future Improvements
- - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
 
- - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
+ - Syncfusion® is working to remove the need for 'unsafe-inline' in TreeView virtualization, with the goal of eliminating the need for **'unsafe-inline'** entirely.
 
  - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.
