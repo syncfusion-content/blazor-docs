@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor with Azure Functions
 
-This guide shows how to build a runnable Blazor WebAssembly app that uses Azure Functions as a serverless backend and integrates Syncfusion Blazor components (`Grid`, `Scheduler`, `DatePicker`). It focuses on practical steps for local development, security options (Function keys), calling functions from Blazor, CORS, error/retry handling, and a compact example (Orders list + Scheduler).
+This guide shows how to build a Blazor WebAssembly app that uses Azure Functions as a serverless backend and integrates Syncfusion Blazor components (`Grid`, `Scheduler`, `DatePicker`). It focuses on practical steps for local development, security options (Function keys), calling functions from Blazor, CORS, error handling, and a compact example (Orders list + Scheduler).
 
 ## What is Azure Functions?
 
@@ -450,4 +450,4 @@ dotnet run
 * Open the client URL
 * Select a date range and click Load — the grid fills with demo orders and the schedule shows one event per order.
 
-[!Blazor components with Azure Function](./images/azure-functions.webp)
+![Blazor components with Azure Function](./images/azure-functions.webp)
