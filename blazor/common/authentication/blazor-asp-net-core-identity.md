@@ -23,7 +23,7 @@ Use Identity when your app needs cookie‑based, server‑side authentication an
 * .NET SDK 8.0 or later
 * Editor/IDE: Visual Studio 2022 or later, or VS Code
 
-## Create the sample spp
+## Create the sample app
 
 The steps below will help you build a secure Blazor Web App using Interactive Server mode. You will set up ASP.NET Core Identity with SQLite and add Syncfusion components such as the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Charts](https://www.syncfusion.com/blazor-components/blazor-charts) to pages that require the `[Authorize]` attribute.
 
