@@ -46,7 +46,7 @@ Key guidelines:
 
 Blazor Server starts faster with a minimal client payload, making it ideal when Syncfusion components appear immediately (for example, forms or lightweight dashboards).
 
-Blazor WebAssembly requires downloading the .NET runtime and app assemblies, increasing startup time. Reduce this delay by using **lazy loading** (loading assemblies only when needed) and **AOT compilation**. AOT increases download size and may affect startup times. However, it significantly improves runtime performance for CPU-heavy tasks. Refer to [Blazor performance best practices](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance) for configuration details, including AOT compilation.
+Blazor WebAssembly requires downloading the .NET runtime and app assemblies, increasing startup time. Reduce this delay by using **lazy loading** (loading assemblies only when needed) and **AOT compilation**. AOT compilation increases the initial download size, which increases startup download time. However, it significantly improves runtime execution speed for CPU-intensive tasks and complex UI updates. Refer to [Blazor performance best practices](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance) for configuration details, including AOT compilation.
 
 For component-specific guidance, refer to the following documentation:
 * [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
@@ -95,7 +95,7 @@ Blazor WebAssembly executes UI logic on the client, providing smooth component i
 Choose **Blazor Server** when:
 * Fast initial load is critical.
 * Sensitive data must remain server-side.
-* The app is form-based or focused on CRUD operations, and dashboards with low interactivity.
+* The app is form-based or focused on CRUD operations, and uses dashboards that do not allow much interaction.
 
 Choose **Blazor WebAssembly** when:
 * Components demand frequent, fluid interaction (e.g., real-time charting, diagramming).
@@ -108,7 +108,7 @@ Create a shared Razor component library so you can reuse the same components in 
 
 ## Tuning Recommendations
 
-If you already have a Blazor project, you can apply the tuning recommendations below. If you need to create a project first, refer to the Syncfusion’s Blazor getting started guides.
+If you already have a Blazor project, you can apply the tuning recommendations below. If you need to create a project first, refer to the Syncfusion Blazor getting started guides.
 
 * [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
