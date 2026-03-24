@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor with OAuth 2.0 Authentication
 
-This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) page.
+This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected pages featuring the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
 
 ## What is OAuth 2.0?
 
@@ -31,20 +31,31 @@ OAuth provides:
 ## Create a Blazor Web App (Interactive server)
 
 1. Open **Visual Studio**.
-2. Select **Create a new project**
-3. From the project templates, choose **Blazor Web App**, then click **Next**.
-4. Enter a **Project name** and choose **Interactive Server** as the rendering mode.
-5. Click **Create** to generate the project.
+2. Select **Create a new project**.
+3. In the Create a new project dialog:
+  - Choose **Blazor Web App**
+  - Click **Next**
+4. In Configure your new project:
+  - Enter a **Project name**
+  - Choose a **Location**
+  - Click **Next**
+5. In the Additional information screen, configure the following:
+  - **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
+  - **Authentication type**: Select **None**(OAuth will be configured manually in later steps)
+  - **Interactive render mode**: Select **Server**
+  - **Interactivity location**: Select **Per page/component**
+  - **Enable HTTPS**
+6. Click **Create** to generate the Blazor Web App.
 
 ## Create a GitHub OAuth application
 
-1. Go to: **https://github.com/settings/developers**
+1. Go to [GitHub Developer Settings](https://github.com/settings/developers).
 2. Click **OAuth Apps → New OAuth App**
 3. Configure the application:
    - **Homepage URL:**(example:`https://localhost:5001/`) // Use your Blazor app’s base HTTPS URL.
    - **Authorization callback URL:** `https://localhost:5001/signin-github`
 4. Copy the generated **Client ID** and **Client Secret**
-5. Add them to your *appsettings.json*:
+5. In your Blazor project, open **appsettings.json** and add the following configuration.
 
 ```json
 "Authentication": {
@@ -145,7 +156,7 @@ This configuration redirects users to GitHub for authentication, stores the auth
 
 ## Implement login and logout endpoints
 
-Create an `~/Controllers/AccountController.cs` class to handle OAuth redirection.
+Create a new folder **Controllers** in the project root, then add `AccountController.cs` with the following code to handle OAuth redirection.
 
 {% tabs %}
 {% highlight c# tabtitle="AccountController.cs"  %}
@@ -204,7 +215,7 @@ To allow components to receive authentication state, wrap the router inside **Ca
 
 To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-**2. Register Syncfusion® Blazor service**
+**2. Add import namespaces**
 
 Open the **~/_Imports.razor** file and import the required namespaces.
 
@@ -217,7 +228,7 @@ Open the **~/_Imports.razor** file and import the required namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-**3. Register the Syncfusion® Blazor service in the ~/Program.cs file**
+**3. Register the Syncfusion® Blazor service in the `~/Program.cs` file**
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" %}
