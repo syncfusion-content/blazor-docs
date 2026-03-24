@@ -420,7 +420,7 @@ padding-top: 20px;
 .sf-icon-accumulation-chart:before {
   content: "\e74b";
 }
-.sf-icon-chartwizard:before {
+.sf-icon-chart-wizard:before {
   content: "\e758";
 }
 
@@ -467,7 +467,7 @@ padding-top: 20px;
         <div><p class="controlcategory-topics">DATA VISUALIZATION</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chart/getting-started"><span class="sf-home-icon sf-icon-charts"></span>Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/3d-chart/getting-started-with-web-app"><span class="sf-home-icon sf-icon-3dchart"></span>3D Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chart-wizard/getting-started-with-web-app"><span class="sf-home-icon sf-icon-chartwizard"></span>Chart Wizard</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chart-wizard/getting-started-with-web-app"><span class="sf-home-icon sf-icon-chart-wizard"></span>Chart Wizard</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/sankey/getting-started"><span class="sf-home-icon sf-icon-sankey"></span>Sankey</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stock-chart/getting-started"><span class="sf-home-icon sf-icon-stock-chart"></span>Stock Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/circular-gauge/getting-started"><span class="sf-home-icon sf-icon-circular-gauge"></span>Circular Gauge</a></div>
