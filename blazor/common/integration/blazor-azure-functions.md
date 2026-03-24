@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Blazor WebAssembly with Azure Functions | Syncfusion
-description: Step-by-step guide to use Azure Functions as a serverless backend for Blazor WebAssembly with Syncfusion components (Grid, Scheduler, DatePicker).
+description: Step-by-step guide to integrate Azure Functions as a serverless backend for Blazor WebAssembly with Syncfusion components (Grid, Scheduler, DatePicker).
 platform: Blazor
 control: Common
 documentation: ug
