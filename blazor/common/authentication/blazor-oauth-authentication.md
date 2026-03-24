@@ -24,7 +24,7 @@ OAuth provides:
 
 ## Prerequisites
 
-- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) or later
+- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - Visual Studio 2022 or newer
 - A GitHub account (required for creating the GitHub OAuth App)
 
@@ -248,7 +248,7 @@ Include the theme stylesheet and script references in the `App.razor` file.
 {% endhighlight %}
 {% endtabs %}
 
-## Create a protected page with Syncfusion DataGrid
+**5. Create a protected page with Syncfusion DataGrid**
 
 Create `SecureGrid.razor` page and protect it using the [Authorize] attribute.
 
