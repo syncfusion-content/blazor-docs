@@ -9,13 +9,11 @@ documentation: ug
 
 # Toolbar in Blazor DataGrid
 
-The toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides quick access to common actions such as adding, editing, deleting, printing, and exporting data (Excel, CSV, PDF).
+The toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers several general use cases to enhance data manipulation and overall experience. Actions such as adding, editing, and deleting records within the DataGrid can be performed, providing efficient data manipulation capabilities. The toolbar also facilitates data export and import functionality, allowing users to generate downloadable files in formats like Excel, CSV, or PDF.
 
-The toolbar can be configured with built-in toolbar items or custom items using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. The `Toolbar` property accepts:
-- An array of strings for built-in items
-- An array of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects for custom items (text, icon, id, tooltip)
+To enable the toolbar functionality, you need to add the `Toolbar` property to the DataGrid. This property provides the necessary methods to interact with the toolbar items. The toolbar can be customized with built-in toolbar items or custom toolbar items using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. The `Toolbar` property accepts an array of strings representing the built-in toolbar items or an array of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects for custom toolbar items.
 
-{% tabs %}
+The following example demonstrates enabling toolbar items in the DataGrid:
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
@@ -86,11 +84,12 @@ The toolbar can be configured with built-in toolbar items or custom items using 
 
 ## Enable or disable toolbar items
 
-Enable or disable toolbar items dynamically to control which actions are available based on application logic or user interactions.
+Enabling or disabling toolbar items dynamically in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is to provide control over the availability of specific functionality based on application logic. This powerful capability allows toolbar customization based on various conditions or user interactions.
 
-Toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs. For built-in toolbar items specified with strings, the Grid generates IDs (for example, **Grid_Add, Grid_Edit**). For custom items created with ItemModel, set the Id property explicitly and use it when enabling or disabling items.
+Toolbar items can be enabled or disabled dynamically by using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This method allows control over the availability of specific toolbar items based on application logic requirements. This provides programmatic control over the availability of specific items by their IDs. For built-in toolbar items specified with strings, the DataGrid generates IDs (for example, Grid_Add, Grid_Edit). For custom items created with ItemModel, set the Id property explicitly and use it when enabling or disabling items.
 
-{% tabs %}
+In the following example, the [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) is added to enable and disable the toolbar items using `EnableToolbarItemsAsync` method. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event is triggered and the toolbar items are updated accordingly.
+
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -304,19 +303,20 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBIXGVkiYUtauxh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize Toolbar buttons using CSS
+## Customize toolbar buttons using CSS
 
-Customize the appearance of built-in toolbar buttons by applying CSS to achieve cohesive theming and clear visual hierarchy. Maintain sufficient color contrast and preserve visible focus indicators for accessibility.
+Enhance the visual presentation of toolbar buttons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by modifying their appearance with CSS styles. This flexible approach creates a cohesive user interface tailored to application design requirements.
 
-The following styles target toolbar button icons and buttons to update the background color:
+The appearance of the built-in toolbar buttons can be modified by applying the following CSS styles:
 
-```csharp
+```css
 .e-grid .e-toolbar .e-tbar-btn .e-icons,
 .e-grid .e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn {
     background: #add8e6;   
 }
 ```
-The following example demonstrates changing the background color of the `Add`, `Edit`, `Delete`, `Update`, and `Cancel` toolbar buttons using CSS:
+
+The following example demonstrates changing the background color of the `Add`, `Edit`, `Delete`, `Update`, and `Cancel` toolbar buttons by applying CSS styles:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
