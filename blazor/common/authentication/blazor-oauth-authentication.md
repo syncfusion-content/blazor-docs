@@ -7,39 +7,41 @@ control: Common
 documentation: ug
 ---
 
-# Using Blazor with OAuth 2.0
+# Blazor with OAuth 2.0 Authentication
 
-This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Page.
+This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) page.
 
-## What Is OAuth 2.0?
+## What is OAuth 2.0?
 
 OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service (such as GitHub, Google, and Microsoft). It uses tokens instead of credentials and is widely used for secure authentication in modern applications.
 
 OAuth provides:
 
 - **Secure login using external providers**
-- **No need to store user name/password**
+- **No need to store username and password**
 - **Short‑lived authorization tokens**
 - **Minimal developer‑side security concerns**
 
 ## Prerequisites
 
-- .NET SDK 8.0 or later
+- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) or later
 - Visual Studio 2022 or newer
+- A GitHub account (required for creating the GitHub OAuth App)
 
-## Create a Blazor Web App (Interactive Server)
+## Create a Blazor Web App (Interactive server)
 
-1. Open Visual Studio.
-2. Select **Create a new project** → **Blazor Web App**.
-3. Choose **Interactive Server** as the rendering mode.
-4. Create the project.
+1. Open **Visual Studio**.
+2. Select **Create a new project**
+3. From the project templates, choose **Blazor Web App**, then click **Next**.
+4. Enter a **Project name** and choose **Interactive Server** as the rendering mode.
+5. Click **Create** to generate the project.
 
-## Create a GitHub OAuth Application
+## Create a GitHub OAuth application
 
 1. Go to: **https://github.com/settings/developers**
 2. Click **OAuth Apps → New OAuth App**
 3. Configure the application:
-   - **Homepage URL:** `https://localhost:5001/` 
+   - **Homepage URL:**(example:`https://localhost:5001/`) // Use your Blazor app’s base HTTPS URL.
    - **Authorization callback URL:** `https://localhost:5001/signin-github`
 4. Copy the generated **Client ID** and **Client Secret**
 5. Add them to your *appsettings.json*:
@@ -53,9 +55,9 @@ OAuth provides:
 }
 ```
 
-## Configure OAuth 2.0 Authentication in Blazor
+## Configure OAuth 2.0 authentication in Blazor
 
-In `Program.cs`, add OAuth authentication using GitHub and enable cookie-based sign‑in.
+Add OAuth authentication using GitHub and enable cookie-based sign‑in in `Program.cs`.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -63,15 +65,11 @@ In `Program.cs`, add OAuth authentication using GitHub and enable cookie-based s
 using OAuth.Components;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
-using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents()
   .AddInteractiveServerComponents();
-
-// Register Syncfusion Blazor services
-builder.Services.AddSyncfusionBlazor();
 
 // Configure authentication (Cookies + GitHub OAuth).
 builder.Services.AddAuthentication(options =>
@@ -100,7 +98,7 @@ builder.Services.AddAuthentication(options =>
     {
       OnCreatingTicket = async context =>
       {
-        // GitHub requires a user-agent header
+        // GitHub requires a user-agent header.
         var request = new HttpRequestMessage(HttpMethod.Get, context.Options.UserInformationEndpoint);
         request.Headers.Accept.ParseAdd("application/json");
         request.Headers.UserAgent.ParseAdd("OAuthApp");
@@ -115,7 +113,7 @@ builder.Services.AddAuthentication(options =>
   });
 
 builder.Services.AddAuthorization();
-// Add support for API controllers (used to proxy calls to protected APIs)
+// Add support for API controllers (used to proxy calls to protected APIs).
 builder.Services.AddControllers();
 // Register IHttpClientFactory for outbound HTTP calls
 builder.Services.AddHttpClient();
@@ -145,63 +143,57 @@ app.Run();
 
 This configuration redirects users to GitHub for authentication, stores the authenticated session in a secure cookie, and retrieves the user's profile information from GitHub after a successful login.
 
-## Implement Login and Logout Endpoints
+## Implement login and logout endpoints
 
-Create an `AccountController` class to handle OAuth redirection.
+Create an `~/Controllers/AccountController.cs` class to handle OAuth redirection.
 
 {% tabs %}
 {% highlight c# tabtitle="AccountController.cs"  %}
 
-[Route("account")]
-public class AccountController : Controller
-{
-    [HttpGet("login")]
-    public IActionResult Login(string? returnUrl = "/")
-    {
-        return Challenge( new AuthenticationProperties { RedirectUri = returnUrl }, "GitHub" );
-    }
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 
-    [HttpGet("logout")]
-    public async Task<IActionResult> Logout()
-    {
-        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        return Redirect("/");
-    }
+namespace OAuth.Controllers
+{
+  [Route("account")]
+  public class AccountController : Controller
+  {
+      [HttpGet("login")]
+      public IActionResult Login(string? returnUrl = "/")
+      {
+          return Challenge( new AuthenticationProperties { RedirectUri = returnUrl }, "GitHub" );
+      }
+
+      [HttpGet("logout")]
+      public async Task<IActionResult> Logout()
+      {
+          await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+          return Redirect("/");
+      }
+  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Display Content Based on Authentication Status
+## Enabling authentication state in Blazor
 
-The `home.razor` page uses `<AuthorizeView>` to change UI depending on whether the user is logged in.
+To allow components to receive authentication state, wrap the router inside **CascadingAuthenticationState** under `~/Components/Routes.razor` file.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Routes.razor"  %}
 
-@page "/"
 @using Microsoft.AspNetCore.Components.Authorization
-@using OAuth.Components.Pages
 
-<PageTitle>Home</PageTitle>
-
-<div class="container mt-4">
-	<AuthorizeView>
-		<Authorized>
-            <h1>DataGrid</h1>
-			<!-- Render DataGrid on the home page when authenticated -->
-			<SecureGrid />
-		</Authorized>
-		<NotAuthorized>
-            <h1>Welcome!</h1>
-            <p>
-                Click the Login button below to sign in with GitHub.
-                Once you’re logged in, the Syncfusion DataGrid will be displayed.
-            </p>
-			<a class="btn btn-primary" href="/account/login?returnUrl=/">Login with GitHub</a>
-		</NotAuthorized>
-	</AuthorizeView>
-</div>
+<CascadingAuthenticationState>
+    <Router AppAssembly="typeof(Program).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+            <FocusOnNavigate RouteData="routeData" Selector="h1" />
+        </Found>
+    </Router>
+</CascadingAuthenticationState>
 
 {% endhighlight %}
 {% endtabs %}
@@ -256,9 +248,9 @@ Include the theme stylesheet and script references in the `App.razor` file.
 {% endhighlight %}
 {% endtabs %}
 
-**5. Create a protected page with Syncfusion DataGrid**
+## Create a protected page with Syncfusion DataGrid
 
-Create `SecureGrid.razor` and protect it using the [Authorize] attribute.
+Create `SecureGrid.razor` page and protect it using the [Authorize] attribute.
 
 {% tabs %}
 {% highlight razor %}
@@ -290,4 +282,38 @@ Create `SecureGrid.razor` and protect it using the [Authorize] attribute.
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrated how to integrate GitHub OAuth into a Blazor Web App and authenticate users using secure cookie-based sign‑in. After authentication, the user can access protected pages and view the Syncfusion Blazor DataGrid.
+## Display content based on authentication status
+
+The `Home.razor` page uses `<AuthorizeView>` to change UI depending on whether the user is logged in.
+
+{% tabs %}
+{% highlight razor %}
+
+@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
+@using OAuth.Components.Pages
+
+<PageTitle>Home</PageTitle>
+
+<div class="container mt-4">
+	<AuthorizeView>
+		<Authorized>
+            <h1>DataGrid</h1>
+			<!-- Render DataGrid on the home page when authenticated -->
+			<SecureGrid />
+		</Authorized>
+		<NotAuthorized>
+            <h1>Welcome!</h1>
+            <p>
+                Click the Login button below to sign in with GitHub.
+                Once you’re logged in, the Syncfusion DataGrid will be displayed.
+            </p>
+			<a class="btn btn-primary" href="/account/login?returnUrl=/">Login with GitHub</a>
+		</NotAuthorized>
+	</AuthorizeView>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
+
+This example demonstrates how to integrate GitHub OAuth into a Blazor Web App and authenticate users using secure cookie-based sign‑in. After authentication, the user can access protected pages and view the Syncfusion Blazor DataGrid.
