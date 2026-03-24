@@ -65,9 +65,7 @@ Follow these steps to download and install the Syncfusion Blazor extension from 
 
     ![VSIX Installer showing Visual Studio instance selection](images/vsixinstallation1.webp)
 
-4. Click the **Modify** button.
-
-5. After installation completes, open Visual Studio. The Syncfusion<sup style="font-size:70%">&reg;</sup> extensions are available under the **Extensions** menu.
+4. After installation completes, open Visual Studio. The Syncfusion<sup style="font-size:70%">&reg;</sup> extensions are available under the **Extensions** menu.
 
 
      ![SyncfusionMenu](images/syncfusionmenu.webp)
