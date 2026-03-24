@@ -300,7 +300,7 @@ public class OrderData
 
 ## Row height
 
-The DataGrid allows customization of the height of rows based on needs. This feature is useful when displaying more content in a row or when reducing the height of rows to fit content. This can be achieved by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight)property of the DataGrid. This property allows changing the height of the entire DataGrid row to a desired value.
+The DataGrid allows customization of the height of rows based on needs. This feature is useful when displaying more content in a row or when reducing the height of rows to fit content. This can be achieved by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property of the DataGrid. This property allows changing the height of the entire DataGrid row to a desired value.
 
 The following example demonstrates dynamically changing the height of the rows using the `RowHeight` property.
 
