@@ -189,7 +189,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ### OnActionComplete
 
-The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnActionComplete) event fires after data has been successfully fetched and is ready to bind. Use it for post-processing, such as logging record counts or updating dependent UI.
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnActionComplete) event fires after remote data has been successfully fetched and is ready to bind. Use it for post-processing, such as logging record counts or updating dependent UI.
 
 **Event argument:** [`ActionCompleteEventArgs<TItem>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ActionCompleteEventArgs-1.html)
 
@@ -202,27 +202,23 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ```razor
 @using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Data;
 
-<SfMultiSelect TValue="string[]" TItem="Employee" DataSource="@Employees" Placeholder="Select employees">
-    <MultiSelectFieldSettings Text="Name" Value="ID" />
-    <MultiSelectEvents TValue="string[]" TItem="Employee" OnActionComplete="OnActionComplete" />
+<SfMultiSelect TValue="string[]" TItem="Country" Placeholder="Select countries">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Customers"
+                   Adaptor="Adaptors.ODataV4Adaptor" />
+    <MultiSelectFieldSettings Text="ContactName" Value="CustomerID" />
+    <MultiSelectEvents TValue="string[]" TItem="Country" OnActionComplete="OnActionComplete" />
 </SfMultiSelect>
 
 @code {
-    public class Employee 
-    { 
-        public int ID { get; set; } 
-        public string Name { get; set; } 
+    public class Country
+    {
+        public string CustomerID { get; set; }
+        public string ContactName { get; set; }
     }
 
-    private List<Employee> Employees = new()
-    {
-        new() { ID = 1, Name = "Alice" },
-        new() { ID = 2, Name = "Bob" },
-        new() { ID = 3, Name = "Carol" }
-    };
-
-    private void OnActionComplete(ActionCompleteEventArgs<Employee> args)
+    private void OnActionComplete ( ActionCompleteEventArgs<Country> args )
     {
         Console.WriteLine($"Data loaded: {args.Count} records.");
     }
