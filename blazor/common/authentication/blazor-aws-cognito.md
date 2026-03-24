@@ -20,7 +20,7 @@ For identity, AWS provides Amazon Cognito to handle sign-up/sign-in, tokens, MFA
 ## Why Amazon Cognito for Blazor?
 
 * Standards-based OIDC: Works with ASP.NET Core's built-in OpenID Connect middleware for Blazor Server; no third-party libraries are necessary. This is the Microsoft-recommended pattern to connect non-Microsoft OIDC providers. 
-* Hosted UI & MFA: Prebuilt, brandable login with MFA and password policies, reducing custom auth UI work. 
+* Hosted UI & MFA: Pre-built, login with MFA and password policies, reducing custom auth UI work. 
 * Groups/roles: Emit cognito:groups in tokens for role-based authorization in your app and API. 
 * Temporary AWS credentials (optional): Identity Pools can exchange a user's ID token for time-limited AWS credentials to call S3, DynamoDB, etc.
 
@@ -90,7 +90,7 @@ N> This sample uses Authorization Code + PKCE with a public client (no client se
 
 ### `Program.cs` (OIDC + Cookies)
 
-This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. SaveTokens = true keeps ID/Access tokens available for downstream API calls. RoleClaimType = "cognito:groups" turns Cognito groups into ASP.NET Core roles. The /signin and /signout endpoints start and end the hosted login flow.
+This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. SaveTokens = true keeps ID/Access tokens available for downstream API calls. RoleClaimType = "cognito:groups" turns Cognito groups into ASP.NET Core roles. The /sign-in and /sign-out endpoints start and end the hosted login flow.
 
 {% tabs %}
 {% highlight cs %}
