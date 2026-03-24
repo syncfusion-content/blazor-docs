@@ -227,34 +227,6 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLyXeNfdPWbBobj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Touch interaction
-
-The touch interaction feature in DataGrid provides easy interaction with the DataGrid on touch screen devices. This feature improves the experience on mobile devices and tablets, making it easier to navigate and interact with the DataGrid's content using touch gestures.
-
-**Single row selection**
-
-Tapping on a row selects it immediately, providing efficient single-row selection on touch interfaces.
-
-**Multi-row selection**
-
-Multiple rows can be selected by tapping a row, which triggers a popup as shown in the image. Once the popup is tapped, additional rows can be selected by tapping the required rows, enabling efficient multi-row interaction.
-
-![Multi row selection](../images/sselection.jpg) 
-
-**Multi-row or cell selection**
-
-The DataGrid supports selecting both multiple rows and cells. Tap the popup to switch to multi-row or cell selection mode, then tap desired rows or cells to select them, as shown in the following image:
-
-![Multi row or cell selection](../images/mselection.jpg)
-
-> For multi-selection, it requires the selection [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be `Multiple`.
-
-**Touch selection example**
-
-The following screenshot illustrates how touch selection appears on a device:
-
-![Touch Interaction](../images/touch-selection.jpg)
-
 ## Toggle selection
 
 Toggle selection provides efficient selection state switching by enabling single-click selection and deselection. When this feature is enabled, clicking a selected item deselects it, and clicking an unselected item selects it.
