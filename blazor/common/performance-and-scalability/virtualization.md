@@ -109,7 +109,7 @@ Add the following stylesheet and script references in the **~/App.razor** file.
 
 ### Configure render mode
 
-For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each **~Pages/*.razor** file that requires interactive Server components:
+For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each **~Pages/*.razor** file that requires interactive Server components.
 
 **Per‑page directive (Server)**
 
@@ -912,7 +912,7 @@ Virtualization can be enabled by setting the [`EnableVirtualization`](https://he
 
 ### Scroll modes
 
-ListView supports two scrolling modes when virtualization is enabled:
+ListView supports two scrolling modes when virtualization is enabled.
 
 **1. Window Scroll (Default)**
 This mode is used automatically when no height is specified for the component. Scrolling is controlled by the browser window.
