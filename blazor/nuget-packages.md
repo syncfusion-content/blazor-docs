@@ -96,6 +96,54 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are
 </tr>
 </table>
 
+## Syncfusion.Blazor.SmartRichTextEditor
+
+This package contains the Blazor SmartRichTextEditor for Blazor applications. The Blazor Smart Rich Text Editor is an advanced rich text editing component in Syncfusion's Blazor suite that integrates artificial intelligence to enhance content creation and editing.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartRichTextEditor">Syncfusion.Blazor.SmartRichTextEditor</a>
+</td>
+<td>
+<ul>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp">Smart Rich Text Editor</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SfSmartRichTextEditor</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.AI">Syncfusion.Blazor.AI</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat">Syncfusion.Blazor.InteractiveChat</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter">Syncfusion.Blazor.MarkdownConverter</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups">Syncfusion.Blazor.Popups</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor">Syncfusion.Blazor.RichTextEditor</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.InteractiveChat
 
 The AI AssistView creates an interface through which users can interact with AI-driven suggestions and prompts.
@@ -455,6 +503,58 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+## Syncfusion.Blazor.ChartWizard
+
+The Blazor Chart Wizard is an interactive chart creation and customization component for Blazor applications. It helps users configure chart types, data mappings, styling, and formatting with real-time preview.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard">Syncfusion.Blazor.ChartWizard</a>
+</td>
+<td>
+<ul>
+<li><a href="https://blazor.syncfusion.com/documentation/chart-wizard/getting-started-with-web-app">Chart Wizard</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SfChartWizard</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Charts">Syncfusion.Blazor.Charts</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid">Syncfusion.Blazor.Grid</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core">Syncfusion.ExcelExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
