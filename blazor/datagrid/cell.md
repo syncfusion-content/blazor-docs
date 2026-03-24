@@ -15,7 +15,7 @@ A cell in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid r
 
 ## Displaying the HTML content
 
-Displaying HTML content in a DataGrid can be useful when displaying formatted content, such as images, links, or tables, in a tabular format. The DataGrid allows HTML tags to be displayed in the header and content. By default, HTML content is encoded to prevent potential security vulnerabilities. However, the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode property can be set to `false` to display HTML tags without encoding. This feature is useful when displaying HTML content in a DataGrid cell.
+Displaying HTML content in a DataGrid can be useful when displaying formatted content, such as images, links, or tables, in a tabular format. The DataGrid allows HTML tags to be displayed in the header and content. By default, HTML content is encoded to prevent potential security vulnerabilities. However, the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property can be set to `false` to display HTML tags without encoding. This feature is useful when displaying HTML content in a DataGrid cell.
 
 To configure:
 
