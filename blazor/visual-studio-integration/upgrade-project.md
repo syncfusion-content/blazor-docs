@@ -27,19 +27,19 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for
 
     Choose **Extensions -> Syncfusion® -> Essential Studio® for Blazor -> Migrate Project…** from the Visual Studio menu.
 
-    ![Open the Migrate Project wizard from the Extensions menu in Visual Studio](images/MigrationMenu.PNG)
+    ![Open the Migrate Project wizard from the Extensions menu in Visual Studio](images/migrationmenu.webp)
 
     **Option 2:**
 
     In **Solution Explorer**, right-click the project, select **Syncfusion® Blazor**, then choose **Migrate Syncfusion® Blazor project from another version...**
 
-      ![Open the Migrate Project wizard from the Solution Explorer context menu](images/MigrationAddin.png)
+      ![Open the Migrate Project wizard from the Solution Explorer context menu](images/migrationaddin.webp)
 
     N> The Migration option becomes available only after the project references the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
 
 3. In the Syncfusion® Project Migration window, select the desired Syncfusion® Blazor version to migrate to.
 
-    ![Syncfusion Blazor Project Migration wizard with version selection](images/Migration.png)
+    ![Syncfusion Blazor Project Migration wizard with version selection](images/migration.webp)
 
     N> Versions are loaded from the Syncfusion® Blazor NuGet packages available on [NuGet.org](https://www.nuget.org/) and require an active internet connection.
 
@@ -47,11 +47,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for
 
 5. After migration completes, a confirmation message is displayed.
 
-    ![Migration succeeded message after completing the project migration](images/MigrationSuccess.png)
+    ![Migration succeeded message after completing the project migration](images/migrationsuccess.webp)
 
     If a backup was created, the original project will be saved to the specified backup path.
 
-    ![Backup location for the original project created during conversion](images/Backuplocation.png)
+    ![Backup location for the original project created during conversion](images/backuplocation.webp)
 
 6. The migration updates the Syncfusion® Blazor NuGet package references in the application's `.csproj` to the selected version.
 
