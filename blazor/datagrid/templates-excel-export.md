@@ -147,7 +147,7 @@ public class EmployeeData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting grouped data along with a custom caption template to an Excel document. This feature is useful for adding meaningful group captions such as record counts or group keys to the exported file.
 
-Steps to Customize and Align Group Caption Text in Excel Export:
+### Steps to Customize and Align Group Caption Text in Excel Export
 
 1. Trigger the Excel export by handling the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
 2. Initiate the export using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
