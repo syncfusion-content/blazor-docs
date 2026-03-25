@@ -181,10 +181,32 @@ Please refer to upcoming Syncfusion® release notes for updates.
 ---
 
 
-## Constraints and Considerations : 
+## Constraints and Considerations
 
-Some components are not currently fully compliant with Strict CSP requirements. Applications using the components listed below must include the style-src 'unsafe-inline' directive as part of their CSP configuration.
+Some of our Syncfusion® Blazor components are not fully support strict CSP. The **`style-src 'unsafe-inline'`** directive is required in your CSP configuration under either of the following conditions:
 
+- Your application uses one or more components listed in the **Components Requiring CSP Relaxation** table below.
+- Your application uses a component that has a **Feature Limitation** entry in the Component Categories Overview section above (for example, Pivot Table, Gantt Chart, Circular Gauge, Maps, Heatmap Chart, or TreeView). These components rely on certain features that currently require inline styles or dynamic style injection.
+- Your application passes inline `style` attribute values through `InputAttributes` or `HtmlAttributes` parameters (for example, `InputAttributes='@(new Dictionary<string, object> { { "style", "width:200px;" } })'`). Inline styles supplied via these dictionaries are subject to CSP restrictions and require the `'unsafe-inline'` directive.
+
+  > **Recommendation:** Where possible, avoid passing inline styles through `InputAttributes` or `HtmlAttributes`. Instead, use the component's dedicated style properties such as `Width` and `Height`, or apply custom styling by overriding the relevant CSS classes in your application's stylesheet.
+
+In any of the above cases, apply the following CSP configuration to your application:
+
+```html
+<meta http-equiv="Content-Security-Policy"
+      content="base-uri 'self';
+               default-src 'self';
+               connect-src 'self' https: ws: wss:;
+               img-src 'self' data: https:;
+               object-src 'none';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               font-src 'self' data:;
+               upgrade-insecure-requests;">
+```
+
+> **Note:** The [wasm-unsafe-eval](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) source expression is mandatory for Blazor WebAssembly and Blazor Web App applications. It enables the browser to compile and execute WebAssembly modules required by the Blazor Mono runtime. Without this directive, modern browsers will block WebAssembly execution, preventing the Blazor runtime from initializing correctly.
 
 #### Components Requiring CSP Relaxation
 
