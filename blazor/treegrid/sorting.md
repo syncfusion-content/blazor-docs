@@ -238,8 +238,6 @@ public class TreeData
 
 {% endtabs %}
 
-N> The **args.requestType** is the current action name. For example, in sorting the **args.requestType** value is *sorting*. 
-
 ## Touch interaction
 
 When the tree grid header is tapped on the touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.jpg) is displayed for the multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.jpg), and then tap the desired tree grid headers.
