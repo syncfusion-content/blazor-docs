@@ -1,33 +1,33 @@
 ---
 layout: post
-title:  Using Syncfusion Blazor Server with AWS Cognito
+title: Using Syncfusion Blazor Server with AWS Cognito
 description: Authenticate a Blazor Server app with AWS Cognito (OIDC Hosted UI) and secure Syncfusion components.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Authentication and Authorization with AWS Cognito in Blazor Server 
+# Authentication and Authorization with AWS Cognito in Blazor Server
 
-AWS Cognito User Pools provide a managed identity system that supports OpenID Connect (OIDC), OAuth 2.0, JWT tokens, MFA, user attributes, and group‑based roles. This guide explains how to integrate a Blazor Server application with Cognito using Authorization Code Flow + PKCE through the Hosted UI, configure roles, and secure Syncfusion Blazor UI components.
+AWS Cognito User Pools provide a managed identity system that supports OpenID Connect (OIDC), OAuth 2.0, JSON Web Tokens (JWTs), MFA, user attributes, and group-based roles. This guide explains how to integrate a Blazor Server application with Cognito using Authorization Code Flow + PKCE through the Hosted UI, configure roles, and secure Syncfusion Blazor UI components.
 
 ## What is AWS?
 
-Amazon Web Services (AWS) is a cloud platform offering compute, storage, databases, security, and many managed services. 
+Amazon Web Services (AWS) is a cloud platform that provides compute, storage, and identity services. For Blazor developers, AWS offers Amazon Cognito for user authentication and identity management.
 
-For identity, AWS provides Amazon Cognito to handle sign-up/sign-in, tokens, MFA, and issuing temporary AWS credentials via IAM. Cognito exposes managed login (Hosted UI) and standard OpenID Connect (OIDC) endpoints for modern auth flows.
+For identity, AWS provides Amazon Cognito to handle sign-up and sign-in, tokens, MFA, and issuing temporary AWS credentials via IAM. Cognito provides a managed login interface (Hosted UI) and implements standard OpenID Connect (OIDC) endpoints to support modern authentication flows.
 
 ## Why Amazon Cognito for Blazor?
 
-* Standards-based OIDC: Works with ASP.NET Core's built-in OpenID Connect middleware for Blazor Server; no third-party libraries are necessary. This is the Microsoft-recommended pattern to connect non-Microsoft OIDC providers. 
-* Hosted UI & MFA: Pre-built, login with MFA and password policies, reducing custom auth UI work. 
-* Groups/roles: Emit cognito:groups in tokens for role-based authorization in your app and API. 
-* Temporary AWS credentials (optional): Identity Pools can exchange a user's ID token for time-limited AWS credentials to call S3, DynamoDB, etc.
+* Standards-based OIDC works with ASP.NET Core's built-in OpenID Connect middleware for Blazor Server; no third-party libraries are necessary. This is the Microsoft-recommended pattern to connect non-Microsoft OIDC providers. 
+* Supports login with MFA and password policies, reducing custom auth UI work. 
+* Emits `cognito:groups` in tokens for role-based authorization in your app and API. 
+* Identity Pools can exchange a user's ID token for time-limited AWS credentials to call S3, DynamoDB, etc.
 
-## Cognito building blocks
+## Cognito Building Blocks
 
-* **User Pools:** Managed user directory + OIDC authorization server (tokens, Hosted UI, MFA, groups). Use this to authenticate users and obtain ID/Access tokens for your app/APIs. 
-* **Identity Pools (Federated Identities):** Optional service that exchanges a trusted identity (e.g., User Pool ID token) for temporary AWS credentials through IAM roles; use when your app (typically the server) must call AWS services on behalf of the user. 
+* **User Pools:** Managed user directory + OIDC authorization server (tokens, Hosted UI, MFA, groups). Use this to authenticate users and obtain ID/Access tokens for your app and APIs. 
+* **Identity Pools (Federated Identities):** Optional service that exchanges a trusted identity (e.g., User Pool ID token) for temporary AWS credentials through IAM roles. Use this when server must call AWS services (such as Amazon S3 and Amazon DynamoDB) on behalf of the user.
 
 ## Password Policies
 
@@ -40,10 +40,13 @@ In **User Pool → Sign-in experience**:
 
 * Create groups (e.g., `Admin`) in **User Pool → Groups** and add users.  
 * Ensure **Group membership** is included in tokens.  
-* Map roles using `RoleClaimType = "cognito:groups"` and protect pages/endpoints with `[Authorize(Roles="Admin")]`.  
+* Map roles using `RoleClaimType = "cognito:groups"` and protect pages/endpoints with `[Authorize(Roles="Admin")]`. 
+
+Add the following attribute to any `.razor` page file to restrict access to the Admin role:
 
 ```razor
 @page "/admin"
+@using Microsoft.AspNetCore.Authorization
 @attribute [Authorize(Roles = "Admin")]
 <h3>Admin Dashboard</h3>
 <p>Only users in the Admin group can access this page.</p>
@@ -53,24 +56,47 @@ In **User Pool → Sign-in experience**:
 
 ## Prerequisites
 
-* .NET 10  
-*  Visual Studio 2022 or VS Code + C# Dev Kit  
+* .NET SDK (version 8.0 or later; this guide uses .NET 10.0)
+* Visual Studio 2022 or VS Code + C# Dev Kit  
 * AWS Account with permission to manage Cognito
 
 ## Integrating Cognito with Blazor
 
 Configure OpenID Connect with the Cognito Hosted UI (Authorization Code + PKCE), which Microsoft's docs show for any OIDC provider in Blazor Web Apps.
 
-### Create project 
+### Create a Blazor Server Project
 
-If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion’s Blazor getting‑started guides.
+If you already have a Blazor project, proceed to the **Create a Cognito User Pool** section. Otherwise, create one using Syncfusion Blazor Server getting started guides.
 
 * [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+
+### Create a Cognito User Pool
+
+Before building the Blazor app, set up an AWS Cognito User Pool:
+
+1. Go to **AWS Management Console** > **Amazon Cognito**.
+2. Click **Create user pool**.
+3. Choose authentication method: **Email** or **Phone number** (or both).
+4. Continue through the setup wizard. Accept defaults or customize as needed.
+5. Note the **User pool ID** and **User pool name**.
+6. Go to **App integration** > **App clients** (or **App clients and analytics**).
+7. Click **Create app client**:
+   - **App type:** Choose **Public client** (for PKCE without a secret).
+   - **Client name:** (for example, `MyBlazorServer`).
+   - **Authentication flows:** Ensure **Authorization code flow** is selected.
+   - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin-oidc` (adjust port if different; check `Properties/launchSettings.json`).
+   - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback-oidc`.
+8. Create the app client and note the **Client ID**.
+9. In **Domain name** (under App integration), create a custom domain or use the Cognito-provided subdomain. Note the full Hosted UI domain:  
+   `https://your-domain.auth.{region}.amazoncognito.com`
+
+You now have the values to add to `appsettings.json`.
+
+[Amazon Cognito user pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools.html)
 
 ### Update `appsettings.json`
 
-This stores your Cognito Hosted UI domain and app client ID so the app can read them at startup. The Authority is the base URL of your Cognito User Pool domain, and ClientId identifies your web app in Cognito. Keep these out of code to simplify environment changes. Replace the placeholders with your actual Cognito values.
+This stores your Cognito Hosted UI domain and app client ID so the app can read them at startup. The `Authority` is the base URL of your Cognito User Pool domain, and `ClientId` identifies your web app in Cognito. Keep these out of code to simplify environment changes. Replace the placeholders with your actual Cognito values.
 
 {% tabs %}
 {% highlight json %}
@@ -86,20 +112,23 @@ This stores your Cognito Hosted UI domain and app client ID so the app can read 
 {% endhighlight %}
 {% endtabs %}
 
-N> This sample uses Authorization Code + PKCE with a public client (no client secret). If you created a confidential client, add ClientSecret to configuration and set options.ClientSecret in the OIDC options. 
+N> Replace **ap-south-1** with your AWS region (e.g., us-east-1, eu-west-1). Check your Cognito User Pool details page for the correct region.
+
+**Where to find these values:**
+- **Authority:** Go to **Amazon Cognito** > Your **User Pool** > **App integration** > **Domain name**. The full URL is `https://{domain-name}.auth.{region}.amazoncognito.com` (for example, `https://myapp.auth.us-east-1.amazoncognito.com`).
+- **ClientId:** Go to **App integration** > **App clients** and copy the **Client ID** for your app.
+
+
+N> This sample uses Authorization Code + PKCE with a public client (no client secret). If you created a confidential client, add ClientSecret to configuration and set `options.ClientSecret` in the OIDC options. 
 
 ### `Program.cs` (OIDC + Cookies)
 
-This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. SaveTokens = true keeps ID/Access tokens available for downstream API calls. RoleClaimType = "cognito:groups" turns Cognito groups into ASP.NET Core roles. The /sign-in and /sign-out endpoints start and end the hosted login flow.
+This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. `SaveTokens = true` keeps ID/Access tokens available for downstream API calls. `RoleClaimType = "cognito:groups"` turns Cognito groups into ASP.NET Core roles. The `/sign-in` and `/sign-out` endpoints start and end the hosted login flow.
 
 {% tabs %}
 {% highlight cs %}
 
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Components.Authorization;
-using WebApp.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
@@ -113,7 +142,6 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddSingleton<WeatherForecastService>();
 var cognitoDomain = builder.Configuration["Cognito:Authority"];
 var clientId = builder.Configuration["Cognito:ClientId"];
 
@@ -122,7 +150,7 @@ bool TryGetAuthorityUri(string? authority, out Uri? uri)
     uri = null;
     if (string.IsNullOrWhiteSpace(authority)) return false;
     if (authority.Contains("your-domain")) return false;
-    // Require a valid absolute URI (e.g. https://your-domain.auth.region.amazoncognito.com)
+    // Require a valid absolute URI (for example, https://your-domain.auth.region.amazoncognito.com)
     if (!Uri.TryCreate(authority, UriKind.Absolute, out var parsed)) return false;
     // only http or https are acceptable here for dev detection; production will require https
     if (parsed.Scheme != Uri.UriSchemeHttp && parsed.Scheme != Uri.UriSchemeHttps) return false;
@@ -149,7 +177,7 @@ if (!string.IsNullOrWhiteSpace(cognitoDomain)
                  && !u.IsLoopback
                  && builder.Environment.IsDevelopment())
         {
-            // allow non-local http authority in development (rare)
+            // Allow non-local http authority in development (rare)
             useOidc = true;
         }
     }
@@ -168,7 +196,7 @@ if (useOidc)
         options.Authority = cognitoDomain!;          // Cognito Hosted UI domain
         options.ClientId = clientId!;                // App client ID
         options.ResponseType = "code";             // Authorization Code + PKCE
-        options.SaveTokens = true;                  // persist tokens in auth session
+        options.SaveTokens = true;                  // Persist ID/Access tokens in session for use in API calls or as Bearer tokens
 
         // If the authority is http and we're in Development, allow non-https metadata.
         options.RequireHttpsMetadata = !(builder.Environment.IsDevelopment()
@@ -275,10 +303,9 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-###  Syncfusion DataGrid on an authenticated page
+### Syncfusion DataGrid on an authenticated page
 
-This page shows a Sign in link when anonymous and renders a Syncfusion DataGrid once authenticated. The links hit the minimal endpoints you mapped in Program.cs. The grid uses in‑memory data to keep the sample runnable.
-
+This page demonstrates how to protect a Syncfusion DataGrid using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
 
 {% tabs %}
 {% highlight razor %}
@@ -295,12 +322,12 @@ This page shows a Sign in link when anonymous and renders a Syncfusion DataGrid 
             <a class="btn btn-outline-secondary" href="/signout">Sign out</a>
         </div>
 
-        <SfGrid DataSource="@_orders" AllowPaging="true" AllowSorting="true">
+        <SfGrid DataSource="@_orders">
             <GridColumns>
                 <GridColumn Field="Id" HeaderText="ID" Width="120"></GridColumn>
                 <GridColumn Field="Item" HeaderText="Item"></GridColumn>
                 <GridColumn Field="Qty" HeaderText="Qty"></GridColumn>
-                <GridColumn Field="Price" HeaderText="Price" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
+                <GridColumn Field="Price" HeaderText="Price" Format="C2"></GridColumn>
             </GridColumns>
         </SfGrid>
     </Authorized>
@@ -311,6 +338,8 @@ This page shows a Sign in link when anonymous and renders a Syncfusion DataGrid 
 </AuthorizeView>
 
 @code {
+
+     // Demo data for this sample; in production, fetch from a service/API
     private record Order(int Id, string Item, int Qty, decimal Price);
 
     private readonly List<Order> _orders = new()
@@ -323,13 +352,15 @@ This page shows a Sign in link when anonymous and renders a Syncfusion DataGrid 
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
+### Run the Application
 
-Run the application using below:
+Run the application using the following command:
 
 ```
 dotnet run
 ```
+
+N> By default, the app runs on `https://localhost:7000` (or `https://localhost:5001` in older project templates). Ensure your Cognito app client **Allowed redirect URIs** match your actual localhost URL.
 
 **Expected Behavior**
 
