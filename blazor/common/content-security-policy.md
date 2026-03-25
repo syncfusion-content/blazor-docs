@@ -197,7 +197,7 @@ Some components are largely strict CSP-compliant, but specific features within t
 
 If you pass a `style` key with an inline style value through the `InputAttributes` or `HtmlAttributes` parameter dictionary, the browser will block those styles under a strict CSP.
 
-```razor
+```cshtml
 @* Example that requires 'unsafe-inline' *@
 <SfTextBox InputAttributes='@(new Dictionary<string, object> { { "style", "width:200px;" } })' />
 ```
