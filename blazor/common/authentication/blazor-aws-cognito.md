@@ -114,11 +114,6 @@ This stores your Cognito Hosted UI domain and app client ID so the app can read 
 {% endhighlight %}
 {% endtabs %}
 
-**Where to find these values:**
-- **Authority:** Go to **Amazon Cognito** > Your **User Pool** > **App integration** > **Domain name**. The full URL is `https://{domain-name}.auth.{region}.amazoncognito.com` (for example, `https://myapp.auth.us-east-1.amazoncognito.com`).
-- **ClientId:** Go to **App integration** > **App clients** and copy the **Client ID** for your app.
-
-
 N> This sample uses Authorization Code + PKCE with a public client (no client secret). If you created a confidential client, add ClientSecret to configuration and set `options.ClientSecret` in the OIDC options. 
 
 ### `Program.cs` (OIDC + Cookies)
