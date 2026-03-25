@@ -84,11 +84,13 @@ Before building the Blazor app, set up an AWS Cognito User Pool:
    - **App type:** Choose **Public client** (for PKCE without a secret).
    - **Client name:** (for example, `MyBlazorServer`).
    - **Authentication flows:** Ensure **Authorization code flow** is selected.
-   - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin-oidc` (adjust port if different; check `Properties/launchSettings.json`).
-   - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback-oidc`.
+   - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin` (adjust port if different; check `Properties/launchSettings.json`).
+   - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout`.
 8. Create the app client and note the **Client ID**.
-9. In **Domain name** (under App integration), create a custom domain or use the Cognito-provided subdomain. Note the full Hosted UI domain:  
-   `https://your-domain.auth.{region}.amazoncognito.com`
+9. In **Domain name** (under App integration), create a custom domain or use the Cognito-provided sub-domain. Note the full Hosted UI domain:
+   ```  
+   https://your-domain.auth.{region}.amazoncognito.com
+   ```
 
 You now have the values to add to `appsettings.json`.
 
@@ -99,11 +101,11 @@ You now have the values to add to `appsettings.json`.
 This stores your Cognito Hosted UI domain and app client ID so the app can read them at startup. The `Authority` is the base URL of your Cognito User Pool domain, and `ClientId` identifies your web app in Cognito. Keep these out of code to simplify environment changes. Replace the placeholders with your actual Cognito values.
 
 {% tabs %}
-{% highlight json %}
+{% highlight %}
 
 {
   "Cognito": {
-    "Authority": "https://your-domain.auth.ap-south-1.amazoncognito.com",
+    "Authority": "https://your-domain.auth.ap-south-1.amazoncognito.com", //Replace **ap-south-1** with your AWS region (e.g., us-east-1, eu-west-1). Check your Cognito User Pool details page for the correct region.
     "ClientId": "YOUR_APP_CLIENT_ID"
   },
   "AllowedHosts": "*"
@@ -111,8 +113,6 @@ This stores your Cognito Hosted UI domain and app client ID so the app can read 
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Replace **ap-south-1** with your AWS region (e.g., us-east-1, eu-west-1). Check your Cognito User Pool details page for the correct region.
 
 **Where to find these values:**
 - **Authority:** Go to **Amazon Cognito** > Your **User Pool** > **App integration** > **Domain name**. The full URL is `https://{domain-name}.auth.{region}.amazoncognito.com` (for example, `https://myapp.auth.us-east-1.amazoncognito.com`).
