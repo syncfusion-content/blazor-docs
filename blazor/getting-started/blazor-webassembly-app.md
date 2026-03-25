@@ -119,7 +119,7 @@ After the packages installed, open the **~/_Imports.razor** file and import the 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="3 11" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="2 4" %}
 
 ....
 using Syncfusion.Blazor;
