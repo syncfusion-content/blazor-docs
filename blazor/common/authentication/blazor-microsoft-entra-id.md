@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor with Microsoft Entra ID Authentication
 
-This document explains how to build a **Blazor Web App (Interactive Server)** that uses **Microsoft Entra ID** (formerly Azure Active Directory) for user authentication. Once users log in with their Microsoft account, they will be able to access a protected page that includes the Syncfusion Blazor DataGrid component.
+This document explains how to build a **Blazor Web App (Interactive Server)** that uses **Microsoft Entra ID** (formerly Azure Active Directory) for user authentication. Once users log in with their Microsoft account, they will be able to access a protected page that includes the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
 
 ## What is Microsoft Entra ID?
 
@@ -51,7 +51,7 @@ With Entra ID, you do not need to write authentication logic manually. Microsoft
   - **Enable HTTPS**
 6. Click **Create** to generate the Blazor Web App.
 
-## Register Your App in Microsoft Entra ID (Azure Portal)
+## Register your app in Microsoft Entra ID (Azure Portal)
 
 This step registers the Blazor application in Azure so Microsoft Entra ID can authenticate users.
 
@@ -67,7 +67,7 @@ After registration, note the following values:
 
 These values are required in the application configuration.
 
-## Configure Redirect URLs
+## Configure redirect URLs
 
 Redirect URLs specify where Microsoft Entra ID should return the user after a successful login.
 
@@ -92,9 +92,18 @@ After copying the **Tenant ID** and **Client ID**, update the `appsettings.json`
 }
 ```
 
+## Install Microsoft Identity packages
+
+1. In Visual Studio, go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search and install the following packages:
+* Microsoft.Identity.Web
+* Microsoft.Identity.Web.UI
+
+These packages are required to connect the Blazor application with Microsoft Entra ID and to enable the built‑in sign‑in and sign‑out endpoints.
+
 ## Configure Microsoft Entra ID authentication in Blazor
 
-This step enables OpenID Connect authentication using Microsoft Entra ID.
+This step enables OpenID Connect authentication in the Blazor application by configuring Microsoft Entra ID settings in the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -157,7 +166,7 @@ app.Run();
 
 ## Enabling authentication state in Blazor
 
-This step allows Blazor components to access the current user’s authentication state.
+This step allows Blazor components to access the current user’s authentication state by configuring the `~/Components/Routes.razor` file.
 
 @using Microsoft.AspNetCore.Components.Authorization
 
