@@ -54,7 +54,7 @@ You can create a **Blazor Web App** using Visual Studio via [Microsoft Templates
 
 You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
@@ -151,9 +151,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ```html
 
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-    ...
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+...
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 ```
 
@@ -161,7 +161,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` component. (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If an **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is already configured in the `App.razor` file by default.
 
