@@ -80,7 +80,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Style Attributes Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| DataGrid, Pager, Tree Grid, DataForm, Query Builder | ListView | [Pivot Table](../pivot-table/content-security-policy.md) |
+| DataGrid, Pager, Tree Grid, DataForm, Query Builder | ListView | [Pivot Table](../pivot-table/content-security-policy) |
 
 ---
 
@@ -89,7 +89,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| Scheduler, Calendar | DatePicker, DateRangePicker, DateTime Picker, TimePicker | [Gantt Chart](../gantt-chart/content-security-policy.md) |
+| Scheduler, Calendar | DatePicker, DateRangePicker, DateTime Picker, TimePicker | [Gantt Chart](../gantt-chart/content-security-policy) |
 
 ---
 
@@ -123,7 +123,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant |HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| BarcodeGenerator, QRCodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy.md), [Maps](../maps/content-security-policy.md), [Heatmap Chart](../heatmap-chart/content-security-policy.md) |
+| BarcodeGenerator, QRCodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy), [Maps](../maps/content-security-policy), [Heatmap Chart](../heatmap-chart/content-security-policy) |
 
 ---
 
@@ -158,7 +158,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| Ribbon     | Accordion, Stepper, Breadcrumb, AppBar, Carousal, Context Menu, Sidebar, MenuBar, Tabs, Toolbar,  | [TreeView](../treeview/content-security-policy.md) |
+| Ribbon     | Accordion, Stepper, Breadcrumb, AppBar, Carousal, Context Menu, Sidebar, MenuBar, Tabs, Toolbar,  | [TreeView](../treeview/content-security-policy) |
 
 ---
 
