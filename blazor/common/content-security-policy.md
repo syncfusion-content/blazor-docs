@@ -183,15 +183,28 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 ## Constraints and Considerations
 
-Some of our Syncfusion® Blazor components are not fully support strict CSP. The **`style-src 'unsafe-inline'`** directive is required in your CSP configuration under either of the following conditions:
+While Syncfusion® Blazor components are progressively moving toward full strict CSP compliance, certain scenarios still require the **`style-src 'unsafe-inline'`** directive. You must include this directive in your CSP configuration if your application falls into any of the following scenarios:
 
-- Your application uses one or more components listed in the **Components Requiring CSP Relaxation** table below.
-- Your application uses a component that has a **Feature Limitation** entry in the Component Categories Overview section above (for example, Pivot Table, Gantt Chart, Circular Gauge, Maps, Heatmap Chart, or TreeView). These components rely on certain features that currently require inline styles or dynamic style injection.
-- Your application passes inline `style` attribute values through `InputAttributes` or `HtmlAttributes` parameters (for example, `InputAttributes='@(new Dictionary<string, object> { { "style", "width:200px;" } })'`). Inline styles supplied via these dictionaries are subject to CSP restrictions and require the `'unsafe-inline'` directive.
+**Scenario 1: Components that require CSP relaxation**
 
-  > **Recommendation:** Where possible, avoid passing inline styles through `InputAttributes` or `HtmlAttributes`. Instead, use the component's dedicated style properties such as `Width` and `Height`, or apply custom styling by overriding the relevant CSS classes in your application's stylesheet.
+Certain components inherently rely on dynamic or inline style injection and cannot function under a strict CSP without `'unsafe-inline'`. Refer to the **Components Requiring CSP Relaxation** table below for the complete list.
 
-In any of the above cases, apply the following CSP configuration to your application:
+**Scenario 2: Components with feature limitations**
+
+Some components are largely strict CSP-compliant, but specific features within them require inline styles. If your application uses any such feature in Pivot Table, Gantt Chart, Circular Gauge, Maps, Heatmap Chart, or TreeView, the `'unsafe-inline'` directive is required. Refer to the **Feature Limitation** column in the Component Categories Overview for details.
+
+**Scenario 3: Inline styles passed via `InputAttributes` or `HtmlAttributes`**
+
+If you pass a `style` key with an inline style value through the `InputAttributes` or `HtmlAttributes` parameter dictionary, the browser will block those styles under a strict CSP.
+
+```razor
+@* Example that requires 'unsafe-inline' *@
+<SfTextBox InputAttributes='@(new Dictionary<string, object> { { "style", "width:200px;" } })' />
+```
+
+> **Recommendation:** Avoid passing inline styles through `InputAttributes` or `HtmlAttributes`. Use the component's built-in properties (such as `Width` and `Height`) for dimensions, or apply custom styling by overriding the relevant CSS classes in your application's stylesheet. This keeps your CSP as strict as possible.
+
+If your application falls under any of the above scenarios, apply the following CSP configuration:
 
 ```html
 <meta http-equiv="Content-Security-Policy"
