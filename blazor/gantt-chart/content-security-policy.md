@@ -24,7 +24,7 @@ The Syncfusion® Blazor **Gantt Chart** component supports most features under s
 
 **Rich Text Formatting in Notes Field** requires the `style-src 'unsafe-inline'` directive.
 
-### Why Does Rich Text Need `'unsafe-inline'`?
+### Why Does Rich Text Formatting Need `'unsafe-inline'`?
 
 The Notes field supports rich text formatting (bold, italic, colors, lists, links, etc.). When you render formatted content, the Rich Text Editor applies dynamic inline styles to display the requested visual appearance, including:
 
@@ -41,7 +41,7 @@ If you don't need rich text formatting in Notes, just use plain text. The rest o
 
 ## Recommended CSP Configurations
 
-### Strict CSP (Without Rich Text Notes)
+### Strict CSP (Without  RichTextEditor related Features)
 
 Use this configuration if you don't use rich text formatting in Notes (or don't use the Notes field):
 

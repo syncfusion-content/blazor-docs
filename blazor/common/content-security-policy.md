@@ -45,7 +45,7 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
                upgrade-insecure-requests;">
 ```
 
-### Blazor WebAssembly and Hybrid (Auto) Apps
+### Blazor Interactive WebAssembly App and Wasm Standalone App
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -75,13 +75,14 @@ Most Syncfusion components support strict CSP. However, some components or featu
 The following components need inline styles to work and always require `'unsafe-inline'`: 
 
 | Category | Components |
-| **Data Visualization** | Charts, 3D Charts, Stock Chart, Bullet Chart, Range Selector, Sankey, Sparkline Chart, Smith Chart |
-| **File Viewers & Editors** | Block Editor, Rich Text Editor |
-| **Interactive Chat** | Chat UI |
-| **File Management** | File Manager |
-| **Layout** | Card |
-| **Diagrams and Maps** | Diagram |
-| **Kanban** | Kanban |
+|----------|------------|
+| **Data Visualization** | • Charts<br> • 3D Charts<br> • Stock Chart<br> • Bullet Chart<br> • Range Selector<br> • Sankey<br> • Sparkline Chart<br> • Smith Chart |
+| **File Viewers & Editors** | • Block Editor<br> • Rich Text Editor |
+| **Interactive Chat** | • Chat UI |
+| **File Management** | • File Manager |
+| **Layout** | • Card |
+| **Diagrams and Maps** | • Diagram |
+| **Kanban** | • Kanban |
 
 ### Scenario 2: Components With Limited Features Requiring `'unsafe-inline'`
 
@@ -89,10 +90,11 @@ These components work under strict CSP for most features, but specific advanced 
 
 | Category | Components |
 |----------|------------|
-| Data Management | [Pivot Table](../pivot-table/content-security-policy) |
-| Scheduling | [Gantt Chart](../gantt-chart/content-security-policy) |
-| Charts & Maps | [Circular Gauge](../circular-gauge/content-security-policy), [Maps](../maps/content-security-policy), [Heatmap Chart](../heatmap-chart/content-security-policy) |
-| Navigation | [TreeView](../treeview/content-security-policy) |
+| Data Management | • [Pivot Table](../pivot-table/content-security-policy) |
+| Scheduling | • [Gantt Chart](../gantt-chart/content-security-policy) |
+| Charts | • [Circular Gauge](../circular-gauge/content-security-policy)<br> • [Heatmap Chart](../heatmap-chart/content-security-policy) |
+| Navigation | • [TreeView](../treeview/content-security-policy) |
+| Maps |  • [Maps](../maps/content-security-policy)|
 
 ### Scenario 3: Passing Inline Styles via ComponentInputAttributes
 
