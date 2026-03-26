@@ -221,7 +221,7 @@ export default defineConfig({
 The Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> scripts/themes are required for rendering Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components inside React. Add the following resources to the **index.html** file of your React project.
 
 {% tabs %}
-{% highlight html tabtitle="index.html" hl_lines="2 5 8"%}
+{% highlight html tabtitle="index.html" hl_lines="2 5 8" %}
 
 <!-- Syncfusion Blazor theme -->
 <link rel="stylesheet" href="/_content/Syncfusion.Blazor.Themes/fluent2.css" />
@@ -250,7 +250,7 @@ export default function OrdersGrid() {
   return (
     <div>
       <h2>DataGrid (Blazor with React)</h2>
-      
+
       <sf-orders-grid></sf-orders-grid>
     </div>
   );
