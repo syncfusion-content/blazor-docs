@@ -5,7 +5,6 @@ description: Learn how to install and use Syncfusion Agent Skills to enhance AI 
 platform: Blazor
 control: Skills
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Syncfusion® Blazor Agent Skills for AI Assistants
