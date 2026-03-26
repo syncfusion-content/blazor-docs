@@ -116,17 +116,8 @@ using Microsoft.AspNetCore.Http;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure authentication with Microsoft Entra ID (Azure AD)
-// Ensure configuration contains a path-only CallbackPath (avoid full-URL overrides)
-builder.Configuration["AzureAd:CallbackPath"] = "/signin-oidc";
-
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
   .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
-
-// Ensure the OIDC callback path is set to a path-only value to avoid config binding errors
-builder.Services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, options =>
-{
-    options.CallbackPath = new PathString("/signin-oidc");
-});
 
 builder.Services.AddAuthorization();
 
@@ -237,6 +228,7 @@ This section creates a protected page that displays the Syncfusion DataGrid only
 {% highlight razor %}
 
 @page "/"
+@rendermode InteractiveServer
 @using Microsoft.AspNetCore.Components.Authorization
 
 <PageTitle>Home</PageTitle>
@@ -256,7 +248,6 @@ This section creates a protected page that displays the Syncfusion DataGrid only
 		<div class="d-flex justify-content-between align-items-center">
 			<h1>DataGrid</h1>
 			<a class="btn btn-secondary" href="/MicrosoftIdentity/Account/SignOut">Logout</a> </div>
-			@using Syncfusion.Blazor.Grids
 
 			<SfGrid DataSource="@Orders" />
 
@@ -284,7 +275,7 @@ This section creates a protected page that displays the Syncfusion DataGrid only
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrates how to integrate Microsoft Entra ID authentication into a Blazor Web App using the Microsoft Identity platform. The application securely signs users in through Entra ID and manages the authentication lifecycle using OpenID Connect. After successfully signing in, authenticated users can access protected pages and interact with the Syncfusion Blazor DataGrid component.This approach provides a secure, enterprise-ready foundation for building modern Blazor applications with controlled access to data and UI components.   
+This example demonstrates how to integrate Microsoft Entra ID authentication into a Blazor Web App using the Microsoft Identity platform. The application securely signs users in through Entra ID and manages the authentication lifecycle using OpenID Connect. After successfully signing in, authenticated users can access protected pages and interact with the Syncfusion Blazor DataGrid component. This approach provides a secure, enterprise-ready foundation for building modern Blazor applications with controlled access to data and UI components.   
 
 ## See also
 
