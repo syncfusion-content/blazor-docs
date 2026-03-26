@@ -154,7 +154,6 @@ To customize group caption text in the exported Excel document:
 3. Handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event to customize the group caption text.
 4. Use the **args.Cell.Value** property to define the caption using values like group key, record count, and header text.
 
-
 > * To customize group caption text during Excel export, use the `ExcelGroupCaptionTemplateInfo` event.
 
 {% tabs %}
@@ -261,18 +260,22 @@ public class OrderData
 
 ![Exporting with group caption template](./images/group-caption.gif)
 
-## Exporting and aligning the group caption template
+## Customizing and Aligning Group Caption Templates in Excel Export
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports aligning exported grouped data along with a custom caption template in an Excel document. This capability enables the application of custom formatting and horizontal alignment to group captions, providing enhanced visual presentation and improved readability of exported hierarchical data in Excel spreadsheets.
 
-To align and customize group caption text in the exported Excel document:
+### Steps to Customize and Align Group Caption Text in Excel Export
 
-1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to trigger the export.
-2. Use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method to export the Grid.
-3. Handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event to customize and align the group caption text.
-4. Use the **args.Cell.CellStyle.HAlign** property to specify the horizontal alignment of the group caption text.
-5. Utilize the **Syncfusion.ExcelExport.HAlignType** enumeration to assign alignment values such as **Left**, **Center**, **Right**, **General**, or **Justify**.
-6. Optionally, apply additional styling properties like **Bold**, **FontColor**, or **FontSize** using the **args.Cell.CellStyle** object.
+1. Trigger the Excel export by handling the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
+2. Initiate the export using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+3. Customize the exported group caption by handling the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event.
+4. Apply horizontal alignment to the caption text using `args.Cell.CellStyle.HAlign`.
+5. Specify the alignment value using the `Syncfusion.ExcelExport.HAlignType` enumeration (e.g., Left, Center, Right, General, Justify).
+6. Optionally, enhance the caption style by applying additional formatting via
+`args.Cell.CellStyle` properties such as:
+    *   `Bold`
+    *   `FontColor`
+    *   `FontSize`
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
