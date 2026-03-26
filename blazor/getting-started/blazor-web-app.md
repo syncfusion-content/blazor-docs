@@ -147,7 +147,7 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and the script reference in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script reference in the **App.razor** file.
 
 ```html
 
