@@ -7,28 +7,50 @@ control: TreeView
 documentation: ug
 ---
 
-# TreeView Strict CSP Feature Limitations
+# TreeView - Content Security Policy Limitations
 
-The Syncfusion® Blazor **TreeView** component supports **strict CSP** for its core functionality, enabling most default operations—such as hierarchical data binding, node selection, expansion/collapse, drag-and-drop, checkboxes, multi-selection, node editing, context menu integration, templates, icons/images, accessibility, keyboard navigation, and lazy loading—without requiring `'unsafe-inline'` in the `style-src` directive.
+## What's Supported Under Strict CSP?
 
-However, the **[virtualization](virtualization.md)** feature relies on dynamic runtime style manipulations (typically for precise positioning, sizing of virtualized containers, scroll calculations, and DOM recycling), which apply inline styles via JavaScript and are blocked under a fully strict CSP configuration.
+The Syncfusion® Blazor **TreeView** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
-This document details the specific feature that requires the `style-src 'unsafe-inline'` directive and provides recommended CSP configurations for different usage scenarios.
+- Hierarchical and self-referential data binding
+- Node selection and multi-selection
+- Expand/collapse functionality
+- Checkboxes and badges
+- Drag-and-drop
+- Node editing
+- Context menu integration
+- Custom templates and custom rendering
+- Icons and images
+- Lazy loading
+- RTL support
+- Accessibility (ARIA/WCAG)
+- Keyboard navigation and export
 
-## Current Limitations Under Strict CSP
+## What Requires `'unsafe-inline'`?
 
-The following feature in the TreeView currently **requires** `style-src 'unsafe-inline'` to function correctly:
+**UI Virtualization** requires the `style-src 'unsafe-inline'` directive.
 
-- **Virtualization**  
-  UI virtualization (enabled via `EnableVirtualization="true"` with a fixed `Height`) optimizes performance for large hierarchical datasets by rendering only visible nodes and dynamically loading others on scroll. This involves runtime calculations for node positions, viewport management, and efficient DOM updates, which depend on applying dynamic inline styles for container sizing, offset positioning, and smooth scrolling behavior.
+### Why Does Virtualization Need `'unsafe-inline'`?
 
-> **Note:** All core TreeView features—including data binding (hierarchical and self-referential), node templates, custom rendering, drag-and-drop, editing, filtering, sorting (via integration), badges, context menu, RTL support, accessibility (ARIA/WCAG), keyboard navigation, lazy loading, and export capabilities—operate fully under strict CSP without requiring `'unsafe-inline'`.
+UI virtualization improves performance with large datasets by rendering only visible nodes. It uses dynamic inline styles for:
+- Container sizing and positioning
+- Node offset calculations
+- Scroll container management
+- Smooth scrolling behavior
+- DOM element recycling calculations
+
+These calculations happen in real-time as users scroll and are blocked under strict CSP.
+
+### How to Disable Virtualization
+
+If you don't need virtualization, simply omit `EnableVirtualization="true"` or leave the Height unset. The rest of the TreeView works fully under strict CSP for large and small datasets.
 
 ## Recommended CSP Configurations
 
-### Strict CSP Configuration (Core TreeView Functionality Only)
+### Strict CSP (No Virtualization)
 
-Use this configuration when virtualization is not required (or can be disabled by omitting `EnableVirtualization="true"` or not setting a fixed height):
+Use this configuration if you don't use virtualization (or handle smaller datasets):
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -43,13 +65,14 @@ Use this configuration when virtualization is not required (or can be disabled b
                upgrade-insecure-requests;">
 ```
 
->This policy ensures full strict CSP compliance for the TreeView's primary hierarchical data display and interaction capabilities.
+This configuration maintains full security for the TreeView's hierarchical data display and interactions.
 
-### Relaxed CSP Configuration (Full Feature Enabled)
+### Relaxed CSP (With Virtualization)
 
-Include **'unsafe-inline'** in **style-src** to enable the virtualization feature:
+Include `'unsafe-inline'` if you need virtualization for optimal performance with large datasets:
 
-```<meta http-equiv="Content-Security-Policy"
+```html
+<meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
                default-src 'self';
                connect-src 'self' https: ws: wss:;
@@ -60,10 +83,5 @@ Include **'unsafe-inline'** in **style-src** to enable the virtualization featur
                font-src 'self' data:;
                upgrade-insecure-requests;">
 ```
->Use this configuration only when handling very large datasets requiring virtualization for optimal performance and memory efficiency. This maintains strong overall protection while allowing the dynamic styling needed for virtualization.
 
-### Future Improvements
-
- - Syncfusion® is working to remove the need for 'unsafe-inline' in TreeView virtualization, with the goal of eliminating the need for **'unsafe-inline'** entirely.
-
- - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.
+> Use this only when handling very large datasets where virtualization is essential for performance and memory efficiency.
