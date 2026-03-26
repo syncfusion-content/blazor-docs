@@ -280,3 +280,4 @@ This example demonstrates how to integrate Microsoft Entra ID authentication int
 ## See also
 
 - [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts?view=aspnetcore-8.0)
+
