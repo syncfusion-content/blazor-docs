@@ -49,7 +49,7 @@ Use this configuration when animation is not required (or can be disabled by set
 
 ### Relaxed CSP Configuration (Full Feature Enabled)
 
-Include 'unsafe-inline' in style-src to enable animation features:
+Include 'unsafe-inline' in style-src to allow animation features while enabling the CSP:
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -64,12 +64,4 @@ Include 'unsafe-inline' in style-src to enable animation features:
                upgrade-insecure-requests;">
 ```
 
-> Use this configuration only when smooth loading animations or pointer-specific animations are essential to your application. This maintains strong overall protection while permitting the dynamic styling needed for animations.
-
-
-### Future Improvements
- - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
-
- - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
-
- - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.
+> Use this configuration only when smooth loading animations or pointer-specific animations are essential to your application.

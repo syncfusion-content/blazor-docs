@@ -47,7 +47,7 @@ Use this configuration when the rich **Notes** field is not required or can be d
 
 ### Relaxed CSP Configuration (Full Feature Enabled)
 
-Include 'unsafe-inline' in style-src to enable rich formatting in the Notes field:
+Include 'unsafe-inline' in style-src to enable rich formatting while enabling the CSP:
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -61,9 +61,3 @@ Include 'unsafe-inline' in style-src to enable rich formatting in the Notes fiel
                font-src 'self' data:;
                upgrade-insecure-requests;">
  ```
-
-### Future Improvements
- - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
-
- - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
-Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.

@@ -51,7 +51,7 @@ Use this configuration when selection interactivity is not required (or can be d
 
 ### Relaxed CSP Configuration (Full Feature Enabled)
 
-Include 'unsafe-inline' in style-src to enable single and multiple cell selection:
+Include 'unsafe-inline' in style-src to enable strict CSP for single and multiple cell selection:
 ```html
  <meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
@@ -64,11 +64,4 @@ Include 'unsafe-inline' in style-src to enable single and multiple cell selectio
                font-src 'self' data:;
                upgrade-insecure-requests;">
 ```
->Use this configuration only when single or multiple cell selection is essential for user interaction, drill-down, or data exploration workflows. This maintains strong overall protection while permitting the dynamic styling needed for selection feedback.
-
-### Future Improvements
- - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
-
- - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
-
- - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.
+>Use this configuration only when single or multiple cell selection is essential for user interaction, drill-down, or data exploration workflows.
