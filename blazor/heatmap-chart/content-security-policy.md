@@ -7,33 +7,46 @@ control: Heatmap
 documentation: ug
 ---
 
-# Heatmap Strict CSP Feature Limitations
+# Heatmap - Content Security Policy Limitations
 
-The Syncfusion® Blazor **Heatmap** component supports **strict CSP** for its core functionality, enabling most default operations—such as data binding (one-dimensional and two-dimensional), color mapping (palette, gradient, fixed), axis customization (labels, ticks, inversed, opposed), cell rendering, legends, tooltips, title/subtitle, border and cell spacing, RTL support, accessibility, keyboard navigation, and export (image/PDF)—without requiring `'unsafe-inline'` in the `style-src` directive.
+## What's Supported Under Strict CSP?
 
-However, interactive selection features rely on dynamic runtime style manipulations (typically for applying selection borders, background changes, opacity adjustments, focus indicators, or overlay effects via inline styles managed by JavaScript), which are blocked under a fully strict CSP configuration.
+The Syncfusion® Blazor **Heatmap** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
-This document details the specific selection features that require the `style-src 'unsafe-inline'` directive and provides recommended CSP configurations for different usage scenarios.
+- Data binding (one-dimensional and two-dimensional)
+- Color mapping (palette, gradient, fixed colors)
+- Axis customization (labels, ticks, inversed, opposed)
+- Cell rendering and spacing
+- Legends and tooltips
+- Title and subtitle
+- RTL support and accessibility
+- Keyboard navigation
+- Image/PDF export
 
-## Current Limitations Under Strict CSP
+## What Requires `'unsafe-inline'`?
 
-The following features in the Heatmap currently **require** `style-src 'unsafe-inline'` to function correctly:
+**Cell Selection** (single or multiple) requires the `style-src 'unsafe-inline'` directive.
 
-- **[Single and Multiple Selection](./selection.md)**  
-  Enabling cell selection whether single cell (`AllowSelection="true" EnableMultiSelect="false"`) or multiple cells depends on runtime-applied inline styles to visually indicate selected cells. This includes dynamic changes such as:  
-  - Selection border or outline  
-  - Background color / fill overrides  
-  - Opacity or brightness adjustments  
-  - Focus ring or highlight effects  
-  These visual cues are applied directly to cell elements during user interaction (click, Ctrl+click, Shift+click, or programmatic selection).
+### Why Does Selection Need `'unsafe-inline'`?
 
-> **Note:** All core Heatmap features operate fully under strict CSP without requiring `'unsafe-inline'`.
+When users click on cells to select them, the component applies dynamic inline styles to visually highlight the selected cells. This includes:
+
+- Selection borders and outlines
+- Background color changes
+- Opacity and brightness adjustments
+- Focus rings and highlight effects
+
+These visual indicators are applied in real-time during user interaction and blocked under strict CSP.
+
+### How to Disable Selection
+
+If you don't need cell selection, set `SelectionMode="None"` or simply don't configure selection-related events. The rest of the Heatmap will work fully under strict CSP.
 
 ## Recommended CSP Configurations
 
-### Strict CSP Configuration (Core Heatmap Functionality Only)
+### Strict CSP (No Cell Selection)
 
-Use this configuration when selection interactivity is not required (or can be disabled by setting `SelectionMode="None"` or omitting selection-related events):
+Use this configuration if you don't use cell selection (or don't want selection interactions):
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -47,13 +60,15 @@ Use this configuration when selection interactivity is not required (or can be d
                font-src 'self' data:;
                upgrade-insecure-requests;">
 ```
->This policy ensures full strict CSP compliance for the Heatmap component's primary data visualization and representation capabilities.
 
-### Relaxed CSP Configuration (Full Feature Enabled)
+This configuration maintains full security for the Heatmap's data visualization capabilities.
 
-Include 'unsafe-inline' in style-src to enable single and multiple cell selection:
+### Relaxed CSP (With Cell Selection)
+
+Include `'unsafe-inline'` if you want users to select cells for drill-down or data exploration:
+
 ```html
- <meta http-equiv="Content-Security-Policy"
+<meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
                default-src 'self';
                connect-src 'self' https: ws: wss:;
@@ -64,11 +79,5 @@ Include 'unsafe-inline' in style-src to enable single and multiple cell selectio
                font-src 'self' data:;
                upgrade-insecure-requests;">
 ```
->Use this configuration only when single or multiple cell selection is essential for user interaction, drill-down, or data exploration workflows. This maintains strong overall protection while permitting the dynamic styling needed for selection feedback.
 
-### Future Improvements
- - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
-
- - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
-
- - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.
+> Use this only when single or multiple cell selection is essential for user workflows.
