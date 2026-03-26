@@ -34,7 +34,7 @@ Use NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Pack
 * [Microsoft.AspNetCore.Mvc.NewtonsoftJson](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.NewtonsoftJson/) 
 * [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) 
 
-## Add required Namespaces
+## Add required namespaces
 
 Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Buttons` namespaces.
 
@@ -113,7 +113,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 ### Create interop file
 
-Create a interop JS (in this example used as `bold-reports-interop.js` file name) inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer.
+Create an interop JS (in this example used as `bold-reports-interop.js` file name) inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer.
 
 {% tabs %}
 {% highlight js tabtitle="boldreports-interop.js"  %}
