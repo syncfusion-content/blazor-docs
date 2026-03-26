@@ -80,7 +80,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Style Attributes Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| DataGrid, Pager, Tree Grid, DataForm, Query Builder | ListView | [Pivot Table](../pivot-table/content-security-policy.md) |
+| DataGrid, Pager, Tree Grid, DataForm, Query Builder | ListView | [Pivot Table](../pivot-table/content-security-policy) |
 
 ---
 
@@ -89,7 +89,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| Scheduler, Calendar | DatePicker, DateRangePicker, DateTime Picker, TimePicker | [Gantt Chart](../gantt-chart/content-security-policy.md) |
+| Scheduler, Calendar | DatePicker, DateRangePicker, DateTime Picker, TimePicker | [Gantt Chart](../gantt-chart/content-security-policy) |
 
 ---
 
@@ -123,7 +123,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant |HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| BarcodeGenerator, QRCodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy.md), [Maps](../maps/content-security-policy.md), [Heatmap Chart](../heatmap-chart/content-security-policy.md) |
+| BarcodeGenerator, QRCodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy), [Maps](../maps/content-security-policy), [Heatmap Chart](../heatmap-chart/content-security-policy) |
 
 ---
 
@@ -158,7 +158,7 @@ Please refer to upcoming Syncfusion® release notes for updates.
 
 | Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
 |----------------------------|------------------------|--------------------------|
-| Ribbon     | Accordion, Stepper, Breadcrumb, AppBar, Carousal, Context Menu, Sidebar, MenuBar, Tabs, Toolbar,  | [TreeView](../treeview/content-security-policy.md) |
+| Ribbon     | Accordion, Stepper, Breadcrumb, AppBar, Carousal, Context Menu, Sidebar, MenuBar, Tabs, Toolbar,  | [TreeView](../treeview/content-security-policy) |
 
 ---
 
@@ -181,10 +181,45 @@ Please refer to upcoming Syncfusion® release notes for updates.
 ---
 
 
-## Constraints and Considerations : 
+## Constraints and Considerations
 
-Some components are not currently fully compliant with Strict CSP requirements. Applications using the components listed below must include the style-src 'unsafe-inline' directive as part of their CSP configuration.
+While Syncfusion® Blazor components are progressively moving toward full strict CSP compliance, certain scenarios still require the **`style-src 'unsafe-inline'`** directive. You must include this directive in your CSP configuration if your application falls into any of the following scenarios:
 
+**Scenario 1: Components that require CSP relaxation**
+
+Certain components inherently rely on dynamic or inline style injection and cannot function under a strict CSP without `'unsafe-inline'`. Refer to the **Components Requiring CSP Relaxation** table below for the complete list.
+
+**Scenario 2: Components with feature limitations**
+
+Some components are largely strict CSP-compliant, but specific features within them require inline styles. If your application uses any such feature in Pivot Table, Gantt Chart, Circular Gauge, Maps, Heatmap Chart, or TreeView, the `'unsafe-inline'` directive is required. Refer to the **Feature Limitation** column in the Component Categories Overview for details.
+
+**Scenario 3: Inline styles passed via `InputAttributes` or `HtmlAttributes`**
+
+If you pass a `style` key with an inline style value through the `InputAttributes` or `HtmlAttributes` parameter dictionary, the browser will block those styles under a strict CSP.
+
+```razor
+@* Example that requires 'unsafe-inline' *@
+<SfTextBox InputAttributes='@(new Dictionary<string, object> { { "style", "width:200px;" } })' />
+```
+
+> **Recommendation:** Avoid passing inline styles through `InputAttributes` or `HtmlAttributes`. Use the component's built-in properties (such as `Width` and `Height`) for dimensions, or apply custom styling by overriding the relevant CSS classes in your application's stylesheet. This keeps your CSP as strict as possible.
+
+If your application falls under any of the above scenarios, apply the following CSP configuration:
+
+```html
+<meta http-equiv="Content-Security-Policy"
+      content="base-uri 'self';
+               default-src 'self';
+               connect-src 'self' https: ws: wss:;
+               img-src 'self' data: https:;
+               object-src 'none';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               font-src 'self' data:;
+               upgrade-insecure-requests;">
+```
+
+> **Note:** The [wasm-unsafe-eval](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) source expression is mandatory for Blazor WebAssembly and Blazor Web App applications. It enables the browser to compile and execute WebAssembly modules required by the Blazor Mono runtime. Without this directive, modern browsers will block WebAssembly execution, preventing the Blazor runtime from initializing correctly.
 
 #### Components Requiring CSP Relaxation
 
