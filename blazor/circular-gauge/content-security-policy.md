@@ -51,7 +51,7 @@ Use this configuration when animation is not required (or can be disabled by set
 
 Include 'unsafe-inline' in style-src to enable animation features:
 
-```
+```html
 <meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
                default-src 'self';
