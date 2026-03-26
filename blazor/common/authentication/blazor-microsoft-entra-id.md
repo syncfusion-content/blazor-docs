@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Syncfusion Blazor DataGrid with Microsoft Entra ID
+title: Syncfusion Blazor DataGrid with Microsoft Entra ID Authentication
 description: Step-by-step guide to integrating Microsoft Entra ID authentication with Syncfusion Blazor components in a Blazor Web App.
 platform: Blazor
 control: Common
@@ -32,23 +32,23 @@ With Entra ID, you do not need to write authentication logic manually. Microsoft
 - Visual Studio 2022 or newer
 - Azure subscription
 
-## Create a Blazor Web App (Interactive server)
+## Create a Blazor Web App (Interactive Server)
 
 1. Open **Visual Studio**.
 2. Select **Create a new project**.
 3. In the Create a new project dialog.
-  - Choose **Blazor Web App**
-  - Click **Next**
+	- Choose **Blazor Web App**
+	- Click **Next**
 4. In Configure your new project.
-  - Enter a **Project name**
-  - Choose a **Location**
-  - Click **Next**
+	- Enter a **Project name**
+	- Choose a **Location**
+	- Click **Next**
 5. In the Additional information screen, configure the following.
-  - **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
-  - **Authentication type**: Select **None** (authentication will be configured manually)
-  - **Interactive render mode**: Select **Server**
-  - **Interactivity location**: Select **Per page/component**
-  - **Enable HTTPS**
+	- **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
+	- **Authentication type**: Select **None** (authentication will be configured manually)
+	- **Interactive render mode**: Select **Server**
+	- **Interactivity location**: Select **Per page/component**
+	- **Enable HTTPS**
 6. Click **Create** to generate the Blazor Web App.
 
 ## Register your app in Microsoft Entra ID (Azure Portal)
@@ -74,7 +74,7 @@ Redirect URLs specify where Microsoft Entra ID should return the user after a su
 1. Open the registered application in Azure Portal
 2. Navigate to **Authentication**
 3. Click **Add a platform** and select **Web**
-4. Add the redirect URL: (example: https://localhost:5001/signin-oidc) // (Use your application’s HTTPS URL if different.)
+4. Add the redirect URL: `https://localhost:5001/signin-oidc` (Use your application’s HTTPS URL if different.)
 5. Enable **ID tokens**
 6. Save the changes
 
@@ -96,8 +96,8 @@ After copying the **Tenant ID** and **Client ID**, update the `appsettings.json`
 
 1. In Visual Studio, go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search and install the following packages:
-* Microsoft.Identity.Web
-* Microsoft.Identity.Web.UI
+	- Microsoft.Identity.Web
+	- Microsoft.Identity.Web.UI
 
 These packages are required to connect the Blazor application with Microsoft Entra ID and to enable the built‑in sign‑in and sign‑out endpoints.
 
@@ -108,7 +108,6 @@ This step enables OpenID Connect authentication in the Blazor application by con
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-using Microsoft_Entra_ID.Components;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -129,11 +128,7 @@ builder.Services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.Authentic
     options.CallbackPath = new PathString("/signin-oidc");
 });
 
-builder.Services.AddAuthorization(options =>
-{
-  // Example role policy; ensure roles are configured in the Azure app manifest or via groups
-  options.AddPolicy("RequireAdmin", policy => policy.RequireRole("Admin"));
-});
+builder.Services.AddAuthorization();
 
 builder.Services.AddRazorComponents()
   .AddInteractiveServerComponents();
@@ -168,6 +163,9 @@ app.Run();
 
 This step allows Blazor components to access the current user’s authentication state by configuring the `~/Components/Routes.razor` file.
 
+{% tabs %}
+{% highlight razor tabtitle="Routes.razor"  %}
+
 @using Microsoft.AspNetCore.Components.Authorization
 
 <CascadingAuthenticationState>
@@ -178,6 +176,9 @@ This step allows Blazor components to access the current user’s authentication
         </Found>
     </Router>
 </CascadingAuthenticationState>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Connect Syncfusion Blazor DataGrid 
 
@@ -203,7 +204,6 @@ Open the **~/_Imports.razor** file and import the required namespaces.
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" %}
 
-// Program.cs
 using Syncfusion.Blazor;
  
 builder.Services.AddSyncfusionBlazor();
@@ -285,3 +285,7 @@ This section creates a protected page that displays the Syncfusion DataGrid only
 {% endtabs %}
 
 This example demonstrates how to integrate Microsoft Entra ID authentication into a Blazor Web App using the Microsoft Identity platform. The application securely signs users in through Entra ID and manages the authentication lifecycle using OpenID Connect. After successfully signing in, authenticated users can access protected pages and interact with the Syncfusion Blazor DataGrid component.This approach provides a secure, enterprise-ready foundation for building modern Blazor applications with controlled access to data and UI components.   
+
+## See also
+
+- [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts?view=aspnetcore-8.0)
