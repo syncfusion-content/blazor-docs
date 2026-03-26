@@ -33,7 +33,7 @@ Create a new Blazor Web App configured to use **Interactive Server render mode**
 
 `BlazorIdentitySyncfusion` is used as the sample project name in the following commands. You may replace it with any project name that suits your application.
 
-Run the following commands in your **command-line interface (CLI)**:
+Run the following commands in your **command-line interface (CLI)**.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -48,7 +48,7 @@ cd BlazorIdentitySyncfusion
 
 Install the necessary NuGet packages that provide ASP.NET Core Identity features and database connectivity. These packages allow your app to store user accounts, manage authentication, and connect to a SQLite database.
 
-**Package Overview**:
+**Package Overview**
 
 | Package | What It Does |
 |---------|--------------|
@@ -59,7 +59,7 @@ Install the necessary NuGet packages that provide ASP.NET Core Identity features
 | **Microsoft.EntityFrameworkCore.Tools** | Adds the `dotnet ef` command-line tool for running migration commands |
 | **Microsoft.VisualStudio.Web.CodeGeneration.Design** | Scaffolding tool for customizing Identity Razor Pages (e.g., to override the default login page design) |
 
-Run the following commands inside your project folder:
+Run the following commands inside your project folder.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -80,7 +80,7 @@ N> For Production Applications, SQLite is excellent for development and learning
 
 Add Syncfusion Blazor packages to your project. These packages provide professional UI components like DataGrid (for displaying tabular data) and Charts (for visualizing data) that you'll use in the protected pages.
 
-Run the following commands in your project folder (the folder that contains the .csproj file):
+Run the following commands in your project folder (the folder that contains the `.csproj` file).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -127,7 +127,7 @@ N> `IdentityDbContext<IdentityUser>` uses the default `IdentityUser` class provi
 
 Set up the connection string that tells your app where the `SQLite` database should be created. Entity Framework Core uses this connection string to store Identity data.
 
-Open your **appsettings.json** file and add the `ConnectionStrings` section at the top:
+Open your **appsettings.json** file and add the `ConnectionStrings` section at the top.
 
 {% tabs %}
 {% highlight c# tabtitle="appsettings.json" %}
@@ -160,7 +160,7 @@ Configure your application by registering essential services and middleware in *
 - Register Syncfusion components
 - Set up the request processing pipeline
 
-**Understanding Services vs. Middleware**:
+**Understanding Services vs. Middleware**
 - **Services**: Reusable components registered in the dependency injection container (database, authentication, Syncfusion, etc.)
 - **Middleware**: Components that process each HTTP request in a specific order (authentication → authorization → routing)
 
@@ -170,14 +170,12 @@ Open **Program.cs** and replace its contents with the below.
 {% highlight c# tabtitle="Program.cs" %}
 
 // Program.cs
-using BlazorIdentitySyncfusion.Components;
+...
 using BlazorIdentitySyncfusion.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
+...
 // EF Core + SQLite
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -200,21 +198,8 @@ builder.Services.AddCascadingAuthenticationState();
 
 // Register Syncfusion Blazor services
 builder.Services.AddSyncfusionBlazor();
+...
 
-// Blazor components (Interactive Server)
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
@@ -227,10 +212,7 @@ app.UseAntiforgery();
 
 // Map endpoints
 app.MapRazorPages(); // Identity UI endpoints
-app.MapRazorComponents<App>()
-   .AddInteractiveServerRenderMode();
-
-app.Run();
+...
 
 {% endhighlight %}
 {% endtabs %}
@@ -255,7 +237,7 @@ Add the required namespaces in **Components/_Imports.razor**. These namespaces a
 
 Before adding the Syncfusion theme stylesheet, ensure that no other Syncfusion theme CSS (e.g., `material.css`, `fluent.css`) is already referenced to avoid styling conflicts.
 
-Open **Components/App.razor** and include the following inside the `<head>` and `<body>` sections:
+Open **Components/App.razor** and include the following inside the `<head>` and `<body>` sections.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/App.razor" hl_lines="4 11" %}
@@ -334,7 +316,7 @@ Create a file named `_ViewImports.cshtml` inside the `Pages` folder. This enable
 
 Update the router in your **App.razor** file so that Blazor can enforce authorization rules on your components. This allows pages marked with `[Authorize]` to require sign‑in before they are shown.
 
-Find the `<body>` section in **App.razor** and update it to the following:
+Find the `<body>` section in **App.razor** and update it to the following.
 
 * Wrap the router in `<CascadingAuthenticationState>` so Blazor can pass authentication information to all components.
 * Replace `<RouteView>` with `<AuthorizeRouteView>` so pages can show different content based on the user's sign‑in status.
@@ -539,7 +521,7 @@ This component displays a column chart showing monthly sales data.
 
 Update the navigation menu to include links to your secured pages. This makes them easily accessible from any page in your application. When users click these links, they'll be able to access the pages if logged in, or will be prompted to log in if they're not authenticated.
 
-Open **Components/Layout/NavMenu.razor** and add the following navigation items after the existing menu links:
+Open **Components/Layout/NavMenu.razor** and add the following navigation items after the existing menu links.
 
 {% tabs %}
 {% highlight c# tabtitle="Layout/NavMenu.razor" %}
@@ -566,7 +548,7 @@ Open **Components/Layout/NavMenu.razor** and add the following navigation items 
 
 Create the database tables required for ASP.NET Core Identity by running Entity Framework Core migrations. Migrations generate the schema and apply it to your SQLite database.
 
-If you have not installed the EF Core command‑line tools, install them first:
+If you have not installed the EF Core command‑line tools, install them first.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -576,7 +558,7 @@ dotnet tool install --global dotnet-ef
 {% endhighlight %}
 {% endtabs %}
 
-Then create the migration and update the database:
+Then create the migration and update the database.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -591,7 +573,7 @@ After these commands run, the SQLite database will include the Identity tables s
 
 ### 15. Run the application and validate authentication flow
 
-Run the application and verify the authentication flow:
+Run the application and verify the authentication flow.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
