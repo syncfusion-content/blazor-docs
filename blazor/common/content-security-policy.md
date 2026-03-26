@@ -197,10 +197,14 @@ Some components are largely strict CSP-compliant, but specific features within t
 
 If you pass a `style` key with an inline style value through the `InputAttributes` or `HtmlAttributes` parameter dictionary, the browser will block those styles under a strict CSP.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @* Example that requires 'unsafe-inline' *@
 <SfTextBox InputAttributes='@(new Dictionary<string, object> { { "style", "width:200px;" } })' />
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > **Recommendation:** Avoid passing inline styles through `InputAttributes` or `HtmlAttributes`. Use the component's built-in properties (such as `Width` and `Height`) for dimensions, or apply custom styling by overriding the relevant CSS classes in your application's stylesheet. This keeps your CSP as strict as possible.
 
