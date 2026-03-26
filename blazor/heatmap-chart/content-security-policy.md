@@ -9,7 +9,7 @@ documentation: ug
 
 # Heatmap Strict CSP Feature Limitations
 
-The Syncfusion® Blazor **Heatmap** component supports **strict CSP** for its core functionality, enabling most default operations—such as data binding (one-dimensional and two-dimensional), color mapping (palette, gradient, fixed), axis customization (labels, ticks, inversed, opposed), cell rendering, legends, tooltips, title/subtitle, border and cell spacing, RTL support, accessibility, keyboard navigation, and export (image/PDF)—without requiring `'unsafe-inline'` in the `style-src` directive.
+The Syncfusion® Blazor **Heatmap** component supports **strict CSP** for its core functionality, enabling most default operations—such as data binding (one-dimensional and two-dimensional), color mapping (palette, gradient, fixed), axis customization (labels, ticks, inversed, opposed), cell rendering, legends, tooltips, title/subtitle, border and cell spacing, RTL support, accessibility, keyboard navigation, and export (image/PDF) without requiring `'unsafe-inline'` in the `style-src` directive.
 
 However, interactive selection features rely on dynamic runtime style manipulations (typically for applying selection borders, background changes, opacity adjustments, focus indicators, or overlay effects via inline styles managed by JavaScript), which are blocked under a fully strict CSP configuration.
 
@@ -47,7 +47,6 @@ Use this configuration when selection interactivity is not required (or can be d
                font-src 'self' data:;
                upgrade-insecure-requests;">
 ```
->This policy ensures full strict CSP compliance for the Heatmap component's primary data visualization and representation capabilities.
 
 ### Relaxed CSP Configuration (Full Feature Enabled)
 
@@ -64,4 +63,4 @@ Include 'unsafe-inline' in style-src to enable single and multiple cell selectio
                font-src 'self' data:;
                upgrade-insecure-requests;">
 ```
->Use this configuration only when single or multiple cell selection is essential for user interaction, drill-down, or data exploration workflows. This maintains strong overall protection while permitting the dynamic styling needed for selection feedback.
+> **Note:** Use this configuration only when single or multiple cell selection is essential for user interaction, drill-down, or data exploration workflows. This maintains strong overall protection while permitting the dynamic styling needed for selection feedback.

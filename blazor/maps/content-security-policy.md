@@ -27,13 +27,13 @@ The following features in the Maps component currently **require** `style-src 'u
 
 - **Custom Highlight Features**  
   The following highlight/selection effects use dynamic inline styles to apply visual changes (e.g., border/color modifications, opacity shifts, scaling, or overlay rendering) at runtime:  
-  - **Bubble Highlight** — Dynamic emphasis on bubble elements (size/color changes on interaction).  
-  - **Marker Highlight** — Runtime styling for selected or hovered markers (e.g., glow, border, scale).  
-  - **Polygon Highlight** — Shape/polygon selection effects (fill/border updates).  
-  - **Navigation Highlight** — Highlighting navigation lines or paths (stroke changes, animations).  
-  - **Shape Highlight** — Base shape (region/country) selection or hover highlighting (color overrides, borders).
+  - **Bubble Highlight** - Dynamic emphasis on bubble elements (size/color changes on interaction).  
+  - **Marker Highlight** - Runtime styling for selected or hovered markers (e.g., glow, border, scale).  
+  - **Polygon Highlight** - Shape/polygon selection effects (fill/border updates).  
+  - **Navigation Highlight** - Highlighting navigation lines or paths (stroke changes, animations).  
+  - **Shape Highlight** - Base shape (region/country) selection or hover highlighting (color overrides, borders).
 
-> **Note:** Core features—including static shape rendering, data-bound color mapping, legends, tooltips, multiple layers, basic zooming/panning (without toolbar), annotations, and export (image/PDF)—operate fully under strict CSP without requiring `'unsafe-inline'`.
+> **Note:** Core features including static shape rendering, data-bound color mapping, legends, tooltips, multiple layers, basic zooming/panning (without toolbar), annotations, and export (image/PDF)—operate fully under strict CSP without requiring `'unsafe-inline'`.
 
 ## Recommended CSP Configurations
 
@@ -53,7 +53,7 @@ Use this configuration when the listed interactive/highlight features, OSM+toolb
                font-src 'self' data:;
                upgrade-insecure-requests;">
 ```
->This policy ensures full strict CSP compliance for the Maps component's primary geographic data visualization capabilities.
+
 
 ### Relaxed CSP Configuration (Full Feature Enabled)
 Include 'unsafe-inline' in style-src to enable the restricted features (OSM with toolbar, click interactions, and all highlight customizations):
@@ -70,4 +70,4 @@ Include 'unsafe-inline' in style-src to enable the restricted features (OSM with
                font-src 'self' data:;
                upgrade-insecure-requests;">
 ```
->Use this configuration only when interactive highlights, OSM integration with toolbar, or click-based behaviors are essential to your application. This maintains strong overall protection while permitting the dynamic styling needed.
+> **Note:** Use above configuration only when interactive highlights, OSM integration with toolbar, or click-based behaviors are essential to your application. This maintains strong overall protection while permitting the dynamic styling needed.

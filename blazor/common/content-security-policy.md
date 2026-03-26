@@ -62,10 +62,6 @@ The following CSP configurations are **tested and recommended** for Syncfusion®
 ```
 > **Note:**  The [wasm-unsafe-eval](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) source expression is mandatory for Blazor WebAssembly and Blazor Web App applications, as it enables the browser to compile and execute WebAssembly modules required by the Blazor Mono runtime on the client. Without this directive, modern browsers will block WebAssembly execution, preventing the Blazor runtime from initializing correctly.
 
-If your application includes Syncfusion® components that are not explicitly marked as Strict CSP implemented, you must include the **style-src 'unsafe-inline' directive** in your Content Security Policy.
-
-Refer to the list of supported components to verify Strict CSP compatibility. We have also outlined the features that currently require additional CSP directives.
-
 
 ## Constraints and Considerations
 
@@ -77,9 +73,9 @@ Certain components inherently rely on dynamic or inline style injection and cann
 
 #### Components Requiring CSP Relaxation
 
-| Category                          | Components                                                                
-|-----------------------------------|----------------------------------------------------------------------------|
-| **Data Visualization** | • Charts<br>• 3D Charts<br>• Stock Chart<br>• Bullet Chart<br>• Range Selector<br>• Sankey<br>• Sparkline Chart<br>• Smith Chart |
+| Category                                | Components                                                                
+|-------------------------------------------|---------------------------------------------------------------------------|
+| **Data Visualization**    | • Charts<br>• 3D Charts<br>• Stock Chart<br>• Bullet Chart<br>• Range Selector<br>• Sankey<br>• Sparkline Chart<br>• Smith Chart |
 | **File Viewers & Editors**                  | • Block Editor<br>• Rich Text Editor |
 | **Interactive Chat**              | • Chat UI |
 | **File Management**        | • File Manager|
@@ -100,8 +96,9 @@ Some components are largely strict CSP-compliant, but specific features within t
 |----------|------------|
 | Data Management | • [Pivot Table](../pivot-table/content-security-policy) |
 | Scheduling & Calendars | • [Gantt Chart](../gantt-chart/content-security-policy) |
-| Data Visualization and Maps | • [Circular Gauge](../circular-gauge/content-security-policy)<br>• [Maps](../maps/content-security-policy)<br>• [Heatmap Chart](../heatmap-chart/content-security-policy) |
-| Navigation & Actions | • [TreeView](../treeview/content-security-policy) |
+| Data Visualization | • [Circular Gauge](../circular-gauge/content-security-policy)<br>• [Heatmap Chart](../heatmap-chart/content-security-policy) |
+| Navigations| • [TreeView](../treeview/content-security-policy) |
+| Diagrams and Maps | •  [Maps](../maps/content-security-policy) |
 
 **Scenario 3: Inline styles passed via `InputAttributes` or `HtmlAttributes`**
 

@@ -43,7 +43,7 @@ Use this configuration when the rich **Notes** field is not required or can be d
                upgrade-insecure-requests;">
 
 ```
->This policy ensures full strict CSP compliance for the Gantt Chart's primary project management and visualization capabilities.
+
 
 ### Relaxed CSP Configuration (Full Feature Enabled)
 
