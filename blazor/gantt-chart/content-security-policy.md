@@ -7,28 +7,43 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Gantt Chart Strict CSP Feature Limitations
+# Gantt Chart - Content Security Policy Limitations
 
-The Syncfusion® Blazor **Gantt Chart** component supports **strict CSP** for its core functionality, enabling most default operations—such as task scheduling, timeline rendering, dependency management, resource allocation, and basic editing—without requiring `'unsafe-inline'` in the `style-src` directive.
+## What's Supported Under Strict CSP?
 
-However, certain rich content and advanced formatting features rely on dynamic inline styles generated at runtime, which are blocked in a fully strict CSP environment.
+The Syncfusion® Blazor **Gantt Chart** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
-This document details the specific features that require the `style-src 'unsafe-inline'` directive and provides recommended CSP configurations for different usage scenarios.
+- Task scheduling and timeline rendering
+- Dependency management
+- Resource allocation and assignment
+- Basic editing capabilities
+- Data binding and filtering
+- Multiple views and interactions
 
-## Current Limitations Under Strict CSP
+## What Requires `'unsafe-inline'`?
 
-The following feature in the Gantt Chart currently **requires** `style-src 'unsafe-inline'` to function correctly:
+**Rich Text Formatting in Notes Field** requires the `style-src 'unsafe-inline'` directive.
 
-- **Notes Task Field (with Rich Text Editor support)**  
-  The `Notes` field in tasks supports rich text formatting via an integrated Rich Text Editor. Rendering formatted content (bold, italic, colors, lists, hyperlinks, etc.) applies dynamic inline style attributes to achieve the requested visual appearance, including font styles, text colors, background colors, and alignment.
+### Why Does Rich Text Need `'unsafe-inline'`?
 
-> **Note:** Remaining All core Gantt Chart features Work fully under strict CSP without requiring `'unsafe-inline'`.
+The Notes field supports rich text formatting (bold, italic, colors, lists, links, etc.). When you render formatted content, the Rich Text Editor applies dynamic inline styles to display the requested visual appearance, including:
+
+- Font styles and weights
+- Text colors and backgrounds
+- Text alignment and spacing
+- List formatting and indentation
+
+These styles are applied at runtime and blocked under strict CSP.
+
+### How to Use Plain Text Only
+
+If you don't need rich text formatting in Notes, just use plain text. The rest of the Gantt Chart will work fully under strict CSP.
 
 ## Recommended CSP Configurations
 
-### Strict CSP Configuration (Except RichTextEditor related Features)
+### Strict CSP (Without Rich Text Notes)
 
-Use this configuration when the rich **Notes** field is not required or can be disabled/limited to plain text:
+Use this configuration if you don't use rich text formatting in Notes (or don't use the Notes field):
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -41,13 +56,13 @@ Use this configuration when the rich **Notes** field is not required or can be d
                style-src 'self';
                font-src 'self' data:;
                upgrade-insecure-requests;">
-
 ```
->This policy ensures full strict CSP compliance for the Gantt Chart's primary project management and visualization capabilities.
 
-### Relaxed CSP Configuration (Full Feature Enabled)
+This configuration maintains full security for the Gantt Chart's project management and visualization features.
 
-Include 'unsafe-inline' in style-src to enable rich formatting while enabling the CSP:
+### Relaxed CSP (With Rich Text Notes)
+
+Include `'unsafe-inline'` if you want to use rich text formatting in the Notes field:
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -60,4 +75,7 @@ Include 'unsafe-inline' in style-src to enable rich formatting while enabling th
                style-src 'self' 'unsafe-inline';
                font-src 'self' data:;
                upgrade-insecure-requests;">
- ```
+```
+
+> Use this only if you need formatted text (bold, colors, lists, etc.) in task Notes.
+
