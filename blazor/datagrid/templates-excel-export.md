@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Customizing and Aligning Group Caption Templates in Excel Export
+# Exporting grid with templates in Syncfusion Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting template content to Excel, enabling rich formatting in exported documents. The following template types are supported:
 
@@ -147,18 +147,12 @@ public class EmployeeData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting grouped data along with a custom caption template to an Excel document. This feature is useful for adding meaningful group captions such as record counts or group keys to the exported file.
 
-### Steps to Customize and Align Group Caption Text in Excel Export
+To customize group caption text in the exported Excel document:
 
-1. Trigger the Excel export by handling the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
-2. Initiate the export using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
-3. Customize the exported group caption by handling the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event.
-4. Apply horizontal alignment to the caption text using `args.Cell.CellStyle.HAlign`.
-5. Specify the alignment value using the `Syncfusion.ExcelExport.HAlignType` enumeration (e.g., Left, Center, Right, General, Justify).
-6. Optionally, enhance the caption style by applying additional formatting via
-`args.Cell.CellStyle` properties such as:
-    *   `Bold`
-    *   `FontColor`
-    *   `FontSize`
+- 1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to trigger the export.
+- 2. Use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method to export the Grid.
+- 3. Handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event to customize the group caption text.
+- 4. Use the **args.Cell.Value** property to define the caption using values like group key, record count, and header text.
 
 
 > * To customize group caption text during Excel export, use the `ExcelGroupCaptionTemplateInfo` event.
