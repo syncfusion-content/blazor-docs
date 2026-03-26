@@ -16,7 +16,7 @@ A Blazor Web App is used for this example. To create a new app, follow the offic
 
 > This tutorial focuses on using Blazor Server rendering mode rather than Blazor WebAssembly.
 
-![New Blazor App](images/new-blazor-app.png)
+![New Blazor App](images/new-blazor-app.webp)
 
 ## Setting up Tailwind CSS or Bootstrap 5.3 theme in the app
 
@@ -94,7 +94,7 @@ If you choose **Tailwind CSS** theme, follow these steps to configure it.
      
 You can refer to the consolidated screenshot below for more details.
 
-![Tailwind CSS configuration](images/tailwind-configuration.png)
+![Tailwind CSS configuration](images/tailwind-configuration.webp)
 
 Now that the **Tailwind CSS** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
 
@@ -144,7 +144,7 @@ If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
 
 You can refer to the consolidated screenshot below for more details.
 
-![Bootstrap 5.3 configuration](images/bootstrap-5.3-configuration.png)
+![Bootstrap 5.3 configuration](images/bootstrap-5.3-configuration.webp)
 
 Now that the **Bootstrap 5.3** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
 
@@ -156,15 +156,15 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
 1. In the [online demo](https://blazor.syncfusion.com/essential-ui-kit), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
 
-    ![Navigate to the sign-in block demo](images/navigate-to-the-sign-in-block-demo.png)
+    ![Navigate to the sign-in block demo](images/navigate-to-the-sign-in-block-demo.webp)
 
 2. On the demo page, go to the first demo, which showcases a simple sign-in block. Choose the desired theme, then switch from the **Preview** tab to the **Code** tab.
 
-    ![Choose Tailwind CSS or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.png)
+    ![Choose Tailwind CSS or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.webp)
 
 3. In the **Code** tab, copy the Razor (HTML) code using the **Copy to Clipboard** option and paste it into the **Components -> Pages -> Home.razor** file, replacing its content with the provided "Hello, world!" example.
 
-    ![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.png)
+    ![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.webp)
 
 >  Ensure that you do not remove the `@page` directive and `<PageTitle>` element while replacing the content. These are essential for routing and setting the page title.
 
@@ -175,13 +175,13 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
 1. On [downloading](https://github.com/syncfusion/essential-ui-kit-for-blazor) and opening the GitHub source in Visual Studio Code, navigate to the following folder: **Components -> Pages -> BlocksSection**.
 
-    ![Downloaded GitHub app in Visual Studio Code](images/downloaded-github-app-in-visual-studio-code.png)
+    ![Downloaded GitHub app in Visual Studio Code](images/downloaded-github-app-in-visual-studio-code.webp)
 
 2. Inside, you'll find a list of folders, each corresponding to a specific block. Open the **SignIn** block folder, where you'll see the demo arranged sequentially.
 
 3. Go to the first folder, **Components/Pages/BlocksSection/SignIn/SignIn1**, where you'll find the Razor (HTML) file of the simple sign-in block. You can copy the code directly from this file.
 
-    ![View the sign-in block demo files](images/view-the-sign-in-block-demo-files.png)
+    ![View the sign-in block demo files](images/view-the-sign-in-block-demo-files.webp)
 
 > **Note:**
 > 1. In the Razor file, the **Tailwind CSS** and **Bootstrap 5.3** design code is placed in their respective if-else statements. You can copy and paste as per your requirement.
@@ -193,7 +193,7 @@ While copying and pasting the Razor (HTML) code, you'll notice that Syncfusion B
 
 In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting Razor (HTML) code into the Razor file, open the **MyBlazorApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Syncfusion Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor)
 
-![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.png)
+![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.webp)
 
 Once the necessary packages are added, run the following command via the terminal to install those packages.
 
@@ -203,7 +203,7 @@ dotnet restore
 
 After restoring the packages, import the required namespaces `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs` in the _Imports.razor file to enable Syncfusion components in the application.
 
-![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.png)
+![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.webp)
 
 Finally, again check the [online demo](https://blazor.syncfusion.com/essential-ui-kit) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required Razor (HTML) code for the simple sign-in block into your app as outlined in the previous topic.
 
@@ -219,8 +219,8 @@ Now that everything is set up in **MyBlazorApp** — including the Razor (HTML),
 dotnet run
 ```
 
-![Build and launch the app](images/build-and-launch-the-app.png)
+![Build and launch the app](images/build-and-launch-the-app.webp)
 
 To view the app in your browser, simply **Ctrl + Click** (or **Cmd + Click** on macOS) on the localhost URL displayed in the terminal. This will open the app in your default browser, allowing you to view and experience the simple sign-in block.
 
-![View the app in the browser using the localhost URL](images/view-the-app-in-the-browser-using-the-localhost-URL.png)
+![View the app in the browser using the localhost URL](images/view-the-app-in-the-browser-using-the-localhost-URL.webp)

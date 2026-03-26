@@ -13,7 +13,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> provides [Figma UI kits](https:
 
 Each kit contains reusable design controls with states and variants, along with detailed figures, measurements, and icons that represent Syncfusion<sup style="font-size:70%">&reg;</sup> controls.
 
-![Preview of the Material 3 Figma UI kit](./images/material3.png)
+![Preview of the Material 3 Figma UI kit](./images/material3.webp)
 
 ## Advantages of UI kits
 
@@ -41,7 +41,7 @@ The Figma UI kits are structured for easy navigation and exploration of controls
 - **Icons**: Contains a collection of all icons used in the design controls.
 - **UI Controls**: At the core of the UI kit, this section features a wide range of essential UI controls. Each control is meticulously designed with detailed figures, measurements, and icons, showcasing various states and variants.
 
-![Layout](./images/layout.png)
+![Layout](./images/layout.webp)
 
 ## Customizing the UI kits
 
@@ -58,7 +58,7 @@ Here's how to customize the primary button color of the Material 3 theme within 
 7. A popup will show the design token list. You can change the primary color using a color palette.
 8. Once you've selected the new color (e.g., pink) for the primary variable, the button's color pattern will be updated accordingly. You'll see the changes reflected in real-time within your design.
 
-![Customize a component primary color using local variables](./images/customize.png)
+![Customize a component primary color using local variables](./images/customize.webp)
 
 In addition to changing the button color, you can also customize other aspects like font, spacing, shadows, etc., of the UI controls:
 
@@ -79,7 +79,7 @@ Follow these steps to download the customized styles from the Figma UI Kit:
 - Select a directory to save the exported files.
 - Extract the downloaded zip file to access its contents.
 
-![export-design-tokens](./images/syncfusion-design-tokens.png)
+![export-design-tokens](./images/syncfusion-design-tokens.webp)
 
 ### Use design tokens
 

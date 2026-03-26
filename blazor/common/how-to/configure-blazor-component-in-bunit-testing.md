@@ -17,35 +17,35 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
 
 1. Open Visual Studio 2022 and create a new `xUnit Test Project`.
 
-    ![xUnit project creation dialog in Visual Studio 2022](images/bunit/xunit-project.png)
+    ![xUnit project creation dialog in Visual Studio 2022](images/bunit/xunit-project.webp)
 
 2. Specify the project name and click the `Next` button.
 
-    ![Specify the xUnit project name](images/bunit/xunit-project-name.png)
+    ![Specify the xUnit project name](images/bunit/xunit-project-name.webp)
 
 3. Select the target framework and click the `Create` button.
 
-    ![Select the target framework for the xUnit project](images/bunit/xunit-target-framework.png)
+    ![Select the target framework for the xUnit project](images/bunit/xunit-target-framework.webp)
 
 4. Right-click the project in Solution Explorer and select `Manage NuGet Packages`.
 
-    ![Open Manage NuGet Packages on the xUnit project](images/bunit/xunit-manage-nuget-package.png)
+    ![Open Manage NuGet Packages on the xUnit project](images/bunit/xunit-manage-nuget-package.webp)
 
 5. Search for `bunit` and install both NuGet packages in the test project.
 
-    ![Install the bUnit NuGet packages in the xUnit project](images/bunit/xunit-bunit-install.png)
+    ![Install the bUnit NuGet packages in the xUnit project](images/bunit/xunit-bunit-install.webp)
 
 ### Add Existing Blazor App and Configure it on xUnit Project
 
 1. Right-click the solution and select `Add -> Existing Project`. Browse and add your existing Blazor project.
 
-    ![Add an existing Blazor project to the solution](images/bunit/xunit-add-existing-project.png)
+    ![Add an existing Blazor project to the solution](images/bunit/xunit-add-existing-project.webp)
 
     N> Refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation, if you don't have any existing application.
 
 2. Right-click the xUnit project and select `Add -> Project Reference`, then select the added project.
 
-    ![Add a project reference to the xUnit project](images/bunit/xunit-add-project-reference.png)
+    ![Add a project reference to the xUnit project](images/bunit/xunit-add-project-reference.webp)
 
 3. Add the following Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample to the `~/Pages/Home.razor` or `~/Pages/Index.razor` file in the Blazor project for testing purposes. You can test any Blazor component from your app instead of this example.
 
@@ -161,7 +161,7 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
 
 5. Right-click the xUnit project and select `Run Tests`. The test cases run and report the results.
 
-    ![xUnit test case results](images/bunit/xunit-test-run.png)
+    ![xUnit test case results](images/bunit/xunit-test-run.webp)
 
 ## Configure bUnit with NUnit Test Project
 
@@ -169,35 +169,35 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
 
 1. Open Visual Studio 2022 and create a new `NUnit 3 Test Project`.
 
-    ![NUnit project creation dialog in Visual Studio 2022](images/bunit/nunit-project.png)
+    ![NUnit project creation dialog in Visual Studio 2022](images/bunit/nunit-project.webp)
 
 2. Specify the project name and click the `Next` button.
 
-    ![Specify the NUnit project name](images/bunit/nunit-project-name.png)
+    ![Specify the NUnit project name](images/bunit/nunit-project-name.webp)
 
 3. Select the target framework and click the `Create` button.
 
-    ![Select the target framework for the NUnit project](images/bunit/nunit-target-framework.png)
+    ![Select the target framework for the NUnit project](images/bunit/nunit-target-framework.webp)
 
 4. Right-click the project in Solution Explorer and select `Manage NuGet Packages`.
 
-    ![Open Manage NuGet Packages on the NUnit project](images/bunit/nunit-manage-nuget-package.png)
+    ![Open Manage NuGet Packages on the NUnit project](images/bunit/nunit-manage-nuget-package.webp)
 
 5. Search for `bunit` and install both NuGet packages in the test project.
 
-    ![Install the bUnit NuGet packages in the NUnit project](images/bunit/nunit-bunit-install.png)
+    ![Install the bUnit NuGet packages in the NUnit project](images/bunit/nunit-bunit-install.webp)
 
 ### Add existing Blazor App and configure it on NUnit project
 
 1. Right-click the solution and select `Add -> Existing Project`. Browse and add your existing Blazor project.
 
-    ![Add an existing Blazor project to the solution](images/bunit/nunit-add-existing-project.png)
+    ![Add an existing Blazor project to the solution](images/bunit/nunit-add-existing-project.webp)
 
     N> Refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation, if you don't have any existing application.
 
 2. Right-click the NUnit project and select `Add -> Project Reference`, then select the added project.
 
-    ![Add a project reference to the NUnit project](images/bunit/nunit-add-project-reference.png)
+    ![Add a project reference to the NUnit project](images/bunit/nunit-add-project-reference.webp)
 
 3. Add the following Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample to the `~/Pages/Home.razor` or `~/Pages/Index.razor` file in the Blazor project for testing purposes. You can test any component from your app instead of this example.
 
@@ -315,7 +315,7 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
 
 5. Right-click the NUnit project and select `Run Tests`. The test cases run and report the results.
 
-    ![NUnit test case results](images/bunit/nunit-test-run.png)
+    ![NUnit test case results](images/bunit/nunit-test-run.webp)
 
 ## Passing parameters to the Blazor component during testing
 

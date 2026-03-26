@@ -62,7 +62,7 @@ Optimized lite theme files (<theme_name>-lite.css):
 
 Comparison of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button Component in **normal** and **bigger** size modes:
 
-![bigger-sized-button](./images/bigger-theme-button.png)
+![bigger-sized-button](./images/bigger-theme-button.webp)
 
 Refer to the comparison below for the default and optimized theme file sizes:
 
@@ -573,27 +573,27 @@ LibMan offers the following advantages,
 
 1.Right-click the project folder where the files should be added. Select **Add** -> **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
 
-![Client side library dialog](images/theme-client-side.png)
+![Client side library dialog](images/theme-client-side.webp)
 
 2.Select the **unpkg** in the provider dropdown to get the Syncfusion<sup style="font-size:70%">&reg;</sup> control themes.
 
-![Select unpkg provider](images/client-library-unpkg.png)
+![Select unpkg provider](images/client-library-unpkg.webp)
 
 3.You can refer the combined component styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
 
-![Specify Syncfusion library](images/library-unpkg.png)
+![Specify Syncfusion library](images/library-unpkg.webp)
 
 4.You can choose to select specific files or include all library files, as shown below.
 
 For example, select specific files and choose the Bootstrap 5 theme in the dialog.
 
-![Choose themes](images/library-unpkg-theme.png)
+![Choose themes](images/library-unpkg-theme.webp)
 
 5.By using the target location textbox, you can specify the location of where files will be stored in the application.
 
 For example, the default location `wwwroot/lib/syncfusion/blazor-themes/` has been modified to `wwwroot/themes/syncfusion/blazor-themes/`.
 
-![Modified the target location](images/client-side-target-unpkg.png)
+![Modified the target location](images/client-side-target-unpkg.webp)
 
 6.Click the install button then `libman.json` file is added to the root application with the following content.
 
@@ -623,15 +623,15 @@ N> If you use individual component styles, you should install the styles of thei
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/vs_extension.png)
+    ![VS Extension](images/vs_extension.webp)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/web_compiler.png)
+    ![Web Compiler 2022+](images/web_compiler.webp)
 
 * Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
-![Themes-libman-compile](images/themes-libman-compile.png)
+![Themes-libman-compile](images/themes-libman-compile.webp)
 
 * The `compilerconfig.json` file is created by default as shown in the following code snippet.
 
@@ -674,11 +674,11 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/vs_extension.png)
+    ![VS Extension](images/vs_extension.webp)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/web_compiler.png)
+    ![Web Compiler 2022+](images/web_compiler.webp)
 
 * Install the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
@@ -699,7 +699,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     **Output:**
 
-    ![Overall Theme Output](images/overall_theme_output.png)
+    ![Overall Theme Output](images/overall_theme_output.webp)
 
     For the Calendar (individual) component:
 
@@ -712,11 +712,11 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     **Output:**
 
-    ![Individual Theme Output](images/individual_theme_output.png)
+    ![Individual Theme Output](images/individual_theme_output.webp)
 
 * Then, Right-click the created `SCSS` file and click the `Web Compiler` option to compile the file.
 
-    ![Web Compiler Option](images/web_compiler_option.png)
+    ![Web Compiler Option](images/web_compiler_option.webp)
 
 * The `compilerconfig.json` file is created by default. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
 
@@ -873,10 +873,6 @@ Below table lists the importing theme path for the individual components.
         <td>@use 'blazor-themes/SCSS-Themes/popups/dialog/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
-        <td>DocumentEditor</td>
-        <td>@use 'blazor-themes/SCSS-Themes/documenteditor/document-editor/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
         <td>Dropdown Menu</td>
         <td>@use 'blazor-themes/SCSS-Themes/dropdowns/drop-down-list/{THEME-NAME}.scss'</td>
     </tr>
@@ -939,10 +935,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>Pager</td>
         <td>@use 'blazor-themes/SCSS-Themes/navigations/pager/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
-        <td>PDF Viewer</td>
-        <td>@use 'blazor-themes/SCSS-Themes/pdfviewer/pdfviewer/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
         <td>ImageEditor</td>
@@ -1270,7 +1262,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 {% endhighlight %}
 {% endtabs %}
 
-![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif)
+![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.webp)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app)
 
@@ -1358,7 +1350,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     }
 
     ```
-    ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif)
+    ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.webp)
 
     N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
 
@@ -1368,11 +1360,11 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
 
 1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 2. Unzip the file and it contains the styles of the selected components and an `import.json` file, which stores the current settings.
-   ![Select styles folder](images/crg-styles.png)
+   ![Select styles folder](images/crg-styles.webp)
 3. The styles folder of material and tailwind theme contains css files and a **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
-   ![Open customized folder](images/customized-folder-crg.png)
+   ![Open customized folder](images/customized-folder-crg.webp)
 4. Open the **customized** folder which contains CSS files without online dependencies of google fonts.
-   ![Customized CSS](images/custom-css-crg.png)
+   ![Customized CSS](images/custom-css-crg.webp)
 5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
 6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
     * For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, reference custom styles in `~/Components/App.razor` file
