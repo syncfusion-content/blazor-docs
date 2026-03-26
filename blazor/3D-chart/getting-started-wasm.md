@@ -91,7 +91,7 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 ## Add Import Namespaces
 
-After the packages installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
+After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}

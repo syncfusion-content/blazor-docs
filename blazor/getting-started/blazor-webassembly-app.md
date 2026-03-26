@@ -103,7 +103,7 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 ### Add Import Namespaces
 
-After the packages installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -138,7 +138,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
 
 ```
 

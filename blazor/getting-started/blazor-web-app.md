@@ -110,13 +110,13 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 Install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages into your project.
 
-If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this packages in the client project.
+If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ### Add Import Namespaces
 
-After the packages installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -161,7 +161,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at top of the `~Pages/*.razor` file. (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If an **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is already configured in the `App.razor` file by default.
 

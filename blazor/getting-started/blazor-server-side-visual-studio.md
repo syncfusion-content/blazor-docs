@@ -101,7 +101,7 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 ### Add Import Namespaces
 
-After the packages installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -144,9 +144,9 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at top of the `~Pages/Home.razor` file.
 
-N> If an Interactivity Location is set to `Global` and the render mode is already configured in the `App.razor` file by default.
+N> If an Interactivity Location is set to `Global`, the render mode is already configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}

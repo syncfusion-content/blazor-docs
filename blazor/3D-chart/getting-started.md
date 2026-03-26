@@ -91,7 +91,7 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 ## Add Import Namespaces
 
-After the packages installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
+After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -130,9 +130,9 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Blazor 3D Chart Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at top of the `~Pages/Home.razor` file.
 
-N> If an Interactivity Location is set to `Global` and the render mode is already configured in the `App.razor` file by default.
+N> If an Interactivity Location is set to `Global`, the render mode is already configured in the `App.razor` file by default.
 
 ```
 @* desired render mode define here *@

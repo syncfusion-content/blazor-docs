@@ -94,13 +94,13 @@ This command creates a new Blazor Web App and places it in a new directory calle
 
 Install [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package into the project.
 
-If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this packages in the client project.
+If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the client project.
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add Import Namespaces
 
-After the packages installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
+After the package is installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -141,7 +141,7 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the **~/Components/Pages/*.razor** file. If an interactivity location is set to `Per page/component` in the Web App, define a render mode at top of the  `~Pages/*.razor` file.  (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the **~/Components/Pages/*.razor** file. If an interactivity location is set to `Per page/component` in the Web App, define a render mode at top of the `~Pages/*.razor` file.  (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If an **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is already configured in the `App.razor` file by default.
 
