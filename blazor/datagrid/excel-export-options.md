@@ -340,7 +340,7 @@ Hidden column export functionality in the Syncfusion<sup style="font-size:70%">&
 
 To export hidden columns of the DataGrid to an Excel or CSV document, set the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) property to **true** in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property.
 
-The following example demonstrates how to export hidden columns to an Excel document. In this example, the "Ship City" column, which is not visible in the UI, is exported to the Excel document. The DataGrid can also be exported by changing the `ExcelExportProperties.IncludeHiddenColumn` property based on the switch toggle using the [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_Checked) property of the [EJ2 Toggle Switch](https://help.syncfusion.com/blazor/switch/getting-started).
+The following example demonstrates how to export hidden columns to an Excel document. In this example, the "Ship City" column, which is not visible in the UI, is exported to the Excel document. The DataGrid can also be exported by changing the `ExcelExportProperties.IncludeHiddenColumn` property based on the switch toggle using the [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_Checked) property of the [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

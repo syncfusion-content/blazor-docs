@@ -19,7 +19,7 @@ Excel export configuration in the DataGrid requires the following setup:
 
 **Trigger export**: Use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method to export DataGrid data to an Excel document. For CSV export, use the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method instead.
 
-The following example demonstrates performing the Excel export action in the DataGrid by adding the `ExcelExport` item to the DataGrid [toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.Toolbar-1.html#Syncfusion_Blazor_Navigations_Toolbar_1_Items) and invoking the `ExportToExcelAsync` method inside the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
+The following example demonstrates performing the Excel export action in the DataGrid by adding the `ExcelExport` item to the DataGrid [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) and invoking the `ExportToExcelAsync` method inside the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
