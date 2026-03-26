@@ -2,13 +2,13 @@
 layout: post
 title: Syncfusion Blazor Agent Skills for AI Assistants | Syncfusion
 description: Learn how to install and use Syncfusion Agent Skills to enhance AI assistants with accurate Syncfusion Blazor component guidance.
+platform: Blazor
 control: Skills
-platform: blazor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion Blazor Agent Skills for AI Assistants
+# Syncfusion® Blazor Agent Skills for AI Assistants
 
 This guide introduces **Syncfusion Blazor Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code using official APIs, patterns, and theming guidelines.
 
