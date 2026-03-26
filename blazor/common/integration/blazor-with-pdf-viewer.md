@@ -213,4 +213,4 @@ Implement a patient record system where lab reports, prescriptions, and medical 
 
 * [Getting Started with Syncfusion Blazor PDF Viewer in Blazor WASM](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
 * [Getting Started with Syncfusion Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-* [Blazor DataGrid Demo – Overview](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2)
+* [Blazor DataGrid Demo – Overview](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) 
