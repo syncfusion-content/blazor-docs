@@ -119,7 +119,7 @@ Group findings by file, then by section/heading within each file. For each findi
 ### Markdown Formatting
 - [ ] Heading hierarchy is correct (H1 → H2 → H3, no skips)
 - [ ] Code blocks have proper language tags (`csharp`, `razor`, `html`, etc.)
-- [ ] Inline code uses backticks for identifiers, filenames, and short code
+- [ ] Inline code uses back ticks for identifiers, filenames, and short code
 - [ ] Tables are properly formatted and render correctly
 - [ ] Lists use consistent formatting (ordered vs. unordered)
 - [ ] Notes/warnings use correct Markdown extensions
@@ -132,7 +132,7 @@ Group findings by file, then by section/heading within each file. For each findi
 - [ ] Uses meaningful variable and component names
 - [ ] Follows C# and Blazor naming conventions
 - [ ] Comments explain non-obvious logic
-- [ ] No hardcoded values where configuration is expected
+- [ ] No hard coded values where configuration is expected
 - [ ] Exception handling is appropriate for the context
 - [ ] Disposal patterns are demonstrated when needed (IDisposable, IAsyncDisposable)
 
