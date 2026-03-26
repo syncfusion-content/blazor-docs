@@ -21,11 +21,11 @@ Syncfusion® Blazor components now offer improved support for strict **Content S
 
 Now we have introduced **strict CSP compatibility** for **over 80 components**. Default functionalities across these components now operate seamlessly under a strict CSP configuration without requiring unsafe directives such as `'unsafe-eval'` or `'unsafe-inline'` in many scenarios. 
 
-This enhancement allows developers to enforce modern, secure browser policies more easily while retaining full component capabilities in Blazor Server, WebAssembly, and hybrid (Auto) render modes.
+This enhancement allows developers to enforce modern, secure browser policies more easily while retaining full component capabilities in Blazor Web App (any render mode: Server, WebAssembly, or Auto) and Wasm standalone app.
 
 ### Recommended CSP Directives for Strict CSP implemented Syncfusion® Blazor Components 
 
-The following CSP configurations are **tested and recommended** for Syncfusion® Blazor components that support strict CSP (Refer Supported list below).
+The following CSP configurations are **tested and recommended** for Syncfusion® Blazor components that support strict CSP.
 
 #### For Blazor Interactive Server App
 
@@ -69,7 +69,7 @@ While Syncfusion® Blazor components are progressively moving toward full strict
 
 **Scenario 1: Components that require CSP relaxation**
 
-Certain components inherently rely on dynamic or inline style injection and cannot function under a strict CSP without `'unsafe-inline'`. Refer to the **Components Requiring CSP Relaxation** 
+Certain components inherently rely on dynamic or inline style injection and cannot function under a strict CSP without `'unsafe-inline'`. 
 
 #### Components Requiring CSP Relaxation
 
