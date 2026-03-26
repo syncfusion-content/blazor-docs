@@ -181,31 +181,31 @@ The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup
 
 ![Blazor DataGrid with PDF Viewer](images/blazor-datagrid-with-pdf-viewer-integration.webp)
 
-## Use Cases
+## Use cases
 
 Integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid with PDF Viewer provides powerful solutions for various business scenarios:
 
-### Invoice Management System
+### Invoice management system
 
 Display a list of invoices in the DataGrid with columns for invoice number, customer name, date, and amount. When a user selects an invoice row, the PDF Viewer loads and displays the corresponding invoice PDF document. This allows users to quickly browse through invoices in the grid and view detailed invoice documents without leaving the page.
 
-### Document Repository and Archive
+### Document repository and archive
 
 Create a document management system where the DataGrid shows metadata such as document title, author, category, upload date, and file size. Users can click on a document row to preview the PDF in the viewer, enabling efficient document browsing and quick access to content without downloading files.
 
-### Report Viewing Dashboard
+### Report viewing dashboard
 
 Build a reporting dashboard where the DataGrid lists available reports (sales reports, financial statements, analytics) with filters for date range, department, or report type. Selecting a report row dynamically loads the PDF report in the viewer, providing a seamless experience for business users to access and review multiple reports.
 
-### Contract and Agreement Management
+### Contract and agreement management
 
 Implement a contract management system displaying contract records in the DataGrid with contract number, party names, start date, end date, and status. Users can select contracts to view the full PDF document in the viewer, making it easy to manage and review legal documents, track renewals, and maintain compliance.
 
-### Educational Material Distribution
+### Educational material distribution
 
 Develop an e-learning platform where the DataGrid shows course materials, assignments, or lecture notes with columns for title, subject, instructor, and upload date. Students can click on any material to view the PDF content directly in the viewer, streamlining access to educational resources.
 
-### Healthcare Patient Records
+### Healthcare patient records
 
 Implement a patient record system where lab reports, prescriptions, and medical documents are displayed in a DataGrid with patient details, document type, date, and status. Healthcare professionals can select a record to view the full PDF instantly, improving diagnosis support, documentation accuracy, and patient care coordination.
 
