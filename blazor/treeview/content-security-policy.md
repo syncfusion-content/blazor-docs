@@ -61,9 +61,3 @@ Include **'unsafe-inline'** in **style-src** to enable the virtualization featur
                upgrade-insecure-requests;">
 ```
 >Use this configuration only when handling very large datasets requiring virtualization for optimal performance and memory efficiency. This maintains strong overall protection while allowing the dynamic styling needed for virtualization.
-
-### Future Improvements
-
- - Syncfusion® is working to remove the need for 'unsafe-inline' in TreeView virtualization, with the goal of eliminating the need for **'unsafe-inline'** entirely.
-
- - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.

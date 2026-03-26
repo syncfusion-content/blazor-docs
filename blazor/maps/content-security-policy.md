@@ -71,10 +71,3 @@ Include 'unsafe-inline' in style-src to enable the restricted features (OSM with
                upgrade-insecure-requests;">
 ```
 >Use this configuration only when interactive highlights, OSM integration with toolbar, or click-based behaviors are essential to your application. This maintains strong overall protection while permitting the dynamic styling needed.
-
-### Future Improvements
- - The security limitation related to the Notes field (Rich Text Editor formatting) will be addressed in future weekly security patch releases.
-
- - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Gantt Chart component, with the goal of eliminating the need for **'unsafe-inline'** entirely.
-
- - Track the latest **Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.

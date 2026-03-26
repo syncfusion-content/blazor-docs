@@ -66,120 +66,6 @@ If your application includes Syncfusion® components that are not explicitly mar
 
 Refer to the list of supported components to verify Strict CSP compatibility. We have also outlined the features that currently require additional CSP directives.
 
-### Component Categories Overview
-
-Below is an updated overview highlighting CSP compliance status based on the latest verification:
-
->**Important:** HTMLAttribute/InputAttributes Parameter Limitations Under Strict CSP
-When using a strict Content Security Policy (CSP), support for inline style attributes is not currently available. Support for inline style attributes will be added in a future weekly patch release.
-Please refer to upcoming Syncfusion® release notes for updates.
-
-
-
-### Data Management
-
-| Fully Strict CSP Compliant | HTML Attributes (Style Attributes Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-| DataGrid, Pager, Tree Grid, DataForm, Query Builder | ListView | [Pivot Table](../pivot-table/content-security-policy) |
-
----
-
-
-### Scheduling & Calendars
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-| Scheduler, Calendar | DatePicker, DateRangePicker, DateTime Picker, TimePicker | [Gantt Chart](../gantt-chart/content-security-policy) |
-
----
-
-
-### File Viewers & Editors & File Management
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-| File Upload | Imageditor |- |
-
----
-
-
-### Layout Components
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-| Dashboard Layout, Timeline, Avatar, Media Query | Dialog, Predefined Dialog,  Splitter, Tooltip | - |
-
----
-
-### Notifications
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-|Toast, Spinner, Message, Skeleton, ProgressBar, Badge | - | - |
-
----
-
-### Data Visualization, Diagram and Maps
-
-| Fully Strict CSP Compliant |HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-| BarcodeGenerator, QRCodeGenerator, Linear Gauge, TreeMap |  - | [Circular Gauge](../circular-gauge/content-security-policy), [Maps](../maps/content-security-policy), [Heatmap Chart](../heatmap-chart/content-security-policy) |
-
----
-
-### Buttons and Actions
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-|SplitButton, Toggle Switch Button, Button Group, Button, Progress Button, Floating Action Button, Speed Dial  | DropDown Menu, Chips  | - |
-
----
-
-
-### Dropdowns
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-|Mention, ListBox | MultiColumn Combobox, Dropdown List, AutoComplete, ComboBox, Multiselect Dropdown, Dropdown Tree | - |
-   
----
-
-
-### Inputs
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation|
-|----------------------------|------------------------|--------------------------|
-| RangeSlider, Radio Button, Checkbox, Speech to text, Rating | In-Place Editor, TextBox, TextArea, Numeric TextBox, OtpInput, Inputmask, Color picker, Color palatte | -  |
-
----
-
-
-### Navigation & Actions
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-| Ribbon     | Accordion, Stepper, Breadcrumb, AppBar, Carousal, Context Menu, Sidebar, MenuBar, Tabs, Toolbar,  | [TreeView](../treeview/content-security-policy) |
-
----
-
-
-
-### Smart Components
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-| Smart Paste Button, Smart TextArea | -  | - |
-
----
-
-### Interactive Chat
-
-| Fully Strict CSP Compliant | HTML Attributes (Inline Styles Not Supported) | Feature Limitation |
-|----------------------------|------------------------|--------------------------|
-| AI Assist View| - | - |
-
----
-
 
 ## Constraints and Considerations
 
@@ -187,11 +73,35 @@ While Syncfusion® Blazor components are progressively moving toward full strict
 
 **Scenario 1: Components that require CSP relaxation**
 
-Certain components inherently rely on dynamic or inline style injection and cannot function under a strict CSP without `'unsafe-inline'`. Refer to the **Components Requiring CSP Relaxation** table below for the complete list.
+Certain components inherently rely on dynamic or inline style injection and cannot function under a strict CSP without `'unsafe-inline'`. Refer to the **Components Requiring CSP Relaxation** 
+
+#### Components Requiring CSP Relaxation
+
+| Category                          | Components                                                                
+|-----------------------------------|----------------------------------------------------------------------------|
+| **Data Visualization** | • Charts<br>• 3D Charts<br>• Stock Chart<br>• Bullet Chart<br>• Range Selector<br>• Sankey<br>• Sparkline Chart<br>• Smith Chart |
+| **File Viewers & Editors**                  | • Block Editor<br>• Rich Text Editor |
+| **Interactive Chat**              | • Chat UI |
+| **File Management**        | • File Manager|
+| **Layout**        | • Card |
+| **Diagrams and Maps**        | • Diagram |
+| **Kanban**        | • Kanban |
+
+
+
 
 **Scenario 2: Components with feature limitations**
 
-Some components are largely strict CSP-compliant, but specific features within them require inline styles. If your application uses any such feature in Pivot Table, Gantt Chart, Circular Gauge, Maps, Heatmap Chart, or TreeView, the `'unsafe-inline'` directive is required. Refer to the **Feature Limitation** column in the Component Categories Overview for details.
+Some components are largely strict CSP-compliant, but specific features within them require inline styles. If your application uses any component listed in the **Feature-Limited Components** table below, the `'unsafe-inline'` directive is required.
+
+#### Feature-Limited Components
+
+| Category | Components |
+|----------|------------|
+| Data Management | • [Pivot Table](../pivot-table/content-security-policy) |
+| Scheduling & Calendars | • [Gantt Chart](../gantt-chart/content-security-policy) |
+| Data Visualization and Maps | • [Circular Gauge](../circular-gauge/content-security-policy)<br>• [Maps](../maps/content-security-policy)<br>• [Heatmap Chart](../heatmap-chart/content-security-policy) |
+| Navigation & Actions | • [TreeView](../treeview/content-security-policy) |
 
 **Scenario 3: Inline styles passed via `InputAttributes` or `HtmlAttributes`**
 
@@ -220,21 +130,3 @@ If your application falls under any of the above scenarios, apply the following 
 ```
 
 > **Note:** The [wasm-unsafe-eval](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) source expression is mandatory for Blazor WebAssembly and Blazor Web App applications. It enables the browser to compile and execute WebAssembly modules required by the Blazor Mono runtime. Without this directive, modern browsers will block WebAssembly execution, preventing the Blazor runtime from initializing correctly.
-
-#### Components Requiring CSP Relaxation
-
-| Category                          | Components                                                                
-|-----------------------------------|----------------------------------------------------------------------------|
-| **Charts & Advanced Visualizations** | Charts, 3D Charts, Stock Chart, BulletChart, Range Selector, Sankey,Sparkline Charts, Smith Chart, Diagram 
-| **Editors and Kanban**                  | Block Editor , RichtextEditor Kanban                                                                                                                  |
-| **Interactive Chat**              | Chat UI                                                                    |
-| **File Management and Card**        | File Manager, Card                                                               |
-
-
->**Important:** CSP compliance remains a key security priority. We are actively working toward achieving complete Strict CSP compatibility for all components, and updates will be provided incrementally through upcoming security patch releases.
-
-### Best Practices
-
- - Apply the strictest CSP policy feasible for your application
- - Avoid using 'unsafe-inline' unless explicitly required
- - Track Syncfusion® release notes for CSP-related improvements
