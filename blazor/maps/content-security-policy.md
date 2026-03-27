@@ -21,7 +21,7 @@ The Syncfusion® Blazor **Maps** component supports most features under strict C
 - Basic zoom and pan navigation
 - Static customizations
 
-## What Requires `'unsafe-inline'`?
+## What Requires *'unsafe-inline'* ?
 
 The following features require the `style-src 'unsafe-inline'` directive:
 

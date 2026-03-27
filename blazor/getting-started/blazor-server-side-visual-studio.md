@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Server App
 
-This article provides step-by-step instructions for building a Blazor Server App with the `Blazor DataGrid` component using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This article provides step-by-step instructions for building a Blazor Server App with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Using Playground
 
@@ -97,6 +97,17 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 Install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages into your project.
 
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ### Add Import Namespaces
@@ -114,7 +125,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor Server App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of the Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="2 4" %}
