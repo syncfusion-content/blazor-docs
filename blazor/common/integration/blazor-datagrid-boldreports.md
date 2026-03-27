@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® DataGrid with Bold Report Viewer
+# Integrating Syncfusion® Blazor DataGrid with Bold Report Viewer
 
 This guide explains how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC/RDL reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
 
@@ -18,21 +18,21 @@ If you haven't created your Blazor app yet, follow the [Blazor getting started g
 ## Prerequisites
 Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components.
 
-## Install required Syncfusion packages
+## Install required NuGet packages
 
-Use NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Packages for Solution) and install:
+Use NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) and install the following packages:
 
-**Syncfusion NuGet packages**
+**Syncfusion packages:**
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-* [DataGrid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)  
-* [Theme](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-* [Button](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
-
-**Bold Reports NuGet packages**
-
+**Bold Reports package:**
 * [BoldReports.Net.Core](https://www.nuget.org/packages/BoldReports.Net.Core)
-* [Microsoft.AspNetCore.Mvc.NewtonsoftJson](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.NewtonsoftJson/) 
-* [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) 
+
+**Microsoft packages:**
+* [Microsoft.AspNetCore.Mvc.NewtonsoftJson](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.NewtonsoftJson/)
+* [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient)
 
 ## Add required namespaces
 
@@ -108,6 +108,8 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
 ## Add a sample report
 
@@ -568,7 +570,7 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
 
-**Expected Behavior**
+**Expected behavior**
 * DataGrid renders with sample records.
 * Clicking **Open RDLC Report** sends the grid data to the Web API.
 * The Bold Report Viewer loads and displays the report.
