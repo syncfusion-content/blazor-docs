@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Angular Components in Blazor
 
-This guide explains how to render [Syncfusion® Angular components](https://www.syncfusion.com/angular-components/angular-data-grid) inside a [Blazor application](https://www.syncfusion.com/blazor-components/blazor-datagrid) by packaging the Angular component as a **Custom Element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, **Angular Custom Elements** allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
+This guide explains how to render [Syncfusion® Angular components](https://www.syncfusion.com/angular-components/angular-data-grid) inside a Blazor application by packaging the Angular component as a **Custom Element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, **Angular Custom Elements** allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
 
 ## Prerequisites
 
