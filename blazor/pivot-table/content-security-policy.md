@@ -21,7 +21,7 @@ The Syncfusion® Blazor **Pivot Table** component supports most features under s
 - Field list integration
 - Keyboard navigation and accessibility
 
-## What Requires **'unsafe-inline'**?
+## What Requires *'unsafe-inline'*?
 
 The following features require the `style-src 'unsafe-inline'` directive:
 

@@ -20,7 +20,7 @@ The Syncfusion® Blazor **Gantt Chart** component supports most features under s
 - Data binding and filtering
 - Multiple views and interactions
 
-## What Requires **'unsafe-inline'**?
+## What Requires *'unsafe-inline'*?
 
 **Rich Text Formatting in Notes Field** requires the `style-src 'unsafe-inline'` directive.
 

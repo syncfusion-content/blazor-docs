@@ -23,7 +23,7 @@ The Syncfusion® Blazor **Heatmap** component supports most features under stric
 - Keyboard navigation
 - Image/PDF export
 
-## What Requires **'unsafe-inline'** ?
+## What Requires *'unsafe-inline'* ?
 
 **Cell Selection** (single or multiple) requires the `style-src 'unsafe-inline'` directive.
 
