@@ -15,7 +15,7 @@ If you haven’t created a Blazor Web app yet, follow the [Blazor getting starte
 
 ## Prerequisites
 
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 * .NET CLI or [Visual Studio Code](https://code.visualstudio.com/)
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
