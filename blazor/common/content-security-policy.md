@@ -88,13 +88,13 @@ The following components need inline styles to work and always require `'unsafe-
 
 These components work under strict CSP for most features, but specific advanced features need `'unsafe-inline'`:
 
-| Category | Components |
+| Category | Components | 
 |----------|------------|
-| Data Management | • [Pivot Table](../pivot-table/content-security-policy) |
-| Scheduling | • [Gantt Chart](../gantt-chart/content-security-policy) |
-| Charts | • [Circular Gauge](../circular-gauge/content-security-policy)<br> • [Heatmap Chart](../heatmap-chart/content-security-policy) |
-| Navigation | • [TreeView](../treeview/content-security-policy) |
-| Maps |  • [Maps](../maps/content-security-policy)|
+| Data Management | Pivot Table - [Click here for feature details](../pivot-table/content-security-policy) |
+| Scheduling | Gantt Chart - [Click here for feature details](../gantt-chart/content-security-policy) |
+| Charts | Circular Gauge - [Click here for feature details](../circular-gauge/content-security-policy)<br> Heatmap Chart - [Click here for feature details](../heatmap-chart/content-security-policy) |
+| Navigation | TreeView - [Click here for feature details](../treeview/content-security-policy) |
+| Maps | Maps -[Click here for feature details](../maps/content-security-policy) |
 
 ### Scenario 3: Passing Inline Styles via ComponentInputAttributes
 
