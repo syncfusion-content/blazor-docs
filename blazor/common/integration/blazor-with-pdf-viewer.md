@@ -9,14 +9,15 @@ documentation: ug
 
 # Integrating Syncfusion® Blazor DataGrid with PDF Viewer
 
-This article explains how to integrate the **[Syncfusion® Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer)** together with the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using the Server render mode.
+This article explains how to integrate the **[Syncfusion® Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer)** together with the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using Server render mode.
 
-This guide uses [Visual Studio Code](https://code.visualstudio.com/). If you haven’t created a Blazor Web app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create your project.
+If you haven’t created a Blazor Web app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create your project.
 
 ## Prerequisites
 
-**Target Framework**: This guide targets .NET 8.0 or later.
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements): Ensure your development environment meets the required system specifications for using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
+* .NET CLI or [Visual Studio Code](https://code.visualstudio.com/)
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer, DataGrid, and Themes NuGet packages
 
@@ -138,6 +139,8 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
 @using System.IO
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.SfPdfViewer
+
+// Inject IWebHostEnvironment to access the web root path for locating PDF files
 @inject IWebHostEnvironment WebHostEnvironment
 
 <PageTitle>Dynamic PDF Viewer</PageTitle>
@@ -323,6 +326,9 @@ Develop an e-learning platform where the DataGrid shows course materials, assign
 
 ## See also
 
+* [Getting Started with Syncfusion Blazor PDF Viewer in Blazor Web App](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app)
 * [Getting Started with Syncfusion Blazor PDF Viewer in Blazor WASM](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
+* [Getting Started with Syncfusion Blazor DataGrid in Blazor  Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 * [Getting Started with Syncfusion Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Blazor PDF Viewer Demo](https://liveviewereditorblazorapp.azurewebsites.net/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities)
 * [Blazor DataGrid Demo – Overview](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2)
