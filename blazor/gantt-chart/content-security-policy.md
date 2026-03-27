@@ -20,7 +20,7 @@ The Syncfusion® Blazor **Gantt Chart** component supports most features under s
 - Data binding and filtering
 - Multiple views and interactions
 
-## What Requires `'unsafe-inline'`?
+## What Requires *'unsafe-inline'*?
 
 **Rich Text Formatting in Notes Field** requires the `style-src 'unsafe-inline'` directive.
 
@@ -35,7 +35,7 @@ The Notes field supports rich text formatting (bold, italic, colors, lists, link
 
 These styles are applied at runtime and blocked under strict CSP.
 
-### How to Use Plain Text Only
+### How to Use Plain Text Only ?
 
 If you don't need rich text formatting in Notes, just use plain text. The rest of the Gantt Chart will work fully under strict CSP.
 
