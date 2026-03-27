@@ -104,6 +104,8 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 {% endhighlight %}
 {% endtabs %}
 
+N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
+
 ## Add a sample report
 
 ### Create interop file
