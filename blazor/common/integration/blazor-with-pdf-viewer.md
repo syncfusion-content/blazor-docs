@@ -137,6 +137,7 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
 @rendermode InteractiveServer
 
 @using System.IO
+@using Microsoft.AspNetCore.Hosting
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -214,7 +215,6 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
         string[] employees = { "John Smith", "Jane Doe", "Bob Wilson", "Alice Brown", "Mike Johnson" };
         
         // Create 5 sample orders with sequential data
-        // Create 5 sample orders
         Orders = Enumerable.Range(1, 5).Select(x => new Order()
         {
             OrderID = 1000 + x,
@@ -328,7 +328,7 @@ Develop an e-learning platform where the DataGrid shows course materials, assign
 
 * [Getting Started with Syncfusion Blazor PDF Viewer in Blazor Web App](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app)
 * [Getting Started with Syncfusion Blazor PDF Viewer in Blazor WASM](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
-* [Getting Started with Syncfusion Blazor DataGrid in Blazor  Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting Started with Syncfusion Blazor DataGrid in Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 * [Getting Started with Syncfusion Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 * [Blazor PDF Viewer Demo](https://liveviewereditorblazorapp.azurewebsites.net/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities)
 * [Blazor DataGrid Demo – Overview](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2)
