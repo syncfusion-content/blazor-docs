@@ -15,6 +15,7 @@ This guide uses [Visual Studio Code](https://code.visualstudio.com/). If you hav
 
 ## Prerequisites
 
+**Target Framework**: This guide targets .NET 8.0 or later.
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements): Ensure your development environment meets the required system specifications for using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer, DataGrid, and Themes NuGet packages
@@ -23,7 +24,6 @@ From the server project folder (where the `.csproj` is located), install the req
  * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
- * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
 {% tabs %}
 
@@ -32,7 +32,6 @@ From the server project folder (where the `.csproj` is located), install the req
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet add package SkiaSharp.Views.Blazor
 dotnet restore
 
 {% endhighlight %}
@@ -71,7 +70,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 // Configure SignalR to support large PDF file transfers
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
-
+// Add memory cache for PDF Viewer component caching
 builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
@@ -94,15 +93,16 @@ Add the following stylesheet and script references in the server app's **~/Compo
 </head>
 
 <body>
-    <!-- Syncfusion Blazor PDF Viewer component script -->
-    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-
     <!-- Syncfusion Blazor Core script (required for most components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!-- Syncfusion Blazor PDF Viewer component script -->
+    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Ensure the `Syncfusion.Blazor.Core` script is loaded before the `SfPdfViewer` script, as shown above. The PDF Viewer component depends on core Blazor functionality.
 
 ## Configure render mode (Server)
 
