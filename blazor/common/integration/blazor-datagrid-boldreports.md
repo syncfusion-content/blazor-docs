@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® DataGrid with Bold Report Viewer
+# Integrating Syncfusion® Blazor DataGrid with Bold Report Viewer
 
 This guide explains how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC/RDL reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
 
