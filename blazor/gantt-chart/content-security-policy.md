@@ -35,7 +35,7 @@ The Notes field supports rich text formatting (bold, italic, colors, lists, link
 
 These styles are applied at runtime and blocked under strict CSP.
 
-### How to Use Plain Text Only
+### How to Use Plain Text Only ?
 
 If you don't need rich text formatting in Notes, just use plain text. The rest of the Gantt Chart will work fully under strict CSP.
 

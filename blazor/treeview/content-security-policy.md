@@ -42,7 +42,7 @@ UI virtualization improves performance with large datasets by rendering only vis
 
 These calculations happen in real-time as users scroll and are blocked under strict CSP.
 
-### How to Disable Virtualization
+### How to Disable Virtualization ?
 
 If you don't need virtualization, simply omit `EnableVirtualization="true"` or leave the Height unset. The rest of the TreeView works fully under strict CSP for large and small datasets.
 
