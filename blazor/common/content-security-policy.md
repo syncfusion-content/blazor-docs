@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Syncfusion® Blazor Components with Strict Content Security Policy
+# Syncfusion® Blazor Components With Strict Content Security Policy
 
 ## What is Content Security Policy (CSP)?
 
@@ -64,7 +64,7 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
 
 WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) directive to compile and run. Without it, your Blazor runtime won't start. This is different from `'unsafe-eval'` and is necessary for client-side WebAssembly applications.
 
-## When You Need `'unsafe-inline'` ?
+## When You Need **'unsafe-inline'** ?
 
 Most Syncfusion components support strict CSP. However, some components or features still need the **`style-src 'unsafe-inline'`** directive. Read the sections below to determine if your application needs it.
 
@@ -120,7 +120,7 @@ If you add `style` attributes directly through `InputAttributes` or `HtmlAttribu
 
 This keeps your CSP strict while still achieving your styling goals.
 
-## CSP Configuration With `'unsafe-inline'`
+## CSP Configuration With **'unsafe-inline'**
 
 If your application needs any of the above scenarios, use this configuration:
 
