@@ -140,7 +140,7 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.SfPdfViewer
 
-// Inject IWebHostEnvironment to access the web root path for locating PDF files
+@* Inject IWebHostEnvironment to access the web root path for locating PDF files *@
 @inject IWebHostEnvironment WebHostEnvironment
 
 <PageTitle>Dynamic PDF Viewer</PageTitle>
