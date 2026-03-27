@@ -94,8 +94,6 @@ This command creates a new Blazor Web App and places it in a new directory calle
 
 Install [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package into the project.
 
-If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the client project.
-
 Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
 {% tabs %}
@@ -105,6 +103,8 @@ Install-Package Syncfusion.Blazor.Chart3D -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
