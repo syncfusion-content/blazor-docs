@@ -27,7 +27,7 @@ The Syncfusion® Blazor **TreeView** component supports most features under stri
 - Accessibility (ARIA/WCAG)
 - Keyboard navigation and export
 
-## What Requires `'unsafe-inline'`?
+## What Requires **'unsafe-inline'**?
 
 **UI Virtualization** requires the `style-src 'unsafe-inline'` directive.
 

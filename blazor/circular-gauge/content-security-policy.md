@@ -20,7 +20,7 @@ The Syncfusion® Blazor **Circular Gauge** component supports most features unde
 - Annotations
 - Multiple axes
 
-## What Requires `'unsafe-inline'`?
+## What Requires **'unsafe-inline'**?
 
 **Animation Features** require the `style-src 'unsafe-inline'` directive.
 
