@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Using Syncfusion Blazor DataGrid with OAuth 2.0
-description: Step-by-step guide to integrating OAuth 2.0 authentication with Syncfusion Blazor components in a Blazor Web App.
+title: Syncfusion Blazor DataGrid with GitHub OAuth 2.0
+description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Syncfusion Blazor components in a Blazor Web App.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Blazor with OAuth 2.0 Authentication
+# Blazor with GitHub OAuth 2.0
 
 This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected pages featuring the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
 
 ## What is OAuth 2.0?
 
-OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service (such as GitHub, Google, and Microsoft). It uses tokens instead of credentials and is widely used for secure authentication in modern applications.
+OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service (such as **GitHub**, **Google**, and **Microsoft**). It uses tokens instead of credentials and is widely used for secure authentication in modern applications.
 
 OAuth provides:
 
@@ -33,18 +33,18 @@ OAuth provides:
 1. Open **Visual Studio**.
 2. Select **Create a new project**.
 3. In the Create a new project dialog:
-  - Choose **Blazor Web App**
-  - Click **Next**
+    - Choose **Blazor Web App**
+    - Click **Next**
 4. In Configure your new project:
-  - Enter a **Project name**
-  - Choose a **Location**
-  - Click **Next**
+    - Enter a **Project name**
+    - Choose a **Location**
+    - Click **Next**
 5. In the Additional information screen, configure the following:
-  - **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
-  - **Authentication type**: Select **None**(OAuth will be configured manually in later steps)
-  - **Interactive render mode**: Select **Server**
-  - **Interactivity location**: Select **Per page/component**
-  - **Enable HTTPS**
+    - **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
+    - **Authentication type**: Select **None**(OAuth will be configured manually in later steps)
+    - **Interactive render mode**: Select **Server**
+    - **Interactivity location**: Select **Per page/component**
+    - **Enable HTTPS**
 6. Click **Create** to generate the Blazor Web App.
 
 ## Create a GitHub OAuth application
@@ -52,8 +52,8 @@ OAuth provides:
 1. Go to [GitHub Developer Settings](https://github.com/settings/developers).
 2. Click **OAuth Apps → New OAuth App**
 3. Configure the application:
-   - **Homepage URL:**(example:`https://localhost:5001/`) // Use your Blazor app’s base HTTPS URL.
-   - **Authorization callback URL:** `https://localhost:5001/signin-github`
+    - **Homepage URL:** `https://localhost:5001/` (Use your Blazor app’s base HTTPS URL)
+    - **Authorization callback URL:** `https://localhost:5001/signin-github`
 4. Copy the generated **Client ID** and **Client Secret**
 5. In your Blazor project, open **appsettings.json** and add the following configuration.
 
@@ -217,7 +217,7 @@ To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual 
 
 **2. Add import namespaces**
 
-Open the **~/_Imports.razor** file and import the required namespaces.
+Open the `~/_Imports.razor` file and import the required namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -233,7 +233,6 @@ Open the **~/_Imports.razor** file and import the required namespaces.
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" %}
 
-// Program.cs
 using Syncfusion.Blazor;
  
 builder.Services.AddSyncfusionBlazor();
@@ -307,24 +306,40 @@ The `Home.razor` page uses `<AuthorizeView>` to change UI depending on whether t
 <PageTitle>Home</PageTitle>
 
 <div class="container mt-4">
-	<AuthorizeView>
-		<Authorized>
+    <AuthorizeView>
+        <Authorized>
+
             <h1>DataGrid</h1>
-			<!-- Render DataGrid on the home page when authenticated -->
-			<SecureGrid />
-		</Authorized>
-		<NotAuthorized>
+
+            <!-- Render DataGrid on the home page when authenticated -->
+            <SecureGrid />
+
+        </Authorized>
+
+        <NotAuthorized>
+
             <h1>Welcome!</h1>
+
             <p>
                 Click the Login button below to sign in with GitHub.
                 Once you’re logged in, the Syncfusion DataGrid will be displayed.
             </p>
-			<a class="btn btn-primary" href="/account/login?returnUrl=/">Login with GitHub</a>
-		</NotAuthorized>
-	</AuthorizeView>
+
+            <a class="btn btn-primary" href="/account/login?returnUrl=/">
+                Login with GitHub
+            </a>
+
+        </NotAuthorized>
+    </AuthorizeView>
 </div>
 
 {% endhighlight %}
 {% endtabs %}
 
 This example demonstrates how to integrate GitHub OAuth into a Blazor Web App and authenticate users using secure cookie-based sign‑in. After authentication, the user can access protected pages and view the Syncfusion Blazor DataGrid.
+
+## See also
+
+- [OAuth 2.0 and OIDC authentication in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols)
+
+- [Getting started with Blazor DataGrid in Web app](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
