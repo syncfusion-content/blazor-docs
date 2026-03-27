@@ -21,7 +21,7 @@ This guide explains how to render [Syncfusion® Angular components](https://www.
 
 ### Create the project
 
-If you already have an Angular project, proceed to custom elements package installation. Otherwise, create a new Angular project following Syncfusion documentation.
+If you already have an Angular project, skip to the **Install custom elements package** section. Otherwise, create a new Angular project following Syncfusion documentation.
 
 [Angular Getting Started](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone).
 
@@ -135,7 +135,7 @@ import { createCustomElement } from '@angular/elements';
 The Angular production build generates JavaScript and CSS files that represent the Web Component.
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 ng build --configuration production --output-hashing=none
 
@@ -151,7 +151,7 @@ If you already have a Blazor project, move to the next step. Otherwise, create o
 **Blazor WebAssembly:**
 
 {% tabs %}
-{% highlight bash tabtitle="Package Manager" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazorwasm -o BlazorHost
 
@@ -161,12 +161,14 @@ dotnet new blazorwasm -o BlazorHost
 **Blazor Server:**
 
 {% tabs %}
-{% highlight bash tabtitle="Package Manager" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor --interactivity Server -o BlazorHost
 
 {% endhighlight %}
 {% endtabs %}
+
+N> For .NET 8 and later, use the `blazor` template with the `--interactivity` parameter. If you're using .NET 6 or 7, use `dotnet new blazorserver` instead.
 
 ### Add MSBuild automation to build & copy Angular output
 
@@ -212,7 +214,7 @@ N> Replace **syncfusion-angular-app** in both `<AngularProject>` and `<AngularDi
 Include the stylesheet in the `<head>` and the script at the end of the `<body>` in the `App.razor` file as shown below:
 
 {% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+{% highlight html tabtitle="App.razor" %}
 
 <head>
     ....
