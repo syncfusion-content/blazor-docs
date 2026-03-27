@@ -506,10 +506,6 @@ Implement a contract management system displaying contract records in the DataGr
 
 Develop an e-learning platform where the DataGrid shows course materials, assignments, or lecture notes with columns for title, subject, instructor, and upload date. Students can click on any material to view the PDF content directly in the viewer, streamlining access to educational resources.
 
-### Healthcare patient records
-
-Implement a patient record system where lab reports, prescriptions, and medical documents are displayed in a DataGrid with patient details, document type, date, and status. Healthcare professionals can select a record to view the full PDF instantly, improving diagnosis support, documentation accuracy, and patient care coordination.
-
 ## See also
 
 * [Getting Started with Syncfusion Blazor PDF Viewer in Blazor WASM](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
