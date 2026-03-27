@@ -13,7 +13,7 @@ documentation: ug
 
 **Content Security Policy (CSP)** is a browser security feature that protects your application against malicious attacks like cross-site scripting (XSS) and data injection. It works by controlling where your application can load scripts, styles, images, fonts, and other resources from.
 
-## Where to Add CSP Directives
+## Where to Add CSP Directives ?
 
 Add CSP directives to the `<head>` tag of your application's main HTML file:
 
@@ -64,25 +64,25 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
 
 WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) directive to compile and run. Without it, your Blazor runtime won't start. This is different from `'unsafe-eval'` and is necessary for client-side WebAssembly applications.
 
-## When You Need `'unsafe-inline'`
+## When You Need `'unsafe-inline'` ?
 
 Most Syncfusion components support strict CSP. However, some components or features still need the **`style-src 'unsafe-inline'`** directive. Read the sections below to determine if your application needs it.
 
-## Three Scenarios That Require CSP Relaxation
 
 ### Scenario 1: Components That Always Require `'unsafe-inline'`
 
 The following components need inline styles to work and always require `'unsafe-inline'`: 
 
-| Category | Components |
-|----------|------------|
-| **Data Visualization** | • Charts<br> • 3D Charts<br> • Stock Chart<br> • Bullet Chart<br> • Range Selector<br> • Sankey<br> • Sparkline Chart<br> • Smith Chart |
-| **File Viewers & Editors** | • Block Editor<br> • Rich Text Editor |
-| **Interactive Chat** | • Chat UI |
-| **File Management** | • File Manager |
-| **Layout** | • Card |
-| **Diagrams and Maps** | • Diagram |
-| **Kanban** | • Kanban |
+| Category | Components | Reason for unsafe-inline Requirement |
+|----------|------------|------------|
+| **Data Visualization** | • Charts<br> • 3D Charts<br> • Stock Chart<br> • Bullet Chart<br> • Range Selector<br> • Sankey<br> • Sparkline Chart<br> • Smith Chart |• These components are independent of external Syncfusion theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.<br> • Dynamic calculation of axes, scales, gradients, data labels, and tooltips at runtime<br>• Inline styles ensure pixel‑perfect alignment and high‑performance redraws during zoom, pan, and real-time updates<br>|
+| **File Viewers & Editors** | • Block Editor<br> • Rich Text Editor | • File editing components apply dynamic inline styles to render rich content accurately based on user input and stored markup.<br> • Formatting features (bold, italic, underline, font size, font color, background color, lists, links, alignment) require inline styles to reflect user intent precisely |
+| **Interactive Chat** | • Chat UI |• Chat UI component is implemented using Blazor’s Virtualize component, which optimizes performance by rendering only the visible subset of messages within the viewport while representing the full dataset logically.<br> • Blazor’s virtualization mechanism relies on runtime-generated inline styles as an essential part of its layout and scrolling model
+ |
+| **File Management** | • File Manager |• Uses inline styles for responsive grid/list views, selection highlights, drag indicators, and context menus.<br> • Inline styles allow immediate visual feedback during selection, resizing panes, and drag operations |
+| **Layout** | • Card |• Card components dynamically adjust layout, elevation, spacing, and responsive breakpoints via inline styles.<br> • Enables adaptive layouts across different screen sizes and container widths.<br> • Supports dynamic styling scenarios such as hover effects, conditional emphasis |
+| **Diagrams and Maps** | • Diagram | • Diagram components depend extensively on inline styles for interactive behaviors.<br>• Inline styles are used for node positioning, connectors, ports, annotations, and selection states<br>• Dragging, resizing, rotating, and snapping operations require continuous style updates at runtime |
+| **Kanban** | • Kanban | Kanban boards use inline styles to provide fluid drag‑and‑drop interactions between columns and cards. |
 
 ### Scenario 2: Components With Limited Features Requiring `'unsafe-inline'`
 
