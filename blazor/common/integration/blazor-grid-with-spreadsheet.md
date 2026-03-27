@@ -24,7 +24,7 @@ Make sure your development environment meets the [system requirements](https://b
 
 ## Install required Syncfusion packages
 
-To add the Blazor DataGrid and Spreadsheet components to the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install the NuGet packages listed below.
+To add the Blazor DataGrid and Spreadsheet components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
 
 * [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet)
 * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)

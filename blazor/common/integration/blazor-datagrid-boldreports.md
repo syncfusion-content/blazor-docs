@@ -18,21 +18,16 @@ If you haven't created your Blazor app yet, follow the [Blazor getting started g
 ## Prerequisites
 Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components.
 
-## Install required Syncfusion packages
+## Install required NuGet packages
 
-Use NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Packages for Solution) and install:
+Use NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) and install the following packages:
 
-**Syncfusion NuGet packages**
-
-* [DataGrid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)  
-* [Theme](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-* [Button](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
-
-**Bold Reports NuGet packages**
-
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [BoldReports.Net.Core](https://www.nuget.org/packages/BoldReports.Net.Core)
-* [Microsoft.AspNetCore.Mvc.NewtonsoftJson](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.NewtonsoftJson/) 
-* [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) 
+* [Microsoft.AspNetCore.Mvc.NewtonsoftJson](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.NewtonsoftJson/)
+* [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient)
 
 ## Add required namespaces
 
