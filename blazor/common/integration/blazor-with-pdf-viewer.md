@@ -106,7 +106,7 @@ Add the following stylesheet and script references in the server app's **~/Compo
 
 ## Configure render mode (Server)
 
-For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each **~Pages/*.razor** file that requires interactive Server components:
+For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each **~Pages/*.razor** file that requires interactive Server components.
 
 **Per‑page directive (Server)**
 
@@ -121,9 +121,11 @@ For Server render mode, if your app's interactivity location is set to `Per page
 
 N> If the `interactivity location` is set to `Global` and the app is configured for Server render mode, no per‑page directive is required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer and DataGrid components
+## Integrate DataGrid and PDF Viewer
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and DataGrid components to a `.razor` file in the server project's `Pages` folder (for example, **~/Pages/Home.razor**):
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and DataGrid components to any `.razor` file in the server project's `Pages` folder (for example, **~/Pages/Home.razor**).
+
+The example below displays a **DataGrid** with sample order data, selecting a row generates and loads a detailed PDF for that order in the **PDF Viewer**.
 
 {% tabs %}
 {% highlight razor %}
@@ -131,43 +133,342 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and DataGrid
 @page "/"
 @rendermode InteractiveServer
 
-<h1>PDF Viewer</h1>
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Pdf
+@using Syncfusion.Pdf.Graphics
+@using Syncfusion.Pdf.Grid
+@using Syncfusion.Drawing
 
-<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-              Height="100%"
-              Width="100%">
-</SfPdfViewer2>
+<PageTitle>Dynamic PDF Viewer</PageTitle>
 
-<h1>DataGrid</h1>
+<div class="container-fluid">
+    <h2 class="mb-4">Order Management System</h2>
 
-<SfGrid DataSource="@Orders" />
+    <!-- DataGrid Section -->
+    <div class="row">
+        <div class="col-12 mb-4">
+            <h4>Orders - DataGrid</h4>
+            <p class="text-muted">Click on any row to view detailed order information in the PDF viewer below</p>
+            
+            <SfGrid DataSource="@Orders" TValue="Order" AllowSelection="true">
+                <GridSelectionSettings Type="SelectionType.Single"></GridSelectionSettings>
+                <GridEvents TValue="Order" RowSelected="OnRowSelected"></GridEvents>
+                <GridColumns>
+                    <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
+                    <GridColumn Field="CustomerName" HeaderText="Customer" Width="150"></GridColumn>
+                    <GridColumn Field="EmployeeName" HeaderText="Sales Rep" Width="150"></GridColumn>
+                    <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Width="130"></GridColumn>
+                    <GridColumn Field="ShipCity" HeaderText="Ship City" Width="120"></GridColumn>
+                    <GridColumn Field="ShippingCost" HeaderText="Shipping Cost" Format="C2" Width="120"></GridColumn>
+                </GridColumns>
+            </SfGrid>
+        </div>
+    </div>
 
-@code{
-    public List<Order> Orders { get; set; }
+    <!-- PDF Viewer Section -->
+    <div class="row">
+        <div class="col-12">
+            <h4>Order Details - PDF Viewer</h4>
+            <SfPdfViewer2 @ref="PdfViewer" Height="600px" Width="100%"></SfPdfViewer2>
+        </div>
+    </div>
+</div>
 
+@code {
+    private SfPdfViewer2? PdfViewer;
+    private Random _random = new Random();
+    public List<Order> Orders { get; set; } = new();
+    
+    // Load welcome PDF when the page first renders
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var welcomePdf = GenerateWelcomePdf();
+            using var pdfStream = new MemoryStream(welcomePdf);
+            await PdfViewer!.LoadAsync(pdfStream);
+        }
+    }
+
+    // Initialize sample order data
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 10).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
+        string[] customers = { "ALFKI|Alfreds Futterkiste", "ANANTR|Ana Trujillo Emparedados", 
+                              "ANTON|Antonio Moreno Taquería", "BLONP|Blondel père et fils", 
+                              "BOLID|Bólido Comidas preparadas" };
+        
+        Orders = Enumerable.Range(1, 5).Select(x => {
+            var custData = customers[x - 1].Split('|');
+            return new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = custData[0],
+                CustomerName = custData[1],
+                ShippingCost = Math.Round(15.5 + (x * 8.25), 2),
+                OrderDate = DateTime.Now.AddDays(-x * 2),
+                ShipAddress = $"{100 + x} Commerce Street",
+                ShipCity = RandomPick("Berlin", "Madrid", "Paris", "London", "Rome"),
+                ShipCountry = RandomPick("Germany", "Spain", "France", "UK", "Italy"),
+                ShipPostalCode = $"{10000 + x * 100}",
+                EmployeeName = RandomPick("John Smith", "Jane Doe", "Bob Wilson", "Alice Brown", "Mike Johnson"),
+                OrderItems = GenerateItems(x)
+            };
         }).ToList();
     }
 
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+    private string RandomPick(params string[] items) => items[_random.Next(items.Length)];
+
+    // Generate random order items for demonstration purposes
+    private List<OrderItem> GenerateItems(int seed)
+    {
+        string[] products = { "Laptop Computer", "Wireless Mouse", "Mechanical Keyboard", "LED Monitor", 
+                             "Gaming Headset", "USB Hub", "Webcam", "External SSD" };
+        var rnd = new Random(seed * 100);
+        return Enumerable.Range(0, rnd.Next(4, 8)).Select(_ => new OrderItem()
+        {
+            ProductName = products[rnd.Next(products.Length)],
+            Quantity = rnd.Next(1, 8),
+            UnitPrice = rnd.Next(25, 450),
+            Discount = rnd.Next(0, 20)
+        }).ToList();
+    }
+
+    // Handle grid row selection and generate PDF
+    private async Task OnRowSelected(RowSelectEventArgs<Order> args)
+    {
+        var pdfBytes = GenerateOrderPdf(args.Data);
+        using var pdfStream = new MemoryStream(pdfBytes);
+        await PdfViewer!.LoadAsync(pdfStream);
+    }
+
+    // Generate a welcome PDF shown on initial page load
+    private byte[] GenerateWelcomePdf()
+    {
+        using (PdfDocument doc = new PdfDocument())
+        {
+            var page = doc.Pages.Add();
+            var g = page.Graphics;
+            var titleFont = new PdfStandardFont(PdfFontFamily.Helvetica, 24, PdfFontStyle.Bold);
+            var textFont = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+
+            // Draw title
+            g.DrawString("Welcome to Order Management System", titleFont, PdfBrushes.DarkBlue, 
+                new PointF(40, 90));
+
+            // Draw instructions
+            string instructions = "Please select an order from the grid above to view detailed information here.\n\n" +
+                                "Each order contains comprehensive details including customer information, shipping details, " +
+                                "and a complete breakdown of all items in the order with pricing information.";
+
+            g.DrawString(instructions, textFont, PdfBrushes.Black, 
+                new RectangleF(40, 140, page.GetClientSize().Width - 80, 100));
+
+            using var ms = new MemoryStream();
+            doc.Save(ms);
+            return ms.ToArray();
+        }
+    }
+
+    // Generate a detailed order PDF document
+    private byte[] GenerateOrderPdf(Order order)
+    {
+        using (PdfDocument doc = new PdfDocument())
+        {
+            var page = doc.Pages.Add();
+            var g = page.Graphics;
+            float margin = 30, y = margin, pageWidth = page.GetClientSize().Width;
+
+            // Define fonts
+            var titleFont = new PdfStandardFont(PdfFontFamily.Helvetica, 22, PdfFontStyle.Bold);
+            var textFont = new PdfStandardFont(PdfFontFamily.Helvetica, 11);
+            var headerFont = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold);
+            var labelFont = new PdfStandardFont(PdfFontFamily.Helvetica, 10, PdfFontStyle.Bold);
+
+            // Draw title
+            g.DrawString($"Order #{order.OrderID}", titleFont, PdfBrushes.DarkBlue, new PointF(margin, y));
+            y += 35;
+
+            // Draw description
+            string description = 
+                $"This document contains the complete order summary for Order #{order.OrderID} placed by {order.CustomerName} on {order.OrderDate:MMMM dd, yyyy}. " +
+                $"The order is being processed by {order.EmployeeName} and will be shipped to {order.ShipCity}, {order.ShipCountry}. " +
+                $"Below you will find detailed information about each item including quantities, pricing, and applicable discounts.";
+
+            g.DrawString(description, textFont, PdfBrushes.Black, 
+                new RectangleF(margin, y, pageWidth - (2 * margin), 80));
+            y += 60;
+
+            // Draw order information section with background
+            g.DrawRectangle(new PdfPen(Color.LightGray, 1), new PdfSolidBrush(Color.LightSteelBlue), 
+                new RectangleF(margin, y, pageWidth - (2 * margin), 80));
+            
+            y += 10;
+            float col1 = margin + 10, col2 = margin + 250;
+
+            // Order details - Row 1
+            g.DrawString("Customer:", labelFont, PdfBrushes.Black, new PointF(col1, y));
+            g.DrawString(order.CustomerName, textFont, PdfBrushes.Black, new PointF(col1 + 80, y));
+            g.DrawString("Order Date:", labelFont, PdfBrushes.Black, new PointF(col2, y));
+            g.DrawString(order.OrderDate.ToString("MM/dd/yyyy"), textFont, PdfBrushes.Black, new PointF(col2 + 80, y));
+            y += 20;
+
+            // Order details - Row 2
+            g.DrawString("Sales Rep:", labelFont, PdfBrushes.Black, new PointF(col1, y));
+            g.DrawString(order.EmployeeName, textFont, PdfBrushes.Black, new PointF(col1 + 80, y));
+            g.DrawString("Shipping Cost:", labelFont, PdfBrushes.Black, new PointF(col2, y));
+            g.DrawString($"${order.ShippingCost:F2}", textFont, PdfBrushes.Black, new PointF(col2 + 100, y));
+            y += 20;
+
+            // Order details - Row 3
+            g.DrawString("Ship To:", labelFont, PdfBrushes.Black, new PointF(col1, y));
+            g.DrawString($"{order.ShipAddress}, {order.ShipCity}, {order.ShipPostalCode}", 
+                textFont, PdfBrushes.Black, new PointF(col1 + 80, y));
+            y += 40;
+
+            // Order items section header
+            g.DrawString("Order Items Details", headerFont, PdfBrushes.DarkSlateGray, new PointF(margin, y));
+            y += 25;
+
+            // Create table grid for order items
+            PdfGrid grid = new PdfGrid();
+            grid.Columns.Add(5);
+            grid.Columns[0].Width = 160;  // Product
+            grid.Columns[1].Width = 60;   // Quantity
+            grid.Columns[2].Width = 75;   // Unit Price
+            grid.Columns[3].Width = 70;   // Discount
+            grid.Columns[4].Width = 85;   // Line Total
+
+            // Add and style header row
+            PdfGridRow headerRow = grid.Headers.Add(1)[0];
+            headerRow.Cells[0].Value = "Product";
+            headerRow.Cells[1].Value = "Quantity";
+            headerRow.Cells[2].Value = "Unit Price";
+            headerRow.Cells[3].Value = "Discount";
+            headerRow.Cells[4].Value = "Line Total";
+
+            PdfGridCellStyle headerStyle = new PdfGridCellStyle
+            {
+                BackgroundBrush = PdfBrushes.DarkGray,
+                TextBrush = PdfBrushes.White,
+                Font = headerFont
+            };
+            
+            for (int i = 0; i < headerRow.Cells.Count; i++)
+            {
+                headerRow.Cells[i].Style = headerStyle;
+                // Center-align Quantity and Discount headers
+                if (i == 1 || i == 3)
+                    headerRow.Cells[i].StringFormat = new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle);
+                // Right-align Unit Price and Line Total headers
+                else if (i == 2 || i == 4)
+                    headerRow.Cells[i].StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
+            }
+
+            // Add data rows with alternating colors
+            decimal subtotal = 0;
+            int rowIndex = 0;
+
+            foreach (var item in order.OrderItems)
+            {
+                decimal lineTotal = item.Quantity * item.UnitPrice * (1 - item.Discount / 100m);
+                subtotal += lineTotal;
+
+                PdfGridRow row = grid.Rows.Add();
+                row.Cells[0].Value = item.ProductName;
+                row.Cells[1].Value = item.Quantity.ToString();
+                row.Cells[2].Value = $"${item.UnitPrice:F2}";
+                row.Cells[3].Value = $"{item.Discount}%";
+                row.Cells[4].Value = $"${lineTotal:F2}";
+
+                // Center-align Quantity and Discount columns
+                row.Cells[1].StringFormat = new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle);
+                row.Cells[3].StringFormat = new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle);
+                
+                // Right-align Unit Price and Line Total columns
+                row.Cells[2].StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
+                row.Cells[4].StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
+
+                // Alternate row colors
+                if (rowIndex++ % 2 == 1)
+                    for (int i = 0; i < row.Cells.Count; i++)
+                        row.Cells[i].Style.BackgroundBrush = PdfBrushes.LightGray;
+            }
+
+            // Apply grid styling
+            grid.Style = new PdfGridStyle
+            {
+                Font = textFont,
+                CellPadding = new PdfPaddings(5, 5, 5, 5)
+            };
+
+             // Draw the grid
+            var layout = grid.Draw(page, new PointF(margin, y));
+            y = layout.Bounds.Bottom + 20;
+
+            // Draw totals section with right alignment
+            float totalsLabelX = pageWidth - 230;
+            float totalsValueX = pageWidth - margin - 10;
+
+            // Subtotal
+            g.DrawString("Subtotal:", headerFont, PdfBrushes.Black, new PointF(totalsLabelX, y));
+            var subtotalText = $"${subtotal:F2}";
+            var subtotalWidth = textFont.MeasureString(subtotalText).Width;
+            g.DrawString(subtotalText, textFont, PdfBrushes.Black, 
+                new PointF(totalsValueX - subtotalWidth, y));
+            y += 20;
+
+            // Shipping Cost
+            g.DrawString("Shipping Cost:", headerFont, PdfBrushes.Black, new PointF(totalsLabelX, y));
+            var shippingCostText = $"${order.ShippingCost:F2}";
+            var shippingCostWidth = textFont.MeasureString(shippingCostText).Width;
+            g.DrawString(shippingCostText, textFont, PdfBrushes.Black, 
+                new PointF(totalsValueX - shippingCostWidth, y));
+            y += 25;
+
+            // Draw grand total with highlight
+            g.DrawRectangle(new PdfPen(Color.DarkGreen, 2), new RectangleF(totalsLabelX - 10, y - 5, 220, 25));
+            var totalFont = new PdfStandardFont(PdfFontFamily.Helvetica, 14, PdfFontStyle.Bold);
+            g.DrawString("Grand Total:", totalFont, PdfBrushes.DarkGreen, new PointF(totalsLabelX, y));
+            
+            var grandTotalText = $"${(subtotal + (decimal)order.ShippingCost):F2}";
+            var grandTotalWidth = totalFont.MeasureString(grandTotalText).Width;
+            g.DrawString(grandTotalText, totalFont, PdfBrushes.DarkGreen, 
+                new PointF(totalsValueX - grandTotalWidth, y));
+
+            using var ms = new MemoryStream();
+            doc.Save(ms);
+            return ms.ToArray();
+        }
+    }
+
+    // Data models
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; } = "";
+        public string CustomerName { get; set; } = "";
+        public DateTime OrderDate { get; set; }
+        public double ShippingCost { get; set; }
+        public string ShipAddress { get; set; } = "";
+        public string ShipCity { get; set; } = "";
+        public string ShipPostalCode { get; set; } = "";
+        public string ShipCountry { get; set; } = "";
+        public string EmployeeName { get; set; } = "";
+        public List<OrderItem> OrderItems { get; set; } = new();
+    }
+
+    public class OrderItem
+    {
+        public string ProductName { get; set; } = "";
+        public int Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+        public decimal Discount { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
-
-N> In Syncfusion PDF Viewer, if the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer renders without loading a PDF. Use the **Open** toolbar option to browse and open a PDF.
 
 ## Run the application
 
@@ -179,7 +480,7 @@ dotnet run
 
 The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer and DataGrid in your default browser.
 
-![Blazor DataGrid with PDF Viewer](images/blazor-datagrid-with-pdf-viewer-integration.webp)
+![Blazor DataGrid with PDF Viewer](images/datagrid-with-pdfviewer.webp)
 
 ## Use cases
 
