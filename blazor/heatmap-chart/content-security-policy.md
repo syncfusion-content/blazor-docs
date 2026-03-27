@@ -23,7 +23,7 @@ The Syncfusion® Blazor **Heatmap** component supports most features under stric
 - Keyboard navigation
 - Image/PDF export
 
-## What Requires `'unsafe-inline'`?
+## What Requires *'unsafe-inline'* ?
 
 **Cell Selection** (single or multiple) requires the `style-src 'unsafe-inline'` directive.
 
@@ -38,7 +38,7 @@ When users click on cells to select them, the component applies dynamic inline s
 
 These visual indicators are applied in real-time during user interaction and blocked under strict CSP.
 
-### How to Disable Selection
+### How to Disable Selection ?
 
 If you don't need cell selection, set `SelectionMode="None"` or simply don't configure selection-related events. The rest of the Heatmap will work fully under strict CSP.
 
