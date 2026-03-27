@@ -8,18 +8,20 @@ documentation: ug
 
 ---
 
-# Integrating Blazor DataGrid Component into the Spreadsheet
+# Integrating Syncfusion® DataGrid with Spreadsheet
 
-This guide demonstrates how to integrate the **Syncfusion® Blazor DataGrid** with the **Syncfusion® Blazor Spreadsheet** component to enable a data workflow within a Blazor application.
+This guide demonstrates how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component to enable a data workflow within a Blazor application.
 
 The workflow includes exporting grid data to an Excel file, opening the file through Spreadsheet UI, and performing interactive editing.
+
+A common use case for integrating the Syncfusion Blazor DataGrid with the Spreadsheet component is when applications need to transition from structured, tabular data viewing to more flexible spreadsheet‑style editing. Users can review, filter, and edit records in the DataGrid, then export the data to Excel and continue advanced manipulation using the Spreadsheet UI. This workflow is especially useful for tasks such as **financial adjustments**, **bulk data corrections**, **inventory updates**, **shipment tracking updates**, or **preparing data for reporting**. It provides a seamless flow between data browsing and spreadsheet-based editing without switching tools or external applications.
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
 ## Prerequisites
-Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion® Blazor components.
+Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components.
 
-## Install Required Syncfusion Packages
+## Install required Syncfusion packages
 
 To add the Blazor DataGrid and Spreadsheet components to the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install the NuGet packages listed below.
 
@@ -27,23 +29,23 @@ To add the Blazor DataGrid and Spreadsheet components to the app, open the NuGet
 * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-## Add Required Namespaces
+## Add required namespaces
 
-Open the `~Components/_Imports.razor` file and import the below namespaces.
+Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Spreadsheet` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Spreadsheet
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Spreadsheet
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Register Syncfusion Blazor Service
 
-Register the Syncfusion Blazor Service in the `Program.cs` file of your Blazor Server App.
+Register the Syncfusion Blazor Service in the `Program.cs` file of the Blazor Server App.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" hl_lines="1 8" %}
@@ -63,7 +65,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-## Add Stylesheet and Script Resources
+## Add stylesheet and script resources
 
 Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. The Spreadsheet requires its specific script in addition to the core script. 
 
@@ -72,7 +74,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 <head>
      <!-- Syncfusion theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -89,7 +91,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 Add Spreadsheet and DataGrid component into the any **.razor** file.  
 
-The example below displays a **DataGrid** with sample data, exports to Excel, and lets users open the exported file in **Spreadsheet** via the ribbon (File → Open). 
+The following example displays a **DataGrid** with sample data, exports to Excel, and lets users open the exported file in **Spreadsheet** via the ribbon (File → Open). 
 
 {% tabs %}
 {% highlight razor %}
@@ -163,11 +165,11 @@ The example below displays a **DataGrid** with sample data, exports to Excel, an
 {% endhighlight %}
 {% endtabs %}
 
-## Run the Application
+## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, Spreadsheet components in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion Blazor DataGrid, Spreadsheet components in the default web browser.
 
-**Expected Behavior**
+**Expected behavior**
 * DataGrid renders with sample records.
 * Clicking **Export Grid to Excel** downloads an `.xlsx` file.
 * In the Spreadsheet, open it via **Ribbon → File → Open**.

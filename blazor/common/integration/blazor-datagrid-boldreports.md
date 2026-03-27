@@ -568,7 +568,7 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
 
-**Expected Behavior**
+**Expected behavior**
 * DataGrid renders with sample records.
 * Clicking **Open RDLC Report** sends the grid data to the Web API.
 * The Bold Report Viewer loads and displays the report.
