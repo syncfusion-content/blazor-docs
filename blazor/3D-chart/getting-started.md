@@ -146,7 +146,7 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
 
-N> If an Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 ```
 @* desired render mode define here *@
