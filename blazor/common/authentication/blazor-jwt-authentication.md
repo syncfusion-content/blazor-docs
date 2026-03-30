@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion Blazor Datagrid with JWT Authentication
+title: Syncfusion Blazor DataGrid with JWT Authentication
 description: Guide to setting up JWT authentication for Syncfusion Blazor DataGrid with secure API access and token handling.
 platform: Blazor
 control: Common
