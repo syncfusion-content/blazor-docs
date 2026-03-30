@@ -7,15 +7,23 @@ control: DataGrid
 documentation: ug
 ---
 
-# Group and caption aggregates in Blazor DataGrid
+# Group and Caption Aggregate in Blazor DataGrid
 
-Group footer and group caption aggregates in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid calculate values based on items in each group and display results in group footer cells and group caption cells. Configure these using the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) and [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) properties of the [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn__ctor) component. Aggregate values inside templates can be accessed through AggregateTemplateContext (for example, Sum, Min, Max).
+Group footer and group caption aggregates in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid calculate values based on items in each group and display results in group footer cells and group caption cells. Aggregate values inside templates can be accessed through [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) (for example, Sum, Min, Max).
 
-> For group aggregates, ensure grouping is enabled at the grid level with [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) set to **true**, and maintain grouped columns by setting [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) to **true**.
+To configure this in the DataGrid, use the following properties on the `GridAggregateColumn`:
+
+- [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate): Display aggregate values in the group footer section.
+- [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate): Renders aggregate values in the group caption section.
+
+> - Set [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) to `true` in the DataGrid to enable column grouping.
+> - Set [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) to `true` in `GridGroupSettings` to display grouped columns in the DataGrid.
 
 ## Group footer aggregates
 
-Group footer aggregates appear in the footer cells of each group and provide per-group summary values. To display group footer aggregates, define a template with the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) property. The template renders the aggregate value for each group’s footer row. Apply the Format property to present currency or date values using culture-aware formatting as needed.
+Group footer aggregates appear in the footer cells of each group and provide per-group summary values. To display group footer aggregates, define a template with the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) property. The template renders the aggregate value for each group’s footer row. Apply the `Format` property to present currency or date values using culture-aware formatting as needed.
+
+The following example displays the sum of the "Freight" field in the footer of each group: 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -112,7 +120,9 @@ Group footer aggregates appear in the footer cells of each group and provide per
 
 ## Group caption aggregates
 
-Group caption aggregates appear in the caption cells at the top of each group and provide a concise summary. To display group caption aggregates, define a template using the [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) property. The template renders the aggregate value in the caption area of each group. Apply the Format property to aggregate values to present culture-aware currency or date results.
+Group caption aggregates appear in the caption cells at the top of each group and provide a concise summary. To display group caption aggregates, define a template using the [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) property. The template renders the aggregate value in the caption area of each group. Apply the `Format` property to aggregate values to present culture-aware currency or date results.
+
+The following example displays the Max of the "Freight" field in the each group caption cell:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -207,4 +217,4 @@ Group caption aggregates appear in the caption cells at the top of each group an
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVyDaVxoilKLoVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The group total summary in Grid is calculated based on the current page records for each group by default.
+> The group total summary in DataGrid is calculated based on the current page records for each group by default.
