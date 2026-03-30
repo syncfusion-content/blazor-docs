@@ -873,10 +873,6 @@ Below table lists the importing theme path for the individual components.
         <td>@use 'blazor-themes/SCSS-Themes/popups/dialog/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
-        <td>DocumentEditor</td>
-        <td>@use 'blazor-themes/SCSS-Themes/documenteditor/document-editor/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
         <td>Dropdown Menu</td>
         <td>@use 'blazor-themes/SCSS-Themes/dropdowns/drop-down-list/{THEME-NAME}.scss'</td>
     </tr>
@@ -939,10 +935,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>Pager</td>
         <td>@use 'blazor-themes/SCSS-Themes/navigations/pager/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
-        <td>PDF Viewer</td>
-        <td>@use 'blazor-themes/SCSS-Themes/pdfviewer/pdfviewer/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
         <td>ImageEditor</td>

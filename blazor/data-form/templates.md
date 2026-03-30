@@ -15,6 +15,8 @@ The DataForm component supports templating to customize either a specific field 
 
 Customize an individual field editor using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.Template.html) `RenderFragment` inside a `FormItem`. This enables full control over the rendering, styling, and behavior of a single editor while retaining DataForm features such as validation and labels.
 
+> **Note:** The `Field` property is required even when using a custom editor `Template`. Set the `Field` on the corresponding `FormItem` so the DataForm can bind the template to the data model, perform validation, and render labels correctly.
+
 {% tabs %}
 {% highlight razor tabtitle="Template"  %}
 
