@@ -143,12 +143,14 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
-// Register custom backend
-string customEndpoint = "https://your-ai-service.com/api/inference";
-string customApiKey = "your-api-key";
+// Register custom backend - load from configuration
+string customEndpoint = builder.Configuration["CustomAI:Endpoint"] 
+    ?? throw new InvalidOperationException("CustomAI:Endpoint not configured");
+string customApiKey = builder.Configuration["CustomAI:ApiKey"] 
+    ?? throw new InvalidOperationException("CustomAI:ApiKey not configured");
 
 var customBackend = new CustomAIBackend(customEndpoint, customApiKey);
-builder.Services.AddChatClient(customBackend);
+builder.Services.AddSingleton<IChatClient>(customBackend);
 
 // Register Smart Rich Text Editor Components
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
@@ -221,12 +223,14 @@ public class CustomAIBackend : IChatClient
 {
   "CustomAI": {
     "Endpoint": "https://your-ai-service.com/api/inference",
-    "ApiKey": "your-api-key",
+    "ApiKey": "${CustomAI_ApiKey}",
     "MaxRetries": 3,
     "TimeoutSeconds": 30
   }
 }
 ```
+
+> **Note**: Store sensitive credentials in user secrets or environment variables, not in appsettings.json
 
 ### Registration with Configuration
 

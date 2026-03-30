@@ -118,6 +118,8 @@ Type your prompt and press Enter. Type `/bye` to exit.
 
 ## Configuration in Blazor
 
+> **Note**: OllamaSharp is a community package for local model integration. Ensure compliance with your organization's policy on third-party NuGet packages before using in production.
+
 ### Installation
 
 Install required NuGet packages:
