@@ -7,34 +7,36 @@ control: Common
 documentation: ug
 ---
 
-# Integrating Blazor DataGrid Component with Bold Report Viewer
+# Integrating Syncfusion® Blazor DataGrid with Bold Report Viewer
 
-This guide explains how to integrate the Syncfusion® Blazor DataGrid with the Bold Report Viewer to display grid data inside RDLC/RDL reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
+This guide explains how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC/RDL reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
+
+A common use case for this integration is when applications require users to interact with data and then generate a corresponding report. Users can filter, sort, or edit records in the DataGrid and immediately view a matching RDLC/RDL report. This is especially useful in scenarios like **order processing**, **inventory management**, **CRM**, or **financial reviews**. It allows teams to produce invoices, summaries, or audit-ready documents directly from the same screen without additional tools or data re‑entry.
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
 ## Prerequisites
-Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion® Blazor components.
+Make sure your development environment meets the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for Syncfusion Blazor components.
 
-## Install Required Syncfusion Packages
+## Install required NuGet packages
 
-Use NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Packages for Solution) and install:
+Use NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) and install the following packages:
 
-**Syncfusion NuGet Packages**
+**Syncfusion packages:**
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-* [DataGrid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)  
-* [Theme](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-* [Button](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
+**Bold Reports package:**
+* [BoldReports.Net.Core](https://www.nuget.org/packages/BoldReports.Net.Core)
 
-**Bold Reports NuGet Packages**
+**Microsoft packages:**
+* [Microsoft.AspNetCore.Mvc.NewtonsoftJson](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.NewtonsoftJson/)
+* [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient)
 
-* BoldReports.Net.Core 
-* Microsoft.AspNetCore.Mvc.NewtonsoftJson 
-* System.Data.SqlClient 
+## Add required namespaces
 
-## Add Required Namespaces
-
-Open the `~Components/_Imports.razor` file and import the below namespaces.
+Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Buttons` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -48,7 +50,7 @@ Open the `~Components/_Imports.razor` file and import the below namespaces.
 
 ## Register Syncfusion Blazor Service
 
-Register the Syncfusion Blazor Service in the `Program.cs` file of your Blazor Server App.
+Register the Syncfusion Blazor Service in the `Program.cs` file of the Blazor Server App.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" hl_lines="1 7 8 9 12 16 17 18" %}
@@ -77,7 +79,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-## Add Stylesheet and Script Resources
+## Add stylesheet and script resources
 
 Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. The Bold Report Viewer requires its specific script in addition to the core script. 
 
@@ -86,7 +88,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 <head>
      <!-- Syncfusion theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     <!-- Bold Report Viewer CSS -->
     <link href="https://cdn.boldreports.com/12.2.6/content/v2.0/tailwind-light/bold.report-viewer.min.css" rel="stylesheet" />
 
@@ -107,11 +109,13 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 {% endhighlight %}
 {% endtabs %}
 
+N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
+
 ## Add a sample report
 
 ### Create interop file
 
-Create a interop js (in this example used as `bold-reports-interop.js` file name) inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer JavaScript control.
+Create an interop JS (in this example used as `bold-reports-interop.js` file name) inside the `wwwroot/scripts` folder and use the following code snippet to invoke the Bold Report Viewer.
 
 {% tabs %}
 {% highlight js tabtitle="boldreports-interop.js"  %}
@@ -318,9 +322,9 @@ The Blazor Report Viewer requires a Web API service to process the RDL, RDLC, an
 
 * Click Add.
 
-* Open the **BoldReportsAPIController** and add the following. Add a controller that implements Bold Reports `IReportController` to process report requests. 
+* Open the **BoldReportsAPIController** and add the following code to implement the Bold Reports `IReportController` for handling report requests.
 
-The Report Viewer requires data in a **DataSet** format. In the below example, API converts the posted DataGrid data (JSON) into a `DataSet` named `OrdersDataSet` that matches the `RDLC` file.
+The Report Viewer requires data in a **DataSet** format. In the following example, API converts the posted DataGrid data (JSON) into a `DataSet` named `OrdersDataSet` that matches the `RDLC` file.
 
 {% tabs %}
 {% highlight c# tabtitle="BoldReportsAPIController.cs"  %}
@@ -478,7 +482,7 @@ public class BoldReportsAPIController : Controller, IReportController
 
 Create or update any `.razor` page (e.g., Pages/Home.razor) to host both the DataGrid and the Report Viewer.
 
-Inject **IJSRuntime**, render DataGrid and invoke this JavaScript interop with the `Orders.rdlc` report and the created BoldReportsAPI URL in the `Components/Pages/Index.razor` file to visualize the report using our viewer.
+Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop with the `Orders.rdlc` report and the created BoldReportsAPI URL in the `Components/Pages/Index.razor` file to visualize the report using the viewer.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor"  %}
@@ -501,7 +505,7 @@ Inject **IJSRuntime**, render DataGrid and invoke this JavaScript interop with t
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
     </SfGrid>
@@ -566,7 +570,7 @@ Inject **IJSRuntime**, render DataGrid and invoke this JavaScript interop with t
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
 
-**Expected Behavior**
+**Expected behavior**
 * DataGrid renders with sample records.
 * Clicking **Open RDLC Report** sends the grid data to the Web API.
 * The Bold Report Viewer loads and displays the report.
@@ -578,4 +582,5 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 * [How to use the Bold Reports Report Viewer in a Blazor WebAssembly App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-web-assembly-application/)
 * [How to use the Bold Reports Report Viewer in a Blazor Server App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-server-application/)
-* [Learn about Blazor reporting components in Bold Reports](https://www.boldreports.com/blog/blazor-reporting-components)
+* [Explore the Blazor reporting components available in Bold Reports](https://www.boldreports.com/blog/blazor-reporting-components)
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) 
