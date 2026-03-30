@@ -85,6 +85,8 @@ This command creates a new Blazor Web App and places it in a new directory calle
 
 {% endtabcontents %}
 
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
 Install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package into your project.
@@ -115,9 +117,9 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component in the **~/Components/Pages/*.razor** file. If an interactivity location is set to `Per page/component` in the Web App, define a render mode at top of the `~Pages/*.razor` file.  (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component in the **~/Components/Pages/*.razor** file. If an interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file.  (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
-N> If an **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is already configured in the `App.razor` file by default.
+N> If an **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
