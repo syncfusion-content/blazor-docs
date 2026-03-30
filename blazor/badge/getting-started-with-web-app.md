@@ -110,14 +110,16 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the **~/Components/App.razor** file.
 
 ```html
+
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+
 ```
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component in the **~/Components/Pages/*.razor** file. If an interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file.  (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component in the **~/Components/Pages/*.razor** file. If an interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If an **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
