@@ -46,7 +46,7 @@ With Entra ID, you do not need to write authentication logic manually. Microsoft
 5. In the Additional information screen, configure the following.
 	- **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
 	- **Authentication type**: Select **None** (authentication will be configured manually)
-	- **Interactive render mode**: Select **Server**
+	- **Interactive mode**: Select **Server**
 	- **Interactivity location**: Select **Per page/component**
 	- **Enable HTTPS**
 6. Click **Create** to generate the Blazor Web App.
@@ -179,7 +179,7 @@ To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual 
 
 **2. Add import namespaces**
 
-Open the **~/_Imports.razor** file and import the required namespaces.
+Open the `~/_Imports.razor` file and import the required namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -279,5 +279,4 @@ This example demonstrates how to integrate Microsoft Entra ID authentication int
 
 ## See also
 
-- [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts?view=aspnetcore-8.0)
-
+- [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts?view=aspnetcore-10.0)
