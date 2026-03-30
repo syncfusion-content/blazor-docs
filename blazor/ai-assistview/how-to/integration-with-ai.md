@@ -125,4 +125,4 @@ In the following example, user input is sent to the injected `IChatClient`. The 
 {% endhighlight %}
 {% endtabs %}
 
-![AI AssistView with IChatClient](../images/ai-assistview-ichatclient.png)
+![AI AssistView with IChatClient](../images/ai-assistview-ichatclient.webp)
