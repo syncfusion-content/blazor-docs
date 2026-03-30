@@ -240,7 +240,7 @@ dotnet run
 
 The app launches and renders the **[Syncfusion® Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)** and **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in your default browser.
 
-![Blazor DataGrid with Document Editor](images/documenteditor-with-datagrid.gif)
+![Blazor DataGrid with Document Editor](images/documenteditor-with-datagrid.webp)
 
 ## See also
 
