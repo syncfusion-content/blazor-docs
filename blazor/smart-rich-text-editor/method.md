@@ -44,29 +44,34 @@ The following example demonstrates how to use all AssistViewSettings methods tog
 </SfSmartRichTextEditor>
 @code {
     private AssistViewSettings AssistViewSettings;
-    private List<string> WorkflowLogs = new();
-    private async void ShowPopupAsync()
+
+    private async Task ShowPopupAsync()
     {
         await AssistViewSettings.ShowAIPopupAsync();
     }
-    private async void ExecutePromptAsync()
+
+    private async Task ExecutePromptAsync()
     {
         await AssistViewSettings.ExecuteAIPromptAsync("Write a professional summary about AI");
     }
-    private async void ClearHistoryAsync()
+
+    private async Task ClearHistoryAsync()
     {
         await AssistViewSettings.ClearAIPromptHistoryAsync();
     }
-    private async void UpdateResponseAsync()
+
+    private async Task UpdateResponseAsync()
     {
         string customResponse = "This is a custom AI-generated response added programmatically via UpdateAIResponseAsync().";
         await AssistViewSettings.UpdateAIResponseAsync(customResponse, true);
     }
-    private async void HidePopupAsync()
+
+    private async Task HidePopupAsync()
     {
         await AssistViewSettings.HideAIPopupAsync();
     }
-    private async void GetHistoryAsync()
+
+    private async Task GetHistoryAsync()
     {
         AssistViewPrompt[] history = await AssistViewSettings.GetAIPromptHistoryAsync();
     }
