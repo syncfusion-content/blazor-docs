@@ -98,6 +98,18 @@ Defines a collection of predefined prompts and their corresponding responses. Th
 </SfSmartRichTextEditor>
 
 @code {
+    private const string ApiDocResponse = @"### GET /users
+Retrieves a list of users.
+
+**Request**: GET /api/users
+
+**Response Example**:
+```json
+{
+  ""users"": []
+}
+```";
+
     private List<AssistViewPrompt> TemplatePrompts = new()
     {
         new AssistViewPrompt
@@ -108,7 +120,7 @@ Defines a collection of predefined prompts and their corresponding responses. Th
         new AssistViewPrompt
         {
             Prompt = "Create API documentation",
-            Response = @"### GET /users Retrieves a list of users. **Request** GET /api/users **Response** ```json { ""users"": [] } ```"
+            Response = ApiDocResponse
         }
     };
 }
