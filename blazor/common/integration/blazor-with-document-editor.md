@@ -73,7 +73,7 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents()
+    .AddInteractiveServerComponents();
 
 builder.Services.AddSyncfusionBlazor();
 ....
@@ -128,7 +128,7 @@ In this example, clicking the Invoice button in the DataGrid row generates an in
 
 <h4 class="mt-4">Invoice Generator</h4>
 
-<SfGrid TItem="Order" @ref="GridRef" DataSource="@Orders" AllowPaging="true">
+<SfGrid TItem="Order" DataSource="@Orders" AllowPaging="true">
 
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
@@ -141,8 +141,7 @@ In this example, clicking the Invoice button in the DataGrid row generates an in
                 @{
                     var row = context as Order;
                 }
-                <button class="btn btn-success btn-sm"
-                        @onclick="@(() => GenerateInvoice(row))">
+                <button class="btn btn-success btn-sm" @onclick="@(() => GenerateInvoice(row))">
                     Generate Invoice
                 </button>
             </Template>
@@ -157,8 +156,6 @@ In this example, clicking the Invoice button in the DataGrid row generates an in
 </SfDocumentEditorContainer>
 
 @code {
-
-    private SfGrid<Order>? GridRef;
     private SfDocumentEditorContainer? EditorContainer;
 
     private List<Order> Orders = new()
@@ -180,44 +177,47 @@ In this example, clicking the Invoice button in the DataGrid row generates an in
 
     private async Task GenerateInvoice(Order order)
     {
+        if (EditorContainer?.DocumentEditor == null)
+            return;
+        
         var sfdt = BuildInvoice(order);
-        await EditorContainer!.DocumentEditor.OpenAsync(sfdt);
+        await EditorContainer.DocumentEditor.OpenAsync(sfdt);
     }
 
     private string BuildInvoice(Order o)
     {
         // Generate the invoice in SFDT format.
-        return $@"
-        {{
-        ""sections"": [
-            {{
-            ""blocks"": [
-                {{ ""paragraphFormat"": {{ ""textAlignment"": ""Center"" }},
-                ""inlines"": [ {{ ""text"": ""My Orders PVT LTD"", ""bold"": true, ""fontSize"": 24 }} ] }},
-
-                {{ ""paragraphFormat"": {{ ""textAlignment"": ""Center"" }},
-                ""inlines"": [ {{ ""text"": ""No.123, Main Street, Business City"" }} ] }},
-
-                {{ ""paragraphFormat"": {{ ""textAlignment"": ""Center"" }},
-                ""inlines"": [ {{ ""text"": ""Phone: +1 234 567 8900\n"" }} ] }},
-
-                {{ ""inlines"": [ {{ ""text"": ""INVOICE"", ""bold"": true, ""fontSize"": 22 }} ] }},
-                {{ ""inlines"": [ {{ ""text"": ""Invoice No: INV-{o.OrderID}"" }} ] }},
-                {{ ""inlines"": [ {{ ""text"": ""Customer ID: {o.CustomerID}"" }} ] }},
-                {{ ""inlines"": [ {{ ""text"": ""City: {o.ShipCity}"" }} ] }},
-                {{ ""inlines"": [ {{ ""text"": ""Date: {DateTime.Now:dd-MMM-yyyy}"" }} ] }},
-                {{ ""inlines"": [ {{ ""text"": ""Amount: ${o.Freight:F2}"" }} ] }},
-                {{ ""inlines"": [ {{ ""text"": ""Notes: Thank you for your business."" }} ] }},
-
-                {{ ""inlines"": [ {{ ""text"": ""\n"" }} ] }},
-
-                {{ ""inlines"": [ 
-                    {{ ""text"": ""Authorized Signature"", ""bold"": true }} ] }},
-                {{ ""inlines"": [ {{ ""text"": ""______________________________"" }} ] }}
+        return $$"""
+        {
+            "sections": [
+                {
+                    "blocks": [
+                        { "paragraphFormat": { "textAlignment": "Center" },
+                        "inlines": [ { "text": "My Orders PVT LTD", "bold": true, "fontSize": 24 } ] },
+                        
+                        { "paragraphFormat": { "textAlignment": "Center" },
+                        "inlines": [ { "text": "No.123, Main Street, Business City" } ] },
+                        
+                        { "paragraphFormat": { "textAlignment": "Center" },
+                        "inlines": [ { "text": "Phone: +1 234 567 8900\n" } ] },
+                        
+                        { "inlines": [ { "text": "INVOICE", "bold": true, "fontSize": 22 } ] },
+                        { "inlines": [ { "text": "Invoice No: INV-{{o.OrderID}}" } ] },
+                        { "inlines": [ { "text": "Customer ID: {{o.CustomerID}}" } ] },
+                        { "inlines": [ { "text": "City: {{o.ShipCity}}" } ] },
+                        { "inlines": [ { "text": "Date: {{DateTime.Now:dd-MMM-yyyy}}" } ] },
+                        { "inlines": [ { "text": "Amount: ${{o.Freight:F2}}" } ] },
+                        { "inlines": [ { "text": "Notes: Thank you for your business." } ] },
+                        
+                        { "inlines": [ { "text": "\n" } ] },
+                        
+                        { "inlines": [ { "text": "Authorized Signature", "bold": true } ] },
+                        { "inlines": [ { "text": "______________________________" } ] }
+                    ]
+                }
             ]
-            }}
-        ]
-        }}";
+        }
+        """;
     }
 }
 
