@@ -90,10 +90,13 @@ builder.Services.AddServerSideBlazor();
 // Register Syncfusion Blazor Service
 builder.Services.AddSyncfusionBlazor();
 
-// Configure Azure OpenAI
-string azureOpenAIKey = "your-azure-key";
-string azureOpenAIEndpoint = "https://your-resource-name.openai.azure.com/";
-string azureOpenAIDeployment = "your-deployment-name";
+// Configure Azure OpenAI - load from configuration
+string azureOpenAIKey = builder.Configuration["AzureOpenAI:Key"] 
+    ?? throw new InvalidOperationException("AzureOpenAI:Key not configured");
+string azureOpenAIEndpoint = builder.Configuration["AzureOpenAI:Endpoint"] 
+    ?? throw new InvalidOperationException("AzureOpenAI:Endpoint not configured");
+string azureOpenAIDeployment = builder.Configuration["AzureOpenAI:DeploymentName"] 
+    ?? throw new InvalidOperationException("AzureOpenAI:DeploymentName not configured");
 
 AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
     new Uri(azureOpenAIEndpoint),
@@ -104,7 +107,7 @@ IChatClient azureOpenAIChatClient = azureOpenAIClient
     .GetChatClient(azureOpenAIDeployment)
     .AsIChatClient();
 
-builder.Services.AddChatClient(azureOpenAIChatClient);
+builder.Services.AddSingleton<IChatClient>(azureOpenAIChatClient);
 
 // Register Smart Rich Text Editor Components with Azure OpenAI
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
@@ -152,12 +155,14 @@ Store Azure credentials in configuration:
 ```json
 {
   "AzureOpenAI": {
-    "Key": "your-azure-key",
-    "Endpoint": "https://your-resource-name.openai.azure.com/",
-    "DeploymentName": "your-deployment-name"
+    "Key": "${AzureOpenAI_Key}",
+    "Endpoint": "https://<your-resource-name>.openai.azure.com/",
+    "DeploymentName": "<your-deployment-name>"
   }
 }
 ```
+
+> **Note**: Store sensitive keys in user secrets or environment variables, not in appsettings.json
 
 ### Reading from Configuration
 
@@ -184,9 +189,9 @@ For development environment:
 
 ```bash
 dotnet user-secrets init
-dotnet user-secrets set "AzureOpenAI:Key" "your-azure-key"
-dotnet user-secrets set "AzureOpenAI:Endpoint" "https://your-resource-name.openai.azure.com/"
-dotnet user-secrets set "AzureOpenAI:DeploymentName" "your-deployment-name"
+dotnet user-secrets set "AzureOpenAI:Key" "<your-actual-key>"
+dotnet user-secrets set "AzureOpenAI:Endpoint" "https://<your-resource-name>.openai.azure.com/"
+dotnet user-secrets set "AzureOpenAI:DeploymentName" "<your-deployment-name>"
 ```
 
 ## Advanced Configuration
@@ -270,8 +275,10 @@ For enhanced security using Managed Identity:
 using Azure.Identity;
 
 var credential = new DefaultAzureCredential();
-string azureOpenAIEndpoint = "https://your-resource-name.openai.azure.com/";
-string azureOpenAIDeployment = "your-deployment-name";
+string azureOpenAIEndpoint = builder.Configuration["AzureOpenAI:Endpoint"] 
+    ?? throw new InvalidOperationException("AzureOpenAI:Endpoint not configured");
+string azureOpenAIDeployment = builder.Configuration["AzureOpenAI:DeploymentName"] 
+    ?? throw new InvalidOperationException("AzureOpenAI:DeploymentName not configured");
 
 AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
     new Uri(azureOpenAIEndpoint),
@@ -282,7 +289,7 @@ IChatClient azureOpenAIChatClient = azureOpenAIClient
     .GetChatClient(azureOpenAIDeployment)
     .AsIChatClient();
 
-builder.Services.AddChatClient(azureOpenAIChatClient);
+builder.Services.AddSingleton<IChatClient>(azureOpenAIChatClient);
 ```
 
 ## Troubleshooting

@@ -72,13 +72,14 @@ builder.Services.AddServerSideBlazor();
 // Register Syncfusion Blazor Service
 builder.Services.AddSyncfusionBlazor();
 
-// Configure OpenAI
-string openAIApiKey = "your-api-key-here";
-string openAIModel = "gpt-3.5-turbo"; // or gpt-4, gpt-4-turbo, etc.
+// Configure OpenAI - load from configuration
+string openAIApiKey = builder.Configuration["OpenAI:ApiKey"] 
+    ?? throw new InvalidOperationException("OpenAI:ApiKey not configured");
+string openAIModel = builder.Configuration["OpenAI:Model"] ?? "gpt-3.5-turbo";
 
 OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
 IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
-builder.Services.AddChatClient(openAIChatClient);
+builder.Services.AddSingleton<IChatClient>(openAIChatClient);
 
 // Register Smart Rich Text Editor Components with OpenAI
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
