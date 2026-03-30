@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor with JWT Authentication
 
-This guide shows how to secure the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** rendering using **JWT (JSON Web Token)** authentication.
+This guide shows how to secure the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using **JWT (JSON Web Token)** authentication.
 
 ## What is JWT (JSON Web Token)?
 
@@ -41,8 +41,8 @@ Syncfusion components make HTTP requests to your API internally. JWT allows each
     - Click **Next**
 5. In the Additional information screen, configure the following:
     - **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
-    - **Authentication type**: Select **None**(JWT will be configured manually in later steps)
-    - **Interactive render mode**: Select **Server**
+    - **Authentication type**: Select **None** (JWT will be configured manually in later steps)
+    - **Interactive mode**: Select **Server**
     - **Interactivity location**: Select **Per page/component**
     - **Enable HTTPS**
 6. Click **Create** to generate the Blazor Web App.
