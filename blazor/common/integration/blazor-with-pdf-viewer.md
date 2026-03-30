@@ -43,7 +43,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add required namespaces
 
-Add Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces in the server project's **~/Components/_Imports.razor** file.
+Add Syncfusion<sup style="font-size:70%">&reg;</sup> and required .NET namespaces in the **~/Components/_Imports.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -51,6 +51,8 @@ Add Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces in the server pr
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Grids
+@using System.IO
+@using Microsoft.AspNetCore.Hosting
 
 {% endhighlight %}
 {% endtabs %}
@@ -135,11 +137,6 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
 
 @page "/"
 @rendermode InteractiveServer
-
-@using System.IO
-@using Microsoft.AspNetCore.Hosting
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.SfPdfViewer
 
 @* Inject IWebHostEnvironment to access the web root path for locating PDF files *@
 @inject IWebHostEnvironment WebHostEnvironment
@@ -259,6 +256,7 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
             {
                 // Display error if PDF file is not found
                 ErrorMessage = $"PDF file not found: {args.Data.PdfFileName}";
+                // For production apps, use ILogger instead of Console.WriteLine
                 Console.WriteLine($"PDF file not found: {pdfFilePath}");
             }
         }
@@ -266,6 +264,7 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
         {
             // Handle and display any errors during PDF loading
             ErrorMessage = $"Error loading PDF: {ex.Message}";
+            // For production apps, use ILogger instead of Console.WriteLine
             Console.WriteLine($"Error loading PDF: {ex.Message}");
         }
     }
@@ -288,6 +287,8 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
 {% endhighlight %}
 {% endtabs %}
 
+N> This example uses direct file system access for simplicity. In production applications, consider implementing a dedicated file service with proper security, caching, and error handling. Ensure PDF files are stored in a secure location with appropriate access controls.
+
 ## Run the application
 
 ```
@@ -299,6 +300,14 @@ dotnet run
 The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer and DataGrid in your default browser.
 
 ![Blazor DataGrid with PDF Viewer](images/datagrid-with-pdfviewer.webp)
+
+**Expected behavior:**
+1. The DataGrid displays 5 sample orders on page load
+2. Clicking any row in the grid triggers the `OnRowSelected` event
+3. The PDF Viewer loads the corresponding PDF file (if it exists in `wwwroot/PDFs`)
+4. If the PDF file is not found, an error message displays above the viewer
+
+N> To fully test this example, create sample PDF files named `Order_1001.pdf` through `Order_1005.pdf` and place them in the `wwwroot/PDFs` folder of your project. You can use any PDF files for testing purposes.
 
 ## Use cases
 
