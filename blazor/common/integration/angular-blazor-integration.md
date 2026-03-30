@@ -1,36 +1,36 @@
 ---
 layout: post
 title: Angular Blazor integration | Syncfusion
-description: Learn how to host Syncfusion Angular components into an Blazor app by packaging them as Angular Custom Elements for seamless UI rendering.
+description: Learn how to host Syncfusion Angular components into a Blazor app by packaging them as Angular Custom Elements for seamless UI rendering.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion Angular Components in Blazor
+# Integrating Syncfusion® Angular Components in Blazor
 
-This guide explains how to render **Syncfusion Angular components** inside a **Blazor application** by packaging the Angular component as a **Custom Element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, **Angular Custom Elements** allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
+This guide explains how to render [Syncfusion® Angular components](https://www.syncfusion.com/angular-components/angular-data-grid) inside a Blazor application by packaging the Angular component as a **Custom Element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, **Angular Custom Elements** allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
 
 ## Prerequisites
 
-* .NET 10 SDK 
-* Node.js 18+ 
-* Angular CLI 18+ 
+* [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) 
+* [Node.js 18+](https://nodejs.org/en/download)
+* [Angular CLI 18+](https://www.npmjs.com/package/@angular/cli) 
 
-## Creating the Angular Application 
+## Creating the Angular application 
 
 ### Create the project
 
-If you already have an Angular project, proceed to custom elements package installation. Otherwise, create a new Angular project following Syncfusion’s documentation.
+If you already have an Angular project, skip to the **Install custom elements package** section. Otherwise, create a new Angular project following Syncfusion documentation.
 
 [Angular Getting Started](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone).
 
-### Install Custom Elements package
+### Install custom elements package
 
-To enable Angular Custom Elements, install the package below: 
+To enable Angular custom elements, install the package below: 
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %} 
+{% highlight bash tabtitle="Angular CLI" %}
 
 npm i @angular/elements
 
@@ -39,9 +39,32 @@ npm i @angular/elements
 
 This package enables exporting Angular components as Web Components. This allows Blazor to load Angular UI using a simple HTML tag. 
 
+### Adding CSS References
+
+The following CSS styles are available in the `../node_modules/@syncfusion` folder. Reference them in `src/styles.css` as follows:
+
+{% tabs %}
+{% highlight css tabtitle="styles.css" %}
+
+@import '../node_modules/@syncfusion/ej2-base/styles/fluent2.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/fluent2.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/fluent2.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/fluent2.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/fluent2.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-notifications/styles/fluent2.css';
+@import '../node_modules/@syncfusion/ej2-angular-grids/styles/fluent2.css';
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview).
+
 ### Add Syncfusion component
 
-Update your **src/app/app.ts** file to incorporate the Syncfusion® DataGrid component: 
+Update your `src/app/app.ts` file to incorporate the Syncfusion DataGrid component: 
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -74,17 +97,20 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Angular component as a Custom Element
+N> If your project uses the default Angular CLI naming, the file may be named `app.component.ts` instead of `app.ts`.
 
-The Angular component is converted into a Web Component by registering it with **customElements.define()**. After this registration, the component is available as a standalone HTML element such as `<sf-grid>` that Blazor can display. 
+### Register the Syncfusion DataGrid component as a custom element
 
-Add the following code inside **main.ts** to expose the component as a Custom Elements.
+The Angular component is converted into a Web Component by registering it with [customElements.define()](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define). After this registration, the component is available as a standalone HTML element such as `<sf-grid>` that Blazor can display. 
+
+Add the following code inside `main.ts` to expose the component as a custom element.
 
 {% tabs %}
 {% highlight ts tabtitle="main.ts" %}
 
-import { AppComponent} from './app/app';
-import { createApplication, provideHttpClient } from '@angular/platform-browser';
+import { AppComponent } from './app/app';
+import { createApplication } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
 import { createCustomElement } from '@angular/elements';
 
 (async () => {
@@ -104,15 +130,19 @@ import { createCustomElement } from '@angular/elements';
 {% endhighlight %}
 {% endtabs %}
 
-**Build the angular application:**
+**Build the Angular application:**
 
 The Angular production build generates JavaScript and CSS files that represent the Web Component.
 
-```
-ng build --configuration production --output-hashing=none
-```
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
 
-## Integrating the Custom Elements in Blazor 
+ng build --configuration production --output-hashing=none
+
+{% endhighlight %}
+{% endtabs %}
+
+## Integrating the custom elements in Blazor 
 
 ### Create the Blazor app 
 
@@ -120,28 +150,38 @@ If you already have a Blazor project, move to the next step. Otherwise, create o
 
 **Blazor WebAssembly:**
 
-```
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
 dotnet new blazorwasm -o BlazorHost
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Blazor Server:**
 
-```
-dotnet new blazorserver -o BlazorHost
-```
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet new blazor --interactivity Server -o BlazorHost
+
+{% endhighlight %}
+{% endtabs %}
+
+N> For .NET 8 and later, use the `blazor` template with the `--interactivity` parameter. If you're using .NET 6 or 7, use `dotnet new blazorserver` instead.
 
 ### Add MSBuild automation to build & copy Angular output
 
-An MSBuild script is added to the Blazor project, so Angular builds automatically whenever Blazor builds. This ensures that the Web Component files are always up to date and copied into Blazor’s **wwwroot** folder. 
+An MSBuild script is added to the Blazor project, so Angular builds automatically whenever Blazor builds. This ensures that the Web Component files are always up to date and copied into Blazor’s `wwwroot` folder. 
 
-Add this target block to your Blazor project’s **.csproj** file:
+Add this target block to your Blazor project’s `.csproj` file:
 
 {% tabs %}
-{% highlight c# tabtitle=".csproj" %}
+{% highlight xml tabtitle=".csproj" %}
 
  <Target Name="BuildAngularElement" BeforeTargets="Build">
 
-    <!-- Path to your Angular project -->
+    <!-- Replace 'syncfusion-angular-app' with your Angular project folder name -->
     <PropertyGroup>
       <AngularProject>../syncfusion-angular-app</AngularProject>
       <AngularDist>$(AngularProject)/dist/syncfusion-angular-app</AngularDist>
@@ -156,7 +196,7 @@ Add this target block to your Blazor project’s **.csproj** file:
     <RemoveDir Directories="$(BlazorLib)" />
     <MakeDir Directories="$(BlazorLib)" />
     <ItemGroup>
-      <AngularFiles Include="$(AngularDist)\**\*.*" />
+      <AngularFiles Include="$(AngularDist)/**/*.*" />
     </ItemGroup>
     <Copy SourceFiles="@(AngularFiles)"
           DestinationFolder="$(BlazorLib)" />
@@ -165,30 +205,33 @@ Add this target block to your Blazor project’s **.csproj** file:
 {% endhighlight %}
 {% endtabs %}
 
-### Load Web Component scripts/ themes in Blazor
+N> Replace **syncfusion-angular-app** in both `<AngularProject>` and `<AngularDist>` with the actual name of your Angular project folder.
 
- The generated Angular files (main.js and styles.css) are referenced inside the Blazor host page. This is required for the Web Component to initialize and render correctly inside the Blazor layout. 
+### Load Web Component scripts and themes in Blazor
 
-**Web Assembly:**
+ The generated Angular files (`main.js` and `styles.css`) are referenced inside the Blazor host page. This is required for the Web Component to initialize and render correctly inside the Blazor layout. 
 
-Reference the stylesheet and script in the `<head>` of the **~wwwroot/index.html** file.
-
-**Server:**
-
-Reference the stylesheet and script in the `<head>` of the **Pages/_Host.cshtml** file.
+Include the stylesheet in the `<head>` and the script at the end of the `<body>` in the `App.razor` file as shown below:
 
 {% tabs %}
-{% highlight html %}
+{% highlight html tabtitle="App.razor" %}
 
-<link rel="stylesheet" href="/lib/sf-grid/styles.css" />
-<script src="/lib/sf-grid/main.js"></script>
+<head>
+    ....
+    <link rel="stylesheet" href="/lib/sf-grid/styles.css" />
+</head>
+
+<body>
+    ....
+    <script src="/lib/sf-grid/main.js"></script>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
 
-###  Use the Angular Custom Element in Blazor
+### Use the Angular custom element in Blazor
 
-You can place the <sf-grid> HTML tag directly inside any **.razor** (e.g Index.razor) component. 
+You can place the `<sf-grid>` HTML tag directly inside any `.razor` (e.g `Index.razor`) component. 
 
 {% tabs %}
 {% highlight razor tabtitle=".razor" %}
@@ -200,11 +243,15 @@ You can place the <sf-grid> HTML tag directly inside any **.razor** (e.g Index.r
 
 N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 
-## Running the Applications 
+## Run the applications
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 dotnet run
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® DataGrid component:
 

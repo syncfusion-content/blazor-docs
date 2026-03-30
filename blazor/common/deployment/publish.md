@@ -23,7 +23,7 @@ Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us
 
 ![Publish Location in Blazor](../images/folder.webp)
 
-* Check the configuration as Release by clicking the `Advanced...` option below the target location.
+* Check the configuration as Release by clicking the `Show all settings` option below the target location.
 
 ![Release Configuration in Blazor](../images/config.webp)
 
