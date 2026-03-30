@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Using Syncfusion Blazor with JWT Authentication
+title: Syncfusion Blazor Datagrid with JWT Authentication
 description: Guide to setting up JWT authentication for Syncfusion Blazor DataGrid with secure API access and token handling.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Using Blazor with JWT Authentication
+# Blazor with JWT Authentication
 
-This guide shows how to secure the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a Blazor Web App with Interactive Server rendering using JWT (JSON Web Token) authentication.
+This guide shows how to secure the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** rendering using **JWT (JSON Web Token)** authentication.
 
 ## What is JWT (JSON Web Token)?
 
@@ -25,12 +25,27 @@ Syncfusion components make HTTP requests to your API internally. JWT allows each
 
 ## Prerequisites
 
-- .NET SDK 8.0 or above.
+- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or above.
 - Visual Studio 2022 or newer with ASP.NET and web development workload.
 
-## Create a Blazor web app (Interactive server)
+## Create a Blazor web app (Interactive Server)
 
-Create a new **Blazor Web App** and select **Interactive Server** rendering mode. Install the Syncfusion Blazor packages, and add the required style and script references  as shown in the [Getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio) documentation.
+1. Open **Visual Studio**.
+2. Select **Create a new project**.
+3. In the Create a new project dialog:
+    - Choose **Blazor Web App**
+    - Click **Next**
+4. In Configure your new project:
+    - Enter a **Project name**
+    - Choose a **Location**
+    - Click **Next**
+5. In the Additional information screen, configure the following:
+    - **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
+    - **Authentication type**: Select **None**(JWT will be configured manually in later steps)
+    - **Interactive render mode**: Select **Server**
+    - **Interactivity location**: Select **Per page/component**
+    - **Enable HTTPS**
+6. Click **Create** to generate the Blazor Web App.
 
 ## Add JWT authentication
 
@@ -41,7 +56,6 @@ This section explains how to enable JWT authentication in your Blazor Web App.
 To enable JWT authentication in the application, open the NuGet Package Manager in Visual Studio from **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, and install the required package.
 
 ```csharp
-# Install the NuGet package
 Microsoft.AspNetCore.Authentication.JwtBearer
 ```
 
@@ -204,7 +218,7 @@ To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual 
 
 **2. Register Syncfusion® Blazor service**
 
-Open the **~/_Imports.razor** file and import the required namespaces.
+Open the `~/_Imports.razor` file and import the required namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -216,12 +230,11 @@ Open the **~/_Imports.razor** file and import the required namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-**3. Register the Syncfusion® Blazor service in the ~/Program.cs file**
+**3. Register the Syncfusion® Blazor service in the `~/Program.cs` file**
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" %}
 
-// Program.cs
 using Syncfusion.Blazor;
  
 builder.Services.AddSyncfusionBlazor();
@@ -393,3 +406,9 @@ Attach the JWT token to HTTP headers so the DataManager can send authenticated r
 {% endtabs %}
 
 The complete application flow ensures the DataGrid loads only after the user is authenticated using a valid JWT.
+
+## See also
+
+- [Configure JWT bearer authentication in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/configure-jwt-bearer-authentication?view=aspnetcore-10.0)
+
+- [Getting started with Blazor DataGrid in Web app](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
