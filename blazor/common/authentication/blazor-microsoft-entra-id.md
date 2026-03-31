@@ -105,8 +105,8 @@ After copying the **Tenant ID** and **Client ID**, update the `appsettings.json`
 
 1. In Visual Studio, go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search and install the following packages(version 3.0 or later for .NET 8.0+):
-	- Microsoft.Identity.Web
-	- Microsoft.Identity.Web.UI
+	- [Microsoft.Identity.Web](https://www.nuget.org/packages/Microsoft.Identity.Web)
+	- [Microsoft.Identity.Web.UI](https://www.nuget.org/packages/Microsoft.Identity.Web.UI)
 
 These packages are required to connect the Blazor application with Microsoft Entra ID and to enable the built‑in sign‑in and sign‑out endpoints.
 
