@@ -265,4 +265,4 @@ You can apply one or more of these styles to any supported content element for r
 
 ```
 
-![Blazor Block Editor Content Styles](./../images/content-styles.png)
+![Blazor Block Editor Content Styles](./../images/content-styles.webp)

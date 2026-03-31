@@ -130,7 +130,7 @@ The following example demonstrates how to pre-configure a [Table](https://help.s
 }
 ```
 
-![Blazor Block Editor Table Block](./../images/table-block.png)
+![Blazor Block Editor Table Block](./../images/table-block.webp)
 
 ### Table resizing
 
@@ -277,4 +277,4 @@ This sample demonstrates the `Table` block's both resize scenario and multi row/
 }
 ```
 
-![Blazor Block Editor Table Feature](./../images/table-resize-and-selection.png)
+![Blazor Block Editor Table Feature](./../images/table-resize-and-selection.webp)
