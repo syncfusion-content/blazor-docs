@@ -85,6 +85,8 @@ This command creates a new Blazor Web App and places it in a new directory calle
 
 {% endtabcontents %}
 
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
 Install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package into your project.
@@ -108,16 +110,18 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the **~/Components/App.razor** file.
 
 ```html
+
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+
 ```
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component in the **~/Components/Pages/*.razor** file. If an interactivity location is set to `Per page/component` in the Web App, define a render mode at top of the `~Pages/*.razor` file.  (e.g. `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
-N> If an **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is already configured in the `App.razor` file by default.
+N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is already configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}

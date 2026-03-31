@@ -88,4 +88,4 @@ The following example demonstrates how to set the undo/redo history limit to `20
 
 The following screenshot displays the Block Editor component with undo/redo functionality.
 
-![Blazor Block Editor Undo Redo](./images/undo-redo.png)
+![Blazor Block Editor Undo Redo](./images/undo-redo.webp)
