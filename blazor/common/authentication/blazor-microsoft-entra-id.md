@@ -34,32 +34,37 @@ With Entra ID, you do not need to write authentication logic manually. Microsoft
 
 ## Create a Blazor Web App (Interactive Server)
 
-1. Open **Visual Studio**.
+1. Open **Visual Studio**
 2. Select **Create a new project**.
 3. In the Create a new project dialog.
-	- Choose **Blazor Web App**
-	- Click **Next**
+	- Choose **Blazor Web App**.
+	- Click **Next**.
 4. In Configure your new project.
-	- Enter a **Project name**
-	- Choose a **Location**
-	- Click **Next**
+	- Enter a **Project name**.
+	- Choose a **Location**.
+	- Click **Next**.
 5. In the Additional information screen, configure the following.
-	- **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
-	- **Authentication type**: Select **None** (authentication will be configured manually)
-	- **Interactive mode**: Select **Server**
-	- **Interactivity location**: Select **Per page/component**
-	- **Enable HTTPS**
+	- **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version).
+	- **Authentication type**: Select **None** (authentication will be configured manually).
+	- **Interactive mode**: Select **Server**.
+	- **Interactivity location**: Select **Per page/component**.
+	- **Enable HTTPS**.
 6. Click **Create** to generate the Blazor Web App.
 
 ## Register your app in Microsoft Entra ID (Azure Portal)
 
 This step registers the Blazor application in Azure so Microsoft Entra ID can authenticate users.
 
-1. Open [Azure Portal](https://portal.azure.com)
-2. Go to **Microsoft Entra ID** → **App registrations**
-3. Click **New registration**
-4. Enter **App name** and select **Single tenant**
-5. Click **Register**
+1. Open [Azure Portal](https://portal.azure.com).
+2. Go to **Microsoft Entra ID** → **App registrations**.
+3. Click **New registration**.
+4. Enter **App name** and under **Supported account types**, select:
+   - **Single tenant** - if the app is for users in your organization only.
+   - **Multitenant** - if the app should support users from any Microsoft Entra organization.
+   - **Multitenant and personal Microsoft accounts** - for the broadest access.
+   
+   For this tutorial, select **Single tenant**.
+5. Click **Register**.
 
 After registration, note the following values:
 - **Application (Client) ID**
@@ -71,12 +76,12 @@ These values are required in the application configuration.
 
 Redirect URLs specify where Microsoft Entra ID should return the user after a successful login.
 
-1. Open the registered application in Azure Portal
-2. Navigate to **Authentication**
-3. Click **Add a platform** and select **Web**
-4. Add the redirect URL: `https://localhost:5001/signin-oidc` (Use your application’s HTTPS URL if different.)
-5. Enable **ID tokens**
-6. Save the changes
+1. Open the registered application in Azure Portal.
+2. Navigate to **Authentication**.
+3. Click **Add a platform** and select **Web**.
+4. Add the redirect URL: `https://localhost:5001/signin-oidc` *(Replace `5001` with your application's actual HTTPS port number from `launchSettings.json` if different)*.
+5. Enable **ID tokens**.
+6. Save the changes.
 
 ## Configure Azure AD settings in appsettings.json
 
@@ -98,8 +103,8 @@ After copying the **Tenant ID** and **Client ID**, update the `appsettings.json`
 
 ## Install Microsoft Identity packages
 
-1. In Visual Studio, go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
-2. Search and install the following packages:
+1. In Visual Studio, go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+2. Search and install the following packages(version 3.0 or later for .NET 8.0+):
 	- Microsoft.Identity.Web
 	- Microsoft.Identity.Web.UI
 
@@ -141,10 +146,10 @@ if (!app.Environment.IsDevelopment())
 
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
+app.MapStaticAssets();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();
-app.MapStaticAssets();
 app.MapControllers();
 app.MapRazorComponents<App>()
   .AddInteractiveServerRenderMode();
@@ -197,7 +202,7 @@ Open the `~/_Imports.razor` file and import the required namespaces.
 **3. Register the Syncfusion® Blazor service in the `~/Program.cs` file**
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" %}
+{% highlight csharp tabtitle="~/Program.cs" %}
 
 using Syncfusion.Blazor;
  
@@ -278,7 +283,7 @@ This section creates a protected page that displays the Syncfusion® DataGrid on
 			public class Order
 			{
 				public int OrderID { get; set; }
-				public string CustomerID { get; set; }
+				public string? CustomerID { get; set; }
 			}
 		}
 	</Authorized>
@@ -295,4 +300,4 @@ This approach provides a secure, enterprise-ready foundation for building modern
 
 ## See also
 
-- [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts?view=aspnetcore-10.0)
+- [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts)
