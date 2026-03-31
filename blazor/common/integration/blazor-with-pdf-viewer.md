@@ -43,7 +43,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add required namespaces
 
-Add Syncfusion<sup style="font-size:70%">&reg;</sup> and required .NET namespaces in the **~/Components/_Imports.razor** file.
+Add Syncfusion<sup style="font-size:70%">&reg;</sup> and required .NET namespaces in the `~/Components/_Imports.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -59,7 +59,7 @@ Add Syncfusion<sup style="font-size:70%">&reg;</sup> and required .NET namespace
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in your server app’s **~/Program.cs** file.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in your server app’s `~/Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="2 9 11 13" %}
@@ -77,7 +77,6 @@ builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
-
 ...
 
 {% endhighlight %}
@@ -85,10 +84,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-Add the following stylesheet and script references in the server app's **~/Components/App.razor** (inside the head/body as appropriate). Ensure no other Syncfusion theme CSS (e.g., bootstrap5.css, material.css) is referenced to avoid conflicts.
+Add the following stylesheet and script references in the server app's `~/Components/App.razor` (inside the head/body as appropriate). Ensure no other Syncfusion theme CSS (e.g., bootstrap5.css, material.css) is referenced to avoid conflicts.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" hl_lines="3 8 11" %}
+{% highlight html tabtitle="App.razor" hl_lines="3 8 10" %}
 
 <head>
     <!-- Syncfusion theme stylesheet -->
@@ -109,7 +108,7 @@ N> Ensure the `Syncfusion.Blazor.Core` script is loaded before the `SfPdfViewer`
 
 ## Configure render mode (Server)
 
-For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each **~Pages/*.razor** file that requires interactive Server components.
+For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each `~Pages/*.razor` file that requires interactive Server components.
 
 **Per‑page directive (Server)**
 
@@ -126,7 +125,7 @@ N> If the `interactivity location` is set to `Global` and the app is configured 
 
 ## Integrate DataGrid and PDF Viewer
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and DataGrid components to any `.razor` file in the server project's `Pages` folder (for example, **~/Pages/Home.razor**).
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and DataGrid components to any `.razor` file in the server project's `Pages` folder (for example, `~/Pages/Home.razor`).
 
 The example below displays a **DataGrid** with sample order data, selecting a row generates and loads a detailed PDF for that order in the **PDF Viewer**.
 
@@ -303,7 +302,7 @@ The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup
 
 **Expected behavior:**
 1. The DataGrid displays 5 sample orders on page load
-2. Clicking any row in the grid triggers the `OnRowSelected` event
+2. Clicking any row in the grid triggers the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event
 3. The PDF Viewer loads the corresponding PDF file (if it exists in `wwwroot/PDFs`)
 4. If the PDF file is not found, an error message displays above the viewer
 
