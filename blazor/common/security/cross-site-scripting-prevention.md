@@ -357,13 +357,8 @@ If HTML formatting is not required, render the content as plain text. Blazor aut
 <SfGrid DataSource="@Comments" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="@nameof(Comment.Content)" HeaderText="Comment">
-            <Template>
-                @{
-                    // context = full row model
-                    var data = (context as Comment);
-                }
-
-                @data.Content @* Safe – Blazor auto‑encodes *@
+            <Template Context="comment">
+                @((comment as Comment)?.Content ?? string.Empty) @* Safe – Blazor auto-encodes *@
             </Template>
         </GridColumn>
     </GridColumns>
@@ -419,13 +414,13 @@ The following example conditionally renders content based on whether the message
 @code {
     private List<ChatMessage> Messages = new()
     {
-        new() { Id = 1, Sender = "Alice", Content = "Plain text", IsHtml = false, Timestamp = DateTime.Now },
-        new() { Id = 2, Sender = "Bob", SanitizedContent = "<p>HTML</p>", IsHtml = true, Timestamp = DateTime.Now }
+        new() { Id = "1", Sender = "Alice", Content = "Plain text", IsHtml = false, Timestamp = DateTime.Now },
+        new() { Id = "2", Sender = "Bob", SanitizedContent = "<p>HTML</p>", IsHtml = true, Timestamp = DateTime.Now }
     };
 
     public class ChatMessage
     {
-        public int Id { get; set; }
+        public string Id { get; set; } = string.Empty;
         public string Sender { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
         public string SanitizedContent { get; set; } = string.Empty;
