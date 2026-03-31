@@ -263,3 +263,4 @@ Once the compilation is complete, open your browser and navigate to the hosted l
 
 * [Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 * [Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
+
