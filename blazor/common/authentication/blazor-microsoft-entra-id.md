@@ -60,8 +60,8 @@ This step registers the Blazor application in Azure so Microsoft Entra ID can au
 3. Click **New registration**.
 4. Enter **App name** and under **Supported account types**, select:
    - **Single tenant** - if the app is for users in your organization only.
-   - **Multitenant** - if the app should support users from any Microsoft Entra organization.
-   - **Multitenant and personal Microsoft accounts** - for the broadest access.
+   - **Multi tenant** - if the app should support users from any Microsoft Entra organization.
+   - **Multi tenant and personal Microsoft accounts** - for the broadest access.
    
    For this tutorial, select **Single tenant**.
 5. Click **Register**.
