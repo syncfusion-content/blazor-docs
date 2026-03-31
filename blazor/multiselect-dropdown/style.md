@@ -79,6 +79,8 @@ To style only a specific instance, set a custom class via [CssClass](https://hel
 
 {% endhighlight %}
 
+N> The above sample displays the custom icon correctly when using the Material theme. If you are using a different Syncfusion theme, you may need to adjust the content value or override the corresponding theme‑specific icon class to ensure the custom icon appears properly.
+
 ## Adding icons in popup items
 
 Display icons in list items by mapping a field to [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_IconCss).
@@ -197,6 +199,8 @@ Customize the appearance of the popup element within the multiselect component b
 {% endhighlight %}
 
 ![Blazor MultiSelect Dropdown popup appearance](./images/style/blazor_multiselect_appearance-of-popup.png)
+
+> **Note:** This popup appearance customization works only with the **Material** theme, as the CSS classes used (`.e-list-item` and `.e-item-focus`) apply exclusively to the Material theme’s styling structure and are not supported by Bootstrap, Fluent, Tailwind, or other themes.
 
 ## Change HTML attributes
 

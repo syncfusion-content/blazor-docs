@@ -37,6 +37,6 @@
     public void OnBtnClick()
     {
         var DropDownValue = comboObj.GetDataByValue(comboBoxValue);
-        Console.WriteLine(DropDownValue);
+        Console.WriteLine($"Selected Game - ID: {DropDownValue?.ID}, Name: {DropDownValue?.Game}");
     }
 }

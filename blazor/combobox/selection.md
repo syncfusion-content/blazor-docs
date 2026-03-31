@@ -41,7 +41,7 @@ Bind the preselected value to the ComboBox component using the [@bind-Value](htt
 
 ## Programmatically change the selected value
 
-Change the component value programmatically or externally by using the component instance with the [@ref](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-10.0#ref) attribute. The following sample shows how to set the value in a button click handler.
+Change the component value programmatically by updating the field bound via [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value).
 
 {% highlight cshtml %}
 
