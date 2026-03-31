@@ -110,7 +110,7 @@ Follow these practices when validating input.
 - For file uploads, verify the file type, file size, and actual file content before processing.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -176,13 +176,13 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
 #### When to use EnableHtmlSanitizer
 
 - To catch accidental HTML and improve the user experience
-- To provide an extra layer of defense on top of server side sanitization
+- To provide an extra layer of defense on top of server-side sanitization
 - To give immediate feedback without waiting for a server round trip
 
 #### When not to use EnableHtmlSanitizer
 
 - As the only security mechanism in your app
-- As a replacement for server side sanitization
+- As a replacement for server-side sanitization
 
 #### BlockEditor with EnableHtmlSanitizer
 
@@ -294,17 +294,12 @@ The `SanitizedContent` property contains only safe HTML, so rendering it with `M
 @using Syncfusion.Blazor.Grids
 @* In a real application, add: @using YourApp.Models *@
 
-<h3>SAFE Example - Server-Sanitized Content</h3>
-
 <SfGrid DataSource="@Comments" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="@nameof(Comment.Author)" HeaderText="Author" Width="150" />
         <GridColumn HeaderText="Comment" Width="400">
-            <Template>
-                @{
-                    var comment = (context as Comment);
-                    @((MarkupString)comment.SanitizedContent)
-                }
+            <Template Context="comment">
+                @((MarkupString)((Comment)comment).SanitizedContent)
             </Template>
         </GridColumn>
         <GridColumn Field="@nameof(Comment.CreatedAt)" HeaderText="Date" Width="150" Format="d" />
@@ -358,16 +353,17 @@ If HTML formatting is not required, render the content as plain text. Blazor aut
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Grids
-@* In a real application, add: @using YourApp.Models *@
 
 <SfGrid DataSource="@Comments" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="@nameof(Comment.Content)" HeaderText="Comment">
             <Template>
                 @{
-                    var comment = (context as Comment);
-                    @comment.Content @* Safe - Blazor auto-encodes *@
+                    // context = full row model
+                    var data = (context as Comment);
                 }
+
+                @data.Content @* Safe – Blazor auto‑encodes *@
             </Template>
         </GridColumn>
     </GridColumns>
@@ -385,7 +381,6 @@ If HTML formatting is not required, render the content as plain text. Blazor aut
         public string Content { get; set; } = string.Empty;
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -398,29 +393,25 @@ The following example conditionally renders content based on whether the message
 {% tabs %}
 {% highlight razor %}
 
-@page "/safe-listview-demo"
 @using Syncfusion.Blazor.Lists
 
 <SfListView DataSource="@Messages">
     <ListViewFieldSettings TValue="ChatMessage" Text="Content" Id="Id" />
     <ListViewTemplates TValue="ChatMessage">
-        <Template>
-            @{
-                var message = (context as ChatMessage);
+        <Template Context="message">
+            <div>
+                <strong>@message.Sender</strong> - @message.Timestamp.ToShortTimeString()
                 <div>
-                    <strong>@message.Sender</strong> - @message.Timestamp.ToShortTimeString()
-                    <div>
-                        @if (message.IsHtml)
-                        {
-                            @((MarkupString)message.SanitizedContent)
-                        }
-                        else
-                        {
-                            @message.Content
-                        }
-                    </div>
+                    @if (message.IsHtml)
+                    {
+                        @((MarkupString)message.SanitizedContent)
+                    }
+                    else
+                    {
+                        @message.Content
+                    }
                 </div>
-            }
+            </div>
         </Template>
     </ListViewTemplates>
 </SfListView>
@@ -465,7 +456,7 @@ Server-side sanitization is the **authoritative and required** defense against X
 The following example demonstrates how to sanitize user‑entered HTML submitted from the Syncfusion **RichTextEditor** component. The sanitization process removes script tags, script content, disallowed HTML, inline event handlers, and unsafe URL protocols.
 
 {% tabs %}
-{% highlight C# tabtitle="~/Services/HtmlSanitizerService.cs"  %}
+{% highlight c# tabtitle="~/Services/HtmlSanitizerService.cs"  %}
 
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -523,8 +514,13 @@ public class HtmlSanitizerService
                 // Remove any event handler attributes (onclick, onerror, etc.).
                 if (name.StartsWith("on", StringComparison.OrdinalIgnoreCase))
                     continue;
-
-                // Only allow href/src and ensure they do not use javascript: or data: protocols.
+                /*
+                    NOTE:
+                    The sanitizer includes special handling for href/src for future expansion.
+                    Since <a> and <img> are NOT in the allow-list, this logic is currently unused.
+                    It remains here so that if those tags are allowed later,
+                    dangerous protocols (javascript:, data:) will still be blocked safely.
+                */
                 if (name.Equals("href", StringComparison.OrdinalIgnoreCase) ||
                     name.Equals("src", StringComparison.OrdinalIgnoreCase))
                 {
@@ -554,7 +550,7 @@ public class HtmlSanitizerService
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="~/Models/Comment.cs" %}
+{% highlight c# tabtitle="~/Models/Comment.cs" %}
 
 namespace BlazorApp.Models;
 
@@ -568,7 +564,7 @@ public class Comment
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="~/SanitizerDemo.razor" %}
+{% highlight razor tabtitle="~/SanitizerDemo.razor" %}
 
 @page "/sanitize-demo"
 @rendermode InteractiveServer
@@ -579,7 +575,7 @@ public class Comment
 
 <h3>Server-Side Sanitization Demo</h3>
 
-<SfRichTextEditor @bind-Value="InputText" Height="200px"
+<SfRichTextEditor @bind-Value="@InputText" Height="200px"
                   EnableHtmlSanitizer="true">
 </SfRichTextEditor>
 
@@ -615,7 +611,7 @@ public class Comment
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ...
 using Syncfusion.Blazor;
@@ -623,7 +619,9 @@ using BlazorApp.Services;
 ...
 // Registers the sanitizer service for dependency injection.
 builder.Services.AddSingleton<HtmlSanitizerService>();
+// Required to enable all Syncfusion Blazor components.
 builder.Services.AddSyncfusionBlazor();
+...
 
 {% endhighlight %}
 {% endtabs %}
@@ -631,6 +629,6 @@ builder.Services.AddSyncfusionBlazor();
 ## See also
 
 * [Cross-site scripting (XSS) prevention in Block Editor](https://blazor.syncfusion.com/documentation/block-editor/editor-security/cross-site-script)
-* [Strict CSP usage with SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faqs/how-to-configure-content-security-policy)
+
  
 
