@@ -89,7 +89,7 @@ This example shows how to configure [CollapsibleHeading](https://help.syncfusion
 }
 ```
 
-![Blazor Block Editor Toggle Blocks](./../images/toggle-blocks.png)
+![Blazor Block Editor Toggle Blocks](./../images/toggle-blocks.webp)
 
 ### Configure placeholder
 
@@ -175,7 +175,7 @@ The following sample adds a quote block to the editor.
 }
 ```
 
-![Blazor Block Editor Quote](./../images/quote-block.png)
+![Blazor Block Editor Quote](./../images/quote-block.webp)
 
 ## Configure callout block
 
@@ -242,4 +242,4 @@ The following sample adds a callout block to the editor.
 }
 ```
 
-![Blazor Block Editor Callout](./../images/callout-block.png)
+![Blazor Block Editor Callout](./../images/callout-block.webp)
