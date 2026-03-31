@@ -68,7 +68,7 @@ N> Replace `0.4.1` with the latest stable version. Check [NuGet](https://www.nug
 
 ## Add required namespaces
 
-Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor namespaces in **~/_Imports.razor**.
+Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor namespaces in `~/_Imports.razor`.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -81,12 +81,12 @@ Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor namespa
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> and Electron services
 
-Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service and configure ElectronNET.Core in your **~/Program.cs** file.
+Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service and configure ElectronNET.Core in your `~/Program.cs` file.
 
 N> Before using the code snippet, update the namespace `BlazorElectronApp` to match your project's root namespace. You can find this in `App.razor` or `_Imports.razor`. For example, if your project is named `MyApp`, use `MyApp.Components.App`.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8/.NET 9/.NET 10 (~/Program.cs)" hl_lines="2 3 4 7 9 11 12 13 14 15 16 17 18 19 20 22 24 25 26 28 35" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="2 3 4 7 9 11 12 13 14 15 16 17 18 19 20 22 24 25 26 28 35" %}
 
 ...
 using Syncfusion.Blazor;
@@ -178,7 +178,7 @@ N> The example includes x64 and ARM64 architectures for Windows, macOS, and Linu
 
 ## Add Packaging Configuration for ElectronNET.Core
 
-ElectronNET.Core uses the electron-builder.json file to configure packaging settings for desktop builds. Create a file named **electron-builder.json** in your project's **root folder** (next to the `.csproj` file) and add the following content.
+ElectronNET.Core uses the electron-builder.json file to configure packaging settings for desktop builds. Create a file named `electron-builder.json` in your project's **root folder** (next to the `.csproj` file) and add the following content.
 
 {% tabs %}
 
@@ -210,7 +210,7 @@ ElectronNET.Core uses the electron-builder.json file to configure packaging sett
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component to a `.razor` file within your app. For example, update **~/Components/Pages/Home.razor**.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component to a `.razor` file within your app. For example, update `~/Components/Pages/Home.razor`.
 
 {% tabs %}
 {% highlight razor %}
