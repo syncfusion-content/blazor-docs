@@ -23,21 +23,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts NuGet in the app
-
-To add **Blazor Chart**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts).
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 {% endtabcontent %}
 
@@ -49,32 +35,31 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 ## Create a new Blazor MAUI App in Visual Studio Code
 
-You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
-
-## Install Blazor Charts NuGet in the App
-
-To add **Blazor Chart**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts).
-
-{% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
-
-dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+Create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+
+Install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package in your project.
+
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+
 ## Add Import Namespaces
 
-Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespace.
+After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -125,7 +110,7 @@ namespace MauiBlazorWindow;
 
 ## Add script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~/index.html** file.
 
 ```html
 <head>
