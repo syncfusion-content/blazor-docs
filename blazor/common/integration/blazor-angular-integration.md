@@ -13,7 +13,7 @@ This guide demonstrates how to use [Syncfusion® Blazor components](https://www.
 
 Blazor and Angular are two different web technologies. Blazor uses .NET and Razor components, while Angular uses TypeScript and HTML. Normally, these frameworks cannot share UI components. However, [Blazor custom elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0#blazor-custom-elements) make this possible. A Custom Element turns a Blazor component into a standard HTML tag that Angular can recognize and render.
 
-A common use case for this integration is when an existing Angular application needs advanced UI features such as rich grids, charts, or schedulers without rewriting the project in Blazor. By exposing Syncfusion Blazor components as custom elements, teams can seamlessly add powerful .NET based controls into Angular pages. This is especially helpful in **enterprise dashboards**, **order management**, **analytics**, and **admin portals** where capabilities like sorting, filtering, exporting, and high‑performance data handling are required, all while keeping the Angular app intact.
+A common use case for this integration is when an existing Angular application needs advanced UI features such as rich grids, charts, or schedulers without rewriting the project in Blazor. By exposing Syncfusion Blazor components as custom elements, teams can seamlessly add powerful .NET-based controls into Angular pages. This is especially helpful in **enterprise dashboards**, **order management**, **analytics**, and **admin portals** where capabilities like sorting, filtering, exporting, and high‑performance data handling are required, all while keeping the Angular app intact.
 
 ## Prerequisites
 
