@@ -11,7 +11,9 @@ documentation: ug
 
 This guide demonstrates how to use [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components/blazor-datagrid) inside an **Angular application**.
 
-Blazor and Angular are two different web technologies. Blazor uses .NET and Razor components, while Angular uses TypeScript and HTML. Normally, these frameworks cannot share UI components. However, **Blazor Custom Elements** make this possible. A Custom Element turns a Blazor component into a standard HTML tag that Angular can recognize and render.
+Blazor and Angular are two different web technologies. Blazor uses .NET and Razor components, while Angular uses TypeScript and HTML. Normally, these frameworks cannot share UI components. However, [Blazor custom elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0#blazor-custom-elements) make this possible. A custom element turns a Blazor component into a standard HTML tag that Angular can recognize and render.
+
+A common use case for this integration is when an existing Angular application needs advanced UI features such as rich grids, charts, or schedulers without rewriting the project in Blazor. By exposing Syncfusion Blazor components as custom elements, teams can seamlessly add powerful .NET-based controls into Angular pages. This is especially helpful in **enterprise dashboards**, **order management**, **analytics**, and **admin portals** where capabilities like sorting, filtering, exporting, and high-performance data handling are required, all while keeping the Angular app intact.
 
 ## Prerequisites
 
@@ -23,7 +25,7 @@ Blazor and Angular are two different web technologies. Blazor uses .NET and Razo
 
 ### Create the project
 
-If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion Blazor getting‑started guides.
+If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion Blazor getting started guides.
 
 * [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
@@ -230,7 +232,7 @@ You can run both apps separately or together.
 Blazor host:
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet run
 
@@ -241,7 +243,7 @@ dotnet run
 Angular app:
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight bash tabtitle="Angular CLI" %}
 
 npm start
 
@@ -255,7 +257,7 @@ N> Start the Blazor application first so that Angular can load its resources thr
 ### Option 2: Run both using the concurrently package 
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight bash tabtitle="Angular CLI" %}
 
 npm install --save-dev concurrently 
 
@@ -281,7 +283,7 @@ Add the following scripts to  `package.json`.
 Then, run both with one command:  
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight bash tabtitle="Angular CLI" %}
 
  npm run start:all 
 
@@ -291,3 +293,8 @@ Then, run both with one command:
 Once the compilation completes, open your browser and navigate to `http://localhost:4200/` to see your application with the integrated Syncfusion DataGrid component: 
 
 ![Blazor DataGrid Component](../images/blazor-angular-integration.webp)
+
+## See also
+
+* [Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
