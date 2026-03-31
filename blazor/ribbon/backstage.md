@@ -205,7 +205,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Items](./images/backstage/backstage_items.png)
+![Ribbon Backstage Items](./images/backstage/backstage_items.webp)
 
 ## Adding footer items
 
@@ -409,7 +409,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Footer Items](./images/backstage/backstage_footer.png)
+![Ribbon Backstage Footer Items](./images/backstage/backstage_footer.webp)
 
 ## Adding separator
 
@@ -614,7 +614,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Separator](./images/backstage/backstage_separator.png)
+![Ribbon Backstage Separator](./images/backstage/backstage_separator.webp)
 
 ## Back button
 
@@ -761,7 +761,7 @@ You can use the [BackButtonSettings](https://help.syncfusion.com/cr/blazor/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Backbutton](./images/backstage/backstage_backbutton.png)
+![Ribbon Backstage Backbutton](./images/backstage/backstage_backbutton.webp)
 
 ## Template
 
@@ -1002,7 +1002,7 @@ You can customize the backstage menu items and their content using the [Template
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Template](./images/backstage/backstage_template.png)
+![Ribbon Backstage Template](./images/backstage/backstage_template.webp)
 
 ## Setting width and height
 

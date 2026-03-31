@@ -57,4 +57,4 @@ Below sample demonstrates the usage of drag and drop feature in the editor.
 }
 ```
 
-![Blazor Block Editor DragDrop](./images/drag-drop.png)
+![Blazor Block Editor DragDrop](./images/drag-drop.webp)

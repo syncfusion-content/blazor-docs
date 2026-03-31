@@ -83,7 +83,7 @@ By default, the [Indent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Block Editor Blocks Indent](./../images/indent.png)
+![Blazor Block Editor Blocks Indent](./../images/indent.webp)
 
 ## Configure CSS class
 
@@ -192,4 +192,4 @@ Custom CSS classes allow you to define specialized styling for specific blocks i
 
 ```
 
-![Blazor Block Editor Blocks CssClass](./../images/cssClass.png)
+![Blazor Block Editor Blocks CssClass](./../images/cssClass.webp)

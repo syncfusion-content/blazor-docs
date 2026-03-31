@@ -37,7 +37,7 @@ You can use the [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Blazor Chat UI Timestamp](./images/timestamp.png)
+![Blazor Chat UI Timestamp](./images/timestamp.webp)
 
 ## Setting timestamp format
 
@@ -65,4 +65,4 @@ You can use the [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor Chat UI TimestampFormat](./images/timestampformat.png)
+![Blazor Chat UI TimestampFormat](./images/timestampformat.webp)
