@@ -9,7 +9,9 @@ documentation: ug
 
 # Integrating Syncfusion® Angular Components in Blazor
 
-This guide explains how to render [Syncfusion® Angular components](https://www.syncfusion.com/angular-components/angular-data-grid) inside a Blazor application by packaging the Angular component as a **Custom Element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, **Angular Custom Elements** allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
+This guide explains how to render [Syncfusion® Angular components](https://www.syncfusion.com/angular-components/angular-data-grid) inside a Blazor application by packaging the Angular component as a **custom element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, [Angular custom element](https://angular.dev/guide/elements) allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
+
+A common use case for this integration is when a Blazor application needs to reuse existing Angular components without migrating them to .NET. By converting Angular components into Custom Elements, teams can embed rich UI elements such as charts, grids, editors, and schedulers directly within Blazor pages. This is especially useful for enterprise applications in **ERP**, **logistics**, **healthcare**, and **analytics platforms**.
 
 ## Prerequisites
 
@@ -135,7 +137,7 @@ import { createCustomElement } from '@angular/elements';
 The Angular production build generates JavaScript and CSS files that represent the Web Component.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight bash tabtitle="Angular CLI" %}
 
 ng build --configuration production --output-hashing=none
 
@@ -246,7 +248,7 @@ N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 ## Run the applications
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet run
 
@@ -256,3 +258,8 @@ dotnet run
 Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® DataGrid component:
 
 ![Blazor DataGrid Component](../images/angular-blazor-integration.webp)
+
+## See also
+
+* [Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
