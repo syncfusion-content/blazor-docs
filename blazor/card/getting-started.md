@@ -83,7 +83,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
 Install [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project.
 
