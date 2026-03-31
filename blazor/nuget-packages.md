@@ -96,6 +96,54 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are
 </tr>
 </table>
 
+## Syncfusion.Blazor.SmartRichTextEditor
+
+This package contains the Blazor SmartRichTextEditor for Blazor applications. The Blazor Smart Rich Text Editor is an advanced rich text editing component in Syncfusion's Blazor suite that integrates artificial intelligence to enhance content creation and editing.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartRichTextEditor">Syncfusion.Blazor.SmartRichTextEditor</a>
+</td>
+<td>
+<ul>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp">Smart Rich Text Editor</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SfSmartRichTextEditor</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.AI">Syncfusion.Blazor.AI</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat">Syncfusion.Blazor.InteractiveChat</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter">Syncfusion.Blazor.MarkdownConverter</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups">Syncfusion.Blazor.Popups</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor">Syncfusion.Blazor.RichTextEditor</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.InteractiveChat
 
 The AI AssistView creates an interface through which users can interact with AI-driven suggestions and prompts.
@@ -455,6 +503,58 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+## Syncfusion.Blazor.ChartWizard
+
+The Blazor Chart Wizard is an interactive chart creation and customization component for Blazor applications. It helps users configure chart types, data mappings, styling, and formatting with real-time preview.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard">Syncfusion.Blazor.ChartWizard</a>
+</td>
+<td>
+<ul>
+<li><a href="https://blazor.syncfusion.com/documentation/chart-wizard/getting-started-with-web-app">Chart Wizard</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SfChartWizard</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Charts">Syncfusion.Blazor.Charts</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid">Syncfusion.Blazor.Grid</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core">Syncfusion.ExcelExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -1419,146 +1519,6 @@ The notification component Toast is used to notify status or summary information
 </tr>
 </table>
 
-## Syncfusion.Blazor.PdfViewer
-
-The Blazor PDF Viewer supports viewing and reviewing PDF files in web applications and also printing them. The thumbnail, bookmark, hyperlink, and table of contents supports provide easy navigation within and outside the PDF files. The form-filling support provides a platform to fill and print with AcroForms. The PDF files can be reviewed with the available annotation tools.
-
-#### For Blazor WebAssembly application
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewer/">Syncfusion.Blazor.PdfViewer</a>
-</td>
-<td>
-<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/web-assembly-application">PDF Viewer</a>
-</td>
-<td>
-SfPdfViewer
-</td>
-<td>
-<ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorinplaceeditor">Syncfusion.Blazor.InPlaceEditor</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazornotifications">Syncfusion.Blazor.Notifications</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
-#### For Blazor Server application
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows">Syncfusion.Blazor.PdfViewerServer.Windows</a>
-</td>
-<td>
-<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/server-side-application">PDF Viewer Server</a>
-</td>
-<td>
-SfPdfViewerServer
-</td>
-<td>
-<ul>
-<li><a href="https://www.nuget.org/packages/Microsoft.Extensions.Caching.Memory/">Microsoft.Extensions.Caching.Memory</a></li>
-<li><a href="#syncfusionblazorpdfviewer">Syncfusion.Blazor.PdfViewer</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfViewer.AspNet.Core.Windows/">Syncfusion.PdfViewer.AspNet.Core.Windows</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
-N> For developing Linux or Mac (OSX) operating system, use the following corresponding libraries:
-<br/> * For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
-<br/> * For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
-
-## Syncfusion.Blazor.SfPdfViewer
-
-The SfPdfViewer is designed to be independent of web services, allowing users to view, edit, print, and download PDF files directly within Blazor applications. It offers various features such as thumbnails, bookmarks, hyperlinks, and table of contents for easy navigation within and outside the PDF files. Additionally, it supports form-filling with AcroForms and ensures fast and responsive performance. Integration of the component into both Blazor Server and WASM applications is straightforward and requires minimal effort.
-
-#### For Blazor Server & WebAssembly application
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer/">Syncfusion.Blazor.SfPdfViewer</a>
-</td>
-<td>
-<a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application">PDF Viewer(Next-Gen)</a>
-</td>
-<td>
-SfPdfViewer2
-</td>
-<td>
-<ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorinplaceeditor">Syncfusion.Blazor.InPlaceEditor</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazornotifications">Syncfusion.Blazor.Notifications</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.SfPdfViewer.AspNet.Core/">Syncfusion.SfPdfViewer.AspNet.Core</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
 ## Syncfusion.Blazor.PivotTable
 
 The Blazor Pivot Table is a powerful control used to organize and summarize business data and display the result in a cross-table format. It includes major functionalities such as data binding, drilling up and down, Excel-like filtering and sorting, editing, Excel and PDF exporting, several built-in aggregations, pivot table field list, and calculated fields.
@@ -2317,53 +2277,6 @@ SfTreeMap
 </tr>
 </table>
 
-## Syncfusion.Blazor.WordProcessor
-
-The Blazor Word Processor (Document Editor) is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common Word processing features including editing text, formatting contents, resizing images and tables, finding and replacing text, bookmarks, tables of contents, printing, and importing and exporting Word documents.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor/">Syncfusion.Blazor.WordProcessor</a>
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/document-editor/getting-started/overview">Word Processor</a>
-</td>
-<td>
-<ul>
-<li>SfDocumentEditor</li>
-<li>SfDocumentEditorContainer</li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a> (Utilized up to v19.4.0.56)</li>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.WordProcessor.AspNet.Core/" target="_blank">Syncfusion.WordProcessor.AspNet.Core</a></li>
-<li><a href="https://www.nuget.org/packages/System.Text.Json/" target="_blank">System.Text.Json</a> (Utilizing from v20.1.0.47)</li>
-</ul>
-</td>
-</tr>
-</table>
 <!-- markdownlint-enable MD033 -->
 
 ## Benefits of using individual NuGet packages

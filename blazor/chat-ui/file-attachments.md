@@ -30,7 +30,7 @@ Enable file attachment support by setting the [Enable](https://help.syncfusion.c
 
 ```
 
-![Blazor Chat UI Enable Attachment](./images/attachment-enable.png)
+![Blazor Chat UI Enable Attachment](./images/attachment-enable.webp)
 
 ### Setting saveUrl and removeUrl
 
@@ -101,7 +101,7 @@ Configure the [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Blazor Chat UI Attachment File size](./images/attachment-filesize.png)
+![Blazor Chat UI Attachment File size](./images/attachment-filesize.webp)
 
 ## Setting save format
 
@@ -198,7 +198,7 @@ Restrict how many files can be attached at once using [MaximumCount](https://hel
 
 ```
 
-![Blazor Chat UI Attachment maximum count](./images/attachment-maximum-count.png)
+![Blazor Chat UI Attachment maximum count](./images/attachment-maximum-count.webp)
 
 ## Templates
 
@@ -439,6 +439,6 @@ Control how attachments appear inside message bubbles with [AttachmentTemplate](
 
 ```
 
-![Blazor Chat UI Attachment template](./images/attachment-template.png)
+![Blazor Chat UI Attachment template](./images/attachment-template.webp)
 
-![Blazor Chat UI Attachment Preview template](./images/attachment-preview-template.png)
+![Blazor Chat UI Attachment Preview template](./images/attachment-preview-template.webp)

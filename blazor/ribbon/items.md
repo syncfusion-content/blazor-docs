@@ -63,7 +63,7 @@ Below example demonstrates how to configure a Button item including it's events
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Button Item](./images/items/button_item.png)
+![Ribbon Button Item](./images/items/button_item.webp)
 
 ## Checkbox item
 
@@ -127,7 +127,7 @@ Below example demonstrates how to configure a Checkbox item including it's event
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Checkbox Item](./images/items/checkbox_item.png)
+![Ribbon Checkbox Item](./images/items/checkbox_item.webp)
 
 ## DropDownButton item
 
@@ -212,7 +212,7 @@ Below example demonstrates how to configure a DropDownButton item including it's
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon DropDown Item](./images/items/dropdown_item.png)
+![Ribbon DropDown Item](./images/items/dropdown_item.webp)
 
 ## SplitButton item
 
@@ -301,7 +301,7 @@ Below example demonstrates how to configure a SplitButton item including it's ev
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon SplitButton Item](./images/items/splitbutton_item.png)
+![Ribbon SplitButton Item](./images/items/splitbutton_item.webp)
 
 ## Combobox item
 
@@ -416,7 +416,7 @@ Below example demonstrates how to configure a Combobox item including it's event
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Combobox Item](./images/items/combobox_item.png)
+![Ribbon Combobox Item](./images/items/combobox_item.webp)
 
 ## Colorpicker item
 
@@ -495,7 +495,7 @@ Below example demonstrates how to configure a Colorpicker item including it's ev
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Colorpicker Item](./images/items/colorpicker_item.png)
+![Ribbon Colorpicker Item](./images/items/colorpicker_item.webp)
 
 ## GroupButton item
 
@@ -619,7 +619,7 @@ Below example demonstrates how to configure a GroupButton item with both selecti
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon GroupButton Item](./images/items/groupbutton_item.png)
+![Ribbon GroupButton Item](./images/items/groupbutton_item.webp)
 
 ## Custom item
 
@@ -695,7 +695,7 @@ The Ribbon supports rendering non-built-in items or your own HTML content by set
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Custom Item](./images/items/custom_item.png)
+![Ribbon Custom Item](./images/items/custom_item.webp)
 
 ## Items display mode
 
@@ -781,9 +781,9 @@ Below example demonstrates the usages of `DisplayOptions` property to control th
 {% endhighlight %}
 {% endtabs %}
 
-![Display Options Classic](./images/items/displayoption_classic.png)
+![Display Options Classic](./images/items/displayoption_classic.webp)
 
-![Display Options Simplified and Overflow](./images/items/displayoption_simp_overflow.png)
+![Display Options Simplified and Overflow](./images/items/displayoption_simp_overflow.webp)
 
 ## Enable/Disable items
 
@@ -842,4 +842,4 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Item Disabled](./images/items/disabled_item.png)
+![Ribbon Item Disabled](./images/items/disabled_item.webp)

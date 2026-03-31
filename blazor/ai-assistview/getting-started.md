@@ -23,7 +23,7 @@ This section briefly explains about how to include [Blazor AI AssistView](https:
 
 Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
-![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
+![Blazor WASM Create Project Template](images/blazor-wasm-app-template.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor InteractiveChat and Themes NuGet in the App
 
@@ -200,7 +200,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView co
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component in default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrfCjiMCTRHTGzR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AI AssistView Component](./images/ai-assistview-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrfCjiMCTRHTGzR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AI AssistView Component](./images/ai-assistview-component.webp)" %}
+
+> **Note:** Starting from version 33.1x, when a user submits a prompt to the AI AssistView, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
 
 ## Configure suggestions and responses
 
@@ -238,6 +240,6 @@ You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTCNsCMKFGRhuU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AI AssistView default prompt](./images/default-prompt.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTCNsCMKFGRhuU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AI AssistView default prompt](./images/default-prompt.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AIAssistView).

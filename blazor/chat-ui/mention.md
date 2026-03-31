@@ -42,7 +42,7 @@ Use the [MentionUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor Chat UI MentionUsers](./images/MentionUsers.png)
+![Blazor Chat UI MentionUsers](./images/MentionUsers.webp)
 
 ## Customize the Mention trigger character
 
@@ -76,7 +76,7 @@ Use the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 ```
 
-![Blazor Chat UI MentionCharacter](./images/MentionCharacter.png)
+![Blazor Chat UI MentionCharacter](./images/MentionCharacter.webp)
 
 ## Predefined Mentions in Messages
 
@@ -110,7 +110,7 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interacti
 
 ```
 
-![Blazor Chat UI MentionMessage](./images/MentionMessage.png)
+![Blazor Chat UI MentionMessage](./images/MentionMessage.webp)
 
 ## Configure mentionSelect
 

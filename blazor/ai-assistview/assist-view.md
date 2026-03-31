@@ -32,7 +32,7 @@ You can use the [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor AI AssistView PromptText](./images/prompt-text.png)
+![Blazor AI AssistView PromptText](./images/prompt-text.webp)
 
 ## Setting prompt placeholder
 
@@ -57,7 +57,7 @@ You can use the [PromptPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor AI AssistView PromptPlaceholder](./images/prompt-placeholder.png)
+![Blazor AI AssistView PromptPlaceholder](./images/prompt-placeholder.webp)
 
 ## Prompt-response collection
 
@@ -89,7 +89,13 @@ The `Prompts` collection stores all the prompts and responses generated.
 
 ```
 
-![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
+![Blazor AI AssistView Prompts](./images/assistview-prompts.webp)
+
+### Update response as markdown
+
+The AI AssistView supports rendering responses as **Markdown** content, which is automatically converted to HTML using the built-in [Markdown Converter](https://blazor.syncfusion.com/documentation/markdown-editor/markdown-preview). When you pass markdown-formatted text in the response, it will be displayed as formatted HTML in the AI AssistView. The streaming of markdown content happens seamlessly with built-in support for dynamic rendering.
+
+You can use markdown syntax like **bold**, *italic*, headings, lists, code blocks, and links to format your responses.
 
 ## Adding prompt suggestions
 
@@ -117,7 +123,7 @@ You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor AI AssistView PromptSuggestions](./images/assistview-suggestions.png)
+![Blazor AI AssistView PromptSuggestions](./images/assistview-suggestions.webp)
 
 ### Adding suggestion headers
 
@@ -145,7 +151,7 @@ You can use the [PromptSuggestionsHeader](https://help.syncfusion.com/cr/blazor/
 
 ```
 
-![Blazor AI AssistView PromptSuggestionsHeader](./images/assistview-suggestion-header.png)
+![Blazor AI AssistView PromptSuggestionsHeader](./images/assistview-suggestion-header.webp)
 
 ## Adding prompt iconCss
 
@@ -175,7 +181,7 @@ You can customize the appearance of the prompter avatar by using the [PromptIcon
 
 ```
 
-![Blazor AI AssistView PromptIcon](./images/assistview-prompt-icon.png)
+![Blazor AI AssistView PromptIcon](./images/assistview-prompt-icon.webp)
 
 ## Adding response iconCss
 
@@ -205,4 +211,9 @@ You can use the [ResponseIconCss](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor AI AssistView ResponseIconCss](./images/assistview-response-icon.png)
+![Blazor AI AssistView ResponseIconCss](./images/assistview-response-icon.webp)
+
+## Enable scroll to bottom icon
+
+You can use the [EnableScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_EnableScrollToBottom) property to show or hide the scroll-to-bottom indicator. By default, this property is `true`. When enabled, a floating icon/button appears when the user scrolls away from the bottom of the conversation. Clicking this icon smoothly scrolls the view to the bottom to display the latest response.
+
