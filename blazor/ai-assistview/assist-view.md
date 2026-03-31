@@ -32,7 +32,7 @@ You can use the [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor AI AssistView PromptText](./images/prompt-text.png)
+![Blazor AI AssistView PromptText](./images/prompt-text.webp)
 
 ## Setting prompt placeholder
 
@@ -57,7 +57,7 @@ You can use the [PromptPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor AI AssistView PromptPlaceholder](./images/prompt-placeholder.png)
+![Blazor AI AssistView PromptPlaceholder](./images/prompt-placeholder.webp)
 
 ## Prompt-response collection
 
@@ -89,7 +89,7 @@ The `Prompts` collection stores all the prompts and responses generated.
 
 ```
 
-![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
+![Blazor AI AssistView Prompts](./images/assistview-prompts.webp)
 
 ### Update response as markdown
 
@@ -123,7 +123,7 @@ You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor AI AssistView PromptSuggestions](./images/assistview-suggestions.png)
+![Blazor AI AssistView PromptSuggestions](./images/assistview-suggestions.webp)
 
 ### Adding suggestion headers
 
@@ -151,7 +151,7 @@ You can use the [PromptSuggestionsHeader](https://help.syncfusion.com/cr/blazor/
 
 ```
 
-![Blazor AI AssistView PromptSuggestionsHeader](./images/assistview-suggestion-header.png)
+![Blazor AI AssistView PromptSuggestionsHeader](./images/assistview-suggestion-header.webp)
 
 ## Adding prompt iconCss
 
@@ -181,7 +181,7 @@ You can customize the appearance of the prompter avatar by using the [PromptIcon
 
 ```
 
-![Blazor AI AssistView PromptIcon](./images/assistview-prompt-icon.png)
+![Blazor AI AssistView PromptIcon](./images/assistview-prompt-icon.webp)
 
 ## Adding response iconCss
 
@@ -211,7 +211,7 @@ You can use the [ResponseIconCss](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor AI AssistView ResponseIconCss](./images/assistview-response-icon.png)
+![Blazor AI AssistView ResponseIconCss](./images/assistview-response-icon.webp)
 
 ## Enable scroll to bottom icon
 

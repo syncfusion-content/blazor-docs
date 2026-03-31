@@ -98,7 +98,7 @@ Gallery items can be added using [GalleryItem](https://help.syncfusion.com/cr/bl
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Items](./images/gallery/gallery_items.png)
+![Ribbon Gallery Items](./images/gallery/gallery_items.webp)
 
 #### CSS class
 
@@ -198,7 +198,7 @@ You can use the `CssClass` property to customize the gallery item.
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Item Customization](./images/gallery/gallery_cssClass.png)
+![Ribbon Gallery Item Customization](./images/gallery/gallery_cssClass.webp)
 
 ### Custom header
 
@@ -284,7 +284,7 @@ You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Custom Header](./images/gallery/gallery_header.png)
+![Ribbon Gallery Custom Header](./images/gallery/gallery_header.webp)
 
 ### Setting item dimensions
 
@@ -374,7 +374,7 @@ You can specify the width and height of gallery items using the [ItemWidth](http
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Item Dimensions](./images/gallery/gallery_itemDimensions.png)
+![Ribbon Gallery Item Dimensions](./images/gallery/gallery_itemDimensions.webp)
 
 ### Group styling
 
@@ -466,7 +466,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Group Styling](./images/gallery/gallery_group_styling.png)
+![Ribbon Gallery Group Styling](./images/gallery/gallery_group_styling.webp)
 
 ## Setting item count
 
@@ -552,7 +552,7 @@ You can customize the number of items to be displayed in Ribbon gallery by using
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Item Count](./images/gallery/gallery_itemCount.png)
+![Ribbon Gallery Item Count](./images/gallery/gallery_itemCount.webp)
 
 ## Setting selected item
 
@@ -642,7 +642,7 @@ You can use the [SelectedItemIndex](https://help.syncfusion.com/cr/blazor/Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Selected Item](./images/gallery/gallery_selectedItem.png)
+![Ribbon Gallery Selected Item](./images/gallery/gallery_selectedItem.webp)
 
 ## Setting popup dimensions
 
@@ -731,7 +731,7 @@ You can specify the width and height of the gallery popup by using the [PopupWid
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Popup Dimensions](./images/gallery/gallery_popupDimensions.png)
+![Ribbon Gallery Popup Dimensions](./images/gallery/gallery_popupDimensions.webp)
 
 ## Template customization
 
@@ -863,7 +863,7 @@ You can customize the default appearance and content of Ribbon gallery items by 
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Template Customization](./images/gallery/gallery_templates.png)
+![Ribbon Gallery Template Customization](./images/gallery/gallery_templates.webp)
 
 ## Events
 
