@@ -271,6 +271,6 @@ The following example demonstrates the usage of [ReadOnly](https://help.syncfusi
 </style>
 ```
 
-![Blazor Block Editor with custom gradient theme and styling](./images/appearance.png)
+![Blazor Block Editor with custom gradient theme and styling](./images/appearance.webp)
 
-![Blazor Block Editor with custom CSS classes applied](./images/customStyles.png)
+![Blazor Block Editor with custom CSS classes applied](./images/customStyles.webp)
