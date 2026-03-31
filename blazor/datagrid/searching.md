@@ -664,11 +664,10 @@ N> For a broader overview, see the [Blazor DataGrid](https://www.syncfusion.com/
 
 ## Ignore accents and diacritics while searching
 
-By default, the search operation distinguishes between characters with and without accents (diacritics). For example, searching for "Chai" does not find "Chäi". Set the [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) property to `true` to make the search accent-insensitive.
+By default, the DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) property to `true`. This improves usability when data contains diacritic characters.
 
 This feature is useful when:
 - Applications work with international data containing accented characters (é, ñ, ü, etc.).
-- Search should match both "Chäi" and "Chai" as equivalent.
 - Input searches may not include accents even though data contains them.
 
 {% tabs %}
