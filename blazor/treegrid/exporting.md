@@ -664,95 +664,65 @@ public class TreeData
 N> By default, material theme is applied to exported PDF document.
 
 
-# Globalization – Using TrueType Fonts (TTF) in PDF Export
+## Globalization – Using TrueType Fonts (TTF) in PDF Export
 
+### Overview
 
+By default, the TreeGrid PDF export supports only a limited set of fonts. Due to this limitation, non-English languages such as Chinese or other Unicode characters may not render correctly in the exported PDF.
 
-## Overview
-
-By default, the TreeGrid PDF export supports only a limited set of fonts. Due to this limitation, **non-English languages** such as **Chinese or other Unicode characters** may not render correctly in the exported PDF.
-
-
-To export such characters properly, you must use a **TrueType Font (TTF)** and provide it as a **Base64-encoded string**. The TreeGrid component supports `PdfTrueTypeFont` through the `ExportToPdfAsync()` method, enabling globalization support by applying custom fonts during PDF export.
+To export such characters properly, you must use a TrueType Font (TTF) and provide it as a Base64-encoded string. The TreeGrid component supports TrueType fonts through the `ExportToPdfAsync()` method, which enables globalization support during PDF export.
 
 ---
 
-## When to Use Custom TTF Fonts
+### When to Use Custom TTF Fonts
 
 Use a custom TrueType font when:
 
-- Exporting **Chinese or other Unicode language text**
-
-- Using **custom fonts** not included in the default PDF export support
-
-- Ensuring correct text rendering in **PDF headers and records**
+- Exporting Chinese or other Unicode language text  
+- Using custom fonts that are not supported by default  
+- Ensuring proper text rendering in PDF headers and records  
 
 ---
 
-## Applying a TrueType Font in PDF Export
+### Applying a TrueType Font in PDF Export
 
+To apply a custom TTF font, assign the Base64-encoded string of the font file to the `FontFamily` property and set `IsTrueType` to `true` in the `PdfGridFont`.
 
+Ensure that PDF export is enabled by setting the `AllowPdfExport` property to true.
 
-To apply a custom TTF font, assign a **Base64 string** of the font file to the `FontFamily` property and set `IsTrueType` to `true` in the `PdfGridFont`.
-
-
+---
 
 ### Toolbar Click Event – Code Example
 
-
-
 ```csharp
-
 private void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
-
 {
+    if (Args.Item.Text == "PDF Export")
+    {
+        Syncfusion.Blazor.Grids.PdfExportProperties exportProperties =
+            new Syncfusion.Blazor.Grids.PdfExportProperties();
 
-    if (Args.Item.Text == "PDF Export")
+        PdfTheme theme = new PdfTheme();
 
-    {
+        PdfThemeStyle recordThemeStyle = new PdfThemeStyle()
+        {
+            FontColor = "#0000FF",
+            FontName = "Calibri",
+            FontSize = 17,
+            Font = new PdfGridFont()
+            {
+                IsTrueType = true,
+                FontSize = 11,
+                FontFamily = "encodedbase64stringhere"
+            }
+        };
 
-        Syncfusion.Blazor.Grids.PdfExportProperties ExportProperties =
+        theme.Record = recordThemeStyle;
+        theme.Header = recordThemeStyle;
+        exportProperties.Theme = theme;
 
-            new Syncfusion.Blazor.Grids.PdfExportProperties();
-
-
-
-        PdfTheme Theme = new PdfTheme();
-
-
-
-        PdfThemeStyle RecordThemeStyle = new PdfThemeStyle()
-
-        {
-
-            FontColor = "#0000FF",
-
-            FontName = "Calibri",
-
-            FontSize = 17,
-
-            Font = new PdfGridFont()
-
-            {
-
-                IsTrueType = true,
-
-                FontSize = 11,
-
-                FontFamily = "encodedbase64stringhere"
-
-            }
-
-        };
-
-        Theme.Record = RecordThemeStyle;
-        Theme.Header = RecordThemeStyle;
-        ExportProperties.Theme = Theme;
-        this.TreeGrid.ExportToPdfAsync(ExportProperties);
-
-    }
-
+        this.TreeGrid.ExportToPdfAsync(exportProperties);
+    }
 }
-
-``
+```
 
