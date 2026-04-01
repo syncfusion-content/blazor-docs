@@ -180,3 +180,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 **Output:**
 ![Blazor DataGrid With Spreadsheet](images/datagrid-with-spreadsheet.webp)
+
+## See also
+
+* [Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+* [Blazor Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started-webapp)
+
+ 
