@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion CircularGauge Component in Blazor Web App
+title: Getting Started with Syncfusion Blazor CircularGauge in Web App
 description: Checkout and learn about the documentation for getting started with Blazor CircularGauge Component in Blazor Web App.
 platform: Blazor
 component: CircularGauge
@@ -185,8 +185,6 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor CircularGauge component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLzXMhasGnmeXvK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CircularGauge Component](./images/blazor-circulargauge-component.png)" %}
-
-N> You can also explore our [Blazor CircularGauge example](https://blazor.syncfusion.com/demos/circulargauge/default-functionalities) that shows how to render and configure the CircularGauge.
 
 ## Set pointer value
 
