@@ -108,8 +108,6 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
-
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="4 11" %}
 
@@ -312,7 +310,14 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Text Editor** component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Text Editor** component in the **~/Pages/Index.razor** file. If an interactivity location as `per page/component`, define a render mode at the top of the `Index.razor` page.
+
+N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
+
+```
+@* desired render mode define here *@
+@rendermode InteractiveServer
+```
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.razor" %}
