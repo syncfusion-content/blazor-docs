@@ -38,7 +38,7 @@ You can use the [Transcript](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Component Transcript](images/getting-started.png)
+![Blazor SpeechToText Component Transcript](images/getting-started.webp)
 
 ## Setting language
 
@@ -69,7 +69,7 @@ You can use the [Language](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Component Language](images/speechtotext-language.png)
+![Blazor SpeechToText Component Language](images/speechtotext-language.webp)
 
 ## Allowing interim results
 
@@ -100,7 +100,7 @@ You can use the [AllowInterimResults](https://help.syncfusion.com/cr/blazor/Sync
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Component AllowInterimResults](images/speechtotext-allowinterim.png)
+![Blazor SpeechToText Component AllowInterimResults](images/speechtotext-allowinterim.webp)
 
 ## Managing listening state
 
@@ -247,7 +247,7 @@ Below sample demonstrates the usage of [ListeningState](https://help.syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Listening State](images/speechtotext-listeningstate.png)
+![Blazor SpeechToText Listening State](images/speechtotext-listeningstate.webp)
 
 ## Show or hide tooltip
 
@@ -280,7 +280,7 @@ You can use the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Component ShowTooltip](images/speechtotext-showtooltip.png)
+![Blazor SpeechToText Component ShowTooltip](images/speechtotext-showtooltip.webp)
 
 ## Setting disabled
 
@@ -313,7 +313,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Component Disabled](images/speechtotext-disabled.png)
+![Blazor SpeechToText Component Disabled](images/speechtotext-disabled.webp)
 
 ## Setting html attributes
 

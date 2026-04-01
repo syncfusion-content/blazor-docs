@@ -17,7 +17,9 @@ N> All event handlers must be registered inside the `<MultiSelectEvents>` tag wi
 
 Events are registered by adding `<MultiSelectEvents>` as a child of `<SfMultiSelect>` and assigning handler methods to the appropriate event parameters.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="GameData" DataSource="@Games" Placeholder="Select games">
@@ -50,7 +52,9 @@ Events are registered by adding `<MultiSelectEvents>` as a child of `<SfMultiSel
     private void OnCreated(object args) => Console.WriteLine("MultiSelect created.");
     private void OnDestroyed(object args) => Console.WriteLine("MultiSelect destroyed.");
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -60,7 +64,9 @@ Events are registered by adding `<MultiSelectEvents>` as a child of `<SfMultiSel
 
 The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Created) event fires once when the MultiSelect component has finished initializing. Use it to perform post-initialization logic such as loading additional data or setting external state.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Colors" Placeholder="Pick colors">
@@ -75,13 +81,17 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
         Console.WriteLine("MultiSelect component is ready.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Destroyed
 
 The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Destroyed) event fires when the component is torn down (disposed). Use it to release resources, unsubscribe from services, or log analytics.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Colors" Placeholder="Pick colors">
@@ -96,7 +106,9 @@ The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
         Console.WriteLine("MultiSelect component has been destroyed.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -106,7 +118,9 @@ The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Focus) event triggers when the MultiSelect component receives focus, either through user interaction (tab/click) or programmatically via [`FocusAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FocusAsync). Use it to display hints, enable validation feedback, or update UI state.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Skills" Placeholder="Select skills">
@@ -121,13 +135,17 @@ The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Mu
         Console.WriteLine("MultiSelect is focused. Start selecting skills.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Blur
 
 The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Blur) event triggers when focus moves away from the MultiSelect component. This is commonly used to trigger form validation or persist intermediate state.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Skills" Placeholder="Select skills">
@@ -142,7 +160,9 @@ The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Mul
         Console.WriteLine("MultiSelect lost focus. Triggering validation.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -162,7 +182,9 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 | `EventName` | `string` | Name of the triggering event (e.g., `"load"`, `"filtering"`). |
 | `Query` | `Query` | The data query to be executed; can be modified. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Data;
 
@@ -185,7 +207,9 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
         Console.WriteLine("OnActionBegin event triggered");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### OnActionComplete
 
@@ -200,7 +224,9 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 | `EventName` | `string` | Name of the triggering action. |
 | `Result` | `IEnumerable<TItem>` | The collection of fetched items. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Data;
 
@@ -223,7 +249,9 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
         Console.WriteLine($"Data loaded: {args.Count} records.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### OnActionFailure
 
@@ -231,7 +259,9 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 **Event argument:** [`Exception`](https://learn.microsoft.com/en-us/dotnet/api/system.exception?view=net-10.0)
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Data;
 
@@ -256,7 +286,9 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
         Console.WriteLine(errorMessage);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### DataBound
 
@@ -264,7 +296,9 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 **Event argument:** [`DataBoundEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DataBoundEventArgs.html)
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="Department" DataSource="@Departments" Placeholder="Select departments">
@@ -287,7 +321,9 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
         Console.WriteLine("All department data has been bound to the popup.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -303,7 +339,9 @@ The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
 |---|---|---|
 | `Cancel` | `bool` | Set to `true` to prevent the popup from opening. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Fruits" Placeholder="Select fruits">
@@ -323,7 +361,9 @@ The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Opened
 
@@ -331,7 +371,9 @@ The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
 
 **Event argument:** [`PopupEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.PopupEventArgs.html)
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Fruits" Placeholder="Select fruits">
@@ -346,7 +388,9 @@ The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
         Console.WriteLine("Dropdown popup is now open.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### OnClose
 
@@ -359,7 +403,9 @@ The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
 | `Cancel` | `bool` | Set to `true` to prevent the popup from closing. |
 | `Popup` | `PopupModel` | Reference to the popup model for advanced access. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Tags" Placeholder="Select tags">
@@ -378,7 +424,9 @@ The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Closed
 
@@ -386,7 +434,9 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
 
 **Event argument:** [`ClosedEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ClosedEventArgs.html)
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Tags" Placeholder="Select tags">
@@ -401,7 +451,9 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.M
         Console.WriteLine("Dropdown popup is fully closed.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -421,7 +473,9 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 N> By default, `ValueChange` is fired after changing the value selections and when the component loses focus, since [EnableChangeOnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableChangeOnBlur) is `true` by default. Set `EnableChangeOnBlur` to `false` to fire `ValueChange` immediately upon selection change.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="Priority" @bind-Value="@selectedValues" DataSource="@Priorities" Placeholder="Select priorities">
@@ -452,7 +506,9 @@ N> By default, `ValueChange` is fired after changing the value selections and wh
         Console.WriteLine($"Changed from [{string.Join(",", args.OldValue ?? Array.Empty<string>())}] to [{string.Join(",", args.Value ?? Array.Empty<string>())}]");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -470,7 +526,9 @@ The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 | `IsInteracted` | `bool` | `true` if triggered by user action. |
 | `Cancel` | `bool` | Set to `true` to prevent the item from being selected. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="Product" DataSource="@Products" Placeholder="Select products"
@@ -504,7 +562,9 @@ The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -522,7 +582,9 @@ The [OnValueRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 | `IsInteracted` | `bool` | `true` if the removal was triggered by user action. |
 | `Cancel` | `bool` | Set to `true` to cancel the removal. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="Role" DataSource="@Roles" Placeholder="Select roles">
@@ -555,7 +617,9 @@ The [OnValueRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### ValueRemoved
 
@@ -563,7 +627,9 @@ The [ValueRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
 
 **Event argument:** [`RemoveEventArgs<TItem>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.RemoveEventArgs-1.html)
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="Tag" DataSource="@Tags" Placeholder="Select tags">
@@ -589,7 +655,9 @@ The [ValueRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
         Console.WriteLine($"Tag '{args.ItemData?.TagName}' was removed.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -610,7 +678,9 @@ The [SelectingAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
 | `IsChecked` | `bool` | `true` when selecting all; `false` when deselecting all. |
 | `IsInteracted` | `bool` | `true` if triggered by user action. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Regions" Placeholder="Select regions"
@@ -635,7 +705,9 @@ The [SelectingAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
         args.SuppressItemEvents = true;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### SelectedAll
 
@@ -649,7 +721,9 @@ The [SelectedAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 | `IsInteracted` | `bool` | `true` if triggered by user action. |
 | `ItemData` | `IEnumerable<TItem>` | Collection of all items after the operation. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Regions" Placeholder="Select regions"
@@ -666,7 +740,9 @@ The [SelectedAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
         Console.WriteLine($"User {action} regions. Total: {args.ItemData?.Count() ?? 0}");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -685,7 +761,9 @@ The [OnChipTag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 | `Cancel` | `bool` | Set to `true` to prevent the chip from being created. |
 | `IsInteracted` | `bool` | `true` if triggered by user interaction. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="Task" DataSource="@Tasks" Placeholder="Select tasks"
@@ -715,7 +793,9 @@ The [OnChipTag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
         args.SetClass = args.ItemData?.Priority == "High" ? "e-chip-high-priority" : "e-chip-low-priority";
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### ChipSelected
 
@@ -727,7 +807,9 @@ The [ChipSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
 |---|---|---|
 | `ChipData` | `TItem` | The data object of the selected chip. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="Employee" DataSource="@Team" Placeholder="Select team members"
@@ -759,7 +841,9 @@ The [ChipSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
         activeChipName = args.ChipData?.Name;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -771,7 +855,9 @@ The [Cleared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
 
 **Event argument:** `MouseEventArgs`
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Colors" Placeholder="Select colors"
@@ -788,7 +874,9 @@ The [Cleared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
         // Reset dependent dropdowns or form state here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -810,7 +898,9 @@ N> When implementing custom filtering, set `args.PreventDefaultAction = true` an
 
 **Built-in filtering:**
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Languages"
@@ -828,11 +918,15 @@ N> When implementing custom filtering, set `args.PreventDefaultAction = true` an
             args.Cancel = true;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Custom filtering with [`FilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FilterAsync_System_Collections_Generic_IEnumerable__1__Syncfusion_Blazor_Data_Query_Syncfusion_Blazor_DropDowns_FieldSettingsModel_):**
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Data;
 
@@ -875,7 +969,9 @@ N> When implementing custom filtering, set `args.PreventDefaultAction = true` an
         await MultiSelectRef.FilterAsync(Cities, query);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -893,7 +989,9 @@ The [CustomValueSpecifier](https://blazor.syncfusion.com/documentation/multisele
 | `NewData` | `TItem` | Set this to the newly created data object to add to the list. |
 | `Cancel` | `bool` | Set to `true` to reject the custom value. |
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="Label" DataSource="@Labels"
@@ -926,7 +1024,9 @@ The [CustomValueSpecifier](https://blazor.syncfusion.com/documentation/multisele
         };
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ---
 
@@ -946,7 +1046,9 @@ The [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
 
 **Event argument:** `object`
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Options"
@@ -972,7 +1074,9 @@ The [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
         resizeStatus = "Popup resize complete.";
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> The `OnResizeStart` and `OnResizeStop` events are only triggered when `AllowResize="true"` is set on the `SfMultiSelect` component.
 
