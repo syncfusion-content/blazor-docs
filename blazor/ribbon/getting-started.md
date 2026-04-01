@@ -23,7 +23,7 @@ This guide explains how to add the [Blazor Ribbon](https://www.syncfusion.com/bl
 
 Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
-![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
+![Blazor WASM Create Project Template](images/blazor-wasm-app-template.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon and Themes NuGet in the App
 
@@ -280,6 +280,6 @@ You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJCLsRVGKvCOVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Ribbon Component](./images/getting-started.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJCLsRVGKvCOVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Ribbon Component](./images/getting-started.webp)" %}
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon component will be rendered in the default web browser.

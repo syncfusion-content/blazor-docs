@@ -32,7 +32,7 @@ You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor AI AssistView Width](./images/ai-assistview-width.png)
+![Blazor AI AssistView Width](./images/ai-assistview-width.webp)
 
 ## Setting height
 
@@ -57,7 +57,7 @@ You can use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor AI AssistView Height](./images/ai-assistview-height.png)
+![Blazor AI AssistView Height](./images/ai-assistview-height.webp)
 
 ## CssClass
 
@@ -98,4 +98,4 @@ You can customize the appearance of the AI AssistView component by using the [Cs
 
 ```
 
-![Blazor AI AssistView Custom Class](./images/ai-assistview-custom-class.png)
+![Blazor AI AssistView Custom Class](./images/ai-assistview-custom-class.webp)
