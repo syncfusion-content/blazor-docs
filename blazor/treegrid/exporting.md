@@ -666,6 +666,7 @@ N> By default, material theme is applied to exported PDF document.
 
 ## Globalization – Using TrueType Fonts (TTF) in PDF Export
 
+
 ### Overview
 
 By default, the TreeGrid PDF export supports only a limited set of fonts. Due to this limitation, non-English languages such as Chinese or other Unicode characters may not render correctly in the exported PDF.
@@ -688,7 +689,7 @@ Use a custom TrueType font when:
 
 To apply a custom TTF font, assign the Base64-encoded string of the font file to the `FontFamily` property and set `IsTrueType` to `true` in the `PdfGridFont`.
 
-Ensure that PDF export is enabled by setting the `AllowPdfExport` property to true.
+Use the `ExportToPdfAsync()` method for exporting. Enable PDF export in the TreeGrid by setting the `AllowPdfExport` property to true.
 
 ---
 
