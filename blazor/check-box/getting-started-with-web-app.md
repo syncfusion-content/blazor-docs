@@ -89,7 +89,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project.
+Install [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
@@ -183,7 +183,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.png)" %}
 
-N> You can also explore our [Blazor CheckBox example](https://blazor.syncfusion.com/demos/buttons/checkbox) that shows how to render and configure the checkbox.
+N> You can also explore our [Blazor CheckBox example](https://blazor.syncfusion.com/demos/buttons/checkbox) that shows how to render and configure the CheckBox.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CheckBox).
 
