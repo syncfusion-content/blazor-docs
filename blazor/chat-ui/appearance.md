@@ -35,7 +35,7 @@ You can use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ```
 
-![Blazor Chat UI Placeholder](./images/placeholder.png)
+![Blazor Chat UI Placeholder](./images/placeholder.webp)
 
 ## Setting width
 
@@ -63,7 +63,7 @@ You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Chat UI Width](./images/width.png)
+![Blazor Chat UI Width](./images/width.webp)
 
 ## Setting height
 
@@ -91,7 +91,7 @@ You can use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Chat UI Height](./images/width.png)
+![Blazor Chat UI Height](./images/width.webp)
 
 ## Setting CSS class
 
@@ -135,4 +135,4 @@ You can customize the appearance of the Chat UI component by using the [CssClass
 
 ```
 
-![Blazor Chat UI CssClass](./images/cssclass.png)
+![Blazor Chat UI CssClass](./images/cssclass.webp)

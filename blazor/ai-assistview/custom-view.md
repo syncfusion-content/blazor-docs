@@ -45,7 +45,7 @@ You can set the type of view by using the [AssistView](https://help.syncfusion.c
 
 ```
 
-![Blazor AI AssistView Types](./images/ai-assistview-type.png)
+![Blazor AI AssistView Types](./images/ai-assistview-type.webp)
 
 ### Setting name
 
@@ -79,7 +79,7 @@ You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor AI AssistView type Header](./images/ai-assistview-type-header.png)
+![Blazor AI AssistView type Header](./images/ai-assistview-type-header.webp)
 
 ### Setting iconCss
 
@@ -113,7 +113,7 @@ You can customize the view icons by using the [IconCss](https://help.syncfusion.
 
 ```
 
-![Blazor AI AssistView type IconCss](./images/ai-assistview-type-icon.png)
+![Blazor AI AssistView type IconCss](./images/ai-assistview-type-icon.webp)
 
 ### Setting view template 
 
@@ -149,8 +149,8 @@ You can use the [ViewTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-![Blazor AI AssistView assist ViewTemplate](./images/ai-assistview-prompt-template.png)
-![Blazor AI AssistView custom ViewTemplate](./images/ai-assistview-response-template.png)
+![Blazor AI AssistView assist ViewTemplate](./images/ai-assistview-prompt-template.webp)
+![Blazor AI AssistView custom ViewTemplate](./images/ai-assistview-response-template.webp)
 
 #### Show or hide clear button
 
@@ -179,7 +179,7 @@ You can use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor AI AssistView ClearButton](./images/ai-assistview-clear-btn.png)
+![Blazor AI AssistView ClearButton](./images/ai-assistview-clear-btn.webp)
 
 ## Setting active view
 
@@ -221,4 +221,4 @@ You can use the [ActiveView](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ```
 
-![Blazor AI AssistView ActiveView](./images/ai-assistview-activeview.png)
+![Blazor AI AssistView ActiveView](./images/ai-assistview-activeview.webp)
