@@ -121,15 +121,20 @@ var app = builder.Build();
 
 Update **~/_Imports.razor**:
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="~/Components/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SmartRichTextEditor
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 3: Use Azure OpenAI with Smart Rich Text Editor Component
 
-```razor
-@page "/editor"
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
@@ -144,7 +149,9 @@ Update **~/_Imports.razor**:
         <p>Welcome to the Smart Rich Text Editor — try selecting a sentence to see AI suggestions.</p>
     </div>
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Using Configuration Files
 
