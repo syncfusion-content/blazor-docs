@@ -11,12 +11,12 @@ documentation: ug
 
 This guide explains how to use **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components** inside a **[React](https://react.dev/)** application.
 
-Blazor and React are different frontend frameworks. Blazor uses .NET and Razor components, while React uses JavaScript/TypeScript and JSX. These frameworks cannot directly share UI components. However, **[Blazor Custom Elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0&preserve-view=true)** make integration possible by exposing Razor components as standard web components (custom HTML elements), allowing React to render them like any other DOM element.
+Blazor and React are different frontend frameworks. Blazor uses .NET and Razor components, while React uses JavaScript/TypeScript and JSX. These frameworks cannot directly share UI components. However, **[Blazor Custom Elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-8.0&preserve-view=true)** make integration possible by exposing Razor components as standard web components (custom HTML elements), allowing React to render them like any other DOM element.
 
 ## Prerequisites
 
 * [.NET 8 (LTS) or later](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [Node.js 18 or later](https://nodejs.org/en/download/)  
+* [Node.js 18 or later](https://nodejs.org/en/download/)
 * [React (Vite) project setup](https://vitejs.dev/guide/)
 
 N> This guide uses the **Blazor Server** template with `blazor.server.js` rather than the newer Blazor Web App template with `blazor.web.js`. Microsoft recommends using `blazor.server.js` (Blazor Server) and `blazor.webassembly.js` (Blazor WebAssembly) scripts when integrating Razor components into existing JavaScript applications until better support for `blazor.web.js` is added. For more information, see [RegisterCustomElement stopped working in Blazor 8](https://github.com/dotnet/aspnetcore/issues/53920).
@@ -48,7 +48,7 @@ The **[Microsoft.AspNetCore.Components.CustomElements](https://www.nuget.org/pac
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
-dotnet add package Microsoft.AspNetCore.Components.CustomElements
+dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0.5
 
 {% endhighlight %}
 {% endtabs %}
@@ -68,9 +68,9 @@ Add the following Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor namesp
 
 ### Add stylesheet and script resources
 
-Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS files (e.g., bootstrap5.css, material.css) are referenced to avoid conflicts.
+Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS files (e.g., `bootstrap5.css`, `material.css`) are referenced to avoid conflicts.
 
-Add the following stylesheet and script references inside the `_Host.cshtml` file. 
+Add the following stylesheet and script references inside the `_Host.cshtml` file.
 
 {% tabs %}
 {% highlight html tabtitle="_Host.cshtml" hl_lines="4 10" %}
@@ -95,11 +95,12 @@ Add the following stylesheet and script references inside the `_Host.cshtml` fil
 
 Create a `.razor` file inside the `Pages` folder to add the Syncfusion<sup style="font-size:70%">&reg;</sup> [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
 
-In this example, the file name used is `OrdersGrid.razor`.
+In this example, the file name is `OrdersGrid.razor`.
 
 {% tabs %}
 {% highlight razor tabtitle="OrdersGrid.razor" %}
 
+@using Syncfusion.Blazor.Grids
 @namespace BlazorServerHost.Pages
 
 <SfGrid DataSource="@Orders">
@@ -112,7 +113,7 @@ In this example, the file name used is `OrdersGrid.razor`.
 </SfGrid>
 
 @code{
-    public List<Order> Orders { get; set; } = new();
+    public List<Order> Orders { get; set; } = new List<Order>();
 
     protected override void OnInitialized()
     {
@@ -146,7 +147,7 @@ Also, ensure that Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor servic
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="2 5 6 7 8 10" %}
-...
+... 
 using Syncfusion.Blazor;
 ...
 // Registers the OrdersGrid component as the <sf-orders-grid> custom element.
@@ -182,7 +183,7 @@ npm install
 
 React (Vite) and Blazor run on separate development servers. To allow React to access Blazor's static files, you need to configure a development proxy.
 
-Before setting up the proxy, run your Blazor application and copy its **local development server URL** (e.g., `http://localhost:5167`). You will need this URL when assigning the `target` field.
+Before setting up the proxy, run your Blazor application and copy its **local development server URL** from the console output (e.g., `http://localhost:5167`). You will need this URL when assigning the `target` field.
 
 Open the `vite.config.js` file and configure the proxy to the Blazor server by replacing the following code.
 
@@ -219,12 +220,12 @@ export default defineConfig({
 
 ### Load Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> assets in React
 
-The Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> scripts/themes are required for rendering Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components inside React. Add the following resources to the `index.html` file of your React project.
+The Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> scripts/themes are required for rendering Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components inside React. Add the following resources to the `index.html` file of your React project. Place the stylesheet in the `<head>` section and the scripts before the closing `</body>` tag.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" hl_lines="2 5 8" %}
 
-<!-- Syncfusion Blazor theme -->
+<!-- Syncfusion Blazor theme stylesheet-->
 <link rel="stylesheet" href="/_content/Syncfusion.Blazor.Themes/fluent2.css" />
 
 <!-- Syncfusion Blazor Core script -->
@@ -242,10 +243,10 @@ The Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> scripts/
 
 In this example, the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component is wrapped inside a custom Razor component named `OrdersGrid`, which is then exposed to React as the `<sf-orders-grid>` custom element.
 
-Create a `.jsx` file inside the `src` folder and add the React wrapper component. In this example, the file name used is `OrdersGrid.jsx`.
+Create a `.jsx` file inside the `src` folder and add the React wrapper component. In this example, the file name is `OrdersGrid.jsx`.
 
 {% tabs %}
-{% highlight js tabtitle="OrdersGrid.jsx" %}
+{% highlight jsx tabtitle="OrdersGrid.jsx" %}
 
 export default function OrdersGrid() {
   return (
@@ -260,13 +261,12 @@ export default function OrdersGrid() {
 {% endhighlight %}
 {% endtabs %}
 
-
 **Integrate the component into the App**
 
 Add the following code snippet to the `App.jsx` file.
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight jsx tabtitle="App.jsx" %}
 
 import OrdersGrid from './OrdersGrid'
 
@@ -280,6 +280,8 @@ export default App
 {% endtabs %}
 
 ## Run both applications
+
+You need to run both applications simultaneously in separate terminal windows.
 
 **Terminal 1 - Blazor Server**
 
