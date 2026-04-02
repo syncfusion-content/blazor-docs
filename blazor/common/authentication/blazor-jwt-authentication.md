@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor with JWT Authentication
+title: Blazor with JWT Authentication | Syncfusion
 description: Guide to setting up JWT authentication for Syncfusion Blazor DataGrid with secure API access and token handling.
 platform: Blazor
 control: Common
@@ -306,7 +306,6 @@ namespace BlazorJWT.Controllers;
 [IgnoreAntiforgeryToken] // DataManager uses bearer token authentication; antiforgery tokens are not applicable for API endpoints using JWT.
 public class GridController : ControllerBase
 {
-
     [HttpPost]
     public IActionResult Post([FromBody] DataManagerRequest dm)
     {
@@ -370,7 +369,7 @@ Attach the JWT token to HTTP headers so the DataManager can send authenticated r
     {
         ["Authorization"] = string.IsNullOrEmpty(jwt) ? "" : $"Bearer {jwt}"
     };
-    // Note: Ensure jwt is set before the DataManager is rendered; otherwise headers may be empty.
+    // Ensure jwt is set before the DataManager is rendered; otherwise headers may be empty.
     private async Task LoadGridWithToken()
     {
         error = null;
