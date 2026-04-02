@@ -45,7 +45,7 @@ The below sample demonstrates the configuration of paragraph block in the Block 
 }
 ```
 
-![Blazor Block Editor Paragraph Block](./../images/paragraph-block.png)
+![Blazor Block Editor Paragraph Block](./../images/paragraph-block.webp)
 
 
 ### Configure placeholder
@@ -87,7 +87,7 @@ The below sample demonstrates the configuration of placeholder in the Block Edit
 }
 ```
 
-![Blazor Block Editor Paragraph placeholder](./../images/paragraph-placeholder.png)
+![Blazor Block Editor Paragraph placeholder](./../images/paragraph-placeholder.webp)
 
 ## Configure heading block
 
@@ -146,7 +146,7 @@ The following sample demonstrates the configuration of a heading block in the Bl
 }
 ```
 
-![Blazor Block Editor Heading Blocks](./../images/heading-block.png)
+![Blazor Block Editor Heading Blocks](./../images/heading-block.webp)
 
 ### Configure placeholder
 
@@ -194,4 +194,4 @@ This sample shows how to place a divider between two blocks.
 }
 ```
 
-![Blazor Block Editor Divider Block](./../images/divider-block.png)
+![Blazor Block Editor Divider Block](./../images/divider-block.webp)
