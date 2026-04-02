@@ -279,4 +279,4 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AI AssistView LLM Integration](../images/llm-integration.png)
+![Blazor AI AssistView LLM Integration](../images/llm-integration.webp)

@@ -275,7 +275,7 @@ Keytips can be added to Ribbon items by using the `KeyTip` property in the `Ribb
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon items keytip](./images/keytip/items-keytip.png)
+![Ribbon items keytip](./images/keytip/items-keytip.webp)
 
 ### File menu keytip
 
@@ -346,7 +346,7 @@ A keytip can be added to the File menu by using the `KeyTip` property.
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon file menu keytip](./images/keytip/file-menu-keytip.png)
+![Ribbon file menu keytip](./images/keytip/file-menu-keytip.webp)
 
 ### Backstage menu keytip
 
@@ -418,7 +418,7 @@ Keytips can be added for the backstage button and menu items by using the `KeyTi
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon backstage menu keytip](./images/keytip/backstage-keytip.png)
+![Ribbon backstage menu keytip](./images/keytip/backstage-keytip.webp)
 
 ### Ribbon layout switcher keytip
 
@@ -489,7 +489,7 @@ A keytip can be added to the layout switcher by using the `LayoutSwitcherKeyTip`
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon layout switcher keytip](./images/keytip/layout-switcher-keytip.png)
+![Ribbon layout switcher keytip](./images/keytip/layout-switcher-keytip.webp)
 
 ### Ribbon launcher icon keytip
 
@@ -561,7 +561,7 @@ A keytip can be added to the launcher icon by using the `LauncherIconKeyTip` pro
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon launcher icon keytip](./images/keytip/launcher-icon-keytip.png)
+![Ribbon launcher icon keytip](./images/keytip/launcher-icon-keytip.webp)
 
 ## Methods
 
@@ -654,7 +654,7 @@ The `HideKeyTipsAsync` method removes all visible keytips from the Ribbon dynami
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Show Hide keytips](./images/keytip/show-hide-keytip.png)
+![Ribbon Show Hide keytips](./images/keytip/show-hide-keytip.webp)
 
 ## Guidelines for adding keytips
 
