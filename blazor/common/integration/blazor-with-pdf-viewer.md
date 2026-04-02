@@ -56,15 +56,13 @@ Add Syncfusion<sup style="font-size:70%">&reg;</sup> and required .NET namespace
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service to the `~/Program.cs` file to enable Syncfusion<sup style="font-size:70%">&reg;</sup> components in the application.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 9 11 13" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="2 7 9 11" %}
 
 ...
 using Syncfusion.Blazor;
-
 var builder = WebApplication.CreateBuilder(args);
+...
 
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
 // Configure SignalR to support large PDF file transfers
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 // Add memory cache for PDF Viewer component caching
@@ -126,29 +124,22 @@ The example below displays a **DataGrid** with sample order data, and selecting 
 N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazor project. The PDF filename must match the `PdfFileName` property value from the selected order record. For example, if the `PdfFileName` is `Order_1001.pdf`, the file should exist at `wwwroot/PDFs/Order_1001.pdf`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 @rendermode InteractiveServer
-
-@* Inject IWebHostEnvironment to access the web root path for locating PDF files *@
 @inject IWebHostEnvironment WebHostEnvironment
 
 <PageTitle>Dynamic PDF Viewer</PageTitle>
 
 <div class="container-fluid">
     <h2 class="mb-4">Order Management System</h2>
-
-    <!-- DataGrid Section -->
     <div class="row">
         <div class="col-12 mb-4">
             <h4>Orders - DataGrid</h4>
             <p class="text-muted">Click on any row to view detailed order information in the PDF viewer below.</p>
-            
-            <!-- Syncfusion DataGrid with single row selection enabled -->
             <SfGrid DataSource="@Orders" TValue="Order" AllowSelection="true">
                 <GridSelectionSettings Type="SelectionType.Single"></GridSelectionSettings>
-                <!-- Event handler triggered when a row is selected -->
                 <GridEvents TValue="Order" RowSelected="OnRowSelected"></GridEvents>
                 <GridColumns>
                     <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
@@ -162,7 +153,6 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
         </div>
     </div>
 
-    <!-- PDF Viewer Section -->
     <div class="row">
         <div class="col-12">
             <h4>Order Details - PDF Viewer</h4>
@@ -170,26 +160,17 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
             {
                 <div class="alert alert-danger">@ErrorMessage</div>
             }
-            <!-- Syncfusion PDF Viewer component for displaying order PDFs -->
             <SfPdfViewer2 @ref="PdfViewer" Height="600px" Width="100%"></SfPdfViewer2>
         </div>
     </div>
 </div>
 
 @code {
-    // Reference to the PDF Viewer component for programmatic access
     private SfPdfViewer2? PdfViewer;
-    
-    // Collection of orders to display in the grid
     public List<Order> Orders { get; set; } = new();
-    
-    // Error message for user feedback
     private string ErrorMessage = string.Empty;
-
-    // Initialize sample order data on component load
     protected override void OnInitialized()
     {
-        // Define customer names
         string[] customers = { 
             "Alfreds Futterkiste", 
             "Ana Trujillo Emparedados", 
@@ -197,11 +178,7 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
             "Blondel père et fils", 
             "Bólido Comidas preparadas" 
         };
-
-        // Define cities
         string[] cities = { "Berlin", "Madrid", "Paris", "London", "Rome" };
-
-        // Define employee names for sales representatives
         string[] employees = { "John Smith", "Jane Doe", "Bob Wilson", "Alice Brown", "Mike Johnson" };
         
         // Create 5 sample orders with sequential data
@@ -217,29 +194,17 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
         }).ToList();
     }
 
-    // Event handler for grid row selection - loads the corresponding PDF file
     private async Task OnRowSelected(RowSelectEventArgs<Order> args)
     {
-        // Clear any previous error messages
         ErrorMessage = string.Empty;
-        
         try
         {
-            // Construct the full path to the PDF file
-            // Note: PDF files should be placed in the wwwroot/PDFs folder of your Blazor project
-            // The filename must match the PdfFileName property value from the selected order
+            // Build the full path to the selected order's PDF in wwwroot/PDFs using its PdfFileName
             string pdfFilePath = Path.Combine(WebHostEnvironment.WebRootPath, "PDFs", args.Data.PdfFileName);
-            
-            // Check if the PDF file exists before attempting to load
             if (File.Exists(pdfFilePath))
             {
-                // Read the PDF file as a byte array
                 var pdfBytes = await File.ReadAllBytesAsync(pdfFilePath);
-                
-                // Create a memory stream from the PDF bytes
                 using var pdfStream = new MemoryStream(pdfBytes);
-                
-                // Load the PDF into the viewer component
                 if (PdfViewer != null)
                 {
                     await PdfViewer.LoadAsync(pdfStream);
@@ -247,22 +212,17 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
             }
             else
             {
-                // Display error if PDF file is not found
                 ErrorMessage = $"PDF file not found: {args.Data.PdfFileName}";
-                // For production apps, use ILogger instead of Console.WriteLine
                 Console.WriteLine($"PDF file not found: {pdfFilePath}");
             }
         }
         catch (Exception ex)
         {
-            // Handle and display any errors during PDF loading
             ErrorMessage = $"Error loading PDF: {ex.Message}";
-            // For production apps, use ILogger instead of Console.WriteLine
             Console.WriteLine($"Error loading PDF: {ex.Message}");
         }
     }
 
-    // Data model representing an order with shipping and customer details
     public class Order
     {
         public int OrderID { get; set; }
@@ -271,8 +231,7 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
         public DateTime OrderDate { get; set; }
         public string ShipCity { get; set; } = "";
         public double ShippingCost { get; set; }
-        // PDF filename that corresponds to this order
-        // Important: The actual PDF file with this name must exist in wwwroot/PDFs folder
+        // PDF filename for this order (place the matching file in wwwroot/PDFs)
         public string PdfFileName { get; set; } = "";
     }
 }
