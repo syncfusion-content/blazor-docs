@@ -9,22 +9,24 @@ documentation: ug
 
 # Edit Types in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports multiple edit types that allow customization of the editing behavior for individual columns. These edit types improve data entry efficiency and provide flexibility for handling various data types.
+The Blazor DataGrid in Syncfusion<sup style="font-size:70%">&reg;</sup> provides powerful edit types that enable seamless customization of the editing behavior for different column types. These edit types deliver flexibility in handling diverse data types, enhance the editing experience, and provide efficient solutions for different editing scenarios.
 
-## Default cell edit type editor
+## Built-in cell editors
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in editors to streamline data editing and input handling within the grid. These editors automatically apply based on the column's data type, reducing the need for manual configuration. The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html) property can be used to specify the desired editor for each column.
-The available default edit types include:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides pre-built default editors that enhance data editing and input handling within the DataGrid. The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html) property specifies which editor component renders in a DataGrid column during editing. Each data type (string, number, date, boolean) has a corresponding editor that automatically formats and validates user input.
 
-| Component                                                                                      | Edit Type Value      | Description                                                                                                   |
-|------------------------------------------------------------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------|
-| [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)          | DefaultEdit          | Renders a `SfTextBox` for columns with string data types.                             |
-| [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit          | Renders a `SfNumericTextBox` for numeric data types such as int, double, and float.|
-| [`SfDropDownList`](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | DropDownEdit         | Renders a `SfDropDownList` for string data types with predefined options.                        |
-| [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit          | Renders a `SfCheckBox` for boolean data types.                           |
-| [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit       | Renders a `SfDatePicker` for date data types.                          |
-| [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit   | TRenders a `SfDateTimePicker` for date-time data types.             |
+The available default edit types are as follows:
 
+Component|Edit Type value |Description
+----|-----|-----
+[SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)|`DefaultEdit`|  Renders a `SfTextBox` for string data type columns. 
+[SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)|`NumericEdit`| Renders a `SfNumericTextBox` for integers, double, float, short, byte, long, and decimal data types.
+[SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app)|`DropDownEdit`| Renders a `SfDropDownList` for string data type columns with predefined options.
+[SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app)|`BooleanEdit`| Renders a `SfCheckBox` for boolean data type columns.
+[SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app)|`DatePickerEdit`| Renders a `SfDatePicker` for date data type columns.
+[SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app)|`DateTimePickerEdit`| Renders a `SfDateTimePicker` for date-time data type columns.
+
+The following example demonstrates how to define the `EditType` for DataGrid columns:
 
 ```cs
 <GridColumns>
@@ -37,24 +39,24 @@ The available default edit types include:
 </GridColumns>
 ```
 
+> If `EditType` is not defined in the column, then it will be considered as the `DefaultEdit` type (`SfTextBox`).
+
 ## Customizing the default editors
 
 The behavior of default editors in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html)component.
 
-> * The properties that can be customized through `EditorSettings` in default Grid editors are limited. Refer to the related topics below for a list of supported properties.
+> * The properties that can be customized through `EditorSettings` in default DataGrid editors are limited. Refer to the related topics below for a list of supported properties.
 > * To apply additional customizations beyond the supported properties, refer to the [Template Editing](https://blazor.syncfusion.com/documentation/datagrid/template-editing) documentation for rendering custom components within the edit form.
 
-## Customize TextBox of StringEdit type
+## Customize built-in TextBox editor 
 
-The default [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) rendered for string data type columns in the Grid edit form can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the GridColumn component. This customization enables configuration of various properties of the `SfTextBox` to match specific editing requirements.
+Enhance the default [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) in DataGrid edit form by customizing its properties. This enables configuration of various `SfTextBox` features, tailoring its behavior and appearance to match specific requirements within the DataGrid. Fine-tune the editor behavior through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property for powerful customization options.
 
 The [StringEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.StringEditCellParams.html) class is used to define the `EditorSettings` for the column.
 
-The table below outlines key aspects of customizing a `SfTextBox` using the `EditorSettings` property:
-
-| Component                                                                                      | Edit Type   | Description                                                                                                   | Example Customized Edit Params       |
-|------------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)          | DefaultEdit | Renders a `SfTextBox` for string data type columns. For available customization options, refer to the [SfTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html). | Params: { ShowClearButton: true } |
+Component|Edit Type |Description|Example Customized edit params
+-----|---|-----|-----|
+[SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) |DefaultEdit| The `DefaultEdit` type renders a `SfTextBox` for string data type columns. To customize the `SfTextBox`, refer to the [SfTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html). | Params: { ShowClearButton: true}
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -142,17 +144,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNretIsEsetnBOie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize NumericTextBox of NumericEdit type 
+## Customize built-in NumericTextBox editor
 
-The [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) rendered in the Grid edit form for numeric data type columns can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This customization enables configuration of various properties of the `SfNumericTextBox` to align with specific editing requirements.
+Enhance the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) in DataGrid edit form by customizing its properties. This enables configuration of various `SfNumericTextBox` features, tailoring its behavior and appearance to match specific requirements within the DataGrid. Fine-tune the editor behavior through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 The [NumericEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.NumericEditCellParams.html) class is used to define the `EditorSettings` for numeric columns.
 
-The table below outlines key aspects of customizing a `SfNumericTextBox` using the `EditorSettings` property:
-
-| Component                                                                                      | Edit Type   | Description                                                                                                   | Example Customized Edit Params       |
-|------------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit | Renders a `SfNumericTextBox` for numeric data types such as int, double, float, short, byte, long, and decimal. For additional configuration options, refer to the [SfNumericTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html). | Params: { decimals: 2, value: 5 }    |
+Component| Edit Type |Description |Example Customized edit params
+-----|-----|-----|----|
+[SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)|NumericEdit| The `NumericEdit` type renders a `SfNumericTextBox` for integers, double, float, short, byte, long, and decimal data types columns. To customize the `SfNumericTextBox`, refer to the [SfNumericTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html). | Params: { decimals: 2, value: 5 }
 
 The following example demonstrates how to customize the `SfNumericTextBox` editor for the **Freight** column in the Grid:
 
@@ -243,13 +243,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLyNSMzsdfWrGHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Restrict decimal points in a NumericTextBox while editing a numeric column
+### Restrict decimal points in NumericTextBox during numeric column editing
 
-By default, the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) allows input of decimal values with up to two decimal places when editing numeric columns. In scenarios where only whole numbers are required, decimal input can be restricted using the [ValidateDecimalOnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_ValidateDecimalOnType) and [Decimals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Decimals) properties of `SfNumericTextBox`.
+By default, the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) allows entering decimal values with up to two decimal places when editing a numeric column. However, there might be cases where restricting input to whole numbers only (without decimal points) is preferred. In such scenarios, use the [ValidateDecimalOnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_ValidateDecimalOnType) and [Decimals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Decimals) properties provided by Syncfusion's `SfNumericTextBox`.
 
-The `ValidateDecimalOnType` property determines whether decimal points are permitted during input. By default, this property is set to **false**, allowing decimal values to be entered. When set to **true**, decimal input is restricted, and only whole numbers are accepted.
+The `ValidateDecimalOnType` property is used to control whether decimal points are allowed during input in the `SfNumericTextBox`. By default, it is set to `false`, allowing decimal points to be entered. However, when set to `true`, decimal points will be restricted, and only whole numbers can be entered.
 
-The `Decimals` property defines the number of decimal places displayed in the `SfNumericTextBox`. The default value is **2**, which displays two decimal places. This value can be modified to control the number of visible decimal digits.
+The `Decimals` property specifies the number of decimal places to be displayed in the `SfNumericTextBox`. By default, it is set to 2, meaning that two decimal places will be displayed. Modify this value to customize the decimal places according to specific requirements.
+
+In the below demo, while editing the row the decimal point value is restricted to type in the `SfNumericTextBox` of "Freight" column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -343,17 +345,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhyjoifsHoSQlcn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize DropDownList of DropDownEdit type
+## Customize built-in DropDownList editor
 
-The [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) rendered in the Grid edit form for string data type columns can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the GridColumn component. This customization enables configuration of various properties of the `SfDropDownList` to align with specific editing requirements.
+Enhance the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) in DataGrid edit form by customizing its properties. This enables configuration of various `SfDropDownList` features, tailoring its behavior and appearance to match specific requirements within the DataGrid. Fine-tune the editor behavior through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property for flexible selection capabilities. 
 
 The [DropDownEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DropDownEditCellParams.html) class is used to define the `EditorSettings` for string columns.
 
-The table below outlines key aspects of customizing a `SfDropDownList` using the `EditorSettings` property:
-
-| Component                                                                                      | Edit Type     | Description                                                                                                                                              | Example Customized Edit Params     |
-|------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | DropDownEdit | Renders a `SfDropDownList` for string data type columns. For additional configuration options, refer to the [SfDropDownList API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html). | Params = { Value: 'Germany' }       |
+Component|Edit Type |Description| Example Customized edit params
+-----|-----|-----|----|
+[SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app)|DropDownEdit|  The `DropDownEdit` type renders a `SfDropDownList` for string data type columns. To customize the SfDropDownList, refer to the [SfDropDownList API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html).  | Params = { Value: 'Germany' }
 
 > The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property in `DropDownListModel` must be of type **IEnumerable<TItem>**. Avoid binding **string[]** or **List<string>** directly to the `DataSource` property.
 
@@ -445,11 +445,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhyjyWkslpZKQfq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Provide custom data source for DropDownList
+### Provide custom data source for DropDownList editor
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, a custom data source can be assigned to the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) used in the edit form. This approach enables the definition of a specific set of values for the `SfDropDownList`, allowing precise control over the available options.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, provide a custom data source for the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app). This feature allows definition of a specific set of values for the `SfDropDownList`.
 
-To configure a custom data source, use the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). Additional configurations, such as filtering or querying the data, can be applied using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_Query) property.
+To achieve this, utilize the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+
+Additional configurations, such as filtering or querying the data, can be applied using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_Query) property.
+
+In the below demo, `SfDropDownList` is rendered with custom data source for the "Ship Country" column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -544,11 +548,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhINespMHFAJVNG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Apply filtering for DropDownList
+### Enable filtering in DropDownList editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports filtering in the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) used within the edit form. This feature enables selection from a predefined list with the ability to search for specific items using built-in filtering functionality.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides filtering for the `SfDropDownList` within the edit form. This feature enables selection of options from a predefined list and easier search for specific items using the built-in filtering feature.  
 
 To enable filtering, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property to **true** within the [DropDownEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DropDownEditCellParams.html). This activates the filtering capability in the `SfDropDownList`.
+
+In the following demo, filtering is enabled for the "Ship Country" column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -638,17 +644,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNByZeMTscjKzOYt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize CheckBox of BooleanEdit Type
+## Customize built-in CheckBox editor
 
-The [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) rendered in the Grid edit form for boolean data type columns can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This customization allows configuration of various properties of the `SfCheckBox` to match specific editing requirements.
+Enhance the [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) in DataGrid edit form by customizing its properties. This enables configuration of various `SfCheckBox` features, tailoring its behavior and appearance to match specific requirements within the DataGrid. Fine-tune the editor behavior through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This customization allows configuration of various properties of the `SfCheckBox` to match specific editing requirements.
 
 The [BooleanEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.BooleanEditCellParams.html) class is used to define the `EditorSettings` for boolean columns.
 
-The table below outlines key aspects of customizing a `SfCheckBox` using the `EditorSettings` property:
-
-| Component  | Edit Type    | Description                                                                                              | Example Customized Edit Params |
-|------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
-| [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit  | Renders a `SfCheckBox` for boolean data type columns. For additional configuration options, refer to the [SfCheckBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox.html). | Params: { Checked: true }      |
+Component| Edit Type |Description |Example Customized edit params
+-----|-----|-----|----|
+[SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app)| BooleanEdit | The `BooleanEdit` type renders a `SfCheckBox` for boolean data type. To customize the `SfCheckBox`, refer to the [SfCheckBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox.html). | Params: { Checked: true}
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -738,17 +742,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrSZoMkiYjhGzhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize DatePicker of DatePickerEdit Type
+## Customize built-in DatePicker editor
 
-The [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) rendered in the Grid edit form for date data type columns can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings)  property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This customization enables configuration of various properties of the `SfDatePicker` to align with specific editing requirements.
+Enhance the [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) in DataGrid edit form by customizing its properties. This enables configuration of various `SfDatePicker` features, tailoring its behavior and appearance to match specific requirements within the DataGrid. Fine-tune the editor behavior through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property for powerful date selection control. This customization enables configuration of various properties of the `SfDatePicker` to align with specific editing requirements.
 
 The [DateEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DateEditCellParams.html) class is used to define the `EditorSettings` for date columns.
 
-The table below outlines key aspects of customizing a `SfDatePicker` using the `EditorSettings` property:
-
-| Component  | Edit Type    | Description                                                                                              | Example Customized Edit Params |
-|------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
-| [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit  | Renders a `SfDatePicker` for date data type columns. For additional configuration options, refer to the [SfDatePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html). | Params: { Format:’dd.MM.yyyy’ }      |
+Component| Edit Type |Description|Example Customized edit params
+-----|-----|-----|----|
+[SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app)| DatePickerEdit | The `DatePickerEdit` type renders a `SfDatePicker` for date data type columns. To customize the SfDatePicker, refer to the [SfDatePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html). | Params: { Format:'dd.MM.yyyy' }
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -847,11 +849,9 @@ public class OrderData
 
 ## Customize TimePicker of TimePickerEdit Type
 
-The [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) rendered in the Grid edit form for time data type columns can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings)  property of the Grid[GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html)Column component. This customization enables configuration of various properties of the `SfTimePicker` to align with specific editing requirements.
+The [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) rendered in the DataGrid edit form for time data type columns can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings)  property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This customization enables configuration of various properties of the `SfTimePicker` to align with specific editing requirements.
 
 The [TimeEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TimeEditCellParams.html) class is used to define the `EditorSettings` for time columns.
-
-The table below outlines key aspects of customizing a `SfTimePicker` using the `EditorSettings` property:
 
 | Component  | Edit Type    | Description                                                                                              | Example Customized Edit Params |
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
@@ -948,17 +948,15 @@ The table below outlines key aspects of customizing a `SfTimePicker` using the `
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrfWhWRHKMBbbnG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize DateTimePicker of DateTimePickerEdit Type
+## Customize built-in DateTimePicker editor
 
-The [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) rendered in the Grid edit form for date-time data type columns can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This customization enables configuration of various properties of the `SfDateTimePicker` to align with specific editing requirements.
+Enhance the [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) in DataGrid edit form by customizing its properties. This enables configuration of various `SfDateTimePicker` features, tailoring its behavior and appearance to match specific requirements within the DataGrid. Fine-tune the editor behavior through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 The [DateTimeEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DateTimeEditCellParams-1.html) class is used to define the `EditorSettings` for date-time columns.
 
-The table below outlines key aspects of customizing a `SfDateTimePicker` using the `EditorSettings` property:
-
-| Component                                                                                      | Edit Type          | Description                                                                                                   | Example Customized Edit Params       |
-|------------------------------------------------------------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit | Renders a `SfDateTimePicker` for date-time data type columns. For additional configuration options, refer to the [SfDateTimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html). | Params: { Value: new Date() }         |
+Component|Edit Type |Description |Example Customized edit params
+-----|-----|-----|----|
+[SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app)| DateTimePickerEdit | The `DateTimePickerEdit` type renders a `SfDateTimePicker` for date time data type columns. Customize the `SfDateTimePicker` by referring to the [SfDateTimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html). | Params: { Value: new Date() }
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1063,13 +1061,15 @@ The table below outlines key aspects of customizing a `SfDateTimePicker` using t
  
 ## Render custom cell editors
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering custom cell editors for specific columns. This feature is useful when custom components are required to handle data editing within a Grid column. To implement this functionality, use the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering custom cell editors for specific columns. Unlike built-in editors (TextBox, DatePicker, DropDownList), custom editors allow developers to integrate specialized components that match unique business requirements and data entry workflows. This powerful feature enables enhanced user experience by presenting the right editing interface for each data type. 
 
-> Custom components used within the `EditTemplate` must implement two-way binding using (**@bind-Value**) to ensure that changes are reflected in the Grid.
+To implement this functionality, use the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+
+> Custom components used within the `EditTemplate` must implement two-way binding using (**@bind-Value**) to ensure that changes are reflected in the DataGrid.
 
 ### Render TextArea in EditTemplate 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfTextArea](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp) within the Grid's edit form for specific columns. This functionality is useful for editing and displaying multi-line text content, providing an efficient way to manage extensive text data within Grid cells.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfTextArea](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp) within the DataGrid's edit form for specific columns. This functionality is useful for editing and displaying multi-line text content, providing an efficient way to manage extensive text data within DataGrid cells.
 
 To render a `SfTextArea` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template used as an editor for the column and accepts either a template string or an HTML element ID.
 
@@ -1171,9 +1171,9 @@ public class OrderData
 
 ### Prevent the enter key functionality in multiline textbox while editing
 
-While editing a row in **Normal** or **Dialog** edit mode, pressing the **Enter** key triggers a save action for the current cell or the entire edit form. When using a multiline textbox, this behavior may interfere with the expected input experience, where pressing **Enter** should insert a new line instead of saving the record.
+While editing a row in **Normal** or **Dialog** edit mode, pressing the <kbd>ENTER</kbd> key triggers a save action for the current cell or the entire edit form. When using a multiline `SfTextBox`, this behavior may interfere with the expected input experience, where pressing <kbd>ENTER</kbd> should insert a new line instead of saving the record.
 
-To override this behavior, use the OnFocus event of the SfTextBox to attach a custom JavaScript handler. This handler can prevent the default save action by calling the `stopPropagation()` method when the **Enter** key is pressed.
+To override this behavior, use the `OnFocus` event of the `SfTextBox` to attach a custom JavaScript handler. This handler can prevent the default save action by calling the `stopPropagation()` method when the <kbd>ENTER</kbd> key is pressed.
 
 ```cshtml
 function editKeyDown(id) {    
@@ -1239,9 +1239,9 @@ function editKeyDown(id) {
 
 ### Render AutoComplete in EditTemplate
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering an [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) component within the Grid's edit form for specific columns. This feature is useful for providing dropdown-style auto-suggestions and input assistance during data entry.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering an [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) within the DataGrid's edit form for specific columns. This feature is useful for providing dropdown-style auto-suggestions and input assistance during data entry.
 
-To render an `SfAutoComplete` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template used as an editor for the column and accepts either a template string or an HTML element ID.
+To render an `SfAutoComplete` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1339,9 +1339,9 @@ public class OrderData
 
 ### Render MaskedTextBox in EditTemplate
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfMaskedTextBox](https://blazor.syncfusion.com/documentation/input-mask/getting-started-with-web-app) within the Grid's edit form for specific columns. This feature is useful for enforcing input formats such as phone numbers, postal codes, or other structured data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfMaskedTextBox](https://blazor.syncfusion.com/documentation/input-mask/getting-started-with-web-app) within the DataGrid's edit form for specific columns. This feature is useful for enforcing input formats such as phone numbers, postal codes, or other structured data.
 
-To render a `SfMaskedTextBox` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template used as an editor for the column and accepts either a template string or an HTML element ID.
+To render a `SfMaskedTextBox` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1439,9 +1439,9 @@ To render a `SfMaskedTextBox` in the edit form, define an [EditTemplate](https:/
 
 ### Render DropDownList in EditTemplate
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) within the Grid’s edit form for specific columns. This feature provides a convenient way to select values from a predefined list during data entry.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) within the DataGrid’s edit form for specific columns. This feature provides a convenient way to select values from a predefined list during data entry.
 
-To render a `SfDropDownList` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template used as an editor for the column and accepts either a template string or an HTML element ID.
+To render a `SfDropDownList` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1554,9 +1554,9 @@ public class OrderData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering images within the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) editor. This feature enhances the visual representation of dropdown items by displaying images alongside text values.
 
-To render a `SfDropDownList` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template used as an editor for the column and accepts either a template string or an HTML element ID.
+To render a `SfDropDownList` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). To display images within the dropdown items, use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property of the `SfDropDownList`. This property allows customization of the content for each item in the dropdown list.
 
-To display images within the dropdown items, use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property of the `SfDropDownList`. This property allows customization of the content for each item in the dropdown list.
+The following example demonstrates rendering images in the `SfDropDownList` using the `ItemTemplate` in “EmployeeID”.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1723,9 +1723,9 @@ public class EmployeeData
 
 ### Render multiple columns in DropDownList
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) within the Grid's edit form for specific columns. This feature is useful for displaying detailed information for each item in the dropdown, such as multiple fields from a data source.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) within the DataGrid's edit form for specific columns. This feature is useful for displaying detailed information for each item in the dropdown, such as multiple fields from a data source.
 
-To render a `SfDropDownList` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template used as an editor for the column and accepts either a template string or an HTML element ID.
+To render a `SfDropDownList` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 The `SfDropDownList` provides several customization options for list items, including support for multiple columns using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate) and [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) properties. These templates allow customization of the list item layout, including headers and multiple data fields.
 
@@ -1865,6 +1865,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports re
 
 To use a `SfComboBox` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` allows customization of the cell editor for a column.
 
+The following example demonstrates rendering a `SfComboBox` in the “Ship Country” column:
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -1977,7 +1979,7 @@ public class OrderData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) inside the edit form of a specific column. This feature is useful when numeric input is required, with support for formatting, increment/decrement controls, and validation.
 
-To use a `SfNumericTextBox` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` allows customization of the cell editor for a column and accepts a Razor template.
+To use a `SfNumericTextBox` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2075,9 +2077,11 @@ public class OrderData
 
 ### Render TimePicker in EditTemplate
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to render a [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) within the Grid’s edit form for a specific column. This feature is especially valuable when you need to provide a time input, such as appointment times, event schedules, or any other time-related data for editing in the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to render a [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) within the DataGrid’s edit form for a specific column. This feature is especially valuable when you need to provide a time input, such as appointment times, event schedules, or any other time-related data for editing in the DataGrid.
 
-To render a `SfTimePicker` in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a `SfTimePicker` in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+
+The following example demonstrates rendering a `SfTimePicker` in the "Order Date" column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2174,11 +2178,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVoDoCTWuGyZZsM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> The `SfTimePicker` displays only the time portion. However, all DataGrid data operations—including editing, validation, and CRUD actions are performed using a Date object value. The displayed time format does not change the underlying data type used by the DataGrid.
+
 ### Render MultiSelect DropDown in EditTemplate
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfMultiSelect](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started-webapp) inside the edit form of a specific column. This feature is useful when multiple selections are required, such as assigning multiple tags, categories, or cities.
 
-To use a `SfMultiSelect` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` allows customization of the cell editor for a column and accepts a Razor template.
+To use a `SfMultiSelect` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2300,13 +2306,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrSjyVNJjotXFbu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> When a `MultiSelect` is used, values are stored as a comma‑separated string in the DataGrid data source. All DataGrid data operations are performed based on this combined string value, as DataGrid columns do not support array‑type values.
+
 ### Render RichTextEditor in EditTemplate
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfRichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-webapp) inside the edit form of a specific column. This feature is useful when formatted text input is required, such as for addresses, comments, or descriptions.
 
-To use a `SfRichTextEditor` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The EditTemplate allows customization of the cell editor for a column and accepts a Razor template.
+To use a `SfRichTextEditor` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
-Additionally, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property of the corresponding Grid column to **true**. This ensures that the `SfRichTextEditor` adjusts its width and wraps text content within the column boundaries. To display formatted content correctly in the Grid, disable the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property of the `GridColumn`.
+Additionally, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property of the corresponding Grid column to **true**. This ensures that the `SfRichTextEditor` adjusts its width and wraps text content within the column boundaries. To display formatted content correctly in the DataGrid, disable the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property of the `GridColumn`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2403,9 +2411,9 @@ public class OrderData
 
 ### Render Uploader in EditTemplate
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering an [SfUpload](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) component inside the edit form of a specific column. This feature is useful when file or image uploads are required during data editing.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows rendering an [SfUpload](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) within the DataGrid's edit form. This enables uploading and managing files or images in a specific column during data editing.
 
-To use an `SfUpload` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` allows customization of the cell editor for a column and accepts a Razor template.
+To use an `SfUpload` in the edit form, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2543,7 +2551,9 @@ To use an `SfUpload` in the edit form, configure the [EditTemplate](https://help
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering cascading DropDownLists inside the edit form of specific columns. This functionality is useful for hierarchical selections, such as choosing a country followed by a state based on the selected country.
 
-To implement cascading DropDownLists in Grid editing, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` allows customization of the cell editor for a column and accepts a Razor template.
+To implement cascading DropDownLists in DataGrid editing, configure the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+
+In the below demo, cascading `SfDropDownList` rendered for "Ship Country" and "Ship State" column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2649,7 +2659,7 @@ To implement cascading DropDownLists in Grid editing, configure the [EditTemplat
 
 ### DynamicObject data binding with EditTemplate
 
-By configuring the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), a custom editor can be rendered inside the Blazor DataGrid's edit form. However, when the Grid is bound to a `DynamicObject`, direct two-way (**@bind-Value**) binding is not supported due to the absence of compile-time property types.
+By configuring the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), a custom editor can be rendered inside the Blazor DataGrid's edit form. However, when the DataGrid is bound to a `DynamicObject`, direct two-way (**@bind-Value**) binding is not supported due to the absence of compile-time property types.
 
 In such scenarios, an event-driven approach can be used to perform CRUD operations. For example, a [SfComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) can be placed inside the `EditTemplate`, and changes can be captured using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfComboBox`. The updated value can then be manually applied to the dynamic data using the Grid’s [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event.
 
@@ -2758,9 +2768,9 @@ This event-driven method ensures smooth editing functionality even when working 
 
 ### ExpandoObject data binding with Edit template
 
-The [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) enables rendering a custom editor inside the Blazor DataGrid's edit form. Two-way (**@bind-Value**) binding cannot be applied to the editor within the `EditTemplate` when the Grid is bound to an `ExpandoObject`, due to the absence of compile-time property types.
+The [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) enables rendering a custom editor inside the Blazor DataGrid's edit form. Two-way (**@bind-Value**) binding cannot be applied to the editor within the `EditTemplate` when the DataGrid is bound to an `ExpandoObject`, due to the absence of compile-time property types.
 
-An alternative approach can be used to perform CRUD operations. For example, an [SfTextBox](http://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) can be placed inside the EditTemplate, and changes can be captured using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox`. The updated value can then be manually applied to the dynamic data using the Grid’s [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event.
+An alternative approach can be used to perform CRUD operations. For example, an [SfTextBox](http://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) can be placed inside the `EditTemplate`, and changes can be captured using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox`. The updated value can then be manually applied to the dynamic data using the DataGrid’s [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event.
 
 This alternative enables manual updates to the underlying `ExpandoObject` data, ensuring editing functionality without relying on direct binding.
 

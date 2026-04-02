@@ -98,9 +98,9 @@ Data annotation validation attributes are used to validate fields in the Syncfus
 
 ## Custom validation
 
-Custom validation enables the definition of validation logic tailored to specific application requirements.
+Custom validation rules apply specific rules to grid columns beyond standard built-in validation.
 
-To implement custom validation, define a class that inherits from the `ValidationAttribute` class and override the **IsValid** method. All validation logic should be placed within the **IsValid** method.
+To implement custom validation, define a class that inherits from the `ValidationAttribute` class and override the **IsValid** method. All validation logic should be placed within the **IsValid** method. 
 
 In this configuration, custom validation is applied to the **EmployeeID** and **Freight** fields.
 
@@ -441,7 +441,7 @@ protected void HandleValidation(FieldIdentifier identifier)
 
 The [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component can be used to disable the built-in `Validator` component in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
 
-By default, the Grid uses two validator components:
+By default, the DataGrid uses two validator components:
 
 - DataAnnotationsValidator
 - An internal validator that processes the [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property
@@ -480,7 +480,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports fo
 
 In this configuration, the validation message for **ShipAddress** is displayed in the dialog template, although the **ShipAddress** field is not defined as a Grid column.
 
-> Validation messages for fields not defined in the Grid columns will appear as a validation summary at the top of the dialog edit form.
+> Validation messages for fields not defined in the DataGrid columns will appear as a validation summary at the top of the dialog edit form.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

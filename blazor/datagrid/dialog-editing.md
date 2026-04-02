@@ -9,7 +9,7 @@ documentation: ug
 
 # Dialog editing in Blazor DataGrid
 
-Dialog editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables editing of data in the selected row using a dialog window. This feature facilitates quick modification of cell values and updates the data source without navigating to a separate page or view. Dialog editing is particularly effective for scenarios requiring streamlined editing of multiple cells.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid dialog editing provides a powerful, efficient way to edit row data through a dedicated modal dialog window that focuses attention on the editing form. Instead of editing cells directly in the DataGrid, multiple field values can be entered and modified at once in a clean, organized form. The DataGrid automatically saves all changes to the data source without navigating away from the current page making data entry faster, more intuitive, and less error-prone, especially when dealing with complex records that span multiple columns.
 
 To enable dialog editing, set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Dialog**. This property defines the editing mode for the DataGrid.
 
@@ -128,7 +128,7 @@ To customize the edit dialog, use the [HeaderTemplate](https://help.syncfusion.c
     }
     public async Task SaveEdit()
     {
-        await Grid.EndEditAsync();       //Save the edited/added data to Grid.
+        await Grid.EndEditAsync();       //Save the edited/added data to DataGrid.
     }
 }
 {% endhighlight %}
@@ -181,7 +181,7 @@ public class OrderDetails
 ## Show or hide columns in dialog editing
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to dynamically show or hide columns during dialog editing. This feature enables conditional column visibility based on the editing context, such as when adding a new record or modifying an existing one.
-To implement this behavior, use the following Grid events:
+To implement this behavior, use the following DataGrid events:
 
 1. [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating): Triggered before a new record is added.
 2. [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing): Triggered before an existing record is edited.
@@ -191,6 +191,8 @@ To implement this behavior, use the following Grid events:
 Within the `RowCreating` and `RowEditing` event handlers, column visibility can be modified using the [Column.Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property. This property determines whether a column is displayed or hidden during dialog editing.
 
 To restore the original visibility state, use the `Column.Visible` property in the `RowUpdating` and `EditCanceling` events.
+
+In the following example, the “Customer ID” column is rendered as a hidden column, and the “Ship Country” column is rendered as a visible column. In the edit mode, the “Customer ID” column will be changed to a visible state and the “Ship Country” column will be changed to a hidden state.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -636,7 +638,7 @@ public class OrderDetails
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports automatic column value updates based on changes made to related columns during dialog editing. This functionality enables dynamic calculations within the edit form using the **Dialog Template** feature.
 
-In the following example, the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) component is rendered inside the dialog edit form. The **Total** column value is calculated based on the **Price** and **Quantity** columns using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxEvents-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxEvents_1_ValueChange) event. 
+In the following example, the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) is rendered inside the dialog edit form. The **Total** column value is calculated based on the **Price** and **Quantity** columns using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxEvents-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxEvents_1_ValueChange) event. 
 
 This behavior is configured using the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating), [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating), and [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) events, along with the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
