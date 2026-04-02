@@ -9,19 +9,13 @@ documentation: ug
 
 # Integrating Syncfusion® Blazor DataGrid with PDF Viewer
 
-This article explains how to integrate the **[Syncfusion® Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer)** together with the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using Server render mode.
+This article explains how to integrate the **[Syncfusion® Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer)** with the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using Server render mode.
 
-If you haven’t created a Blazor Web app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create your project.
+If you haven’t created a Blazor Web App yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create your project.
 
-## Prerequisites
+## Install Syncfusion<sup style="font-size:70%">®</sup> Blazor NuGet packages
 
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
-* .NET CLI or [Visual Studio Code](https://code.visualstudio.com/)
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer, DataGrid, and Themes NuGet packages
-
-From the server project folder (where the `.csproj` is located), install the required packages:
+From the server project folder (where the `.csproj` file is located), install the following packages:
  * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -59,7 +53,7 @@ Add Syncfusion<sup style="font-size:70%">&reg;</sup> and required .NET namespace
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in your server app’s `~/Program.cs` file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service to the `~/Program.cs` file to enable Syncfusion<sup style="font-size:70%">&reg;</sup> components in the application.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="2 9 11 13" %}
@@ -75,7 +69,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 // Add memory cache for PDF Viewer component caching
 builder.Services.AddMemoryCache();
-//Add Syncfusion Blazor service to the container.
+// Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 ...
 
@@ -104,7 +98,7 @@ Add the following stylesheet and script references in the server app's `~/Compon
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure the `Syncfusion.Blazor.Core` script is loaded before the `SfPdfViewer` script, as shown above. The PDF Viewer component depends on core Blazor functionality.
+N> Ensure the `Syncfusion.Blazor.Core` script is loaded before the `SfPdfViewer` script, as shown above. The PDF Viewer component requires the core Blazor script to initialize and function correctly.
 
 ## Configure render mode (Server)
 
@@ -127,7 +121,7 @@ N> If the `interactivity location` is set to `Global` and the app is configured 
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and DataGrid components to any `.razor` file in the server project's `Pages` folder (for example, `~/Pages/Home.razor`).
 
-The example below displays a **DataGrid** with sample order data, selecting a row generates and loads a detailed PDF for that order in the **PDF Viewer**.
+The example below displays a **DataGrid** with sample order data, and selecting a row generates and loads a detailed PDF for that order in the **PDF Viewer**.
 
 N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazor project. The PDF filename must match the `PdfFileName` property value from the selected order record. For example, if the `PdfFileName` is `Order_1001.pdf`, the file should exist at `wwwroot/PDFs/Order_1001.pdf`.
 
@@ -149,7 +143,7 @@ N> Ensure that PDF files are placed in the **wwwroot/PDFs** folder of your Blazo
     <div class="row">
         <div class="col-12 mb-4">
             <h4>Orders - DataGrid</h4>
-            <p class="text-muted">Click on any row to view detailed order information in the PDF viewer below</p>
+            <p class="text-muted">Click on any row to view detailed order information in the PDF viewer below.</p>
             
             <!-- Syncfusion DataGrid with single row selection enabled -->
             <SfGrid DataSource="@Orders" TValue="Order" AllowSelection="true">
