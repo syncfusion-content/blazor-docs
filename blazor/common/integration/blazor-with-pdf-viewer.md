@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion® Blazor PDF Viewer and DataGrid Integration
-description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer and DataGrid in Blazor Web App (Server).
+description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer and DataGrid in a Blazor Web App (Server).
 platform: Blazor
 control: Common
 documentation: ug
@@ -16,9 +16,9 @@ If you haven’t created a Blazor Web App yet, follow the [Blazor getting starte
 ## Install Syncfusion<sup style="font-size:70%">®</sup> Blazor NuGet packages
 
 From the server project folder (where the `.csproj` file is located), install the following packages:
- * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
- * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
- * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 {% tabs %}
 
@@ -63,7 +63,7 @@ using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRazorComponents() 
+builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 // Configure SignalR to support large PDF file transfers
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
@@ -78,7 +78,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-Add the following stylesheet and script references in the server app's `~/Components/App.razor` (inside the head/body as appropriate). Ensure no other Syncfusion theme CSS (e.g., bootstrap5.css, material.css) is referenced to avoid conflicts.
+Add the following stylesheet and script references in the server app's `~/Components/App.razor` (inside the head/body as appropriate). Ensure no other Syncfusion theme CSS (for example, `bootstrap5.css` or `material.css`) is referenced to avoid conflicts.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" hl_lines="3 8 10" %}
@@ -102,7 +102,7 @@ N> Ensure the `Syncfusion.Blazor.Core` script is loaded before the `SfPdfViewer`
 
 ## Configure render mode (Server)
 
-For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each `~Pages/*.razor` file that requires interactive Server components.
+For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each `~/Pages/*.razor` file that requires interactive Server components.
 
 **Per‑page directive (Server)**
 
@@ -300,7 +300,7 @@ The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup
 3. The PDF Viewer loads the corresponding PDF file (if it exists in `wwwroot/PDFs`)
 4. If the PDF file is not found, an error message displays above the viewer
 
-N> To fully test this example, create sample PDF files named `Order_1001.pdf` through `Order_1005.pdf` and place them in the `wwwroot/PDFs` folder of your project. You can use any PDF files for testing purposes.
+N> To fully test this example, create sample PDF files named `Order_1001.pdf` through `Order_1005.pdf` and place them in the `wwwroot/PDFs` folder of your project. You can use any valid PDF files for testing purposes.
 
 ## Use cases
 
@@ -334,4 +334,3 @@ Develop an e-learning platform where the DataGrid shows course materials, assign
 * [Getting Started with Syncfusion Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 * [Blazor PDF Viewer Demo](https://liveviewereditorblazorapp.azurewebsites.net/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities)
 * [Blazor DataGrid Demo – Overview](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2)
- 
