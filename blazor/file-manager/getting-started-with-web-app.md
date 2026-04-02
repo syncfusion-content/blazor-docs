@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion File Manager Component in Blazor Web App
+title: Getting Started with Syncfusion Blazor File Manager Component
 description: Checkout and learn about the documentation for getting started with Blazor File Manager Component in Blazor Web App.
 platform: Blazor
 component: File Manager
