@@ -652,7 +652,7 @@ The [BooleanEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 Component| Edit Type |Description |Example Customized edit params
 -----|-----|-----|----|
-[SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app)| BooleanEdit | The `BooleanEdit` type renders a `SfCheckBox` for boolean data type. To customize the `SfCheckBox`, refer to the [SfCheckBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox.html). | Params: { Checked: true}
+[SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app)| BooleanEdit | The `BooleanEdit` type renders a `SfCheckBox` for boolean data type. To customize the `SfCheckBox`, refer to the [SfCheckBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html). | Params: { Checked: true}
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

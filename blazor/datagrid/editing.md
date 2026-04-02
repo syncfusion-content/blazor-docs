@@ -1626,7 +1626,7 @@ public class OrderData
 
 ## Perform CRUD operation using Blazor DataGrid events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables seamless CRUD (Create, Read, Update and Delete) operations directly with `IQueryable` data from a database without requiring additional data adaptors. This functionality can be implemented using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the DataGrid and handling the necessary CRUD actions through DataGrid events such as [RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated)and [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables seamless CRUD (Create, Read, Update, and Delete) operations directly with `IQueryable` data from a database without requiring additional data adaptors. This functionality can be implemented using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the DataGrid and handling the necessary CRUD actions through DataGrid events such as [RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated)and [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting).
 
 ### Create an interface layer to the database
 
