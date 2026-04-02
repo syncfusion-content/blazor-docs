@@ -15,7 +15,9 @@ documentation: ug
 Predefined AI actions displayed in the Smart Action dropdown.
 Use the `Commands` property to configure each `AICommands` entry, including its display text, prompt template, and any nested options. By default, the AI Assistant prompt includes contextual information from the editor, such as the selected text or the entire document content.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
@@ -39,7 +41,10 @@ Use the `Commands` property to configure each `AICommands` entry, including its 
         }
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## PopupMaxHeight
@@ -47,13 +52,18 @@ Use the `Commands` property to configure each `AICommands` entry, including its 
 
 Sets the maximum height of the AI Assistant popup. Accepts CSS height values or numbers (treated as pixels).
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
     <AssistViewSettings PopupMaxHeight="80vh" />
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## PopupWidth
@@ -61,13 +71,18 @@ Sets the maximum height of the AI Assistant popup. Accepts CSS height values or 
 
 Sets the width of the AI Assistant popup. Accepts CSS width values or numbers (treated as pixels).
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
     <AssistViewSettings PopupWidth="650px" />
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## Placeholder
@@ -75,13 +90,18 @@ Sets the width of the AI Assistant popup. Accepts CSS width values or numbers (t
 
 Specifies the placeholder text shown in the AI Assistant prompt textarea.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
     <AssistViewSettings Placeholder="How can I improve this document?" />
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## Prompts
@@ -89,7 +109,9 @@ Specifies the placeholder text shown in the AI Assistant prompt textarea.
 
 Defines a collection of predefined prompts and their corresponding responses. These prompt/response templates can be loaded into the AI Assistant to provide starter prompts or predefined workflows.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -104,11 +126,11 @@ Retrieves a list of users.
 **Request**: GET /api/users
 
 **Response Example**:
-```json
+``json
 {
   ""users"": []
 }
-```";
+``";
 
     private List<AssistViewPrompt> TemplatePrompts = new()
     {
@@ -124,7 +146,10 @@ Retrieves a list of users.
         }
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## Suggestions
@@ -132,7 +157,9 @@ Retrieves a list of users.
 
 Defines suggestion prompts displayed in the AI Assistant popup.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
@@ -150,7 +177,10 @@ Defines suggestion prompts displayed in the AI Assistant popup.
         "Simplify"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## MaxPromptHistory
@@ -158,21 +188,28 @@ Defines suggestion prompts displayed in the AI Assistant popup.
 
 Defines the maximum number of conversation entries retained in the editor's history. When this limit is exceeded, the oldest entries are automatically removed.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
     <!-- Store only 5 recent conversations -->
     <AssistViewSettings MaxPromptHistory="5" />
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## BannerTemplate
 
 Specifies the template for the banner in the AI Assistant popup, useful for branding, status, or short instructions.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
@@ -185,7 +222,10 @@ Specifies the template for the banner in the AI Assistant popup, useful for bran
         </BannerTemplate>
     </AssistViewSettings>
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## HeaderToolbarSettings
@@ -193,7 +233,9 @@ Specifies the template for the banner in the AI Assistant popup, useful for bran
 
 Configures the toolbar in the header section of the AI Assistant interface.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
@@ -207,14 +249,20 @@ Configures the toolbar in the header section of the AI Assistant interface.
         </HeaderToolbarSettings>
     </AssistViewSettings>
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## PromptToolbarSettings
 **Type:** `RenderFragment?`
 
 Configures the toolbar below of the prompt input area section.
-```razor
+
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
@@ -229,7 +277,10 @@ Configures the toolbar below of the prompt input area section.
         </PromptToolbarSettings>
     </AssistViewSettings>
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## ResponseToolbarSettings
@@ -237,7 +288,10 @@ Configures the toolbar below of the prompt input area section.
 
 Configures the toolbar in the AI response viewer section.
 
-```razor
+
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
@@ -257,7 +311,10 @@ Configures the toolbar in the AI response viewer section.
         </ResponseToolbarSettings>
     </AssistViewSettings>
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## See Also
