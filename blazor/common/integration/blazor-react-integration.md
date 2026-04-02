@@ -11,11 +11,11 @@ documentation: ug
 
 This guide explains how to use **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components** inside a **[React](https://react.dev/)** application.
 
-Blazor and React are different frontend frameworks. Blazor uses .NET and Razor components, while React uses JavaScript/TypeScript and JSX. These frameworks cannot directly share UI components. However, **[Blazor Custom Elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-8.0&preserve-view=true)** make integration possible by exposing Razor components as standard web components (custom HTML elements), allowing React to render them like any other DOM element.
+Blazor and React are different frontend frameworks. Blazor uses .NET and Razor components, while React uses JavaScript/TypeScript and JSX. These frameworks cannot directly share UI components. However, **[Blazor Custom Elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0&preserve-view=true)** make integration possible by exposing Razor components as standard web components (custom HTML elements), allowing React to render them like any other DOM element.
 
 ## Prerequisites
 
-* [.NET 8 (LTS) or later](https://dotnet.microsoft.com/en-us/download/dotnet)
+* [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 * [Node.js 18 or later](https://nodejs.org/en/download/)
 * [React (Vite) project setup](https://vitejs.dev/guide/)
 
@@ -300,3 +300,4 @@ Open the React development URL to see the Syncfusion<sup style="font-size:70%">&
 N> Start the Blazor application first so that React can load its resources through the proxy.
 
 ![Blazor DataGrid Component](./images/blazor-react-integration.webp)
+ 
