@@ -43,7 +43,7 @@ The **.e-pagercontainer** class styles the pager container in the Syncfusion<sup
 }
 ```
 
-Properties such as **font-family**, **background-color**, and spacing-related styles can be adjusted to align with the grid design.
+Properties such as **font-family**, **background-color**, and spacing-related styles can be adjusted to align with the DataGrid design.
 
 ![Pager container element](../images/style-and-appearance/grid-pager-container-element.png)
 
