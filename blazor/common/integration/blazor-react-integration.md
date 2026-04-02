@@ -150,13 +150,14 @@ Also, ensure that Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor servic
 ... 
 using Syncfusion.Blazor;
 ...
-// Registers the OrdersGrid component as the <sf-orders-grid> custom element.
+// Add required Syncfusion Blazor services for component rendering.
+builder.Services.AddSyncfusionBlazor();
+// Register the OrdersGrid Razor component as the <sf-orders-grid> custom element.
 builder.Services.AddServerSideBlazor(options =>
 {
     options.RootComponents.RegisterCustomElement<BlazorServerHost.Pages.OrdersGrid>("sf-orders-grid");
 });
-// Adds Syncfusion Blazor services required for component rendering.
-builder.Services.AddSyncfusionBlazor();
+
 ....
 {% endhighlight %}
 {% endtabs %}
