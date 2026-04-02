@@ -104,7 +104,7 @@ If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add Import Namespaces
+## Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Buttons` namespaces.
 
@@ -117,7 +117,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Web App.
 
@@ -182,7 +182,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
 
-## Event Click In Blazor Floating Action Button
+## Event click in Blazor Floating Action Button
 
 The floating action button control triggers the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_OnClick) event when you click on the floating action button. Use this event to perform the required action.
 
