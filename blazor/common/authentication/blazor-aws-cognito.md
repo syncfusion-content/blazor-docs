@@ -86,8 +86,8 @@ Before building the Blazor app, set up an AWS Cognito User Pool:
    - **App type:** Choose **Public client** (for PKCE without a secret).
    - **Client name:** (for example, `MyBlazorServer`).
    - **Authentication flows:** Ensure **Authorization code flow** is selected.
-   - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin-oidc` (adjust port if different; check `Properties/launchSettings.json`).
-   - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback-oidc`.
+   - Under **Allowed redirect URIs**, add: ```https://localhost:7000/signin` (adjust port if different; check `Properties/launchSettings.json`).
+   - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback`.
 10. Create the app client and note the **Client ID**.
 
 You now have the values to add to `appsettings.json`.
@@ -101,18 +101,16 @@ This stores your Cognito Hosted UI domain and app client ID so the app can read 
 
 {
   "Cognito": {
-    "Authority": "https://your-domain.auth.<REGION>.amazoncognito.com", 
-    "RedirectUri": "https://localhost:<PORT>/signin-oidc", 
+    "Authority": "https://your-domain.auth.<REGION>.amazoncognito.com", //Replace **<REGION>** with your AWS region (e.g., ap-east-1, ap-south-1, eu-west-1). 
+    "RedirectUri": "https://localhost:<PORT>/signin-oidc", //Replace **<PORT>** with your actual localhost port (typically 5001 or 7000).
     "SignOutUri": "https://localhost:<PORT>/signout-callback-oidc", 
-    "ClientId": "YOUR_APP_CLIENT_ID"
+    "ClientId": "YOUR_APP_CLIENT_ID" //Replace **YOUR_APP_CLIENT_ID** with your Cognito app client ID
   },
   "AllowedHosts": "*"
 }
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Replace **<REGION>** with your AWS region (e.g., ap-east-1, ap-south-1, eu-west-1). Replace **<PORT>** with your actual localhost port (typically 5001 or 7000). Replace **YOUR_APP_CLIENT_ID** with your Cognito app client ID
 
 N> This sample uses Authorization Code + PKCE with a public client (no client secret). If you created a confidential client, add ClientSecret to configuration and set `options.ClientSecret` in the OIDC options. 
 
