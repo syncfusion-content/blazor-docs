@@ -97,22 +97,14 @@ using ElectronNET.API.Entities;
 
 // Syncfusion services
 builder.Services.AddSyncfusionBlazor();
-
 // Electron services
 builder.Services.AddElectron();
-
 // Electron window bootstrap (modern ElectronNET.Core)
 builder.UseElectron(args, async () =>
 {
     var options = new BrowserWindowOptions
     {
-        Width = 1200,
-        Height = 800,
-        Show = false,
-        AutoHideMenuBar = true,
-
-        // Optional: Enable this if Blazor script loading issues occur
-        // IsRunningBlazor = true,
+        Width = 1200, Height = 800, Show = false, AutoHideMenuBar = true
     };
 
     var window = await Electron.WindowManager.CreateWindowAsync(options);
@@ -125,7 +117,7 @@ builder.UseElectron(args, async () =>
 // Required for serving assets like _content/ (Syncfusion)
 app.UseStaticFiles();
 
-// Disable HTTPS redirection for Electron apps since they run on http://localhost and HTTPS can cause certificate errors
+// Disable HTTPS redirection to avoid certificate issues in Electron apps
 // app.UseHttpsRedirection();
 ...
 
