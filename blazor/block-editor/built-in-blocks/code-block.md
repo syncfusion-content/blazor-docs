@@ -63,4 +63,4 @@ The following example demonstrates how to configure and render a Code block with
 }
 ```
 
-![Blazor Block Editor Code Block](./../images/code-block.png)
+![Blazor Block Editor Code Block](./../images/code-block.webp)

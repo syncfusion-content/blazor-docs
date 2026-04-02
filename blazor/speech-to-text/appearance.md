@@ -76,8 +76,8 @@ Below code sample demonstrates how to configure the button with above mentioned 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Button Idle state](images/customize-btn-idle-state.png)
-![Blazor SpeechToText Button Listening state](images/customize-btn-listening-state.png)
+![Blazor SpeechToText Button Idle state](images/customize-btn-idle-state.webp)
+![Blazor SpeechToText Button Listening state](images/customize-btn-listening-state.webp)
 
 ## Customizing the tooltips
 
@@ -131,7 +131,7 @@ Below code sample demonstrates how to configure the tooltip settings with above 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Tooltip](images/speechtotext-tooltip.png)
+![Blazor SpeechToText Tooltip](images/speechtotext-tooltip.webp)
 
 ## Setting button styles
 
@@ -190,4 +190,4 @@ Below code sample demonstrates how to configure cssclass and customize the butto
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Tooltip](images/speechtotext-cssClass.png)
+![Blazor SpeechToText Tooltip](images/speechtotext-cssClass.webp)

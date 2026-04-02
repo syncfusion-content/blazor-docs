@@ -27,7 +27,7 @@ Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](h
 
 Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App.
 
-![Create Blazor Web App](images/blazor-create-web-app.png)
+![Create Blazor Web App](images/blazor-create-web-app.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inputs NuGet in the App
 
@@ -248,7 +248,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText com
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText component in the default web browser.
 
-![Blazor SpeechToText Component](images/getting-started.png)
+![Blazor SpeechToText Component](images/getting-started.webp)
 
 > The [SpeechToText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html) component requires an internet connection and using a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API.
 
@@ -288,8 +288,8 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText with Button Content Start text](images/btn-content-start.png)
-![Blazor SpeechToText with Button Content Stop text](images/btn-content-stop.png)
+![Blazor SpeechToText with Button Content Start text](images/btn-content-start.webp)
+![Blazor SpeechToText with Button Content Stop text](images/btn-content-stop.webp)
 
 ## See also
 
