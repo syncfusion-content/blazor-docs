@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a Blazor Desktop App with Electron | Syncfusion
-description: Learn to build a cross-platform desktop app using a Blazor Web App (Server) with Electron and Syncfusion Blazor DataGrid components.
+description: Learn to build a cross-platform desktop app using a Blazor Web App (Server) with Electron integrating Syncfusion Blazor DataGrid.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Creating a Blazor Desktop App with Electron
 
-This guide explains how to create a cross-platform desktop application by combining a **Blazor Web App (Server)** with the **[ElectronNET.Core](https://www.nuget.org/packages/ElectronNET.Core)** framework and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as the **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** within an Electron‑powered desktop environment.
+This guide explains how to create a cross-platform desktop application by combining a **Blazor Web App (Server)** with the **[ElectronNET.Core](https://www.nuget.org/packages/ElectronNET.Core)** framework and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** within an Electron‑powered desktop environment.
 
 N> ElectronNET.Core is a community-maintained fork of Electron.NET that supports .NET 6 and later versions (including .NET 8, 9, and 10). It is not an official Microsoft package.
 
@@ -45,6 +45,7 @@ cd BlazorElectronApp
 ## Install required packages
 
 From the project folder (where the `.csproj` is located), install the Syncfusion<sup style="font-size:70%">&reg;</sup> **Grid**, **Themes**, and the **ElectronNET.Core** packages.
+
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
  * [ElectronNET.Core](https://www.nuget.org/packages/ElectronNET.Core)
@@ -86,13 +87,14 @@ Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 N> Before using the code snippet, update the namespace `BlazorElectronApp` to match your project's root namespace. You can find this in `App.razor` or `_Imports.razor`. For example, if your project is named `MyApp`, use `MyApp.Components.App`.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 3 4 7 9 11 12 13 14 15 16 17 18 19 20 22 24 25 26 28 35" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ...
 using Syncfusion.Blazor;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
 ...
+
 // Syncfusion services
 builder.Services.AddSyncfusionBlazor();
 // Electron services
@@ -102,11 +104,7 @@ builder.UseElectron(args, async () =>
 {
     var options = new BrowserWindowOptions
     {
-        Width = 1200,
-        Height = 800,
-        Show = false,
-        AutoHideMenuBar = true,
-        // IsRunningBlazor = true,   // Optional: enable if Blazor script loading issues occur.
+        Width = 1200, Height = 800, Show = false, AutoHideMenuBar = true
     };
 
     var window = await Electron.WindowManager.CreateWindowAsync(options);
@@ -115,12 +113,14 @@ builder.UseElectron(args, async () =>
     window.OnClosed += () => Electron.App.Quit();
 });
 ...
-app.UseStaticFiles(); // Required for serving assets like _content/ (Syncfusion).
 
-// Disable HTTPS redirection for Electron apps.
-// Electron runs on http://localhost, and HTTPS redirection will cause certificate errors.
+// Required for serving assets like _content/ (Syncfusion)
+app.UseStaticFiles();
+
+// Disable HTTPS redirection to avoid certificate issues in Electron apps
 // app.UseHttpsRedirection();
 ...
+
 // Map the root Razor Components app
 app.MapRazorComponents<BlazorElectronApp.Components.App>()
     .AddInteractiveServerRenderMode();
@@ -132,9 +132,9 @@ app.Run();
 
 ## Add stylesheet and script resources
 
-Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (e.g., bootstrap5.css, material.css) is already referenced to avoid conflicts.
+Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (for example, bootstrap5.css or material.css) is already referenced to avoid conflicts.
 
-Add the following stylesheet and script references in `~/App.razor`. 
+Add the following stylesheet and script references in `~/App.razor`.
 
 {% tabs %}
 {% highlight html hl_lines="4 10" %}
@@ -153,7 +153,6 @@ Add the following stylesheet and script references in `~/App.razor`.
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Add RuntimeIdentifiers to support cross-platform builds
 
@@ -178,7 +177,7 @@ N> The example includes x64 and ARM64 architectures for Windows, macOS, and Linu
 
 ## Add Packaging Configuration for ElectronNET.Core
 
-ElectronNET.Core uses the electron-builder.json file to configure packaging settings for desktop builds. Create a file named `electron-builder.json` in your project's **root folder** (next to the `.csproj` file) and add the following content.
+ElectronNET.Core uses the `electron-builder.json` file to configure packaging settings for desktop builds. Create a file named `electron-builder.json` in your project's **root folder** (next to the `.csproj` file) and add the following content.
 
 {% tabs %}
 
@@ -256,14 +255,22 @@ dotnet run
 
 The following commands publish the application for the x64 architecture. Update the runtime identifier as needed (for example, `osx-arm64` or `linux-arm64`) to target other platforms.
 
-```bash
-# Windows
+{% tabs %}
+{% highlight c# tabtitle="Windows" %}
+
 dotnet publish -r win-x64 -c Release
 
-# macOS
+{% endhighlight %}
+
+{% highlight c# tabtitle="macOS" %}
+
 dotnet publish -r osx-x64 -c Release
 
-# Linux
+{% endhighlight %}
+
+{% highlight c# tabtitle="Linux" %}
+
 dotnet publish -r linux-x64 -c Release
-```
- 
+
+{% endhighlight %}
+{% endtabs %}
