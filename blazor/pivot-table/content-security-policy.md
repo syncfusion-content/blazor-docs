@@ -7,32 +7,52 @@ control: Pivot Table
 documentation: ug
 ---
 
-# Pivot Table Strict CSP Feature Limitations
+# Pivot Table - Content Security Policy Limitations
 
-The Syncfusion® Blazor **Pivot Table** component supports **strict CSP** for its core functionality, allowing most default operations without `'unsafe-inline'` in `style-src`. However, certain advanced visualization and formatting features still rely on dynamic inline styles, which are blocked under a fully strict CSP configuration.
+## What's Supported Under Strict CSP?
 
-This document outlines the specific features that require the `style-src 'unsafe-inline'` directive and provides guidance on CSP configurations with and without those features.
+The Syncfusion® Blazor **Pivot Table** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
-## Current Limitations Under Strict CSP
+- Grid view with data binding
+- Data aggregation and grouping
+- Sorting and filtering
+- Basic cell editing
+- Expand/collapse functionality
+- Field list integration
+- Keyboard navigation and accessibility
 
-The following features in the Pivot Table currently **require** `style-src 'unsafe-inline'` to function correctly:
+## What Requires *'unsafe-inline'*?
 
-- **Pivot Chart Integration**  
-  Rendering the integrated Pivot Chart (via the `ShowToolbar` Chart view toggle or `DisplayOption` set to Chart) depends on dynamic inline styles for chart rendering, positioning, legends, tooltips, and responsive layout adjustments.
+The following features require the `style-src 'unsafe-inline'` directive:
 
-- **Conditional Formatting**  
-  Applying cell-level conditional formatting (via the `ConditionalFormatSettings` collection) uses inline style attributes to dynamically set background colors, font styles, text colors, and other visual indicators based on applied rules.
+### 1. Pivot Chart Integration
 
-- **Number Formatting & Cell Styling** 
-  Certain custom number formatting options, especially when combined with alignment, text wrapping, or theme-based overrides that trigger runtime style calculations, may apply inline styles.
+When you enable the integrated Pivot Chart view (via `ShowToolbar` Chart toggle or `DisplayOption="Chart"`), the chart applies dynamic inline styles for:
+- Chart rendering and positioning
+- Legends and tooltips
+- Responsive layout adjustments
 
-> **Note:** Core features operate fully under strict CSP without requiring `'unsafe-inline'`.
+### 2. Conditional Formatting
+
+Cell-level conditional formatting uses inline styles to dynamically apply:
+- Background colors
+- Font styles and weights
+- Text colors
+- Visual indicators based on formatting rules
+
+### 3. Advanced Number Formatting & Styling
+
+Custom number formatting combined with alignment, text wrapping, or theme overrides may apply runtime inline styles.
+
+### How to Disable These Features
+
+If you don't need these advanced features, the rest of the Pivot Table works fully under strict CSP.
 
 ## Recommended CSP Configurations
 
-### Strict CSP Configuration (Core Grid Functionality Only)
+### Strict CSP (Grid View Only)
 
-Use this configuration when you can disable or avoid the limited features listed above:
+Use this configuration if you don't use Pivot Chart view, conditional formatting, or advanced number formatting:
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -41,15 +61,17 @@ Use this configuration when you can disable or avoid the limited features listed
                connect-src 'self' https: ws: wss:;
                img-src 'self' data: https:;
                object-src 'none';
-               script-src 'self' ;
+               script-src 'self';
                style-src 'self';
                font-src 'self' data:;
                upgrade-insecure-requests;">
-
 ```
-> This policy allows full strict CSP compliance for the Pivot Table's grid view and most non-visual features.
-### Relaxed CSP Configuration (Full Feature Enabled)
-Include 'unsafe-inline' in style-src to enable all features:
+
+This configuration maintains full security for the Pivot Table's grid view functionality.
+
+### Relaxed CSP (With Advanced Features)
+
+Include `'unsafe-inline'` if you need Pivot Chart view, conditional formatting, or advanced number styling:
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -58,20 +80,10 @@ Include 'unsafe-inline' in style-src to enable all features:
                connect-src 'self' https: ws: wss:;
                img-src 'self' data: https:;
                object-src 'none';
-               script-src 'self' ;
+               script-src 'self';
                style-src 'self' 'unsafe-inline';
                font-src 'self' data:;
                upgrade-insecure-requests;">
-
 ```
 
-> Use this only when the restricted features (Pivot Chart, conditional formatting, etc.) are essential to your application. This relaxes the CSP slightly but still provides strong protection compared to broader unsafe directives.
-
-
-### Future Improvements
-
- - These security limitations for the listed features (Pivot Chart integration, conditional formatting, and related styling behaviors) will be addressed in **future weekly security patch releases**. 
-
- - Syncfusion® is actively working toward full strict CSP compatibility across all features of the Pivot Table component, eliminating the need for 'unsafe-inline' entirely.
-
- - Track the latest Syncfusion® Blazor release notes and weekly patches for CSP-related updates and announcements.
+> Use this only when integrated charting, cell-level conditional formatting, or advanced styling is essential.

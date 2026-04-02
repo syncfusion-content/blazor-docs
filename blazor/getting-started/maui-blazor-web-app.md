@@ -19,11 +19,11 @@ A **.NET MAUI Blazor Web App** uses a Razor Class Library (RCL) to store reusabl
 
 By sharing UI components between native and web apps, this pattern ensures consistent user experiences, maximizes code reuse, and simplifies maintenance for applications targeting multiple environments.
 
-Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app?view=aspnetcore-9.0)** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution. 
+Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app)** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution. 
 
 ## Prerequisites
 
-* .NET SDK 9.0 or later
+* [.NET SDK 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later
 * Visual Studio 2022 17.3 or later with the following workloads:
    * [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin)
    * ASP.NET and web development
@@ -39,7 +39,7 @@ The template generates the shared RCL, .NET MAUI app, and Web App.
 
 ![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.webp)
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet in the app
 
 Follow these steps to add the Syncfusion DataGrid.
 
@@ -50,7 +50,7 @@ Follow these steps to add the Syncfusion DataGrid.
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
 
-## Add Syncfusion Namespaces
+## Add Syncfusion namespaces
 
 Open both of the following files and add the Syncfusion namespaces.
 
@@ -63,7 +63,7 @@ Open both of the following files and add the Syncfusion namespaces.
 @using Syncfusion.Blazor.Grids
 
 ```
-## Register Syncfusion Blazor Service
+## Register Syncfusion Blazor service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both the `MauiProgram.cs` file of the MAUI Blazor App and the `~/Program.cs` file of the Blazor Web App.
 
@@ -93,7 +93,7 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in 
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the **~wwwroot/index.html** file of your MAUI Blazor App and in the **~/Components/App.razor file** of your Blazor Web App.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the **<head>** of the `~wwwroot/index.html` file of your MAUI Blazor App and in the `~/Components/App.razor file` of your Blazor Web App.
 
 ```html
 <head>
@@ -156,8 +156,6 @@ N> To run the application on Android or iOS, refer to [MAUI Getting Started](htt
 N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-Hybrid-with-Blazor-Web-App-using-Syncfuion-Blazor-Components).
 
 ## See also
-
-### MAUI Blazor App
 
 * [How to create Diagram Builder in MAUI platform?](https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform)
 
