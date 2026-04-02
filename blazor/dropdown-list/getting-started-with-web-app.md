@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion DropDown List Component in Blazor Web App
+title: Getting Started with Syncfusion Blazor DropDown List Component
 description: Checkout and learn about the documentation for getting started with Blazor DropDown List Component in Blazor Web App.
 platform: Blazor
 component: DropDown List
