@@ -110,7 +110,7 @@ This stores your Cognito Hosted UI domain and app client ID so the app can read 
 {% endhighlight %}
 {% endtabs %}
 
-N> Replace **<REGION>** with your AWS region, `<PORT>` with your localhost port, and `YOUR_APP_CLIENT_ID` with your Cognito app client ID.
+N> Replace **<REGION>** with your AWS region, **<PORT>** with your localhost port, and **YOUR_APP_CLIENT_ID** with your Cognito app client ID.
 
 N> This sample uses Authorization Code + PKCE with a public client (no client secret). If you created a confidential client, add ClientSecret to configuration and set `options.ClientSecret` in the OIDC options. 
 
@@ -119,7 +119,7 @@ N> This sample uses Authorization Code + PKCE with a public client (no client se
 This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. `SaveTokens = true` keeps ID/Access tokens available for downstream API calls. `RoleClaimType = "cognito:groups"` turns Cognito groups into ASP.NET Core roles. The `/sign-in` and `/sign-out` endpoints start and end the hosted login flow.
 
 {% tabs %}
-{% highlight cs tabtitle="Program.cs" %}
+{% highlight csharp tabtitle="Program.cs" %}
 
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -142,7 +142,7 @@ bool TryGetAuthorityUri(string? authority, out Uri? uri)
 {
     uri = null;
     if (string.IsNullOrWhiteSpace(authority)) return false;
-    if (authority.Contains("https://your-domain.auth.region.amazoncognito.com")) return false;
+    if (authority.Contains("your-domain")) return false;
     // Require a valid absolute URI (e.g. https://your-domain.auth.region.amazoncognito.com)
     if (!Uri.TryCreate(authority, UriKind.Absolute, out var parsed)) return false;
     // only http or https are acceptable here for dev detection; production will require https
