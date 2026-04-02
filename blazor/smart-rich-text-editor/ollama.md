@@ -172,15 +172,20 @@ var app = builder.Build();
 
 ### Add to _Imports.razor
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="~/Components/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SmartRichTextEditor
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Use Ollama AI with Smart Rich Text Editor Component
 
-```razor
-@page "/editor"
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
@@ -194,7 +199,9 @@ var app = builder.Build();
         </ul>
     </div>
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configuration Options
 
