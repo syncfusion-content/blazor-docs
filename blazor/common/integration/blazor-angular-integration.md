@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Blazor Components in Angular
 
-This guide demonstrates how to use [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components/blazor-datagrid) inside an **Angular application**.
+This guide demonstrates how to use [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) inside an **Angular application**.
 
 Blazor and Angular are two different web technologies. Blazor uses .NET and Razor components, while Angular uses TypeScript and HTML. Normally, these frameworks cannot share UI components. However, [Blazor custom elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0#blazor-custom-elements) make this possible. A custom element turns a Blazor component into a standard HTML tag that Angular can recognize and render.
 
@@ -47,7 +47,7 @@ dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0
 
 Create a `.razor` file to incorporate the Syncfusion DataGrid component:
 
-In this example, the file name used is `OrdersGrid.razor`
+In this example, the file name used is `OrdersGrid.razor`.
 
 {% tabs %}
 {% highlight razor tabtitle="OrdersGrid.razor" %}
@@ -56,12 +56,12 @@ In this example, the file name used is `OrdersGrid.razor`
 @namespace BlazorServerHost.Pages
 
 <SfGrid DataSource="@Orders" >
-<GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-        <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Width="100"></GridColumn>
-        <GridColumn Field="Freight" HeaderText="Freight" Width="120"></GridColumn>
-    </GridColumns>
+  <GridColumns>
+    <GridColumn Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+    <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100"></GridColumn>
+    <GridColumn Field="OrderDate" HeaderText="Order Date" Width="100"></GridColumn>
+    <GridColumn Field="Freight" HeaderText="Freight" Width="120"></GridColumn>
+  </GridColumns>
 </SfGrid>
 
 @code{
@@ -89,16 +89,18 @@ In this example, the file name used is `OrdersGrid.razor`
 {% endhighlight %}
 {% endtabs %}
 
-### Register the above Syncfusion DataGrid component as a custom element
+Sets the C# namespace for the generated component class (e.g., **BlazorServerHost.Pages.OrdersGrid**), which is important when referencing or registering the component (for example with **RegisterCustomElement**).
 
-To use your Razor component inside an Angular application, you must register it as a **Blazor Custom Element**. This registration exposes your `.razor` file as a standard HTML tag.
+### Register as a custom element
+
+To use your Razor component inside an Angular application, you must register it as a **Blazor custom element**. This registration exposes your `.razor` file as a standard HTML tag.
 
 Any Razor component that you want to use in Angular must be registered inside the `Program.cs` file. Add the following line:
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-builder.RootComponents.RegisterCustomElement<SfxGridWasm.Pages.OrdersGrid>("sf-orders-grid"); 
+builder.RootComponents.RegisterCustomElement<BlazorServerHost.Pages.OrdersGrid>("sf-orders-grid"); 
 
 {% endhighlight %}
 {% endtabs %}
@@ -296,5 +298,5 @@ Once the compilation completes, open your browser and navigate to `http://localh
 
 ## See also
 
-* [Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting started with Syncfusion Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
