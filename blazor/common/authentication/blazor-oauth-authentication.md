@@ -28,31 +28,31 @@ OAuth provides:
 - Visual Studio 2022 or newer
 - A GitHub account (required for creating the GitHub OAuth App)
 
-## Create a Blazor Web App (Interactive server)
+## Create a Blazor Web App (Interactive Server)
 
 1. Open **Visual Studio**.
 2. Select **Create a new project**.
 3. In the Create a new project dialog:
-    - Choose **Blazor Web App**
-    - Click **Next**
+    - Choose **Blazor Web App**.
+    - Click **Next**.
 4. In Configure your new project:
-    - Enter a **Project name**
-    - Choose a **Location**
-    - Click **Next**
+    - Enter a **Project name**.
+    - Choose a **Location**.
+    - Click **Next**.
 5. In the Additional information screen, configure the following:
-    - **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version)
-    - **Authentication type**: Select **None**(OAuth will be configured manually in later steps)
-    - **Interactive render mode**: Select **Server**
-    - **Interactivity location**: Select **Per page/component**
-    - **Enable HTTPS**
+    - **Framework**: Select **.NET 8.0** (or .NET (Latest) if available in your Visual Studio version).
+    - **Authentication type**: Select **None**(OAuth will be configured manually in later steps).
+    - **Interactive render mode**: Select **Server**.
+    - **Interactivity location**: Select **Per page/component**.
+    - **Enable HTTPS**.
 6. Click **Create** to generate the Blazor Web App.
 
 ## Create a GitHub OAuth application
 
 1. Go to [GitHub Developer Settings](https://github.com/settings/developers).
-2. Click **OAuth Apps → New OAuth App**
+2. Click **OAuth Apps → New OAuth App**.
 3. Configure the application:
-    - **Homepage URL:** `https://localhost:5001/` (Use your Blazor app’s base HTTPS URL)
+    - **Homepage URL:** `https://localhost:5001/` *(Replace `5001` with your application's actual HTTPS port number from `launchSettings.json` if different)*.
     - **Authorization callback URL:** `https://localhost:5001/signin-github`
 4. Copy the generated **Client ID** and **Client Secret**
 5. In your Blazor project, open **appsettings.json** and add the following configuration.
@@ -68,12 +68,11 @@ OAuth provides:
 
 ## Configure OAuth 2.0 authentication in Blazor
 
-Add OAuth authentication using GitHub and enable cookie-based sign‑in in `Program.cs`.
+Add OAuth authentication using GitHub and enable cookie based sign‑in in `Program.cs`.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-using OAuth.Components;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 
@@ -91,8 +90,8 @@ builder.Services.AddAuthentication(options =>
   .AddCookie()
   .AddOAuth("GitHub", options =>
   {
-    options.ClientId = builder.Configuration["Authentication:GitHub:ClientId"] ?? "your-github-client-id";
-    options.ClientSecret = builder.Configuration["Authentication:GitHub:ClientSecret"] ?? "your-github-client-secret";
+    options.ClientId = builder.Configuration["Authentication:GitHub:ClientId"] ?? throw new InvalidOperationException("GitHub ClientId is not configured. Set 'Authentication:GitHub:ClientId' in appsettings or user secrets.");
+    options.ClientSecret = builder.Configuration["Authentication:GitHub:ClientSecret"] ?? throw new InvalidOperationException("GitHub ClientSecret is not configured. Set 'Authentication:GitHub:ClientSecret' in appsettings or user secrets.");
     options.CallbackPath = "/signin-github";
     options.AuthorizationEndpoint = "https://github.com/login/oauth/authorize";
     options.TokenEndpoint = "https://github.com/login/oauth/access_token";
@@ -117,7 +116,7 @@ builder.Services.AddAuthentication(options =>
 
         var response = await context.Backchannel.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, context.HttpContext.RequestAborted);
         response.EnsureSuccessStatusCode();
-        var payload = System.Text.Json.JsonDocument.Parse(await response.Content.ReadAsStringAsync());
+        using var payload = System.Text.Json.JsonDocument.Parse(await response.Content.ReadAsStringAsync());
         context.RunClaimActions(payload.RootElement);
       }
     };
@@ -138,7 +137,6 @@ if (!app.Environment.IsDevelopment())
   app.UseHsts();
 }
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
@@ -198,7 +196,7 @@ To allow components to receive authentication state, wrap the router inside **Ca
 @using Microsoft.AspNetCore.Components.Authorization
 
 <CascadingAuthenticationState>
-    <Router AppAssembly="typeof(Program).Assembly">
+    <Router AppAssembly="typeof(Program).Assembly" NotFoundPage="typeof(Pages.NotFound)">
         <Found Context="routeData">
             <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
             <FocusOnNavigate RouteData="routeData" Selector="h1" />
@@ -228,7 +226,9 @@ Open the `~/_Imports.razor` file and import the required namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-**3. Register the Syncfusion® Blazor service in the `~/Program.cs` file**
+**3. Register the Syncfusion® Blazor service**
+
+To enable Syncfusion Blazor components, add the required service registration in your app’s `~/Program.cs`.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" %}
@@ -266,29 +266,39 @@ Create `SecureGrid.razor` page and protect it using the [Authorize] attribute.
 {% highlight razor %}
 
 @page "/secure-grid"
-@attribute [Authorize]
+@rendermode InteractiveServer
+@attribute [Microsoft.AspNetCore.Authorization.Authorize]
+
 @using Syncfusion.Blazor.Grids
+@using Microsoft.AspNetCore.Components.Authorization
 
-<SfGrid DataSource="@Orders" />
+<PageTitle>Secure Data Grid</PageTitle>
 
+            <SfGrid DataSource="@Orders" AllowPaging="true">
+                <GridColumns>
+                    <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+                    <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="150" />
+                </GridColumns>
+            </SfGrid>
 @code {
-    public List<Order> Orders { get; set; }
+    public List<Order> Orders { get; set; } = new();
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5).Select(x => new Order
+        Orders = Enumerable.Range(1, 5).Select(x => new Order()
         {
             OrderID = x,
-            CustomerID = new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" }[new Random().Next(5)]
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
         }).ToList();
     }
 
     public class Order
     {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public int? OrderID { get; set; }
+        public string? CustomerID { get; set; }
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -301,7 +311,6 @@ The `Home.razor` page uses `<AuthorizeView>` to change UI depending on whether t
 
 @page "/"
 @using Microsoft.AspNetCore.Components.Authorization
-@using OAuth.Components.Pages
 
 <PageTitle>Home</PageTitle>
 
@@ -336,7 +345,7 @@ The `Home.razor` page uses `<AuthorizeView>` to change UI depending on whether t
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrates how to integrate GitHub OAuth into a Blazor Web App and authenticate users using secure cookie-based sign‑in. After authentication, the user can access protected pages and view the Syncfusion Blazor DataGrid.
+This example demonstrates how to integrate GitHub OAuth into a Blazor Web App and authenticate users using secure cookie based sign‑in. After authentication, the user can access protected pages and view the Syncfusion Blazor DataGrid.
 
 ## See also
 
