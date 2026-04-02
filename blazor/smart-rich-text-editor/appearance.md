@@ -26,7 +26,9 @@ The AI Assistant Popup can be styled using the following CSS class:
 
 In this example, we customize the AI Assistant popup appearance by targeting the `.e-rte-aiquery-dialog.e-aiassistview` selector.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor Height="300"></SfSmartRichTextEditor>
@@ -53,7 +55,9 @@ In this example, we customize the AI Assistant popup appearance by targeting the
         border: 3px solid #e0e0e0;
     }
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Smart Rich Text Editor AI AssistView Custom Class](./images/smart-rich-text-editor-ai-assistview-custom-class.png)
 
