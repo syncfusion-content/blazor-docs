@@ -7,7 +7,7 @@ component: Gantt Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Gantt Chart component in Blazor Web App
+# Getting Started with Blazor Gantt Chart Component in Blazor Web App
 
 This section briefly explains about how to include [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -24,8 +24,6 @@ This section briefly explains about how to include [Blazor Gantt Chart](https://
 ## Create a new Blazor Web App in Visual Studio
 
 Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
-
-![Create Blazor Web App](images/blazor-create-web-app.png)
 
 {% endtabcontent %}
 
