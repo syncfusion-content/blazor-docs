@@ -21,12 +21,7 @@ A JSON Web Token (JWT) is a compact, digitally signed string that identifies a u
 
 ## Why use JWT in Blazor?
 
-Syncfusion components make HTTP requests to your API internally. JWT allows each request to carry a trusted identity and prevents unauthorized access without relying on server-side session state.
-
-## Prerequisites
-
-- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or above.
-- Visual Studio 2022 or newer with ASP.NET and web development workload.
+Syncfusion components make HTTP requests to your API internally. JWT allows each request  to carry a trusted identity and prevents unauthorized access without relying on server-side session state.
 
 ## Create a Blazor web app (Interactive Server)
 
