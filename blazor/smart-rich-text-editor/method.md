@@ -26,7 +26,9 @@ Using the public methods, you can build custom workflows with the AI Assistant. 
 
 The following example demonstrates how to use all AssistViewSettings methods together in a single button click handler to create a comprehensive workflow:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
@@ -76,7 +78,10 @@ The following example demonstrates how to use all AssistViewSettings methods tog
         AssistViewPrompt[] history = await AssistViewSettings.GetAIPromptHistoryAsync();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## See Also
