@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Authentication and Authorization with AWS Cognito in Syncfusion Blazor
+title: Blazor Server Authentication with AWS Cognito | Syncfusion
 description: Authenticate a Blazor Server app with AWS Cognito (OIDC Hosted UI) and secure Syncfusion components.
 platform: Blazor
 control: Common
@@ -36,9 +36,9 @@ In **User Pool → Sign-in experience**:
 
 ## Role-based authorization with Cognito groups
 
-* Create groups (e.g., `Admin`) in **User Pool → Groups** and add users.  
-* Ensure **Group membership** is included in tokens.  
-* Map roles using `RoleClaimType = "cognito:groups"` and protect pages/endpoints with `[Authorize(Roles="Admin")]`. 
+* Create groups (e.g., `Admin`) in **User Pool → Groups** and add users.
+* Ensure **Group membership** is included in tokens.
+* Map roles using `RoleClaimType = "cognito:groups"` and protect pages/endpoints with `[Authorize(Roles="Admin")]`.
 
 ## Prerequisites
 
@@ -50,13 +50,9 @@ In **User Pool → Sign-in experience**:
 
 Configure OpenID Connect with the Cognito Hosted UI (Authorization Code + PKCE), which Microsoft's docs show for any OIDC provider in Blazor Web Apps.
 
-### Create a Blazor Server Project
+### Create a Blazor Project
 
-If you already have a Blazor project, proceed to the **Install Authentication package** section. Otherwise, create one using Syncfusion Blazor getting started guides.
-
-* [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [WebApp](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+If you already have a Blazor project, proceed to the **Install Authentication package** section. Otherwise, create one using Syncfusion [Blazor getting started guides](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
 
 ### Install Authentication package
 
@@ -81,14 +77,16 @@ Before building the Blazor app, set up an AWS Cognito User Pool:
 5. Choose authentication method: **Email** or **Phone number** (or both).
 6. Continue through the setup wizard and confirm your settings. Once ready, click the button to **Create User Directory**.
 7. Go to **Amazon Cognito** > **User pools**. Note the **User pool ID** and **User pool name**.
-8. Go to **App clients and analytics** (or **App integration** > **App clients**).
-9. Click **Create app client**:
+8. Go to **App integration** > **App clients**.
+9. Verify that in **App integration** → **Hosted UI**:
+   - "Hosted UI" is **enabled**
+   - "Callback URLs" includes your app redirect URI
+10. Click **Create app client**:
    - **App type:** Choose **Public client** (for PKCE without a secret).
    - **Client name:** (for example, `MyBlazorServer`).
    - **Authentication flows:** Ensure **Authorization code flow** is selected.
-   - Under **Allowed redirect URIs**, add: ```https://localhost:7000/signin` (adjust port if different; check `Properties/launchSettings.json`).
-   - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback`.
-10. Create the app client and note the **Client ID**.
+   - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin-oidc` (adjust port if different; check `Properties/launchSettings.json`).
+   - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback-oidc`.
 
 You now have the values to add to `appsettings.json`.
 
@@ -101,16 +99,18 @@ This stores your Cognito Hosted UI domain and app client ID so the app can read 
 
 {
   "Cognito": {
-    "Authority": "https://your-domain.auth.<REGION>.amazoncognito.com", //Replace **<REGION>** with your AWS region (e.g., ap-east-1, ap-south-1, eu-west-1). 
-    "RedirectUri": "https://localhost:<PORT>/signin-oidc", //Replace **<PORT>** with your actual localhost port (typically 5001 or 7000).
-    "SignOutUri": "https://localhost:<PORT>/signout-callback-oidc", 
-    "ClientId": "YOUR_APP_CLIENT_ID" //Replace **YOUR_APP_CLIENT_ID** with your Cognito app client ID
+    "Authority": "https://your-domain.auth.<REGION>.amazoncognito.com",
+    "RedirectUri": "https://localhost:<PORT>/signin-oidc",
+    "SignOutUri": "https://localhost:<PORT>/signout-callback-oidc",
+    "ClientId": "YOUR_APP_CLIENT_ID"
   },
   "AllowedHosts": "*"
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Replace **<REGION>** with your AWS region, `<PORT>` with your localhost port, and `YOUR_APP_CLIENT_ID` with your Cognito app client ID.
 
 N> This sample uses Authorization Code + PKCE with a public client (no client secret). If you created a confidential client, add ClientSecret to configuration and set `options.ClientSecret` in the OIDC options. 
 
@@ -142,7 +142,7 @@ bool TryGetAuthorityUri(string? authority, out Uri? uri)
 {
     uri = null;
     if (string.IsNullOrWhiteSpace(authority)) return false;
-    if (authority.Contains("https://us-east-1td50lz7sv.auth.us-east-1.amazoncognito.com")) return false;
+    if (authority.Contains("https://your-domain.auth.region.amazoncognito.com")) return false;
     // Require a valid absolute URI (e.g. https://your-domain.auth.region.amazoncognito.com)
     if (!Uri.TryCreate(authority, UriKind.Absolute, out var parsed)) return false;
     // only http or https are acceptable here for dev detection; production will require https
