@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
 
-- **DataGrid root element:** Defines the overall appearance of the grid container.
+- **DataGrid root element:** Defines the overall appearance of the DataGrid container.
 - **Alternate rows with frozen columns:** Applies styles to alternate rows when frozen columns are enabled.
 - **Grid lines:** Controls the color and visibility of horizontal and vertical lines between cells.
 
@@ -26,7 +26,7 @@ Default styles such as **colors**, **typography**, **spacing**, and **borders** 
 }
 ```
 
-Properties like **background-color**, **color**, **font-family**, and **padding** can be changed to match the grid layout design and improve visual consistency.
+Properties like **background-color**, **color**, **font-family**, and **padding** can be changed to match the DataGrid layout design and improve visual consistency.
 
 ![Change header background](../images/style-and-appearance/header-background.png)
 
@@ -49,7 +49,7 @@ The **.e-grid** class styles the root container of the Blazor DataGrid. Apply CS
 }
 ```
 
-Properties such as f **font-family**,**background-color**, and spacing-related styles can be adjusted to align with the grid design.
+Properties such as f **font-family**,**background-color**, and spacing-related styles can be adjusted to align with the DataGrid design.
 
 ![Grid root element](../images/style-and-appearance/style-font-family.png)
 
@@ -248,7 +248,7 @@ internal sealed class OrderData
 
 ## Customize the color of grid lines
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of Grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the Grid container to control color, thickness, and border style.
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property defines border visibility and supports options for `Horizontal`, `Vertical`, `Both`, or `None`.
 

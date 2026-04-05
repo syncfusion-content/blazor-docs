@@ -63,7 +63,7 @@ The **.e-groupcaption** class styles the caption row, and **.e-recordplusexpand*
 }
 ```
 
-Adjust properties such as **background-color**, **padding**, **border**, and **font** to maintain consistency with the rest of the grid.
+Adjust properties such as **background-color**, **padding**, **border**, and **font** to maintain consistency with the rest of the DataGrid.
 
 ![Group caption row](../images/style-and-appearance/group-caption-row.png)
 

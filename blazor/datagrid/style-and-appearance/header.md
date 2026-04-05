@@ -25,7 +25,7 @@ The **.e-gridheader** class styles the header container in the Blazor DataGrid. 
 }
 ```
 
-Style Properties like  **border**, **padding**, and **background-color** can be changed to fit the grid layout design.
+Style Properties like  **border**, **padding**, and **background-color** can be changed to fit the DataGrid layout design.
 
 ![Grid header](../images/style-and-appearance/grid-header.png)
 
@@ -40,7 +40,7 @@ The **.e-headercell** class styles individual header cells in the Blazor DataGri
 }
 ```
 
-Properties such as **color**, **background-color**, **font**, and alignment can be adjusted to align with the grid design.
+Properties such as **color**, **background-color**, **font**, and alignment can be adjusted to align with the DataGrid design.
 
 ![Grid header cell](../images/style-and-appearance/grid-header-cell.png)
 
