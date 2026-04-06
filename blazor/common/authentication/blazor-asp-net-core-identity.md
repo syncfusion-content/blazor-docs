@@ -8,11 +8,11 @@ documentation: ug
 
 # Blazor Web App (Interactive Server) with ASP.NET Core Identity
 
-This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App using Interactive Server render mode** and protect Syncfusion components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Charts](https://www.syncfusion.com/blazor-components/blazor-charts).
+This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App using Interactive Server render mode** and protect Syncfusion® components such as **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**.
 
 ## What is ASP.NET Core Identity?
 
-ASP.NET Core Identity is the built-in membership system for ASP.NET Core apps. It provides UI and APIs for registration, login, logout, password management, roles, claims, and more.  In Blazor Web Apps, Microsoft recommends using the Identity Razor Pages for authentication tasks and using Blazor authorization for your components.
+[ASP.NET Core Identity](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-10.0&tabs=visual-studio) is the built-in membership system for ASP.NET Core apps. It provides UI and APIs for registration, login, logout, password management, roles, claims, and more. In Blazor Web Apps, Microsoft recommends using the Identity Razor Pages for authentication tasks and using Blazor authorization for your components.
 
 ## When should I use it in Blazor?
 
@@ -20,18 +20,18 @@ Use Identity when your app needs cookie‑based, server‑side authentication an
 
 ## Prerequisites
 
-* .NET SDK 8.0 or later
-* Editor/IDE: Visual Studio 2022 or later, or VS Code
+* [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
+* [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/) or [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Create the sample app
 
-The steps below will help you build a secure Blazor Web App using Interactive Server mode. You will set up ASP.NET Core Identity with SQLite and add Syncfusion components such as the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Charts](https://www.syncfusion.com/blazor-components/blazor-charts) to pages that require the `[Authorize]` attribute.
+The steps below help you build a secure Blazor Web App using Interactive Server mode. You will set up ASP.NET Core Identity with SQLite and add Syncfusion components such as the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Charts](https://www.syncfusion.com/blazor-components/blazor-charts) to pages that require the `[Authorize]` attribute.
 
 ### 1. Create a Blazor web app with Interactive Server
 
-Create a new Blazor Web App configured to use **Interactive Server render mode**. In this mode, the app runs on the server and updates the UI in the browser through a real-time connection. This helps keep your data secure because it stays on the server.
+Create a new Blazor Web App configured to use **Interactive Server render mode**. In this mode, the app runs on the server and updates the UI in the browser through a real-time connection, which helps keep your data secure.
 
-`BlazorIdentitySyncfusion` is used as the sample project name in the following commands. You may replace it with any project name that suits your application.
+`BlazorIdentitySyncfusion` is used as the sample project name in the following commands. Replace it with any project name you prefer.
 
 Run the following commands in your **command-line interface (CLI)**.
 
@@ -48,16 +48,16 @@ cd BlazorIdentitySyncfusion
 
 Install the necessary NuGet packages that provide ASP.NET Core Identity features and database connectivity. These packages allow your app to store user accounts, manage authentication, and connect to a SQLite database.
 
-**Package Overview**
+**Package overview**
 
-| Package | What It Does |
+| Package | What it does |
 |---------|--------------|
-| **Microsoft.AspNetCore.Identity.EntityFrameworkCore** | Connects Identity to your database via Entity Framework Core, enabling storage of users, passwords (hashed), and roles |
-| **Microsoft.AspNetCore.Identity.UI** | Provides ready-made login, registration, and account management pages (Razor Pages) so you don't have to build them from scratch |
-| **Microsoft.EntityFrameworkCore.Sqlite** | SQLite database provider-a lightweight database stored as a single file, perfect for development and small applications |
-| **Microsoft.EntityFrameworkCore.Design** | Tools for creating and managing database schema changes (migrations) |
-| **Microsoft.EntityFrameworkCore.Tools** | Adds the `dotnet ef` command-line tool for running migration commands |
-| **Microsoft.VisualStudio.Web.CodeGeneration.Design** | Scaffolding tool for customizing Identity Razor Pages (e.g., to override the default login page design) |
+| [Microsoft.AspNetCore.Identity.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Identity.EntityFrameworkCore) | Connects Identity to your database via [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/), enabling storage of users, passwords (hashed), and roles |
+| [Microsoft.AspNetCore.Identity.UI](https://www.nuget.org/packages/Microsoft.AspNetCore.Identity.UI) | Provides ready-made login, registration, and account management pages (Razor Pages) so you don't have to build them from scratch |
+| [Microsoft.EntityFrameworkCore.Sqlite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite) | SQLite database provider. A lightweight database stored as a single file, perfect for development and small applications |
+| [Microsoft.EntityFrameworkCore.Design](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design) | Tools for creating and managing database schema changes (migrations) |
+| [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools) | Adds the `dotnet ef` command-line tool for running migration commands |
+| [Microsoft.VisualStudio.Web.CodeGeneration.Design](https://www.nuget.org/packages/Microsoft.VisualStudio.Web.CodeGeneration.Design) | Scaffolding tool for customizing Identity Razor Pages (e.g., to override the default login page design) |
 
 Run the following commands inside your project folder.
 
@@ -74,13 +74,11 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 {% endhighlight %}
 {% endtabs %}
 
-N> For Production Applications, SQLite is excellent for development and learning, but for production apps with multiple users or high traffic, use SQL Server, PostgreSQL, or MySQL for better performance, scalability, and concurrent access support.
-
 ### 3. Install Syncfusion Blazor component packages
 
-Add Syncfusion Blazor packages to your project. These packages provide professional UI components like DataGrid (for displaying tabular data) and Charts (for visualizing data) that you'll use in the protected pages.
+Add Syncfusion Blazor packages to your project. These packages provide UI components like DataGrid and Charts that you'll use on protected pages.
 
-Run the following commands in your project folder (the folder that contains the `.csproj` file).
+Run the following commands in the project folder (where the `.csproj` file is located).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -94,9 +92,9 @@ dotnet add package Syncfusion.Blazor.Themes
 
 ### 4. Create the database context for Identity users
 
-Create the **ApplicationDbContext** class that connects ASP.NET Core Identity to your database. This class tells Entity Framework Core how to store and manage Identity data such as users, passwords, and roles.
+Create the **ApplicationDbContext** class that connects ASP.NET Core Identity to your database. This class tells [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/) how to store and manage Identity data such as users, passwords, and roles.
 
-Create a folder named `Data` in the project root (same level as `Program.cs`). Inside that folder, create a file named **ApplicationDbContext.cs** and add the following code:
+Create a folder named `Data` in the project root (same level as `Program.cs`). Inside that folder, create a file named `ApplicationDbContext.cs` and add the following code.
 
 {% tabs %}
 {% highlight c# tabtitle="Data/ApplicationDbContext.cs" %}
@@ -107,11 +105,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlazorIdentitySyncfusion.Data;
 
-/// <summary>
-/// Database context for ASP.NET Core Identity. Inherits IdentityDbContext to include
-/// tables for users, roles, claims, etc.
-/// </summary>
-
+// Database context for ASP.NET Core Identity (users, roles, claims, etc.)
 public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -121,13 +115,13 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {% endhighlight %}
 {% endtabs %}
 
-N> `IdentityDbContext<IdentityUser>` uses the default `IdentityUser` class provided by ASP.NET Core Identity. You can replace `IdentityUser` with a custom user class (e.g., `ApplicationUser : IdentityUser`) if you need additional user properties like `FullName` or `Department`.
+N> `IdentityDbContext<IdentityUser>` uses the default `IdentityUser` class. You can replace `IdentityUser` with a custom user class (e.g., `ApplicationUser : IdentityUser`) if you need additional properties like `FullName` or `Department`.
 
 ### 5. Configure the SQLite connection string
 
 Set up the connection string that tells your app where the `SQLite` database should be created. Entity Framework Core uses this connection string to store Identity data.
 
-Open your **appsettings.json** file and add the `ConnectionStrings` section at the top.
+Open `appsettings.json` and add the `ConnectionStrings` section.
 
 {% tabs %}
 {% highlight c# tabtitle="appsettings.json" %}
@@ -150,42 +144,35 @@ Open your **appsettings.json** file and add the `ConnectionStrings` section at t
 
 N> SQLite is a simple, file‑based database that stores all data in one `.db` file. It is easy to use and works well for development, testing, and learning. For production apps with many users or heavy traffic, consider switching to SQL Server, PostgreSQL, or MySQL.
 
-**Security Warning**: Add `*.db` to your `.gitignore` file to prevent committing the database file (which contains hashed passwords and personal data) to source control. This is critical for protecting user privacy and security.
+**Security Warning**: Add `*.db` to your `.gitignore` file to avoid committing the database file (which contains hashed passwords and personal data) to source control.
 
 ### 6. Configure application services and middleware
 
-Configure your application by registering essential services and middleware in **Program.cs**. This is the central configuration file where you:
+Configure your application by registering essential services and middleware in `Program.cs`. This is the central configuration file where you:
 - Connect to the database
 - Enable Identity authentication
 - Register Syncfusion components
-- Set up the request processing pipeline
+- Configure the request processing pipeline
 
-**Understanding Services vs. Middleware**
-- **Services**: Reusable components registered in the dependency injection container (database, authentication, Syncfusion, etc.)
-- **Middleware**: Components that process each HTTP request in a specific order (authentication → authorization → routing)
-
-Open **Program.cs** and replace its contents with the below.
+Open `Program.cs` and replace its contents with the following snippets where appropriate.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-// Program.cs
 ...
 using BlazorIdentitySyncfusion.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Syncfusion.Blazor;
 ...
-// EF Core + SQLite
+// Configure EF Core with SQLite as the Identity data store
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// ASP.NET Core Identity (cookie auth + default UI)
+// Configure ASP.NET Core Identity using cookies and the default UI (email confirmation disabled for demo only; enable it with an email sender in production)
 builder.Services
     .AddDefaultIdentity<IdentityUser>(options =>
     {
-        // WARNING: Email confirmation is disabled for demo purposes only.
-        // In production, set SignIn.RequireConfirmedAccount = true and configure an email sender to prevent unauthorized account access.
         options.SignIn.RequireConfirmedAccount = false;
     })
     .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -193,21 +180,20 @@ builder.Services
 // Razor Pages (Identity UI lives here)
 builder.Services.AddRazorPages();
 
-// Blazor auth state for <CascadingAuthenticationState>/<AuthorizeRouteView>
+// Enable Blazor authentication state for CascadingAuthenticationState and AuthorizeRouteView
 builder.Services.AddCascadingAuthenticationState();
 
 // Register Syncfusion Blazor services
 builder.Services.AddSyncfusionBlazor();
 ...
-
 app.UseStaticFiles();
 app.UseRouting();
 
-// Authentication & Authorization middleware (order matters!)
+// Authentication & Authorization middleware (order matters)
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Antiforgery Middleware (required for Identity Razor Pages login/logout forms in .NET 8+)
+// Antiforgery middleware (required for Identity Razor Pages login/logout forms in .NET 8+)
 app.UseAntiforgery();
 
 // Map endpoints
@@ -219,7 +205,7 @@ app.MapRazorPages(); // Identity UI endpoints
 
 ### 7. Import authorization and Syncfusion namespaces
 
-Add the required namespaces in **Components/_Imports.razor**. These namespaces allow you to use authorization features such as `[Authorize]` and `<AuthorizeView>`, and they enable Syncfusion components in your Blazor pages.
+Add the required namespaces in `Components/_Imports.razor`. These namespaces allow you to use authorization features such as `[Authorize]` and `<AuthorizeView>`, and they enable Syncfusion components in your Blazor pages.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/_Imports.razor" %}
@@ -237,21 +223,21 @@ Add the required namespaces in **Components/_Imports.razor**. These namespaces a
 
 Before adding the Syncfusion theme stylesheet, ensure that no other Syncfusion theme CSS (e.g., `material.css`, `fluent.css`) is already referenced to avoid styling conflicts.
 
-Open **Components/App.razor** and include the following inside the `<head>` and `<body>` sections.
+Open `Components/App.razor` and include the following inside the `<head>` and `<body>` sections.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/App.razor" hl_lines="4 11" %}
 
 <head>
     ...
-    <!-- Syncfusion theme style sheet -->
+    <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     <HeadOutlet />
 </head>
 
 <body>
     ...
-    <!-- Syncfusion Blazor Core script -->
+    <!-- Syncfusion Blazor core script -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
@@ -260,9 +246,9 @@ Open **Components/App.razor** and include the following inside the `<head>` and 
 
 ### 9. Create the _LoginPartial.cshtml file for Identity UI
 
-Create the `_LoginPartial.cshtml` file to display the login, logout, register, and manage account links used by ASP.NET Core Identity. This partial view is shown in the navigation bar and updates based on whether the user is signed in.
+The `_LoginPartial.cshtml` file displays login, logout, register, and account management links for ASP.NET Core Identity. It appears in the navigation bar and automatically updates based on the user’s sign‑in status.
 
-Create a folder named `Pages` at the project root (next to Program.cs). Inside the Pages folder, create a subfolder named `Shared`. Then create a new file called **_LoginPartial.cshtml** and add the following content.
+In the project root (next to `Program.cs`), create a `Pages` folder and add a `Shared` subfolder. Inside the `Shared` folder, create a file named `_LoginPartial.cshtml` and add the following content.
 
 {% tabs %}
 {% highlight c# tabtitle="Pages/Shared/_LoginPartial.cshtml" %}
@@ -302,7 +288,7 @@ else
 {% endhighlight %}
 {% endtabs %}
 
-Create a file named `_ViewImports.cshtml` inside the `Pages` folder. This enables Tag Helpers for all Razor Pages, including the Identity UI pages.
+Create a file named `_ViewImports.cshtml` inside the `Pages` folder and add the following code. This enables Tag Helpers for all Razor Pages, including the Identity UI pages.
 
 {% tabs %}
 {% highlight c# tabtitle="Pages/_ViewImports.cshtml" %}
@@ -314,21 +300,19 @@ Create a file named `_ViewImports.cshtml` inside the `Pages` folder. This enable
 
 ### 10. Configure the Blazor router with authorization support
 
-Update the router in your **App.razor** file so that Blazor can enforce authorization rules on your components. This allows pages marked with `[Authorize]` to require sign‑in before they are shown.
+To apply authorization for Blazor components, update the router in `App.razor`. This ensures that pages marked with `[Authorize]` require authentication before rendering.
 
-Find the `<body>` section in **App.razor** and update it to the following.
+Replace the existing `<body>` section in `App.razor` with the following:
 
 * Wrap the router in `<CascadingAuthenticationState>` so Blazor can pass authentication information to all components.
-* Replace `<RouteView>` with `<AuthorizeRouteView>` so pages can show different content based on the user's sign‑in status.
+* Replace `<RouteView>` with `<AuthorizeRouteView>` so pages can show different content based on the user's sign-in status.
 * Keep the `<NotAuthorized>` and `<Authorizing>` sections to display messages to the user when needed.
-
-This setup ensures protected pages only load after the user is authenticated and provides clear messages when access is denied.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
 
 <body>
-      <CascadingAuthenticationState>
+    <CascadingAuthenticationState>
         <Router AppAssembly="@typeof(App).Assembly">
             <Found Context="routeData">
                 <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
@@ -362,11 +346,13 @@ This setup ensures protected pages only load after the user is authenticated and
 
 N> `<ReconnectModal />` is a custom component for handling SignalR reconnection UI. If your template does not include it, you can omit this line.
 
-### 11. Add authentication UI in Components/Layout/MainLayout.razor
+### 11. Add authentication UI to the main layout
 
 Update your main layout to display authentication options in the header. The `<AuthorizeView>` component will display different links depending on whether the user is signed in. This gives users an easy way to access login, logout, register, or manage account pages.
 
-Open **Components/Layout/MainLayout.razor** and replace its content with the updated layout.
+Open `Components/Layout/MainLayout.razor` and replace its content with the following. 
+
+N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your project uses different styling, adjust the CSS classes accordingly.
 
 {% tabs %}
 {% highlight razor tabtitle="MainLayout.razor" %}
@@ -432,7 +418,7 @@ dotnet new razorcomponent -n SecureChart -o Components/Pages
 {% endhighlight %}
 {% endtabs %}
 
-**Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component**
+**Add Syncfusion Blazor DataGrid component**
 
 This component displays a sample order list using Syncfusion's DataGrid. The `@attribute [Authorize]` directive ensures only authenticated users can access this page.
 
@@ -480,7 +466,7 @@ This component displays a sample order list using Syncfusion's DataGrid. The `@a
 {% endhighlight %}
 {% endtabs %}
 
-**Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts component**
+**Add Syncfusion Blazor Charts component**
 
 This component displays a column chart showing monthly sales data.
 
@@ -517,11 +503,11 @@ This component displays a column chart showing monthly sales data.
 {% endhighlight %}
 {% endtabs %}
 
-### 13. Add secure links to the left navigation
+### 13. Add secure links to the left navigation menu
 
-Update the navigation menu to include links to your secured pages. This makes them easily accessible from any page in your application. When users click these links, they'll be able to access the pages if logged in, or will be prompted to log in if they're not authenticated.
+Update the navigation menu to include links to the secured pages. This makes them easily accessible from any page in the application. When users click these links, they'll be able to access the pages if logged in, or will be prompted to log in if they're not authenticated.
 
-Open **Components/Layout/NavMenu.razor** and add the following navigation items after the existing menu links.
+Open `Components/Layout/NavMenu.razor` and add the following navigation items after the existing menu links.
 
 {% tabs %}
 {% highlight c# tabtitle="Layout/NavMenu.razor" %}
@@ -571,6 +557,8 @@ dotnet ef database update
 
 After these commands run, the SQLite database will include the Identity tables such as AspNetUsers, AspNetRoles, and others used for authentication.
 
+N> If you receive an error that a migration with this name already exists, you can either delete the existing migration or choose a different name such as `InitialIdentitySetup`.
+
 ### 15. Run the application and validate authentication flow
 
 Run the application and verify the authentication flow.
@@ -583,7 +571,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-1. Open a browser and navigate to `https://localhost:<port>` (the port is shown in the terminal output).
+1. Open a browser and navigate to the URL shown in the terminal output (typically `https://localhost:5001` or `https://localhost:7xxx`).
 2. Click **Secure Grid** or **Secure Chart** in the left navigation.
 3. You will be redirected to the Identity login page (`/Identity/Account/Login`) because you are not authenticated.
 4. Click **Register** and create a new account (email and password).
