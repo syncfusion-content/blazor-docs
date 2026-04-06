@@ -25,11 +25,7 @@ Syncfusion® components make HTTP requests to your API internally. JWT allows ea
 
 **Benefits of using JWT in Blazor applications**
 
-- Secure token based authentication
-- Stateless and scalable architecture
-- API level authorization
-- No password storage in your app
-- Framework and platform independent security
+JWT allows users to log in once and securely access APIs, controls features based on user roles, maintain authentication while navigating between pages, ensure secure communication between client and server, and supports large‑scale applications without storing login sessions on the server.
 
 ## Create a Blazor web app (Interactive Server)
 
