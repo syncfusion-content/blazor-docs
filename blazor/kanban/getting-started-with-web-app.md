@@ -100,13 +100,6 @@ Install-Package Syncfusion.Blazor.Kanban -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
-{% highlight c# tabtitle="dotnet CLI" %}
-
-dotnet add package Syncfusion.Blazor.Kanban --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
 {% endtabs %}
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
