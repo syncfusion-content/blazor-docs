@@ -9,18 +9,15 @@ documentation: ug
 
 # Blazor with GitHub OAuth 2.0
 
-This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected pages featuring the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
+This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected pages featuring the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component.
 
 ## What is OAuth 2.0?
 
 OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service (such as **GitHub**, **Google**, and **Microsoft**). It uses tokens instead of credentials and is widely used for secure authentication in modern applications.
 
-OAuth provides:
+**Benefits of using OAuth in Blazor applications**
 
-- **Secure login using external providers**
-- **No need to store username and password**
-- **Short‑lived authorization tokens**
-- **Minimal developer‑side security concerns**
+OAuth enables secure user authentication by allowing sign‑in through trusted external providers. It removes the need to store usernames and passwords in the application, reducing security risks. OAuth uses short lived access tokens to protect APIs and user data. This approach minimizes developer side security responsibilities.
 
 ## Create a Blazor Web App (Interactive Server)
 
@@ -47,7 +44,7 @@ OAuth provides:
 2. Click **OAuth Apps → New OAuth App**.
 3. Configure the application:
     - **Homepage URL:** `https://localhost:5001/` *(Replace `5001` with your application's actual HTTPS port number from `launchSettings.json` if different)*.
-    - **Authorization callback URL:** `https://localhost:5001/signin-github`
+    - **Authorization callback URL:** `https://localhost:5001/signin-github`.
 4. Copy the generated **Client ID** and **Client Secret**.
 5. In your Blazor project, open **appsettings.json** and add the following configuration.
 
