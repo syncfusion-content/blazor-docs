@@ -101,7 +101,7 @@ export class AppComponent {
 
 N> If your project uses the default Angular CLI naming, the file may be named `app.component.ts` instead of `app.ts`.
 
-### Register as a custom element
+### Register the Angular component as a custom element
 
 The Angular component is converted into a Web Component by registering it with [customElements.define()](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define). After this registration, the component is available as a standalone HTML element such as `<sf-grid>` that Blazor can display. 
 
@@ -255,12 +255,12 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion DataGrid component:
+Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® DataGrid component:
 
 ![Blazor DataGrid Component](../images/angular-blazor-integration.webp)
 
 ## See also
 
-* [Getting started with Syncfusion Blazor](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 * [Getting started with Syncfusion Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
 

@@ -91,7 +91,7 @@ In this example, the file name used is `OrdersGrid.razor`.
 
 **BlazorServerHost.Pages** defines the namespace where Razor components are grouped within a Blazor Server application. It usually corresponds to the **Pages** folder and helps organize UI components like `OrdersGrid.razor` in a structured way.
 
-### Register as a custom element
+### Register the Blazor component as a custom element
 
 To use your Razor component inside an Angular application, you must register it as a **Blazor custom element**. This registration exposes your `.razor` file as a standard HTML tag.
 
@@ -202,7 +202,7 @@ Server:
 {% endhighlight %}
 {% endtabs %}
 
-N> Based on the blazor project type add the script reference file. 
+N> Based on the Blazor project type, add the appropriate script reference file.
 
 ### Use the custom element in Angular
 
@@ -301,4 +301,4 @@ Once the compilation completes, open your browser and navigate to `http://localh
 ## See also
 
 * [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [Getting started with Syncfusion Angular](https://ej2.syncfusion.com/angular/documentation/getting-started)
+* [Getting started with Syncfusion Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
