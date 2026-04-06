@@ -7,13 +7,13 @@ control: common
 documentation: ug
 ---
 
-# Integrating Syncfusion® DataGrid with DocumentEditor in Blazor app
+# Integrating Syncfusion® DataGrid with DocumentEditor in Blazor App
 
 This guide shows how to integrate the **[Syncfusion® Blazor DocumentEditor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)** (WordProcessor) together with the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using `Server` interactivity.
 
 A common use case for this integration is helping users work with structured records while creating or updating a related document at the same time. Users can browse, filter, or select items in the DataGrid and instantly view the matching details in the DocumentEditor as an editable Word style document. This is especially valuable in scenarios such as **order confirmation**, **HR record management**, and **customer support workflows**, where teams frequently transform Grid data into formal documents. It allows users to create invoices, summaries, letters, or agreements from one screen without switching tools, copying data, or risking errors from manual entry.
 
-If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create a project.
+If you haven't created your Blazor App yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create a project.
 
 ## Install Syncfusion® NuGet packages
 
@@ -55,7 +55,7 @@ Open the `~/Components/_Imports.razor` file and import the Syncfusion® namespac
 Add the Syncfusion® Blazor service to the `~/Program.cs` file to enable Syncfusion® components in the application.
 
 {% tabs %}
-{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="1 8" %}
+{% highlight c# tabtitle="~/_Program.cs" hl_lines="1 8" %}
 
 using Syncfusion.Blazor;
 
@@ -74,7 +74,9 @@ builder.Services.AddSyncfusionBlazor();
 
 To apply styles and enable Syncfusion® features, reference the theme CSS and scripts within the `~/Components/App.razor` file.
 
-```html
+{% tabs %}
+{% highlight html  %}
+
 <head>
     <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -87,7 +89,9 @@ To apply styles and enable Syncfusion® features, reference the theme CSS and sc
     <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure render mode
 
@@ -236,6 +240,6 @@ The app launches and renders the **[Syncfusion® Blazor DocumentEditor](https://
 
 ## See also
 
-- [Getting started with Blazor DocumentEditor component in Web app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/web-app)
+- [Getting started with Syncfusion® Blazor DocumentEditor in Web App](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/web-app)
 
-- [Getting started with Blazor DataGrid in Web app](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+- [Getting started with Syncfusion® Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
