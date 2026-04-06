@@ -9,7 +9,7 @@ documentation: ug
 
 # Authentication and Authorization with AWS Cognito in Blazor Server
 
-AWS Cognito User Pools provide a managed identity system that supports OpenID Connect (OIDC), OAuth 2.0, JSON Web Tokens (JWTs), Multi-Factor Authentication (MFA), user attributes, and group-based roles. This guide explains how to integrate a Blazor Server application with Cognito using Authorization Code Flow with Proof Key for Code Exchange (PKCE) through the Hosted UI, configure roles, and secure Syncfusion Blazor UI components.
+This guide demonstrates how to integrate AWS Cognito authentication in a **Blazor Server** application (or a **Blazor Web App** with **Server interactivity** in .NET 8+). AWS Cognito User Pools provide a managed identity system that supports OpenID Connect (OIDC), OAuth 2.0, JSON Web Tokens (JWTs), Multi-Factor Authentication (MFA), user attributes, and group-based roles. 
 
 ## What is AWS?
 
@@ -43,7 +43,7 @@ In **User Pool → Sign-in experience**:
 ## Prerequisites
 
 * .NET SDK 8.0 or later (this guide uses .NET 10.0)
-* Visual Studio 2022 or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension 
+* Visual Studio 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension 
 * AWS Account with permission to manage Cognito
 
 ## Integrating Cognito with Blazor
@@ -56,12 +56,14 @@ If you already have a Blazor project, proceed to the **Install Authentication pa
 
 ### Install Authentication package
 
-To enable authentication, install the required Microsoft packages.
+To enable authentication and Syncfusion Blazor components, install the required packages.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
+dotnet add package Syncfusion.Blazor.Grids -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -99,9 +101,9 @@ This stores your Cognito Hosted UI domain and app client ID so the app can read 
 
 {
   "Cognito": {
-    "Authority": "https://your-domain.auth.<REGION>.amazoncognito.com",
-    "RedirectUri": "https://localhost:<PORT>/signin-oidc",
-    "SignOutUri": "https://localhost:<PORT>/signout-callback-oidc",
+    "Authority": "https://your-domain.auth.{REGION}.amazoncognito.com",
+    "RedirectUri": "https://localhost:{PORT}/signin-oidc",
+    "SignOutUri": "https://localhost:{PORT}/signout-callback-oidc",
     "ClientId": "YOUR_APP_CLIENT_ID"
   },
   "AllowedHosts": "*"
@@ -110,13 +112,13 @@ This stores your Cognito Hosted UI domain and app client ID so the app can read 
 {% endhighlight %}
 {% endtabs %}
 
-N> Replace **<REGION>** with your AWS region, **<PORT>** with your localhost port, and **YOUR_APP_CLIENT_ID** with your Cognito app client ID.
+N> Replace **{REGION}** with your AWS region (e.g., `us-east-1`), **{PORT}** with your localhost port (e.g., `7000`), and **YOUR_APP_CLIENT_ID** with your Cognito app client ID.
 
 N> This sample uses Authorization Code + PKCE with a public client (no client secret). If you created a confidential client, add ClientSecret to configuration and set `options.ClientSecret` in the OIDC options. 
 
 ### Configure OIDC and Cookie Authentication
 
-This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. `SaveTokens = true` keeps ID/Access tokens available for downstream API calls. `RoleClaimType = "cognito:groups"` turns Cognito groups into ASP.NET Core roles. The `/sign-in` and `/sign-out` endpoints start and end the hosted login flow.
+This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. `SaveTokens = true` keeps ID/Access tokens available for downstream API calls. `RoleClaimType = "cognito:groups"` turns Cognito groups into ASP.NET Core roles. The `/signin` and `/signout` endpoints start and end the hosted login flow.
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
@@ -135,8 +137,8 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddHttpContextAccessor();
 
-var cognitoDomain = builder.Configuration["Cognito:Authority"];
-var clientId = builder.Configuration["Cognito:ClientId"];
+var cognitoAuthority = builder.Configuration["Cognito:Authority"];
+var cognitoClientId = builder.Configuration["Cognito:ClientId"];
 
 bool TryGetAuthorityUri(string? authority, out Uri? uri)
 {
@@ -153,13 +155,13 @@ bool TryGetAuthorityUri(string? authority, out Uri? uri)
 
 // Decide whether to enable OIDC (Cognito) or fall back to cookie-only auth in Development.
 bool useOidc = false;
-if (!string.IsNullOrWhiteSpace(cognitoDomain)
-    && !cognitoDomain.Contains("your-domain")
-    && !string.Equals(cognitoDomain, "Test user", StringComparison.OrdinalIgnoreCase)
-    && !string.IsNullOrWhiteSpace(clientId)
-    && !clientId.Contains("YOUR_APP_CLIENT_ID"))
+if (!string.IsNullOrWhiteSpace(cognitoAuthority)
+    && !cognitoAuthority.Contains("your-domain")
+    && !string.Equals(cognitoAuthority, "Test user", StringComparison.OrdinalIgnoreCase)
+    && !string.IsNullOrWhiteSpace(cognitoClientId)
+    && !cognitoClientId.Contains("YOUR_APP_CLIENT_ID"))
 {
-    if (Uri.TryCreate(cognitoDomain, UriKind.Absolute, out var u))
+    if (Uri.TryCreate(cognitoAuthority, UriKind.Absolute, out var u))
     {
         // Allow only HTTPS authority generally
         if (string.Equals(u.Scheme, Uri.UriSchemeHttps, StringComparison.OrdinalIgnoreCase))
@@ -167,10 +169,10 @@ if (!string.IsNullOrWhiteSpace(cognitoDomain)
             useOidc = true;
         }
         else if (string.Equals(u.Scheme, Uri.UriSchemeHttp, StringComparison.OrdinalIgnoreCase)
-                 && !u.IsLoopback
-                 && builder.Environment.IsDevelopment())
+         && u.IsLoopback
+         && builder.Environment.IsDevelopment())
         {
-            // Allow non-local http authority in development (rare)
+            // Allow HTTP for localhost in development only
             useOidc = true;
         }
     }
@@ -186,14 +188,14 @@ if (useOidc)
     .AddCookie()
     .AddOpenIdConnect(options =>
     {
-        options.Authority = cognitoDomain!;          // Cognito Hosted UI domain
-        options.ClientId = clientId!;                // App client ID
+        options.Authority = cognitoAuthority!;          // Cognito Hosted UI domain
+        options.ClientId = cognitoClientId!;                // App client ID
         options.ResponseType = "code";              // Authorization Code + PKCE
         options.SaveTokens = true;                  // Persist ID/Access tokens in session for use in API calls or as Bearer tokens
 
         // If the authority is http and we're in Development, allow non-https metadata.
         options.RequireHttpsMetadata = !(builder.Environment.IsDevelopment()
-            && Uri.TryCreate(cognitoDomain, UriKind.Absolute, out var uu)
+            && Uri.TryCreate(cognitoAuthority, UriKind.Absolute, out var uu)
             && string.Equals(uu.Scheme, Uri.UriSchemeHttp, StringComparison.OrdinalIgnoreCase));
 
         options.Scope.Clear();
@@ -221,7 +223,7 @@ else
 // In Production require a valid HTTPS Cognito authority.
 if (!builder.Environment.IsDevelopment())
 {
-    if (!TryGetAuthorityUri(cognitoDomain, out var prodUri) || prodUri!.Scheme != Uri.UriSchemeHttps || string.IsNullOrWhiteSpace(clientId) || clientId.Contains("YOUR_APP_CLIENT_ID"))
+    if (!TryGetAuthorityUri(cognitoAuthority, out var prodUri) || prodUri!.Scheme != Uri.UriSchemeHttps || string.IsNullOrWhiteSpace(cognitoClientId) || cognitoClientId.Contains("YOUR_APP_CLIENT_ID"))
     {
         throw new InvalidOperationException(
             "Cognito configuration is invalid. Set 'Cognito:Authority' to your Cognito Hosted UI domain (https://<your-domain>.auth.<region>.amazoncognito.com) and 'Cognito:ClientId' to your app client id.");
@@ -296,6 +298,27 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
+### Add Syncfusion theme and script references
+
+Add the Syncfusion Blazor theme CSS and script references to your application's `_Host.cshtml` file (or `App.razor` depending on your project template).
+
+{% tabs %}
+{% highlight html tabtitle="_Host.cshtml" %}
+
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+</head>
+<body>
+    ...
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
+
 ### Syncfusion DataGrid on an authenticated page
 
 This page demonstrates how to protect a Syncfusion DataGrid using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
@@ -312,7 +335,7 @@ This page demonstrates how to protect a Syncfusion DataGrid using ASP.NET Core a
         <Authorized>
             <div>
                 <h1>Welcome to Blazor with AWS Cognito</h1>
-                <h5> Orders Data</h5>
+                <h5>Orders Data</h5>
                 <SfGrid DataSource="@_orders" AllowPaging="true" AllowSorting="true" AllowSelection="true">
                     <GridPageSettings PageSize="10"></GridPageSettings>
                     <GridColumns>
@@ -347,8 +370,6 @@ This page demonstrates how to protect a Syncfusion DataGrid using ASP.NET Core a
 @code {
     private record Order(int Id, string Item, int Qty, decimal Price);
 
-    // In production, load orders from an API or database
-    // protected override async Task OnInitializedAsync() => _orders = await OrderService.GetOrdersAsync();
     private readonly List<Order> _orders = new()
     {
         new Order(1, "Laptop", 1, 1299.00m),
@@ -360,6 +381,8 @@ This page demonstrates how to protect a Syncfusion DataGrid using ASP.NET Core a
 
 {% endhighlight %}
 {% endtabs %}
+
+N> In this example, sample data is defined inline for demonstration purposes. In production applications, load data from a secure API endpoint that validates the user's JWT token or authentication cookie.
 
 ### Run the application
 
@@ -373,7 +396,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-N> By default, the app runs on `https://localhost:7000` (or `https://localhost:5001` in older project templates). Ensure your Cognito app client **Allowed redirect URIs** match your actual localhost URL.
+N> By default, the app runs on `https://localhost:7000` (or similar port defined in `Properties/launchSettings.json`). Older project templates may use `https://localhost:5001`. Ensure your Cognito app client **Allowed redirect URIs** match your actual localhost URL.
 
 **Expected behavior**
 
@@ -385,10 +408,13 @@ N> By default, the app runs on `https://localhost:7000` (or `https://localhost:5
 
 **Output:**
 
-![AWS with Blazor](./images/aws-cognito.webp)
+![Syncfusion Blazor DataGrid displaying order data after AWS Cognito authenticationr](./images/aws-cognito.webp)
 
 ## See also
 
+* [Blazor with JWT Authentication](https://blazor.syncfusion.com/documentation/common/authentication/blazor-jwt-authentication)
+* [Blazor with Microsoft Entra ID](https://blazor.syncfusion.com/documentation/common/authentication/blazor-microsoft-entra-id)
+* [Blazor with GitHub OAuth 2.0](https://blazor.syncfusion.com/documentation/common/authentication/blazor-oauth-authentication)
 * [AWS Cognito User Pools Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools.html)
 * [ASP.NET Core Authentication overview](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/)
 * [Syncfusion Blazor Server Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
