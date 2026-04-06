@@ -1,38 +1,38 @@
 ---
 layout: post
-title: Integrating Syncfusion® Blazor Components in .NET MAUI and Web app
-description: Steps to create a .NET MAUI Blazor Hybrid and Blazor Web app and integrate Syncfusion® Blazor components.
+title: Integrating Syncfusion® Blazor Components in .NET MAUI and Web App
+description: Steps to create a .NET MAUI Blazor Hybrid and Blazor Web App and integrate Syncfusion® Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Integrating Blazor with .NET MAUI Blazor Hybrid and Web app
+# Integrating Blazor with .NET MAUI Blazor Hybrid and Web App
 
-This section explains how to create and run a **.NET MAUI Blazor Hybrid app** together with a **Blazor Web app** using [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
+This section explains how to create and run a **.NET MAUI Blazor Hybrid App** together with a **Blazor Web App** using [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
 
-## What is .NET MAUI Blazor Hybrid and Web app?
+## What is .NET MAUI Blazor Hybrid and Web App?
 
-A **.NET MAUI Blazor Hybrid app** is a native application for Windows, Android, iOS, and macOS. It uses Blazor pages inside a WebView to display the UI.
+A **.NET MAUI Blazor Hybrid App** is a native application for Windows, Android, iOS, and macOS. It uses Blazor pages inside a WebView to display the UI.
 
-A **.NET MAUI Blazor Web app** uses a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used in a Blazor WebAssembly app, a Blazor Server app, and a .NET MAUI Blazor app. This makes it easy to build one UI and use it across mobile, desktop, and web platforms. 
+A **.NET MAUI Blazor Web App** uses a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used in a Blazor WebAssembly App, a Blazor Server App, and a .NET MAUI Blazor App. This makes it easy to build one UI and use it across mobile, desktop, and web platforms. 
 
 By sharing UI components between native and web apps, this pattern ensures consistent user experiences, maximizes code reuse, and simplifies maintenance for applications targeting multiple environments.
 
-Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web app](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app)** project template. You can use this template to quickly create a .NET MAUI Hybrid app together with a Blazor Web app in one solution.
+Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app)** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution.
 
-## Create a new .NET MAUI Blazor Hybrid and Blazor Web app in Visual Studio
+## Create a new .NET MAUI Blazor Hybrid and Blazor Web App in Visual Studio
 
 1. Open **Visual Studio**.
 2. Click **Create a new project**.
-3. Search for **.NET MAUI Blazor Hybrid and Web app**.
+3. Search for **.NET MAUI Blazor Hybrid and Web App**.
 4. Select the template and create the project.
 
-The template generates the shared RCL, .NET MAUI app, and Web app.
+The template generates the shared RCL, .NET MAUI App, and Web App.
 
-![.NET MAUI Blazor Hybrid and Blazor Web app](images/maui/maui-web-app-template.webp)
+![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.webp)
 
-## Install Syncfusion® Blazor DataGrid and Themes NuGet in the app
+## Install Syncfusion® Blazor DataGrid and Themes NuGet in the App
 
 Follow these steps to add the Syncfusion® DataGrid.
 
@@ -48,7 +48,7 @@ N> Syncfusion® Blazor components are available on [nuget.org](https://www.nuget
 Open both of the following files and add the Syncfusion® namespaces.
 
 * `~/.Maui/Components/_Imports.razor`
-* `~/Components/_Imports.razor` (Blazor Web app)
+* `~/Components/_Imports.razor` (Blazor Web App)
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -61,7 +61,7 @@ Open both of the following files and add the Syncfusion® namespaces.
 
 ## Register Syncfusion® Blazor service
 
-Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the MAUI Blazor app and the `~/Program.cs` file of the Blazor Web app to enable Syncfusion® components in the application.
+Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the MAUI Blazor App and the `~/Program.cs` file of the Blazor Web App to enable Syncfusion® components in the application.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 4" %}
@@ -89,7 +89,7 @@ Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the MAU
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the **<head>** of the `~wwwroot/index.html` file of your MAUI Blazor app and in the `~/Components/App.razor file` of your Blazor Web app.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the **<head>** of the `~wwwroot/index.html` file of your MAUI Blazor App and in the `~/Components/App.razor file` of your Blazor Web App.
 
 {% tabs %}
 {% highlight html  %}
@@ -111,7 +111,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion® Blazor DataGrid component
 
-Include the Syncfusion® Blazor **DataGrid** component in any razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` app.
+Include the Syncfusion® Blazor **DataGrid** component in any razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
 
 {% tabs %}
 {% highlight razor %}
@@ -144,13 +144,13 @@ Include the Syncfusion® Blazor **DataGrid** component in any razor file. In thi
 {% endhighlight %}
 {% endtabs %}
 
-In the Visual Studio toolbar, select the **Windows Machine** target to build and run the `.Maui` app. To build and run the `.Web` app, select the **IIS Express** target.
+In the Visual Studio toolbar, select the **Windows Machine** target to build and run the `.Maui` App. To build and run the `.Web` App, select the **IIS Express** target.
 
-![Build and run MAUI Blazor app](images/maui/windows-machine-mode.webp)
+![Build and run MAUI Blazor App](images/maui/windows-machine-mode.webp)
 
 N> To run the application on Android or iOS, refer to [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-9.0#run-the-app-in-the-android-emulator) for emulator or device setup.
 
-![MAUI Blazor app with Syncfusion Blazor Components](../common/images/maui-blazor-datagrid.webp)
+![MAUI Blazor App with Syncfusion Blazor Components](../common/images/maui-blazor-datagrid.webp)
 
 N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-Hybrid-with-Blazor-Web-App-using-Syncfuion-Blazor-Components).
 
