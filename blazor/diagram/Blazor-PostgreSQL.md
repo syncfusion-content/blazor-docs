@@ -449,7 +449,7 @@ Syncfusion components are now configured and ready to use. For additional guidan
 
 ### Step 2: Update the Blazor Diagram
 
-The `Home.razor` component will display the data in a Syncfusion Blazor Diagram Organzaton chart.
+The `Home.razor` component will display the data in a Syncfusion Blazor Diagram Organization chart.
 
 **Instructions:**
 
