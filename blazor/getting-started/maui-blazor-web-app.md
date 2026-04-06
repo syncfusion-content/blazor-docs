@@ -32,7 +32,7 @@ The template generates the shared RCL, .NET MAUI App, and Web App.
 
 ![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.webp)
 
-## Install Syncfusion® Blazor DataGrid and Themes NuGet in the App
+## Install Syncfusion® Blazor DataGrid and Themes NuGet in the app
 
 Follow these steps to add the Syncfusion® DataGrid.
 
