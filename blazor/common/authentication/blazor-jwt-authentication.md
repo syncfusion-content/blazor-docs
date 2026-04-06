@@ -216,7 +216,7 @@ This section shows how to fetch a JWT token from the server, attach it to Syncfu
 
 **1. Install Syncfusion® Blazor DataGrid and themes NuGet packages**
 
-To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio *(Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)* and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)* and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 **2. Add Syncfusion® namespaces**
 
