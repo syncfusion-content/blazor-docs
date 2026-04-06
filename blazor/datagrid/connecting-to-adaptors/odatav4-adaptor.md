@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with ODataV4Adaptor in Syncfusion Blazor DataGrid
+title: Blazor DataGrid with ODataV4Adaptor| Syncfusion
 description: Learn about bind data and performing CRUD operations using ODataV4Adaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
@@ -8,7 +8,7 @@ keywords: adaptors, ODataV4adaptor, ODataV4 adaptor, remotedata
 documentation: ug
 ---
 
-# ODataV4Adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# OData Remote Data Binding in Syncfusion Blazor Components
 
 The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataManager enables seamless integration between the Blazor DataGrid and OData V4 services by handling OData‑formatted request and response processing. It automatically converts DataGrid actions such as filtering, sorting, paging, grouping, and CRUD into OData V4 compliant query options (like `$filter`, `$orderby`, `$top`, `$skip`) and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding without custom query or response logic.
 

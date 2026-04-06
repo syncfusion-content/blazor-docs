@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with WebApiAdaptor in Syncfusion Blazor DataGrid
+title: Blazor DataGrid with WebApiAdaptor| Syncfusion
 description: Learn about bind data and performing CRUD operations using WebApiAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
@@ -8,7 +8,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# WebApiAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# ASP.NET Web API Remote Data Binding in Syncfusion Blazor Components
 
 The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) integrates the Blazor DataGrid with Web API endpoints that support OData‑style querying. It is derived from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), meaning the target Web API must accept OData‑formatted query parameters for operations such as filtering, sorting, paging, and searching. When the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid performs any data action, the `WebApiAdaptor` generates OData‑compliant query strings, sends them to the Web API endpoint, and processes the returned JSON to populate the DataGrid. This ensures seamless remote data binding with OData-capable Web API services.
 
