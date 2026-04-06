@@ -97,8 +97,6 @@ Alternatively, run the following command in the Package Manager Console to achie
 Install-Package Syncfusion.Blazor.Maps -Version {{ site.releaseversion }}
 
 {% endhighlight %}
-
-{% endhighlight %}
 {% endtabs %}
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the client project.
@@ -224,7 +222,7 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Ma
          new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent"},
          new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent"},
          new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "Ivory Coast", Membership= "Permanent"},
          new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent"},
          new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent"},
          new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent"}

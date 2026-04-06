@@ -99,8 +99,6 @@ Alternatively, run the following command in the Package Manager Console to achie
 Install-Package Syncfusion.Blazor.LinearGauge -Version {{ site.releaseversion }}
 
 {% endhighlight %}
-
-{% endhighlight %}
 {% endtabs %}
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the client project.
