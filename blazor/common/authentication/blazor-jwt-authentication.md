@@ -27,7 +27,7 @@ Syncfusion® components make HTTP requests to your API internally. JWT allows ea
 
 JWT allows users to log in once and securely access APIs, controls features based on user roles, maintain authentication while navigating between pages, ensure secure communication between client and server, and supports large‑scale applications without storing login sessions on the server.
 
-## Create a Blazor web app (Interactive Server)
+## Create a Blazor Web App (Interactive Server)
 
 1. Open **Visual Studio**.
 2. Select **Create a new project**.
