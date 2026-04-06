@@ -56,7 +56,7 @@ This section explains how to enable JWT authentication in your Blazor Web App.
 
 ### Install required packages for JWT
 
-To enable JWT authentication in the application, open the NuGet Package Manager in Visual Studio from *(Tools → NuGet Package Manager → Manage NuGet Packages for Solution)*, and install the required package.
+To enable JWT authentication in the application, open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and install the required package.
 
 - [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer)
 
