@@ -77,7 +77,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 <body>
     <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-    <!-- Syncfusion Blazor PDF Viewer component's script reference-->
+    <!-- Syncfusion Blazor Spreadsheet component's script reference-->
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js"></script>
 </body>
 
