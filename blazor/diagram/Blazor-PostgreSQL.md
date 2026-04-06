@@ -457,7 +457,7 @@ The `Home.razor` component will display the data in a Syncfusion Blazor Diagram 
 2. Add the following code to create a Diagram:
 
 ```cshtml
-﻿@page "/"
+@page "/"
 @using Services
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
