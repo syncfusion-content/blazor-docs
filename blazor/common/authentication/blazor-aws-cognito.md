@@ -68,16 +68,15 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-## Add required namespaces
+### Add required namespaces
 
-Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Spreadsheet` namespaces.
+Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Spreadsheet
 
 {% endhighlight %}
 {% endtabs %}
@@ -258,16 +257,47 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseStaticFiles();
-
+app.MapStaticAssets();
 app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseAntiforgery();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+app.MapGet("/signin", async (HttpContext ctx) =>
+{
+    if (useOidc)
+    {
+        await ctx.ChallengeAsync(OpenIdConnectDefaults.AuthenticationScheme, new AuthenticationProperties { RedirectUri = "/" });
+        return Results.Empty;
+    }
 
+    // Dev fallback: create a local cookie user and redirect home
+    var claims = new[] {
+        new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.NameIdentifier, "devuser"),
+        new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Name, "Developer User"),
+        new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Email, "dev@example.local")
+    };
+    var identity = new System.Security.Claims.ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+    var user = new System.Security.Claims.ClaimsPrincipal(identity);
+    await ctx.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, user);
+    ctx.Response.Redirect("/");
+    return Results.Empty;
+});
+
+app.MapGet("/signout", async (HttpContext ctx) =>
+{
+    if (useOidc)
+    {
+        await ctx.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme, new AuthenticationProperties { RedirectUri = "/" });
+        return Results.Empty;
+    }
+
+    await ctx.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+    ctx.Response.Redirect("/");
+    return Results.Empty;
+});
 app.Run();
 
 {% endhighlight %}
