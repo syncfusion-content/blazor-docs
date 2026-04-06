@@ -50,12 +50,15 @@ Open both of the following files and add the Syncfusion® namespaces.
 * `~/.Maui/Components/_Imports.razor`
 * `~/Components/_Imports.razor` (Blazor Web app)
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
-```
+{% endhighlight %}
+{% endtabs %}
+
 ## Register Syncfusion® Blazor service
 
 Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the MAUI Blazor app and the `~/Program.cs` file of the Blazor Web app to enable Syncfusion® components in the application.
@@ -88,7 +91,9 @@ Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the MAU
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the **<head>** of the `~wwwroot/index.html` file of your MAUI Blazor app and in the `~/Components/App.razor file` of your Blazor Web app.
 
-```html
+{% tabs %}
+{% highlight html  %}
+
 <head>
     <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -99,7 +104,8 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
