@@ -57,10 +57,10 @@ In this example, the file name used is `OrdersGrid.razor`.
 
 <SfGrid DataSource="@Orders" >
   <GridColumns>
-    <GridColumn Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-    <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100"></GridColumn>
-    <GridColumn Field="OrderDate" HeaderText="Order Date" Width="100"></GridColumn>
-    <GridColumn Field="Freight" HeaderText="Freight" Width="120"></GridColumn>
+      <GridColumn Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+      <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100"></GridColumn>
+      <GridColumn Field="OrderDate" HeaderText="Order Date" Width="100"></GridColumn>
+      <GridColumn Field="Freight" HeaderText="Freight" Width="120"></GridColumn>
   </GridColumns>
 </SfGrid>
 
