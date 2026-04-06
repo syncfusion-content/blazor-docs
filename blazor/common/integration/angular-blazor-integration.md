@@ -23,7 +23,7 @@ A common use case for this integration is when a Blazor application needs to reu
 
 ### Create the project
 
-If you already have an Angular project, skip to the **Install custom elements package** section. Otherwise, create a new Angular project following Syncfusion documentation.
+If you already have an Angular project, move to the **Install custom elements package** section. Otherwise, create a new Angular project following Syncfusion documentation.
 
 [Angular Getting Started](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone).
 
@@ -261,6 +261,6 @@ Once the compilation is complete, open your browser and navigate to the hosted l
 
 ## See also
 
-* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting started with Syncfusion Blazor](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting started with Syncfusion Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
 

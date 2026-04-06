@@ -89,7 +89,7 @@ In this example, the file name used is `OrdersGrid.razor`.
 {% endhighlight %}
 {% endtabs %}
 
-Sets the C# namespace for the generated component class (e.g., **BlazorServerHost.Pages.OrdersGrid**), which is important when referencing or registering the component (for example with **RegisterCustomElement**).
+**BlazorServerHost.Pages** defines the namespace where Razor components are grouped within a Blazor Server application. It usually corresponds to the **Pages** folder and helps organize UI components like `OrdersGrid.razor` in a structured way.
 
 ### Register as a custom element
 
@@ -105,7 +105,7 @@ builder.RootComponents.RegisterCustomElement<BlazorServerHost.Pages.OrdersGrid>(
 {% endhighlight %}
 {% endtabs %}
 
-This line registers the **OrdersGrid** component as a custom element named `<sf-orders-grid>`, making it available for use within your Angular application.
+This line registers the **OrdersGrid** component as a custom element named `<sf-orders-grid>`, making it available for use within your Angular application. The **BlazorServerHost.Pages** namespace uniquely identifies the Razor component, which is required when accessing it outside the Blazor app. This namespace is essential for registering the component as a custom element and enabling seamless integration and usage within an Angular application.
 
 ## Integrating the custom elements in Angular 
 
@@ -299,4 +299,4 @@ Once the compilation completes, open your browser and navigate to `http://localh
 ## See also
 
 * [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [Getting started with Syncfusion Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
+* [Getting started with Syncfusion Angular](https://ej2.syncfusion.com/angular/documentation/getting-started)
