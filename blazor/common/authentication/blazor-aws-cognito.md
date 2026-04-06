@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor with AWS Cognito Authentication
 
-This guide demonstrates how to integrate AWS Cognito authentication in a **Blazor Server** application (or a **Blazor Web App** with **Server interactivity** in .NET 8+). AWS Cognito User Pools provide a managed identity system that supports OpenID Connect (OIDC), OAuth 2.0, JSON Web Tokens (JWTs), Multi-Factor Authentication (MFA), user attributes, and group-based roles. 
+This guide demonstrates how to integrate AWS Cognito authentication in a **Blazor Server** application (or a **Blazor Web App** with **Server interactivity** in .NET 8+).  
 
 ## What is AWS?
 
@@ -42,9 +42,9 @@ In **User Pool → Sign-in experience**:
 
 ## Prerequisites
 
-* .NET SDK 8.0 or later (this guide uses .NET 10)
-* Visual Studio 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension 
-* AWS Account with permission to manage Cognito
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later (this guide uses .NET 10)
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension 
+* [AWS Account with permission to manage Cognito](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html)
 
 ## Integrating Cognito with Blazor
 
@@ -54,7 +54,7 @@ Configure OpenID Connect with the Cognito Hosted UI (Authorization Code + PKCE),
 
 If you already have a Blazor project, proceed to the **Install Authentication package** section. Otherwise, create one using Syncfusion getting started guides for [Blazor Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) or [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
 
-### Install Authentication package
+### Install required packages
 
 To enable authentication and Syncfusion Blazor components, install the required packages.
 
