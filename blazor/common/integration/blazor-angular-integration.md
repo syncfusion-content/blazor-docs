@@ -202,6 +202,8 @@ Server:
 {% endhighlight %}
 {% endtabs %}
 
+N> Based on the blazor project type add the script reference file. 
+
 ### Use the custom element in Angular
 
 Define the schemas and the custom element tag in the `app.ts` file. 
