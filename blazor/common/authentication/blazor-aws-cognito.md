@@ -52,7 +52,7 @@ Configure OpenID Connect with the Cognito Hosted UI (Authorization Code + PKCE),
 
 ### Create a Blazor Project
 
-If you already have a Blazor project, proceed to the **Install Authentication package** section. Otherwise, create one using Syncfusion getting started guides for [Blazor Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) or [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app-visual-studio).
+If you already have a Blazor project, proceed to the **Install Authentication package** section. Otherwise, create one using Syncfusion getting started guides for [Blazor Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) or [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
 
 ### Install Authentication package
 
@@ -64,6 +64,20 @@ To enable authentication and Syncfusion Blazor components, install the required 
 dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 dotnet add package Syncfusion.Blazor.Grids -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add required namespaces
+
+Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Spreadsheet` namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Spreadsheet
 
 {% endhighlight %}
 {% endtabs %}
