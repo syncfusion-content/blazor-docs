@@ -14,7 +14,7 @@ Authentication verifies a user's identity. Authorization then determines the acc
 
 ## What is authentication?
 
-Authentication verifies a user's identity in your Blazor application. Blazor apps often use cookie-based authentication where a server stores user session information in browser cookies for Server-hosted apps. For WebAssembly apps, use token-based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. In this pattern, the BFF acts as an intermediary that handles token exchange and manages sensitive credentials server-side, preventing tokens from being exposed to browser JavaScript.
+Authentication verifies a user's identity in your Blazor application. Blazor apps often use cookie-based authentication where a signed cookie is stored in the browser and validated server-side for each request. For WebAssembly apps, use token-based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. In this pattern, the BFF acts as an intermediary that handles token exchange and manages sensitive credentials server-side, preventing tokens from being exposed to browser JavaScript.
 
 Syncfusion components access user identity information through Blazor's `AuthenticationStateProvider`. This allows secure data loading or feature restriction based on the user's identity.
 
@@ -46,15 +46,15 @@ Syncfusion components can be secured at two layers:
 
 For full security, combine UI-level and data-level approaches. The following examples demonstrate this with Syncfusion components.
 
-N> This `<AuthorizeView>` and `SfDataManager` pattern applies to most data-bound Syncfusion components, such as DataGrid, Charts, Scheduler, and TreeView. For non-data-bound ones (e.g., Button), use only `<AuthorizeView>`.
+N> This `<AuthorizeView>` and `SfDataManager` pattern applies to most data-bound Syncfusion components, such as DataGrid, Charts, Scheduler, and TreeView. For non data-bound ones (e.g., Button), use only `<AuthorizeView>`.
 
 ## Using Syncfusion components
 
-All examples use `<AuthorizeView>` for UI-level security. DataGrid and Scheduler also include `SfDataManager` with Bearer tokens for data-level Authentication. TreeView uses local data.
+All examples use `<AuthorizeView>` for UI-level security. DataGrid and Scheduler also include `SfDataManager` with Bearer tokens for data-level authentication. TreeView uses local data.
 
 ### Prerequisites
 
-* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later (Examples in this guide use .NET 10; adjust target framework as needed.)
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later; Examples use .NET 10.
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 * [AuthorizeView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authorizeview), [AuthenticationStateProvider](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/authentication-state), and token-based data requests require the Blazor authentication pipeline to be configured.
 
@@ -66,6 +66,7 @@ For applications using ASP.NET Core Identity, install the Identity UI package by
 {% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Microsoft.AspNetCore.Identity.UI
+dotnet add package Microsoft.AspNetCore.Authorization
 
 {% endhighlight %}
 {% endtabs %}
@@ -110,6 +111,9 @@ builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
     .AddCookie(IdentityConstants.ApplicationScheme);
 
 builder.Services.AddAuthorization();
+// This class is scaffolded by the Blazor Server Identity template.
+// If using a custom provider, replace with your own AuthenticationStateProvider implementation.
+
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 // Add Syncfusion Blazor services
 builder.Services.AddSyncfusionBlazor();
@@ -150,7 +154,7 @@ N>
     <Authorized Context="authContext">
             <SfGrid TValue="Order" AllowPaging="true">
             <!-- Replace with your actual protected API endpoint -->
-            <SfDataManager  Url="https://your-api.com/api/orders/" Adaptor="Adaptors.WebApiAdaptor" Headers="@HeaderData"></SfDataManager>
+            <SfDataManager Url="https://your-api.com/api/orders/" Adaptor="Adaptors.WebApiAdaptor" Headers="@HeaderData"></SfDataManager>
                 <GridPageSettings PageSize="10"></GridPageSettings>
                 <GridColumns>
                     <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
@@ -208,10 +212,10 @@ The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized
             <ScheduleEventSettings TValue="AppointmentData">
             <!-- Replace with your actual protected API endpoint -->
                 <SfDataManager Url="https://your-api.com/api/schedule" Headers="@HeaderData" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
-                <ScheduleViews>
-                    <ScheduleView Option="View.Month"></ScheduleView>
-                </ScheduleViews>
             </ScheduleEventSettings>
+            <ScheduleViews>
+                <ScheduleView Option="View.Month"></ScheduleView>
+            </ScheduleViews>
         </SfSchedule>
     </Authorized>
     <NotAuthorized>

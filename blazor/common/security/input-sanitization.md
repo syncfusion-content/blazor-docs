@@ -32,7 +32,7 @@ Sanitizing user input ensures that only safe and expected values are stored or d
 
 | Attacks | Description | Prevention |
 |--------|-------------|------------|
-| **Cross-Site Scripting (XSS)** | Malicious scripts are injected (e.g.,event attributes like onclick, or javascript: URLs) and execute in the user’s browser. Example: `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components like RTE; use HTML encoding (e.g., `HtmlEncoder.Default.Encode()`) for plain-text inputs.|
+| **Cross-Site Scripting (XSS)** | Malicious scripts are injected (e.g., event attributes like onclick, or javascript: URLs) and execute in the user’s browser. Example: `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components like RTE; use HTML encoding (e.g., `HtmlEncoder.Default.Encode()`) for plain-text inputs.|
 | **HTML Injection** | Unwanted markup changes layout or behavior (e.g., injecting unexpected `<div>`, `<style>`, or risky attributes). Example: `<iframe src="phish-site.com"></iframe>`. | Built-in sanitizer removes unsafe tags/attributes; avoid rendering raw HTML from untrusted sources. |
 
 ## Built-in sanitization features
@@ -214,7 +214,7 @@ The following example demonstrates sanitizing text before binding it to the Grid
 
     private void ProcessInput()
     {
-        var cleaned =  HtmlEncoder.Default.Encode(UserText);
+        var cleaned = HtmlEncoder.Default.Encode(UserText);
         Items.Add(new ItemRecord { Content = cleaned });
         UserGrid.Refresh();
     }
