@@ -469,7 +469,6 @@ public class HtmlSanitizerService
 
     public string Sanitize(string input)
     {
-        // Return empty string if the input is null or whitespace.
         if (string.IsNullOrWhiteSpace(input))
             return string.Empty;
 
@@ -487,12 +486,8 @@ public class HtmlSanitizerService
             var isClosing = !string.IsNullOrEmpty(match.Groups[1].Value);
             var tagName = match.Groups[2].Value;
             var attrText = match.Groups[3].Value;
-
-            // Drop any tag not explicitly allowed.
             if (!allowList.Contains(tagName))
                 return string.Empty;
-
-            // Preserve closing tag as-is (e.g., </p>).
             if (isClosing)
                 return $"</{tagName}>";
 
@@ -509,13 +504,8 @@ public class HtmlSanitizerService
                 // Remove any event handler attributes (onclick, onerror, etc.).
                 if (name.StartsWith("on", StringComparison.OrdinalIgnoreCase))
                     continue;
-                /*
-                    NOTE:
-                    The sanitizer includes special handling for href/src for future expansion.
-                    Since <a> and <img> are NOT in the allow-list, this logic is currently unused.
-                    It remains here so that if those tags are allowed later,
-                    dangerous protocols (javascript:, data:) will still be blocked safely.
-                */
+
+                // Note: Keep href/src handling for future <a>/<img> support; it blocks unsafe protocols like javascript: and data:.
                 if (name.Equals("href", StringComparison.OrdinalIgnoreCase) ||
                     name.Equals("src", StringComparison.OrdinalIgnoreCase))
                 {
@@ -588,10 +578,7 @@ public class Comment
 }
 
 @code {
-    // Stores the content entered inside the Syncfusion Rich Text Editor.
     private string InputText = string.Empty;
-
-    // Holds the processed and sanitized comment data.
     private Comment? Comment;
 
     private void Process()
