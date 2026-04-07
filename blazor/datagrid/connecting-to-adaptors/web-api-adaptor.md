@@ -485,7 +485,7 @@ The following example demonstrates how to extract the `$orderby` parameter and a
 
 ***Descending Sorting***
 
-![WebApiAdaptor - Sorting Descending query](../images/web-api-adaptor-desc-sorting.png)
+![WebApiAdaptor - Sorting Descending query](../images/web-api-adaptor-desc-sorting.jpeg)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
