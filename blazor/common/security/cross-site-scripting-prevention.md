@@ -41,10 +41,10 @@ Blazor Server and Blazor WebAssembly come with different types of XSS risks.
 
 ### Blazor WebAssembly
 
-- The application runs in the user's browser, so scripts can directly access the page content and change how the interface works or take over user sessions.
-- Client-side files and application logic are fully visible, making it easier for attackers to review the code or interfere with built-in security checks.
-- Sensitive data used or stored on the client (such as API tokens or client credentials) is at higher risk; avoid keeping secrets in the browser and secure APIs with proper server-side login and access checks.
-- Server-side validation and input cleaning are not applied automatically for client-side code—treat all data coming from the client as unsafe and always validate and clean it on the server.
+- The application runs entirely in the user's browser. Injected scripts execute locally and can modify the user interface or hijack user sessions.
+- Client-side files and application logic are publicly available. This makes it easier for attackers to inspect or bypass client-side protections.
+- Never store secrets or other sensitive data in the browser. Protect backend APIs with server-side authentication and authorization.
+- Client-side validation and sanitization improve the user experience but are not a substitute for server-side validation and sanitization. Always validate and sanitize all client-origin data on the server.
 
 ## XSS threat model and attack vectors
 
