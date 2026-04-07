@@ -54,7 +54,7 @@ All examples use `<AuthorizeView>` for UI-level security. DataGrid and Scheduler
 
 ### Prerequisites
 
-* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later (this guide uses .NET 10)
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later (Examples in this guide use .NET 10; adjust target framework as needed.)
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 * [AuthorizeView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authorizeview), [AuthenticationStateProvider](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/authentication-state), and token-based data requests require the Blazor authentication pipeline to be configured.
 
@@ -63,7 +63,7 @@ All examples use `<AuthorizeView>` for UI-level security. DataGrid and Scheduler
 For applications using ASP.NET Core Identity, install the Identity UI package by running the following command in your project directory:
 
 {% tabs %}
-{% highlight bash tabtitle=.NET CLI %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Microsoft.AspNetCore.Identity.UI
 
@@ -109,7 +109,6 @@ builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
     .AddCookie(IdentityConstants.ApplicationScheme);
 
 builder.Services.AddAuthorization();
-builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 // Add Syncfusion Blazor services
 builder.Services.AddSyncfusionBlazor();
