@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid with GraphQL using Custom Adaptor | Syncfusion
+title: Blazor Data Grid with GraphQL | Syncfusion
 description: Build Blazor apps with GraphQL and Syncfusion Data Grid to enable CRUD, filtering, sorting, paging, and grouping for seamless data operations.
 control: DataGrid
 platform: blazor

@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Bind data and perform CRUD actions with CustomAdaptor in Syncfusion Blazor DataGrid
-description: Learn all about Custom Binding in the Syncfusion Blazor DataGrid and much more.
+title: Blazor Data Grid with Custom Adaptor | Syncfusion
+description: Learn about Custom Data Binding and perform CRUD operations using CustomAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
 documentation: ug
 ---
+
+Learn about Custom Data Binding and perform CRUD operations using CustomAdaptor in Syncfusion Blazor DataGrid.
 
 # Custom Binding in Blazor DataGrid
 
@@ -528,7 +530,7 @@ Custom binding supports data operations such as **searching**, **sorting**, **fi
 * Ensure the DataGrid has paging enabled with `AllowPaging="true"`.
 * The `DataManagerRequest` class provides paging action details, including `skip` and `take` values, paging can be performed on a custom data source by using the built-in [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) methods from the `DataOperations` class. 
 
-![Handling Paging in Custom Adaptor](../images/blazor-datagrid-paging-in-custom-adaptor.png)
+![Handling Paging in Custom Adaptor](../images/blazor-datagrid-paging-in-custom-adaptor.jpeg)
 
 The following sample code demonstrates how to implement the paging operation for custom-bound data:
 
@@ -671,7 +673,7 @@ The following sample code demonstrates how to implement the filtering operation 
 * Ensure the toolbar includes the "Search" item.
 * The `DataManagerRequest` class provides DataGrid action details, including search criteria. Based on the details, handle searching using[PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
-![Handling Searching in Custom Adaptor](../images/blazor-datagrid-searching-in-custom-adaptor.png)
+![Handling Searching in Custom Adaptor](../images/blazor-datagrid-searching-in-custom-adaptor.jpeg)
 
 The following sample code demonstrates how to implement the searching operation for custom-bound data:
 
