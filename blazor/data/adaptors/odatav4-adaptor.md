@@ -312,8 +312,6 @@ OData filter operator query reference:
 - `and` - logical AND: `ShipCountry eq 'Denmark' and OrderID gt 10005`
 - `or` - logical OR: `ShipCountry eq 'Denmark' or ShipCountry eq 'Germany'`
 
-![ODataV4Adaptor Data](../images/odatav4-adaptors-data.png)
-
 ### Step 8: Understanding the required response format
 
 When using the `OdataV4Adaptor`, every backend API endpoint must return data in a specific JSON structure. This ensures that Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataManager can correctly interpret the response and bind it to the DataGrid. The expected format is:
