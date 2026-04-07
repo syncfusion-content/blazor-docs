@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CSS classes and their descriptions in the Blazor Accordion component | Syncfusion
+title: Blazor Accordion CSS classes and their descriptions | Syncfusion
 description: Check out and learn all about CSS classes and their descriptions in the Syncfusion Blazor Accordion component.
 platform: Blazor
 control: Accordion
