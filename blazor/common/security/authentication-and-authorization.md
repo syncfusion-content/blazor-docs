@@ -102,6 +102,7 @@ If you already have a Blazor project, proceed to the package installation sectio
 {% highlight cs %}
 
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity;
 using Syncfusion.Blazor;
 
 ...
