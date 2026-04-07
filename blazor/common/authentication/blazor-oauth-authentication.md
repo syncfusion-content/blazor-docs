@@ -17,7 +17,7 @@ OAuth 2.0 is an authorization framework that enables applications to obtain limi
 
 **Benefits of using OAuth in Blazor applications**
 
-OAuth enables secure user authentication by allowing sign‑in through trusted external providers. It removes the need to store usernames and passwords in the application, reducing security risks. OAuth uses short lived access tokens to protect APIs and user data. This approach minimizes developer side security responsibilities.
+OAuth enables secure user authentication by allowing sign‑in through trusted external providers. It removes the need to store user names and passwords in the application, reducing security risks. OAuth uses short lived access tokens to protect APIs and user data. This approach minimizes developer side security responsibilities.
 
 ## Create a Blazor Web App (Interactive Server)
 
