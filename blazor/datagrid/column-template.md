@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Template in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. This feature is useful for displaying images, buttons, or other custom content within a column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option for displaying custom elements in a column instead of the field value. This is useful for displaying images, buttons, or other custom content within a column.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
@@ -22,7 +22,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows rend
 
 ### Render image in a column
 
-To display an image in a DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property allows rendering custom HTML or Blazor components instead of the default field value.
+To render an image in a DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property accepts any custom HTML or Blazor component content, replacing the default field value. When using the `Template` property of the `GridColumn`, the Blazor DataGrid passes the current row's data through the implicit **context** parameter, allowing access to field values from the data source directly within the template (e.g., **context.EmployeeID**, **context.FirstName**).
+
+The following example demonstrates defining a `Template` for the **"Employee Image"** column that displays an image element. The `Template` property renders an HTML `<img>` tag with `src` and `alt` attributes derived from the row's **EmployeeID** field.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -115,7 +117,9 @@ To display an image in a DataGrid column, define the [Template](https://help.syn
 
 ### Render hyperlink in a column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering hyperlinks in columns using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data that links to another page or external resource.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering hyperlink columns and performing navigation on click using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a link to another page or external resource. The `Template` property provides access to the current row's data through the **context** parameter, allowing access to field values. Within the template, event handlers (for example, `@onclick`) can be attached to trigger custom logic when the element is clicked.
+
+The following example shows a hyperlink column in the Blazor DataGrid where the **"First Name"** column renders an anchor tag that opens a URL in a new browser tab when clicked.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -190,11 +194,13 @@ public class EmployeeDetails
 
 ## Render other components in a column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering other Syncfusion components inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This allows embedding interactive elements for advanced customization.
+The column template has options to render a custom component in a DataGrid column instead of a field value.
 
 ### Render LineChart in a column
 
-The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp) provided by Syncfusion<sup style="font-size:70%">&reg;</sup> offers an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [LineChart (Sparkline)](https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp) is a lightweight chart used to display data trends. It connects data points with straight line segments to show patterns over time, without axes or labels. To render a sparkline within a template, define a `Template` that returns the `SfSparkline`. The chart requires a `DataSource` array of numeric values, and each DataGrid row will display its own sparkline visualization.
+
+The following example shows a `SfSparkline` in the DataGrid column. The **"lineData"** list contains arrays of numbers (one per row), and the `GetSparkData` function retrieves the appropriate data array for each row and passes it to the `SfSparkline`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -225,7 +231,7 @@ The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-st
     {
     EmployeeData = EmployeeDetails.GetAllRecords();        
     } 
-     // Line data
+     // Line data.
     private List<List<int>> lineData = new List<List<int>>
     {
         new List<int> { 0, 6, -4, 1, -3, 2, 5 },
@@ -240,7 +246,7 @@ The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-st
         new List<int> { 6, 4, 0, -3, 2, -5, 1 }
     };
 
-    // Function to get sparkline data
+    // Function to get sparkline data.
     private List<int> GetSparkData(string type, int count)
     {
         if (type == "line" && count > 0 && count <= lineData.Count)
@@ -293,7 +299,9 @@ public class EmployeeDetails
 
 ### Render DropDownList in a column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows rendering a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is commonly used to provide inline selection of predefined values directly within the grid, such as choosing from predefined options for a field.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) in a column using the `Template` property. This feature is useful when displaying data that requires selection from predefined options in a column.
+
+The following example shows the `SfDropDownList` in the DataGrid **"Order Status"** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -383,7 +391,9 @@ public class OrderDetails
 
 ### Render Chip in a column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data as visually distinct elements, such as tags or labels, within the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering [SfChips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) in a column using the `Template` property. This feature is useful when displaying data that requires a chip to be rendered in a column, presenting values as visually distinct tags or labels.
+
+The following example shows the `SfChip` in the DataGrid **"First Name"** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -461,7 +471,9 @@ public class EmployeeDetails
 
 ### Render ProgressBar in a column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [Progress Bar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for visually tracking progress related to specific records.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [SfProgressBar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) within a column using the `Template` property. The Progress Bar in a DataGrid column visually tracks the progress of tasks or operations associated with specific records. This feature is useful for applications involving processes such as data loading, task completion, or other progressive activities.
+
+The following example shows the `SfProgressBar` in the DataGrid **"Freight"** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -538,7 +550,9 @@ public class OrderDetails
 
 ### Render RadioButton in a column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering a [RadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for scenarios where a single option must be selected from multiple choices within the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports rendering the [SfRadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) within a column using the `Template` property. This feature is useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the DataGrid.
+
+The following example demonstrates rendering a `SfRadioButton` in the **"Order Status"** column of the DataGrid by defining the `Template` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -612,9 +626,8 @@ public class OrderDetails
 
 ## Using condition template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports conditional rendering within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature allows displaying template elements based on specific conditions in the data source.
+The conditional column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) allows displaying template elements based on specific conditions. This is useful for showing different content depending on the data values in each row. The following example demonstrates rendering a checkbox conditionally based on the **"Discontinued"** field value. The template uses an `@if`/`else` block to check whether `context.Discontinued` is `true`. If `true`, it renders a checked checkbox; otherwise, it renders an unchecked checkbox.
 
-The `Template` property provides access to the current row’s data through the implicit **context** parameter, enabling conditional logic for rendering elements such as checkboxes, icons, or status indicators.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -698,9 +711,11 @@ The `Template` property provides access to the current row’s data through the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKWsDsASInUbPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> Any template element or custom component can replace the checkbox in the conditional template based on specific requirements.
+
 ### Calculate column value based on other columns in Blazor DataGrid
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, a column can display values derived from other fields in the same row using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This approach is useful for scenarios where calculated values, such as totals or combined costs, need to be shown without adding extra fields to the data source.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, a column can display values derived from other fields in the same row using the `Template` property. This approach is useful for scenarios where calculated values, such as totals or combined costs, need to be shown without adding extra fields to the data source.
 
 The `Template` property allows defining inline expressions or logic that compute values dynamically. The **context** parameter provides access to the row data, enabling calculations like summing two fields or applying custom formulas.
 
@@ -756,11 +771,13 @@ The `Template` property allows defining inline expressions or logic that compute
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoNfKNztPbnpjL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## How to get the row object by clicking on the template element
+## Getting the row object by clicking on a template element
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports retrieving the row object when a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) element inside a column is clicked. This feature is useful for performing custom actions such as showing detailed information, triggering workflows, or updating related UI components based on the selected record.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports retrieving the row object when a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) element inside a column is clicked. This is useful for performing custom actions such as showing detailed information, triggering workflows, or updating related UI components based on the selected record.
 
 The `Template` property allows rendering interactive elements like buttons inside a column. When these elements are clicked, the associated row data can be accessed using the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event or by handling the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event of the template element.
+
+The following example demonstrates a button element rendered in the **“Employee Data”** column with an  `OnClick` event handler that calls the **ShowDetails** method displays the details of row in dialog popup.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -857,6 +874,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports us
 
 Custom helper functions can be defined in the component’s code section and invoked within the template using the **context** parameter. This approach allows implementing dynamic behaviors such as formatting values, applying conditional styles, or rendering custom UI elements based on row data.
 
+The following example shows a custom helper function inside the `Template` property that processes field values and returns formatted content for the **“Freight”** column.
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -935,9 +954,11 @@ public class OrderDetails
 
 ## Dynamically adding template column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dynamically adding template columns at runtime. This feature is useful when the grid structure needs to change based on interactions or dynamic conditions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dynamically adding template columns at runtime. This allows modifying the DataGrid structure after initialization based on UI interactions or other dynamic conditions (for example, adding a new column when a button is clicked). Dynamically adding columns involves creating a new `GridColumn` with a `Template` and inserting it into the DataGrid's column collection.
 
-Template columns can be created and inserted after the grid has been initialized, allowing custom elements such as dropdowns, buttons, or icons to be rendered dynamically. This approach provides flexibility for scenarios like adding interactive controls or displaying conditional content without modifying the initial grid configuration.
+Template columns can be created and inserted after the DataGrid has been initialized, allowing custom elements such as dropdowns, buttons, or icons to be rendered dynamically. This approach provides flexibility for scenarios like adding interactive controls or displaying conditional content without modifying the initial DataGrid configuration.
+
+The following example demonstrates adding a template column using an external button click. When the button is clicked, a new **“Ship Country”** column with a `SfDropdownlist` template is added to the DataGrid at runtime. The column uses both the `Template` property for the cell content and the `HeaderTemplate` property to customize the column header.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1119,7 +1140,7 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
 {% endhighlight %}
 {% endtabs %}
 
-In this configuration, the navigation URL is defined in the **Link** field of the Grid data. When the link is clicked, the page is routed to the specified URL.
+In this configuration, the navigation URL is defined in the **Link** field of the DataGrid data. When the link is clicked, the page is routed to the specified URL.
 
 Next, create a new Razor page with the appropriate routing URL and include any required route parameters. Initialize the page with the necessary details.
 
@@ -1145,9 +1166,9 @@ Next, create a new Razor page with the appropriate routing URL and include any r
 {% endhighlight %}
 {% endtabs %}
 
-The following GIF represents template routing in Grid
+The following GIF represents template routing in DataGrid
 ![Blazor DataGrid with routing template.](./images/blazor-datagrid-template-routing.gif)
 
 ## See also
 
-* [FileUpload in Grid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)
+* [FileUpload in DataGrid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)
