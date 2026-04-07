@@ -9,7 +9,7 @@ documentation: ug
 
 Blazor DataManager explains creating a custom data adaptor to transform requests and responses, enabling custom backends and behaviors.
 
-# Custom Remote Data Binding in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components 
+# Custom Binding in Syncfusion Blazor Components 
 
 Custom binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.htm) provides a mechanism to implement custom logic for data retrieval and manipulation. It allows defining how data operations are executed by creating a [CustomAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor) that overrides default behavior. Instead of creating an entirely new adaptor from scratch, Custom Adaptor extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 

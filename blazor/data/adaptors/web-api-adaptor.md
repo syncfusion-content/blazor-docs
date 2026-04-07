@@ -7,7 +7,7 @@ control: Adaptors
 documentation: ug
 ---
 
-# WebApiAdaptor Remote Data Binding in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# WebApiAdaptor Remote Data Binding in Syncfusion Blazor Components
 
 The `WebApiAdaptor` extends the `ODataAdaptor` and is specifically designed to interact with Web APIs that support OData query conventions. It facilitates seamless communication with Web API endpoints, enabling efficient data operations while ensuring compatibility with standard Web API architecture.
 
