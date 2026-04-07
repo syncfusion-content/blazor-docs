@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Blazor DataManager - GraphQL Adaptor | Syncfusion
-description: Blazor DataManager GraphQL provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description:  Blazor DataManager GraphQL enables server-side data handling, explaining backend setup and endpoint configuration for REST-based operations.
 control: GraphQL Adaptor 
 platform: blazor
 documentation: ug
 ---
 
-# GraphQL in Remote Data Binding in Syncfusion Blazor Components
+# GraphQL Remote Data Binding in Syncfusion Blazor Components
  
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides seamless integration with GraphQL services, enabling modern, efficient data operations through a flexible query language. This comprehensive guide demonstrates configuring and using GraphQL with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components to perform server-side operations including querying, mutations, filtering, sorting, paging, and complete CRUD functionality.
 

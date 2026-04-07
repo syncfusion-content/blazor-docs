@@ -98,7 +98,7 @@ The sample response object should look like this:
 ```
 
 {% tabs %}
-{% highlight c# tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs"%}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;

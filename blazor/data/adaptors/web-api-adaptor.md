@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Blazor DataManager - WebApiAdaptor | Syncfusion
-description: Blazor DataManager WebApiAdaptor provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description: Blazor DataManager WebApiAdaptor enables server-side integration with REST APIs, detailing backend setup and endpoint configuration for data operations.
 platform: Blazor
 control: Adaptors
 documentation: ug
 ---
 
-# WebApiAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# WebApiAdaptor Remote Data Binding in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
 
 The `WebApiAdaptor` extends the `ODataAdaptor` and is specifically designed to interact with Web APIs that support OData query conventions. It facilitates seamless communication with Web API endpoints, enabling efficient data operations while ensuring compatibility with standard Web API architecture.
 
@@ -121,7 +121,7 @@ The sample response object should look like this:
 ```
 
 {% tabs %}
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;

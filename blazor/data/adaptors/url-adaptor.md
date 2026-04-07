@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Blazor DataManager - URL Adaptor  | Syncfusion
-description: Blazor DataManager UrlAdaptor provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description: Blazor DataManager UrlAdaptor enables server-side integration with REST APIs, detailing backend setup and endpoint configuration for data operations.
 platform: Blazor
 control: Url Adaptor
 documentation: ug
 ---
 
-# UrlAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
+# Custom REST API Remote Data Binding in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
 
 The `UrlAdaptor` in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a straightforward way to connect the DataGrid to custom REST API endpoints. It acts as the communication layer that controls how requests are sent and how responses are received. By organizing this interaction, it ensures reliable and efficient data handling across different Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, regardless of the server setup.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor DataManager - ODataV4 Adaptor | Syncfusion
-description: Blazor DataManager ODataV4 provides server-side integration with REST APIs by detailing the backend setup and endpoint configuration required for data operations.
+description: Blazor DataManager ODataV4 enables server-side integration with REST APIs, explaining backend setup and endpoint configuration for efficient data operations.
 platform: Blazor
 control: ODataV4 Adaptor
 keywords: adaptors, ODataV4adaptor, ODataV4 adaptor, remotedata 
