@@ -211,4 +211,4 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-N> You can also explore our [Blazor Splitter example](https://blazor.syncfusion.com/demos/splitter/default-functionalities?theme=fluent) that shows you how to render and configure the Splitter.
+N> You can also explore our [Blazor Splitter example](https://blazor.syncfusion.com/demos/splitter/default-functionalities) that shows you how to render and configure the Splitter.
