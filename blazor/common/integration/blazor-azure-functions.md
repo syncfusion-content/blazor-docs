@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor with Azure Functions
 
-This guide shows how to build a Blazor WebAssembly app that uses Azure Functions as a serverless backend and integrates Syncfusion Blazor components (`DataGrid`, `Scheduler`, `DatePicker`). It covers local development setup, security options such as Function keys, calling functions from Blazor, CORS configuration, error handling, and a complete working example with an orders list and a scheduler view.
+This guide shows how to build a Blazor WebAssembly app that uses **Azure Functions** as a serverless backend and integrates Syncfusion Blazor components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker). It covers local development setup, security options such as Function keys, calling functions from Blazor, CORS configuration, error handling, and a complete working example with an orders list and a scheduler view.
 
 ## What is Azure Functions?
 
@@ -37,28 +37,40 @@ Examples:
 
 * Query string
 
-```
+{% tabs %}
+{% highlight bash %}
+
  GET /api/orders?code=YOUR_FUNCTION_KEY
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 * HTTP header: 
 Request-side (C#):
 
-```cs
+{% tabs %}
+{% highlight cs %}
+
 builder.Services.AddScoped(sp => {
   var client = new HttpClient { BaseAddress = new Uri("http://localhost:7071/") };
   client.DefaultRequestHeaders.Add("x-functions-key", Environment.GetEnvironmentVariable("FUNCTION_KEY") ?? "YOUR_FUNCTION_KEY");
   return client;
 });
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Blazor HttpClient (add before call): 
 
-```cs
+{% tabs %}
+{% highlight cs %}
+
 var req = new HttpRequestMessage(HttpMethod.Get, "/api/orders?...");
 req.Headers.Add("x-functions-key", "YOUR_FUNCTION_KEY");
 await Http.SendAsync(req);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 For production, Microsoft Entra ID and managed identities provide better security than function keys
 
@@ -68,78 +80,98 @@ Register an application in Microsoft Entra ID and configure the Function App Aut
 
 Use EasyAuth (platform) for standard token validation; validate JWTs in-function when you need custom claims or fine‑grained checks.
 
-## Working with Function Apps in a Real‑World Blazor App
+## Working with Function Apps in a real‑world Blazor app
 
 This sample exposes `GET /api/orders` and `POST /api/orders`. The Blazor page uses `DatePicker` to select date ranges, `DataGrid` to list orders, `Scheduler` to show order events. Keep functions single-purpose, persist real data in storage, and enable Application Insights for telemetry.
 
 ### Prerequisites
 
-* .NET SDK (version 8.0 or later, this guide uses .NET 10.0)
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) (version 8.0 or later, this guide uses .NET 10.0)
 * [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local) (version 4.x or later)
-* Azure CLI
-* Visual Studio 2022 or VS Code with C# extension
+* [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=msi#install-or-update)
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension 
 
 Ensure the .NET SDK and Azure Functions Core Tools are compatible. Refer to the [Azure Functions supported versions](https://learn.microsoft.com/en-us/azure/azure-functions/supported-languages) to verify compatibility for your environment.
 
 ### Create solution and projects
 
-Create two projects a Blazor WebAssembly (WASM) client and an isolated Azure Functions project and place them in a single solution
+Create two projects: a Blazor WebAssembly (WASM) client and an isolated Azure Functions project and place them in a single solution
 
 Create the **Blazor WASM project** using the following command:
 
-```
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
 dotnet new blazorwasm -o Client -f net10.0
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 This creates a client-side Blazor application in the `Client` folder.
 
 
 Create the **Azure Functions project** using the following command:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 func init Functions --worker-runtime dotnet-isolated
 cd Functions
 func new --name OrdersApi --template "HTTP trigger" --authlevel function
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 This creates an isolated worker-runtime Functions project with an HTTP trigger.
 
 Create a Solution file to manage both projects:
 
-```
-cd..
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+cd ..
 dotnet new sln -n BlazorFunctions
 dotnet sln add Client/Client.csproj
 dotnet sln add Functions/Functions.csproj
-```
 
-## Add NuGet Packages (client and functions)
+{% endhighlight %}
+{% endtabs %}
 
-### Client: Syncfusion Packages
+## Add NuGet packages (client and functions)
+
+### Client: Syncfusion packages
 
 Navigate to the Blazor WASM project and install the necessary Syncfusion packages.
 
-```
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
 cd Client
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Schedule -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Calendars -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 cd ..
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Functions: worker and HTTP extension
 
 Install the necessary packages for isolated worker-runtime Azure Functions with HTTP triggers:
 
-```
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
 cd Functions
 dotnet add package Microsoft.Azure.Functions.Worker
 dotnet add package Microsoft.Azure.Functions.Worker.Extensions.Http
 cd ..
-```
 
-### Add Required Namespaces
+{% endhighlight %}
+{% endtabs %}
+
+### Add required namespaces
 
 Open the `Client/_Imports.razor` file from WASM project and import the below namespaces.
 
@@ -154,12 +186,12 @@ Open the `Client/_Imports.razor` file from WASM project and import the below nam
 {% endhighlight %}
 {% endtabs %}
 
-### Register Syncfusion Blazor Service
+### Register Syncfusion Blazor service
 
 Register the Syncfusion Blazor Service in the `Client/Program.cs` file from WASM project of your Blazor App.
 
 {% tabs %}
-{% highlight cs %}
+{% highlight cs tabtitle="Program.cs" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -171,8 +203,10 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddSyncfusionBlazor();
-// Configure Functions API base URL
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:7071/") });
+// For production: read base address from configuration
+// builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration["FunctionsBaseUrl"]!) });
+
+builder.Services.AddScoped(sp => new HttpClient {  BaseAddress = new Uri("http://localhost:7071/") });
 
 
 await builder.Build().RunAsync();
@@ -180,9 +214,9 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-N> > The `BaseAddress` is set to `http://localhost:7071/` for local development. In production, update this to your Azure Function App URL (e.g., `https://myapp.azurewebsites.net`). Consider reading this from configuration. 
+N> The `BaseAddress` is set to `http://localhost:7071/` for local development. In production, update this to your Azure Function App URL (e.g., `https://myapp.azurewebsites.net`). Consider reading this from configuration. 
 
-### Add Stylesheet and Script Resources
+### Add stylesheet and script resources
 
 Add the Syncfusion theme CSS and required scripts to the `wwwroot/index.html` file from WASM project. 
 
@@ -206,7 +240,7 @@ Add the Syncfusion theme CSS and required scripts to the `wwwroot/index.html` fi
 
 This example shows two minimal HTTP-triggered functions: GET `/api/orders` returns demo orders filtered by optional from/to query parameters (format yyyy‑MM‑dd), and POST `/api/orders` accepts and echoes a JSON payload. The functions include development-only CORS handling and basic logging; configure CORS and authentication in Azure for production.
 
-Need to add this service file from Function project's cs file. In this example used `OrderApi.cs` file. This is the example file. You can use your own file name.
+Add the following file to your Azure Functions project (e.g., OrdersApi.cs):
 
 {% tabs %}
 {% highlight cs tabtitle="OrdersApi.cs" %}
@@ -352,7 +386,7 @@ N> > The above code example uses `Access-Control-Allow-Origin: *` for developmen
 
 This example demonstrates using Syncfusion controls: two DatePicker components to choose a range, an DataGrid to list orders, and an Scheduler to show events. It expects `HttpClient` to be configured with the Functions host as BaseAddress and uses JSON binding to populate the grid and scheduler. The sample injects `HttpClient` the earlier `Program.cs` scoped `HttpClient` whose `BaseAddress` points to the Functions host.
 
-Need to add this razor file from Blazor wasm project's. 
+Add the following Razor page to your Blazor WebAssembly project:
 
 {% tabs %}
 {% highlight razor  %}
@@ -408,6 +442,7 @@ Need to add this razor file from Blazor wasm project's.
       bool found = false;
       foreach (var port in portsToTry)
       {
+        //This port used testing only. In production, use HttpClient BaseAddress from configuration.
         var tryUrl = $"http://localhost:{port}/api/orders?from={From:yyyy-MM-dd}&to={To:yyyy-MM-dd}";
         try
         {
@@ -465,21 +500,29 @@ Need to add this razor file from Blazor wasm project's.
 
 For browser calls, add the Blazor origin to Function App CORS (Azure Portal → Function App → API → CORS).
 
-## Run the Application
+## Run the application
 
-**Start Functions:**
+**Start Functions project:**
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 cd Functions
 func start
-```
 
-**In a new terminal, start the Blazor client:**
+{% endhighlight %}
+{% endtabs %}
 
-```
+**In a new terminal, start the Blazor project:**
+
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 cd ../Client
 dotnet run
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Output:**
 
@@ -490,3 +533,9 @@ dotnet run
 
 
 ![Blazor components with Azure Function](./images/azure-functions.webp)
+
+## See also
+
+* [Getting started with Syncfusion DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Getting started with Syncfusion Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started)
+* [Getting started with Syncfusion DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started)
