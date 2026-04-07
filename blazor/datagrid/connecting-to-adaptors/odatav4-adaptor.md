@@ -216,7 +216,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -268,7 +268,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -327,7 +327,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -391,7 +391,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
