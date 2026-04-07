@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® Blazor DataGrid with Microsoft Entra ID Authentication
+title: Blazor with Microsoft Entra ID Authentication | Syncfusion® 
 description: Step-by-step guide to integrating Microsoft Entra ID authentication with Syncfusion® Blazor components in a Blazor Web App.
 platform: Blazor
 control: Common
@@ -17,7 +17,7 @@ Microsoft Entra ID is Microsoft’s identity platform that allows users to secur
 
 **Benefits of using Entra ID in Blazor applications**
 
-Entra ID enables secure Microsoft account sign-in for your Blazor App with single sign-on and token based authentication so you never store passwords. it also supports role and group based authorization and provides enterprise grade security managed by Microsoft, so you don’t need to write or maintain authentication logic yourself.
+Entra ID enables secure Microsoft account sign-in for your Blazor App with single sign-on and token based authentication, so your app never stores passwords. It also supports role and group based authorization and provides enterprise grade security managed by Microsoft, so you don’t need to write or maintain authentication logic yourself.
 
 ## Create a Blazor Web App (Interactive Server)
 
