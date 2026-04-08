@@ -1308,19 +1308,21 @@ The [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ### AutoFit via GridColumn
 
-The Syncfusion <sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports autofitting specific columns during initial rendering by enabling the `AutoFit` property on the corresponding `GridColumn` component. When `AutoFit` is enabled at the column level, the column width is automatically calculated based on the content it contains. This allows the column to dynamically expand or contract, ensuring that cell values are fully visible without truncation. In this configuration, the content‑driven width takes precedence over any predefined width settings, improving the display of columns with variable or unpredictable content.
+The Syncfusion <sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports autoFit the specific columns during initial rendering by enabling the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AutoFit) property on the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. When `AutoFit` is enabled at the column level, the column width is calculated dynamically based on the content it contains.
+
+This behavior allows the column to expand or shrink automatically so that cell values are fully visible without being truncated. When `AutoFit` is applied, the content‑driven width takes precedence over any predefined width values, ensuring optimal display for columns that contain variable or unpredictable data.
 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@OrderData" Height="315" AllowResizing="true" Width="800">
+<SfGrid DataSource="@OrderData" Height="315" Width="800">
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" MinWidth="100" MaxWidth="200" TextAlign="TextAlign.Right" Width="200"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" AutoFit="true" MinWidth="8" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" AutoFit="true" AllowResizing="false" MinWidth="8" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" AutoFit="true" MinWidth="8" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" MinWidth="8" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1357,15 +1359,15 @@ public class OrderDetails
             order.Add(new OrderDetails(10248, "Vine Traders", 32.38, new DateTime(1996, 7, 4), "Reims City", "Australia"));
             order.Add(new OrderDetails(10249, "Tom Supply", 11.61, new DateTime(1996, 7, 5), "Munster Town", "Australia"));
             order.Add(new OrderDetails(10250, "Hana Foods", 65.83, new DateTime(1996, 7, 8), "Rio Janeiro City", "United States"));
-            order.Add(new OrderDetails(10251, "Victor Exports", 41.34, new DateTime(1996, 7, 8), "Lyon Urban Area", "Australia"));
+            order.Add(new OrderDetails(10251, "Victor Exports Limited", 41.34, new DateTime(1996, 7, 8), "Lyon Urban Area", "Australia"));
             order.Add(new OrderDetails(10252, "Super Retail", 51.3, new DateTime(1996, 7, 9), "Charleroi Industrial Zone", "United States"));
             order.Add(new OrderDetails(10253, "Hana Market", 58.17, new DateTime(1996, 7, 10), "Rio Janeiro Metro", "United States"));
             order.Add(new OrderDetails(10254, "Chop House", 22.98, new DateTime(1996, 7, 11), "Bern Capital City", "Switzerland"));
-            order.Add(new OrderDetails(10255, "Rich Supplies", 148.33, new DateTime(1996, 7, 12), "Geneva Lake Region", "Switzerland"));
+            order.Add(new OrderDetails(10255, "Rich Supplies Limited", 148.33, new DateTime(1996, 7, 12), "Geneva Lake Region", "Switzerland"));
             order.Add(new OrderDetails(10256, "Well Imports", 13.97, new DateTime(1996, 7, 15), "Resende City Area", "Brazil"));
             order.Add(new OrderDetails(10257, "Hill Foods", 81.91, new DateTime(1996, 7, 16), "San Cristobal City", "Venezuela"));
             order.Add(new OrderDetails(10258, "Ernst Handel", 140.51, new DateTime(1996, 7, 17), "Graz City Center", "Austria"));
-            order.Add(new OrderDetails(10259, "Central Trade", 3.25, new DateTime(1996, 7, 18), "Mexico City Zone", "Mexico"));
+            order.Add(new OrderDetails(10259, "Central Trade center", 3.25, new DateTime(1996, 7, 18), "Mexico City Zone", "Mexico"));
             order.Add(new OrderDetails(10260, "Ottik Sales", 55.09, new DateTime(1996, 7, 19), "Cologne Rhine Area", "Germany"));
             order.Add(new OrderDetails(10261, "Queen Depot", 3.05, new DateTime(1996, 7, 19), "Rio Janeiro Port", "Brazil"));
             order.Add(new OrderDetails(10262, "Rapid Transport", 48.29, new DateTime(1996, 7, 22), "Albuquerque Metro Area", "USA"));
@@ -1384,7 +1386,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhHXzDUqFNelcyC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVdXTDFeCXxYymp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ### AutoFit with Empty Space
