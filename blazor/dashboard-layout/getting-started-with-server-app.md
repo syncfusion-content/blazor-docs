@@ -7,7 +7,7 @@ control: Dashboard Layout
 documentation: ug
 ---
 
-# Getting Started with Blazor Dashboard Layout Component in Blazor Server App
+# Getting Started with Blazor Dashboard Layout Component in Server App
 
 This section briefly explains about how to include [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

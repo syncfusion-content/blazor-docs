@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor DatePicker Component in Server App
+title: Getting Started with Syncfusion Blazor DatePicker in Server App
 description: Checkout and learn about the documentation for getting started with Blazor DatePicker Component in Blazor Server App.
 platform: Blazor
 component: DatePicker
