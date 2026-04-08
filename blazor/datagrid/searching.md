@@ -9,9 +9,14 @@ documentation: ug
 
 # Searching in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes a built-in search feature that helps locate records quickly across grid data. Users can filter displayed records by entering a search key, which is especially useful for large datasets.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes a powerful built-in searching feature that enables efficient filtering of DataGrid records based on search criteria. This feature allows quick discovery of specific data within large datasets. Whether the application works with small or large datasets, the search feature provides a seamless solution for locating relevant records instantly.
 
-To provide a search box in the UI, add the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. Searching can also be performed programmatically using [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method. The [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property is column-level and is used to include or exclude specific columns from search; it is not required to enable global search.
+## Enable searching
+
+To provide a search box in the UI, add the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. Searching can also be performed programmatically using [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method. The [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property is column-level and is used to include or exclude specific columns from search; it is not required to enable global search.  
+
+
+The following example demonstrates enabling the `Toolbar` with search option in the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -86,19 +91,23 @@ To provide a search box in the UI, add the Search item to the toolbar using the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqMDUXsngnslOp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The clear icon appears in the grid search box when focused or after typing a character. Selecting the clear icon removes the text and resets the search results.
+> The clear icon appears in the search text box when it has focus or after entering a character. Clicking the clear icon removes the text from the search box and resets the DataGrid to display all records.
 
 ## Initial search
 
-By default, search is performed after the grid renders and a search action is triggered. To apply a search on initial render, configure the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html) with the following properties:
+By default, the search operation is performed after the DataGrid renders. However, scenarios may require applying a search automatically when the DataGrid first loads. The initial search feature enables this by setting search criteria before the DataGrid displays its data.
+
+To apply search at initial rendering, configure the following properties in the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html).
 
 | Property     | Description                                                                                                                                                                                                         |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Fields       | Specifies the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) that participate in the search.                     |
-| Operator     | Specifies the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) used for comparison.                            |
-| Key          | Specifies the initial search text.                                                                                                                                                                                  |
-| IgnoreCase   | [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreCase) sets case-insensitive search when true.                   |
-| IgnoreAccent | [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) ignores diacritic characters during search when true. |
+| Fields       | Specifies the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) that participate in the search. By default, the DataGrid searches all columns. Set this property to limit the search to specific columns. |                     |
+| Operator     | Specifies the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) used for comparison. Available Options include `Startswith`, `Endswith`, `Contains`, `Equal`, and others. The default value is `Contains`.                            |
+| `Key`          | Specifies the [Key](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Key). The DataGrid filters records matching this value based on the specified operator.                                                                                                                                                                                   |
+| IgnoreCase   | [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreCase) sets case-insensitive search when true. For example, searching "john" finds "John", "JOHN", and "john".                   |
+| IgnoreAccent | [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) ignores diacritic characters during search when true. For example, “café” matches “cafe”. |
+
+The following example demonstrates configuring initial search by setting these properties.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -174,18 +183,22 @@ By default, search is performed after the grid renders and a search action is tr
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKWZUXimSvcekD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> By default, the grid searches all visible columns. To limit search to specific fields, set the `Fields` property of `GridSearchSettings`.
+> By default, the DataGrid searches all visible columns. Customize this by setting the `Fields` property of `GridSearchSettings` to limit searching to specific columns only.
 
 ## Search operators
 
-Search operators define how the search key is compared to data values. Configure the operator using [GridSearchSettings.Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator). The default is **contains**, which returns values that contain the search key.
+Search operators are symbols or keywords used to define the type of comparison or condition applied during a search operation. They specify the way the search key is compared with the column data. Different operators enable different types of matching logic. The [GridSearchSettings.Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) property configures which operator the DataGrid uses.
 
-| Operator   | Description                                             |
-|------------|---------------------------------------------------------|
-| StartsWith | Checks whether a value begins with the specified value. |
-| EndsWith   | Checks whether a value ends with the specified value.   |
-| Contains   | Checks whether a value contains the specified value.    |
-| Equal      | Checks whether a value is equal to the specified value. |
+By default, the `GridSearchSettings.Operator` is set to `Contains`, which returns records containing the search key anywhere in the specified columns. The following operators are available.
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| **StartsWith** | Matches records that begin with the search key | Searching "John" finds "Johnson" and "Johnathan", but not "St. John". |
+| **EndsWith** | Matches records that end with the search key | Searching "son" finds "Johnson" and "Allison", but not "Sunshine". |
+| **Contains** | Matches records containing the search key anywhere | Searching "son" finds "Johnson", "Sunshine", and "Allison". |
+| **WildCard** | Uses wildcards (* symbol) for pattern matching | Searching "J*n" finds "John", "Jen", "Jargon". |
+ **Equal** | Matches records exactly equal to the search key | Searching "John" finds only cells containing exactly "John". |
+| **NotEqual** | Matches records that DO NOT equal the search key | Searching "John" finds all records except those with exactly "John". |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -286,18 +299,19 @@ Search operators define how the search key is compared to data values. Configure
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheMWibUKtkPFVK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrnNUrxUzwNiCNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Search by external button
+## Search using an external button
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports programmatic search, enabling custom search triggers such as external buttons. Use the grid’s [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method and pass the search text.
+The DataGrid provides the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method, which enables programmatic searching. This allows implementing custom search interfaces outside the DataGrid's toolbar, such as using a dedicated search button or external search box.
 
-Steps:
+Implementation steps for searching via an external button:
 
-1. Render a [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) outside the grid UI.
-2. Handle the button’s [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event.
-3. Access the grid reference.
-4. Call `SearchAsync` with the search key.
+1. Add a [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) and a [SfButton](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) element outside the DataGrid.
+2. Attach a [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event handler to the button.
+3. Enter the text to search in the DataGrid.
+4. In the event handler, get the entered text from the `SfTextBox`.
+5. Call the DataGrid's `SearchAsync` method, passing the text as a parameter.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -384,7 +398,14 @@ Steps:
 
 ## Search specific columns
 
-By default, the search scans all visible columns. To restrict the search to specific columns, set the field names in [GridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields).
+By default, the search functionality searches across all visible columns. However, scenarios may require searching only specific columns. The [GridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property enables limiting the search scope to targeted columns.
+
+This approach is useful when:
+- Applications work with large DataGrids containing many columns (reduces processing time).
+- Search should focus on key columns (like "Customer ID" or "Freight") rather than all columns.
+- Displaying search results for specific fields improves relevance.
+
+The following example searches only the "CustomerID" and "ShipCity" columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -460,167 +481,13 @@ By default, the search scans all visible columns. To restrict the search to spec
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVKMNADrifXTYHZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Disable search for particular column
+## Perform real-time search while typing
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
+The real-time search feature enables searching as each keystroke is entered into the search box. This provides immediate, dynamic search results without requiring pressing <kbd>Enter</kbd> or clicking a button.
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@using Syncfusion.Blazor.Grids
+ By default, search is executed on Enter. To trigger search as the user types, render an [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox__ctor) in the toolbar template and call [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) in the TextBox [Input](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Input) event.
 
-<SfGrid DataSource="@Orders" Toolbar=@ToolbarItems>
-    <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" AllowSearching="false" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="ShipName" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<OrderData> Orders { get; set; }
-    public List<string> ToolbarItems = new List<string>() { "Search" };
-       
-    protected override void OnInitialized()
-    {
-        Orders = OrderData.GetAllRecords();
-    }    
-}
-{% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
-    {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;
-
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Bern", "Vins et alcools Chevalier"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Genève", "Richter Supermar"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-    }
-{% endhighlight %}
-{% endtabs %}
-
-N> For a broader overview, see the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour and the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5).
-
-## Ignore accents in search
-
-By default, the DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to **true**. This improves usability when data contains diacritic characters.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid @ref="Grid" DataSource="@GridData" Toolbar="@(new List<string>() { "Search" })">
-    <GridSearchSettings IgnoreAccent="true"></GridSearchSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(InventorDetails.Inventor) IsPrimaryKey="true" HeaderText="Inventor Name" Width="180"></GridColumn>
-        <GridColumn Field=@nameof(InventorDetails.PatentFamilies) HeaderText="Number of Patent Families" TextAlign="TextAlign.Right" Width="195"></GridColumn>
-        <GridColumn Field=@nameof(InventorDetails.Country) HeaderText="Country" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(InventorDetails.MainFields) HeaderText="Main Fields of Invention" Width="130"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    private SfGrid<InventorDetails> Grid;
-    public List<InventorDetails> GridData { get; set; }
-    protected override void OnInitialized()
-    {
-        GridData = InventorDetails.GetAllRecords();
-    }   
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="InventorDetails.cs" %}
-
-public class InventorDetails
-{
-    public static List<InventorDetails> Inventors = new List<InventorDetails>();
-    public InventorDetails()
-    {
-
-    }
-    public InventorDetails(string Inventor,int? PatentFamilies,string NumberofINPADOCpatents,string Country,string MainFields)
-    {
-      this.Inventor= Inventor;
-      this.PatentFamilies= PatentFamilies;
-      this.NumberofINPADOCpatents= NumberofINPADOCpatents;
-      this.Country= Country;
-      this.MainFields= MainFields;
-    }
-    public static List<InventorDetails> GetAllRecords()
-    {
-        if (Inventors.Count() == 0)
-        {
-            int code = 10;
-            for (int i = 1; i < 2; i++)
-            {
-                Inventors.Add(new InventorDetails("Łukasz Kowalski", 4737, "9839", "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"));
-                Inventors.Add(new InventorDetails("João Pereira", 4677, "10000+", "Japan", "Various"));
-                Inventors.Add(new InventorDetails("Štěpán Novák",13197, "1332", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
-                Inventors.Add(new InventorDetails("Guðrún Jónsdóttir", 1255, "3099", "India", "Automotive, Stainless steel products"));
-                Inventors.Add(new InventorDetails("Zsófia Tóth", 1240, "2038", "USA", "Gaming machines"));
-                Inventors.Add(new InventorDetails("Márcio Silveira", 1240, "4126", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
-                Inventors.Add(new InventorDetails("René González", 1093, "3360", "USA", "Automotive, Stainless steel products"));
-                Inventors.Add(new InventorDetails("Émile Durand", 993, "1398", "Japan", "Various"));
-                Inventors.Add(new InventorDetails("José Martínez", 949,"NA", "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));                  
-                code += 5;
-            }
-        }
-        return Inventors;
-    }
-    public string Inventor { get; set; }
-    public int? PatentFamilies { get; set; }
-    public string NumberofINPADOCpatents { get; set; }
-    public string Country { get; set; }
-    public string MainFields { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrItRCfhblhPJaR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-> * Accent-insensitive comparison applies to searching and filtering when using an IEnumerable data source.
-> * This feature affects characters outside the ASCII range.
-
-## Search on each key stroke
-
-The search-on-keystroke approach enables real-time results while typing in the search box. By default, search is executed on Enter. To trigger search as the user types, render an [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox__ctor) in the toolbar template and call [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) in the TextBox [Input](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Input) event.
+In the following example, the `Input` event of the SfTextBox calls the DataGrid's `SearchAsync` method with the new text. This produces real-time filtering as typing happens.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -717,10 +584,178 @@ The search-on-keystroke approach enables real-time results while typing in the s
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrgXFLzhbsDRpHF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> Real-time search on keystroke may impact performance when the application works with large datasets (thousands of rows). Consider implementing a delayed search trigger or using initial search combined with external buttons for better performance with large data.
 
-## Perform search operation in Grid using multiple keywords
+## Disable search for particular column
 
-The DataGrid can also be searched using multiple criteria. Build compound predicates with the grid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Syncfusion Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Toolbar=@ToolbarItems>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" AllowSearching="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="ShipName" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+    public List<string> ToolbarItems = new List<string>() { "Search" };
+       
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }    
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Bern", "Vins et alcools Chevalier"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Genève", "Richter Supermar"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+N> For a broader overview, see the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour and the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5).
+
+## Ignore accents and diacritics while searching
+
+By default, the DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) property to `true`. This improves usability when data contains diacritic characters.
+
+This feature is useful when:
+- Applications work with international data containing accented characters (é, ñ, ü, etc.).
+- Input searches may not include accents even though data contains them.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@GridData" Toolbar="@(new List<string>() { "Search" })">
+    <GridSearchSettings IgnoreAccent="true"></GridSearchSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(InventorDetails.Inventor) IsPrimaryKey="true" HeaderText="Inventor Name" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.PatentFamilies) HeaderText="Number of Patent Families" TextAlign="TextAlign.Right" Width="195"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.Country) HeaderText="Country" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.MainFields) HeaderText="Main Fields of Invention" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<InventorDetails> Grid;
+    public List<InventorDetails> GridData { get; set; }
+    protected override void OnInitialized()
+    {
+        GridData = InventorDetails.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="InventorDetails.cs" %}
+
+public class InventorDetails
+{
+    public static List<InventorDetails> Inventors = new List<InventorDetails>();
+    public InventorDetails()
+    {
+
+    }
+    public InventorDetails(string Inventor,int? PatentFamilies,string NumberofINPADOCpatents,string Country,string MainFields)
+    {
+      this.Inventor= Inventor;
+      this.PatentFamilies= PatentFamilies;
+      this.NumberofINPADOCpatents= NumberofINPADOCpatents;
+      this.Country= Country;
+      this.MainFields= MainFields;
+    }
+    public static List<InventorDetails> GetAllRecords()
+    {
+        if (Inventors.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Inventors.Add(new InventorDetails("Łukasz Kowalski", 4737, "9839", "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"));
+                Inventors.Add(new InventorDetails("João Pereira", 4677, "10000+", "Japan", "Various"));
+                Inventors.Add(new InventorDetails("Štěpán Novák",13197, "1332", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                Inventors.Add(new InventorDetails("Guðrún Jónsdóttir", 1255, "3099", "India", "Automotive, Stainless steel products"));
+                Inventors.Add(new InventorDetails("Zsófia Tóth", 1240, "2038", "USA", "Gaming machines"));
+                Inventors.Add(new InventorDetails("Márcio Silveira", 1240, "4126", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                Inventors.Add(new InventorDetails("René González", 1093, "3360", "USA", "Automotive, Stainless steel products"));
+                Inventors.Add(new InventorDetails("Émile Durand", 993, "1398", "Japan", "Various"));
+                Inventors.Add(new InventorDetails("José Martínez", 949,"NA", "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));                  
+                code += 5;
+            }
+        }
+        return Inventors;
+    }
+    public string Inventor { get; set; }
+    public int? PatentFamilies { get; set; }
+    public string NumberofINPADOCpatents { get; set; }
+    public string Country { get; set; }
+    public string MainFields { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrItRCfhblhPJaR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * The `IgnoreAccent` property can be combined with other search settings such as `Fields`, `Operator`, `IgnoreCase` to customize search behavior.
+> * This feature applies only to non-ASCII characters (characters with diacritical marks).
+> * Enabling accent-ignoring may have a slight performance impact on very large datasets.
+
+## Search using multiple keywords
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports searching with multiple keywords simultaneously. This enables narrowing search results by matching multiple conditions at once. For example, finding records where CustomerID contains "A" AND Paid contains "Lunas".
+
+Build compound predicates with the DataGrid's [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Syncfusion Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. 
+
+In the following example, the search uses WhereFilter to combine conditions.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -832,9 +867,11 @@ The DataGrid can also be searched using multiple criteria. Build compound predic
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqCDqNBkpniqXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Clear search by external button
+## Clear search results using an external button
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to clear the current search programmatically. To reset search results from an external button, call [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) with an empty string. This clears the search text and removes the applied search.
+The DataGrid provides the capability to clear search results and reset the DataGrid to display all records. This is useful for resetting search filters when a "Clear" or "Reset" button is clicked.
+
+To reset search results from an external button, call [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) with an empty string. This clears the search text and removes the applied search.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -915,4 +952,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides th
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVzjpXoqkaJnBKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Also clear the searched records using the clear icon in the search input field.
+> Alternatively, the search box's built-in clear icon also clears search results. When the search box has focus or contains text, clicking the clear icon removes the text and resets the DataGrid to display all records.
