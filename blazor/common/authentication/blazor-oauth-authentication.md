@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Blazor DataGrid with GitHub OAuth 2.0
-description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Syncfusion Blazor components in a Blazor Web App.
+title: Syncfusion® Blazor DataGrid with GitHub OAuth 2.0
+description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Syncfusion® Blazor components in a Blazor Web App.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,24 +9,15 @@ documentation: ug
 
 # Blazor with GitHub OAuth 2.0
 
-This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected pages featuring the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
+This guide explains how to integrate **OAuth 2.0 authentication** into a **Blazor Web App (Interactive Server)** using **GitHub OAuth**. Once authenticated, the user can access protected pages featuring the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component.
 
 ## What is OAuth 2.0?
 
 OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service (such as **GitHub**, **Google**, and **Microsoft**). It uses tokens instead of credentials and is widely used for secure authentication in modern applications.
 
-OAuth provides:
+**Benefits of using OAuth in Blazor applications**
 
-- **Secure login using external providers**
-- **No need to store username and password**
-- **Short‑lived authorization tokens**
-- **Minimal developer‑side security concerns**
-
-## Prerequisites
-
-- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
-- Visual Studio 2022 or newer
-- A GitHub account (required for creating the GitHub OAuth App)
+OAuth enables secure user authentication by allowing sign‑in through trusted external providers. It removes the need to store username and password in the application, reducing security risks. OAuth uses short lived access tokens to protect APIs and user data. This approach minimizes developer side security responsibilities.
 
 ## Create a Blazor Web App (Interactive Server)
 
@@ -53,8 +44,8 @@ OAuth provides:
 2. Click **OAuth Apps → New OAuth App**.
 3. Configure the application:
     - **Homepage URL:** `https://localhost:5001/` *(Replace `5001` with your application's actual HTTPS port number from `launchSettings.json` if different)*.
-    - **Authorization callback URL:** `https://localhost:5001/signin-github`
-4. Copy the generated **Client ID** and **Client Secret**
+    - **Authorization callback URL:** `https://localhost:5001/signin-github`.
+4. Copy the generated **Client ID** and **Client Secret**.
 5. In your Blazor project, open **appsettings.json** and add the following configuration.
 
 ```json
@@ -207,15 +198,15 @@ To allow components to receive authentication state, wrap the router inside **Ca
 {% endhighlight %}
 {% endtabs %}
 
-## Connect Syncfusion Blazor DataGrid 
+## Connect Syncfusion® Blazor DataGrid 
 
 **1. Install Syncfusion® Blazor DataGrid and themes NuGet packages**
 
-To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-**2. Add import namespaces**
+**2. Add Syncfusion® namespaces**
 
-Open the `~/_Imports.razor` file and import the required namespaces.
+Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -228,7 +219,7 @@ Open the `~/_Imports.razor` file and import the required namespaces.
 
 **3. Register the Syncfusion® Blazor service**
 
-To enable Syncfusion Blazor components, add the required service registration in your app’s `~/Program.cs`.
+Add the Syncfusion® Blazor service to the `~/Program.cs` file to enable Syncfusion® components in the application.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" %}
@@ -248,17 +239,19 @@ Include the theme stylesheet and script references in the `App.razor` file.
 {% highlight html  %}
 
 <head>
+    <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
-....
+
 <body>
+    <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
 {% endhighlight %}
 {% endtabs %}
 
-**5. Create a protected page with Syncfusion DataGrid**
+**5. Create a protected page with Syncfusion® DataGrid**
 
 Create `SecureGrid.razor` page and protect it using the [Authorize] attribute.
 
@@ -345,10 +338,10 @@ The `Home.razor` page uses `<AuthorizeView>` to change UI depending on whether t
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrates how to integrate GitHub OAuth into a Blazor Web App and authenticate users using secure cookie based sign‑in. After authentication, the user can access protected pages and view the Syncfusion Blazor DataGrid.
+This example demonstrates how to integrate **GitHub OAuth** into a Blazor Web App and authenticate users using secure cookie based sign‑in. After authentication, the user can access protected pages and view the Syncfusion® Blazor **DataGrid**.
 
 ## See also
 
 - [OAuth 2.0 and OIDC authentication in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols)
 
-- [Getting started with Blazor DataGrid in Web app](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+- [Getting started with Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
