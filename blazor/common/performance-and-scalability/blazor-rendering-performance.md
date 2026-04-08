@@ -100,7 +100,7 @@ In this pattern, the grid receives the same `Orders` reference unless the data a
 
 N> Reassigning a new list instance with the same items still counts as a parameter change and may trigger unnecessary re-rendering.
 
-## Managing re-renders with `ShouldRender`
+## Managing re-renders with ShouldRender
 
 There are cases where state changes occur but the visual output does not actually need to change. In such cases, the `ShouldRender` method can be used to explicitly control whether the component proceeds with rendering.
 
@@ -131,7 +131,7 @@ This pattern is useful when background work updates internal values that do not 
 
 N> `ShouldRender` is most effective when the render conditions are clear, predictable, and easy to validate during testing.
 
-## Efficient event handling with `EventCallback`
+## Efficient event handling with EventCallback
 
 Event handling contributes directly to rendering behavior because UI events often trigger state changes. Using `EventCallback` helps keep events aligned with the component model and avoids unnecessary lambda or delegate allocations that can occur when multiple delegate instances are created repeatedly during rendering cycles.
 
