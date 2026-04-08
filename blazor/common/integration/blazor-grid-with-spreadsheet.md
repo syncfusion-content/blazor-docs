@@ -18,7 +18,7 @@ A common use case for integrating the Syncfusion Blazor DataGrid with the Spread
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
-## Install required Syncfusion packages
+## Install required Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
 To add the Blazor DataGrid and Spreadsheet components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
 
@@ -40,9 +40,9 @@ Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion Blazor service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion Blazor service in the `Program.cs` file of the Blazor Server App.
+Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" hl_lines="1 6" %}

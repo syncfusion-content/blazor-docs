@@ -43,7 +43,7 @@ dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion component
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> component
 
 Create a `.razor` file to incorporate the Syncfusion DataGrid component:
 
@@ -164,7 +164,7 @@ Then update the start script in `package.json`.
 {% endhighlight %}
 {% endtabs %}
 
-### Load Blazor runtime and Syncfusion theme/scripts
+### Load Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> theme/scripts
 
 The Blazor runtime and Syncfusion scripts/themes are required to load Syncfusion Blazor components inside Angular. Add the following to your Angular project’s `index.html` file.
 

@@ -64,7 +64,7 @@ The following CSS styles are available in the `../node_modules/@syncfusion` fold
 
 N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview).
 
-### Add Syncfusion component
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> component
 
 Update your `src/app/app.ts` file to incorporate the Syncfusion DataGrid component: 
 

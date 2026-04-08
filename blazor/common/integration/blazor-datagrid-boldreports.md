@@ -45,9 +45,9 @@ Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion Blazor service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion Blazor service in the `Program.cs` file of the Blazor Server App.
+Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" hl_lines="2 5 6 7 9 12 13 14" %}
