@@ -17,8 +17,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Accordion](https://
 |-----------|-------------|
 | `.e-accordion` | Applied to the root container element of the Accordion component. Defines the base block-level display and relative positioning. |
 | `.e-acrdn-item` | Applied to each Accordion item wrapper. Contains both the header and content panel. Controls item-level spacing, borders, margin, padding, and overflow behavior. |
-| `.e-acrdn-item:first-child` | Applied to the first Accordion item in the component. Removes top margin and may have specific border-radius or border styling for the top edge. |
-| `.e-acrdn-item:last-child` | Applied to the last Accordion item in the component. May have specific border and border-radius styling for the bottom edge to complete the component's visual boundaries. |
+| `.e-acrdn-item:first-child` | Applied to the first Accordion item in the component. Removes top margin and applies specific border-radius and border styling for the top edge. |
+| `.e-acrdn-item:last-child` | Applied to the last Accordion item in the component. Applies specific border and border-radius styling for the bottom edge to complete the component's visual boundaries. |
 
 ## Header Classes
 
@@ -89,4 +89,3 @@ The following class combinations have specific styling behaviors:
 | `.e-acrdn-item.e-select.e-selected:first-child` | Applied to the first selected item. Controls top border styling for the first expanded item. |
 | `.e-acrdn-item.e-select.e-selected:last-child` | Applied to the last selected item. Controls bottom border styling for the last expanded item. |
 | `.e-acrdn-item.e-select.e-selected.e-expand-state` | Applied to Accordion items that are selectable, currently selected, and in expanded state. Represents the complete expanded item state with all relevant modifiers. |
-| `.e-acrdn-item:not(.e-select) + .e-acrdn-item:not(.e-select)` | Applied to consecutive non-interactive items. Removes top and bottom margins between them for compact display. |
