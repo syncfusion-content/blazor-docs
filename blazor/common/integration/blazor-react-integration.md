@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Blazor Components in React
 
-This guide explains how to use **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components** inside a **[React](https://react.dev/)** application.
+This guide explains how to use **[Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components)** inside a **[React](https://react.dev/)** application.
 
 Blazor and React are different frontend frameworks. Blazor uses .NET and Razor components, while React uses JavaScript/TypeScript and JSX. These frameworks cannot directly share UI components. However, **[Blazor Custom Elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0&preserve-view=true)** make integration possible by exposing Razor components as standard web components (custom HTML elements), allowing React to render them like any other DOM element.
 
@@ -247,7 +247,7 @@ In this example, the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid c
 Create a `.jsx` file inside the `src` folder and add the React wrapper component. In this example, the file name is `OrdersGrid.jsx`.
 
 {% tabs %}
-{% highlight jsx tabtitle="OrdersGrid.jsx" %}
+{% highlight js tabtitle="OrdersGrid.jsx" %}
 
 export default function OrdersGrid() {
   return (
@@ -267,7 +267,7 @@ export default function OrdersGrid() {
 Add the following code snippet to the `App.jsx` file.
 
 {% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 
 import OrdersGrid from './OrdersGrid'
 
