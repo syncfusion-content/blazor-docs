@@ -45,29 +45,24 @@ Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion Blazor service
 
-Register the Syncfusion Blazor Service in the `Program.cs` file of the Blazor Server App.
+Register the Syncfusion Blazor service in the `Program.cs` file of the Blazor Server App.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" hl_lines="1 7 8 9 12 16 17 18" %}
+{% highlight razor tabtitle="~/Program.cs" hl_lines="2 5 6 7 9 12 13 14" %}
 
-
+...
 using Syncfusion.Blazor;
-
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddMemoryCache();
-
 // HttpClient for server-side calls
 builder.Services.AddHttpClient();
-
+...
 var app = builder.Build();
-
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 app.MapControllers(); 
@@ -88,9 +83,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     <!-- Bold Report Viewer CSS -->
     <link href="https://cdn.boldreports.com/12.2.6/content/v2.0/tailwind-light/bold.report-viewer.min.css" rel="stylesheet" />
-
 </head>
-
 <body>
     <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
@@ -133,7 +126,6 @@ window.BoldReports = {
                 body: JSON.stringify({ dataSources: orders })
             });
             if (!resp.ok) throw new Error('POST failed: ' + resp.status);
-
             $("#" + elementId).empty();
             $("#" + elementId).boldReportViewer({
                 reportServiceUrl: serviceUrl,
@@ -189,7 +181,6 @@ Create a new folder inside the `wwwroot` folder in your application to store the
               <TextAlign>Center</TextAlign>
             </Style>
           </Textbox>
-
           <Tablix Name="OrdersTable">
             <TablixBody>
               <TablixColumns>
@@ -262,7 +253,6 @@ Create a new folder inside the `wwwroot` folder in your application to store the
       </Page>
     </ReportSection>
   </ReportSections>
-
   <DataSources>
     <DataSource Name="DummyDataSource">
       <ConnectionProperties>
@@ -272,7 +262,6 @@ Create a new folder inside the `wwwroot` folder in your application to store the
       <rd:DataSourceID>2BA47F3B-787C-4EF9-9A18-FC9405C53C7B</rd:DataSourceID>
     </DataSource>
   </DataSources>
-
   <DataSets>
     <DataSet Name="OrdersDataSet">
       <Fields>
@@ -299,7 +288,6 @@ Create a new folder inside the `wwwroot` folder in your application to store the
       </Query>
     </DataSet>
   </DataSets>
-
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>2BA47F3B-787C-4EF9-9A18-FC9405C53C7B</rd:ReportID>
 </Report>
@@ -309,16 +297,13 @@ Create a new folder inside the `wwwroot` folder in your application to store the
 
 ### Configure the Web API
 
-The Blazor Report Viewer requires a Web API service to process the RDLC, and SSRS report files.
+The Blazor Report Viewer requires a Web API service to process the RDLC report files.
 
 **Add Web API Controller**
 
 * Right-click the project and select **Add > New** Item from the context menu.
-
 * In the Add New Item dialog, select **API Controller Empty** class and name it as `BoldReportsAPIController.cs`.
-
 * Click Add.
-
 * Open the **BoldReportsAPIController** and add the following code to implement the Bold Reports `IReportController` for handling report requests.
 
 The Report Viewer requires data in a **DataSet** format. In the following example, API converts the posted DataGrid data (JSON) into a `DataSet` named `OrdersDataSet` that matches the `RDLC` file.
@@ -343,25 +328,20 @@ public class BoldReportsAPIController : Controller, IReportController
     private readonly IWebHostEnvironment _env;
     private static List<Order>? _sharedOrders;
     private static DataSet? _reportDataSet;
-
     public BoldReportsAPIController(IMemoryCache cache, IWebHostEnvironment env)
     {
         _cache = cache;
         _env = env;
     }
-
     [HttpPost]
     public object PostReportAction([FromBody] Dictionary<string, object> json)
         => ReportHelper.ProcessReport(json, this, _cache);
-
     [HttpPost]
     public object PostFormReportAction()
         => ReportHelper.ProcessReport(null, this, _cache);
-
     [HttpGet]
     public object GetResource([FromQuery] ReportResource resource)
         => ReportHelper.GetResource(resource, this, _cache);
-
     [HttpPost]
     public IActionResult SetReportData([FromBody] ReportDataModel dataModel)
     {
@@ -370,27 +350,22 @@ public class BoldReportsAPIController : Controller, IReportController
             if (dataModel?.DataSources != null && dataModel.DataSources.Count > 0)
             {
                 _sharedOrders = dataModel.DataSources;
-
                 // Convert List<Order> to DataSet with DataTable
                 DataSet ds = new();
                 DataTable dt = new("OrdersDataSet");
-
                 // Add columns matching the RDLC report
                 dt.Columns.Add("OrderID", typeof(int));
                 dt.Columns.Add("CustomerID", typeof(string));
                 dt.Columns.Add("OrderDate", typeof(DateTime));
                 dt.Columns.Add("Freight", typeof(double));
-
                 // Add rows from orders
                 foreach (var order in _sharedOrders)
                 {
                     dt.Rows.Add(order.OrderID, order.CustomerID, order.OrderDate, order.Freight);
                 }
-
                 ds.Tables.Add(dt);
                 _reportDataSet = ds;
                 _cache.Set("ReportDataSet", ds, TimeSpan.FromMinutes(10));
-
                 return Ok(new { success = true, message = "Data set successfully" });
             }
             return BadRequest(new { success = false, message = "No data provided" });
@@ -400,28 +375,23 @@ public class BoldReportsAPIController : Controller, IReportController
            return BadRequest(new { success = false, message = ex.Message });
         }
     }
-
     [NonAction]
     public void OnInitReportOptions(ReportViewerOptions options)
     {
         try
         {
             options.ReportModel.ProcessingMode = ProcessingMode.Local;
-
             var path = Path.Combine(_env.WebRootPath, "Reports", "Orders.rdlc");
-            
             if (!System.IO.File.Exists(path))
             {
                 throw new FileNotFoundException($"RDLC file not found at: {path}");
             }
-
             var stream = new MemoryStream();
             using (var fs = System.IO.File.OpenRead(path))
             {
                 fs.CopyTo(stream);
             }
             stream.Position = 0;
-
             options.ReportModel.Stream = stream;
             options.ReportModel.ReportPath = "Orders.rdlc";
         }
@@ -430,7 +400,6 @@ public class BoldReportsAPIController : Controller, IReportController
             System.Console.WriteLine($"[OnInitReportOptions] Error: {ex.Message}");
         }
     }
-
     [NonAction]
     public void OnReportLoaded(ReportViewerOptions options)
     {
@@ -446,7 +415,6 @@ public class BoldReportsAPIController : Controller, IReportController
             {
                 ds = _reportDataSet;
             }
-
             if (ds != null && ds.Tables.Contains("OrdersDataSet"))
             {
                 var table = ds.Tables["OrdersDataSet"];
@@ -465,7 +433,6 @@ public class BoldReportsAPIController : Controller, IReportController
             System.Console.WriteLine($"[OnReportLoaded] Error: {ex.Message}");
         }
     }
-    
     public class ReportDataModel
     {
         public List<Order> DataSources { get; set; } = [];
@@ -493,26 +460,22 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
 
 <div class="container mt-5">
     <h2>Orders Data Grid & Bold Reports Integration</h2>
-        
     <SfButton CssClass="e-primary mt-3" IsPrimary="true" OnClick="@OpenReport">
         Open RDLC Report
     </SfButton>
-    
     <SfGrid DataSource="@Orders">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-    </SfGrid>
-    
+        <GridColumns>
+            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+            <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        </GridColumns>
+    </SfGrid>    
     <div id="viewer" style="height:80vh; margin-top:20px;"></div>
 </div>
 
 @code{
     public List<Order> Orders { get; set; } = [];
-   
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 10).Select(x => new Order()
@@ -523,35 +486,28 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-    
     public async Task OpenReport()
-    {  
-        
+    {       
         try
-        {
-              
+        { 
             // Step 1: Send the grid data to the server API
             var dataModel = new { DataSources = Orders };
             var baseUrl = Nav.BaseUri.TrimEnd('/');
             var url = $"{baseUrl}/api/BoldReportsAPI/SetReportData".Replace("//api", "/api");
-            var response = await Http.PostAsJsonAsync(url, dataModel);
-                       
+            var response = await Http.PostAsJsonAsync(url, dataModel);                      
             // Step 2: Render the viewer with the data
             var viewerOptions = new
             {
                 serviceUrl = "/api/BoldReportsAPI",
                 reportPath = "Orders.rdlc"
             };
-
             await JS.InvokeVoidAsync("BoldReports.renderViewer", "viewer", viewerOptions);
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Exception: {ex}");
         }
-       
     }
-
     public class Order {
         public int? OrderID { get; set; }
         public string? CustomerID { get; set; }
