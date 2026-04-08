@@ -42,7 +42,7 @@ Rendering overhead becomes noticeable when actions such as scrolling, filtering,
 3. Start recording user interactions (scroll, filter, resize).
 4. Stop recording and inspect the results for long tasks, layout recalculations, and paint events.
 
-For Blazor Server or ASP.NET Core hosting environments, also consider using dotnet-trace for server-side performance analysis.
+For Blazor Server or ASP.NET Core hosting environments, also consider using [dotnet-trace](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-trace) for server-side performance analysis.
 
 When analyzing a page that contains a Syncfusion Grid or Chart, focus on how often the UI updates and whether updates are triggered by real data changes or by repeated object creation. In many cases, performance improvements come not from changing the component itself, but from reducing how often the parent component causes it to re-render.
 
@@ -54,7 +54,7 @@ Keeping parameter values stable reduces unnecessary diffing and avoids render wo
 
 ## Syncfusion DataGrid example with stable data binding
 
-The following example shows a simple `SfGrid` with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
+The following example shows a simple `DataGrid` with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -118,8 +118,10 @@ protected override bool ShouldRender()
 private async Task OnDataRefreshAsync()
 {
     isUiUpdateRequired = true;
+    StateHasChanged();
     await RefreshDataAsync();
     isUiUpdateRequired = false; // Reset for next cycle
+    StateHasChanged();
 }
 
 {% endhighlight %}
