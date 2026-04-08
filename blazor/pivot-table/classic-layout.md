@@ -78,7 +78,7 @@ To enable the classic layout, set the `Layout` property in the [PivotViewGridSet
 
 ```
 
-![Classic Layout in Blazor Pivot Table](images/blazor-pivot-table-classic-layout.png)
+![Classic Layout in Blazor Pivot Table](images/blazor-pivot-table-classic-layout.webp)
 
 **Limitations**
 

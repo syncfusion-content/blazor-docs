@@ -22,7 +22,7 @@ This section describes how to connect the [Blazor Pivot Table](https://www.syncf
 1. Open the **NuGet Package Manager** in your project solution.
 2. Search for and install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) package to enable Microsoft SQL Server connectivity.
 
-![Add the NuGet package System.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.png)
+![Add the NuGet package System.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.webp)
 
 ### Step 3: Connect to the Microsoft SQL database
 In the **Index.razor** file, under the `OnInitialized` method, use the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) library to connect to a Microsoft SQL database and retrieve data for the Pivot Table.
@@ -97,7 +97,7 @@ In the **Index.razor** file, under the `OnInitialized` method, use the [System.D
 2. The Pivot Table will display the Microsoft SQL data, organized according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with Microsoft SQL data](../images/blazor-pivottable-Ms-SQL-databinding.png)
+![Blazor Pivot Table bound with Microsoft SQL data](../images/blazor-pivottable-Ms-SQL-databinding.webp)
 
 ## Connecting a Microsoft SQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
@@ -111,13 +111,13 @@ Follow these steps to set up a Web API service that retrieves Microsoft SQL data
 1. Open Visual Studio and create a new **ASP.NET Core Web App** project named **MyWebService**.
 2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
 
-![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
+![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.webp)
 
 #### Step 2: Install the System.Data.SqlClient NuGet package
 1. Open the **NuGet Package Manager** in your project solution.
 2. Search for and install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) package to enable Microsoft SQL Server connectivity.
 
-![Add the NuGet package System.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.png)
+![Add the NuGet package System.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.webp)
 
 #### Step 3: Create a Web API controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
@@ -263,7 +263,7 @@ This section explains how to connect the [Blazor Pivot Table](https://www.syncfu
 2. The Pivot Table will display the Microsoft SQL data fetched via the Web API, structured according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with Microsoft SQL data](../images/blazor-pivottable-Ms-SQL-databinding.png)
+![Blazor Pivot Table bound with Microsoft SQL data](../images/blazor-pivottable-Ms-SQL-databinding.webp)
 
 ### Additional resources
 Explore a complete example of the Blazor Pivot Table integrated with an ASP.NET Core Web application to fetch data from a Microsoft SQL database in this [GitHub repository](https://github.com/SyncfusionExamples/aspnetcore-bind-SQL-database-to-pivot-table).
