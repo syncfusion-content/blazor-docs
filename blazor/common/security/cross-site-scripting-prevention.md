@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cross-Site Scripting (XSS) Security | Syncfusion Blazor
-description: Protect Syncfusion Blazor apps from XSS using built‑in sanitization, server-side validation, and essential security best practices.
+description: Protect Syncfusion Blazor components from XSS using built‑in sanitization, server-side validation, and essential security best practices.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-Cross-Site Scripting (XSS) is one of the most common security problems in web applications. This guide explains how to protect a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application from XSS attacks. It covers built-in client-side sanitization, server-side validation, and safe usage guidelines for components that handle user‑generated content.
+[Cross-Site Scripting (XSS)](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS) is one of the most common security problems in web applications. This guide explains how to protect a [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components) from XSS attacks. It covers built-in client-side sanitization, server-side validation, and safe usage guidelines for components that handle user‑generated content.
 
 ## What is cross-site scripting (XSS)?
 
@@ -29,7 +29,7 @@ XSS is a vulnerability where attackers insert harmful code into your application
 2. **Reflected XSS** - The harmful script is delivered through a URL or form input and is immediately sent back in the response, causing it to execute in the user’s browser.
 3. **DOM-based XSS** - Client-side scripts read unsafe data and write it directly into the page.
 
-## Why XSS matters in Blazor applications
+## Why XSS matters in Blazor applications?
 
 Blazor Server and Blazor WebAssembly come with different types of XSS risks.
 
@@ -41,10 +41,10 @@ Blazor Server and Blazor WebAssembly come with different types of XSS risks.
 
 ### Blazor WebAssembly
 
-- The entire application runs directly in the browser, giving malicious scripts full access to the DOM if they are injected.
-- Sensitive data like API tokens or client-side credentials can be exposed more easily.
-- Server‑side validation doesn’t apply automatically, so extra care is needed.
-- Because the entire application runs in the browser, attackers have full access to the application code and can more easily reverse-engineer security mechanisms or exploit vulnerabilities.
+- The application runs entirely in the user's browser. Injected scripts execute locally and can modify the user interface or hijack user sessions.
+- Client-side files and application logic are publicly available. This makes it easier for attackers to inspect or bypass client-side protections.
+- Never store secrets or other sensitive data in the browser. Protect backend APIs with server-side authentication and authorization.
+- Client-side validation and sanitization improve the user experience but are not a substitute for server-side validation and sanitization. Always validate and sanitize all client-origin data on the server.
 
 ## XSS threat model and attack vectors
 
@@ -88,10 +88,10 @@ Use `@userInput` whenever you want to safely display text on the page. Only use 
 {% tabs %}
 {% highlight html %}
 
-@* SAFE - Blazor automatically encodes *@
+<!-- SAFE - Blazor automatically encodes. -->
 <p>@userInput</p>
 
-@* UNSAFE - Bypasses encoding; only safe if sanitized *@
+<!-- UNSAFE - Bypasses encoding and is only safe if sanitized. -->
 <p>@((MarkupString)userInput)</p>
 
 {% endhighlight %}
@@ -250,9 +250,8 @@ If the content includes malicious scripts, it can lead to **XSS (Cross‑Site Sc
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Grids
-@* In a real application, add: @using YourApp.Models *@
 
-@* NEVER DO THIS *@
+@* Unsafe example shown for illustration only; do not use this pattern in production code *@
 <SfGrid DataSource="@Comments" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="@nameof(Comment.Content)">
@@ -282,17 +281,17 @@ If the content includes malicious scripts, it can lead to **XSS (Cross‑Site Sc
 {% endhighlight %}
 {% endtabs %}
 
-#### SAFE - Sanitized MarkupString (server-side sanitization via API)
+#### SAFE – Sanitized MarkupString (pre-sanitized data)
 
-In this example, the HTML content is cleaned and sanitized on the server before it is returned by the API.
+When HTML content is sanitized on the server or during data preparation and stored in a dedicated property, rendering it with `MarkupString` is acceptable. 
 
-The `SanitizedContent` property contains only safe HTML, so rendering it with `MarkupString` is secure.
+The example below uses a SanitizedContent property that contains only trusted, pre‑sanitized HTML. Cast to MarkupString only when you can guarantee the content has been properly sanitized and comes from a trusted source.
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Grids
-@* In a real application, add: @using YourApp.Models *@
+@* Add the appropriate model namespace for your project *@
 
 <SfGrid DataSource="@Comments" AllowPaging="true">
     <GridColumns>
@@ -383,7 +382,7 @@ If HTML formatting is not required, render the content as plain text. Blazor aut
 
 The same safe rendering rules apply to ListView when displaying user-generated content.
 
-The following example conditionally renders content based on whether the message contains HTML. When `IsHtml` is `true`, only pre-sanitized content stored in `SanitizedContent` is rendered as markup. Otherwise, plain text is displayed using Blazor's automatic encoding. This keeps all messages safe regardless of their format. (CSS classes shown are for demonstration; styling is not included.)
+The following example conditionally renders content based on whether the message contains HTML. When `IsHtml` is `true`, only pre-sanitized content stored in `SanitizedContent` is rendered as markup. Otherwise, plain text is displayed using Blazor's automatic encoding. This keeps all messages safe regardless of their format.
 
 {% tabs %}
 {% highlight razor %}
