@@ -958,7 +958,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dy
 
 Template columns can be created and inserted after the DataGrid has been initialized, allowing custom elements such as dropdowns, buttons, or icons to be rendered dynamically. This approach provides flexibility for scenarios like adding interactive controls or displaying conditional content without modifying the initial DataGrid configuration.
 
-The following example demonstrates adding a template column using an external button click. When the button is clicked, a new **“Ship Country”** column with a `SfDropdownlist` template is added to the DataGrid at runtime. The column uses both the `Template` property for the cell content and the `HeaderTemplate` property to customize the column header.
+The following example demonstrates adding a template column using an external button click. When the button is clicked, a new **“Ship Country”** column with a `SfDropdownList` template is added to the DataGrid at runtime. The column uses both the `Template` property for the cell content and the `HeaderTemplate` property to customize the column header.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
