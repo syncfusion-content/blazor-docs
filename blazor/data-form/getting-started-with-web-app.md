@@ -164,6 +164,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
+N> The **RenderMode** setting in Blazor is essential for determining how components like **DataForm** are rendered and interact with the browser.
+The `@rendermode InteractiveServer` directive ensures that components are rendered server-side and communicate with the browser via SignalR, enabling real-time interactivity and responsiveness.
+
 {% tabs %}
 {% highlight razor %}
 
