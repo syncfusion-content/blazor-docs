@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Angular Components in Blazor
 
-This guide explains how to render [Syncfusion® Angular components](https://www.syncfusion.com/angular-components/angular-data-grid) inside a Blazor application by packaging the Angular component as a **custom element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, [Angular custom elements](https://angular.dev/guide/elements) allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
+This guide explains how to render [Syncfusion® Angular components](https://www.syncfusion.com/angular-components) inside a Blazor application by packaging the Angular component as a **custom element (Web Component)**. Blazor and Angular use different rendering engines, so Angular cannot run directly inside a Blazor page. However, [Angular custom elements](https://angular.dev/guide/elements) allow Angular components to be compiled into standard HTML tags, enabling seamless integration within Blazor.
 
 A common use case for this integration is when a Blazor application needs to reuse existing Angular components without migrating them to .NET. By converting Angular components into custom elements, teams can embed rich UI elements such as charts, grids, editors, and schedulers directly within Blazor pages. This is especially useful for enterprise applications in **ERP**, **logistics**, **health-care**, and **analytics platforms**.
 
@@ -23,9 +23,9 @@ A common use case for this integration is when a Blazor application needs to reu
 
 ### Create the project
 
-If you already have an Angular project, skip to the **Install custom elements package** section. Otherwise, create a new Angular project following Syncfusion documentation.
+If you already have an Angular project, move to the **Install custom elements package** section. Otherwise, create a new Angular project following Syncfusion documentation.
 
-[Angular Getting Started](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone).
+[Angular Getting Started](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone)
 
 ### Install custom elements package
 
@@ -41,7 +41,7 @@ npm i @angular/elements
 
 This package enables exporting Angular components as Web Components. This allows Blazor to load Angular UI using a simple HTML tag. 
 
-### Adding CSS References
+### Adding CSS references
 
 The following CSS styles are available in the `../node_modules/@syncfusion` folder. Reference them in `src/styles.css` as follows:
 
@@ -64,7 +64,7 @@ The following CSS styles are available in the `../node_modules/@syncfusion` fold
 
 N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview).
 
-### Add Syncfusion component
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> component
 
 Update your `src/app/app.ts` file to incorporate the Syncfusion DataGrid component: 
 
@@ -83,16 +83,17 @@ import { GridModule } from '@syncfusion/ej2-angular-grids';
       <e-columns>
         <e-column field="OrderID" headerText="Order ID" width="120"></e-column>
         <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
-        <e-column field="Freight" headerText="Freight" width="120" format="C2"></e-column>
+        <e-column field="ShipCountry" headerText="ShipCountry" width="120"></e-column>
       </e-columns>
     </ejs-grid>
   `
 })
 export class AppComponent {
   public data = [
-    { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
-    { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
-    { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 }
+    { OrderID: 10248, CustomerID: 'VINET', ShipCountry: 'France' },
+    { OrderID: 10249, CustomerID: 'TOMSP', ShipCountry: 'Germany' },
+    { OrderID: 10250, CustomerID: 'HANAR', ShipCountry: 'Brazil' },
+    { OrderID: 10251, CustomerID: 'VICTE', ShipCountry: 'France' }
   ];
 }
 
@@ -101,7 +102,7 @@ export class AppComponent {
 
 N> If your project uses the default Angular CLI naming, the file may be named `app.component.ts` instead of `app.ts`.
 
-### Register the Syncfusion DataGrid component as a custom element
+### Register the Angular component as a custom element
 
 The Angular component is converted into a Web Component by registering it with [customElements.define()](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define). After this registration, the component is available as a standalone HTML element such as `<sf-grid>` that Blazor can display. 
 
@@ -182,18 +183,15 @@ Add this target block to your Blazor project’s `.csproj` file:
 {% highlight xml tabtitle=".csproj" %}
 
  <Target Name="BuildAngularElement" BeforeTargets="Build">
-
     <!-- Replace 'syncfusion-angular-app' with your Angular project folder name -->
     <PropertyGroup>
       <AngularProject>../syncfusion-angular-app</AngularProject>
       <AngularDist>$(AngularProject)/dist/syncfusion-angular-app</AngularDist>
       <BlazorLib>wwwroot/lib/sf-grid</BlazorLib>
     </PropertyGroup>
-
     <!-- Install & build Angular (skip if you prefer pnpm/yarn) -->
     <Exec WorkingDirectory="$(AngularProject)" Command="npm ci" />
     <Exec WorkingDirectory="$(AngularProject)" Command="npx ng build --configuration production --output-hashing=none" />
-
     <!-- Clean & copy -->
     <RemoveDir Directories="$(BlazorLib)" />
     <MakeDir Directories="$(BlazorLib)" />
@@ -222,7 +220,6 @@ Include the stylesheet in the `<head>` and the script at the end of the `<body>`
     ....
     <link rel="stylesheet" href="/lib/sf-grid/styles.css" />
 </head>
-
 <body>
     ....
     <script src="/lib/sf-grid/main.js"></script>
@@ -245,7 +242,7 @@ You can place the `<sf-grid>` HTML tag directly inside any `.razor` (e.g `Index.
 
 N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 
-## Run the applications
+## Run the application
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -261,6 +258,6 @@ Once the compilation is complete, open your browser and navigate to the hosted l
 
 ## See also
 
-* [Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting started with Syncfusion Angular DataGrid](https://ej2.syncfusion.com/angular/documentation/grid/getting-started)
 
