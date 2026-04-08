@@ -181,6 +181,7 @@ Create a new folder inside the `wwwroot` folder in your application to store the
               <TextAlign>Center</TextAlign>
             </Style>
           </Textbox>
+          
           <Tablix Name="OrdersTable">
             <TablixBody>
               <TablixColumns>
@@ -253,6 +254,7 @@ Create a new folder inside the `wwwroot` folder in your application to store the
       </Page>
     </ReportSection>
   </ReportSections>
+
   <DataSources>
     <DataSource Name="DummyDataSource">
       <ConnectionProperties>
@@ -262,6 +264,7 @@ Create a new folder inside the `wwwroot` folder in your application to store the
       <rd:DataSourceID>2BA47F3B-787C-4EF9-9A18-FC9405C53C7B</rd:DataSourceID>
     </DataSource>
   </DataSources>
+
   <DataSets>
     <DataSet Name="OrdersDataSet">
       <Fields>
@@ -288,6 +291,7 @@ Create a new folder inside the `wwwroot` folder in your application to store the
       </Query>
     </DataSet>
   </DataSets>
+
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>2BA47F3B-787C-4EF9-9A18-FC9405C53C7B</rd:ReportID>
 </Report>
@@ -387,15 +391,18 @@ public class BoldReportsAPIController : Controller, IReportController
         {
             options.ReportModel.ProcessingMode = ProcessingMode.Local;
             var path = Path.Combine(_env.WebRootPath, "Reports", "Orders.rdlc");
+
             if (!System.IO.File.Exists(path))
             {
                 throw new FileNotFoundException($"RDLC file not found at: {path}");
             }
+
             var stream = new MemoryStream();
             using (var fs = System.IO.File.OpenRead(path))
             {
                 fs.CopyTo(stream);
             }
+
             stream.Position = 0;
             options.ReportModel.Stream = stream;
             options.ReportModel.ReportPath = "Orders.rdlc";
@@ -413,6 +420,7 @@ public class BoldReportsAPIController : Controller, IReportController
         {
             // Retrieve the DataSet from cache or static variable
             DataSet? ds = null;
+
             if (_cache.TryGetValue("ReportDataSet", out object? cachedData) && cachedData is DataSet cachedDs)
             {
                 ds = cachedDs;
@@ -486,6 +494,7 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
 
 @code{
     public List<Order> Orders { get; set; } = [];
+
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 10).Select(x => new Order()
@@ -520,7 +529,7 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
             Console.WriteLine($"Exception: {ex}");
         }
     }
-    
+
     public class Order {
         public int? OrderID { get; set; }
         public string? CustomerID { get; set; }
