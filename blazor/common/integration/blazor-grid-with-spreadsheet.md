@@ -104,6 +104,7 @@ The following example displays a **DataGrid** with sample data, exports to Excel
     <SfButton CssClass="e-primary" @onclick="PreviewGridInSpreadsheet">Export Grid in Excel</SfButton>
     <span class="ms-3 text-muted">(Use Spreadsheet Ribbon → File to Open/Save as XLSX/CSV)</span>
 </div>
+
 <h5>DataGrid</h5>
 <SfGrid TItem="Order" @ref="GridRef" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" />
@@ -114,6 +115,7 @@ The following example displays a **DataGrid** with sample data, exports to Excel
         <GridColumn Field="@nameof(Order.ShipCity)" HeaderText="Ship City" Width="150" />
     </GridColumns>
 </SfGrid>
+
 <h5>Spreadsheet</h5>
 <div class="mt-3">
     <SfSpreadsheet AllowNumberFormatting="true" AllowCellFormatting="true" AllowAutofill="true"
@@ -132,6 +134,7 @@ The following example displays a **DataGrid** with sample data, exports to Excel
         new() { OrderID = 10004, CustomerID = "BLONP", Freight = 5.30, ShipCity = "USA" },
         new() { OrderID = 10005, CustomerID = "BOLID", Freight = 6.30, ShipCity = "Brazil" }
     };
+    
     public class Order
     {
         public int OrderID { get; set; }
@@ -139,6 +142,7 @@ The following example displays a **DataGrid** with sample data, exports to Excel
         public double Freight { get; set; }
         public string ShipCity { get; set; } = "";
     }
+
     private async Task PreviewGridInSpreadsheet()
     {
         if (GridRef is not null)

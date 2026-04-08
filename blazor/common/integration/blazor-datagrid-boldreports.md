@@ -333,15 +333,19 @@ public class BoldReportsAPIController : Controller, IReportController
         _cache = cache;
         _env = env;
     }
+
     [HttpPost]
     public object PostReportAction([FromBody] Dictionary<string, object> json)
         => ReportHelper.ProcessReport(json, this, _cache);
+
     [HttpPost]
     public object PostFormReportAction()
         => ReportHelper.ProcessReport(null, this, _cache);
+
     [HttpGet]
     public object GetResource([FromQuery] ReportResource resource)
         => ReportHelper.GetResource(resource, this, _cache);
+
     [HttpPost]
     public IActionResult SetReportData([FromBody] ReportDataModel dataModel)
     {
@@ -375,6 +379,7 @@ public class BoldReportsAPIController : Controller, IReportController
            return BadRequest(new { success = false, message = ex.Message });
         }
     }
+
     [NonAction]
     public void OnInitReportOptions(ReportViewerOptions options)
     {
@@ -400,6 +405,7 @@ public class BoldReportsAPIController : Controller, IReportController
             System.Console.WriteLine($"[OnInitReportOptions] Error: {ex.Message}");
         }
     }
+
     [NonAction]
     public void OnReportLoaded(ReportViewerOptions options)
     {
@@ -433,6 +439,7 @@ public class BoldReportsAPIController : Controller, IReportController
             System.Console.WriteLine($"[OnReportLoaded] Error: {ex.Message}");
         }
     }
+
     public class ReportDataModel
     {
         public List<Order> DataSources { get; set; } = [];
@@ -460,9 +467,11 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
 
 <div class="container mt-5">
     <h2>Orders Data Grid & Bold Reports Integration</h2>
+
     <SfButton CssClass="e-primary mt-3" IsPrimary="true" OnClick="@OpenReport">
         Open RDLC Report
     </SfButton>
+
     <SfGrid DataSource="@Orders">
         <GridColumns>
             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -470,7 +479,8 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
             <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         </GridColumns>
-    </SfGrid>    
+    </SfGrid>
+
     <div id="viewer" style="height:80vh; margin-top:20px;"></div>
 </div>
 
@@ -486,6 +496,7 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
+
     public async Task OpenReport()
     {       
         try
@@ -494,7 +505,8 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
             var dataModel = new { DataSources = Orders };
             var baseUrl = Nav.BaseUri.TrimEnd('/');
             var url = $"{baseUrl}/api/BoldReportsAPI/SetReportData".Replace("//api", "/api");
-            var response = await Http.PostAsJsonAsync(url, dataModel);                      
+            var response = await Http.PostAsJsonAsync(url, dataModel);    
+
             // Step 2: Render the viewer with the data
             var viewerOptions = new
             {
@@ -508,6 +520,7 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
             Console.WriteLine($"Exception: {ex}");
         }
     }
+    
     public class Order {
         public int? OrderID { get; set; }
         public string? CustomerID { get; set; }
