@@ -76,6 +76,7 @@ In this example, the file name used is `OrdersGrid.razor`.
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
+    
     public class Order {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
