@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Row Template in Blazor Tree Grid Component | Syncfusion
-description: Check out here and learn more details about the Row Template in the Syncfusion Blazor Tree Grid component.
+title: Row Template in Blazor TreeGrid Component | Syncfusion
+description: Check out here and learn more details about the Row Template in the Syncfusion Blazor TreeGrid component.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Row Template in Blazor Tree Grid Component
+# Row Template in Blazor TreeGrid Component
 
-To know more about Row Template in the Blazor tree grid Component, you can check this video.
+The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_RowTemplate) has an option to customize the look and behavior of the TreeGrid rows. The `RowTemplate` property accepts either the **template** string or HTML elements.
+
+To know more about Row Template in the Blazor TreeGrid Component, check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cB4NjwFya_U"%}
 
-The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowTemplate) has an option to customize the look and behavior of the tree grid rows. The `RowTemplate` property accepts either the **template** string or HTML elements.
+
 
 {% tabs %}
 
@@ -112,11 +114,11 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor Tree Grid with Row Template](../images/blazor-treegrid-row-template.png)
+![Blazor TreeGrid with Row Template](../images/blazor-treegrid-row-template.png)
 
 ## Row template with formatting
 
-If [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowTemplate) is used, the value cannot be  formatted  inside the template using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
+If [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_RowTemplate) is used, the value cannot be  formatted  inside the template using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
 
 {% tabs %}
 
@@ -216,17 +218,29 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor Tree Grid Row Template with Formatting](../images/blazor-treegrid-row-template-formatting.png)
+![Blazor TreeGrid Row Template with Formatting](../images/blazor-treegrid-row-template-formatting.png)
 
 ## Limitations
 
-Row template feature is not compatible with all the features which are available in the tree grid and it has limited features support. Here the features which are compatible with row template feature are listed out.
+Row template feature is not compatible with all the features which are available in the TreeGrid and it has limited features support. Here the features which are compatible with row template feature are listed out.
 
-* Filtering
-* Paging
-* Sorting
-* Scrolling
-* Searching
-* Rtl
-* Context Menu
-* State Persistence
+- Filtering
+- Paging
+- Sorting
+- Searching
+- Rtl
+- Export
+- Context Menu
+- State Persistence
+- Selection
+- Editing
+- Frozen rows & columns
+- Virtual scrolling
+- Column chooser
+- Column menu
+- Detail Row
+- Resizing
+- Reordering
+- Aggregates
+- Clipboard
+- Adaptive view
