@@ -12,7 +12,7 @@ documentation: ug
 The custom aggregate feature in the Syncfusion Blazor DataGrid enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
 
 To use the custom aggregate option:
-* Set the `AggregateType` as Custom in the `GridAggregateColumn` component.
+* Set the `AggregateType` as `Custom` in the `GridAggregateColumn`.
 * Provide a custom aggregate function using the `CustomAggregate` property on the GridAggregateColumn.
 
 The custom aggregate function is invoked differently based on the context:
@@ -110,9 +110,9 @@ The custom aggregate function is invoked differently based on the context:
 
 > To access a custom aggregate value inside a template, use the **Custom** key (**AggregateTemplateContext.Custom**).
 
-**Show the count of distinct values in aggregate row**
+## Displaying distinct value count in aggregate row
 
-Custom aggregate functions can also compute distinct counts or other domain-specific summaries. Specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) as Custom and provide a function via the [CustomAggregate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_CustomAggregate) property. The result can be rendered in the footer, group footer, or group caption by using the corresponding template and accessing **AggregateTemplateContext.Custom**.
+Custom aggregate functions can also compute distinct counts or other domain-specific summaries. Specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) as `Custom` and provide a function via the [CustomAggregate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_CustomAggregate) property. The result can be rendered in the footer, group footer, or group caption by using the corresponding template and accessing **AggregateTemplateContext.Custom**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -206,6 +206,6 @@ Custom aggregate functions can also compute distinct counts or other domain-spec
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVUDvBkVInESEoB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> To display the aggregate value of the current column in another column, use the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_ColumnName) property. If ColumnName is not defined, the value of Field is used.
+> To display the aggregate value of the current column in another column, use the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_ColumnName) property. If `ColumnName` is not defined, the field name value will be assigned to the `ColumnName` property.
 >
 > Refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for feature overviews. Explore the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to see data presentation and manipulation in action.
