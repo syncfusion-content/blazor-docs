@@ -109,7 +109,7 @@ namespace WebApiAdaptor.Models
 ```
 ### Step 3: Web API controller configuration
 
-Create a new folder named **Controllers**. Then, add a controller named **GridController.cs** in the **Controllers** folder to handle data communication with Blazor DataGrid. Implement the `Get` method in the controller to return data in JSON format, including the `Items` and `Count` properties as required by the `WebApiAdaptor`.
+Create a new folder named **Controllers**. Then, add a controller named **OrdersController.cs** in the **Controllers** folder to handle data communication with Blazor Components. Implement the `Get` method in the controller to return data in JSON format, including the `Items` and `Count` properties as required by the `WebApiAdaptor`.
 
 The sample response object should look like this:
 

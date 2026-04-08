@@ -64,7 +64,7 @@ The following benefits apply when using GraphQL protocol:
 - **Rapid development**: Faster iteration with flexible queries.
 - **Reduced over-fetching**: Eliminates unnecessary data transfer.
  
-### GraphQLAdaptor overview
+### GraphQLAdaptor Overview
 
 The `GraphQLAdaptor` is a specialized adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager that enables seamless communication between Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components and GraphQL servers. It automatically converts component operations into GraphQL queries and mutations. The process works as follows:
  
@@ -100,6 +100,10 @@ Install the following software and packages before starting the process:
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | HotChocolate.AspNetCore | 15.1 or later | GraphQL server framework |
 
+**Package purposes:**
+
+- `HotChocolate.AspNetCore`: Core GraphQL server implementation for ASP.NET Core, providing schema execution, middleware integration, and HTTP request handling.
+
 ## Setting Up the GraphQL Backend
 
 ### Step 1: Install Required NuGet Packages and Configure Launch Settings
@@ -110,13 +114,11 @@ For this guide, a Blazor application named **GraphQLAdaptor** has been created.
 
 **Install NuGet Packages**
 
-NuGet packages are software libraries that add functionality to applications. The following packages enable GraphQL server functionality+ and Syncfusion DataGrid components.
+NuGet packages are software libraries that add functionality to applications. The following packages enable GraphQL server functionality+ and Syncfusion Blazor Components.
 
 **Required Packages:**
 
 - **HotChocolate.AspNetCore** (version 15.1 or later) - GraphQL server framework
-- **Syncfusion.Blazor.Grids** (version {{site.blazorversion}}) - DataGrid component
-- **Syncfusion.Blazor.Themes** (version {{site.blazorversion}}) - Styling for DataGrid
 
 **Method 1: Using Package Manager Console**
 
@@ -126,8 +128,6 @@ NuGet packages are software libraries that add functionality to applications. Th
 
 ```powershell
 Install-Package HotChocolate.AspNetCore -Version 15.1.12
-Install-Package Syncfusion.Blazor.Grids -Version {{site.blazorversion}}
-Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
 **Method 2: Using NuGet Package Manager UI**
@@ -135,10 +135,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **HotChocolate.AspNetCore** (version 15.1.12 or later)   
-   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
-   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
-
-All required packages are now installed.
 
 ---
 
@@ -160,16 +156,16 @@ The `Program.cs` file configures and registers the GraphQL services.
 ```csharp
 [Program.cs]
 
-using Grid_GraphQLAdaptor.Models;
+using GraphQLAdaptor.Models;
 using HotChocolate.Execution.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Register Hot Chocolate GraphQL services
 builder.Services
-    .AddGraphQLServer()
-    .AddQueryType<GraphQLQuery>()
-    .AddMutationType<GraphQLMutation>();
+    .AddGraphQLServer()    
+    .AddQueryType<GraphQLQuery>()   // Register query resolver.   
+    .AddMutationType<GraphQLMutation>(); // Register mutation resolver.
 
 var app = builder.Build();
 
@@ -343,7 +339,7 @@ The expense data model has been successfully created.
 
 ### Step 5: GraphQL Query Resolvers
 
-A query resolver is a method in the backend that handles read requests from the client. When the Blazor DataGrid needs to fetch data, it sends a GraphQL query to the server. The query resolver receives this request, processes it, and returns the appropriate data. Query resolvers do not modify data; they only retrieve and return it.
+A query resolver is a method in the backend that handles read requests from the client. When the Blazor components needs to fetch data, it sends a GraphQL query to the server. The query resolver receives this request, processes it, and returns the appropriate data. Query resolvers do not modify data; they only retrieve and return it.
 
 In simple terms, a **GraphQL query** asks a question,
 and a **resolver** is the one who answers it.
@@ -356,7 +352,7 @@ and a **resolver** is the one who answers it.
 ```csharp
 [Models/GraphQLQuery.cs]
 
-using Grid_GraphQLAdaptor.Models;
+using GraphQLAdaptor.Models;
 
 public class GraphQLQuery
 {
@@ -368,7 +364,7 @@ public class GraphQLQuery
         // Retrieve all expense records from the data source.
         List<ExpenseRecord> dataSource = ExpenseRecord.GetAllRecords();
 
-        // Apply search, filter, sort, and paging operations as provided by the DataGrid.
+        // Apply search, filter, sort, and paging operations as provided by the Blazor components.
         // Operations are applied sequentially: search → filter → sort → paging.
 
         // Store the total count before paging.
@@ -395,9 +391,9 @@ public class ExpenseRecordDataResponse
 
 **Details:**
 
-- The `GetExpenseRecordData` method receives `DataManagerRequestInput`, which contains filter, sort, search, and paging parameters from the DataGrid
-- Hot Chocolate automatically converts the method name `GetExpenseRecordData` to camelCase: `expenseRecordData` in the GraphQL schema
-- The response must contain `Count` (total records) and `Result` (current page data) for the DataGrid to process pagination
+- The `GetExpenseRecordData` method receives `DataManagerRequestInput`, which contains filter, sort, search, and paging parameters from the Blazor components.
+- Hot Chocolate automatically converts the method name `GetExpenseRecordData` to camelCase: `expenseRecordData` in the GraphQL schema.
+- The response must contain `Count` (total records) and `Result` (current page data) for the component to process pagination.
 
 The query resolver has been created successfully.
 
@@ -405,10 +401,10 @@ The query resolver has been created successfully.
 
 ### Step 6: Create the DataManagerRequestInput Class
 
-A **DataManagerRequestInput** class is a GraphQL input type that represents all the parameters the Syncfusion Blazor DataGrid sends to the backend when requesting data. This class acts as a container for filtering, sorting, searching, paging, and other data operation parameters.
+A **DataManagerRequestInput** class is a GraphQL input type that represents all the parameters the Syncfusion Blazor components sends to the backend when requesting data. This class acts as a container for filtering, sorting, searching, paging, and other data operation parameters.
 
 **Purpose**
-When the DataGrid performs operations like pagination, sorting, filtering, or searching, it packages all these parameters into a `DataManagerRequestInput` object and sends it to the GraphQL backend. The backend then uses these parameters to fetch and return only the data the grid needs.
+When the component performs operations like pagination, sorting, filtering, or searching, it packages all these parameters into a `DataManagerRequestInput` object and sends it to the GraphQL backend. The backend then uses these parameters to fetch and return only the data the component needs.
 
 **Instructions**:
 
@@ -416,10 +412,10 @@ When the DataGrid performs operations like pagination, sorting, filtering, or se
 2. Define the **DataManagerRequestInput** class and supporting classes with the following code:
 
 ```csharp
-namespace Grid_GraphQLAdaptor.Models;
+namespace GraphQLAdaptor.Models;
 
 /// <summary>
-/// Represents the input structure for data manager requests from the Syncfusion Blazor DataGrid.
+/// Represents the input structure for data manager requests from the Syncfusion Blazor component.
 /// Contains all parameters needed for data operations like filtering, sorting, paging, and searching.
 /// </summary>
 public class DataManagerRequestInput
@@ -635,10 +631,10 @@ In simple terms, a **GraphQL mutation** asks for a change, and a **resolver** is
 2. Define the **GraphQLMutation** class with the following code:
 
 ```csharp
-using Grid_GraphQLAdaptor.Models;
+using GraphQLAdaptor.Models;
 using HotChocolate.Types;
 
-namespace Grid_GraphQLAdaptor.Models
+namespace GraphQLAdaptor.Models
 {
     /// <summary>
     /// GraphQL Mutation class that handles all write operations (Create, Update, Delete).
@@ -694,12 +690,12 @@ namespace Grid_GraphQLAdaptor.Models
 
 A mutation resolver is a C# method decorated with GraphQL attributes that:
 
-- **Receives input parameters** from the DataGrid (record data, primary keys, etc.).
+- **Receives input parameters** from the components(record data, primary keys, etc.).
 - **Processes the operation** (validation, calculation, data modification).
 - **Persists changes** to the data source (database, file, memory).
 - **Returns results** to the client (modified record or success/failure status).
 
-The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations from the Syncfusion Blazor DataGrid.
+The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations from the Syncfusion Blazor Components.
 
 ---
 
@@ -803,4 +799,4 @@ query {
 
 To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with the `GraphQLAdaptor`, refer to the documentation below:
 
-- [Grid](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/graphql-adaptor#integrating-syncfusion-blazor-datagrid)
+- [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/graphql-adaptor#integrating-syncfusion-blazor-datagrid)

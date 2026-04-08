@@ -224,7 +224,7 @@ app.Run();
 
 ### Step 5: OData controller implementation
  
-Create an API controller (aka, **GridController.cs**) file under the **Controllers** folder within the `ODataV4Adaptor` project. This controller facilitates data communication with the Blazor DataGrid.
+Create an API controller (aka, **OrdersController.cs**) file under the **Controllers** folder within the `ODataV4Adaptor` project. This controller facilitates data communication with the Blazor components.
  
 ```csharp
  
@@ -314,7 +314,7 @@ OData filter operator query reference:
 
 ### Step 8: Understanding the required response format
 
-When using the `OdataV4Adaptor`, every backend API endpoint must return data in a specific JSON structure. This ensures that Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataManager can correctly interpret the response and bind it to the DataGrid. The expected format is:
+When using the `OdataV4Adaptor`, every backend API endpoint must return data in a specific JSON structure. This ensures that Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataManager can correctly interpret the response and bind it to the component. The expected format is:
 
 ```json
 {

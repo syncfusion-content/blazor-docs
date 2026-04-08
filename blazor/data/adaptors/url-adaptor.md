@@ -73,66 +73,11 @@ To configure a server with the Syncfusion<sup style="font-size:70%">&reg;</sup> 
  
 You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
-### Step 2: Install required NuGet package
-
-**1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and Themes NuGet packages**
-
-**Method 1: Using Package Manager Console**
-
-1. Open Visual Studio 2026.
-2. Navigate to Tools → NuGet Package Manager → Package Manager Console.
-3. Run the following commands:
-
-```powershell
-Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}};
-Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}};
-```
-
-**Method 2: Using NuGet Package Manager UI**
-
-1. Open Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution.
-2. Search for and install each package individually:
-   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
-   - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
-
-All required packages are now installed.
-
-**2. Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
-
-Import the required namespaces in the `Components/_Imports.razor` file:
-
-```csharp
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-```
-- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
+### Step 2: Create data model class
  
-```csharp
-using Syncfusion.Blazor;
- 
-builder.Services.AddSyncfusionBlazor();
-```
- For apps using `WebAssembly` or `Auto (Server and WebAssembly)` render modes, register the service in both **~/Program.cs** files.
- 
-**3. Add stylesheet and script resources**
+1. In Solution Explorer, right-click the **Server** project, choose **Add** → **New Folder**, and name it **Models**.
 
-Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
-
-```html
-<!-- Syncfusion Blazor Stylesheet -->
-<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-
-<!-- Syncfusion Blazor Scripts -->
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-```
- 
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
- 
-> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
-
-### Step 3: Create data model class
- 
-Create a new folder named **Models**. Then, add a model class named **OrdersDetails.cs** in the **Models** folder to represent the order data.
+2. Right-click the **Models** folder, select **Add → Class**, name it **OrdersDetails.cs**, and replace its default content with the provided implementation.
  
 ```csharp
 namespace URLAdaptor.Models
@@ -192,9 +137,9 @@ namespace URLAdaptor.Models
 ```
 >  This example uses a static in-memory list (`order`) for simplicity. In real applications, replace `GetAllRecords()` with database queries using Entity Framework Core, Dapper, or the preferred data access layer.
 
-### Step 4: Create an API controller
+### Step 3: Create an API controller
  
-Create an API controller (aka, **GridController.cs**) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid.
+Create an API controller (aka, **DataController.cs**) file under **Controllers** folder that helps to establish data communication with the Blazor Components.
  
 ```csharp
  
@@ -252,7 +197,7 @@ namespace URLAdaptor.Controllers
 - **count**: Must be total count before paging (not just current page count).
 - **HttpPost**: Client sends `POST` requests by default for data operations.
 
-### Step 5: Register controllers in `Program.cs`
+### Step 4: Register controllers in `Program.cs`
  
 The `Program.cs` file is where application services are registered and configured. Add the following lines in the `Program.cs` file to register controllers:
  
@@ -270,11 +215,11 @@ app.MapControllers();
 - `MapControllers()` exposes routes like `/api/Grid`.
 - Syncfusion Blazor and Razor components are registered for the UI.
 
-### Step 6: Test the backend API
+### Step 5: Test the backend API
 
 Run the application in Visual Studio, accessible on a URL like **https://localhost:xxxx**. Verify the API returns order data at **https://localhost:xxxx/api/data**, where **xxxx** is the port. 
 
-### Step 7: Understanding the required response format
+### Step 6: Understanding the required response format
 
 When using the `UrlAdaptor`, every backend API endpoint must return data in a specific JSON structure. This ensures that Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataManager can correctly interpret the response and bind it to the component. The expected format is:
 
