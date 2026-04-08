@@ -66,7 +66,6 @@ In this example, the file name used is `OrdersGrid.razor`.
 
 @code{
     public List<Order> Orders { get; set; }
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 10).Select(x => new Order()
@@ -77,7 +76,6 @@ In this example, the file name used is `OrdersGrid.razor`.
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-
     public class Order {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
@@ -275,10 +273,8 @@ Add the following scripts to  `package.json`.
 {% tabs %}
 {% highlight json tabtitle="package.json" %}
 
-"start:blazor": "dotnet watch run --project ../SfxGridWasm", //Replace this with your Blazor project name. 
-
+"start:blazor": "dotnet watch run --project ../BlazorServerHost", //Replace this with your Blazor project name. 
 "start:ng": "ng serve --proxy-config proxy.conf.json", 
-
 "start:all": "concurrently -k -n BLAZOR,ANGULAR -c cyan,green \"npm:start:blazor\" \"npm:start:ng\"", 
 
 {% endhighlight %}
