@@ -2065,7 +2065,7 @@ For detailed guidance, refer to the [Customize Cell Styles](https://blazor.syncf
 
 ## Manipulating columns
 
-This section explains working with columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, including accessing columns, changing column settings, and adding or removing columns using the Grid's properties, methods, and events.
+This section explains working with columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, including accessing columns, changing column settings, and adding or removing columns using the DataGrid's properties, methods, and events.
 
 ### Accessing Columns
 
@@ -2298,7 +2298,7 @@ Use `HideAtMedia` property to create responsive layouts where certain columns ar
 
 ## See also
 
-* [How to create a Custom Grid Column](https://support.syncfusion.com/kb/article/11220/blazor-grid-how-to-create-a-custom-grid-column-component)
+* [How to create a Custom DataGrid Column](https://support.syncfusion.com/kb/article/11220/blazor-grid-how-to-create-a-custom-grid-column-component)
 
 * Comprehensive information about the Syncfusion Blazor DataGrid and its features is available through the following resources:
     * **Feature Overview:** The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour provides a complete overview of available capabilities.
