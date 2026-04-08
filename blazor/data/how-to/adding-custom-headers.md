@@ -11,13 +11,13 @@ documentation: ug
 
 # Adding Custom Headers in Blazor DataManager
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app) component supports adding **custom HTTP headers** to all outbound requests. This feature is essential when requests require additional metadata, such as **authentication tokens**, **tenant identifiers**, or **localization details**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataManager supports adding **custom HTTP headers** to all outbound requests. This feature is essential when requests require additional metadata, such as **authentication tokens**, **API keys**, **session identifiers**, or any other metadata required by the server to validate and process the request correctly.
 
-The [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property is used to configure these headers by assigning **key–value** pairs through an **IDictionary<string, string>** collection. Each request automatically includes the specified headers, enabling secure and context-aware communication without repetitive code.
+The [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property is used to configure these headers by assigning **key–value** pairs through an **IDictionary<string, string>** collection, enabling secure and flexible communication between the client application and the server. Each request automatically includes the specified headers, enabling secure and context-aware communication without repetitive code. This feature is particularly useful when requests must carry additional information for authentication, authorization, or contextual processing.
 
 **Key Capabilities**
 
-Use the `Headers` property to add custom HTTP headers to requests made by [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This includes sending authentication details such as a **Bearer token**.
+Use the `Headers` property to add custom HTTP headers to requests made by [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app). This includes sending authentication details such as a **Bearer token**.
 
 * **Adaptor Support**
 
@@ -26,10 +26,6 @@ Use the `Headers` property to add custom HTTP headers to requests made by [SfDat
 * **Automatic Integration**
 
   Headers are included when `DataManager` connects to components such as [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html), [SfChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html), or [SfListView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html).
-
-* **Dynamic Updates**
-
-  Modify headers at runtime for scenarios like **token refresh** or **context changes**.
 
 * **Secure Transmission**
 
