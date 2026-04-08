@@ -114,6 +114,7 @@ Add the Syncfusion Blazor DocumentEditor and DataGrid components to a `.razor` f
 In this example, clicking the Invoice button in the DataGrid row generates an invoice for that order and displays it in the DocumentEditor for preview.
 
 {% tabs %}
+{% raw %}
 {% highlight razor %}
 
 @page "/"
@@ -218,6 +219,7 @@ In this example, clicking the Invoice button in the DataGrid row generates an in
 }
 
 {% endhighlight %}
+{% endraw %}
 {% endtabs %}
 
 > By default, the `SfDocumentEditorContainer` component initializes an `SfDocumentEditor` instance internally. If you like to use the events of `SfDocumentEditor` component, then you can set `UseDefaultEditor` property as **false** and define your own `SfDocumentEditor` instance with event hooks in the application (Razor file).
