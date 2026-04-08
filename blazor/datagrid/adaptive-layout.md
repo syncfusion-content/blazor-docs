@@ -7,17 +7,18 @@ control: DataGrid
 documentation: ug
 ---
 
-# Adaptive UI Layout in Blazor DataGrid
+# Adaptive in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes an adaptive user interface designed for optimal usability on small screens. When enabled, the Grid renders filter, sort, column chooser, column menu (supported only when [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) is **Horizontal**), and edit dialogs in a full-screen, mobile-friendly layout. It also provides an option to render Grid row elements vertically for improved readability on narrow viewport.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface renders the filter, sort, column chooser, column menu (supports only when the [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) is **Horizontal**) and edit dialogs adaptively and provides an option to render DataGrid row elements in the vertical direction.
 
-To learn how **Adaptive UI Layout** works in the Grid, watch the following video.
+To learn how **Adaptive UI Layout** works in the DataGrid, watch the following video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=RFMGdOyEWFo"%}
 
+
 ## Render adaptive dialogs
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can render adaptive dialogs to enhance the user experience on smaller screens. Enable the [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property to display filter, sort, and edit dialogs in full-screen mode. This is especially helpful on devices with limited screen space.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance usability on smaller screens. This feature is especially useful for optimizing the interface on devices with limited screen real estate. The functionality is enabled by setting the [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property, allowing the DataGrid to render filter, sort, and edit dialogs in full-screen mode.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -515,11 +516,12 @@ The following features are supported in vertical row rendering:
 
 ![Adaptive Grid with pager dropdown on small screens](images/pager-dropdown.gif)
 
-> The Column Menu feature (grouping, sorting, autofit, filter, and column chooser) is supported only when the Grid is in **Horizontal** [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode).
+> The Column Menu feature (grouping, sorting, autofit, filter, and column chooser) is supported only when the DataGrid is in **Horizontal** [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode).
+
 
 ## Rendering an adaptive layout for smaller screens alone
 
-By default, the adaptive UI layout is rendered on both mobile devices and desktop when [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) is set to **true**. To limit the adaptive layout to mobile screen sizes only, set the [`AdaptiveUIMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AdaptiveUIMode) property to **Mobile**. The default value of **AdaptiveUIMode** is **Both**.
+By default, the adaptive UI layout is rendered on both mobile devices and desktop when [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) is set to **true**. The DataGrid can be configured to render an adaptive layout only for mobile screen sizes by setting the [`AdaptiveUIMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AdaptiveUIMode) property to **Mobile**. The default value of **AdaptiveUIMode** is **Both**.
 
 > The [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) applied in the adaptive layout depends on the **AdaptiveUIMode** configuration.
 

@@ -9,12 +9,13 @@ documentation: ug
 
 # Aggregate customization in Syncfusion Blazor DataGrid
 
-Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the grid. Styling options are available for:
+Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the DataGrid. Styling options are available for:
 
 - **Aggregate root container:** The outer wrapper of the footer row.
 - **Aggregate summary row and cells:** The row that shows summary values, and the cells that display each result.
 
 ## Customize the aggregate root element
+
 The **.e-gridfooter** class styles the root container of the aggregate footer row. Use CSS to adjust its appearance:
 
 ```css
@@ -23,7 +24,7 @@ The **.e-gridfooter** class styles the root container of the aggregate footer ro
 }
 ```
 
-Properties like **font-family**, **font-size**, and **padding** can be changed to fit the grid layout design.
+Properties like **font-family**, **font-size**, and **padding** can be changed to fit the DataGrid layout design.
 
 ![Aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.png)
 
