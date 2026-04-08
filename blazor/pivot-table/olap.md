@@ -155,7 +155,7 @@ N> Only fields from the [PivotViewValues](https://help.syncfusion.com/cr/blazor/
 
 After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser.
 
-![OLAP in Blazor PivotTable](images/blazor-pivottable-with-olap.png)
+![OLAP in Blazor PivotTable](images/blazor-pivottable-with-olap.webp)
 
 ### Enable Pivot Field List
 
@@ -204,10 +204,10 @@ To display the Field List, set the [ShowFieldList](https://help.syncfusion.com/c
 }
 ```
 
-![Blazor PivotTable with OLAP FieldList Icon](images/blazor-pivottable-olap-fieldlist-icon.png)
+![Blazor PivotTable with OLAP FieldList Icon](images/blazor-pivottable-olap-fieldlist-icon.webp)
 <br/>
 
-![Blazor PivotTable with OLAP FieldList Dialog](images/blazor-pivottable-olap-fieldlist-dialog.png)
+![Blazor PivotTable with OLAP FieldList Dialog](images/blazor-pivottable-olap-fieldlist-dialog.webp)
 
 ### Enable Grouping Bar
 
@@ -256,7 +256,7 @@ To display the grouping bar, set the [ShowGroupingBar](https://help.syncfusion.c
 }
 ```
 
-![Blazor PivotTable with OLAP Grouping Bar](images/blazor-pivottable-olap-grouping-bar.png)
+![Blazor PivotTable with OLAP Grouping Bar](images/blazor-pivottable-olap-grouping-bar.webp)
 
 ### Exploring Filter Axis
 
@@ -299,11 +299,11 @@ Users can add [OLAP cube elements](#olap-cube-elements) and filter members to th
 }
 ```
 
-![Blazor PivotTable with Filter Axis in Field List](images/blazor-pivottable-filter-axis-in-fieldlist.png)
+![Blazor PivotTable with Filter Axis in Field List](images/blazor-pivottable-filter-axis-in-fieldlist.webp)
 <br/>
 <br/>
 
-![Blazor PivotTable with Filter Axis in Grouping Bar](images/blazor-pivottable-filter-axis-in-grouping-bar.png)
+![Blazor PivotTable with Filter Axis in Grouping Bar](images/blazor-pivottable-filter-axis-in-grouping-bar.webp)
 
 ### Calculated Field
 
@@ -369,7 +369,7 @@ N> Calculated measures can be added only to the value axis.
 
 ```
 
-![Adding Calculated Field in Blazor PivotGrid](images/blazor-pivotgrid-calculated-field.png)
+![Adding Calculated Field in Blazor PivotGrid](images/blazor-pivotgrid-calculated-field.webp)
 <br/>
 
 Users can add a calculated field at runtime using the built-in dialog by following these steps:
@@ -377,35 +377,35 @@ Users can add a calculated field at runtime using the built-in dialog by followi
 **Step 1:** Click the **CALCULATED FIELD** button in the field list dialog, located at the top right corner. The calculated field dialog appears. Enter the name for the new calculated field in the dialog.
 <br/>
 
-![Enbling Calculated Field in Blazor PivotTable UI](images/blazor-pivottable-enable-calculated-field.png)
+![Enbling Calculated Field in Blazor PivotTable UI](images/blazor-pivottable-enable-calculated-field.webp)
 <br/>
 
-![Displaying Create Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculated-field-name.png)
+![Displaying Create Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculated-field-name.webp)
 <br/>
 
 **Step 2:** Create the expression for your calculated field. To do this, drag and drop fields from the tree view on the left side of the dialog and use simple arithmetic operators. **For example**: `IIF([Measures].[Internet Sales Amount]^0.5 > 100, [Measures].[Internet Sales Amount]*100, [Measures].[Internet Sales Amount]/100)`  
 For more information about supported [operators](https://learn.microsoft.com/en-us/sql/mdx/operators-mdx-syntax?view=sql-server-ver15) and [functions](https://learn.microsoft.com/en-us/sql/mdx/functions-mdx-syntax?view=sql-server-ver15), see the Microsoft documentation.
 <br/>
 
-![Dragging Fields from TreeView to Blazor PivotTable Expression](images/blazor-pivottable-expression-in-calculated-field.png)
+![Dragging Fields from TreeView to Blazor PivotTable Expression](images/blazor-pivottable-expression-in-calculated-field.webp)
 <br/>
 
 **Step 3:** Select the type for the new field, either calculated measure or calculated dimension.
 <br/>
 
-![Selecting Field Type in Blazor PivotTable Calculated Field](images/blazor-pivottable-calculated-field-type.png)
+![Selecting Field Type in Blazor PivotTable Calculated Field](images/blazor-pivottable-calculated-field-type.webp)
 <br/>
 
 **Step 4:** If you are creating a calculated dimension, select its parent hierarchy from the drop-down list. This step is only required when adding a calculated dimension.
 <br/>
 
-![Choosing Parent Hierarchy in Blazor PivotTable Calculated Field](images/blazor-pivottable-hierarchy-in-calculated-field.png)
+![Choosing Parent Hierarchy in Blazor PivotTable Calculated Field](images/blazor-pivottable-hierarchy-in-calculated-field.webp)
 <br/>
 
 **Step 5:** Select a format string from the drop-down list and then click **OK** to finalize the calculated field.
 <br/>
 
-![Selecting Format in Blazor PivotTable Calculated Field](images/blazor-pivottable-calculated-field-format-string.png)
+![Selecting Format in Blazor PivotTable Calculated Field](images/blazor-pivottable-calculated-field-format-string.webp)
 <br/>
 
 
@@ -422,7 +422,7 @@ By default, the **Standard** option is selected in the drop-down list.
 
 This option helps users present calculated field results in the most suitable format for their needs.
 
-![Format String in Blazor PivotTable Calculated Field](images/blazor-pivottable-calculated-field-format.png)
+![Format String in Blazor PivotTable Calculated Field](images/blazor-pivottable-calculated-field-format.webp)
 
 #### Renaming the Existing Calculated Field
 
@@ -435,10 +435,10 @@ To rename a calculated field:
 3. Enter the new name in the text box.
 4. Click **OK** to save the new name.
 
-![Before Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-before-renaming-in-field.png)
+![Before Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-before-renaming-in-field.webp)
 <br/>
 
-![After Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-after-renaming-in-field.png)
+![After Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-after-renaming-in-field.webp)
 
 #### Editing an Existing Calculated Field Formula
 
@@ -452,10 +452,10 @@ You can edit an existing calculated field formula directly through the user inte
 
 The Pivot Table will automatically update to show the changes in the calculated values.
 
-![Before Editing Existing Field Formula in Blazor PivotTable](images/blazor-pivottable-before-renaming-in-field.png)
+![Before Editing Existing Field Formula in Blazor PivotTable](images/blazor-pivottable-before-renaming-in-field.webp)
 <br/>
 
-![After Editing Existing Field Formula in Blazor PivotTable](images/blazor-pivottable-after-editing-existing-field.png)
+![After Editing Existing Field Formula in Blazor PivotTable](images/blazor-pivottable-after-editing-existing-field.webp)
 
 #### Reusing an Existing Formula in a New Calculated Field
 
@@ -470,13 +470,13 @@ To reuse an existing formula when working with the OLAP data source:
 5. If needed, you can adjust the formula further or use it without changes.
 6. Click **OK** to add your new calculated field.
 
-![Before Dragging Formula to Blazor PivotTable Calculated Field](images/blazor-pivottable-before-renaming-in-field.png)
+![Before Dragging Formula to Blazor PivotTable Calculated Field](images/blazor-pivottable-before-renaming-in-field.webp)
 <br/>
 
-![Dragging Formula to Blazor PivotTable Calculated Field](images/blazor-pivottable-dragging-existing-field.png)
+![Dragging Formula to Blazor PivotTable Calculated Field](images/blazor-pivottable-dragging-existing-field.webp)
 <br/>
 
-![Reusing Existing Formula in Blazor PivotTable Calculated Field](images/blazor-pivottable-reusing-formula-in-calculated-field.png)
+![Reusing Existing Formula in Blazor PivotTable Calculated Field](images/blazor-pivottable-reusing-formula-in-calculated-field.webp)
 
 #### Modifying the Existing Format String
 
@@ -488,16 +488,16 @@ You can modify the format string of an existing calculated field at runtime thro
 4. Select or enter a new format string based on your requirements.
 5. Click **OK** to apply and save your changes.
 
-![Before Modifying Existing Format in Blazor PivotTable Field](images/blazor-pivottable-before-renaming-in-field.png)
+![Before Modifying Existing Format in Blazor PivotTable Field](images/blazor-pivottable-before-renaming-in-field.webp)
 <br/>
 
-![After Modifying Existing Format in Blazor PivotTable Field](images/blazor-pivottable-after-modify-format-in-field.png)
+![After Modifying Existing Format in Blazor PivotTable Field](images/blazor-pivottable-after-modify-format-in-field.webp)
 
 #### Clearing the Changes While Editing the Calculated Field
 
 If you make edits while creating or modifying a calculated field, you can easily remove all the current changes by clicking the **Clear** button. This option is available in the bottom left corner of the calculated field dialog. Using the Clear button helps you start over without manually undoing each change, ensuring a smooth editing experience.
 
-![Clearing Changes while Editing in Blazor PivotTable Field](images/blazor-pivottable-clear-edit-in-field.png)
+![Clearing Changes while Editing in Blazor PivotTable Field](images/blazor-pivottable-clear-edit-in-field.webp)
 
 ### Virtual Scrolling
 
@@ -548,7 +548,7 @@ To enable virtual scrolling, set the [EnableVirtualization](https://help.syncfus
 
 ```
 
-![Virtual Scrolling in Blazor PivotTable](images/blazor-pivottable-virtual-scrolling.png)
+![Virtual Scrolling in Blazor PivotTable](images/blazor-pivottable-virtual-scrolling.webp)
 
 #### Limitations for virtual scrolling
 
@@ -609,7 +609,7 @@ To connect an OLAP data source to the Pivot Table, use the [PivotViewDataSourceS
 }
 ```
 
-![Binding OLAP Data in Blazor PivotTable](images/blazor-pivottable-with-olap.png)
+![Binding OLAP Data in Blazor PivotTable](images/blazor-pivottable-with-olap.webp)
 
 ### Fields
 
@@ -660,7 +660,7 @@ Alternatively, you can set up the measure directly in your code by configuring t
 }
 ```
 
-![Blazor PivotTable OLAP Values in Row Axis](images/blazor-pivottable-olap-value-axis.png)
+![Blazor PivotTable OLAP Values in Row Axis](images/blazor-pivottable-olap-value-axis.webp)
 
 ### Named Set
 
@@ -706,7 +706,7 @@ To display a named set in the Pivot Table, set its unique name using the [Name](
 }
 ```
 
-![Binding Named Set in Blazor PivotTable](images/blazor-pivottable-bind-named-set.png)
+![Binding Named Set in Blazor PivotTable](images/blazor-pivottable-bind-named-set.webp)
 
 ### Configuring Authentication
 
@@ -860,12 +860,12 @@ In the field list, each node uses a specific icon to help users quickly identify
 
 | Icon | Name | Node Type | Is Draggable? |
 |------|------|-----------|--------------|
-| ![Folder icon in Blazor pivot table component](images/Folder.png) | Display folder | Display Folder | No |
-| ![Measure icon in Blazor pivot table component](images/Measure.png) | Measure | Measure | No |
-| ![Dimension icon in Blazor pivot table component](images/Dimension.png) | Dimension | Dimension | No |
-| ![User-defined hierarchy icon in Blazor pivot table component](images/UserDefinedHierarchy.png) | User-defined hierarchy | Hierarchy | Yes |
-| ![Attribute hierarchy icon in Blazor pivot table component](images/AttributeHierarchy.png) | Attribute hierarchy | Hierarchy | Yes |
-| ![First level icon in Blazor pivot table component](images/FirstLevel.png)<br>![Second level icon in Blazor pivot table component](images/SecondLevel.png)<br>![Third level icon in Blazor pivot table component](images/ThirdLevel.png) | Levels (in order) | Level Element | Yes |
-| ![NamedSet icon in Blazor pivot client control](images/NamedSet.png) | Named set | Named Set | Yes |
+| ![Folder icon in Blazor pivot table component](images/Folder.webp) | Display folder | Display Folder | No |
+| ![Measure icon in Blazor pivot table component](images/Measure.webp) | Measure | Measure | No |
+| ![Dimension icon in Blazor pivot table component](images/Dimension.webp) | Dimension | Dimension | No |
+| ![User-defined hierarchy icon in Blazor pivot table component](images/UserDefinedHierarchy.webp) | User-defined hierarchy | Hierarchy | Yes |
+| ![Attribute hierarchy icon in Blazor pivot table component](images/AttributeHierarchy.webp) | Attribute hierarchy | Hierarchy | Yes |
+| ![First level icon in Blazor pivot table component](images/FirstLevel.webp)<br>![Second level icon in Blazor pivot table component](images/SecondLevel.webp)<br>![Third level icon in Blazor pivot table component](images/ThirdLevel.webp) | Levels (in order) | Level Element | Yes |
+| ![NamedSet icon in Blazor pivot client control](images/NamedSet.webp) | Named set | Named Set | Yes |
 
 N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

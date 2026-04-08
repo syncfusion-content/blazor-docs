@@ -69,7 +69,7 @@ N> The calculated field feature applies only to value fields. By default, calcul
 
 ```
 
-![Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculated-field.png)
+![Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculated-field.webp)
 
 ## Opening the calculated field dialog programmatically
 
@@ -118,9 +118,9 @@ You can display the calculated field dialog by calling the [CreateCalculatedFiel
 
 ```
 
-![Displaying Calculated Field Button in Blazor PivotTable](images/blazor-pivottable-calculated-field-button.png)
+![Displaying Calculated Field Button in Blazor PivotTable](images/blazor-pivottable-calculated-field-button.webp)
 
-![Displaying Calculated Field Button in Blazor PivotTable](images/blazor-pivottable-calc-field.png)
+![Displaying Calculated Field Button in Blazor PivotTable](images/blazor-pivottable-calc-field.webp)
 
 ## Editing through the field list and grouping bar
 
@@ -134,10 +134,10 @@ To edit an existing calculated field:
 4. Make changes to the field name, formula, or format as needed.
 5. Click **OK** to apply the changes.
 
-![Editing Calculated Field in Blazor PivotTable](images/blazor-pivottable-editing-calculated-field.png)
+![Editing Calculated Field in Blazor PivotTable](images/blazor-pivottable-editing-calculated-field.webp)
 <br/>
 
-![Editing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-calc-fieldlist-edit.png)
+![Editing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-calc-fieldlist-edit.webp)
 
 ## Renaming an existing calculated field
 
@@ -151,10 +151,10 @@ To rename a calculated field:
 4. Replace the existing name with your preferred name.
 5. Click **OK** to save the new name.
 
-![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-edit-calculate-field.png)
+![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-edit-calculate-field.webp)
 <br/>
 
-![Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-renaming-calc-field.png)
+![Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-renaming-calc-field.webp)
 
 ## Editing an existing calculated field formula
 
@@ -171,10 +171,10 @@ To edit an existing calculated field formula:
 
 The pivot table will automatically refresh to reflect the updated calculations.
 
-![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-editing-calculated-field.png)
+![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-editing-calculated-field.webp)
 <br/>
 
-![Editing in Blazor PivotTable Calculated Field Formula](images/blazor-pivottable-edit-calc-field-formula.png)
+![Editing in Blazor PivotTable Calculated Field Formula](images/blazor-pivottable-edit-calc-field-formula.webp)
 
 ## Reusing an existing formula in a new calculated field
 
@@ -190,13 +190,13 @@ To reuse an existing formula:
 6. Modify the formula further if needed, or use it as is.
 7. Click **OK** to create the new calculated field.
 
-![Dragging Existing Calculated Field in Blazor PivotTable](images/blazor-pivottable-drag-existing-calculated-field.png)
+![Dragging Existing Calculated Field in Blazor PivotTable](images/blazor-pivottable-drag-existing-calculated-field.webp)
 <br/>
 
-![Dragging Blazor PivotTable Field to Formula](images/blazor-pivottable-drag-calc-field-to-formula.png)
+![Dragging Blazor PivotTable Field to Formula](images/blazor-pivottable-drag-calc-field-to-formula.webp)
 <br/>
 
-![Reusing Existing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-reusing-existed-calc-field-formula.png)
+![Reusing Existing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-reusing-existed-calc-field-formula.webp)
 
 ## Applying formatting to calculated field values
 
@@ -216,13 +216,13 @@ To apply formatting to calculated field values via the user interface, use the b
 
 N> By default, **None** is selected in the dropdown.
 
-![Applying Format to Blazor PivotTable Calculated Field](images/blazor-pivottable-calc-formatstring.png)
+![Applying Format to Blazor PivotTable Calculated Field](images/blazor-pivottable-calc-formatstring.webp)
 
 ### Applying custom formatting
 
 For specific formatting requirements, select the **Custom** option from the "Format" dropdown. This allows you to enter custom format patterns that meet your exact display needs.
 
-![Applying custom format through Blazor PivotTable calculated field dialog UI](images/calculatdfield-apply-custom-format.png)
+![Applying custom format through Blazor PivotTable calculated field dialog UI](images/calculatdfield-apply-custom-format.webp)
 
 ## Supported operators and functions for the calculated field formula
 
@@ -364,7 +364,7 @@ Syntax: Max(number1, number2)
 
 ```
 
-![Blazor PivotTable woth Conditional Calculate Field](images/blazor-pivottable-conditional-calculated-field.png)
+![Blazor PivotTable woth Conditional Calculate Field](images/blazor-pivottable-conditional-calculated-field.webp)
 
 ## Event
 
