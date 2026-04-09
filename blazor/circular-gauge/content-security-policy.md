@@ -9,7 +9,7 @@ documentation: ug
 
 # Circular Gauge - Content Security Policy Limitations
 
-## What's supported under strict CSP?
+## What's supported under strict CSP ?
 
 The Syncfusion® Blazor **Circular Gauge** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
@@ -20,11 +20,11 @@ The Syncfusion® Blazor **Circular Gauge** component supports most features unde
 - Annotations
 - Multiple axes
 
-## What requires *'unsafe-inline'*?
+## What requires *'unsafe-inline'* ?
 
 **Animation Features** require the `style-src 'unsafe-inline'` directive.
 
-### Why do animations need `'unsafe-inline'`?
+### Why do animations need *'unsafe-inline'* ?
 
 Animations work by applying dynamic inline CSS styles to make elements transition smoothly. This includes:
 
@@ -32,7 +32,7 @@ Animations work by applying dynamic inline CSS styles to make elements transitio
 - Individual pointer animations (via `CircularGaugePointerAnimation`)
 - Sequential rendering: axis → ticks → labels → ranges → pointers → annotations
 
-### How to disable animations
+### How to disable animations ?
 
 If you don't need animations, set `AnimationDuration="0"` (this is the default) to render the gauge instantly without transitions.
 

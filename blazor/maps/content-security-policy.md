@@ -9,7 +9,7 @@ documentation: ug
 
 # Maps - Content Security Policy Limitations
 
-## What's supported under strict CSP?
+## What's supported under strict CSP ?
 
 The Syncfusion® Blazor **Maps** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 

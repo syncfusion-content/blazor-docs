@@ -9,7 +9,7 @@ documentation: ug
 
 # TreeView - Content Security Policy Limitations
 
-## What's supported under strict CSP?
+## What's supported under strict CSP ?
 
 The Syncfusion® Blazor **TreeView** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
@@ -27,11 +27,11 @@ The Syncfusion® Blazor **TreeView** component supports most features under stri
 - Accessibility (ARIA/WCAG)
 - Keyboard navigation and export
 
-## What requires *'unsafe-inline'*?
+## What requires *'unsafe-inline'* ?
 
 **UI Virtualization** requires the `style-src 'unsafe-inline'` directive.
 
-### Why does virtualization need `'unsafe-inline'`?
+### Why does virtualization need *'unsafe-inline'*  ?
 
 UI virtualization improves performance with large datasets by rendering only visible nodes. It uses dynamic inline styles for:
 - Container sizing and positioning
@@ -42,7 +42,7 @@ UI virtualization improves performance with large datasets by rendering only vis
 
 These calculations happen in real-time as users scroll and are blocked under strict CSP.
 
-### How to disable virtualization ?
+### How to disable virtualization
 
 If you don't need virtualization, simply omit `EnableVirtualization="true"` or leave the Height unset. The rest of the TreeView works fully under strict CSP for large and small datasets.
 

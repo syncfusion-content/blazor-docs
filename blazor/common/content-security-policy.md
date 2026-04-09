@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion® Blazor Components With Strict Content Security Policy
 
-## What is content security policy (CSP)?
+## What is content security policy (CSP) ?
 
 **Content Security Policy (CSP)** is a browser security feature that protects your application against malicious attacks like cross-site scripting (XSS) and data injection. It works by controlling where your application can load scripts, styles, images, fonts, and other resources from.
 
@@ -30,9 +30,9 @@ This makes it easier for you to enforce strong security policies while still hav
 
 The following CSP configurations are **recommended** for Syncfusion® Blazor components that support strict CSP (Refer Supported list below).
 
-### Blazor server app
+{% tabs %}
 
-```html
+{% highlight html tabtitle="Blazor Server App" %}
 <meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
                default-src 'self';
@@ -43,11 +43,9 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
                style-src 'self';
                font-src 'self' data:;
                upgrade-insecure-requests;">
-```
+{% endhighlight %}
 
-### Blazor interactive webassembly app and wasm standalone app
-
-```html
+{% highlight html tabtitle="Blazor WebAssembly" %}
 <meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
                default-src 'self';
@@ -58,9 +56,11 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
                style-src 'self';
                font-src 'self' data:;
                upgrade-insecure-requests;">
-```
+{% endhighlight %}
 
-**Why `'wasm-unsafe-eval'` for WebAssembly?** 
+{% endtabs %}
+
+**Why `'wasm-unsafe-eval'` for WebAssembly ?** 
 
 WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) directive to compile and run. Without it, your Blazor runtime won't start. This is different from `'unsafe-eval'` and is necessary for client-side WebAssembly applications.
 
@@ -69,7 +69,7 @@ WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en
 Most Syncfusion components support strict CSP. However, some components or features still need the **`style-src 'unsafe-inline'`** directive. Read the sections below to determine if your application needs it.
 
 
-### Scenario 1: components that always require `'unsafe-inline'`
+### Scenario 1: components that always require *'unsafe-inline'*
 
 The following components need inline styles to work and always require `'unsafe-inline'`: 
 
@@ -83,7 +83,7 @@ The following components need inline styles to work and always require `'unsafe-
 | **Diagrams and Maps** | • Diagram |<ul><li>Diagram components depend extensively on inline styles for interactive behaviors.</li><li>Inline styles are used for node positioning, connectors, ports, annotations, and selection states.</li><li>Dragging, resizing, rotating, and snapping operations require continuous style updates at runtime.</li></ul>|
 | **Kanban** | • Kanban |<ul><li>Kanban boards use inline styles to provide fluid drag‑and‑drop interactions between columns and cards.</li></ul>|
 
-### Scenario 2: components with limited features requiring `'unsafe-inline'`
+### Scenario 2: components with limited features requiring *'unsafe-inline'*
 
 These components work under strict CSP for most features, but specific advanced features need `'unsafe-inline'`:
 

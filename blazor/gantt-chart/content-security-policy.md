@@ -9,7 +9,7 @@ documentation: ug
 
 # Gantt Chart - Content Security Policy Limitations
 
-## What's supported under strict CSP?
+## What's supported under strict CSP ?
 
 The Syncfusion® Blazor **Gantt Chart** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
@@ -20,11 +20,11 @@ The Syncfusion® Blazor **Gantt Chart** component supports most features under s
 - Data binding and filtering
 - Multiple views and interactions
 
-## What requires *'unsafe-inline'*?
+## What requires *'unsafe-inline'* ?
 
 **Rich Text Formatting in Notes Field** requires the `style-src 'unsafe-inline'` directive.
 
-### Why does rich text formatting need `'unsafe-inline'`?
+### Why does rich text formatting need *'unsafe-inline'* ?
 
 The Notes field supports rich text formatting (bold, italic, colors, lists, links, etc.). When you render formatted content, the Rich Text Editor applies dynamic inline styles to display the requested visual appearance, including:
 

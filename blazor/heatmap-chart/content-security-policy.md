@@ -27,7 +27,7 @@ The Syncfusion® Blazor **Heatmap** component supports most features under stric
 
 **Cell Selection** (single or multiple) requires the `style-src 'unsafe-inline'` directive.
 
-### Why does selection need `'unsafe-inline'`?
+### Why does selection need *'unsafe-inline'*?
 
 When users click on cells to select them, the component applies dynamic inline styles to visually highlight the selected cells. This includes:
 

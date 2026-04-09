@@ -9,7 +9,7 @@ documentation: ug
 
 # Pivot Table - Content Security Policy Limitations
 
-## What's supported under strict CSP?
+## What's supported under strict CSP ?
 
 The Syncfusion® Blazor **Pivot Table** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
@@ -21,7 +21,7 @@ The Syncfusion® Blazor **Pivot Table** component supports most features under s
 - Field list integration
 - Keyboard navigation and accessibility
 
-## What requires *'unsafe-inline'*?
+## What requires *'unsafe-inline'* ?
 
 The following features require the `style-src 'unsafe-inline'` directive:
 
@@ -44,7 +44,7 @@ Cell-level conditional formatting uses inline styles to dynamically apply:
 
 Custom number formatting combined with alignment, text wrapping, or theme overrides may apply runtime inline styles.
 
-### How to disable these features
+### How to disable these features ?
 
 If you don't need these advanced features, the rest of the Pivot Table works fully under strict CSP.
 
