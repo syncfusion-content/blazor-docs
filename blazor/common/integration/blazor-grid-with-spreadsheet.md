@@ -18,7 +18,7 @@ A common use case for integrating the Syncfusion Blazor DataGrid with the Spread
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
-## Install required Syncfusion packages
+## Install required Syncfusion<sup style="font-size:70%">&reg;</sup> packages
 
 To add the Blazor DataGrid and Spreadsheet components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
 
@@ -40,22 +40,20 @@ Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion Blazor Service in the `Program.cs` file of the Blazor Server App.
+Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" hl_lines="1 8" %}
+{% highlight razor tabtitle="~/Program.cs" hl_lines="1 6" %}
 
 using Syncfusion.Blazor;
-
+...
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
 builder.Services.AddSyncfusionBlazor();
-
+...
 var app = builder.Build();
 app.Run();
 
@@ -73,11 +71,10 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
      <!-- Syncfusion theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
-
 <body>
     <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-    <!-- Syncfusion Blazor PDF Viewer component's script reference-->
+    <!-- Syncfusion Blazor Spreadsheet component's script reference-->
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js"></script>
 </body>
 
@@ -97,14 +94,12 @@ The following example displays a **DataGrid** with sample data, exports to Excel
 
 @page "/"
 @rendermode InteractiveServer
-
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Spreadsheet
 
 <h3>Blazor DataGrid ➜ Spreadsheet Preview</h3>
-
 <div class="mb-2">
     <SfButton CssClass="e-primary" @onclick="PreviewGridInSpreadsheet">Export Grid in Excel</SfButton>
     <span class="ms-3 text-muted">(Use Spreadsheet Ribbon → File to Open/Save as XLSX/CSV)</span>
@@ -123,18 +118,14 @@ The following example displays a **DataGrid** with sample data, exports to Excel
 
 <h5>Spreadsheet</h5>
 <div class="mt-3">
-    <SfSpreadsheet AllowNumberFormatting="true"
-                   AllowCellFormatting="true"
-                   AllowAutofill="true"
-                   Height="250px"
-                   Width="auto">
+    <SfSpreadsheet AllowNumberFormatting="true" AllowCellFormatting="true" AllowAutofill="true"
+                   Height="250px"  Width="auto">
         <SpreadsheetRibbon></SpreadsheetRibbon>
     </SfSpreadsheet>
 </div>
 
 @code {
     private SfGrid<Order>? GridRef;
-
     private List<Order> Orders = new()
     {
         new() { OrderID = 10001, CustomerID = "ALFKI", Freight = 2.30, ShipCity = "Denmark" },
@@ -143,7 +134,7 @@ The following example displays a **DataGrid** with sample data, exports to Excel
         new() { OrderID = 10004, CustomerID = "BLONP", Freight = 5.30, ShipCity = "USA" },
         new() { OrderID = 10005, CustomerID = "BOLID", Freight = 6.30, ShipCity = "Brazil" }
     };
-
+    
     public class Order
     {
         public int OrderID { get; set; }
@@ -179,7 +170,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## See also
 
-* [Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
-* [Blazor Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started-webapp)
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+* [Getting started with Syncfusion Blazor Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started-webapp)
 
  

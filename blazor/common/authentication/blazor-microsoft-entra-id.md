@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Blazor DataGrid with Microsoft Entra ID Authentication
-description: Step-by-step guide to integrating Microsoft Entra ID authentication with Syncfusion Blazor components in a Blazor Web App.
+title: Blazor with Microsoft Entra ID Authentication | Syncfusion® 
+description: Step-by-step guide to integrating Microsoft Entra ID authentication with Syncfusion® Blazor components in a Blazor Web App.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor with Microsoft Entra ID Authentication
 
-This document explains how to build a **Blazor Web App (Interactive Server)** that uses **Microsoft Entra ID** (formerly Azure Active Directory) for user authentication. Once users log in with their Microsoft account, they will be able to access a protected page that includes the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
+This document explains how to build a **Blazor Web App (Interactive Server)** that uses **Microsoft Entra ID** (formerly Azure Active Directory) for user authentication. Once users log in with their Microsoft account, they will be able to access a protected page that includes the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component.
 
 ## What is Microsoft Entra ID?
 
@@ -17,24 +17,11 @@ Microsoft Entra ID is Microsoft’s identity platform that allows users to secur
 
 **Benefits of using Entra ID in Blazor applications**
 
-- Secure login using Microsoft accounts
-- Single Sign‑On (SSO)
-- Token‑based authentication
-- No password storage in your app
-- Role‑based and group‑based authorization
-- Enterprise‑grade security
-
-With Entra ID, you do not need to write authentication logic manually. Microsoft handles the security for you.
-
-## Prerequisites
-
-- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
-- Visual Studio 2022 or newer
-- Azure subscription
+Entra ID enables secure Microsoft account sign-in for your Blazor App with Single Sign‑On (SSO) and token based authentication, so your app never stores passwords. It also supports role and group based authorization and provides enterprise grade security managed by Microsoft, so you don’t need to write or maintain authentication logic yourself.
 
 ## Create a Blazor Web App (Interactive Server)
 
-1. Open **Visual Studio**
+1. Open **Visual Studio**.
 2. Select **Create a new project**.
 3. In the Create a new project dialog.
 	- Choose **Blazor Web App**.
@@ -62,7 +49,6 @@ This step registers the Blazor application in Azure so Microsoft Entra ID can au
    - **Single tenant** - if the app is for users in your organization only.
    - **Multi tenant** - if the app should support users from any Microsoft Entra organization.
    - **Multi tenant and personal Microsoft accounts** - for the broadest access.
-   
    For this tutorial, select **Single tenant**.
 5. Click **Register**.
 
@@ -85,7 +71,7 @@ Redirect URLs specify where Microsoft Entra ID should return the user after a su
 
 ## Configure Azure AD settings in appsettings.json
 
-This step stores Microsoft Entra ID configuration values so the Blazor app can read them at runtime.
+This step stores Microsoft Entra ID configuration values so the Blazor App can read them at runtime.
 After copying the **Tenant ID** and **Client ID**, update the `appsettings.json` file as shown below.
 
 {% tabs %}
@@ -103,7 +89,7 @@ After copying the **Tenant ID** and **Client ID**, update the `appsettings.json`
 
 ## Install Microsoft Identity packages
 
-1. In Visual Studio, go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+1. In Visual Studio, go to (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
 2. Search and install the following packages(version 3.0 or later for .NET 8.0+):
 	- [Microsoft.Identity.Web](https://www.nuget.org/packages/Microsoft.Identity.Web)
 	- [Microsoft.Identity.Web.UI](https://www.nuget.org/packages/Microsoft.Identity.Web.UI)
@@ -176,7 +162,6 @@ This step allows Blazor components to access the current user’s authentication
 	</Router>
 </CascadingAuthenticationState>
 
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -184,11 +169,11 @@ This step allows Blazor components to access the current user’s authentication
 
 **1. Install Syncfusion® Blazor DataGrid and themes NuGet packages**
 
-To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-**2. Add import namespaces**
+**2. Add Syncfusion® namespaces**
 
-Open the `~/_Imports.razor` file and import the required namespaces.
+Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -199,7 +184,9 @@ Open the `~/_Imports.razor` file and import the required namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-**3. Register the Syncfusion® Blazor service in the `~/Program.cs` file**
+**3. Register the Syncfusion® Blazor service**
+
+Add the Syncfusion® Blazor service to the `~/Program.cs` file to enable Syncfusion® components in the application.
 
 {% tabs %}
 {% highlight csharp tabtitle="~/Program.cs" %}
@@ -219,10 +206,12 @@ Include the theme stylesheet and script references in the `App.razor` file.
 {% highlight html  %}
 
 <head>
+    <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
-....
+
 <body>
+    <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
@@ -231,7 +220,7 @@ Include the theme stylesheet and script references in the `App.razor` file.
 
 **5. Create a protected page with Syncfusion® DataGrid**
 
-This section creates a protected page that displays the Syncfusion® DataGrid only after the user successfully signs in with Microsoft Entra ID.
+This section creates a protected page that displays the Syncfusion® **DataGrid** only after the user successfully signs in with **Microsoft Entra ID**.
 
 {% tabs %}
 {% highlight razor %}
@@ -294,10 +283,10 @@ This section creates a protected page that displays the Syncfusion® DataGrid on
 
 This example demonstrates how to integrate Microsoft Entra ID authentication into a Blazor Web App using the Microsoft Identity platform. 
 
-The application securely signs users in through Entra ID and manages the authentication lifecycle using OpenID Connect. After successfully signing in, authenticated users can access protected pages and interact with the Syncfusion® Blazor DataGrid component. 
+The application securely signs users in through Entra ID and manages the authentication lifecycle using OpenID Connect. After successfully signing in, authenticated users can access protected pages and interact with the **Syncfusion® Blazor DataGrid** component. 
 
-This approach provides a secure, enterprise-ready foundation for building modern Blazor applications with controlled access to data and UI components.   
+This approach provides a secure, enterprise ready foundation for building modern Blazor applications with controlled access to data and UI components.   
 
 ## See also
 
-- [Secure an ASP.NET Core Blazor WebAssembly standalone app with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts)
+- [Secure an ASP.NET Core Blazor WebAssembly standalone App with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts)
