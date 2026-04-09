@@ -19,6 +19,7 @@ A common use case for this integration is when an existing React application nee
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 * [Node.js 18 or later](https://nodejs.org/en/download/)
+* A code editor (this guide uses [Visual Studio Code](https://code.visualstudio.com/))
 
 N> This guide uses the **Blazor Server** template with `blazor.server.js` rather than the newer Blazor Web App template with `blazor.web.js`. Microsoft recommends using `blazor.server.js` (Blazor Server) and `blazor.webassembly.js` (Blazor WebAssembly) scripts when integrating Razor components into existing JavaScript applications until better support for `blazor.web.js` is added. For more information, see [RegisterCustomElement stopped working in Blazor 8](https://github.com/dotnet/aspnetcore/issues/53920).
 
@@ -305,6 +306,30 @@ Open the React development URL to see the Syncfusion<sup style="font-size:70%">&
 N> Start the Blazor application first so that React can load its resources through the proxy.
 
 ![Blazor DataGrid Component](./images/blazor-react-integration.webp)
+
+## Use Cases
+
+Integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components into React applications provides powerful solutions for various business scenarios:
+
+**Enterprise dashboards**
+
+Build comprehensive dashboards where React handles the overall application layout and routing, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide advanced data visualization through grids, charts, and gauges. This approach allows teams to leverage React's ecosystem while adding enterprise-grade reporting and analytics capabilities without rebuilding existing infrastructure.
+
+**Order management systems**
+
+Create order management interfaces where the React application manages the checkout flow and user interactions, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid handles complex order listings with features like sorting, filtering, grouping, and exporting. Users can efficiently manage large order volumes with high-performance data handling and built-in CRUD operations.
+
+**Analytics and reporting portals**
+
+Develop analytics platforms where React components handle navigation and data fetching, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor charts, pivot grids, and schedulers deliver rich data visualization and analysis tools. This combination enables teams to create sophisticated reporting dashboards without migrating entire React applications to Blazor.
+
+**Admin portals**
+
+Implement administrative interfaces where React manages authentication and application state, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide advanced UI controls for managing users, permissions, and system configurations. Features like inline editing, batch updates, and data export streamline administrative workflows.
+
+**Document and content management**
+
+Build document management systems where the React application handles file uploads and folder navigation, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components display document metadata in grids with advanced filtering and search capabilities. This integration maintains the React app structure while adding powerful content organization tools.
 
 ## See also
 
