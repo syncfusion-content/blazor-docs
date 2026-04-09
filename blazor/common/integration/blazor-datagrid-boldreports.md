@@ -11,8 +11,6 @@ documentation: ug
 
 This guide explains how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
 
-A common use case for this integration is when applications require users to interact with data and then generate a corresponding report. Users can filter, sort, or edit records in the DataGrid and immediately view a matching RDLC report. This is especially useful in scenarios like **order processing**, **inventory management**, **CRM**, or **financial reviews**. It allows teams to produce invoices, summaries, or audit-ready documents directly from the same screen without additional tools or data re‑entry.
-
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
 ## Install required NuGet packages
@@ -552,6 +550,30 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 **Output:**
 ![Blazor DataGrid with Bold Report Viewer](./images/data-grid-boldreport.webp)
+
+## Use cases
+
+The integration of the Syncfusion® Blazor DataGrid with RDLC reporting enables seamless data interaction and on‑demand report generation within Blazor applications. This combination is ideal for applications that require real‑time reporting based on user‑selected or filtered grid data.
+
+### Order processing and invoice generation
+
+Use the DataGrid to display order details such as order ID, customer name, order date, and total amount. Users can sort or filter the records and generate RDLC invoice or order summary reports based on the current DataGrid view. The generated report reflects the selected records, allowing users to preview, print, or export invoices without navigating away from the page.
+
+### Inventory management and reporting
+
+Implement an inventory tracking system where product details such as item name, SKU, category, stock quantity, and reorder level are displayed in the DataGrid. Users can filter items based on stock availability and generate RDLC inventory reports or low‑stock summaries. This enables efficient monitoring of inventory status and supports operational and audit requirements.
+
+### Customer relationship management(CRM)
+
+Display customer data, sales records, or support interactions in the DataGrid with options for grouping and filtering. Based on the filtered or selected records, users can generate RDLC customer profiles, activity summaries, or sales reports. This helps teams analyze customer data and produce actionable reports directly from the grid.
+
+### Financial review and analysis
+
+Use the DataGrid to present financial transactions, expense details, or revenue data with sorting and filtering options by date, category, or department. Users can generate RDLC financial statements or period‑based summaries that match the DataGrid state, ensuring consistency between on‑screen data and exported reports.
+
+### Audit and compliance reporting
+
+Create an audit or compliance module where logs, verification records, or inspection results are displayed in the DataGrid. Auditors can filter records by period, status, or department and generate RDLC audit reports or compliance documentation. This simplifies audit workflows and ensures accurate, traceable report generation from validated data.
 
 ## See also
 
