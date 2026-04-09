@@ -23,7 +23,7 @@ ElectronNET.Core connects a Blazor Web App (Server) with the Electron shell by h
 
 - [.NET 8 (LTS) or later](https://dotnet.microsoft.com/en-us/download/dotnet)
 - [Node.js 22.x (LTS) or later](https://nodejs.org/en/download/)
-- .NET CLI or [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 - **Supported Operating Systems:**
   - **Windows:** Windows 10 or later (x64, ARM64)
   - **macOS:** macOS 12 (Monterey) or later (x64, ARM64)
