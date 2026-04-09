@@ -9,7 +9,7 @@ documentation: ug
 
 # CSS Classes in the Blazor Accordion Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component is a vertically collapsible container that organizes content into headers and expandable panels. It supports single or multi-panel expansion, nested accordions, RTL layout, and keyboard accessibility. This document lists the component’s CSS classes and explains their purpose.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component is a vertically collapsible container that organizes content into headers and expandable panels. It supports single or multi-panel expansion, nested accordions, RTL layout, and keyboard accessibility. This document lists the component’s CSS classes and explains their purpose.
 
 ## Root and item classes
 
