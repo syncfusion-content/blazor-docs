@@ -11,8 +11,6 @@ documentation: ug
 
 This guide explains how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
 
-A common use case for this integration is when applications require users to interact with data and then generate a corresponding report. Users can filter, sort, or edit records in the DataGrid and immediately view a matching RDLC report. This is especially useful in scenarios like **order processing**, **inventory management**, **CRM**, or **financial reviews**. It allows teams to produce invoices, summaries, or audit-ready documents directly from the same screen without additional tools or data re‑entry.
-
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
 ## Install required NuGet packages
