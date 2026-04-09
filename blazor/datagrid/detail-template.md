@@ -301,9 +301,9 @@ public class OrderData
 
 ## Rendering custom components/Hierarchical DataGrid 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a powerful feature for rendering custom components inside the detail row. This capability proves helpful when additional information or functionality specific to a grid row requires display. A hierarchical structure can be created by nesting DataGrids inside the detail row of the parent DataGrid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a powerful feature for rendering custom components inside the detail row. This capability proves helpful when additional information or functionality specific to a DataGrid row requires display. A hierarchical structure can be created by nesting DataGrids inside the detail row of the parent DataGrid.
 
-To render a custom component or build a hierarchical grid inside the detail row, define the template in the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) within the `GridTemplates` section. The hierarchical DataGrid displays data in expandable or collapsible levels using the expand or collapse button, or custom content such as HTML elements.
+To render a custom component or build a hierarchical DataGrid inside the detail row, define the template in the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) within the `GridTemplates` section. The hierarchical DataGrid displays data in expandable or collapsible levels using the expand or collapse button, or custom content such as HTML elements.
 
 The following example uses the detail template to display parent–child data in a hierarchical structure with multiple levels (**Employee → Orders → Customers**):
 
@@ -472,7 +472,7 @@ public class CustomerDetails
 
 ## Template column in detail DataGrid
 
-A template column in a detail DataGrid within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful for customizing the appearance and behavior of specific columns. It enables the inclusion of interactive elements, custom formatting, or complex data representations within the detail DataGrid.
+A template column in a detail DataGrid within the Blazor DataGrid is useful for customizing the appearance and behavior of specific columns. It enables the inclusion of interactive elements, custom formatting, or complex data representations within the detail DataGrid.
 
 Use the `Template` property of a column to display custom content instead of the field value.
 
@@ -1212,7 +1212,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ## How to access the child component in the detail template
 
-Using the detail template feature of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, a Grid-like structure with hierarchical binding can be achieved by rendering a DataGrid inside the DetailTemplate. By default, the @ref property of the DataGrid is of type SfGrid<T>, which carries a single DataGrid instance. For a hierarchy, each child DataGrid requires a separate reference. Define the @ref using a dictionary of key–value pairs, where values are SfGrid<T> instances and keys are unique.
+Using the detail template feature of the Blazor DataGrid, a Grid-like structure with hierarchical binding can be achieved by rendering a DataGrid inside the DetailTemplate. By default, the @ref property of the DataGrid is of type SfGrid<T>, which carries a single DataGrid instance. For a hierarchy, each child DataGrid requires a separate reference. Define the @ref using a dictionary of key–value pairs, where values are SfGrid<T> instances and keys are unique.
 
 In the following sample, the instance of a specific child DataGrid is retrieved using the unique key value passed to the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. The selected record details are then obtained using [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) on that child DataGrid:
 
@@ -1419,7 +1419,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports hiding the expand/collapse icon in parent rows when no records exist in the detail grid. This creates a cleaner and more intuitive interface by removing unnecessary icons from empty parent rows.
 
-Use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event to check whether the detail grid has records for the current row and add a custom class to disable and hide the icon. Apply the following CSS to prevent interaction and hide the icon:
+Use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event to check whether the detail DataGrid has records for the current row and add a custom class to disable and hide the icon. Apply the following CSS to prevent interaction and hide the icon:
 
 ```css
 
@@ -1789,7 +1789,7 @@ In this example, the `.e-detailcell` class targets the detail DataGrid, and `.e-
 
 **Customizing the Detail DataGrid Pager Container Element**
 
-To customize the appearance of the pager container element in the detail grid, use the following CSS:
+To customize the appearance of the pager container element in the detail DataGrid, use the following CSS:
 
 ```css
 .e-detailcell .e-grid .e-pagercontainer {
@@ -1797,13 +1797,13 @@ To customize the appearance of the pager container element in the detail grid, u
     font-family: cursive;
 }
 ```
-In this example, the `.e-pagercontainer` class targets the pager container element within the detail grid. The `border` and `font-family` properties control the border styling and font appearance of the pager container.
+In this example, the `.e-pagercontainer` class targets the pager container element within the detail DataGrid. The `border` and `font-family` properties control the border styling and font appearance of the pager container.
 
 ![Blazor Grid pager container element](images/hierarchy-grid/grid-child-pager-container-element.png)
 
 **Customizing the Detail DataGrid Pager Navigation Elements**
 
-To customize the appearance of the detail Grid pager navigation elements, use the following CSS code:
+To customize the appearance of the detail DataGrid pager navigation elements, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-prevpagedisabled,
@@ -1845,7 +1845,7 @@ In this example, the `.e-numericitem` class targets the page numeric link elemen
 
 **Customizing the Detail DataGrid Pager Current Page Numeric Element**
 
-To customize the appearance of the detail Grid pager current page numeric element, use the following CSS code:
+To customize the appearance of the detail DataGrid pager current page numeric element, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-currentitem {
@@ -1911,7 +1911,7 @@ To customize the appearance of the filter bar cell element in the detail DataGri
 }
 ```
 
-In this example, the `.e-detailcell` class targets the detail Grid, and the `.e-filterbarcell` class targets the filter bar cell element in the header. Modify the `background-color` property to change the color of the filter bar cell element.
+In this example, the `.e-detailcell` class targets the detail DataGrid, and the `.e-filterbarcell` class targets the filter bar cell element in the header. Modify the `background-color` property to change the color of the filter bar cell element.
 
 ![Blazor Grid filter bar cell element](images/hierarchy-grid/grid-child-filter-bar-cell-element.png)
 
@@ -2043,7 +2043,7 @@ In this example, the `.e-filter-popup .e-contextmenu` classes target the number 
 
 ### Grouping
 
-Customize grouping elements in the detail grid using CSS. The following examples style the group header, expand/collapse icons, caption row, and indent cell.
+Customize grouping elements in the detail DataGrid using CSS. The following examples style the group header, expand/collapse icons, caption row, and indent cell.
 
 **Customizing the Detail DataGrid Group Header**
 
@@ -2250,7 +2250,7 @@ To customize the appearance of the detail DataGrid's row selection, use the foll
     background-color: #00b7ea;
 }
 ```
-In this example, the `.e-selectionbackground` class targets the background color of the selected rows in the detail Grid. Modify the `background-color` property to change the appearance of the selected row background.
+In this example, the `.e-selectionbackground` class targets the background color of the selected rows in the detail DataGrid. Modify the `background-color` property to change the appearance of the selected row background.
 
 ![Detail Grid row selection in Blazor](images/hierarchy-grid/child-grid-row-selection.png)
 
@@ -2272,11 +2272,11 @@ In this example, the `.e-cellselectionbackground` class targets the background c
 
 Detail template is not supported with the following features:
 
-* Immutable mode
-* Infinite scrolling
-* Virtual scrolling
-* Print
-* Row template
-* Lazy load grouping
-* State persistence
-* Row and Column Spanning
+* Immutable mode.
+* Infinite scrolling.
+* Virtual scrolling.
+* Print.
+* Row template.
+* Lazy load grouping.
+* State persistence.
+* Row and Column Spanning.

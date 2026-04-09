@@ -23,7 +23,7 @@ To configure:
 - Insert HTML tags such as `<img>`, `<a>`, or `<table>` directly into the cell content.
 - Use a [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button)  to dynamically control the encoding behavior.
 - Handle the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event to update the column setting.
-- Call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method to apply the changes and re-render the DataGrid.
+- Call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method to apply the changes and re-render the DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -670,7 +670,7 @@ Three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 * **`Ellipsis`**: Displays ellipsis when the cell content overflows its area.
 * **`EllipsisWithTooltip`**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied. It also displays a tooltip when hover over the ellipsis.
 
-The following example demonstrates, setting the `clipMode`property to `Clip` for the "Name of the Inventor" column, `Ellipsis` for the "Number of Patent Families" column, and `EllipsisWithTooltip` for the "Main Fields of Invention" column, on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the `DropDownList`.
+The following example demonstrates, setting the `clipMode`property to `Clip` for the "Name of the Inventor" column, `Ellipsis` for the "Number of Patent Families" column, and `EllipsisWithTooltip` for the "Main Fields of Invention" column, on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`.
 
 
 {% tabs %}
@@ -1037,7 +1037,7 @@ public class OrdersDetails
 
 The DataGrid provides a feature to display custom tooltips for its columns using the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started). This allows providing additional information about columns when the user hovers over them.
 
-To enable custom tooltips, use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature and render the tooltip component within the template definition.
+To enable custom tooltips, use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature and render the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started-webapp) within the template definition.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1130,7 +1130,7 @@ public class OrderData
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid defines the visibility of **horizontal** and **vertical** lines between cells to improve readability.
 
-The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) in a DataGrid are used to separate cells with horizontal and vertical lines for better readability. Grid lines are enabled by setting the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property to one of the following values:
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) in a DataGrid are used to separate cells with horizontal and vertical lines for better readability. DataGrid lines are enabled by setting the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property to one of the following values:
 
 | Modes | Actions |
 |-------|---------|
@@ -1140,9 +1140,9 @@ The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Sf
 | `Vertical` | Displays the vertical grid lines only.|
 | `Default` | Displays grid lines based on the theme.|
 
-In this configuration, the `GridLines` property is updated dynamically based on the selected value from a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event.
+In this configuration, the `GridLines` property is updated dynamically based on the selected value from a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event.
 
-The following example demonstrates setting the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property based on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the `DropDownList` component.
+The following example demonstrates setting the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property based on changing the dropdown value using the `ValueChange` event of the `SfDropDownList`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

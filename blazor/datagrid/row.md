@@ -12,13 +12,13 @@ Each row typically represents a single record or item from a data source. Rows i
 
 ## Styling rows
 
-Customizing the styles of rows in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows modification of row appearance to meet specific design requirements. This feature is useful when highlighting certain rows or changing the font style, background color, and other properties of the row to enhance the visual appeal of the DataGrid. To customize the row styles in the DataGrid, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid  provides CSS, properties, methods, and event support.
+Customizing the styles of rows in a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows modification of row appearance to meet specific design requirements. This feature is useful when highlighting certain rows or changing the font style, background color, and other properties of the row to enhance the visual appeal of the DataGrid. To customize the row styles in the DataGrid, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides CSS, properties, methods, and event support.
 
 ### Using event
 
 The [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event triggers for every row when it is bound to the data source. In the event handler, the [RowDataBoundEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) object contains details of the row. This object can be used to modify the row's appearance, add custom elements, or perform other customizations.
 
-Here's an example of customizing the rows styles based on the value of the **"Freight"** column using the `RowDataBound` event. This example involves checking the value of the **"Freight"** column for each row and adding a CSS class to the row based on the value. The CSS classes "below-30", "below-80", and "above-80" can be defined in the stylesheet to apply the desired styles to the rows.
+Here's an example of customizing the row styles based on the value of the **"Freight"** column using the `RowDataBound` event. This example involves checking the value of the **"Freight"** column for each row and adding a CSS class to the row based on the value. The CSS classes "below-30", "below-80", and "above-80" can be defined in the stylesheet to apply the desired styles to the rows.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -119,7 +119,7 @@ Row styles can be applied using CSS selectors. The DataGrid provides a class nam
 
 **Customize alternate rows**
 
-The appearance of alternate rows can be customized using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, The DataGrid provides the CSS class `.e-altrow` to style the alternate rows. This default style can be customized by overriding the `.e-altrow` class with custom CSS styles. 
+The appearance of alternate rows can be customized using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, DataGrid provides the CSS class `.e-altrow` to style the alternate rows. This default style can be customized by overriding the `.e-altrow` class with custom CSS styles. 
 
 To change the background color of alternate rows, add the following CSS:
 
@@ -608,7 +608,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows free
 
 The [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property in the Blazor DataGrid is used to freeze a specified number of rows at the top of the DataGrid, keeping them fixed while the rest of the content scrolls vertically. 
 
-In the following example, the `FrozenRows` property is set to `2`. This configuration freezes the top two rows of the grid, and they will remain fixed in their positions while the rest of the DataGrid can be scrolled vertically.
+In the following example, the `FrozenRows` property is set to `2`. This configuration freezes the top two rows of the DataGrid, and they will remain fixed in their positions while the rest of the DataGrid can be scrolled vertically.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -715,8 +715,8 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrTMjUtTMnyFhpX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Frozen rows should remain within the DataGrid viewport.
-> Frozen DataGrid supports row virtualization to improve performance with large datasets.
-> The frozen feature applies to rows visible in the current view.
+> Frozen DataGrid supports row virtualization to impro datasets.
+> The frozen feature applies to rows visible in the current view.ve performance with large
 > [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) can be used together in the same DataGrid.
 
 ### Change default frozen rows line color
@@ -831,7 +831,7 @@ The Autofill feature is not compatible with frozen rows.
 
 ## Add a new row programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a way to add a new row to the DataGrid programmatically. This feature is useful when adding a new record to the grid without manually entering data in the DataGrid. This can be done using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method of the DataGrid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a way to add a new row to the DataGrid programmatically. This feature is useful when adding a new record to the DataGrid without manually entering data. This can be done using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method of the DataGrid.
 
 The `AddRecordAsync` method takes two parameters:
 
@@ -976,7 +976,7 @@ public class OrderData
 
 ## Get the row data and element
 
-DataGrid provides several methods to retrieve row data and elements. This feature is useful when needing to access specific rows, perform custom operations, or manipulate the data displayed in the grid.
+DataGrid provides several methods to retrieve row data and elements. This feature is useful when needing to access specific rows, perform custom operations, or manipulate the data displayed in the DataGrid.
 
 1. [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): Retrieves the row index based on a primary key value or row data.
 

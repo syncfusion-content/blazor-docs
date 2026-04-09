@@ -16,7 +16,7 @@ Enable the row template feature by setting the [RowTemplate](https://help.syncfu
 To enable and configure the `RowTemplate` feature in the DataGrid, follow these steps:
 
 1. **Set up the row template:** Define a custom row layout using the `RowTemplate`.
-2. **Define row layout using the GridTemplates component:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the DataGrid’s column count to ensure alignment.
+2. **Define row layout using the GridTemplates:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the DataGrid’s column count to ensure alignment.
 3. **Template configuration:** For more guidance on configuring templates, see the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) documentation.
 
 For an overview of `row templates` in the DataGrid, watch the following video.
@@ -385,7 +385,7 @@ The DataGrid renders custom Syncfusion<sup style="font-size:70%">&reg;</sup> con
 
 Render a Syncfusion<sup style="font-size:70%">&reg;</sup> control in a row template by setting the [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) property of the DataGrid. This property accepts a custom HTML template that defines the layout for each row.
 
-The following example renders a [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) for `OrderID`, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for `Quantity`, a [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) for `OrderDate`, and a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for `OrderStatus` in a row template:
+The following example renders a [SfChip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) for `OrderID`, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for `Quantity`, a [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) for `OrderDate`, and a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for `OrderStatus` in a row template:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -632,25 +632,25 @@ Render a Syncfusion<sup style="font-size:70%">&reg;</sup> Chart within a row tem
 
 The row template feature offers focused functionality, working seamlessly with a curated set of DataGrid features. The features listed below are not part of its supported set of features:
 
-- Filtering
-- Paging
-- Sorting
-- Searching
-- Rtl
-- Export
-- Context Menu
-- State Persistence
-- Selection
-- Grouping
-- Editing
-- Frozen rows & columns
-- Virtual & Infinite scrolling
-- Column chooser
-- Column menu
-- Detail Row
-- Foreign key column
-- Resizing
-- Reordering
-- Aggregates
-- Clipboard
-- Adaptive view
+- Filtering.
+- Paging.
+- Sorting.
+- Searching.
+- Rtl.
+- Export.
+- Context Menu.
+- State Persistence.
+- Selection.
+- Grouping.
+- Editing.
+- Frozen rows & columns.
+- Virtual & Infinite scrolling.
+- Column chooser.
+- Column menu.
+- Detail Row.
+- Foreign key column.
+- Resizing.
+- Reordering.
+- Aggregates.
+- Clipboard.
+- Adaptive view.

@@ -28,7 +28,6 @@ Sorting a particular column is accomplished by clicking on its column header. Ea
 | Click header again           | Sorts in descending order (↓ icon appears)       |
 | Click header a third time    | Clears sorting for that column(no icon)          |
 
-To use the sorting feature, inject the `Sort` module in the DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -181,7 +180,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAiCDLKrKWrRVA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The initial sorting defined in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) of the Columns will override any sorting applied through user interaction.
+> The initial sorting defined in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) of the columns will override any sorting applied through user interaction.
 
 ## Multi-column sorting
 
@@ -189,8 +188,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports mu
 
 To clear multi-column sorting for a particular column, press <kbd>Shift</kbd> while clicking the column header.
 
-> * The [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) must be `true` while enabling multi-column sort.
-> * Set [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting)  property as `false` to disable multi-column sorting.
+> * The `AllowSorting` must be `true` while enabling multi-column sort.
+> * Set `AllowMultiSorting` property as `false` to disable multi-column sorting.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -260,7 +259,7 @@ public class OrderData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent sorting for a particular column. This is useful when certain columns should not be included in the sorting process. 
 
-This is achieved by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property of the particular column to `false`
+This is achieved by setting the `AllowSorting`property of the particular column to `false`.
 
 The following example demonstrates disabling sorting for **"Customer ID"** column.
 
@@ -331,7 +330,7 @@ public class OrderData
 ## Controlling Unsort behavior in Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides control over whether a column can return to an unsorted state after sorting. This behavior is managed using the [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) property in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
-When [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) is set to **false**, clicking a sorted column header does not revert the DataGrid to its original unsorted layout. Instead, the column remains sorted until a different sort action is applied. This ensures a consistent sorting state and prevents accidental removal of sorting.
+When `AllowUnsort` is set to **false**, clicking a sorted column header does not revert the DataGrid to its original unsorted layout. Instead, the column remains sorted until a different sort action is applied. This ensures a consistent sorting state and prevents accidental removal of sorting.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
