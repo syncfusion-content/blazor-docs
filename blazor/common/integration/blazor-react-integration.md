@@ -13,8 +13,6 @@ This guide explains how to use **[Syncfusion<sup style="font-size:70%">&reg;</su
 
 Blazor and React are different frontend frameworks. Blazor uses .NET and Razor components, while React uses JavaScript/TypeScript and JSX. These frameworks cannot directly share UI components. However, **[Blazor custom elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0&preserve-view=true#blazor-custom-elements)** make integration possible by exposing Razor components as standard web components (custom HTML elements), allowing React to render them like any other DOM element.
 
-A common use case for this integration is when an existing React application needs advanced UI features such as rich grids, charts, or schedulers without rewriting the project in Blazor. By exposing Syncfusion Blazor components as custom elements, teams can seamlessly add powerful .NET-based controls into React pages. This is especially helpful in **enterprise dashboards**, **order management**, **analytics**, and **admin portals** where capabilities like sorting, filtering, exporting, and high-performance data handling are required, all while keeping the React app intact.
-
 ## Prerequisites
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
