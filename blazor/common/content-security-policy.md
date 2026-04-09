@@ -30,7 +30,7 @@ This makes it easier for you to enforce strong security policies while still hav
 
 The following CSP configurations are **recommended** for Syncfusion® Blazor components that support strict CSP (Refer Supported list below).
 
-### Blazor server App
+### Blazor server app
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -45,7 +45,7 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
                upgrade-insecure-requests;">
 ```
 
-### Blazor interactive webassembly App and wasm standalone App
+### Blazor interactive webassembly app and wasm standalone app
 
 ```html
 <meta http-equiv="Content-Security-Policy"
