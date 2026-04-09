@@ -9,55 +9,51 @@ documentation: ug
 
 # Connecting ASP.NET Core Minimal API to Scheduler Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component supports binding data from ASP.NET Core [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis) endpoints hosted within the same application. This approach enables seamless integration of appointment data with full CRUD (Create, Read, Update, Delete) functionality without requiring a separate backend project.
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component supports binding data from ASP.NET Core [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis) endpoints hosted within the same application. This approach enables seamless integration of appointment data with full CRUD (Create, Read, Update, Delete) functionality without requiring a separate backend project.
 
 This documentation explains how to create a Blazor Server application that hosts Minimal API endpoints in the same project, enabling the Scheduler component to perform CRUD operations on in-memory appointment data through RESTful HTTP requests.
 
 ## Prerequisites
 
-Install the following software and packages before starting the process:
+[System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
-| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
-| .NET SDK | net10.0 or compatible | Runtime and build tools |
-| Syncfusion.Blazor.Schedule | Latest Version | Scheduler component |
-| Syncfusion.Blazor.Themes | Latest Version | Styling for Scheduler |
+| [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule/) | Latest Version | Scheduler component |
+| [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) | Latest Version | Styling for Scheduler |
 
 ## Binding data from Minimal API endpoints
 
 This section explains how to create an ASP.NET Core Minimal API backend within a Blazor Server application and bind appointment data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. The following steps demonstrate the actual project creation flow.
 
-### Step 1: Create a Blazor Web App
+### Step 1: Create a Blazor Web App using Visual Studio 
 
-Create a **Blazor Web App** using Visual Studio 2026 or .NET CLI.
-
-**Using Visual Studio 2026:**
-1. Open Visual Studio 2026
+1. Open Visual Studio 
 2. Click **Create a new project**
 3. Search for **Blazor Web App** template
 4. Configure project name as **BlazorSchedulerApp**
-5. Select **.NET 10.0** as the target framework
+5. Select **.NET 8.0 or compatible** as the target framework
 6. Set **Interactive render mode** to **Server**
 7. Set **Interactivity location** to **Per page/component**
 8. Click **Create**
 
-**Using .NET CLI:**
-```bash
-dotnet new blazor -n BlazorSchedulerApp --interactivity Server
-cd BlazorSchedulerApp
-```
 
 > Configure the Interactive render mode to **InteractiveServer** during project creation as the Scheduler requires interactivity for CRUD operations.
 
-### Step 2: Install Required NuGet Packages
+### Step 2: Install Required NuGet Packages and Configure Blazor Scheduler Component with MinimalAPI
 
-Install the Syncfusion Blazor packages using the .NET CLI:
+Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files—such as `Program.cs`, `appsettings.json`, the `wwwroot` folder, and the `Components` folder.
 
-**Using .NET CLI:**
-```bash
-dotnet add package Syncfusion.Blazor.Schedule
-dotnet add package Syncfusion.Blazor.Themes
+For this guide, a Blazor application named **BlazorSchedulerApp** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application.
+
+To add the **Blazor Scheduler** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+
+
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
+
+```
+Install-Package Syncfusion.Blazor.Schedule
+Install-Package Syncfusion.Blazor.Themes
 ```
 The installed packages are reflected in the `BlazorSchedulerApp.csproj` file:
 
