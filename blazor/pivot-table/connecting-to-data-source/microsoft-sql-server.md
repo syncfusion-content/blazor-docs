@@ -208,7 +208,7 @@ namespace MyWebService.Controllers
 1. Access the Web API endpoint at `https://localhost:7139/Pivot` to view the JSON data retrieved from the Microsoft SQL database.
 2. The browser will display the JSON data, as shown below.
 
-![Hosted Web API URL](../images/code-web-app.jpeg)
+![Hosted Web API URL](../images/code-web-app.webp)
 
 ### Connecting the Pivot Table to a Microsoft SQL database using the Web API service
 
