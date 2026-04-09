@@ -408,7 +408,7 @@ public class OrderData
 
 ### Customize row height for particular row
 
-The row height for a particular row can be customized when displaying more content in a particular row, reducing the height of a row to fit content, or making a specific row stand out from the other rows in the grid. This can be achieved by using the `RowHeight` property of the DataGrid along with the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event. This event triggers every time a request is made to access row information, element, or data, and before the row element is appended to the DataGrid element.
+The row height for a particular row can be customized when displaying more content in a particular row, reducing the height of a row to fit content, or making a specific row stand out from the other rows in the DataGrid. This can be achieved by using the `RowHeight` property of the DataGrid along with the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event. This event triggers every time a request is made to access row information, element, or data, and before the row element is appended to the DataGrid element.
 
 In the following example, the row height for the row with **“OrderID”** as **“10249”** is set as **‘90px’** using the `RowDataBound` event.
 

@@ -400,7 +400,7 @@ public class OrderData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports customizing the default sort action for a column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property. This property accepts an IComparer &lt;object&gt; implementation, which can be created by defining a comparer class that implements the .NET [IComparer&lt;T&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
-The following example demonstrates defining a custom `SortComparer` function for the **"Customer ID"** column.
+The following example demonstrates defining a custom `SortComparer` function for the **"Customer ID"** column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
