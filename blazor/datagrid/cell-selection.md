@@ -189,9 +189,9 @@ public class OrderDetails
 
 ## Cell selection mode
 
-The cell selection mode in the Syncfusion Blazor DataGrid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the Grid.
+The cell selection mode in the Syncfusion Blazor DataGrid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the DataGrid.
 
-The Grid supports three types of cell selection modes, configurable via the [GridSelectionSettings.CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) property:
+The DataGrid supports three types of cell selection modes, configurable via the [GridSelectionSettings.CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) property:
 
 1. **Flow:** This is the default mode. It allows selection of a continuous range of cells between the start and end indexes, including all cells across rows in that range.
 2. **Box:** Enables selection of a rectangular range of cells between specified start and end column indexes, including all rows within the defined range. Useful for column-specific selections.
@@ -308,7 +308,7 @@ Single cell selection, multiple cell selection, and range-based cell selection c
 
 To select a single cell programmatically, use the [SelectCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_Boolean__) method. This method selects a cell based on the specified row and column indexes.
 
-The following example demonstrates programmatic single cell selection by passing row and cell index values to the `selectCell` method:
+The following example demonstrates programmatic single cell selection by passing row and cell index values to the `selectCellAsync` method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -403,11 +403,11 @@ public class OrderDetails
 
 ### Multiple cell selection
 
-Multiple cell selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of multiple cells within the Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
+Multiple cell selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of multiple cells within the DataGrid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
 
 To perform multiple cell selection programmatically, use the [SelectCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsAsync_System_ValueTuple_System_Int32_System_Int32____) method. This method accepts a collection of row and column index pairs to define the target cells.
 
-The following example demonstrates how to select multiple cells in the grid by calling the `SelectCellsAsync` method within the button click event and passing a collection of row and column indexes as arguments:
+The following example demonstrates how to select multiple cells in the DataGrid by calling the `SelectCellsAsync` method within the button click event and passing a collection of row and column indexes as arguments:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

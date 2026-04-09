@@ -81,7 +81,7 @@ By default, three blocks are initially rendered when the DataGrid is loaded. Eac
 
 Initial loading pages count configuration is managed through the [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_InitialBlocks) on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html). The default value is "3". Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
 
-The example below demonstrates how to configure InitialBlocks using a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
+The example below demonstrates how to configure InitialBlocks using a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

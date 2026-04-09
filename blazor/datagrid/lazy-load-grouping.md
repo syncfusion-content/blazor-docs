@@ -13,7 +13,7 @@ Lazy loading in Blazor refers to dynamically loading data as needed, rather than
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports lazy load grouping, which optimizes the rendering of large datasets by loading only the required grouped data on demand. Initially, only the top-level group caption rows are rendered in a collapsed state. Child rows are fetched and displayed dynamically when a group is expanded.
 
-To enable this feature, set the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property to `true`. The following example demonstrates how to configure lazy load grouping using the `GridGroupSettings.EnableLazyLoading` property. Ensure grouping is enabled by setting `AllowGrouping` to true.
+To enable this feature, set the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property to `true`. The following example demonstrates how to configure lazy load grouping using the `GridGroupSettings.EnableLazyLoading` property. Ensure grouping is enabled by setting [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to true.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -110,7 +110,6 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBfXWNvAIVdashy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 ## Lazy load grouping with infinite scrolling
 
@@ -380,15 +379,14 @@ public class CustomAdaptor : DataAdaptor
 
 * Due to browser element height limitations, the maximum number of records that can be rendered is constrained by browser capabilities.
 * Lazy load grouping is not compatible with the following features:
-    * Batch editing
-    * Row template
-    * Print
-    * Row drag and drop in collapsed group
-    * ExpandAll method   
-    * Column virtualization
-    * Hierarchical Grid
-    * Detail Template
-    * Row and Cell Spanning  
+    * Batch editing.
+    * Row template.
+    * Print.
+    * Row drag and drop in collapsed group.
+    * ExpandAll method.   
+    * Column virtualization.
+    * Detail Template.
+    * Row and Cell Spanning, 
 * Programmatic selection is not supported when groups are collapsed.
 * Drag selection, cell selection (box and flow), and row selection do not work when groups are collapsed.
 * Clipboard is not supported when groups are collapsed.

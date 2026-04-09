@@ -177,10 +177,10 @@ public class OrderDetails
 ### Limitations
 
 * Row virtual scrolling is not compatible with:
-	1. Batch editing
-	2. Detail template
-	3. Row template
-	4. Autofill
+	1. Batch editing.
+	2. Detail template.
+	3. Row template.
+	4. Autofill.
 
 * With row virtual scrolling, copy-paste and drag-and-drop apply only to items within the current viewport.
 * Cell-based selection is not supported for row virtual scrolling.
@@ -483,7 +483,7 @@ public class OrderDetails
 
 ### Column virtualization with paging
 
-Column virtualization renders only the columns visible in the viewport, while `paging` limits the number of rows displayed per page.
+Column virtualization renders only the columns visible in the viewport, while `Paging` limits the number of rows displayed per page.
 
 Enabling both features reduces memory usage and improves initial render time when working with large grids containing many columns and rows.
 
@@ -583,20 +583,20 @@ public class OrderDetails
 * Cell selection is not supported with column virtualization.
 * **Ctrl + Home** and **Ctrl + End** keyboard shortcuts are not supported with column virtualization.
 * The following features work within the viewport with column virtualization:
-   1. Column resizing
-   2. Column chooser
-   3. Auto-fit
-   4. Clipboard
-   5. Column menu – Column chooser, AutofitAll
+   1. Column resizing.
+   2. Column chooser.
+   3. Auto-fit.
+   4. Clipboard.
+   5. Column menu – Column chooser, AutofitAll.
 * Column virtual scrolling is not compatible with:
-    1. Grouping
-    2. Batch editing
-    3. Column with infinite scrolling
-    4. Stacked header
-    5. Row template
-    6. Detail template
-    7. Hierarchy DataGrid
-    8. Autofill
+    1. Grouping.
+    2. Batch editing.
+    3. Column with infinite scrolling.
+    4. Stacked header.
+    5. Row template.
+    6. Detail template.
+    7. Hierarchy DataGrid.
+    8. Autofill.
 
 ## Enable cell placeholder during Virtualization
 
@@ -893,8 +893,8 @@ public class VirtualData
 In certain scenarios, it may be necessary to programmatically scroll the DataGrid content into view rather than relying on manual scrolling. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method, which enables scrolling to a specific row or column by passing their respective indices as parameters.
 To ensure smooth scrolling behavior, virtualization must be enabled in the DataGrid.
 
-* **Horizontal scrolling:** enable both [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization).
-* **Vertical scrolling:** enable [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization).
+* **Horizontal scrolling:** Enable both [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization).
+* **Vertical scrolling:** Enable [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

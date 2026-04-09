@@ -1167,7 +1167,7 @@ public class OrderData
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides two key events for handling grouping operations. These events enable the integration of custom logic before and after a grouping action:
 
 - [Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping): Triggered before the grouping or ungrouping action is performed in the DataGrid. Use this to perform operations or cancel the action. The event parameters include the current grouping column name and the action.
-- [Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped): Triggered after the grouping or ungrouping action is performed in the Grid. Use this to run post-action logic. The event parameters include the current grouping column name and the action.
+- [Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped): Triggered after the grouping or ungrouping action is performed in the DataGrid. Use this to run post-action logic. The event parameters include the current grouping column name and the action.
 
 The following example demonstrates how to cancel grouping for the **"Order ID"** column using `Grouping` and display a status message via `Grouped`.
 

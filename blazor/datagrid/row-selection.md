@@ -762,7 +762,7 @@ public class OrderDetails
 Specific rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be programmatically selected based on custom conditions. This feature is useful for dynamically highlighting or manipulating rows based on data-driven logic.
 To implement conditional row selection, use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method within the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid.
 
-The [GetCurrentViewRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecordsAsync)  method is used to retrieve the current page records. A condition is applied to these records, and rows that meet the condition are selected during initial rendering.
+The [GetCurrentViewRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecordsAsync) method is used to retrieve the current page records. A condition is applied to these records, and rows that meet the condition are selected during initial rendering.
 
 In the following example, rows are selected only when the **EmployeeID** column value is greater than **3**.
 
@@ -1069,7 +1069,7 @@ public class OrderDetails
 
 ## Get selected records 
 
-The get selected records feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows retrieval of data from selected rows. This is useful when performing actions on selected data or displaying specific information based on selected rows.
+Getting selected records in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows retrieval of data from selected rows. This is useful when performing actions on selected data or displaying specific information based on selected rows.
 
 To retrieve the selected records, use the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method. This method returns an array of objects representing the selected records.
 
