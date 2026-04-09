@@ -44,7 +44,7 @@ If you don't need cell selection, set `SelectionMode="None"` or simply don't con
 
 ## Recommended csp configurations
 
-### Strict csp (no cell selection)
+### Strict CSP (no cell selection)
 
 Use this configuration if you don't use cell selection (or don't want selection interactions):
 
@@ -63,7 +63,7 @@ Use this configuration if you don't use cell selection (or don't want selection 
 
 This configuration maintains full security for the Heatmap's data visualization capabilities.
 
-### Relaxed csp (with cell selection)
+### Relaxed CSP (with cell selection)
 
 Include `'unsafe-inline'` if you want users to select cells for drill-down or data exploration:
 

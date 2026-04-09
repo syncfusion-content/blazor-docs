@@ -9,7 +9,7 @@ documentation: ug
 
 # Pivot table - content security policy limitations
 
-## What's supported under strict csp?
+## What's supported under strict CSP?
 
 The Syncfusion® Blazor **Pivot Table** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
@@ -48,9 +48,9 @@ Custom number formatting combined with alignment, text wrapping, or theme overri
 
 If you don't need these advanced features, the rest of the Pivot Table works fully under strict CSP.
 
-## Recommended csp configurations
+## Recommended CSP configurations
 
-### Strict csp (grid view only)
+### Strict CSP (grid view only)
 
 Use this configuration if you don't use Pivot Chart view, conditional formatting, or advanced number formatting:
 
