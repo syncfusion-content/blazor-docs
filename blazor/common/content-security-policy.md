@@ -62,7 +62,7 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
 
 **Why `'wasm-unsafe-eval'` for WebAssembly ?** 
 
-WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) directive to compile and run. Without it, your Blazor runtime won't start. This is different from `'unsafe-eval'` and is necessary for client-side WebAssembly applications.
+WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) directive to compile and run. This is different from `'unsafe-eval'` and is necessary for client-side WebAssembly applications.
 
 ## When you need *'unsafe-inline'* ?
 
