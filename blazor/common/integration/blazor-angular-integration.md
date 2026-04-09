@@ -43,7 +43,7 @@ dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion component
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> component
 
 Create a `.razor` file to incorporate the Syncfusion DataGrid component:
 
@@ -66,7 +66,6 @@ In this example, the file name used is `OrdersGrid.razor`.
 
 @code{
     public List<Order> Orders { get; set; }
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 10).Select(x => new Order()
@@ -77,7 +76,7 @@ In this example, the file name used is `OrdersGrid.razor`.
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-
+    
     public class Order {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
@@ -166,7 +165,7 @@ Then update the start script in `package.json`.
 {% endhighlight %}
 {% endtabs %}
 
-### Load Blazor runtime and Syncfusion theme/scripts
+### Load Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> theme/scripts
 
 The Blazor runtime and Syncfusion scripts/themes are required to load Syncfusion Blazor components inside Angular. Add the following to your Angular project’s `index.html` file.
 
@@ -275,10 +274,8 @@ Add the following scripts to  `package.json`.
 {% tabs %}
 {% highlight json tabtitle="package.json" %}
 
-"start:blazor": "dotnet watch run --project ../SfxGridWasm", //Replace this with your Blazor project name. 
-
+"start:blazor": "dotnet watch run --project ../BlazorServerHost", //Replace this with your Blazor project name. 
 "start:ng": "ng serve --proxy-config proxy.conf.json", 
-
 "start:all": "concurrently -k -n BLAZOR,ANGULAR -c cyan,green \"npm:start:blazor\" \"npm:start:ng\"", 
 
 {% endhighlight %}
