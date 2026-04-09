@@ -9,7 +9,7 @@ documentation: ug
 
 # CSS Classes in the Blazor Chip Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Chip](https://www.syncfusion.com/blazor-components/blazor-chips) component is a compact element that represents an input, attribute, or action. It supports avatars, icons, delete functionality, multi-selection mode, drag-and-drop, and RTL layout. This document lists the component's CSS classes and explains their purpose.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor Chip](https://www.syncfusion.com/blazor-components/blazor-chips) component is a compact element that represents an input, attribute, or action. It supports avatars, icons, delete functionality, multi-selection mode, drag-and-drop, and RTL layout. This document lists the component's CSS classes and explains their purpose.
 
 ## Root and container classes
 
