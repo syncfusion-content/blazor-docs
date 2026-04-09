@@ -42,7 +42,7 @@ These visual indicators are applied in real-time during user interaction and blo
 
 If you don't need cell selection, set `SelectionMode="None"` or simply don't configure selection-related events. The rest of the Heatmap will work fully under strict CSP.
 
-## Recommended csp configurations
+## Recommended CSP configurations
 
 ### Strict CSP (no cell selection)
 

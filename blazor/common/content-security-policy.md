@@ -119,7 +119,7 @@ If you add `style` attributes directly through `InputAttributes` or `HtmlAttribu
 
 This keeps your CSP strict while still achieving your styling goals.
 
-## Csp configuration with *'unsafe-inline'*
+## CSP configuration with *'unsafe-inline'*
 
 If your application needs any of the above scenarios, use this configuration:
 
