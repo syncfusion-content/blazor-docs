@@ -20,7 +20,7 @@ With virtualization enabled, working with large datasets becomes easier and fast
 ## Prerequisites and setup
 
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
-* .NET CLI or [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ### Create a Blazor web app with Interactive Server
