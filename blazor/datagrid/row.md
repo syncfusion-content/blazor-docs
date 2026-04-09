@@ -715,8 +715,8 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrTMjUtTMnyFhpX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Frozen rows should remain within the DataGrid viewport.
-> Frozen DataGrid supports row virtualization to impro datasets.
-> The frozen feature applies to rows visible in the current view.ve performance with large
+> Frozen DataGrid supports row virtualization to improve datasets.
+> The frozen feature applies to rows visible in the current view.
 > [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) can be used together in the same DataGrid.
 
 ### Change default frozen rows line color
