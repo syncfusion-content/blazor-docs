@@ -21,7 +21,7 @@ Use Identity when your app needs cookie‑based, server‑side authentication an
 ## Prerequisites
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/) or [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 ## Create the sample app
 
