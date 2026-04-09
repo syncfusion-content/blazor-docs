@@ -19,7 +19,6 @@ A common use case for this integration is when an existing React application nee
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 * [Node.js 18 or later](https://nodejs.org/en/download/)
-* [React (Vite) project setup](https://vitejs.dev/guide/)
 
 N> This guide uses the **Blazor Server** template with `blazor.server.js` rather than the newer Blazor Web App template with `blazor.web.js`. Microsoft recommends using `blazor.server.js` (Blazor Server) and `blazor.webassembly.js` (Blazor WebAssembly) scripts when integrating Razor components into existing JavaScript applications until better support for `blazor.web.js` is added. For more information, see [RegisterCustomElement stopped working in Blazor 8](https://github.com/dotnet/aspnetcore/issues/53920).
 
