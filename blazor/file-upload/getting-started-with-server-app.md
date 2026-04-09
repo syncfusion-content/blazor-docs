@@ -7,7 +7,7 @@ control: FileUpload
 documentation: ug
 ---
 
-# Getting Started with Blazor File Upload Component
+# Getting Started with Blazor File Upload Component in Server App
 
 This section briefly explains how to include the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Server Application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

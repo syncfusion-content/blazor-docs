@@ -7,7 +7,7 @@ component: HeatMap Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor HeatMap Chart Component in Blazor Server App
+# Getting Started with Blazor HeatMap Chart Component in Server App
 
 This section briefly explains about how to include [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

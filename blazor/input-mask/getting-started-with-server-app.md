@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Input Mask Component in Server App| Syncfusion
+title: Getting Started with Blazor Input Mask in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Input Mask Component in Blazor Server App.
 platform: Blazor
 component: Input Mask
 documentation: ug
 ---
 
-# Getting Started with Blazor MaskedTextBox Component in Blazor Server App
+# Getting Started with Blazor MaskedTextBox Component in Server App
 
 This section briefly explains about how to include [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

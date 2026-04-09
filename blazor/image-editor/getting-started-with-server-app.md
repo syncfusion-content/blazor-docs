@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor ImageEditor Component in Server App
+title: Getting Started with Syncfusion Blazor ImageEditor in Server App
 description: Learn how to add and configure the Syncfusion Blazor Image Editor component in a Blazor Server App using Visual Studio or Visual Studio Code.
 platform: Blazor
 component: Image Editor
 documentation: ug
 ---
 
-# Getting Started with Blazor Image Editor Component in Blazor Server App
+# Getting Started with Blazor Image Editor Component in Server App
 
 This section briefly explains about how to include [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
