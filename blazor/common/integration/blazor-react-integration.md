@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor-React Integration | Syncfusion
-description: Learn how to integrate Syncfusion Blazor components into a React application using Blazor Custom Elements for seamless UI rendering.
+description: Learn how to integrate Syncfusion Blazor components into a React application using Blazor custom elements for seamless UI rendering.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,17 +11,19 @@ documentation: ug
 
 This guide explains how to use **[Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components)** inside a **[React](https://react.dev/)** application.
 
-Blazor and React are different frontend frameworks. Blazor uses .NET and Razor components, while React uses JavaScript/TypeScript and JSX. These frameworks cannot directly share UI components. However, **[Blazor Custom Elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0&preserve-view=true)** make integration possible by exposing Razor components as standard web components (custom HTML elements), allowing React to render them like any other DOM element.
+Blazor and React are different frontend frameworks. Blazor uses .NET and Razor components, while React uses JavaScript/TypeScript and JSX. These frameworks cannot directly share UI components. However, **[Blazor custom elements](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/js-spa-frameworks?view=aspnetcore-10.0&preserve-view=true#blazor-custom-elements)** make integration possible by exposing Razor components as standard web components (custom HTML elements), allowing React to render them like any other DOM element.
 
 ## Prerequisites
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 * [Node.js 18 or later](https://nodejs.org/en/download/)
-* [React (Vite) project setup](https://vitejs.dev/guide/)
+* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 N> This guide uses the **Blazor Server** template with `blazor.server.js` rather than the newer Blazor Web App template with `blazor.web.js`. Microsoft recommends using `blazor.server.js` (Blazor Server) and `blazor.webassembly.js` (Blazor WebAssembly) scripts when integrating Razor components into existing JavaScript applications until better support for `blazor.web.js` is added. For more information, see [RegisterCustomElement stopped working in Blazor 8](https://github.com/dotnet/aspnetcore/issues/53920).
 
 ## Creating the Blazor application
+
+The following demonstrates how to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component into a React application by exporting a Razor component as a Blazor custom element.
 
 ### Create the Blazor Server project
 
@@ -38,9 +40,9 @@ cd BlazorServerHost
 
 ### Install required packages
 
-Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages and the Custom Elements package.
+Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid), [Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and the [Blazor custom elements](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.CustomElements/) packages.
 
-The **[Microsoft.AspNetCore.Components.CustomElements](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.CustomElements/)** package is required because it enables Blazor components to be exported as standard custom elements, allowing them to be easily used inside the React application.
+The **Microsoft.AspNetCore.Components.CustomElements** package is required because it enables Blazor components to be exported as standard custom elements, allowing them to be easily used inside the React application.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -52,6 +54,8 @@ dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Replace `10.0.5` with the latest stable version. Check [NuGet](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.CustomElements/) for the current release.
 
 ### Add required namespaces
 
@@ -83,7 +87,7 @@ Add the following stylesheet and script references inside the `_Host.cshtml` fil
 
 <body>
     ...
-    <!-- Syncfusion Blazor Core script -->
+    <!-- Syncfusion Blazor core script -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     ...
 </body>
@@ -146,7 +150,7 @@ Register any Razor component you want to use in React inside the `Program.cs` fi
 Also, ensure that Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services are added so that Syncfusion<sup style="font-size:70%">&reg;</sup> components function correctly.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 5 6 7 8 10" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="2 5 7 8 9 10" %}
 ... 
 using Syncfusion.Blazor;
 ...
@@ -157,7 +161,6 @@ builder.Services.AddServerSideBlazor(options =>
 {
     options.RootComponents.RegisterCustomElement<BlazorServerHost.Pages.OrdersGrid>("sf-orders-grid");
 });
-
 ....
 {% endhighlight %}
 {% endtabs %}
@@ -199,16 +202,16 @@ export default defineConfig({
   server: {
     proxy: {
       '/_framework': {
-        target: 'http://localhost:5167', // Replace with the hosted URL of the Blazor application.
+        target: 'http://localhost:5167', // Replace with the local development server URL of the Blazor application.
         changeOrigin: true,
         ws: true
       },
       '/_content': {
-        target: 'http://localhost:5167', // Same Blazor hosted URL.
+        target: 'http://localhost:5167', // Same Blazor local development server URL.
         changeOrigin: true
       },
       '/_blazor': {
-        target: 'http://localhost:5167', // Same Blazor hosted URL.
+        target: 'http://localhost:5167', // Same Blazor local development server URL.
         changeOrigin: true,
         ws: true
       }
@@ -229,7 +232,7 @@ The Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> scripts/
 <!-- Syncfusion Blazor theme stylesheet-->
 <link rel="stylesheet" href="/_content/Syncfusion.Blazor.Themes/fluent2.css" />
 
-<!-- Syncfusion Blazor Core script -->
+<!-- Syncfusion Blazor core script -->
 <script src="/_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
 
 <!-- Blazor runtime script -->
@@ -301,4 +304,32 @@ Open the React development URL to see the Syncfusion<sup style="font-size:70%">&
 N> Start the Blazor application first so that React can load its resources through the proxy.
 
 ![Blazor DataGrid Component](./images/blazor-react-integration.webp)
- 
+
+## Use Cases
+
+Integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components into React applications provides powerful solutions for various business scenarios:
+
+**Enterprise dashboards**
+
+Build comprehensive dashboards where React handles the overall application layout and routing, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide advanced data visualization through grids, charts, and gauges. This approach allows teams to leverage React's ecosystem while adding enterprise-grade reporting and analytics capabilities without rebuilding existing infrastructure.
+
+**Order management systems**
+
+Create order management interfaces where the React application manages the checkout flow and user interactions, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid handles complex order listings with features like sorting, filtering, grouping, and exporting. Users can efficiently manage large order volumes with high-performance data handling and built-in CRUD operations.
+
+**Analytics and reporting portals**
+
+Develop analytics platforms where React components handle navigation and data fetching, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor charts, pivot grids, and schedulers deliver rich data visualization and analysis tools. This combination enables teams to create sophisticated reporting dashboards without migrating entire React applications to Blazor.
+
+**Admin portals**
+
+Implement administrative interfaces where React manages authentication and application state, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide advanced UI controls for managing users, permissions, and system configurations. Features like inline editing, batch updates, and data export streamline administrative workflows.
+
+**Document and content management**
+
+Build document management systems where the React application handles file uploads and folder navigation, while Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components display document metadata in grids with advanced filtering and search capabilities. This integration maintains the React app structure while adding powerful content organization tools.
+
+## See also
+
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting started with Syncfusion React DataGrid](https://ej2.syncfusion.com/react/documentation/grid/getting-started)
