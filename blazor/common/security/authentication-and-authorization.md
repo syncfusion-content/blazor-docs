@@ -58,7 +58,7 @@ All examples use `<AuthorizeView>` for UI-level security. DataGrid and Scheduler
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 * [AuthorizeView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authorizeview), [AuthenticationStateProvider](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/authentication-state), and token-based data requests require the Blazor authentication pipeline to be configured.
 
-**Install required package:**
+**Install required packages:**
 
 For applications using ASP.NET Core Identity, install the Identity UI package by running the following command in your project directory:
 
@@ -105,15 +105,12 @@ If you already have a Blazor project, proceed to the package installation sectio
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Identity;
 using Syncfusion.Blazor;
-
 ...
 builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
     .AddCookie(IdentityConstants.ApplicationScheme);
-
 builder.Services.AddAuthorization();
 // This class is scaffolded by the Blazor Server Identity template.
 // If using a custom provider, replace with your own AuthenticationStateProvider implementation.
-
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 // Add Syncfusion Blazor services
 builder.Services.AddSyncfusionBlazor();
@@ -163,8 +160,7 @@ N>
                     <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120"></GridColumn>
                 </GridColumns>
             </SfGrid>
-
-        <p>Hello, @authContext.User.Identity?.Name!</p>
+            <p>Hello, @authContext.User.Identity?.Name!</p>
     </Authorized>
     <NotAuthorized>
         <p>Please log in to view the DataGrid.</p>
@@ -210,7 +206,7 @@ The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized
     <Authorized>
         <SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@currentDate">
             <ScheduleEventSettings TValue="AppointmentData">
-            <!-- Replace with your actual protected API endpoint -->
+                <!-- Replace with your actual protected API endpoint -->
                 <SfDataManager Url="https://your-api.com/api/schedule" Headers="@HeaderData" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
             </ScheduleEventSettings>
             <ScheduleViews>
@@ -280,7 +276,6 @@ The following TreeView example demonstrates a Blazor Server App configured with 
 </AuthorizeView>
 
 @code {
-  
     
     public class MailItem
     {
