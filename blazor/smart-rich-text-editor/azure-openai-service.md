@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure OpenAI Configuration for Syncfusion Smart Rich Text Editor
-description: Configure Azure OpenAI for Syncfusion Blazor Smart Rich Text Editor: authentication, client setup, DI registration, and usage examples.
+description: Configure Azure OpenAI for Syncfusion Blazor Smart Rich Text Editor authentication, client setup, DI registration, and usage examples.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug

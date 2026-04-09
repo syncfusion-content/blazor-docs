@@ -25,7 +25,7 @@ A common use case for this integration is when a Blazor application needs to reu
 
 If you already have an Angular project, move to the **Install custom elements package** section. Otherwise, create a new Angular project following Syncfusion documentation.
 
-[Angular Getting Started](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone).
+[Angular Getting Started](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone)
 
 ### Install custom elements package
 
@@ -64,7 +64,7 @@ The following CSS styles are available in the `../node_modules/@syncfusion` fold
 
 N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview).
 
-### Add Syncfusion component
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> component
 
 Update your `src/app/app.ts` file to incorporate the Syncfusion DataGrid component: 
 
@@ -83,16 +83,17 @@ import { GridModule } from '@syncfusion/ej2-angular-grids';
       <e-columns>
         <e-column field="OrderID" headerText="Order ID" width="120"></e-column>
         <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
-        <e-column field="Freight" headerText="Freight" width="120" format="C2"></e-column>
+        <e-column field="ShipCountry" headerText="ShipCountry" width="120"></e-column>
       </e-columns>
     </ejs-grid>
   `
 })
 export class AppComponent {
   public data = [
-    { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
-    { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
-    { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 }
+    { OrderID: 10248, CustomerID: 'VINET', ShipCountry: 'France' },
+    { OrderID: 10249, CustomerID: 'TOMSP', ShipCountry: 'Germany' },
+    { OrderID: 10250, CustomerID: 'HANAR', ShipCountry: 'Brazil' },
+    { OrderID: 10251, CustomerID: 'VICTE', ShipCountry: 'France' }
   ];
 }
 
@@ -182,18 +183,15 @@ Add this target block to your Blazor project’s `.csproj` file:
 {% highlight xml tabtitle=".csproj" %}
 
  <Target Name="BuildAngularElement" BeforeTargets="Build">
-
     <!-- Replace 'syncfusion-angular-app' with your Angular project folder name -->
     <PropertyGroup>
       <AngularProject>../syncfusion-angular-app</AngularProject>
       <AngularDist>$(AngularProject)/dist/syncfusion-angular-app</AngularDist>
       <BlazorLib>wwwroot/lib/sf-grid</BlazorLib>
     </PropertyGroup>
-
     <!-- Install & build Angular (skip if you prefer pnpm/yarn) -->
     <Exec WorkingDirectory="$(AngularProject)" Command="npm ci" />
     <Exec WorkingDirectory="$(AngularProject)" Command="npx ng build --configuration production --output-hashing=none" />
-
     <!-- Clean & copy -->
     <RemoveDir Directories="$(BlazorLib)" />
     <MakeDir Directories="$(BlazorLib)" />
@@ -222,7 +220,6 @@ Include the stylesheet in the `<head>` and the script at the end of the `<body>`
     ....
     <link rel="stylesheet" href="/lib/sf-grid/styles.css" />
 </head>
-
 <body>
     ....
     <script src="/lib/sf-grid/main.js"></script>
@@ -245,7 +242,7 @@ You can place the `<sf-grid>` HTML tag directly inside any `.razor` (e.g `Index.
 
 N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
 
-## Run the applications
+## Run the application
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
