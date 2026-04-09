@@ -9,11 +9,11 @@ documentation: ug
 
 # Blazor with AWS Cognito Authentication
 
-This guide demonstrates how to integrate AWS Cognito authentication in a **Blazor Server** application (or a **Blazor Web App** with **Server interactivity** in .NET 8+).  
+This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components).  
 
 ## What is AWS?
 
-Amazon Web Services (AWS) is a cloud platform providing compute, storage, and identity services. For Blazor developers, its key identity service is Amazon Cognito, which handles sign-up, sign-in, Multi-Factor Authentication (MFA), token issuance, and issuing temporary AWS credentials through AWS Identity and Access Management (IAM). Cognito also exposes a managed login interface (Hosted UI) and standard OpenID Connect (OIDC) endpoints.
+[Amazon Web Services (AWS)](https://aws.amazon.com/what-is-aws/) is a cloud platform providing compute, storage, and identity services. For Blazor developers, its key identity service is Amazon Cognito, which handles sign-up, sign-in, Multi-Factor Authentication (MFA), token issuance, and issuing temporary AWS credentials through AWS Identity and Access Management (IAM). Cognito also exposes a managed login interface (Hosted UI) and standard OpenID Connect (OIDC) endpoints.
 
 ## Why Amazon Cognito for Blazor?
 
@@ -50,9 +50,9 @@ In **User Pool → Sign-in experience**:
 
 Configure OpenID Connect with the Cognito Hosted UI (Authorization Code + PKCE), which Microsoft's docs show for any OIDC provider in Blazor Web Apps.
 
-### Create a Blazor Project
+### Create a Blazor project
 
-If you already have a Blazor project, proceed to the **Install Authentication package** section. Otherwise, create one using Syncfusion getting started guides for [Blazor Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) or [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
+If you already have a Blazor project, proceed to the **Install required packages** section. Otherwise, create one using Syncfusion getting started guides for [Blazor Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) or [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
 
 ### Install required packages
 
@@ -105,7 +105,7 @@ Before building the Blazor app, set up an AWS Cognito User Pool:
 
 You now have the values to add to `appsettings.json`.
 
-### Update `appsettings.json`
+### Update appsettings.json file
 
 This stores your Cognito Hosted UI domain and app client ID so the app can read them at startup. The `Authority` is the base URL of your Cognito User Pool domain, and `ClientId` identifies your web app in Cognito. Keep these out of code to simplify environment changes. Replace the placeholders with your actual Cognito values.
 
@@ -127,7 +127,7 @@ N> Replace **{REGION}** with your AWS region (e.g., `us-east-1`), and **YOUR_APP
 
 N> This sample uses Authorization Code + PKCE with a public client (no client secret). If you created a confidential client, add ClientSecret to configuration and set `options.ClientSecret` in the OIDC options.
 
-### Configure OIDC and Cookie Authentication
+### Configure OIDC and Cookie authentication
 
 This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. `SaveTokens = true` keeps ID/Access tokens available for downstream API calls. `RoleClaimType = "cognito:groups"` turns Cognito groups into ASP.NET Core roles.
 
@@ -141,7 +141,6 @@ using Microsoft.IdentityModel.Tokens;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
@@ -247,7 +246,6 @@ builder.Services.AddAuthorization(o =>
 });
 
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -259,7 +257,6 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.MapStaticAssets();
 app.UseRouting();
-
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();
