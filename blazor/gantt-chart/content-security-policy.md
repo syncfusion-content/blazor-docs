@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Gantt Chart - Strict CSP Feature Limitations - Syncfusion
+title: Gantt chart - strict CSP feature limitations - Syncfusion
 description: Details on Syncfusion Blazor features in Gantt Chart that require Content Security Policy (CSP) relaxation.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Gantt Chart - Content Security Policy Limitations
+# Gantt chart - content security policy limitations
 
-## What's Supported Under Strict CSP?
+## What's supported under strict CSP?
 
 The Syncfusion® Blazor **Gantt Chart** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
@@ -20,11 +20,11 @@ The Syncfusion® Blazor **Gantt Chart** component supports most features under s
 - Data binding and filtering
 - Multiple views and interactions
 
-## What Requires *'unsafe-inline'*?
+## What requires *'unsafe-inline'*?
 
 **Rich Text Formatting in Notes Field** requires the `style-src 'unsafe-inline'` directive.
 
-### Why Does Rich Text Formatting Need `'unsafe-inline'`?
+### Why does rich text formatting need `'unsafe-inline'`?
 
 The Notes field supports rich text formatting (bold, italic, colors, lists, links, etc.). When you render formatted content, the Rich Text Editor applies dynamic inline styles to display the requested visual appearance, including:
 
@@ -35,13 +35,13 @@ The Notes field supports rich text formatting (bold, italic, colors, lists, link
 
 These styles are applied at runtime and blocked under strict CSP.
 
-### How to Use Plain Text Only ?
+### How to use plain text only ?
 
 If you don't need rich text formatting in Notes, just use plain text. The rest of the Gantt Chart will work fully under strict CSP.
 
-## Recommended CSP Configurations
+## Recommended CSP configurations
 
-### Strict CSP (Without  RichTextEditor related Features)
+### Strict CSP (without richtexteditor related features)
 
 Use this configuration if you don't use rich text formatting in Notes (or don't use the Notes field):
 
@@ -60,7 +60,7 @@ Use this configuration if you don't use rich text formatting in Notes (or don't 
 
 This configuration maintains full security for the Gantt Chart's project management and visualization features.
 
-### Relaxed CSP (With Rich Text Notes)
+### Relaxed CSP (with rich text notes)
 
 Include `'unsafe-inline'` if you want to use rich text formatting in the Notes field:
 
