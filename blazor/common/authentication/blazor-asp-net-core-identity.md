@@ -582,3 +582,7 @@ dotnet run
 6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Syncfusion components.
 7. Click **Logout** to end the session and verify that accessing the secure pages redirects back to the login page. 
 
+## See also
+
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting started with Syncfusion Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)
