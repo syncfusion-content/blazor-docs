@@ -14,8 +14,6 @@ This guide demonstrates how to integrate the [Syncfusion® Blazor DataGrid](http
 
 The workflow includes exporting grid data to an Excel file, opening the file through Spreadsheet UI, and performing interactive editing.
 
-A common use case for integrating the Syncfusion Blazor DataGrid with the Spreadsheet component is when applications need to transition from structured, tabular data viewing to more flexible spreadsheet style editing. Users can review, filter, and edit records in the DataGrid, then export the data to Excel and continue advanced manipulation using the Spreadsheet UI. This workflow is especially useful for tasks such as **financial adjustments**, **bulk data corrections**, **inventory updates**, **shipment tracking updates**, or **preparing data for reporting**. It provides a seamless flow between data browsing and spreadsheet based editing without switching tools or external applications.
-
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
 ## Install required Syncfusion<sup style="font-size:70%">&reg;</sup> packages
@@ -167,6 +165,30 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 **Output:**
 ![Blazor DataGrid With Spreadsheet](images/datagrid-with-spreadsheet.webp)
+
+## Use cases
+
+The integration of the Syncfusion® Blazor DataGrid with the Spreadsheet component enables a smooth transition from structured data visualization to flexible, Excel‑like editing. This workflow allows users to review, filter, and select records in the DataGrid and then perform advanced data manipulation in the Spreadsheet without leaving the application.
+
+### Financial adjustments and calculations
+
+Present financial datasets such as budgets, forecasts, or transaction records in the DataGrid for efficient filtering and review. Users can export selected or filtered data to the Spreadsheet to apply formulas, perform adjustments, and run calculations using built‑in spreadsheet features before finalizing the data.
+
+### Bulk data correction and updates
+
+Use the DataGrid to display large datasets with sorting and filtering to identify records that require correction. Once identified, users can export the data to the Spreadsheet to perform bulk edits, validate values, and make uniform updates, improving accuracy and reducing manual effort.
+
+### Inventory management and updates
+
+Display inventory information such as item name, SKU, quantity, and warehouse location in the DataGrid. Users can export inventory data to the Spreadsheet to update stock quantities, adjust reorder levels, or apply formula‑based calculations, simplifying inventory maintenance workflows.
+
+### Shipment and logistics tracking
+
+Render shipment data in the DataGrid with details such as shipment ID, destination, status, and delivery date. Users can export the data to the Spreadsheet to update shipment statuses, modify schedules, or apply batch changes, enabling efficient operational updates.
+
+### Data preparation for reporting
+
+Allow users to filter and organize business data in the DataGrid before exporting it to the Spreadsheet for final preparation. In the Spreadsheet, users can format data, apply formulas, and restructure datasets to prepare them for reporting or Excel export.
 
 ## See also
 

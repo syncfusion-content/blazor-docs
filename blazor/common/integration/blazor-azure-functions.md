@@ -13,7 +13,7 @@ This guide shows how to build a Blazor WebAssembly app that uses **Azure Functio
 
 ## What is Azure Functions?
 
-Azure Functions is a serverless compute service designed to run small pieces of code (functions) without managing infrastructure. Azure automatically handles hosting, scaling, and execution. Functions run on demand triggered by HTTP requests, timers, queues, or other Azure events, making them ideal for lightweight APIs, background tasks, and event-driven workflows.
+[Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) is a serverless compute service designed to run small pieces of code (functions) without managing infrastructure. Azure automatically handles hosting, scaling, and execution. Functions run on demand triggered by HTTP requests, timers, queues, or other Azure events, making them ideal for lightweight APIs, background tasks, and event-driven workflows.
 
 ## Why use Azure Functions with Blazor?
 
@@ -201,15 +201,10 @@ using Syncfusion.Blazor;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
-
 builder.Services.AddSyncfusionBlazor();
 // For production: read base address from configuration
 // builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration["FunctionsBaseUrl"]!) });
-
 builder.Services.AddScoped(sp => new HttpClient {  BaseAddress = new Uri("http://localhost:7071/") });
-
-
-await builder.Build().RunAsync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -227,7 +222,6 @@ Add the Syncfusion theme CSS and required scripts to the `wwwroot/index.html` fi
      <!-- Syncfusion theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
-
 <body>
     <!-- Syncfusion Blazor component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
@@ -270,7 +264,6 @@ public static class OrdersApi
         }
 
         var baseDate = DateTime.UtcNow.Date;
-
         // Generate demo orders
         var allOrders = Enumerable.Range(1, 10).Select(i => new OrderDto
         {
@@ -392,6 +385,7 @@ Add the following Razor page to your Blazor WebAssembly project:
 {% highlight razor  %}
 
 @page "/"
+
 @using System.Net.Http.Headers
 @inject HttpClient Http
 @using Syncfusion.Blazor.Grids
@@ -423,7 +417,6 @@ Add the following Razor page to your Blazor WebAssembly project:
   private List<EventItem> EventItems = new();
   private DateTime? From = DateTime.Today.AddDays(-7);
   private DateTime? To = DateTime.Today;
-
   class Order { public int Id { get; set; } public DateTime Date { get; set; } public string? Customer { get; set; } public double Total { get; set; } }
   // Use property names expected by Syncfusion Schedule (StartTime/EndTime/Subject)
   class EventItem { public DateTime StartTime { get; set; } public DateTime EndTime { get; set; } public string? Subject { get; set; } }
