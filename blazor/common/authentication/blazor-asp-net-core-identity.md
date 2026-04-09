@@ -21,7 +21,7 @@ Use Identity when your app needs cookie‑based, server‑side authentication an
 ## Prerequisites
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/) or [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 ## Create the sample app
 
@@ -165,39 +165,42 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Syncfusion.Blazor;
 ...
-// Configure EF Core with SQLite as the Identity data store
+// Configure EF Core to use SQLite for Identity data.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configure ASP.NET Core Identity using cookies and the default UI (email confirmation disabled for demo only; enable it with an email sender in production)
+// Configure Identity with the default UI.
 builder.Services
     .AddDefaultIdentity<IdentityUser>(options =>
     {
+        // Email confirmation is disabled for demo purposes; enable and configure an email sender in production.
         options.SignIn.RequireConfirmedAccount = false;
     })
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-// Razor Pages (Identity UI lives here)
+// Add Razor Pages (includes Identity UI).
 builder.Services.AddRazorPages();
 
-// Enable Blazor authentication state for CascadingAuthenticationState and AuthorizeRouteView
+// Enable Blazor authentication state support for CascadingAuthenticationState and AuthorizeRouteView.
 builder.Services.AddCascadingAuthenticationState();
 
-// Register Syncfusion Blazor services
+// Register Syncfusion Blazor services.
 builder.Services.AddSyncfusionBlazor();
 ...
+
+// Serve static files and enable endpoint routing.
 app.UseStaticFiles();
 app.UseRouting();
 
-// Authentication & Authorization middleware (order matters)
+// Enable authentication and authorization middleware (order matters).
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Antiforgery middleware (required for Identity Razor Pages login/logout forms in .NET 8+)
+// Enable antiforgery middleware (required for Identity Razor Pages login/logout forms in .NET 8+).
 app.UseAntiforgery();
 
-// Map endpoints
-app.MapRazorPages(); // Identity UI endpoints
+// Map Razor Pages endpoints (includes Identity UI).
+app.MapRazorPages();
 ...
 
 {% endhighlight %}
@@ -251,7 +254,7 @@ The `_LoginPartial.cshtml` file displays login, logout, register, and account ma
 In the project root (next to `Program.cs`), create a `Pages` folder and add a `Shared` subfolder. Inside the `Shared` folder, create a file named `_LoginPartial.cshtml` and add the following content.
 
 {% tabs %}
-{% highlight c# tabtitle="Pages/Shared/_LoginPartial.cshtml" %}
+{% highlight cshtml tabtitle="Pages/Shared/_LoginPartial.cshtml" %}
 
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
@@ -291,7 +294,7 @@ else
 Create a file named `_ViewImports.cshtml` inside the `Pages` folder and add the following code. This enables Tag Helpers for all Razor Pages, including the Identity UI pages.
 
 {% tabs %}
-{% highlight c# tabtitle="Pages/_ViewImports.cshtml" %}
+{% highlight cshtml tabtitle="Pages/_ViewImports.cshtml" %}
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
@@ -369,16 +372,16 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
         <div class="top-row px-4 d-flex align-items-center">
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
 
-            <!-- Right-aligned auth menu -->
+            @* Right-aligned auth menu *@
             <div class="ms-auto d-flex gap-3">
                 <AuthorizeView>
                     <Authorized>
                         <span class="navbar-text">Hello @context.User.Identity?.Name</span>
 
-                        <!-- Manage (Identity UI) -->
+                        @* Manage (Identity UI) *@
                         <a class="nav-link text-dark" href="/Identity/Account/Manage/Index" title="Manage">Manage</a>
 
-                        <!-- Logout: GET request shows confirmation page, then POST with antiforgery token completes logout -->
+                        @* Logout: GET request shows confirmation page, then POST with antiforgery token completes logout *@
                         <a class="nav-link text-dark" href="/Identity/Account/Logout">Logout</a>
                     </Authorized>
 
@@ -510,11 +513,11 @@ Update the navigation menu to include links to the secured pages. This makes the
 Open `Components/Layout/NavMenu.razor` and add the following navigation items after the existing menu links.
 
 {% tabs %}
-{% highlight c# tabtitle="Layout/NavMenu.razor" %}
+{% highlight razor tabtitle="Layout/NavMenu.razor" %}
 
 ...
 
-<!-- Secure pages (protected by [Authorize]) -->
+@* Secure pages (protected by [Authorize]) *@
 <div class="nav-item px-3">
     <NavLink class="nav-link" href="secure-grid">
         <span class="bi bi-list-nested" aria-hidden="true"></span> Secure Grid
@@ -579,3 +582,7 @@ dotnet run
 6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Syncfusion components.
 7. Click **Logout** to end the session and verify that accessing the secure pages redirects back to the login page. 
 
+## See also
+
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting started with Syncfusion Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)
