@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pivot table - strict CSP feature limitations - Syncfusion
+title: Pivot Table - Strict CSP Feature Limitations - Syncfusion
 description: Details on Syncfusion Blazor features in Pivot Table that require Content Security Policy (CSP) relaxation.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Pivot table - content security policy limitations
+# Pivot Table - Content Security Policy Limitations
 
 ## What's supported under strict CSP?
 
