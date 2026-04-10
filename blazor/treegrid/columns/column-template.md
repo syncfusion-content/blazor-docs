@@ -223,7 +223,7 @@ N> The column template feature is used to render the customized element value in
 ```
 
 The following screenshot represents the column Template.
-![Blazor Tree Grid with Column template](../images/blazor-treegrid-column-template.png)
+![Blazor Tree Grid with Column template](../images/blazor-treegrid-column-template.webp)
 
 N> * Tree Grid actions such as editing, filtering and sorting etc. will depend upon the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html). If the `Field` is not specified in the
 template column, the tree grid actions cannot be performed.
@@ -325,7 +325,7 @@ In the following code, checkbox is rendered based on Discontinued field value in
 ```
 
 The following screenshot represents the Conditional Template.
-![Blazor Tree Grid with Conditional Template](../images/blazor-treegrid-conditional-template.png)
+![Blazor Tree Grid with Conditional Template](../images/blazor-treegrid-conditional-template.webp)
 
 N> For Templated Tree Grid component, [ModelType](../templates/#template-modeltype) property of Tree Grid should be defined.
 
@@ -536,7 +536,7 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```
 
 The following screenshot represents the Image Template.
-![Blazor Tree Grid with Image Template](../images/blazor-treegrid-image-template.png)
+![Blazor Tree Grid with Image Template](../images/blazor-treegrid-image-template.webp)
 
 ## Using hyperlink column
 
@@ -631,4 +631,4 @@ In the above code, the url to be navigated is specified in the Link variable of 
 ```
 
 The following GIF represents template routing in tree grid
-![Blazor Tree Grid with Routing Template](../images/blazor-treegrid-template-routing.gif)
+![Blazor Tree Grid with Routing Template](../images/blazor-treegrid-template-routing.webp)

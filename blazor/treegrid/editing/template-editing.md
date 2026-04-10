@@ -127,7 +127,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Dialog Template](../images/blazor-treegrid-dialog-template.png)
+![Blazor TreeGrid with Dialog Template](../images/blazor-treegrid-dialog-template.)
 
 N> The template form editors should have **name** attribute.
 
@@ -261,7 +261,7 @@ public class TreeData
 {% endtabs %}
 
 The following image represents the dialog template of the tree grid component with the disabled components,
-![Blazor Tree Grid displays Disable components](../images/blazor-treegrid-disable-component.png)
+![Blazor Tree Grid displays Disable components](../images/blazor-treegrid-disable-component.webp)
 
 ### Set focus to editor
 
@@ -390,4 +390,4 @@ public class TreeData
 {% endtabs %}
 
 The following image represents the AutoComplete component in a focused state inside the dialog template of the tree grid component,
-![Blazor Tree Grid displays Dynamic Focus of Component](../images/blazor-treegrid-dynamic-focus-component.gif)
+![Blazor Tree Grid displays Dynamic Focus of Component](../images/blazor-treegrid-dynamic-focus-component.webp)
