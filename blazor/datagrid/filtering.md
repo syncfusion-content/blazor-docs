@@ -13,7 +13,7 @@ Filtering is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg
 
 ## Enable filtering
 
-To enable filtering in the DataGrid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**. Once enabled, configure filtering behavior and appearance using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) property.
+To enable filtering in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**. Once enabled, configure filtering behavior and appearance using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -453,7 +453,7 @@ The following example filters both **"Order ID"** and **"Customer ID"** columns 
 
 ## Filter operators
 
-The DataGrid provides various filter operators to define filter conditions for columns. Define the filter operator using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Operator) property in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns)  collection of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides various filter operators to define filter conditions for columns. Define the filter operator using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Operator) property in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns)  collection of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 The available operators and their supported data types are:
 
@@ -519,11 +519,11 @@ The "Like" filter processes search patterns using the "%" symbol, retrieving val
 
 ## Diacritics filter
 
-The diacritics filter feature handles text data that includes accented characters. Diacritics are accent marks added to letters (examples: é, ñ, ü, ç). By default, the grid ignores these characters during filtering.
+The diacritics filter feature handles text data that includes accented characters. Diacritics are accent marks added to letters (examples: é, ñ, ü, ç). By default, the DataGrid ignores these characters during filtering.
 
 This feature is essential for international data where names like "José" and "Jose" should be treated differently (or the same, depending on requirements).
 
-Enable diacritic character consideration by setting [FilterSettings.IgnoreAccent](https://ej2.syncfusion.com/react/documentation/api/grid/filter#filterbycolumn) to `true`.
+Enable diacritic character consideration by setting `FilterSettings.IgnoreAccent` to `true`.
 
 The following example includes diacritic characters in the filtering process:
 
@@ -532,19 +532,19 @@ The following example includes diacritic characters in the filtering process:
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@GridData" AllowFiltering="true" AllowSorting="true" AllowPaging="true">
-    <GridPageSettings PageSize="6"></GridPageSettings>
+<SfGrid @ref="Grid" DataSource="@GridData" AllowFiltering="true" Height="315px">
+    <GridFilterSettings IgnoreAccent="true"></GridFilterSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d"  TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Name) HeaderText="Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.CustomerID) HeaderText="CustomerID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     public List<EmployeeData> GridData { get; set; }
-    SfGrid<EmployeeData>? Grid { get; set; }
+    SfGrid<EmployeeData> Grid;
 
     protected override void OnInitialized()
     {
@@ -555,24 +555,22 @@ The following example includes diacritic characters in the filtering process:
 {% endhighlight %}
 
 {% highlight c# tabtitle="EmployeeData.cs" %}
- 
-    public List<EmployeeData> GridData { get; set; }
-    SfGrid<EmployeeData>? Grid { get; set; }
+
+   public List<EmployeeData> GridData { get; set; }
+    SfGrid<EmployeeData> Grid;
 
     protected override void OnInitialized()
     {
         GridData = EmployeeData.GetAllRecords();
     }
-
-   public class EmployeeData
-   {
+    public class EmployeeData
+    {
     public static List<EmployeeData> Employees = new List<EmployeeData>();
     public EmployeeData(){}
-    public EmployeeData(int EmployeeID, string Name, string id, string CustomerID, string ShipName)
+    public EmployeeData(int EmployeeID, string Name, string CustomerID, string ShipName)
     {
         this.EmployeeID = EmployeeID;
         this.Name = Name;
-        this.id = id;
         this.CustomerID = CustomerID;
         this.ShipName = ShipName;
     }
@@ -581,33 +579,34 @@ The following example includes diacritic characters in the filtering process:
     {
         if (Employees.Count() == 0)
         {
-            Employees.Add(new EmployeeData(1, "Aeróbics", "list-01", "VINET", "Vins et alcools Chevalier"));
-            Employees.Add(new EmployeeData(2, "Aerógrafía en Agua", "list-02", "TOMSP", "Toms SpezialitAiten"));
-            Employees.Add(new EmployeeData(3, "AerografÃ­a", "list-03", "TAMSP", "Suprames dalices"));
-            Employees.Add(new EmployeeData(4, "Aeromodelaje", "list-04", "HANAA", "Ottilies Kaseladen"));
-            Employees.Add(new EmployeeData(5, "Águilas", "list-05", "VICTE", "Centro comercial Moctezuma"));
-            Employees.Add(new EmployeeData(6, "Álbumes de Delta", "list-06", "HANAR", "Que Delacia"));
-            Employees.Add(new EmployeeData(7, "Ãlbumes de Música", "list-07", "SUPRD", "Ernst Handel"));
-            Employees.Add(new EmployeeData(8, "Alusivos", "list-08", "CHOPS", "Richter Supermarkt"));
-            Employees.Add(new EmployeeData(9, "Ãerografía", "list-09", "RICSU", "Wellington"));
-            Employees.Add(new EmployeeData(10, "Análisis de Escritura a Mano", "list-10", "WELLI", "Victuailles"));
+            Employees.Add(new EmployeeData(1, "Aeróbics", "VINET", "Vins et alcools Chevalier"));
+            Employees.Add(new EmployeeData(2, "Aerógrafía en Agua","TOMSP", "Toms SpezialitAiten"));
+            Employees.Add(new EmployeeData(3, "AerografÃ­a", "TAMSP", "Suprames dalices"));
+            Employees.Add(new EmployeeData(4, "Aeromodelaje", "HANAA", "Ottilies Kaseladen"));
+            Employees.Add(new EmployeeData(5, "Águilas", "VICTE", "Centro comercial Moctezuma"));
+            Employees.Add(new EmployeeData(6, "Álbumes de Delta", "HANAR", "Que Delacia"));
+            Employees.Add(new EmployeeData(7, "Ãlbumes de Música", "SUPRD", "Ernst Handel"));
+            Employees.Add(new EmployeeData(8, "Alusivos", "list-08",  "Richter Supermarkt"));
+            Employees.Add(new EmployeeData(9, "Ãerografía", "CHOPS", "Wellington"));
+            Employees.Add(new EmployeeData(10, "Análisis de Escritura a Mano", "WELLI", "Victuailles"));
         }
         return Employees;
     }
 
     public int EmployeeID { get; set; }
     public string Name { get; set; }
-    public string id { get; set; }
     public string CustomerID { get; set; }
     public string ShipName { get; set; }
-}
+   }
 
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBdDpiNikopYwJV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Perform ENUM column filtering
 
-The DataGrid allows filtering enum-type data using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature. Enumerated values (enum) are predefined fixed options, such as status categories (Active, Inactive, Pending) or priority levels (High, Medium, Low). This is particularly useful for filtering columns with dropdown-based data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows filtering enum-type data using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature. Enumerated values (enum) are predefined fixed options, such as status categories (Active, Inactive, Pending) or priority levels (High, Medium, Low). This is particularly useful for filtering columns with dropdown-based data.
 
 In the following example, the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) component is rendered within the `FilterTemplate` of the **Type** column. The enumerated list is bound to the column, and filtering is applied dynamically using the  [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`. Within this event, the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_System_String_) method is used to apply filtering to the **Type** column.
 
@@ -729,7 +728,7 @@ public enum FileType : short
 
 ## Filtering with case sensitivity
 
-The DataGrid provides the flexibility to enable or disable case sensitivity during filtering. Control whether filtering operations consider the case of characters using the [EnableCaseSensitivity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_EnableCaseSensitivity) property within [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the flexibility to enable or disable case sensitivity during filtering. Control whether filtering operations consider the case of characters using the [EnableCaseSensitivity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_EnableCaseSensitivity) property within [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -830,7 +829,7 @@ public class OrderData
 
 ## Enable different filter for a column
 
-The DataGrid offers flexibility to customize filtering behavior for different columns by enabling various filter types such as `Menu`, `Excel`, or `CheckBox`. This allows tailoring the filtering experience to suit specific column needs. For example, use a menu-based filter for a category column, an Excel-like filter for a date column, and a checkbox filter for a status column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers flexibility to customize filtering behavior for different columns by enabling various filter types such as `Menu`, `Excel`, or `CheckBox`. This allows tailoring the filtering experience to suit specific column needs. For example, use a menu-based filter for a category column, an Excel-like filter for a date column, and a checkbox filter for a status column.
 
 Adjust the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) based on requirements.
 
@@ -989,7 +988,7 @@ public class OrderData
 
 ## Change default filter operator for particular column
 
-The DataGrid provides flexibility to change the default filter operator for a particular column. By default, the filter operator for string columns is `StartsWith`, for numeric columns is `Equal`, and for boolean columns is `Equal`. Customize the filter operator to better match the nature of the data using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides flexibility to change the default filter operator for a particular column. By default, the filter operator for string columns is `StartsWith`, for numeric columns is `Equal`, and for boolean columns is `Equal`. Customize the filter operator to better match the nature of the data using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1529,7 +1528,7 @@ public async Task FilteredHandler(FilteredEventArgs args)
 
 ## Clear filter via programmatically
 
-The DataGrid provides a [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearFilteringAsync) method to clear applied filtering. This method removes filter conditions and resets the DataGrid to its original state.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearFilteringAsync) method to clear applied filtering. This method removes filter conditions and resets the DataGrid to its original state.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

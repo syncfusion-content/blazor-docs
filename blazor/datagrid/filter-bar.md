@@ -21,7 +21,7 @@ Filter expressions are operators that define how the DataGrid compares entered v
 |----------|---------|-------------|-----------|
 | = | =value | Matches values exactly equal to the entered value | Number |
 | != | !=value | Matches values not equal to the entered value | Number |
-| > | >value |Matches values greater than the entered value | Number |
+| > | >value | Matches values greater than the entered value | Number |
 | < | <value |  Matches values less than the entered value | Number |
 | >= | >=value | Matches values greater than or equal to the entered value | Number |
 | <= | <=value | Matches values less than or equal to the entered value | Number |
@@ -532,7 +532,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports in
 
 * [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) - For date-based filtering.
 * [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) - For numeric value filtering  
-* [CSfomboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) - For predefined selection filtering.
+* [SfComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) - For predefined selection filtering.
 * [SfMultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started-webapp) - For multi-value filtering.
 
 To implement a custom filter component, define a template using the `FilterTemplate` property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
