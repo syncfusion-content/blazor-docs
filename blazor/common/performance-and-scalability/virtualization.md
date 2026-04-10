@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Virtualization in Syncfusion® Blazor Components
+title: Virtualization in Syncfusion Blazor Components
 description: Learn how Syncfusion Blazor components use Row and Column virtualization, Overscan, Virtual placeholders, Frozen columns, and Infinite scrolling.
 platform: Blazor
 control: Common
