@@ -1312,7 +1312,7 @@ The Syncfusion <sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports a
 
 This behavior allows the column to expand or shrink automatically so that cell values are fully visible without being truncated. When `AutoFit` is applied, the content‑driven width takes precedence over any predefined width values, ensuring optimal display for columns that contain variable or unpredictable data.
 
-In this configuration, `AutoFit` is enabled for the CustomerID and ShipCity columns.
+In this configuration, `AutoFit` is enabled for the **CustomerID** and **ShipCity** columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
