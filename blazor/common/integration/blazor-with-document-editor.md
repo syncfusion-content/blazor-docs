@@ -238,7 +238,7 @@ The app launches and renders the **[Syncfusion® Blazor DocumentEditor](https://
 
 ![Blazor DataGrid with DocumentEditor](images/documenteditor-with-datagrid.webp)
 
-## Use case
+## Use cases
 
 Integrating the Syncfusion® Blazor **DataGrid** with the **DocumentEditor** enables users to transform structured data into fully editable Word style documents within a single workflow. Users can browse, filter, and select records in the DataGrid and instantly generate or update documents without switching applications.
 
@@ -246,11 +246,11 @@ Integrating the Syncfusion® Blazor **DataGrid** with the **DocumentEditor** ena
 
 Display order or billing records in the DataGrid with details such as order ID, customer name, items, quantity, and pricing. When a user selects a record, the DocumentEditor loads a formatted invoice or quotation template populated with the selected data. Users can then edit text, adjust formatting, add terms, and finalize the document for export or sharing.
 
-### HR record management and documentation
+### HR record management
 
 Create an HR management system where the DataGrid lists employee records such as employee ID, name, department, role, and status. Selecting an employee record opens an editable document in the DocumentEditor for offer letters, appraisal reports, employment contracts, or disciplinary notices. HR teams can quickly personalize documents while ensuring consistency and accuracy.
 
-### Customer support and case documentation
+### Customer support
 
 Build a customer support application where the DataGrid displays support tickets with fields like ticket ID, customer name, issue type, status, and priority. Selecting a ticket opens a case summary document in the DocumentEditor, allowing agents to write incident reports, resolution summaries, or customer communication letters directly from the case data.
 
@@ -258,7 +258,7 @@ Build a customer support application where the DataGrid displays support tickets
 
 Use the DataGrid to manage legal records such as contracts, agreements, or compliance documents. Each row can represent a contract with details like contract number, parties involved, effective date, and status. Selecting a record loads a contract template in the DocumentEditor where legal teams can review, edit clauses, add signatures, and prepare the document for approval.
 
-### Business reports and formal documentation
+### Business reports
 
 Present business data such as project details, financial summaries, or operational metrics in the DataGrid. Users can select one or more records to generate structured reports, summaries, or approval documents in the DocumentEditor. This enables teams to convert raw data into polished, professional documents without manual copying or formatting errors.
 
