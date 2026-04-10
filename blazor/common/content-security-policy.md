@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Content Security Policy (CSP) - Syncfusion
 description: Learn how to use Syncfusion Blazor components with a strict Content Security Policy (CSP) in Blazor Web App, Blazor WebAssembly (WASM), and Blazor Server.
@@ -75,13 +75,13 @@ The following components need inline styles to work and always require `'unsafe-
 
 | Category | Components | Reason for unsafe-inline Requirement |
 |----------|------------|------------|
-| **Data Visualization** | • Charts<br> • 3D Charts<br> • Stock Chart<br> • Bullet Chart<br> • Range Selector<br> • Sankey<br> • Sparkline Chart<br> • Smith Chart |<ul><li>These components are independent of external Syncfusion theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.</li><li>Dynamic calculation of axes, scales, gradients, data labels, and tooltips at runtime.</li><li>Inline styles ensure pixel‑perfect alignment and high‑performance redraws during zoom, pan, and real-time updates.</li></ul>|
-| **File Viewers & Editors** | • Block Editor<br> • Rich Text Editor |<ul><li>File editing components apply dynamic inline styles to render rich content accurately based on user input and stored markup.</li><li>Formatting features (bold, italic, underline, font size, font color, background color, lists, links, alignment) require inline styles to reflect user intent precisely.</li></ul>|
-| **Interactive Chat** | • Chat UI |<ul><li>Chat UI component is implemented using Blazor’s Virtualize component, which optimizes performance by rendering only the visible subset of messages within the viewport while representing the full dataset logically.</li><li>Blazor’s virtualization mechanism relies on runtime-generated inline styles as an essential part of its layout and scrolling model.</li></ul>|
-| **File Management** | • File Manager |<ul><li>Uses inline styles for responsive grid/list views, selection highlights, drag indicators, and context menus.</li><li>Inline styles allow immediate visual feedback during selection, resizing panes, and drag operations.</li></ul>|
-| **Layout** | • Card |<ul><li>Card components dynamically adjust layout, elevation, spacing, and responsive breakpoints via inline styles.</li><li>Enables adaptive layouts across different screen sizes and container widths.</li><li>Supports dynamic styling scenarios such as hover effects and conditional emphasis.</li></ul>|
-| **Diagrams and Maps** | • Diagram |<ul><li>Diagram components depend extensively on inline styles for interactive behaviors.</li><li>Inline styles are used for node positioning, connectors, ports, annotations, and selection states.</li><li>Dragging, resizing, rotating, and snapping operations require continuous style updates at runtime.</li></ul>|
-| **Kanban** | • Kanban |<ul><li>Kanban boards use inline styles to provide fluid drag‑and‑drop interactions between columns and cards.</li></ul>|
+| **Data Visualization** | • Charts<br> • 3D Charts<br> • Stock Chart<br> • Bullet Chart<br> • Range Selector<br> • Sankey<br> • Sparkline Chart<br> • Smith Chart |• These components are independent of external Syncfusion theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.<br>• Dynamic calculation of axes, scales, gradients, data labels, and tooltips at runtime.<br>• Inline styles ensure pixel-perfect alignment and high-performance redraws during zoom, pan, and real-time updates.|
+| **File Viewers & Editors** | • Block Editor<br> • Rich Text Editor |• File editing components apply dynamic inline styles to render rich content accurately based on user input and stored markup.<br>• Formatting features (bold, italic, underline, font size, font color, background color, lists, links, alignment) require inline styles to reflect user intent precisely.|
+| **Interactive Chat** | • Chat UI |• Chat UI component is implemented using Blazor's Virtualize component, which optimizes performance by rendering only the visible subset of messages within the viewport while representing the full dataset logically.<br>• Blazor's virtualization mechanism relies on runtime-generated inline styles as an essential part of its layout and scrolling model.|
+| **File Management** | • File Manager |• Uses inline styles for responsive grid/list views, selection highlights, drag indicators, and context menus.<br>• Inline styles allow immediate visual feedback during selection, resizing panes, and drag operations.|
+| **Layout** | • Card |• Card components dynamically adjust layout, elevation, spacing, and responsive breakpoints via inline styles.<br>• Enables adaptive layouts across different screen sizes and container widths.<br>• Supports dynamic styling scenarios such as hover effects and conditional emphasis.|
+| **Diagrams and Maps** | • Diagram |• Diagram components depend extensively on inline styles for interactive behaviors.<br>• Inline styles are used for node positioning, connectors, ports, annotations, and selection states.<br>• Dragging, resizing, rotating, and snapping operations require continuous style updates at runtime.|
+| **Kanban** | • Kanban |• Kanban boards use inline styles to provide fluid drag-and-drop interactions between columns and cards.|
 
 ### Scenario 2: components with limited features requiring *'unsafe-inline'*
 
