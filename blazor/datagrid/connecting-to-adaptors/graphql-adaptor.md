@@ -31,7 +31,7 @@ Install the following software and packages before starting the process:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | HotChocolate.AspNetCore | 15.1 or later | GraphQL server framework |
-| Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid component |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid component |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid |
 
 ## Setting Up the GraphQL Backend
@@ -49,7 +49,7 @@ NuGet packages are software libraries that add functionality to applications. Th
 **Required Packages:**
 
 - **HotChocolate.AspNetCore** (version 15.1 or later) - GraphQL server framework
-- **Syncfusion.Blazor.Grids** (version {{site.blazorversion}}) - DataGrid component
+- **Syncfusion.Blazor.Grid** (version {{site.blazorversion}}) - DataGrid component
 - **Syncfusion.Blazor.Themes** (version {{site.blazorversion}}) - Styling for DataGrid
 
 **Method 1: Using Package Manager Console**
@@ -60,7 +60,7 @@ NuGet packages are software libraries that add functionality to applications. Th
 
 ```powershell
 Install-Package HotChocolate.AspNetCore -Version 15.1.12
-Install-Package Syncfusion.Blazor.Grids -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}}
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
@@ -639,7 +639,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-* The Syncfusion.Blazor.Grids package was installed in [**Step 1**](#step-1-install-and-configure-blazor-datagrid-components-with-graphql) of the previous heading.
+* The Syncfusion.Blazor.Grid package was installed in **Step 1** of the previous heading.
 * Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
