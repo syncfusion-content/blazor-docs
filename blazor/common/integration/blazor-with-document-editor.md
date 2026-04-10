@@ -236,7 +236,7 @@ The app launches and renders the **[Syncfusion® Blazor DocumentEditor](https://
 
 ![Blazor DataGrid with DocumentEditor](images/documenteditor-with-datagrid.webp)
 
-## Use case
+## Use cases
 
 Integrating the Syncfusion® Blazor **DataGrid** with the **DocumentEditor** enables users to transform structured data into fully editable Word style documents within a single workflow. Users can browse, filter, and select records in the DataGrid and instantly generate or update documents without switching applications.
 
