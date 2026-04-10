@@ -86,7 +86,6 @@ Add the following stylesheet and script references in the server app's `~/Compon
 
 <!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
 <!-- Syncfusion Blazor PDF Viewer component script -->
 <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
