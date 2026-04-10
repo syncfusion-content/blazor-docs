@@ -77,20 +77,13 @@ Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-si
 Add the following stylesheet and script references inside the `_Host.cshtml` file.
 
 {% tabs %}
-{% highlight html tabtitle="_Host.cshtml" hl_lines="4 10" %}
+{% highlight html tabtitle="_Host.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion theme stylesheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
+<!-- Syncfusion theme stylesheet -->
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
-<body>
-    ...
-    <!-- Syncfusion Blazor core script -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    ...
-</body>
+<!-- Syncfusion Blazor core script -->
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -227,7 +220,7 @@ export default defineConfig({
 The Blazor runtime and Syncfusion<sup style="font-size:70%">&reg;</sup> scripts/themes are required for rendering Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components inside React. Add the following resources to the `index.html` file of your React project. Place the stylesheet in the `<head>` section and the scripts before the closing `</body>` tag.
 
 {% tabs %}
-{% highlight html tabtitle="index.html" hl_lines="2 5 8" %}
+{% highlight html tabtitle="index.html" %}
 
 <!-- Syncfusion Blazor theme stylesheet-->
 <link rel="stylesheet" href="/_content/Syncfusion.Blazor.Themes/fluent2.css" />

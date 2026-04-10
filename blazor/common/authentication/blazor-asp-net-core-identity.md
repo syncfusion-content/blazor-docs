@@ -8,7 +8,7 @@ documentation: ug
 
 # Blazor Web App (Interactive Server) with ASP.NET Core Identity
 
-This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App using Interactive Server render mode** and protect Syncfusion® components such as **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**.
+This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App using Interactive Server render mode** and protect [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) such as **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**.
 
 ## What is ASP.NET Core Identity?
 
@@ -226,23 +226,16 @@ Add the required namespaces in `Components/_Imports.razor`. These namespaces all
 
 Before adding the Syncfusion theme stylesheet, ensure that no other Syncfusion theme CSS (e.g., `material.css`, `fluent.css`) is already referenced to avoid styling conflicts.
 
-Open `Components/App.razor` and include the following inside the `<head>` and `<body>` sections.
+Open `App.razor` and add the following to the `<head>` and `<body>` sections.
 
 {% tabs %}
-{% highlight razor tabtitle="Components/App.razor" hl_lines="4 11" %}
+{% highlight razor tabtitle="App.razor" %}
 
-<head>
-    ...
-    <!-- Syncfusion theme stylesheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-    <HeadOutlet />
-</head>
+<!-- Syncfusion theme stylesheet -->
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
-<body>
-    ...
-    <!-- Syncfusion Blazor core script -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
+<!-- Syncfusion Blazor core script -->
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
