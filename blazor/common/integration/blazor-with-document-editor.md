@@ -11,8 +11,6 @@ documentation: ug
 
 This guide shows how to integrate the **[Syncfusion® Blazor DocumentEditor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)** (WordProcessor) together with the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using `Server` interactivity.
 
-A common use case for this integration is helping users work with structured records while creating or updating a related document at the same time. Users can browse, filter, or select items in the DataGrid and instantly view the matching details in the DocumentEditor as an editable Word style document. This is especially valuable in scenarios such as **order confirmation**, **HR record management**, and **customer support workflows**, where teams frequently transform Grid data into formal documents. It allows users to create invoices, summaries, letters, or agreements from one screen without switching tools, copying data, or risking errors from manual entry.
-
 If you haven't created your Blazor App yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create a project.
 
 ## Install Syncfusion® NuGet packages
@@ -237,6 +235,30 @@ dotnet run
 The app launches and renders the **[Syncfusion® Blazor DocumentEditor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor)** and **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in your default browser.
 
 ![Blazor DataGrid with DocumentEditor](images/documenteditor-with-datagrid.webp)
+
+## Use case
+
+Integrating the Syncfusion® Blazor **DataGrid** with the **DocumentEditor** enables users to transform structured data into fully editable Word style documents within a single workflow. Users can browse, filter, and select records in the DataGrid and instantly generate or update documents without switching applications.
+
+### Invoice and quotation generation
+
+Display order or billing records in the DataGrid with details such as order ID, customer name, items, quantity, and pricing. When a user selects a record, the DocumentEditor loads a formatted invoice or quotation template populated with the selected data. Users can then edit text, adjust formatting, add terms, and finalize the document for export or sharing.
+
+### HR record management and documentation
+
+Create an HR management system where the DataGrid lists employee records such as employee ID, name, department, role, and status. Selecting an employee record opens an editable document in the DocumentEditor for offer letters, appraisal reports, employment contracts, or disciplinary notices. HR teams can quickly personalize documents while ensuring consistency and accuracy.
+
+### Customer support and case documentation
+
+Build a customer support application where the DataGrid displays support tickets with fields like ticket ID, customer name, issue type, status, and priority. Selecting a ticket opens a case summary document in the DocumentEditor, allowing agents to write incident reports, resolution summaries, or customer communication letters directly from the case data.
+
+### Legal agreement and contract drafting
+
+Use the DataGrid to manage legal records such as contracts, agreements, or compliance documents. Each row can represent a contract with details like contract number, parties involved, effective date, and status. Selecting a record loads a contract template in the DocumentEditor where legal teams can review, edit clauses, add signatures, and prepare the document for approval.
+
+### Business reports and formal documentation
+
+Present business data such as project details, financial summaries, or operational metrics in the DataGrid. Users can select one or more records to generate structured reports, summaries, or approval documents in the DocumentEditor. This enables teams to convert raw data into polished, professional documents without manual copying or formatting errors.
 
 ## See also
 
