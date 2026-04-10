@@ -15,7 +15,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
 1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor offline installer file(.exe) from the download location by double‑clicking it. The installer wizard opens and extracts the package.
 
-   ![Offline installer setup extracting package](images/webofflineinstaller-1.png)
+   ![Offline installer setup extracting package](images/webofflineinstaller-1.webp)
 
    N> The installer extracts syncfusionessentialblazor_(version).exe and displays the extraction progress(unzip operation).
 
@@ -28,7 +28,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    Enter the Syncfusion<sup style="font-size:70%">&reg;</sup> account email address and password. If you don’t already have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can sign up for one by clicking "**Create an account**". If you have forgotten your password, click on "**Forgot Password**" to create a new one. Once you’ve entered your Syncfusion<sup style="font-size:70%">&reg;</sup> email and password, click Next.
 
-   ![Offline installer Login to install wizard](images/webofflineinstaller-2.png)
+   ![Offline installer Login to install wizard](images/webofflineinstaller-2.webp)
 
    **Use unlock key:**
 
@@ -38,13 +38,13 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    To learn how to generate an unlock key for both trial and licensed products, see [this](https://www.syncfusion.com/kb/2326) Knowledge Base article.
 
-   ![Offline installer Use unlock key wizard](images/webofflineinstaller-3.png)
+   ![Offline installer Use unlock key wizard](images/webofflineinstaller-3.webp)
 
 3. Read the License Terms and Privacy Policy, then select **I agree to the License Terms and Privacy Policy**. Select **Next**.
 
 4. Change the install and sample locations as needed. Adjust additional settings if required. Select **Next** or **Install** to continue with defaults.
 
-   ![Offline installer Settings wizard with install locations and options](images/webofflineinstaller-4.png)
+   ![Offline installer Settings wizard with install locations and options](images/webofflineinstaller-4.webp)
 
    ***Additional settings***
 
@@ -58,25 +58,25 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
 5. If previous versions of the current product is installed, the Uninstall previous versions wizard opens. Select **Uninstall** to remove the previous versions, then select **Proceed**.
 
-   ![Offline installer Uninstall previous versions wizard](images/webofflineinstaller-5.png)
+   ![Offline installer Uninstall previous versions wizard](images/webofflineinstaller-5.webp)
 
    N> From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version. <br /> <br /> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
 
    **Confirmation alert:**
 
-   ![Web Offline Installer Confirmation Alert](images/webofflineinstaller-6.png)
+   ![Web Offline Installer Confirmation Alert](images/webofflineinstaller-6.webp)
 
    **Uninstall progress:**
 
-   ![Web Offline Installer Uninstall Progress Wizard](images/webofflineinstaller-7.png)
+   ![Web Offline Installer Uninstall Progress Wizard](images/webofflineinstaller-7.webp)
 
    ***Install progress***
 
-   ![Web Offline Installer Progress Wizard](images/webofflineinstaller-8.png)
+   ![Web Offline Installer Progress Wizard](images/webofflineinstaller-8.webp)
 
    N> The Completed screen appears after installation. If versions were uninstalled, it shows both uninstall and install status.
 
-   ![Web Offline Installer Summary Wizard](images/webofflineinstaller-9.png)
+   ![Web Offline Installer Summary Wizard](images/webofflineinstaller-9.webp)
 
 6. After installation, select **Launch Control Panel** to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
 
