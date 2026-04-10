@@ -22,7 +22,7 @@ This section describes how to connect the [Blazor Pivot Table](https://www.syncf
 1. Open the **NuGet Package Manager** in your project solution and search for [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data/).
 2. Install the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data/) package to add Snowflake support.
 
-![Add the NuGet package Snowflake.Data to the project](../images/Snowflake-nuget-package-install.png)
+![Add the NuGet package Snowflake.Data to the project](../images/Snowflake-nuget-package-install.webp)
 
 ### Step 3: Connect to the Snowflake Database
 In the **Index.razor** file, under the `OnInitialized` method, use the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data) library to connect to the Snowflake database and retrieve data for the Pivot Table.
@@ -104,7 +104,7 @@ In the **Index.razor** file, under the `OnInitialized` method, use the [Snowflak
 2. The Pivot Table displays the Snowflake data, organized according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with Snowflake data](../images/blazor-pivottable-Snowflake-databinding.png)
+![Blazor Pivot Table bound with Snowflake data](../images/blazor-pivottable-Snowflake-databinding.webp)
 
 ## Connecting a Snowflake database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
@@ -118,13 +118,13 @@ Follow these steps to set up a Web API service that retrieves Snowflake data for
 1. Open Visual Studio and create a new ASP.NET Core Web App project named **MyWebService**.
 2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
 
-![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
+![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.webp)
 
 #### Step 2: Install the Snowflake.Data NuGet Package
 1. Open the NuGet Package Manager in your project solution.
 2. Search for and install the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data) package to enable Snowflake connectivity.
 
-![Add the NuGet package Snowflake.Data to the project](../images/Snowflake-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package Snowflake.Data to the project](../images/Snowflake-nuget-package-install-in-web-service-app.webp)
 
 #### Step 3: Create a Web API Controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
@@ -217,7 +217,7 @@ namespace MyWebService.Controllers
 1. Access the Web API endpoint at `https://localhost:44378/Pivot` to view the JSON data retrieved from the Snowflake database.
 2. The browser will display the JSON data, as shown below.
 
-![Hosted Web API URL](../images/Snowflake-data.png)
+![Hosted Web API URL](../images/Snowflake-data.webp)
 
 ### Connecting the Pivot Table to a Snowflake Database Using the Web API Service
 
@@ -274,7 +274,7 @@ This section explains how to connect the [Blazor Pivot Table](https://www.syncfu
 2. The Pivot Table displays the Snowflake data fetched via the Web API, structured according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with Snowflake data](../images/blazor-pivottable-Snowflake-databinding.png)
+![Blazor Pivot Table bound with Snowflake data](../images/blazor-pivottable-Snowflake-databinding.webp)
 
 ### Additional Resources
 Explore a complete example of the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) integrated with an ASP.NET Core Web application to fetch data from a Snowflake database in this [GitHub repository](https://github.com/SyncfusionExamples/web-bind-Snowflake-database-to-pivot-table/tree/master/Blazor).

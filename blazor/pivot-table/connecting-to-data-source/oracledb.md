@@ -22,7 +22,7 @@ This section describes how to connect the [Blazor Pivot Table](https://www.syncf
 1. Open the **NuGet Package Manager** in your project solution and search for [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core/).
 2. Install the [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core/) package to add Oracle support.
 
-![Add the NuGet package Oracle.ManagedDataAccess.Core to the project](../images/oracledb-nuget-package-install.png)
+![Add the NuGet package Oracle.ManagedDataAccess.Core to the project](../images/oracledb-nuget-package-install.webp)
 
 ### Step 3: Connect to the Oracle database
 In the **Index.razor** file, under the `OnInitialized` method, use the [Oracle.ManagedDataAccess](https://www.nuget.org/packages/Oracle.ManagedDataAccess) library to connect to an Oracle database and retrieve data for the Pivot Table.
@@ -111,7 +111,7 @@ In the **Index.razor** file, under the `OnInitialized` method, use the [Oracle.M
 2. The Pivot Table will display the Oracle data, organized according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with Oracle data](../images/blazor-pivottable-oracledb-databinding.png)
+![Blazor Pivot Table bound with Oracle data](../images/blazor-pivottable-oracledb-databinding.webp)
 
 ## Connecting an Oracle database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
@@ -125,12 +125,12 @@ Follow these steps to set up a Web API service that retrieves Oracle data for th
 1. Open Visual Studio and create a new **ASP.NET Core Web App** project named **MyWebService**.
 2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
 
-![Creating an ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
+![Creating an ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.webp)
 
 #### Step 2: Install the Oracle NuGet package
 1. Install the [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core/) package using the **NuGet Package Manager** to enable Oracle connectivity.
 
-![Add the NuGet package Oracle.ManagedDataAccess.Core to the project](../images/oracledb-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package Oracle.ManagedDataAccess.Core to the project](../images/oracledb-nuget-package-install-in-web-service-app.webp)
 
 #### Step 3: Create a Web API controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
@@ -221,7 +221,7 @@ namespace MyWebService.Controllers
 1. Access the Web API endpoint at `https://localhost:44346/Pivot` to view the JSON data retrieved from Oracle.
 2. The browser will display the JSON data, as shown below.
 
-![Hosted Web API URL](../images/oracle-code-web-app.png)
+![Hosted Web API URL](../images/oracle-code-web-app.webp)
 
 ### Connecting the Pivot Table to a Oracle database using the Web API service
 
@@ -281,7 +281,7 @@ This section explains how to connect the Blazor Pivot Table to Oracle data retri
 2. The Pivot Table will display the Oracle data fetched via the Web API, structured according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with OracleDB data](../images/blazor-pivottable-oracledb-databinding.png)
+![Blazor Pivot Table bound with OracleDB data](../images/blazor-pivottable-oracledb-databinding.webp)
 
 ### Additional resources
 Explore a complete example of the Blazor Pivot Table integrated with an ASP.NET Core Web application to fetch data from an Oracle database in this [GitHub repository](https://github.com/SyncfusionExamples/how-to-bind-Oracle-database-to-pivot-table/tree/master/Blazor).
