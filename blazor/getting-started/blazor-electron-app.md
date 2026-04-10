@@ -139,7 +139,7 @@ Add the following stylesheet and script references in `~/App.razor`.
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-<!-- Syncfusion theme style sheet -->
+<!-- Syncfusion theme stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
 <!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
