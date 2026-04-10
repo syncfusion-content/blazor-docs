@@ -22,7 +22,7 @@ This section describes how to connect the [Blazor Pivot Table](https://www.syncf
 1. Open the **NuGet Package Manager** in your project solution and search for **MySql.Data**.
 2. Install the **MySql.Data** package to add MySQL database support.
 
-![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.webp)
 
 ### Step 3: Connect to MySQL
 In the **Index.razor** file, under the `OnInitialized` method, use the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library to connect to a MySQL database and retrieve data for the Pivot Table.
@@ -102,7 +102,7 @@ The following code connects to a MySQL database, retrieves data, and binds it to
 2. The Pivot Table will display the MySQL data, organized according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.png)
+![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.webp)
 
 ## Connecting a MySQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
@@ -116,12 +116,12 @@ Follow these steps to set up a Web API service that retrieves MySQL data for the
 1. Open Visual Studio and create a new **ASP.NET Core Web App** project named **MyWebService**.
 2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
 
-![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
+![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.webp)
 
 #### Step 2: Install the MySql.Data NuGet Package
 1. Install the [MySql.Data](https://www.nuget.org/packages/MySql.Data) package using the **NuGet Package Manager** to enable MySQL connectivity.
 
-![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
+![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.webp)
 
 #### Step 3: Create a Web API Controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
@@ -214,7 +214,7 @@ The following code sets up the Web API controller to fetch and serialize MySQL d
 1. Access the Web API endpoint at `https://localhost:7146/Pivot` to view the JSON data retrieved from MySQL.
 2. The browser will display the JSON data, as shown below.
 
-![Hosted Web API URL](../images/mysql-data.png)
+![Hosted Web API URL](../images/mysql-data.webp)
 
 ### Connecting the Pivot Table to MySQL Using the Web API Service
 
@@ -271,7 +271,7 @@ The following code connects the Pivot Table to the Web API and configures the re
 2. The Pivot Table will display the MySQL data fetched via the Web API, structured according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.png)
+![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.webp)
 
 ### Additional Resources
 Explore a complete example of the Blazor Pivot Table integrated with MySQL using a Web API service in this [GitHub repository](https://github.com/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table/tree/master/Blazor).

@@ -84,4 +84,4 @@ In the following example, a custom style is applied to the column header **FY 20
 
 ```
 
-![Apply Custom Style to Pivot Cells in Blazor PivotTable](images/blazor-pivottable-custom-style.png)
+![Apply Custom Style to Pivot Cells in Blazor PivotTable](images/blazor-pivottable-custom-style.webp)
