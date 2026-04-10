@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor-React Integration | Syncfusion
+title: Integrating Syncfusion Blazor Components in React
 description: Learn how to integrate Syncfusion Blazor components into a React application using Blazor custom elements for seamless UI rendering.
 platform: Blazor
 control: Common

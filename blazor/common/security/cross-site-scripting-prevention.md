@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cross-Site Scripting (XSS) Security | Syncfusion Blazor
+title: Cross-Site Scripting (XSS) Security in Blazor Apps | Syncfusion
 description: Protect Syncfusion Blazor components from XSS using built‑in sanitization, server-side validation, and essential security best practices.
 platform: Blazor
 control: Common

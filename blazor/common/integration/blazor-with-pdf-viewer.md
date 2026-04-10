@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® Blazor PDF Viewer and DataGrid Integration
+title: Integrating Syncfusion Blazor DataGrid with PDF Viewer
 description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer and DataGrid in a Blazor Web App (Server).
 platform: Blazor
 control: Common
