@@ -9,9 +9,9 @@ documentation: ug
 
 # Column Chooser in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a column chooser feature that allows dynamically showing or hiding columns.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes a built-in Column Chooser feature that allows columns to be shown or hidden through a simple dialog with checkboxes.
 
-To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser)  property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
+To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser)  property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) to **true**. Add `ColumnChooser` item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -80,7 +80,7 @@ To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLfsVirCTHjHXFK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The column chooser dialog displays the header text of each column by default. If the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) is not defined, the corresponding [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) name is shown instead.
+> The column chooser dialog displays the header text of each column by default. If the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) is not defined, the corresponding [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) name is shown instead. The DataGrid automatically updates its layout and column widths based on the currently visible columns.
 
 ## Hide column in column chooser dialog
 
@@ -158,11 +158,11 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVJihiLMwbAZjZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The `ShowInColumnChooser` property is applied to each column individually. By setting it to **false**, specific columns can be excluded from the column chooser dialog.
-> * At least one column must remain visible in the Grid to ensure proper rendering and interaction.
+> * At least one column must remain visible in the DataGrid to ensure proper rendering and interaction.
 
 ## Open column chooser via programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page. By default, the column chooser button appears in the right corner of the DataGrid and opens the dialog below it when clicked. The method allows programmatically opening the dialog at specific "X" and "Y" axis positions. 
 
 | Parameter | Type     | Description                                                                 |
 |-----------|----------|-----------------------------------------------------------------------------|
@@ -340,9 +340,11 @@ public class OrderData
 
 ## Change default search operator of the column chooser
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a search box in the column chooser dialog to filter column names. By default, the search uses the **StartsWith** operator. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a search box in the column chooser dialog to filter column names. By default, the search functionality uses the **StartsWith** operator to match columns and display results.
 
 To modify this behavior, use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html).
+
+The following example demonstrates changing the default search operator to `Contains`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -416,11 +418,16 @@ public class OrderData
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the column chooser dialog using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate) properties of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html). These templates enable injecting custom content into the body and footer of the column chooser.
 
+* `GridColumnChooserSettings.Template` – Customizes the main content area of the column chooser. Instead of showing a list of checkboxes with column names, a custom layout can be defined using this property.
+* `GridColumnChooserSettings.FooterTemplate` – Customizes the footer area of the column chooser. By default, it includes "OK" and "Cancel" buttons. This property allows replacing or modifying the footer content. It is optional.
+
 The parameters passed to the templates can be accessed using the implicit **context** parameter.
 
 ### Customize the content of column chooser
 
-The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) is used to customize the content of the column chooser dialog. The **context** parameter can be typecast to [ColumnChooserTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserTemplateContext.html) to access the list of columns within the template.
+The `Template` property of the `GridColumnChooserSettings` is used to customize the content of the column chooser dialog. The **context** parameter can be typecast to [ColumnChooserTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserTemplateContext.html) to access the list of columns within the template.
+
+In this example, [SfListView](https://blazor.syncfusion.com/documentation/listview/getting-started-webapp) is rendered inside the column chooser. Using `Clicked` event of `SfListView`, columns can be shown and hidden using [ShowColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnAsync_System_String_System_String_) and [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnAsync_System_String_System_String_) methods, allowing users to control column visibility directly from the column chooser interface. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -622,7 +629,7 @@ namespace Model
 
 ### Customize the footer of column chooser
 
-The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate)  property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) allows customizing the footer area of the column chooser dialog. The **context** parameter can be typecast to [ColumnChooserFooterTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserFooterTemplateContext.html)  to access the list of columns and perform actions such as applying or cancelling changes.
+The `FooterTemplate` property of the `GridColumnChooserSettings` allows customizing the footer area of the column chooser dialog. The **context** parameter can be typecast to `ColumnChooserFooterTemplateContext` to access the list of columns and perform actions such as applying or cancelling changes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
