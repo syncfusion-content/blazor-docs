@@ -1312,12 +1312,13 @@ The Syncfusion <sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports a
 
 This behavior allows the column to expand or shrink automatically so that cell values are fully visible without being truncated. When `AutoFit` is applied, the content‑driven width takes precedence over any predefined width values, ensuring optimal display for columns that contain variable or unpredictable data.
 
+In this configuration, `AutoFit` is enabled for the CustomerID and ShipCity columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@OrderData" Height="315" Width="800">
+<SfGrid DataSource="@OrderData" GridLines="GridLine.Both" Height="315" Width="800">
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" MinWidth="100" MaxWidth="200" TextAlign="TextAlign.Right" Width="200"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" AutoFit="true" MinWidth="8" Width="150"></GridColumn>
@@ -1386,7 +1387,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVdXTDFeCXxYymp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrHXTMjBPsFPplW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ### AutoFit with Empty Space
