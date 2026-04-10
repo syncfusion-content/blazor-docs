@@ -119,7 +119,6 @@ The following components need inline styles to work and always require `'unsafe-
 <ul>
 <li>Block Editor</li>
 <li>Rich Text Editor</li>
-<li>Markdown Editor</li>
 </ul>
 </td>
 <td>
@@ -185,8 +184,7 @@ The following components need inline styles to work and always require `'unsafe-
 <td>
 <ul>
 <li>Diagram</li>
-<li>Overview Panel</li>
-<li>Symbol Palette</li>
+
 </ul>
 </td>
 <td>
