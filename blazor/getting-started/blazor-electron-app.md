@@ -23,7 +23,7 @@ ElectronNET.Core connects a Blazor Web App (Server) with the Electron shell by h
 
 - [.NET 8 (LTS) or later](https://dotnet.microsoft.com/en-us/download/dotnet)
 - [Node.js 22.x (LTS) or later](https://nodejs.org/en/download/)
-- .NET CLI or [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 - **Supported Operating Systems:**
   - **Windows:** Windows 10 or later (x64, ARM64)
   - **macOS:** macOS 12 (Monterey) or later (x64, ARM64)
@@ -34,7 +34,7 @@ ElectronNET.Core connects a Blazor Web App (Server) with the Electron shell by h
 Run the following commands in the **command-line interface (CLI)**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -o BlazorElectronApp -int Server
 cd BlazorElectronApp
@@ -52,7 +52,7 @@ From the project folder (where the `.csproj` is located), install the Syncfusion
  * [ElectronNET.Core.AspNet](https://www.nuget.org/packages/ElectronNET.Core.AspNet)
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
