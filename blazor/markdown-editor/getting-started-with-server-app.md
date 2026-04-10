@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor Markdown Editor Component in Blazor Server App
+# Getting Started with Blazor Markdown Editor Component in Server App
 
 This section briefly explains about how to include [Blazor Markdown Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -319,7 +319,7 @@ To retrieve the maximum number of characters in the Markdown Editor's content, u
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
 
-* [How to insert Emoticons](https://blazor.syncfusion.com/demos/rich-text-editor/insert-emoticons?theme=bootstrap5)
+* [How to insert emoticons](https://blazor.syncfusion.com/demos/rich-text-editor/insert-emoticons?theme=bootstrap5)
 
 * [Blog posting using Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/usecase?theme=bootstrap5)
 
