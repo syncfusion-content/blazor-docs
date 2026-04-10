@@ -34,7 +34,7 @@ ElectronNET.Core connects a Blazor Web App (Server) with the Electron shell by h
 Run the following commands in the **command-line interface (CLI)**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -o BlazorElectronApp -int Server
 cd BlazorElectronApp
@@ -52,7 +52,7 @@ From the project folder (where the `.csproj` is located), install the Syncfusion
  * [ElectronNET.Core.AspNet](https://www.nuget.org/packages/ElectronNET.Core.AspNet)
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}

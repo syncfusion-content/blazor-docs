@@ -28,7 +28,7 @@ N> This guide uses the **Blazor Server** template with `blazor.server.js` rather
 If you already have a Blazor project, you may proceed to the next step. Otherwise, create a new Blazor Server project using the **command-line interface (CLI)**.
 
 {% tabs %}
-{% highlight c# tabtitle="CLI" %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet new blazorserver -n BlazorServerHost
 cd BlazorServerHost
@@ -43,7 +43,7 @@ Install Syncfusion<sup style="font-size:70%">&reg;</sup> packages and the Custom
 The **[Microsoft.AspNetCore.Components.CustomElements](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.CustomElements/)** package is required because it enables Blazor components to be exported as standard custom elements, allowing them to be easily used inside the React application.
 
 {% tabs %}
-{% highlight c# tabtitle="CLI" %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -171,7 +171,7 @@ This registers the **OrdersGrid** component as the `<sf-orders-grid>` custom ele
 If you already have a React project, you may proceed to the next step. Otherwise, create a new React application using the following commands from the project’s root.
 
 {% tabs %}
-{% highlight c# tabtitle="CLI" %}
+{% highlight bash tabtitle="CLI" %}
 
 npm create vite@latest react-grid
 cd react-grid

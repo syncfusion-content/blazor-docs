@@ -28,7 +28,7 @@ With virtualization enabled, working with large datasets becomes easier and fast
 Run the following commands in the **command-line interface (CLI)**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -o BlazorApp -int Server
 cd BlazorApp
@@ -45,7 +45,7 @@ Run the following commands to install the required Syncfusion<sup style="font-si
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
    
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Lists -v {{ site.releaseversion }}
