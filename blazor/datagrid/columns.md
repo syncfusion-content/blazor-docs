@@ -1040,8 +1040,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides mu
 1. AutoFit on double-click
 2. AutoFit via Programmatically
 3. AutoFit via GridColumn
-3. AutoFit with Empty Space
-4. AutoFit on Column Visibility Change
+4. AutoFit with Empty Space
+5. AutoFit on Column Visibility Change
 
 ### AutoFit on double-click
 
