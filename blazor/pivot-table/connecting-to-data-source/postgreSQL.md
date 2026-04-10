@@ -22,7 +22,7 @@ This section explains how to connect a PostgreSQL database to the Blazor Pivot T
 1. Open the **NuGet Package Manager** in your project solution and search for **Npgsql.EntityFrameworkCore.PostgreSQL**.
 2. Install the **Npgsql.EntityFrameworkCore.PostgreSQL** package to add PostgreSQL support.
 
-![Installing the Npgsql.EntityFrameworkCore.PostgreSQL NuGet package](../images/postgreSQL-nuget-package-install.png)
+![Installing the Npgsql.EntityFrameworkCore.PostgreSQL NuGet package](../images/postgreSQL-nuget-package-install.webp)
 
 ### Step 3: Connect to the PostgreSQL Database
 In the **Index.razor** file, under the `OnInitialized` method, use the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library to connect to the PostgreSQL database and retrieve data.
@@ -104,7 +104,7 @@ In the **Index.razor** file, under the `OnInitialized` method, use the [Npgsql.E
 2. The Pivot Table will display the PostgreSQL data, organized based on the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-postgreSQL-databinding.png)
+![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-postgreSQL-databinding.webp)
 
 ## Connecting a PostgreSQL Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API Service
 
@@ -118,12 +118,12 @@ Follow these steps to set up a Web API service that retrieves PostgreSQL data fo
 1. Open Visual Studio and create a new ASP.NET Core Web App project named **MyWebService**.
 2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
 
-![Creating an ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
+![Creating an ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.webp)
 
 #### Step 2: Install the Npgsql NuGet Package
 1. Install the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) package using the **NuGet Package Manager** to enable PostgreSQL connectivity.
 
-![Installing the Npgsql.EntityFrameworkCore.PostgreSQL NuGet package](../images/postgreSQL-nuget-package-install-in-web-service-app.png)
+![Installing the Npgsql.EntityFrameworkCore.PostgreSQL NuGet package](../images/postgreSQL-nuget-package-install-in-web-service-app.webp)
 
 #### Step 3: Create a Web API Controller
 1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
@@ -212,7 +212,7 @@ namespace MyWebService.Controllers
 1. Access the Web API endpoint at `https://localhost:44378/Pivot` to view the JSON data retrieved from PostgreSQL.
 2. The browser will display the JSON data, as shown below.
 
-![Hosted Web API URL](../images/postgresql_data.png)
+![Hosted Web API URL](../images/postgresql_data.webp)
 
 ### Connecting the Pivot Table to a PostgreSQL Database Using the Web API Service
 
@@ -269,7 +269,7 @@ This section explains how to connect the Blazor Pivot Table to PostgreSQL data r
 2. The Pivot Table will display the PostgreSQL data fetched via the Web API, structured according to the defined configuration.
 3. The resulting Pivot Table will look like this:
 
-![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-mongodb-databinding.png)
+![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-mongodb-databinding.webp)
 
 ### Additional Resources
 Explore a complete example of the Blazor Pivot Table integrated with an ASP.NET Core Web application to fetch data from a PostgreSQL database in this [GitHub repository](https://github.com/SyncfusionExamples/how-to-bind-PostgreSQL-database-to-pivot-table/tree/master/Blazor).
