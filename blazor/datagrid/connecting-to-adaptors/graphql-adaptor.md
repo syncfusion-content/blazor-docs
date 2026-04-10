@@ -60,7 +60,7 @@ NuGet packages are software libraries that add functionality to applications. Th
 
 ```powershell
 Install-Package HotChocolate.AspNetCore -Version 15.1.12
-Install-Package Syncfusion.Blazor.Grids -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}}
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
