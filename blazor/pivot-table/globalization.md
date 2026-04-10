@@ -51,6 +51,6 @@ Right-to-left (RTL) support makes the Pivot Table more accessible and user-frien
 
 ```
 
-![Right to Left in Blazor PivotChart](images/blazor-pivottable-right-to-left.png)
+![Right to Left in Blazor PivotChart](images/blazor-pivottable-right-to-left.webp)
 
 N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

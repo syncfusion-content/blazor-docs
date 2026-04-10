@@ -22,7 +22,7 @@ From the server project folder (where the `.csproj` file is located), install th
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}

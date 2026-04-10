@@ -800,7 +800,7 @@ In this example, we added a custom button called **AI Assistant** to the Pivot T
 
 A dialog box opens with three options to choose from: **Predictive Modeling**, **Intelligent Report Aggregation**, and **Adaptive Filtering**.
 
-![AI Assistant Dialog](images/ai-assistant-dialog.png)
+![AI Assistant Dialog](images/ai-assistant-dialog.webp)
 
 #### Step 2: Select a feature
 
@@ -810,11 +810,11 @@ Pick one of the AI features below and follow the detailed steps for each feature
 
 Choose a future year to predict values for that time period. After you click Submit, the Pivot Table shows predicted data along with your existing data. The predicted values are highlighted in yellow so you can easily see them.
 
-![Predictive Modeling Dropdown](images/predictive-modeling-dropdown.png)
+![Predictive Modeling Dropdown](images/predictive-modeling-dropdown.webp)
 
-![Clicking the submit button](images/Cliking-Submit-Button.png)
+![Clicking the submit button](images/Cliking-Submit-Button.webp)
 
-![Predictive Modeling](images/predictive-modeling.png)
+![Predictive Modeling](images/predictive-modeling.webp)
 
 ##### Intelligent Report Aggregation
 
@@ -822,21 +822,21 @@ Choose one or more fields from your data and pick an aggregation type (such as S
 
 ![Intelligent Report Dropdown](images/intelligent-report-dropdown.jpeg)
 
-![Intelligent Report Aggregation Dropdown](images/intelligent-report-aggregation-dropdown.png)
+![Intelligent Report Aggregation Dropdown](images/intelligent-report-aggregation-dropdown.webp)
 
-![Clicking the submit button](images/intelligent-report-cliking-submit-button.png)
+![Clicking the submit button](images/intelligent-report-cliking-submit-button.webp)
 
-![Intelligent Report Aggregation](images/smart-aggregation.png)
+![Intelligent Report Aggregation](images/smart-aggregation.webp)
 
 ##### Adaptive Filtering
 
 Type a product field member name (such as "Road Bikes" or "Mountain Bikes") in the input box. After you click Submit, the AI filters the products field to show only the items that match what you entered. The original data remains unchanged.
 
-![Adaptive Filter Suggestions](images/adaptive-filtering-text-box.png)
+![Adaptive Filter Suggestions](images/adaptive-filtering-text-box.webp)
 
-![Clicking the submit button](images/adaptive-filtering-cliking-submit-button.png)
+![Clicking the submit button](images/adaptive-filtering-cliking-submit-button.webp)
 
-![Adaptive Filtering](images/adaptive-filtering.png)
+![Adaptive Filtering](images/adaptive-filtering.webp)
 
 #### Step 3: Wait for processing
 
