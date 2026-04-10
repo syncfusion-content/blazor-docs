@@ -196,7 +196,6 @@ Register JWT authentication and authorization middleware to validate incoming AP
 {% highlight razor tabtitle="~/Program.cs" %}
 
 using System.Text;
-
 using YourProjectName.Components;
 using YourProjectName.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
