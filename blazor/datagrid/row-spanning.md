@@ -9,11 +9,11 @@ documentation: ug
 
 # Row Spanning in Blazor DataGrid
 
-Row spanning in the Syncfusion Blazor DataGrid merges adjacent cells with identical values horizontally across columns within the same row. This feature reduces visual repetition and presents grouped data in a compact, readable format. It is particularly effective in scenarios where multiple columns share the same value, such as repeated product details or status indicators.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides row spanning capabilities to merge two or more cells in a row into a single cell, reducing information repetition across multiple rows and enhancing readability.
 
-The functionality is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Row**. When activated, the grid evaluates each row and merges neighboring cells containing identical values, resulting in a single, wider cell. The merging process is automatic and declarative, requiring no manual logic or data transformation.
+The functionality is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) to **AutoSpanMode.Row**. When activated, the DataGrid evaluates each row and merges neighboring cells containing identical values, resulting in a single, wider cell. The merging process is automatic and declarative, requiring no manual logic or data transformation.
 
-Row spanning is part of the broader **AutoSpanMode** enumeration, which provides multiple options for customizing cell merging behavior in the Syncfusion Blazor DataGrid. The available modes include **None**, **Row**, **Column**, and **HorizontalAndVertical**. 
+Row spanning is part of the broader **AutoSpanMode** enumeration, which provides multiple options for customizing cell merging behavior in the DataGrid. The available modes include **None**, **Row**, **Column**, and **HorizontalAndVertical**. 
 
 | Enum Value | Description |
 |---------|-----|
@@ -24,7 +24,7 @@ Row spanning is part of the broader **AutoSpanMode** enumeration, which provides
 
 ## Enable row spanning
 
-Horizontal cell merging in the Syncfusion Blazor DataGrid is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Row**. In this mode, adjacent cells across columns within the same row are automatically merged when they contain identical values. This reduces redundancy and provides a cleaner, more compact presentation of repeated data.
+Horizontal cell merging in the Syncfusion Blazor DataGrid is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the `SfGrid` to **AutoSpanMode.Row**. In this mode, adjacent cells across columns within the same row are automatically merged when they contain identical values. This reduces redundancy and provides a cleaner, more compact presentation of repeated data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -468,7 +468,7 @@ public class TelecastData
 
 ## Disable spanning for specific column
 
-Column spanning in Syncfusion Blazor DataGrid can be disabled for a specific column(s) by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding column(s) where merging is not required.
+Column spanning in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, can be disabled for a specific column(s) by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the DataGrid while excluding column(s) where merging is not required.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -910,39 +910,39 @@ public class TelecastData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXByMVixeXvnPXRS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The effective spanning behavior in the Syncfusion Blazor DataGrid is determined by the intersection of grid-level and column-level [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) modes. A column can only restrict the spanning directions permitted at the grid level and cannot enable a span direction that has been disabled globally. This ensures consistent behavior across the grid while allowing fine-grained control for individual columns.
+The effective spanning behavior in the DataGrid is determined by the intersection of DataGrid-level and column-level [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) modes. A column can only restrict the spanning directions permitted at the DataGrid level and cannot enable a span direction that has been disabled globally. This ensures consistent behavior across the DataGrid while allowing fine-grained control for individual columns.
 
 
 **Combination Matrix**
 
-| Grid AutoSpan | Column AutoSpan | Effective Behavior |
+| DataGrid AutoSpan | Column AutoSpan | Effective Behavior |
 |---|---|---|
-| None | None | No spanning. Both grid and column explicitly disable spanning. |
-| None | Row | No spanning. Grid-level **None** overrides column-level **Row**. |
-| None | Column | No spanning. Grid-level **None** overrides column-level **Column**. |
-| None | HorizontalAndVertical | No spanning. Grid-level **None** overrides all spanning modes. |
+| None | None | No spanning. Both DataGrid and column explicitly disable spanning. |
+| None | Row | No spanning. DataGrid-level **None** overrides column-level **Row**. |
+| None | Column | No spanning. DataGrid-level **None** overrides column-level **Column**. |
+| None | HorizontalAndVertical | No spanning. DataGrid-level **None** overrides all spanning modes. |
 | Row | None | No spanning. Column explicitly disables spanning. |
-| Row | Row | Row spanning only. Both grid and column enable row spanning. |
-| Row | Column | No spanning. Grid only allows row spanning; column cannot enable column spanning. |
-| Row | HorizontalAndVertical | Row spanning only. Grid only allows row spanning. |
+| Row | Row | Row spanning only. Both DataGrid and column enable row spanning. |
+| Row | Column | No spanning. DataGrid only allows row spanning; column cannot enable column spanning. |
+| Row | HorizontalAndVertical | Row spanning only. DataGrid only allows row spanning. |
 | Column | None | No spanning. Column explicitly disables spanning. |
-| Column | Row | No spanning. Grid only allows column spanning; column cannot enable row spanning. |
-| Column | Column | Column spanning only. Both grid and column enable column spanning. |
-| Column | HorizontalAndVertical | Column spanning only. Grid only allows column spanning. |
+| Column | Row | No spanning. DataGrid only allows column spanning; column cannot enable row spanning. |
+| Column | Column | Column spanning only. Both DataGrid and column enable column spanning. |
+| Column | HorizontalAndVertical | Column spanning only. DataGrid only allows column spanning. |
 | HorizontalAndVertical | None | No spanning. Column explicitly disables both directions. |
-| HorizontalAndVertical | Row | Row spanning only. Grid allows both; column narrows to Row. |
-| HorizontalAndVertical | Column | Column spanning only. Grid allows both; column narrows to Column. |
-| HorizontalAndVertical | HorizontalAndVertical | Row and Column spanning. Both grid and column enable both directions. |
+| HorizontalAndVertical | Row | Row spanning only. DataGrid allows both; column narrows to Row. |
+| HorizontalAndVertical | Column | Column spanning only. DataGrid allows both; column narrows to Column. |
+| HorizontalAndVertical | HorizontalAndVertical | Row and Column spanning. Both DataGrid and column enable both directions. |
 
 ---
 
 ## Apply row spanning via programmatically
 
-In addition to automatic cell merging, the Syncfusion Blazor DataGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method, which enables the definition of rectangular regions of cells to be merged programmatically.
+In addition to automatic cell merging, the Syncfusion Blazor DataGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the `MergeCellsAsync` method, which enables the definition of rectangular regions of cells to be merged programmatically.
 
 Use [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method to manually merge cells by defining rectangular regions. This method supports both single and batch merging, allowing precise control over layout customization when automatic spanning is insufficient.
 
-The [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method is overloaded, meaning multiple versions of the same method name exist, but each accepts different parameter types to handle different use cases. This approach provides flexibility while maintaining a consistent API design.
+The `MergeCellsAsync` method is overloaded, meaning multiple versions of the same method name exist, but each accepts different parameter types to handle different use cases. This approach provides flexibility while maintaining a consistent API design.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
@@ -1425,9 +1425,9 @@ public class TelecastData
 
 ## Clear spanning via programmatically
 
-The Syncfusion Blazor DataGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the [UnmergeAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) method can be used to restore every cell to its original state.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the `UnmergeCellsAsync` methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the `UnmergeAllAsync` method can be used to restore every cell to its original state.
 
-The [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) method is overloaded to provide flexibility for different scenarios. Both overloads share the same method name but accept different parameter types, allowing removal of either a single merged region or multiple merged regions in one operation.
+The `UnmergeCellsAsync` method is overloaded to provide flexibility for different scenarios. Both overloads share the same method name but accept different parameter types, allowing removal of either a single merged region or multiple merged regions in one operation.
 
 | Method | Parameter | Type | Description |
 |--------|-----------|------|-------------|
@@ -1940,5 +1940,5 @@ public class TelecastData
 The row spanning is not compatible with the following features:
 
 1. Autofill.
-2. Grouping - Row and column spanning are supported only within the same caption row during grouping scenarios. This means cells can be merged horizontally or vertically only inside a single group header (caption row). Merging across different caption rows is not supported, since each caption row represents a distinct group context. Allowing spans between these rows would break the logical grouping structure and the visual hierarchy of the grid.
-3. Frozen Grid - When the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property is set to [FreezeDirection.Fixed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html), the concerned column will not be included for row spanning.
+2. Grouping - Row and column spanning are supported only within the same caption row during grouping scenarios. This means cells can be merged horizontally or vertically only inside a single group header (caption row). Merging across different caption rows is not supported, since each caption row represents a distinct group context. Allowing spans between these rows would break the logical grouping structure and the visual hierarchy of the DataGrid.
+3. Frozen DataGrid - When the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property is set to [FreezeDirection.Fixed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html), the concerned column will not be included for row spanning.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes a built-in sorting feature that helps organize information within columns. This makes it easier to locate and analyze data efficiently. To turn on sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in the Grid component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the DataGrid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to `true`.
 
 Sorting can be applied in two ways:
 - **Ascending Order**: Arranges values from smallest to largest (e.g., A to Z or 1 to 100). An upward arrow (↑) appears next to the header.
@@ -19,7 +19,7 @@ Sorting can be applied in two ways:
 
 ## Sort via UI
 
-Interact with column headers to sort data directly. Clicking a column header toggles the sort order between **Ascending** and **Descending**. By default, the first click sorts ascending.
+Sorting a particular column is accomplished by clicking on its column header. Each click on the header toggles the sort order between `Ascending` and `Descending`.
 
 
 |Action                        | Result                                           |
@@ -105,7 +105,7 @@ public class OrderData
 
 By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid renders without any sorting applied. To arrange records in a desired order right from the initial load, configure initial sorting by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) (the column's data field name) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) properties (either **SortDirection.Ascending** for smallest to largest or **SortDirection.Descending** for largest to smallest) in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) collection of [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
 
-In this configuration, initial sorting is applied to the **OrderID** and **ShipCity** columns using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
+In this configuration, initial sorting is applied to the **OrderID** and **ShipCity** columns using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html) with a specified [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -180,18 +180,16 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAiCDLKrKWrRVA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Initial sorting defined in the `GridSortSettings` of the Columns is applied on first render and overrides any sorting applied through interaction.
+> The initial sorting defined in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) of the columns will override any sorting applied through user interaction.
 
 ## Multi-column sorting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting multiple columns simultaneously. To enable this feature, set both [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) and [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) to **true**.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports multi-column sorting, allowing multiple columns to be sorted simultaneously. To enable multi-column sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) and the [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) properties to `true`. This enables sorting of multiple columns by holding the <kbd>CTRL</kbd> (or <kbd>Command</kbd> on macOS) key and clicking the column headers. This feature is useful for sorting data based on multiple criteria to analyze it in various ways.
 
-**How Multi-Column Sorting Works**
+To clear multi-column sorting for a particular column, press <kbd>Shift</kbd> while clicking the column header.
 
-When multi-sorting is enabled:
-- Click a column header to apply sorting to that column.
-- Hold <kbd>Ctrl</kbd> (or <kbd>Command</kbd> on macOS) and click additional column headers to include them in the sort sequence.
-- Press <kbd>Shift</kbd> and click a column header to remove it from the multi-column sort configuration.
+> * The `AllowSorting` must be `true` while enabling multi-column sort.
+> * Set `AllowMultiSorting` property as `false` to disable multi-column sorting.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -257,13 +255,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhAWCDhqqMpzrfL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Disabling sorting for specific column
+## Prevent sorting for particular column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the option to disable sorting for individual columns. This is useful for fields where sorting is not meaningful or should be restricted.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the ability to prevent sorting for a particular column. This is useful when certain columns should not be included in the sorting process. 
 
-To disable sorting for a specific column, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property of that [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
+This is achieved by setting the `AllowSorting`property of the particular column to `false`.
 
-In this configuration, sorting is disabled for the **CustomerID** column.
+The following example demonstrates disabling sorting for **"Customer ID"** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -332,7 +330,7 @@ public class OrderData
 ## Controlling Unsort behavior in Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides control over whether a column can return to an unsorted state after sorting. This behavior is managed using the [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) property in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
-When [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) is set to **false**, clicking a sorted column header does not revert the Grid to its original unsorted layout. Instead, the column remains sorted until a different sort action is applied. This ensures a consistent sorting state and prevents accidental removal of sorting.
+When `AllowUnsort` is set to **false**, clicking a sorted column header does not revert the DataGrid to its original unsorted layout. Instead, the column remains sorted until a different sort action is applied. This ensures a consistent sorting state and prevents accidental removal of sorting.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -400,9 +398,9 @@ public class OrderData
 
 ## Custom sorting 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the default sort logic for a column by setting the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of a column. This property accepts an IComparer &lt;object&gt; implementation, which can be created by defining a comparer class that implements the .NET [IComparer&lt;T&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports customizing the default sort action for a column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property. This property accepts an IComparer &lt;object&gt; implementation, which can be created by defining a comparer class that implements the .NET [IComparer&lt;T&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
-In this configuration, a custom comparer is assigned to the **CustomerID** column:
+The following example demonstrates defining a custom `SortComparer` function for the **"Customer ID"** column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -490,24 +488,17 @@ public class OrderData
 
 ## Touch interaction
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting through touch gestures. On touch-enabled devices, tapping a column header sorts that column. A popup icon
-![Sorting in Blazor DataGrid.](./images/blazor-datagrid-sorting.jpg) appears to enable multi-column sorting.
-To sort multiple columns, tap the popup
-![Multiple sorting in Blazor DataGrid.](./images/blazor-datagrid-multiple-sorting.jpg), and then tap the desired column headers.
+On touch screen devices, tapping a DataGrid header sorts the selected column and displays a popup ![Sorting](./images/blazor-datagrid-sorting.jpg) for multi-column sorting. Tapping the popup enables sorting of multiple columns ![Multiple Sorting](./images/blazor-datagrid-multiple-sorting.jpg). Additional columns can then be sorted by tapping their headers.
 
-> Both [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) and [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) must be true for the popup to appear.
+> The [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) and [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) properties must be `true` for the popup to display.
 
-This screenshot illustrates touch-based sorting in the Grid:
+The following screenshot represents a DataGrid touch sorting in the device.
 
-![Sorting in Blazor DataGrid](./images/blazor-datagrid-touch-sorting.jpg)
+![Touch Interaction](./images/blazor-datagrid-touch-sorting.jpg)
 
 ## Sort foreign key column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting foreign key columns based on display text. To enable this, configure a [GridForeignColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) with the following properties:
-
-- [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) - Specifies the data source that contains foreign key values and display text.
-- [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) - Defines the key field used for mapping.
-- [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) - Specifies the display text field used for sorting and rendering.
+Sorting based on a foreign key column is enabled by configuring the [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource), [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField), and [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) properties.
 
 N> 
 * **For local data** → Sorting is performed based on the value of the `ForeignKeyValue` property (**display text**).
@@ -612,9 +603,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrosDBrMaWuSWBG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## How to customize sort icon
+## Customizing sort icon
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the default sort icons by overriding the **.e-icon-ascending** and **.e-icon-descending** CSS classes. Use the **content** property to define custom icons:
+Sort icon customization in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is accomplished by overriding the default DataGrid classes `.e-icon-ascending` and `.e-icon-descending` with custom content using CSS. The desired icons or symbols are specified using the `content` property as shown below:
 
 ```css
 .e-grid .e-icon-ascending::before {
@@ -705,17 +696,17 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXryiZBieWXbgwvN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Sort via programmatically
+## Sort columns externally
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports sorting operations through built-in methods. These methods allow sorting to be added, removed, or cleared programmatically without relying on the grid’s UI. Sorting actions can be triggered externally—such as via dropdown menus, buttons, or other UI elements—allowing for flexible and dynamic control over data presentation.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides flexibility in sorting based on external interactions. Columns can be sorted, sort columns removed, and sorting cleared using external button clicks.
 
 ### Add sort columns
 
-The DataGrid provides method overloads for programmatic sorting, offering flexibility based on different use cases. These overloads support sorting a single column, multiple columns, or multiple columns while resetting any previous sort settings.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides method overloads for programmatic sorting, offering flexibility based on different use cases. These overloads support sorting a single column, multiple columns, or multiple columns while resetting any previous sort settings.
 
 **Sorting a Single Column**
 
-Use [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) method to sort a single column by specifying its name and sort direction. This method also supports multi-column sorting when enabled in the grid, allowing it to add the new sort condition alongside existing ones.
+Use [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) method to sort a single column by specifying its name and sort direction. This method also supports multi-column sorting when enabled in the DataGrid, allowing it to add the new sort condition alongside existing ones.
 
 | Parameter      | Type              | Description                                                                 |
 |----------------|-------------------|-----------------------------------------------------------------------------|
@@ -829,7 +820,6 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhIijrBrMZftWiI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 **Sort Multiple Columns**
 
 The [SortColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnsAsync_System_Collections_Generic_List_Syncfusion_Blazor_Grids_SortColumn__) method is used to sort multiple columns simultaneously. It accepts a list of [SortColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SortColumn.html#Syncfusion_Blazor_Grids_SortColumn_Field) objects, each specifying the column name and sort direction.
@@ -926,7 +916,7 @@ The [SortColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 | columns             | List<SortColumn>        | A collection of sorting instructions. Each `SortColumn` in the list defines a specific column to sort and the direction of sorting (**Ascending** or **Descending**). This allows multiple columns to be sorted at the same time, based on the order they appear in the list.         |
 | clearPreviousSort   | bool                    | To apply a new sort and remove any existing sort settings, enable the option to clear previous sorting. When this option is set to true, all current sort conditions will be removed before applying the new ones. This ensures that only the specified columns are sorted, rather than combining with any existing sort configuration.               |
 
-In this example, the grid is initially configured to sort the **OrderID** column. By setting the `clearPreviousSort` parameter to true in the `SortColumnsAsync` method, the existing sort on the **OrderID** column is removed before applying the new sort. This ensures that only the newly specified columns are sorted, replacing any previous sort settings.
+In this example, the DataGrid is initially configured to sort the **OrderID** column. By setting the `clearPreviousSort` parameter to true in the `SortColumnsAsync` method, the existing sort on the **OrderID** column is removed before applying the new sort. This ensures that only the newly specified columns are sorted, replacing any previous sort settings.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1012,17 +1002,18 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBeCWtoRymxjAYV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Clear sorting
-The Blazor DataGrid component provides flexible options to remove sorting from columns. Sorting can be cleared either for specific column or for all columns at once, depending on the requirement.
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides flexible options to remove sorting from columns. Sorting can be cleared either for specific column or for all columns at once, depending on the requirement.
 
 **Clear sorting for specific Column**
 
-The [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) method removes sorting from specific columns. It accepts a list of column field names and clears their sort settings.
+Sorting is cleared on an external button click using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) method provided by the DataGrid. This method clears the sorting applied to all columns in the DataGrid. 
 
 | Parameter     | Type              | Description                                                  |
 |---------------|-------------------|--------------------------------------------------------------|
 | columnNames   | List<string>      | A list of column field names whose sorting should be removed. |
 
-In the following example, the grid is initially sorted by **CustomerID** and **ShipName**. A dropdown allows selecting a column name, and clicking the **Remove Sort Column** button removes sorting from the selected column.
+In the following example, the DataGrid is initially sorted by **CustomerID** and **ShipName**. A dropdown allows selecting a column name, and clicking the **Remove Sort Column** button removes sorting from the selected column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1137,9 +1128,9 @@ public class OrderData
 
 **Clear sorting for all columns**
 
-The [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) method removes sorting from all columns in the grid. This is useful when resetting the grid to its default unsorted state.
+The [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) method removes sorting from all columns in the grid. This is useful when resetting the DataGrid to its default unsorted state.
 
-In this example, the grid is initially sorted by **CustomerID** and **ShipName**. Clicking the **Clear Sorting** button removes sorting from all columns.
+In this example, the DataGrid is initially sorted by **CustomerID** and **ShipName**. Clicking the **Clear Sorting** button removes sorting from all columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
