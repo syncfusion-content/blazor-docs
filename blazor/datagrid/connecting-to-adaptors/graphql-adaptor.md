@@ -1004,7 +1004,7 @@ dotnet run
 2. Navigate to `https://localhost:5272` (or the port shown in the terminal).
 3. The Expense Tracker System is now running and ready to use.
 
-![Basic DataGrid displaying expenses from the GraphQL Server](../images/blazor-datagrid-graphql.png)
+![Basic DataGrid displaying expenses from the GraphQL Server](../images/blazor-datagrid-graphql.webp)
 
 ---
 

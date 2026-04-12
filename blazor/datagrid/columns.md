@@ -607,7 +607,7 @@ namespace LocalizationSample.Client
 {% endhighlight %}
 {% endtabs %}
 
-![Format the date column based on localization](./images/blazor-datagrid-format-localization.png)
+![Format the date column based on localization](./images/blazor-datagrid-format-localization.webp)
 
 > [Syncfusion<sup style="font-size:70%">&reg;</sup> GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
 

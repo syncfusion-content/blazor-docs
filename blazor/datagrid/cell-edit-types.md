@@ -489,7 +489,7 @@ You can able to render SfAutoComplete component in EditTemplate. In the below sa
 
 In the following image, **Autocomplete** component is rendered with **EditTemplate** in Customer ID column
 
-![Blazor DataGrid with CellEdit Template](./images/blazor-datagrid-celledit-template.png)
+![Blazor DataGrid with CellEdit Template](./images/blazor-datagrid-celledit-template.webp)
 
 ### Using DropDownList in EditTemplate
 
@@ -555,7 +555,7 @@ You can able to render SfDropDownList component in EditTemplate. In the below sa
 
 In the following image, **SfDropDownList** component is rendered with **EditTemplate** in ShipCountry column
 
-![Blazor DataGrid with Editing in Custom DropDownList](./images/blazor-datagrid-editing-in-custom-dropdownlist.png)
+![Blazor DataGrid with Editing in Custom DropDownList](./images/blazor-datagrid-editing-in-custom-dropdownlist.webp)
 
 ### Using ComboBox in EditTemplate
 
@@ -720,7 +720,7 @@ You can able to render SfTimePicker component in EditTemplate. In the below samp
 
 In the following image, **SfTimePicker** component is rendered with **EditTemplate** in OrderDate column
 
-![Blazor DataGrid with Editing in Custom TimePicker](./images/blazor-datagrid-editing-in-custom-timepicker.png)
+![Blazor DataGrid with Editing in Custom TimePicker](./images/blazor-datagrid-editing-in-custom-timepicker.webp)
 
 ### Using MultiSelect Dropdown in EditTemplate
 
@@ -797,7 +797,7 @@ You can able to render SfMultiSelect component in EditTemplate. In the below sam
 
 In the following image, **SfMultiSelect** component is rendered with **EditTemplate** in ChosenItems column
 
-![Blazor DataGrid with Editing in Custom MultiSelect](./images/blazor-datagrid-editing-in-custom-multiselect.png)
+![Blazor DataGrid with Editing in Custom MultiSelect](./images/blazor-datagrid-editing-in-custom-multiselect.webp)
 
 ### Using RichTextEditor in EditTemplate
 
@@ -861,7 +861,7 @@ You can render the **SfRichTextEditor** component in [EditTemplate](https://help
 
 In the following image, **SfRichTextEditor** component is rendered with **EditTemplate** in Customer ID column
 
-![Blazor DataGrid with Editing in Custom RichTextEditor](./images/blazor-datagrid-editing-in-custom-richtexteditor.png)
+![Blazor DataGrid with Editing in Custom RichTextEditor](./images/blazor-datagrid-editing-in-custom-richtexteditor.webp)
 
 ### DynamicObject data binding with edit template feature
 

@@ -153,7 +153,7 @@ Run the application in Visual Studio. It will be hosted at the URL **https://loc
 
 After running the application, you can verify that the server-side API controller successfully returns the order data at the URL **https://localhost:xxxx/odata/grid** (where **xxxx** represents the port number).
 
-![ODataV4Adaptor Data](../images/odatav4-adaptors-data.png)
+![ODataV4Adaptor Data](../images/odatav4-adaptors-data.webp)
 
 ## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to an OData V4 Service
 
@@ -270,7 +270,7 @@ namespace ODataV4Adaptor.Controllers
  
 When you run the application, the Blazor DataGrid will display data fetched from the OData V4 service.
 
-![ODataV4Adaptor Data](../images/blazor-odatav4-adaptors.gif)
+![ODataV4Adaptor Data](../images/blazor-odatav4-adaptors.webp)
 
 > Replace `https://localhost:xxxx/odata/` with the actual URL of your OData V4 service.
 
@@ -337,7 +337,7 @@ builder.Services.AddControllers().AddOData(
 {% endhighlight %}
 {% endtabs %}
 
-![ODataV4Adaptor - Searching](../images/odatav4-adaptor-searching.png)
+![ODataV4Adaptor - Searching](../images/odatav4-adaptor-searching.webp)
 
 ## Handling filtering operation
 
@@ -387,10 +387,10 @@ builder.Services.AddControllers().AddOData(
 {% endtabs %}
 
 **Single column filtering**
-![Single column filtering](../images/odatav4-adaptor-filtering.png)
+![Single column filtering](../images/odatav4-adaptor-filtering.webp)
 
 **Multi column filtering**
-![Multi column filtering](../images/odatav4-adaptor-multi-filtering.png)
+![Multi column filtering](../images/odatav4-adaptor-multi-filtering.webp)
 
 ## Handling sorting operation
 
@@ -441,10 +441,10 @@ builder.Services.AddControllers().AddOData(
 {% endtabs %}
 
 **Single column sorting**
-![Single column sorting](../images/odatav4-adaptor-sorting.png)
+![Single column sorting](../images/odatav4-adaptor-sorting.webp)
 
 **Multi column sorting**
-![Multi column sorting](../images/odatav4-adaptor-multi-sorting.png)
+![Multi column sorting](../images/odatav4-adaptor-multi-sorting.webp)
 
 ## Handling paging operation
 
@@ -499,7 +499,7 @@ builder.Services.AddControllers().AddOData(
 {% endhighlight %}
 {% endtabs %}
 
-![ODataV4Adaptor - Paging](../images/odatav4-adaptor-paging.png)
+![ODataV4Adaptor - Paging](../images/odatav4-adaptor-paging.webp)
 
 ## Handling CRUD operations
 
@@ -562,7 +562,7 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 {% endhighlight %}
 {% endtabs %}
 
-![Insert Record](../images/odatav4-adaptor-insert-record.png)
+![Insert Record](../images/odatav4-adaptor-insert-record.webp)
 
 **Update Record:**
 
@@ -605,7 +605,7 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
 {% endhighlight %}
 {% endtabs %}
 
-![Update Record](../images/odatav4-adaptor-update-record.png)
+![Update Record](../images/odatav4-adaptor-update-record.webp)
 
 **Delete Record:**
 
@@ -639,6 +639,6 @@ public IActionResult Delete(int key)
 {% endhighlight %}
 {% endtabs %}
 
-![Delete Record](../images/odatav4-adaptor-delete-record.png)
+![Delete Record](../images/odatav4-adaptor-delete-record.webp)
 
 Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/ODataV4Adaptor).

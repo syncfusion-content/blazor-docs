@@ -148,7 +148,7 @@ app.MapControllers();
  
 Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/Grid** (where **xxxx** represents the port number). Please verify that the API returns the order data.
  
-![WebApiAdaptor Data](../images/web-api-adaptor-data.png)
+![WebApiAdaptor Data](../images/web-api-adaptor-data.webp)
 
 ## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to an API service
  
@@ -269,7 +269,7 @@ namespace WebApiAdaptor.Controllers
  
 When you run the application, the Blazor Grid  will display data fetched from the API.
  
-![WebMethod Adaptor Data](../images/blazor-datagrid-adaptors.gif)
+![WebMethod Adaptor Data](../images/blazor-datagrid-adaptors.webp)
 
 **Perform data operations in a WebAPI service**
 
@@ -293,7 +293,7 @@ When a search operation is triggered, the `$filter` parameter is sent to the ser
 
 The following example demonstrates how to extract the `$filter` parameter and apply search logic across multiple fields:
 
-![WebApiAdaptor - Searching](../images/web-api-adaptor-searching.png)
+![WebApiAdaptor - Searching](../images/web-api-adaptor-searching.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -383,7 +383,7 @@ When filtering is applied, the `$filter` parameter is sent to the server. The `$
 
 The following example demonstrates how to extract the `$filter` parameter and apply filtering logic based on custom conditions:
 
-![WebApiAdaptor - Filtering](../images/web-api-adaptor-filtering.png)
+![WebApiAdaptor - Filtering](../images/web-api-adaptor-filtering.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -500,11 +500,11 @@ The following example demonstrates how to extract the `$orderby` parameter and a
 
 ***Ascending Sorting***
 
-![WebApiAdaptor - Sorting Ascending query](../images/web-api-adaptor-asc-sorting.png)
+![WebApiAdaptor - Sorting Ascending query](../images/web-api-adaptor-asc-sorting.webp)
 
 ***Descending Sorting***
 
-![WebApiAdaptor - Sorting Descending query](../images/web-api-adaptor-desc-sorting.png)
+![WebApiAdaptor - Sorting Descending query](../images/web-api-adaptor-desc-sorting.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -594,7 +594,7 @@ When paging is applied, the `$skip` and `$top` parameters are sent to the server
 
 The following example demonstrates how to apply paging logic:
 
-![WebApiAdaptor - Paging](../images/web-api-adaptor-paging.png)
+![WebApiAdaptor - Paging](../images/web-api-adaptor-paging.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -686,7 +686,7 @@ To enable CRUD operations in the Grid, follow the steps below:
 
 To insert a new record into your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can utilize the `HttpPost` method in your server application. The details of the newly added record are passed to the **newRecord** parameter. Below is a sample implementation of inserting a record using the **GridController**: 
 
-![Insert Record](../images/web-api-adaptor-insert.png)
+![Insert Record](../images/web-api-adaptor-insert.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -709,7 +709,7 @@ public void Post([FromBody] OrdersDetails newRecord)
 
 Updating a record in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid can be achieved by utilizing the `HttpPut` method in your controller. The details of the updated record are passed to the **updatedRecord** parameter. Here's a sample implementation of updating a record:
 
-![Update Record](../images/web-api-adaptor-update.png)
+![Update Record](../images/web-api-adaptor-update.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -741,7 +741,7 @@ public void Put([FromBody] OrdersDetails updatedRecord)
 
 To delete a record from your Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
 
-![Delete Record](../images/web-api-adaptor-delete.png)
+![Delete Record](../images/web-api-adaptor-delete.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -765,6 +765,6 @@ public void Delete(int id)
 {% endhighlight %}
 {% endtabs %}
 
-![WebApiAdaptor CRUD operations](../images/adaptor-crud-operation.gif)
+![WebApiAdaptor CRUD operations](../images/adaptor-crud-operation.webp)
 
 N> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Therefore, it is currently not feasible to support **Batch** mode CRUD operations until ASP.NET Core provides support for batch handling. For more details, refer to [this GitHub issue](https://github.com/dotnet/aspnetcore/issues/14722).
