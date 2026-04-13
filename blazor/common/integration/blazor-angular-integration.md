@@ -178,7 +178,7 @@ The Blazor runtime and Syncfusion scripts/themes are required to load Syncfusion
 
 N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
-WebAssembly script refernce file:
+WebAssembly script reference file:
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
