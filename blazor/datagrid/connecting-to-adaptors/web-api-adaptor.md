@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with WebApiAdaptor in Syncfusion Blazor DataGrid
+title: Blazor DataGrid with WebApiAdaptor| Syncfusion.
 description: Learn about bind data and performing CRUD operations using WebApiAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
@@ -8,7 +8,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# WebApiAdaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# WebApiAdaptor in Syncfusion Blazor DataGrid
 
 The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is an extension of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid and OData-endpoint-based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
 
@@ -98,7 +98,7 @@ The sample response object should look like this:
 ```
 
 {% tabs %}
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;
@@ -213,7 +213,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) configuration where an API service are set up to return the resulting data in the **Items** and **Count** format. Update the **Index.razor** file as follows.
  
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -231,7 +231,7 @@ To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.sync
  
 {% endhighlight %}
  
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;

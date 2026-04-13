@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind data and perform CRUD actions with CustomAdaptor in Syncfusion Blazor DataGrid
-description: Learn all about Custom Binding in the Syncfusion Blazor DataGrid and much more.
+title: Blazor DataGrid with Custom Adaptor | Syncfusion
+description: Learn about Custom Data Binding and perform CRUD operations using CustomAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
