@@ -7,15 +7,15 @@ control: Common
 documentation: ug
 ---
 
-# Input Sanitization in Syncfusion Blazor Components
+# Getting Started with Input Sanitization in Syncfusion® Blazor Components
 
-## What is Input Sanitization?
+## What is input sanitization?
 
-**Input sanitization** is the process of filtering and cleaning HTML content from untrusted sources. It removes unsafe tags (like `<script>`), inline scripts (JavaScript code embedded directly in HTML attributes), event handlers (such as onclick), and dangerous URLs (malicious 'javascript:' links). Only safe and valid markup is preserved.
+**Input sanitization** is the process of filtering and cleaning HTML content from untrusted sources. It removes unsafe tags (like `<script>`), inline scripts (JavaScript code embedded directly in HTML attributes), event handlers (such as onclick), and dangerous URLs (malicious javascript links). Only safe and valid markup is preserved.
 
 For plain text inputs, this often means HTML encoding to escape special characters, preventing interpretation as markup.
 
-## Why Input Sanitization is important?
+## Why input sanitization is important?
 
 Blazor applications often accept text input, file uploads, dialog content, and query parameters. Users may intentionally or accidentally submit HTML or script content. This content can execute unexpectedly when rendered as HTML.
 
@@ -91,7 +91,7 @@ To disable the built-in sanitizer (not recommended for untrusted content), set t
 
 ### Block Editor
 
-The Block Editor allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user-generated content may include HTML-like input or potentially unsafe markup, enable the built-in sanitizer using the `EnableHtmlSanitizer` property to ensure only safe content is rendered.
+The Block Editor allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user-generated content may include HTML like input or potentially unsafe markup, enable the built-in sanitizer using the `EnableHtmlSanitizer` property to ensure only safe content is rendered.
 
 {% tabs %}
 {% highlight razor tabtitle="index.razor" %}
