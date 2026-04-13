@@ -15,7 +15,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid displays it
 This customization involves the following steps:
 
 * Create a custom overlay spinner container and position it over the DataGrid.
-* Hide the built‑in Grid spinner by applying CSS.
+* Hide the built‑in DataGrid spinner by applying CSS.
 * Using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event to detect when the Grid has finished loading and hide the custom spinner.
 
 The `DataBound` event is triggered after the DataGrid has fully bound its DataSource and completed UI rendering, making it the appropriate event for removing the custom loading indicator.
@@ -50,7 +50,7 @@ public Task DataBoundHandler()
 }
 
 ```
-### Wrap the Grid and apply the logic
+### Wrap the DataGrid and apply the logic
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

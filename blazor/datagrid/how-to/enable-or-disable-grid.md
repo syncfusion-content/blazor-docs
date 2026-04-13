@@ -9,11 +9,11 @@ documentation: ug
 
 # Enable or disable Blazor DataGrid and its actions
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be dynamically enabled or disabled by toggling a button. This is useful to restrict user interaction with the Grid during certain application states or processes. The approach below disables interaction at the UI level by applying a CSS class to a wrapper and setting an attribute for styling or accessibility.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be dynamically enabled or disabled by toggling a button. This is useful to restrict user interaction with the DataGrid during certain application states or processes. The approach below disables interaction at the UI level by applying a CSS class to a wrapper and setting an attribute for styling or accessibility.
 
 To implement this:
 
-* Define a CSS class on the wrapper (`.grid-wrapper.disabled`) to visually and functionally disable the Grid.
+* Define a CSS class on the wrapper (`.grid-wrapper.disabled`) to visually and functionally disable the DataGrid.
 
 ```css
 .grid-wrapper.disabled {
@@ -23,8 +23,8 @@ To implement this:
     cursor: not-allowed;
 }
 ```
-* Bind a boolean flag (`isGridDisabled`) to update the wrapper class and an attribute (for example, `aria-disabled`) on the Grid or wrapper.
-* Use a button to toggle the flag and control the Grid state.
+* Bind a boolean flag (`isGridDisabled`) to update the wrapper class and an attribute (for example, `aria-disabled`) on the DataGrid or wrapper.
+* Use a button to toggle the flag and control the DataGrid state.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

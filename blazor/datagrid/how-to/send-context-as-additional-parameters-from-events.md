@@ -9,11 +9,11 @@ documentation: ug
 
 # Sending Context as additional Parameters in Blazor DataGrid Events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports passing the current row context to event handlers. This approach is useful for updating Grid fields based on interactions inside the edit dialog, enabling immediate, in-place updates to the bound data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports passing the current row context to event handlers. This approach is useful for updating DataGrid fields based on interactions inside the edit dialog, enabling immediate, in-place updates to the bound data.
 
 To implement this, follow these steps:
 
-   1. Place the [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) inside the Grid's `GridEditSettings.Template` to customize the edit form.
+   1. Place the [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) inside the DataGrid's [GridEditSettings.Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) to customize the edit form.
 
    2. Bind the ComboBox’s `ValueChange` event to a handler method.
 
@@ -21,7 +21,7 @@ To implement this, follow these steps:
       * args: Event arguments that include the new ComboBox value and the selected item.
       * context: The template context cast to the row type (Order) and stored in a local variable (order).
 
-   4. Inside the handler, update properties of the current row (for example, ShipCity and ShipCountry) based on the selected ComboBox value. Because the Grid is bound to the same data object instance, changes are reflected immediately in the Grid UI.
+   4. Inside the handler, update properties of the current row (for example, ShipCity and ShipCountry) based on the selected ComboBox value. Because the DataGrid is bound to the same data object instance, changes are reflected immediately in the DataGrid UI.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
