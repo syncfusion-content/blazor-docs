@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Memory management in Syncfusion Blazor Components
-description: Best practices for memory management in Syncfusion Blazor components.
+description: Provides best practices for managing memory efficiently in Syncfusion Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
 platform: Blazor
 control: Common
 documentation: ug
@@ -15,7 +15,7 @@ This section explains best practices for managing memory in Blazor applications 
 
 Memory management in Blazor involves controlling the lifecycle of components, services, event subscriptions, and JavaScript interop references. Memory is allocated during component rendering, data binding, event handling, and interaction with JavaScript. When these allocations are not released properly, memory remains occupied and impacts application performance.
 
-In Blazor WebAssembly, retained memory affects the browser environment and client-side responsiveness. In Blazor Server, memory is allocated on the server per user circuit (a persistent connection between a user and the server), making memory leaks more impactful on application scalability.
+In Blazor WebAssembly, retained memory affects the browser environment and client-side responsiveness. In Blazor Server, memory is allocated on the server per user circuit (a persistent connection between a user and the server), making memory leaks more serious for application scalability.
 
 ## Why is memory management required?
 
@@ -35,7 +35,7 @@ In Blazor WebAssembly, releasing these references allows the browser runtime to 
 
 ### Disposing data‑bound Syncfusion components
 
-Data‑bound components such as **SfGrid** and **SfListView** frequently hold large data collections in memory. These references should be released when the component is removed from the render tree.
+Data‑bound components such as **DataGrid** and **ListView** frequently hold large data collections in memory. These references should be released when the component is removed from the render tree.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -101,13 +101,14 @@ When the component is disposed, clearing the data source ensures that memory can
 
 ### Managing event subscriptions in Syncfusion UI components
 
-Components such as **SfDialog**, **SfToast**, or custom wrappers around Syncfusion components may subscribe to shared application events. These subscriptions must be removed explicitly during component disposal.
+Components such as **Dialog**, **Toast**, or custom wrappers around Syncfusion components may subscribe to shared application events. These subscriptions must be removed explicitly during component disposal.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Buttons
+@inject AppState _appState
 @implements IDisposable
 
 <div style="padding:16px">
@@ -121,8 +122,6 @@ Components such as **SfDialog**, **SfToast**, or custom wrappers around Syncfusi
 </div>
 
 @code {
-    private readonly AppState _appState = new();
-
     protected override void OnInitialized()
     {
        _appState.OnChange += OnAppStateChanged;
@@ -142,26 +141,50 @@ Components such as **SfDialog**, **SfToast**, or custom wrappers around Syncfusi
     {
         _appState.OnChange -= OnAppStateChanged;
     }
-
-    private class AppState
-    {
-        private string _currentMessage = "Initial State";
-        public string CurrentMessage
-        {
-            get => _currentMessage;
-            set
-            {
-                if (_currentMessage == value)
-                    return;
-
-                _currentMessage = value;
-                OnChange?.Invoke();
-            }
-        }
-
-        public event System.Action? OnChange;
-    }
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+**Add service file:**
+
+Create the service file(e.g., AppState.cs) and add the following code:
+
+{% tabs %}
+{% highlight cs tabtitle="AppState.cs" %}
+
+public class AppState
+{
+    private string _currentMessage = "Initial State";
+
+    public string CurrentMessage
+    {
+        get => _currentMessage;
+        set
+        {
+            if (_currentMessage == value)
+                return;
+
+            _currentMessage = value;
+            OnChange?.Invoke();
+        }
+    }
+
+    public event Action? OnChange;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Register the service:**
+
+Register this service into the `Program.cs` file: 
+
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" %}
+
+....
+builder.Services.AddScoped<AppState>();
 
 {% endhighlight %}
 {% endtabs %}
@@ -288,12 +311,13 @@ window.MyJavaScriptFunction = function (dotNetRef) {
 
 **Add script reference:**
 
-Register the script in `App.razor` inside the `<body>` tag: 
+Register the script in `App.razor` inside the `<body>` tag for Blazor WebApp: 
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
 
-<!-- Add in the </body> -->
+<!-- Blazor WebAssembly: wwwroot/index.html -->
+<!-- Blazor Server: _Host.cshtml_ -->
 <script src="js/site.js"></script>
 
 {% endhighlight %}
@@ -303,7 +327,7 @@ Disposing the `DotNetObjectReference` ensures that the component is not retained
 
 ### Preventing unnecessary rendering
 
-Dynamic rendering of components such as **SfTextBox**, **SfDropDownList**, and **SfComboBox** can lead to unnecessary component recreation. The `@key` directive helps stabilize rendering.
+Dynamic rendering of components such as **TextBox**, **DropDownList**, and **ComboBox** can lead to unnecessary component recreation. The `@key` directive helps stabilize rendering.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -361,7 +385,7 @@ Using `@key` preserves component identity between renders and reduces memory chu
 
 ### Service lifetime considerations in Blazor Server applications
 
-In Blazor Server applications, service lifetimes directly impact memory usage. Services used by Syncfusion components for user‑specific data should be registered with a scoped lifetime.
+In Blazor Server, each user maintains their own `ServiceProvider` instance per circuit. A Scoped service is created once per circuit/user, ensuring user-specific state is isolated. `Singleton` services would be shared across all users, potentially causing data leaks.
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
