@@ -11,9 +11,9 @@ documentation: ug
 
 ## Overview
 
-[Cross-Site Scripting (XSS)](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS) is one of the most common security problems in web applications. This guide explains how to protect a [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components) from XSS attacks. It covers built-in client-side sanitization, server-side validation, and safe usage guidelines for components that handle user‑generated content.
+[Cross-Site Scripting (XSS)](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS) is one of the most common security problems in web applications. This guide explains how to protect [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components) from XSS attacks. It covers built-in client-side sanitization, server-side validation, and safe usage guidelines for components that handle user‑generated content.
 
-## What is cross-site scripting (XSS)?
+## What is Cross-Site Scripting (XSS)?
 
 XSS is a vulnerability where attackers insert harmful code into your application, causing it to run in the user’s browser with the same access level as your app. This can result in:
 
@@ -43,7 +43,7 @@ Blazor Server and Blazor WebAssembly come with different types of XSS risks.
 
 - The application runs entirely in the user's browser. Injected scripts execute locally and can modify the user interface or hijack user sessions.
 - Client-side files and application logic are publicly available. This makes it easier for attackers to inspect or bypass client-side protections.
-- Never store secrets or other sensitive data in the browser. Protect backend APIs with server-side authentication and authorization.
+- Never store secrets or other sensitive data in the browser. Protect API endpoints with server-side authentication and authorization.
 - Client-side validation and sanitization improve the user experience but are not a substitute for server-side validation and sanitization. Always validate and sanitize all client-origin data on the server.
 
 ## XSS threat model and attack vectors
@@ -64,7 +64,7 @@ XSS can enter an application in many different ways. The most common source is u
 <img src="x" onerror="alert('XSS')" />
 
 <!-- SVG-based attack -->
-<svg onload="alert('XSS')">
+<svg onload="alert('XSS')"></svg>
 
 <!-- Data attribute abuse -->
 <div data-bind="innerHTML: maliciousContent"></div>
@@ -75,7 +75,7 @@ XSS can enter an application in many different ways. The most common source is u
 {% endhighlight %}
 {% endtabs %}
 
-## How to prevent XSS attacks
+## How to prevent XSS attacks?
 
 Protecting your application from XSS requires using several layers of defense.
 
@@ -86,13 +86,23 @@ Blazor automatically turns special characters in user input into safe, readable 
 Use `@userInput` whenever you want to safely display text on the page. Only use `MarkupString` when the HTML has already been sanitized on the server.
 
 {% tabs %}
-{% highlight html %}
+{% highlight razor %}
 
-<!-- SAFE - Blazor automatically encodes. -->
-<p>@userInput</p>
+<h3>Output Encoding Example</h3>
 
-<!-- UNSAFE - Bypasses encoding and is only safe if sanitized. -->
-<p>@((MarkupString)userInput)</p>
+<div class="mb-3">
+    <strong>SAFE - Blazor automatically encodes:</strong>
+    <p>@userInput</p>
+</div>
+
+<div class="mb-3">
+    <strong>UNSAFE - Bypasses encoding:</strong>
+    <p>@((MarkupString)userInput)</p>
+</div>
+
+@code {
+    private string userInput = "<b>Bold</b> <script>alert('XSS')</script>";
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -150,11 +160,11 @@ If your app allows users to enter rich HTML, such as through a rich text editor,
 
 Only the HTML tags you explicitly allow are kept. Always sanitize content before saving it to the database and again before displaying it. This defense-in-depth approach applies to all content, including data from external sources.
 
-#### Built-in sanitization with Syncfusion<sup style="font-size:70%">&reg;</sup> components
+#### Built-in sanitization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 
-The [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) property is available in the Syncfusion<sup style="font-size:70%">&reg;</sup> **[RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)** and **[BlockEditor](https://www.syncfusion.com/blazor-components/blazor-block-editor)** components. It provides built-in client-side XSS protection.
+The [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) property is available in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor **[RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)** and **[BlockEditor](https://www.syncfusion.com/blazor-components/blazor-block-editor)** components. It provides built-in client-side XSS protection.
 
-#### How EnableHtmlSanitizer works
+#### How EnableHtmlSanitizer works?
 
 When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer does the following:
 
@@ -166,20 +176,20 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
 
 > **Important:** Client-side sanitization alone cannot keep your application fully secure. The `EnableHtmlSanitizer` feature helps with basic cleanup and improves safety, but you still need server-side sanitization to properly protect your application.
 
-#### Why client-side sanitization is not enough
+#### Why client-side sanitization is not enough?
 
 1. **Bypass potential** - Attackers can disable JavaScript or modify requests before they reach the server.
 2. **No database protection** - Even if the UI blocks harmful HTML, attackers can still send malicious content that gets stored in your database.
 3. **API vulnerability** - API calls made directly to the backend skip all client-side checks.
 4. **Zero trust principle** - Client-side validation should never be trusted as a complete security measure.
 
-#### When to use EnableHtmlSanitizer
+#### When to use EnableHtmlSanitizer?
 
 - To catch accidental HTML and improve the user experience
 - To provide an extra layer of defense on top of server-side sanitization
 - To give immediate feedback without waiting for a server round trip
 
-#### When not to use EnableHtmlSanitizer
+#### When not to use EnableHtmlSanitizer?
 
 - As the only security mechanism in your app
 - As a replacement for server-side sanitization
@@ -236,9 +246,11 @@ When `EnableHtmlSanitizer` is enabled (it is `true` by default), the sanitizer d
 
 Components that display user-generated or database content, such as **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[ListView](https://www.syncfusion.com/blazor-components/blazor-listview)**, follow the same rule: only render HTML that has been sanitized on the server, or display plain text which Blazor encodes automatically.
 
-#### DataGrid templates
+#### Rendering user content safely
 
-Grid templates should display only content that has already been sanitized on the server. Any unsanitized HTML must never be rendered directly.
+Templates allow you to customize how data is displayed by controlling the HTML structure and content presentation within components. When rendering user-generated content in templates, apply the encoding and sanitization principles covered earlier.
+
+The examples below demonstrate three approaches: unsafe direct rendering (which should always be avoided), safe rendering of pre-sanitized HTML, and secure plain text display with automatic encoding.
 
 #### UNSAFE - Direct HTML rendering
 
@@ -251,7 +263,6 @@ If the content includes malicious scripts, it can lead to **XSS (Cross‑Site Sc
 
 @using Syncfusion.Blazor.Grids
 
-@* Unsafe example shown for illustration only; do not use this pattern in production code *@
 <SfGrid DataSource="@Comments" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="@nameof(Comment.Content)">
@@ -291,7 +302,6 @@ The example below uses a SanitizedContent property that contains only trusted, p
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Grids
-@* Add the appropriate model namespace for your project *@
 
 <SfGrid DataSource="@Comments" AllowPaging="true">
     <GridColumns>
@@ -344,7 +354,7 @@ The example below uses a SanitizedContent property that contains only trusted, p
 {% endhighlight %}
 {% endtabs %}
 
-#### Alternative - text-only rendering
+#### Text-only rendering
 
 If HTML formatting is not required, render the content as plain text. Blazor automatically encodes all special characters, ensuring no injected scripts can execute regardless of what the data source contains.
 
@@ -357,7 +367,7 @@ If HTML formatting is not required, render the content as plain text. Blazor aut
     <GridColumns>
         <GridColumn Field="@nameof(Comment.Content)" HeaderText="Comment">
             <Template Context="comment">
-                @((comment as Comment)?.Content ?? string.Empty) @* Safe – Blazor auto-encodes *@
+                @((comment as Comment)?.Content ?? string.Empty)
             </Template>
         </GridColumn>
     </GridColumns>
@@ -447,7 +457,7 @@ Server-side sanitization is the **authoritative and required** defense against X
 
 ### Server-side sanitization example
 
-The following example demonstrates how to sanitize user‑entered HTML submitted from the Syncfusion **RichTextEditor** component. The sanitization process removes script tags, script content, disallowed HTML, inline event handlers, and unsafe URL protocols.
+The following example demonstrates how to sanitize user‑entered HTML submitted from the Syncfusion Blazor **RichTextEditor** component. The sanitization process removes script tags, script content, disallowed HTML, inline event handlers, and unsafe URL protocols.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Services/HtmlSanitizerService.cs"  %}

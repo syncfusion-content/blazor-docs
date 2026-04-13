@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Syncfusion Blazor Components
-description: Learn how Syncfusion Blazor components use Row and Column virtualization, Overscan, Virtual placeholders, Frozen columns, and Infinite scrolling.
+description: Learn how Syncfusion Blazor components use row and column virtualization, overscan, virtual placeholders, frozen columns, and infinite scrolling.
 platform: Blazor
 control: Common
 documentation: ug
@@ -122,12 +122,12 @@ For Server render mode, if your app's interactivity location is set to `Per page
 
 The following major Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide built-in virtualization support to efficiently handle large datasets.
 
-* **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** – Supports Row virtualization, Column virtualization, buffered rendering (Overscan), Virtual loading placeholders (mask row), Frozen columns with virtualization, and Infinite scrolling.
+* **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** – Supports row virtualization, column virtualization, buffered rendering (Overscan), virtual loading placeholders (mask row), frozen columns with virtualization, and infinite scrolling.
 * **[ListView](https://www.syncfusion.com/blazor-components/blazor-listview)** – Supports UI virtualization with window or container scrolling modes.
 * **[File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)** – Supports UI virtualization in both Details and Large Icons views.
 * **[TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview)** – Provides UI virtualization to render only visible nodes, significantly boosting performance in large hierarchical structures.
-* **[Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)** – Includes Row virtualization, timeline virtualization, and Column virtualization to efficiently render large project schedules and complex timelines. 
-* **[TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid)** – Offers Row virtualization, Column virtualization, and cell placeholders (VirtualMaskRow) for smoother loading with large hierarchical data.
+* **[Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)** – Includes row virtualization, timeline virtualization, and column virtualization to efficiently render large project schedules and complex timelines. 
+* **[TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid)** – Offers row virtualization, Column virtualization, and cell placeholders (VirtualMaskRow) for smoother loading with large hierarchical data.
 
 ## Advantages of virtualization
 
@@ -151,13 +151,13 @@ The following major Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor comp
 
 ## DataGrid virtualization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports several virtualization features that help it handle large datasets efficiently. These include Row virtualization, Column virtualization, Overscan buffering, Loading placeholders, Frozen columns with virtualization, and Infinite scrolling. Together, these features make the grid faster, smoother, and more responsive when working with large amounts of data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports several virtualization features that help it handle large datasets efficiently. These include row virtualization, column virtualization, Overscan buffering, loading placeholders, frozen columns with virtualization, and infinite scrolling. Together, these features make the grid faster, smoother, and more responsive when working with large amounts of data.
 
 ### Row virtualization
 
 Row virtualization improves performance by rendering only the rows that are visible in the viewport. Instead of creating all rows at once, the DataGrid loads and reuses rows while you scroll vertically. This reduces the initial loading time, lowers memory usage, and keeps scrolling smooth.
 
-#### Configure Row virtualization
+#### Configure row virtualization
 
 * Set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true** on the grid.
 * Assign a fixed pixel [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) (for example, Height="300").
@@ -232,7 +232,7 @@ public class TaskDetails
 
 Column virtualization improves performance when the DataGrid has many columns. Only the columns that are currently visible in the viewport are rendered. As you scroll horizontally, additional columns load automatically. This results in faster rendering, lower memory usage, and smoother horizontal scrolling.
 
-#### Configure Column virtualization
+#### Configure column virtualization
 
 * Set [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) to **true** on the grid.
 * Assign a fixed pixel [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) to every column.
@@ -523,7 +523,7 @@ When `VirtualMaskRow` is enabled, the grid reuses existing DOM elements and disp
 #### Configure VirtualMaskRow
 
 * Set [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) to **true**.
-* Enable Row virtualization ([EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization)) or Column virtualization ([EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization)).
+* Enable row virtualization ([EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization)) or column virtualization ([EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization)).
 * For the best results, set both [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) and [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight). This ensures accurate placeholder rendering and smooth scrolling performance.
 
 {% tabs %}
@@ -587,13 +587,13 @@ public class OrderDetails
 
 ### Frozen columns with virtualization
 
-Frozen columns remain fixed on the left or right side of the grid while the rest of the columns scroll horizontally. When used with virtualization, the grid renders only visible rows and columns, but the Frozen columns stay in place. This improves performance without affecting usability.
+Frozen columns remain fixed on the left or right side of the grid while the rest of the columns scroll horizontally. When used with virtualization, the grid renders only visible rows and columns, but the frozen columns stay in place. This improves performance without affecting usability.
 
-#### Configure Frozen columns with virtualization
+#### Configure frozen columns with virtualization
 
 * Set [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) to **true** for the columns you want to freeze.
 * Set [GridColumn.Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) to Left or Right.
-* Enable both Row and Column virtualization using [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization).
+* Enable both row and column virtualization using [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization).
 * Assign a fixed width to all columns.
 * Use a fixed grid height for smoother virtualization.
 
@@ -782,7 +782,7 @@ public class VirtualData
 
 Infinite scrolling loads additional data automatically as you scroll down. Instead of loading everything at once, the grid loads data in blocks. This keeps performance fast even when working with very large datasets.
 
-#### Configure Infinite scrolling
+#### Configure infinite scrolling
 
 * Set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to **true** on the grid.
 * Assign a fixed pixel [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) to the grid.
