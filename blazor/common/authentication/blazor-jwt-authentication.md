@@ -35,7 +35,7 @@ Configure JWT based authorization to secure backend APIs used by the Syncfusion�
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following one of the **Syncfusion getting started guides** for [Blazor Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) or [Blazor Web App(Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+Otherwise, create a new Blazor application by following the **Syncfusion getting started guides** [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 Ensure that **HTTPS is enabled** during project creation, as JWT based authorization requires secure communication.
 
@@ -282,9 +282,9 @@ public class OrdersDetails
 {% endhighlight %}
 {% endtabs %}
 
-### Protecting the Syncfusion® DataGrid API
+### Protecting the Syncfusion® Blazor DataGrid API
 
-This section explains how the Syncfusion® DataGrid API endpoint is secured to allow access only to authenticated requests. The `Authorize` attribute enforces token based access to Grid data.
+This section explains how the Syncfusion® Blazor DataGrid API endpoint is secured to allow access only to authenticated requests. The `Authorize` attribute enforces token based access to Grid data.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Controllers/GridController.cs"  %}
@@ -314,9 +314,9 @@ public class GridController : ControllerBase
 {% endhighlight %}
 {% endtabs %}
 
-### Adding JWT to Syncfusion® DataManager headers
+### Adding JWT to Syncfusion® Blazor DataManager headers
 
-Attach the JWT token to HTTP headers so the DataManager can send authenticated requests.
+Attach the JWT token to HTTP headers so the **DataManager** can send authenticated requests.
 
 {% tabs %}
 {% highlight razor %}
