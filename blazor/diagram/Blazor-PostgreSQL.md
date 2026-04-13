@@ -190,8 +190,7 @@ The implementation details for the automated initialization script are covered i
 
 ### Step 1: Install Required NuGet Packages
 
-Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
-This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
+Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. For full step-by-step instructions on creating a Blazor project, see the getting-started guide: [Getting Started](https://blazor.syncfusion.com/documentation/diagram/getting-started).
 
 For this guide, a Blazor application named **BlazorServerStyle** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and PostgreSQL integration.
 
@@ -216,6 +215,17 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
    - **Npgsql.EntityFrameworkCore.PostgreSQL** (version 10.0.0 or later)
    - **[Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/)** (version {{site.blazorversion}})
    - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
+
+**Method 3: Using Integrated Terminal In VisualStudio Code**
+
+Install NuGet packages from the VS Code terminal (run these from the project folder):
+
+```powershell
+dotnet add package Microsoft.EntityFrameworkCore --version 10.0.2
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 10.0.0
+dotnet add package Syncfusion.Blazor.Diagram --version <your-syncfusion-version>
+dotnet add package Syncfusion.Blazor.Themes --version <your-syncfusion-version>
+```
 
 **Project File Reference**
 
