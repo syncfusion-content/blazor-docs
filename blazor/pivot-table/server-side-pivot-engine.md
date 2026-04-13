@@ -26,7 +26,7 @@ This section explains how to use the Syncfusion<sup style="font-size:70%">&reg;<
 
 3. Open the **PivotController** application in Visual Studio. The Syncfusion [Syncfusion.Pivot.Engine](https://www.nuget.org/packages/Syncfusion.Pivot.Engine) library will automatically download from nuget.org, enabling server-side calculations such as aggregation, filtering, and sorting for the Pivot Table.
 
-![Solution Explorer](./images/blazor-pivotcontroller-solution-explorer.png)
+![Solution Explorer](./images/blazor-pivotcontroller-solution-explorer.webp)
 
 ### Connecting Blazor Pivot Table to Server-side Pivot Engine
 
@@ -100,7 +100,7 @@ Define the report to organize and display data from the server-side Pivot Engine
 4. **Run the Blazor application**  
 Launch your Blazor application to view the Pivot Table. The Pivot Table will connect to the server-side Pivot Engine, retrieve the processed data, and display the results based on the configured report.
 
-![Pivot Table demo using server-side pivot engine](./images/blazor-server-side-demo.png)
+![Pivot Table demo using server-side pivot engine](./images/blazor-server-side-demo.webp)
 
 ## Available configurations in Server-side application
 
@@ -212,7 +212,7 @@ Finally, configure the Pivot Table by setting the appropriate report in the [Piv
 }
 ```
 
-![Server-Side Pivot Engine using collection](./images/blazor-server-side-with-collection-data.png)
+![Server-Side Pivot Engine using collection](./images/blazor-server-side-with-collection-data.webp)
 
 #### JSON
 
@@ -301,7 +301,7 @@ Then, configure the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr
 }
 ```
 
-![Server-Side Pivot Engine with JSON data](./images/blazor-server-side-with-json-data.png)
+![Server-Side Pivot Engine with JSON data](./images/blazor-server-side-with-json-data.webp)
 
 You can also use JSON data from a remote server in the same way as a local JSON file. Both directly downloadable *.json files and web service URLs are supported. To do this, specify the URL of the remote *.json file in the **GetData** method. The remaining configurations stay the same.
 
@@ -433,7 +433,7 @@ Finally, configure the Pivot Table with the appropriate report settings based on
 }
 ```
 
-![Server-Side Pivot Engine using CSV data](./images/blazor-server-side-with-csv-data.png)
+![Server-Side Pivot Engine using CSV data](./images/blazor-server-side-with-csv-data.webp)
 
 You can also use CSV data from a remote server, such as a downloadable file or a web service URL. To do this, provide the CSV file URL in the **GetData** method. The process for setting up the Pivot Table remains the same as described above.
 
@@ -543,7 +543,7 @@ Finally, configure the Pivot Table by setting the appropriate report using the [
 }
 ```
 
-![Server-Side Pivot Engine using DataTable](./images/blazor-server-side-with-data-table.png)
+![Server-Side Pivot Engine using DataTable](./images/blazor-server-side-with-data-table.webp)
 
 #### Dynamic
 
@@ -624,7 +624,7 @@ Finally, configure the [PivotViewDataSourceSettings](https://help.syncfusion.com
 }
 ```
 
-![Server-Side Pivot Engine using ExpandoObject](./images/blazor-server-side-with-expandoobject.png)
+![Server-Side Pivot Engine using ExpandoObject](./images/blazor-server-side-with-expandoobject.webp)
 
 ##### Dynamic Objects
 
@@ -720,7 +720,7 @@ Finally, configure the [PivotViewDataSourceSettings](https://help.syncfusion.com
 }
 ```
 
-![Server-Side Pivot Engine using Dynamic Objects](./images/blazor-server-side-with-dynamic-object.png)
+![Server-Side Pivot Engine using Dynamic Objects](./images/blazor-server-side-with-dynamic-object.webp)
 
 ### Controller Configuration
 
@@ -853,7 +853,7 @@ Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), 
 
 ```
 
-![Server-side engine excel exporting](images/excel-export-with-server-side-pivot-engine.png)
+![Server-side engine excel exporting](images/excel-export-with-server-side-pivot-engine.webp)
 
 ### Add header and footer while exporting
 
@@ -928,7 +928,7 @@ The Excel export provides an option to include header and footer content for the
 }
 
 ```
-![Add header and footer while exporting](images/add-header-and-footer-while-exporting.png)
+![Add header and footer while exporting](images/add-header-and-footer-while-exporting.webp)
 
 ## CSV Export
 
@@ -1024,7 +1024,7 @@ Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), 
 
 ```
 
-![CSV Export](images/csv-export-with-server-side-pivot-engine.png)
+![CSV Export](images/csv-export-with-server-side-pivot-engine.webp)
 
 ## Export as Pivot
 
@@ -1123,4 +1123,4 @@ Then, based on the **Action** parameter (**onPivotExcelExport** or **onPivotCsvE
 
 ```
 
-![Export as Pivot](images/export-as-pivot.png)
+![Export as Pivot](images/export-as-pivot.webp)
