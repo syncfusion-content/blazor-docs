@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor Block Editor is a modular, block-based content editor component that enables rich, structured content creation. It provides an intuitive interface for building documents, articles, and collaborative content using customizable blocks such as headings, paragraphs, lists, and more.
 
-This section explains how to integrate the [Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to integrate the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -167,7 +167,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfBlockEditor></SfBlockEditor>
 
@@ -183,7 +183,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 The Block Editor uses a block-based content structure where each block represents a specific content type (heading, paragraph, list, etc.). The [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property manages and configures these blocks, allowing full control over the content structure and presentation.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfBlockEditor @bind-Blocks="blockDataOverview">
 </SfBlockEditor>
