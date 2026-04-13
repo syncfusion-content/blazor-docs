@@ -419,7 +419,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-* The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
+* The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous heading.
 * Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
