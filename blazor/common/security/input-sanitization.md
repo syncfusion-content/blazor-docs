@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Getting Started with Input Sanitization in Syncfusion® Blazor Components
+# Input Sanitization in Syncfusion® Blazor Components
 
 ## What is input sanitization?
 

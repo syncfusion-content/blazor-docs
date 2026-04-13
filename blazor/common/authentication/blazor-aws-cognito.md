@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Getting Started with Blazor Authentication using AWS Cognito and Syncfusion® Components
+# Blazor Authentication with AWS Cognito using Syncfusion® Components
 
 This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components).  
 
