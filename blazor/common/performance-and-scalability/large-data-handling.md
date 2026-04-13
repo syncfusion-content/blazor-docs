@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Large data handling in Blazor | Syncfusion
-description: Learn how Syncfusion® Blazor components handling the large data.
+description: Learn how Syncfusion Blazor components efficiently handle large datasets using paging, virtualization, server-side processing, and lazy loading. 
 platform: Blazor
 control: Common
 documentation: ug
@@ -89,7 +89,7 @@ For large datasets, filtering, sorting, grouping, and searching should be handle
 
 For example, when a user applies a column filter in the DataGrid, the filter criteria are sent to the server. The server then processes the request and returns only the matching records, ensuring efficient data retrieval and optimal performance.
 
-For more information refer the documnetation [handling server-side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation).
+For more information refer the documentation [handling server-side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation).
 
 ## Use virtualization or infinite scrolling
 
