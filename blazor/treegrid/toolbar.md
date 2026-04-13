@@ -15,25 +15,6 @@ To learn more about toolbar templates in the Blazor TreeGrid component, refer to
 
 {% youtube "youtube:https://www.youtube.com/watch?v=yqp_Ukr_aQs" %}
 
-## Built-in Toolbar Items
-
-Built-in toolbar items perform standard TreeGrid actions and can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property as a collection of predefined item names. These items render with both icon and text.
-
-| Built-in Toolbar Item | Action Description               |
-|-----------------------|----------------------------------|
-| ExpandAll             | Expands all rows                 |
-| CollapseAll           | Collapses all rows              |
-| Add                   | Adds a new record                |
-| Edit                  | Edits the selected record        |
-| Update                | Updates the edited record        |
-| Delete                | Deletes the selected record      |
-| Cancel                | Cancels the edit state           |
-| Search                | Searches records by keyword      |
-| Print                 | Prints the TreeGrid              |
-| ExcelExport           | Exports TreeGrid to Excel        |
-| PdfExport             | Exports TreeGrid to PDF          |
-| WordExport            | Exports TreeGrid to Word         |
-
 {% tabs %}
 
 {% highlight razor %}
@@ -106,11 +87,12 @@ N> The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfus
 
 Toolbar items can be enabled or disabled using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method.
 
-```cshtml
-
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid
 @using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.TreeGrid;
-@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.Grids
 
 <div>
     <div style="float:left;">
@@ -122,11 +104,11 @@ Toolbar items can be enabled or disabled using the [EnableToolbarItemsAsync](htt
 </div>
 
 @{
-    var Tool = (new string[] { "ExpandAll", "CollapseAll" });
+    var tool = (new string[] { "ExpandAll", "CollapseAll" });
 }
 
-<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@Tool" Height="350">
-    <TreeGridEvents TValue="TreeData" OnToolbarClick="ToolBarClick"></TreeGridEvents>
+<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@tool" Height="350">
+    <TreeGridEvents OnToolbarClick="ToolBarClick"></TreeGridEvents>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
@@ -135,87 +117,105 @@ Toolbar items can be enabled or disabled using the [EnableToolbarItemsAsync](htt
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="Index.razor.cs" %}
+private SfTreeGrid<TreeData> TreeGrid;
+public List<TreeData> TreeGridData { get; set; }
 
-@code{
-    SfTreeGrid<TreeData> TreeGrid;
-
-    public void Enable()
-    {
-        this.TreeGrid.EnableToolbarItemsAsync(new List<string>() { "TreeGrid_gridcontrol_ExpandAll", "TreeGrid_gridcontrol_CollapseAll" }, true);
-    }
-
-    public void Disable()
-    {
-        this.TreeGrid.EnableToolbarItemsAsync(new List<string>() { "TreeGrid_gridcontrol_ExpandAll", "TreeGrid_gridcontrol_CollapseAll" }, false);
-    }
-
-    public void ToolBarClick(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
-    {
-        if (Args.Item.Text == "ExpandAll")
-        {
-            this.TreeGrid.ExpandAll();
-        }
-        if (Args.Item.Text == "CollapseAll")
-        {
-            this.TreeGrid.CollapseAllAsync();
-        }
-    }
-
-    public List<TreeData> TreeGridData { get; set; }
-    public class TreeData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public int? Duration { get; set; }
-        public int? Progress { get; set; }
-        public string Priority { get; set; }
-        public int? ParentId { get; set; }
-        public static List<TreeData> GetSelfDataSource()
-        {
-            List<TreeData> TreeDataCollection = new List<TreeData>();
-            TreeDataCollection.Add(new TreeData(){ TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
-            TreeDataCollection.Add(new TreeData(){ TaskId = 2, TaskName = "Child task 1", Progress = 80, Priority = "Low", Duration = 50, ParentId = 1 });
-            TreeDataCollection.Add(new TreeData(){ TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
-            TreeDataCollection.Add(new TreeData(){ TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
-            TreeDataCollection.Add(new TreeData(){ TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
-            TreeDataCollection.Add(new TreeData(){ TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData(){ TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData(){ TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData(){ TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5 });
-            return TreeDataCollection;
-        }
-    }
-    protected override void OnInitialized()
-    {
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
-    }
+protected override void OnInitialized()
+{
+    this.TreeGridData = TreeData.GetSelfDataSource().ToList();
 }
 
-```
+public async Task Enable()
+{
+    await this.TreeGrid.EnableToolbarItemsAsync(new List<string>() { "TreeGrid_gridcontrol_ExpandAll", "TreeGrid_gridcontrol_CollapseAll" }, true);
+}
+
+public async Task Disable()
+{
+    await this.TreeGrid.EnableToolbarItemsAsync(new List<string>() { "TreeGrid_gridcontrol_ExpandAll", "TreeGrid_gridcontrol_CollapseAll" }, false);
+}
+
+public void ToolBarClick(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
+{
+    if (Args.Item.Text == "ExpandAll")
+    {
+        this.TreeGrid.ExpandAll();
+    }
+    if (Args.Item.Text == "CollapseAll")
+    {
+        this.TreeGrid.CollapseAllAsync();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 The following screenshots represent a TreeGrid with Enable/disable toolbar items,
 ![Enabling or Disabling Toolbar Items in Blazor TreeGrid](images/blazor-treegrid-enable-disable-toolbar-items.png)
 
-<!--
-Custom toolbar items
 
-Custom toolbar items can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) as a collection of
-**ItemModels**.
-Actions for this customized toolbar items are defined in the [`ToolbarClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ToolbarClick.html) event.
+## Customize Toolbar buttons using CSS
 
-By default, Custom toolbar items are in position **Left**. Change the position by using the **Align** property. In the below sample, we have applied position **Right** for the **Quick Filter** toolbar item.
+Customize the appearance of built-in toolbar buttons by applying CSS to update icon and button backgrounds. When hiding text, ensure accessible names using `TooltipText` or `aria-label`.
 
-> The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) has options to define both built-in and custom toolbar items.
-> If a toolbar item does not match the built-in items, it will be treated as a custom toolbar item.
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
 
- Built-in and custom items in toolbar
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Navigations
 
-TreeGrid have an option to use both built-in and custom toolbar items at same time.
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" Toolbar=@ToolbarItems TreeColumnIndex="1">
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
 
-In the below example, **ExpandAll**, **CollapseAll** are built-in toolbar items and **Click** is custom toolbar item.
+@code {
+    public List<string> ToolbarItems = new List<string>() { "Search", "Print" };
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+    }
 
-Enable/disable toolbar items
+    public List<BusinessObject> TreeData = new List<BusinessObject>();
 
-Toolbar items can be enabled or disabled using the **enableItems** method.
+    protected override void OnInitialized()
+    {
+        TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
+        TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
+        TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
+        TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+        TreeData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+        TreeData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+        TreeData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+        TreeData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+    }
+}
 
--->
+<style>
+    .e-treegrid .e-toolbar .e-tbar-btn .e-icons,
+    .e-treegrid .e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn {
+        background: #add8e6;
+    }
+</style>
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthdtTZLKnIyYStJ?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
+
+
+N> Place styles in the component's `.razor.css` when using CSS isolation.
+
