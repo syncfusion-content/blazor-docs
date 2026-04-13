@@ -102,7 +102,7 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
+After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
