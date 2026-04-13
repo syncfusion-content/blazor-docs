@@ -21,7 +21,7 @@ Use Identity when your app needs cookie‑based, server‑side authentication an
 ## Prerequisites
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/) or [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 ## Create the sample app
 
@@ -36,7 +36,7 @@ Create a new Blazor Web App configured to use **Interactive Server render mode**
 Run the following commands in your **command-line interface (CLI)**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -o BlazorIdentitySyncfusion --interactivity Server
 cd BlazorIdentitySyncfusion
@@ -62,7 +62,7 @@ Install the necessary NuGet packages that provide ASP.NET Core Identity features
 Run the following commands inside your project folder.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
 dotnet add package Microsoft.AspNetCore.Identity.UI
@@ -74,14 +74,14 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 {% endhighlight %}
 {% endtabs %}
 
-### 3. Install Syncfusion Blazor component packages
+### 3. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component packages
 
 Add Syncfusion Blazor packages to your project. These packages provide UI components like DataGrid and Charts that you'll use on protected pages.
 
 Run the following commands in the project folder (where the `.csproj` file is located).
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid
 dotnet add package Syncfusion.Blazor.Charts
@@ -124,7 +124,7 @@ Set up the connection string that tells your app where the `SQLite` database sho
 Open `appsettings.json` and add the `ConnectionStrings` section.
 
 {% tabs %}
-{% highlight c# tabtitle="appsettings.json" %}
+{% highlight json tabtitle="appsettings.json" %}
 
 {
   "ConnectionStrings": {
@@ -165,45 +165,48 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Syncfusion.Blazor;
 ...
-// Configure EF Core with SQLite as the Identity data store
+// Configure EF Core to use SQLite for Identity data.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configure ASP.NET Core Identity using cookies and the default UI (email confirmation disabled for demo only; enable it with an email sender in production)
+// Configure Identity with the default UI.
 builder.Services
     .AddDefaultIdentity<IdentityUser>(options =>
     {
+        // Email confirmation is disabled for demo purposes; enable and configure an email sender in production.
         options.SignIn.RequireConfirmedAccount = false;
     })
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-// Razor Pages (Identity UI lives here)
+// Add Razor Pages (includes Identity UI).
 builder.Services.AddRazorPages();
 
-// Enable Blazor authentication state for CascadingAuthenticationState and AuthorizeRouteView
+// Enable Blazor authentication state support for CascadingAuthenticationState and AuthorizeRouteView.
 builder.Services.AddCascadingAuthenticationState();
 
-// Register Syncfusion Blazor services
+// Register Syncfusion Blazor services.
 builder.Services.AddSyncfusionBlazor();
 ...
+
+// Serve static files and enable endpoint routing.
 app.UseStaticFiles();
 app.UseRouting();
 
-// Authentication & Authorization middleware (order matters)
+// Enable authentication and authorization middleware (order matters).
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Antiforgery middleware (required for Identity Razor Pages login/logout forms in .NET 8+)
+// Enable antiforgery middleware (required for Identity Razor Pages login/logout forms in .NET 8+).
 app.UseAntiforgery();
 
-// Map endpoints
-app.MapRazorPages(); // Identity UI endpoints
+// Map Razor Pages endpoints (includes Identity UI).
+app.MapRazorPages();
 ...
 
 {% endhighlight %}
 {% endtabs %}
 
-### 7. Import authorization and Syncfusion namespaces
+### 7. Import authorization and Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces
 
 Add the required namespaces in `Components/_Imports.razor`. These namespaces allow you to use authorization features such as `[Authorize]` and `<AuthorizeView>`, and they enable Syncfusion components in your Blazor pages.
 
@@ -219,7 +222,7 @@ Add the required namespaces in `Components/_Imports.razor`. These namespaces all
 {% endhighlight %}
 {% endtabs %}
 
-### 8. Add Syncfusion styles and script resources
+### 8. Add Syncfusion<sup style="font-size:70%">&reg;</sup> styles and script resources
 
 Before adding the Syncfusion theme stylesheet, ensure that no other Syncfusion theme CSS (e.g., `material.css`, `fluent.css`) is already referenced to avoid styling conflicts.
 
@@ -251,7 +254,7 @@ The `_LoginPartial.cshtml` file displays login, logout, register, and account ma
 In the project root (next to `Program.cs`), create a `Pages` folder and add a `Shared` subfolder. Inside the `Shared` folder, create a file named `_LoginPartial.cshtml` and add the following content.
 
 {% tabs %}
-{% highlight c# tabtitle="Pages/Shared/_LoginPartial.cshtml" %}
+{% highlight cshtml tabtitle="Pages/Shared/_LoginPartial.cshtml" %}
 
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
@@ -262,7 +265,6 @@ In the project root (next to `Program.cs`), create a `Pages` folder and add a `S
 {
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-            @* Display the authenticated user's name *@
             Hello @User.Identity?.Name!
         </a>
     </li>
@@ -291,7 +293,7 @@ else
 Create a file named `_ViewImports.cshtml` inside the `Pages` folder and add the following code. This enables Tag Helpers for all Razor Pages, including the Identity UI pages.
 
 {% tabs %}
-{% highlight c# tabtitle="Pages/_ViewImports.cshtml" %}
+{% highlight cshtml tabtitle="Pages/_ViewImports.cshtml" %}
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
@@ -358,7 +360,7 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
 {% highlight razor tabtitle="MainLayout.razor" %}
 
 @inherits LayoutComponentBase
-@using Microsoft.AspNetCore.Components.Authorization  @* needed for <AuthorizeView> *@
+@using Microsoft.AspNetCore.Components.Authorization
 
 <div class="page">
     <div class="sidebar">
@@ -369,16 +371,11 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
         <div class="top-row px-4 d-flex align-items-center">
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
 
-            <!-- Right-aligned auth menu -->
             <div class="ms-auto d-flex gap-3">
                 <AuthorizeView>
                     <Authorized>
                         <span class="navbar-text">Hello @context.User.Identity?.Name</span>
-
-                        <!-- Manage (Identity UI) -->
                         <a class="nav-link text-dark" href="/Identity/Account/Manage/Index" title="Manage">Manage</a>
-
-                        <!-- Logout: GET request shows confirmation page, then POST with antiforgery token completes logout -->
                         <a class="nav-link text-dark" href="/Identity/Account/Logout">Logout</a>
                     </Authorized>
 
@@ -405,12 +402,12 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
 {% endhighlight %}
 {% endtabs %}
 
-### 12. Create the secure Syncfusion DataGrid and Charts pages
+### 12. Create the secure Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid and Charts pages
 
 Create two protected pages using `[Authorize]` that display Syncfusion DataGrid and Charts components. The generated components will use the default namespace `BlazorIdentitySyncfusion.Components.Pages`. If needed, adjust the `@namespace` directive in the generated files.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new razorcomponent -n SecureGrid -o Components/Pages
 dotnet new razorcomponent -n SecureChart -o Components/Pages
@@ -418,7 +415,7 @@ dotnet new razorcomponent -n SecureChart -o Components/Pages
 {% endhighlight %}
 {% endtabs %}
 
-**Add Syncfusion Blazor DataGrid component**
+**Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component**
 
 This component displays a sample order list using Syncfusion's DataGrid. The `@attribute [Authorize]` directive ensures only authenticated users can access this page.
 
@@ -466,7 +463,7 @@ This component displays a sample order list using Syncfusion's DataGrid. The `@a
 {% endhighlight %}
 {% endtabs %}
 
-**Add Syncfusion Blazor Charts component**
+**Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts component**
 
 This component displays a column chart showing monthly sales data.
 
@@ -510,11 +507,9 @@ Update the navigation menu to include links to the secured pages. This makes the
 Open `Components/Layout/NavMenu.razor` and add the following navigation items after the existing menu links.
 
 {% tabs %}
-{% highlight c# tabtitle="Layout/NavMenu.razor" %}
-
+{% highlight razor tabtitle="Layout/NavMenu.razor" %}
 ...
 
-<!-- Secure pages (protected by [Authorize]) -->
 <div class="nav-item px-3">
     <NavLink class="nav-link" href="secure-grid">
         <span class="bi bi-list-nested" aria-hidden="true"></span> Secure Grid
@@ -537,7 +532,7 @@ Create the database tables required for ASP.NET Core Identity by running Entity 
 If you have not installed the EF Core command‑line tools, install them first.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet tool install --global dotnet-ef 
 
@@ -547,7 +542,7 @@ dotnet tool install --global dotnet-ef
 Then create the migration and update the database.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet ef migrations add CreateIdentitySchema
 dotnet ef database update
@@ -564,7 +559,7 @@ N> If you receive an error that a migration with this name already exists, you c
 Run the application and verify the authentication flow.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet run
 
@@ -579,3 +574,7 @@ dotnet run
 6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Syncfusion components.
 7. Click **Logout** to end the session and verify that accessing the secure pages redirects back to the login page. 
 
+## See also
+
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting started with Syncfusion Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)

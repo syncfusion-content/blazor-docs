@@ -162,7 +162,7 @@ When you only need to display plain text (not HTML), the safest approach is to H
 **Output:**
 
 {% tabs %}
-{% highlight bash %}
+{% highlight bash tabtitle="Output" %}
 
 &lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt; Hello!
 
@@ -191,7 +191,6 @@ The following example demonstrates sanitizing text before binding it to the Grid
 
 <div class="input-row">
     <SfTextBox @bind-Value="UserText" Placeholder="Enter text" CssClass="w-100"></SfTextBox>
-
     <SfButton CssClass="e-primary" OnClick="ProcessInput" Type="Button">
         Submit
     </SfButton>
@@ -207,9 +206,7 @@ The following example demonstrates sanitizing text before binding it to the Grid
 
 @code {
     public string UserText { get; set; } = string.Empty;
-
     public List<ItemRecord> Items { get; set; } = new();
-
     private SfGrid<ItemRecord> UserGrid;
 
     private void ProcessInput()

@@ -20,7 +20,7 @@ With virtualization enabled, working with large datasets becomes easier and fast
 ## Prerequisites and setup
 
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
-* .NET CLI or [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ### Create a Blazor web app with Interactive Server
@@ -28,7 +28,7 @@ With virtualization enabled, working with large datasets becomes easier and fast
 Run the following commands in the **command-line interface (CLI)**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -o BlazorApp -int Server
 cd BlazorApp
@@ -45,7 +45,7 @@ Run the following commands to install the required Syncfusion<sup style="font-si
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
    
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Lists -v {{ site.releaseversion }}
