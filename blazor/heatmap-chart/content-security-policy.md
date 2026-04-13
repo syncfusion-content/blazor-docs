@@ -9,7 +9,7 @@ documentation: ug
 
 # Heatmap - Content Security Policy Limitations
 
-## What's Supported Under Strict CSP?
+## What's supported under strict CSP?
 
 The Syncfusion® Blazor **Heatmap** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
@@ -23,11 +23,11 @@ The Syncfusion® Blazor **Heatmap** component supports most features under stric
 - Keyboard navigation
 - Image/PDF export
 
-## What Requires *'unsafe-inline'*?
+## What requires *'unsafe-inline'* ?
 
 **Cell Selection** (single or multiple) requires the `style-src 'unsafe-inline'` directive.
 
-### Why Does Selection Need `'unsafe-inline'`?
+### Why does selection need *'unsafe-inline'*?
 
 When users click on cells to select them, the component applies dynamic inline styles to visually highlight the selected cells. This includes:
 
@@ -38,13 +38,13 @@ When users click on cells to select them, the component applies dynamic inline s
 
 These visual indicators are applied in real-time during user interaction and blocked under strict CSP.
 
-### How to Disable Selection ?
+### How to disable selection ?
 
 If you don't need cell selection, set `SelectionMode="None"` or simply don't configure selection-related events. The rest of the Heatmap will work fully under strict CSP.
 
-## Recommended CSP Configurations
+## Recommended CSP configurations
 
-### Strict CSP (No Cell Selection)
+### Strict CSP (no cell selection)
 
 Use this configuration if you don't use cell selection (or don't want selection interactions):
 
@@ -63,7 +63,7 @@ Use this configuration if you don't use cell selection (or don't want selection 
 
 This configuration maintains full security for the Heatmap's data visualization capabilities.
 
-### Relaxed CSP (With Cell Selection)
+### Relaxed CSP (with cell selection)
 
 Include `'unsafe-inline'` if you want users to select cells for drill-down or data exploration:
 

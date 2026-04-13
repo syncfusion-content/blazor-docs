@@ -9,30 +9,30 @@ documentation: ug
 
 # Syncfusion® Blazor Components With Strict Content Security Policy
 
-## What is Content Security Policy (CSP)?
+## What is content security policy (CSP) ?
 
 **Content Security Policy (CSP)** is a browser security feature that protects your application against malicious attacks like cross-site scripting (XSS) and data injection. It works by controlling where your application can load scripts, styles, images, fonts, and other resources from.
 
-## Where to Add CSP Directives ?
+## Where to add CSP directives ?
 
 Add CSP directives to the `<head>` tag of your application's main HTML file:
 
 - **For .NET 8, 9, or 10 Blazor Web Apps** (Server, WebAssembly, or Auto modes): Add to `~/Components/App.razor`
 - **For Blazor WebAssembly Standalone Apps**: Add to `wwwroot/index.html`
 
-## Syncfusion Support for Strict CSP
+## Syncfusion support for strict CSP
 
 Syncfusion now provides **strict CSP compatibility** for **over 80 components**. This means most of your application's core functionality can work securely without needing unsafe directives like `'unsafe-eval'` or `'unsafe-inline'`. 
 
 This makes it easier for you to enforce strong security policies while still having access to all component features.
 
-## Recommended CSP Configurations 
+## Recommended CSP configurations 
 
 The following CSP configurations are **recommended** for Syncfusion® Blazor components that support strict CSP (Refer Supported list below).
 
-### Blazor Server App
+{% tabs %}
 
-```html
+{% highlight html tabtitle="Blazor Server App" %}
 <meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
                default-src 'self';
@@ -43,11 +43,9 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
                style-src 'self';
                font-src 'self' data:;
                upgrade-insecure-requests;">
-```
+{% endhighlight %}
 
-### Blazor Interactive WebAssembly App and Wasm Standalone App
-
-```html
+{% highlight html tabtitle="Blazor WebAssembly" %}
 <meta http-equiv="Content-Security-Policy"
       content="base-uri 'self';
                default-src 'self';
@@ -58,33 +56,166 @@ The following CSP configurations are **recommended** for Syncfusion® Blazor com
                style-src 'self';
                font-src 'self' data:;
                upgrade-insecure-requests;">
-```
+{% endhighlight %}
 
-**Why `'wasm-unsafe-eval'` for WebAssembly?** 
+{% endtabs %}
 
-WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) directive to compile and run. Without it, your Blazor runtime won't start. This is different from `'unsafe-eval'` and is necessary for client-side WebAssembly applications.
+**Why `'wasm-unsafe-eval'` for WebAssembly ?** 
 
-## When You Need *'unsafe-inline'* ?
+WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) directive to compile and run. This is different from `'unsafe-eval'` and is necessary for client-side WebAssembly applications.
+
+## When you need *'unsafe-inline'* ?
 
 Most Syncfusion components support strict CSP. However, some components or features still need the **`style-src 'unsafe-inline'`** directive. Read the sections below to determine if your application needs it.
 
 
-### Scenario 1: Components That Always Require `'unsafe-inline'`
+### Scenario 1: components that always require *'unsafe-inline'*
 
 The following components need inline styles to work and always require `'unsafe-inline'`: 
 
-| Category | Components | Reason for unsafe-inline Requirement |
-|----------|------------|------------|
-| **Data Visualization** | • Charts<br> • 3D Charts<br> • Stock Chart<br> • Bullet Chart<br> • Range Selector<br> • Sankey<br> • Sparkline Chart<br> • Smith Chart |• These components are independent of external Syncfusion theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.<br> • Dynamic calculation of axes, scales, gradients, data labels, and tooltips at runtime<br>• Inline styles ensure pixel‑perfect alignment and high‑performance redraws during zoom, pan, and real-time updates<br>|
-| **File Viewers & Editors** | • Block Editor<br> • Rich Text Editor | • File editing components apply dynamic inline styles to render rich content accurately based on user input and stored markup.<br> • Formatting features (bold, italic, underline, font size, font color, background color, lists, links, alignment) require inline styles to reflect user intent precisely |
-| **Interactive Chat** | • Chat UI |• Chat UI component is implemented using Blazor’s Virtualize component, which optimizes performance by rendering only the visible subset of messages within the viewport while representing the full dataset logically.<br> • Blazor’s virtualization mechanism relies on runtime-generated inline styles as an essential part of its layout and scrolling model
- |
-| **File Management** | • File Manager |• Uses inline styles for responsive grid/list views, selection highlights, drag indicators, and context menus.<br> • Inline styles allow immediate visual feedback during selection, resizing panes, and drag operations |
-| **Layout** | • Card |• Card components dynamically adjust layout, elevation, spacing, and responsive breakpoints via inline styles.<br> • Enables adaptive layouts across different screen sizes and container widths.<br> • Supports dynamic styling scenarios such as hover effects, conditional emphasis |
-| **Diagrams and Maps** | • Diagram | • Diagram components depend extensively on inline styles for interactive behaviors.<br>• Inline styles are used for node positioning, connectors, ports, annotations, and selection states<br>• Dragging, resizing, rotating, and snapping operations require continuous style updates at runtime |
-| **Kanban** | • Kanban | Kanban boards use inline styles to provide fluid drag‑and‑drop interactions between columns and cards. |
+<!-- markdownlint-disable MD033 -->
 
-### Scenario 2: Components With Limited Features Requiring `'unsafe-inline'`
+<table>
+<tr>
+<td>
+<b>Category</b>
+</td>
+<td>
+<b>Components</b>
+</td>
+<td>
+<b>Reason for unsafe-inline Requirement</b>
+</td>
+</tr>
+<tr>
+<td>
+<b>Data Visualization</b>
+</td>
+<td>
+<ul>
+<li>Charts</li>
+<li>Accumulation Chart</li>
+<li>3D Chart</li>
+<li>Stock Chart</li>
+<li>Bullet Chart</li>
+<li>Range Selector</li>
+<li>Sankey</li>
+<li>Sparkline</li>
+<li>Smith Chart</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>These components are independent of external Syncfusion theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.</li>
+<li>Dynamic calculation of axes, scales, gradients, data labels, and tooltips at runtime.</li>
+<li>Inline styles ensure pixel-perfect alignment and high-performance redraws during zoom, pan, and real-time updates.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<b>File Viewers &amp; Editors</b>
+</td>
+<td>
+<ul>
+<li>Block Editor</li>
+<li>Rich Text Editor</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>File editing components apply dynamic inline styles to render rich content accurately based on user input and stored markup.</li>
+<li>Formatting features (bold, italic, underline, font size, font color, background color, lists, links, alignment) require inline styles to reflect user intent precisely.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<b>Interactive Chat</b>
+</td>
+<td>
+<ul>
+<li>Chat UI</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Chat UI component is implemented using Blazor's Virtualize component, which optimizes performance by rendering only the visible subset of messages within the viewport while representing the full dataset logically.</li>
+<li>Blazor's virtualization mechanism relies on runtime-generated inline styles as an essential part of its layout and scrolling model.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<b>File Management</b>
+</td>
+<td>
+<ul>
+<li>File Manager</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Uses inline styles for responsive grid/list views, selection highlights, drag indicators, and context menus.</li>
+<li>Inline styles allow immediate visual feedback during selection, resizing panes, and drag operations.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<b>Layout</b>
+</td>
+<td>
+<ul>
+<li>Card</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Card components dynamically adjust layout, elevation, spacing, and responsive breakpoints via inline styles.</li>
+<li>Enables adaptive layouts across different screen sizes and container widths.</li>
+<li>Supports dynamic styling scenarios such as hover effects and conditional emphasis.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<b>Diagrams and Maps</b>
+</td>
+<td>
+<ul>
+<li>Diagram</li>
+
+</ul>
+</td>
+<td>
+<ul>
+<li>Diagram components depend extensively on inline styles for interactive behaviors.</li>
+<li>Inline styles are used for node positioning, connectors, ports, annotations, and selection states.</li>
+<li>Dragging, resizing, rotating, and snapping operations require continuous style updates at runtime.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<b>Kanban</b>
+</td>
+<td>
+<ul>
+<li>Kanban</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Kanban boards use inline styles to provide fluid drag-and-drop interactions between columns and cards.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<!-- markdownlint-enable MD033 -->
+
+### Scenario 2: components with limited features requiring *'unsafe-inline'*
 
 These components work under strict CSP for most features, but specific advanced features need `'unsafe-inline'`:
 
@@ -96,7 +227,7 @@ These components work under strict CSP for most features, but specific advanced 
 | Navigation | TreeView - [Click here for feature details](../treeview/content-security-policy) |
 | Maps | Maps -[Click here for feature details](../maps/content-security-policy) |
 
-### Scenario 3: Passing Inline Styles via ComponentInputAttributes
+### Scenario 3: passing inline styles via ComponentInputAttributes
 
 If you add `style` attributes directly through `InputAttributes` or `HtmlAttributes`, strict CSP will block them:
 
@@ -120,7 +251,7 @@ If you add `style` attributes directly through `InputAttributes` or `HtmlAttribu
 
 This keeps your CSP strict while still achieving your styling goals.
 
-## CSP Configuration With *'unsafe-inline'*
+## CSP configuration with *'unsafe-inline'*
 
 If your application needs any of the above scenarios, use this configuration:
 
