@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® Blazor PDF Viewer and DataGrid Integration
+title: Integrating Syncfusion Blazor DataGrid with PDF Viewer
 description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer and DataGrid in a Blazor Web App (Server).
 platform: Blazor
 control: Common
@@ -22,7 +22,7 @@ From the server project folder (where the `.csproj` file is located), install th
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
@@ -79,18 +79,15 @@ builder.Services.AddSyncfusionBlazor();
 Add the following stylesheet and script references in the server app's `~/Components/App.razor` (inside the head/body as appropriate). Ensure no other Syncfusion theme CSS (for example, `bootstrap5.css` or `material.css`) is referenced to avoid conflicts.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" hl_lines="3 8 10" %}
+{% highlight html tabtitle="App.razor" %}
 
-<head>
-    <!-- Syncfusion theme stylesheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
+<!-- Syncfusion theme stylesheet -->
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
-<body>
-    <!-- Syncfusion Blazor Core script (required for most components, including DataGrid) -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!-- Syncfusion Blazor PDF Viewer component script -->
-    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+<!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<!-- Syncfusion Blazor PDF Viewer component script -->
+<script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
 {% endhighlight %}
