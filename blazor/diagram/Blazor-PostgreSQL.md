@@ -346,7 +346,10 @@ The **AppDbContext** connects your C# code to PostgreSQL. It:
 - Maps `LayoutNode` class properties to **org_chart_layout** table columns.
 - Configures the `parent_id` index for fast lookups.
 - Seeds the database with sample org-chart data.
-- Enables `dotnet ef database update` to create the table automatically.
+- Enables the following command to create the table automatically.
+```powershell
+dotnet ef database update
+```
 
 The API controller (Step 7) will query this context to fetch data for the diagram. The DbContext has been successfully configured.
 
