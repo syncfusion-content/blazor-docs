@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor SpeechToText Component | Syncfusion
-description: Checkout and learn about Appearance in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Style and Appearance in Blazor SpeechToText Component | Syncfusion
+description: Checkout and learn about Style and Appearance in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Appearance in Blazor SpeechToText component
+# Style and Appearance in Blazor SpeechToText component
 
 ## Customizing the button
 
