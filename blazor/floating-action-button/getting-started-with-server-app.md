@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Floating Action Button in Server App
 
-This section briefly explains about how to include [Blazor Floating Action Button](https://www.syncfusion.com/blazor-components/blazor-fab) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Floating Action Button](https://www.syncfusion.com/blazor-components/blazor-fab) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -181,7 +181,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 The floating action button control triggers the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_OnClick) event when you click on the floating action button. Use this event to perform the required action.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfFab Target="#target" IconCss="e-icons e-plus" OnClick="EventClick"></SfFab>
