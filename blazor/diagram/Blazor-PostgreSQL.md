@@ -796,7 +796,7 @@ A complete, working sample implementation is available in the [GitHub repository
 This guide demonstrates how to:
 
 1. Install PostgreSQL. [🔗](#Installing-PostgreSQL)
-1. Create a PostgreSQL database with layout Nodes using pgAdmin 4. [🔗](#PostgreSQL database setup)
+1. Create a PostgreSQL database with layout Nodes using pgAdmin 4. [🔗](#PostgreSQL-database-setup)
 2. Install necessary NuGet packages for Entity Framework Core with Npgsql and Syncfusion®. [🔗](#step-1-install-required-nuget-packages)
 3. Create data models and DbContext for database communication with PostgreSQL-specific configuration. [🔗](#step-2-create-the-data-model)
 4. Configure connection strings and register services. [🔗](#step-4-configure-the-connection-string)
