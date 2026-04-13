@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Ribbon in a Blazor Web App
 
-This section explains how to add the [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to add the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 To get started quickly with the Blazor Ribbon component, refer to the following video guide:
 
@@ -174,7 +174,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 Options in the ribbon are organized into tabs. Use the [RibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTabs.html) tag to group all tabs and the [RibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTab.html) tag for each individual tab.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRibbon>
     <RibbonTabs>
@@ -190,7 +190,7 @@ Options in the ribbon are organized into tabs. Use the [RibbonTabs](https://help
 To define a ribbon group under each tab, you can use the [RibbonGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroups.html) tag directive like below. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRibbon>
     <RibbonTabs>
@@ -210,7 +210,7 @@ To define a ribbon group under each tab, you can use the [RibbonGroups](https://
 Within a group, items are organized into collections. Use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCollection.html) tag directive for a set of items and the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) tag directive for each individual item. The [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property specifies the kind of item to render, such as a Button, DropDown, or ComboBox.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Ribbon;
 @using Syncfusion.Blazor.SplitButtons;

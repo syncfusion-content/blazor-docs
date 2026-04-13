@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Rich Text Editor in Blazor Web App
 
-This section explains how to add the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to add the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -167,7 +167,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRichTextEditor>
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
@@ -189,7 +189,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property as your application requires.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
@@ -258,7 +258,7 @@ The **Image** inserts an image into Rich Text Editor content, and the **Link** l
 The quick toolbar items can be configured for specific target elements such as images, links, and tables. The quick toolbar opens when clicking the target element, allowing customization of that element.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
@@ -319,7 +319,7 @@ The quick toolbar items can be configured for specific target elements such as i
 To retrieve the editor contents in HTML format, use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property of Rich Text Editor, and to fetch the editor content as plain text, use the [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetTextAsync) method of Rich Text Editor.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor
@@ -369,7 +369,7 @@ To retrieve the editor contents in HTML format, use the [Value](https://help.s
 To retrieve the number of characters in the Rich Text Editor content, use the [GetCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetCharCountAsync) method.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor

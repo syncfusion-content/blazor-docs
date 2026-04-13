@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor OTP Input in Blazor Web App
 
-This section briefly explains about how to include `Blazor OTP Input` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor OTP Input](https://www.syncfusion.com/blazor-components/blazor-otp-input) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 To get started quickly with Blazor OTP Input component, check on the following video:
 
@@ -170,7 +170,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfOtpInput></SfOtpInput>
 

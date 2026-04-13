@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TreeView in Blazor Web App
 
-This section explains how to integrate the Syncfusion [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to integrate the Syncfusion [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -231,7 +231,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeView).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
