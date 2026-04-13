@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Dashboard Layout Component in Blazor Web App
 
-This section briefly explains about how to include the [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -163,7 +163,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Layouts
 
@@ -192,7 +192,7 @@ Panels are interactive, supporting functionalities such as dragging, floating, a
 A basic Dashboard Layout panel can display simple data. The panel's header is defined by [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) and its content by the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Layouts
 
@@ -230,7 +230,7 @@ A Dashboard Layout can also host complex UI components such as charts, grids, ma
 These components are placed as panel content by assigning the corresponding Blazor component element as the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) of the panel.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Grids
@@ -284,7 +284,6 @@ These components are placed as panel content by assigning the corresponding Blaz
                             </ChartSeriesCollection>
                         </SfChart>
                     </div>
-
                 </ContentTemplate>
             </DashboardLayoutPanel>
             <DashboardLayoutPanel Id="Panel4" SizeX=3 SizeY=2 Row=2 Column=0>
@@ -325,7 +324,8 @@ These components are placed as panel content by assigning the corresponding Blaz
     </SfDashboardLayout>
 </div>
 @code
- { SfChart chartObj;
+{ 
+    SfChart chartObj;
     SfChart barchartObj;
     SfRangeNavigator rangeObj;
     SfChart linechartObj;
@@ -344,12 +344,12 @@ These components are placed as panel content by assigning the corresponding Blaz
         public double Y4 { get; set; }
     }
     public List<ChartData> DataSource = new List<ChartData>
-{
+    {
         new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21, X = "USA", Y =300.2, Country = "USA: 72", X1= "2012"},
         new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24, X = "Russia", Y = 103.1, Country = "RUS: 103.1", X1= "2013"},
         new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36, X = "Brazil", Y = 139.1, Country = "BRZ: 139.1", X1= "2014"},
         new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38, X = "India", Y = 262.1, Country = "IND: 262.1", X1= "2015"},
-        };
+    };
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -377,7 +377,7 @@ These components are placed as panel content by assigning the corresponding Blaz
         this.linechartObj.RefreshAsync();
         this.barchartObj.RefreshAsync();
     }
- }
+}
 
 <style>
     #linechart, #grid, #chart1, #chart, #range {

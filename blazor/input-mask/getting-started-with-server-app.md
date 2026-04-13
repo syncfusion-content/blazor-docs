@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor MaskedTextBox Component in Server App
 
-This section briefly explains about how to include [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfMaskedTextBox></SfMaskedTextBox>
 
@@ -177,7 +177,7 @@ Set a mask on the MaskedTextBox to validate user input using the [Mask](https://
 The following example demonstrates the mask element `0`, which allows any single digit from `0` to `9`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfMaskedTextBox Mask='000-000-0000'></SfMaskedTextBox>
 
