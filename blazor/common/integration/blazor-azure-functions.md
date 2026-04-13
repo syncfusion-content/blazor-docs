@@ -7,13 +7,13 @@ control: Common
 documentation: ug
 ---
 
-# Blazor with Azure Functions
+# Integrating Syncfusion® Blazor Components with Azure Functions
 
-This guide shows how to build a Blazor WebAssembly app that uses **Azure Functions** as a serverless backend and integrates Syncfusion Blazor components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker). It covers local development setup, security options such as Function keys, calling functions from Blazor, CORS configuration, error handling, and a complete working example with an orders list and a scheduler view.
+This guide shows how to build a Blazor WebAssembly app that uses [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend and integrates Syncfusion Blazor components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker). It covers local development setup, security options such as Function keys, calling functions from Blazor, CORS configuration, error handling, and a complete working example with an orders list and a scheduler view.
 
 ## What is Azure Functions?
 
-[Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) is a serverless compute service designed to run small pieces of code (functions) without managing infrastructure. Azure automatically handles hosting, scaling, and execution. Functions run on demand triggered by HTTP requests, timers, queues, or other Azure events, making them ideal for lightweight APIs, background tasks, and event-driven workflows.
+Azure Functions is a serverless compute service designed to run small pieces of code (functions) without managing infrastructure. Azure automatically handles hosting, scaling, and execution. Functions run on demand triggered by HTTP requests, timers, queues, or other Azure events, making them ideal for lightweight APIs, background tasks, and event-driven workflows.
 
 ## Why use Azure Functions with Blazor?
 
@@ -21,35 +21,43 @@ Azure Functions scale independently from the UI and require minimal operational 
 
 ## Secure Azure Functions
 
-For production applications, use **Microsoft Entra ID** for token-based, per-user authorization and auditing. Function keys are intended for development, testing, and trusted internal workflows, and should not be used in production client authentication.
+For production applications, use **Microsoft Entra ID** for token based, per user authorization and auditing. Function keys are intended for development, testing, and trusted internal workflows, and should not be used in production client authentication.
 
 Azure Functions supports two authorization approaches:
 * **Function-level authorization (Function Keys):** Simple shared secrets passed via query parameters or headers; suitable for development and internal automation only.
-* **Microsoft Entra ID / EasyAuth:** Token-based authentication with per-user authorization, auditing, and managed identities; recommended for production environments.
+* **Microsoft Entra ID / EasyAuth:** Token based authentication with per user authorization, auditing, and managed identities; recommended for production environments.
 
 EasyAuth (App Service Authentication) lets Azure validate tokens for you. For server-side validation in isolated worker functions use `Microsoft.IdentityModel.Tokens`. EasyAuth can validate tokens at platform level so your functions don't need to parse JWTs.
 
 ### Function-level authorization
 
-Function keys are simple shared secrets passed via `?code=` or the `x-functions-key` header, but they offer no user identity or fine-grained access control, so they shouldn’t be used as production‑level authorization. Reserve function keys for trusted server-to-server or internal automation workflows.
+Function keys are simple shared secrets passed via `?code=` or the `x-functions-key` header, but they offer no user identity or fine-grained access control, so they shouldn’t be used as production level authorization. Reserve Function Keys for trusted server-to-server or internal automation workflows.
 
-Examples:
+**Examples: How Function Keys are sent to Azure Functions**
+
+When calling an Azure Function that uses Function-level authorization, the Function Key must be sent with every request. Azure Functions supports two common ways to send the key:
 
 * Query string
+* HTTP header
+
+**1. Using a Query String**
+
+ In this approach, the Function Key is added directly to the URL using the code `query` parameter.
 
 {% tabs %}
-{% highlight bash %}
+{% highlight razor tabtitle=".razor"  %}
 
  GET /api/orders?code=YOUR_FUNCTION_KEY
 
 {% endhighlight %}
 {% endtabs %}
 
-* HTTP header: 
-Request-side (C#):
+**2. Using an HTTP Header**
+
+In this approach, the Function Key is sent in a request header called `x-functions-key`.
 
 {% tabs %}
-{% highlight cs %}
+{% highlight cs tabtitle="Program.cs" %}
 
 builder.Services.AddScoped(sp => {
   var client = new HttpClient { BaseAddress = new Uri("http://localhost:7071/") };
@@ -60,10 +68,12 @@ builder.Services.AddScoped(sp => {
 {% endhighlight %}
 {% endtabs %}
 
-Blazor HttpClient (add before call): 
+**Blazor HttpClient: Add HTTP Header before a request**
+
+Instead of configuring it globally, you can add the Function Key only when making a specific request.
 
 {% tabs %}
-{% highlight cs %}
+{% highlight razor tabtitle=".razor" %}
 
 var req = new HttpRequestMessage(HttpMethod.Get, "/api/orders?...");
 req.Headers.Add("x-functions-key", "YOUR_FUNCTION_KEY");
@@ -72,17 +82,17 @@ await Http.SendAsync(req);
 {% endhighlight %}
 {% endtabs %}
 
-For production, Microsoft Entra ID and managed identities provide better security than function keys
+For production, Microsoft Entra ID and managed identities provide better security than Function Keys.
 
 ### EasyAuth / Microsoft Entra ID
 
-Register an application in Microsoft Entra ID and configure the Function App Authentication provider (EasyAuth) to require tokens, or keep EasyAuth off and validate JWTs inside functions with `Microsoft.IdentityModel.Tokens`. For production, Microsoft Entra ID and managed identities provide better security than function keys.
+Register an application in Microsoft Entra ID and configure the Function App Authentication provider (EasyAuth) to require tokens, or keep EasyAuth off and validate JWTs inside functions with `Microsoft.IdentityModel.Tokens`. For production, Microsoft Entra ID and managed identities provide better security than Function Keys.
 
 Use EasyAuth (platform) for standard token validation; validate JWTs in-function when you need custom claims or fine‑grained checks.
 
 ## Working with Function Apps in a real‑world Blazor app
 
-This sample exposes `GET /api/orders` and `POST /api/orders`. The Blazor page uses `DatePicker` to select date ranges, `DataGrid` to list orders, `Scheduler` to show order events. Keep functions single-purpose, persist real data in storage, and enable Application Insights for telemetry.
+This sample exposes `GET /api/orders` and `POST /api/orders`. The Blazor page uses `DatePicker` to select date ranges, `DataGrid` to list orders, `Scheduler` to show order events. Keep functions single purpose, persist real data in storage, and enable Application Insights for telemetry.
 
 ### Prerequisites
 
@@ -95,9 +105,16 @@ Ensure the .NET SDK and Azure Functions Core Tools are compatible. Refer to the 
 
 ### Create solution and projects
 
-Create two projects: a Blazor WebAssembly (WASM) client and an isolated Azure Functions project and place them in a single solution
+In this section, you will create a single solution that contains:
 
-Create the **Blazor WASM project** using the following command:
+* A Blazor WebAssembly (WASM) client application.
+* An Azure Functions project using the isolated worker model.
+
+Keeping both projects in one solution makes development and debugging easier.
+
+**Step 1: Create the Blazor WebAssembly client project**
+
+Run the following command to create a Blazor WebAssembly application named Client.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -107,10 +124,9 @@ dotnet new blazorwasm -o Client -f net10.0
 {% endhighlight %}
 {% endtabs %}
 
-This creates a client-side Blazor application in the `Client` folder.
+**Step 2: Create the Azure Functions project (isolated worker)**
 
-
-Create the **Azure Functions project** using the following command:
+Create an Azure Functions project named Functions using the isolated worker model, then add an HTTP-triggered function.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
@@ -122,9 +138,9 @@ func new --name OrdersApi --template "HTTP trigger" --authlevel function
 {% endhighlight %}
 {% endtabs %}
 
-This creates an isolated worker-runtime Functions project with an HTTP trigger.
+**Step 3: Create a solution and add both projects**
 
-Create a Solution file to manage both projects:
+Return to the root folder and create a solution file to manage both projects.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -137,9 +153,9 @@ dotnet sln add Functions/Functions.csproj
 {% endhighlight %}
 {% endtabs %}
 
-## Add NuGet packages (client and functions)
+## Install required NuGet packages
 
-### Client: Syncfusion packages
+**Syncfusion packages:**
 
 Navigate to the Blazor WASM project and install the necessary Syncfusion packages.
 
@@ -156,9 +172,9 @@ cd ..
 {% endhighlight %}
 {% endtabs %}
 
-### Functions: worker and HTTP extension
+**Microsoft packages:**
 
-Install the necessary packages for isolated worker-runtime Azure Functions with HTTP triggers:
+Install the necessary packages for isolated worker runtime Azure Functions with HTTP triggers.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -188,7 +204,7 @@ Open the `Client/_Imports.razor` file from WASM project and import the below nam
 
 ### Register Syncfusion Blazor service
 
-Register the Syncfusion Blazor Service in the `Client/Program.cs` file from WASM project of your Blazor App.
+Add the Syncfusion Blazor service to the `Client/Program.cs` file to enable Syncfusion components in the application.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -232,7 +248,7 @@ Add the Syncfusion theme CSS and required scripts to the `wwwroot/index.html` fi
 
 ### Implement simple Azure Functions endpoints
 
-This example shows two minimal HTTP-triggered functions: GET `/api/orders` returns demo orders filtered by optional from/to query parameters (format yyyy‑MM‑dd), and POST `/api/orders` accepts and echoes a JSON payload. The functions include development-only CORS handling and basic logging; configure CORS and authentication in Azure for production.
+This example shows two minimal HTTP triggered functions: GET `/api/orders` returns demo orders filtered by optional from/to query parameters (format yyyy‑MM‑dd), and POST `/api/orders` accepts and echoes a JSON payload. The functions include development-only CORS handling and basic logging; configure CORS and authentication in Azure for production.
 
 Add the following file to your Azure Functions project (e.g., OrdersApi.cs):
 
@@ -373,13 +389,15 @@ public static class OrdersApi
 {% endhighlight %}
 {% endtabs %}
 
-N> > The above code example uses `Access-Control-Allow-Origin: *` for development convenience only. In production, replace `"*"` with your Blazor client's origin (e.g., `https://myapp.azurewebsites.net`) in Azure Portal → Function App → API → CORS. Never use wildcards in production.
+N> The above code example uses `Access-Control-Allow- : *` for development convenience only. In production, replace `"*"` with your Blazor client's origin (e.g., `https://myapp.azurewebsites.net`) in *Azure Portal → Function App → API → CORS*. Never use wildcards in production.
 
 ### Create the Blazor page using Syncfusion components
 
-This example demonstrates using Syncfusion controls: two DatePicker components to choose a range, an DataGrid to list orders, and an Scheduler to show events. It expects `HttpClient` to be configured with the Functions host as BaseAddress and uses JSON binding to populate the grid and scheduler. The sample injects `HttpClient` the earlier `Program.cs` scoped `HttpClient` whose `BaseAddress` points to the Functions host.
+This example demonstrates using Syncfusion Components: Two DatePicker components to choose a range, a DataGrid to list orders, and a Scheduler to show events. 
 
-Add the following Razor page to your Blazor WebAssembly project:
+The page expects `HttpClient` to be configured with the Azure Functions host URL as its BaseAddress. It uses JSON data returned from the Functions API to populate both the grid and the scheduler. The sample injects the `HttpClient` instance that was registered earlier in `Program.cs` where the `BaseAddress` points to the Azure Functions host.
+
+Add the following Razor page to your Blazor WebAssembly project.
 
 {% tabs %}
 {% highlight razor  %}
@@ -440,9 +458,7 @@ Add the following Razor page to your Blazor WebAssembly project:
         try
         {
           resp = await Http.GetAsync(tryUrl);
-          Console.WriteLine($"GET {tryUrl} => {(int)resp.StatusCode} {resp.ReasonPhrase}");
           body = await resp.Content.ReadAsStringAsync();
-          Console.WriteLine($"Response body (truncated): {body?.Substring(0, Math.Min(400, body.Length))}");
           if (resp.IsSuccessStatusCode)
           {
             var trimmed = (body ?? string.Empty).TrimStart();
@@ -475,11 +491,9 @@ Add the following Razor page to your Blazor WebAssembly project:
       if (!found)
       {
         OrdersList = new List<Order>();
-        Console.WriteLine("No valid response received from local Functions host on tested ports.");
       }
       EventItems = OrdersList.Select(o => new EventItem { StartTime = o.Date, EndTime = o.Date.AddHours(1), Subject = $"{o.Customer} ({o.Total:C2})" }).ToList();
       StateHasChanged();
-      Console.WriteLine($"Orders loaded: {OrdersList.Count}");
     }
     catch (Exception ex)
     {
@@ -491,7 +505,7 @@ Add the following Razor page to your Blazor WebAssembly project:
 {% endhighlight %}
 {% endtabs %}
 
-For browser calls, add the Blazor origin to Function App CORS (Azure Portal → Function App → API → CORS).
+For browser calls, add the Blazor origin to Function App CORS (*Azure Portal → Function App → API → CORS*).
 
 ## Run the application
 
