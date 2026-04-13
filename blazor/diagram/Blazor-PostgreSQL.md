@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Loading Blazor Diagram from PostgreSQL database | Syncfusion®
-description: Fetch organizational-chart layout data from PostgreSQL and bind it to a .NET API-backed Syncfusion Blazor Diagram for Server and WASM samples.
+description: Fetch organizational chart layout data from PostgreSQL and bind it to a .NET API-backed Syncfusion® Blazor Diagram for Server and WASM samples.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Loading a Syncfusion Blazor Diagram from PostgreSQL
+# Loading a Syncfusion® Blazor Diagram from PostgreSQL
 
-This guide shows how the sample in this repository loads organizational-chart layout data from PostgreSQL and renders it with the Syncfusion Blazor Diagram component. It covers database creation, API backend, EF Core migrations, and how the Blazor Server and WASM projects consume the API.
+This guide shows how to load organizational chart data from a PostgreSQL database and render it using the Syncfusion® Blazor Diagram component. It walks through creating the database schema, configuring EF Core with the Npgsql provider, applying migrations and seed data, exposing a .NET API endpoint, and consuming that API from Blazor Server and WASM hosts to render an organizational chart.
 
-> Note: The API returns objects with fields `id`, `parentId` (C#) / `parent_id` (DB) and `role`. The diagram's `DataSourceSettings` expects this parent–child shape.
+> **Note**: This guide works with React Diagram version 28.x or later. The REST API needs to return an array of JSON objects with **id**, **parent_id**, and **role** fields for correct data binding.
 
 **What is Entity Framework Core?**
 
@@ -29,6 +29,18 @@ Entity Framework Core (EF Core) is a software tool that simplifies database oper
 
 The **Npgsql.EntityFrameworkCore.PostgreSQL** package is the official Entity Framework Core provider for PostgreSQL. It acts as a bridge between Entity Framework Core and PostgreSQL, allowing applications to read, write, update, and delete data in a PostgreSQL database.
 
+## Overview
+
+This sample connects three parts:
+
+- **PostgreSQL** — stores the org chart data.
+- **Api** — ASP.NET Core Web API project that exposes **/api/layout** and hosts EF Core migrations and seeding.
+- **Blazor samples** — two consumer apps:
+  - **Blazor Server**: [BlazorServerStyle](BlazorServerStyle)
+  - **Blazor WebAssembly**: [BlazorWASMStyle](BlazorWASMStyle/BlazorWASMStyle)
+
+The Blazor pages use a small **LayoutService** to call the API and bind results to **SfDiagramComponent**.
+
 ## Prerequisites
 
 Ensure the following software and packages are available:
@@ -37,94 +49,146 @@ Ensure the following software and packages are available:
 |---|---|---|
 | Visual Studio / Code | Latest | Development IDE with .NET workloads |
 | .NET SDK | 10.0 or later | Build & run projects |
-| PostgreSQL Server | 12.x or later | Stores org-chart data |
+| PostgreSQL Server | 12.x or later | Stores organizational chart data |
 | pgAdmin 4 (optional) | Latest | DB management UI |
 | Syncfusion.Blazor.Diagram | {{site.blazorversion}} | Diagram component |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Syncfusion components |
-| Microsoft.EntityFrameworkCore | 10.x | EF Core runtime |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Syncfusion® Blazor components |
+| Microsoft.EntityFrameworkCore.Design | 10.x | EF Core runtime |
+| Microsoft.EntityFrameworkCore.Tools | 10.x | EF Core runtime |
 | Npgsql.EntityFrameworkCore.PostgreSQL | 10.x | EF provider for PostgreSQL |
 
-## Setting Up the PostgreSQL Environment for Entity Framework Core
+## Installing PostgreSQL
 
-You can create the database and table manually (pgAdmin/psql) or apply the EF Core migrations included in the Api project.
+Download PostgreSQL from the official website: [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
 
-### Step 1: Create the database and Table in PostgreSQL
+**Installation Steps:**
 
-#### Option A — Manual (pgAdmin / psql)
+1. Download the installer for the preferred version (12.x or higher recommended)
+2. Run the installer and follow the setup wizard
+3. During installation:
+  - Set a password for the PostgreSQL (example: **postgres123**) and remember it.
+  - Keep the default port **5432**.
+  - Next, the Select Components screen will open.
+  - By default, all options are selected, as shown in the image:
+    ![Select Components](images/select-component-Package.png)
+  - Uncheck the **Stack Builder** option — it is not necessary for this setup.
+  - Ensure **PostgreSQL Server**, **pgAdmin 4**, and **Command Line Tools** are selected.
 
-First, the **PostgreSQL database** structure must be created to store purchase order records.
+4. Complete the installation.
 
-**UI Instructions (Using pgAdmin 4):**
 
-1. **Open pgAdmin 4** and connect to the PostgreSQL server.
-2. **Create Database**:
-   - Right-click on **Databases** → Select **Create** → **Database**
-   - Enter name: `org_chart_db`
-   - Click **Save**
-3. **Create Table**:
-   - Expand `org_chart_db` → Right-click on **Schemas** → **public** → **Tables**
-   - Click **Create** → **Table**
-   - Enter table name: `org_chart_layout`
-   - Define columns as per the script below
-4. **Execute SQL Script** (Alternative method):
-   - Right-click on `org_chart_db` → **Query Tool**
-   - Copy and paste the SQL script below
-   - Execute (F5 or Run button)
+## PostgreSQL database setup
 
-**SQL Script for PostgreSQL:**
+Two options are available to create a database:
+  * Manual (pgAdmin 4)
+  * Automated initialization and seeding (seed script).
+
+### Option A: Manual (pgAdmin 4)
+
+#### Opening pgAdmin
+
+PostgreSQL includes pgAdmin 4, a graphical tool for database management. Open pgAdmin 4 from the Windows Start menu or application launcher.
+
+![Opening pgAdmin 4](images/pgadmin-start.jpg)
+
+#### Creating the database
+
+Right-click on **Databases** option and select **Create** → **Database**.
+
+![Create Database Menu](images/create-database-menu.png)
+
+In the **Create - Database** dialog:
+1. Enter **org_chart_db** as the database name. 
+2. Click **Save** to create the database.
+
+![Database Creation Dialog](images/database-creation-dialog.png)
+
+After creating the database, right-click the **org_chart_db** database and choose **Query Tool** from the context menu.
+
+**Quick procedure before running SQL:**
+
+- Clear the editor (Ctrl+A → Delete) to remove any previous statements.
+- Enter the SQL, then click **Execute / Execute Query** (or press **F5**) to run it.
+- After execution, clear the editor again before entering the next statement.
+
+Follow this simple sequence for every SQL in this guide.
+
+#### Creating the table
+
+Run the following SQL to create the **org_chart_layout** table:
 
 ```sql
--- Create Database
-CREATE DATABASE org_chart_db
-
--- Connect to the database
-\c org_chart_db;
-
--- Create PurchaseOrder Table
 CREATE TABLE IF NOT EXISTS org_chart_layout (
   id text PRIMARY KEY,
   role text NOT NULL,
   parent_id text NULL
 );
+```
+![Create Table Query](images/create-table-query.jpg)
 
+The table structure includes:
+- **id** - Primary key for unique node identification.
+- **role** - Display text for the node in the organizational chart layout.
+- **parent_id** - Foreign key reference to the parent node (NULL for root).
+
+#### Inserting sample data
+
+Add organizational chart data using the SQL **INSERT** statement. The sample data shows a typical organizational structure with board, management, and department levels.
+
+```sql
 INSERT INTO org_chart_layout (id, role, parent_id) VALUES
-('parent','Board',NULL),
-('1','General Manager','parent')
-ON CONFLICT (id) DO UPDATE SET role = EXCLUDED.role, parent_id = EXCLUDED.parent_id;
-
+('parent', 'Board', NULL),
+('1', 'General Manager', 'parent'),
+('2', 'Human Resource Manager', '1'),
+('3', 'Trainers', '2'),
+('4', 'Recruiting Team', '2'),
+('5', 'Finance Asst. Manager', '2'),
+('6', 'Design Manager', '1'),
+('7', 'Design Supervisor', '6'),
+('8', 'Development Supervisor', '6'),
+('9', 'Drafting Supervisor', '6'),
+('10', 'Operations Manager', '1'),
+('11', 'Statistics Department', '10'),
+('12', 'Logistics Department', '10'),
+('16', 'Marketing Manager', '1'),
+('17', 'Overseas Sales Manager', '16'),
+('18', 'Petroleum Manager', '16'),
+('20', 'Service Department Manager', '16'),
+('21', 'Quality Control Department', '16')
+ON CONFLICT (id) DO UPDATE
+SET role = EXCLUDED.role,
+    parent_id = EXCLUDED.parent_id;
 ```
 
-#### Option B — Automated (EF Core migrations + seed)
+![Insert Data Query](images/insert-data-query.jpg)
 
-Apply the EF Core migrations included in the host project that contains `AppDbContext` (the Server host includes migrations by default). Update the connection string in the host's `appsettings.Development.json` and run migrations from that project directory.
+#### Verifying data insertion
 
-Example (Blazor Server host):
+Run a **SELECT** query to confirm the data insertion:
 
-```powershell
-cd src/BlazorServerStyle
-dotnet restore
-dotnet build
-dotnet ef database update
+```sql
+SELECT * FROM org_chart_layout ORDER BY id;
 ```
 
-If you prefer the WASM host (it also contains the server + migrations), run:
+The query should return 18 rows. Parent–child relationships are indicated by the **parent_id** column, which references the **id** of the parent node (NULL for root nodes).
 
-```powershell
-cd src/BlazorWASMStyle/BlazorWASMStyle
-dotnet restore
-dotnet build
-dotnet ef database update
-```
+![Verify Data Query Results](images/verify-data-results.jpg)
 
-If `dotnet-ef` is not installed:
+### Option B — Automated (EF Core migrations + seed)
 
-```powershell
-dotnet tool install --global dotnet-ef
-```
+This project includes an automated initialization script that handles database creation, table schema generation, and data seeding in one command.  
 
+The script performs the following operations:
+1. **Dynamic Database Provisioning**: Detects if the database exists and creates it automatically.
+2. **Schema Generation**: Creates the **org_chart_layout** table with the required primary keys and organizational relationships.
+3. **Data Seeding**: Populates the table with organizational data from a JSON source.
+
+The implementation details for the automated initialization script are covered in the [Automated database initialization and seeding](#step-7-automated-database-initialization-and-seeding) section under Backend Implementation.
 ---
 
-### Step 2: Install Required NuGet Packages
+## Backend implementation (Api project)
+
+### Step 1: Install Required NuGet Packages
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
@@ -168,15 +232,15 @@ The installed packages are reflected in the **BlazorServerStyle.csproj** file:
 
 All required packages are now installed.
 
-### Step 3: Create the Data Model
+### Step 2: Create the Data Model
 
-A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the `LayoutNode` table.
+A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the **org_chart_layout** table.
 
 **Instructions:**
 
 1. Create a new folder named `Models` in the Blazor application project.
-2. Inside the `Models` folder, create a new file named **LayoutNode.cs**.
-3. Define the **LayoutNode** class with the following code:
+2. Inside the `Models` folder, create a new file named `LayoutNode.cs`.
+3. Define the `LayoutNode` class with the following code:
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -194,18 +258,18 @@ public class LayoutNode
 **Explanation:**
 - Each property represents a column in the database table.
 - The `?` symbol indicates that a property is nullable (can be empty).
-- The model includes comprehensive XML documentation for each property.
 
-The data model has been successfully created.
+The data model has been successfully created. This model represents the structure of the **org_chart_layout** table and will be used by the **DbContext** in the next step.
 
-### Step 4: Configure the DbContext
+### Step 3: Configure the DbContext
 
-A `DbContext` is a special class that manages the connection between the application and the PostgreSQL database. It handles all database operations such as saving, updating, deleting, and retrieving data.
+A **DbContext** is a special class that manages the connection between the application and the PostgreSQL database. It handles all database operations such as saving, updating, deleting, and retrieving data.
 
 **Instructions:**
 
-1. Inside the `Data` folder, create a new file named **AppDbContext.cs**.
-2. Define the `AppDbContext` class with the following code:
+1. Create a new folder named `Data` in the Blazor application project.
+2. Inside the `Data` folder, create a new file named `AppDbContext.cs`.
+3. Define the `AppDbContext` class with the following code:
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -263,22 +327,20 @@ public class AppDbContext : DbContext
 ```
 
 **Explanation:**
-- The `DbContext` class inherits from Entity Framework's `DbContext` base class.
-- The `OrgChartLayouts` property represents the `org_chart_layout` table in the database.
+- The `DbContext` class inherits from Entity Framework's **DbContext** base class.
+- The `OrgChartLayouts` property represents the **org_chart_layout** table in the database.
 - The `OnModelCreating` method configures how the database columns should behave (maximum length, required/optional, default values, data types, indexes, etc.).
 - Database indexes are configured for improved query performance on frequently accessed columns.
 
-The **AppDbContext** class is required because:
+The **AppDbContext** connects your C# code to PostgreSQL. It:
+- Maps `LayoutNode` class properties to **org_chart_layout** table columns.
+- Configures the `parent_id` index for fast lookups.
+- Seeds the database with sample org-chart data.
+- Enables `dotnet ef database update` to create the table automatically.
 
-- It **connects** the application to the PostgreSQL database.
-- It **manages** all database operations.
-- It **maps** C# models to actual database tables.
-- It **configures** how data should look inside the database.
-- It **enables** PostgreSQL-specific features like indexes and default value functions.
+The API controller (Step 7) will query this context to fetch data for the diagram. The DbContext has been successfully configured.
 
-Without this class, Entity Framework Core will not know where to save data or how to create the org_chart_layout table. The DbContext has been successfully configured.
-
-### Step 5: Configure the Connection String
+### Step 4: Configure the Connection String
 
 A connection string contains the information needed to connect the application to the PostgreSQL database, including the server address, database name, and authentication credentials.
 
@@ -289,9 +351,9 @@ A connection string contains the information needed to connect the application t
 
 ```json
 {
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=5432;Database=PurchaseOrderDB;User Id=postgres;Password=postgresql@123"
-  },
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=5432;Database=org_chart_db;User Id=postgres;Password=postgresql@123"
+    },
   "Logging": {
     "LogLevel": {
       "Default": "Information",
@@ -308,18 +370,18 @@ A connection string contains the information needed to connect the application t
 |-----------|-------------|
 | Server | The address of the PostgreSQL server (localhost for local development) |
 | Port | The port number on which PostgreSQL is running (default is 5432) |
-| Database | The database name (in this case, `PurchaseOrderDB`) |
+| Database | The database name (for this guide, **org_chart_db**) |
 | User Id | The PostgreSQL username (default is `postgres`) |
 | Password | The password for the PostgreSQL user account |
 
 
 > **Security Note:** For production environments, store sensitive credentials in environment variables or Azure Key Vault instead of storing them in appsettings.json. Example: `Password=${DB_PASSWORD}` and set the environment variable `DB_PASSWORD` on the deployment server.
 
-The database connection string has been configured successfully.
+The connection string is now configured. When the application starts, `AddDbContext<AppDbContext>` (registered in Program.cs, Step 7 below) will use this string to connect to PostgreSQL.
 
-### Step 6: Create the LayoutService Class
+### Step 5: Create the LayoutService Class
 
-A LayoutService class is an intermediary layer that handles all database operations. This class uses Entity Framework Core to communicate with the PostgreSQL database.
+A LayoutService class is an HTTP client wrapper that calls the API endpoint to fetch layout nodes. The Blazor component injects this service to load data from the host's `/api/layout` endpoint.
 
 **Instructions:**
 
@@ -347,10 +409,10 @@ public class LayoutService
     }
 }
 ```
-The repository class has been created.
+The service class has been created. This wrapper calls the API endpoint `/api/layout` to fetch organizational chart data. It will be injected into the Blazor component (Step 2 under "Integrating Syncfusion® Blazor Diagram") and registered in the next step (Step 6).
 
 
-### Step 7: Register Services in Program.cs
+### Step 6: Register Services in Program.cs
 
 The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Entity Framework Core with PostgreSQL and the repository pattern.
 
@@ -408,33 +470,111 @@ app.Run();
 
 **Explanation:**
 
-- **`AddSyncfusionBlazor()`**: Registers Syncfusion Blazor components (Diagram, themes, etc.).
+- **`AddSyncfusionBlazor()`**: Registers Syncfusion® Blazor components (Diagram, themes, etc.).
 - **`AddDbContext<AppDbContext>`**: Registers the DbContext with PostgreSQL as the database provider using `UseNpgsql()`.
 - **Connection String Validation**: Ensures the connection string is configured before attempting to connect.
 - **`AddScoped<LayoutService>`**: Registers the repository as a scoped service, creating a new instance for each HTTP request.
+ - **`AddHttpClient<LayoutService>(...)`**: Registers an `HttpClient` for `LayoutService` using `HttpClientFactory`; ensure `client.BaseAddress` matches the API host so `LayoutService` calls `api/layout` correctly.
 - **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
 
-The service registration has been completed successfully.
+Service registration is complete. The host can now:
+- Use `AppDbContext` to access the database via the connection string (Step 5).
+- Handle HTTP requests via `AddControllers()`.
+- Provide `LayoutService` to Blazor components to fetch data from the API.
 
+Next, create the API controller to expose the `/api/layout` endpoint that `LayoutService` calls.
+
+### Step 7: Create the API Controller
+
+The `LayoutService` calls a `/api/layout` endpoint that must exist on the host. Create a controller file (e.g., **Controllers/LayoutController.cs**) in the host project to expose this endpoint:
+
+```csharp
+using BlazorServerStyle.Data;
+using BlazorServerStyle.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace BlazorServerStyle.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class LayoutController : ControllerBase
+{
+    private readonly AppDbContext _db;
+    
+    public LayoutController(AppDbContext db) => _db = db;
+
+    [HttpGet]
+    public async Task<IActionResult> Get() => Ok(await _db.OrgChartLayouts.ToListAsync());
+}
+```
+
+**Explanation:**
+- `[ApiController]` and `[Route("api/[controller]")]` expose the endpoint at `/api/layout`.
+- `[HttpGet]` handles GET requests.
+- The method queries `OrgChartLayouts` from the database and returns JSON.
+
+After starting the host (see "Run the sample locally" section), verify the endpoint by opening `http://localhost:5069/api/layout` in a browser (adjust port if different). It should return a JSON array of layout nodes. The Blazor **Home.razor** component will use `LayoutService` to call this endpoint and bind the data to the Diagram.
+
+###  Step 7: Automated database initialization and seeding
+This section explains the automated database initialization and seeding process that creates the database, applies the schema, and populates the initial organizational chart data.
+
+Apply the EF Core migrations included in the host project that contains `AppDbContext` (the Server host includes migrations by default). Update the connection string in the host's **appsettings.Development.json** and run migrations from that project directory.
+
+Example (Blazor Server host):
+
+```powershell
+cd src/BlazorServerStyle
+dotnet restore
+dotnet build
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
+If you prefer the WASM host (it also contains the server + migrations), run:
+
+```powershell
+cd src/BlazorWASMStyle/BlazorWASMStyle
+dotnet restore
+dotnet build
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
+If the database does not exist, `dotnet ef database update` (with proper DB server access) will create the database and apply the migration that defines the `orgchart_layout` table and seed rows (the seed is configured with **HasData** in the `AppDbContext`). If `dotnet ef` is not installed, install it with:
+
+```powershell
+dotnet tool install --global dotnet-ef
+```
+Running the commands above creates the database schema (including **org_chart_layout** table) and applies the seed data defined in `OnModelCreating()`. After successful migration, the database is ready for the application.
+
+Alternatively create the DB manually (Option A) and then run `dotnet ef database update` to create schema and seed.
 ---
 
-## Integrating Syncfusion Blazor Diagram
+**Backend is now complete.** You have a PostgreSQL database, EF Core models, a DbContext, migrations, service registration in Program.cs, and an API controller. The next section sets up the Blazor frontend to consume this API and display the Diagram.
 
-### Step 1: Install and Configure Blazor Diagram Component
+## Integrating the Blazor Diagram component
 
-Syncfusion is a library that provides pre-built UI components like Diagram, which is used to display data as a diagram.
+### Step 1: Install and Configure Blazor Diagram component
+
+Syncfusion® Blazor provides pre-built UI components. The Diagram component visualizes hierarchical data (parent–child relationships) as an organizational chart layout.
 
 **Instructions:**
 
 * The Syncfusion.Blazor.Diagram package was installed in **Step 2** of the previous section.
-* Import the required namespaces in the `Components/_Imports.razor` file:
+* Import the required namespaces in the **Components/_Imports.razor** file:
 
 ```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Diagram
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the Syncfusion® stylesheet and scripts to your host page head so assets load before components render. Use the host file for your project type:
+
+- Blazor Server: add the links to **Pages/app.razor** (inside the `<head>` element).
+- Blazor WebAssembly: add the links to **wwwroot/index.html** (inside the `<head>` element).
+
+Example links to add inside the host `<head>`:
 
 ```html
 <!-- Syncfusion Blazor Stylesheet -->
@@ -445,15 +585,15 @@ Syncfusion is a library that provides pre-built UI components like Diagram, whic
 ```
 For this project, the bootstrap5 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Diagram component's [getting-started](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app) documentation.
+Syncfusion® components are now configured and ready to use. For additional guidance, refer to the Diagram component's [getting-started](https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor Diagram
 
-The `Home.razor` component will display the data in a Syncfusion Blazor Diagram Organization chart.
+The **Home.razor** component will display the organizational data using a Syncfusion® Blazor Diagram with organizational chart layout.
 
 **Instructions:**
 
-1. Open the file named `Home.razor` in the `Components/Pages` folder.
+1. Open the file named **Home.razor** in the **Components/Pages** folder.
 2. Add the following code to create a Diagram:
 
 ```cshtml
@@ -551,21 +691,29 @@ else
 
 **Component Explanation:**
 
-- **`@inject LayoutService`**: Injects the repository to access database methods.
-- **`<SfDiagramComponent>`**: The Diagram component that displays data as layout.
-- **`<DataSourceSettings>`**: Represents the settings that specify the data source and define how the parent and child relationship will be generated in the diagram layout.
-- **`<SnapSettings>`**: Customize and control the grid lines and snap behavior of the diagram.
-- **`<Layout>`**: Class for arranging the nodes and connectors in a tree structure.
+- **`@inject LayoutService`**: Injects the service to call the `/api/layout` endpoint.
+- **`<SfDiagramComponent>`**: The Syncfusion® Blazor Diagram component that renders the organizational chart.
+- **`<DataSourceSettings>`**: Maps data source properties (`ID`, `ParentID`) to the component so it understands parent–child relationships.
+- **`<SnapSettings>`**: Customizes grid lines and snap behavior for better user interaction.
+- **`<Layout>`**: Arranges nodes and connectors in an organizational chart tree structure based on parent–child relationships.
+- **`OnNodeCreating` / `OnConnectorCreating`**: Customize the appearance of nodes (boxes) and connectors (lines) — in this example, blue boxes with black borders.
 
-The Home component has been updated successfully with Diagram.
+The Home component has been updated successfully with Diagram. When the page loads, it injects `LayoutService`, calls `GetOrgChartAsync()` in `OnInitializedAsync()`, and passes the JSON data to the Diagram via `DataSourceSettings`.
 
 ---
 
 ## Run the sample locally
 
-1. Ensure PostgreSQL is running and reachable; update the `DefaultConnection` in the host project's `appsettings.Development.json`.
+**Summary:** You now have all code in place. Follow these steps to build, run migrations, and launch the application.
 
-2. Apply migrations and seed (choose the host project that contains `Migrations`):
+**Prerequisites for this section:**
+- PostgreSQL is running and reachable.
+- Connection string in **appsettings.json** is correct (or use migrations to create the database).
+- All steps above (1–7) are complete.
+
+1. Ensure PostgreSQL is running and reachable; update the **DefaultConnection** in the host project's **appsettings.Development.json**.
+
+2. Apply migrations and seed (choose the host project that contains **Migrations**):
 
 ```powershell
 dotnet tool install --global dotnet-ef
@@ -582,7 +730,7 @@ cd src/BlazorServerStyle
 dotnet run
 ```
 
-By default the Server app uses the launch settings shown in `BlazorServerStyle/Properties/launchSettings.json` and will be available on `http://localhost:5069` (HTTP) and `https://localhost:7269` (HTTPS).
+By default the Server app uses the launch settings shown in **BlazorServerStyle/Properties/launchSettings.json** and will be available on `http://localhost:5069` (HTTP) and `https://localhost:7269` (HTTPS).
 
 4. Or run the WASM host (which serves the client and hosts the API):
 
@@ -591,20 +739,43 @@ cd src/BlazorWASMStyle/BlazorWASMStyle
 dotnet run
 ```
 
-Typical WASM host URLs in this workspace are `http://localhost:5252` and `https://localhost:7042` .
+Typical WASM host URLs (when running the sample project) are `http://localhost:5252` and `https://localhost:7042` .
 
-5. Open the app in a browser and navigate to the Home page — the organizational chart should load from the host's `/api/layout` endpoint and render via the Syncfusion Blazor Diagram.
+5. Open the app in a browser and navigate to the Home page, the organizational chart should load from the host's `/api/layout` endpoint and render via the Blazor Diagram.
 
 ## Troubleshooting
 
-- API connection errors: confirm PostgreSQL is running and `appsettings.Development.json` contains correct credentials.
-- CORS errors: check CORS configuration in `Program.cs` and ensure the Blazor host origin is allowed.
-- No data in diagram: open `/api/layout` in a browser or Postman to confirm JSON is returned; verify `LayoutService` base address.
+**API connection errors:**
+- Confirm PostgreSQL is running and reachable.
+- Verify the connection string in **appsettings.json**: Server, Port, Database, User Id, and Password must match your PostgreSQL setup.
+- Run `dotnet ef database update` from the host project to ensure migrations applied successfully.
+
+**CORS errors (if Blazor and API are on different ports/domains):**
+- Add CORS support to `Program.cs` before `app.UseAuthorization()`:
+  ```csharp
+  builder.Services.AddCors(options =>
+  {
+      options.AddDefaultPolicy(policy =>
+      {
+          policy.WithOrigins("http://localhost:5252")  // adjust WASM client URL
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+      });
+  });
+  ...
+  app.UseCors();
+  ```
+- Ensure `LayoutService` `BaseAddress` in **Program.cs** matches your API host (e.g., `http://localhost:5069/`).
+
+**No data in Diagram:**
+- Open `http://localhost:5069/api/layout` (adjust your API port) in a browser to verify it returns a JSON array.
+- Check browser console (F12) for error messages from `LayoutService`.
+- Verify that migrations completed and the database contains seed data (check PostgreSQL directly if needed).
 
 ## Next steps / customization
 
-- Change API origin: update CORS in `Program.cs` and `LayoutService` base address in the Blazor hosts.
-- Modify seed data: edit `AppDbContext.OnModelCreating()` and create a new migration:
+- Change API origin: update CORS in **Program.cs** and `LayoutService` base address in the Blazor hosts.
+- Modify seed data: edit **AppDbContext.OnModelCreating()** and create a new migration:
 
 ```powershell
 cd src/Api
@@ -612,7 +783,7 @@ dotnet ef migrations add UpdateSeed
 dotnet ef database update
 ```
 
-- Explore Syncfusion Diagram properties to alter templates, orientation, spacing, or styles.
+- Explore Syncfusion® Diagram properties to alter templates, orientation, spacing, or styles.
 
 ---
 
@@ -624,15 +795,16 @@ A complete, working sample implementation is available in the [GitHub repository
 
 This guide demonstrates how to:
 
-1. Create a PostgreSQL database with layout Nodes using pgAdmin 4. [🔗](#step-1-create-the-database-and-table-in-postgresql)
-2. Install necessary NuGet packages for Entity Framework Core with Npgsql and Syncfusion. [🔗](#step-2-install-required-nuget-packages)
-3. Create data models and DbContext for database communication with PostgreSQL-specific configuration. [🔗](#step-3-create-the-data-model)
-4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
-5. Implement the repository pattern for data access with helper methods. [🔗](#step-6-create-the-LayoutService-class)
+1. Install PostgreSQL. [🔗](#Installing-PostgreSQL)
+1. Create a PostgreSQL database with layout Nodes using pgAdmin 4. [🔗](#PostgreSQL-database-setup)
+2. Install necessary NuGet packages for Entity Framework Core with Npgsql and Syncfusion®. [🔗](#step-1-install-required-nuget-packages)
+3. Create data models and DbContext for database communication with PostgreSQL-specific configuration. [🔗](#step-2-create-the-data-model)
+4. Configure connection strings and register services. [🔗](#step-4-configure-the-connection-string)
+5. Implement the repository pattern for data access with helper methods. [🔗](#step-5-create-the-LayoutService-class)
 6. Create a Blazor component with a Diagram that visualizes data as a Organization layout. [🔗](#step-1-install-and-configure-blazor-Diagram-component)
 
 
-The application now provides a complete solution for visualizing data from as a organization chart layout integrated with PostgreSQL.
+The application now provides a complete solution for visualizing organizational chart data from PostgreSQL.
 
 ## See also
 
