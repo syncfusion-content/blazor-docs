@@ -10,7 +10,7 @@ keywords: chart wizard, blazor, chart
 
 # Getting Started with Blazor Chart Wizard Component in Web App
 
-This section briefly explains about how to include [Blazor Chart Wizard](https://www.syncfusion.com/blazor-components/blazor-chart-wizard) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart Wizard](https://www.syncfusion.com/blazor-components/blazor-chart-wizard) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -92,7 +92,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.ChartWizard](https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard/) NuGet package in your project.
+Install [Syncfusion.Blazor.ChartWizard](https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 Alternatively, run the following command in the Package Manager Console to achieve the same.
 
@@ -170,7 +170,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfChartWizard>
 
@@ -188,7 +188,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 To bind data for the chart wizard component, you can assign a IEnumerable object to the [DataSource]() property.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 public class OlympicsData
 {
@@ -222,7 +222,7 @@ N>
 The default series type is Line. Use the `SeriesType` property to change the series type.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <div class="control-section">
     <SfChartWizard>
@@ -268,9 +268,11 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 ![Chart Wizard Example](images/chart-wizard-getting-started-example.png)
 
 ## Theme
+
 Blazor Chart Wizard has built-in themes that can be used to change the appearance of the chart.
 
 ### Prerequisites
+
 In order to apply same theme update for the overall Chart Wizard UI, include the same theme stylesheet (this can be accessed from NuGet through Static Web Assets) in the <head> tag in the App.razor file as shown below:
 
 {% tabs %}
@@ -287,7 +289,7 @@ In order to apply same theme update for the overall Chart Wizard UI, include the
 The `Theme` property is used to specify the visual theme applied to the chart.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <div class="control-section">
     <SfChartWizard Theme="Theme.Material3">

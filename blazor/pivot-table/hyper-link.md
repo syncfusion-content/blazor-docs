@@ -86,7 +86,7 @@ Once enabled, hyperlinks will be shown consistently in row headers, column heade
 }
 ```
 
-![Hyperlink with All Cells in Blazor PivotTable](images/blazor-pivottable-hyperlink-with-cells.png)
+![Hyperlink with All Cells in Blazor PivotTable](images/blazor-pivottable-hyperlink-with-cells.webp)
 
 ## Hyperlink for row headers
 
@@ -135,7 +135,7 @@ The Pivot Table provides a way to display hyperlinks specifically in **row heade
 }
 ```
 
-![Hyperlink in Blazor PivotTable Row Headers](images/blazor-pivottable-hyperlink-in-row-headers.png)
+![Hyperlink in Blazor PivotTable Row Headers](images/blazor-pivottable-hyperlink-in-row-headers.webp)
 
 ## Hyperlink for column headers
 
@@ -184,7 +184,7 @@ The Pivot Table provides an option to display hyperlinks specifically in column 
 }
 ```
 
-![Hyperlink in Blazor Column Headers](images/blazor-pivottable-hyperlink-in-column-headers.png)
+![Hyperlink in Blazor Column Headers](images/blazor-pivottable-hyperlink-in-column-headers.webp)
 
 ## Hyperlink for value cells
 
@@ -233,7 +233,7 @@ The Pivot Table provides support for displaying hyperlinks specifically in value
 }
 ```
 
-![Hyperlink with Value Cells in Blazor PivotTable](images/blazor-pivottable-hyperlink-in-value-cells.png)
+![Hyperlink with Value Cells in Blazor PivotTable](images/blazor-pivottable-hyperlink-in-value-cells.webp)
 
 ## Hyperlink for summary cells
 
@@ -282,7 +282,7 @@ The Pivot Table provides support for displaying hyperlinks specifically in summa
 }
 ```
 
-![Hyperlink in Blazor PivotTable Summary Cells](images/blazor-pivottable-hyperlink-in-summary-cells.png)
+![Hyperlink in Blazor PivotTable Summary Cells](images/blazor-pivottable-hyperlink-in-summary-cells.webp)
 
 ## Condition based hyperlink
 
@@ -342,7 +342,7 @@ In the example below, the Pivot Table is configured to display hyperlinks only i
 }
 ```
 
-![Hyperlink in Blazor PivotTable Cells based on Condition](images/blazor-pivottable-hyperlink-cell-based-on-condition.png)
+![Hyperlink in Blazor PivotTable Cells based on Condition](images/blazor-pivottable-hyperlink-cell-based-on-condition.webp)
 
 ## Header based hyperlink
 
@@ -393,7 +393,7 @@ In the below code example, the value **FY 2015** is assigned to [HeaderText](htt
 }
 ```
 
-![Hyperlink in Blazor PivotTable Cells based on Header](images/blazor-pivottable-hyperlink-cell-based-on-header.png)
+![Hyperlink in Blazor PivotTable Cells based on Header](images/blazor-pivottable-hyperlink-cell-based-on-header.webp)
 
 ## Event
 

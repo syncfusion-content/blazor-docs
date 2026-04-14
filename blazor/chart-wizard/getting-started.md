@@ -12,7 +12,7 @@ keywords: chart wizard, blazor, chart
 
 # Getting Started with Blazor Chart Wizard Component in Server App
 
-This section briefly explains about how to include [Blazor Chart Wizard](https://www.syncfusion.com/blazor-components/blazor-chart-wizard) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart Wizard](https://www.syncfusion.com/blazor-components/blazor-chart-wizard) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -90,7 +90,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.ChartWizard](https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard/) NuGet package in your project.
+Install [Syncfusion.Blazor.ChartWizard](https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 Alternatively, run the following command in the Package Manager Console to achieve the same.
 
@@ -104,7 +104,7 @@ Install-Package Syncfusion.Blazor.ChartWizard -Version {{ site.releaseversion }}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add Import Namespaces
+## Add import namespaces
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.ChartWizard` namespaces.
 
@@ -117,9 +117,9 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of the Blazor Server App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -141,14 +141,11 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-<!-- Blazor Chart Wizard Component script reference.-->
-<!-- <script src="_content/Syncfusion.Blazor.ChartWizard/scripts/sf-chart-wizard.min.js" type="text/javascript"></script> -->
-
 ```
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Blazor Chart Wizard Component
+## Add Blazor Chart Wizard component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart Wizard component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
 
@@ -164,7 +161,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfChartWizard>
 
@@ -182,7 +179,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 To bind data for the chart wizard component, you can assign a IEnumerable object to the `DataSource` property.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 public class OlympicsData
 {
@@ -216,7 +213,7 @@ N>
 The default series type is Line. Use the `SeriesType` property to change the series type.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <div class="control-section">
     <SfChartWizard>
@@ -262,13 +259,15 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 ![Chart Wizard Example](images/chart-wizard-getting-started-example.png)
 
 ## Theme
+
 Blazor Chart Wizard has built-in themes that can be used to change the appearance of the chart.
 
 ### Prerequisites
+
 In order to apply same theme update for the overall Chart Wizard UI, include the same theme stylesheet (this can be accessed from NuGet through Static Web Assets) in the <head> tag in the App.razor file as shown below:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <head>
     ....
@@ -281,7 +280,7 @@ In order to apply same theme update for the overall Chart Wizard UI, include the
 The `Theme` property is used to specify the visual theme applied to the chart.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <div class="control-section">
     <SfChartWizard Theme="Theme.Material3">
