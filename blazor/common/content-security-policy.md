@@ -224,7 +224,7 @@ These components work under strict CSP for most features, but specific advanced 
 | Navigation | TreeView - [Click here for feature details](../treeview/content-security-policy) |
 | Maps | Maps -[Click here for feature details](../maps/content-security-policy) |
 
-### Scenario 3: passing inline styles via ComponentInputAttributes
+### Scenario 3: passing inline styles via Component Attributes
 
 If you add `style` attributes directly through `InputAttributes` or `HtmlAttributes`, strict CSP will block them:
 
