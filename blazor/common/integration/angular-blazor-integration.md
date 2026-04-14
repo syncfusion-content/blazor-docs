@@ -171,7 +171,7 @@ dotnet new blazor --interactivity Server -o BlazorHost
 {% endhighlight %}
 {% endtabs %}
 
-N> For .NET 8 and later, use the `blazor` template with the `--interactivity` parameter. If you're using .NET 6 or 7, use `dotnet new blazorserver` instead.
+N> For .NET 8 and later, use the `blazor` template with the `--interactivity` parameter.
 
 ### Add MSBuild automation to build & copy Angular output
 
@@ -255,6 +255,12 @@ dotnet run
 Once the compilation is complete, open your browser and navigate to the hosted link to view your application with the integrated Syncfusion® DataGrid component:
 
 ![Blazor DataGrid Component](../images/angular-blazor-integration.webp)
+
+## Troubleshooting tips
+
+### Angular build fails (Bundle Budget Exceeded)
+
+If the Angular build fails due to the bundle size exceeding the configured budget, consider importing only the *required Syncfusion modules, removing unused Angular features, avoiding wildcard imports, and enabling lazy loading* wherever possible. If the issue persists after these optimizations, increase the bundle budget limits in the `angular.json` file to accommodate the application size.
 
 ## See also
 
