@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor ButtonGroup in Blazor Web App
 
-This section briefly explains about how to include [Blazor ButtonGroup](https://www.syncfusion.com/blazor-components/blazor-button-group) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ButtonGroup](https://www.syncfusion.com/blazor-components/blazor-button-group) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -167,7 +167,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfButtonGroup>
     <ButtonGroupButton>Left</ButtonGroupButton>
