@@ -17,8 +17,15 @@ Use the following CSS to customize the overall progress bar container of the Ste
 
 ```css
     .e-stepper .e-stepper-progressbar {
-        background-color: #5e5d5d;
+        background-color: #0a0000;
+        height: 3px;
         border-radius: 3px;
+    }
+
+    .e-stepper .e-stepper-progressbar .e-progressbar-value {
+            background: linear-gradient(90deg, #4da40d, #4da40d);
+            height: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 ```
 ![Stepper progress bar value](./images/Blazor-progress-bar.png)
@@ -29,10 +36,19 @@ The progress bar value in the Stepper component automatically increases as each 
 
 ```css
 
-    .e-stepper .e-stepper-progressbar .e-progressbar-value {
-        background: linear-gradient(90deg, #2196f3, #64b5f6);
-        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+
+    .e-stepper .e-stepper-progressbar {
+        background-color: #0a0a0acf;
+        height: 3px;
+        border-radius: 3px;
     }
+
+    .e-stepper .e-stepper-progressbar .e-progressbar-value {
+            background: linear-gradient(90deg, #4da40d, #4da40d);
+            height: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
 
 ```
 ![Stepper progress bar](./images/blazor-progressbar.png)
@@ -90,12 +106,21 @@ Use the following CSS to highlight the selected step item.
 
 ```css
 
-.e-stepper .e-step-container.e-step-selected .e-step-content {
-    background-color: #031c62;
-    color: #fff;
-    border-radius: 50%;
-    padding: 8px;
-}
+    .e-stepper .e-step-container.e-step-selected .e-step-content {
+        background-color: green;
+        color: #fff;
+        border-radius: 50%;
+        padding: 8px;
+    }
+
+    .e-stepper:not(.e-steps-focus) .e-step-selected .e-step {
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px #52b931, 0 0 0 8px #fff;
+    }
+
+    .e-stepper .e-step-completed .e-step {
+        background: green;
+        color: #fff;
+    }
 
 ```
 
@@ -210,6 +235,24 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     .e-stepper .fourth-step .e-indicator:hover {
         border: 2px solid gray;
         cursor: pointer;
+    }
+
+    .e-stepper .e-step-container.e-step-selected .e-indicator {
+        background-color:green;
+        color: #fff;
+    }
+
+
+    .e-stepper .e-stepper-progressbar {
+        background-color: #64086e;
+        height: 3px;
+        border-radius: 3px;
+    }
+
+    .e-stepper .e-stepper-progressbar .e-progressbar-value {
+        background: linear-gradient(90deg, #4da40d, #4da40d);
+        height: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 </style>
 
