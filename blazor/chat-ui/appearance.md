@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Appearance with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Style and Appearance in Blazor Chat UI Component | Syncfusion
+description: Checkout and learn here all about Style and Appearance with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Appearance in Blazor Chat UI component
+# Style and Appearance in Blazor Chat UI component
 
 ## Setting placeholder
 
