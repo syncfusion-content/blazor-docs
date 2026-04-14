@@ -407,7 +407,7 @@ To retrieve the number of characters in the Rich Text Editor content, use the [G
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in Github](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor).
 
 ## See also
 

@@ -7,7 +7,7 @@ control: QueryBuilder
 documentation: ug
 ---
 
-# Getting Started with Blazor Query Builder Component in Blazor Server App
+# Getting Started with Blazor Query Builder Component in Server App
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

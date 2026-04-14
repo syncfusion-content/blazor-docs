@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor TextBox Component | Syncfusion
+title: Getting Started | Syncfusion Blazor TextBox Component in Server App
 description: Checkout and learn about getting started with Blazor TextBox component in Blazor Server Application.
 platform: Blazor
 control: TextBox
