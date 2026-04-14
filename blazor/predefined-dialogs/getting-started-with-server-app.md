@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Syncfusion Predefined Dialogs in Blazor Server App
+title: Getting started | Syncfusion Predefined Dialogs in Blazor Server App
 description: Check out the documentation for getting started with Syncfusion Blazor Predefined Dialogs Components in Blazor Server App.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
 ---
 
-# Getting Started with Blazor Predefined Dialogs Component in Blazor Server App
+# Getting Started with Blazor Predefined Dialogs Component in Server App
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Predefined Dialogs](https://blazor.syncfusion.com/demos/predefined-dialogs/default-functionalities?theme=fluent2) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
