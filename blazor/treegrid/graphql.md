@@ -997,7 +997,7 @@ This configuration ensures that the Blazor application can communicate with the 
 
 After completing the setup, run the application. The TreeGrid will fetch and display data from the configured GraphQL API. Ensure that both the Blazor application and the GraphQL server are running and accessible.
  
-![GraphQL Adaptor Data](./images/treegrid-graphql-paging.gif)
+![GraphQL Adaptor Data](./images/treegrid-graphql-paging.webp)
 
 **Understanding DataManagerRequestInput Class**
 
@@ -1160,7 +1160,7 @@ To handle search operations in the Syncfusion<sup style="font-size:70%">&reg;</s
 
 When a search is performed in the TreeGrid, the `DataManager` sends the search parameters to the server, which include the search keyword and the list of fields to search against. The server then processes these parameters and filters the data accordingly.
 
-![GraphqlAdaptor - Searching](./images/treegrid-graphql-searching.png)
+![GraphqlAdaptor - Searching](./images/treegrid-graphql-searching.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -1642,7 +1642,7 @@ When a filter is applied in the TreeGrid, the `DataManager` sends the filtering 
 
 On the server, these parameters are parsed and used to filter the data source accordingly before returning the results to the TreeGrid.
 
-![GraphqlAdaptor - Filtering](./images/treegrid-graphql-filtering.png)
+![GraphqlAdaptor - Filtering](./images/treegrid-graphql-filtering.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -2150,7 +2150,7 @@ To handle sorting operations in the Syncfusion<sup style="font-size:70%">&reg;</
 
 When a sort action is triggered in the TreeGrid, the `DataManager` sends the sorting configuration in the `Sorted` property. This includes the field name to sort and the direction (Ascending or Descending). The server processes this parameter and sorts the data accordingly before returning it to the TreeGrid.
 
-![GraphqlAdaptor - Sorting](./images/treegrid-graphql-sorting.png)
+![GraphqlAdaptor - Sorting](./images/treegrid-graphql-sorting.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -2581,7 +2581,7 @@ When paging is applied, the `DataManager` sends the **Skip** and **Take** values
 
 On the server side, the data is sliced based on the **Skip** and **Take** values, and the total record count is returned to enable proper pagination in the TreeGrid.
 
-![GraphQLAdaptor - Paging](./images/treegrid-graphql-paging.gif)
+![GraphQLAdaptor - Paging](./images/treegrid-graphql-paging.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -3794,5 +3794,5 @@ namespace GraphQLServer.GraphQL
 {% endhighlight %}
 {% endtabs %}
 
-![Crud Operation](./images/treegrid-graphql-CRUD.gif)
+![Crud Operation](./images/treegrid-graphql-CRUD.webp)
 
