@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Range Selector Component | Syncfusion
-description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor Range Selector component.
+description: Check out and learn about Style and Appearance customization in Syncfusion Blazor Range Selector component.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,7 +9,9 @@ documentation: ug
 
 # Style and Appearance in Blazor Range Navigator Component
 
-The Style and Appearance feature allows you to customize the visual design of the **Syncfusion Blazor Range Navigator** control to match your application's branding, theme, and user experience requirements. By leveraging CSS selectors, you can modify colors, typography, spacing, and other visual properties of various Range Navigator elements.
+Style and Appearance provide options to customize the visual design of the **Syncfusion Blazor Range Navigator** component, ensuring consistency with your application’s branding and theme.
+
+By using CSS selectors and ID-based styling, you can customize colors, typography, spacing, borders, and other visual properties of TreeMap items, labels, and SVG elements.
 
 **Basic Range Navigator Setup**
 
@@ -64,7 +66,7 @@ This styles the entire Range Navigator container.
 
 ## Customize Unselected Range Regions
 
-Modify the appearance of unselected regions (left and right areas outside the selected range) to create visual distinction and improve user interaction clarity. Unselected regions are rendered as SVG elements with dynamically generated IDs, allowing independent styling for left and right areas.
+Modify the appearance of unselected regions (left and right areas outside the selected range) to create visual distinction and improve user interaction clarity. Unselected regions are rendered as SVG elements with IDs, allowing independent styling for left and right areas.
 
 **Left unselected region**
 
@@ -113,4 +115,4 @@ Format the axis labels to match your application's typography and readability st
 
 ![Blazor RangeNavigator Label Customization](images/style/blazor-rangenavigator-label-customization.png)
 
-N> SVG presentation attributes such as fill and font-size may require **!important** if overridden by inline SVG attributes.
+N> SVG presentation attributes such as fill, stroke, and font-size may require **!important** when overridden by inline SVG styles.

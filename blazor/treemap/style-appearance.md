@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor TreeMap component and much more.
+description: Check out and learn about Style and Appearance customization in the Syncfusion Blazor TreeMap component.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -9,46 +9,52 @@ documentation: ug
 
 # Style and Appearance in Blazor TreeMap Component
 
-The Style and Appearance feature allows you to customize the visual design of the **Syncfusion Blazor TreeMap** control to match your application's branding, theme, and user experience requirements. By leveraging CSS selectors and ID-based styling, you can modify colors, typography, spacing, borders, and other visual properties of individual tree map items, text labels, and various TreeMap elements.
+Style and Appearance provide options to customize the visual design of the **Syncfusion Blazor TreeMap** component, ensuring consistency with your application’s branding and theme.
 
-## Basic TreeMap Setup
+By using CSS selectors and ID-based styling, you can customize colors, typography, spacing, borders, and other visual properties of TreeMap items, labels, and SVG elements.
+
+**Basic TreeMap Setup**
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
 
-<SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP">
+<SfTreeMap DataSource="GrowthReports"
+           TValue="GDPReport"
+           WeightValuePath="GDP">
     <TreeMapLeafItemSettings LabelPath="CountryName">
-        <TreeMapLeafLabelStyle Color="#000000"></TreeMapLeafLabelStyle>
-        <TreeMapLeafBorder Color="#000000" Width="0.5"></TreeMapLeafBorder>
+        <TreeMapLeafLabelStyle Color="#000000" />
+        <TreeMapLeafBorder Color="#000000" Width="0.5" />
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 
-@code{
+@code {
     public class GDPReport
     {
         public string CountryName { get; set; }
         public double GDP { get; set; }
         public double Percentage { get; set; }
         public int Rank { get; set; }
-    };
-    public List<GDPReport> GrowthReports = new List<GDPReport> {
-            new GDPReport {CountryName="United States", GDP=17946, Percentage=11.08, Rank=1},
-            new GDPReport {CountryName="China", GDP=10866, Percentage= 28.42, Rank=2},
-            new GDPReport {CountryName="Japan", GDP=4123, Percentage=-30.78, Rank=3},
-            new GDPReport {CountryName="Germany", GDP=3355, Percentage=-5.19, Rank=4},
-            new GDPReport {CountryName="United Kingdom", GDP=2848, Percentage=8.28, Rank=5},
-            new GDPReport {CountryName="France", GDP=2421, Percentage=-9.69, Rank=6},
-            new GDPReport {CountryName="India", GDP=2073, Percentage=13.65, Rank=7},
-            new GDPReport {CountryName="Italy", GDP=1814, Percentage=-12.45, Rank=8},
-            new GDPReport {CountryName="Brazil", GDP=1774, Percentage=-27.88, Rank=9},
-            new GDPReport {CountryName="Canada", GDP=1550, Percentage=-15.02, Rank=10}
+    }
+
+    public List<GDPReport> GrowthReports = new()
+    {
+        new GDPReport { CountryName = "United States", GDP = 17946, Percentage = 11.08, Rank = 1 },
+        new GDPReport { CountryName = "China", GDP = 10866, Percentage = 28.42, Rank = 2 },
+        new GDPReport { CountryName = "Japan", GDP = 4123, Percentage = -30.78, Rank = 3 },
+        new GDPReport { CountryName = "Germany", GDP = 3355, Percentage = -5.19, Rank = 4 },
+        new GDPReport { CountryName = "United Kingdom", GDP = 2848, Percentage = 8.28, Rank = 5 },
+        new GDPReport { CountryName = "France", GDP = 2421, Percentage = -9.69, Rank = 6 },
+        new GDPReport { CountryName = "India", GDP = 2073, Percentage = 13.65, Rank = 7 },
+        new GDPReport { CountryName = "Italy", GDP = 1814, Percentage = -12.45, Rank = 8 },
+        new GDPReport { CountryName = "Brazil", GDP = 1774, Percentage = -27.88, Rank = 9 },
+        new GDPReport { CountryName = "Canada", GDP = 1550, Percentage = -15.02, Rank = 10 }
     };
 }
 ```
 
 ## Customize TreeMap Root Element
 
-Customize the root container of the TreeMap to apply global styling such as background color, padding, and borders.
+You can apply global styles such as borders, padding, and background color to the TreeMap container:
 
 ```css
 [id] {
@@ -60,11 +66,9 @@ Customize the root container of the TreeMap to apply global styling such as back
 
 ## Customize TreeMap Item Rectangles (RectPath)
 
-Style the rectangle elements of individual tree map items using ID-based selectors. Each rectangle is assigned a unique ID based on the level and item index. The `RectPath` suffix identifies rectangle elements.
+Each TreeMap item rectangle is rendered as an SVG path element. These elements contain RectPath in their ID, allowing targeted customization.
 
-### Basic Item Rectangle Styling
-
-Customize the appearance of tree map rectangles with colors, borders, and opacity:
+### Item Rectangle Styling
 
 ```css
 [id*="RectPath"] {
@@ -78,8 +82,6 @@ Customize the appearance of tree map rectangles with colors, borders, and opacit
 ![Blazor TreeMap with Item Rectangle Customization](images/style/blazor-treemap-item-rect-customization.png)
 
 ### Level-Based Rectangle Styling
-
-Apply different styles to rectangles at specific hierarchy levels:
 
 ```css
 /* Level 0 items */
@@ -103,8 +105,6 @@ Apply different styles to rectangles at specific hierarchy levels:
 
 ### Item Index-Based Rectangle Styling
 
-Customize rectangles based on their item index within a level:
-
 ```css
 /* First item in each level */
 [id*="_Item_Index_0_RectPath"] {
@@ -119,24 +119,6 @@ Customize rectangles based on their item index within a level:
 /* Third item in each level */
 [id*="_Item_Index_2_RectPath"] {
     fill: #1abc9c;
-}
-```
-
-### Alternating Item Styles
-
-Create alternating color patterns across items:
-
-```css
-[id*="_Item_Index_0_RectPath"],
-[id*="_Item_Index_2_RectPath"],
-[id*="_Item_Index_4_RectPath"] {
-    fill: #3498db;
-}
-
-[id*="_Item_Index_1_RectPath"],
-[id*="_Item_Index_3_RectPath"],
-[id*="_Item_Index_5_RectPath"] {
-    fill: #e74c3c;
 }
 ```
 
@@ -163,11 +145,9 @@ Apply styles to specific combinations of level and item indices:
 
 ## Customize TreeMap Item Text
 
-Style the text labels of individual tree map items using ID-based selectors. The `Text` suffix identifies text elements within items.
+TreeMap text elements contain Text in their IDs and can be styled independently.
 
 ### Basic Item Text Styling
-
-Customize text color, font size, and weight:
 
 ```css
 [id*="Text"] {
@@ -181,8 +161,6 @@ Customize text color, font size, and weight:
 ![Blazor TreeMap with Item Rectangle Customization](images/style/blazor-treemap-item-text-customization.png)
 
 ### Level-Based Text Styling
-
-Apply different text styles to items at specific hierarchy levels:
 
 ```css
 /* Level 0 text */
@@ -209,8 +187,6 @@ Apply different text styles to items at specific hierarchy levels:
 
 ### Item Index-Based Text Styling
 
-Customize text based on item index:
-
 ```css
 /* First item text in each level */
 [id*="_Item_Index_0_Text"] {
@@ -231,36 +207,7 @@ Customize text based on item index:
 }
 ```
 
-### Combined Level and Item Text Styling
-
-Apply styles to specific combinations of level and item indices:
-
-```css
-/* Level 0, Item 0 - Featured text */
-[id*="_Level_Index_0_Item_Index_0_Text"] {
-    fill: #ffffff;
-    font-size: 18px;
-    font-weight: 700;
-    text-anchor: middle;
-}
-
-/* Level 1, Item 1 - Secondary featured text */
-[id*="_Level_Index_1_Item_Index_1_Text"] {
-    fill: #f39c12;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* Level 2 text items */
-[id*="_Level_Index_2_Item_Index_0_Text"] {
-    fill: #2c3e50;
-    font-size: 12px;
-}
-```
-
 ### Text Contrast Enhancement
-
-Ensure text readability across different background colors:
 
 ```css
 [id*="Text"] {
@@ -273,45 +220,9 @@ Ensure text readability across different background colors:
 
 ![Blazor TreeMap with Item Text Customization](images/style/blazor-treemap-item-text-advance-customization.png)
 
-## Combine Rectangle and Text Styling
-
-Create cohesive item styling by combining rectangle and text customizations:
-
-```css
-/* Featured light theme items */
-[id*="_Item_Index_0_RectPath"] {
-    fill: #3498db;
-}
-
-[id*="_Item_Index_0_Text"] {
-    fill: #ffffff;
-    font-weight: 700;
-}
-
-/* Secondary dark theme items */
-[id*="_Item_Index_1_RectPath"] {
-    fill: #2c3e50;
-}
-
-[id*="_Item_Index_1_Text"] {
-    fill: #ecf0f1;
-    font-weight: 600;
-}
-
-/* Accent theme items */
-[id*="_Item_Index_2_RectPath"] {
-    fill: #e74c3c;
-}
-
-[id*="_Item_Index_2_Text"] {
-    fill: #ffffff;
-    font-weight: 600;
-}
-```
-
 ## Hover and Interactive States
 
-Style TreeMap items on hover for better user interaction:
+You can improve interactivity by styling hover states:
 
 ```css
 /* Hover effect on rectangles */
@@ -330,4 +241,4 @@ Style TreeMap items on hover for better user interaction:
 
 ![Blazor TreeMap with Item Text Customization](images/style/blazor-treemap-item-hover-customization.png)
 
-N> SVG presentation attributes such as fill, font-size, and stroke may require **!important** if overridden by inline SVG attributes.
+N> SVG presentation attributes such as fill, stroke, and font-size may require **!important** when overridden by inline SVG styles.
