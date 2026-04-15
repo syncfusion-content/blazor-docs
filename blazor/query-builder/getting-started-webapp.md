@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor QueryBuilder in Blazor Web App
 
-This section briefly explains about how to include [Blazor QueryBuilder](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor QueryBuilder](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 N> You can also explore our [Blazor QueryBuilder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
 
@@ -167,7 +167,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfQueryBuilder TValue="EmployeeDetails">
     <QueryBuilderColumns>
