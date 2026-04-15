@@ -33,6 +33,71 @@ Syncfusion Blazor components are optimized for efficient rendering and automatic
 
 In Blazor WebAssembly, releasing these references allows the browser runtime to reclaim memory. In Blazor Server, explicit cleanup prevents memory retention across active user circuits, which is critical for maintaining scalability.
 
+If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
+
+### Install required Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+
+To add the Blazor components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
+
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
+* [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+### Add required namespaces
+
+Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Buttons` namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Inputs
+
+{% endhighlight %}
+{% endtabs %}
+
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+
+Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Program.cs" %}
+
+using Syncfusion.Blazor;
+...
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSyncfusionBlazor();
+...
+var app = builder.Build();
+app.Run();
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add stylesheet and script resources
+
+Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file.
+
+{% tabs %}
+{% highlight html  %}
+
+<head>
+     <!-- Syncfusion theme style sheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Syncfusion Blazor DataGrid component's script reference -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
+
 ### Disposing data‑bound Syncfusion components
 
 Data‑bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) frequently hold large data collections in memory. These references should be released when the component is removed from the render tree.
@@ -52,7 +117,7 @@ Data‑bound components such as [DataGrid](https://www.syncfusion.com/blazor-com
 </SfGrid>
 
 @code {
-    private List<Order>? Orders = new();
+    private List<Order> Orders = new();
 
     protected override void OnInitialized()
     {
@@ -108,7 +173,7 @@ Components such as [Dialog](https://www.syncfusion.com/blazor-components/blazor-
 
 @page "/"
 @using Syncfusion.Blazor.Buttons
-@inject AppState _appState
+@inject AppState AppState
 @implements IDisposable
 
 <div style="padding:16px">
@@ -117,19 +182,19 @@ Components such as [Dialog](https://www.syncfusion.com/blazor-components/blazor-
     </SfButton>
 
     <p style="margin-top:12px">
-        Current state: @_appState.CurrentMessage
+        Current state: @AppState.CurrentMessage
     </p>
 </div>
 
 @code {
     protected override void OnInitialized()
     {
-       _appState.OnChange += OnAppStateChanged;
+       AppState.OnChange += OnAppStateChanged;
     }
 
     private void OnClicked()
     {
-        _appState.CurrentMessage = $"Updated at {DateTime.Now:T}";
+        AppState.CurrentMessage = $"Updated at {DateTime.Now:T}";
     }
 
     private void OnAppStateChanged()
@@ -139,7 +204,7 @@ Components such as [Dialog](https://www.syncfusion.com/blazor-components/blazor-
 
     public void Dispose()
     {
-        _appState.OnChange -= OnAppStateChanged;
+        AppState.OnChange -= OnAppStateChanged;
     }
 }
 
@@ -148,7 +213,7 @@ Components such as [Dialog](https://www.syncfusion.com/blazor-components/blazor-
 
 **Add service file:**
 
-Create the service file(e.g., AppState.cs) and add the following code:
+Create the service folder in the project root. Then create service file(e.g., AppState.cs) under the service folder and add the following code:
 
 {% tabs %}
 {% highlight cs tabtitle="AppState.cs" %}
@@ -203,8 +268,9 @@ Rendering large datasets without virtualization increases memory allocation and 
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees"
-        EnableVirtualization="true"
+        EnableVirtualization="true" RowHeight="36"
         Height="400">
+    <GridPageSettings PageSize="50"></GridPageSettings>
     <GridColumns>
         <GridColumn Field="Id" HeaderText="ID" Width="100" />
         <GridColumn Field="Name" HeaderText="Employee Name" Width="200" />
@@ -224,7 +290,7 @@ Rendering large datasets without virtualization increases memory allocation and 
         // Clear large datasets when component is disposed
         if (Employees != null)
         {
-            Employees?.Clear();
+            Employees.Clear();
             Employees = null;
         }
         return ValueTask.CompletedTask;
@@ -252,6 +318,8 @@ Rendering large datasets without virtualization increases memory allocation and 
 
 With virtualization enabled, only visible records are rendered. This reduces memory usage in Blazor WebAssembly and significantly improves scalability in Blazor Server applications.
 
+N> For datasets with many columns, consider also enabling `EnableColumnVirtualization="true"` on the DataGrid to virtualize horizontal rendering. See [Column Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) for details.
+
 ### Cleaning up JavaScript Interop used by Syncfusion components
 
 Some Syncfusion components rely on JavaScript interop for browser‑specific behavior. Managed interop references must be disposed explicitly to avoid memory retention.
@@ -262,10 +330,9 @@ Some Syncfusion components rely on JavaScript interop for browser‑specific beh
 @page "/"
 @implements IDisposable
 @inject IJSRuntime JS
-@using System
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="IncrementCount" CssClass="e-primary">Click me</SfButton>
+<SfButton OnClick="OnButtonClickAsync" CssClass="e-primary">Click me</SfButton>
 
 @code {
     private DotNetObjectReference<Home>? dotNetRef;
@@ -275,7 +342,7 @@ Some Syncfusion components rely on JavaScript interop for browser‑specific beh
         dotNetRef = DotNetObjectReference.Create(this);
     }
 
-    private async Task IncrementCount()
+    private async Task OnButtonClickAsync()
     {
         await JS.InvokeVoidAsync("MyJavaScriptFunction", dotNetRef);
     }
@@ -311,7 +378,7 @@ window.MyJavaScriptFunction = function (dotNetRef) {
 
 **Add script reference:**
 
-Register the script in `App.razor` (or `_Host.cshtml` or `wwwroot/index.html` depending on your project template) inside the `<body>` tag for Blazor WebApp: 
+Register the script in `App.razor` (for Blazor Web App / Blazor Server on .NET 8+), or `wwwroot/index.html` (for standalone Blazor WebAssembly), inside the `<body>` tag:
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -349,16 +416,15 @@ Dynamic rendering of components such as [TextBox](https://www.syncfusion.com/bla
         Items = GetItems();
     }
 
-    async ValueTask IAsyncDisposable.DisposeAsync()
+    public ValueTask DisposeAsync()
     {
         if (Items != null)
         {
             Items.Clear();
             Items = null;
         }
-        await Task.CompletedTask;
+        return ValueTask.CompletedTask;
     }
-
     public List<Item> GetItems()
     {
         return new List<Item>
