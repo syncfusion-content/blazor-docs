@@ -29,7 +29,7 @@ Memory issues are commonly identified through gradual memory growth during repea
 
 ## Preventing memory leaks with Syncfusion Blazor components
 
-Syncfusion Blazor components are optimized for efficient rendering and automatically manage their internal resources. However, application‑level objects such as data collections, service subscriptions, timers, and JavaScript interop references must be released explicitly.
+Syncfusion Blazor components are optimized for efficient rendering and automatically manage their internal resources. However, application level objects such as data collections, service subscriptions, timers, and JavaScript interop references must be released explicitly.
 
 In Blazor WebAssembly, releasing these references allows the browser runtime to reclaim memory. In Blazor Server, explicit cleanup prevents memory retention across active user circuits, which is critical for maintaining scalability.
 
@@ -189,7 +189,7 @@ builder.Services.AddScoped<AppState>();
 {% endhighlight %}
 {% endtabs %}
 
-Removing event subscriptions ensures the component instance is not retained in memory after it is removed from the UI. This is particularly important in Blazor Server applications with long‑lived circuits.
+Removing event subscriptions ensures the component instance is not retained in memory after it is removed from the UI. This is particularly important in Blazor Server applications with long lived circuits.
 
 ### Virtualizing large data with Syncfusion components
 
@@ -383,7 +383,7 @@ Using `@key` preserves component identity between renders and reduces memory chu
 
 ### Service lifetime considerations in Blazor Server applications
 
-In Blazor Server, each user maintains their own `ServiceProvider` instance per circuit. A Scoped service is created once per circuit/user, ensuring user-specific state is isolated. `Singleton` services would be shared across all users, potentially causing data leaks.
+In Blazor Server, each user maintains their own `ServiceProvider` instance per circuit. A Scoped service is created once per circuit/user, ensuring user specific state is isolated. `Singleton` services would be shared across all users, potentially causing data leaks.
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
@@ -393,7 +393,7 @@ builder.Services.AddScoped<UserSessionService>();
 {% endhighlight %}
 {% endtabs %}
 
-`UserSessionService` is a placeholder representing any user-specific service (for example, one that holds session state or per-user preferences). Replace it with your actual service type. 
+`UserSessionService` is a placeholder representing any user specific service (for example, one that holds session state or per-user preferences). Replace it with your actual service type. 
 
 This guidance applies to the Blazor Server hosting model and to Blazor Web App projects configured with server-side rendering. It is not applicable to standalone Blazor WebAssembly applications.
 
