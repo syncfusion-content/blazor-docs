@@ -373,9 +373,41 @@ A connection string contains the information needed to connect the application t
 
 > **Security Note:** For production environments, store sensitive credentials in environment variables or Azure Key Vault instead of storing them in appsettings.json. Example: `Password=${DB_PASSWORD}` and set the environment variable `DB_PASSWORD` on the deployment server.
 
-The connection string is now configured. When the application starts, `AddDbContext<AppDbContext>` (registered in Program.cs, Step 6 below) will use this string to connect to PostgreSQL.
+The connection string is now configured. When the application starts, `AddDbContext<AppDbContext>` (registered in Program.cs, Step 7 below) will use this string to connect to PostgreSQL.
 
-### Step 5: Create the LayoutService Class
+### Step 5: Create the API Controller
+
+The `LayoutService` calls a `/api/layout` endpoint that must exist on the host. Create a controller file (e.g., **Controllers/LayoutController.cs**) in the host project to expose this endpoint:
+
+```csharp
+using BlazorServerStyle.Data;
+using BlazorServerStyle.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace BlazorServerStyle.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class LayoutController : ControllerBase
+{
+    private readonly AppDbContext _db;
+    
+    public LayoutController(AppDbContext db) => _db = db;
+
+    [HttpGet]
+    public async Task<IActionResult> Get() => Ok(await _db.OrgChartLayouts.ToListAsync());
+}
+```
+
+**Explanation:**
+- `[ApiController]` and `[Route("api/[controller]")]` expose the endpoint at `/api/layout`.
+- `[HttpGet]` handles GET requests.
+- The method queries `OrgChartLayouts` from the database and returns JSON.
+
+After starting the host (see "Run the sample locally" section), verify the endpoint by opening `http://localhost:5069/api/layout` in a browser (adjust port if different). The controller exposes database data as JSON that the Blazor UI can consume. The Blazor **Home.razor** component will use `LayoutService` to call this endpoint and bind the data to the Diagram.
+
+### Step 6: Create the LayoutService Class
 
 A `LayoutService` class is an HTTP client wrapper that calls the API endpoint to fetch layout nodes. The Blazor component injects this service to load data from the host's `/api/layout` endpoint.
 
@@ -405,10 +437,10 @@ public class LayoutService
     }
 }
 ```
-The service class has been created. This keeps HTTP logic out of UI components. This service calls the API endpoint `/api/layout` to fetch organizational chart data. It will be injected into the Blazor component (Step 2 under "Integrating Syncfusion® Blazor Diagram") and registered in the next step (Step 6).
+The service class has been created. This keeps HTTP logic out of UI components. This service calls the API endpoint `/api/layout` to fetch organizational chart data. It will be injected into the Blazor component (Step 2 under "Integrating Syncfusion® Blazor Diagram") and registered in the next step (Step 7).
 
 
-### Step 6: Register Services in Program.cs
+### Step 7: Register Services in Program.cs
 
 The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Entity Framework Core with PostgreSQL and the repository pattern.
 
@@ -473,43 +505,11 @@ app.Run();
 - **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
 
 Service registration is complete. The host can now:
-- Use `AppDbContext` to access the database via the connection string (Step 5).
+- Use `AppDbContext` to access the database via the connection string (Step 4).
 - Handle HTTP requests via `AddControllers()`.
 - Provide `LayoutService` to Blazor components to fetch data from the API.
 
 Next, create the API controller to expose the `/api/layout` endpoint that `LayoutService` calls.
-
-### Step 7: Create the API Controller
-
-The `LayoutService` calls a `/api/layout` endpoint that must exist on the host. Create a controller file (e.g., **Controllers/LayoutController.cs**) in the host project to expose this endpoint:
-
-```csharp
-using BlazorServerStyle.Data;
-using BlazorServerStyle.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
-namespace BlazorServerStyle.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class LayoutController : ControllerBase
-{
-    private readonly AppDbContext _db;
-    
-    public LayoutController(AppDbContext db) => _db = db;
-
-    [HttpGet]
-    public async Task<IActionResult> Get() => Ok(await _db.OrgChartLayouts.ToListAsync());
-}
-```
-
-**Explanation:**
-- `[ApiController]` and `[Route("api/[controller]")]` expose the endpoint at `/api/layout`.
-- `[HttpGet]` handles GET requests.
-- The method queries `OrgChartLayouts` from the database and returns JSON.
-
-After starting the host (see "Run the sample locally" section), verify the endpoint by opening `http://localhost:5069/api/layout` in a browser (adjust port if different). The controller exposes database data as JSON that the Blazor UI can consume. The Blazor **Home.razor** component will use `LayoutService` to call this endpoint and bind the data to the Diagram.
 
 ### Step 8: Automated Database Initialization and Seeding
 This section explains the automated database initialization and seeding process that creates the database, applies the schema, and populates the initial organizational chart data.
