@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Large data handling in Blazor | Syncfusion
-description: Learn how Syncfusion Blazor components efficiently handle large datasets using paging, virtualization, server-side processing, and lazy loading. 
+title: Large data handling in Blazor | Syncfusion®
+description: Learn how Syncfusion® Blazor components efficiently handle large datasets using paging, virtualization, server side processing, and lazy loading. 
 platform: Blazor
 control: Common
 documentation: ug
@@ -13,17 +13,17 @@ Handling large datasets efficiently is a critical requirement for modern Blazor 
 
 Syncfusion® Blazor components are built to ensure responsive rendering, smooth scrolling, and efficient memory usage, even when working with large volumes of data. By leveraging capabilities such as data virtualization, server‑side data operations, lazy loading, and optimized rendering pipelines, these components minimize UI overhead and deliver consistent performance.
 
-This document provides guidance on how to load and interact with large datasets effectively in Blazor applications using Syncfusion® components, enabling scalable data experiences without compromising usability or performance.
+This document provides guidance on how to load and interact with large datasets effectively in Blazor applications using Syncfusion® Blazor components, enabling scalable data experiences without compromising usability or performance.
  
 ## Understanding data size and processing location
  
 Before selecting a data-handling strategy, determine where data operations should be performed on the client side (in the browser) or on the server side (backend services). The choice should balance factors such as data volume, network latency, bandwidth usage, and client memory constraints.
 
-### Client-side data processing
+### Client side data processing
  
-Client-side processing loads the complete dataset into the browser and performs operations such as sorting, filtering, and searching locally. This approach is recommended only for small and manageable datasets.
+Client side processing loads the complete dataset into the browser and performs operations such as sorting, filtering, and searching locally. This approach is recommended only for small and manageable datasets.
 
-**Use client-side processing when:**
+**Use Client side processing when:**
 
 * The dataset size is small
 * All required data can be safely loaded into browser memory
@@ -31,19 +31,51 @@ Client-side processing loads the complete dataset into the browser and performs 
  
 ### Server side data handling
 
-Server-side processing delegates data operations to the server. The client requests only the required data, and the server applies paging, filtering, or sorting before returning the result.
+server side processing delegates data operations to the server. The client requests only the required data, and the server applies paging, filtering, or sorting before returning the result.
 
-**Use server-side processing when:**
+**Use server side processing when:**
 
 * Working with large or unbounded datasets
 * Data is sourced from a database or remote service
 * Application performance, scalability, and reliability are critical
 
-For more information on configuring server-side data operations and remote data binding using Syncfusion® Blazor components, see the following documentation:
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-- [DataManager overview and remote data binding](https://blazor.syncfusion.com/documentation/data/getting-started)
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
 
-N> Client-side processing is generally suitable for small datasets (approximately fewer than 10,000 simple records). For larger datasets, it is recommended to use server-side processing combined with paging and virtualization to ensure optimal performance and scalability.
+<SfGrid TValue="Order" AllowPaging="true">
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders/" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+For more information on configuring server side data operations and remote data binding using Syncfusion® Blazor components, see the following documentation:
+
+- [DataManager overview](https://blazor.syncfusion.com/documentation/data/getting-started) and [remote data binding](https://blazor.syncfusion.com/documentation/data/adaptors)
+
+N> Client side processing is generally suitable for small datasets (approximately fewer than 10,000 simple records). For larger datasets, it is recommended to use server side processing combined with paging and virtualization to ensure optimal performance and scalability.
 
 ## Enable paging to limit rendered records
 
@@ -57,9 +89,7 @@ Paging is the first and most commonly recommended approach when working with mod
 * Reduced browser memory usage
 * Predictable navigation for users
 
-Paging is commonly used in components such as DataGrid, TreeGrid, Gantt, and list-based controls. 
-
-For example, when paging is enabled in the DataGrid, the component requests only a single page of records from the server at a time, reducing data transfer and improving performance. For more details, refer to the DataGrid documentation on [paging and virtual scrolling](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization-with-paging).
+For example, when paging is enabled in the DataGrid, the component requests only a single page of records from the server at a time, reducing data transfer and improving performance. For more details, refer to the DataGrid documentation on [Handling paging operation](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-paging-operation).
 
 ## Use incremental loading (load-on-demand)
 
@@ -75,27 +105,47 @@ This approach is especially useful when the total number of records is very high
 
 Incremental loading improves perceived performance and keeps the UI responsive.
 
-N> Incremental loading retrieves additional data blocks as needed, whereas virtualization reduces the number of DOM elements rendered in the UI. These techniques are often used together, where incremental loading handles backend data fetching and virtualization optimizes client-side rendering.
+For example, The Syncfusion® Blazor TreeGrid supports incremental loading using the **LoadChildOnDemand** feature. Child records are retrieved from the server only when a parent row is expanded.
 
-## Apply server-driven querying
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid @ref="grid" TValue="SelfReferenceData" LoadChildOnDemand="true" HasChildMapping="isParent" Height="315" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowPaging="true">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Incremental loading retrieves additional data blocks as needed, whereas virtualization reduces the number of DOM elements rendered in the UI. These techniques are often used together, where incremental loading handles backend data fetching and virtualization optimizes Client side rendering.
+
+## Apply server driven querying
 
 For large datasets, filtering, sorting, grouping, and searching should be handled on the server. In this approach, the component sends query parameters to the server, and only the processed result set is returned.
 
-**Why server-driven querying is important:**
+**Why server driven querying is important:**
 
 * Avoids transferring large volumes of data to the client
-* Minimizes client-side memory usage and computation
+* Minimizes Client side memory usage and computation
 * Enables better scalability for data-intensive applications
 
 For example, when a user applies a column filter in the DataGrid, the filter criteria are sent to the server. The server then processes the request and returns only the matching records, ensuring efficient data retrieval and optimal performance.
 
-For more information refer the documentation [handling server-side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation).
+For more information refer to the documentation [handling server side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation).
 
 ## Use virtualization or infinite scrolling
 
-Virtualization improves performance by rendering only the visible items in the viewport. As the user scrolls, existing UI elements are reused instead of creating new ones.
+**Virtualization** improves performance by rendering only the visible items in the viewport. As the user scrolls, existing UI elements are reused instead of creating new ones.
 
-Infinite scrolling loads additional data blocks automatically as the user scrolls. This removes the need for explicit pagination controls.
+**Infinite scrolling** loads additional data blocks automatically as the user scrolls, eliminating the need for explicit pagination controls and providing a continuous scrolling experience.
 
 These approaches are recommended when:
 
@@ -103,7 +153,71 @@ These approaches are recommended when:
 * Smooth scrolling is required
 * Paging alone is not sufficient
 
-Virtualization and infinite scrolling are supported in several Syncfusion® components, including DataGrid and list-based components.
+Virtualization and infinite scrolling are supported in several Syncfusion® Blazor components. For example, in the DataGrid, virtualization can be enabled using the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property to render only the visible records for improved performance.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@TaskData" Height="300" EnableVirtualization="true">
+    <GridPageSettings PageSize="50"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(TaskDetails.TaskID) HeaderText="TaskID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Engineer) HeaderText="Engineer" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Designation) HeaderText="Designation" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Estimation) HeaderText="Estimation" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Status) HeaderText="Status" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<TaskDetails> TaskData { get; set; }
+    protected override void OnInitialized()
+    {
+        TaskData = TaskDetails.GenerateData(1000);
+    }  
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="TaskDetails.cs" %}
+
+public class TaskDetails
+{
+    public static List<TaskDetails> GenerateData(int count)
+    {
+        var names = new List<string> { "TOM", "Hawk", "Jon", "Chandler", "Monica", "Rachel", "Phoebe", "Gunther", "Ross", "Geller", "Joey", "Bing", "Tribbiani", "Janice", "Bong", "Perk", "Green", "Ken", "Adams" };
+        var hours = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        var designations = new List<string> { "Manager", "Engineer 1", "Engineer 2", "Developer", "Tester" };
+        var statusValues = new List<string> { "Completed", "Open", "In Progress", "Review", "Testing" };
+        var random = new Random();
+        var result = new List<TaskDetails>();
+        // Generate random data.
+        for (int i = 0; i < count; i++)
+        {
+            result.Add(new TaskDetails
+            {
+                TaskID = i + 1,
+                Engineer = names[random.Next(names.Count)],
+                Designation = designations[random.Next(designations.Count)],
+                Estimation = hours[random.Next(hours.Count)],
+                Status = statusValues[random.Next(statusValues.Count)]
+            });
+        }
+        return result;
+    }
+    public int TaskID { get; set; }
+    public string Engineer { get; set; }
+    public string Designation { get; set; }
+    public int Estimation { get; set; }
+    public string Status { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+For more information, refer to the Syncfusion® Blazor DataGrid documentation on [Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) and [Infinite scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling).
 
 ## Handle streaming data in Blazor Server
 
@@ -138,7 +252,7 @@ Lazy loading defers data retrieval until it is actually required. Instead of loa
 
 Lazy loading improves perceived performance by reducing initial load time and allows users to interact with the application while data is being retrieved in the background.
 
-For an example of implementing the LoadChildOnDemand pattern in hierarchical components, refer to the [Gantt data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
+For an example of implementing the **LoadChildOnDemand** pattern in hierarchical components, refer to the [Gantt data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
 
 ## How Syncfusion® Approaches Large Data Handling
 
@@ -154,6 +268,5 @@ By following these principles, Syncfusion® Blazor components enable developers 
 
 ## See also
 
-* [Handling Large Data Sets Efficiently in Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
-
-* [Performance Optimization for Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
+* [Handling Large Data Sets Efficiently in Syncfusion® Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
+* [Performance Optimization for Syncfusion® Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
