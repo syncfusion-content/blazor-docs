@@ -17,7 +17,7 @@ This section explains how rendering works in Blazor and shows practical ways to 
 
 This model helps Blazor update only the necessary parts of the interface. For Syncfusion components, this means rendering remains efficient when parameters are stable and state updates are intentional.
 
-## Why rendering optimization matters
+## Why rendering optimization matters?
 
 Most commonly used Syncfusion components are interactive and data-driven. A DataGrid may respond to paging, sorting, filtering, and editing, while a chart may refresh when a dashboard filter changes or when live data arrives.
 
@@ -25,13 +25,13 @@ If component state changes too often or if child components receive new object r
 
 N> Rendering issues often remain unnoticed in small samples and become visible only when the application starts handling larger datasets and real user interaction patterns.
 
-## How rendering works in Blazor
+## How rendering works in Blazor?
 
 Blazor represents the UI as a **render tree**, which is an internal structure describing elements, attributes, child content, and nested components. Every time a component renders, Blazor creates a new render tree for that component.
 
 It then performs **diffing**, which means it compares the new render tree with the previous one and identifies the exact differences. These differences are grouped into a **batch** and applied efficiently to the UI, which avoids rebuilding the entire page and limits updates to only the affected components.
 
-N> Rendering in Blazor is scoped to individual components. A state change in one component triggers only that component and its descendants to re-render; it does not automatically refresh the full page unless the state change affects the root component or the parent component structure.
+N> Blazor rendering is scoped to individual components. When state changes in a component, Blazor re-renders only that component and its descendants. The framework does not refresh the entire page unless the change affects the root component or alters the parent component hierarchy.
 
 ## Measuring rendering overhead
 
@@ -54,7 +54,7 @@ Keeping parameter values stable reduces unnecessary diffing and avoids render wo
 
 ## Syncfusion DataGrid example with stable data binding
 
-The following example shows a simple `DataGrid` with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
+The following example shows a simple [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -297,7 +297,7 @@ This keeps the render path simple and avoids repeated computation during every U
 
 ## Syncfusion Chart example with render-efficient updates
 
-Charts are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
+[Charts](https://www.syncfusion.com/blazor-components/blazor-charts) are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
 
 {% tabs %}
 {% highlight razor tabtitle="Charts.razor" %}
@@ -393,7 +393,7 @@ The difference here is not only code style; it directly affects rendering effici
 
 * [Razor component rendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0)
 * [Razor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
-* [Blazor rendering performance best practices](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0).
+* [Blazor rendering performance best practices](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0)
 * [DataGrid getting started](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 * [Chart getting started](https://blazor.syncfusion.com/documentation/chart/getting-started)
 * [DropDownList getting started](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
