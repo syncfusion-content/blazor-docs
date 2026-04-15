@@ -20,6 +20,7 @@ You can set the width of the dialog using the [`Width`](https://help.syncfusion.
     <!-- Dialog content -->
 </SfDialog>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhHjfioKoHwrfVp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Width](./images/dialog-customization/blazor-dialog-width.png)" %}
 
 ### MinHeight
 
@@ -30,6 +31,7 @@ Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfu
     <!-- Dialog content -->
 </SfDialog>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrRDTiyglKQXCjb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog MinHeight](./images/dialog-customization/blazor-dialog-min-height.png)" %}
 
 ### RTL Support
 
@@ -41,15 +43,43 @@ Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusio
 </SfDialog>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBxtTWeqkZUhnrA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog RTL Support](./images/dialog-customization/blazor-dialog-rtl.png)" %}
+
 ### CssClass
 
 Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_CssClass) property.
 
 ```cshtml
-<SfDialog CssClass="custom-dialog">
-    <!-- Dialog content -->
+<SfDialog CssClass="success-dialog"
+          Width="400px"
+          Header="Success"
+          ShowCloseIcon="true">
+    <DialogTemplates>
+        <Content>
+            Operation completed successfully.
+        </Content>
+    </DialogTemplates>
 </SfDialog>
+
+@code {
+
+}
+
+<style>
+    .success-dialog.e-dialog {
+    border-color: #22c55e;
+}
+
+.success-dialog .e-dlg-header {
+    background-color: #22c55e;
+}
+
+.success-dialog .e-dlg-content {
+    background-color: #f0fdf4;
+}
+</style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxtzCIffgAdyqB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-cssclass.png)" %}
 
 ### Animation
 
@@ -121,6 +151,8 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrHZzsITIXbwZiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-animation.png)" %}
+
 ### Customizing the dialog header
 
 Use the following CSS to customize the dialog header properties.
@@ -132,6 +164,8 @@ Use the following CSS to customize the dialog header properties.
     font-weight: normal;
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxZzsITcfjlroX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Header](./images/dialog-customization/blazor-dialog-header.png)" %}
 
 ### Customizing the dialog content
 
@@ -146,6 +180,8 @@ Use the following CSS to customize the dialog content properties.
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhRZJiSplLTsmJC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Content](./images/dialog-customization/blazor-dialog-content.png)" %}
+
 ### Customizing modal dialog overlay
 
 Use the following CSS to customize the modal dialog overlay.
@@ -156,6 +192,7 @@ Use the following CSS to customize the modal dialog overlay.
     opacity: 0.6;
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhnZpMSfaLApAky?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog overlay](./images/dialog-customization/blazor-dialog-overlay.png)" %}
 
 ### Customizing the dialog resize icon
 
@@ -186,10 +223,11 @@ Use the following CSS to customize the dialog close button.
     color: red;
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVnjTCyyrIorzfn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog close button](./images/dialog-customization/blazor-dialog-closebtn.png)" %}
 
-### Customizing the dialog footer button
+### Customizing the dialog footer content
 
-Use the following CSS to customize the dialog footer button.
+Use the following CSS to customize the dialog footer content.
 
 ```css
 /* To specify font color, background color and border color */
@@ -199,3 +237,4 @@ Use the following CSS to customize the dialog footer button.
     color: blue;
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrnNzsIyKGWhRFz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog footer](./images/dialog-customization/blazor-dialog-footer.png)" %}
