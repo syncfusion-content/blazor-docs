@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Mention Component
 
-This section briefly explains about how to include [Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -190,7 +190,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mention component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfMention TItem="PersonData" DataSource="@EmailData">
     <TargetComponent>
@@ -242,7 +242,7 @@ The `Target` property of the Mention component allows you to specify an element 
 
 In the bellow example, the `Target` property of the Mention component is set to the CSS selector `#mentionTarget`, which matches the textarea element with an id of `mentionTarget`. The mention element will be appended to the textarea element as a child element, allowing the user to select or mention a specific entity within the textarea.
 
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <textarea id="mentionTarget" placeHolder="Type @@ and tag user"></textarea>
 

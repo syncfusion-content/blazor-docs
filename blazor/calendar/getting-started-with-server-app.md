@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Calendar Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfCalendar TValue="DateTime"></SfCalendar>
 
@@ -179,7 +179,7 @@ The Calendar component provides an option to select a date within a specified ra
 Here, the Calendar allows selecting a date from the 5th to the 27th of the current month. `TValue` specifies the type of the Calendar component.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfCalendar TValue="DateTime" Min='@MinDate' Value='@DateValue' Max='@MaxDate'></SfCalendar>
 
