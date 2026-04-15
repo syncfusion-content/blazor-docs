@@ -274,5 +274,5 @@ This allows inline styles while keeping the rest of your security policy strict.
 * [Content security policy in Syncfusion® Circular Gauge component](https://blazor.syncfusion.com/documentation/circular-gauge/content-security-policy)
 * [Content security policy in Syncfusion® HeatMap component](https://blazor.syncfusion.com/documentation/heatmap-chart/content-security-policy)
 * [Content security policy in Syncfusion® Maps component](https://blazor.syncfusion.com/documentation/maps/content-security-policy)
-* [Content security policy in Syncfusion® Blazor components](https://blazor.syncfusion.com/documentation/pivot-table/content-security-policy)
+* [Content security policy in Syncfusion® Pivot Table component](https://blazor.syncfusion.com/documentation/pivot-table/content-security-policy)
 * [Content security policy in Syncfusion® TreeView component](https://blazor.syncfusion.com/documentation/treeview/content-security-policy)
