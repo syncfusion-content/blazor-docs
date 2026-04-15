@@ -35,7 +35,7 @@ Configure JWT based authorization to secure backend APIs used by the SyncfusionÂ
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the **Syncfusion getting started guides** [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+Otherwise, create a new Blazor application by following the Syncfusion getting started guides [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 Ensure that **HTTPS is enabled** during project creation, as JWT based authorization requires secure communication.
 
@@ -45,7 +45,8 @@ Open the NuGet Package Manager in Visual Studio from (*Tools â†’ NuGet Package M
 
 **Syncfusion packages:**
 
-- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 **JWT package:**
 
