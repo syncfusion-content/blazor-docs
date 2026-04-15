@@ -76,7 +76,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Show or Hide Columns in Blazor TreeGrid](../images/blazor-treegrid-show-hide-column.png)
+![Show or Hide Columns in Blazor TreeGrid](../images/blazor-treegrid-show-hide-column.webp)
 
 N> The column names can be hidden in the column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ShowInColumnChooser) property as false.
 
@@ -157,7 +157,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Opening Column Chooser in Blazor Tree Grid](../images/blazor-treegrid-open-column-chooser.png)
+![Opening Column Chooser in Blazor Tree Grid](../images/blazor-treegrid-open-column-chooser.webp)
 
 N> The column names in column chooser can be hidden by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ShowInColumnChooser) property as false.
 
@@ -338,7 +338,7 @@ namespace TreeGridComponent.Data
 
 {% endtabs %}
 
-![Column Chooser Template with Blazor Tree Grid](../images/blazor-treegrid-column-chooser-template.png)
+![Column Chooser Template with Blazor Tree Grid](../images/blazor-treegrid-column-chooser-template.webp)
 
 ### Custom component in column chooser template
 
@@ -565,7 +565,7 @@ namespace TreeGridComponent.Data
 
 The following output is displayed as a result of the above code example.
 
-![Column Chooser Template with Blazor Tree Grid](../images/blazor-treegrid-column-with-chooser-template.png)
+![Column Chooser Template with Blazor Tree Grid](../images/blazor-treegrid-column-with-chooser-template.webp)
 
 ### Column Chooser with group template
 
@@ -670,4 +670,4 @@ namespace TreeGridComponent.Data
 
 The following output is displayed as a result of the above code example.
 
-![Column Chooser with Group in Blazor Tree Grid](../images/blazor-treegrid-column-chooser-group-template.png)
+![Column Chooser with Group in Blazor Tree Grid](../images/blazor-treegrid-column-chooser-group-template.webp)
