@@ -95,4 +95,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Custom Toolbar Items in Blazor TreeGrid](../images/blazor-treegrid-custom-toolbar-item.PNG)
+![Custom Toolbar Items in Blazor TreeGrid](../images/blazor-treegrid-custom-toolbar-item.webp)
