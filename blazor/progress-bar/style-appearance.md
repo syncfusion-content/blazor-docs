@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor ProgressBar component and more.
+description: Check out and learn about Style and Appearance customization in Syncfusion Blazor ProgressBar component.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
@@ -9,7 +9,9 @@ documentation: ug
 
 # Style and Appearance in Blazor ProgressBar Component
 
-The Style and Appearance feature allows you to customize the visual design of the **Syncfusion Blazor ProgressBar** control to match your application's branding, theme, and user experience requirements. By leveraging CSS selectors, you can modify colors, typography, spacing, and other visual properties of various ProgressBar elements.
+Style and Appearance provide options to customize the visual design of the **Syncfusion Blazor ProgressBar** component, ensuring consistency with your application’s branding and theme.
+
+By using CSS selectors and ID-based styling, you can customize colors, typography, spacing, borders, and other visual properties of TreeMap items, labels, and SVG elements.
 
 **Basic ProgressBar Setup**
 
@@ -104,4 +106,4 @@ text[id*="_linearLabel"] {
 
 ![Blazor ProgressBar Label Customization](images/style/blazor-progressbar-label-customization.png)
 
-N> SVG presentation attributes such as fill and stroke may require **!important** if overridden by inline SVG attributes.
+N> SVG presentation attributes such as fill, stroke, and font-size may require **!important** when overridden by inline SVG styles.
