@@ -98,7 +98,7 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor TreeGrid with Model Template](images/blazor-treegrid-model-template.png)
+![Blazor TreeGrid with Model Template](images/blazor-treegrid-model-template.webp)
 
 ## Template Context
 
@@ -180,7 +180,7 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor TreeGrid with Column Template](images/blazor-treegrid-column-template.png)
+![Blazor TreeGrid with Column Template](images/blazor-treegrid-column-template.webp)
 
 ## TreeGridTemplates component
 
@@ -277,7 +277,7 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor TreeGrid with Row Template](images/blazor-treegrid-row-template.png)
+![Blazor TreeGrid with Row Template](images/blazor-treegrid-row-template.webp)
 
 ## Customize the empty record template in Blazor TreeGrid
 
@@ -347,4 +347,4 @@ public class TreeData
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TreeGrid with Empty Record Template](images/empty-record-template.png)
+![Blazor TreeGrid with Empty Record Template](images/empty-record-template.webp)
