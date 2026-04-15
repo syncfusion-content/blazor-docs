@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Chart Component in Web App
 
-This section briefly explains about how to include [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -91,7 +91,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package in your project.
+Install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 Alternatively, run the following command in the Package Manager Console to achieve the same.
 
@@ -107,7 +107,7 @@ If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add Import Namespaces
+## Add import namespaces
 
 After the package is installed, open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
@@ -120,9 +120,9 @@ After the package is installed, open the **~/_Imports.razor** file from the clie
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of your Blazor Web App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -146,9 +146,6 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-//Blazor Chart Component script reference.
-<!-- <script src="_content/Syncfusion.Blazor.Charts/scripts/sf-chart.min.js" type="text/javascript"></script> -->
-
 ```
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
@@ -169,7 +166,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfChart>
 
@@ -187,7 +184,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 To bind data for the chart component, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 public class SalesInfo
 {
@@ -216,7 +213,7 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
@@ -237,7 +234,7 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 You can add data labels to improve the readability of the chart. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) property to **true** in the [ChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
@@ -261,7 +258,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
@@ -283,7 +280,7 @@ When space constraints prevent you from displaying information using data labels
 You can use legend for the chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to **true** in [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html). The legend name can be changed by using the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) property in the series.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>

@@ -14,7 +14,9 @@ documentation: ug
 
 Fires when the user submits a prompt. This is where you process the user input and send it to your AI backend.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -28,7 +30,10 @@ Fires when the user submits a prompt. This is where you process the user input a
         // Your required action here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## AIResponseStopped
@@ -36,7 +41,9 @@ Fires when the user submits a prompt. This is where you process the user input a
 
 Fires when the user clicks "Stop" during a streaming response.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -50,7 +57,10 @@ Fires when the user clicks "Stop" during a streaming response.
         // Your required action here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## AIToolbarItemClicked
@@ -58,7 +68,9 @@ Fires when the user clicks "Stop" during a streaming response.
 
 Fires when the user clicks a toolbar button (Insert, Copy, Regenerate, etc.).
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -72,7 +84,10 @@ Fires when the user clicks a toolbar button (Insert, Copy, Regenerate, etc.).
         // Your required action here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
 ## AIPopupOpening
@@ -80,7 +95,9 @@ Fires when the user clicks a toolbar button (Insert, Copy, Regenerate, etc.).
 
 Fires before the AI Assistant popup opens. Use to validate permissions or prefetch data.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.Popups
 
@@ -94,7 +111,9 @@ Fires before the AI Assistant popup opens. Use to validate permissions or prefet
         // Your required action here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Event Args Properties:**
 - `Cancel` — Set to true to prevent opening
@@ -106,7 +125,9 @@ Fires before the AI Assistant popup opens. Use to validate permissions or prefet
 
 Fires before the AI Assistant popup closes. Use to save state or confirm before closing.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.Popups
 
@@ -120,7 +141,9 @@ Fires before the AI Assistant popup closes. Use to save state or confirm before 
         // Your required action here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Event Args Properties:**
 - `Cancel` — Set to true to prevent closing

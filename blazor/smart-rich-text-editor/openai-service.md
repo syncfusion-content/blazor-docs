@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenAI Configuration for Blazor Smart Rich Text Editor | Syncfusion
-description: Configure OpenAI for Syncfusion Blazor Smart Rich Text Editor: API keys, client setup, DI registration, usage examples, and best practices.
+description: Configure OpenAI for Syncfusion Blazor Smart Rich Text Editor API keys, client setup, DI registration, usage examples, and best practices.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -94,17 +94,22 @@ var app = builder.Build();
 
 Update **~/_Imports.razor** to include necessary namespaces:
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="~/Components/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SmartRichTextEditor
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 3: Use OpenAI with Smart Rich Text Editor Component
 
 Add the Smart Rich Text Editor to your Blazor page:
 
-```razor
-@page "/editor"
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
@@ -118,7 +123,9 @@ Add the Smart Rich Text Editor to your Blazor page:
         </ul>
     </div>
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Using Environment Variables
 

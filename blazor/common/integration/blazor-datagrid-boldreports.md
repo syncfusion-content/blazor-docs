@@ -9,9 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Blazor DataGrid with Bold Report Viewer
 
-This guide explains how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC/RDL reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
-
-A common use case for this integration is when applications require users to interact with data and then generate a corresponding report. Users can filter, sort, or edit records in the DataGrid and immediately view a matching RDLC/RDL report. This is especially useful in scenarios like **order processing**, **inventory management**, **CRM**, or **financial reviews**. It allows teams to produce invoices, summaries, or audit-ready documents directly from the same screen without additional tools or data re‑entry.
+This guide explains how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
@@ -45,32 +43,27 @@ Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion Blazor Service in the `Program.cs` file of the Blazor Server App.
+Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" hl_lines="1 7 8 9 12 16 17 18" %}
+{% highlight razor tabtitle="~/Program.cs" hl_lines="2 5 6 7 9 12 13 14" %}
 
-
+...
 using Syncfusion.Blazor;
-
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddMemoryCache();
-
 // HttpClient for server-side calls
 builder.Services.AddHttpClient();
-
+...
 var app = builder.Build();
-
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
-app.MapControllers(); 
+app.MapControllers();
 app.Run();
 
 {% endhighlight %}
@@ -78,7 +71,7 @@ app.Run();
 
 ## Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. The Bold Report Viewer requires its specific script in addition to the core script. 
+Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. The Bold Report Viewer requires its specific script in addition to the core script.
 
 {% tabs %}
 {% highlight html  %}
@@ -88,9 +81,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     <!-- Bold Report Viewer CSS -->
     <link href="https://cdn.boldreports.com/12.2.6/content/v2.0/tailwind-light/bold.report-viewer.min.css" rel="stylesheet" />
-
 </head>
-
 <body>
     <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
@@ -133,7 +124,6 @@ window.BoldReports = {
                 body: JSON.stringify({ dataSources: orders })
             });
             if (!resp.ok) throw new Error('POST failed: ' + resp.status);
-
             $("#" + elementId).empty();
             $("#" + elementId).boldReportViewer({
                 reportServiceUrl: serviceUrl,
@@ -151,7 +141,7 @@ window.BoldReports = {
 
 ### Add the RDLC report
 
-Create a new folder inside the `wwwroot` folder in your application to store the RDL reports. Then, add any previously created RDL reports to this newly created folder or use the below `rdl` file.
+Create a new folder inside the `wwwroot` folder in your application to store the RDLC reports. Then, add any previously created RDLC reports to this newly created folder or use the below `rdlc` file.
 
 {% tabs %}
 {% highlight xml tabtitle="Orders.rdlc"  %}
@@ -309,16 +299,13 @@ Create a new folder inside the `wwwroot` folder in your application to store the
 
 ### Configure the Web API
 
-The Blazor Report Viewer requires a Web API service to process the RDL, RDLC, and SSRS report files.
+The Blazor Report Viewer requires a Web API service to process the RDLC report files.
 
 **Add Web API Controller**
 
 * Right-click the project and select **Add > New** Item from the context menu.
-
 * In the Add New Item dialog, select **API Controller Empty** class and name it as `BoldReportsAPIController.cs`.
-
 * Click Add.
-
 * Open the **BoldReportsAPIController** and add the following code to implement the Bold Reports `IReportController` for handling report requests.
 
 The Report Viewer requires data in a **DataSet** format. In the following example, API converts the posted DataGrid data (JSON) into a `DataSet` named `OrdersDataSet` that matches the `RDLC` file.
@@ -343,7 +330,6 @@ public class BoldReportsAPIController : Controller, IReportController
     private readonly IWebHostEnvironment _env;
     private static List<Order>? _sharedOrders;
     private static DataSet? _reportDataSet;
-
     public BoldReportsAPIController(IMemoryCache cache, IWebHostEnvironment env)
     {
         _cache = cache;
@@ -370,27 +356,22 @@ public class BoldReportsAPIController : Controller, IReportController
             if (dataModel?.DataSources != null && dataModel.DataSources.Count > 0)
             {
                 _sharedOrders = dataModel.DataSources;
-
                 // Convert List<Order> to DataSet with DataTable
                 DataSet ds = new();
                 DataTable dt = new("OrdersDataSet");
-
                 // Add columns matching the RDLC report
                 dt.Columns.Add("OrderID", typeof(int));
                 dt.Columns.Add("CustomerID", typeof(string));
                 dt.Columns.Add("OrderDate", typeof(DateTime));
                 dt.Columns.Add("Freight", typeof(double));
-
                 // Add rows from orders
                 foreach (var order in _sharedOrders)
                 {
                     dt.Rows.Add(order.OrderID, order.CustomerID, order.OrderDate, order.Freight);
                 }
-
                 ds.Tables.Add(dt);
                 _reportDataSet = ds;
                 _cache.Set("ReportDataSet", ds, TimeSpan.FromMinutes(10));
-
                 return Ok(new { success = true, message = "Data set successfully" });
             }
             return BadRequest(new { success = false, message = "No data provided" });
@@ -407,9 +388,8 @@ public class BoldReportsAPIController : Controller, IReportController
         try
         {
             options.ReportModel.ProcessingMode = ProcessingMode.Local;
-
             var path = Path.Combine(_env.WebRootPath, "Reports", "Orders.rdlc");
-            
+
             if (!System.IO.File.Exists(path))
             {
                 throw new FileNotFoundException($"RDLC file not found at: {path}");
@@ -420,8 +400,8 @@ public class BoldReportsAPIController : Controller, IReportController
             {
                 fs.CopyTo(stream);
             }
-            stream.Position = 0;
 
+            stream.Position = 0;
             options.ReportModel.Stream = stream;
             options.ReportModel.ReportPath = "Orders.rdlc";
         }
@@ -438,6 +418,7 @@ public class BoldReportsAPIController : Controller, IReportController
         {
             // Retrieve the DataSet from cache or static variable
             DataSet? ds = null;
+
             if (_cache.TryGetValue("ReportDataSet", out object? cachedData) && cachedData is DataSet cachedDs)
             {
                 ds = cachedDs;
@@ -446,7 +427,6 @@ public class BoldReportsAPIController : Controller, IReportController
             {
                 ds = _reportDataSet;
             }
-
             if (ds != null && ds.Tables.Contains("OrdersDataSet"))
             {
                 var table = ds.Tables["OrdersDataSet"];
@@ -465,7 +445,7 @@ public class BoldReportsAPIController : Controller, IReportController
             System.Console.WriteLine($"[OnReportLoaded] Error: {ex.Message}");
         }
     }
-    
+
     public class ReportDataModel
     {
         public List<Order> DataSources { get; set; } = [];
@@ -493,26 +473,26 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
 
 <div class="container mt-5">
     <h2>Orders Data Grid & Bold Reports Integration</h2>
-        
+
     <SfButton CssClass="e-primary mt-3" IsPrimary="true" OnClick="@OpenReport">
         Open RDLC Report
     </SfButton>
-    
+
     <SfGrid DataSource="@Orders">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
+        <GridColumns>
+            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+            <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        </GridColumns>
     </SfGrid>
-    
+
     <div id="viewer" style="height:80vh; margin-top:20px;"></div>
 </div>
 
 @code{
     public List<Order> Orders { get; set; } = [];
-   
+
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 10).Select(x => new Order()
@@ -523,33 +503,29 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-    
+
     public async Task OpenReport()
-    {  
-        
+    {
         try
         {
-              
             // Step 1: Send the grid data to the server API
             var dataModel = new { DataSources = Orders };
             var baseUrl = Nav.BaseUri.TrimEnd('/');
             var url = $"{baseUrl}/api/BoldReportsAPI/SetReportData".Replace("//api", "/api");
             var response = await Http.PostAsJsonAsync(url, dataModel);
-                       
+
             // Step 2: Render the viewer with the data
             var viewerOptions = new
             {
                 serviceUrl = "/api/BoldReportsAPI",
                 reportPath = "Orders.rdlc"
             };
-
             await JS.InvokeVoidAsync("BoldReports.renderViewer", "viewer", viewerOptions);
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Exception: {ex}");
         }
-       
     }
 
     public class Order {
@@ -565,7 +541,7 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
 **Expected behavior**
 * DataGrid renders with sample records.
@@ -575,9 +551,33 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 **Output:**
 ![Blazor DataGrid with Bold Report Viewer](./images/data-grid-boldreport.webp)
 
+## Use cases
+
+The integration of the Syncfusion® Blazor DataGrid with RDLC reporting enables seamless data interaction and on‑demand report generation within Blazor applications. This combination is ideal for applications that require real‑time reporting based on user‑selected or filtered grid data.
+
+### Order processing and invoice generation
+
+Use the DataGrid to display order details such as order ID, customer name, order date, and total amount. Users can sort or filter the records and generate RDLC invoice or order summary reports based on the current DataGrid view. The generated report reflects the selected records, allowing users to preview, print, or export invoices without navigating away from the page.
+
+### Inventory management and reporting
+
+Implement an inventory tracking system where product details such as item name, SKU, category, stock quantity, and reorder level are displayed in the DataGrid. Users can filter items based on stock availability and generate RDLC inventory reports or low‑stock summaries. This enables efficient monitoring of inventory status and supports operational and audit requirements.
+
+### Customer relationship management(CRM)
+
+Display customer data, sales records, or support interactions in the DataGrid with options for grouping and filtering. Based on the filtered or selected records, users can generate RDLC customer profiles, activity summaries, or sales reports. This helps teams analyze customer data and produce actionable reports directly from the grid.
+
+### Financial review and analysis
+
+Use the DataGrid to present financial transactions, expense details, or revenue data with sorting and filtering options by date, category, or department. Users can generate RDLC financial statements or period‑based summaries that match the DataGrid state, ensuring consistency between on‑screen data and exported reports.
+
+### Audit and compliance reporting
+
+Create an audit or compliance module where logs, verification records, or inspection results are displayed in the DataGrid. Auditors can filter records by period, status, or department and generate RDLC audit reports or compliance documentation. This simplifies audit workflows and ensures accurate, traceable report generation from validated data.
+
 ## See also
 
 * [How to use the Bold Reports Report Viewer in a Blazor WebAssembly App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-web-assembly-application/)
 * [How to use the Bold Reports Report Viewer in a Blazor Server App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-server-application/)
 * [Explore the Blazor reporting components available in Bold Reports](https://www.boldreports.com/blog/blazor-reporting-components)
-* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) 
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)

@@ -162,8 +162,9 @@ var app = builder.Build();
 
 ### Step 3: Use in Blazor Component
 
-```razor
-@page "/editor"
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
@@ -177,7 +178,9 @@ var app = builder.Build();
         </ul>
     </div>
 </SfSmartRichTextEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Advanced Implementation
 

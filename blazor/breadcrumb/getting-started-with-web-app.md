@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Breadcrumb in Blazor Web App
 
-This section briefly explains about how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -87,7 +87,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages into your project.
+Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
@@ -104,7 +104,7 @@ If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add Import Namespaces
+## Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
@@ -117,9 +117,9 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of your Blazor Web App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -165,7 +165,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfBreadcrumb></SfBreadcrumb>
 
@@ -183,7 +183,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 To render Breadcrumb component with items use [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive as like below code example.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 

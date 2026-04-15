@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Pivot Table in Blazor Web App
 
-This section explains how to add a [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Follow these steps to set up and display data in the Pivot Table with ease.
+This section explains how to add a [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Follow these steps to set up and display data in the Pivot Table with ease.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -19,23 +19,77 @@ This section explains how to add a [Blazor Pivot Table](https://www.syncfusion.c
 
 ## Prerequisites
 
-- [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor Web App in Visual Studio
 
-Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed steps, see the [Blazor Web App Getting Started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
-Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App.
+{% endtabcontent %}
 
-![Create Blazor Web App](images/blazor-create-web-app.png)
+{% tabcontent Visual Studio Code %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the App
+## Prerequisites
 
-To add the Blazor Pivot Table component, install the required NuGet packages in your project.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-1. Open the NuGet Package Manager in Visual Studio by navigating to *Tools > NuGet Package Manager > Manage NuGet Packages for Solution*.
-2. Search for and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes).
-3. If your Blazor Web App uses `WebAssembly` or `Auto` render modes, ensure these packages are installed in the client project.
+## Create a new Blazor Web App in Visual Studio Code
+
+Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
+
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor Web App" %}
+
+dotnet new blazor -o BlazorWebApp -int Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+## Prerequisites
+
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet --version
+
+{% endhighlight %}
+{% endtabs %}
+
+## Create a Blazor Web App using .NET CLI
+
+Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
+
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands:
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor Web App" %}
+
+dotnet new blazor -o BlazorWebApp -int Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+
+Install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
@@ -48,115 +102,13 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
+If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
 
-{% endtabcontent %}
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-{% tabcontent Visual Studio Code %}
+## Add import namespaces
 
-## Prerequisites
-
-- [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor Web App in Visual Studio Code
-
-Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed steps, see the [Blazor Web App Getting Started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code).
-
-Configure the appropriate interactive render mode and interactivity location when setting up a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
-
-For example, to create a Blazor Web App with the `Auto` interactive render mode, use the following commands:
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-dotnet new blazor -o BlazorWebApp -int Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the App
-
-If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
-
-1. Open the integrated terminal in Visual Studio Code by pressing <kbd>Ctrl</kbd>+<kbd>`</kbd>.
-2. Ensure you are in the project root directory where the `.csproj` file is located.
-3. Run the following commands to install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package and ensure all dependencies are installed.
-
-{% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
-
-dotnet add package Syncfusion.Blazor.PivotTable -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-## Prerequisites
-
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
-
-## Create a Blazor Web App using .NET CLI
-
-To create a new Blazor Web App, run the following commands in a command prompt (Windows), terminal (macOS), or command shell (Linux). For detailed steps, see the [Blazor Web App Getting Started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli).
-
-Select the appropriate interactive render mode and interactivity location when setting up the app. For more details, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
-
-For example, to create a Blazor Web App with the `Auto` interactive render mode, use the following commands:
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp -int Auto
-cd BlazorApp
-cd BlazorApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-This command creates a new Blazor Web App and places it in a new directory called `BlazorApp` inside your current location. See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) topics for more details.
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PivotTable and Themes NuGet in the App
-
-Here's an example of how to add **Blazor Pivot Table** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
-
-If using the `WebAssembly or Auto` render modes in the Blazor Web App, install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet packages in the client project.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet add package Syncfusion.Blazor.PivotTable --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
-
-{% endtabcontent %}
-
-{% endtabcontents %}
-
-## Add Import Namespaces
-
-Open the **~/Components/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -167,78 +119,43 @@ Open the **~/Components/_Imports.razor** file from the client project and import
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
-
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** files of the main `server` project and associated `.Client` project.
+Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
+{% highlight c# tabtitle="Program.cs" %}
 
-...
-...
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents()
-    .AddInteractiveWebAssemblyComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
 ....
-
-{% endhighlight %}
-{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
-
-...
 using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
+....
 builder.Services.AddSyncfusionBlazor();
-
-await builder.Build().RunAsync();
+....
 
 {% endhighlight %}
 {% endtabs %}
 
+N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+
 ## Add stylesheet and script resources
 
-Include the Syncfusion theme stylesheet and script in your Blazor Web App to style and enable the pivot table. Add the stylesheet in the `<head>` section and the script at the end of the `<body>` in the **~/Components/App.razor** file, as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/Components/App.razor** file.
 
 ```html
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
 
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+....
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-    //Blazor PivotTable Component script reference.
-    <!-- <script src="_content/Syncfusion.Blazor.PivotTable/scripts/sf-pivotview.min.js" type="text/javascript"></script> -->
-</body>
 ```
 
-N> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to learn about referencing themes using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). Visit the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different ways to add script references.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Initializing Blazor pivot Table component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component to a Razor page located under the Pages folder (e.g., **~/Components/Pages/Home.razor**) in either the **Server** or **Client** project. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion Blazor Pivot Table component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
-| Interactivity Location | Render Mode | Code |
-| --- | --- | --- |
-| Per page/component | Auto | `@rendermode InteractiveAuto` |
-| Per page/component | WebAssembly | `@rendermode InteractiveWebAssembly` |
-| Per page/component | None | --- |
-
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default.
-
-Add the following code to your Razor page to include the Pivot Table component:
+N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
@@ -250,7 +167,7 @@ Add the following code to your Razor page to include the Pivot Table component:
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfPivotView TValue="ProductDetails"></SfPivotView>
 
@@ -264,7 +181,7 @@ To enable users to perform meaningful analysis and generate actionable insights,
 For demonstration purposes, a collection of objects containing sales details for various products across different periods and regions has been prepared. This sample data is assigned to the Pivot Table component through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
@@ -397,7 +314,7 @@ To define each field in its respective axis, configure the following basic prope
 * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_Type): Sets the summary type for the field. By default, the [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) aggregation is applied.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
@@ -441,7 +358,7 @@ Within each [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncf
 N> Formatting can only be applied to numeric fields in the value section of the Pivot Table.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
@@ -479,7 +396,7 @@ N> Formatting can only be applied to numeric fields in the value section of the 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component in the default web browser like below.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNEZeilHoDpvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNEZeilHoDpvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.webp)" %}
 
 ## Enable Field List
 
@@ -488,7 +405,7 @@ The field list enhances user interaction by allowing you to dynamically add, rem
 To enable the field list, set the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. This activates the field list interface, making it accessible to users to modify Pivot Table report settings. For comprehensive details about field list functionality, [refer](./field-list) to the dedicated field list documentation.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
@@ -524,7 +441,7 @@ To enable the field list, set the [ShowFieldList](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrotEtSCvFxdyJy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrotEtSCvFxdyJy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.webp)" %}
 
 ## Enable Grouping Bar
 
@@ -533,7 +450,7 @@ The grouping bar allows users to easily manage and modify the report settings of
 Users can also use the grouping bar to sort, filter, or remove fields quickly without needing to write any code. To enable the grouping bar, set the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. For more details about using the grouping bar, see the [Grouping Bar documentation](./grouping-bar).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
@@ -569,7 +486,7 @@ Users can also use the grouping bar to sort, filter, or remove fields quickly wi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtroXkDehXUHMfdh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtroXkDehXUHMfdh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.webp)" %}
 
 ## Exploring Filter Axis
 
@@ -578,7 +495,7 @@ The filter axis lets you show only the data you need in the Blazor Pivot Table, 
 The following example shows how to add a field to the filter axis in a Blazor Pivot Table:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
@@ -616,7 +533,7 @@ The following example shows how to add a field to the filter axis in a Blazor Pi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDroXajSVMDijPfd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDroXajSVMDijPfd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-format.webp)" %}
 
 ## Calculated Field
 
@@ -631,7 +548,7 @@ N> By default, the calculated fields created through code-behind are only added 
 Below is a sample code that shows how to set up calculated fields both through code-behind and using the popup dialog:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
@@ -673,7 +590,7 @@ Below is a sample code that shows how to set up calculated fields both through c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBoXENSVskAdvwR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBoXENSVskAdvwR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.webp)" %}
 
 ## Handling exceptions
 
@@ -682,7 +599,7 @@ You can handle errors that occur during Pivot Table actions without stopping you
 The following code example shows how to display a server-side error message to the user when a data operation fails:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
