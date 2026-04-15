@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Testing Blazor Applications with Playwright | Syncfusion®
-description: Learn how to perform end-to-end UI testing for Syncfusion® Blazor applications using Microsoft Playwright, including validating user interactions, testing complete workflows, and detecting UI regressions.
+description: Learn how to perform end-to-end UI testing for Syncfusion® Blazor applications using Microsoft Playwright, including testing complete workflows.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Testing Syncfusion® Blazor Applications with Playwright
+# Testing Syncfusion® Blazor applications with Playwright
 
 This guide demonstrates how to integrate Syncfusion® UI components into a Blazor WebAssembly application and validate them through end‑to‑end tests using Microsoft Playwright. It provides a clear, step‑by‑step approach for building reliable and maintainable UI automation for Syncfusion® components in Blazor applications.
 
@@ -59,11 +59,11 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Syncfusion® Demo Page
+## Create a Syncfusion® page
 
 Create a Razor page to demonstrate a simple Syncfusion® UI interaction that can be validated using Playwright tests.
 
-This demo page contains a **Syncfusion® Button**, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
+This page contains a **Syncfusion® Button**, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
 
 {% tabs %}
 {% highlight razor %}
@@ -92,7 +92,7 @@ This demo page contains a **Syncfusion® Button**, allowing you to verify user i
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Playwright Test Project
+## Create a Playwright test project
 
 In this step, you create a separate test project to write and manage Playwright end‑to‑end tests for your Syncfusion® Blazor application.
 
@@ -109,7 +109,7 @@ cd tests/E2E.Tests
 
 This command creates a class library named E2E.Tests under the tests folder, which will host all Playwright‑based UI tests.
 
-**Install Required Packages**
+**Install required packages**
 
 Install the following NuGet packages into the E2E.Tests project to enable Playwright‑based end‑to‑end testing in the test project.
 
@@ -131,7 +131,8 @@ Run the following command in a Terminal.
 {% highlight bash tabtitle=" Terminal " %}
 
 dotnet tool install --global Microsoft.Playwright.CLI
-# Restore the test Project
+
+// Restore the test project
 dotnet restore tests/E2E.Tests
 
 {% endhighlight %}
@@ -139,7 +140,7 @@ dotnet restore tests/E2E.Tests
 
 If the tool is already installed, this command can be safely skipped.
 
-**Step 2: Install Playwright Browsers**
+**Step 2: Install Playwright browsers**
 
 After the CLI is available, install the required browsers by running:
 
@@ -151,7 +152,7 @@ playwright install
 {% endhighlight %}
 {% endtabs %}
 
-## Create Playwright Test Class
+## Create Playwright test class
 
 Create a new C# file named `BlazorPlaywrightTests.cs` in the Playwright test project (E2E.Tests). This file contains the end‑to‑end test logic and manages the Playwright browser lifecycle.
 
@@ -236,7 +237,7 @@ namespace E2E.Tests
 {% endhighlight %}
 {% endtabs %}
 
-## Run the Tests
+## Run the tests
 
 You can execute the Playwright end‑to‑end tests to validate the behavior of your Syncfusion® Blazor application.
 
