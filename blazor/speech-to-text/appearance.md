@@ -146,7 +146,7 @@ The SpeechToText component supports the following predefined styles that can be 
 | `e-warning` | Used to represent an action with caution. | 
 | `e-danger` | Used to represent a negative action. |
 
-## Setting cssclass
+## Customization using CSS class
 
 You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property to customize the appearance of the SpeechToText component.
 
