@@ -77,7 +77,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Displaying Excel Filter in Blazor Tree Grid](../images/blazor-treegrid-excel-filter.png)
+![Displaying Excel Filter in Blazor Tree Grid](../images/blazor-treegrid-excel-filter.webp)
 
 ## Filter item template
 
@@ -158,7 +158,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Blazor Tree Grid Filter with Item Template](../images/blazor-treegrid-filter-item-template.png)
+![Blazor Tree Grid Filter with Item Template](../images/blazor-treegrid-filter-item-template.webp)
 
 ## Customize the height and width of filter popup
 
@@ -279,7 +279,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Customize the Height and Width of Filter Popup in Blazor Tree Grid](../images/blazor-treegrid-customize-filter-popup.gif)
+![Customize the Height and Width of Filter Popup in Blazor Tree Grid](../images/blazor-treegrid-customize-filter-popup.webp)
 
 ## Add current selection option to filter checkbox in excel filter dialog
 
@@ -802,5 +802,5 @@ namespace TreeGridComponent.Data {
 
 The following image describes the above mentioned behavior:
 
-![Add current selection option to filter checkbox in Blazor Tree Grid](../images/blazor-treegrid-current-selection-filter.gif)
+![Add current selection option to filter checkbox in Blazor Tree Grid](../images/blazor-treegrid-current-selection-filter.webp)
 
