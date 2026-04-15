@@ -9,7 +9,7 @@ documentation: ug
 
 # Memory Management with Syncfusion® Blazor Components
 
-This section explains best practices for managing memory in Blazor applications that use Syncfusion Blazor components. Proper memory management helps minimize memory allocations, prevent memory leaks, and maintain consistent performance in both Blazor WebAssembly and Blazor Server hosting models.
+This section explains best practices for managing memory in Blazor applications that use [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Proper memory management helps minimize memory allocations, prevent memory leaks, and maintain consistent performance in both Blazor WebAssembly and Blazor Server hosting models.
 
 ## What is memory management in Blazor?
 
@@ -35,7 +35,7 @@ In Blazor WebAssembly, releasing these references allows the browser runtime to 
 
 ### Disposing data‑bound Syncfusion components
 
-Data‑bound components such as **DataGrid** and **ListView** frequently hold large data collections in memory. These references should be released when the component is removed from the render tree.
+Data‑bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) frequently hold large data collections in memory. These references should be released when the component is removed from the render tree.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -101,7 +101,7 @@ When the component is disposed, clearing the data source ensures that memory can
 
 ### Managing event subscriptions in Syncfusion UI components
 
-Components such as **Dialog**, **Toast**, or custom wrappers around Syncfusion components may subscribe to shared application events. These subscriptions must be removed explicitly during component disposal.
+Components such as [Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog), [Toast](https://www.syncfusion.com/blazor-components/blazor-toast), or custom wrappers around Syncfusion components may subscribe to shared application events. These subscriptions must be removed explicitly during component disposal.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -311,13 +311,11 @@ window.MyJavaScriptFunction = function (dotNetRef) {
 
 **Add script reference:**
 
-Register the script in `App.razor` inside the `<body>` tag for Blazor WebApp: 
+Register the script in `App.razor` (or `_Host.cshtml` or `wwwroot/index.html` depending on your project template) inside the `<body>` tag for Blazor WebApp: 
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
 
-<!-- Blazor WebAssembly: wwwroot/index.html -->
-<!-- Blazor Server: _Host.cshtml_ -->
 <script src="js/site.js"></script>
 
 {% endhighlight %}
@@ -327,7 +325,7 @@ Disposing the `DotNetObjectReference` ensures that the component is not retained
 
 ### Preventing unnecessary rendering
 
-Dynamic rendering of components such as **TextBox**, **DropDownList**, and **ComboBox** can lead to unnecessary component recreation. The `@key` directive helps stabilize rendering.
+Dynamic rendering of components such as [TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox), [DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), and [ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) can lead to unnecessary component recreation. The `@key` directive helps stabilize rendering.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
