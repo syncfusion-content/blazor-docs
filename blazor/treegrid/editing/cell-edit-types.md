@@ -117,7 +117,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Cell Editing in Blazor TreeGrid](../images/blazor-treegrid-cell-editing.png)
+![Cell Editing in Blazor TreeGrid](../images/blazor-treegrid-cell-editing.webp)
 
 N> If edit type is not defined in the column, then it will be considered as the **stringedit** type (Textbox component).
 
@@ -201,7 +201,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Cell Edit Template](../images/blazor-treegrid-cell-edit-template.png)
+![Blazor TreeGrid with Cell Edit Template](../images/blazor-treegrid-cell-edit-template.webp)
 
 ### Using AutoComplete in EditTemplate
 
@@ -283,7 +283,7 @@ public class TreeData
 {% endtabs %}
 
 In the following image, `Autocomplete` component is rendered with the  `EditTemplate` in the  **TaskName** column.
-![Blazor Tree Grid with Autocomplete Edit Template](../images/blazor-treegrid-autocomplete-edit-template.png)
+![Blazor Tree Grid with Autocomplete Edit Template](../images/blazor-treegrid-autocomplete-edit-template.webp)
 
 ### Using ComboBox in EditTemplate
 
@@ -375,7 +375,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid with ComboBox Edit Template](../images/blazor-treegrid-combobox-edit-template.png)
+![Blazor Tree Grid with ComboBox Edit Template](../images/blazor-treegrid-combobox-edit-template.webp)
 
 ### Using NumericTextBox in EditTemplate
 
@@ -455,7 +455,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid with NumericTextBox Edit Template](../images/blazor-treegrid-numerictextbox-edit-template.png)
+![Blazor Tree Grid with NumericTextBox Edit Template](../images/blazor-treegrid-numerictextbox-edit-template.webp)
 
 ### Using TimePicker in EditTemplate
 
@@ -588,7 +588,7 @@ public class SelfReferenceData
 {% endtabs %}
 
 In the following image, `SfTimePicker` component is rendered with the `EditTemplate` in the **StartDate** column
-![Blazor Tree Grid with Editing in Custom TimePicker](../images/blazor-treegrid-editing-in-custom-timepicker.png)
+![Blazor Tree Grid with Editing in Custom TimePicker](../images/blazor-treegrid-editing-in-custom-timepicker.webp)
 
 ### Using MultiSelect dropdown in EditTemplate
 
@@ -686,7 +686,7 @@ public class TreeData
 {% endtabs %}
 
 In the following image, `SfMultiSelect` component is rendered with the `EditTemplate` in the ChosenItems column
-![Blazor Tree Grid with Editing in Custom MultiSelect](../images/blazor-treegrid-editing-in-custom-multiselect.png)
+![Blazor Tree Grid with Editing in Custom MultiSelect](../images/blazor-treegrid-editing-in-custom-multiselect.webp)
 
 ### Using RichTextEditor in EditTemplate
 
@@ -764,4 +764,4 @@ public class TreeData
 {% endtabs %}
 
 In the following image, `SfRichTextEditor` component is rendered with the `EditTemplate` in the **TaskName** column
-![Blazor Tree Grid with Editing in Custom RichTextEditor](../images/blazor-treegrid-editing-in-custom-richtexteditor.png)
+![Blazor Tree Grid with Editing in Custom RichTextEditor](../images/blazor-treegrid-editing-in-custom-richtexteditor.webp)

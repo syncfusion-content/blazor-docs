@@ -127,7 +127,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Footer Aggregate in Blazor TreeGrid](images/blazor-treegrid-footer-aggregate.png)
+![Footer Aggregate in Blazor TreeGrid](images/blazor-treegrid-footer-aggregate.webp)
 
 N> The aggregate values must be accessed inside the template using their corresponding `AggregateType`.
 
@@ -217,7 +217,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Format Aggregate in Blazor TreeGrid](images/blazor-treegrid-aggregate-format.png)
+![Format Aggregate in Blazor TreeGrid](images/blazor-treegrid-aggregate-format.webp)
 
 <!-- Custom aggregate
 

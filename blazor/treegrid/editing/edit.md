@@ -167,7 +167,7 @@ public class TreeData
 
 {% endtabs %}
 
-![TreeGrid toolbar with edit actions](../images/blazor-treegrid-edit-in-toolbar.png)
+![TreeGrid toolbar with edit actions](../images/blazor-treegrid-edit-in-toolbar.webp)
 
 ## Default column values on add new
 
@@ -450,7 +450,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Delete Confirmation Dialog in Blazor TreeGrid](../images/blazor-treegrid-delete-confirmation.png)
+![Delete Confirmation Dialog in Blazor TreeGrid](../images/blazor-treegrid-delete-confirmation.webp)
 
 N> **ShowDeleteConfirmDialog** applies to all edit modes.
 
@@ -688,7 +688,7 @@ public class TreeData
 {% endtabs %}
 
 The following GIF shows Add, Update, and Delete operations in the TreeGrid.
-![CRUD operations in Blazor TreeGrid](../images/blazor-treegrid-editing-in-crud-operation.gif)
+![CRUD operations in Blazor TreeGrid](../images/blazor-treegrid-editing-in-crud-operation.webp)
 
 ## Cancel CRUD operations based on a condition
 
@@ -923,7 +923,7 @@ public class TreeData
 {% endtabs %}
 
 The following GIF shows the TreeGrid with a custom external form for editing.
-![Blazor TreeGrid with Custom External form Editing](../images/blazor-treegrid-custom-form-editing.gif)
+![Blazor TreeGrid with Custom External form Editing](../images/blazor-treegrid-custom-form-editing.webp)
 
 ## Edit enum column
 
