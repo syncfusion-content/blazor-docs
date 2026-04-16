@@ -335,5 +335,4 @@ This example demonstrates how to integrate **GitHub OAuth** into a Blazor Web Ap
 ## See also
 
 - [OAuth 2.0 and OIDC authentication in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols)
-
 - [Getting started with Syncfusion® Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
