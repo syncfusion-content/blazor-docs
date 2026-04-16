@@ -107,23 +107,7 @@ Incremental loading improves perceived performance and keeps the UI responsive.
 
 For example, The Syncfusion® Blazor TreeGrid supports incremental loading using the **LoadChildOnDemand** feature. Child records are retrieved from the server only when a parent row is expanded.
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.TreeGrid;
-
-<SfTreeGrid @ref="grid" TValue="SelfReferenceData" LoadChildOnDemand="true" HasChildMapping="isParent" Height="315" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowPaging="true">
-    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-    <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
-    <TreeGridColumns>
-        <TreeGridColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
-    </TreeGridColumns>
-</SfTreeGrid>
-
-{% endhighlight %}
-{% endtabs %}
+For more information, refer to the [Syncfusion® Blazor TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/data-binding?cs-save-lang=1&cs-tab-name=C#loadchildondemand)
 
 N> Incremental loading retrieves additional data blocks as needed, whereas virtualization reduces the number of DOM elements rendered in the UI. These techniques are often used together, where incremental loading handles backend data fetching and virtualization optimizes Client side rendering.
 
@@ -217,7 +201,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-For more information, refer to the Syncfusion® Blazor DataGrid documentation on [Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) and [Infinite scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling).
+For more information, refer to the Syncfusion® Blazor DataGrid documentation for [Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) and [Infinite scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling).
 
 ## Handle streaming data in Blazor Server
 
