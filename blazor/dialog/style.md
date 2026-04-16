@@ -153,6 +153,45 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrHZzsITIXbwZiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-animation.png)" %}
 
+
+### Dialog background color change
+
+Use the following CSS to customize the background color of the Dialog.
+
+```razor
+<SfDialog Width="300px"
+          Header="Background Color Dialog"
+          Content="This dialog demonstrates background color customization."
+          ShowCloseIcon="true">
+</SfDialog>
+
+<style>
+    .e-dialog .e-dlg-header-content, .e-dialog .e-dlg-content {
+        background-color: #f0f9ff;
+    }
+</style>
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBdjpixrfIBCkXV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog background](./images/dialog-customization/blazor-dialog-background-color.png)" %}
+
+### Dialog border customization with radius
+
+Use the following CSS to customize the Dialog border and apply a border radius.
+
+```razor
+<SfDialog Width="300px"
+          Header="Border Customized Dialog"
+          Content="This dialog demonstrates border and radius customization."
+          ShowCloseIcon="true">
+</SfDialog>
+
+<style>
+    .e-dialog {
+        border-radius: 12px;
+    }
+</style>
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdXpCnBzFRaUor?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog border radius](./images/dialog-customization/blazor-dialog-border-radius.png)" %}
+
 ### Customizing the dialog header
 
 Use the following CSS to customize the dialog header properties.
@@ -199,16 +238,14 @@ Use the following CSS to customize the modal dialog overlay.
 Use the following CSS to customize the dialog resize icon.
 
 ```css
-/* To change the icon content */
-.e-dialog .e-south-east::before, .e-dialog .e-south-west::before {
-    content: "\f047";
-}
+/* To change the resize icon color */
+    .e-dialog .e-south-east::before,
+    .e-dialog .e-south-west::before {
+        color: red;
+    }
 
-/* To set the icon pack */
-.e-dialog .e-resize-handle {
-    font: normal normal normal 14px/1 FontAwesome;
-}
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdtTMxVtzhydwJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog resize icon](./images/dialog-customization/blazor-dialog-resize-icon.png)" %}
 
 The above CSS demonstration uses the font awesome icon.
 
@@ -231,10 +268,10 @@ Use the following CSS to customize the dialog footer content.
 
 ```css
 /* To specify font color, background color and border color */
-.e-dialog .e-btn.e-flat, .e-css.e-btn.e-flat {
-    background-color: transparent;
-    border-color: transparent;
-    color: blue;
-}
+.e-dialog .e-footer-content {
+        background-color: transparent;
+        border-color: transparent;
+        color: blue;
+    }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrnNzsIyKGWhRFz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog footer](./images/dialog-customization/blazor-dialog-footer.png)" %}
