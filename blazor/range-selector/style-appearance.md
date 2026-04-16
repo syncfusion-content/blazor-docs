@@ -93,7 +93,8 @@ Style the highlighted selected range area to emphasize the active data range and
 
 ```css
 [id*="_SelectedArea"] {
-    fill: blue;
+    fill: pink;
+    opacity: 0.5;
 }
 ```
 
