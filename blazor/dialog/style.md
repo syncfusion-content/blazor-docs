@@ -53,30 +53,22 @@ Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/b
 <SfDialog CssClass="success-dialog"
           Width="400px"
           Header="Success"
-          ShowCloseIcon="true">
-    <DialogTemplates>
-        <Content>
-            Operation completed successfully.
-        </Content>
-    </DialogTemplates>
+          ShowCloseIcon="true"
+          Content="Dialog header and content are customized using the CssClass property">
 </SfDialog>
-
-@code {
-
-}
 
 <style>
     .success-dialog.e-dialog {
-    border-color: #22c55e;
-}
+        border-color: #22c55e;
+    }
 
-.success-dialog .e-dlg-header {
-    background-color: #22c55e;
-}
+    .success-dialog .e-dlg-header {
+        color: #22c55e;
+    }
 
-.success-dialog .e-dlg-content {
-    background-color: #f0fdf4;
-}
+    .success-dialog .e-dlg-content {
+        background-color: #f0fdf4;
+    }
 </style>
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxtzCIffgAdyqB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-cssclass.png)" %}
@@ -198,7 +190,7 @@ Use the following CSS to customize the dialog header properties.
 
 ```css
 .e-dialog .e-dlg-header {
-    color: green;
+    color: #22c55e;
     font-size: 20px;
     font-weight: normal;
 }
@@ -212,7 +204,7 @@ Use the following CSS to customize the dialog content properties.
 
 ```css
 .e-dialog .e-dlg-content {
-    color: red;
+    color: #f11014;
     font-size: 10px;
     font-weight: normal;
     line-height: normal;
@@ -269,9 +261,8 @@ Use the following CSS to customize the dialog footer content.
 ```css
 /* To specify font color, background color and border color */
 .e-dialog .e-footer-content {
-        background-color: transparent;
-        border-color: transparent;
-        color: blue;
+        background-color: #f0fdf4;
+        color: #593fed;
     }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrnNzsIyKGWhRFz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog footer](./images/dialog-customization/blazor-dialog-footer.png)" %}
