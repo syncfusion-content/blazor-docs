@@ -21,12 +21,6 @@ Use the following CSS to customize the overall progress bar container of the Ste
         height: 3px;
         border-radius: 3px;
     }
-
-    .e-stepper .e-stepper-progressbar .e-progressbar-value {
-            background: linear-gradient(90deg, #4da40d, #4da40d);
-            height: 3px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    }
 ```
 ![Stepper progress bar value](./images/Blazor-progress-bar.png)
 
@@ -36,17 +30,10 @@ The progress bar value in the Stepper component automatically increases as each 
 
 ```css
 
-
-    .e-stepper .e-stepper-progressbar {
-        background-color: #0a0a0acf;
-        height: 3px;
-        border-radius: 3px;
-    }
-
     .e-stepper .e-stepper-progressbar .e-progressbar-value {
-            background: linear-gradient(90deg, #4da40d, #4da40d);
-            height: 3px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        background: linear-gradient(90deg, #4da40d, #4da40d);
+        height: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 
 
@@ -58,6 +45,8 @@ The progress bar value in the Stepper component automatically increases as each 
 You can customize the label text that appears next to each step in the Stepper by targeting the `.e-label` class. This allows you to change font size, weight, background, and colors for active, completed, and upcoming steps.
 
 ```css
+
+@using Syncfusion.Blazor.Navigations
 
 <SfStepper ActiveStep="1" CssClass="custom-stepper">
     <StepperSteps>
