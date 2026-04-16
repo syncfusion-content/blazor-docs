@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor WebAssembly Standalone App
 
-This article provides step-by-step instructions for building a Blazor WebAssembly App with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This article provides step-by-step instructions for building a Blazor WebAssembly App with the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Using Playground
 
@@ -21,7 +21,7 @@ This article provides step-by-step instructions for building a Blazor WebAssembl
 
 You can create a Blazor WebAssembly Standalone App using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Templates in both [Visual Studio](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) and [Visual Studio Code](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-## Manually Creating a Project
+## Manually creating a project
 
 This section provides a brief guide on how to manually create a Blazor WebAssembly App.
 
@@ -66,7 +66,7 @@ cd BlazorApp
 
 ### Prerequisites
 
-Install the latest version of the [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK was previously installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -112,7 +112,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-### Add Import Namespaces
+### Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
 
@@ -125,9 +125,9 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of the Blazor WebAssembly App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -159,7 +159,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
