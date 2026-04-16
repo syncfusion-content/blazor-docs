@@ -147,7 +147,7 @@ Apply styles to specific combinations of level and item indices:
 
 TreeMap text elements contain Text in their IDs and can be styled independently.
 
-### Basic Item Text Styling
+### Item Text Styling
 
 ```css
 [id*="Text"] {
