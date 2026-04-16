@@ -22,20 +22,20 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is an enterpr
 - **Accessible**: WCAG-compliant semantics, ARIA attributes, and contrast-aware theming.
 - **Tooling and docs**: Extensive samples, API reference, and guidance to get productive quickly.
 
-## What’s included
+## What’s included?
 
 - Data bound components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), and more.
 - [Form inputs](https://www.syncfusion.com/blazor-components/blazor-textbox), [Editors](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), [Pickers](https://www.syncfusion.com/blazor-components/blazor-datepicker), [Menus](https://www.syncfusion.com/blazor-components/blazor-menu-bar), [Navigation](https://www.syncfusion.com/blazor-components/blazor-treeview), and [Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) components.
 - Rich visualization: [2D/3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts), [Gauges](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Maps](https://www.syncfusion.com/blazor-components/blazor-map), [HeatMaps](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), and [Sparklines](https://www.syncfusion.com/blazor-components/blazor-sparkline).
 - Theming system with multiple built-in themes and CSS variables for fine grained component.
 
-## How it fits into Blazor
+## How it fits into Blazor?
 
 - Works across [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio), [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app), and [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) (.NET 8, .NET 9, and .NET 10) render modes.
 - Plays well with dependency injection, routing, and cascading values.
 - Uses JavaScript interop only where it adds value (DOM/canvas/complex layout), keeping your app primarily in C# and Razor.
 
-## How to best read this user guide
+## How to best read this user guide?
 
 * The best way to get started is to read the Getting Started section of the documentation for the component intended for use. The Getting Started section covers the essential concepts to know before writing code. This is the only section recommended to read end-to-end before coding; other topics can be referenced as needed. Ensure the required SDKs and the supported .NET/Blazor versions are installed.
 
