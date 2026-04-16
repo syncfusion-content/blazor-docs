@@ -81,3 +81,7 @@ Include `'unsafe-inline'` if you want users to select cells for drill-down or da
 ```
 
 > Use this only when single or multiple cell selection is essential for user workflows.
+
+## See also
+
+* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
