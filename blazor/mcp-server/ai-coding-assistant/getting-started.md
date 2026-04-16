@@ -68,6 +68,26 @@ Create a `.vscode/mcp.json` file in your workspace with the MCP server configura
 }
 
 {% endhighlight %}
+{% highlight bash tabtitle="Visual Studio" %}
+
+Create a `.vs/mcp.json` file in your workspace with the MCP server configuration:
+
+{
+  "servers": {
+    "sf-blazor-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@syncfusion/blazor-assistant@latest"],
+      "env": {
+        "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+        // or
+        // "Syncfusion_API_Key": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+
+{% endhighlight %}
 {% highlight bash tabtitle="Cursor" %}
 
 Create a `.cursor/mcp.json` file in your workspace with the MCP server configuration:
