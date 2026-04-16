@@ -54,7 +54,7 @@ In the example shown, the sanitizer removes embedded scripts and event based att
 
 ### Rich Text Editor (RTE)
 
-The Rich Text Editor allows users to input and render HTML content. To prevent unsafe markup from being inserted or displayed, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) property.
+The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) allows users to input and render HTML content. To prevent unsafe markup from being inserted or displayed, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -91,7 +91,7 @@ To disable the built-in sanitizer (not recommended for untrusted content), set t
 
 ### Block Editor
 
-The Block Editor allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user generated content may include HTML like input or potentially unsafe markup, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property to ensure only safe content is rendered.
+The [Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user generated content may include HTML like input or potentially unsafe markup, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property to ensure only safe content is rendered.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
