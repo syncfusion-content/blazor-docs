@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Blazor Components with Azure Functions
 
-This guide shows how to build a Blazor WebAssembly app that uses [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend and integrates [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components) such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker). It covers local development setup, security options such as Function keys, calling functions from Blazor, CORS configuration, error handling, and a complete working example with an orders list and a scheduler view.
+This guide shows how to build a Blazor WebAssembly app that uses [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend and integrates Syncfusion Blazor components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker). It covers local development setup, security options such as Function keys, calling functions from Blazor, CORS configuration, error handling, and a complete working example with an orders list and a scheduler view.
 
 ## What is Azure Functions?
 
