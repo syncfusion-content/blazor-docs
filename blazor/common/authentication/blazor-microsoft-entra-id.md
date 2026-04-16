@@ -273,6 +273,5 @@ This approach provides a secure, enterprise ready foundation for building modern
 
 ## See also
 
-- [Secure an ASP.NET Core Blazor WebAssembly standalone App with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts)
-
+- [Secure an ASP.NET Core Blazor WebAssembly Standalone App with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts)
 - [Getting started with Syncfusion® Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
