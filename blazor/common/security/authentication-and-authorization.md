@@ -237,7 +237,7 @@ N>
 The [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to fetch events. This ensures only authorized users get protected data from the API.
 
 {% tabs %}
-{% highlight razor tatbtitle="Home.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
