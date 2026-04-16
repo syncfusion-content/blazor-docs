@@ -29,7 +29,7 @@ If you already have a Blazor project configured, you can skip this section and p
 
 Otherwise, create a new Blazor application by following the Syncfusion getting started guides [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-Ensure that **HTTPS is enabled** during project creation, as JWT based authorization requires secure communication.
+Ensure that **HTTPS is enabled** during project creation, as GitHub OAuth based authorization requires secure communication.
 
 ### Install required packages
 
@@ -38,7 +38,7 @@ Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package M
 **Syncfusion packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
-- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 ### Add Syncfusion® namespaces
 
