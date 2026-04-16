@@ -13,7 +13,7 @@ This section explains best practices for managing memory in Blazor applications 
 
 ## What is memory management in Blazor?
 
-Memory management in Blazor involves controlling the lifecycle of components, services, event subscriptions, and JavaScript interop references. Memory is allocated during component rendering, data binding, event handling, and interaction with JavaScript. When these allocations are not released properly, memory remains occupied and impacts application performance.
+Memory management in Blazor involves controlling the lifecycle of components, services, event subscriptions, and JavaScript interop references. Memory is allocated during component rendering, data binding, event handling, and interaction with JavaScript. When these allocations are not released properly, memory remains occupied, which increases memory usage and can degrade application performance over time.
 
 In Blazor WebAssembly, retained memory affects the browser environment and client-side responsiveness. In Blazor Server, memory is allocated on the server per user circuit (a persistent connection between a user and the server), making memory leaks more serious for application scalability.
 
@@ -27,7 +27,7 @@ N> In Blazor Server applications, improperly released memory impacts all connect
 
 Memory issues are commonly identified through gradual memory growth during repeated navigation or user interaction. Components that react to events after being removed from the UI, and delayed garbage collection, are typical indicators. These issues usually appear as browser slowdowns in Blazor WebAssembly and increased memory usage or reduced throughput in Blazor Server applications.
 
-## Preventing memory leaks with Syncfusion Blazor components
+## Preventing memory leaks with Syncfusion® Blazor components
 
 Syncfusion Blazor components are optimized for efficient rendering and automatically manage their internal resources. However, application level objects such as data collections, service subscriptions, timers, and JavaScript interop references must be released explicitly.
 
@@ -46,7 +46,7 @@ To add the Blazor components to the app, open the NuGet Package Manager in Visua
 
 ### Add required namespaces
 
-Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Buttons` namespaces.
+Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Buttons`, `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -82,14 +82,14 @@ app.Run();
 Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file.
 
 {% tabs %}
-{% highlight html  %}
+{% highlight html tabtitle="App.razor" %}
 
 <head>
      <!-- Syncfusion theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor DataGrid component's script reference -->
+    <!-- Syncfusion Blazor component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
 </body>
 
@@ -98,9 +98,11 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
-### Disposing data‑bound Syncfusion components
+### Disposing data bound Syncfusion® components
 
-Data‑bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) frequently hold large data collections in memory. These references should be released when the component is removed from the render tree.
+Data bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) frequently hold large data collections in memory. These references should be released when the component is removed from the render tree.
+
+The following example demonstrates how to release large data collections used by DataGrid component. 
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -162,11 +164,15 @@ Data‑bound components such as [DataGrid](https://www.syncfusion.com/blazor-com
 {% endhighlight %}
 {% endtabs %}
 
-When the component is disposed, clearing the data source ensures that memory can be reclaimed. In Blazor WebAssembly, this frees browser memory. In Blazor Server, it prevents server‑side memory retention after navigation.
+In this example, the Orders collection is cleared and set to null in DisposeAsync. This ensures that references to large datasets are released when the component is removed from the render tree.
 
-### Managing event subscriptions in Syncfusion UI components
+This practice is particularly important in Blazor Server applications, where retained references can increase server memory usage across user circuits.
+
+### Managing event subscriptions in Syncfusion® UI components
 
 Components such as [Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog), [Toast](https://www.syncfusion.com/blazor-components/blazor-toast), or custom wrappers around Syncfusion components may subscribe to shared application events. These subscriptions must be removed explicitly during component disposal.
+
+This example shows how to properly manage event subscriptions in a component that listens to shared application state. 
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -213,7 +219,7 @@ Components such as [Dialog](https://www.syncfusion.com/blazor-components/blazor-
 
 **Add service file:**
 
-Create the service folder in the project root. Then create service file(e.g., AppState.cs) under the service folder and add the following code:
+Create the service folder in the project root. Then create service file(e.g., `AppState.cs`) under the service folder and add the following code:
 
 {% tabs %}
 {% highlight cs tabtitle="AppState.cs" %}
@@ -254,11 +260,15 @@ builder.Services.AddScoped<AppState>();
 {% endhighlight %}
 {% endtabs %}
 
+The component subscribes to the OnChange event in OnInitialized and removes the subscription in Dispose.
+
 Removing event subscriptions ensures the component instance is not retained in memory after it is removed from the UI. This is particularly important in Blazor Server applications with long lived circuits.
 
-### Virtualizing large data with Syncfusion components
+### Virtualizing large data with Syncfusion® components
 
 Rendering large datasets without virtualization increases memory allocation and DOM size. Syncfusion Blazor components provide built‑in virtualization support to address this scenario.
+
+The following example demonstrates how to use built‑in virtualization in the Syncfusion DataGrid component to efficiently render large data collections.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -316,13 +326,13 @@ Rendering large datasets without virtualization increases memory allocation and 
 {% endhighlight %}
 {% endtabs %}
 
-With virtualization enabled, only visible records are rendered. This reduces memory usage in Blazor WebAssembly and significantly improves scalability in Blazor Server applications.
+With virtualization enabled, only visible records are rendered. Clearing the Employees collection during disposal releases references to large datasets, which is especially beneficial in Blazor WebAssembly to reduce browser memory usage.
 
 N> For datasets with many columns, consider also enabling `EnableColumnVirtualization="true"` on the DataGrid to virtualize horizontal rendering. See [Column Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) for details.
 
-### Cleaning up JavaScript Interop used by Syncfusion components
+### Cleaning up JavaScript Interop used by Syncfusion® components
 
-Some Syncfusion components rely on JavaScript interop for browser‑specific behavior. Managed interop references must be disposed explicitly to avoid memory retention.
+Some Syncfusion components rely on JavaScript interop for browser specific behavior. Managed interop references must be disposed explicitly to avoid memory retention.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -394,6 +404,8 @@ Disposing the `DotNetObjectReference` ensures that the component is not retained
 
 Dynamic rendering of components such as [TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox), [DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), and [ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) can lead to unnecessary component recreation. The `@key` directive helps stabilize rendering.
 
+This example illustrates how the `@key` directive helps Blazor preserve component identity during re‑renders. 
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
@@ -445,11 +457,13 @@ Dynamic rendering of components such as [TextBox](https://www.syncfusion.com/bla
 {% endhighlight %}
 {% endtabs %}
 
-Using `@key` preserves component identity between renders and reduces memory churn during UI updates.
+The `@key` directive ensures that each SfTextBox component is associated with a stable identifier.
+
+When the collection changes, Blazor can correctly match existing components instead of destroying and recreating them, improving rendering efficiency and memory usage.
 
 ### Service lifetime considerations in Blazor Server applications
 
-In Blazor Server, each user maintains their own `ServiceProvider` instance per circuit. A Scoped service is created once per circuit/user, ensuring user specific state is isolated. `Singleton` services would be shared across all users, potentially causing data leaks.
+In Blazor Server, each user maintains their own `ServiceProvider` instance per circuit. A Scoped service is created once per user circuit, ensuring user specific state is isolated. `Singleton` services would be shared across all users, potentially causing data leaks.
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}

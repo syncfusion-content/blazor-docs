@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Blazor Components with Azure Functions
 
-This guide shows how to build a Blazor WebAssembly app that uses [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend and integrates Syncfusion Blazor components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker). It covers local development setup, security options such as Function keys, calling functions from Blazor, CORS configuration, error handling, and a complete working example with an orders list and a scheduler view.
+This guide shows how to build a Blazor WebAssembly app that uses [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend and integrates [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components) such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker). It covers local development setup, security options such as Function keys, calling functions from Blazor, CORS configuration, error handling, and a complete working example with an orders list and a scheduler view.
 
 ## What is Azure Functions?
 
@@ -24,8 +24,8 @@ Azure Functions scale independently from the UI and require minimal operational 
 For production applications, use **Microsoft Entra ID** for token based, per user authorization and auditing. Function keys are intended for development, testing, and trusted internal workflows, and should not be used in production client authentication.
 
 Azure Functions supports two authorization approaches:
-* **Function-level authorization (Function Keys):** Simple shared secrets passed via query parameters or headers; suitable for development and internal automation only.
-* **Microsoft Entra ID / EasyAuth:** Token based authentication with per user authorization, auditing, and managed identities; recommended for production environments.
+* **Function-level authorization (Function Keys):** Simple shared secrets passed via query parameters or headers and is suitable for development and internal automation only.
+* **Microsoft Entra ID / EasyAuth:** Token based authentication with per user authorization, auditing, and managed identities and is recommended for production environments.
 
 EasyAuth (App Service Authentication) lets Azure validate tokens for you. For server-side validation in isolated worker functions use `Microsoft.IdentityModel.Tokens`. EasyAuth can validate tokens at platform level so your functions don't need to parse JWTs.
 
@@ -88,7 +88,7 @@ For production, Microsoft Entra ID and managed identities provide better securit
 
 Register an application in Microsoft Entra ID and configure the Function App Authentication provider (EasyAuth) to require tokens, or keep EasyAuth off and validate JWTs inside functions with `Microsoft.IdentityModel.Tokens`. For production, Microsoft Entra ID and managed identities provide better security than Function Keys.
 
-Use EasyAuth (platform) for standard token validation; validate JWTs in-function when you need custom claims or fine‑grained checks.
+Use EasyAuth (platform) for standard token validation and validate JWTs in function when you need custom claims or fine‑grained checks.
 
 ## Working with Function Apps in a real‑world Blazor app
 
@@ -126,7 +126,7 @@ dotnet new blazorwasm -o Client -f net10.0
 
 **Step 2: Create the Azure Functions project (isolated worker)**
 
-Create an Azure Functions project named Functions using the isolated worker model, then add an HTTP-triggered function.
+Create an Azure Functions project named Functions using the isolated worker model, then add an HTTP triggered function.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
@@ -153,7 +153,7 @@ dotnet sln add Functions/Functions.csproj
 {% endhighlight %}
 {% endtabs %}
 
-## Install required NuGet packages
+### Install required NuGet packages
 
 **Syncfusion packages:**
 
@@ -214,7 +214,7 @@ Open the `Client/_Imports.razor` file from WASM project and import the below nam
 {% endhighlight %}
 {% endtabs %}
 
-### Register Syncfusion Blazor service
+### Register Syncfusion® Blazor service
 
 Add the Syncfusion Blazor service to the `Client/Program.cs` file to enable Syncfusion components in the application.
 
@@ -403,9 +403,9 @@ public static class OrdersApi
 
 N> The above code example uses `Access-Control-Allow- : *` for development convenience only. In production, replace `"*"` with your Blazor client's origin (e.g., `https://myapp.azurewebsites.net`) in *Azure Portal → Function App → API → CORS*. Never use wildcards in production.
 
-### Create the Blazor page using Syncfusion components
+### Create the Blazor page using Syncfusion® components
 
-This example demonstrates using Syncfusion Components: Two `DatePicker` components to choose a range, a `DataGrid` to list orders, and a `Scheduler` to show events. 
+This example demonstrates using Syncfusion components: Two `DatePicker` components to choose a range, a `DataGrid` to list orders, and a `Scheduler` to show events. 
 
 The page expects `HttpClient` to be configured with the Azure Functions host URL as its BaseAddress. It uses JSON data returned from the Functions API to populate both the grid and the scheduler. The sample injects the `HttpClient` instance that was registered earlier in `Program.cs` where the `BaseAddress` points to the Azure Functions host.
 
