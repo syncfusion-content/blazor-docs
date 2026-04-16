@@ -28,6 +28,7 @@ Otherwise, create a new Blazor application by following the Syncfusion® getting
 Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and install the required package.
 
 - [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 ## Add Syncfusion® namespaces
 
@@ -176,7 +177,7 @@ namespace E2E.Tests
         [OneTimeSetUp]
         public async Task OneTimeSetup()
         {
-            var projectPath = @"<Absolute path to your Blazor application's .csproj file>"; 
+            var projectPath = @"<Absolute path to your Blazor application's .csproj file>"; // Example: @"C:\\Users\\MyBlazorApp\\MyBlazorApp.csproj";
 
             var psi = new ProcessStartInfo(
                 "dotnet",
