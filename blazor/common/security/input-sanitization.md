@@ -13,7 +13,7 @@ documentation: ug
 
 **Input sanitization** is the process of filtering and cleaning HTML content from untrusted sources. It removes unsafe tags (like `<script>`), inline scripts (JavaScript code embedded directly in HTML attributes), event handlers (such as onclick), and dangerous URLs (malicious javascript links). Only safe and valid markup is preserved.
 
-For plain text inputs, this often means HTML encoding to escape special characters, preventing interpretation as markup.
+For plain text(such as a letter, number, symbols), input sanitization ensures special characters are treated as normal text so the browser does not execute them as HTML or code.
 
 ## Why input sanitization is important?
 
@@ -32,8 +32,8 @@ Sanitizing user input ensures that only safe and expected values are stored or d
 
 | Attacks | Description | Prevention |
 |--------|-------------|------------|
-| **Cross-Site Scripting (XSS)** | Malicious scripts are injected (e.g., event attributes like onclick, or javascript: URLs) and execute in the user’s browser. Example: `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components like RTE; use HTML encoding (e.g., `HtmlEncoder.Default.Encode()`) for plain-text inputs.|
-| **HTML Injection** | Unwanted markup changes layout or behavior (e.g., injecting unexpected `<div>`, `<style>`, or risky attributes). Example: `<iframe src="phish-site.com"></iframe>`. | Built-in sanitizer removes unsafe tags/attributes; avoid rendering raw HTML from untrusted sources. |
+| Cross-Site Scripting (XSS) | Malicious scripts are injected (e.g., event attributes like onclick, or javascript: URLs) and execute in the user’s browser. Example: `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components such as the RTE. For plain text inputs, use HTML encoding (e.g., `HtmlEncoder.Default.Encode()`).|
+| HTML Injection | Unwanted markup changes layout or behavior (e.g., injecting unexpected `<div>`, `<style>`, or risky attributes). Example: `<iframe src="phish-site.com"></iframe>`. | The built‑in sanitizer removes unsafe tags and attributes and helps avoid rendering raw HTML from untrusted sources. |
 
 ## Built-in sanitization features
 
@@ -54,10 +54,10 @@ In the example shown, the sanitizer removes embedded scripts and event based att
 
 ### Rich Text Editor (RTE)
 
-The Rich Text Editor allows users to input and render HTML content. To prevent unsafe markup from being inserted or displayed, enable the built-in sanitizer using the `EnableHtmlSanitizer` property.
+The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) allows users to input and render HTML content. To prevent unsafe markup from being inserted or displayed, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) property.
 
 {% tabs %}
-{% highlight razor tabtitle="index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -75,12 +75,12 @@ The Rich Text Editor allows users to input and render HTML content. To prevent u
 
 When the `EnableHtmlSanitizer` property is enabled, the Rich Text Editor automatically removes unsafe tags and attributes before rendering the content.
 
-**Disabling the EnableHtmlSanitizer**
+#### Disabling the EnableHtmlSanitizer
 
 To disable the built-in sanitizer (not recommended for untrusted content), set the property to `false`:
 
 {% tabs %}
-{% highlight razor tabtitle="index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -91,10 +91,10 @@ To disable the built-in sanitizer (not recommended for untrusted content), set t
 
 ### Block Editor
 
-The Block Editor allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user-generated content may include HTML like input or potentially unsafe markup, enable the built-in sanitizer using the `EnableHtmlSanitizer` property to ensure only safe content is rendered.
+The [Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user generated content may include HTML like input or potentially unsafe markup, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property to ensure only safe content is rendered.
 
 {% tabs %}
-{% highlight razor tabtitle="index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.BlockEditor;
 
@@ -124,12 +124,12 @@ The Block Editor allows users to create structured content such as paragraphs, h
 
 When the `EnableHtmlSanitizer` property is enabled, the Block Editor automatically removes unsafe tags and attributes such as `<script>` tags, event attributes (like onload, onclick), javascript: URLs, and other harmful markup before rendering content. This ensures that only clean and trusted HTML remains in the editor output.
 
-**Disabling the EnableHtmlSanitizer**
+#### Disabling the EnableHtmlSanitizer
 
 To disable the built-in sanitizer (not recommended for untrusted input), set the property to false:
 
 {% tabs %}
-{% highlight razor tabtitle="index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.BlockEditor;
 
@@ -140,12 +140,12 @@ To disable the built-in sanitizer (not recommended for untrusted input), set the
 {% endhighlight %}
 {% endtabs %}
     
-## How to sanitize input in Blazor
+## How to sanitize input in Blazor?
 
 When you only need to display plain text (not HTML), the safest approach is to HTML encode user input. Encoding converts characters like <, >, and & into harmless text representations so the browser will not interpret them as HTML or scripts. This ensures that even if the user enters malicious markup, it is displayed as text, not executed.
 
 {% tabs %}
-{% highlight razor tabtitle="index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using System.Text.Encodings.Web
 
@@ -175,12 +175,12 @@ Displaying the encoded text ensures it is treated as plain text.
 
 ### DataGrid
 
-The DataGrid can render HTML when using templates or when column values include markup. User provided values should be sanitized before being added to the data source. 
+The [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can render HTML when using templates or when column values include markup. User provided values should be sanitized before being added to the data source. 
 
 The following example demonstrates sanitizing text before binding it to the Grid:
 
 {% tabs %}
-{% highlight razor tabtitle="index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 

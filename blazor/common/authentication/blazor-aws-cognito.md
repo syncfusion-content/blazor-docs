@@ -81,7 +81,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ### Add required namespaces
 
-Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids` namespaces.
+Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -351,7 +351,7 @@ N> Syncfusion provides multiple theme variants, allowing selection of the theme 
 
 ### Syncfusion® DataGrid on an authenticated page
 
-This page demonstrates how to protect a Syncfusion DataGrid using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
+This page demonstrates how to protect a [Syncfusion DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
