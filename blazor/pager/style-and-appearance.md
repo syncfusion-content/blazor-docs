@@ -92,31 +92,42 @@ Properties such as **background-color**, **border**, **padding**, and **border-r
 <SfPager TotalItemsCount="50" PageSize="5" NumericItemsCount="5">
 </SfPager>
 
-<style>
+style>
     .e-pager .e-numericitem {
         background-color: #ffffff;
         color: #333;
-        border: 1px solid #ddd;
-        margin: 0 4px;
-        padding: 6px 10px;
-        border-radius: 3px;
-        font-weight: 500;
+        border: 2px solid #ddd;
+        margin: 0 6px;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
     .e-pager .e-numericitem:hover {
         background-color: #e8f4f8;
         border-color: #2bbbad;
+        border-radius: 20px;
+        padding: 8px 14px;
+        box-shadow: 0 4px 12px rgba(43, 187, 173, 0.2);
     }
 
     .e-pager .e-currentitem.e-numericitem {
         background-color: #2bbbad;
-        color: #fff;
+        color: #ffffff;
         border-color: #2bbbad;
+        box-shadow: 0 4px 12px rgba(43, 187, 173, 0.35);
+    }
+
+    .e-pager .e-currentitem.e-numericitem:hover {
+        background-color: #20a399;
+        border-color: #20a399;
+        box-shadow: 0 6px 16px rgba(43, 187, 173, 0.4);
     }
 
     .e-pager .e-currentitem.e-numericitem.e-focused {
-        outline: 2px solid #005a9e;
-        outline-offset: -2px;
         color: #2bbbad;
     }
 </style>
@@ -214,39 +225,126 @@ The dropdown component renders outside the `.e-pager` container, therefore dropd
 <SfPager TotalItemsCount="100" PageSize="10" PageSizes="@pageSizes" NumericItemsCount="3" ShowAllInPageSizes="true">
 </SfPager>
 
+
 <style>
     .e-pager {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 12px;
-        background-color: #f9f9f9;
-        border: 1px solid #e0e0e0;
+        padding: 16px 20px;
+        background-color: #ffffff;
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .e-pager .e-icons {
+        background-color: transparent;
+        border: none;
+        color: #666;
+        padding: 6px 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
         border-radius: 4px;
     }
 
-    .e-pager .e-input-focus {
-        border-color: #25decc !important;
-        box-shadow: 0 0 0 1px #25decc !important;
+    .e-pager .e-icons:hover:not(.e-disable) {
+        color: #2bbbad;
+        background-color: rgba(43, 187, 173, 0.1);
+    }
+
+    .e-pager .e-icons.e-disable {
+        color: #ccc;
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    .e-pager .e-numericitem {
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid transparent;
+        color: #666;
+        margin: 0 4px;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .e-pager .e-numericitem:hover {
+        color: #2bbbad;
+        padding: 4px 8px;
     }
 
     .e-pager .e-currentitem {
-        border-bottom: 2px solid #2bbbad;
+        border-bottom: 3px solid #2bbbad;
         color: #2bbbad;
+        font-weight: 700;
+        padding: 4px 8px;
     }
 
-    .e-dropdownbase .e-list-item.e-item-focus,
-    .e-dropdownbase .e-list-item.e-active,
-    .e-dropdownbase .e-list-item.e-active.e-hover,
+    .e-pager .e-ddl.e-input-group {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .e-pager .e-ddl.e-input-group .e-input-focus {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .e-pager .e-input-focus {
+        border-color: #2bbbad !important;
+        box-shadow: 0 0 0 2px rgba(43, 187, 173, 0.15) !important;
+    }
+
+    .e-ddl.e-popup {
+        border: none !important;
+        border-radius: 8px !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+        overflow: hidden;
+    }
+
+    .e-content.e-dropdownbase {
+        border: none;
+        background-color: #ffffff;
+        padding: 4px 0;
+    }
+
+    .e-list-parent.e-ul {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .e-dropdownbase .e-list-item {
+        padding: 10px 16px;
+        border: none;
+        color: #666;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background-color: transparent;
+    }
+
     .e-dropdownbase .e-list-item.e-hover {
-        background-color: #e8f4f8;
+        background-color: rgba(43, 187, 173, 0.08);
         color: #2bbbad;
     }
 
-    .e-pager .e-pagercontainer {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+    .e-dropdownbase .e-list-item.e-active {
+        background-color: rgba(43, 187, 173, 0.15);
+        color: #2bbbad;
+        font-weight: 600;
+    }
+
+    .e-dropdownbase .e-list-item.e-item-focus {
+        background-color: rgba(43, 187, 173, 0.12);
+        color: #2bbbad;
+        outline: none;
+    }
+
+    .e-dropdownbase .e-list-item.e-active.e-hover {
+        background-color: rgba(43, 187, 173, 0.2);
     }
 </style>
 
