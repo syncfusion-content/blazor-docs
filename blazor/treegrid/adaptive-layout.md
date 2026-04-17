@@ -56,4 +56,4 @@ To render adaptive dialog UI in the Tree Grid, set the [EnableAdaptiveUI](https:
 
 ```
 
-![Blazor Tree Grid with Adaptive UI](./images/blazor-treegrid-adaptive.gif)
+![Blazor Tree Grid with Adaptive UI](./images/blazor-treegrid-adaptive.webp)

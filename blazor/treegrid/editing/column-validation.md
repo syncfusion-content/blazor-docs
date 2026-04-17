@@ -85,7 +85,7 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
 }
 ```
 
-![Column Validation in Blazor TreeGrid](../images/blazor-treegrid-column-validation.png)
+![Column Validation in Blazor TreeGrid](../images/blazor-treegrid-column-validation.webp)
 
 ## Custom validation
 
@@ -383,7 +383,7 @@ namespace TreeGridComponent. Data
 
 The output will be as follows.
 
-![Blazor TreeGrid with Custom Validator](../images/blazor-treegrid-custom-validator.png)
+![Blazor TreeGrid with Custom Validator](../images/blazor-treegrid-custom-validator.webp)
 
 ## Display validation message using in-built tooltip
 
@@ -428,7 +428,7 @@ protected void HandleValidation(FieldIdentifier identifier)
 
 The output will be as follows.
 
-![Blazor TreeGrid with Custom Validator](../images/blazor-treegrid-with-custom-validator.png)
+![Blazor TreeGrid with Custom Validator](../images/blazor-treegrid-with-custom-validator.webp)
 
 ## Disable in-built validator component
 
@@ -630,4 +630,4 @@ N> The validation message for fields that are not defined in the TreeGrid column
 
 ```
 
-![Display Validation in Blazor Tree Grid Dialog Template](../images/blazor-treegrid-display-validation-in-dialog-template.png)
+![Display Validation in Blazor Tree Grid Dialog Template](../images/blazor-treegrid-display-validation-in-dialog-template.webp)

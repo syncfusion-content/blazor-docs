@@ -762,7 +762,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The transaction management application is now running and ready to use.
 
-![Basic DataGrid displaying transactions from the MySQL Server database](../images/blazor-datagrid-mysql.png)
+![Basic DataGrid displaying transactions from the MySQL Server database](../images/blazor-datagrid-mysql.webp)
 
 ### Step 6: Implement Paging Feature
 
