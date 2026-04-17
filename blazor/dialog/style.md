@@ -20,7 +20,7 @@ You can set the width of the dialog using the [`Width`](https://help.syncfusion.
     <!-- Dialog content -->
 </SfDialog>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhHjfioKoHwrfVp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Width](./images/dialog-customization/blazor-dialog-width.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhHjfioKoHwrfVp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Width](./images/dialog-customization/blazor-dialog-width.webp)" %}
 
 ### MinHeight
 
@@ -31,7 +31,7 @@ Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfu
     <!-- Dialog content -->
 </SfDialog>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrRDTiyglKQXCjb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog MinHeight](./images/dialog-customization/blazor-dialog-min-height.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrRDTiyglKQXCjb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog MinHeight](./images/dialog-customization/blazor-dialog-min-height.webp)" %}
 
 ### RTL Support
 
@@ -43,7 +43,7 @@ Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusio
 </SfDialog>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBxtTWeqkZUhnrA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog RTL Support](./images/dialog-customization/blazor-dialog-rtl.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBxtTWeqkZUhnrA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog RTL Support](./images/dialog-customization/blazor-dialog-rtl.webp)" %}
 
 ### CssClass
 
@@ -71,7 +71,7 @@ Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/b
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxtzCIffgAdyqB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-cssclass.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxtzCIffgAdyqB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-cssclass.webp)" %}
 
 ### Animation
 
@@ -143,7 +143,7 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrHZzsITIXbwZiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-animation.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrHZzsITIXbwZiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-animation.webp)" %}
 
 
 ### Dialog background color change
@@ -163,7 +163,7 @@ Use the following CSS to customize the background color of the Dialog.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBdjpixrfIBCkXV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog background](./images/dialog-customization/blazor-dialog-background-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBdjpixrfIBCkXV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog background](./images/dialog-customization/blazor-dialog-background-color.webp)" %}
 
 ### Dialog border customization with radius
 
@@ -182,7 +182,7 @@ Use the following CSS to customize the Dialog border and apply a border radius.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdXpCnBzFRaUor?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog border radius](./images/dialog-customization/blazor-dialog-border-radius.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdXpCnBzFRaUor?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog border radius](./images/dialog-customization/blazor-dialog-border-radius.webp)" %}
 
 ### Customizing the dialog header
 
@@ -196,7 +196,7 @@ Use the following CSS to customize the dialog header properties.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxZzsITcfjlroX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Header](./images/dialog-customization/blazor-dialog-header.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxZzsITcfjlroX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Header](./images/dialog-customization/blazor-dialog-header.webp)" %}
 
 ### Customizing the dialog content
 
@@ -211,7 +211,7 @@ Use the following CSS to customize the dialog content properties.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhRZJiSplLTsmJC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Content](./images/dialog-customization/blazor-dialog-content.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhRZJiSplLTsmJC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Content](./images/dialog-customization/blazor-dialog-content.webp)" %}
 
 ### Customizing modal dialog overlay
 
@@ -223,7 +223,7 @@ Use the following CSS to customize the modal dialog overlay.
     opacity: 0.6;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhnZpMSfaLApAky?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog overlay](./images/dialog-customization/blazor-dialog-overlay.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhnZpMSfaLApAky?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog overlay](./images/dialog-customization/blazor-dialog-overlay.webp)" %}
 
 ### Customizing the dialog resize icon
 
@@ -237,7 +237,7 @@ Use the following CSS to customize the dialog resize icon.
     }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdtTMxVtzhydwJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog resize icon](./images/dialog-customization/blazor-dialog-resize-icon.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdtTMxVtzhydwJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog resize icon](./images/dialog-customization/blazor-dialog-resize-icon.webp)" %}
 
 The above CSS demonstration uses the font awesome icon.
 
@@ -252,7 +252,7 @@ Use the following CSS to customize the dialog close button.
     color: red;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVnjTCyyrIorzfn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog close button](./images/dialog-customization/blazor-dialog-closebtn.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVnjTCyyrIorzfn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog close button](./images/dialog-customization/blazor-dialog-closebtn.webp)" %}
 
 ### Customizing the dialog footer content
 
@@ -265,4 +265,4 @@ Use the following CSS to customize the dialog footer content.
         color: #593fed;
     }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrnNzsIyKGWhRFz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog footer](./images/dialog-customization/blazor-dialog-footer.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrnNzsIyKGWhRFz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog footer](./images/dialog-customization/blazor-dialog-footer.webp)" %}
