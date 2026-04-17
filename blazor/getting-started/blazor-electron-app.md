@@ -9,7 +9,7 @@ documentation: ug
 
 # Creating a Blazor Desktop App with Electron
 
-This guide explains how to create a cross-platform desktop application by combining a **Blazor Web App (Server)** with the **[ElectronNET.Core](https://www.nuget.org/packages/ElectronNET.Core)** framework and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** within an Electron‑powered desktop environment.
+This guide explains how to create a cross-platform desktop application by combining a **Blazor Web App (Server)** with the **[ElectronNET.Core](https://www.nuget.org/packages/ElectronNET.Core)** framework and integrating **[Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** within an Electron‑powered desktop environment.
 
 N> ElectronNET.Core is a community-maintained fork of Electron.NET that supports .NET 6 and later versions (including .NET 8, 9, and 10). It is not an official Microsoft package.
 
@@ -34,7 +34,7 @@ ElectronNET.Core connects a Blazor Web App (Server) with the Electron shell by h
 Run the following commands in the **command-line interface (CLI)**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -o BlazorElectronApp -int Server
 cd BlazorElectronApp
@@ -52,7 +52,7 @@ From the project folder (where the `.csproj` is located), install the Syncfusion
  * [ElectronNET.Core.AspNet](https://www.nuget.org/packages/ElectronNET.Core.AspNet)
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -137,19 +137,13 @@ Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-si
 Add the following stylesheet and script references in `~/App.razor`.
 
 {% tabs %}
-{% highlight html hl_lines="4 10" %}
+{% highlight html tabtitle="App.razor" %}
 
-<head>
-    ...
-    <!-- Syncfusion theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
+<!-- Syncfusion theme stylesheet -->
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
-<body>
-    ...
-    <!-- Syncfusion Blazor Core script (required for most components, including DataGrid) -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-</body>
+<!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}

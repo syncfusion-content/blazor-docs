@@ -6,21 +6,21 @@ component: common
 documentation: ug
 ---
 
-# Authentication and Authorization for Syncfusion Blazor Components
+# Authentication and Authorization in Syncfusion® Blazor Components
 
-This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) for both, and the [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) for UI-level only.
+This guide shows how to secure [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components) with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) for both, and the [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) for UI-level only.
 
 Authentication verifies a user's identity. Authorization then determines the access levels and actions the user can perform. Syncfusion Blazor components integrate with Blazor's built-in authentication and authorization features to enable both UI-level and data-level security.
 
 ## What is authentication?
 
-Authentication verifies a user's identity in your Blazor application. Blazor apps often use cookie-based authentication where a signed cookie is stored in the browser and validated server-side for each request. For WebAssembly apps, use token-based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. In this pattern, the BFF acts as an intermediary that handles token exchange and manages sensitive credentials server-side, preventing tokens from being exposed to browser JavaScript.
+Authentication verifies a user's identity in your Blazor application. Blazor apps often use cookie based authentication where a signed cookie is stored in the browser and validated server-side for each request. For WebAssembly apps, use token based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. In this pattern, the BFF acts as an intermediary that handles token exchange and manages sensitive credentials server-side, preventing tokens from being exposed to browser JavaScript.
 
 Syncfusion components access user identity information through Blazor's `AuthenticationStateProvider`. This allows secure data loading or feature restriction based on the user's identity.
 
 ## What is authorization?
 
-Authorization determines which Syncfusion components or features a user is allowed to access after successful Authentication. Blazor supports authorization via:
+Authorization determines which Syncfusion components or features a user is allowed to access after successful authentication. Blazor supports authorization via:
 
 * **Role checks:** Verify user group membership (e.g., 'Admin').
 * **Policies:** Custom rules, such as requiring multiple roles or claims (key-value attributes in the user's identity, like 'department=Engineering').
@@ -33,53 +33,94 @@ The following table summarizes the functional and behavioral differences between
 | Aspect | Authentication | Authorization |
 |---|---|---|
 | **Purpose** | Verifies user identity. | Grants or denies access to resources and features. |
-| **Timing**  | Happens first | Happens after Authentication |
+| **Timing**  | Happens first | Happens after authentication |
 | **Blazor Tools** | `AuthenticationStateProvider` | `<AuthorizeView>`, `[Authorize]` |
 | **Syncfusion Integration** | Access user identity via `AuthenticationStateProvider` for data loading. | UI-level: Use `<AuthorizeView>` to conditionally render components. Data-level: Add Bearer tokens to `SfDataManager.Headers` for secure API calls. |
 
-## Applying authentication and authorization to Syncfusion components
+## Applying authentication and authorization to Syncfusion® components
 
 Syncfusion components can be secured at two layers:
 
-* **UI-Level Authorization**: Use `<AuthorizeView>` to conditionally render components based on user roles.
-* **Data-Level Authentication**: Use authentication tokens (Bearer tokens) in `SfDataManager` to enforce access to protected API data.
+* **UI-level authorization**: Use `<AuthorizeView>` to conditionally render components based on user roles.
+* **Data-level authentication**: Use authentication tokens (Bearer tokens) in `SfDataManager` to enforce access to protected API data.
 
 For full security, combine UI-level and data-level approaches. The following examples demonstrate this with Syncfusion components.
 
-N> This `<AuthorizeView>` and `SfDataManager` pattern applies to most data-bound Syncfusion components, such as DataGrid, Charts, Scheduler, and TreeView. For non data-bound ones (e.g., Button), use only `<AuthorizeView>`.
+N> This `<AuthorizeView>` and `SfDataManager` pattern applies to most data bound Syncfusion components, such as DataGrid, Charts, Scheduler, and TreeView. For non data bound ones (e.g., Button), use only `<AuthorizeView>`.
 
-## Using Syncfusion components
+## Using Syncfusion® components
 
 All examples use `<AuthorizeView>` for UI-level security. DataGrid and Scheduler also include `SfDataManager` with Bearer tokens for data-level authentication. TreeView uses local data.
 
-### Prerequisites
-
-* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later; Examples use .NET 10.
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
-* [AuthorizeView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authorizeview), [AuthenticationStateProvider](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/authentication-state), and token-based data requests require the Blazor authentication pipeline to be configured.
-
-**Install required packages:**
-
-For applications using ASP.NET Core Identity, install the Identity UI package by running the following command in your project directory:
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet add package Microsoft.AspNetCore.Identity.UI
-dotnet add package Microsoft.AspNetCore.Authorization
-
-{% endhighlight %}
-{% endtabs %}
-
-If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion’s Blazor getting‑started guides.
+If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion’s Blazor getting started guides.
 
 * [WebAssembly getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Server getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
-**1. Wrap the application's router in App.razor:**
+### Prerequisites
+
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later; Examples use .NET 10.
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+* [AuthorizeView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authorizeview), [AuthenticationStateProvider](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/authentication-state), and token based data requests require the Blazor authentication pipeline to be configured.
+
+### Install required packages:
+
+Use NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) and install the following packages:
+
+**Microsoft packages:**
+
+* [Microsoft.AspNetCore.Identity.UI](https://www.nuget.org/packages/Microsoft.AspNetCore.Identity.UI/)
+* [Microsoft.AspNetCore.Authorization](https://www.nuget.org/packages/Microsoft.AspNetCore.Authorization/)
+
+**Syncfusion packages:**
+
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule)
+* [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
+
+### Add required namespaces
+
+Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Navigations
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add stylesheet and script resources
+
+Add the Syncfusion theme CSS and required scripts to the `~/App.razor` file.
+
+{% tabs %}
+{% highlight html tabtitle="App.razor"  %}
+
+<head>
+     <!-- Syncfusion theme style sheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Syncfusion Blazor component's script reference -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
+
+### Configuring authentication and authorization
+
+**Step 1. Wrap the application's router in `App.razor`:**
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
 <CascadingAuthenticationState>
     <Router AppAssembly="@typeof(App).Assembly" />
 </CascadingAuthenticationState>
@@ -87,7 +128,7 @@ If you already have a Blazor project, proceed to the package installation sectio
 {% endhighlight %}
 {% endtabs %}
 
-**2. Inject the authentication provider where needed (eg., in a .razor file):**
+**Step 2. Inject the authentication provider where needed (eg., in a `.razor` file):**
 
 {% tabs %}
 {% highlight razor %}
@@ -97,10 +138,10 @@ If you already have a Blazor project, proceed to the package installation sectio
 {% endhighlight %}
 {% endtabs %}
 
-**3. Register authentication services in Program.cs:**
+**Step 3. Register authentication and syncfusion® services in `Program.cs`:**
 
 {% tabs %}
-{% highlight cs %}
+{% highlight cs tabtitle="Program.cs" %}
 
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Identity;
@@ -120,14 +161,14 @@ builder.Services.AddSyncfusionBlazor();
 
 ### DataGrid
 
-The DataGrid can be secured by using the `SfDataManager.Headers` property, which allows the grid to load data securely from protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
+The [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be secured by using the [SfDataManager.Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property, which allows the grid to load data securely from protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
 
 N> 
 * For testing only, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control. 
  *  For production, retrieve the token dynamically from the authenticated user's claims using `AuthenticationStateProvider` instead of static configuration.
 
 {% tabs %}
-{% highlight json %}
+{% highlight json tabtitle="appsettings.json" %}
 
 {
   "ExternalApi": {
@@ -139,7 +180,7 @@ N>
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -193,10 +234,10 @@ N>
 
 ### Scheduler
 
-The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized users get protected data from the API.
+The [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to fetch events. This ensures only authorized users get protected data from the API.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
@@ -250,10 +291,10 @@ The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized
 
 ### TreeView
 
-The following TreeView example demonstrates a Blazor Server App configured with authentication, ensuring that the entire TreeView component is only accessible to authenticated users.
+The following [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) example demonstrates a Blazor Server app configured with authentication, ensuring that the entire TreeView component is only accessible to authenticated users.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -321,6 +362,6 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## See also
 
-* [Blazor Server App with Authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&tabs=visual-studio) 
+* [Blazor Server app with authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&tabs=visual-studio) 
 * [AuthenticationStateProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authenticationstateprovider) 
 

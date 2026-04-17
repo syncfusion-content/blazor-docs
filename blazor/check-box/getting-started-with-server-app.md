@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor CheckBox Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfCheckBox Label="Default" @bind-Checked="isChecked"></SfCheckBox>
 

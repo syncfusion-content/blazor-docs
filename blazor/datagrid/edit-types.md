@@ -1717,7 +1717,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-![Render images in the DropDownList editor using the ItemTemplate](./images/blazor-datagrid-render-image-using-item-template.gif)
+![Render images in the DropDownList editor using the ItemTemplate](./images/blazor-datagrid-render-image-using-item-template.webp)
 
 > A working sample is available in the following [Github](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Render-image-in-dropdownlist) repository.
 
@@ -2535,7 +2535,7 @@ To use an `SfUpload` in the edit form, configure the [EditTemplate](https://help
 {% endhighlight %}
 {% endtabs %}
 
-![Render Uploader in EditTemplate](./images/blazor-datagrid-editing-upload.gif)
+![Render Uploader in EditTemplate](./images/blazor-datagrid-editing-upload.webp)
 
 > Complete code for this sample is available on [GitHub](https://github.com/SyncfusionExamples/Render-Upload-component-in-edit-template-in-Blazor-DataGrid).
 

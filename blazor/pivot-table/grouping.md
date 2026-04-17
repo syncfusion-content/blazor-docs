@@ -97,21 +97,21 @@ Number grouping allows users to organize numerical data into different ranges, s
 }
 ```
 
-![Number Grouping in Blazor PivotTable](images/blazor-pivottable-number-grouping.png)
+![Number Grouping in Blazor PivotTable](images/blazor-pivottable-number-grouping.webp)
 
 ### Range selection
 
 The "**Starting at**" and "**Ending at**" options are used to set the number range depending on which the headers will be grouped. For example, if the "Product_ID" field holds the number from "1001" to "1010" and the user chooses to group the number range by setting "**1004**" to "**Starting at**" and "**1008**" to "**Ending at**" options on their own, then the specified number range will be used for number grouping and the rest will be grouped as "**Out of Range**".
 
-![Number Grouping within Range in Blazor PivotTable](images/blazor-pivottable-number-group-within-range.png)
+![Number Grouping within Range in Blazor PivotTable](images/blazor-pivottable-number-group-within-range.webp)
 
 ### Range interval
 
 The "**Interval by**" option is used to separate the selected number data type field into range-wise such as 1-5, 6-10, etc. For example, if the user wants to display the "Product_ID" data field with a group interval of "**2**" by setting the "**Interval by**" option on their own, the "Product_ID" field will then be grouped by the specified range of intervals, such as "**1004-1005**", "**1006-1007**", etc.
 
-![Grouping with Blazor PivotTable Range Interval](images/blazor-pivottable-group-within-range-interval.png)
+![Grouping with Blazor PivotTable Range Interval](images/blazor-pivottable-group-within-range-interval.webp)
 <br/>
-![Updating Number Group in Blazor PivotTable](images/blazor-pivottable-update-number-group.png)
+![Updating Number Group in Blazor PivotTable](images/blazor-pivottable-update-number-group.webp)
 
 ### Configuring Number Grouping Programmatically
 
@@ -160,13 +160,13 @@ N> If starting and ending numbers specified in [StartingAt](https://help.syncfus
 }
 ```
 
-![Updating Number Group in Blazor PivotTable](images/blazor-pivottable-update-number-group.png)
+![Updating Number Group in Blazor PivotTable](images/blazor-pivottable-update-number-group.webp)
 
 ### Ungrouping the existing number groups
 
 To remove an applied number grouping, simply right-click on the grouped header in the Pivot Table and select **Ungroup** option from the context menu. This action will break apart the grouped ranges and display the original, ungrouped values in the table.
 
-![UnGrouping in Blazor PivotTable](images/blazor-pivottable-ungroup.png)
+![UnGrouping in Blazor PivotTable](images/blazor-pivottable-ungroup.webp)
 
 ## Date Grouping
 
@@ -208,13 +208,13 @@ Date grouping organizes date and time data into hierarchical segments, such as y
 }
 ```
 
-![Date Grouping in Blazor PivotTable](images/blazor-pivottable-date-grouping.png)
+![Date Grouping in Blazor PivotTable](images/blazor-pivottable-date-grouping.webp)
 
 ### Range Selection
 
 The **Starting at** and **Ending at** options allow users to define the date range for grouping headers. For example, if the "Date" field contains data from "01/01/2015" to "02/12/2018" and the user sets **Starting at** to "**01/07/2015**" and **Ending at** to "**31/07/2017**", only records within this range will be grouped according to the selected settings. Dates outside this range are labeled as **Out of Range**.
 
-![Range Selection in Blazor PivotTable](images/blazor-pivottable-range-selection.png)
+![Range Selection in Blazor PivotTable](images/blazor-pivottable-range-selection.webp)
 
 ### Group Interval
 
@@ -222,11 +222,11 @@ The **Interval by** option allows users to split date fields into years, quarter
 
 N> If no options are selected in the **Interval by** section, the **OK** button in the dialog remains disabled. At least one interval must be chosen to enable date grouping.
 
-![Interval Grouping in Blazor PivotTable](images/blazor-pivottable-interval-grouping.png)
+![Interval Grouping in Blazor PivotTable](images/blazor-pivottable-interval-grouping.webp)
 <br/>
-![Date Grouping in Blazor PivotTable](images/blazor-pivottable-date-group.png)
+![Date Grouping in Blazor PivotTable](images/blazor-pivottable-date-group.webp)
 <br/>
-![Displaying Updated Date Group in Blazor PivotTable](images/blazor-pivottable-update-date-group.png)
+![Displaying Updated Date Group in Blazor PivotTable](images/blazor-pivottable-update-date-group.webp)
 
 ### Configuring Date Grouping Programmatically
 
@@ -279,13 +279,13 @@ N> For example, if your date format is "YYYY-DD-MM HH:MM:SS" and you want to gro
 }
 ```
 
-![Displaying Updated Date Group in Blazor PivotTable](images/blazor-pivottable-update-date-group.png)
+![Displaying Updated Date Group in Blazor PivotTable](images/blazor-pivottable-update-date-group.webp)
 
 ### Ungrouping the existing date groups
 
 To remove a previously applied date grouping, simply right-click the relevant date-based header within the Pivot Table and select the **Ungroup** option from the context menu. This action will revert the grouped dates back to their original, ungrouped state, allowing you to view and analyze the raw date values in the Pivot Table component.
 
-![UnGrouping Date Groups in Blazor PivotTable](images/blazor-pivottable-date-ungroup.png)
+![UnGrouping Date Groups in Blazor PivotTable](images/blazor-pivottable-date-ungroup.webp)
 
 ## Custom Grouping
 
@@ -327,7 +327,7 @@ Custom grouping is an option that enables users to group data types (date, time,
 
 To create a custom group in the Pivot Table, select at least two headers from the same field. Hold the **CTRL** key to select multiple headers individually or the **SHIFT** key to select a range of headers. Then, right-click and choose **Group** from the context menu.
 
-![Custom Grouping in Blazor PivotTable](images/blazor-pivottable-custom-grouping.png)
+![Custom Grouping in Blazor PivotTable](images/blazor-pivottable-custom-grouping.webp)
 
 In the dialog box:
 - **Field Caption**: Set an alias name for the new custom field, which will appear in the Pivot Table.
@@ -335,21 +335,21 @@ In the dialog box:
 
 For example, to group the headers "Gloves," "Jerseys," and "Shorts" in the "Products" field under a single group, set the **Group Name** to "Clothings." The selected headers will then appear under "Clothings" in the Pivot Table.
 
-![Caption with Custom Grouping in Blazor PivotTable](images/blazor-pivottable-custom-group-with-caption.png)
+![Caption with Custom Grouping in Blazor PivotTable](images/blazor-pivottable-custom-group-with-caption.webp)
 <br/>
-![Blazor PivotTable with Custom Grouping](images/blazor-pivottable-custom-group.png)
+![Blazor PivotTable with Custom Grouping](images/blazor-pivottable-custom-group.webp)
 <br/>
-![Displaying Updated Custom Grouping in Blazor PivotTable](images/blazor-pivottable-update-custom-group.png)
+![Displaying Updated Custom Grouping in Blazor PivotTable](images/blazor-pivottable-update-custom-group.webp)
 
 ### Nested Custom Grouping
 
 Users can also apply new custom grouping options to an existing custom field by right-clicking on the custom group header in the Pivot Table. For example, if the user wants to create a new custom group for the current custom group headers such as "**Bottles and Cages**", "**Cleaners**" and "**Fenders**" by setting the top level name as "**Accessories**" to "**Group Name**" on their own. The selected headers will then be grouped in the Pivot Table under the name "**Accessories**" with a new custom field called "**Product category 1**".
 
-![Nested Custom Grouping in Blazor PivotTable](images/blazor-pivottable-nested-custom-group.png)
+![Nested Custom Grouping in Blazor PivotTable](images/blazor-pivottable-nested-custom-group.webp)
 <br/>
-![Applying Nested Custom Grouping in Blazor PivotTable](images/blazor-pivottable-apply-nested-custom-group.png)
+![Applying Nested Custom Grouping in Blazor PivotTable](images/blazor-pivottable-apply-nested-custom-group.webp)
 <br/>
-![Displaying Updated Nested Custom Grouping in Blazor PivotTable](images/blazor-pivottable-update-nested-custom-group.png)
+![Displaying Updated Nested Custom Grouping in Blazor PivotTable](images/blazor-pivottable-update-nested-custom-group.webp)
 
 ### Configuring Custom Grouping Programmatically
 
@@ -406,7 +406,7 @@ N> Headers listed in [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-![Displaying Updated Custom Grouping in Blazor PivotTable](images/blazor-pivottable-update-custom-group.png)
+![Displaying Updated Custom Grouping in Blazor PivotTable](images/blazor-pivottable-update-custom-group.webp)
 
 ### Ungrouping Existing Custom Groups
 
@@ -414,6 +414,6 @@ To remove a custom group in the Pivot Table, simply right-click on the grouped h
 
 N> After ungrouping, if you remove the related field from the report, any custom group fields associated with it will also be removed from the Pivot Table.
 
-![Custom UnGrouping in Blazor PivotTable](images/blazor-pivottable-custom-ungroup.png)
+![Custom UnGrouping in Blazor PivotTable](images/blazor-pivottable-custom-ungroup.webp)
 
 N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the Pivot Table.

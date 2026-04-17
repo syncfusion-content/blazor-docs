@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Range Slider in Blazor Web App
 
-This section briefly explains about how to include [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Inputs
 
@@ -180,7 +180,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RangeSlider).
 
-## See Also
+## See also
 
 [Slider Types](./types)
 

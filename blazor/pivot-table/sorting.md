@@ -29,13 +29,13 @@ N> By default the [EnableSorting](https://help.syncfusion.com/cr/blazor/Syncfusi
 #### Visual Reference
 
 - **Field List Sort Icon**:  
-  ![Member sorting icon in field list](images/blazor-pivottable-sorting-in-field-list.png)
+  ![Member sorting icon in field list](images/blazor-pivottable-sorting-in-field-list.webp)
 
 - **Grouping Bar Sort Icon**:  
-  ![Member sorting icon in grouping bar](images/blazor-pivottable-sorting-in-groupbar.png)
+  ![Member sorting icon in grouping bar](images/blazor-pivottable-sorting-in-groupbar.webp)
 
 - **Sorted Pivot Table**:  
-  ![Resultant pivot table after member sorting](images/blazor-pivotgrid-sorting.png)
+  ![Resultant pivot table after member sorting](images/blazor-pivotgrid-sorting.webp)
 
 ### Configuring Member Sorting Code Behind
 
@@ -85,7 +85,7 @@ The following example demonstrates how to configure the Pivot Table to enable me
 
 ```
 
-![Sorting in Blazor PivotGrid](images/blazor-pivotgrid-sorting.png)
+![Sorting in Blazor PivotGrid](images/blazor-pivotgrid-sorting.webp)
 
 ### Alphanumeric Sorting
 
@@ -162,7 +162,7 @@ When [DataType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotVie
 
 ```
 
-![Alpha Numeric Sorting in Blazor PivotTable](images/blazor-pivottable-alpha-numberic-sorting.png)
+![Alpha Numeric Sorting in Blazor PivotTable](images/blazor-pivottable-alpha-numberic-sorting.webp)
 
 ## Value Sorting
 
@@ -211,7 +211,7 @@ N> Value fields are set to the column axis by default. In such cases, the value 
 
 ```
 
-![Value Sorting in Blazor PivotTable](images/blazor-pivottable-value-sorting.png)
+![Value Sorting in Blazor PivotTable](images/blazor-pivottable-value-sorting.webp)
 
 ### Multiple Axis Sorting
 

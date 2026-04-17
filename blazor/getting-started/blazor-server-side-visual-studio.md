@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Server App
 
-This article provides step-by-step instructions for building a Blazor Server App with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This article provides step-by-step instructions for building a Blazor Server App with the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Using Playground
 
@@ -17,7 +17,7 @@ This article provides step-by-step instructions for building a Blazor Server App
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-## Manually Creating a Project
+## Manually creating a project
 
 This section provides a brief guide on how to manually create a Blazor Server App.
 
@@ -169,7 +169,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Grids
 

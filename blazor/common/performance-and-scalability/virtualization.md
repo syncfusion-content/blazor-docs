@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor — Syncfusion
-description: Learn how Syncfusion Blazor components use row and column virtualization, Overscan, virtual placeholders, frozen columns, and infinite scrolling.
+title: Virtualization in Syncfusion Blazor Components
+description: Learn how Syncfusion Blazor components use row and column virtualization, overscan, virtual placeholders, frozen columns, and infinite scrolling.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-Virtualization improves the overall performance of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by rendering only the elements that are visible in the viewport. Instead of creating all items at once, the framework reuses DOM elements while the user scrolls.
+Virtualization improves the overall performance of [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) by rendering only the elements that are visible in the viewport. Instead of creating all items at once, the framework reuses DOM elements while the user scrolls.
 
 This approach helps reduce the initial loading time and lowers memory usage. It also keeps the DOM smaller, which leads to smoother scrolling and more responsive interactions.
 
@@ -23,12 +23,12 @@ With virtualization enabled, working with large datasets becomes easier and fast
 * [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-### Create a Blazor web app with Interactive Server
+### Create a Blazor Web App with Interactive Server
 
 Run the following commands in the **command-line interface (CLI)**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -o BlazorApp -int Server
 cd BlazorApp
@@ -45,7 +45,7 @@ Run the following commands to install the required Syncfusion<sup style="font-si
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
    
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Lists -v {{ site.releaseversion }}
@@ -92,19 +92,13 @@ Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-si
 Add the following stylesheet and script references in the `~/App.razor` file. 
 
 {% tabs %}
-{% highlight html hl_lines="4 10" %}
+{% highlight html tabtitle="App.razor" %}
 
-<head>
-    ....
-    <!-- Syncfusion theme stylesheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
+<!-- Syncfusion theme stylesheet -->
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
-<body>
-    ....
-    <!-- Syncfusion Blazor Core script -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
+<!-- Syncfusion Blazor core script -->
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -128,7 +122,7 @@ For Server render mode, if your app's interactivity location is set to `Per page
 
 The following major Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide built-in virtualization support to efficiently handle large datasets.
 
-* **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** – Supports Row virtualization, column virtualization, buffered rendering (Overscan), virtual loading placeholders (mask row), frozen columns with virtualization, and infinite scrolling.
+* **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** – Supports row virtualization, column virtualization, buffered rendering (Overscan), virtual loading placeholders (mask row), frozen columns with virtualization, and infinite scrolling.
 * **[ListView](https://www.syncfusion.com/blazor-components/blazor-listview)** – Supports UI virtualization with window or container scrolling modes.
 * **[File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)** – Supports UI virtualization in both Details and Large Icons views.
 * **[TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview)** – Provides UI virtualization to render only visible nodes, significantly boosting performance in large hierarchical structures.
@@ -157,7 +151,7 @@ The following major Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor comp
 
 ## DataGrid virtualization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports several virtualization features that help it handle large datasets efficiently. These include row virtualization, column virtualization, Overscan buffering, loading placeholders, frozen columns with virtualization, and infinite scrolling. Together, these features make the grid faster, smoother, and more responsive when working with large amounts of data.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports several virtualization features that help it handle large datasets efficiently. These include row virtualization, column virtualization, Overscan buffering, loading placeholders, frozen columns with virtualization, and infinite scrolling. Together, these features make the grid faster, smoother, and more responsive when working with large amounts of data.
 
 ### Row virtualization
 
@@ -529,7 +523,7 @@ When `VirtualMaskRow` is enabled, the grid reuses existing DOM elements and disp
 #### Configure VirtualMaskRow
 
 * Set [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) to **true**.
-* Enable Row virtualization ([EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization)) or column virtualization ([EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization)).
+* Enable row virtualization ([EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization)) or column virtualization ([EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization)).
 * For the best results, set both [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) and [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight). This ensures accurate placeholder rendering and smooth scrolling performance.
 
 {% tabs %}
@@ -597,7 +591,7 @@ Frozen columns remain fixed on the left or right side of the grid while the rest
 
 #### Configure frozen columns with virtualization
 
-* Set [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) on the columns you want to freeze.
+* Set [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) to **true** for the columns you want to freeze.
 * Set [GridColumn.Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) to Left or Right.
 * Enable both row and column virtualization using [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization).
 * Assign a fixed width to all columns.
@@ -859,7 +853,7 @@ public class TaskDetails
 
 ## ListView virtualization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView supports UI virtualization, which helps improve performance when working with large datasets. Instead of rendering all items at once, only the items visible within the viewport are created. This keeps the component responsive and reduces memory usage even when the list contains thousands of records.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) supports UI virtualization, which helps improve performance when working with large datasets. Instead of rendering all items at once, only the items visible within the viewport are created. This keeps the component responsive and reduces memory usage even when the list contains thousands of records.
 
 #### Configure ListView virtualization
 
@@ -924,7 +918,7 @@ This mode is used when you set a fixed pixel height for the ListView. In this ca
 
 ## File Manager virtualization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> File Manager supports UI virtualization to efficiently load large numbers of files and folders without affecting performance. It renders only the items visible in the viewport, enabling smooth navigation even when directories contain thousands of entries. Virtualization works in both Details and Large Icons views.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) supports UI virtualization to efficiently load large numbers of files and folders without affecting performance. It renders only the items visible in the viewport, enabling smooth navigation even when directories contain thousands of entries. Virtualization works in both Details and Large Icons views.
 
 The component determines which items to display based on the **height** and **width** of the viewport. As the user scrolls, the File Manager loads additional files and folders according to the available visible area.
 
@@ -948,58 +942,11 @@ To enable virtualization, set the [EnableVirtualization](https://help.syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-### Row virtualization limitations
-
-* Features like batch editing, detail templates, row templates, and autofill are not supported.
-* Copy/paste and drag operations work only on rows currently visible in the viewport.
-* Individual cell selection is not supported.
-* All rows must have a fixed, identical height.
-* Group expand/collapse states are not preserved unless [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) is enabled.
-* Text wrapping is not allowed because row height must remain consistent.
-* Some browsers limit maximum scrollable height, which may affect extremely large datasets.
-
-### Column virtualization limitations
-
-* Cell selection is not supported.
-* The **Ctrl + Home** and **Ctrl + End** keyboard shortcuts do not work.
-* Features that work only inside the visible area (viewport):
-  * Column resizing
-  * Column chooser
-  * Auto-fit
-  * Clipboard
-  * Column menu
-* Features that are NOT compatible with column virtualization:
-  * Grouping
-  * Batch editing
-  * Column virtualization cannot be combined with infinite scrolling
-  * Stacked headers
-  * Row template / detail template
-  * Hierarchy grid
-  * Autofill
-
-### Infinite scrolling limitations
-
-* Requires a fixed grid height for proper block calculation.
-* Batch editing and row virtualization cannot be used with infinite scrolling.
-* With infinite scrolling, copy-paste and drag-and-drop apply only to items within the current viewport.
-* Programmatic selection using `SelectRowsAsync` and `SelectRowAsync` is not supported in infinite scrolling.
-
-### ListView virtualization limitations
-
-* Requires a pixel-based `height`. Percentage heights are not supported unless the ListView is placed inside a fixed-height parent container.
-* If you prefer to use a percentage value, you can render the component within a div container with a specific pixel value set for height. The ListView will then render based on the parent container's height.
-
-### File Manager virtualization limitations
-
-* Programmatic selection using `SelectAllAsync` is not supported when virtualization is enabled.
-* Pressing `CTRL + A` selects only the files and folders currently visible in the viewport, not all items in the directory.
-* Selected items are not preserved while scrolling or when switching between views, to maintain optimal performance.
-
 ## See also
 
 For detailed explanations, and additional configuration options, refer to the following documentation pages.
 
-* [DataGrid – Virtual Scrolling and Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
-* [DataGrid – Infinite Scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling)
-* [ListView – Virtualization](https://blazor.syncfusion.com/documentation/listview/virtualization)
-* [File Manager – Virtualization](https://blazor.syncfusion.com/documentation/file-manager/virtualization)
+* [Virtual Scrolling in Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+* [Infinite Scrolling in Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling)
+* [Virtualization in Syncfusion Blazor ListView](https://blazor.syncfusion.com/documentation/listview/virtualization)
+* [Virtualization in Syncfusion Blazor File Manager](https://blazor.syncfusion.com/documentation/file-manager/virtualization)
