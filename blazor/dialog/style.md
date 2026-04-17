@@ -112,23 +112,22 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
-
+<div id="target">
 <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
 
-<SfDialog Width="500px" ShowCloseIcon="true" @bind-Visible="@IsVisible">
-    <DialogTemplates>
-        <Header> Dialog </Header>
-        <Content> Dialog enabled with Zoom effect </Content>
-    </DialogTemplates>
+<SfDialog Width="500px" ID="defaultDialog" Header="Dialog Animation" Content="Dialog enabled with Fade and Zoom effect" Target="#target" ShowCloseIcon="true" @bind-Visible="@IsVisible">
     <DialogAnimationSettings Effect="@AnimationEffect" Duration=400 />
     <DialogButtons>
         <DialogButton Content="Hide" IsPrimary="true" OnClick="@CloseDialog" />
     </DialogButtons>
+    <DialogPositionData X="center" Y="center"></DialogPositionData>
 </SfDialog>
+</div>
+
 
 @code {
-    private bool IsVisible { get; set; } = true;
-    private DialogEffect AnimationEffect = DialogEffect.Zoom;
+    private bool IsVisible { get; set; } = false;
+    private DialogEffect AnimationEffect = DialogEffect.FadeZoom;
 
     private void OpenDialog()
     {
@@ -141,9 +140,15 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
     }
 }
 
+<style>
+    #target {
+        height: 500px;
+    }
+</style>
+
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrHZzsITIXbwZiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-animation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVxZzCGpsmWxCAV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Animation](./images/dialog-customization/Animationeffect.gif)" %}
 
 
 ### Dialog background color change
@@ -212,6 +217,28 @@ Use the following CSS to customize the dialog content properties.
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBRNTWQKHvcCycE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Content](./images/dialog-customization/blazor-dialog-content.webp)" %}
+
+### Customizing dialog hover state
+
+Use the following CSS to customize the hover state of the dialog container.
+
+```css
+.e-dialog:hover {
+    box-shadow: 0 12px 25px #ff0000;
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhdjJsmJqRSBphT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog hover state](./images/dialog-customization/hover-state-customization.gif)" %}
+
+### Customizing active dialog state
+
+Use the following CSS to customize the active (focused) state of the dialog.
+
+```css
+.e-dialog:active {
+        box-shadow: 0 12px 25px #f318d9ad;
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthnNzCmpfgbYxCn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Active Dialog](./images/dialog-customization/activestate-customization.gif)" %}
 
 ### Customizing modal dialog overlay
 
