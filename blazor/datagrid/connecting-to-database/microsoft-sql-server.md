@@ -847,7 +847,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The Network Support Ticket System is now running and ready to use.
 
-![Basic DataGrid displaying tickets from the SQL Server database](../images/blazor-datagrid-sql.png)
+![Basic DataGrid displaying tickets from the SQL Server database](../images/blazor-datagrid-sql.webp)
 
 ### Step 6: Implement Paging Feature
 

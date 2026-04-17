@@ -141,7 +141,7 @@ public class EmployeeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVItzhpzpJHfBYo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with column template](./images/exporting-pdf-column-template.gif)
+![Exporting with column template](./images/exporting-pdf-column-template.webp)
 
 ## Exporting with group caption template
 
@@ -256,7 +256,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyjfMHqkQMUKqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with group caption template](./images/exporting-pdf-group-caption-template.gif)
+![Exporting with group caption template](./images/exporting-pdf-group-caption-template.webp)
 
 ## Exporting with detail template
 
@@ -608,7 +608,7 @@ public class ProductData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLIDYhxTrzASqVV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with detail template](./images/exporting-pdf-detail-template.gif)
+![Exporting with detail template](./images/exporting-pdf-detail-template.webp)
 
 > If [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_ColumnCount) is not specified or is less than the number of cells in the first row of `Headers` or `Rows`, the columns in the detail section of the exported PDF will be generated based on the cell count in the first row of `Headers` or `Rows`.
 
@@ -886,4 +886,4 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtByZTscrNDihvvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.gif)
+![Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.webp)

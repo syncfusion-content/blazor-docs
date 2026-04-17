@@ -141,7 +141,7 @@ public class EmployeeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with column template](./images/column-template.gif)
+![Exporting with column template](./images/column-template.webp)
 
 ## Exporting with group caption template
 
@@ -258,7 +258,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with group caption template](./images/group-caption.gif)
+![Exporting with group caption template](./images/group-caption.webp)
 
 ## Exporting with detail template
 
@@ -596,7 +596,7 @@ public class ProductData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with detail template](./images/detail-template.gif)
+![Exporting with detail template](./images/detail-template.webp)
 
 ## Exporting hierarchical Grid using detail template
 
@@ -894,4 +894,4 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.gif)
+![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.webp)
