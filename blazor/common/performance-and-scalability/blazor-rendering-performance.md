@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Syncfusion Blazor Rendering and Performance Optimization
+# Syncfusion® Blazor Rendering and Performance Optimization
 
 This section explains how rendering works in Blazor and shows practical ways to optimize rendering efficiency, reducing unnecessary re-renders, diffing overhead, and UI update latency when authoring components with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). The focus is on writing components that remain efficient as data volume, user interaction, and layout complexity increase.
 
@@ -19,9 +19,9 @@ This model helps Blazor update only the necessary parts of the interface. For Sy
 
 ## Why rendering optimization matters?
 
-Most commonly used Syncfusion components are interactive and data-driven. A DataGrid may respond to paging, sorting, filtering, and editing, while a chart may refresh when a dashboard filter changes or when live data arrives.
+Most commonly used Syncfusion components are interactive and operate based on data. A [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) may respond to paging, sorting, filtering, and editing, while a [Chart](https://www.syncfusion.com/blazor-components/blazor-charts) may refresh when a dashboard filter changes or when live data arrives.
 
-If component state changes too often or if child components receive new object references unnecessarily, Blazor performs more rendering work than required. Over time, this leads to slower interactions, increased CPU usage, and reduced UI smoothness.
+If component state changes more frequently than necessary or if child components receive new object references unnecessarily, Blazor performs more rendering work than required. Over time, this leads to slower interactions, increased CPU usage, and reduced UI smoothness.
 
 N> Rendering issues often remain unnoticed in small samples and become visible only when the application starts handling larger datasets and real user interaction patterns.
 
@@ -52,7 +52,7 @@ Blazor determines whether child components should update based on state and para
 
 Keeping parameter values stable reduces unnecessary diffing and avoids render work in Syncfusion components. This is especially important for grids, charts, and dropdown controls that often receive collections and configuration objects.
 
-## Syncfusion DataGrid example with stable data binding
+## Syncfusion® DataGrid example with stable data binding
 
 The following example shows a simple [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
 
@@ -135,7 +135,7 @@ N> `ShouldRender` is most effective when the render conditions are clear, predic
 
 Event handling contributes directly to rendering behavior because UI events often trigger state changes. Using `EventCallback` helps keep events aligned with the component model and avoids unnecessary lambda or delegate allocations that can occur when multiple delegate instances are created repeatedly during rendering cycles.
 
-The following example uses a Syncfusion button to refresh grid data only when the user explicitly requests an update.
+The following example uses a button to refresh grid data only when the user explicitly requests an update.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -295,7 +295,7 @@ protected override void OnInitialized()
 
 This keeps the render path simple and avoids repeated computation during every UI update.
 
-## Syncfusion Chart example with render-efficient updates
+## Syncfusion® Chart example with render-efficient updates
 
 [Charts](https://www.syncfusion.com/blazor-components/blazor-charts) are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
 
@@ -346,6 +346,8 @@ A common inefficient pattern is to create collections directly inside markup or 
 {% tabs %}
 {% highlight razor tabtitle="Dropdown.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfDropDownList TValue="string" TItem="string"
                 DataSource="@GetCountries()"
                 Placeholder="Select a country">
@@ -369,6 +371,8 @@ A more efficient version creates the collection once and reuses it.
 {% tabs %}
 {% highlight razor tabtitle="Dropdown.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfDropDownList TValue="string" TItem="string"
                 DataSource="@Countries"
                 Placeholder="Select a country">
@@ -387,7 +391,7 @@ A more efficient version creates the collection once and reuses it.
 {% endhighlight %}
 {% endtabs %}
 
-The difference here is not only code style; it directly affects rendering efficiency. Stable references help Blazor determine that the child component’s data has not changed unnecessarily.
+This difference is not about code style and directly impacts rendering efficiency. Stable references allow Blazor to recognize when a child component’s data has not changed unnecessarily.
 
 ## See also
 
