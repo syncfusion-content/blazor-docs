@@ -113,6 +113,7 @@ In this example, clicking the Invoice button in the **DataGrid** row generates a
 
 {% tabs %}
 {% highlight razor %}
+{% raw %}
 
 @page "/"
 @rendermode InteractiveServer
@@ -215,6 +216,7 @@ In this example, clicking the Invoice button in the **DataGrid** row generates a
     }
 }
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

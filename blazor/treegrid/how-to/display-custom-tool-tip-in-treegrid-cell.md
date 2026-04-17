@@ -96,4 +96,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Displaying Custom Tooltip in Blazor TreeGrid](../images/blazor-treegrid-custom-tooltip.PNG)
+![Displaying Custom Tooltip in Blazor TreeGrid](../images/blazor-treegrid-custom-tooltip.webp)
