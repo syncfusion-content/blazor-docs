@@ -13,7 +13,7 @@ This section explains how to create and run a **.NET MAUI Blazor Hybrid App** to
 
 ## What is .NET MAUI Blazor Hybrid and Web App?
 
-The **.NET MAUI Blazor Hybrid and Web App** template creates a solution with three projects: a .NET MAUI Blazor Hybrid App (native), a Blazor Web App (server or WebAssembly), and a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used across the native MAUI app and the web app, making it easy to build one UI and deploy it across mobile, desktop, and web platforms.
+The **.NET MAUI Blazor Hybrid and Web App** template creates a solution that consists of three projects, including a .NET MAUI Blazor Hybrid App (native), a Blazor Web App (server or WebAssembly), and a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used across the native MAUI app and the web app, making it easy to build one UI and deploy it across mobile, desktop, and web platforms.
 
 By sharing UI components between native and web apps, this pattern ensures consistent user experiences, maximizes code reuse, and simplifies maintenance for applications targeting multiple environments.
 
@@ -32,7 +32,7 @@ The template generates the shared RCL, .NET MAUI App, and Web App.
 
 ## Install Syncfusion® Blazor DataGrid and Themes NuGet in the app
 
-Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and install the required package.
+Open the NuGet Package Manager in Visual Studio by selecting (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and then install the following Syncfusion® NuGet packages.
 
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
