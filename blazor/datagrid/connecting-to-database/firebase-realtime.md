@@ -911,7 +911,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The library management application is now running and ready to use.
 
-![Basic DataGrid displaying books from the Firebase Realtime](../images/blazor-datagrid-realtimedb.png)
+![Basic DataGrid displaying books from the Firebase Realtime](../images/blazor-datagrid-realtimedb.webp)
 
 ---
 
