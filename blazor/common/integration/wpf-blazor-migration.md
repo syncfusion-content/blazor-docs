@@ -134,12 +134,12 @@ dotnet watch   # Hot reload during development
 
 This section provides **step-by-step migration guidance** for the following six Syncfusion components, with side-by-side WPF and Blazor code examples:
 
-1. **[DataGrid](#1-datagrid)** - Tabular data display with sorting, filtering, editing, and grouping
-2. **[TreeGrid](#2-treegrid)** - Hierarchical data display in a grid format
-3. **[Charts](#3-charts)** - Data visualization with various chart types
-4. **[Scheduler](#4-scheduler)** - Calendar and appointment scheduling
-5. **[Diagram](#5-diagram)** - Visual diagramming and flowchart creation
-6. **[RichTextEditor](#6-richtexteditor)** - Rich text editing with formatting capabilities
+1. **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** - Tabular data display with sorting, filtering, editing, and grouping
+2. **[TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid)** - Hierarchical data display in a grid format
+3. **[Charts](https://www.syncfusion.com/blazor-components/blazor-charts)** - Data visualization with various chart types
+4. **[Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler)** - Calendar and appointment scheduling
+5. **[Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram)** - Visual diagramming and flowchart creation
+6. **[RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)** - Rich text editing with formatting capabilities
 
 Each component section includes package installation, theme setup, service registration, and basic rendering code for both platforms.
 
@@ -149,13 +149,20 @@ For detailed explanation, refer to the [WPF DataGrid getting started guide](http
 
 #### Migration overview
 
-| Aspect | WPF | Blazor |
-|---|---|---|
-| **Package** | `Syncfusion.SfGrid.WPF` | `Syncfusion.Blazor.Grid` |
-| **Namespace** | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.Grids` |
-| **Binding** | `ItemsSource="{Binding}"` | `DataSource="@Orders"` |
-| **Theme approach** | ResourceDictionary | CSS file |
-| **Steps** | 3 steps | 5 steps |
+| Aspect | WPF (SfDataGrid) | Blazor (SfGrid / SfGrid<TValue>) |
+|---|---:|---|
+| Package | `Syncfusion.SfGrid.WPF` | `Syncfusion.Blazor.Grid` |
+| Namespace / usage | XAML: `xmlns:syncfusion="clr-namespace:..."` | Razor: `@using Syncfusion.Blazor.Grids` |
+| Component declaration | `<syncfusion:SfDataGrid>` (XAML) | `<SfGrid>` / `<SfGrid TValue="T">` (Razor) |
+| Data binding | `ItemsSource` / DataContext / INotifyPropertyChanged | `DataSource="@..."` + component state (`OnInitialized[Async]`, `StateHasChanged()`) |
+| Collection type | `ObservableCollection<T>` for change notifications | `List<T>` / `IEnumerable<T>`; UI updates via re-render or StateHasChanged |
+| Columns | Typed columns (GridTextColumn, GridNumericColumn, GridTemplateColumn) | `GridColumn` / `GridTemplateColumn`, `Field="@nameof(...)"`, `Format`/`EditType` |
+| Templates | XAML DataTemplate | Razor <Template> sections |
+| Editing & API | XAML boolean props, code‑behind events, direct object refs (x:Name) | `GridEditSettings`, `GridEvents`, EventCallback<T>, `@ref` async APIs |
+| Events & commands | CLR events / ICommand | EventCallback-based handlers (async) |
+| Theming & assets | ResourceDictionary / SfSkinManager | CSS theme files + Syncfusion JS; register AddSyncfusionBlazor() |
+| Paging / virtualization | SfDataPager / native virtualization | `GridPageSettings`, `EnableVirtualization`, `SfDataManager` for remote ops |
+| Lifecycle & refs | constructor / Loaded event / x:Name | `OnInitialized[Async]`, DI, `@ref` and async methods |
 
 #### Step-by-step migration
 
@@ -257,11 +264,74 @@ Add the DataGrid component to your page with data binding and column definitions
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
 
-<Window xmlns:syncfusion="http://schemas.syncfusion.com/wpf">
-    <syncfusion:SfDataGrid x:Name="dataGrid" 
-                           ItemsSource="{Binding Orders}"
-                           AutoGenerateColumns="True" />
+<Window x:Class="WpfDataGridApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Grid;assembly=Syncfusion.SfGrid.WPF"
+        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=FluentLight}"
+        Title="Orders" Height="450" Width="800">
+    
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           AutoGenerateColumns="False"
+                           AllowEditing="True"
+                           AllowSorting="True"
+                           AllowFiltering="True"
+                           AddNewRowPosition="Top">
+        
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:GridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID"
+                                       IsPrimaryKey="True"
+                                       Width="100" />
+            <syncfusion:GridTextColumn MappingName="CustomerID"
+                                       HeaderText="Customer ID"
+                                       Width="120" />
+            <syncfusion:GridNumericColumn MappingName="Freight"
+                                          HeaderText="Freight"
+                                          NumberDecimalDigits="2"
+                                          Width="100" />
+        </syncfusion:SfDataGrid.Columns>
+        
+    </syncfusion:SfDataGrid>
+    
 </Window>
+
+{% endhighlight %}
+{% highlight cs tabtitle="MainWindow.xaml.cs" %}
+
+using Syncfusion.UI.Xaml.Grid;
+using System.Collections.ObjectModel;
+using System.Windows;
+
+namespace WpfDataGridApp
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            dataGrid.ItemsSource = GetOrders();
+        }
+
+        private ObservableCollection<Order> GetOrders()
+        {
+            return new ObservableCollection<Order>
+            {
+                new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+                new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
+                new Order { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
+            };
+        }
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -274,33 +344,33 @@ Add the DataGrid component to your page with data binding and column definitions
 @page "/orders"
 @rendermode InteractiveServer
 
-<SfGrid DataSource="@Orders" >
-  <GridColumns>
-      <GridColumn Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-      <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100"></GridColumn>
-      <GridColumn Field="OrderDate" HeaderText="Order Date" Width="100"></GridColumn>
-      <GridColumn Field="Freight" HeaderText="Freight" Width="120"></GridColumn>
-  </GridColumns>
+<SfGrid DataSource="@Orders" AllowSorting="true" AllowFiltering="true">
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2" Width="100"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
-@code{
-    public List<Order> Orders { get; set; }
+@code {
+    public List<Order> Orders { get; set; } = new();
+    
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+        Orders = new List<Order>
         {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+            new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
+            new Order { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
+        };
     }
     
-    public class Order {
-        public int? OrderID { get; set; }
+    public class Order
+    {
+        public int OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public double Freight { get; set; }
     }
 }
 
@@ -320,13 +390,18 @@ For detailed explanation, refer to the [WPF TreeGrid getting started guide](http
 
 #### Migration overview
 
-| Aspect | WPF | Blazor |
-|---|---|---|
-| **Package** | `Syncfusion.SfGrid.WPF` | `Syncfusion.Blazor.TreeGrid` |
-| **Namespace** | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.TreeGrid` |
-| **Hierarchy binding** | `ChildPropertyName="Children"` | `IdMapping` + `ParentIdMapping` |
-| **Data structure** | Self-referencing or nested | Self-referencing (flat collection) |
-| **Steps** | 3 steps | 4 steps |
+| Aspect | WPF (SfTreeGrid) | Blazor (SfTreeGrid) |
+|---|---:|---|
+| Package | `Syncfusion.SfGrid.WPF` | `Syncfusion.Blazor.TreeGrid` |
+| Namespace | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.TreeGrid` |
+| Component declaration | `<syncfusion:SfTreeGrid>` (XAML) | `<SfTreeGrid>` (Razor) |
+| Hierarchy mapping | `ChildPropertyName` / `ParentPropertyName` (+ SelfRelationRootValue sentinel) | `IdMapping` + `ParentIdMapping` (nullable parent IDs preferred) |
+| Data shape | Nested children collections OR self‑referencing flat lists | Optimized for flat self‑referencing lists; nested requires mapping/flattening |
+| Tree column | Automatic tree UI bound to hierarchical column | `TreeColumnIndex` to specify expand/collapse column |
+| Columns & templates | TreeGridTextColumn, TreeGridNumericColumn | `TreeGridColumn` + Razor templates |
+| Expand/collapse state | `IsExpanded` on data items | Programmatic via `ExpandedRowIndexes` / API |
+| Virtualization / performance | Native WPF rendering | Virtual scrolling / load‑on‑demand; set Height for virtualization |
+| Events | CLR events | EventCallback-based GridEvents |
 
 #### Step-by-step migration
 
@@ -424,12 +499,78 @@ Add the TreeGrid component with self-referencing data structure using IdMapping 
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
 
-<Window xmlns:syncfusion="http://schemas.syncfusion.com/wpf">
+<Window x:Class="WpfTreeGridApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.TreeGrid;assembly=Syncfusion.SfGrid.WPF"
+        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=FluentLight}"
+        Title="Tree Grid - Employees" Height="450" Width="800">
+
     <syncfusion:SfTreeGrid x:Name="treeGrid"
-                           ItemsSource="{Binding Employees}"
-                           ChildPropertyName="Children"
-                           AutoGenerateColumns="True" />
+                           AutoGenerateColumns="False"
+                           ChildPropertyName="TaskID"
+                           ParentPropertyName="ParentID"
+                           SelfRelationRootValue="-1"
+                           AllowEditing="True"
+                           AllowDeleting="True"
+                           AddNewRowPosition="Top">
+
+        <syncfusion:SfTreeGrid.Columns>
+            <syncfusion:TreeGridTextColumn MappingName="TaskID"
+                                           HeaderText="Task ID"
+                                           IsPrimaryKey="True"
+                                           Width="100" />
+            <syncfusion:TreeGridTextColumn MappingName="TaskName"
+                                           HeaderText="Task Name"
+                                           Width="200" />
+            <syncfusion:TreeGridNumericColumn MappingName="Duration"
+                                              HeaderText="Duration"
+                                              Width="100" />
+        </syncfusion:SfTreeGrid.Columns>
+
+    </syncfusion:SfTreeGrid>
+
 </Window>
+
+{% endhighlight %}
+{% highlight cs tabtitle="MainWindow.xaml.cs" %}
+
+using Syncfusion.UI.Xaml.TreeGrid;
+using System.Collections.ObjectModel;
+using System.Windows;
+
+namespace WpfTreeGridApp
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            treeGrid.ItemsSource = GetTaskData();
+        }
+
+        private ObservableCollection<TaskInfo> GetTaskData()
+        {
+            return new ObservableCollection<TaskInfo>
+            {
+                new TaskInfo { TaskID = 1, TaskName = "Planning", Duration = 5, ParentID = -1 },
+                new TaskInfo { TaskID = 2, TaskName = "Plan timeline", Duration = 3, ParentID = 1 },
+                new TaskInfo { TaskID = 3, TaskName = "Plan budget", Duration = 2, ParentID = 1 },
+                new TaskInfo { TaskID = 4, TaskName = "Development", Duration = 10, ParentID = -1 },
+                new TaskInfo { TaskID = 5, TaskName = "Implementation", Duration = 7, ParentID = 4 }
+            };
+        }
+    }
+
+    public class TaskInfo
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int ParentID { get; set; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -442,32 +583,36 @@ Add the TreeGrid component with self-referencing data structure using IdMapping 
 @page "/employees"
 @rendermode InteractiveServer
 
-<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1">
+    <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></TreeGridEditSettings>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="5" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="30" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="100" IsPrimaryKey="true"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="200"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code
-{
-    public class BusinessObject
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    public List<BusinessObject> TreeData = new List<BusinessObject>();
-
+@code {
+    public List<TaskInfo> TreeData { get; set; } = new();
+    
     protected override void OnInitialized()
     {
-        TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", ParentId = null });
-        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", ParentId = 1 });
-        TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", ParentId = 1, });
-        TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", ParentId = null });
-        TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", ParentId = 4 });
-        TreeData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", ParentId = 5 });
+        TreeData = new List<TaskInfo>
+        {
+            new TaskInfo { TaskID = 1, TaskName = "Planning", Duration = 5, ParentID = null },
+            new TaskInfo { TaskID = 2, TaskName = "Plan timeline", Duration = 3, ParentID = 1 },
+            new TaskInfo { TaskID = 3, TaskName = "Plan budget", Duration = 2, ParentID = 1 },
+            new TaskInfo { TaskID = 4, TaskName = "Development", Duration = 10, ParentID = null },
+            new TaskInfo { TaskID = 5, TaskName = "Implementation", Duration = 7, ParentID = 4 }
+        };
+    }
+    
+    public class TaskInfo
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int? ParentID { get; set; }
     }
 }
 
@@ -486,13 +631,17 @@ For detailed explanation, refer to the [WPF Charts getting started guide](https:
 
 #### Migration overview
 
-| Aspect | WPF | Blazor |
-|---|---|---|
-| **Package** | `Syncfusion.SfChart.WPF` | `Syncfusion.Blazor.Charts` |
-| **Namespace** | XAML: `xmlns:chart` | Razor: `@using Syncfusion.Blazor.Charts` |
-| **Series definition** | Nested XAML elements | Razor components |
-| **Data binding** | `ItemsSource` + `XBindingPath` | `DataSource` + `XName` |
-| **Steps** | 3 steps | 4 steps |
+| Aspect | WPF (SfChart) | Blazor (SfChart) |
+|---|---:|---|
+| Package | `Syncfusion.SfChart.WPF` | `Syncfusion.Blazor.Charts` |
+| Namespace | XAML: `xmlns:chart` | Razor: `@using Syncfusion.Blazor.Charts` |
+| Component model | Nested XAML elements (PrimaryAxis, Series elements) | Razor components (ChartPrimaryXAxis, ChartSeries, ChartSeriesCollection) |
+| Axis & series declaration | Axis elements (CategoryAxis, NumericalAxis), series types via element names | Axis components with `ValueType`, `ChartSeries` with `Type="ChartSeriesType.*"` |
+| Data binding | `ItemsSource` + `XBindingPath` / `YBindingPath` | `DataSource` + `XName` / `YName` |
+| Markers / adornments | `AdornmentsInfo` nested config | `ChartMarker`, `ChartTooltipSettings` components |
+| Tooltip & animation | Series‑level properties and templates | Centralized `ChartTooltipSettings`, `ChartSeriesAnimation` component |
+| Responsiveness | Window sizing | CSS-based sizing (Width="100%") and responsive containers |
+| Events | CLR events | EventCallback handlers (OnPointClick, TooltipRender, etc.) |
 
 #### Step-by-step migration
 
@@ -588,21 +737,79 @@ Add the Chart component with axis configuration, series definition, and data bin
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
 
-<Window xmlns:chart="http://schemas.syncfusion.com/wpf">
-    <chart:SfChart>
-        <chart:SfChart.PrimaryAxis>
-            <chart:CategoryAxis />
-        </chart:SfChart.PrimaryAxis>
-        <chart:SfChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfChart.SecondaryAxis>
-        <chart:SfChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding SalesData}"
-                               XBindingPath="Month"
-                               YBindingPath="Sales" />
-        </chart:SfChart.Series>
-    </chart:SfChart>
+<Window x:Class="WpfChart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=FluentLight}"
+        Title="Sales Analysis" Height="450" Width="800">
+
+    <syncfusion:SfChart Header="Sales Analysis">
+
+        <syncfusion:SfChart.PrimaryAxis>
+            <syncfusion:CategoryAxis Header="Month" />
+        </syncfusion:SfChart.PrimaryAxis>
+
+        <syncfusion:SfChart.SecondaryAxis>
+            <syncfusion:NumericalAxis Header="Sales" />
+        </syncfusion:SfChart.SecondaryAxis>
+
+        <syncfusion:SfChart.Legend>
+            <syncfusion:ChartLegend Visibility="Visible" />
+        </syncfusion:SfChart.Legend>
+
+        <syncfusion:ColumnSeries ItemsSource="{Binding SalesData}"
+                                 XBindingPath="Month"
+                                 YBindingPath="Sales"
+                                 Label="Sales 2024"
+                                 ShowTooltip="True">
+            <syncfusion:ColumnSeries.AdornmentsInfo>
+                <syncfusion:ChartAdornmentInfo ShowMarker="True" 
+                                               Symbol="Circle"
+                                               SymbolInterior="White"
+                                               SymbolStroke="{Binding Interior, RelativeSource={RelativeSource Mode=Self}}" />
+            </syncfusion:ColumnSeries.AdornmentsInfo>
+        </syncfusion:ColumnSeries>
+
+    </syncfusion:SfChart>
+
 </Window>
+
+{% endhighlight %}
+{% highlight cs tabtitle="MainWindow.xaml.cs" %}
+
+using Syncfusion.UI.Xaml.Charts;  
+using System.Collections.ObjectModel;
+using System.Windows;
+
+namespace WpfChart
+{
+    public partial class MainWindow : Window
+    {
+        public ObservableCollection<SalesInfo> SalesData { get; set; }
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            SalesData = new ObservableCollection<SalesInfo>
+            {
+                new SalesInfo { Month = "Jan", Sales = 35 },
+                new SalesInfo { Month = "Feb", Sales = 28 },
+                new SalesInfo { Month = "Mar", Sales = 34 },
+                new SalesInfo { Month = "Apr", Sales = 32 },
+                new SalesInfo { Month = "May", Sales = 40 }
+            };
+            DataContext = this;
+        }
+    }
+
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double Sales { get; set; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -615,24 +822,42 @@ Add the Chart component with axis configuration, series definition, and data bin
 @page "/sales"
 @rendermode InteractiveServer
 
-<SfChart Title="Sales (USD)">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+<SfChart Title="Sales Analysis">
+    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Sales"></ChartPrimaryYAxis>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="Data"
-                     XName="Month" YName="Amount"
-                     Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column"
-                     Name="Sales" />
+        <ChartSeries DataSource="@SalesData" 
+                     XName="Month" 
+                     YName="Sales" 
+                     Type="ChartSeriesType.Column"
+                     Name="Sales 2024">
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
     </ChartSeriesCollection>
+    <ChartLegendSettings Visible="true"></ChartLegendSettings>
+    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
 </SfChart>
 
 @code {
-    public List<Point> Data { get; set; } = new()
+    public List<SalesInfo> SalesData { get; set; } = new();
+    
+    protected override void OnInitialized()
     {
-        new("Jan", 42500), new("Feb", 39100), new("Mar", 45900),
-        new("Apr", 54400), new("May", 49350), new("Jun", 61200)
-    };
-
-    public record Point(string Month, double Amount);
+        SalesData = new List<SalesInfo>
+        {
+            new SalesInfo { Month = "Jan", Sales = 35 },
+            new SalesInfo { Month = "Feb", Sales = 28 },
+            new SalesInfo { Month = "Mar", Sales = 34 },
+            new SalesInfo { Month = "Apr", Sales = 32 },
+            new SalesInfo { Month = "May", Sales = 40 }
+        };
+    }
+    
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double Sales { get; set; }
+    }
 }
 
 {% endhighlight %}
@@ -644,13 +869,18 @@ For detailed explanation, refer to the [WPF Scheduler getting started guide](htt
 
 #### Migration overview
 
-| Aspect | WPF | Blazor |
-|---|---|---|
-| **Package** | `Syncfusion.SfSchedule.WPF` | `Syncfusion.Blazor.Schedule` |
-| **Namespace** | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.Schedule` |
-| **Appointment model** | `ScheduleAppointment` | Custom model with `TValue` |
-| **View configuration** | `ScheduleType` enum | `ScheduleView` components |
-| **Steps** | 3 steps | 4 steps |
+| Aspect | WPF (SfScheduler) | Blazor (SfSchedule<TValue>) |
+|---|---:|---|
+| Package | `Syncfusion.SfSchedule.WPF` | `Syncfusion.Blazor.Schedule` |
+| Namespace | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.Schedule` |
+| Component declaration | `<syncfusion:SfScheduler>` (XAML, ScheduleAppointment model) | `<SfSchedule TValue="TModel">` (Razor, generic model) |
+| Appointment model | `ScheduleAppointment` / SchedulerAppointmentCollection | Custom model type `TValue` + explicit `ScheduleEventSettings` field mappings |
+| Views / configuration | `ViewType` enum (single prop) | `ScheduleViews` collection with `ScheduleView` elements |
+| Field mapping | Implicit for ScheduleAppointment or mapping props | Explicit mapping (`SubjectField`, `StartTimeField`, `EndTimeField`, etc.) |
+| Templates & editors | XAML DataTemplate / built‑in editors | `AppointmentTemplate`, `TimeSlotTemplate` Razor templates; `RecurrenceEditor` component |
+| Resources & grouping | `ResourceCollection` + mapping | `ScheduleResources` / `ScheduleResource` components |
+| Events & callbacks | CLR events | EventCallback-based events (OnActionBegin, OnCellClick) |
+| Data & performance | Native large‑set handling | Virtualization / lazy loading recommended for large datasets |
 
 #### Step-by-step migration
 
@@ -663,7 +893,7 @@ Install the Scheduler NuGet package to enable calendar and appointment schedulin
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.SfSchedule.WPF
+dotnet add package Syncfusion.SfScheduler.WPF
 
 {% endhighlight %}
 {% endtabs %}
@@ -746,18 +976,59 @@ Add the Scheduler component with view configuration, appointment data binding, a
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
 
-<Window xmlns:syncfusion="http://schemas.syncfusion.com/wpf">
+<Window x:Class="WpfScheduler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Scheduler;assembly=Syncfusion.SfScheduler.WPF"
+        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=FluentLight}"
+        Title="Scheduler" Height="650" Width="1000">
+
     <syncfusion:SfScheduler x:Name="scheduler"
-                            ScheduleType="Week"
-                            ItemsSource="{Binding Appointments}">
-        <syncfusion:SfScheduler.AppointmentMapping>
-            <syncfusion:AppointmentMapping 
-                SubjectMapping="Subject"
-                StartTimeMapping="StartTime"
-                EndTimeMapping="EndTime" />
-        </syncfusion:SfScheduler.AppointmentMapping>
-    </syncfusion:SfScheduler>
+                            ViewType="Week"
+                            DisplayDate="{Binding CurrentDate, Mode=TwoWay}" />
+
 </Window>
+
+{% endhighlight %}
+{% highlight cs tabtitle="MainWindow.xaml.cs" %}
+
+using Syncfusion.UI.Xaml.Scheduler;
+using System;
+using System.Windows;
+
+namespace WpfScheduler
+{
+    public partial class MainWindow : Window
+    {
+        public DateTime CurrentDate { get; set; } = DateTime.Today;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            DataContext = this;
+
+            // Create appointments
+            scheduler.ItemsSource = new SchedulerAppointmentCollection
+            {
+                new ScheduleAppointment
+                {
+                    Subject = "Project Meeting",
+                    StartTime = DateTime.Today.AddHours(10),
+                    EndTime = DateTime.Today.AddHours(11),
+                    AppointmentBackground = System.Windows.Media.Brushes.LightBlue
+                },
+                new ScheduleAppointment
+                {
+                    Subject = "Client Call",
+                    StartTime = DateTime.Today.AddHours(14),
+                    EndTime = DateTime.Today.AddHours(15),
+                    AppointmentBackground = System.Windows.Media.Brushes.LightGreen
+                }
+            };
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -770,28 +1041,46 @@ Add the Scheduler component with view configuration, appointment data binding, a
 @page "/calendar"
 @rendermode InteractiveServer
 
-<SfSchedule TValue=AppointmentData>
+<SfSchedule TValue="Meeting" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
         <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek"></ScheduleView>
         <ScheduleView Option="View.Month"></ScheduleView>
-        <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@Appointments"></ScheduleEventSettings>
 </SfSchedule>
+
 @code {
-    public class AppointmentData
+    private DateTime CurrentDate = DateTime.Today;
+    public List<Meeting> Appointments { get; set; } = new();
+    
+    protected override void OnInitialized()
+    {
+        Appointments = new List<Meeting>
+        {
+            new Meeting 
+            { 
+                Id = 1,
+                Subject = "Project Meeting", 
+                StartTime = DateTime.Today.AddHours(10), 
+                EndTime = DateTime.Today.AddHours(11)
+            },
+            new Meeting 
+            { 
+                Id = 2,
+                Subject = "Client Call", 
+                StartTime = DateTime.Today.AddHours(14), 
+                EndTime = DateTime.Today.AddHours(15)
+            }
+        };
+    }
+    
+    public class Meeting
     {
         public int Id { get; set; }
         public string Subject { get; set; }
-        public string Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 
@@ -804,13 +1093,18 @@ For detailed explanation, refer to the [WPF Diagram getting started guide](https
 
 #### Migration overview
 
-| Aspect | WPF | Blazor |
-|---|---|---|
-| **Package** | `Syncfusion.SfDiagram.WPF` | `Syncfusion.Blazor.Diagram` |
-| **Namespace** | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.Diagram` |
-| **Node definition** | `NodeCollection` in XAML | `DiagramObjectCollection<Node>` in code |
-| **Connector definition** | `ConnectorCollection` in XAML | `DiagramObjectCollection<Connector>` in code |
-| **Steps** | 3 steps | 4 steps |
+| Aspect | WPF (SfDiagram) | Blazor (SfDiagramComponent) |
+|---|---:|---|
+| Package | `Syncfusion.SfDiagram.WPF` | `Syncfusion.Blazor.Diagram` |
+| Namespace | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.Diagram` |
+| Node definition | `NodeCollection` in XAML (declarative) | `DiagramObjectCollection<Node>` in code (`@code` / OnInitialized) |
+| Connector definition | `ConnectorCollection` in XAML | `DiagramObjectCollection<Connector>` in code |
+| Shape specification | XAML Shape enums / ViewModels | Shape objects (FlowShape, Path) and `ShapeStyle` objects in code |
+| Positioning | Attributes `OffsetX`, `OffsetY` in XAML | Properties set in Node objects (OffsetX/OffsetY) in code |
+| Ports & constraints | Declared in XAML | Programmatic `Ports` + `NodeConstraints` enum flags |
+| Layouts | `LayoutManager` XAML settings | `DiagramLayout` component with `LayoutType` and options |
+| Data binding / auto‑generate | `DataSourceSettings` mapping in XAML | `DataSourceSettings` + `SfDataManager` support; code mapping required |
+| Events & serialization | Routed events, Save/Load methods | EventCallback callbacks; `SaveDiagram()` / `LoadDiagram()` async JSON APIs |
 
 #### Step-by-step migration
 
@@ -906,19 +1200,56 @@ Add the Diagram component and define nodes and connectors programmatically in th
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
 
-<Window xmlns:syncfusion="http://schemas.syncfusion.com/wpf">
+<Window x:Class="WpfDiagram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=FluentLight}"
+        Title="Diagram" Height="600" Width="1000">
+
     <syncfusion:SfDiagram x:Name="diagram">
         <syncfusion:SfDiagram.Nodes>
             <syncfusion:NodeCollection>
-                <syncfusion:NodeViewModel UnitHeight="100" 
-                                         UnitWidth="100" 
-                                         OffsetX="100" 
-                                         OffsetY="100" 
-                                         Shape="{syncfusion:FlowChartShape ShapeType=Process}" />
+                <syncfusion:NodeViewModel ID="node1" 
+                                          UnitHeight="60" 
+                                          UnitWidth="100"
+                                          OffsetX="100" 
+                                          OffsetY="100" />
+                <syncfusion:NodeViewModel ID="node2" 
+                                          UnitHeight="60" 
+                                          UnitWidth="100"
+                                          OffsetX="300" 
+                                          OffsetY="100" />
             </syncfusion:NodeCollection>
         </syncfusion:SfDiagram.Nodes>
+        
+        <syncfusion:SfDiagram.Connectors>
+            <syncfusion:ConnectorCollection>
+                <syncfusion:ConnectorViewModel SourceNodeID="node1" 
+                                               TargetNodeID="node2" />
+            </syncfusion:ConnectorCollection>
+        </syncfusion:SfDiagram.Connectors>
     </syncfusion:SfDiagram>
+
 </Window>
+
+{% endhighlight %}
+{% highlight cs tabtitle="MainWindow.xaml.cs" %}
+
+using Syncfusion.UI.Xaml.Diagram;
+using System.Windows;
+
+namespace WpfDiagram
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -931,14 +1262,7 @@ Add the Diagram component and define nodes and connectors programmatically in th
 @page "/flow"
 @rendermode InteractiveServer
 
-<SfDiagramComponent Height="600px" 
-                    Width="100%" 
-                    Nodes="@nodes" 
-                    Connectors="@connectors">
-    <SnapSettings>
-        <HorizontalGridLines LineColor="#e0e0e0" />
-        <VerticalGridLines LineColor="#e0e0e0" />
-    </SnapSettings>
+<SfDiagramComponent Height="600px" Width="100%" Nodes="@nodes" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code {
@@ -947,36 +1271,33 @@ Add the Diagram component and define nodes and connectors programmatically in th
     
     protected override void OnInitialized()
     {
-        // Create node
-        Node node1 = new Node()
+        // Create Node 1
+        nodes.Add(new Node()
         {
             ID = "node1",
-            Height = 100,
+            Height = 60,
+            Width = 100,
+            OffsetX = 100,
+            OffsetY = 100
+        });
+        
+        // Create Node 2
+        nodes.Add(new Node()
+        {
+            ID = "node2",
+            Height = 60,
             Width = 100,
             OffsetX = 300,
-            OffsetY = 100,
-            Shape = new FlowShape() 
-            { 
-                Type = NodeShapes.Flow, 
-                Shape = NodeFlowShapes.Process 
-            },
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "#6495ED" 
-            }
-        };
-        nodes.Add(node1);
+            OffsetY = 100
+        });
         
-        // Create connector
-        Connector connector1 = new Connector()
+        // Create Connector
+        connectors.Add(new Connector()
         {
             ID = "connector1",
             SourceID = "node1",
-            TargetID = "node2",
-            Type = ConnectorSegmentType.Orthogonal
-        };
-        connectors.Add(connector1);
+            TargetID = "node2"
+        });
     }
 }
 
@@ -989,14 +1310,19 @@ For detailed explanation, refer to the [WPF RichTextBox getting started guide](h
 
 #### Migration overview
 
-| Aspect | WPF | Blazor |
-|---|---|---|
-| **Package** | `Syncfusion.SfRichTextBoxAdv.WPF` | `Syncfusion.Blazor.RichTextEditor` |
-| **Component name** | `SfRichTextBoxAdv` | `SfRichTextEditor` |
-| **Namespace** | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.RichTextEditor` |
-| **Content binding** | `Document` property | `@bind-Value` |
-| **Toolbar** | Built-in ribbon UI | Configurable toolbar |
-| **Steps** | 3 steps | 4 steps |
+| Aspect | WPF (SfRichTextBoxAdv) | Blazor (SfRichTextEditor) |
+|---|---:|---|
+| Package | `Syncfusion.SfRichTextBoxAdv.WPF` | `Syncfusion.Blazor.RichTextEditor` |
+| Namespace | XAML: `xmlns:syncfusion` | Razor: `@using Syncfusion.Blazor.RichTextEditor` |
+| Component name | `SfRichTextBoxAdv` (Document model) | `SfRichTextEditor` (HTML value model) |
+| Content model | `Document` / DocumentAdv (DOCX/RTF native) | HTML string via `Value` / `@bind-Value` |
+| Load / Save | Stream-based Load/Save (DOCX/RTF/HTML) | Value string; import/export via converters or server-side processing |
+| Toolbar & UI | RibbonBar + command bindings | `ToolbarSettings` with configurable items; Razor templates for dialogs |
+| Images | Embedded images or file paths | Base64 or URLs; requires image upload endpoint (ImageSettings) |
+| Spell-check & print | Native spell checker; direct printing | Browser spell-check; print via browser APIs / PrintAsync |
+| Templates / dialogs | XAML DataTemplates | Razor templates + JS interop for custom dialogs |
+| Undo/Redo & keyboard | Native undo stack & full OS shortcuts | Built-in undo/redo; browser shortcut limitations |
+| Performance | Native large‑doc support | Browser limits for very large HTML; consider server conversion/pagination |
 
 #### Step-by-step migration
 
@@ -1092,14 +1418,61 @@ Add the RichTextEditor component with toolbar configuration and content binding.
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
 
-<Window xmlns:syncfusion="http://schemas.syncfusion.com/wpf">
-    <syncfusion:SfRichTextBoxAdv x:Name="richTextBox"
-                                 LayoutType="Pages">
-        <syncfusion:SfRichTextBoxAdv.RibbonUI>
-            <syncfusion:SfRichTextRibbonUI />
-        </syncfusion:SfRichTextBoxAdv.RibbonUI>
-    </syncfusion:SfRichTextBoxAdv>
+<Window x:Class="WpfRichText.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="clr-namespace:Syncfusion.Windows.Controls.RichTextBoxAdv;assembly=Syncfusion.SfRichTextBoxAdv.WPF"
+        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=FluentLight}"
+        Title="RichTextEditor" Height="500" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <syncfusion:RibbonBar Grid.Row="0">
+            <syncfusion:RibbonTab Caption="Home" IsChecked="True">
+                <syncfusion:RibbonBar Items="{Binding ElementName=richTextBoxAdv, Path=RibbonCommands}" />
+            </syncfusion:RibbonTab>
+        </syncfusion:RibbonBar>
+
+        <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Grid.Row="1" />
+    </Grid>
+
 </Window>
+
+{% endhighlight %}
+{% highlight cs tabtitle="MainWindow.xaml.cs" %}
+
+using Syncfusion.Windows.Controls.RichTextBoxAdv;
+using System.IO;
+using System.Text;
+using System.Windows;
+
+namespace WpfRichText
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            LoadInitialContent();
+        }
+
+        private void LoadInitialContent()
+        {
+            string htmlContent = "<p><b>Welcome!</b> Start editing your document here...</p>";
+            byte[] htmlBytes = Encoding.UTF8.GetBytes(htmlContent);
+
+            using (MemoryStream stream = new MemoryStream(htmlBytes))
+            {
+                richTextBoxAdv.Load(stream, FormatType.Html);
+            }
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1112,32 +1485,11 @@ Add the RichTextEditor component with toolbar configuration and content binding.
 @page "/editor"
 @rendermode InteractiveServer
 
-<SfRichTextEditor @bind-Value="@EditorContent" Height="500px">
-    <RichTextEditorToolbarSettings Items="@Tools" />
+<SfRichTextEditor @bind-Value="@HtmlContent" Height="500px">
 </SfRichTextEditor>
 
 @code {
-    private string EditorContent { get; set; } = "<p>Start typing here...</p>";
-    
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
-    };
-    
+    private string HtmlContent { get; set; } = "<p><b>Welcome!</b> Start editing your document here...</p>";
 }
 
 {% endhighlight %}
@@ -1157,35 +1509,17 @@ Add the RichTextEditor component with toolbar configuration and content binding.
 
 > N> All Blazor components require `Syncfusion.Blazor.Themes` for theming and `@rendermode InteractiveServer` (or another interactive mode) for full interactivity.
 
----
-
 ## Detailed DataGrid migration
 
 The following sections provide **in-depth migration guidance** for the **Syncfusion DataGrid**, covering data binding, columns, editing, sorting, filtering, paging, events, styling, and performance optimization.
 
-### Key DataGrid property concepts
-
-Before diving into detailed migration, understanding the **intent and migration relevance** of major DataGrid properties is essential:
-
-| Property / Feature | Intent | Migration Relevance |
-|---|---|---|
-| **ItemsSource / DataSource** | Binds the grid to a data collection | WPF uses `ItemsSource` with `ObservableCollection`; Blazor uses `DataSource` with `List<T>` or `IEnumerable<T>` |
-| **AutoGenerateColumns** | Automatically creates columns from data model properties | WPF: `AutoGenerateColumns="True"`; Blazor: Manual `<GridColumns>` definition recommended for control |
-| **AllowEditing / GridEditSettings** | Enables inline, batch, or dialog editing | WPF: `AllowEditing="True"`; Blazor: `<GridEditSettings AllowEditing="true" Mode="EditMode.Normal">` |
-| **AllowSorting / AllowFiltering** | Enables user-driven sorting and filtering | Direct property mapping from WPF to Blazor with similar syntax |
-| **SelectionMode / GridSelectionSettings** | Controls single or multiple row/cell selection | WPF: `SelectionMode` property; Blazor: `<GridSelectionSettings Mode="...">` |
-| **AllowPaging / GridPageSettings** | Enables pagination | WPF uses external `SfDataPager`; Blazor has built-in `<GridPageSettings>` |
-| **Validation (IDataErrorInfo / ValidationRules)** | Enforces data integrity during editing | WPF: `IDataErrorInfo` interface; Blazor: `ValidationRules` property on columns |
-| **Events (GridEvents)** | Handles user actions (row click, edit, save, delete) | WPF: Event handlers in code-behind; Blazor: `<GridEvents TValue="...">` component |
-
 ### Data binding
 
-#### WPF data binding
+**WPF implementation:**
 
 {% tabs %}
 {% highlight c# tabtitle="OrderViewModel.cs" %}
 
-// WPF ViewModel
 public class OrderViewModel : INotifyPropertyChanged
 {
     private ObservableCollection<Order> _orders;
@@ -1194,10 +1528,12 @@ public class OrderViewModel : INotifyPropertyChanged
         get => _orders;
         set { _orders = value; OnPropertyChanged(); }
     }
+    
     public OrderViewModel()
     {
         Orders = new ObservableCollection<Order>(OrderService.GetOrders());
     }
+    
     public event PropertyChangedEventHandler PropertyChanged;
     protected void OnPropertyChanged([CallerMemberName] string name = null)
         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
@@ -1211,93 +1547,104 @@ public class OrderViewModel : INotifyPropertyChanged
 
 <syncfusion:SfDataGrid ItemsSource="{Binding Orders}" AutoGenerateColumns="False">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:GridTextColumn    HeaderText="Order ID"  MappingName="OrderID" />
-        <syncfusion:GridTextColumn    HeaderText="Customer"  MappingName="CustomerID" />
-        <syncfusion:GridNumericColumn HeaderText="Freight"   MappingName="Freight" />
+        <syncfusion:GridTextColumn HeaderText="Order ID" MappingName="OrderID" />
+        <syncfusion:GridTextColumn HeaderText="Customer" MappingName="CustomerID" />
+        <syncfusion:GridNumericColumn HeaderText="Freight" MappingName="Freight" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor data binding
-
-{% tabs %}
-{% highlight c# tabtitle="Order.cs" %}
-
-// Order.cs — reusable from WPF without modification
-public class Order
-{
-    public int    OrderID    { get; set; }
-    public string CustomerID { get; set; }
-    public double Freight    { get; set; }
-    public string ShipCity   { get; set; }
-    public DateTime OrderDate { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
 @page "/orders"
 @rendermode InteractiveServer
-@inject OrderService OrderService
 
-<SfGrid TValue="Order" DataSource="@Orders" AllowSorting="true" AllowPaging="true">
+<SfGrid TValue="Order" DataSource="@Orders" Height="400px">
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)"    HeaderText="Order ID"   IsPrimaryKey="true"      Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer"                            Width="150" />
-        <GridColumn Field="@nameof(Order.Freight)"    HeaderText="Freight"    Format="C2"              Width="120" />
-        <GridColumn Field="@nameof(Order.OrderDate)"  HeaderText="Order date" Format="d" Type="ColumnType.Date" Width="150" />
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="ID" Width="100" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
     </GridColumns>
 </SfGrid>
 
 @code {
-    private List<Order> Orders { get; set; } = new();
-
-    protected override async Task OnInitializedAsync()
+    List<Order> Orders = new()
     {
-        Orders = await OrderService.GetOrdersAsync();
+        new Order{ OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+        new Order{ OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
+        new Order{ OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
+    };
+
+    class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Data binding comparison
+**Key migration changes:**
+- `ItemsSource` → `DataSource`
+- `ObservableCollection<T>` → `List<T>` or `IEnumerable<T>`
+- `INotifyPropertyChanged` → `StateHasChanged()`
+- `MappingName` → `Field="@nameof(...)"`
 
-| Feature | WPF (`SfDataGrid`) | Blazor ([`SfGrid<TValue>`](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)) |
-|---|---|---|
-| **Bind property** | `ItemsSource="{Binding Orders}"` | `DataSource="@Orders"` |
-| **Collection type** | `ObservableCollection<T>` | `List<T>`, `IEnumerable<T>` |
-| **Change notification** | `INotifyPropertyChanged` | `StateHasChanged()` |
-| **Column definition** | `SfDataGrid.Columns` (XAML) | `<GridColumns>` (Razor) |
-| **Field mapping** | `MappingName="OrderID"` | `Field="@nameof(Order.OrderID)"` |
-| **Async loading** | BackgroundWorker / Task + Dispatcher | `OnInitializedAsync()` |
-| **Generic type** | Inferred from `ItemsSource` | Explicit `TValue="Order"` required |
+### Column types and formatting
 
-### Columns and column types
+**WPF implementation:**
 
-#### Column type mapping
+{% tabs %}
+{% highlight xml tabtitle="OrderView.xaml" %}
 
-| WPF column type | Blazor equivalent | Notes |
-|---|---|---|
-| `GridTextColumn` | [`GridColumn`](https://blazor.syncfusion.com/documentation/datagrid/columns/column-types) (default) | Text / string data |
-| `GridNumericColumn` | `GridColumn` with `Format="N2"` | Numeric data |
-| `GridCurrencyColumn` | `GridColumn` with `Format="C2"` | Currency data |
-| `GridDateTimeColumn` | `GridColumn` with `Type="ColumnType.Date"` | Date / DateTime |
-| `GridCheckBoxColumn` | `GridColumn` with `Type="ColumnType.Boolean"` | Boolean / checkbox |
-| `GridComboBoxColumn` | `GridColumn` with `EditType="EditType.DropDownEdit"` | Dropdown editing |
-| `GridTemplateColumn` | [`GridTemplateColumn`](https://blazor.syncfusion.com/documentation/datagrid/columns/column-template) | Custom cell templates |
-| `GridImageColumn` | `GridTemplateColumn` | Image rendering |
-| `GridHyperlinkColumn` | `GridTemplateColumn` | Hyperlink rendering |
-| `GridUnboundColumn` | `GridColumn` with `Template` | Computed / unbound data |
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" />
+        <syncfusion:GridNumericColumn MappingName="Freight" HeaderText="Freight" NumberDecimalDigits="2" />
+        <syncfusion:GridCurrencyColumn MappingName="Amount" HeaderText="Amount" />
+        <syncfusion:GridDateTimeColumn MappingName="OrderDate" HeaderText="Order Date" />
+        <syncfusion:GridCheckBoxColumn MappingName="IsShipped" HeaderText="Shipped" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 
-#### Template column example
+{% endhighlight %}
+{% endtabs %}
 
-**WPF:**
+**Blazor implementation:**
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+<SfGrid TValue="Order" DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2" Width="120" />
+        <GridColumn Field="@nameof(Order.Amount)" HeaderText="Amount" Format="C2" Width="120" />
+        <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="150" />
+        <GridColumn Field="@nameof(Order.IsShipped)" HeaderText="Shipped" Type="ColumnType.Boolean" Width="100" />
+    </GridColumns>
+</SfGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Column type mappings:**
+- `GridTextColumn` → `GridColumn` (default)
+- `GridNumericColumn` → `GridColumn` with `Format="N2"`
+- `GridCurrencyColumn` → `GridColumn` with `Format="C2"`
+- `GridDateTimeColumn` → `GridColumn` with `Type="ColumnType.Date"`
+- `GridCheckBoxColumn` → `GridColumn` with `Type="ColumnType.Boolean"`
+
+### Template columns
+
+**WPF implementation:**
 
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
@@ -1305,7 +1652,10 @@ public class Order
 <syncfusion:GridTemplateColumn MappingName="ShipCity" HeaderText="Ship City">
     <syncfusion:GridTemplateColumn.CellTemplate>
         <DataTemplate>
-            <TextBlock Text="{Binding ShipCity}" Foreground="Blue" />
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/location.png" Width="16" Height="16" Margin="0,0,5,0" />
+                <TextBlock Text="{Binding ShipCity}" Foreground="Blue" FontWeight="Bold" />
+            </StackPanel>
         </DataTemplate>
     </syncfusion:GridTemplateColumn.CellTemplate>
 </syncfusion:GridTemplateColumn>
@@ -1313,45 +1663,48 @@ public class Order
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor:**
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<GridColumn Field="@nameof(Order.ShipCity)" HeaderText="Ship City">
+<GridColumn Field="@nameof(Order.ShipCity)" HeaderText="Ship City" Width="200">
     <Template>
-        @{ var order = context as Order; }
-        <span style="color: blue; font-weight: 500;">@order?.ShipCity</span>
+        @{
+            var order = context as Order;
+        }
+        <div style="display: flex; align-items: center;">
+            <img src="/images/location.png" style="width: 16px; height: 16px; margin-right: 5px;" />
+            <span style="color: blue; font-weight: bold;">@order?.ShipCity</span>
+        </div>
     </Template>
 </GridColumn>
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Column formatting reference
-
-| Data type | WPF | Blazor `Format` |
-|---|---|---|
-| Currency | `GridCurrencyColumn` | `Format="C2"` |
-| Integer | `GridNumericColumn` | `Format="N0"` |
-| Decimal | `GridNumericColumn` | `Format="N2"` |
-| Short date | `GridDateTimeColumn` | `Format="d"` |
-| Date-time | `GridDateTimeColumn` | `Format="g"` |
-
 ### Editing
 
-#### WPF editing configuration
+**WPF implementation:**
 
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
 
-<syncfusion:SfDataGrid AllowEditing="True" AddNewRowPosition="Top"
-                       EditMode="Cell" ItemsSource="{Binding Orders}" />
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                       AllowEditing="True"
+                       AddNewRowPosition="Top"
+                       EditMode="Cell">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" AllowEditing="False" />
+        <syncfusion:GridTextColumn MappingName="CustomerID" HeaderText="Customer" />
+        <syncfusion:GridNumericColumn MappingName="Freight" HeaderText="Freight" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor editing configuration
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -1360,23 +1713,28 @@ public class Order
 @rendermode InteractiveServer
 @inject OrderService OrderService
 
-<SfGrid TValue="Order" @ref="Grid" DataSource="@Orders"
+<SfGrid TValue="Order" @ref="Grid" DataSource="@Orders" 
         AllowPaging="true" Toolbar="@ToolbarItems">
-    <GridEditSettings AllowAdding="true" AllowEditing="true"
-                      AllowDeleting="true" Mode="EditMode.Normal" />
+    <GridEditSettings AllowAdding="true" 
+                      AllowEditing="true" 
+                      AllowDeleting="true" 
+                      Mode="EditMode.Normal" />
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)"    HeaderText="Order ID"
-                    IsPrimaryKey="true" IsIdentity="true" Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer"
-                    ValidationRules="@(new ValidationRules { Required = true, MinLength = 3 })"
-                    Width="150" />
-        <GridColumn Field="@nameof(Order.Freight)"    HeaderText="Freight"
-                    Format="C2" EditType="EditType.NumericEdit"
-                    ValidationRules="@(new ValidationRules { Required = true, Min = 0 })"
+        <GridColumn Field="@nameof(Order.OrderID)" 
+                    HeaderText="Order ID" 
+                    IsPrimaryKey="true" 
+                    IsIdentity="true" 
                     Width="120" />
-        <GridColumn Field="@nameof(Order.OrderDate)"  HeaderText="Order date"
-                    Format="d" Type="ColumnType.Date"
-                    EditType="EditType.DatePickerEdit" Width="150" />
+        <GridColumn Field="@nameof(Order.CustomerID)" 
+                    HeaderText="Customer" 
+                    ValidationRules="@(new ValidationRules { Required = true, MinLength = 3 })" 
+                    Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" 
+                    HeaderText="Freight" 
+                    Format="C2" 
+                    EditType="EditType.NumericEdit"
+                    ValidationRules="@(new ValidationRules { Required = true, Min = 0 })" 
+                    Width="120" />
     </GridColumns>
     <GridEvents TValue="Order" OnActionComplete="OnActionComplete" />
 </SfGrid>
@@ -1400,109 +1758,148 @@ public class Order
             else
                 await OrderService.UpdateOrderAsync(args.Data);
         }
-        if (args.RequestType == Action.Delete)
+        else if (args.RequestType == Action.Delete)
+        {
             await OrderService.DeleteOrderAsync(args.Data.FirstOrDefault());
+        }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Editing mode comparison
+**Key migration changes:**
+- `AllowEditing="True"` → `GridEditSettings` component
+- `EditMode="Cell"` → `Mode="EditMode.Batch"` (or `EditMode.Normal` for row editing)
+- `IDataErrorInfo` validation → `ValidationRules` property
+- Add/Edit/Delete buttons via `Toolbar` property
 
-| Edit mode | WPF | Blazor | Notes |
-|---|---|---|---|
-| **Cell editing** | `EditMode.Cell` | `EditMode.Batch` | Commit on navigation |
-| **Row editing** | `EditMode.Row` | `EditMode.Normal` | Full row edit state |
-| **Dialog editing** | Custom | `EditMode.Dialog` | Built-in modal |
-| **Add row** | `AddNewRowPosition="Top"` | `AllowAdding="true"` + Toolbar `"Add"` | |
-| **Validation** | `IDataErrorInfo` | [`ValidationRules`](https://blazor.syncfusion.com/documentation/datagrid/editing/validation) property | Built-in client-side |
+### Sorting and filtering
 
-#### Edit types for columns
-
-| Data type | `EditType` | Description |
-|---|---|---|
-| String | `EditType.DefaultEdit` | Standard text input |
-| Number | `EditType.NumericEdit` | Numeric input with spinner |
-| Date | `EditType.DatePickerEdit` | Date picker |
-| DateTime | `EditType.DateTimePickerEdit` | Date and time picker |
-| Boolean | `EditType.BooleanEdit` | Checkbox |
-| Enum / List | `EditType.DropDownEdit` | Dropdown list |
-
-### Sorting, filtering, and grouping
-
-#### WPF configuration
+**WPF implementation:**
 
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
 
-<syncfusion:SfDataGrid AllowSorting="True" AllowMultiSorting="True"
-                       AllowFiltering="True" AllowGrouping="True"
-                       ShowGroupDropArea="True" ItemsSource="{Binding Orders}" />
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                       AllowSorting="True"
+                       AllowMultiSorting="True"
+                       AllowFiltering="True"
+                       FilterRowPosition="FixedTop">
+    <syncfusion:SfDataGrid.SortColumnDescriptions>
+        <syncfusion:SortColumnDescription ColumnName="OrderID" SortDirection="Ascending" />
+    </syncfusion:SfDataGrid.SortColumnDescriptions>
+</syncfusion:SfDataGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor configuration
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
 <SfGrid TValue="Order" DataSource="@Orders"
-        AllowSorting="true" AllowMultiSorting="true"
-        AllowFiltering="true" AllowGrouping="true">
+        AllowSorting="true"
+        AllowMultiSorting="true"
+        AllowFiltering="true">
     <GridFilterSettings Type="FilterType.Excel" />
-    <GridGroupSettings ShowDropArea="true" ShowGroupedColumn="true" />
     <GridSortSettings>
         <GridSortColumns>
             <GridSortColumn Field="OrderID" Direction="SortDirection.Ascending" />
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)"    HeaderText="Order ID"  Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer"  Width="150" />
-        <GridColumn Field="@nameof(Order.Freight)"    HeaderText="Freight"   Format="C2" Width="120" />
-        <GridColumn Field="@nameof(Order.ShipCity)"   HeaderText="Ship city" Width="150" />
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
     </GridColumns>
 </SfGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Feature comparison
+**Key migration changes:**
+- Initial sort: `SortColumnDescriptions` → `GridSortSettings > GridSortColumns`
+- Filter UI: `FilterRowPosition` → `GridFilterSettings.Type` (Excel, Menu, CheckBox, Row)
 
-| Feature | WPF | Blazor |
-|---|---|---|
-| **Sorting** | `AllowSorting="True"` | [`AllowSorting="true"`](https://blazor.syncfusion.com/documentation/datagrid/sorting) |
-| **Multi-column sort** | `AllowMultiSorting="True"` | `AllowMultiSorting="true"` |
-| **Initial sort** | `SortColumnDescriptions` | `GridSortSettings > GridSortColumns` |
-| **Filter UI** | `FilterRowPosition`, `FilterMode` | [`GridFilterSettings.Type`](https://blazor.syncfusion.com/documentation/datagrid/filtering/filter-bar) (Row, Excel, Menu, CheckBox) |
-| **Group drop area** | `ShowGroupDropArea="True"` | [`GridGroupSettings.ShowDropArea="true"`](https://blazor.syncfusion.com/documentation/datagrid/grouping) |
-| **Group caption** | `GroupCaptionTextFormat` | `GridGroupSettings.CaptionTemplate` |
+### Grouping
 
-### Selection
-
-#### WPF selection
+**WPF implementation:**
 
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
 
-<syncfusion:SfDataGrid SelectionMode="Extended" SelectionUnit="Row"
-                       ItemsSource="{Binding Orders}" />
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                       AllowGrouping="True"
+                       ShowGroupDropArea="True">
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="CustomerID" />
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor selection
+**Blazor implementation:**
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+<SfGrid TValue="Order" DataSource="@Orders" AllowGrouping="true">
+    <GridGroupSettings ShowDropArea="true" ShowGroupedColumn="true">
+        <GridGroupColumns>
+            <GridGroupColumn Field="CustomerID"></GridGroupColumn>
+        </GridGroupColumns>
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
+    </GridColumns>
+</SfGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Selection
+
+**WPF implementation:**
+
+{% tabs %}
+{% highlight xml tabtitle="OrderView.xaml" %}
+
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                       SelectionMode="Extended"
+                       SelectionUnit="Row"
+                       SelectionChanged="OnSelectionChanged">
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderView.xaml.cs" %}
+
+private void OnSelectionChanged(object sender, GridSelectionChangedEventArgs e)
+{
+    var selectedItems = dataGrid.SelectedItems;
+    // Handle selection change
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
 <SfGrid TValue="Order" @ref="Grid" DataSource="@Orders" AllowSelection="true">
     <GridSelectionSettings Mode="SelectionMode.Multiple" Type="SelectionType.Row" />
-    <GridEvents TValue="Order" RowSelected="OnRowSelected" RowDeselected="OnRowDeselected" />
+    <GridEvents TValue="Order" 
+                RowSelected="OnRowSelected" 
+                RowDeselected="OnRowDeselected" />
     <GridColumns>
-        @* ...columns... *@
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
     </GridColumns>
 </SfGrid>
 
@@ -1510,47 +1907,55 @@ public class Order
     private SfGrid<Order> Grid;
 
     private void OnRowSelected(RowSelectEventArgs<Order> args)
-        => Console.WriteLine($"Selected: {args.Data?.CustomerID}");
+    {
+        Console.WriteLine($"Selected: {args.Data?.CustomerID}");
+    }
 
     private void OnRowDeselected(RowDeselectEventArgs<Order> args)
-        => Console.WriteLine($"Deselected: {args.Data?.CustomerID}");
+    {
+        Console.WriteLine($"Deselected: {args.Data?.CustomerID}");
+    }
 
-    private async Task GetSelected()
-        => await Grid.GetSelectedRecordsAsync();
-
-    private async Task SelectFirstRow()
-        => await Grid.SelectRowAsync(0);
+    private async Task GetSelectedRecords()
+    {
+        var selectedRecords = await Grid.GetSelectedRecordsAsync();
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Selection comparison
+**Key migration changes:**
+- `SelectionMode` → `GridSelectionSettings.Mode`
+- `SelectionUnit` → `GridSelectionSettings.Type`
+- `SelectedItems` property → `GetSelectedRecordsAsync()` method
 
-| Feature | WPF | Blazor |
-|---|---|---|
-| **Selection mode** | `SelectionMode` (Single, Multiple, Extended) | [`GridSelectionSettings.Mode`](https://blazor.syncfusion.com/documentation/datagrid/selection/row-selection) (Single, Multiple) |
-| **Selection unit** | `SelectionUnit` (Row, Cell, Any) | `GridSelectionSettings.Type` (Row, Cell) |
-| **Get selected rows** | `SelectedItems` property | `GetSelectedRecordsAsync()` method |
-| **Programmatic select** | `SelectedIndex`, `SelectedItem` | `SelectRowAsync()`, `SelectRowsAsync()` |
-| **Clear selection** | `ClearSelections()` | `ClearSelectionAsync()` |
-| **Checkbox selection** | `GridCheckBoxColumn` as first column | `GridSelectionSettings.CheckboxMode` |
+### Paging
 
-### Paging and virtualization
-
-#### WPF paging (external `SfDataPager`)
+**WPF implementation:**
 
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
 
-<syncfusion:SfDataPager x:Name="dataPager" PageSize="20"
-                        Source="{Binding Orders}" />
-<syncfusion:SfDataGrid ItemsSource="{Binding ElementName=dataPager, Path=PagedSource}" />
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <syncfusion:SfDataGrid Grid.Row="0" 
+                           ItemsSource="{Binding ElementName=dataPager, Path=PagedSource}" />
+    
+    <syncfusion:SfDataPager Grid.Row="1"
+                            x:Name="dataPager"
+                            PageSize="20"
+                            Source="{Binding Orders}" />
+</Grid>
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor standard paging
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -1558,93 +1963,99 @@ public class Order
 <SfGrid TValue="Order" DataSource="@Orders" AllowPaging="true">
     <GridPageSettings PageSize="20" PageSizes="@(new int[] { 10, 20, 50, 100 })" />
     <GridColumns>
-        @* ...columns... *@
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
     </GridColumns>
 </SfGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor row and column virtualization
+**Key migration changes:**
+- External `SfDataPager` → Built-in `GridPageSettings`
+- `PageSize` property → `GridPageSettings.PageSize`
+- Page size dropdown via `PageSizes` property
+
+### Virtualization
+
+**WPF implementation:**
+
+{% tabs %}
+{% highlight xml tabtitle="OrderView.xaml" %}
+
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                       EnableDataVirtualization="True"
+                       EnableColumnVirtualization="True" />
+
+{% endhighlight %}
+{% endtabs %}
+
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
 <SfGrid TValue="Order" DataSource="@LargeOrders"
-        EnableVirtualization="true" EnableColumnVirtualization="true" Height="600px">
+        EnableVirtualization="true"
+        EnableColumnVirtualization="true"
+        Height="600px">
     <GridColumns>
-        @* ...columns... *@
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
     </GridColumns>
 </SfGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-> N> When using [`EnableVirtualization`](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling), the `Height` property must be set. Do not enable paging and virtualization simultaneously.
+> N> When using `EnableVirtualization`, the `Height` property must be set.
 
-#### Blazor infinite scrolling
+### Events
 
-{% tabs %}
-{% highlight razor tabtitle="Orders.razor" %}
-
-<SfGrid TValue="Order" DataSource="@Orders"
-        EnableInfiniteScrolling="true" Height="500px">
-    <GridInfiniteScrollSettings InitialBlocks="5" />
-    <GridColumns>
-        @* ...columns... *@
-    </GridColumns>
-</SfGrid>
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Paging / virtualization comparison
-
-| Feature | WPF | Blazor |
-|---|---|---|
-| **Paging** | External `SfDataPager` control | Built-in [`AllowPaging`](https://blazor.syncfusion.com/documentation/datagrid/paging) + `GridPageSettings` |
-| **Row virtualization** | `EnableDataVirtualization` | `EnableVirtualization` |
-| **Column virtualization** | `EnableColumnVirtualization` | `EnableColumnVirtualization` |
-| **Infinite scroll** | Manual implementation | `EnableInfiniteScrolling` |
-| **Page size dropdown** | Not built-in | `GridPageSettings.PageSizes` |
-
-### Events and commands
-
-#### WPF events and commands
-
-{% tabs %}
-{% highlight c# tabtitle="OrderViewModel.cs" %}
-
-public ICommand RowDoubleClickCommand { get; }
-public OrderViewModel()
-{
-    RowDoubleClickCommand = new RelayCommand<Order>(OnRowDoubleClick);
-}
-private void OnRowDoubleClick(Order order) { /* handle */ }
-
-{% endhighlight %}
-{% endtabs %}
+**WPF implementation:**
 
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
 
-<syncfusion:SfDataGrid CurrentCellActivated="OnCellActivated"
-                       SelectionChanged="OnSelectionChanged">
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                       CurrentCellActivated="OnCellActivated"
+                       SelectionChanged="OnSelectionChanged"
+                       RecordDeleted="OnRecordDeleted">
     <syncfusion:SfDataGrid.InputBindings>
-        <MouseBinding MouseAction="LeftDoubleClick"
+        <MouseBinding MouseAction="LeftDoubleClick" 
                       Command="{Binding RowDoubleClickCommand}" />
     </syncfusion:SfDataGrid.InputBindings>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
+{% highlight c# tabtitle="OrderView.xaml.cs" %}
+
+private void OnCellActivated(object sender, CurrentCellActivatedEventArgs e)
+{
+    // Handle cell activation
+}
+
+private void OnSelectionChanged(object sender, GridSelectionChangedEventArgs e)
+{
+    // Handle selection change
+}
+
+private void OnRecordDeleted(object sender, RecordDeletedEventArgs e)
+{
+    // Handle record deletion
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-#### Blazor events via `GridEvents`
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<SfGrid TValue="Order" DataSource="@Orders" AllowPaging="true" AllowSorting="true">
+<SfGrid TValue="Order" DataSource="@Orders" AllowPaging="true">
     <GridEvents TValue="Order"
                 OnRecordDoubleClick="OnRecordDoubleClick"
                 RowSelected="OnRowSelected"
@@ -1652,16 +2063,21 @@ private void OnRowDoubleClick(Order order) { /* handle */ }
                 OnActionComplete="OnActionComplete"
                 RowDataBound="OnRowDataBound" />
     <GridColumns>
-        @* ...columns... *@
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
     </GridColumns>
 </SfGrid>
 
 @code {
     private void OnRowSelected(RowSelectEventArgs<Order> args)
-        => Console.WriteLine($"Selected: {args.Data?.CustomerID}");
+    {
+        Console.WriteLine($"Selected: {args.Data?.CustomerID}");
+    }
 
     private void OnRecordDoubleClick(RecordDoubleClickEventArgs<Order> args)
-        => Console.WriteLine($"Double-clicked OrderID: {args.RowData?.OrderID}");
+    {
+        Console.WriteLine($"Double-clicked OrderID: {args.RowData?.OrderID}");
+    }
 
     private void OnActionBegin(ActionEventArgs<Order> args)
     {
@@ -1675,7 +2091,7 @@ private void OnRowDoubleClick(Order order) { /* handle */ }
     {
         if (args.RequestType == Action.Delete)
             await OrderService.DeleteOrderAsync(args.Data.FirstOrDefault());
-
+            
         if (args.RequestType == Action.Save && args.Action == "Add")
             await OrderService.AddOrderAsync(args.Data);
     }
@@ -1690,24 +2106,118 @@ private void OnRowDoubleClick(Order order) { /* handle */ }
 {% endhighlight %}
 {% endtabs %}
 
-#### Events comparison
+**Key event mappings:**
+- `CurrentCellActivated` → `CellSelected`
+- `SelectionChanged` → `RowSelected` / `RowDeselected`
+- `RecordDeleted` → `OnActionComplete` (RequestType == Action.Delete)
+- `MouseDoubleClick` → `OnRecordDoubleClick`
 
-| WPF event / command | Blazor `GridEvents` callback | Notes |
-|---|---|---|
-| `CurrentCellActivated` | `CellSelected` | Cell focus |
-| `SelectionChanged` | `RowSelected` / `RowDeselected` | Row selection change |
-| `RecordDeleted` | `OnActionComplete` | `RequestType == Action.Delete` |
-| `RecordAdded` | `OnActionComplete` | `RequestType == Action.Save`, `Action == "Add"` |
-| `SortColumnsChanging` | `OnActionBegin` | `RequestType == Action.Sorting` |
-| `FilterChanging` | `OnActionBegin` | `RequestType == Action.Filtering` |
-| `MouseDoubleClick` / `ICommand` | `OnRecordDoubleClick` | `RecordDoubleClickEventArgs<T>` |
-| `CellBeginEdit` | `OnActionBegin` | `RequestType == Action.BeginEdit` |
-| `RowValidating` | `OnActionBegin` + `args.Cancel` | Set `args.Cancel = true` to prevent save |
-| `QueryRowStyle` | `RowDataBound` | `args.Row.AddClass()` for CSS |
+### Styling - Cell level
 
-### Styling and theming
+**WPF implementation:**
 
-#### WPF theming
+{% tabs %}
+{% highlight xml tabtitle="OrderView.xaml" %}
+
+<syncfusion:GridTextColumn MappingName="Freight" HeaderText="Freight">
+    <syncfusion:GridTextColumn.CellStyle>
+        <Style TargetType="syncfusion:GridCell">
+            <Setter Property="Background" Value="LightYellow" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </syncfusion:GridTextColumn.CellStyle>
+</syncfusion:GridTextColumn>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Blazor implementation:**
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+<GridColumn Field="@nameof(Order.Freight)" 
+            HeaderText="Freight" 
+            Format="C2"
+            CustomAttributes='@(new Dictionary<string, object> { { "class", "freight-col" } })' 
+            Width="120" />
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight css tabtitle="app.css" %}
+
+.freight-col {
+    background-color: lightyellow;
+    font-weight: bold;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Styling - Row level
+
+**WPF implementation:**
+
+{% tabs %}
+{% highlight xml tabtitle="OrderView.xaml" %}
+
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.RowStyle>
+        <Style TargetType="syncfusion:VirtualizingCellsControl">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Freight, Converter={StaticResource FreightConverter}}" 
+                             Value="True">
+                    <Setter Property="Background" Value="#fff3cd" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </syncfusion:SfDataGrid.RowStyle>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Blazor implementation:**
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+<SfGrid TValue="Order" DataSource="@Orders">
+    <GridEvents TValue="Order" RowDataBound="OnRowDataBound" />
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private void OnRowDataBound(RowDataBoundEventArgs<Order> args)
+    {
+        if (args.Data.Freight > 500)
+            args.Row.AddClass(new string[] { "high-freight-row" });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight css tabtitle="app.css" %}
+
+.high-freight-row {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Theming
+
+**WPF implementation:**
 
 {% tabs %}
 {% highlight xml tabtitle="App.xaml" %}
@@ -1723,115 +2233,48 @@ private void OnRowDoubleClick(Order order) { /* handle */ }
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight xml tabtitle="OrderView.xaml" %}
-
-<syncfusion:GridTextColumn MappingName="Freight">
-    <syncfusion:GridTextColumn.CellStyle>
-        <Style TargetType="syncfusion:GridCell">
-            <Setter Property="Background" Value="LightYellow" />
-            <Setter Property="FontWeight" Value="Bold" />
-        </Style>
-    </syncfusion:GridTextColumn.CellStyle>
-</syncfusion:GridTextColumn>
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Blazor theming
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-<!-- Fluent (closest to WPF Fluent) -->
+<!-- Fluent theme (closest to WPF Fluent) -->
 <link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
 
-<!-- Bootstrap 5 (default) -->
+<!-- Or Bootstrap 5 -->
 <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 
-{% endhighlight %}
-{% endtabs %}
-
-**Available [themes](https://blazor.syncfusion.com/documentation/appearance/themes):**
-
-| Theme | CSS file |
-|---|---|
-| Bootstrap 5 | `bootstrap5.css` / `bootstrap5-dark.css` |
-| Fluent | `fluent.css` / `fluent-dark.css` |
-| Material 3 | `material3.css` / `material3-dark.css` |
-| Tailwind | `tailwind.css` |
-| High contrast | `highcontrast.css` |
-
-**Column-level styling via `CustomAttributes`:**
-
-{% tabs %}
-{% highlight razor tabtitle="Orders.razor" %}
-
-<GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2"
-            CustomAttributes='@(new Dictionary<string, object> { { "class", "freight-col" } })' />
+<!-- Or Material 3 -->
+<link href="_content/Syncfusion.Blazor.Themes/material3.css" rel="stylesheet" />
 
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight css tabtitle="app.css" %}
+### Performance - Remote data operations
 
-.freight-col       { background-color: lightyellow; font-weight: bold; }
-.high-freight-row  { background-color: #fff3cd; color: #856404; }
-.e-altrow          { background-color: #f9f9f9; }  /* Alternating rows */
-
-{% endhighlight %}
-{% endtabs %}
-
-**Row-level conditional styling:**
+**WPF implementation:**
 
 {% tabs %}
-{% highlight razor tabtitle="Orders.razor" %}
+{% highlight c# tabtitle="OrderViewModel.cs" %}
 
-<GridEvents TValue="Order" RowDataBound="OnRowDataBound" />
-
-@code {
-    private void OnRowDataBound(RowDataBoundEventArgs<Order> args)
+public class OrderViewModel
+{
+    private readonly OrderService _orderService;
+    
+    public async Task LoadDataAsync()
     {
-        if (args.Data.Freight > 500)
-            args.Row.AddClass(new string[] { "high-freight-row" });
+        var orders = await _orderService.GetOrdersAsync();
+        await Application.Current.Dispatcher.InvokeAsync(() =>
+        {
+            Orders = new ObservableCollection<Order>(orders);
+        });
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Theming comparison
-
-| Concept | WPF | Blazor |
-|---|---|---|
-| **Theme application** | `ResourceDictionary` in `App.xaml` | CSS `<link>` in `Components/App.razor` |
-| **Cell style** | `GridColumn.CellStyle` (XAML Style) | `CustomAttributes` + CSS class |
-| **Row style** | `RowStyle` / `AlternatingRowStyle` | `RowDataBound` + CSS class |
-| **Dynamic styling** | XAML `DataTriggers` | `RowDataBound` + `AddClass()` |
-| **Custom theme** | Override XAML brushes | Override [CSS custom properties](https://blazor.syncfusion.com/documentation/appearance/theme-studio) |
-| **Dark mode** | Theme variant assembly | Dark theme CSS file variant |
-
-### Performance optimization
-
-#### Blazor performance techniques
-
-**1. Row and column virtualization (large in-memory datasets):**
-
-{% tabs %}
-{% highlight razor tabtitle="Orders.razor" %}
-
-<SfGrid TValue="Order" DataSource="@LargeOrders"
-        EnableVirtualization="true" EnableColumnVirtualization="true" Height="600px">
-    <GridColumns>
-        @* ...columns... *@
-    </GridColumns>
-</SfGrid>
-
-{% endhighlight %}
-{% endtabs %}
-
-**2. Remote data with `SfDataManager` (server-side operations):**
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -1841,79 +2284,56 @@ private void OnRowDoubleClick(Order order) { /* handle */ }
     <GridPageSettings PageSize="50" />
     <GridFilterSettings Type="FilterType.Excel" />
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)"    HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
         <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
-        <GridColumn Field="@nameof(Order.Freight)"    HeaderText="Freight"  Format="C2" Width="120" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
     </GridColumns>
 </SfGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Best practice:** Use [`SfDataManager`](https://blazor.syncfusion.com/documentation/datagrid/data-binding/webapi-service-binding) with `WebApiAdaptor` for datasets over 50,000 rows.
+> **Best practice:** Use `SfDataManager` with `WebApiAdaptor` for datasets over 50,000 rows to enable server-side sorting, filtering, and paging.
 
-**3. Frozen columns:**
+### Performance - Frozen columns
+
+**WPF implementation:**
+
+{% tabs %}
+{% highlight xml tabtitle="OrderView.xaml" %}
+
+<syncfusion:SfDataGrid ItemsSource="{Binding Orders}" FrozenColumnCount="2">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" />
+        <syncfusion:GridTextColumn MappingName="CustomerID" HeaderText="Customer" />
+        <syncfusion:GridTextColumn MappingName="ShipCity" HeaderText="Ship City" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Blazor implementation:**
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
 <SfGrid TValue="Order" DataSource="@Orders" FrozenColumns="2">
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)"    IsFrozen="true" Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" IsFrozen="true" Width="150" />
-        <GridColumn Field="@nameof(Order.Freight)"    Format="C2"     Width="120" />
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsFrozen="true" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" IsFrozen="true" Width="150" />
+        <GridColumn Field="@nameof(Order.ShipCity)" HeaderText="Ship City" Width="150" />
     </GridColumns>
 </SfGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-**4. Render optimization and disposal:**
-
-{% tabs %}
-{% highlight razor tabtitle="Orders.razor" %}
-
-@implements IDisposable
-
-@code {
-    private SfGrid<Order> Grid;
-    private bool _suppressRender = false;
-
-    protected override bool ShouldRender() => !_suppressRender;
-
-    private async Task BulkUpdate()
-    {
-        _suppressRender = true;
-        Orders = await OrderService.GetOrdersAsync();
-        _suppressRender = false;
-        StateHasChanged();
-    }
-
-    public void Dispose() => Grid = null;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Performance comparison
-
-| Technique | WPF | Blazor |
-|---|---|---|
-| **Row virtualization** | `EnableDataVirtualization` | [`EnableVirtualization`](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) |
-| **Column virtualization** | `EnableColumnVirtualization` | `EnableColumnVirtualization` |
-| **Server-side operations** | WCF / REST + Dispatcher | [`SfDataManager`](https://blazor.syncfusion.com/documentation/datagrid/data-binding/webapi-service-binding) + `WebApiAdaptor` |
-| **Frozen columns** | `FrozenColumnCount` | `GridColumn.IsFrozen` / `FrozenColumns` |
-| **Deferred scroll** | `ScrollMode="Deferred"` | Handled by virtualization engine |
-| **Render control** | WPF rendering pipeline | `ShouldRender()` override |
-| **Memory management** | Explicit disposal | `IDisposable.Dispose()` |
-
 ## See also
 
 - [Syncfusion WPF DataGrid - Getting started](https://help.syncfusion.com/wpf/datagrid/getting-started)
-- [Syncfusion Blazor DataGrid - Getting started (Server)](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
-- [Syncfusion Blazor DataGrid - API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html)
-- [ASP.NET Core Blazor hosting models](https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models)
-- [Syncfusion Blazor themes](https://blazor.syncfusion.com/documentation/appearance/themes)
+- [Syncfusion Blazor DataGrid - Getting started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
 - [Syncfusion Blazor DataGrid - Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/inline-editing)
 - [Syncfusion Blazor DataGrid - Filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering/filter-bar)
 - [Syncfusion Blazor DataGrid - Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+- [ASP.NET Core Blazor hosting models](https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models)
