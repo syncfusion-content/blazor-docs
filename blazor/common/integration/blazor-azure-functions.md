@@ -44,13 +44,11 @@ When calling an Azure Function that uses Function-level authorization, the Funct
 
  In this approach, the Function Key is added directly to the URL using the code `query` parameter.
 
-{% tabs %}
-{% highlight razor tabtitle=".razor"  %}
+```c#
 
- GET /api/orders?code=YOUR_FUNCTION_KEY
+ GET "/api/orders?code=YOUR_FUNCTION_KEY"
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 **2. Using an HTTP Header**
 
@@ -72,15 +70,13 @@ builder.Services.AddScoped(sp => {
 
 Instead of configuring it globally, you can add the Function Key only when making a specific request.
 
-{% tabs %}
-{% highlight razor tabtitle=".razor" %}
+```c#
 
 var req = new HttpRequestMessage(HttpMethod.Get, "/api/orders?...");
 req.Headers.Add("x-functions-key", "YOUR_FUNCTION_KEY");
 await Http.SendAsync(req);
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 For production, Microsoft Entra ID and managed identities provide better security than Function Keys.
 
