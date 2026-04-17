@@ -26,7 +26,7 @@ Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn
 3. Search for **.NET MAUI Blazor Hybrid and Web App**.
 4. Select the template and create the project.
 
-The template generates the shared RCL, .NET MAUI App, and Web App.
+The template generates the shared RCL, .NET MAUI Blazor Hybrid App, and Blazor Web App.
 
 ![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.webp)
 
