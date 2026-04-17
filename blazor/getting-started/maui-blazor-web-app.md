@@ -43,7 +43,7 @@ N> Syncfusion® Blazor components are available on [nuget.org](https://www.nuget
 
 Open both of the following files and add the Syncfusion® namespaces.
 
-* `~/.Maui/Components/_Imports.razor` (.NET MAUI Blazor Hybrid App)
+* `~/Components/_Imports.razor` (.NET MAUI Blazor Hybrid App)
 * `~/Components/_Imports.razor` (Blazor Web App)
 
 {% tabs %}
@@ -57,7 +57,7 @@ Open both of the following files and add the Syncfusion® namespaces.
 
 ## Register Syncfusion® Blazor service
 
-Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the MAUI Blazor App and the `~/Program.cs` file of the Blazor Web App to enable Syncfusion® components in the application.
+Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the **.NET MAUI Blazor Hybrid App** and the `~/Program.cs` file of the **Blazor Web App** to enable Syncfusion® components in the application.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 4" %}
@@ -85,7 +85,7 @@ Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the MAU
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the **<head>** of the `~wwwroot/index.html` file of your MAUI Blazor App and in the `~/Components/App.razor` file of your Blazor Web App.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the **<head>** of the `~wwwroot/index.html` file of your **.NET MAUI Blazor Hybrid App** and in the `~/Components/App.razor` file of your **Blazor Web App**.
 
 {% tabs %}
 {% highlight html  %}
@@ -139,7 +139,7 @@ Include the Syncfusion® Blazor **DataGrid** component in any razor file. In thi
 {% endhighlight %}
 {% endtabs %}
 
-In the Visual Studio toolbar, select the **Windows Machine** target to build and run the **MAUI Blazor App** project. To build and run the **Blazor Web App** project, select the **IIS Express** or **https** profile.
+In the Visual Studio toolbar, select the **Windows Machine** target to build and run the **.NET MAUI Blazor Hybrid App** project. To build and run the **Blazor Web App** project, select the **IIS Express** or **https** profile.
 
 ![Build and run MAUI Blazor App](images/maui/windows-machine-mode.webp)
 
