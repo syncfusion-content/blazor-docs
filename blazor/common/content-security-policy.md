@@ -74,7 +74,6 @@ Most Syncfusion components support strict CSP. However, some components or featu
 The following components need inline styles to work and always require `'unsafe-inline'`: 
 
 <!-- markdownlint-disable MD033 -->
-
 <table>
 <tr>
 <td>
@@ -213,8 +212,6 @@ The following components need inline styles to work and always require `'unsafe-
 </tr>
 </table>
 
-<!-- markdownlint-enable MD033 -->
-
 ### Scenario 2: components with limited features requiring *'unsafe-inline'*
 
 These components work under strict CSP for most features, but specific advanced features need `'unsafe-inline'`:
@@ -227,7 +224,7 @@ These components work under strict CSP for most features, but specific advanced 
 | Navigation | TreeView - [Click here for feature details](../treeview/content-security-policy) |
 | Maps | Maps -[Click here for feature details](../maps/content-security-policy) |
 
-### Scenario 3: passing inline styles via ComponentInputAttributes
+### Scenario 3: passing inline styles via component properties
 
 If you add `style` attributes directly through `InputAttributes` or `HtmlAttributes`, strict CSP will block them:
 
@@ -271,3 +268,11 @@ If your application needs any of the above scenarios, use this configuration:
 This allows inline styles while keeping the rest of your security policy strict.
 
 
+## See also
+
+* [Content security policy in Syncfusion® Gantt Chart component](https://blazor.syncfusion.com/documentation/gantt-chart/content-security-policy)
+* [Content security policy in Syncfusion® Circular Gauge component](https://blazor.syncfusion.com/documentation/circular-gauge/content-security-policy)
+* [Content security policy in Syncfusion® HeatMap Chart component](https://blazor.syncfusion.com/documentation/heatmap-chart/content-security-policy)
+* [Content security policy in Syncfusion® Maps component](https://blazor.syncfusion.com/documentation/maps/content-security-policy)
+* [Content security policy in Syncfusion® Pivot Table component](https://blazor.syncfusion.com/documentation/pivot-table/content-security-policy)
+* [Content security policy in Syncfusion® TreeView component](https://blazor.syncfusion.com/documentation/treeview/content-security-policy)
