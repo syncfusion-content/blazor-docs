@@ -7,7 +7,7 @@ control: File Upload
 documentation: ug
 ---
 
-# Getting Started with Blazor File Upload Component
+# Getting Started with Blazor File Upload Component in WASM App
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
