@@ -1,11 +1,15 @@
-### layout: post
 ---
+layout: post
 title: Style and Appearance in Blazor DataForm Component | Syncfusion
 description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor DataForm component and more.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
+
+# DataForm Customization
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataForm component provides extensive customization options to enhance the appearance and usability of forms. You can customize the layout, labels, input elements, validation messages, and action buttons using CSS styles and the CssClass property to match your application requirements.
 
 ## Style and Appearance in Blazor DataForm Component
 
