@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from WPF to Blazor | Syncfusion
-description: Comprehensive guide to migrating Syncfusion WPF applications to Blazor; covers initial rendering of major components and detailed DataGrid migration path.
+description: Guide to migrating Syncfusion WPF apps to Blazor, covering key components and detailed DataGrid migration.
 platform: Blazor
 component: Common
 documentation: ug
