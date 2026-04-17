@@ -20,7 +20,7 @@ You can set the width of the dialog using the [`Width`](https://help.syncfusion.
     <!-- Dialog content -->
 </SfDialog>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhHjfioKoHwrfVp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Width](./images/dialog-customization/blazor-dialog-width.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBdtpsmKEMTqgio?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Width](./images/dialog-customization/blazor-dialog-width.webp)" %}
 
 ### MinHeight
 
@@ -31,7 +31,7 @@ Set the minimum height of the dialog using the [`MinHeight`](https://help.syncfu
     <!-- Dialog content -->
 </SfDialog>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrRDTiyglKQXCjb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog MinHeight](./images/dialog-customization/blazor-dialog-min-height.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLRDfCwqYgdaAuS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog MinHeight](./images/dialog-customization/blazor-dialog-min-height.webp)" %}
 
 ### RTL Support
 
@@ -163,7 +163,7 @@ Use the following CSS to customize the background color of the Dialog.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBdjpixrfIBCkXV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog background](./images/dialog-customization/blazor-dialog-background-color.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhdjpCGARsZqrTS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog background](./images/dialog-customization/blazor-dialog-background-color.webp)" %}
 
 ### Dialog border customization with radius
 
@@ -182,7 +182,7 @@ Use the following CSS to customize the Dialog border and apply a border radius.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdXpCnBzFRaUor?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog border radius](./images/dialog-customization/blazor-dialog-border-radius.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLnNpMcqxGTPiHJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog border radius](./images/dialog-customization/blazor-dialog-border-radius.webp)" %}
 
 ### Customizing the dialog header
 
@@ -211,7 +211,7 @@ Use the following CSS to customize the dialog content properties.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhRZJiSplLTsmJC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Content](./images/dialog-customization/blazor-dialog-content.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBRNTWQKHvcCycE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Content](./images/dialog-customization/blazor-dialog-content.webp)" %}
 
 ### Customizing modal dialog overlay
 
@@ -219,11 +219,11 @@ Use the following CSS to customize the modal dialog overlay.
 
 ```css
 .e-dlg-overlay {
-    background-color: slategray;
+    background-color: #f1f1107f;
     opacity: 0.6;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhnZpMSfaLApAky?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog overlay](./images/dialog-customization/blazor-dialog-overlay.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthxXpMGgGDVoMGz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog overlay](./images/dialog-customization/blazor-dialog-overlay.webp)" %}
 
 ### Customizing the dialog resize icon
 
@@ -237,7 +237,7 @@ Use the following CSS to customize the dialog resize icon.
     }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdtTMxVtzhydwJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog resize icon](./images/dialog-customization/blazor-dialog-resize-icon.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBnZziwqciFBrOH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog resize icon](./images/dialog-customization/blazor-dialog-resize-icon.webp)" %}
 
 The above CSS demonstration uses the font awesome icon.
 
@@ -252,7 +252,7 @@ Use the following CSS to customize the dialog close button.
     color: red;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVnjTCyyrIorzfn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog close button](./images/dialog-customization/blazor-dialog-closebtn.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBxDTsmAGWLLniB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog close button](./images/dialog-customization/blazor-dialog-closebtn.webp)" %}
 
 ### Customizing the dialog footer content
 
@@ -265,4 +265,4 @@ Use the following CSS to customize the dialog footer content.
         color: #593fed;
     }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrnNzsIyKGWhRFz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog footer](./images/dialog-customization/blazor-dialog-footer.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrRDJCQgmUVSWxS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog footer](./images/dialog-customization/blazor-dialog-footer.webp)" %}
