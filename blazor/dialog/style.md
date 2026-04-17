@@ -43,7 +43,7 @@ Enable RTL (Right-to-Left) layout using the [`EnableRtl`](https://help.syncfusio
 </SfDialog>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBxtTWeqkZUhnrA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog RTL Support](./images/dialog-customization/blazor-dialog-rtl.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdZzsQUIxTNQhd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog RTL Support](./images/dialog-customization/blazor-dialog-rtl.webp)" %}
 
 ### CssClass
 
@@ -71,7 +71,7 @@ Apply custom CSS classes using the [`CssClass`](https://help.syncfusion.com/cr/b
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxtzCIffgAdyqB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-cssclass.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdjzMQKeocFOFl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog CSSClass](./images/dialog-customization/blazor-dialog-cssclass.webp)" %}
 
 ### Animation
 
@@ -196,7 +196,7 @@ Use the following CSS to customize the dialog header properties.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxZzsITcfjlroX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Header](./images/dialog-customization/blazor-dialog-header.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVHNpCmqomayfhC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dialog Header](./images/dialog-customization/blazor-dialog-header.webp)" %}
 
 ### Customizing the dialog content
 
