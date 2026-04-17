@@ -33,6 +33,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration extension 
 
 4. After conversion completes, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package references is updated to the selected version in the application.
 
-    ![Project file updated with Syncfusion NuGet package references](images/nuGetpackage.webp)
+    ![Project file updated with Syncfusion NuGet package references](images/nugetpackage.webp)
 
 5. If the trial setup or NuGet packages from `nuget.org`, register the Syncfusion® license key in the application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to the application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.

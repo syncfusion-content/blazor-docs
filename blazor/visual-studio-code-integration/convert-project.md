@@ -33,7 +33,7 @@ Use the following steps to convert an existing Blazor application to a Syncfusio
 
 4. After version selection, the Command Palette will display available themes. Select the preferred theme (e.g., Material, Bootstrap, Tailwind, Fluent and HighContrast).
 
-    ![Command Palette showing theme selection options](images/choosethemes.webp)
+    ![Command Palette showing theme selection options](images/ChooseThemes.webp)
 
    N> The conversion process will run automatically. This may take a few moments as NuGet packages are downloaded and the project is configured.
 
