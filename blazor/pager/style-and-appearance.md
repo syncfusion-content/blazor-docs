@@ -159,31 +159,50 @@ Adjust properties such as **background-color**, **padding**, and **border** to m
 </SfPager>
 
 <style>
-    .e-pager .e-icons {
-        background-color: #ffffff;
-        color: #333;
-        border: 1px solid #ddd;
-        padding: 6px 12px;
-        margin: 0 2px;
-        border-radius: 3px;
-        font-weight: 500;
+    .e-pager .e-numericitem {
+        background-color: #2bbbad;
+        color: #ffffff;
+        border: 2px solid transparent;
+        margin: 0 -6px;
+        padding: 8px 14px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 0;
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     }
-    .e-pager .e-icons:hover {
-        background-color: #e8f4f8;
-        border-color: #2bbbad;
+    .e-pager .e-icons{
+        border-radius: 0;
+        margin: 0 -6px;
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        background-color: #f7f6f6;
+        box-shadow: none;
+        padding: 8px 14px;
+    }
+    .e-pager .e-icon-first{
+        border-radius: 0;
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+    }
+    .e-pager.sf-pager .e-next.e-icons.e-icon-next.e-nextpage.e-pager-default{
+        margin-left: 5px;
+    }
+    .e-pager .e-numericitem:hover {
+        background-color: #20a399;
+        padding: 8px 14px;
+        box-shadow: 0 4px 12px rgba(43, 187, 173, 0.3);
+    }
+    .e-pager .e-currentitem.e-numericitem {
+        background-color: #ffebeb;
         color: #2bbbad;
+        box-shadow: 0 4px 12px rgba(43, 187, 173, 0.2);
     }
-
-    .e-pager .e-icons.e-disable {
-        background-color: #f5f5f5;
-        color: #999;
-        border-color: #ddd;
-        cursor: not-allowed;
-        opacity: 0.6;
+    .e-pager .e-currentitem.e-numericitem:hover {
+        background-color: #f0f9f7;
+        box-shadow: 0 6px 16px rgba(43, 187, 173, 0.25);
     }
-    .e-pager .e-disable {
-        pointer-events: none;
-        cursor: not-allowed;
+    .e-pager .e-currentitem.e-numericitem.e-focused {
+        color: #2bbbad;
     }
 </style>
 ```
