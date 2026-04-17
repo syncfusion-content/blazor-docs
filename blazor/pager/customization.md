@@ -27,7 +27,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component allo
 
 ```
 
-![Blazor Pager with Custom Text](./images/blazor-pager-custom-text.png)
+![Blazor Pager with Custom Text](./images/blazor-pager-custom-text.webp)
 
 ## Apply custom CSS
 
@@ -54,4 +54,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component supp
 
 ```
 
-![Blazor Pager with Custom CSS](./images/blazor-pager-custom-css.png)
+![Blazor Pager with Custom CSS](./images/blazor-pager-custom-css.webp)

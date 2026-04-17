@@ -1326,7 +1326,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBytoiqfIIReUci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Using external form](./images/blazor-datagrid-editing-form.gif)
+![Using external form](./images/blazor-datagrid-editing-form.webp)
 
 ## Troubleshoot editing works only for first row
 
