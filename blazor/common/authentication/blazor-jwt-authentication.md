@@ -35,7 +35,7 @@ Configure JWT based authorization to secure backend APIs used by the Syncfusion�
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the **Syncfusion getting started guides** [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+Otherwise, create a new Blazor application by following the Syncfusion getting started guides [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 Ensure that **HTTPS is enabled** during project creation, as JWT based authorization requires secure communication.
 
@@ -45,7 +45,8 @@ Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package M
 
 **Syncfusion packages:**
 
-- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 **JWT package:**
 
@@ -208,6 +209,8 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
+
+// Register the Syncfusion® Blazor service 
 builder.Services.AddSyncfusionBlazor();
 
 var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("Jwt:Key missing");
@@ -393,5 +396,4 @@ The complete application flow ensures the **DataGrid** loads only after the user
 ## See also
 
 - [Configure JWT bearer authentication in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/configure-jwt-bearer-authentication?view=aspnetcore-10.0)
-
-- [Getting started with Blazor DataGrid in Web app](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+- [Getting started with Syncfusion® Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
