@@ -505,6 +505,85 @@ The **Like** filter processes single search patterns using the <b>%</b> symbol t
 
 ![Blazor DataGrid with like operator filtering](./images/blazor-datagrid-like-operator-filtering.gif)
 
+## Diacritics filter
+
+The diacritics filter feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful when working with text data that includes accented characters (diacritic characters). By default, the Grid ignores these characters during filtering. However, if you need to consider diacritic characters in your filtering process, you can disable this behavior by setting the `IgnoreAccent` property to false using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+
+Consider the following sample where the `IgnoreAccent` property is set to false in order to consider diacritic characters in the filtering process:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" AllowFiltering="true" Height="273px">
+    <GridFilterSettings IgnoreAccent="false"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Name) HeaderText="Name" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="170"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="140"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+    public OrderData(int EmployeeID, string Name, string CustomerID, string ShipName)
+    {
+        this.EmployeeID = EmployeeID;
+        this.Name = Name;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(1, "Aeróbics", "VINET", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(2, "Aerógrafía en Agua", "TOMSP", "Toms SpezialitAiten"));
+            Orders.Add(new OrderData(3, "Aerografía", "TAMSP", "Suprames dalices"));
+            Orders.Add(new OrderData(4, "Aeromodelaje", "HANAA", "Ottilies Kaseladen"));
+            Orders.Add(new OrderData(5, "Águilas", "VICTE", "Centro comercial Moctezuma"));
+            Orders.Add(new OrderData(6, "Álbumes de Delta", "HANAR", "Que Delacia"));
+            Orders.Add(new OrderData(7, "Álbumes de Música", "SUPRD", "Ernst Handel"));
+            Orders.Add(new OrderData(8, "Alusivos", "CHOPS", "Richter Supermarkt"));
+            Orders.Add(new OrderData(9, "Aerografía", "RICSU", "Wellington"));
+            Orders.Add(new OrderData(10, "Análisis de Escritura a Mano", "WELLI", "Victuailles"));
+        }
+        return Orders;
+    }
+
+    public int EmployeeID { get; set; }
+    public string Name { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+}
+    
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHZTrtDPVkNzGK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+
 ## Filtering with case sensitivity
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the flexibility to enable or disable case sensitivity during filtering. This feature allows control over whether filtering operations should consider character casing. Case sensitivity can be configured using the [EnableCaseSensitivity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_EnableCaseSensitivity) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings)configuration.
