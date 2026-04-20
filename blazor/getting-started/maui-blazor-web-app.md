@@ -69,14 +69,15 @@ Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the **.
     ....
 
 {% endhighlight %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="1 7" %}
+{% highlight C# tabtitle="~/Program.cs" hl_lines="1 8" %}
 
     using Syncfusion.Blazor;
     
     var builder = WebApplication.CreateBuilder(args);
 
     // Add services to the container.
-    builder.Services.AddRazorComponents();
+    builder.Services.AddRazorComponents()
+        .AddInteractiveServerComponents();
     builder.Services.AddSyncfusionBlazor();
     ....
 
@@ -88,17 +89,45 @@ Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the **.
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the **<head>** of the `~wwwroot/index.html` file of your **.NET MAUI Blazor Hybrid App** and in the `~/Components/App.razor` file of your **Blazor Web App**.
 
 {% tabs %}
-{% highlight html  %}
+{% highlight html tabtitle="index.html" hl_lines="6 12" %}
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Syncfusion theme stylesheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  ....
+  <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Syncfusion Blazor DataGrid component's script reference -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+  ....
+  <div id="app">Loading...</div>
+  <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+  <script src="_framework/blazor.webview.js" autostart="false"></script>
 </body>
+
+</html>
+
+{% endhighlight %}
+{% highlight razor tabtitle="App.razor" hl_lines="7 13" %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    ....
+	<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    <HeadOutlet />
+</head>
+
+<body>
+    <Routes />
+	<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_framework/blazor.web.js"></script>
+</body>
+
+</html>
 
 {% endhighlight %}
 {% endtabs %}
