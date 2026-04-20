@@ -68,11 +68,8 @@ Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusio
 
 using Syncfusion.Blazor;
 ...
-var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
 ...
-var app = builder.Build();
-app.Run();
 
 {% endhighlight %}
 {% endtabs %}
