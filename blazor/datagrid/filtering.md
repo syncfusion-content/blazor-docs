@@ -485,7 +485,7 @@ a* | Matches values that start with “a”.
 a | Matches values that contain “a”.
 ab* | Matches values that contain “a”, followed by any characters, then “b”, followed by any characters.
 
-![Blazor DataGrid with WildCard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.gif)
+![Blazor DataGrid with WildCard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.webp)
 
 ### Like filtering
 
@@ -503,7 +503,7 @@ The **Like** filter processes single search patterns using the <b>%</b> symbol t
 | ab% | Matches values that end with “ab”. |
 | %ab | Matches values that start with “ab”. |
 
-![Blazor DataGrid with like operator filtering](./images/blazor-datagrid-like-operator-filtering.gif)
+![Blazor DataGrid with like operator filtering](./images/blazor-datagrid-like-operator-filtering.webp)
 
 ## Filtering with case sensitivity
 
