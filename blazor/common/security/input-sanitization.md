@@ -41,16 +41,14 @@ Several Syncfusion Blazor components include HTML sanitization capabilities to p
 
 In the example shown, the sanitizer removes embedded scripts and event based attacks to prevent malicious code execution. It strips `<script>` tags, inline event handlers, JavaScript URLs, and dangerous elements like `<iframe>` or `<object>` to ensure that only safe HTML is displayed.
 
-{% tabs %}
-{% highlight razor %}
+```cshtml
 <!-- User input -->
 <script>alert('XSS')</script>
 
 <!-- Sanitized output -->
 (Empty or safe text only)
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Rich Text Editor (RTE)
 
@@ -161,13 +159,11 @@ When you only need to display plain text (not HTML), the safest approach is to H
 
 **Output:**
 
-{% tabs %}
-{% highlight bash tabtitle="Output" %}
+```c#
 
 &lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt; Hello!
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 Displaying the encoded text ensures it is treated as plain text.
 
