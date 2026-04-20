@@ -30,7 +30,7 @@ A **Blazor WebAssembly App** can be created using **Visual Studio** with the bui
 5. Select the **target framework** as **.NET 8.0 or later** (choose the latest installed version available on the system).
 6. Click **Create** to generate the project.
 
-![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
+![Blazor WASM Create Project Template](images/blazor-wasm-app-template.webp)
 
 N> For detailed steps, refer to [Microsoft Blazor tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
 

@@ -265,4 +265,4 @@ Custom binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor `D
 }
 ```
 
-![Custom Binding in Blazor DataManager](./images/blazor-datamanager-custom-binding.gif)
+![Custom Binding in Blazor DataManager](./images/blazor-datamanager-custom-binding.webp)

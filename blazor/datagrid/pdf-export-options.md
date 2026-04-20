@@ -1026,7 +1026,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-![Enabling horizontal overflow](./images/Enabling-horizontal-overflow.gif)
+![Enabling horizontal overflow](./images/Enabling-horizontal-overflow.webp)
 
 > Find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Horizontal_overflow).
 
@@ -1661,7 +1661,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
+![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.webp)
 
 > A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Rotate_header).
 

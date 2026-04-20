@@ -950,7 +950,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The Purchase Order Management System is now running and ready to use.
 
-![Basic DataGrid displaying purchase orders from the PostgreSQL Server database](../images/blazor-datagrid-postgresql.png)
+![Basic DataGrid displaying purchase orders from the PostgreSQL Server database](../images/blazor-datagrid-postgresql.webp)
 
 ---
 
