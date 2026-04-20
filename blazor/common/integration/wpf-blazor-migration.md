@@ -275,8 +275,6 @@ Add the DataGrid component to your page with data binding and column definitions
     <syncfusion:SfDataGrid x:Name="dataGrid"
                            AutoGenerateColumns="False"
                            AllowEditing="True"
-                           AllowSorting="True"
-                           AllowFiltering="True"
                            AddNewRowPosition="Top">
         
         <syncfusion:SfDataGrid.Columns>
@@ -344,7 +342,7 @@ namespace WpfDataGridApp
 @page "/orders"
 @rendermode InteractiveServer
 
-<SfGrid DataSource="@Orders" AllowSorting="true" AllowFiltering="true">
+<SfGrid DataSource="@Orders">
     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="100"></GridColumn>
@@ -513,7 +511,6 @@ Add the TreeGrid component with self-referencing data structure using IdMapping 
                            ParentPropertyName="ParentID"
                            SelfRelationRootValue="-1"
                            AllowEditing="True"
-                           AllowDeleting="True"
                            AddNewRowPosition="Top">
 
         <syncfusion:SfTreeGrid.Columns>
@@ -1266,38 +1263,41 @@ namespace WpfDiagram
 </SfDiagramComponent>
 
 @code {
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Node> nodes;
+    private DiagramObjectCollection<Connector> connectors;
     
     protected override void OnInitialized()
     {
-        // Create Node 1
-        nodes.Add(new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        connectors = new DiagramObjectCollection<Connector>();
+
+        Node node1 = new Node()
         {
             ID = "node1",
             Height = 60,
             Width = 100,
             OffsetX = 100,
             OffsetY = 100
-        });
+        };
         
-        // Create Node 2
-        nodes.Add(new Node()
+        Node node2 = new Node()
         {
             ID = "node2",
             Height = 60,
             Width = 100,
             OffsetX = 300,
             OffsetY = 100
-        });
-        
-        // Create Connector
-        connectors.Add(new Connector()
+        };
+        nodes.Add(node1);
+        nodes.Add(node2);
+
+        Connector connector1 = new Connector()
         {
             ID = "connector1",
             SourceID = "node1",
             TargetID = "node2"
-        });
+        };
+        connectors.Add(connector1);
     }
 }
 
@@ -1564,23 +1564,23 @@ public class OrderViewModel : INotifyPropertyChanged
 @page "/orders"
 @rendermode InteractiveServer
 
-<SfGrid TValue="Order" DataSource="@Orders" Height="400px">
+<SfGrid TValue="Order" DataSource="@Orders" Height="400">
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="ID" Width="100" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="100" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="150" />
         <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
     </GridColumns>
 </SfGrid>
 
 @code {
-    List<Order> Orders = new()
+    private List<Order> Orders = new List<Order>
     {
-        new Order{ OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
-        new Order{ OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
-        new Order{ OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
+        new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+        new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
+        new Order { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
     };
 
-    class Order
+    public class Order
     {
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
@@ -1608,7 +1608,7 @@ public class OrderViewModel : INotifyPropertyChanged
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" />
         <syncfusion:GridNumericColumn MappingName="Freight" HeaderText="Freight" NumberDecimalDigits="2" />
-        <syncfusion:GridCurrencyColumn MappingName="Amount" HeaderText="Amount" />
+        <syncfusion:GridCurrencyColumn MappingName="Amount" HeaderText="Amount" CurrencyDecimalDigits="2" />
         <syncfusion:GridDateTimeColumn MappingName="OrderDate" HeaderText="Order Date" />
         <syncfusion:GridCheckBoxColumn MappingName="IsShipped" HeaderText="Shipped" />
     </syncfusion:SfDataGrid.Columns>
@@ -1690,16 +1690,51 @@ public class OrderViewModel : INotifyPropertyChanged
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
 
-<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+<syncfusion:SfDataGrid x:Name="OrdersGrid"
+                       ItemsSource="{Binding Orders}"
                        AllowEditing="True"
-                       AddNewRowPosition="Top"
-                       EditMode="Cell">
+                       EditTrigger="OnTap"                    
+                       EditorSelectionBehavior="SelectAll"         
+                       LostFocusBehavior="Default"                 
+                       CurrentCellBeginEdit="OrdersGrid_CurrentCellBeginEdit"
+                       CurrentCellEndEdit="OrdersGrid_CurrentCellEndEdit"
+                       CurrentCellValueChanged="OrdersGrid_CurrentCellValueChanged"
+                       CellTapped="OrdersGrid_CellTapped"
+                       CellDoubleTapped="OrdersGrid_CellDoubleTapped">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" AllowEditing="False" />
         <syncfusion:GridTextColumn MappingName="CustomerID" HeaderText="Customer" />
         <syncfusion:GridNumericColumn MappingName="Freight" HeaderText="Freight" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% highlight cs tabtitle="OrderView.xaml.cs" %}
+
+private void OrdersGrid_CurrentCellBeginEdit(object sender, CurrentCellBeginEditEventArgs e)
+{
+    // Use e.RowColumnIndex and e.Column to customize or cancel cell editing using e.Cancel.
+}
+
+private void OrdersGrid_CurrentCellEndEdit(object sender, CurrentCellEndEditEventArgs e)
+{
+    // Use e.RowColumnIndex to perform validation or post‑edit processing when editing ends.
+}
+
+private void OrdersGrid_CurrentCellValueChanged(object sender, CurrentCellValueChangedEventArgs e)
+{
+    // Use e.RowColumnIndex and e.Column to respond to value changes in editable cells.
+}
+
+private void OrdersGrid_CellTapped(object sender, GridCellTappedEventArgs e)
+{
+    // Use e.RowColumnIndex, e.Column, and e.Record to handle single‑click or tap interactions.
+}
+
+private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEventArgs e)
+{
+    // Use e.RowColumnIndex, e.Column, and e.Record to initiate editing or perform double‑click actions.
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1709,61 +1744,81 @@ public class OrderViewModel : INotifyPropertyChanged
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-@page "/orders"
-@rendermode InteractiveServer
-@inject OrderService OrderService
+<SfGrid TValue="Order"
+        @ref="OrdersGrid"
+        DataSource="@Orders">
 
-<SfGrid TValue="Order" @ref="Grid" DataSource="@Orders" 
-        AllowPaging="true" Toolbar="@ToolbarItems">
-    <GridEditSettings AllowAdding="true" 
-                      AllowEditing="true" 
-                      AllowDeleting="true" 
-                      Mode="EditMode.Normal" />
+    <GridEditSettings AllowEditing="true"
+                      AllowAdding="true"
+                      AllowDeleting="true"
+                      Mode="EditMode.Normal">
+    </GridEditSettings>
+
+    <GridEvents TValue="Order"
+                OnRecordClick="RecordClickHandler"
+                OnRecordDoubleClick="RecordDoubleClickHandler"
+                OnCellEdit="CellEditHandler"
+                OnCellSave="CellSaveHandler"
+                CellSaved="CellSavedHandler">
+    </GridEvents>
+
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)" 
-                    HeaderText="Order ID" 
-                    IsPrimaryKey="true" 
-                    IsIdentity="true" 
+        <GridColumn Field="@nameof(Order.OrderID)"
+                    HeaderText="Order ID"
+                    IsPrimaryKey="true"
+                    AllowEditing="false"
                     Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" 
-                    HeaderText="Customer" 
-                    ValidationRules="@(new ValidationRules { Required = true, MinLength = 3 })" 
+
+        <GridColumn Field="@nameof(Order.CustomerID)"
+                    HeaderText="Customer"
                     Width="150" />
-        <GridColumn Field="@nameof(Order.Freight)" 
-                    HeaderText="Freight" 
-                    Format="C2" 
+
+        <GridColumn Field="@nameof(Order.Freight)"
+                    HeaderText="Freight"
                     EditType="EditType.NumericEdit"
-                    ValidationRules="@(new ValidationRules { Required = true, Min = 0 })" 
+                    TextAlign="TextAlign.Right"
                     Width="120" />
     </GridColumns>
-    <GridEvents TValue="Order" OnActionComplete="OnActionComplete" />
+
 </SfGrid>
 
 @code {
-    private SfGrid<Order> Grid;
-    private List<Order> Orders { get; set; } = new();
-    private List<string> ToolbarItems = new() { "Add", "Edit", "Delete", "Update", "Cancel" };
+    private SfGrid<Order> OrdersGrid;
+    private List<Order> Orders = new();
 
-    protected override async Task OnInitializedAsync()
+    private void RecordClickHandler(RecordClickEventArgs<Order> args)
     {
-        Orders = await OrderService.GetOrdersAsync();
+        // Use args.RowData and args.RowIndex to handle single‑click record interactions.
     }
 
-    private async Task OnActionComplete(ActionEventArgs<Order> args)
+    private void RecordDoubleClickHandler(RecordDoubleClickEventArgs<Order> args)
     {
-        if (args.RequestType == Action.Save)
-        {
-            if (args.Action == "Add")
-                await OrderService.AddOrderAsync(args.Data);
-            else
-                await OrderService.UpdateOrderAsync(args.Data);
-        }
-        else if (args.RequestType == Action.Delete)
-        {
-            await OrderService.DeleteOrderAsync(args.Data.FirstOrDefault());
-        }
+        // Use args.RowData and args.RowIndex to initiate editing or perform record‑level actions.
+    }
+
+    private void CellEditHandler(CellEditArgs<Order> args)
+    {
+        // Use args.ColumnName and args.RowData to customize or cancel editing using args.Cancel.
+    }
+
+    private void CellSaveHandler(CellSaveArgs<Order> args)
+    {
+        // Validate args.Value and set args.Cancel to prevent saving if needed.
+    }
+
+    private void CellSavedHandler(CellSavedArgs<Order> args)
+    {
+        // Use args.Data and args.ColumnName to perform actions after the cell value is saved.
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
     }
 }
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -1783,11 +1838,15 @@ public class OrderViewModel : INotifyPropertyChanged
 
 <syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
                        AllowSorting="True"
-                       AllowMultiSorting="True"
+                       ShowSortNumbers="True"
+                       SortClickAction="DoubleClick"
                        AllowFiltering="True"
+                       AutoGenerateColumns="True"
+                       FilterPopupStyle="{StaticResource  gridFilterControlStyle}"
                        FilterRowPosition="FixedTop">
     <syncfusion:SfDataGrid.SortColumnDescriptions>
         <syncfusion:SortColumnDescription ColumnName="OrderID" SortDirection="Ascending" />
+        <syncfusion:SortColumnDescription ColumnName="CustomerName" SortDirection="Descending" />
     </syncfusion:SfDataGrid.SortColumnDescriptions>
 </syncfusion:SfDataGrid>
 
@@ -1803,15 +1862,16 @@ public class OrderViewModel : INotifyPropertyChanged
         AllowSorting="true"
         AllowMultiSorting="true"
         AllowFiltering="true">
-    <GridFilterSettings Type="FilterType.Excel" />
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel" />
     <GridSortSettings>
         <GridSortColumns>
             <GridSortColumn Field="OrderID" Direction="SortDirection.Ascending" />
+            <GridSortColumn Field="CustomerName" Direction="SortDirection.Descending" />
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.CustomerName)" HeaderText="Customer" Width="150" />
         <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
     </GridColumns>
 </SfGrid>
@@ -1834,6 +1894,7 @@ public class OrderViewModel : INotifyPropertyChanged
                        AllowGrouping="True"
                        ShowGroupDropArea="True">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="OrderID" />
         <syncfusion:GroupColumnDescription ColumnName="CustomerID" />
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
 </syncfusion:SfDataGrid>
@@ -1846,18 +1907,26 @@ public class OrderViewModel : INotifyPropertyChanged
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<SfGrid TValue="Order" DataSource="@Orders" AllowGrouping="true">
-    <GridGroupSettings ShowDropArea="true" ShowGroupedColumn="true">
-        <GridGroupColumns>
-            <GridGroupColumn Field="CustomerID"></GridGroupColumn>
-        </GridGroupColumns>
-    </GridGroupSettings>
+<SfGrid TValue="Order" DataSource="@Orders" AllowGrouping="true" Height="450px">
+    <GridGroupSettings ShowDropArea="true"
+                       ShowGroupedColumn="true"
+                       Columns="@Initial" />
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
         <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
         <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
     </GridColumns>
 </SfGrid>
+
+@code {
+    private IEnumerable<Order> Orders;
+    private readonly string[] Initial = new[] { nameof(Order.OrderID), nameof(Order.CustomerID) };
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1869,21 +1938,39 @@ public class OrderViewModel : INotifyPropertyChanged
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
 
-<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       SelectionUnit="Any"
                        SelectionMode="Extended"
-                       SelectionUnit="Row"
-                       SelectionChanged="OnSelectionChanged">
+                       ShowRowHeader="True"
+                       EnableExcelLikeSelection="True"
+                       SelectionChanged="DataGrid_SelectionChanged"
+                       AutoGenerateColumns="False">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" Width="100" />
+        <syncfusion:GridTextColumn MappingName="CustomerID" HeaderText="Customer" Width="150" />
+        <syncfusion:GridNumericColumn MappingName="Freight" HeaderText="Freight" NumberDecimalDigits="2" Width="120" />
+    </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="OrderView.xaml.cs" %}
 
-private void OnSelectionChanged(object sender, GridSelectionChangedEventArgs e)
-{
-    var selectedItems = dataGrid.SelectedItems;
-    // Handle selection change
-}
+using Syncfusion.UI.Xaml.Grid;
+using System.Collections;
 
+private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventArgs e)
+{
+    var grid = (SfDataGrid)sender;
+    IList selected = grid.SelectedItems;           // selected rows (IList)
+    if (selected.Count > 0 && selected[0] is Order o)
+    {
+        // use selected order
+    }
+
+    var current = grid.CurrentCellManager.CurrentCell; // current cell info
+    var currentRow = current?.RowData as Order;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1892,34 +1979,41 @@ private void OnSelectionChanged(object sender, GridSelectionChangedEventArgs e)
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<SfGrid TValue="Order" @ref="Grid" DataSource="@Orders" AllowSelection="true">
-    <GridSelectionSettings Mode="SelectionMode.Multiple" Type="SelectionType.Row" />
-    <GridEvents TValue="Order" 
-                RowSelected="OnRowSelected" 
-                RowDeselected="OnRowDeselected" />
+<SfGrid TValue="Order" @ref="Grid" DataSource="@Orders" Height="320" AllowSelection="true">
+    <GridSelectionSettings Type="SelectionType.Single" Mode="SelectionMode.Row" />
+    <GridEvents TValue="Order" RowSelected="OnRowSelected" RowDeselected="OnRowDeselected" />
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
         <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" TextAlign="TextAlign.Right" />
     </GridColumns>
 </SfGrid>
 
 @code {
     private SfGrid<Order> Grid;
+    private List<Order> Orders = new()
+    {
+        new Order{ OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+        new Order{ OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 }
+    };
 
     private void OnRowSelected(RowSelectEventArgs<Order> args)
     {
-        Console.WriteLine($"Selected: {args.Data?.CustomerID}");
+        // Use args.Data for the selected row
     }
 
     private void OnRowDeselected(RowDeselectEventArgs<Order> args)
     {
-        Console.WriteLine($"Deselected: {args.Data?.CustomerID}");
+        // Use args.Data for the deselected row
     }
 
-    private async Task GetSelectedRecords()
+    private async Task<IEnumerable<Order>> GetSelected()
     {
-        var selectedRecords = await Grid.GetSelectedRecordsAsync();
+        // Returns the currently selected records from the grid
+        return await Grid.GetSelectedRecordsAsync();
     }
+
+    public class Order { public int OrderID { get; set; } public string CustomerID { get; set; } public double Freight { get; set; } }
 }
 
 {% endhighlight %}
@@ -1961,7 +2055,7 @@ private void OnSelectionChanged(object sender, GridSelectionChangedEventArgs e)
 {% highlight razor tabtitle="Orders.razor" %}
 
 <SfGrid TValue="Order" DataSource="@Orders" AllowPaging="true">
-    <GridPageSettings PageSize="20" PageSizes="@(new int[] { 10, 20, 50, 100 })" />
+    <GridPageSettings PageSize="20"  PageSizes="true" />
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
         <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
@@ -1985,8 +2079,8 @@ private void OnSelectionChanged(object sender, GridSelectionChangedEventArgs e)
 {% highlight xml tabtitle="OrderView.xaml" %}
 
 <syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
-                       EnableDataVirtualization="True"
-                       EnableColumnVirtualization="True" />
+                       EnableDataVirtualization="True">
+</syncfusion:SfDataGrid>
 
 {% endhighlight %}
 {% endtabs %}
@@ -2011,106 +2105,6 @@ private void OnSelectionChanged(object sender, GridSelectionChangedEventArgs e)
 {% endtabs %}
 
 > N> When using `EnableVirtualization`, the `Height` property must be set.
-
-### Events
-
-**WPF implementation:**
-
-{% tabs %}
-{% highlight xml tabtitle="OrderView.xaml" %}
-
-<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
-                       CurrentCellActivated="OnCellActivated"
-                       SelectionChanged="OnSelectionChanged"
-                       RecordDeleted="OnRecordDeleted">
-    <syncfusion:SfDataGrid.InputBindings>
-        <MouseBinding MouseAction="LeftDoubleClick" 
-                      Command="{Binding RowDoubleClickCommand}" />
-    </syncfusion:SfDataGrid.InputBindings>
-</syncfusion:SfDataGrid>
-
-{% endhighlight %}
-{% highlight c# tabtitle="OrderView.xaml.cs" %}
-
-private void OnCellActivated(object sender, CurrentCellActivatedEventArgs e)
-{
-    // Handle cell activation
-}
-
-private void OnSelectionChanged(object sender, GridSelectionChangedEventArgs e)
-{
-    // Handle selection change
-}
-
-private void OnRecordDeleted(object sender, RecordDeletedEventArgs e)
-{
-    // Handle record deletion
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Blazor implementation:**
-
-{% tabs %}
-{% highlight razor tabtitle="Orders.razor" %}
-
-<SfGrid TValue="Order" DataSource="@Orders" AllowPaging="true">
-    <GridEvents TValue="Order"
-                OnRecordDoubleClick="OnRecordDoubleClick"
-                RowSelected="OnRowSelected"
-                OnActionBegin="OnActionBegin"
-                OnActionComplete="OnActionComplete"
-                RowDataBound="OnRowDataBound" />
-    <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
-    </GridColumns>
-</SfGrid>
-
-@code {
-    private void OnRowSelected(RowSelectEventArgs<Order> args)
-    {
-        Console.WriteLine($"Selected: {args.Data?.CustomerID}");
-    }
-
-    private void OnRecordDoubleClick(RecordDoubleClickEventArgs<Order> args)
-    {
-        Console.WriteLine($"Double-clicked OrderID: {args.RowData?.OrderID}");
-    }
-
-    private void OnActionBegin(ActionEventArgs<Order> args)
-    {
-        if (args.RequestType == Action.Save)
-        {
-            // Set args.Cancel = true to prevent save
-        }
-    }
-
-    private async Task OnActionComplete(ActionEventArgs<Order> args)
-    {
-        if (args.RequestType == Action.Delete)
-            await OrderService.DeleteOrderAsync(args.Data.FirstOrDefault());
-            
-        if (args.RequestType == Action.Save && args.Action == "Add")
-            await OrderService.AddOrderAsync(args.Data);
-    }
-
-    private void OnRowDataBound(RowDataBoundEventArgs<Order> args)
-    {
-        if (args.Data.Freight > 500)
-            args.Row.AddClass(new string[] { "high-freight-row" });
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Key event mappings:**
-- `CurrentCellActivated` → `CellSelected`
-- `SelectionChanged` → `RowSelected` / `RowDeselected`
-- `RecordDeleted` → `OnActionComplete` (RequestType == Action.Delete)
-- `MouseDoubleClick` → `OnRecordDoubleClick`
 
 ### Styling - Cell level
 
@@ -2163,18 +2157,21 @@ private void OnRecordDeleted(object sender, RecordDeletedEventArgs e)
 {% tabs %}
 {% highlight xml tabtitle="OrderView.xaml" %}
 
-<syncfusion:SfDataGrid ItemsSource="{Binding Orders}">
-    <syncfusion:SfDataGrid.RowStyle>
-        <Style TargetType="syncfusion:VirtualizingCellsControl">
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding Freight, Converter={StaticResource FreightConverter}}" 
-                             Value="True">
-                    <Setter Property="Background" Value="#fff3cd" />
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>
-    </syncfusion:SfDataGrid.RowStyle>
-</syncfusion:SfDataGrid>
+<Window.Resources>
+    <Style TargetType="syncfusion:VirtualizingCellsControl" x:Key="alternatingRowStyle">
+        <Setter Property="Background" Value="LightBlue"/>
+    </Style>
+
+    <Style TargetType="syncfusion:VirtualizingCellsControl" x:Key="RowStyle">
+        <Setter Property="Background" Value="Bisque"/>
+    </Style>
+</Window.Resources>
+
+<syncfusion:SfDataGrid x:Name="dataGrid" 
+                       AlternatingRowStyle="{StaticResource alternatingRowStyle}" 
+                       AlternationCount="3"
+                       RowStyle="{StaticResource RowStyle}"
+                       ItemsSource="{Binding Orders}"/>
 
 {% endhighlight %}
 {% endtabs %}
@@ -2215,86 +2212,6 @@ private void OnRecordDeleted(object sender, RecordDeletedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Theming
-
-**WPF implementation:**
-
-{% tabs %}
-{% highlight xml tabtitle="App.xaml" %}
-
-<Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.MergedDictionaries>
-            <syncfusion:FluentThemeDictionary />
-        </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-</Application.Resources>
-
-{% endhighlight %}
-{% endtabs %}
-
-**Blazor implementation:**
-
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
-
-<!-- Fluent theme (closest to WPF Fluent) -->
-<link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
-
-<!-- Or Bootstrap 5 -->
-<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-
-<!-- Or Material 3 -->
-<link href="_content/Syncfusion.Blazor.Themes/material3.css" rel="stylesheet" />
-
-{% endhighlight %}
-{% endtabs %}
-
-### Performance - Remote data operations
-
-**WPF implementation:**
-
-{% tabs %}
-{% highlight c# tabtitle="OrderViewModel.cs" %}
-
-public class OrderViewModel
-{
-    private readonly OrderService _orderService;
-    
-    public async Task LoadDataAsync()
-    {
-        var orders = await _orderService.GetOrdersAsync();
-        await Application.Current.Dispatcher.InvokeAsync(() =>
-        {
-            Orders = new ObservableCollection<Order>(orders);
-        });
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Blazor implementation:**
-
-{% tabs %}
-{% highlight razor tabtitle="Orders.razor" %}
-
-<SfGrid TValue="Order" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
-    <SfDataManager Url="/api/orders" Adaptor="Adaptors.WebApiAdaptor" />
-    <GridPageSettings PageSize="50" />
-    <GridFilterSettings Type="FilterType.Excel" />
-    <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
-        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" />
-    </GridColumns>
-</SfGrid>
-
-{% endhighlight %}
-{% endtabs %}
-
-> **Best practice:** Use `SfDataManager` with `WebApiAdaptor` for datasets over 50,000 rows to enable server-side sorting, filtering, and paging.
-
 ### Performance - Frozen columns
 
 **WPF implementation:**
@@ -2318,7 +2235,7 @@ public class OrderViewModel
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<SfGrid TValue="Order" DataSource="@Orders" FrozenColumns="2">
+<SfGrid TValue="Order" DataSource="@Orders"  Height="300px" EnableHover="false" RowHeight="38" EnableVirtualization="true" EnableColumnVirtualization="true" EnableVirtualMaskRow="true">
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsFrozen="true" Width="120" />
         <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" IsFrozen="true" Width="150" />
