@@ -1,8 +1,8 @@
-# Dialog Styling and Customization
+# Predefined Dialog Styling and Customization
 
 ## Overview
 
-The Syncfusion Blazor Dialog component provides extensive customization capabilities through CSS classes and properties. This guide demonstrates how to implement comprehensive styling for different Dialog types including Alert dialogs with predefined styles and fully custom dialogs.
+The Syncfusion Blazor Predefined Dialog component provides extensive customization capabilities through CSS classes and properties. This guide demonstrates how to implement comprehensive styling for different Dialog types including Alert dialogs with predefined styles and fully custom dialogs.
 
 ## Alert Predefined Dialog Customization
 
@@ -518,4 +518,3 @@ The custom Dialog implementation showcases professional Dialog design patterns w
 }
 
 ```
-**Playground Sample with Demo !**
