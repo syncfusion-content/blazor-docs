@@ -303,7 +303,7 @@ public class EmployeeInfo
 
 ```
 
-![Validate Complex Column Using Data Annotation Attribute in Blazor DataGrid.](images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.gif)
+![Validate Complex Column Using Data Annotation Attribute in Blazor DataGrid.](images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.webp)
 
 ## Custom validator component
 
@@ -402,7 +402,7 @@ public class MyCustomValidator : ComponentBase
 }
 ```
 
-![Blazor DataGrid with Custom Validator in Editing.](images/blazor-datagrid-custom-validator-in-editing.png)
+![Blazor DataGrid with Custom Validator in Editing.](images/blazor-datagrid-custom-validator-in-editing.webp)
 
 ## Display validation message using in-built tooltip
 
@@ -435,7 +435,7 @@ protected void HandleValidation(FieldIdentifier identifier)
 }
 ```
 
-![Blazor DataGrid with Custom Validator in Editing.](images/blazor-datagrid-custom-validator.png)
+![Blazor DataGrid with Custom Validator in Editing.](images/blazor-datagrid-custom-validator.webp)
 
 ## Disable in-built validator component
 

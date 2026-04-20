@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chip](https://www.syncfusion.com/blazor-components/blazor-chips) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-
+{% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
