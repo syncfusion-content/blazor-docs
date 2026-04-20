@@ -32,10 +32,10 @@ The following table summarizes the functional and behavioral differences between
 
 | Aspect | Authentication | Authorization |
 |---|---|---|
-| **Purpose** | Verifies user identity. | Grants or denies access to resources and features. |
-| **Timing**  | Happens first | Happens after authentication |
-| **Blazor Tools** | `AuthenticationStateProvider` | `<AuthorizeView>`, `[Authorize]` |
-| **Syncfusion Integration** | Access user identity via `AuthenticationStateProvider` for data loading. | UI-level: Use `<AuthorizeView>` to conditionally render components. Data-level: Add Bearer tokens to `SfDataManager.Headers` for secure API calls. |
+| Purpose | Verifies user identity. | Grants or denies access to resources and features. |
+| Timing  | Happens first | Happens after authentication |
+| Blazor Tools | `AuthenticationStateProvider` | `<AuthorizeView>`, `[Authorize]` |
+| Syncfusion Integration | Access user identity via `AuthenticationStateProvider` for data loading. | UI-level: Use `<AuthorizeView>` to conditionally render components. Data-level: Add Bearer tokens to `SfDataManager.Headers` for secure API calls. |
 
 ## Applying authentication and authorization to Syncfusion® components
 
@@ -155,7 +155,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 // Add Syncfusion Blazor services
 builder.Services.AddSyncfusionBlazor();
- 
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,8 +163,8 @@ builder.Services.AddSyncfusionBlazor();
 
 The [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be secured by using the [SfDataManager.Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property, which allows the grid to load data securely from protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
 
-N> 
-* For testing only, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control. 
+N>
+* For testing only, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control.
  *  For production, retrieve the token dynamically from the authenticated user's claims using `AuthenticationStateProvider` instead of static configuration.
 
 {% tabs %}
@@ -219,7 +219,7 @@ N>
         if (!string.IsNullOrEmpty(token)) HeaderData["Authorization"] = $"Bearer {token}";
         await base.OnInitializedAsync();
     }
-    
+
     public class Order
     {
         public int? OrderID { get; set; }
@@ -264,7 +264,7 @@ The [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) u
 @code {
     DateTime currentDate = DateTime.Today;
     private Dictionary<string, string> HeaderData { get; } = new Dictionary<string, string>();
-   
+
     protected override async Task OnInitializedAsync()
     {
         var token = Configuration["ExternalApi:BearerToken"];
@@ -317,7 +317,7 @@ The following [TreeView](https://www.syncfusion.com/blazor-components/blazor-tre
 </AuthorizeView>
 
 @code {
-    
+
     public class MailItem
     {
         public string? Id { get; set; }
@@ -334,7 +334,7 @@ The following [TreeView](https://www.syncfusion.com/blazor-components/blazor-tre
         // Load hierarchical folder data
         LoadFolderData();
     }
-    
+
     private void LoadFolderData()
     {
         MyFolder.Add(new MailItem { Id = "1", FolderName = "Inbox", HasSubFolders = true, Expanded = true });
@@ -350,7 +350,7 @@ The following [TreeView](https://www.syncfusion.com/blazor-components/blazor-tre
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
 **Expected behavior**
 * Syncfusion components should render **only for authorized users**.
@@ -362,6 +362,9 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## See also
 
-* [Blazor Server app with authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&tabs=visual-studio) 
-* [AuthenticationStateProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authenticationstateprovider) 
+* [Blazor Server app with authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&tabs=visual-studio)
+* [AuthenticationStateProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authenticationstateprovider)
+* [Getting started with Syncfusion DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+* [Getting started with Syncfusion Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
+* [Getting started with Syncfusion TreeView](https://blazor.syncfusion.com/documentation/treeview/getting-started-with-server-app)
 

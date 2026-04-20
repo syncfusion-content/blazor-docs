@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Authentication with AWS Cognito using Syncfusion® Components
 
-This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components).  
+This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components).
 
 ## What is AWS?
 
@@ -17,22 +17,22 @@ This guide demonstrates how to integrate [AWS Cognito authentication](https://do
 
 ## Why Amazon Cognito for Blazor?
 
-* Standard based OIDC integrates directly with ASP.NET Core's built-in OpenID Connect middleware for Blazor Server. This is the Microsoft recommended approach and requires no third-party authentication libraries. 
-* Supports login with MFA and password policies, reducing custom auth UI work. 
-* Emits `cognito:groups` in tokens for role-based authorization in your app and API. 
+* Standard OIDC integrates directly with ASP.NET Core's built-in OpenID Connect middleware for Blazor Server. This is the Microsoft recommended approach and requires no third-party authentication libraries.
+* Supports login with MFA and password policies, reducing custom auth UI work.
+* Emits `cognito:groups` in tokens for role-based authorization in your app and API.
 * Identity pools can exchange a user's ID token for time limited AWS credentials to call S3, DynamoDB, etc.
 
 ## Cognito building blocks
 
-* **User pools:** Managed user directory + OIDC authorization server (tokens, hosted UI, MFA, groups). Use this to authenticate users and obtain ID/Access tokens for your app and APIs. 
+* **User pools:** Managed user directory + OIDC authorization server (tokens, hosted UI, MFA, groups). Use this to authenticate users and obtain ID/Access tokens for your app and APIs.
 * **Identity pools (Federated Identities):** Optional service that exchanges a trusted identity for example user pool ID token for temporary AWS credentials through IAM roles. Use this when the server must call AWS services (such as Amazon S3 and Amazon DynamoDB) on behalf of the user.
 
 ## Password policies
 
 In **user pool → sign-in experience**:
-* Configure **password policy** (length, complexity, expiration).  
-* Set MFA to Off, Optional, or Required. Choose **SMS** or **TOTP** enrollment.  
-* Hosted UI prompts users according to your policy.  
+* Configure **password policy** (length, complexity, expiration).
+* Set MFA to Off, Optional, or Required. Choose **SMS** or **TOTP** enrollment.
+* Hosted UI prompts users according to your policy.
 
 ## Role-based authorization with Cognito groups
 
@@ -43,12 +43,10 @@ In **user pool → sign-in experience**:
 ## Prerequisites
 
 * [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later (this guide uses .NET 10)
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension 
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 * [AWS Account with permission to manage Cognito](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html)
 
 ## Integrating Cognito with Blazor
-
-Configure OpenID Connect with the Cognito hosted UI (Authorization Code + PKCE), which Microsoft's docs show for any OIDC provider in Blazor Web Apps.
 
 ### Create a Blazor project
 
@@ -56,7 +54,7 @@ If you already have a Blazor project, proceed to the **Install required packages
 
 ### Install required packages
 
-To enable authentication and use Syncfusion Blazor components, install the required packages through NuGet Package Manager (Tools → NuGet Package Manager → Manage NuGet Packages for Solution).
+To enable authentication and use Syncfusion Blazor components, install the required packages through NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
 
 **Syncfusion packages**
 
@@ -101,8 +99,7 @@ Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusio
 
 ...
 using Syncfusion.Blazor;
-var builder = WebApplication.CreateBuilder(args);
-// Add services to the container.
+...
 builder.Services.AddSyncfusionBlazor();
 ...
 
@@ -382,7 +379,7 @@ This page demonstrates how to protect a [Syncfusion DataGrid](https://www.syncfu
                 <div>
                     <h2>Sign in</h2>
                     <p>Sign in to your account with AWS Cognito.</p>
-                </div>                        
+                </div>
                 <div>
                     <p class="signin-description">
                         Secure authentication powered by AWS Cognito
