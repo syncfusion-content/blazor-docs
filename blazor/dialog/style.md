@@ -155,7 +155,7 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 
 Use the following CSS to customize the background color of the Dialog.
 
-```razor
+```cshtml
 <SfDialog Width="300px"
           Header="Background Color Dialog"
           Content="This dialog demonstrates background color customization."
@@ -174,7 +174,7 @@ Use the following CSS to customize the background color of the Dialog.
 
 Use the following CSS to customize the Dialog border and apply a border radius.
 
-```razor
+```cshtml
 <SfDialog Width="300px"
           Header="Border Customized Dialog"
           Content="This dialog demonstrates border and radius customization."
