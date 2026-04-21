@@ -104,8 +104,7 @@ N> Reassigning a new list instance with the same items still counts as a paramet
 
 There are cases where state changes occur but the visual output does not actually need to change. In such cases, the `ShouldRender` method can be used to explicitly control whether the component proceeds with rendering.
 
-{% tabs %}
-{% highlight cs %}
+```c#
 
 private bool isUiUpdateRequired;
 
@@ -124,8 +123,7 @@ private async Task OnDataRefreshAsync()
     StateHasChanged();
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 This pattern is useful when background work updates internal values that do not affect the visible UI immediately. It should be used carefully, because returning `false` at the wrong time can leave the UI out of sync with the component state.
 
@@ -207,9 +205,7 @@ This improves render isolation. If a chart filter changes, only the chart sectio
 {% tabs %}
 {% highlight razor %}
 
-<OrdersSummary TotalOrders="@TotalOrders" />
 <OrdersGrid Orders="@Orders" />
-<SalesChart Data="@SalesData" />
 
 {% endhighlight %}
 {% endtabs %}
@@ -250,16 +246,13 @@ Rendering should remain lightweight. If methods that perform calculations, LINQ 
 
 The following example shows a common pattern that looks simple but becomes costly when the component renders frequently.
 
-{% tabs %}
-{% highlight razor %}
+```c#
 
 <p>Total Amount: @GetTotalAmount()</p>
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-{% tabs %}
-{% highlight cs %}
+```c#
 
 private decimal GetTotalAmount()
 {
@@ -267,21 +260,17 @@ private decimal GetTotalAmount()
     return Orders.Sum(order => order.Total);
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 A more efficient approach is to calculate the total when the data changes and store the result in a field or property.
 
-{% tabs %}
-{% highlight razor %}
+```c#
 
 <p>Total Amount: @TotalAmount</p>
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-{% tabs %}
-{% highlight cs %}
+```c#
 
 private decimal TotalAmount;
 
@@ -290,8 +279,7 @@ protected override void OnInitialized()
     TotalAmount = Orders.Sum(order => order.Total);
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 This keeps the render path simple and avoids repeated computation during every UI update.
 
