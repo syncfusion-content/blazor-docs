@@ -325,7 +325,7 @@ public class GridController : ControllerBase
 This example demonstrates how a JWT token is retrieved from the server and attached to the Syncfusion® Blazor DataManager as an HTTP Authorization header. This ensures that the DataGrid loads data only from a secured API after the user has been authenticated.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor
@@ -394,7 +394,7 @@ This example demonstrates how a JWT token is retrieved from the server and attac
 
 When the Load GridData button is clicked, the application first authenticates the request using JWT. After successful authentication, the secured API is accessed and the DataGrid data is loaded.
 
-![Blazor DataGrid with JWT](images/jwt-authentication.gif)
+![Blazor DataGrid with JWT](images/jwt-authentication.webp)
 
 ## See also
 
