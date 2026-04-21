@@ -8,13 +8,13 @@ documentation: ug
 
 # Authentication and Authorization in Syncfusion® Blazor Components
 
-This guide shows how to secure Syncfusion Blazor components with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) for both, and the [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) for UI-level only.
+This guide shows how to secure [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components) with authentication and authorization. It covers UI-level security (to control what users see and interact with) and data-level security (to protect backend data access), with examples using the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) for both, and the [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) for UI-level only.
 
 Authentication verifies a user's identity. Authorization then determines the access levels and actions the user can perform. Syncfusion Blazor components integrate with Blazor's built-in authentication and authorization features to enable both UI-level and data-level security.
 
 ## What is authentication?
 
-Authentication verifies a user's identity in your Blazor application. Blazor apps often use cookie-based authentication where a signed cookie is stored in the browser and validated server-side for each request. For WebAssembly apps, use token-based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. In this pattern, the BFF acts as an intermediary that handles token exchange and manages sensitive credentials server-side, preventing tokens from being exposed to browser JavaScript.
+Authentication verifies a user's identity in your Blazor application. Blazor apps often use cookie based authentication where a signed cookie is stored in the browser and validated server-side for each request. For WebAssembly apps, use token based systems like JSON Web Tokens (JWTs). Another option is the Backend-for-Frontend (BFF) pattern, where a server manages authentication on behalf of the client. In this pattern, the BFF acts as an intermediary that handles token exchange and manages sensitive credentials server-side, preventing tokens from being exposed to browser JavaScript.
 
 Syncfusion components access user identity information through Blazor's `AuthenticationStateProvider`. This allows secure data loading or feature restriction based on the user's identity.
 
@@ -32,10 +32,10 @@ The following table summarizes the functional and behavioral differences between
 
 | Aspect | Authentication | Authorization |
 |---|---|---|
-| **Purpose** | Verifies user identity. | Grants or denies access to resources and features. |
-| **Timing**  | Happens first | Happens after authentication |
-| **Blazor Tools** | `AuthenticationStateProvider` | `<AuthorizeView>`, `[Authorize]` |
-| **Syncfusion Integration** | Access user identity via `AuthenticationStateProvider` for data loading. | UI-level: Use `<AuthorizeView>` to conditionally render components. Data-level: Add Bearer tokens to `SfDataManager.Headers` for secure API calls. |
+| Purpose | Verifies user identity. | Grants or denies access to resources and features. |
+| Timing  | Happens first | Happens after authentication |
+| Blazor Tools | `AuthenticationStateProvider` | `<AuthorizeView>`, `[Authorize]` |
+| Syncfusion Integration | Access user identity via `AuthenticationStateProvider` for data loading. | UI-level: Use `<AuthorizeView>` to conditionally render components. Data-level: Add Bearer tokens to `SfDataManager.Headers` for secure API calls. |
 
 ## Applying authentication and authorization to Syncfusion® components
 
@@ -46,7 +46,7 @@ Syncfusion components can be secured at two layers:
 
 For full security, combine UI-level and data-level approaches. The following examples demonstrate this with Syncfusion components.
 
-N> This `<AuthorizeView>` and `SfDataManager` pattern applies to most data-bound Syncfusion components, such as DataGrid, Charts, Scheduler, and TreeView. For non data-bound ones (e.g., Button), use only `<AuthorizeView>`.
+N> This `<AuthorizeView>` and `SfDataManager` pattern applies to most data bound Syncfusion components, such as DataGrid, Charts, Scheduler, and TreeView. For non data bound ones (e.g., Button), use only `<AuthorizeView>`.
 
 ## Using Syncfusion® components
 
@@ -60,8 +60,8 @@ If you already have a Blazor project, proceed to the package installation sectio
 ### Prerequisites
 
 * [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) 8.0 or later; Examples use .NET 10.
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or Visual Studio Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
-* [AuthorizeView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authorizeview), [AuthenticationStateProvider](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/authentication-state), and token-based data requests require the Blazor authentication pipeline to be configured.
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+* [AuthorizeView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authorizeview), [AuthenticationStateProvider](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/authentication-state), and token based data requests require the Blazor authentication pipeline to be configured.
 
 ### Install required packages:
 
@@ -81,7 +81,7 @@ Use NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Pac
 
 ### Add required namespaces
 
-Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Navigations` namespaces.
+Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -96,10 +96,10 @@ Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `
 
 ### Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file.
+Add the Syncfusion theme CSS and required scripts to the `~/App.razor` file.
 
 {% tabs %}
-{% highlight html  %}
+{% highlight html tabtitle="App.razor"  %}
 
 <head>
      <!-- Syncfusion theme style sheet -->
@@ -117,10 +117,10 @@ N> Syncfusion provides multiple theme variants, allowing selection of the theme 
 
 ### Configuring authentication and authorization
 
-**Step 1. Wrap the application's router in App.razor:**
+**Step 1. Wrap the application's router in `App.razor`:**
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="App.razor" %}
 <CascadingAuthenticationState>
     <Router AppAssembly="@typeof(App).Assembly" />
 </CascadingAuthenticationState>
@@ -128,7 +128,7 @@ N> Syncfusion provides multiple theme variants, allowing selection of the theme 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2. Inject the authentication provider where needed (eg., in a .razor file):**
+**Step 2. Inject the authentication provider where needed (eg., in a `.razor` file):**
 
 {% tabs %}
 {% highlight razor %}
@@ -138,10 +138,10 @@ N> Syncfusion provides multiple theme variants, allowing selection of the theme 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3. Register authentication and syncfusion® services in Program.cs:**
+**Step 3. Register authentication and syncfusion® services in `Program.cs`:**
 
 {% tabs %}
-{% highlight cs %}
+{% highlight cs tabtitle="Program.cs" %}
 
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Identity;
@@ -155,20 +155,20 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 // Add Syncfusion Blazor services
 builder.Services.AddSyncfusionBlazor();
- 
+
 {% endhighlight %}
 {% endtabs %}
 
 ### DataGrid
 
-The DataGrid can be secured by using the `SfDataManager.Headers` property, which allows the grid to load data securely from protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
+The [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be secured by using the [SfDataManager.Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property, which allows the grid to load data securely from protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
 
-N> 
-* For testing only, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control. 
+N>
+* For testing only, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control.
  *  For production, retrieve the token dynamically from the authenticated user's claims using `AuthenticationStateProvider` instead of static configuration.
 
 {% tabs %}
-{% highlight json %}
+{% highlight json tabtitle="appsettings.json" %}
 
 {
   "ExternalApi": {
@@ -180,7 +180,7 @@ N>
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -219,7 +219,7 @@ N>
         if (!string.IsNullOrEmpty(token)) HeaderData["Authorization"] = $"Bearer {token}";
         await base.OnInitializedAsync();
     }
-    
+
     public class Order
     {
         public int? OrderID { get; set; }
@@ -234,10 +234,10 @@ N>
 
 ### Scheduler
 
-The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized users get protected data from the API.
+The [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to fetch events. This ensures only authorized users get protected data from the API.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
@@ -264,7 +264,7 @@ The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized
 @code {
     DateTime currentDate = DateTime.Today;
     private Dictionary<string, string> HeaderData { get; } = new Dictionary<string, string>();
-   
+
     protected override async Task OnInitializedAsync()
     {
         var token = Configuration["ExternalApi:BearerToken"];
@@ -291,10 +291,10 @@ The Scheduler uses `SfDataManager` to fetch events. This ensures only authorized
 
 ### TreeView
 
-The following TreeView example demonstrates a Blazor Server app configured with authentication, ensuring that the entire TreeView component is only accessible to authenticated users.
+The following [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) example demonstrates a Blazor Server app configured with authentication, ensuring that the entire TreeView component is only accessible to authenticated users.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -317,7 +317,7 @@ The following TreeView example demonstrates a Blazor Server app configured with 
 </AuthorizeView>
 
 @code {
-    
+
     public class MailItem
     {
         public string? Id { get; set; }
@@ -334,7 +334,7 @@ The following TreeView example demonstrates a Blazor Server app configured with 
         // Load hierarchical folder data
         LoadFolderData();
     }
-    
+
     private void LoadFolderData()
     {
         MyFolder.Add(new MailItem { Id = "1", FolderName = "Inbox", HasSubFolders = true, Expanded = true });
@@ -350,7 +350,7 @@ The following TreeView example demonstrates a Blazor Server app configured with 
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
 **Expected behavior**
 * Syncfusion components should render **only for authorized users**.
@@ -362,6 +362,9 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## See also
 
-* [Blazor Server app with authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&tabs=visual-studio) 
-* [AuthenticationStateProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authenticationstateprovider) 
+* [Blazor Server app with authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&tabs=visual-studio)
+* [AuthenticationStateProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.authorization.authenticationstateprovider)
+* [Getting started with Syncfusion DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+* [Getting started with Syncfusion Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
+* [Getting started with Syncfusion TreeView](https://blazor.syncfusion.com/documentation/treeview/getting-started-with-server-app)
 
