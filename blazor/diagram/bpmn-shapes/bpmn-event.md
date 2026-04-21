@@ -56,7 +56,7 @@ The [EventType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnEvent/BpmnEventTypeSample.razor)
 
-![None Trigger End event event BPMNShape](../images/Bpmn-Event-End.png)
+![None Trigger End event event BPMNShape](../images/Bpmn-Event-End.webp)
 
 ## How to Create a BPMN Event Trigger
 
@@ -103,17 +103,17 @@ Event triggers are notated as icons inside the circle and they represent the spe
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnEvent/BpmnEventTriggerSample.razor)
 
-![Message Trigger Start Event BPMN Shape](../images/Bpmn-Event-Message-Start.png)
+![Message Trigger Start Event BPMN Shape](../images/Bpmn-Event-Message-Start.webp)
 
 The following table illustrates the type of event triggers.
 
 | Triggers | Start | Non-Interrupting Start | Intermediate | Non-Interrupting Intermediate | Throwing Intermediate | End |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| None | ![None Trigger Start event BPMN Shape](../images/Bpmn-Event-Start.png)  | ![None Trigger Interupting event BPMN Shape](../images/Bpmn-Event-NonInteruptingStart.png) | ![None Trigger Intermediate event BPMN Shape](../images/Bpmn-Event-Intermidiate.png) | ![None Trigger NonInteruptingIntermediate BPMNShape](../images/Bpmn-Event-NoninteruptingIntermidiate.png) | ![Message Trigger ThrowingIntermediate Event BPMNShape](../images/Bpmn-Event-ThrowingIntermidiate.png) | ![None Trigger End event event BPMNShape](../images/Bpmn-Event-End.png) |
+| None | ![None Trigger Start event BPMN Shape](../images/Bpmn-Event-Start.webp)  | ![None Trigger Interupting event BPMN Shape](../images/Bpmn-Event-NonInteruptingStart.webp) | ![None Trigger Intermediate event BPMN Shape](../images/Bpmn-Event-Intermidiate.webp) | ![None Trigger NonInteruptingIntermediate BPMNShape](../images/Bpmn-Event-NoninteruptingIntermidiate.webp) | ![Message Trigger ThrowingIntermediate Event BPMNShape](../images/Bpmn-Event-ThrowingIntermidiate.webp) | ![None Trigger End event event BPMNShape](../images/Bpmn-Event-End.webp) |
 
-| Message | ![Message Trigger Start Event BPMN Shape](../images/Bpmn-Event-Message-Start.png) | ![Message Trigger NonInterupting Event BPMN Shape](../images/Bpmn-Event-Message-NonInterruptingStart.png) | ![Message Trigger Intermediate Event BPMN Shape](../images/Bpmn-Event-Message-Intermediate.png) | ![Message Trigger NonInteruptingIntermediate Event BPMN Shape](../images/Bpmn-Event-Message-NonInterruptingIntermediate.png) |![Message Trigger ThrowingIntermediate Event BPMNShape](../images/Bpmn-Event-Message-ThrowingIntermediate.png) | ![Message Trigger End Event BPMN EndShape](../images/Bpmn-Event-Message-End.png) |
+| Message | ![Message Trigger Start Event BPMN Shape](../images/Bpmn-Event-Message-Start.webp) | ![Message Trigger NonInterupting Event BPMN Shape](../images/Bpmn-Event-Message-NonInterruptingStart.webp) | ![Message Trigger Intermediate Event BPMN Shape](../images/Bpmn-Event-Message-Intermediate.webp) | ![Message Trigger NonInteruptingIntermediate Event BPMN Shape](../images/Bpmn-Event-Message-NonInterruptingIntermediate.webp) |![Message Trigger ThrowingIntermediate Event BPMNShape](../images/Bpmn-Event-Message-ThrowingIntermediate.webp) | ![Message Trigger End Event BPMN EndShape](../images/Bpmn-Event-Message-End.webp) |
 
-| Timer | ![Timer Trigger Start Event BPMNShape](../images/Bpmn-Event-Timer-Start.png) | ![Timer Trigger NonInterupting Event BPMN Shape](../images/Bpmn-Event-Timer-NonInterruptingStart.png) | ![Timer Trigger Intermediate Event BPMN Shape](../images/Bpmn-Event-Timer-Intermediate.png)|![Timer Trigger NonInteruptingIntermediate  Event BPMN Shape](../images/Bpmn-Event-Timer-NonInterruptingIntermediate.png) |![Timer Trigger ThrowingIntermidiate Event BpmnShape](../images/Bpmn-Event-Timer-ThrowingIntermediate.png)|![Timer Trigger End Event BpmnShape](../images/Bpmn-Event-Timer-End.png)
+| Timer | ![Timer Trigger Start Event BPMNShape](../images/Bpmn-Event-Timer-Start.webp) | ![Timer Trigger NonInterupting Event BPMN Shape](../images/Bpmn-Event-Timer-NonInterruptingStart.webp) | ![Timer Trigger Intermediate Event BPMN Shape](../images/Bpmn-Event-Timer-Intermediate.png)|![Timer Trigger NonInteruptingIntermediate  Event BPMN Shape](../images/Bpmn-Event-Timer-NonInterruptingIntermediate.png) |![Timer Trigger ThrowingIntermidiate Event BpmnShape](../images/Bpmn-Event-Timer-ThrowingIntermediate.png)|![Timer Trigger End Event BpmnShape](../images/Bpmn-Event-Timer-End.png)
 
 | Conditional | ![Conditional Trigger Start BPMN Shape](../images/Bpmn-Event-Conditional-Start.png) | ![Conditional Trigger NonInterupting BPMN Shape](../images/Bpmn-Event-Conditional-NonInterruptingStart.png) | ![Conditional Trigger Intermediate BPMN Shape](../images/Bpmn-Event-Conditional-Intermediate.png) |![Conditional Trigger NonInteruptingIntermediateBPMNShape](../images/Bpmn-Event-Conditional-NonInterruptingIntermediate.png) |![Conditional Trigger ThrowingIntermidiate Event BpmnShape](../images/Bpmn-Event-Conditional-ThrowingIntermediate.png)|![Conditional Trigger End Event BpmnShape](../images/Bpmn-Event-Conditional-End.png)|
 
