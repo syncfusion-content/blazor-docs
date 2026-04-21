@@ -70,7 +70,7 @@ Customize the DataForm appearance using CSS selectors to style the form backgrou
 }
 ```
 
-[View Sample](https://blazorplayground.syncfusion.com/embed/VDVRDThWKVgHevBU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrdXTriJTArYaVM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Layout & Spacing Customization
 
@@ -132,7 +132,7 @@ Control spacing, padding, margins, and layout of form items to create well-organ
 }
 ```
 
-[View Sample](https://blazorplayground.syncfusion.com/embed/LXBHjJLCqLfHuJgw?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLHNJrCTfpfSzgF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Input Styling
 
@@ -205,7 +205,7 @@ Style input fields with custom borders, focus states, and visual effects to crea
 }
 ```
 
-[View Sample](https://blazorplayground.syncfusion.com/embed/VjVxjJhMghemDNiq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBdXzhiTpICsBUl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Validation Styling
 
@@ -318,7 +318,7 @@ Apply custom styling to validation messages, error states, and valid states to p
 }
 ```
 
-Explore [Sample](https://blazorplayground.syncfusion.com/embed/rXrRZzLiKhPAzzDR?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLxXJViJTdLXqQW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Advanced Animations
 
@@ -497,7 +497,7 @@ Create modern user experiences with advanced CSS animations, transitions, glass-
 }
 ```
 
-Explore [Sample](https://blazorplayground.syncfusion.com/embed/VtLxtTLsKruCbHcM?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBdDzrspTGEusmS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Responsive Design
 
@@ -675,4 +675,4 @@ Create mobile-friendly forms that adapt to different screen sizes with flexible 
 }
 ```
 
-Explore [Sample](https://blazorplayground.syncfusion.com/embed/LXBHtfLiAAWryehl?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrRZJVCffbmYvBB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
