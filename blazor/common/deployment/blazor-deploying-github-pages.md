@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploying Blazor WebAssembly with Syncfusion Components to GitHub Pages
+title: Deploying Blazor WASM with Syncfusion Components to GitHub Pages
 description: Guide to deploying Syncfusion Blazor Components to GitHub Pages with complete configuration and examples.
 platform: Blazor
 control: Common
@@ -28,7 +28,7 @@ Follow the below steps to create GitHub repository for deploying Blazor applicat
 * Enter a repository name that matches your Blazor deployment path. And select **Public** visibility.
 * Click **Create Repository** button to create the repository.
 
-## Create Syncfusion® DataGrid component
+## Configure Syncfusion® DataGrid component
 
 ### Install required packages
 
@@ -155,7 +155,7 @@ Edit `.csproj` and add the following properties to the first `<PropertyGroup>` e
 {% endhighlight %}
 {% endtabs %}
 
-N> These settings are **required** for GitHub Pages deployment. Fingerprinting creates unpredictable file names, and compression creates .br/.gz variants that GitHub Pages cannot serve correctly. Disabling these ensures stable asset paths and predictable client-side references.
+N> These settings are **required** for GitHub Pages deployment. Fingerprinting creates unpredictable file names, and compression creates variants that GitHub Pages cannot serve correctly. Disabling these ensures stable asset paths and predictable client-side references.
 
 ### Update base path for relative routing
 
@@ -173,14 +173,16 @@ GitHub Pages hosts applications as subfolders under a user or organization domai
 {% endhighlight %}
 {% endtabs %}
 
-This change ensures that all relative paths work correctly when the app is served from `https://<username>.github.io/<repo>/`.
+This change ensures that all relative paths work correctly when the app is served from a GitHub Pages URL like: `https://<username>.github.io/<repo>/`.
 
-### Create `404.html` for SPA route fallback
+## Create `404.html` for SPA route fallback
 
-GitHub Pages does not understand client-side Blazor routes. Create `wwwroot/404.html` to redirect all 404 errors back to `index.html`:
+GitHub Pages does not understand client-side Blazor routes. When a user navigates directly to a Blazor route (e.g., `/counter`), GitHub Pages cannot find a matching file and returns a 404 error. The `404.html` file below redirects this request back to `index.html`, allowing Blazor's client-side router to handle the navigation.
+
+Create `wwwroot/404.html`:
 
 {% tabs %}
-{% highlight razor tabtitle="404.html" %}
+{% highlight html tabtitle="404.html" %}
 
 <!DOCTYPE html>
 <html>
@@ -193,7 +195,7 @@ GitHub Pages does not understand client-side Blazor routes. Create `wwwroot/404.
 {% endhighlight %}
 {% endtabs %}
 
-When a user navigates directly to a Blazor route (e.g., `/counter`), GitHub Pages returns a 404. This file redirects to `index.html`, allowing Blazor's client-side router to handle the route correctly.
+**How it works:** The meta refresh redirects all 404s to `index.html`. When `index.html` loads, Blazor's WebAssembly runtime initializes and evaluates the current URL (e.g., `/counter`) using its client-side router, which displays the appropriate component.
 
 ## Deployment workflow
 
@@ -242,7 +244,7 @@ This produces an optimized `publish/wwwroot` directory ready for deployment. The
 
 ### Deploy to Github pages branch
 
-Navigate to the published wwwroot directory and push to the branch. In the following use `gh-pages` as a branch name.
+Navigate to the published wwwroot directory and push to the branch.
 
 {% tabs %}
 {% highlight cs tabtitle="Git CLI" %}
@@ -259,27 +261,18 @@ git push -f origin gh-pages
 {% endhighlight %}
 {% endtabs %}
 
-**What each command does:**
-
-* `New-Item -ItemType File -Path .nojekyll -Force` Creates a `.nojekyll` marker file that prevents GitHub Pages from processing the content with Jekyll.
-* `git init` Initializes a new git repository in the published directory.
-* `git checkout -b gh-pages` Creates and checks out the `gh-pages` branch.
-* `git add .` Stages all files for commit.
-* `git commit -m "..."` Commits the static files.
-* `git push -f origin gh-pages` Force-pushes to the remote `gh-pages` branch (use `-f` only on first deployment).
-
 ### Enable GitHub Pages
 
-Configure your repository to serve the `gh-pages` branch:
+Configure your repository to serve the branch:
 
 1. Go to your repository on GitHub.
 2. Navigate to **Settings** → **Pages**.
 3. Under **Source**, select:
-   - **Branch:** `gh-pages`
+   - **Branch:** `branch-name`
    - **Folder:** `/ (root)`
 4. Click **Save**.
 
-Your application will be live at `https://<username>.github.io/<repo>/` within minutes.
+Your application will be live at a GitHub Pages URL like: `https://<username>.github.io/<repo>/` within minutes.
 
 ## See Also
 
