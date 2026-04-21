@@ -187,13 +187,13 @@ app.Run();
 
 This configuration redirects users to GitHub for authentication, stores the authenticated session in a secure cookie, and retrieves the user's profile information from GitHub after a successful login.
 
-### Show Login and Logout Options Based on Authentication State
+### Show login and logout options based on authentication state
 
 This section explains to show Login and Logout actions based on the user’s authentication state, and how to integrate it into the application layout so it is accessible across all pages.
 
-**Create LoginDisplay component**
+**Create LoginDisplay UI**
 
-Create a new Razor component named `LoginDisplay.razor` under the **Shared** folder inside the Components directory. This component displays a Login with GitHub button when the user is not authenticated and a Logout button when the user is signed in.
+Create a new Razor file named `LoginDisplay.razor` under the **Shared** folder inside the Components directory. This file is responsible for displaying a Login with GitHub button when the user is not authenticated and a Logout button when the user is signed in.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/Shared/LoginDisplay.razor"  %}
@@ -230,7 +230,7 @@ Create a new Razor component named `LoginDisplay.razor` under the **Shared** fol
 
 **Add LoginDisplay to MainLayout**
 
-To make the login and logout actions available throughout the application, include the LoginDisplay component in the main layout. Open `MainLayout.razor` and add **<LoginDisplay />** to the top navigation area.
+To make the login and logout actions available throughout the application, add the LoginDisplay UI to the main layout. Open `MainLayout.razor` and add **<LoginDisplay />** to the top navigation area.
 
 {% tabs %}
 {% highlight razor tabtitle="Layout/MainLayout.razor" hl_lines="8" %}
@@ -256,7 +256,7 @@ To make the login and logout actions available throughout the application, inclu
 
 **Import application component namespaces**
 
-Open the `_Imports.razor` file and add the following `@using` statements to make the components available throughout the application.
+Open the `_Imports.razor` file and add the following `@using` statements to make the application files accessible throughout the application.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
