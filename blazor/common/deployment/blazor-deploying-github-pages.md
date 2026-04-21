@@ -173,7 +173,7 @@ GitHub Pages hosts applications as subfolders under a user or organization domai
 {% endhighlight %}
 {% endtabs %}
 
-This change ensures that all relative paths work correctly when the app is served from a GitHub Pages URL like: `https://<username>.github.io/<repo>/`.
+This change ensures that all relative paths work correctly when the app is served from a GitHub Pages.
 
 ## Create `404.html` for SPA route fallback
 
@@ -242,7 +242,7 @@ dotnet publish -c Release -p:StaticWebAssetFingerprintingEnabled=false -p:Blazor
 
 This produces an optimized `publish/wwwroot` directory ready for deployment. The explicit property flags override any project file settings to ensure correct behavior.
 
-### Deploy to Github pages branch
+### Deploy to GitHub pages branch
 
 Navigate to the published wwwroot directory and push to the branch.
 
@@ -272,7 +272,7 @@ Configure your repository to serve the branch:
    - **Folder:** `/ (root)`
 4. Click **Save**.
 
-Your application will be live at a GitHub Pages URL like: `https://<username>.github.io/<repo>/` within minutes.
+Your application will be live at a GitHub Pages within minutes.
 
 ## See Also
 
