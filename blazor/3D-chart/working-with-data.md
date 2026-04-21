@@ -54,7 +54,7 @@ An IEnumerable object can be assigned to the `DataSource` property. The list dat
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrJDdCgiIrsmTGI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Colum 3D Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrJDdCgiIrsmTGI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Colum 3D Chart with Data Binding](images/working-data/blazor-chart-data-binding.webp)" %}
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -93,7 +93,7 @@ Blazor 3D Chart is a generic component which is strongly bound to a model type. 
 
 ```
 
-![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.png)
+![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.webp)
 
 ### DynamicObject binding
 
@@ -151,7 +151,7 @@ Blazor 3D Chart supports **DynamicObject** data source when the model type is un
 
 ```
 
-![Blazor 3D Chart with DynamicObject Binding](images/working-data/blazor-chart-dynamic-object.png)
+![Blazor 3D Chart with DynamicObject Binding](images/working-data/blazor-chart-dynamic-object.webp)
 
 ## Remote data
 
@@ -175,7 +175,7 @@ The remote data can be bound to the 3D chart using the [SfDataManager](https://h
 </SfChart3D>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVfjxsgWyogzTfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Remote Data Binding in Blazor 3D Chart](images/working-data/blazor-chart-remote-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVfjxsgWyogzTfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Remote Data Binding in Blazor 3D Chart](images/working-data/blazor-chart-remote-data-binding.webp)" %}
 
 ### Binding with OData services
 
@@ -204,7 +204,7 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ```
 
-![Blazor 3D Chart with ODataV4Adaptor Binding](images/working-data/blazor-chart-odatav4-adaptor-binding.png)
+![Blazor 3D Chart with ODataV4Adaptor Binding](images/working-data/blazor-chart-odatav4-adaptor-binding.webp)
 
 ### Web API
 
@@ -227,7 +227,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 </SfChart3D>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLztdMKsxBTngfW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with WebApiAdaptor Binding](images/working-data/blazor-chart-webapi-adaptor-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLztdMKsxBTngfW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with WebApiAdaptor Binding](images/working-data/blazor-chart-webapi-adaptor-binding.webp)" %}
 
 ### Sending additional parameters to the server
 
@@ -305,7 +305,7 @@ The data points that uses the `null` or `undefined` as value are considered as e
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLJZHMgMnsEADrH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLJZHMgMnsEADrH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Empty Points](images/working-data/blazor-chart-empty-point.webp)" %}
 
 **Customizing empty point**
 
@@ -352,4 +352,4 @@ The specific color for empty point can be set by the `Fill` property in `Chart3D
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhzXxiUsnqLRyNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Customized Empty Points](images/working-data/blazor-chart-custom-empty-point.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhzXxiUsnqLRyNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Customized Empty Points](images/working-data/blazor-chart-custom-empty-point.webp)" %}

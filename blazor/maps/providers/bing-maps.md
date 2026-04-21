@@ -38,7 +38,7 @@ Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.c
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Blazor Bing Maps](../images/MapProviders/blazor-bing-maps.png)
+![Blazor Bing Maps](../images/MapProviders/blazor-bing-maps.webp)
 
 ## Types of Bing Maps
 
@@ -76,7 +76,7 @@ These types can be rendered by specifying their URLs in the `UrlTemplate` proper
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Blazor Bing Maps with CanvasLight](../images/MapProviders/blazor-bing-maps-with-canvas.png)
+![Blazor Bing Maps with CanvasLight](../images/MapProviders/blazor-bing-maps-with-canvas.webp)
 
 ## Enable zooming and panning
 
@@ -112,7 +112,7 @@ The Bing Maps layer supports zooming and panning. Zooming provides a closer view
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Blazor Bing Maps with Zooming](../images/MapProviders/blazor-bing-maps-zooming.png)
+![Blazor Bing Maps with Zooming](../images/MapProviders/blazor-bing-maps-zooming.webp)
 
 ## Adding markers and navigation line
 
@@ -168,7 +168,7 @@ Markers can be added to Bing Maps layers by setting the location coordinates (la
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Blazor Bing Maps with Markers and Navigation Line](../images/MapProviders/blazor-bing-maps-marker-and-line.png)
+![Blazor Bing Maps with Markers and Navigation Line](../images/MapProviders/blazor-bing-maps-marker-and-line.webp)
 
 ## Adding sublayer
 
@@ -202,7 +202,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer to
 
 N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Blazor Bing Maps with Sublayer](../images/blazor-bing-map-sublayer.PNG)
+![Blazor Bing Maps with Sublayer](../images/blazor-bing-map-sublayer.webp)
 
 ## Enable legend
 
@@ -270,4 +270,4 @@ A legend can be added to tile maps by setting the [Visible](https://help.syncfus
 
 ```
 
-![Blazor Bing Maps with Legend](../images/MapProviders/blazor-bing-map-legend.png)
+![Blazor Bing Maps with Legend](../images/MapProviders/blazor-bing-map-legend.webp)

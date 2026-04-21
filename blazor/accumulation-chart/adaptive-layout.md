@@ -50,7 +50,7 @@ When viewing the accumulation chart on mobile devices, some elements may not dis
 
 ```
 
-![Adaptive Layout in Blazor Accumulation Chart](images/adaptive-layout/blazor-accumulation-chart-adaptive-layout.png)
+![Adaptive Layout in Blazor Accumulation Chart](images/adaptive-layout/blazor-accumulation-chart-adaptive-layout.webp)
 
 The table below outlines the behavior of chart elements under specific conditions determined by chart height and width:
 
