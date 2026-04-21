@@ -21,7 +21,7 @@ If you haven't created your Blazor app yet, follow the [Blazor getting started g
 
 ## Create GitHub repository
 
-Follow the below steps to create GitHub repository for deploying blazor application.
+Follow the below steps to create GitHub repository for deploying Blazor application.
 
 * Go to [GitHub](https://github.com). Sign in using your GitHub account credentials.
 * From the GitHub homepage, click the **"+"** icon in the top‑right corner and select **New repository**.
@@ -69,10 +69,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file.
+Add the Syncfusion theme CSS and required scripts to the `~/wwwroot/index.html` file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight html tabtitle="index.html" %}
 
 <head>
      <!-- Syncfusion theme style sheet -->
@@ -80,7 +80,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 </head>
 <body>
     <!-- Syncfusion Blazor script reference -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     <!-- Blazor WebAssembly script reference -->
   <script src="_framework/blazor.webassembly.js"></script>
 </body>
