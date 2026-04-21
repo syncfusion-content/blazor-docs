@@ -58,7 +58,7 @@ Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
 Include the theme stylesheet and script references in the `App.razor` file.
 
 {% tabs %}
-{% highlight html  %}
+{% highlight razor tabtitle="App.razor" %}
 
 <head>
     <!-- Syncfusion theme stylesheet -->
