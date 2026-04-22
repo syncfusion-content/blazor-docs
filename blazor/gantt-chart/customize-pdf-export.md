@@ -1421,7 +1421,7 @@ In the following sample, task label template with images and text are exported t
 
 2. **Images not displaying**
    - **Image URL**: Verify that the image URLs are correct and accessible. Ensure that external images are hosted on a server with public access rights.
-   - **Supported formats**: Use compatible image formats such as JPG, webp, or GIF. Unsupported formats may not render correctly in a PDF.
+   - **Supported formats**: Use compatible image formats such as JPG, PNG, or GIF. Unsupported formats may not render correctly in a PDF.
 
 3. **Performance issues**
    - **Optimize resources**: Large images or complex styling may slow down the PDF export process. Consider optimizing image size and simplifying styles.
