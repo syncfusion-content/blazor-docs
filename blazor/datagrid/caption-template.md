@@ -349,7 +349,7 @@ namespace LocalizationSample.Client
 {% endhighlight %}
 {% endtabs %}
 
-![Customize group caption text using locale](./images/blazor-datagrid-customize-group-caption-text-locale.png)
+![Customize group caption text using locale](./images/blazor-datagrid-customize-group-caption-text-locale.webp)
 
 ## Render custom component in group caption
 

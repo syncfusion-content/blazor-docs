@@ -30,7 +30,7 @@ The **.e-gridpager** class styles the pager root element in the Blazor DataGrid.
 
 Properties like **font-family**, **background-color**, and spacing-related styles can be changed to fit the grid layout design.
 
-![Pager root element](../images/style-and-appearance/grid-pager-root-element.png)
+![Pager root element](../images/style-and-appearance/grid-pager-root-element.webp)
 
 ## Customize the pager container element
 
@@ -45,7 +45,7 @@ The **.e-pagercontainer** class styles the pager container in the Syncfusion<sup
 
 Properties such as **font-family**, **background-color**, and spacing-related styles can be adjusted to align with the grid design.
 
-![Pager container element](../images/style-and-appearance/grid-pager-container-element.png)
+![Pager container element](../images/style-and-appearance/grid-pager-container-element.webp)
 
 ## Customize the pager navigation elements
 
@@ -66,7 +66,7 @@ The **.e-prevpagedisabled**, **.e-prevpage**, **.e-nextpage**, **.e-nextpagedisa
 
 Adjust properties like **background-color** to match the design, while keeping clear focus styles for accessibility.
 
-![Pager navigation elements](../images/style-and-appearance/grid-pager-navigation-element.png)
+![Pager navigation elements](../images/style-and-appearance/grid-pager-navigation-element.webp)
 
 ## Customize the pager numeric button elements
 
@@ -87,7 +87,7 @@ The **.e-numericitem** class styles the numeric page buttons in the Blazor DataG
 
 Modify properties such as **background-color**, **color**, and **hover** effects to improve clarity and interaction.
 
-![Pager numeric button elements](../images/style-and-appearance/pager-page-numeric-link-elements.png)
+![Pager numeric button elements](../images/style-and-appearance/pager-page-numeric-link-elements.webp)
 
 ## Customize the current page numeric element
 
@@ -102,7 +102,7 @@ The **.e-currentitem** class styles the current page indicator in the Blazor Dat
 
 Change properties like **background-color** and **color** to highlight the active page.
 
-![Current page numeric element](../images/style-and-appearance/grid-pager-current-page-numeric-element.png)
+![Current page numeric element](../images/style-and-appearance/grid-pager-current-page-numeric-element.webp)
 
 
 {% tabs %}
