@@ -161,6 +161,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.RichTextEditor
+
 <SfRichTextEditor EditorMode="EditorMode.Markdown" value="@MarkdownValue"></SfRichTextEditor>
 
 @code {
@@ -182,6 +184,8 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor EditorMode="EditorMode.Markdown" value="@MarkdownValue">
     <RichTextEditorToolbarSettings Items="@Tools" />
