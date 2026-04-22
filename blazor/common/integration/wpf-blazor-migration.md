@@ -2226,3 +2226,4 @@ private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventA
 - [Blazor Scheduler Demos](https://blazor.syncfusion.com/demos/scheduler/default-functionalities?theme=fluent2)
 - [Blazor RichTextEditor Demos](https://blazor.syncfusion.com/demos/rich-text-editor/overview)
 - [Blazor Diagram Demos](https://blazor.syncfusion.com/demos/diagram/flowchart)
+ 
