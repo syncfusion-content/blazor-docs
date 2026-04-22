@@ -49,7 +49,7 @@ Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazo
 }
 ```
 
-![Blazor Dropdown Tree with Disabled ](./images/styles/blazor-dropdowntree-component-disabled.png)
+![Blazor Dropdown Tree with Disabled ](./images/styles/blazor-dropdowntree-component-disabled.webp)
 
 ## CssClass  
 
@@ -97,7 +97,7 @@ Some of the predefined values are
 }
 ```
 
-![Blazor Dropdown Tree with CssClass property](./images/styles/blazor-dropdowntree-component-cssclas.png)
+![Blazor Dropdown Tree with CssClass property](./images/styles/blazor-dropdowntree-component-cssclass.webp)
 
 ## Show the custom icon in dropdown icon
 
@@ -109,7 +109,7 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 }
 ```
 
-![Blazor Dropdown Tree with dropdown icon](./images/styles/blazor-dropdowntree-component-arrow.png)
+![Blazor Dropdown Tree with dropdown icon](./images/styles/blazor-dropdowntree-component-arrow.webp)
 
 You can customize the dropdown icon for the particular component using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property and add style to the custom class which is mapped to `CssClass`.
 
@@ -165,7 +165,7 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 }
 ```
 
-![Blazor Dropdown Tree icon color](./images/styles/blazor-dropdowntree-component-icon.png)
+![Blazor Dropdown Tree icon color](./images/styles/blazor-dropdowntree-component-icon.webp)
 
 ## Replace the dropdown icon with svg
 
@@ -208,7 +208,7 @@ To replace the default dropdown icon in the Dropdown Tree component with an SVG,
 </style>
 ```
 
-![Blazor Dropdown Tree svg icon](./images/styles/blazor-dropdowntree-component-svg.png)
+![Blazor Dropdown Tree svg icon](./images/styles/blazor-dropdowntree-component-svg.webp)
 
 ## Customizing the appearance of container element
 
@@ -223,7 +223,7 @@ You can customize the appearance of the container element within the Dropdown Tr
 }
 ```
 
-![Blazor Dropdown Tree container element customization](./images/styles/blazor-dropdowntree-component-container.png)
+![Blazor Dropdown Tree container element customization](./images/styles/blazor-dropdowntree-component-container.webp)
 
 ## Customizing the focus color
 
@@ -235,7 +235,7 @@ You can customize the component color when it is focused by targeting its CSS cl
 }
 ```
 
-![Blazor Dropdown Tree focus color](./images/styles/blazor-dropdowntree-component-focus.png)
+![Blazor Dropdown Tree focus color](./images/styles/blazor-dropdowntree-component-focus.webp)
 
 ## Customizing the outline theme's focus color
 
@@ -285,7 +285,7 @@ You can customize the color of the Dropdown Tree component when it is in a focus
 </style>
 ```
 
-![Blazor Dropdown Tree focusing color outline theme](./images/styles/blazor-dropdowntree-component-outline.png)
+![Blazor Dropdown Tree focusing color outline theme](./images/styles/blazor-dropdowntree-component-outline.webp)
 
 ## Customizing the background color of focus, hover, and active items
 
@@ -299,7 +299,7 @@ You can customize the background color and text color of list items within the D
 }
 ```
 
-![Blazor Dropdown Tree with customizing the focus, hover and active item color](./images/styles/blazor-dropdowntree-component-active.png)
+![Blazor Dropdown Tree with customizing the focus, hover and active item color](./images/styles/blazor-dropdowntree-component-active.webp)
 
 ## Customizing the appearance of pop-up element
 
@@ -312,7 +312,7 @@ You can customize the appearance of the popup element within the Dropdown Tree c
  }
 ```
 
-![Blazor Dropdown Tree with customizing popup color](./images/styles/blazor-dropdowntree-component-popup.png)
+![Blazor Dropdown Tree with customizing popup color](./images/styles/blazor-dropdowntree-component-popup.webp)
 
 ## Change the HTML attributes
 
@@ -358,7 +358,7 @@ Add the additional html attributes such as styles, class, and more to the root e
 }
 ```
 
-![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-html-attribute.png)
+![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-html-attribute.webp)
 
 ## Set the various font family for Dropdown Tree elements
 
@@ -418,7 +418,7 @@ In the following sample, the font family of the Dropdown Tree, ListItem text in 
 </style>
 ```
 
-![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-font.png)
+![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-font.webp)
 
 ## Show tooltip on list item
 
@@ -494,7 +494,7 @@ The following code demonstrates how to display a tooltip when hovering over the 
 }
 ```
 
-![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-tooltip.png)
+![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-tooltip.webp)
 
 ### Tooltip using HTMLAttribute in Dropdown Tree component
 
@@ -623,4 +623,4 @@ In the following example, by enabling the `TextWrap` the selected items will app
 }
 ```
 
-![Blazor Dropdown Tree with TextWrap property.](./images/styles/blazor-dropdowntree-component-textwrap.png)
+![Blazor Dropdown Tree with TextWrap property.](./images/styles/blazor-dropdowntree-component-textwrap.webp)
