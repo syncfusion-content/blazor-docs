@@ -25,7 +25,7 @@ This section explains how to customize the following visual elements:
  
 To scope the styling changes to a specific Mention component, assign a custom CSS class using the `CssClass` property.
  
-```razor
+```cshtml
 <SfMention CssClass="e-custom" ...>
 </SfMention>
 ```
