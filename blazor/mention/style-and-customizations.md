@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about customization in Syncfusion Blazor Mention component and much more.
+title: Style and Customization in Blazor Mention Component | Syncfusion
+description: Checkout and learn here all about Style and Customization in Syncfusion Blazor Mention component and much more.
 platform: Blazor
 control: Mention
 documentation: ug
