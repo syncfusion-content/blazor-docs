@@ -1138,7 +1138,7 @@ In the following sample, header template with images and text are exported to PD
         <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250">
             <HeaderTemplate>
                 <div>
-                    <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" width="20" height="20" style="margin-right: 8px">
+                    <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" width="20" height="20" style="margin-right: 8px">
                     @((context as GridColumn).HeaderText)
                 </div>
             </HeaderTemplate>
@@ -1146,7 +1146,7 @@ In the following sample, header template with images and text are exported to PD
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="250">
             <HeaderTemplate>
                 <div>
-                    <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" width="20" height="20" style="margin-right: 8px">
+                    <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" width="20" height="20" style="margin-right: 8px">
                     @((context as GridColumn).HeaderText)
                 </div>
             </HeaderTemplate>
@@ -1167,7 +1167,7 @@ In the following sample, header template with images and text are exported to PD
     protected override async Task OnInitializedAsync()
     {
         TaskCollection = GetTaskCollection();
-        var imageBytes = await Http.GetByteArrayAsync("https://cdn.syncfusion.com/content/images/landing-page/yes.png");
+        var imageBytes = await Http.GetByteArrayAsync("https://cdn.syncfusion.com/content/images/landing-page/yes.webp");
         using var imageStream = new MemoryStream(imageBytes);
         image = PdfImage.FromStream(imageStream);
     }
@@ -1258,7 +1258,7 @@ In the following sample, task label template with images and text are exported t
                 if ((context as TaskData).TaskID == 5)
                 {
                     <div class="e-right-label-inner-div" style="height:22px;margin-top:7px;">
-                        <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" />
+                        <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" />
                     </div>
                 }
                 else
@@ -1322,7 +1322,7 @@ In the following sample, task label template with images and text are exported t
         this.TaskCollection = GetTaskCollection();
 
         using var httpClient = new HttpClient();
-        var imageBytes = await httpClient.GetByteArrayAsync("https://cdn.syncfusion.com/content/images/landing-page/yes.png");
+        var imageBytes = await httpClient.GetByteArrayAsync("https://cdn.syncfusion.com/content/images/landing-page/yes.webp");
         var imageStream = new MemoryStream(imageBytes);
         image = PdfImage.FromStream(imageStream);
     }
@@ -1421,7 +1421,7 @@ In the following sample, task label template with images and text are exported t
 
 2. **Images not displaying**
    - **Image URL**: Verify that the image URLs are correct and accessible. Ensure that external images are hosted on a server with public access rights.
-   - **Supported formats**: Use compatible image formats such as JPG, PNG, or GIF. Unsupported formats may not render correctly in a PDF.
+   - **Supported formats**: Use compatible image formats such as JPG, webp, or GIF. Unsupported formats may not render correctly in a PDF.
 
 3. **Performance issues**
    - **Optimize resources**: Large images or complex styling may slow down the PDF export process. Consider optimizing image size and simplifying styles.

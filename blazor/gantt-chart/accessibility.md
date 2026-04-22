@@ -18,13 +18,13 @@ The table below summarizes the accessibility compliance of the Blazor Gantt Char
 | Accessibility Criteria | Compatibility |
 |------------------------|---------------|
 | [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | AA |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate compatibility"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full compatibility"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" alt="Full compatibility"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.webp" alt="Intermediate compatibility"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" alt="Full compatibility"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" alt="Full compatibility"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" alt="Full compatibility"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" alt="Full compatibility"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" alt="Full compatibility"> |
 
 <style>
     .post .post-content img {
@@ -33,9 +33,9 @@ The table below summarizes the accessibility compliance of the Blazor Gantt Char
     }
 </style>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Full compatibility"> - All features meet the requirement.</div>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate compatibility"> - Some features do not fully meet the requirement.</div>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No compatibility"> - The component does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.webp" alt="Full compatibility"> - All features meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.webp" alt="Intermediate compatibility"> - Some features do not fully meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.webp" alt="No compatibility"> - The component does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
 

@@ -143,7 +143,7 @@ The following code snippet demonstrates how to use the `PdfColumnHeaderQueryCell
     private SfGantt<TaskData> Gantt;
     private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     private static WebClient webClient = new WebClient();
-    private static byte[] imageBytes = webClient.DownloadData("https://cdn.syncfusion.com/content/images/landing-page/yes.png");
+    private static byte[] imageBytes = webClient.DownloadData("https://cdn.syncfusion.com/content/images/landing-page/yes.webp");
     private static MemoryStream imageStream = new MemoryStream(imageBytes);
     public static PdfImage image = PdfImage.FromStream(imageStream);
     protected override void OnInitialized()
@@ -225,7 +225,7 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
                 @if ((context as TaskData).TaskId == 5)
                 {
                     <div class="e-right-label-inner-div" style="height:22px;margin-top:7px;">
-                        <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" />
+                        <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.webp" />
                     </div>
                 }
                 else
@@ -274,7 +274,7 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
     private SfGantt<TaskData> Gantt;
     private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     private static WebClient webClient = new WebClient();
-    private static byte[] imageBytes = webClient.DownloadData("https://cdn.syncfusion.com/content/images/landing-page/yes.png");
+    private static byte[] imageBytes = webClient.DownloadData("https://cdn.syncfusion.com/content/images/landing-page/yes.webp");
     private static MemoryStream imageStream = new MemoryStream(imageBytes);
     public static PdfImage image = PdfImage.FromStream(imageStream);
     protected override void OnInitialized()
@@ -368,7 +368,7 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
 
 2. **Images not displaying**
    - **Image URL**: Verify that the image URLs are correct and accessible. Ensure that external images are hosted on a server with public access rights.
-   - **Supported formats**: Use compatible image formats such as JPG, PNG, or GIF. Unsupported formats may not render correctly in a PDF.
+   - **Supported formats**: Use compatible image formats such as JPG, webp, or webp. Unsupported formats may not render correctly in a PDF.
 
 3. **Performance issues**
    - **Optimize resources**: Large images or complex styling may slow down the PDF export process. Consider optimizing image size and simplifying styles.
