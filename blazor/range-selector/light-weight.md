@@ -44,7 +44,7 @@ By default, when the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor RangeNavigator with Lightweight](images/common/blazor-rangenavigator-light-weight.png)
+![Blazor RangeNavigator with Lightweight](images/common/blazor-rangenavigator-light-weight.webp)
 
 ## See Also
 

@@ -25,7 +25,7 @@ This section briefly explains about how to include [Blazor Sankey](https://www.s
 
 Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
-![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
+![Blazor WASM Create Project Template](images/blazor-wasm-app-template.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram NuGet in the App
 
@@ -243,7 +243,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram i
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram in the default web browser.
 
-![Blazor Sankey Diagram](images/getting-started/blazor-sankey.png)
+![Blazor Sankey Diagram](images/getting-started/blazor-sankey.webp)
 
 ## Populate Blazor Sankey with data
 
@@ -314,7 +314,7 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.png)
+![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.webp)
 
 ## Add node labels
 
@@ -330,7 +330,7 @@ You can add data labels to improve the readability of the sankey diagram. This c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.png)
+![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.webp)
 
 ## Enable tooltip
 
@@ -346,7 +346,7 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.png)
+![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.webp)
 
 ## Enable legend
 
@@ -362,7 +362,7 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.png)
+![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.webp)
 
 ## See also
 

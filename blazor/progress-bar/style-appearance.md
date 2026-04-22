@@ -47,7 +47,7 @@ Style the linear progress bar to customize colors, height, and visual appearance
 
 This CSS customizes the progress bar appearance with stroke color, width, and other properties to create an engaging progress visualization.
 
-![Blazor ProgressBar Progress Customization](images/style/blazor-progressbar-progress-customization.png)
+![Blazor ProgressBar Progress Customization](images/style/blazor-progressbar-progress-customization.webp)
 
 ## Customize Progress Bar - Track Line
 
@@ -69,7 +69,7 @@ Modify the appearance of the progress bar track (the background area where progr
 }
 ```
 
-![Blazor ProgressBar Track Customization](images/style/blazor-progressbar-track-customization.png)
+![Blazor ProgressBar Track Customization](images/style/blazor-progressbar-track-customization.webp)
 
 ## Customize Progress Bar - Range Text
 
@@ -104,6 +104,6 @@ text[id*="_linearLabel"] {
 </style>
 ```
 
-![Blazor ProgressBar Label Customization](images/style/blazor-progressbar-label-customization.png)
+![Blazor ProgressBar Label Customization](images/style/blazor-progressbar-label-customization.webp)
 
 N> SVG presentation attributes such as fill, stroke, and font-size may require **!important** when overridden by inline SVG styles.

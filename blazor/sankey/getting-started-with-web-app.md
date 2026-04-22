@@ -217,7 +217,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram in the default web browser.
 
-![Blazor Sankey Diagram](images/getting-started/blazor-sankey.png)
+![Blazor Sankey Diagram](images/getting-started/blazor-sankey.webp)
 
 ## Populate Blazor Sankey Diagram with data
 
@@ -288,7 +288,7 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.png)
+![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.webp)
 
 ## Add node labels
 
@@ -304,7 +304,7 @@ You can add data labels to improve the readability of the sankey diagram. This c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.png)
+![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.webp)
 
 ## Enable tooltip
 
@@ -320,7 +320,7 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.png)
+![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.webp)
 
 ## Enable legend
 
@@ -336,7 +336,7 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.png)
+![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.webp)
 
 ## See also
 
