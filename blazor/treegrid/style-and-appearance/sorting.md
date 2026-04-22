@@ -28,7 +28,7 @@ The **.e-icon-ascending** and **.e-icon-descending** classes define the icons sh
  }
 ```
 
-Adjust properties such as **content**, **color**, **font-size**, and **margin** to match the grid design. Ensure the correct icon font family is loaded to display the icons properly.
+Adjust properties such as **content**, **color**, **font-size**, and **margin** to match the TreeGrid design. Ensure the correct icon font family is loaded to display the icons properly.
 
 ![Grid sorting icon](../images/style-and-appearance/sort1.webp)
 
@@ -43,7 +43,7 @@ The **.e-sortnumber** class styles the numeric indicator shown when multiple col
 }
 ```
 
-Modify properties such as **background-color**, **font-family**, **font-size**, and **border-radius** to align with the grid layout. Ensure accessibility by maintaining clear contrast and focus styles.
+Modify properties such as **background-color**, **font-family**, **font-size**, and **border-radius** to align with the TreeGrid layout. Ensure accessibility by maintaining clear contrast and focus styles.
 
 ![Grid multi sorting icon](../images/style-and-appearance/sort2.webp)
 
