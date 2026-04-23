@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Legend in Syncfusion Blazor HeatMap Chart component and much more.
+description: Check out and learn how to configure and customize Legends in Syncfusion Blazor HeatMap Chart component.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in Blazor HeatMap Chart Component
 
-The legend is used to provide the information about the heat map cell. You can enable the legend by setting the `Visible` property to true.
+The legend provides information about the HeatMap Chart cells. Enable the legend by setting the `Visible` property to true.
 
 ```cshtml
 
@@ -39,7 +39,12 @@ The legend is used to provide the information about the heat map cell. You can e
     <HeatMapLegendSettings Visible="true"></HeatMapLegendSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -53,9 +58,7 @@ The legend is used to provide the information about the heat map cell. You can e
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -69,12 +72,12 @@ The legend is used to provide the information about the heat map cell. You can e
 
 ## Legend types
 
-Heat map supports two legend types: Gradient and list type.
+The HeatMap Chart supports two legend types:
 
-* Gradient - This is a continuous color legend with smooth color transition between palette color values.
-* List - List is a fixed color legend. Each palette color information is shown separately in the list item.
+- **Gradient**: A continuous color legend with smooth transitions between palette values.
+- **List**: A fixed color legend, where each palette color is shown as a separate list item.
 
-You can change the legend type by using the `Type` property in the `HeatMapPaletteSettings` property.
+Change the legend type using the `Type` property in `HeatMapPaletteSettings`.
 
 ```cshtml
 
@@ -90,7 +93,12 @@ You can change the legend type by using the `Type` property in the `HeatMapPalet
     <HeatMapLegendSettings ShowLabel="true"></HeatMapLegendSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -104,9 +112,7 @@ You can change the legend type by using the `Type` property in the `HeatMapPalet
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -119,7 +125,7 @@ You can change the legend type by using the `Type` property in the `HeatMapPalet
 
 ## Placement
 
-You can place the legend at left, right, top, or bottom to the heat map layout by using the `Position` property. The legend is positioned at the right to the heat map by default.
+Position the legend to the left, right, top, or bottom of the HeatMap Chart using the `Position` property. The default position is **Right**.
 
 ```cshtml
 
@@ -134,7 +140,12 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Top"></HeatMapLegendSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -148,9 +159,7 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -164,7 +173,7 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 
 ## Alignment
 
-You can align the legend as center, far, or near to the heat map using the `Alignment` property.
+Align the legend as center, far, or near using the `Alignment` property.
 
 ```cshtml
 
@@ -179,7 +188,12 @@ You can align the legend as center, far, or near to the heat map using the `Alig
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Right" Height="150px" Alignment="Alignment.Center"></HeatMapLegendSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -193,9 +207,7 @@ You can align the legend as center, far, or near to the heat map using the `Alig
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -208,7 +220,7 @@ You can align the legend as center, far, or near to the heat map using the `Alig
 
 ## Legend dimensions
 
-You can change the legend dimensions with values in pixels or percentage by using the`Width` and `Height` properties.
+Change the legend's width and height using the `Width` and `Height` properties (in pixels or percentage).
 
 ```cshtml
 
@@ -223,7 +235,12 @@ You can change the legend dimensions with values in pixels or percentage by usin
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Right" Width="200px" Height="150px"></HeatMapLegendSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -237,9 +254,7 @@ You can change the legend dimensions with values in pixels or percentage by usin
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -252,7 +267,7 @@ You can change the legend dimensions with values in pixels or percentage by usin
 
 <!-- ## Paging for legend
 
-Paging is available only for the list type legend in the heat map, and it can be enabled by default, when the legend items exceed the legend bounds. You can view each legend items by navigating between the pages using navigation buttons.
+Paging is available for the list type legend when legend items exceed the legend bounds. Navigate between pages using navigation buttons.
 
 ```cshtml
 
@@ -282,7 +297,12 @@ Paging is available only for the list type legend in the heat map, and it can be
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Right" Alignment="Alignment.Center" Height="150px"></HeatMapLegendSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -296,9 +316,7 @@ Paging is available only for the list type legend in the heat map, and it can be
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -311,14 +329,12 @@ Paging is available only for the list type legend in the heat map, and it can be
 
 ## Smart legend
 
-Smart legend is another way of showing list type legend with responsiveness and readability, when the palette has more number of items. You can enable this smart legend by using the `EnableSmartLegend` property when the palette type is set to `Fixed`.
+Smart legend improves responsiveness and readability for list type legends with many items. Enable with the `EnableSmartLegend` property when the palette type is `Fixed`.
 
-In smart legend, you can change the display type of legend labels by using the `LabelDisplayType` property.
-
-The following are the legend label display types:
-* All: Displays all labels in the legend.
-* Edge: Displays the legend labels only at extreme ends.
-* None: None of the labels are displayed. The tooltip will appear for this type of label display when hovering over the legend item.
+Change the display type of legend labels using the `LabelDisplayType` property:
+- **All**: Displays all labels.
+- **Edge**: Displays labels only at the ends.
+- **None**: No labels are displayed; tooltips appear on hover.
 
 ```cshtml
 
@@ -348,7 +364,12 @@ The following are the legend label display types:
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Right" EnableSmartLegend="true" Alignment="Alignment.Center"></HeatMapLegendSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -362,9 +383,7 @@ The following are the legend label display types:
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
@@ -377,7 +396,7 @@ The following are the legend label display types:
 
 ## Legend selection
 
-In the HeatMap, the legend selection is used to toggle the visibility of cell for viewing the specific range value. You can enable the legend selection using the `ToggleVisibility` property.
+Legend selection toggles the visibility of cells for specific value ranges. Enable with the `ToggleVisibility` property.
 
 ```cshtml
 
@@ -407,7 +426,12 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
     <HeatMapLegendSettings ShowLabel="true" Position="LegendPosition.Right" EnableSmartLegend="true" ToggleVisibility="true"></HeatMapLegendSettings>
 </SfHeatMap>
 
-@code{
+@code {
+    public object HeatMapData { get; set; }
+
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael"};
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
@@ -421,9 +445,7 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael"};
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
+
     protected override void OnInitialized()
     {
         HeatMapData = GetDefaultData();
