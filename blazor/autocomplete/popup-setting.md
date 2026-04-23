@@ -68,6 +68,18 @@ Display the popup at initial load by calling [ShowPopupAsync()](https://help.syn
 
 ![Blazor AutoComplete with Show popup on initial loading](./images/popup-setting/blazor_autocomplete_popup-initial-loading.png)
 
+## Show popup on focus
+
+You can achieve this by calling the [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) method on the component instance within the [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteModel.html#Syncfusion_Blazor_DropDowns_AutoCompleteModel_Focus) Event.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/popup-setting/show-popup-on-focus.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with Show popup on focus](./images/popup-setting/blazor_autocomplete_show_popup_on_focus.gif)
+
 ## Preventing opening and closing
 
 Prevent opening or closing the popup by setting [BeforeOpenEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) or [PopupEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.PopupEventArgs.html#Syncfusion_Blazor_DropDowns_PopupEventArgs_Cancel) to `true` in the corresponding event handlers. This is achieved using the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnClose) events.
