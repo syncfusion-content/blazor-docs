@@ -3,15 +3,15 @@ layout: post
 title: Templates in Blazor TreeGrid Component | Syncfusion
 description: Checkout and learn here all about templates in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Templates in Blazor TreeGrid Component
 
-Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Tree Grid is a templated razor component, that allows to customize various part of the UI using template parameters. It allows to render custom components or content based on own logic.
+Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. TreeGrid is a templated razor component, that allows to customize various part of the UI using template parameters. It allows to render custom components or content based on own logic.
 
-The available template options in tree grid are as follows,
+The available template options in TreeGrid are as follows,
 
 * [Column template](./columns/column-template) - Used to customize cell content.
 * [Header template](./columns/columns#header-template) - Used to customize header cell content.
@@ -20,7 +20,7 @@ The available template options in tree grid are as follows,
 
 ## Template ModelType
 
-To use templates, the tree grid must be bound with named model. This can be done by specifying the model type using the `ModelType` property of the tree grid component as follows.
+To use templates, the TreeGrid must be bound with named model. This can be done by specifying the model type using the `ModelType` property of the TreeGrid component as follows.
 
 {% tabs %}
 
@@ -102,7 +102,7 @@ public class Employee
 
 ## Template Context
 
-Most of the templates used by tree grid are of type `RenderFragment<T>` and they will be passed with parameters. The parameters passed can be accessed to the templates using implicit parameter named `context`. This implicit parameter name can also be changed using the `Context` attribute.
+Most of the templates used by TreeGrid are of type `RenderFragment<T>` and they will be passed with parameters. The parameters passed can be accessed to the templates using implicit parameter named `context`. This implicit parameter name can also be changed using the `Context` attribute.
 
 For example, the data of the column template can be accessed using `context` as follows.
 
@@ -186,7 +186,7 @@ public class Employee
 
 If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/dotnet/aspnetcore/issues/10836).
 
-This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendant of the Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
+This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendant of the TreeGrid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
 
 {% tabs %}
 
@@ -249,25 +249,192 @@ This prevents us from directly specifying templates such as `RowTemplate` and `D
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data {
+namespace TreeGridComponent.Data
+{
 
-public class Employee
+    public class Employee
     {
-        public string Name { get; set; }
-        public DateTime? DOB { get; set; }
-        public string Designation { get; set; }
-        public string EmpID { get; set; }
-        public string Country { get; set; }
+        public string? Name { get; set; }
+        public string? FullName { get; set; }
+        public DateTime DOB { get; set; }
+        public string? Designation { get; set; }
+        public string? EmpID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string? Country { get; set; }
+        public string? Address { get; set; }
+        public string? Contact { get; set; }
         public int? ParentId { get; set; }
-        public TreeData Treedata { get; set; }
-
+        public bool IsAvailable { get; set; }
+        public int Rating { get; set; }
+        public string? Email => $"{FullName.ToLower()}@abc.com";
         public static List<Employee> GetTemplateData()
         {
             List<Employee> DataCollection = new List<Employee>();
-            DataCollection.Add(new Employee { Name = "Robert King",Designation = "Chief Executive Officer",EmpID = "EMP001",Country = "USA",DOB = new DateTime(1963, 2, 15),ParentId = null,Treedata = new TreeData() { ID = 21}});
-            DataCollection.Add(new Employee { Name = "David william",Designation = "Vice President",EmpID = "EMP004",Country = "USA",DOB = new DateTime(1971, 5, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Nancy Davolio",Designation = "Marketing Executive",EmpID = "EMP035",Country = "USA",DOB = new DateTime(1966, 3, 19),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Andrew Fuller",Designation = "Sales Representative",EmpID = "EMP045",Country = "UK",DOB = new DateTime(1980, 9, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee
+            {
+                Name = "Robert King",
+                FullName = "RobertKing",
+                Designation = "Chief Executive Officer",
+                EmployeeID = 1,
+                EmpID = "EMP001",
+                Address = "507 - 20th Ave. E.Apt. 2A, Seattle",
+                Contact = "(206) 555-9857",
+                Country = "Seattle, WA",
+                DOB = new DateTime(1978, 2, 15),
+                ParentId = null,
+                IsAvailable = true,
+                Rating = 5
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "David William",
+                FullName = "DavidWilliam",
+                Designation = "Vice President",
+                EmployeeID = 2,
+                EmpID = "EMP004",
+                Address = "722 Moss Bay Blvd., Kirkland",
+                Contact = "(206) 555-3412",
+                Country = "Kirkland, WA",
+                DOB = new DateTime(1990, 5, 20),
+                ParentId = 1,
+                IsAvailable = true,
+                Rating = 4
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Nancy Davolio",
+                FullName = "NancyDavolio",
+                Designation = "Marketing Executive",
+                EmployeeID = 3,
+                EmpID = "EMP035",
+                Address = "4110 Old Redmond Rd., Redmond",
+                Contact = "(206) 555-8122",
+                Country = "Redmond, WA",
+                DOB = new DateTime(1988, 3, 19),
+                ParentId = 1,
+                IsAvailable = true,
+                Rating = 4
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Andrew Fuller",
+                FullName = "AndrewFuller",
+                Designation = "Sales Representative",
+                EmployeeID = 4,
+                EmpID = "EMP045",
+                Address = "14 Garrett Hill, London",
+                Contact = "(71) 555-4848",
+                Country = "London, UK",
+                DOB = new DateTime(1993, 9, 20),
+                ParentId = 1,
+                IsAvailable = false,
+                Rating = 3
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Anne Dodsworth",
+                FullName = "AnneDodsworth",
+                Designation = "Sales Executive",
+                EmployeeID = 5,
+                EmpID = "EMP091",
+                Address = "4726 - 11th Ave. N.E., Seattle",
+                Contact = "(206) 555-1189",
+                Country = "Seattle, WA",
+                DOB = new DateTime(1985, 7, 10),
+                ParentId = null,
+                IsAvailable = true,
+                Rating = 4
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Michael Suyama",
+                FullName = "MichaelSuyama",
+                Designation = "Sales Representative",
+                EmployeeID = 6,
+                EmpID = "EMP110",
+                Address = "Coventry House Miner Rd., London",
+                Contact = "(71) 555-3636",
+                Country = "London, UK",
+                DOB = new DateTime(1987, 11, 5),
+                ParentId = 5,
+                IsAvailable = true,
+                Rating = 3
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Janet Leverling",
+                FullName = "JanetLeverling",
+                Designation = "Marketing Representative",
+                EmployeeID = 7,
+                EmpID = "EMP131",
+                Address = "Edgeham Hollow Winchester Way, London",
+                Contact = "(71) 555-3636",
+                Country = "London, UK",
+                DOB = new DateTime(1989, 4, 12),
+                ParentId = 5,
+                IsAvailable = false,
+                Rating = 2
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Romey Wilson",
+                FullName = "RomeyWilson",
+                Designation = "Sales Coordinator",
+                EmployeeID = 8,
+                EmpID = "EMP039",
+                Address = "7 Houndstooth Rd., London",
+                Contact = "(71) 555-3690",
+                Country = "London, UK",
+                DOB = new DateTime(1994, 2, 2),
+                ParentId = null,
+                IsAvailable = true,
+                Rating = 4
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Margaret Peacock",
+                FullName = "MargaretPeacock",
+                Designation = "Sales Representative",
+                EmployeeID = 9,
+                EmpID = "EMP213",
+                Address = "4726 - 11th Ave. N.E., California",
+                Contact = "(206) 555-1989",
+                Country = "Los Angeles, CA",
+                DOB = new DateTime(1986, 8, 22),
+                ParentId = 8,
+                IsAvailable = true,
+                Rating = 3
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Steven Buchanan",
+                FullName = "StevenBuchanan",
+                Designation = "Sales Representative",
+                EmployeeID = 10,
+                EmpID = "EMP197",
+                Address = "200 Lincoln Ave, Salinas, CA 93901",
+                Contact = "(831) 758-7408",
+                Country = "Salinas, CA",
+                DOB = new DateTime(1984, 1, 30),
+                ParentId = 8,
+                IsAvailable = false,
+                Rating = 2
+            });
+            DataCollection.Add(new Employee
+            {
+                Name = "Tedd Lawson",
+                FullName = "TeddLawson",
+                Designation = "Sales Representative",
+                EmployeeID = 11,
+                EmpID = "EMP167",
+                Address = "200 Lincoln Ave, Salinas, CA 93901",
+                Contact = "(831) 758-7368",
+                Country = "Salinas, CA",
+                DOB = new DateTime(1991, 6, 18),
+                ParentId = 8,
+                IsAvailable = true,
+                Rating = 3
+            });
             return DataCollection;
         }
     }
@@ -285,13 +452,13 @@ The empty record template feature in the Syncfusion<sup style="font-size:70%">&r
 
 To activate this feature, set the `EmptyRecordTemplate` feature of the TreeGrid. The `EmptyRecordTemplate` feature expects the HTML element or a function that returns the HTML element.
 
-The following example demonstrates how an image and text can be rendered as a template to indicate that the TreeGrid has no data to display:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskID" ParentIdMapping="ParentID" HasChildMapping="IsParent" TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <TreeGridPageSettings PageCount="5"></TreeGridPageSettings>
@@ -320,7 +487,7 @@ The following example demonstrates how an image and text can be rendered as a te
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-	public string ImageUrl = "data:image/svg+xml;base64...."
+	public string ImageUrl = "data:image/svg+xml;base64....";
    
 }
 
