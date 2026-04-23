@@ -10,7 +10,7 @@ documentation: ug
 # PDF Export in Blazor TreeGrid Component
 
 The PDF export feature enables users to convert TreeGrid data into a downloadable PDF document. To perform the export, use the
- **ExportToPdfAsync** method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.
+ **ExportToPdfAsync** method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPdfExport) as true.
 
 For a visual walkthrough of PDF export in the Blazor TreeGrid component, refer to the following video:
 
@@ -662,3 +662,68 @@ public class TreeData
 {% endtabs %}
 
 N> By default, material theme is applied to exported PDF document.
+
+
+## Globalization – Using TrueType Fonts (TTF) in PDF Export
+
+
+### Overview
+
+By default, the TreeGrid PDF export supports only a limited set of fonts. Due to this limitation, non-English languages such as Chinese or other Unicode characters may not render correctly in the exported PDF.
+
+To export such characters properly, you must use a TrueType Font (TTF) and provide it as a Base64-encoded string. The TreeGrid component supports TrueType fonts through the `ExportToPdfAsync()` method, which enables globalization support during PDF export.
+
+---
+
+### When to Use Custom TTF Fonts
+
+Use a custom TrueType font when:
+
+- Exporting Chinese or other Unicode language text  
+- Using custom fonts that are not supported by default  
+- Ensuring proper text rendering in PDF headers and records  
+
+---
+
+### Applying a TrueType Font in PDF Export
+
+To apply a custom TTF font, assign the Base64-encoded string of the font file to the `FontFamily` property and set `IsTrueType` to `true` in the `PdfGridFont`.
+
+Use the `ExportToPdfAsync()` method for exporting. Enable PDF export in the TreeGrid by setting the `AllowPdfExport` property to true.
+
+---
+
+### Toolbar Click Event – Code Example
+
+```csharp
+private void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
+{
+    if (Args.Item.Text == "PDF Export")
+    {
+        Syncfusion.Blazor.Grids.PdfExportProperties exportProperties =
+            new Syncfusion.Blazor.Grids.PdfExportProperties();
+
+        PdfTheme theme = new PdfTheme();
+
+        PdfThemeStyle recordThemeStyle = new PdfThemeStyle()
+        {
+            FontColor = "#0000FF",
+            FontName = "Calibri",
+            FontSize = 17,
+            Font = new PdfGridFont()
+            {
+                IsTrueType = true,
+                FontSize = 11,
+                FontFamily = "encodedbase64stringhere"
+            }
+        };
+
+        theme.Record = recordThemeStyle;
+        theme.Header = recordThemeStyle;
+        exportProperties.Theme = theme;
+
+        this.TreeGrid.ExportToPdfAsync(exportProperties);
+    }
+}
+```
+
