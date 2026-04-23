@@ -1,5 +1,5 @@
 @using Syncfusion.Blazor.RichTextEditor
-@using Markdig;
+@using Syncfusion.Blazor.MarkdownConverter;
 
 <div class="control-section">
     @if (!IsPreview)
@@ -40,10 +40,10 @@
 @code{
     private bool IsPreview { get; set; }
     private string HtmlValue { get; set; }
-    private MarkdownPipeline Pipeline { get; set; }
+    private MarkdownConverterOptions? Pipeline { get; set; }
     private string MarkdownValue { get; set; } = @"The sample is added to showcase **markdown editing**.
 Type or edit the content and apply formatting to view markdown formatted content.
-We can add our own custom formation syntax for the Markdown formation, [sample link](https://blazor.syncfusion.com/demos/rich-text-editor/markdown-custom-format).
+We can add our own custom formation syntax for the Markdown formation, [sample link](https://blazor.syncfusion.com/demos/markdown-editor/custom-format).
 The third-party library **Marked** is used in this sample to convert markdown into HTML content.";
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>() 
     {
@@ -74,8 +74,8 @@ The third-party library **Marked** is used in this sample to convert markdown in
     };
     protected override void OnInitialized()
     {
-        Pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
-        this.HtmlValue = Markdig.Markdown.ToHtml(MarkdownValue, Pipeline);
+        Pipeline = new MarkdownConverterOptions { Gfm = true, LineBreak = true, Silent = false };
+        this.HtmlValue = SfMarkdownConverter.ToHtml(MarkdownValue, Pipeline);
         base.OnInitialized();
     }
     private void OnValueChange(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
@@ -86,7 +86,7 @@ The third-party library **Marked** is used in this sample to convert markdown in
         }
         else
         {
-            this.HtmlValue = Markdig.Markdown.ToHtml(args.Value, Pipeline);
+            this.HtmlValue = SfMarkdownConverter.ToHtml(args.Value, Pipeline);
         }
     }
     private void PreviewClick()

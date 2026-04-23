@@ -1,0 +1,162 @@
+@using Syncfusion.Blazor.MarkdownConverter
+@using Syncfusion.Blazor.RichTextEditor
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <h3>Markdown Converter Options</h3>
+            <div class="options-panel border p-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked="@enableGfm" @onchange="@((Microsoft.AspNetCore.Components.ChangeEventArgs args) => OnOptionsChanged(args, "gfm"))" id="gfmOption" />
+                    <label class="form-check-label" for="gfmOption">
+                        Enable GitHub Flavored Markdown (GFM)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked="@enableLineBreak" @onchange="@((Microsoft.AspNetCore.Components.ChangeEventArgs args) => OnOptionsChanged(args, "linebreak"))" id="lineBreakOption" />
+                    <label class="form-check-label" for="lineBreakOption">
+                        Convert single line breaks to &lt;br /&gt;
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked="@enableSilent" @onchange="@((Microsoft.AspNetCore.Components.ChangeEventArgs args) => OnOptionsChanged(args, "silent"))" id="silentOption" />
+                    <label class="form-check-label" for="silentOption">
+                        Enable Silent Mode (suppress errors)
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Markdown Input</h3>
+            <SfRichTextEditor @bind-Value="markdownText" Height="300px" EditorMode="EditorMode.Markdown">
+                <RichTextEditorEvents ValueChange="@OnMarkdownChanged"></RichTextEditorEvents>
+            </SfRichTextEditor>
+        </div>
+        <div class="col-md-6">
+            <h3>HTML Output</h3>
+            <div class="preview-panel border p-3">
+                @if (!string.IsNullOrEmpty(htmlOutput))
+                {
+                    <div>@((MarkupString)htmlOutput)</div>
+                }
+                else
+                {
+                    <p class="text-muted">HTML preview will appear here...</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// The markdown text to be converted.
+    /// </summary>
+    private string markdownText = @"# Heading 1
+
+## Heading 2
+
+This is a paragraph with **bold** and *italic* text.
+
+- List item 1
+- List item 2
+
+| Column 1 | Column 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |";
+    
+    /// <summary>
+    /// The HTML output after conversion.
+    /// </summary>
+    private string htmlOutput = string.Empty;
+    
+    /// <summary>
+    /// Enable GitHub Flavored Markdown features.
+    /// </summary>
+    private bool enableGfm = true;
+    
+    /// <summary>
+    /// Enable conversion of single line breaks to &lt;br /&gt;.
+    /// </summary>
+    private bool enableLineBreak = false;
+    
+    /// <summary>
+    /// Enable silent mode to suppress conversion errors.
+    /// </summary>
+    private bool enableSilent = false;
+
+    /// <summary>
+    /// Initializes the component and performs initial conversion.
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        ConvertMarkdown();
+    }
+
+    /// <summary>
+    /// Converts the markdown text to HTML based on current options.
+    /// </summary>
+    private void ConvertMarkdown()
+    {
+        try
+        {
+            // Input validation
+            if (string.IsNullOrWhiteSpace(markdownText))
+            {
+                htmlOutput = string.Empty;
+                return;
+            }
+
+            // Create options based on user selections
+            var options = new MarkdownConverterOptions
+            {
+                Gfm = enableGfm,
+                LineBreak = enableLineBreak,
+                Silent = enableSilent
+            };
+            
+            // Convert markdown to HTML
+            htmlOutput = SfMarkdownConverter.ToHtml(markdownText, options);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Markdown conversion error: {ex.Message}");
+            htmlOutput = $"<p class='alert alert-danger'>Error: {System.Net.WebUtility.HtmlEncode(ex.Message)}</p>";
+        }
+    }
+
+    /// <summary>
+    /// Handles markdown text changes and updates preview.
+    /// </summary>
+    private void OnMarkdownChanged(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
+    {
+        markdownText = args.Value ?? string.Empty;
+        ConvertMarkdown();
+    }
+
+    /// <summary>
+    /// Handles conversion options changes.
+    /// </summary>
+    private void OnOptionsChanged(Microsoft.AspNetCore.Components.ChangeEventArgs args, string optionName)
+    {
+        bool updatedValue = (bool)args.Value;
+
+        switch (optionName)
+        {
+            case "gfm":
+                enableGfm = updatedValue;
+                break;
+            case "linebreak":
+                enableLineBreak = updatedValue;
+                break;
+            case "silent":
+                enableSilent = updatedValue;
+                break;
+        }
+        ConvertMarkdown();
+    }
+}
