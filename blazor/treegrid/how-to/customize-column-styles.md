@@ -106,4 +106,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Column Style in Blazor TreeGrid](../images/blazor-treegrid-custom-column-style.PNG)
+![Customizing Column Style in Blazor TreeGrid](../images/blazor-treegrid-custom-column-style.webp)

@@ -76,4 +76,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Row Editing in Blazor TreeGrid](../images/blazor-treegrid-row-editing.png)
+![Row Editing in Blazor TreeGrid](../images/blazor-treegrid-row-editing.webp)

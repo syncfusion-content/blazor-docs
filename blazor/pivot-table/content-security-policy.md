@@ -87,3 +87,7 @@ Include `'unsafe-inline'` if you need Pivot Chart view, conditional formatting, 
 ```
 
 > Use this only when integrated charting, cell-level conditional formatting, or advanced styling is essential.
+
+## See also
+
+* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)

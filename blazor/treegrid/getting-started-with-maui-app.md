@@ -182,7 +182,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid compone
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor TreeGrid Component](images/blazor-treegrid-maui-app.png)
+![Blazor TreeGrid Component](images/blazor-treegrid-maui-app.webp)
 
 ### How to Run the Sample on Android
 
@@ -192,7 +192,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor TreeGrid Component](images/blazor-treegrid-component.png)
+![Blazor TreeGrid Component](images/blazor-treegrid-component.webp)
 
 ## Defining columns
 
@@ -349,7 +349,7 @@ The sorting feature enables to order the records. It can be enabled by setting t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TreeGrid](images/blazor-treegrid.png)
+![Blazor TreeGrid](images/blazor-treegrid.webp)
 
 ## Handling exceptions
 

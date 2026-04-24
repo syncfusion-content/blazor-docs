@@ -178,7 +178,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid compone
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor DataGrid Component](images/blazor-datagrid-maui-page.png)
+![Blazor DataGrid Component](images/blazor-datagrid-maui-page.webp)
 
 ### How to Run the Sample on Android
 
@@ -188,7 +188,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor DataGrid Component](images/blazor-datagrid-component.png)
+![Blazor DataGrid Component](images/blazor-datagrid-component.webp)
 
 ## Defining row data
 
@@ -332,7 +332,7 @@ The grouping feature enables you to view the Syncfusion<sup style="font-size:70%
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBfDWBkLabNleSQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](images/blazor-datagrid.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBfDWBkLabNleSQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](images/blazor-datagrid-render.webp)" %}
 
 ## Handling exceptions
 

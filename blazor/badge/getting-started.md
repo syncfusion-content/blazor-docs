@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Badge Component
 
-This section briefly explains about how to include [Blazor Badge](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=bootstrap5) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=bootstrap5) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -83,11 +83,11 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
 Install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+Alternatively, run the following command in the Package Manager Console to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -99,7 +99,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add Stylesheet
+## Add stylesheet
 
 The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the **~/index.html** file.
 
@@ -111,12 +111,12 @@ The theme stylesheet can be accessed from NuGet through [Static Web Assets](http
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application.
 
-## Add Blazor Badge component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 <h1>Badge Component <span class="e-badge e-badge-primary">New</span></h1>
 
