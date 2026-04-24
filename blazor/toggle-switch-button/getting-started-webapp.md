@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Buttons
+
 <label for="checked" style="padding: 10px 10px 10px 0">USB Tethering</label>
 
 <SfSwitch Name="checked" @bind-Checked="isChecked"></SfSwitch>
@@ -188,6 +190,8 @@ On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Buttons
 
 <SfSwitch @bind-Checked="isChecked" OnLabel="On" OffLabel="Off"></SfSwitch>
 
