@@ -90,7 +90,7 @@ Adding a title and subtitle helps convey purpose and scope. Use the `Title` prop
 
 In this example, "Energy Flow" is configured as the title and "-2024" as the subtitle.
 
-![Blazor Sankey Title](images/titles/sankey-title.png)
+![Blazor Sankey Title](images/titles/sankey-title.webp)
 
 ## Customizing Title and Subtitle
 
@@ -173,7 +173,7 @@ The title and subtitle can be styled using `SankeyTitleStyle` and `SankeySubtitl
 {% endtabs %}
 
 
-![Blazor Sankey Title Customization](images/titles/sankey-title-customization.png)
+![Blazor Sankey Title Customization](images/titles/sankey-title-customization.webp)
 
 ## Key Considerations
 
