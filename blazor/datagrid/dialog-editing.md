@@ -178,9 +178,20 @@ public class OrderDetails
 > * The DataGrid add or edit dialog element includes a max-height property, which is calculated based on the available window height. In a standard window size of **1920×1080** pixels, the dialog height can be set up to **658px**.
 > * Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
 
-### Applying animations to the add/edit dialog
+### Add and Edit Dialog Animation Support for Modern UI Experience
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports adding animation effects to the edit dialog to enhance visual interaction during add and edit operations. By configuring the DialogSettings through the [Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Dialog) property of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html), animation effects can be applied when the dialog is displayed. Properties such as dialog height, width, animation effect and much more can be customized to achieve smooth transitions, improving the overall user experience without affecting data operations or validation behavior. The animation is automatically applied whenever the edit dialog is opened in dialog edit mode.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for animation effects in dialog edit mode, creating a smooth and modern editing experience. Animation effects can be applied to the edit dialog during add and edit operations by using [GridEditSettings]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html)) with the [Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Dialog) property.
+The DialogSettings configuration allows full control over dialog behavior and appearance. Options include dialog height, dialog width, animation effect, and layout customization. These settings enhance visual interaction while maintaining consistent data handling and validation behavior.
+
+Animation effects are automatically applied whenever the edit dialog opens in dialog edit mode. The feature improves user experience without affecting performance, data integrity, or validation logic.
+
+**Key Benefits**
+
+- Smooth animation effects for add and edit dialogs
+- Easy configuration through GridEditSettings and DialogSettings
+- Customizable dialog size and animation style
+- Improved visual appeal for enterprise Blazor applications
+- No impact on data operations or validation workflow.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
