@@ -521,10 +521,14 @@ dotnet ef database update
 
 **What happens when you run the above commands**
 
-- **dotnet ef migrations add InitialCreate**  
+```powershell
+dotnet ef migrations add InitialCreate
+```
 Creates a migration file based on the current `AppDbContext`. This migration represents the database structure required by the application.
 
-- **dotnet ef database update**  
+```powershell
+dotnet ef database update
+```
 Applies the migration to PostgreSQL. This command:
   - Creates the database if it does not already exist.
   - Creates the required tables and schema.
