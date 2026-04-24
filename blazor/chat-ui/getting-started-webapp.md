@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Chat UI in a Blazor Web App
 
-This section explains how to add the [Blazor Chat UI](https://www.syncfusion.com/blazor-components/blazor-chat-ui) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to add the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chat UI](https://www.syncfusion.com/blazor-components/blazor-chat-ui) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 To get started quickly with the Blazor Chat UI component, refer to the following video guide:
 
@@ -172,7 +172,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
     <SfChatUI></SfChatUI>
@@ -190,7 +192,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 Use the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Messages) property to populate the chat with an initial set of messages and the [User](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_User) property to define the current user.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Splitter in Blazor Web App
 
-This section briefly explains about how to include [Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Layouts
 
 <div>Horizontal Splitter</div>
 
@@ -205,7 +207,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTNWqXTTzLolQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.png)" %}
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 

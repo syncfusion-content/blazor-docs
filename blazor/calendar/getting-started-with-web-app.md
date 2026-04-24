@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Calendar Component in Web App
 
-This section briefly explains about how to include [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -151,7 +151,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Calendar component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
@@ -161,7 +161,13 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveAuto
+@rendermode InteractiveServer
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfCalendar TValue="DateTime"></SfCalendar>
 
@@ -181,7 +187,9 @@ The Calendar component provides an option to select a date within a specified ra
 Here, the Calendar allows selecting a date from the 5th to the 27th of the current month. `TValue` specifies the type of the Calendar component.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime" Min='@MinDate' Value='@DateValue' Max='@MaxDate'></SfCalendar>
 

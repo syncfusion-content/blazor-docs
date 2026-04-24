@@ -73,7 +73,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Reordering Columns in Blazor Tree Grid](../images/blazor-treegrid-column-reorder.gif)
+![Reordering Columns in Blazor Tree Grid](../images/blazor-treegrid-column-reorder.webp)
 
 N> You can disable reordering a particular column by setting the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper to false.
 
@@ -151,7 +151,7 @@ public class TreeData
 {% endtabs %}
 
 The following GIF represents the Reordering column **TaskName** by using the method,
-![Reordering Single Column in Blazor Tree Grid](../images/blazor-treegrid-reorder-single-column.gif)
+![Reordering Single Column in Blazor Tree Grid](../images/blazor-treegrid-reorder-single-column.webp)
 
 ## Reorder multiple columns
 
@@ -228,4 +228,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Reordering Multiple Columns in Blazor Tree Grid](../images/blazor-treegrid-reorder-multiple-columns.gif)
+![Reordering Multiple Columns in Blazor Tree Grid](../images/blazor-treegrid-reorder-multiple-columns.webp)

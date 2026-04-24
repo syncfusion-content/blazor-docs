@@ -83,7 +83,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Scrolling in Blazor TreeGrid](images/blazor-treegrid-scrolling.png)
+![Scrolling in Blazor TreeGrid](images/blazor-treegrid-scrolling.webp)
 
 ## Responsive with parent container
 
@@ -331,7 +331,7 @@ namespace TreeGridComponent.Data
 {% endhighlight %}
 {% endtabs %}
 
-![Sticky header](images/sticky-header.gif)
+![Sticky header](images/sticky-header.webp)
 
 ## Frozen rows and columns
 
@@ -403,7 +403,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Frozen Rows and Columns in Blazor TreeGrid](images/blazor-treegrid-frozen-rows-and-columns.png)
+![Frozen Rows and Columns in Blazor TreeGrid](images/blazor-treegrid-frozen-rows-and-columns.webp)
 
 ### Freeze particular columns
 
@@ -475,7 +475,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Freezing Specific Column in Blazor TreeGrid](images/blazor-treegrid-freeze-specific-column.png)
+![Freezing Specific Column in Blazor TreeGrid](images/blazor-treegrid-freeze-specific-column.webp)
 
 ### Limitations
 
@@ -531,7 +531,7 @@ The [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 N> If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
 
-![Add or Remove Frozen Blazor TreeGrid Columns by Dragging the Column Separator](./images/blazor-treegrid-freeze-line-moving.gif)
+![Add or Remove Frozen Blazor TreeGrid Columns by Dragging the Column Separator](./images/blazor-treegrid-freeze-line-moving.webp)
 
 ## Scroll the content programmatically
 This section shows you how to invoke a [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ScrollIntoViewAsync) method to scroll the tree grid content into view externally by passing column index or row index as parameter.
@@ -654,4 +654,4 @@ In the below demo, modifying the RowIndex value triggers a vertical scroll, whil
     }
 }
 ```
-![Blazor Tree Grid Scroll programmatically](./images/blazor-treegrid-scroll-programmatically.gif)
+![Blazor Tree Grid Scroll programmatically](./images/blazor-treegrid-scroll-programmatically.webp)

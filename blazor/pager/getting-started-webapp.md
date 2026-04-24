@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Pager Component in Blazor Web App
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enables navigation through large collections by dividing content into multiple pages. This guide details the integration of the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor Web App** using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component enables navigation through large collections by dividing content into multiple pages. This guide details the integration of the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor Web App** using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). 
 
 {% tabcontents %}
 
@@ -171,7 +171,7 @@ The Syncfusion Blazor Pager component can be integrated with other components to
 Add the [Blazor ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component in the `~/Pages/*.razor` file and bind it to a collection:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Lists
@@ -231,7 +231,7 @@ Add the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigati
 * [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) – indicates the total number of records in the data source.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -248,7 +248,9 @@ To enable paging functionality, bind the **ListView** data for the current page 
 
 The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event is triggered when a pager item is clicked. This event updates the **Skip** and **Take** values dynamically according to the selected page, ensuring that the correct subset of data is displayed in the ListView.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Lists
@@ -311,7 +313,8 @@ The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigati
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 **4. Run the Application**
 

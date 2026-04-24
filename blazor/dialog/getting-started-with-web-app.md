@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dialog Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px">
     <DialogTemplates>
@@ -200,7 +202,8 @@ html, body {
 
 - The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Destroyed) event triggers when the dialog component is removed from the DOM. These lifecycle events allow executing custom code at specific points in the component's existence.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 
@@ -220,7 +223,8 @@ html, body {
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Prerender the Dialog
 
@@ -229,7 +233,8 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 * By default, AllowPrerender is set to false. In this mode, dialog DOM elements are completely removed from the DOM when the dialog is hidden, and recreated each time the dialog is shown. This approach saves memory but requires re-rendering on each display.
 * When AllowPrerender is set to true, the dialog elements remain in the DOM even when hidden, which improves performance for frequently accessed dialogs but uses more memory.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
@@ -254,7 +259,8 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVyNPspKoXXlIYf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -262,13 +268,15 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 
 The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) property allows rendering a dialog with custom text header.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px" Header="Dialog Header"></SfDialog>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhyjEByHgdKnwXS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Header](./images/blazor-dialog-header.png)" %}
 
@@ -276,13 +284,15 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Content) property allows rendering a dialog with custom text content.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px" Content="This is a dialog with Content property."></SfDialog>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIZPssAIpntkQY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Content](./images/blazor-dialog-content.png)" %}
 

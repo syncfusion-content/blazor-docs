@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor ListBox in Blazor Web App
 
-This section briefly explains about how to include [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" TItem="string[]"></SfListBox>
 
@@ -177,7 +179,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 After initialization, populate the ListBox using the `DataSource` property. In the following example, an array of objects is bound and fields are mapped via `ListBoxFieldSettings`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
     <ListBoxFieldSettings Text="Text" Value="Id" />
@@ -211,7 +215,7 @@ N> `TValue` is the type of the value in the data source used for type inference.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ListBox).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

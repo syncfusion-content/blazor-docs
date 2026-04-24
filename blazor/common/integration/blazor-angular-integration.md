@@ -25,10 +25,7 @@ A common use case for this integration is when an existing Angular application n
 
 ### Create the project
 
-If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion Blazor getting started guides.
-
-* [WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using [Syncfusion Blazor getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) guides.
 
 ### Install custom elements packages
 
@@ -37,8 +34,8 @@ To enable custom elements, install the required Microsoft packages.
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Microsoft.AspNetCore.Components.Web --version 10.0.3 
-dotnet add package Microsoft.AspNetCore.Components.CustomElements --version 10.0.3 
+dotnet add package Microsoft.AspNetCore.Components.Web
+dotnet add package Microsoft.AspNetCore.Components.CustomElements 
 
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +121,7 @@ ng new AngularApp --standalone
 
 Blazor and Angular run on different local servers. To allow Angular to load Blazor files, you must create a proxy file. 
 
-Create a new file named `proxy.conf.json` inside the Angular project’s `src/` folder and add the below content.
+Create a new file named `proxy.conf.json` inside the Angular project’s folder and add the below content.
 
 {% tabs %}
 {% highlight json tabtitle="proxy.conf.json" %}
@@ -181,7 +178,7 @@ The Blazor runtime and Syncfusion scripts/themes are required to load Syncfusion
 
 N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
-WebAssembly:
+WebAssembly script reference file:
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -190,18 +187,6 @@ WebAssembly:
 
 {% endhighlight %}
 {% endtabs %}
-
-Server:
-
-{% tabs %}
-{% highlight html tabtitle="index.html" %}
-
-<script src="/blazor/_framework/blazor.server.js"></script> 
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Based on the Blazor project type, add the appropriate script reference file.
 
 ### Use the custom element in Angular
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Kanban Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,9 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel">
     <KanbanColumns>
@@ -194,7 +196,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 To populate the empty Kanban with cards, define the Enumerable object or remote data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. To define `DataSource`, the mandatory fields in object or remote data should be relevant to [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_KeyField). In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
@@ -238,7 +242,9 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 `Swimlane` can be enabled by mapping the fields [KanbanSwimlaneSettings.KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_SwimlaneSettings) to appropriate column name in DataSource. This enables the grouping of the cards based on the mapped column values.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>

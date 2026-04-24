@@ -419,7 +419,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-* The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
+* The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous heading.
 * Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
@@ -674,7 +674,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The reservation management application is now running and ready to use.
 
-![Basic DataGrid displaying reservations from the SQL Server database](../images/blazor-datagrid-dapper.png)
+![Basic DataGrid displaying reservations from the SQL Server database](../images/blazor-datagrid-dapper.webp)
 
 ### Step 6: Implement Paging Feature
 
