@@ -507,9 +507,13 @@ The **Like** filter processes single search patterns using the <b>%</b> symbol t
 
 ## Diacritics filter
 
-The diacritics filter feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful when working with text data that includes accented characters (diacritic characters). By default, the Grid ignores these characters during filtering. However, if you need to consider diacritic characters in your filtering process, you can disable this behavior by setting the `IgnoreAccent` property to false using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The diacritics filter feature handles text data that includes accented characters. Diacritics are accent marks added to letters (examples: é, ñ, ü, ç). By default, the grid ignores these characters during filtering.
 
-Consider the following sample where the `IgnoreAccent` property is set to false in order to consider diacritic characters in the filtering process:
+This feature is essential for international data where names like “José” and “Jose” should be treated differently (or the same, depending on requirements).
+
+Enable diacritic character consideration by setting the `IgnoreAccent` property to **true** using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+
+The following example demonstrates diacritics filtering with the `IgnoreAccent` property set to **true**:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -517,7 +521,7 @@ Consider the following sample where the `IgnoreAccent` property is set to false 
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" AllowFiltering="true" Height="273px">
-    <GridFilterSettings IgnoreAccent="false"></GridFilterSettings>
+    <GridFilterSettings IgnoreAccent="true"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Name) HeaderText="Name" Width="140"></GridColumn>
@@ -581,7 +585,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHZTrtDPVkNzGK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBxXJVJDcKLCWHR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Filtering with case sensitivity
