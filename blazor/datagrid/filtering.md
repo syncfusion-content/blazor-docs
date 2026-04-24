@@ -511,7 +511,7 @@ The diacritics filter feature handles text data that includes accented character
 
 This feature is essential for international data where names like “José” and “Jose” should be treated differently (or the same, depending on requirements).
 
-Enable diacritic character consideration by setting the `IgnoreAccent` property to **true** using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+To ensure diacritic characters are considered during filtering, set the `IgnoreAccent` property to **true** using [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 The following example demonstrates diacritics filtering with the `IgnoreAccent` property set to **true**:
 
