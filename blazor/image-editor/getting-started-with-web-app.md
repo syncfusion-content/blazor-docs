@@ -171,6 +171,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.ImageEditor
+
 <SfImageEditor Height="500"></SfImageEditor>
 
 {% endhighlight %}
