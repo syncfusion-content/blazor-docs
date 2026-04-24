@@ -57,12 +57,45 @@ Properties such as **font-family**, **background-color**, **padding**, and **bor
 <style>
     .e-pager {
         font-family: 'Segoe UI', sans-serif;
-        padding: 12px;
-        border-radius: 4px;
-        border: 1px solid #e0e0e0;
+        padding: 18px 24px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #00d4ff 0%, #20c997 100%);
+        box-shadow: 0 8px 24px rgba(0, 212, 255, 0.35);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        align-items: center;
+        gap: 12px;
     }
-    .e-pager, .e-pager .e-pagercontainer{
-        background-color: #f9f9f9;
+    .e-pager:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(0, 212, 255, 0.45);
+    }
+    .e-pager .e-pagercontainer {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        padding: 8px;
+    }
+    .e-pager .e-numericitem {
+        background-color: #ffffff;
+        color: #00d4ff;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 12px;
+        margin: 0 4px;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
+        transition: all 0.2s ease;
+    }
+
+    .e-pager .e-numericitem:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 212, 255, 0.35);
+    }
+
+    .e-pager .e-currentitem.e-numericitem {
+        background: linear-gradient(135deg, #00d4ff 0%, #20c997 100%);
+        color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 212, 255, 0.4);
+        font-weight: bold;
     }
 </style>
 ```
