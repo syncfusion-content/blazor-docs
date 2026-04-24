@@ -174,6 +174,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Schedule
+
 <SfSchedule TValue=AppointmentData>
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
@@ -214,6 +216,8 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
@@ -259,6 +263,8 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
@@ -309,6 +315,8 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Schedule
+
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView">
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
@@ -344,6 +352,8 @@ Each individual Scheduler views can be customized with its own options such as s
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>

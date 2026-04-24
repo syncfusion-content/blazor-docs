@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Sankey Diagram in Blazor Web App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey](https://www.syncfusion.com/blazor-components) diagram in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey](https://www.syncfusion.com/blazor-components/blazor-sankey) diagram in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -166,6 +166,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Nodes=@Nodes Links=@Links>
 
 </SfSankey>
@@ -226,6 +228,8 @@ To bind data for the sankey diagram, you can assign an IEnumerable object to the
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Nodes=@Nodes Links=@Links>
 
 </SfSankey>
@@ -282,6 +286,8 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
 </SfSankey>
 
@@ -296,6 +302,8 @@ You can add data labels to improve the readability of the sankey diagram. This c
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
     <SankeyLabelSettings Visible="true"></SankeyLabelSettings>
@@ -313,6 +321,8 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
    <SankeyTooltipSettings Enable="true"></SankeyTooltipSettings>
 </SfSankey>
@@ -328,6 +338,8 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
     <SankeyLegendSettings Visible="true"></SankeyLegendSettings>

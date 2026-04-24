@@ -144,7 +144,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Blazor Chart component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
 
@@ -204,6 +204,8 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
