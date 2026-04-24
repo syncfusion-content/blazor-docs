@@ -9,33 +9,33 @@ documentation: ug
 
 # Welcome to Syncfusion® Blazor Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is an enterprise-grade, native UI components library for creating Blazor WebAssembly and Blazor Server applications. Built specifically for Blazor, the components are lightweight, responsive, and touch-friendly to support modern web applications. The library is engineered for performance, keyboard-first accessibility, and global reach, with rich data visualization and productivity components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is an enterprise-grade, native UI components library for creating Blazor Web, Blazor WebAssembly and Blazor Server applications. Built specifically for Blazor, the components are lightweight, responsive, and touch-friendly to support modern web applications. The library is engineered for performance, keyboard-first accessibility, and global reach, with rich data visualization and productivity components.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 ## Why teams choose us?
 
-- Enterprise coverage: A wide range of UI, data visualization, and editor components to cover dashboards, forms, documents, and line-of-business workflows.
-- Built for performance: Virtualization, lazy loading, lightweight payloads, and efficient rendering patterns for large datasets.
-- Production UX: Responsive layouts, high DPI rendering, touch support, and extensive keyboard interactions.
-- Global by default: Localization, internationalization, and right-to-left (RTL) support.
-- Accessible: WCAG-compliant semantics, ARIA attributes, and contrast-aware theming.
-- Tooling and docs: Extensive samples, API reference, and guidance to get productive quickly.
+- **Enterprise coverage**: A wide range of UI, data visualization, and editor components to cover dashboards, forms, documents, and line-of-business workflows.
+- **Built for performance**: Virtualization, lazy loading, lightweight payloads, and efficient rendering patterns for large datasets.
+- **Production UX**: Responsive layouts, high DPI rendering, touch support, and extensive keyboard interactions.
+- **Global by default**: Localization, internationalization, and right-to-left (RTL) support.
+- **Accessible**: WCAG-compliant semantics, ARIA attributes, and contrast-aware theming.
+- **Tooling and docs**: Extensive samples, API reference, and guidance to get productive quickly.
 
-## What’s included
+## What’s included?
 
-- Data bound components like DataGrid, TreeGrid, Charts, Scheduler, Pivot Table, and more.
-- Form inputs, Editors, Pickers, Menus, Navigation, and Layout components.
-- Rich visualization: 2D/3D Charts, Gauges, Maps, Heatmaps, and Sparklines.
+- Data bound components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), and more.
+- [Form inputs](https://www.syncfusion.com/blazor-components/blazor-textbox), [Editors](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), [Pickers](https://www.syncfusion.com/blazor-components/blazor-datepicker), [Menus](https://www.syncfusion.com/blazor-components/blazor-menu-bar), [Navigation](https://www.syncfusion.com/blazor-components/blazor-treeview), and [Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) components.
+- Rich visualization: [2D/3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts), [Gauges](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Maps](https://www.syncfusion.com/blazor-components/blazor-map), [HeatMaps](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), and [Sparklines](https://www.syncfusion.com/blazor-components/blazor-sparkline).
 - Theming system with multiple built-in themes and CSS variables for fine grained component.
 
-## How it fits into Blazor
+## How it fits into Blazor?
 
-- Works across Blazor Server, Blazor WebAssembly, and Blazor Web App (.NET 8, .NET 9, and .NET 10) render modes.
+- Works across [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio), [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app), and [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) (.NET 8, .NET 9, and .NET 10) render modes.
 - Plays well with dependency injection, routing, and cascading values.
 - Uses JavaScript interop only where it adds value (DOM/canvas/complex layout), keeping your app primarily in C# and Razor.
 
-## How to best read this user guide
+## How to best read this user guide?
 
 * The best way to get started is to read the Getting Started section of the documentation for the component intended for use. The Getting Started section covers the essential concepts to know before writing code. This is the only section recommended to read end-to-end before coding; other topics can be referenced as needed. Ensure the required SDKs and the supported .NET/Blazor versions are installed.
 

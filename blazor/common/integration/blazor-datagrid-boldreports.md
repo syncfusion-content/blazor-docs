@@ -63,7 +63,7 @@ builder.Services.AddHttpClient();
 var app = builder.Build();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
-app.MapControllers(); 
+app.MapControllers();
 app.Run();
 
 {% endhighlight %}
@@ -71,7 +71,7 @@ app.Run();
 
 ## Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. The Bold Report Viewer requires its specific script in addition to the core script. 
+Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. The Bold Report Viewer requires its specific script in addition to the core script.
 
 {% tabs %}
 {% highlight html  %}
@@ -179,7 +179,7 @@ Create a new folder inside the `wwwroot` folder in your application to store the
               <TextAlign>Center</TextAlign>
             </Style>
           </Textbox>
-          
+
           <Tablix Name="OrdersTable">
             <TablixBody>
               <TablixColumns>
@@ -505,14 +505,14 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
     }
 
     public async Task OpenReport()
-    {       
+    {
         try
-        { 
+        {
             // Step 1: Send the grid data to the server API
             var dataModel = new { DataSources = Orders };
             var baseUrl = Nav.BaseUri.TrimEnd('/');
             var url = $"{baseUrl}/api/BoldReportsAPI/SetReportData".Replace("//api", "/api");
-            var response = await Http.PostAsJsonAsync(url, dataModel);    
+            var response = await Http.PostAsJsonAsync(url, dataModel);
 
             // Step 2: Render the viewer with the data
             var viewerOptions = new
@@ -541,7 +541,7 @@ Inject **IJSRuntime**, render the DataGrid and invoke the JavaScript interop wit
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
 **Expected behavior**
 * DataGrid renders with sample records.
@@ -580,4 +580,4 @@ Create an audit or compliance module where logs, verification records, or inspec
 * [How to use the Bold Reports Report Viewer in a Blazor WebAssembly App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-web-assembly-application/)
 * [How to use the Bold Reports Report Viewer in a Blazor Server App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-server-application/)
 * [Explore the Blazor reporting components available in Bold Reports](https://www.boldreports.com/blog/blazor-reporting-components)
-* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) 
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
