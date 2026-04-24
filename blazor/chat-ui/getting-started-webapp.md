@@ -174,6 +174,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.InteractiveChat
+
 <div style="height: 400px; width: 400px;">
     <SfChatUI></SfChatUI>
 </div>
@@ -191,6 +193,8 @@ Use the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inter
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>

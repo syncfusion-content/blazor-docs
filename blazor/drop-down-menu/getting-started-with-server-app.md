@@ -161,6 +161,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.SplitButtons
+
 <SfDropDownButton Content="Edit">
     <DropDownMenuItems>
         <DropDownMenuItem Text="Cut"></DropDownMenuItem>
