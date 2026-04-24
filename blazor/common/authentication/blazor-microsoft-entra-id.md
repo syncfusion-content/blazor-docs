@@ -63,7 +63,7 @@ Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
 Include the theme stylesheet and script references in the `App.razor` file.
 
 {% tabs %}
-{% highlight html  %}
+{% highlight razor tabtitle="App.razor" %}
 
 <head>
     <!-- Syncfusion theme stylesheet -->
@@ -134,6 +134,7 @@ This step enables OpenID Connect authentication in the Blazor application by con
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
+using YourProjectName.Components;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -205,7 +206,7 @@ This step allows Blazor components to access the current user’s authentication
 Create a protected page that displays the Syncfusion® **DataGrid** only after the user successfully signs in with **Microsoft Entra ID**.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Pages/Home.razor" %}
 
 @page "/"
 @rendermode InteractiveServer
@@ -265,9 +266,11 @@ Create a protected page that displays the Syncfusion® **DataGrid** only after t
 
 This example demonstrates how to integrate Microsoft Entra ID authentication into a Blazor Web App using the Microsoft Identity platform. 
 
-![Blazor DataGrid with Microsoft Enta ID](images/blazor-datagrid-microsoftentraid.webp)
+![Blazor DataGrid with Microsoft Enta ID login page](images/microsoft-authentication.webp)
 
 The application securely signs users in through Entra ID and manages the authentication lifecycle using OpenID Connect. After successfully signing in, authenticated users can access protected pages and interact with the **Syncfusion® Blazor DataGrid** component. 
+
+![Blazor DataGrid with Microsoft Enta ID](images/blazor-datagrid-microsoftentraid.webp)
 
 This approach provides a secure, enterprise ready foundation for building modern Blazor applications with controlled access to data and UI components.   
 
