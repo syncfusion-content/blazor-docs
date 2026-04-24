@@ -362,7 +362,7 @@ A connection string contains the information needed to connect the application t
 | Server | The address of the PostgreSQL server (localhost for local development) |
 | Port | The port number on which PostgreSQL is running (default is 5432) |
 | Database | The database name (for this guide, **org_chart_db**) |
-| User Id | The PostgreSQL username (default is **postgres**) |
+| User Id | The PostgreSQL username |
 | Password | The password for the PostgreSQL user account |
 
 
@@ -521,10 +521,10 @@ dotnet ef database update
 
 **What happens when you run the above commands**
 
-- **`dotnet ef migrations add InitialCreate`**  
+- **dotnet ef migrations add InitialCreate**  
 Creates a migration file based on the current `AppDbContext`. This migration represents the database structure required by the application.
 
-- **`dotnet ef database update`**  
+- **dotnet ef database update**  
 Applies the migration to PostgreSQL. This command:
   - Creates the database if it does not already exist.
   - Creates the required tables and schema.
