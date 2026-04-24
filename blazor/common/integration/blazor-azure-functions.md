@@ -99,7 +99,7 @@ This sample exposes `GET /api/orders` and `POST /api/orders`. The Blazor page us
 
 Ensure the .NET SDK and Azure Functions Core Tools are compatible. Refer to the [Azure Functions supported versions](https://learn.microsoft.com/en-us/azure/azure-functions/supported-languages) to verify compatibility for your environment.
 
-### Create a projects
+### Create the projects
 
 In this section, you will create two projects:
 
