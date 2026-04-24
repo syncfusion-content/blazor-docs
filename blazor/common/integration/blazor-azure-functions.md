@@ -99,14 +99,14 @@ This sample exposes `GET /api/orders` and `POST /api/orders`. The Blazor page us
 
 Ensure the .NET SDK and Azure Functions Core Tools are compatible. Refer to the [Azure Functions supported versions](https://learn.microsoft.com/en-us/azure/azure-functions/supported-languages) to verify compatibility for your environment.
 
-### Create solution and projects
+### Create a solution and projects
 
 In this section, you will create a single solution that contains:
 
 * A Blazor WebAssembly (WASM) client application.
 * An Azure Functions project using the isolated worker model.
 
-Keeping both projects in one solution makes development and debugging easier.
+Keeping both projects in one solution makes development and debugging easier. Run the commands from your terminal in a new, empty directory.
 
 **Step 1: Create the Blazor WebAssembly client project**
 
@@ -134,63 +134,44 @@ func new --name OrdersApi --template "HTTP trigger" --authlevel function
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Create a solution and add both projects**
-
-Return to the root folder and create a solution file to manage both projects.
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-cd ..
-dotnet new sln -n BlazorFunctions
-dotnet sln add Client/Client.csproj
-dotnet sln add Functions/Functions.csproj
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Install required NuGet packages
 
 **Syncfusion packages:**
 
-Navigate to the Blazor WASM project and install the necessary Syncfusion packages.
+Navigate into the Blazor WASM project(`Client`) directory and install the necessary Syncfusion packages.
 
 * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 * [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule)
 * [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-Alternatively, you can install the required packages by using the following .NET CLI commands.
+Alternatively, you can install the required packages by using the following .NET CLI commands in the Client project.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-cd Client
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Schedule -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Calendars -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-cd ..
 
 {% endhighlight %}
 {% endtabs %}
 
 **Microsoft packages:**
 
-Install the necessary packages for isolated worker runtime Azure Functions with HTTP triggers.
+Navigate to the Functions project and install the necessary packages for isolated worker runtime Azure Functions with HTTP triggers.
 
 * [Microsoft.Azure.Functions.Worker](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker)
 * [Microsoft.Azure.Functions.Worker.Extensions.Http](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker.Extensions.Http)
 
-Alternatively, you can install the required packages by using the following .NET CLI commands.
+Alternatively, you can install the required packages by using the following .NET CLI commands in the Functions project.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-cd Functions
 dotnet add package Microsoft.Azure.Functions.Worker
 dotnet add package Microsoft.Azure.Functions.Worker.Extensions.Http
-cd ..
 
 {% endhighlight %}
 {% endtabs %}
