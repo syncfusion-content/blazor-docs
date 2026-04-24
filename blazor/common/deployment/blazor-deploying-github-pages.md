@@ -25,7 +25,10 @@ Follow the below steps to create GitHub repository for deploying Blazor applicat
 
 * Go to [GitHub](https://github.com). Sign in using your GitHub account credentials.
 * From the GitHub homepage, click the **"+"** icon in the top‑right corner and select **New repository**.
-* Enter a repository name that matches your Blazor deployment path. And select **Public** visibility.
+* Enter a repository name:
+     * For a **user** or **organization site**: `<username>.github.io`
+     * For a **project site**: any repository name (for example, `blazor-demo`)
+* Select **Public** visibility.
 * Click **Create Repository** button to create the repository.
 
 ## Configure Syncfusion® DataGrid component
@@ -219,7 +222,7 @@ Initialize a git repository and commit your source code to the main branch:
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/<you>/<repo>.git
+git remote add origin https://github.com/<username>/<repository-name>.git
 git branch -M main
 git push -u origin main
 
@@ -255,7 +258,7 @@ git init
 git checkout -b gh-pages
 git add .
 git commit -m "Deploy Blazor WASM to GitHub Pages"
-git remote add origin https://github.com/<username>/<repo>.git
+git remote add origin https://github.com/<username>/<repository-name>.git
 git push -f origin gh-pages
 
 {% endhighlight %}
