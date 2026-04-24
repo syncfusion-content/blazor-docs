@@ -161,6 +161,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Calendars
+
 <SfDatePicker TValue="DateTime?" Placeholder='Choose a Date'></SfDatePicker>
 
 {% endhighlight %}
@@ -176,6 +178,8 @@ The following example demonstrates how to set the [Value](https://help.syncfusio
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Value='@DateValue' Min='@MinDate' Max='@MaxDate'></SfDatePicker>
 
