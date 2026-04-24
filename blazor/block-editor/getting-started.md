@@ -185,6 +185,8 @@ The Block Editor uses a block-based content structure where each block represent
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.BlockEditor
+
 <SfBlockEditor @bind-Blocks="blockDataOverview">
 </SfBlockEditor>
 

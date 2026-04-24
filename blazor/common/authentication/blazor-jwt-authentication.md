@@ -66,12 +66,12 @@ Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-### Add stylesheet and script resources
+### Add stylesheet and Interactive Server routing
 
-Include the theme stylesheet and script references in the `App.razor` file.
+Include the Syncfusion® theme stylesheet, required script references, and configure Interactive Server rendering in the `App.razor` file. 
 
 {% tabs %}
-{% highlight html  %}
+{% highlight razor tabtitle="App.razor" %}
 
 <head>
     <!-- Syncfusion theme stylesheet -->
@@ -79,6 +79,8 @@ Include the theme stylesheet and script references in the `App.razor` file.
 </head>
 
 <body>
+    <!-- Enable Interactive Server rendering -->
+    <Routes @rendermode="InteractiveServer" />
     <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
@@ -295,6 +297,7 @@ This section explains how the Syncfusion® Blazor DataGrid API endpoint is secur
 using YourProjectName.Models;  
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.Data;
 
 namespace YourProjectName.Controllers;
@@ -319,10 +322,10 @@ public class GridController : ControllerBase
 
 ### Adding JWT to Syncfusion® Blazor DataManager headers
 
-Attach the JWT token to HTTP headers so the **DataManager** can send authenticated requests.
+This example demonstrates how a JWT token is retrieved from the server and attached to the Syncfusion® Blazor DataManager as an HTTP Authorization header. This ensures that the DataGrid loads data only from a secured API after the user has been authenticated.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor
@@ -332,12 +335,12 @@ Attach the JWT token to HTTP headers so the **DataManager** can send authenticat
 @inject HttpClient Http
 @inject NavigationManager Nav
 
-<h3>JWT + Syncfusion DataGrid (Click to Load)</h3>
+<h3>JWT‑Secured Syncfusion® Blazor DataGrid</h3>
 
-<button class="btn btn-primary" @onclick="LoadGridWithToken">Load GridData</button>
+<button class="btn btn-primary" style="margin-bottom: 15px" @onclick="LoadGridWithToken">Load GridData</button>
 
 <SfGrid TValue="OrdersDetails" @ref="grid" AllowPaging="true" AllowSorting="true" Width="100%">
-    // Only render the DataManager after the token is fetched.
+    @* Only render the DataManager after the token is fetched. *@
     @if (isDataManagerEnabled)
     {
         <SfDataManager Url="api/grid" Adaptor="Adaptors.UrlAdaptor" Headers="HeaderData" />
@@ -389,9 +392,9 @@ Attach the JWT token to HTTP headers so the **DataManager** can send authenticat
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataGrid with JWT](images/jwt-authentication.webp)
+When the Load GridData button is clicked, the application first authenticates the request using JWT. After successful authentication, the secured API is accessed and the DataGrid data is loaded.
 
-The complete application flow ensures the **DataGrid** loads only after the user is authenticated using a valid JWT.
+![Blazor DataGrid with JWT](images/jwt-authentication.webp)
 
 ## See also
 
