@@ -191,7 +191,7 @@ public class OrderDetails
 {% endtabs %}
 
 <!-- cors issue {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrJXMWBgWWmRbjx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}  -->
-![Foreign key column with remote data](./images/foreignkey-remote-data.png)
+![Foreign key column with remote data](./images/foreignkey-remote-data.webp)
 
 > * For remote data, **sorting** and **grouping** operations are performed based on the [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) property rather than the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) property.
 
@@ -1067,4 +1067,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports cu
 {% endhighlight %}
 {% endtabs %}
 
-![Edit template in foreign key column using remote data](./images/edit-template.gif)
+![Edit template in foreign key column using remote data](./images/edit-template.webp)

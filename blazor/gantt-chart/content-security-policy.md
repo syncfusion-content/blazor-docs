@@ -79,3 +79,6 @@ Include `'unsafe-inline'` if you want to use rich text formatting in the Notes f
 
 > Use this only if you need formatted text (bold, colors, lists, etc.) in task Notes.
 
+## See also
+
+* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)

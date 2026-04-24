@@ -17,7 +17,7 @@ This article provides step-by-step instructions for building a Blazor Server App
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-## Manually Creating a Project
+## Manually creating a project
 
 This section provides a brief guide on how to manually create a Blazor Server App.
 

@@ -161,6 +161,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
@@ -197,6 +199,8 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />

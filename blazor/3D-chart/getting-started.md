@@ -201,6 +201,8 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Chart3D
+
 <SfChart3D>
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>

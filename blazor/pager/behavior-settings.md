@@ -71,4 +71,4 @@ The Pager component provides an option to show or hide the Pager information in 
 
 ```
 
-![Show Blazor Pager Message](./images/blazor-pager-message.png)
+![Show Blazor Pager Message](./images/blazor-pager-message.webp)

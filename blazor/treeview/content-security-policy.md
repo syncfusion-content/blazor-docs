@@ -85,3 +85,7 @@ Include `'unsafe-inline'` if you need virtualization for optimal performance wit
 ```
 
 > Use this only when handling very large datasets where virtualization is essential for performance and memory efficiency.
+
+## See also
+
+* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
