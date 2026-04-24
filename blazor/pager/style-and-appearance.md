@@ -64,6 +64,7 @@ Properties such as **font-family**, **background-color**, **padding**, and **bor
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         align-items: center;
         gap: 12px;
+        display: flex;
     }
     .e-pager:hover {
         transform: translateY(-2px);
@@ -74,7 +75,7 @@ Properties such as **font-family**, **background-color**, **padding**, and **bor
         border-radius: 8px;
         padding: 8px;
     }
-    .e-pager .e-numericitem {
+    .e-pager .e-numericitem, .e-pager .e-pager-default {
         background-color: #ffffff;
         color: #00d4ff;
         border: none;
@@ -84,6 +85,14 @@ Properties such as **font-family**, **background-color**, **padding**, and **bor
         font-weight: 500;
         box-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
         transition: all 0.2s ease;
+    }
+
+    .e-pager div.e-icons.e-pager-default{
+       color: #00d4ff;
+    }
+    .e-pager .e-parentmsgbar{
+        color: #ffffff;
+        font-weight: 500;
     }
 
     .e-pager .e-numericitem:hover {
@@ -96,6 +105,11 @@ Properties such as **font-family**, **background-color**, **padding**, and **bor
         color: #ffffff;
         box-shadow: 0 4px 16px rgba(0, 212, 255, 0.4);
         font-weight: bold;
+    }
+
+    .e-pager .e-currentitem.e-numericitem.e-focused {
+        background: #00d4ff;
+        box-shadow: 0 0 0 1px #00d4ff inset;
     }
 </style>
 ```
@@ -445,45 +459,53 @@ Properties such as **outline**, **outline-offset**, **opacity**, and **cursor** 
     }
 
     .e-pager .e-numericitem {
-        background-color: #ffffff;
         color: #333;
-        border: 1px solid #ddd;
-        margin: 0 3px;
-        padding: 6px 10px;
-        border-radius: 3px;
-        transition: all 0.2s ease;
+        border-color: rgba(43, 187, 173, 0.3);
+        box-shadow: 0 4px 12px rgba(43,187,173,0.3);
+        padding: 8px 12px;
+        transition: 0.25s ease;
     }
 
-    .e-pager .e-icons.e-focused {
-        outline: 2px solid #005a9e;
-        outline-offset: -2px;
-        box-shadow: inset 0 0 0 1px #005a9e;
-    }
-
-    .e-pager .e-icons:hover:not(.e-disable) {
-        background-color: #e8f4f8;
+    .e-pager .e-numericitem:hover:not(.e-disable) {
+        background: #2bbbad;
+        color: #333;
         border-color: #2bbbad;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(43,187,173,0.3);
     }
 
-    .e-pager .e-icons.e-disable {
-        background-color: #f5f5f5;
+    .e-pager .e-numericitem.e-focused {
+        background: #005a9e;
+        color: #fff;
+        border: 2px solid #003d7a;
+        box-shadow: 0 0 12px rgba(0,90,158,0.4), inset 0 0 0 1px rgba(255,255,255,0.2);
+        font-weight: 600;
+    }
+
+    .e-pager .e-currentitem {
+        background: #b5e5ed;
+        color: #fff;
+        border-color: #2bbbad;
+        font-weight: 600;
+    }
+
+    .e-pager .e-disable {
+        background: linear-gradient(135deg, #fafafa 25%, #fafafa 25%, #efc7c7 50%, #fafafa 50%, #fafafa 75%, #fafafa 75%, #fafafa);
+        background-size: 6px 6px;
         color: #999;
-        border-color: #ddd;
+        border: 2px dashed #ddd;
         opacity: 0.6;
         cursor: not-allowed;
     }
-
-    .e-pager .e-currentitem.e-numericitem {
-        background-color: #2bbbad;
-        color: #ffffff;
-        border-color: #2bbbad;
-        font-weight: bold;
+    .e-pager .e-currentitem.e-numericitem.e-focused, .e-pager .e-numericitem.e-focused {
+        background: #2bbbad;
+        box-shadow: 0 0 0 1px #2bbbad inset;
+        border: 1px solid #2bbbad;
     }
 
-    .e-pager .e-currentitem.e-numericitem.e-focused {
-        outline: 2px solid #005a9e;
-        outline-offset: 2px;
-        color: #2bbbad;
+    .e-pager .e-pagercontainer, .e-pager div.e-icons.e-pager-default {
+        background: #2bbbad;
+        color: #333;
     }
 </style>
 ```
