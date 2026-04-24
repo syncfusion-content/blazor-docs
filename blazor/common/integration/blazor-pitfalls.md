@@ -31,15 +31,15 @@ Before proceeding with this guide, ensure you have:
 
 * Basic understanding of Blazor application architecture and component lifecycle
 * Familiarity with Blazor Server, Blazor WebAssembly, or Blazor Web App hosting models
-* Visual Studio 2022 (17.8 or later) or Visual Studio Code with C# extension
-* .NET 8.0 SDK or later installed
+* Visual Studio 2022 (17.8 or later) or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later installed
 * Access to [Syncfusion Blazor NuGet packages](https://www.nuget.org/packages?q=syncfusion.blazor)
 
 N> This guide assumes you are working with Syncfusion<sup style="font-size:70%">®</sup> Blazor components version 24.1.41 or later. Some solutions may vary for earlier versions.
 
-## Common Pitfalls in Blazor Applications
+## Common pitfalls in Blazor applications
 
-### Pitfall 1: Components Rendering Without Styles
+### Pitfall 1: Components rendering without styles
 
 **Symptom**: Syncfusion<sup style="font-size:70%">®</sup> Blazor components appear unstyled, with broken layouts, missing colors, or default browser styling instead of the expected theme appearance.
 
@@ -89,7 +89,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 N> If you switch themes during development, clear your browser cache to ensure the new theme CSS loads correctly.
 
-### Pitfall 2: Components Not Rendering Interactively
+### Pitfall 2: Components not rendering interactively
 
 **Symptom**: Blazor components render as static HTML without interactivity. Events don't trigger, data binding doesn't work, and components don't respond to user input.
 
@@ -146,30 +146,18 @@ In `~/Program.cs`, configure global render mode:
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Registers Razor Components and enables interactive Server and WebAssembly components
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseAntiforgery();
-
+// Maps the root component and enables the corresponding render modes globally
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
-
-app.Run();
 
 {% endhighlight %}
 {% endtabs %}
@@ -226,13 +214,19 @@ Syncfusion components require interactive rendering. Apply the render mode to pa
 
 N> Blazor Server applications (.NET 6/7) are interactive by default and do not require explicit render mode directives.
 
-### Pitfall 3: Installing Redundant NuGet Packages
+### Pitfall 3: Installing redundant NuGet packages  
 
-**Symptom**: Both the comprehensive `Syncfusion.Blazor` package and individual component packages (such as `Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Calendars`) are installed in the same project, causing package bloat and potential confusion.
+**Symptom**: Builds fail with ambiguous-call or duplicate-type errors when calling Syncfusion APIs, e.g.:
 
-**Root Cause**: Misunderstanding of Syncfusion's package distribution strategy. Developers install the all-in-one package for convenience, then add individual packages for specific components, unaware that the comprehensive package already includes all components.
+```
+error CS0121: The call is ambiguous between the following methods or properties:
+'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(...) [path\to\Syncfusion.Blazor.Core.dll]'
+and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(...) [path\to\Syncfusion.Blazor.dll]'
+```
 
-**Impact**: Increased package size, longer restore times, potential for version conflicts, and unnecessary complexity in dependency management.
+**Root Cause**: The project references both the comprehensive package (Syncfusion.Blazor) and individual component packages (or Syncfusion.Blazor.Core). These packages export overlapping assemblies/types (same public APIs), causing compiler ambiguity and version/assembly conflicts
+
+**Impact**: Compile-time errors that block builds, longer restore times, bigger deployment footprint, and hard-to-diagnose dependency problems.
 
 **Solution**: Choose **one** packaging approach based on your application requirements.
 
@@ -277,7 +271,7 @@ dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 
 **Best Practices**:
 
-* **Never mix approaches**: Do not install both `Syncfusion.Blazor` and individual packages
+* Never mix Syncfusion.Blazor (comprehensive) with individual Syncfusion component packages in the same project.
 * Audit your `.csproj` file regularly to identify redundant packages
 * Use individual packages unless you're using 5 or more component types
 * Document your package strategy in team guidelines
@@ -329,9 +323,9 @@ dotnet restore
 
 N> The `Syncfusion.Blazor.Themes` package should always be installed separately, regardless of which approach you choose, as it only contains theme stylesheets.
 
-### Pitfall 4: Duplicate Package References
+### Pitfall 4: Duplicate package references
 
-**Symptom**: Build warnings such as "Detected package downgrade" or "Version conflict detected," or unpredictable runtime behavior where component features work inconsistently.
+**Symptom**: Build warnings such as "Detected package downgrade" or "Duplicate 'PackageReference' items found" or "Version conflict detected" or unpredictable runtime behavior where component features work inconsistently.
 
 **Root Cause**: The same NuGet package is referenced multiple times with different versions, either directly in the project file or transitively through dependencies.
 
@@ -433,6 +427,8 @@ Then update your project files to reference packages without versions:
   </ItemGroup>
 </Project>
 
+N> Central Package Management is recommended for solutions with multiple projects. For single‑project apps, consolidating package references directly in the `.csproj` file may be sufficient.
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -446,7 +442,7 @@ Then update your project files to reference packages without versions:
 
 N> When upgrading Syncfusion packages, update **all** Syncfusion packages in your solution simultaneously to maintain version consistency.
 
-### Pitfall 5: Version Mismatches Across Packages
+### Pitfall 5: Version mismatches across packages
 
 **Symptom**: Runtime exceptions such as `MissingMethodException`, `TypeLoadException`, or `FileLoadException`. Components may fail to initialize, throw errors during rendering, or exhibit unexpected behavior.
 
@@ -542,7 +538,7 @@ Project 'YourApp' has the following package references
 
 N> Version mismatches are a leading cause of production issues. Implement CI/CD checks to validate version consistency before deployment.
 
-### Pitfall 6: Missing or Incorrect Script References
+### Pitfall 6: Missing or incorrect script references
 
 **Symptom**: JavaScript interop errors in browser console such as "Syncfusion is not defined" or "syncfusion.blazor is not a function". Components fail to initialize, interactive features don't work, or the application shows blank areas where components should render.
 
@@ -637,11 +633,19 @@ Some Syncfusion components require component-specific scripts in addition to the
 
 N> If you encounter "Failed to load resource" errors, verify that the [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) NuGet package is installed and the project has been built successfully.
 
-### Pitfall 7: Missing Service Registration
+### Pitfall 7: Missing service registration
 
 **Symptom**: Runtime exception "Unable to resolve service for type 'Syncfusion.Blazor.SyncfusionBlazorService'" when attempting to render Syncfusion components. The application may build successfully but crash during component initialization.
 
-**Root Cause**: The Syncfusion Blazor service is not registered in the application's dependency injection (DI) container.
+A common concrete error when the Syncfusion service is not registered is:
+
+```
+System.InvalidOperationException: Cannot provide a value for property 'Localizer' on type 'Syncfusion.Blazor.Grids.SfGrid`1[[BlazorApp.Components.Pages.Home+Order, BlazorApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. There is no registered service of type 'Syncfusion.Blazor.ISyncfusionStringLocalizer'.
+   at Microsoft.AspNetCore.Components.ComponentFactory.<>c__DisplayClass11_0.<CreatePropertyInjector>g__Initialize|1(IServiceProvider serviceProvider, IComponent component)
+   ... (stack trace omitted) ...
+```
+
+**Root Cause**: The Syncfusion Blazor service is not registered in the application's dependency injection (DI) container (missing call to `builder.Services.AddSyncfusionBlazor()`).
 
 **Impact**: All Syncfusion components fail to initialize, resulting in application crashes or blank pages. This is a blocking issue that prevents the application from functioning.
 
@@ -651,7 +655,7 @@ N> If you encounter "Failed to load resource" errors, verify that the [Syncfusio
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
-
+....
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -664,22 +668,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseAntiforgery();
-
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
-
-app.Run();
+....
 
 {% endhighlight %}
 {% endtabs %}
@@ -691,7 +680,7 @@ Register the service in the client project's `Program.cs`:
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+....
 using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -708,7 +697,7 @@ await builder.Build().RunAsync();
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
-
+....
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -720,21 +709,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
-
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
-
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
-
-app.Run();
+....
 
 {% endhighlight %}
 {% endtabs %}
@@ -798,7 +773,7 @@ var app = builder.Build();
 
 N> The `AddSyncfusionBlazor()` service registration is mandatory for all Syncfusion Blazor components. Missing this registration is one of the most common setup errors.
 
-### Pitfall 8: Incorrect SignalR Configuration for Large Data
+### Pitfall 8: Incorrect SignalR configuration for large data
 
 **Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like DataGrid, PDF Viewer, or File Manager fail to load large amounts of data. Browser console shows errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
 
@@ -931,19 +906,11 @@ var app = builder.Build();
 * Use virtual scrolling for large grids and lists
 * Implement lazy loading for large documents and images
 
-**Troubleshooting SignalR Issues**:
-
-1. **Check browser console** for connection errors
-2. **Review server logs** for SignalR exceptions
-3. **Monitor memory usage** during large data transfers
-4. **Test with different message sizes** to find optimal configuration
-5. **Verify network stability** and latency
-
 N> For production deployments, always balance functionality requirements with security and resource constraints. Extremely large message sizes can create denial-of-service vulnerabilities.
 
-## Configuration and Integration Pitfalls
+## Configuration and integration pitfalls
 
-### Pitfall 9: Namespace Import Issues
+### Pitfall 9: Namespace import issues
 
 **Symptom**: Compilation errors such as "The type or namespace name 'Syncfusion' could not be found" or "The name 'SfGrid' does not exist in the current context." IntelliSense doesn't show Syncfusion components.
 
@@ -972,11 +939,11 @@ N> For production deployments, always balance functionality requirements with se
 
 @* Add component-specific namespaces as needed *@
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Charts
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
 @* Add your application namespaces *@
@@ -1017,13 +984,13 @@ If you prefer to import namespaces only where needed:
 | Namespace | Components Included |
 |-----------|-------------------|
 | `Syncfusion.Blazor` | Core infrastructure (required) |
-| `Syncfusion.Blazor.Grids` | DataGrid, TreeGrid, Pivot Grid |
+| `Syncfusion.Blazor.Grids` | DataGrid |
 | `Syncfusion.Blazor.Calendars` | Calendar, DatePicker, DateRangePicker, TimePicker |
 | `Syncfusion.Blazor.Charts` | Charts, Sparkline, Bullet Chart, Stock Chart |
-| `Syncfusion.Blazor.Inputs` | TextBox, NumericTextBox, MaskedTextBox |
-| `Syncfusion.Blazor.DropDowns` | DropDownList, ComboBox, AutoComplete, MultiSelect |
-| `Syncfusion.Blazor.Navigations` | TreeView, Sidebar, Menu, Tabs, Toolbar |
-| `Syncfusion.Blazor.Buttons` | Button, CheckBox, RadioButton, Switch |
+| `Syncfusion.Blazor.Inputs` | TextBox, NumericTextBox |
+| `Syncfusion.Blazor.DropDowns` | DropDownList, ComboBox, AutoComplete, MultiSelect DropDown |
+| `Syncfusion.Blazor.Navigations` | TreeView, Sidebar, Menu Bar, Tabs, Toolbar |
+| `Syncfusion.Blazor.Buttons` | Button, CheckBox, RadioButton, Toggle Switch Button |
 | `Syncfusion.Blazor.Popups` | Dialog, Tooltip |
 | `Syncfusion.Blazor.Notifications` | Toast, Message |
 | `Syncfusion.Blazor.SfPdfViewer` | PDF Viewer |
@@ -1040,7 +1007,7 @@ If you prefer to import namespaces only where needed:
 
 N> The `_Imports.razor` file provides namespace imports to all Razor components in the same folder and subfolders. Place it at the root of your components folder for global access.
 
-### Pitfall 10: Culture and Localization Issues
+### Pitfall 10: Culture and localization issues
 
 **Symptom**: Date formats, number formats, and currency symbols appear incorrectly. Calendar components show wrong month names or week starts. DataGrid exports files with unexpected date formats.
 
@@ -1202,9 +1169,305 @@ Syncfusion supports localization for multiple languages including:
 
 N> Localization resources are optional but highly recommended for international applications. Without proper localization, components will default to `en-US` culture.
 
-## Debugging and Troubleshooting Guidance
+## Performance and responsiveness considerations
 
-### Systematic Troubleshooting Approach
+### Pitfall 11: Large dataset performance issues
+
+**Symptom**: Application becomes slow or unresponsive when loading large datasets in DataGrid, DropDownList, or other data-bound components. Page rendering takes several seconds, and the browser may show "Page Unresponsive" warnings.
+
+**Root Cause**: Loading and rendering thousands of records without virtualization or pagination causes excessive DOM manipulation and memory consumption.
+
+**Impact**: Poor user experience, high memory usage, potential browser crashes, and degraded server performance in Server render mode.
+
+**Solution**: Implement virtual scrolling, pagination, and on-demand data loading.
+
+**Virtual Scrolling for DataGrid:**
+
+{% tabs %}
+{% highlight razor tabtitle="VirtualizedGrid.razor" %}
+
+@page "/virtualized-grid"
+@using Syncfusion.Blazor.Grids
+@rendermode InteractiveServer
+
+<PageTitle>Virtualized Grid</PageTitle>
+
+<SfGrid DataSource="@Orders" Height="400" EnableVirtualization="true" AllowSorting="true">
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field="CustomerName" HeaderText="Customer" Width="150"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Width="130"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        // Generate large dataset (100,000 records)
+        Orders = Enumerable.Range(1, 100000).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerName = $"Customer {x}",
+            OrderDate = DateTime.Now.AddDays(-x % 365),
+            Freight = Math.Round(32.38 * (x % 100), 2)
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerName { get; set; } = "";
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Pagination for DataGrid:**
+
+{% tabs %}
+{% highlight razor tabtitle="PaginatedGrid.razor" %}
+
+@page "/paginated-grid"
+@using Syncfusion.Blazor.Grids
+@rendermode InteractiveServer
+
+<SfGrid DataSource="@Orders" AllowPaging="true">
+    <GridPageSettings PageSize="20" PageCount="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field="CustomerName" HeaderText="Customer" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    // Large dataset with pagination
+    public List<Order> Orders { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10000).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerName = $"Customer {x}"
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerName { get; set; } = "";
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**On-Demand Loading with Remote Data:**
+
+{% tabs %}
+{% highlight razor tabtitle="RemoteDataGrid.razor" %}
+
+@page "/remote-data-grid"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@rendermode InteractiveServer
+
+<SfGrid TValue="Order" AllowPaging="true">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor">
+    </SfDataManager>
+
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="120" TextAlign="TextAlign.Right" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" TextAlign="TextAlign.Right" />
+        <GridColumn Field="@nameof(Order.ShipCountry)" HeaderText="Ship Country" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Performance Best Practices:**
+
+* Use virtual scrolling for datasets larger than 1,000 records
+* Implement pagination for better UX and performance
+* Load data on-demand from server APIs instead of loading all records
+* Use `GridPageSettings` to control page size and visible page count
+* Consider data caching strategies for frequently accessed data
+* Implement search and filtering on the server side
+* Use lazy loading for related data
+
+**Memory Management:**
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Configure memory cache with size limits
+builder.Services.AddMemoryCache(options =>
+{
+    options.SizeLimit = 1024; // Limit cache size
+    options.CompactionPercentage = 0.25; // Compact cache when 75% full
+});
+
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> For optimal performance with large datasets, combine virtual scrolling with server-side paging and filtering. This approach minimizes data transfer and client-side processing.
+
+## Security and deployment considerations
+
+### Pitfall 12: Exposing sensitive configuration
+
+**Symptom**: Application security vulnerabilities due to hardcoded connection strings, API keys, or sensitive configuration values in source code.
+
+**Root Cause**: Developers embed sensitive information directly in application code or configuration files that are committed to source control.
+
+**Impact**: Security breaches, unauthorized access to databases or services, compliance violations, and potential data leaks.
+
+**Solution**: Use secure configuration management and environment-specific settings.
+
+**Use User Secrets in Development:**
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+# Initialize user secrets
+dotnet user-secrets init
+
+# Add sensitive configuration
+dotnet user-secrets set "SyncfusionLicense:Key" "your-license-key-here"
+dotnet user-secrets set "ConnectionStrings:DefaultConnection" "your-connection-string"
+
+{% endhighlight %}
+{% endtabs %}
+
+**Access User Secrets in Application:**
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
+var builder = WebApplication.CreateBuilder(args);
+
+// User secrets are automatically loaded in development
+if (builder.Environment.IsDevelopment())
+{
+    builder.Configuration.AddUserSecrets<Program>();
+}
+
+// Access configuration values safely
+var licenseKey = builder.Configuration["SyncfusionLicense:Key"];
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// Register Syncfusion license (if using licensed version)
+if (!string.IsNullOrEmpty(licenseKey))
+{
+    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(licenseKey);
+}
+
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+**Production Configuration with Azure Key Vault:**
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Use Azure Key Vault in production
+if (builder.Environment.IsProduction())
+{
+    var keyVaultUrl = builder.Configuration["KeyVault:Url"];
+    if (!string.IsNullOrEmpty(keyVaultUrl))
+    {
+        var credential = new DefaultAzureCredential();
+        builder.Configuration.AddAzureKeyVault(
+            new Uri(keyVaultUrl),
+            credential);
+    }
+}
+
+var licenseKey = builder.Configuration["SyncfusionLicense"];
+if (!string.IsNullOrEmpty(licenseKey))
+{
+    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(licenseKey);
+}
+
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+**appsettings.json Best Practices:**
+
+{% tabs %}
+{% highlight json tabtitle="appsettings.json" %}
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  
+  // NEVER commit sensitive values here
+  // Use environment variables or Key Vault instead
+  "KeyVault": {
+    "Url": "https://your-keyvault.vault.azure.net/"
+  },
+  
+  // Use placeholders for sensitive configuration
+  "// filepath: d:\BlazorContentTeam\BlazorDocsRepo\CommonPitfalls\blazor-docs\blazor\common\integration\blazor-pitfalls.md
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Debugging and troubleshooting guidance
+
+### Systematic troubleshooting approach
 
 When encountering issues with Syncfusion Blazor components, follow this systematic approach:
 
@@ -1329,9 +1592,9 @@ Create a diagnostic component to verify Syncfusion configuration:
 <div class="alert alert-success">
     <h5>Configuration Status</h5>
     <ul>
-        <li>✅ Syncfusion service registered</li>
-        <li>✅ Render mode configured</li>
-        <li>✅ Component rendering successfully</li>
+        <li> Syncfusion service registered</li>
+        <li> Render mode configured</li>
+        <li> Component rendering successfully</li>
     </ul>
 </div>
 
@@ -1364,293 +1627,3 @@ Create a diagnostic component to verify Syncfusion configuration:
 * Test in isolated environments to eliminate variable factors
 
 N> When reporting issues to Syncfusion support, include: .NET version, Syncfusion package version, hosting model, browser type/version, and complete error messages with stack traces.
-
-## Performance and Responsiveness Considerations
-
-### Pitfall 11: Large Dataset Performance Issues
-
-**Symptom**: Application becomes slow or unresponsive when loading large datasets in DataGrid, DropDownList, or other data-bound components. Page rendering takes several seconds, and the browser may show "Page Unresponsive" warnings.
-
-**Root Cause**: Loading and rendering thousands of records without virtualization or pagination causes excessive DOM manipulation and memory consumption.
-
-**Impact**: Poor user experience, high memory usage, potential browser crashes, and degraded server performance in Server render mode.
-
-**Solution**: Implement virtual scrolling, pagination, and on-demand data loading.
-
-**Virtual Scrolling for DataGrid:**
-
-{% tabs %}
-{% highlight razor tabtitle="VirtualizedGrid.razor" %}
-
-@page "/virtualized-grid"
-@using Syncfusion.Blazor.Grids
-@rendermode InteractiveServer
-
-<PageTitle>Virtualized Grid</PageTitle>
-
-<SfGrid DataSource="@Orders" Height="400" EnableVirtualization="true" AllowSorting="true">
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field="CustomerName" HeaderText="Customer" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Width="130"></GridColumn>
-        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<Order> Orders { get; set; } = new();
-
-    protected override void OnInitialized()
-    {
-        // Generate large dataset (100,000 records)
-        Orders = Enumerable.Range(1, 100000).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerName = $"Customer {x}",
-            OrderDate = DateTime.Now.AddDays(-x % 365),
-            Freight = Math.Round(32.38 * (x % 100), 2)
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerName { get; set; } = "";
-        public DateTime OrderDate { get; set; }
-        public double Freight { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Pagination for DataGrid:**
-
-{% tabs %}
-{% highlight razor tabtitle="PaginatedGrid.razor" %}
-
-@page "/paginated-grid"
-@using Syncfusion.Blazor.Grids
-@rendermode InteractiveServer
-
-<SfGrid DataSource="@Orders" AllowPaging="true">
-    <GridPageSettings PageSize="20" PageCount="5"></GridPageSettings>
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field="CustomerName" HeaderText="Customer" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    // Large dataset with pagination
-    public List<Order> Orders { get; set; } = new();
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 10000).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerName = $"Customer {x}"
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerName { get; set; } = "";
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**On-Demand Loading with Remote Data:**
-
-{% tabs %}
-{% highlight razor tabtitle="RemoteDataGrid.razor" %}
-
-@page "/remote-data-grid"
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@rendermode InteractiveServer
-@inject HttpClient Http
-
-<SfGrid TValue="Order" AllowPaging="true" AllowSorting="true">
-    <SfDataManager Url="https://your-api.com/orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
-    <GridPageSettings PageSize="20"></GridPageSettings>
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field="CustomerName" HeaderText="Customer" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerName { get; set; } = "";
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Performance Best Practices:**
-
-* Use virtual scrolling for datasets larger than 1,000 records
-* Implement pagination for better UX and performance
-* Load data on-demand from server APIs instead of loading all records
-* Use `GridPageSettings` to control page size and visible page count
-* Consider data caching strategies for frequently accessed data
-* Implement search and filtering on the server side
-* Use lazy loading for related data
-
-**Memory Management:**
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Configure memory cache with size limits
-builder.Services.AddMemoryCache(options =>
-{
-    options.SizeLimit = 1024; // Limit cache size
-    options.CompactionPercentage = 0.25; // Compact cache when 75% full
-});
-
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-
-{% endhighlight %}
-{% endtabs %}
-
-N> For optimal performance with large datasets, combine virtual scrolling with server-side paging and filtering. This approach minimizes data transfer and client-side processing.
-
-## Security and Deployment Considerations
-
-### Pitfall 12: Exposing Sensitive Configuration
-
-**Symptom**: Application security vulnerabilities due to hardcoded connection strings, API keys, or sensitive configuration values in source code.
-
-**Root Cause**: Developers embed sensitive information directly in application code or configuration files that are committed to source control.
-
-**Impact**: Security breaches, unauthorized access to databases or services, compliance violations, and potential data leaks.
-
-**Solution**: Use secure configuration management and environment-specific settings.
-
-**Use User Secrets in Development:**
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-# Initialize user secrets
-dotnet user-secrets init
-
-# Add sensitive configuration
-dotnet user-secrets set "SyncfusionLicense:Key" "your-license-key-here"
-dotnet user-secrets set "ConnectionStrings:DefaultConnection" "your-connection-string"
-
-{% endhighlight %}
-{% endtabs %}
-
-**Access User Secrets in Application:**
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-var builder = WebApplication.CreateBuilder(args);
-
-// User secrets are automatically loaded in development
-if (builder.Environment.IsDevelopment())
-{
-    builder.Configuration.AddUserSecrets<Program>();
-}
-
-// Access configuration values safely
-var licenseKey = builder.Configuration["SyncfusionLicense:Key"];
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-// Register Syncfusion license (if using licensed version)
-if (!string.IsNullOrEmpty(licenseKey))
-{
-    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(licenseKey);
-}
-
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-
-{% endhighlight %}
-{% endtabs %}
-
-**Production Configuration with Azure Key Vault:**
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-using Azure.Identity;
-using Azure.Security.KeyVault.Secrets;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Use Azure Key Vault in production
-if (builder.Environment.IsProduction())
-{
-    var keyVaultUrl = builder.Configuration["KeyVault:Url"];
-    if (!string.IsNullOrEmpty(keyVaultUrl))
-    {
-        var credential = new DefaultAzureCredential();
-        builder.Configuration.AddAzureKeyVault(
-            new Uri(keyVaultUrl),
-            credential);
-    }
-}
-
-var licenseKey = builder.Configuration["SyncfusionLicense"];
-if (!string.IsNullOrEmpty(licenseKey))
-{
-    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(licenseKey);
-}
-
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-
-{% endhighlight %}
-{% endtabs %}
-
-**appsettings.json Best Practices:**
-
-{% tabs %}
-{% highlight json tabtitle="appsettings.json" %}
-
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "AllowedHosts": "*",
-  
-  // NEVER commit sensitive values here
-  // Use environment variables or Key Vault instead
-  "KeyVault": {
-    "Url": "https://your-keyvault.vault.azure.net/"
-  },
-  
-  // Use placeholders for sensitive configuration
-  "// filepath: d:\BlazorContentTeam\BlazorDocsRepo\CommonPitfalls\blazor-docs\blazor\common\integration\blazor-pitfalls.md
-
-
