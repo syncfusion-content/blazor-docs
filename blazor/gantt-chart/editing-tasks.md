@@ -321,15 +321,15 @@ Enable dependency editing by mapping the [GanttTaskFields.Dependency](https://he
 
 - **Mouse interactions**: Drag connector points on taskbars to create or modify links.
 
-    ![Updating task dependency with mouse drag and drop action](images/user-interaction.png)
+    ![Updating task dependency with mouse drag and drop action](images/user-interaction.webp)
 
 - **Dialog**: Edit the Dependency tab in the edit dialog.
 
-    ![Updating task dependency in dialog Dependency tab](images/editing-dialog.png)
+    ![Updating task dependency in dialog Dependency tab](images/editing-dialog.webp)
 
 - **Cell editing**: Update the dependency field in the TreeGrid. Ensure valid dependency strings to avoid circular references.
 
-    ![Updating task dependency via cell editing in TreeGrid](images/cell-edit.png)
+    ![Updating task dependency via cell editing in TreeGrid](images/cell-edit.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
