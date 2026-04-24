@@ -191,11 +191,13 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 The following code explains how to initialize Blazor Accordion using header and content template.
 
+{% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 {% include_relative code-snippet/getting-started.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVoisjQKaKacVAK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
 

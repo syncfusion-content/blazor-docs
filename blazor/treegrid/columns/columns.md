@@ -64,7 +64,7 @@ Complex data binding can be achieved by using the dot (.) operator in the column
 }
 ```
 
-![Blazor TreeGrid columns with complex data binding](../images/blazor-treegrid-column-data-binding.png)
+![Blazor TreeGrid columns with complex data binding](../images/blazor-treegrid-column-data-binding.webp)
 
 ### Expando data binding
 
@@ -134,7 +134,7 @@ TreeGrid supports complex data binding with ExpandoObject. In the following exam
 }
 ```
 
-![Blazor TreeGrid columns with ExpandoObject data binding](../images/blazor-treegrid-column-expando-binding.png)
+![Blazor TreeGrid columns with ExpandoObject data binding](../images/blazor-treegrid-column-expando-binding.webp)
 
 ## Header template
 
@@ -234,7 +234,7 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor TreeGrid column with header template](../images/blazor-treegrid-column-header-template.png)
+![Blazor TreeGrid column with header template](../images/blazor-treegrid-column-header-template.webp)
 
 N> For Templated TreeGrid component, define the [ModelType](https://blazor.syncfusion.com/documentation/treegrid/templates#template-modeltype) property to enable strong typing inside templates.
 
@@ -307,7 +307,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid Column with Header Text](../images/blazor-treegrid-column-header-text.png)
+![Blazor TreeGrid Column with Header Text](../images/blazor-treegrid-column-header-text.webp)
 
 N> If both the `Field` and `HeaderText` are not defined in the column, the column renders with **empty** header text.
 
@@ -462,7 +462,7 @@ public class TreeDataFormat
 
 {% endtabs %}
 
-![Date Formatting in Blazor TreeGrid Column](../images/blazor-treegrid-column-date-format.png)
+![Date Formatting in Blazor TreeGrid Column](../images/blazor-treegrid-column-date-format.webp)
 
 ## AutoFit specific columns
 
@@ -540,7 +540,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid with AutoFit Columns](../images/blazor-treegrid-autofit-column.png)
+![Blazor Tree Grid with AutoFit Columns](../images/blazor-treegrid-autofit-column.webp)
 
 N> All the columns can be autofitted by invoking the **AutoFitColumnsAsync** method without column names.
 
@@ -614,7 +614,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Lock Columns](../images/lockcolumn.png)
+![Lock Columns](../images/lockcolumn.webp)
 
 ## Column type
 
@@ -703,7 +703,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid with CheckBox Column](../images/blazor-treegrid-checkbox-column.png)
+![Blazor Tree Grid with CheckBox Column](../images/blazor-treegrid-checkbox-column.webp)
 
 ## Responsive columns
 
@@ -771,7 +771,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid displays Responsive Columns](../images/blazor-treegrid-responsive-column.png)
+![Blazor Tree Grid displays Responsive Columns](../images/blazor-treegrid-responsive-column.webp)
 
 ## Controlling treegrid actions
 
@@ -989,4 +989,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid Column with CheckBox](../images/blazor-treegrid-column-with-checkbox.png)
+![Blazor Tree Grid Column with CheckBox](../images/blazor-treegrid-column-with-checkbox.webp)

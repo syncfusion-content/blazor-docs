@@ -147,9 +147,6 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-<!-- Blazor Chart Wizard Component script reference.-->
-<!-- <script src="_content/Syncfusion.Blazor.ChartWizard/scripts/sf-chart-wizard.min.js" type="text/javascript"></script> -->
-
 ```
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
@@ -224,6 +221,8 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.ChartWizard
+
 <div class="control-section">
     <SfChartWizard>
         <ChartSettings DataSource="@OlympicsDataSource"
@@ -290,6 +289,8 @@ The `Theme` property is used to specify the visual theme applied to the chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
     <SfChartWizard Theme="Theme.Material3">

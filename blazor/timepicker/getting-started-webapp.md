@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Calendars
+
 <SfTimePicker TValue="DateTime?" PlaceHolder="Select a time"></SfTimePicker>
 
 {% endhighlight %}
@@ -186,6 +188,8 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" Value="@TimeValue" Step=60 Format="HH:mm"></SfTimePicker>
 

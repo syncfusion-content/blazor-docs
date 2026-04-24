@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.TreeGrid
+
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="5" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
@@ -201,7 +203,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzXiANJxYypVIp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzXiANJxYypVIp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeGrid).
 
@@ -216,6 +218,8 @@ Let’s check the properties used here:
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
@@ -269,6 +273,8 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.TreeGrid
+
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true">
     <TreeGridPageSettings PageSizeMode="PageSizeMode.Root" PageSize="2"></TreeGridPageSettings>
     <TreeGridColumns>
@@ -318,6 +324,8 @@ The sorting feature enables to order the records. It can be enabled by setting t
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.TreeGrid
+
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true" AllowSorting="true">
     <TreeGridPageSettings PageSizeMode="PageSizeMode.Root" PageSize="2"></TreeGridPageSettings>
     <TreeGridColumns>
@@ -360,7 +368,7 @@ The sorting feature enables to order the records. It can be enabled by setting t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLzNMKDzGDJVWCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLzNMKDzGDJVWCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid.webp)" %}
 
 ## Handling exceptions
 

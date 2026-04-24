@@ -165,6 +165,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Calendars
+
 <SfDateRangePicker TValue="DateTime?" Placeholder="Choose a Range"></SfDateRangePicker>
 
 {% endhighlight %}
@@ -180,6 +182,8 @@ The minimum and maximum date range can be defined with the help of [Min](https:/
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" Placeholder="Choose a Range" Min="@MinDate" Max="@MaxDate"></SfDateRangePicker>
 

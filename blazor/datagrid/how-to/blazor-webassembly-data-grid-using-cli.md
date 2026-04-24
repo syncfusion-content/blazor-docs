@@ -222,7 +222,7 @@ dotnet run
 
 After the app starts, navigate to `http://localhost:<port-number>` in the browser to view the Grid.
 
-![Blazor DataGrid running in a WebAssembly app](../images/blazor-datagrid-component.png)
+![Blazor DataGrid running in a WebAssembly app](../images/blazor-datagrid-component.webp)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIZoWghZXnoxDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -684,7 +684,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoZosUMRYBBVqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor DataGrid](../images/blazor-datagrid.gif)
+![Blazor DataGrid](../images/blazor-datagrid-render.webp)
 
 > Find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/BlazorApp).
 

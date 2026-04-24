@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfDropDownList TValue="string" TItem="string" Placeholder="Select a game"></SfDropDownList>
 
 {% endhighlight %}
@@ -182,6 +184,8 @@ After initialization, populate the DropDownList with data using the [DataSource]
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
@@ -219,6 +223,8 @@ By default, the popup list width adjusts to the DropDownList input width, and th
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfDropDownList TValue="string" TItem="Games" PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -252,21 +258,23 @@ By default, the popup list width adjusts to the DropDownList input width, and th
 
 Get the selected value of the DropDownList component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
 
-
+{% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 {% include_relative code-snippet/getting-started/get-selected-value.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 Get the complete object list of the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
 
-
+{% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 {% include_relative code-snippet/getting-started/item-data.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
 

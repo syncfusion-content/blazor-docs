@@ -169,6 +169,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Gantt
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
@@ -224,6 +226,8 @@ This following sample shows self-referential data binding in the Gantt Chart by 
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
@@ -284,6 +288,7 @@ The Gantt Chart has an option to define columns using the [GanttColumns](https:/
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -348,6 +353,8 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Gantt
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
@@ -405,6 +412,8 @@ The filtering feature enables you to view the reduced amount of records based on
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Gantt
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
@@ -458,6 +467,8 @@ The sorting feature enables you to order the records. To enable sorting in the G
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
@@ -521,6 +532,8 @@ These relationships can be configured using the [Dependency](https://help.syncfu
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID" Dependency="Predecessor">

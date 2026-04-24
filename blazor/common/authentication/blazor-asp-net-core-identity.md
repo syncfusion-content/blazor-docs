@@ -8,7 +8,7 @@ documentation: ug
 
 # Blazor Web App (Interactive Server) with ASP.NET Core Identity
 
-This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App using Interactive Server render mode** and protect [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) such as **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**.
+This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App using Interactive Server render mode** and protect Syncfusion® Blazor components such as **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**.
 
 ## What is ASP.NET Core Identity?
 
@@ -18,16 +18,11 @@ This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App
 
 Use Identity when your app needs cookie-based, server-side authentication and you want the standard login/registration experience without building it from scratch. In a Blazor Web App using Interactive Server render mode, all authorization checks happen on the server. This gives strong security because the UI is not shown to the user until authentication is complete.
 
-## Prerequisites
-
-* [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
-
 ## Create the sample app
 
 The steps below help you build a secure Blazor Web App using Interactive Server mode. You will set up ASP.NET Core Identity with SQLite and add Syncfusion Blazor components such as the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Charts](https://www.syncfusion.com/blazor-components/blazor-charts) to pages that require the `[Authorize]` attribute.
 
-### 1. Create a Blazor web app with Interactive Server
+### 1. Create a Blazor Web App with Interactive Server
 
 Create a new Blazor Web App configured to use **Interactive Server render mode**. In this mode, the app runs on the server and updates the UI in the browser through a real-time connection, which helps keep your data secure.
 
@@ -240,7 +235,7 @@ Open `App.razor` and add the following to the `<head>` and `<body>` sections.
 {% endhighlight %}
 {% endtabs %}
 
-### 9. Create the _LoginPartial.cshtml file for Identity UI
+### 9. Create the `_LoginPartial.cshtml` file for Identity UI
 
 The `_LoginPartial.cshtml` file displays login, logout, register, and account management links for ASP.NET Core Identity. It appears in the navigation bar and automatically updates based on the user's sign-in status.
 
@@ -397,16 +392,8 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
 
 ### 12. Create the secure Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid and Charts pages
 
-Create two protected pages using `[Authorize]` that display Syncfusion DataGrid and Charts components. The generated components will use the default namespace `BlazorIdentitySyncfusion.Components.Pages`. If needed, adjust the `@namespace` directive in the generated files.
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet new razorcomponent -n SecureGrid -o Components/Pages
-dotnet new razorcomponent -n SecureChart -o Components/Pages
-
-{% endhighlight %}
-{% endtabs %}
+Create two protected Razor pages named `SecureGrid.razor` and `SecureChart.razor` inside the `Components/Pages` folder.
+Apply the `[Authorize]` attribute to both pages and use them to display the Syncfusion DataGrid and Charts components respectively.
 
 **Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component**
 
@@ -525,7 +512,7 @@ Create the database tables required for ASP.NET Core Identity by running Entity 
 If you have not installed the EF Core command-line tools, install them first.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet tool install --global dotnet-ef 
 
@@ -535,7 +522,7 @@ dotnet tool install --global dotnet-ef
 Then create the migration and update the database.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet ef migrations add CreateIdentitySchema
 dotnet ef database update
@@ -552,7 +539,7 @@ N> If you receive an error that a migration with this name already exists, you c
 Run the application and verify the authentication flow.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet run
 
@@ -566,6 +553,9 @@ dotnet run
 5. After registration, you will be automatically logged in.
 6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Syncfusion components.
 7. Click **Logout** to end the session and verify that accessing the secure pages redirects back to the login page.
+
+**Output:**
+![Blazor DataGrid and Charts with ASP.NET Core Identity](./images/asp-net-identity.webp)
 
 ## See also
 

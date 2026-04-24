@@ -109,7 +109,7 @@ To display an image in a DataGrid column, define the [Template](https://help.syn
 {% endtabs %}
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhAMiNMBnKKvMuz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-![Render image in a column](./images/render-image-column-template.png)
+![Render image in a column](./images/render-image-column-template.webp)
 
 > The `Template` property allows defining any HTML content or Blazor components within a column, enabling complete customization of cell rendering.
 
@@ -1146,7 +1146,7 @@ Next, create a new Razor page with the appropriate routing URL and include any r
 {% endtabs %}
 
 The following GIF represents template routing in Grid
-![Blazor DataGrid with routing template.](./images/blazor-datagrid-template-routing.gif)
+![Blazor DataGrid with routing template.](./images/blazor-datagrid-template-routing.webp)
 
 ## See also
 

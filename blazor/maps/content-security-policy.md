@@ -85,3 +85,7 @@ Include `'unsafe-inline'` if you need OSM with toolbar, click interactions, or h
 > Use this only when interactive features like OSM, toolbar, click behavior, or highlight effects are essential to your application.
 
 > **Note:** Core features—including static shape rendering, data-bound color mapping, legends, tooltips, multiple layers, basic zoom/pan, and export—work fully under strict CSP.
+
+## See also
+
+* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
