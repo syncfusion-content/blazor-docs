@@ -36,7 +36,7 @@ Ensure the following NuGet packages are installed based on the selected AI servi
 
 Install-Package Syncfusion.Blazor.QueryBuilder -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Grids -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 Install-Package Microsoft.Extensions.AI
