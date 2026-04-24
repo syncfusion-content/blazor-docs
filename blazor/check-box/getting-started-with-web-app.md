@@ -169,6 +169,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Buttons
+
 <SfCheckBox Label="Default" @bind-Checked="isChecked"></SfCheckBox>
 
 @code

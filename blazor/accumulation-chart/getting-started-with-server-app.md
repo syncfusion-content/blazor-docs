@@ -161,6 +161,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Charts
+
 <SfAccumulationChart>
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
@@ -203,6 +205,8 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>

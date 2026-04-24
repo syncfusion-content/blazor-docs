@@ -177,6 +177,8 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfComboBox TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
 </SfComboBox>
