@@ -28,17 +28,38 @@ Otherwise, create a new Blazor application by following the Syncfusion® getting
 Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and install the required package.
 
 - [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)
-- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 ## Add Syncfusion® namespaces
 
-Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
+Open the `_Imports.razor` file at the root of your project and import the Syncfusion® namespaces.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register Syncfusion® Blazor service
+
+Add the Syncfusion® Blazor service to the `Program.cs` file to enable Syncfusion® components in the application.
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" hl_lines="1 8"% }
+
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddSyncfusionBlazor();
+
+await builder.Build().RunAsync();
 
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +129,7 @@ cd tests/E2E.Tests
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a class library named E2E.Tests under the tests folder, which will host all Playwright‑based UI tests.
+This command creates an NUnit test project named **E2E.Tests** under the tests folder, which will host all Playwright‑based UI tests.
 
 **Install required packages**
 
@@ -172,7 +193,8 @@ namespace E2E.Tests
         private Process? _serverProcess;
         private IPlaywright? _playwright;
         private IBrowser? _browser;
-        private readonly string _url = "http://localhost:5002"; // Replace with your app URL and port from launchSettings.json.
+        // Replace with your app URL and port from Properties/launchSettings.json in your Blazor project (look for the "applicationUrl" value).
+        private readonly string _url = "http://localhost:5002";
 
         [OneTimeSetUp]
         public async Task OneTimeSetup()
@@ -191,17 +213,24 @@ namespace E2E.Tests
 
             _serverProcess = Process.Start(psi);
 
-            // Wait until the app starts
-            var client = new HttpClient();
+            // wait for server to respond
+            using var client = new HttpClient();
+            var started = false;
             for (int i = 0; i < 30; i++)
             {
                 try
                 {
-                    if ((await client.GetAsync(_url)).IsSuccessStatusCode)
+                    var response = await client.GetAsync(_url);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        started = true;
                         break;
+                    }
                 }
-                catch { }
-
+                catch
+                {
+                    // Ignore connection errors while waiting for app to start
+                }
                 await Task.Delay(1000);
             }
 
@@ -242,7 +271,7 @@ namespace E2E.Tests
 
 You can execute the Playwright end‑to‑end tests to validate the behavior of your Syncfusion® Blazor application.
 
-From the repository root directory, run the following command:
+From the solution root directory, run the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
