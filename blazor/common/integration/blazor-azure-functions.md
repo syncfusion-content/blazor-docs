@@ -99,18 +99,18 @@ This sample exposes `GET /api/orders` and `POST /api/orders`. The Blazor page us
 
 Ensure the .NET SDK and Azure Functions Core Tools are compatible. Refer to the [Azure Functions supported versions](https://learn.microsoft.com/en-us/azure/azure-functions/supported-languages) to verify compatibility for your environment.
 
-### Create a solution and projects
+### Create a projects
 
-In this section, you will create a single solution that contains:
+In this section, you will create two projects:
 
 * A Blazor WebAssembly (WASM) client application.
 * An Azure Functions project using the isolated worker model.
 
-Keeping both projects in one solution makes development and debugging easier. Run the commands from your terminal in a new, empty directory.
+Keeping both projects in the same folder makes development and debugging easier. Run the commands from your terminal in a new, empty directory.
 
 **Step 1: Create the Blazor WebAssembly client project**
 
-Run the following command to create a Blazor WebAssembly application named Client.
+Run the following command to create a Blazor WebAssembly application named **Client**.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -122,7 +122,7 @@ dotnet new blazorwasm -o Client -f net10.0
 
 **Step 2: Create the Azure Functions project (isolated worker)**
 
-Create an Azure Functions project named Functions using the isolated worker model, then add an HTTP triggered function.
+Create an Azure Functions project named **Functions** using the isolated worker model, then add an HTTP triggered function.
 
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
