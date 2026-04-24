@@ -48,15 +48,14 @@ Open the `_Imports.razor` file at the root of your project and import the Syncfu
 Add the Syncfusion® Blazor service to the `Program.cs` file to enable Syncfusion® components in the application.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="1 8"% }
+{% highlight c# tabtitle="Program.cs" hl_lines="1 8" %}
 
 using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+....
 builder.Services.AddSyncfusionBlazor();
 
 await builder.Build().RunAsync();
