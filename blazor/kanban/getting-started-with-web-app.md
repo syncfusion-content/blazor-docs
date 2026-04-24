@@ -169,6 +169,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Kanban
+
 <SfKanban TValue="TasksModel">
     <KanbanColumns>
         <KanbanColumn HeaderText="To Do" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
@@ -203,6 +205,8 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
@@ -247,6 +251,8 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>

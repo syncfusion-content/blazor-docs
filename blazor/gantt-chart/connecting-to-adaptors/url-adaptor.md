@@ -316,7 +316,7 @@ namespace URLAdaptor.Controllers
  
 When you run the application, the Blazor Gantt Chart  will display data fetched from the API.
  
-![UrlAdaptor Data](../images/url-adaptor.png)
+![UrlAdaptor Data](../images/url-adaptor.webp)
  
 > * The Gantt Chart supports server-side operations such as **searching**, **sorting** and **filtering**. These can be handled using methods like [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_), and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) from the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
@@ -325,7 +325,7 @@ When you run the application, the Blazor Gantt Chart  will display data fetched 
 
 To handle the searching operation, ensure that your API endpoint supports custom searching criteria. Implement the searching logic on the server side using the `PerformSearching` method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This allows the custom data source to undergo searching based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
 
-![UrlAdaptor - Searching](../images/searching-in-urladaptor.png)
+![UrlAdaptor - Searching](../images/searching-in-urladaptor.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}
@@ -388,7 +388,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 To handle the filtering operation, ensure that your API endpoint supports custom filtering criteria. Implement the filtering logic on the server side using the `PerformFiltering` method from the `DataOperations` class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming `DataManagerRequest` object.
 
 **Column filtering**
-![Column filtering](../images/single-filtering-urladaptor.png)
+![Column filtering](../images/single-filtering-urladaptor.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}
@@ -455,10 +455,10 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 To handle the sorting operation, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server side using the `PerformSorting` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming `DataManagerRequest` object.
 
 **Single column sorting**
-![Single column sorting](../images/sorting-urladaptor.png)
+![Single column sorting](../images/sorting-urladaptor.webp)
 
 **Multi column sorting**
-![Multi column sorting](../images/multisorting-url-adaptor.png)
+![Multi column sorting](../images/multisorting-url-adaptor.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}
@@ -605,7 +605,7 @@ public class CRUDModel<T> where T : class
 
 To insert a new record, use the `InsertUrl` property to specify the controller action mapping URL for the insert operation. The details of the newly added record are passed to the **newRecord** parameter.
 
-![Insert Record](../images/crud-insert-urladaptor.png)
+![Insert Record](../images/crud-insert-urladaptor.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}
@@ -633,7 +633,7 @@ public void Insert([FromBody] CRUDModel<TaskData> newRecord)
 
 For updating existing records, use the `UpdateUrl` property to specify the controller action mapping URL for the update operation. The details of the updated record are passed to the **updatedRecord** parameter.
 
-![Update Record](../images/crud-update-urladaptor.png)
+![Update Record](../images/crud-update-urladaptor.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}
@@ -670,7 +670,7 @@ public void Update([FromBody] CRUDModel<TaskData> updatedRecord)
 
 To delete existing records, use the `RemoveUrl` property to specify the controller action mapping URL for the delete operation. The primary key value of the deleted record is passed to the **deletedRecord** parameter.
 
-![Delete Record](../images/crud-delete-urladaptor.png)
+![Delete Record](../images/crud-delete-urladaptor.webp)
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}

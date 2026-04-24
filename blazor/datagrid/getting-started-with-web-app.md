@@ -169,6 +169,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Grids
+
 <SfGrid DataSource="@Orders" />
 
 @code{
@@ -204,6 +206,8 @@ To bind data for the Grid, you can assign a IEnumerable object to the [DataSourc
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" />
 
@@ -358,6 +362,7 @@ The following sample code demonstrates notifying user when server-side exception
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 
 <span class="error">@ErrorDetails</span>

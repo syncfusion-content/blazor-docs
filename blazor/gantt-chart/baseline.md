@@ -62,6 +62,6 @@ The baseline feature enables users to view the deviation between the planned dat
 
 The following screenshot shows the baselines in Gantt Chart component.
 
-![Baselines in Blazor Gantt Chart](images/blazor-gantt-chart-with-baseline.png)
+![Baselines in Blazor Gantt Chart](images/blazor-gantt-chart-with-baseline.webp)
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the gantt.
