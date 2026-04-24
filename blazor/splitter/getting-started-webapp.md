@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Layouts
+
 <div>Horizontal Splitter</div>
 
 <SfSplitter Height="240px" Width="100%">

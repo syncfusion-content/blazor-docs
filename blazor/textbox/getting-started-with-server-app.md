@@ -161,6 +161,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Inputs
+
 <SfTextBox Placeholder='First Name'></SfTextBox>
 
 {% endhighlight %}
@@ -212,6 +214,8 @@ The floating label moves above the input when the TextBox is focused or contains
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder='First Name' FloatLabelType='@FloatLabelType.Auto'></SfTextBox>
 
