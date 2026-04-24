@@ -11,7 +11,7 @@ documentation: ug
 
 Handling large datasets efficiently is a critical requirement for modern Blazor applications. With the right data-handling strategies, applications can reliably display and interact with thousands of records while maintaining a fast and responsive user interface.
 
-Syncfusion® Blazor components are built to ensure responsive rendering, smooth scrolling, and efficient memory usage, even when working with large volumes of data. By leveraging capabilities such as data virtualization, server‑side data operations, lazy loading, and optimized rendering pipelines, these components minimize UI overhead and deliver consistent performance.
+Syncfusion® Blazor components are built to ensure responsive rendering, smooth scrolling, and efficient memory usage, even when working with large volumes of data. By leveraging capabilities such as data virtualization, server side data operations, lazy loading, and optimized rendering pipelines, these components minimize UI overhead and deliver consistent performance.
 
 This document provides guidance on how to load and interact with large datasets effectively in Blazor applications using Syncfusion® Blazor components, enabling scalable data experiences without compromising usability or performance.
  
@@ -23,7 +23,7 @@ Before selecting a data-handling strategy, determine where data operations shoul
  
 Client side processing loads the complete dataset into the browser and performs operations such as sorting, filtering, and searching locally. This approach is recommended only for small and manageable datasets.
 
-**Use Client side processing when:**
+**Use client side processing when:**
 
 * The dataset size is small
 * All required data can be safely loaded into browser memory
@@ -123,7 +123,7 @@ For large datasets, filtering, sorting, grouping, and searching should be handle
 
 For example, when a user applies a column filter in the DataGrid, the filter criteria are sent to the server. The server then processes the request and returns only the matching records, ensuring efficient data retrieval and optimal performance.
 
-For more information refer to the documentation [handling server side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation).
+For more information, refer to the documentation [handling server side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation).
 
 ## Use virtualization or infinite scrolling
 
@@ -243,7 +243,7 @@ For an example of implementing the **LoadChildOnDemand** pattern in hierarchical
 Syncfusion® Blazor components are built with large‑data scenarios and follow these core principles:
 
 *   Virtualized rendering for optimal UI performance
-*   Server‑side query execution using `SfDataManager` and adaptors
+*   Server side query execution using `SfDataManager` and adaptors
 *   Minimal DOM updates and efficient data binding
 *   Built‑in support for lazy loading and incremental fetch
 *   Scalable design suitable for enterprise‑grade datasets
