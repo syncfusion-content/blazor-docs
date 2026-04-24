@@ -53,7 +53,7 @@ The [Squarified](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap
 }
 ```
 
-![Blazor TreeMap with Squarified Layout](images/Layout/blazor-treemap-squarified-layout.png)
+![Blazor TreeMap with Squarified Layout](images/Layout/blazor-treemap-squarified-layout.webp)
 
 ### Slice and dice vertical
 
@@ -68,7 +68,7 @@ The [SliceAndDiceVertical](https://help.syncfusion.com/cr/aspnetcore-blazor/Sync
 
 N> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
-![Blazor TreeMap with Slice and DiceVertical Layout](images/Layout/blazor-treemap-slice-and-dicevertical-layout.png)
+![Blazor TreeMap with Slice and DiceVertical Layout](images/Layout/blazor-treemap-slice-and-dicevertical-layout.webp)
 
 ### Slice and dice horizontal
 
@@ -83,7 +83,7 @@ The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/aspnetcore-blazor/Sy
 
 N> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
-![Blazor TreeMap with Slice and DiceHorizontal Layout](images/Layout/blazor-treemap-slice-and-dicehorizontal.png)
+![Blazor TreeMap with Slice and DiceHorizontal Layout](images/Layout/blazor-treemap-slice-and-dicehorizontal.webp)
 
 ### Slice and dice auto
 
@@ -98,7 +98,7 @@ The [SliceAndDiceAuto](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusi
 
 N> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
-![Blazor TreeMap with Slice and DiceAuto Layout](images/Layout/blazor-treemap-slice-and-diceauto.png)
+![Blazor TreeMap with Slice and DiceAuto Layout](images/Layout/blazor-treemap-slice-and-diceauto.webp)
 
 ## Rendering direction
 
@@ -141,7 +141,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 }
 ```
 
-![Blazor TreeMap in TopLeftBottomRight Direction](images/Internationalization/blazor-treemap-top-left-bottom-right-direction.png)
+![Blazor TreeMap in TopLeftBottomRight Direction](images/Internationalization/blazor-treemap-top-left-bottom-right-direction.webp)
 
 The following example shows, how to render the TreeMap in the RTL direction with [TopRightBottomLeft](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
@@ -158,7 +158,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 N> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
-![Blazor TreeMap in TopRightBottomLeft Direction](images/Internationalization/blazor-treemap-top-right-bottom-left-direction.png)
+![Blazor TreeMap in TopRightBottomLeft Direction](images/Internationalization/blazor-treemap-top-right-bottom-left-direction.webp)
 
 The following example shows, how to render the TreeMap in the RTL direction with [BottomRightTopLeft](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
@@ -175,7 +175,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 N> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
-![Blazor TreeMap with BottomRightTopLeft Direction](images/Internationalization/blazor-treemap-bottom-right-top-left-direction.png)
+![Blazor TreeMap with BottomRightTopLeft Direction](images/Internationalization/blazor-treemap-bottom-right-top-left-direction.webp)
 
 The following example shows, how to render the TreeMap in the RTL direction with [BottomLeftTopRight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
@@ -192,4 +192,4 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 N> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
-![Blazor TreeMap with BottomLeftTopRight Direction](images/Internationalization/blazor-treemap-bottom-left-top-right-direction.png)
+![Blazor TreeMap with BottomLeftTopRight Direction](images/Internationalization/blazor-treemap-bottom-left-top-right-direction.webp)
