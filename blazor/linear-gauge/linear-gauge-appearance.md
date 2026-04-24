@@ -30,7 +30,7 @@ The following property and components are available in the [SfLinearGauge](https
 </SfLinearGauge>
 ```
 
-![Customizing Blazor Linear Gauge Area](images/blazor-linear-gauge-area-cutomization.png)
+![Customizing Blazor Linear Gauge Area](images/blazor-linear-gauge-area-cutomization.webp)
 
 ## Setting up the Linear Gauge title
 
@@ -56,7 +56,7 @@ The title for the Linear Gauge can be set using [Title](https://help.syncfusion.
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Title](images/blazor-linear-gauge-title.png)
+![Blazor Linear Gauge with Title](images/blazor-linear-gauge-title.webp)
 
 ## Customizing the Linear Gauge container
 
@@ -96,7 +96,7 @@ The [Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Normal Container](images/blazor-linear-gauge-normal-container.png)
+![Blazor Linear Gauge with Normal Container](images/blazor-linear-gauge-normal-container.webp)
 
 ### Rounded Rectangle
 
@@ -120,7 +120,7 @@ The [RoundedRectangle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.L
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Rounded Rectangle Container](images/blazor-linear-gauge-rectangle-container.png)
+![Blazor Linear Gauge with Rounded Rectangle Container](images/blazor-linear-gauge-rectangle-container.webp)
 
 ### Thermometer
 
@@ -144,7 +144,7 @@ The [Thermometer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linear
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Thermometer Container](images/blazor-linear-gauge-thermometer-container.png)
+![Blazor Linear Gauge with Thermometer Container](images/blazor-linear-gauge-thermometer-container.webp)
 
 ## Fitting the Linear Gauge to the control
 
@@ -164,6 +164,6 @@ The Linear Gauge component is rendered with margin by default. To remove the mar
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Margin](images/blazor-linear-gauge-with-margin.png)
+![Blazor Linear Gauge with Margin](images/blazor-linear-gauge-with-margin.webp)
 
 N>To use this feature, set the [AllowMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowMargin) property to **false**, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Width) property to **100%** and the properties of [LinearGaugeMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMargin.html) to **0**.

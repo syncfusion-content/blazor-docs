@@ -42,7 +42,7 @@ To use the print functionality, you should set the [AllowPrint](https://help.syn
 }
 ```
 
-![Printing in Blazor Circular Gauge](./images/blazor-circulargauge-printing.png)
+![Printing in Blazor Circular Gauge](./images/blazor-circulargauge-printing.webp)
 
 ## Export
 
@@ -83,7 +83,7 @@ To use the image export functionality, you should set the [AllowImageExport](htt
 }
 ```
 
-![Exporting in Blazor Circular Gauge](./images/blazor-circulargauge-exporting.png)
+![Exporting in Blazor Circular Gauge](./images/blazor-circulargauge-exporting.webp)
 
 ### PDF export
 
@@ -118,4 +118,4 @@ To use the PDF export functionality, you should set the [AllowPdfExport](https:/
 }
 ```
 
-![PDF Export in Blazor Circular Gauge](./images/blazor-circulargauge-exporting.png)
+![PDF Export in Blazor Circular Gauge](./images/blazor-circulargauge-exporting.webp)
