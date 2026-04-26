@@ -169,6 +169,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.RichTextEditor
+
 <SfRichTextEditor>
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
     <p><b>Get started Quick Toolbar to click on the image</b></p>
@@ -190,6 +192,8 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
@@ -259,6 +263,8 @@ The quick toolbar items can be configured for specific target elements such as i
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
