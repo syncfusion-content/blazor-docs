@@ -201,6 +201,15 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
+The following measured values may vary based on browser, device, hosting model, and data complexity.
+
+| Record count | Without virtualization | With virtualization |
+|-------------|------------------------|---------------------|
+| 100 | ~82 ms (smooth) | ~66 ms (smooth) |
+| 1,000 | ~212 ms (smooth) | ~66 ms (smooth) |
+
+N > Without virtualization, render time increases as record count grows because all rows are rendered in the DOM. With virtualization enabled, render time remains nearly constant by limiting the DOM rows to those visible in the viewport, ensuring smooth UI performance for larger datasets.
+
 For more information, refer to the Syncfusion® Blazor DataGrid documentation for [Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) and [Infinite scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling).
 
 ## Handle streaming data in Blazor Server
