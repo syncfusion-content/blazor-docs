@@ -41,7 +41,7 @@ The `PrintAsync` method can be used to print a rendered TreeMap directly from th
 }
 ```
 
-![Printing in Blazor TreeMap](./images/Print/blazor-treemap-printing.png)
+![Printing in Blazor TreeMap](./images/Print/blazor-treemap-printing.webp)
 
 ## Export
 
