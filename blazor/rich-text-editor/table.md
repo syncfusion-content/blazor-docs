@@ -52,7 +52,7 @@ In the following sample, the table has been inserted using `CreateTable` toolbar
 
 ```
 
-![Inserting Table in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table.png)
+![Inserting Table in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table.webp)
 
 ## Quick Toolbar
 
@@ -68,13 +68,13 @@ Quick toolbar is opened by clicking the table. It has different sets of commands
 
 `Rows` can be inserted above or below the required table cell through the quick toolbar. Also, focused row can be deleted. The following screenshot shows the available options of the row item.
 
-![Inserting Table Rows in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table-rows.png)
+![Inserting Table Rows in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table-rows.webp)
 
 ## Insert Columns
 
 `Columns` can be inserted to the left or right side of the required table cell through the quick toolbar. Also, the focused column can be deleted. The following screenshot shows the available options of the column item.
 
-![Inserting Table Column in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table-column.png)
+![Inserting Table Column in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table-column.webp)
 
 ## Set Color
 
@@ -96,7 +96,7 @@ Text inside the table can be aligned to top, middle, or bottom using the `TableC
 
 Text inside the table can be aligned left, right, or center using the `TableCellHorizontalAlign` command of the quick toolbar.
 
-![Changing Horizontal Alignment in Blazor RichTextEditor Table](./images/blazor-richtexteditor-horizontal-alignment.png)
+![Changing Horizontal Alignment in Blazor RichTextEditor Table](./images/blazor-richtexteditor-horizontal-alignment.webp)
 
 ## Table Styles
 
@@ -135,7 +135,7 @@ Rich Text Editor provides support to custom styles for tables. If you want to ad
 
 ```
 
-![Blazor RichTextEditor with Custom Table Styles](./images/blazor-richtexteditor-custom-table-styles.png)
+![Blazor RichTextEditor with Custom Table Styles](./images/blazor-richtexteditor-custom-table-styles.webp)
 
 ## Table Properties
 

@@ -31,7 +31,7 @@ Using the [ToolbarCommand.CreateTable](https://help.syncfusion.com/cr/blazor/Syn
 {% endhighlight %}
 {% endtabs %}
 
-![Inserting Table in Blazor RichTextEditor](../images/blazor-richtexteditor-insert-table.png)
+![Inserting Table in Blazor RichTextEditor](../images/blazor-richtexteditor-insert-table.webp)
 
 ## Quick Toolbar
 
@@ -152,13 +152,13 @@ The [TableToolbarCommand.TableHeader](https://help.syncfusion.com/cr/blazor/Sync
 
 The [TableCommandsArgs.Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableCommandsArgs.html#Syncfusion_Blazor_RichTextEditor_TableCommandsArgs_Rows) can be inserted above or under the required table cell through the quick toolbar. Also, the focused row can be deleted.
 
-![ Blazor RichTextEditor inserting table rows](../images/blazor-richtexteditor-insert-table-rows.png)
+![ Blazor RichTextEditor inserting table rows](../images/blazor-richtexteditor-insert-table-rows.webp)
 
 ## Insert columns
 
 The [TableCommandsArgs.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableCommandsArgs.html#Syncfusion_Blazor_RichTextEditor_TableCommandsArgs_Columns) can be inserted to the left or right side of the required table cell through the quick toolbar. Also, the focused column can be deleted. The following screenshot shows the available options of the column item.
 
-![Blazor RichTextEditor inserting table column](../images/blazor-richtexteditor-insert-table-column.png)
+![Blazor RichTextEditor inserting table column](../images/blazor-richtexteditor-insert-table-column.webp)
 
 ## Table column resizing
 
@@ -178,7 +178,7 @@ The Rich Text Editor allows users to insert tables within other table cells, ena
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-nesting-table.png)
+![Blazor RichTextEditor with code view](../images/blazor-richtexteditor-nesting-table.webp)
 
 ## Quick insert for table rows and columns
 
@@ -210,7 +210,7 @@ The text inside the table can be aligned to the top, middle, or bottom using the
 
 The text inside the table can be aligned left, right, or center using the `TableCellHorizontalAlign` command of the quick toolbar.
 
-![Blazor RichTextEditor changing horizontal alignment](./images/blazor-richtexteditor-horizontal-alignment.png)
+![Blazor RichTextEditor changing horizontal alignment](../images/blazor-richtexteditor-horizontal-alignment.webp)
 
 ## Border Styles
 
@@ -236,7 +236,7 @@ The Rich Text Editor provides support to custom styles for tables. If you want t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with custom table styles](./images/blazor-richtexteditor-custom-table-styles.png)
+![Blazor RichTextEditor with custom table styles](../images/blazor-richtexteditor-custom-table-styles.webp)
 
 ## Cell color
 

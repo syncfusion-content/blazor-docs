@@ -43,7 +43,7 @@ Customize the inserted image using the [RichTextEditorQuickToolbarSettings.Image
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-quick-toolbar.png)
+![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-quick-toolbar.webp)
 
 ## Link quick toolbar
 
@@ -63,7 +63,7 @@ Customize the selected link using the [RichTextEditorQuickToolbarSettings.Link](
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor link quick toolbar](./images/blazor-richtexteditor-link-quick-toolbar.png)
+![Blazor RichTextEditor link quick toolbar](./images/blazor-richtexteditor-link-quick-toolbar.webp)
 
 ## Table quick toolbar
 
@@ -107,7 +107,7 @@ Customize the inserted audio using the [RichTextEditorQuickToolbarSettings.Audio
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor audio quick toolbar](./images/blazor-richtexteditor-audio-quick-toolbar.png)
+![Blazor RichTextEditor audio quick toolbar](./images/blazor-richtexteditor-audio-quick-toolbar.webp)
 
 ## Video quick toolbar
 

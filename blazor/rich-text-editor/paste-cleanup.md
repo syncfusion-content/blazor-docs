@@ -126,7 +126,7 @@ The [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with denied attribute](./images/blazor-richtexteditor-paste-denied-attribute.png)
+![Blazor RichTextEditor with denied attribute](./images/blazor-richtexteditor-paste-denied-attribute.webp)
 
 > This setting is ignored when `PlainText` is set to `true`. <br>
 It only works when either `KeepFormat` is set to `true`, or when `Prompt`, `PlainText`, and `KeepFormat` are all set to `false`, which triggers clean format behavior.
@@ -147,7 +147,7 @@ For Example, **public string[] AllowedStyles = new string[] { "color", "margin" 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with allowed styles](./images/blazor-richtexteditor-paste-allowed-style.png)
+![Blazor RichTextEditor with allowed styles](./images/blazor-richtexteditor-paste-allowed-style.webp)
 
 > This setting works only when `KeepFormat` is set to true. If `KeepFormat` is `false` or `PlainText` is `true`, style filtering via `AllowedStyleProperties` will not be applied.
 

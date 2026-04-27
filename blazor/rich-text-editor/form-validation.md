@@ -21,7 +21,7 @@ N> [View the sample on GitHub.](https://github.com/SyncfusionExamples/blazor-ric
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor form validation](./images/blazor-richtexteditor-form-validation.png)
+![Blazor Rich Text Editor form validation](./images/blazor-richtexteditor-form-validation.webp)
 
 ## Validation attributes
 
@@ -41,7 +41,7 @@ The Rich Text Editor provides the functionality of character counting and its va
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor character count validation](./images/blazor-richtexteditor-char-count-validation.png)
+![Blazor Rich Text Editor character count validation](./images/blazor-richtexteditor-char-count-validation.webp)
 
 ## Custom placement of validation message
 

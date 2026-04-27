@@ -47,7 +47,7 @@ Tools in this section allow users to customize font properties such as font fami
 | FontName | ![FontName icon](../images/font-name.png) | Defines the fonts that appear under the Font Family DropDownList from the Rich Text Editor's toolbar. |
 | FontSize | ![FontSize icon](../images/font-size.png) | Defines the font sizes that appear under the Font Size DropDownList from the Rich Text Editor's toolbar.|
 | FontColor | ![FontColor icon](../images/font-color.png) | Specifies an array of colors can be used in the colors popup for font color.|
-| BackgroundColor | ![BackgroundColor icon](../images/background-color.png) | Specifies an array of colors can be used in the colors popup for background color.|
+| BackgroundColor | ![BackgroundColor icon](../images/background-color.webp) | Specifies an array of colors can be used in the colors popup for background color.|
 | Formats (Paragraph, Headings) | ![Format icon](../images/formats.png) | An Object with the options that will appear in the Paragraph Format dropdown from the toolbar. |
 
 ### Alignment
@@ -56,11 +56,11 @@ This section provides alignment options for the text or content, allowing users 
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Alignment | ![Alignment icon](../images/alignments.png) | Align the content with left, center, and right margin.|
-| JustifyLeft | ![JustifyLeft icon](../images/align-left.png) | Allows each line to begin at the same distance from the editor’s left-hand side. | 
-| JustifyCenter | ![JustifyCenter icon](../images/align-center.png) | There is an even space on each side of each line since the text is not aligned to the left or right margins. |
-| JustifyRight | ![JustifyRight icon](../images/align-right.png) | Allows each line to end at the same distance from the editor’s right-hand side. | 
-| JustifyFull | ![JustifyFull icon](../images/align-justify.png) | The text is aligned with both right and left margins. | 
+| Alignment | ![Alignment icon](../images/alignments.webp) | Align the content with left, center, and right margin.|
+| JustifyLeft | ![JustifyLeft icon](../images/align-left.webp) | Allows each line to begin at the same distance from the editor’s left-hand side. | 
+| JustifyCenter | ![JustifyCenter icon](../images/align-center.webp) | There is an even space on each side of each line since the text is not aligned to the left or right margins. |
+| JustifyRight | ![JustifyRight icon](../images/align-right.webp) | Allows each line to end at the same distance from the editor’s right-hand side. | 
+| JustifyFull | ![JustifyFull icon](../images/align-justify.webp) | The text is aligned with both right and left margins. | 
 
 ### Lists & indentation
 
@@ -109,13 +109,13 @@ The image quicktoolbar offers a set of tools to edit images inserted in the Rich
 | Name | Icons | Summary | 
 |----------------|---------|---------|
 | Replace Image  | ![Replace icon](../images/image-replace.png) | Replace the selected image with another image. | 
-| Align Image | ![Alignment icon](../images/alignments.png) | The image can be aligned to the right, left, or center. | 
+| Align Image | ![Alignment icon](../images/alignments.webp) | The image can be aligned to the right, left, or center. | 
 | Remove Image | ![Remove icon](../images/table-remove.png) | Allows to remove the selected image from the editor. | 
 | OpenImageLink | ![OpenImageLink icon](../images/open-link.png) | Opens the link that is attached to the selected image. | 
 | EditImageLink | ![EditImageLink icon](../images/edit-link.png) | Allows to edit the link that is attached to the selected image. |
 | RemoveImageLink | ![RemoveImageLink icon](../images/remove-link.png) | Removes the link that is attached to the selected image. | 
 | Display | ![Display icon](../images/display.png) | Allows you to choose whether an image should be shown inline or as a block. | 
-| AltText | ![AltText icon](../images/alt-text.png) | To display image description when an image on a Web page cannot be displayed. | 
+| AltText | ![AltText icon](../images/alt-text.webp) | To display image description when an image on a Web page cannot be displayed. | 
 | Dimension | ![Dimension icon](../images/dimension.png) | Allows you to customize the image’s height and width. |
 
 ### Tables
@@ -136,7 +136,7 @@ The table quicktoolbar provides options for table editing within the Rich Text E
 | TableHeader | ![TableHeader icon](../images/table-headers.png) | Allows you to add a table header. |
 | TableColumns | ![TableColumns icon](../images/table-columns.png) | Shows the dropdown to insert a column or delete the selected column. |
 | TableRows | ![TableRows icon](../images/table-row.png) | Shows the dropdown to insert a row ors delete the selected row. | 
-| TableCellHorizontalAAlignmentslign | ![TableCellHorizontalAlign icon](../images/alignments.png) | Allows the table cell content to be aligned horizontally. | 
+| TableCellHorizontalAAlignmentslign | ![TableCellHorizontalAlign icon](../images/alignments.webp) | Allows the table cell content to be aligned horizontally. | 
 | TableCellVerticalAlign | ![TableCellVerticalAlign icon](../images/vertical-align.png) | Allows the table cell content to be aligned vertically. | 
 | TableEditProperties | ![TableEditProperties icon](../images/table-edit.png) | Allows you to change the table width, padding, and cell spacing styles. |
 

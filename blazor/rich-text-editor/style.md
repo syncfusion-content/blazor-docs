@@ -61,7 +61,7 @@ Apply the following CSS to customize the default content styling of the Rich Tex
 }
 ```
 
-![Blazor RichTextEditor with customizing editor content](./images/blazor-richtexteditor-editor-content.png)
+![Blazor RichTextEditor with customizing editor content](./images/blazor-richtexteditor-editor-content.webp)
 
 ##  Customizing the toolbar appearance
 
@@ -93,7 +93,7 @@ Apply the following CSS to modify the default color of toolbar icons in the Rich
     color: red;
 }
 ```
-![Blazor RichTextEditor with customizing editor toolbar](./images/blazor-richtexteditor-editor-toolbar.png)
+![Blazor RichTextEditor with customizing editor toolbar](./images/blazor-richtexteditor-editor-toolbar.webp)
 
 ## Styling the character count display
 
@@ -140,7 +140,7 @@ The source code is presented with enhanced formatting and consistent indentation
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.png)
+![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.webp)
 
 ### Refreshing the editor UI
 

@@ -39,7 +39,7 @@ Please refer to the sample below to add these basic text styling options in the 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor basic text styles](../images/blazor-richtexteditor-basic-text-format.png)
+![Blazor RichTextEditor basic text styles](../images/blazor-richtexteditor-basic-text-format.webp)
 
 ## Text alignments
 
@@ -114,7 +114,7 @@ The following example demonstrates how to customize the number format lists in t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor number formatlist](../images/blazor-richtexteditor-number-format-list.png)
+![Blazor RichTextEditor number formatlist](../images/blazor-richtexteditor-number-format-list.webp)
 
 ### Unordered lists
 
@@ -145,7 +145,7 @@ The following example demonstrates how to customize the bullet format lists in t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor bullet formatlist](../images/blazor-richtexteditor-bullet-format-list.png)
+![Blazor RichTextEditor bullet formatlist](../images/blazor-richtexteditor-bullet-format-list.webp)
 
 ## Nested list creation using Tab key
 
@@ -224,7 +224,7 @@ The following table list the default format name and width of the  [Format](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.png)
+![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.webp)
 
 ### Custom format
 
@@ -238,7 +238,7 @@ The Rich Text Editor provides support for custom formats with an existing list. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.png)
+![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.webp)
 
 ## Quotation formatting
 
@@ -278,7 +278,7 @@ While the toolbar does not provide a direct method to apply blockquote formattin
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-nested-quotation-formatting.png)
+![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-nested-quotation-formatting.webp)
 
 ## LineHeight
 
@@ -312,7 +312,7 @@ Example: Add the LineHeight tool and configure items
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with LineHeight](../images/blazor-richtexteditor-line-height.png)
+![Blazor RichTextEditor with LineHeight](../images/blazor-richtexteditor-line-height.webp)
 
 ## Horizontal line
 
@@ -330,7 +330,7 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-horizontal-line.png)
+![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-horizontal-line.webp)
 
 ## Format Painter in Blazor Rich Text Editor
 
@@ -382,7 +382,7 @@ Here's an example of how to configure the Clear Format feature:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-clear-format.png)
+![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-clear-format.webp)
 
 ### Using clear format
 
