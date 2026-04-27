@@ -709,10 +709,9 @@ dotnet run
 
 ### No data in Diagram
 
-- Verify that `DataSourceSettings` uses the correct property names:
+- Verify that `DataSourceSettings` uses the correct property names. These property names must exactly match the model returned by the API:
   - `ID="Id"`
   - `ParentID="ParentId"`
-  These property names must exactly match the model returned by the API.
 - Check the browser developer console (F12) for errors from `LayoutService` class.
 - Ensure migrations completed successfully and that seed data exists in the database
   (you may verify this directly in PostgreSQL).
