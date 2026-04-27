@@ -110,9 +110,9 @@ In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagri
 
 | Feature | Web Forms (`ej:Grid`) | Blazor (`SfGrid<T>`) |
 | --- | --- |--- | 
-| Paging                    | Server‑side paging with postbacks and ViewState | Built‑in [paging](https://blazor.syncfusion.com/documentation/datagrid/paging) with component runtime | 
+| Paging                    | Server‑side paging with postback and ViewState | Built‑in [paging](https://blazor.syncfusion.com/documentation/datagrid/paging) with component runtime | 
 | Sorting                   | Server‑processed, page reload dependent         | Built-in [sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting)          |
-| Filtering                 | Filter bar / menu with postbacks                | Declarative [filter](https://blazor.syncfusion.com/documentation/datagrid/filtering) settings (runtime)  | 
+| Filtering                 | Filter bar / menu with postback                | Declarative [filter](https://blazor.syncfusion.com/documentation/datagrid/filtering) settings (runtime)  | 
 | Grouping                  | Server‑processed grouping                       | Runtime [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping) (Server or WASM)      | 
 | Column templates          | ASPX template syntax                            | Razor [templates](https://blazor.syncfusion.com/documentation/datagrid/column-template)                        | 
 | Row selection             | Server callbacks                                | Event‑driven [selection](https://blazor.syncfusion.com/documentation/datagrid/row-selection) handling        |
@@ -550,7 +550,7 @@ In Blazor, the [Rich Text Editor](https://www.syncfusion.com/blazor-components/b
 | Common customer‑used feature     | Web Forms (`ej:RTE`)        | Blazor (`SfRichTextEditor`)                          |
 | --- | --- | --- |
 | HTML content editing   | Server‑side processing      | HTML value binding ([`Value`])                  |
-| Content change handling    | Postbacks / callbacks       | [Two‑way binding](https://blazor.syncfusion.com/documentation/rich-text-editor/data-binding) ([`@bind-Value`])               |
+| Content change handling    | Postback / callbacks       | [Two‑way binding](https://blazor.syncfusion.com/documentation/rich-text-editor/data-binding) ([`@bind-Value`])               |
 | Image insertion    | Server callbacks            | [Image upload](https://blazor.syncfusion.com/documentation/rich-text-editor/tools/insert-image) & embed ([Image])                  |
 | File / media upload  | Server‑side handling        | File upload integration ([Upload])              |
 
