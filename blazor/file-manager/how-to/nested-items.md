@@ -180,7 +180,7 @@ The following example shows how to render the SfFileManager component inside the
 
 ```
 
-![Syncfusion Blazor File Manager displayed inside a dialog](../images/blazor-filemanager-inside-dialog.png)
+![Syncfusion Blazor File Manager displayed inside a dialog](../images/blazor-filemanager-inside-dialog.webp)
 
 ## Adding File Manager inside the Tab
 
@@ -231,4 +231,4 @@ The following example demonstrates how to integrate the Blazor File Manager comp
 
 ```
 
-![Syncfusion Blazor File Manager displayed inside a tab](../images/blazor-filemanager-inside-tab.png)
+![Syncfusion Blazor File Manager displayed inside a tab](../images/blazor-filemanager-inside-tab.webp)
