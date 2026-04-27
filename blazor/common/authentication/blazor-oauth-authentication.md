@@ -58,7 +58,7 @@ Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
 Include the theme stylesheet and script references in the `App.razor` file.
 
 {% tabs %}
-{% highlight html  %}
+{% highlight razor tabtitle="App.razor" %}
 
 <head>
     <!-- Syncfusion theme stylesheet -->
@@ -103,6 +103,7 @@ Add OAuth authentication using GitHub and enable cookie based sign‑in in `Prog
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
+using YourProjectName.Components;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Syncfusion.Blazor;
@@ -186,6 +187,87 @@ app.Run();
 
 This configuration redirects users to GitHub for authentication, stores the authenticated session in a secure cookie, and retrieves the user's profile information from GitHub after a successful login.
 
+### Show login and logout options based on authentication state
+
+This section explains to show Login and Logout actions based on the user’s authentication state, and how to integrate it into the application layout so it is accessible across all pages.
+
+**Create LoginDisplay UI**
+
+Create a new Razor file named `LoginDisplay.razor` under the **Shared** folder inside the Components directory. This file is responsible for displaying a Login with GitHub button when the user is not authenticated and a Logout button when the user is signed in.
+
+{% tabs %}
+{% highlight razor tabtitle="Components/Shared/LoginDisplay.razor"  %}
+
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager Navigation
+
+<AuthorizeView>
+    <Authorized>
+        <div class="d-flex align-items-center">
+            <a class="btn btn-outline-secondary btn-sm" href="/account/logout">Logout</a>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <a class="btn btn-primary btn-sm" href="/account/login?returnUrl=/">Login with GitHub</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private void Login()
+    {
+        // Redirect to our account login endpoint which challenges the GitHub OAuth handler.
+        Navigation.NavigateTo("/account/login?returnUrl=/", true);
+    }
+
+    private void Logout()
+    {
+        Navigation.NavigateTo("/account/logout", true);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Add LoginDisplay to MainLayout**
+
+To make the login and logout actions available throughout the application, add the LoginDisplay UI to the main layout. Open `MainLayout.razor` and add **<LoginDisplay />** to the top navigation area.
+
+{% tabs %}
+{% highlight razor tabtitle="Layout/MainLayout.razor" hl_lines="8" %}
+
+@inherits LayoutComponentBase
+
+<div class="page">
+    ....
+    <main>
+        <div class="top-row px-4 d-flex justify-content-between align-items-center">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <LoginDisplay />
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Import application component namespaces**
+
+Open the `_Imports.razor` file and add the following `@using` statements to make the application files accessible throughout the application.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using YourProjectName.Components
+@using YourProjectName.Components.Layout
+@using YourProjectName.Components.Shared
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Implement login and logout endpoints
 
 Create a new folder **Controllers** in the project root, then add `AccountController.cs` with the following code to handle OAuth redirection.
@@ -197,7 +279,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 
-namespace OAuth.Controllers
+namespace YourProjectName.Controllers
 {
   [Route("account")]
   public class AccountController : Controller
@@ -301,7 +383,7 @@ This section demonstrates how to dynamically render UI content based on the user
     <AuthorizeView>
         <Authorized>
 
-            <h1>DataGrid</h1>
+            <h3>DataGrid</h3>
 
             <!-- Render DataGrid on the home page when authenticated -->
             <SecureGrid />
@@ -328,9 +410,13 @@ This section demonstrates how to dynamically render UI content based on the user
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrates how to integrate **GitHub OAuth** into a Blazor Web App and authenticate users using secure cookie based sign‑in. After authentication, the user can access protected pages and view the Syncfusion® Blazor **DataGrid**.
+This example demonstrates how to integrate **GitHub OAuth** into a Blazor Web App and authenticate users using secure cookie based sign‑in.
 
-![Blazor DataGrid with GitHub OAuth 2.0](images/oauth-authentication.webp)
+![Blazor DataGrid with GitHub OAuth loginpage](images/oauth-authentication.webp)
+
+After authentication, the user can access protected pages and view the Syncfusion® Blazor **DataGrid**.
+
+![Blazor DataGrid with GitHub OAuth 2.0](images/oauth-datagrid.webp)
 
 ## See also
 
