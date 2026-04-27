@@ -188,7 +188,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/AddRemovePhaseAtRuntime.razor).
 
-![Phase Add Remove](Swimlane-images/Phase_Add_Remove.gif)
+![Phase Add Remove](Swimlane-images/Phase_Add_Remove.webp)
 
 ## How to Create and Customize the Phase Header
 
@@ -425,7 +425,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The following image shows how to select and resize the phase header.
 
-![Header Select and Resize](Swimlane-images/Header_Selection_Resize.gif)
+![Header Select and Resize](Swimlane-images/Header_Selection_Resize.webp)
 
 ## How to Edit Phase Header
 
@@ -433,7 +433,7 @@ Phase headers support runtime editing. Double-click the header label to enable i
 
 The following image shows how to edit the phase header.
 
-![Phase Header Editing](Swimlane-images/Phase_Header_Edit.gif)
+![Phase Header Editing](Swimlane-images/Phase_Header_Edit.webp)
 
 
 ## Phase Interaction
