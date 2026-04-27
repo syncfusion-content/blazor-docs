@@ -35,18 +35,16 @@ The grid header in the Blazor Gantt Chart contains column headers and table stru
 
 ```css
 .e-gridheader {
-   color: red !important;
+   color: #1976d2 !important;
 }
 .e-headercelldiv {
     font-size: 36px;
-    font-weight: bold;
-    font-family: cursive !important;
 }
 .e-headercell {
-    background: #add8e6 !important;
+    background: #e3f2fd !important;
 }
 .e-columnheader{
-    color: red !important;
+    color: #1976d2 !important;
 }
 ```
 
@@ -111,15 +109,15 @@ The timeline displays date information and task scheduling. Style the timeline h
 
 ```css
 .e-timeline-header-container {
-    background: #add8e6 !important;
+    background: #e3f2fd !important;
 }
 
 .e-header-cell-label {
-    color: #1e74ca !important;
+    color: #0d47a1 !important;
     font-weight: bold;
 }
 .e-weekend-header-cell{
-    background: pink !important;
+    background: #fce4ec !important;
 }
 ```
 
@@ -133,45 +131,45 @@ The taskbar represents tasks visually on the timeline. Customize parent taskbars
 
 ```css
 .e-taskbar-main-container {
-    border: 1px solid #ddd;
+    border: 1px solid #e0e0e0;
 }
 
 .e-gantt-parent-taskbar-inner-div {
-    background-color: #7ab748 !important;
+    background-color: #1976d2 !important;
 }
 
 .e-gantt-parent-progressbar-inner-div {
-    background-color: #4b732a !important;
+    background-color: #0d47a1 !important;
 }
 
 .e-gantt-child-taskbar-inner-div {
-    background-color: #6d619b !important;
+    background-color: #7b1fa2 !important;
 }
 
 .e-gantt-child-progressbar-inner-div {
-    background-color: #4e466e !important;
+    background-color: #4a148c !important;
 }
 
 .e-gantt-milestone {
-    background-color: #ad7a66 !important;
+    background-color: #ff9800 !important;
 }
 
 .e-gantt-unscheduled-taskbar {
-    background-color: #ff6b6b !important;
+    background-color: #f44336 !important;
     opacity: 0.7;
 }
 
 .e-gantt-manualparenttaskbar {
-    border: 2px dashed #7ab748 !important;
+    border: 2px dashed #1976d2 !important;
 }
 
 .e-gantt-child-manualtaskbar {
-    border: 2px dashed #6d619b !important;
+    border: 2px dashed #7b1fa2 !important;
 }
 
 .e-gantt-unscheduled-manualtask {
-    background-color: #ff6b6b !important;
-    border: 2px dashed #ff6b6b !important;
+    background-color: #f44336 !important;
+    border: 2px dashed #f44336 !important;
     opacity: 0.7;
 }
 ```
@@ -211,6 +209,7 @@ The connector lines in the Blazor Gantt Chart show dependencies between tasks. A
     fill: #ab6060fc !important;
 }
 ```
+
 Properties such as `stroke`, `stroke-width`, and `fill` can be adjusted to align with the Gantt design.
 
 ![Customizing connector lines](./images/blazor-gantt-connector-lines.png)
@@ -229,7 +228,7 @@ The splitter divides the grid and chart sections, while resize handlers allow us
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #0d47a1;
 }
 .e-gantt .e-arrow-left, .e-gantt .e-arrow-right {
     color: green !important;
@@ -252,19 +251,18 @@ The labels in the Blazor Gantt Chart display task information on the taskbars. A
 
 ```css
 .e-label {
-    color: #1e74ca !important;
-    font-weight: bold;
+    color: #0d47a1 !important;
     font-size: 12px;
 }
 
 .e-right-label-container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 2px 4px;
     border-radius: 3px;
 }
 
 .e-left-label-container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 2px 4px;
     border-radius: 3px;
 }
@@ -280,12 +278,12 @@ The event markers in the Blazor Gantt Chart highlight important dates or milesto
 
 ```css
 .e-event-markers {
-    border-left-color: #05088f !important;
+    border-left-color: #7b1fa2 !important;
 }
 
 .e-event-markers .e-span-label {
     background-color: #f3e5f5 !important;
-    color: #6a1b9a !important;
+    color: #4a148c !important;
 }
 ```
 
@@ -303,7 +301,7 @@ The tooltip in the Blazor Gantt Chart displays detailed information when hoverin
 }
 
 .e-gantt-tooltip {
-    background-color: #360591 !important;
+    background-color: #8fa5cf !important;
     color: #333 !important;
     border: 1px solid #87ceeb;
     border-radius: 4px;
