@@ -316,4 +316,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
 
 [Multiple Row selection](https://blazor.syncfusion.com/documentation/gantt-chart/selection): To select multiple rows, tap a row to display a popup that activates multi-selection mode. After tapping the popup, continue tapping the desired rows to select them. This allows you to select multiple rows simultaneously, as illustrated below:
 
-![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.PNG)
+![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.webp)
