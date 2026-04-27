@@ -741,5 +741,5 @@ The application now provides a complete solution for visualizing organizational 
 
 ## See Also
 
-- **Data Binding** – https://blazor.syncfusion.com/documentation/diagram/data-binding#how-to-specify-parent-child-relationship-in-data-source
-- **Organizational Chart Layout** – https://blazor.syncfusion.com/documentation/diagram/layout/organizational-chart
+- [Data Binding](https://blazor.syncfusion.com/documentation/diagram/data-binding#how-to-specify-parent-child-relationship-in-data-source)
+- [Organizational Chart Layout](https://blazor.syncfusion.com/documentation/diagram/layout/organizational-chart)
