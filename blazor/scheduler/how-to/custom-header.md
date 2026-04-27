@@ -109,4 +109,4 @@ The Scheduler header bar can be hidden by setting `false` to `ShowHeaderBar` and
 }
 ```
 
-![Blazor Scheduler with Custom Toolbar](../images/blazor-scheduler-custom-toolbar.png)
+![Blazor Scheduler with Custom Toolbar](../images/blazor-scheduler-custom-toolbar.webp)

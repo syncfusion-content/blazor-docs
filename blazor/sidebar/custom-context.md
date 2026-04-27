@@ -125,4 +125,4 @@ In the following sample, click the toggle button to expand or collapse the Sideb
 
 ```
 
-![Blazor Sidebar with Custom Context](./images/blazor-sidebar-custom-context.png)
+![Blazor Sidebar with Custom Context](./images/blazor-sidebar-custom-context.webp)

@@ -977,10 +977,10 @@ You can now perform CRUD operations on the scheduler:
 All operations are automatically saved to the PostgreSQL database.
 
 ## Output Preview
-![Frontend Preview](./images/blazor-scheduler-postgresql-frontend.png)
+![Frontend Preview](./images/blazor-scheduler-postgresql-frontend.webp)
 *Image illustrating the Syncfusion Blazor Scheduler*
 
-![Database Preview](./images/blazor-scheduler-postgresql-database.png)
+![Database Preview](./images/blazor-scheduler-postgresql-database.webp)
 *Image illustrating the events of the Syncfusion Blazor Scheduler stored in PostgreSQL*
 
 ## Complete Sample Repository

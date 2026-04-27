@@ -112,4 +112,4 @@ The ListView component triggers events based on its actions. The events can be u
 </style>
 ```
 
-![Displaying Event Action in Blazor ListView](../images/list/blazor-listview-trace-events.png)
+![Displaying Event Action in Blazor ListView](../images/list/blazor-listview-trace-events.webp)

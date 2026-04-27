@@ -62,7 +62,7 @@ using Syncfusion.Blazor.Layouts
 
 ```
 
-![Blazor Splitter with Auto sizing Panes](./images/auto-sizing-panes.png)
+![Blazor Splitter with Auto sizing Panes](./images/auto-sizing-panes.webp)
 
 ## Fixed pane
 
@@ -102,7 +102,7 @@ The split panes can be rendered with fixed size in both `Horizontal` and `Vertic
 
 ```
 
-![Blazor Splitter with Fixed Pane Size in Pixel](./images/blazor-splitter-fixed-pane-size-in-pixel.png)
+![Blazor Splitter with Fixed Pane Size in Pixel](./images/blazor-splitter-fixed-pane-size-in-pixel.webp)
 
 Splitter pane Size in `Percentage`.
 
@@ -132,4 +132,4 @@ Splitter pane Size in `Percentage`.
 
 ```
 
-![Blazor Splitter with Fixed Pane Size in Percentage](./images/blazor-splitter-fixed-pane-size-in-percentage.png)
+![Blazor Splitter with Fixed Pane Size in Percentage](./images/blazor-splitter-fixed-pane-size-in-percentage.webp)

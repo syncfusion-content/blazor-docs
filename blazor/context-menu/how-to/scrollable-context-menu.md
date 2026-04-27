@@ -60,4 +60,4 @@ To achieve this functionality, set the `EnableScrolling` property to `true`. Add
 
 ```
 
-![Blazor ContextMenu with Scroller Support](./../images/blazor-contextmenu-scroller.png)
+![Blazor ContextMenu with Scroller Support](./../images/blazor-contextmenu-scroller.webp)
