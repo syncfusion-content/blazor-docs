@@ -53,7 +53,7 @@ You can enable the tooltip by setting the [Enable](https://help.syncfusion.com/c
 
 ```
 
-![Blazor HeatMap Chart displays Tooltip](images/tooltip/blazor-heatmap-chart-tooltip.png)
+![Blazor HeatMap Chart displays Tooltip](images/tooltip/blazor-heatmap-chart-tooltip.webp)
 
 
 ## Tooltip template
@@ -165,7 +165,7 @@ The following example illustrates how to display the tooltip template for array 
 
 ```
 
-![Tooltip template for array table binding in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-table-data-tooltip-template.png)
+![Tooltip template for array table binding in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-table-data-tooltip-template.webp)
 
 **Cell**
 
@@ -267,7 +267,7 @@ The following example illustrates how to display the tooltip template for array 
 
 ```
 
-![Tooltip template for array cell binding in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-cell-data-tooltip-template.png)
+![Tooltip template for array cell binding in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-cell-data-tooltip-template.webp)
 
 ### JSON binding
 
@@ -359,7 +359,7 @@ The following example illustrates how to display the tooltip template for JSON t
 
 ```
 
-![Tooltip template for JSON binding with table adaptor in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-table-data-tooltip-template.png)
+![Tooltip template for JSON binding with table adaptor in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-table-data-tooltip-template.webp)
 
 **Cell**
 
@@ -506,4 +506,4 @@ The following example illustrates how to display the tooltip template for JSON c
 
 ```
 
-![Tooltip template for JSON binding with cell adaptor in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-cell-data-tooltip-template.png)
+![Tooltip template for JSON binding with cell adaptor in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-cell-data-tooltip-template.webp)

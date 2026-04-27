@@ -49,7 +49,7 @@ In the following example, the United States map shape is used as shape data from
 
 ```
 
-![Blazor Maps with Sublayer](./images/Layers/blazor-maps-sublayer.png)
+![Blazor Maps with Sublayer](./images/Layers/blazor-maps-sublayer.webp)
 
 ## Displaying different layer in the view
 
@@ -69,7 +69,7 @@ Multiple shape files and map providers can be loaded simultaneously. The [BaseLa
 
 ```
 
-![Blazor Maps with Multiple Layer](./images/Layers/blazor-maps-multiple-layer.png)
+![Blazor Maps with Multiple Layer](./images/Layers/blazor-maps-multiple-layer.webp)
 
 ## Rendering custom shapes
 

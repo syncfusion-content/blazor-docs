@@ -43,7 +43,7 @@ By default, the visibility of the marker is **false**. It can be enabled by sett
 }
 ```
 
-![Blazor Smith Chart with Marker](./images/Marker/blazor-smith-chart-marker.png)
+![Blazor Smith Chart with Marker](./images/Marker/blazor-smith-chart-marker.webp)
 
 ### Marker Customization
 
@@ -92,7 +92,7 @@ Using the [SmithChartSeriesMarker](https://help.syncfusion.com/cr/blazor/Syncfus
 }
 ```
 
-![Blazor Smith Chart with Custom Marker](./images/Marker/blazor-smith-chart-custom-marker.png)
+![Blazor Smith Chart with Custom Marker](./images/Marker/blazor-smith-chart-custom-marker.webp)
 
 ## Data labels
 
@@ -128,7 +128,7 @@ By default, the data labels are disabled. It can be enabled by setting the [Visi
 }
 ```
 
-![Blazor Smith Chart with Data Label](./images/Marker/blazor-smith-chart-data-label.png)
+![Blazor Smith Chart with Data Label](./images/Marker/blazor-smith-chart-data-label.webp)
 
 ### Data labels customization
 
@@ -173,7 +173,7 @@ The data labels can be customized using the following properties.
 }
 ```
 
-![Blazor Smith Chart with Custom Data Label](./images/Marker/blazor-smith-chart-custom-data-label.png)
+![Blazor Smith Chart with Custom Data Label](./images/Marker/blazor-smith-chart-custom-data-label.webp)
 
 ### Smart Labels
 
@@ -211,7 +211,7 @@ Data labels can be placed smartly by setting the [EnableSmartLabels](https://hel
 }
 ```
 
-![Blazor Smith Chart with Smart Data Labels](./images/Marker/blazor-smith-chart-with-smart-data-labels.png)
+![Blazor Smith Chart with Smart Data Labels](./images/Marker/blazor-smith-chart-with-smart-data-labels.webp)
 
 ### Datalabel Template
 
@@ -254,4 +254,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Blazor Smith Chart with Data Label Template](./images/Marker/blazor-smith-chart-data-label-template.png)
+![Blazor Smith Chart with Data Label Template](./images/Marker/blazor-smith-chart-data-label-template.webp)

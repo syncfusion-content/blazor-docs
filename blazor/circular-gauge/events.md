@@ -39,7 +39,7 @@ In the following example, the event [OnDragMove](https://help.syncfusion.com/cr/
 }
 ```
 
-![Event Binding in Blazor Circular Gauge](./images/blazor-circulargauge-binding-events.png)
+![Event Binding in Blazor Circular Gauge](./images/blazor-circulargauge-binding-events.webp)
 
 ## Available events
 

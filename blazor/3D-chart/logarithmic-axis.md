@@ -51,7 +51,7 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrJtnsUsBeKhZTc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with Logarithmic Axis](images/logarithmic-axis/blazor-chart-logarithmic-axis.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrJtnsUsBeKhZTc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with Logarithmic Axis](images/logarithmic-axis/blazor-chart-logarithmic-axis.webp)" %}
 
 ## Range
 
@@ -95,7 +95,7 @@ The range of an axis will be calculated automatically based on the provided data
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhzZnCUCBSddGpF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart Logarithmic Axis based on Range](images/logarithmic-axis/blazor-column-chart-axis-based-on-range.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhzZnCUCBSddGpF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart Logarithmic Axis based on Range](images/logarithmic-axis/blazor-column-chart-axis-based-on-range.webp)" %}
 
 ## Logarithmic base
 
@@ -139,7 +139,7 @@ Logarithmic base can be customized by using the `LogBase` property of the axis
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBTZdWqWhouoYOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Logarithmic Axis with Base](images/logarithmic-axis/blazor-column-chart-logarithmic-axis-with-base.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBTZdWqWhouoYOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Logarithmic Axis with Base](images/logarithmic-axis/blazor-column-chart-logarithmic-axis-with-base.webp)" %}
 
 ## Logarithmic interval
 
@@ -183,4 +183,4 @@ The interval of the logarithmic axis can be customized by using the `Interval` p
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTNniUMVdBYcdW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart Logarithmic Axis based on Interval](images/logarithmic-axis/blazor-column-chart-axis-based-on-range-interval.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTNniUMVdBYcdW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Column 3D Chart Logarithmic Axis based on Interval](images/logarithmic-axis/blazor-column-chart-axis-based-on-range-interval.webp)" %}

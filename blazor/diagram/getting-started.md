@@ -163,6 +163,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Width="100%" Height="600px"/>
 
 {% endhighlight %}
@@ -186,6 +188,8 @@ Create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes" />
 

@@ -44,7 +44,7 @@ The multi-level labels for the Range Selector can be enabled by setting the [Ena
 
 ```
 
-![Blazor RangeNavigator with Multilevel Labels](images/labels/blazor-rangenavigator-multilevel-labels.png)
+![Blazor RangeNavigator with Multilevel Labels](images/labels/blazor-rangenavigator-multilevel-labels.webp)
 
 ## Grouping
 
@@ -93,7 +93,7 @@ The multi-level labels can be grouped using the [GroupBy](https://help.syncfusio
 
 ```
 
-![Grouping in Blazor RangeNavigator](images/labels/blazor-rangenavigator-grouping.png)
+![Grouping in Blazor RangeNavigator](images/labels/blazor-rangenavigator-grouping.webp)
 
 ## Smart labels
 
@@ -134,7 +134,7 @@ The [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor RangeNavigator with Smart Labels](images/labels/blazor-rangenavigator-smart-labels.png)
+![Blazor RangeNavigator with Smart Labels](images/labels/blazor-rangenavigator-smart-labels.webp)
 
 ## Position
 
@@ -174,7 +174,7 @@ By default, the labels can be placed outside the Range Selector. It can also be 
 
 ```
 
-![Changing Label Position in Blazor RangeNavigator](images/labels/blazor-rangenavigator-change-label-position.png)
+![Changing Label Position in Blazor RangeNavigator](images/labels/blazor-rangenavigator-change-label-position.webp)
 
 ## Labels Customization
 
@@ -212,4 +212,4 @@ The font size, color, family, etc. can be customized using the [RangeNavigatorLa
 
 ```
 
-![Blazor RangeNavigator with Custom Label](images/labels/blazor-rangenavigator-custom-label.png)
+![Blazor RangeNavigator with Custom Label](images/labels/blazor-rangenavigator-custom-label.webp)

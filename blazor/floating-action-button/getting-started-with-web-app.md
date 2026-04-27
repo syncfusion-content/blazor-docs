@@ -189,6 +189,8 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Buttons
+
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfFab Target="#target" IconCss="e-icons e-plus" OnClick="EventClick"></SfFab>
 </div>

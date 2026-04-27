@@ -64,7 +64,7 @@ To split the chart area vertically into number of rows, use `Rows` property of t
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzXxiAsBdkbxIl?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Rows with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-panes-with-rows.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzXxiAsBdkbxIl?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Rows with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-panes-with-rows.webp)" %}
 
 For spanning the vertical axis along multiple rows, use `Span` property of an axis.
 
@@ -114,7 +114,7 @@ For spanning the vertical axis along multiple rows, use `Span` property of an a
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzjniUWLwATaKo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Row spanning with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-span-with-rows-span.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzjniUWLwATaKo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Row spanning with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-span-with-rows-span.webp)" %}
 
 ## Columns
 
@@ -169,7 +169,7 @@ To split the chart area horizontally into number of columns, use `Columns` prope
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLfjdsgiVmdedVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Columns with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLfjdsgiVmdedVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Columns with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column.webp)" %}
 
 The `Span` property of the axis can be used to span the horizontal axis across multiple column.
 
@@ -219,4 +219,4 @@ The `Span` property of the axis can be used to span the horizontal axis across m
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLzXRiqsVGkcDLy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Column Spanning with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column-span.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLzXRiqsVGkcDLy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Column Spanning with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column-span.webp)" %}

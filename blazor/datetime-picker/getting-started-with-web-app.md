@@ -165,6 +165,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Calendars
+
 <SfDateTimePicker TValue="DateTime?" Placeholder='Select a date and time'></SfDateTimePicker>
 
 {% endhighlight %}
@@ -180,6 +182,8 @@ The minimum and maximum date time can be defined with the help of [Min](https://
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Value="@DateValue" Min="@MinDate" Max="@MaxDate"></SfDateTimePicker>
 
