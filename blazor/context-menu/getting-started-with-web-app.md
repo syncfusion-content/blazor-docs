@@ -197,7 +197,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ContextMenu component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu Component](./images/blazor-contextmenu-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu Component](./images/blazor-contextmenu-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ContextMenu).
 
