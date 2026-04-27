@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style And Appearance in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about style and appearance in Syncfusion Blazor Gantt Chart component and more.
+title: Style and Appearance in Blazor Gantt Chart Component | Syncfusion
+description: Check out and learn here all about style and appearance in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,44 +9,315 @@ documentation: ug
 
 # Style and Appearance in Blazor Gantt Chart Component
 
-To customize the appearance of the Gantt Chart, override its default CSS styles. A list of CSS classes is available for targeting specific sections. You can also create a custom theme for all JavaScript controls using the [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio).
+Customize the appearance of the Blazor Gantt Chart by overriding default CSS styles. The Gantt Chart provides a comprehensive set of CSS classes for targeting specific sections, allowing a tailored design that matches application branding. Theme Studio can create custom themes for all JavaScript controls.
 
-|Section | CSS Class | Purpose of Class |
-|-----|-----|-----|
-|**Root**|e-gantt|This class is in the root element (div) of the gantt chart control. |
-|**Header**|e-gridheader|This class is added in the root element of header element. In this class, You can override thin line between header and content of the gantt chart. |
-| | e-table | This class is added at 'table' of the gantt chart header. This CSS class makes table width as 100 %. |
-| |e-columnheader|This class is added at 'tr' of the gantt chart header. |
-|**Grid Content**|e-gridcontent|This class is added at root of body content. This is to override background color of the body.
-| |e-table|This class is added to table of content. This CSS class makes table width as 100 %.
-| |e-row|This class is added to rows of gantt chart.
-| |e-altrow|This class is added to alternate rows of gantt chart. This is to override alternate row color of the gantt chart.
-| |e-rowcell|This class is added to all cells in the gantt chart. This is to override cells appearance and styling.
-|**Chart Content**|e-gantt-chart|This class is added to the chart side of the gantt chart.
-| |e-chart-row|This class is added to rows of gantt chart.
-|**Timeline**|e-timeline-header-container|This class is added to timeline of the gantt chart.
-| |e-header-cell-label|This class is added to the header cell of the timeline.
-| |e-weekend-header-cell|This class is added to the weekend cells.
-|**Taskbar**|e-taskbar-main-container|This class is added to taskbar of the gantt chart.
-| |e-gantt-parent-taskbar|This class is added to the parent task bar of the gantt chart.
-| |e-gantt-milestone|This class is added to the milestone tasks of the gantt chart.
-| |e-gantt-unscheduled-taskbar|This class is added to the unscheduled tasks.
-| |e-gantt-manualparenttaskbar|This class is added to the manual scheduled parent taskbar.
-| |e-gantt-child-manualtaskbar|This class is added to the manual scheduled child taskbar.
-| |e-gantt-unscheduled-manualtask|This class is added to the manual unscheduled tasks.
-|**Splitter**|e-split-bar|This class is added to the gantt chart splitter.
-| |e-resize-handler|This class is added to the resize handler of the gantt chart splitter.
-| |e-arrow-left|This class is added to the left arrow of the resize handler.
-| |e-arrow-right|This class is added to the right arrow of the resize handler.
-|**Connector Lines**|e-connector-line|This class is added to the connector lines.
-| |e-connector-line-arrow|This class is added to the arrow of the connector line.
-|**Labels**|e-task-label|This class is added to the task labels.
-| |e-right-label-container|This class is added to the right label.
-| |e-left-label-container|This class is added to the left label.
-|**Event Markers**|e-event-markers|This class is added to the event markers.
-|**Baseline**|e-baseline-bar|This class is added to the baseline.
-| |e-baseline-gantt-milestone-container|This class is added to the baseline of milestone tasks.
-|**Tooltip**|e-gantt-tooltip|This class is added to the tooltip.
+## Customizing Gantt Chart root element
+
+The `.e-gantt` class is the root container for the entire Blazor Gantt Chart. Customize this element to control global appearance including font family, background color, and overall spacing:
+
+```css
+.e-gantt *:not(.e-icons):not(.e-check):not(.e-frame) {
+    font-family: cursive !important;
+}
+```
+
+Properties such as `font-family`, `background-color`, and spacing-related styles can be adjusted to align with the Gantt design.
+
+![Customizing root element](./images/blazor-gantt-root-element.png)
+
+This customization applies a cursive font to the Gantt Chart content. Additional styling can be applied to rows, alternate rows, selected rows, and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
+
+## Styling the grid section
+
+### Customizing grid headers in Gantt Chart
+
+The grid header in the Blazor Gantt Chart contains column headers and table structures. Customize the header appearance and styling using the following CSS classes:
+
+```css
+.e-gridheader {
+   color: red !important;
+}
+.e-headercelldiv {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: cursive !important;
+}
+.e-headercell {
+    background: #add8e6 !important;
+}
+.e-columnheader{
+    color: red !important;
+}
+```
+
+Properties such as `background-color`, `border`, `font-weight`, and `padding` can be adjusted to align with the Gantt design.
+
+![Customizing header](./images/blazor-gantt-header.png)
+
+### Customizing grid content and rows
+
+Style the grid content area that displays task data in a tabular format. Use these CSS classes to modify rows, cells, and alternate row appearance:
+
+```css
+.e-gridcontent {
+    background-color: #f5f5f5;
+}
+.e-table {
+    border: 1px solid #ccc;
+}
+.e-row {
+    background-color: #ffffff;
+    color: #333;
+}
+.e-altrow {
+    background-color: #e8f4fd;
+}
+.e-rowcell {
+    border-color: #ddd;
+    padding: 8px;
+}
+```
+
+Properties such as `background-color`, `border`, `font-weight`, and `padding` can be adjusted to align with the Gantt design.
+
+![Customizing grid content](./images/blazor-gantt-grid-content.png)
+
+## Styling the chart section
+
+### Customizing chart content and background
+
+The chart content displays taskbars and the timeline visualization. Apply CSS to modify the chart area appearance and styling:
+
+```css
+.e-gantt-chart {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+}
+.e-chart-row {
+    background-color: #ffffff;
+}
+.e-chart-row:hover {
+    background-color: #fff3cd;
+}
+```
+
+Properties such as `background-color`, `border`, and `height` can be adjusted to align with the Gantt design.
+
+![Customizing chart content](./images/blazor-gantt-chart-content.png)
+
+### Customizing timeline headers and date display
+
+The timeline displays date information and task scheduling. Style the timeline header and date cells using these CSS classes:
+
+```css
+.e-timeline-header-container {
+    background: #add8e6 !important;
+}
+
+.e-header-cell-label {
+    color: #1e74ca !important;
+    font-weight: bold;
+}
+.e-weekend-header-cell{
+    background: pink !important;
+}
+```
+
+Properties such as `background-color`, `border`, `font-weight`, and `padding` can be adjusted to align with the Gantt design.
+
+![Customizing timeline](./images/blazor-gantt-timeline.png)
+
+### Customizing taskbars and progress indicators
+
+The taskbar represents tasks visually on the timeline. Customize parent taskbars, child taskbars, milestones, and unscheduled tasks using these CSS classes:
+
+```css
+.e-taskbar-main-container {
+    border: 1px solid #ddd;
+}
+
+.e-gantt-parent-taskbar-inner-div {
+    background-color: #7ab748 !important;
+}
+
+.e-gantt-parent-progressbar-inner-div {
+    background-color: #4b732a !important;
+}
+
+.e-gantt-child-taskbar-inner-div {
+    background-color: #6d619b !important;
+}
+
+.e-gantt-child-progressbar-inner-div {
+    background-color: #4e466e !important;
+}
+
+.e-gantt-milestone {
+    background-color: #ad7a66 !important;
+}
+
+.e-gantt-unscheduled-taskbar {
+    background-color: #ff6b6b !important;
+    opacity: 0.7;
+}
+
+.e-gantt-manualparenttaskbar {
+    border: 2px dashed #7ab748 !important;
+}
+
+.e-gantt-child-manualtaskbar {
+    border: 2px dashed #6d619b !important;
+}
+
+.e-gantt-unscheduled-manualtask {
+    background-color: #ff6b6b !important;
+    border: 2px dashed #ff6b6b !important;
+    opacity: 0.7;
+}
+```
+
+Properties such as `background-color`, `border`, `height`, and `border-radius` can be adjusted to align with the Gantt design.
+
+![Customizing taskbar](./images/blazor-gantt-taskbar.png)
+
+### Customizing baseline bars and milestones
+
+The baseline in the Blazor Gantt Chart represents planned task schedules for comparison with actual progress. Customize baseline bars and milestones using these CSS classes:
+
+```css
+.e-baseline-bar {
+    background-color: #fdb9c9 !important;
+}
+
+.e-baseline-gantt-milestone-container {
+    background-color: #fdb9c9 !important;
+}
+```
+
+Properties such as `background-color` and `height` can be adjusted to align with the Gantt design.
+
+![Customizing baseline](./images/blazor-gantt-baseline.png)
+
+### Customizing connector lines for task dependencies
+
+The connector lines in the Blazor Gantt Chart show dependencies between tasks. Apply CSS to modify the connector line appearance and styling:
+
+```css
+.e-connector-line {
+    stroke: #ab6060fc !important;
+    stroke-width: 2px;
+}   
+.e-connector-line-arrow {
+    fill: #ab6060fc !important;
+}
+```
+Properties such as `stroke`, `stroke-width`, and `fill` can be adjusted to align with the Gantt design.
+
+![Customizing connector lines](./images/blazor-gantt-connector-lines.png)
+
+### Customizing splitter and resize handlers
+
+The splitter divides the grid and chart sections, while resize handlers allow users to adjust the splitter position. Style these elements using the following CSS classes:
+
+```css
+.e-gantt .e-split-bar {
+    background-color: #add8e6 !important;
+    border: 1px solid #87ceeb;
+}
+.e-gantt .e-resize-handler {
+    background-color: red !important;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+}
+.e-gantt .e-arrow-left, .e-gantt .e-arrow-right {
+    color: green !important;
+    font-size: 12px;
+}
+.e-gantt .e-resize-handler:hover {
+    background-color: #f0f0f0 !important;
+}
+```
+
+Properties such as `background-color`, `border`, `width`, `height`, and `border-radius` can be adjusted to align with the Gantt design.
+
+![Customizing splitter](./images/blazor-gantt-splitter.png)
+
+This customization applies a light blue background to the split bar and styles the resize handler with a circular appearance. Additional styling can be applied to arrow icons and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
+
+### Customizing task labels and text display
+
+The labels in the Blazor Gantt Chart display task information on the taskbars. Apply CSS to modify the label appearance and styling:
+
+```css
+.e-label {
+    color: #1e74ca !important;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.e-right-label-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.e-left-label-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+```
+
+Properties such as `color`, `font-weight`, `font-size`, `background-color`, and `padding` can be adjusted to align with the Gantt design.
+
+![Customizing labels](./images/blazor-gantt-labels.png)
+
+### Customizing event markers and timeline indicators
+
+The event markers in the Blazor Gantt Chart highlight important dates or milestones on the timeline. Apply CSS to modify the event marker appearance and styling:
+
+```css
+.e-event-markers {
+    border-left-color: #05088f !important;
+}
+
+.e-event-markers .e-span-label {
+    background-color: #f3e5f5 !important;
+    color: #6a1b9a !important;
+}
+```
+
+Properties such as `border-left-color`, `background-color`, `color`, and `font-weight` can be adjusted to align with the Gantt design.
+
+![Customizing event markers](./images/blazor-gantt-event-markers.png)
+
+### Customizing tooltip content and appearance
+
+The tooltip in the Blazor Gantt Chart displays detailed information when hovering over tasks or elements. Apply CSS to modify the tooltip appearance and styling. Note: Use `.e-tooltip-wrap` for most tooltip styling and `.e-gantt-tooltip` for additional customization:
+
+```css
+.e-tooltip-wrap {
+    background: #a9e0f4 !important;
+}
+
+.e-gantt-tooltip {
+    background-color: #360591 !important;
+    color: #333 !important;
+    border: 1px solid #87ceeb;
+    border-radius: 4px;
+    padding: 8px;
+}
+```
+
+Properties such as `background-color`, `color`, `border`, `border-radius`, and `padding` can be adjusted to align with the Gantt design.
+
+![Customizing tooltip](./images/blazor-gantt-tooltip.png)
+ 
+## Complete code example with CSS customization
+
+Below is a complete example demonstrating how to customize multiple aspects of the Gantt Chart using CSS classes:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -169,14 +440,16 @@ To customize the appearance of the Gantt Chart, override its default CSS styles.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLeNaVoAMMmqlIy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Grid lines
+![style and appearance](./images/style-and-appearance.png)
 
-In the Gantt Chart component, grid lines on the Tree Grid and chart sides can be shown or hidden using the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GridLines) property. The available options are:
+## Configuring grid lines in the Gantt Chart
 
- - **Horizontal**: Displays only horizontal lines.
- - **Vertical**: Displays only vertical lines.
- - **Both**: Displays both horizontal and vertical lines.
- - **None**: Hides all grid lines.
+Grid lines on the Tree Grid and chart sections can be shown or hidden using the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GridLines) property. This property controls the visibility of grid lines throughout the component. The available grid line options are:
+
+ - **Horizontal**: Displays only horizontal grid lines.
+ - **Vertical**: Displays only vertical grid lines.
+ - **Both**: Displays both horizontal and vertical grid lines.
+ - **None**: Hides all grid lines from the component.
 
 N> By default, the `GridLines` property is set to **Horizontal** type.
 
@@ -260,6 +533,10 @@ N> By default, the `GridLines` property is set to **Horizontal** type.
 
 ## See also
 
-* [Customizing the Blazor Gantt Chart’s Taskbar](https://www.syncfusion.com/blogs/post/customizing-the-blazor-gantt-charts-taskbar-an-overview.aspx)
+* [Customizing the Blazor Gantt Chart's Taskbar](https://www.syncfusion.com/blogs/post/customizing-the-blazor-gantt-charts-taskbar-an-overview.aspx)
+* [Blazor Gantt Chart Feature Tour](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)
+* [Blazor Gantt Chart Examples and Demos](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5)
+* [Blazor Gantt Chart API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html)
+* [Theme Studio for Gantt Chart Customization](https://blazor.syncfusion.com/documentation/appearance/theme-studio)
 
-N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the Gantt.
+Refer to the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for feature details. The [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) demonstrates how to render and configure the Gantt.
