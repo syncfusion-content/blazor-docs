@@ -209,7 +209,7 @@ In the above example, both **name** fields contain the value **Afghanistan**. Th
 
 ```
 
-![Blazor Maps with Data Binding](./images/populatedata/blazor-map-data-binding.png)
+![Blazor Maps with Data Binding](./images/populatedata/blazor-map-data-binding.webp)
 
 ## Fetching data from JSON file
 
@@ -293,7 +293,7 @@ Here, the `PopulationDensity.json` file contains the following data.
 
 ```
 
-![Blazor Maps with JSON Data Source using WASM App](./images/populatedata/blazor-map-data-binding.png)
+![Blazor Maps with JSON Data Source using WASM App](./images/populatedata/blazor-map-data-binding.webp)
 
 ### Fetching data from JSON file using  Blazor Server App
 
@@ -352,4 +352,4 @@ else
 
 ```
 
-![Blazor Maps with JSON Data Source using Blazor Server App](./images/populatedata/blazor-map-data-binding.png)
+![Blazor Maps with JSON Data Source using Blazor Server App](./images/populatedata/blazor-map-data-binding.webp)
