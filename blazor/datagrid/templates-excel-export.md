@@ -418,7 +418,7 @@ public class ProductInfo
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdXKMYVbPmnvEo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with group caption template by customizing the alignment](./images/group-caption-alignment.gif)
+![Exporting with group caption template by customizing the alignment](./images/group-caption-alignment.webp)
 
 ## Exporting with detail template
 
