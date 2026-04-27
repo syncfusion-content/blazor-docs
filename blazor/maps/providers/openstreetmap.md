@@ -27,7 +27,7 @@ Render OSM tiles by setting the [UrlTemplate](https://help.syncfusion.com/cr/bla
 
 ```
 
-![Blazor OpenStreetMap](../images/MapProviders/blazor-open-sreet-map.png)
+![Blazor OpenStreetMap](../images/MapProviders/blazor-open-sreet-map.webp)
 
 ## Enable zooming and panning
 
@@ -52,7 +52,7 @@ The OSM layer supports zooming and panning. Zooming provides a closer view of sp
 
 ```
 
-![Blazor OpenStreetMap with zooming](../images/MapProviders/blazor-open-street-map-zooming.png)
+![Blazor OpenStreetMap with zooming](../images/MapProviders/blazor-open-street-map-zooming.webp)
 
 ## Adding markers and navigation line
 
@@ -98,7 +98,7 @@ Markers can be added to OSM layers by providing latitude and longitude for each 
 
 ```
 
-![Blazor OpenStreetMap with Markers and Navigation Line](../images/MapProviders/blazor-open-street-map-marker-and-line.png)
+![Blazor OpenStreetMap with Markers and Navigation Line](../images/MapProviders/blazor-open-street-map-marker-and-line.webp)
 
 ## Adding sublayer
 
@@ -122,7 +122,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the OSM layer to empha
 
 ```
 
-![Blazor OpenStreetMap with SubLayer](../images/MapProviders/blazor-open-street-map-sublayer.png)
+![Blazor OpenStreetMap with SubLayer](../images/MapProviders/blazor-open-street-map-sublayer.webp)
 
 ## Enable legend
 
@@ -183,4 +183,4 @@ A legend can be added to tile maps by setting the [Visible](https://help.syncfus
 
 ```
 
-![Blazor OpenStreetMap with Legend](../images/MapProviders/blazor-open-street-map-legend.png)
+![Blazor OpenStreetMap with Legend](../images/MapProviders/blazor-open-street-map-legend.webp)
