@@ -87,7 +87,7 @@ The following code example explains how to add a phase to a swimlane.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseCreation.razor).
 
-![Phase](Swimlane-images/Swimlane_Phase.PNG).
+![Phase](Swimlane-images/Swimlane_Phase.webp).
 
 ## How to Dynamically Add and Remove Phase in Swimlane
 
@@ -263,7 +263,7 @@ The following code example shows how to define and customize a phase header.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseHeader.razor).
 
-![Phase Header](Swimlane-images/Swimlane_Phase_Header.PNG).
+![Phase Header](Swimlane-images/Swimlane_Phase_Header.webp).
 
 Phase header annotations also support templates. Define HTML content at the tag level and specify the use of a template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per phase, differentiate annotations by the ID property.
 
@@ -345,7 +345,7 @@ The following code example explains how to define a phase header annotation temp
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseHeaderTemplate.razor).
 
-![Phase Header](Swimlane-images/Swimlane_Phase_Header_Template.PNG).
+![Phase Header](Swimlane-images/Swimlane_Phase_Header_Template.webp).
 
 ## How to Set the Orientation of a Phase
 
@@ -413,7 +413,7 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseOrientation.razor).
 
-![Phase](Swimlane-images/PhaseOrientation.PNG).
+![Phase](Swimlane-images/PhaseOrientation.webp).
 
 ## How to Select and Resize Phase Header
 

@@ -109,7 +109,7 @@ The following code example illustrates how to create icons of various shapes on 
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ExpandAndCollapse/Icon.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLSMZtQVZKXIhdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLSMZtQVZKXIhdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse.webp)" %}
 
 The following code example illustrates how to create an icon of various shapes in a layout.
 ```csharp
@@ -249,7 +249,7 @@ The following code example illustrates how to create an icon of various shapes i
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ExpandAndCollapse/ExpandCollapsewithLayout.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrIMDZQhtJNQiMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrIMDZQhtJNQiMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.webp)" %}
 
 ## How to Customize Expand and Collapse Icon
 Diagram allows customization of the node’s expand and collapse icons. For available properties, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).
@@ -348,7 +348,7 @@ The following code explains how to initialize the icon with a path shape.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ExpandAndCollapse/IconWithPathShape.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBoiNXwVtpmyxMJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse-Shape.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBoiNXwVtpmyxMJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse-Shape.webp)" %}
 
 ### How to Customize Expand and Collapse Icon Appearance 
 
@@ -453,7 +453,7 @@ The following code explains how to change the appearance of the Icon using `Fill
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ExpandAndCollapse/Appearance.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLyWDDwhXSUaIpc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-DiagramIcon1.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLyWDDwhXSUaIpc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-DiagramIcon1.webp)" %}
 
 The following code explains how to change the icon appearance using the `CornerRadius` property.
 
@@ -550,7 +550,7 @@ The following code explains how to change the icon appearance using the `CornerR
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ExpandAndCollapse/CornerRadius.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhoMDNGVDxWXOkK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Shape-CornerRadius.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhoMDNGVDxWXOkK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Shape-CornerRadius.webp)" %}
 
 ### How to Position and Align Expand and Collapse Icon
 
@@ -567,15 +567,15 @@ The following table shows the relationship between the Icon position and Icon **
 
 | OffsetX,OffsetY values | Output |
 |---|---|
-| (0,0) | ![Blazor Diagram Icon in Left Top Offset Values](../images/blazor-diagram-DiagramIcon-in-lefttop-offset-values.png) |
-| (0,0.5) | ![Blazor Diagram Port in Left Center Offset Values](../images/blazor-diagram-DiagramIcon-in-leftcenter-offset-values.png) |
-| (0,1) | ![Blazor Diagram Port in Left Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-leftbottom-offset-values.png) |
-| (0.5,0) | ![Blazor Diagram Port in Center Top Offset Values](../images/blazor-diagram-DiagramIcon-in-centertop-offset-values.png) |
-| (0.5,0.5) | ![Blazor Diagram Port in Center Offset Values](../images/blazor-diagram-DiagramIcon-in-center-offset-values.png) |
-| (0.5,1) | ![Blazor Diagram Port in Center Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-centerbottom-offset-values.png) |
-| (1,0) | ![Blazor Diagram Port in Right Top Offset Values](../images/blazor-diagram-DiagramIcon-in-righttop-offset-values.png) |
-| (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-DiagramIcon-in-rightcenter-offset-values.png) |
-| (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-rightbottom-offset-values.png) |
+| (0,0) | ![Blazor Diagram Icon in Left Top Offset Values](../images/blazor-diagram-DiagramIcon-in-lefttop-offset-values.webp) |
+| (0,0.5) | ![Blazor Diagram Port in Left Center Offset Values](../images/blazor-diagram-DiagramIcon-in-leftcenter-offset-values.webp) |
+| (0,1) | ![Blazor Diagram Port in Left Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-leftbottom-offset-values.webp) |
+| (0.5,0) | ![Blazor Diagram Port in Center Top Offset Values](../images/blazor-diagram-DiagramIcon-in-centertop-offset-values.webp) |
+| (0.5,0.5) | ![Blazor Diagram Port in Center Offset Values](../images/blazor-diagram-DiagramIcon-in-center-offset-values.webp) |
+| (0.5,1) | ![Blazor Diagram Port in Center Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-centerbottom-offset-values.webp) |
+| (1,0) | ![Blazor Diagram Port in Right Top Offset Values](../images/blazor-diagram-DiagramIcon-in-righttop-offset-values.webp) |
+| (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-DiagramIcon-in-rightcenter-offset-values.webp) |
+| (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-rightbottom-offset-values.webp) |
 
 
 ### How to find node is in expanded or not 
@@ -796,7 +796,7 @@ To implement a custom template for expand and collapse icons, please refer to th
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXreMXDQLNQrOfwS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXreMXDQLNQrOfwS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.webp)" %}
 
 ### How to Set Padding for the Expand/Collapse Icon
 
