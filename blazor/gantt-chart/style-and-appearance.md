@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and Appearance in Blazor Gantt Chart Component
 
-Customize the appearance of the Blazor Gantt Chart by overriding default CSS styles. The Gantt Chart provides a comprehensive set of CSS classes for targeting specific sections, allowing a tailored design that matches application branding. Theme Studio can create custom themes for all JavaScript controls.
+Customize the appearance of the Blazor Gantt Chart by overriding default CSS styles. The Gantt Chart provides a comprehensive set of CSS classes for targeting specific sections, allowing a tailored design that matches application branding. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) can create custom themes for all JavaScript controls.
 
 ## Customizing Gantt Chart root element
 
