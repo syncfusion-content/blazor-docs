@@ -23,7 +23,7 @@ Use the following CSS to customize the [Accordion](https://help.syncfusion.com/c
 
 ```
 
-![Accordion border](./images/blazor-accordion-border-style.png)
+![Accordion border](./images/blazor-accordion-border-style.webp)
 
 ## Customizing the accordion items
 
@@ -38,7 +38,7 @@ Use the following CSS to customize the items of Accordion.
 
 ```
 
-![Accordion item style customization](./images/blazor-accordion-item-styles.png)
+![Accordion item style customization](./images/blazor-accordion-item-styles.webp)
 
 ## Customizing accordion item header content
 
@@ -53,7 +53,7 @@ Use the following CSS to customize the header content of Accordion control.
 
 ```
 
-![Accordion item header content style customization](./images/blazor-accordion-header-content-style.png)
+![Accordion item header content style customization](./images/blazor-accordion-header-content-style.webp)
 
 ## Customizing accordion expand and collapse icons
 
@@ -67,7 +67,7 @@ The following CSS can be viewed to customize the expand and collapse icons of th
 
 ```
 
-![Accordion toggle icon style customization](./images/blazor-accordion-expand-collapse-icon-style.png)
+![Accordion toggle icon style customization](./images/blazor-accordion-expand-collapse-icon-style.webp)
 
 ## Customizing the hover state of accordion
 
@@ -96,7 +96,7 @@ Use the following CSS to customize the selected accordion item and focus state.
 
 ```
 
-![Accordion selected item header customization](./images/blazor-accordion-selected-item-style.png)
+![Accordion selected item header customization](./images/blazor-accordion-selected-item-style.webp)
 
 Use the following CSS to customize the selected accordion item text.
 
@@ -110,7 +110,7 @@ Use the following CSS to customize the selected accordion item text.
 
 ```
 
-![Accordion selected item header text customization](./images/blazor-accordion-selected-item-text-style.png)
+![Accordion selected item header text customization](./images/blazor-accordion-selected-item-text-style.webp)
 
 ## Customize each accordion item header
 
@@ -144,4 +144,4 @@ You can customize each accordion item header by setting [AccordionItem.CssClass]
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqWBsAATytYBFq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqWBsAATytYBFq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.webp)" %}
