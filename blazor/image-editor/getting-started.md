@@ -148,6 +148,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Image Editor com
 {% tabs %}
 {% highlight razor tabtitle="~/Index.razor" %}
 
+@using Syncfusion.Blazor.ImageEditor
+
 <SfImageEditor Height="500"></SfImageEditor>
 
 {% endhighlight %}

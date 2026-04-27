@@ -161,7 +161,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
@@ -211,7 +211,7 @@ Let’s check the properties used here:
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
@@ -265,7 +265,7 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true">
     <TreeGridPageSettings PageSizeMode="PageSizeMode.Root" PageSize="2"></TreeGridPageSettings>
@@ -316,7 +316,7 @@ The sorting feature enables to order the records. It can be enabled by setting t
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true" AllowSorting="true">
     <TreeGridPageSettings PageSizeMode="PageSizeMode.Root" PageSize="2"></TreeGridPageSettings>
@@ -388,8 +388,8 @@ The following code example shows how to use the [OnActionFailure](https://help.s
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.TreeGrid;
-@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Data
 
 <span class="error">@ErrorDetails</span>
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">

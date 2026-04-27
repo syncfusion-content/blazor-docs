@@ -194,6 +194,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Skeleton compone
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Notifications
+
 <SfSkeleton Height="15px" Width="200px"></SfSkeleton><br/>
 <SfSkeleton Height="15px" Width="100px"></SfSkeleton>
 
