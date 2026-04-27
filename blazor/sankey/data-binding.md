@@ -90,7 +90,7 @@ Below is an example of binding data to the Sankey Diagram in a Blazor applicatio
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Data](images/data-binding/sankey-data-binding.png)
+![Blazor Sankey Data](images/data-binding/sankey-data-binding.webp)
 
 ### Key Points
 
