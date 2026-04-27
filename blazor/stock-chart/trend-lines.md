@@ -67,7 +67,7 @@ A linear trendline is a best‑fit straight line used with simpler data sets. To
 
 ```
 
-![Blazor Stock Chart with Linear Trendline](images/trendlines/blazor-stock-chart-linear-trendline.png)
+![Blazor Stock Chart with Linear Trendline](images/trendlines/blazor-stock-chart-linear-trendline.webp)
 
 ## Logarithmic
 
@@ -127,7 +127,7 @@ To render a logarithmic trendline, set the trendline [Type](https://help.syncfus
 
 ```
 
-![Blazor Stock Chart with Logarithmic Trendline](images/trendlines/blazor-stock-chart-logarithmic-trendline.png)
+![Blazor Stock Chart with Logarithmic Trendline](images/trendlines/blazor-stock-chart-logarithmic-trendline.webp)
 
 ## Exponential
 
@@ -187,7 +187,7 @@ To render an exponential trendline, set the trendline [Type](https://help.syncfu
 
 ```
 
-![Blazor Stock Chart with Exponential Trendline](images/trendlines/blazor-stock-chart-exponential-trendline.png)
+![Blazor Stock Chart with Exponential Trendline](images/trendlines/blazor-stock-chart-exponential-trendline.webp)
 
 ## Polynomial
 
@@ -246,7 +246,7 @@ A polynomial trendline is a curved line used when data fluctuates. To render a p
 
 ```
 
-![Blazor Stock Chart with Polynomial Trendline](images/trendlines/blazor-stock-chart-polynomial-trendline.png)
+![Blazor Stock Chart with Polynomial Trendline](images/trendlines/blazor-stock-chart-polynomial-trendline.webp)
 
 ## Power
 
@@ -310,7 +310,7 @@ The `Period` property defines the period used to calculate the moving average.
 
 ```
 
-![Blazor Stock Chart with Moving Average Trendline](images/common/blazor-stock-chart-moving-average-trendlines.png)
+![Blazor Stock Chart with Moving Average Trendline](images/common/blazor-stock-chart-moving-average-trendlines.webp)
 
 ## Customization of Trendline
 
@@ -358,4 +358,4 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ```
 
-![Blazor Stock Chart with Custom Trendline](images/common/blazor-stock-chart-custom-trendline.png)
+![Blazor Stock Chart with Custom Trendline](images/common/blazor-stock-chart-custom-trendline.webp)
