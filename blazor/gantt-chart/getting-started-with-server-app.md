@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Gantt Chart in Blazor server app
 
-This section briefly explains about how to include [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component in your Blazor server app using Visual Studio and Visual Studio code.
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component in your Blazor server app using Visual Studio and Visual Studio code.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistants/overview)
 
@@ -161,7 +161,9 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
@@ -219,7 +221,9 @@ Additionally, task-related fields from the data source are mapped to the Gantt C
 This following sample shows self-referential data binding in the Gantt Chart by mapping the data source fields to the `Id` and `ParentID` properties. For more detailed information, refer to the [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#self-referential--flat-data-binding).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
@@ -278,8 +282,9 @@ The Gantt Chart has an option to define columns using the [GanttColumns](https:/
 * [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width): To specify the width of the column, which can be defined in **pixels** or as a **percentage** of the total column width.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -342,7 +347,9 @@ For further details regarding columns, refer [here](https://blazor.syncfusion.co
 The editing feature enables you to edit the tasks in the Gantt Chart component. To activate this functionality, set both [EditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) and [EditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing)  properties to **true**.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
@@ -399,7 +406,9 @@ You can find the full information regarding Editing from [here](https://blazor.s
 The filtering feature enables you to view the reduced amount of records based on filter criteria. The Gantt Chart supports column-wise menu filtering. To enable this feature, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) property to **true**. The filtering behavior can be customized using the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterSettings) property.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
@@ -453,7 +462,9 @@ You can find the full information regarding Filtering from [here](https://blazor
 The sorting feature enables you to order the records. To enable sorting in the Gantt Chart, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to **true**. The sorting behavior can be customized using the [SortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SortSettings) property to define the sorting configuration.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
@@ -514,7 +525,9 @@ The Gantt Chart component supports task dependencies to define the logical seque
 These relationships can be configured using the [Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property in the task data.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID" Dependency="Predecessor">
@@ -565,7 +578,7 @@ Exceptions triggered during Gantt operations can be handled effectively without 
 The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

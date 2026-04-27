@@ -26,7 +26,7 @@ Right-to-left (RTL) rendering is supported and can be enabled by setting the [En
 
 ```
 
-![Right to Left in Blazor Sparkline Chart](images/Appearance/blazor-sparkline-right-to-left.png)
+![Right to Left in Blazor Sparkline Chart](images/Appearance/blazor-sparkline-right-to-left.webp)
 
 ## Border
 
@@ -44,7 +44,7 @@ The border can be enabled and customized by specifying the [Color](https://help.
 
 ```
 
-![Blazor Sparkline Chart with Border](images/Appearance/blazor-sparkline-with-border.png)
+![Blazor Sparkline Chart with Border](images/Appearance/blazor-sparkline-with-border.webp)
 
 ## Padding
 
@@ -64,7 +64,7 @@ Padding between the container and the component is supported using [SparklinePad
 
 ```
 
-![Blazor Sparkline Chart with Padding](images/Appearance/blazor-sparkline-with-padding.png)
+![Blazor Sparkline Chart with Padding](images/Appearance/blazor-sparkline-with-padding.webp)
 
 ## Background
 
@@ -85,4 +85,4 @@ The background color of the Sparkline area can be changed using the [Background]
 
 ```
 
-![Blazor Sparkline Chart with Custom Background](images/Appearance/blazor-sparkline-custom-background.png)
+![Blazor Sparkline Chart with Custom Background](images/Appearance/blazor-sparkline-custom-background.webp)

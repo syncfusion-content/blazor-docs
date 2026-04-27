@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor AutoComplete in Blazor Server App
 
-This section briefly explains about how to include [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,9 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />
@@ -196,7 +198,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />
@@ -243,7 +247,7 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 By default, the suggestion list width automatically matches the AutoComplete input element, and the suggestion list height is `300px`. Customize the popup size using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" DataSource="@LocalData" PopupHeight="300px" PopupWidth="300px">
     <AutoCompleteFieldSettings Value="Name" />

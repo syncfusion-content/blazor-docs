@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Toggle Switch Button in Blazor Web App
 
-This section briefly explains about how to include [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Buttons
 
 <label for="checked" style="padding: 10px 10px 10px 0">USB Tethering</label>
 
@@ -187,7 +189,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OnLabel) and [OffLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OffLabel) properties of Toggle Switch Button component. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Buttons
 
 <SfSwitch @bind-Checked="isChecked" OnLabel="On" OffLabel="Off"></SfSwitch>
 

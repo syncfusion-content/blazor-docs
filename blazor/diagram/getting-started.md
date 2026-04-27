@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Diagram Component in the Blazor Server App.
 
-This section explains the step-by-step process of integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component into your Blazor Server app using Visual Studio, Visual Studio Code and .NET CLI. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
+This section explains the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component into your Blazor Server app using Visual Studio, Visual Studio Code and .NET CLI. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -161,7 +161,9 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="100%" Height="600px"/>
 
@@ -185,7 +187,9 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 Create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) with a specific position, size, label, and shape. Connect two or more nodes using a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes" />
 
@@ -320,7 +324,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 A built-in automatic layout algorithm is designed specifically for organizational charts, automatically arranging parent and child node positions for optimal structure and clarity.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Diagram

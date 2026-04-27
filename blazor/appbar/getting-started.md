@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor AppBar Component
 
-This section briefly explains about how to include [Blazor AppBar](https://www.syncfusion.com/blazor-components/blazor-appbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AppBar](https://www.syncfusion.com/blazor-components/blazor-appbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -81,7 +81,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
 Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
@@ -98,7 +98,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add Import Namespaces
+## Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
@@ -111,9 +111,9 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of the Blazor WebAssembly App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -141,12 +141,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Blazor AppBar component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AppBar component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AppBar component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons

@@ -377,7 +377,7 @@ N> Formatting can only be applied to numeric fields in the value section of the 
 
 To see the Pivot Table in action, run your Blazor MAUI app on a Windows machine. The app will display the Pivot Table as shown below.
 
-![Blazor Pivot Table Component](images/blazor-pivottable-maui-app.png)
+![Blazor Pivot Table Component](images/blazor-pivottable-maui-app.webp)
 
 ### How to Run the Sample on Android
 
@@ -389,7 +389,7 @@ To run the Blazor Pivot Table in your Blazor MAUI app on an Android emulator, fo
 
 N> If you face any issues with the Android emulator, check the [Troubleshooting Android Emulator guide](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for solutions.
 
-![Blazor Pivot Table with Formatting](images/blazor-pivottable-formatting.png)
+![Blazor Pivot Table with Formatting](images/blazor-pivottable-formatting.webp)
 
 ## Enable Field List
 
@@ -434,7 +434,7 @@ To enable the field list, set the [ShowFieldList](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)
+![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.webp)
 
 ## Enable Grouping Bar
 
@@ -479,7 +479,7 @@ Users can also use the grouping bar to sort, filter, or remove fields quickly wi
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
+![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.webp)
 
 ## Exploring Filter Axis
 
@@ -526,7 +526,7 @@ The following example shows how to add a field to the filter axis in a Blazor Pi
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)
+![Blazor PivotTable with Formatting](images/blazor-pivottable-format.webp)
 
 ## Calculated Field
 
@@ -583,7 +583,7 @@ Below is a sample code that shows how to set up calculated fields both through c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Calculation Button](images/blazor-pivottable-calculate-button.png)
+![Blazor PivotTable with Calculation Button](images/blazor-pivottable-calculate-button.webp)
 
 ## Handling exceptions
 

@@ -60,4 +60,4 @@ The following code example shows the [EnableSelector](https://help.syncfusion.co
 
 ```
 
-![Range Selection in Blazor Stock Chart](images/common/blazor-stock-chart-range-selection.png)
+![Range Selection in Blazor Stock Chart](images/common/blazor-stock-chart-range-selection.webp)

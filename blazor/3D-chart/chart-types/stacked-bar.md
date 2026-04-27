@@ -50,7 +50,7 @@ To render a stacked bar series, use series `Type` as `StackingBar`.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrfNHMgVDXktKyD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Bar 3D Chart](../images/chart-types-images/blazor-stacked-Bar-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrfNHMgVDXktKyD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Bar 3D Chart](../images/chart-types-images/blazor-stacked-Bar-chart.webp)" %}
 
 ## Stacking group
 
@@ -93,7 +93,7 @@ To group the stacked bar, the `StackingGroup` property can be used. The columns 
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVpZnsgsuHovTcn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Stacked Bar 3D Chart](../images/chart-types-images/blazor-stacked-bar-chart-with-grouping.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVpZnsgsuHovTcn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Stacked Bar 3D Chart](../images/chart-types-images/blazor-stacked-bar-chart-with-grouping.webp)" %}
 
 ## Cylindrical column chart
 
@@ -136,7 +136,7 @@ To render a cylindrical stacked bar chart, set the `ColumnFacet` property to `Cy
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLzjRCgiamCLrWZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Cylindrical Bar 3D Chart](../images/chart-types-images/blazor-cylindricaal-stacked-bar-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLzjRCgiamCLrWZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Cylindrical Bar 3D Chart](../images/chart-types-images/blazor-cylindricaal-stacked-bar-chart.webp)" %}
 
 ## Series customization
 
@@ -182,4 +182,4 @@ The following properties can be used to customize the `Stacked Bar` series.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVpDnMqCYcOWHOq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Bar 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-bar-chart-custom-series.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVpDnMqCYcOWHOq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Bar 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-bar-chart-custom-series.webp)" %}

@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Sankey Diagram in Blazor Web App
 
-This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components) diagram in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey](https://www.syncfusion.com/blazor-components/blazor-sankey) diagram in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -164,7 +164,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Nodes=@Nodes Links=@Links>
 
@@ -217,14 +219,16 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram in the default web browser.
 
-![Blazor Sankey Diagram](images/getting-started/blazor-sankey.png)
+![Blazor Sankey Diagram](images/getting-started/blazor-sankey.webp)
 
 ## Populate Blazor Sankey Diagram with data
 
 To bind data for the sankey diagram, you can assign an IEnumerable object to the  `Nodes` and `Links` properties. These properties define the structure of the nodes and the relationships between them.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Nodes=@Nodes Links=@Links>
 
@@ -280,7 +284,9 @@ To bind data for the sankey diagram, you can assign an IEnumerable object to the
 Using the `Title` property, you can add a title to the sankey diagram to provide the user with quick information about the data plotted in the sankey diagram.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
 </SfSankey>
@@ -288,14 +294,16 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.png)
+![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.webp)
 
 ## Add node labels
 
 You can add data labels to improve the readability of the sankey diagram. This can be achieved by setting the `Visible` property to **true** in the `SankeyLabelSettings`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
     <SankeyLabelSettings Visible="true"></SankeyLabelSettings>
@@ -304,14 +312,16 @@ You can add data labels to improve the readability of the sankey diagram. This c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.png)
+![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.webp)
 
 ## Enable tooltip
 
 The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSettings` to **true**. However, the tooltip is enabled by default in the sankey diagram.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
    <SankeyTooltipSettings Enable="true"></SankeyTooltipSettings>
@@ -320,14 +330,16 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.png)
+![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.webp)
 
 ## Enable legend
 
 You can use legend for the sankey diagram by setting the `Visible` property to **true** in `SankeyLegendSettings`. However, the legend is enabled by default in the sankey diagram.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
     <SankeyLegendSettings Visible="true"></SankeyLegendSettings>
@@ -336,7 +348,7 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.png)
+![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.webp)
 
 ## See also
 

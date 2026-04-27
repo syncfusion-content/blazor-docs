@@ -106,7 +106,7 @@ Here is an example of configuring links in the Sankey Diagram:
 
 In this example, multiple links connect nodes across sources, energy carriers, and usage sectors.
 
-![Blazor Sankey Link Customization](images/links/sankey-basic-link.png)
+![Blazor Sankey Link Customization](images/links/sankey-basic-link.webp)
 
 ## Customizing Link Appearance
 

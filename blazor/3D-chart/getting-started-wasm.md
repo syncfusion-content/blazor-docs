@@ -83,11 +83,11 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart3D NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
 Install [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package in the project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+Alternatively, run the following command in the Package Manager Console to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -99,7 +99,7 @@ Install-Package Syncfusion.Blazor.Chart3D -Version {{ site.releaseversion }}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add Import Namespaces
+## Add import namespaces
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
 
@@ -112,12 +112,12 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of the Blazor WebAssembly App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" hl_lines="2 4" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -140,12 +140,12 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Blazor 3D Chart Component
+## Add Blazor 3D Chart component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 <SfChart3D>
 
@@ -161,7 +161,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart compone
 To bind data for the 3D chart component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 public class SalesInfo
 {
@@ -186,7 +186,9 @@ public List<SalesInfo> Sales = new List<SalesInfo>
 Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` properties, then set the data to the `DataSource` property, and the `chart type` to **Column** because we will be viewing the data in a column chart.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
@@ -225,7 +227,7 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 Using the `Title` property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 <SfChart3D Title="Sales Analysis">
     <Chart3DPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
@@ -246,7 +248,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 You can use legend for the 3D Chart by setting the `Visible` property to **true** in `Chart3DLegendSettings`. The legend name can be changed by using the `Name` property in the series.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 <SfChart3D Title="Sales Analysis">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
@@ -267,7 +269,7 @@ You can use legend for the 3D Chart by setting the `Visible` property to **true*
 You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the `Visible` property to **true** in the `Chart3DDataLabel`. Now, the data labels are arranged smartly based on series.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 <SfChart3D Title="Sales Analysis">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
@@ -288,7 +290,7 @@ You can add data labels to improve the readability of the 3D Chart. This can be 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the `Enable` property in `Chart3DTooltipSettings` to **true**.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 <SfChart3D Title="Sales Analysis">
     <Chart3DPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>

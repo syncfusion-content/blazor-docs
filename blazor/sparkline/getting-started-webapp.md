@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Sparkline in Blazor Web App
 
-This section briefly explains about how to include [Blazor Sparkline](https://www.syncfusion.com/blazor-components/blazor-sparkline) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sparkline](https://www.syncfusion.com/blazor-components/blazor-sparkline) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -162,7 +162,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSparkline>
 
@@ -176,7 +176,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 To bind data for the Sparkline component, assign a `IEnumerable` object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @code {
     public class WeatherReport
@@ -206,7 +206,7 @@ To bind data for the Sparkline component, assign a `IEnumerable` object to the [
 Now map the `Month` and the `Celsius` fields from the datasource to [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_YName) properties for x-axis and y-axis in the Sparkline and then set the `ClimateData` to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property. Because the `Month` field is a value-based category, the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property is used to specify it.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSparkline XName="Month"
              YName="Celsius"
@@ -222,7 +222,7 @@ Now map the `Month` and the `Celsius` fields from the datasource to [XName](http
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sparkline component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJXWqjfqKBvkdq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Chart](./images/blazor-sparkline.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJXWqjfqKBvkdq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Chart](./images/blazor-sparkline.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sparkline).
 
@@ -231,7 +231,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 Change the Sparkline type using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property set to **Line**, **Column**, **WinLoss**, **Pie** or **Area**. Here, the Sparkline type is set to **Area**.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSparkline XName="Month"
              YName="Celsius"
@@ -246,7 +246,7 @@ Change the Sparkline type using the [Type](https://help.syncfusion.com/cr/blazor
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLTtsqNTqqdYsqg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Area Chart](./images/blazor-area-sparkline.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLTtsqNTqqdYsqg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Area Chart](./images/blazor-area-sparkline.webp)" %}
 
 N> Refer to [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 
@@ -264,7 +264,7 @@ Available types are:
 * Negative
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSparkline DataSource="ClimateData"
               TValue="WeatherReport"
@@ -282,14 +282,14 @@ Available types are:
 
 N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJXsqtfqzDdTTI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Chart with Data Label](./images/blazor-sparkline-data-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJXsqtfqzDdTTI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Chart with Data Label](./images/blazor-sparkline-data-label.webp)" %}
 
 ## Enable tooltip
 
 When space constraints prevent from displaying information using Data Labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Visible) property to **true** in the [SparklineTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSparkline DataSource="ClimateData"
              TValue="WeatherReport"
@@ -308,7 +308,7 @@ When space constraints prevent from displaying information using Data Labels, th
 
 N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLfDsUNfgJpNFjr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Chart with Tooltip](./images/blazor-sparkline-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLfDsUNfgJpNFjr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Chart with Tooltip](./images/blazor-sparkline-tooltip.webp)" %}
 
 ## See also
 

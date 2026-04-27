@@ -161,7 +161,9 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" />
 
@@ -197,7 +199,9 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 To bind data for the Grid, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the **DataManager**. You can assign the data source through the `OnInitialized` life cycle of the page.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" />
 
@@ -240,7 +244,7 @@ Let’s check the properties used here:
 * Also, you have used another useful property, [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). Using this, you can format number and date values to standard or custom formats.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
@@ -259,7 +263,7 @@ Let’s check the properties used here:
 The paging feature enables users to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -279,7 +283,7 @@ The paging feature enables users to view the Syncfusion<sup style="font-size:70%
 The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property as true. Sorting feature can be customized using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -299,7 +303,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property as true. Filtering feature can be customized using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -319,7 +323,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 The grouping feature enables you to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as true. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -350,8 +354,9 @@ N> Recommend you to bind `OnActionFailure` event during your application develop
 The following sample code demonstrates notifying user when server-side exception has occurred during data operation:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 
 <span class="error">@ErrorDetails</span>

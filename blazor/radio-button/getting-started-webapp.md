@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor RadioButton Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor RadioButton](https://www.syncfusion.com/blazor-components/blazor-radio-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RadioButton](https://www.syncfusion.com/blazor-components/blazor-radio-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Buttons
 
 <SfRadioButton Label="Option 1" Name="options" Value="card" @bind-Checked="stringChecked"></SfRadioButton>
 <SfRadioButton Label="Option 2" Name="options" Value="cash" @bind-Checked="stringChecked"></SfRadioButton>
@@ -183,7 +185,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RadioButton)
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

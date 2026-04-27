@@ -55,9 +55,9 @@ N> The field list icon will be displayed at the top right corner of the pivot ta
 }
 ```
 
-![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)
+![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.webp)
 
-![Blazor PivotTable with FieldList Dialog](images/blazor-pivottabel-fieldlist-dialog.png)
+![Blazor PivotTable with FieldList Dialog](images/blazor-pivottabel-fieldlist-dialog.webp)
 
 ## Stand-alone Field List (Fixed)
 
@@ -119,7 +119,7 @@ N> To ensure the field list works seamlessly with the Pivot Table, use the [Upda
 }
 ```
 
-![Blazor PivotTable with Static FieldList](images/blazor-pivottable-static-field-list.png)
+![Blazor PivotTable with Static FieldList](images/blazor-pivottable-static-field-list.webp)
 
 ## Search desired field
 
@@ -168,7 +168,7 @@ N> By default, the field search option is disabled in the Field List UI. Further
 }
 ```
 
-![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.png)
+![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.webp)
 
 **Pivot Table's Built-in Popup Field List**
 
@@ -207,7 +207,7 @@ To enable the search box in the Pivot Table's built-in popup Field List UI, set 
 }
 ```
 
-![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.png)
+![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.webp)
 
 ## Option to sort fields
 
@@ -215,13 +215,13 @@ The field list provides a simple way to organize fields in different orders, mak
 
 N> By default, fields are displayed in the default order as they appear in the data source.
 
-![Field list with sorting options in Blazor Pivot Table](images/blazor-pivottable-fieldlist-default-sort.png)
+![Field list with sorting options in Blazor Pivot Table](images/blazor-pivottable-fieldlist-default-sort.webp)
 
 ## Add or remove fields
 
 The Field List allows users to quickly modify their data analysis by selecting or unselecting fields as needed. Using the checkbox beside each field, users can easily add fields to include them in the report or remove fields to exclude them from the current analysis at runtime.
 
-![Adding or Removing Fields in Blazor PivotTable](images/blazor-pivottable-add-remove-field.png)
+![Adding or Removing Fields in Blazor PivotTable](images/blazor-pivottable-add-remove-field.webp)
 
 ## Remove specific field(s) from displaying
 
@@ -260,57 +260,57 @@ When you connect a data source to the Pivot Table, all available fields from the
 }
 ```
 
-![Hiding Specific Field List in Blazor PivotTable](images/blazor-pivottable-hide-field-list.png)
+![Hiding Specific Field List in Blazor PivotTable](images/blazor-pivottable-hide-field-list.webp)
 
 ## Re-arranging fields
 
 To rearrange fields, users can drag a field from the Field List and drop it into the desired axis (column, row, value, or filter) using the drag-and-drop holder. This allows users to modify the report dynamically during runtime, adjusting the layout to suit their needs.
 
-![Rearranging Fields in Blazor PivotTable](images/blazor-pivottable-rearrange-fields.png)
+![Rearranging Fields in Blazor PivotTable](images/blazor-pivottable-rearrange-fields.webp)
 
 ## Filtering members
 
 Users can filter members in the row, column, and filter axes by selecting the filter icon next to each field. This opens a dialog where users can choose to include or exclude specific members from the Pivot Table. To learn more about filtering members, [refer to the filtering documentation](./filtering).
 
-![Filter Icon with Each Field in Blazor PivotTable](images/blazor-pivottable-field-list-with-filter-icon.png)
+![Filter Icon with Each Field in Blazor PivotTable](images/blazor-pivottable-field-list-with-filter-icon.webp)
 <br/>
-![Including or Excluding Member in Blazor PivotTable Filter Dialog](images/blazor-pivottable-include-exclude-item.png)
+![Including or Excluding Member in Blazor PivotTable Filter Dialog](images/blazor-pivottable-include-exclude-item.webp)
 <br/>
-![Displaying Filtered Members in Blazor PivotTable](images/blazor-pivottable-filtered-members-in-field-list.png)
+![Displaying Filtered Members in Blazor PivotTable](images/blazor-pivottable-filtered-members-in-field-list.webp)
 
 ## Sorting members
 
 The Pivot Table allows users to sort members in the row and column axes using a sort icon next to each field. By clicking this icon, users can arrange members in either ascending or descending order at runtime. This option helps users organize data in a way that suits their needs. For more details on sorting members, [refer here](./sorting).
 
-![Sorting Icon with Each Field in Blazor PivotTable](images/blazor-pivottable-field-list-with-sort-icon.png)
+![Sorting Icon with Each Field in Blazor PivotTable](images/blazor-pivottable-field-list-with-sort-icon.webp)
 <br/>
-![Displaying Blazor PivotTable Members in Descending Order](images/blazor-pivottable-field-list-in-descending-order.png)
+![Displaying Blazor PivotTable Members in Descending Order](images/blazor-pivottable-field-list-in-descending-order.webp)
 
 ## Calculated fields
 
 The calculated field option allows users to create a new field based on existing fields from the data source using basic arithmetic operations, such as addition, subtraction, multiplication, and division. To use this option in the Field List UI, set the [AllowCalculatedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowCalculatedField) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. When enabled, a button appears in the Field List UI. Clicking this button opens the calculated field dialog, where users can define a new calculated field. For more details on calculated fields, [refer to the calculated field documentation](./calculated-field).
 
-![Blazor PivotTable with Caluclated Field Button](images/blazor-pivottable-calculate-button.png)
+![Blazor PivotTable with Caluclated Field Button](images/blazor-pivottable-calculate-button.webp)
 <br/>
-![Creating Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculate-dialog.png)
+![Creating Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculate-dialog.webp)
 <br/>
-![Adding New Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculate-dialog.png)
+![Adding New Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculate-dialog.webp)
 
 ## Changing aggregation type of value fields at runtime
 
 Users can perform calculations on a group of values by selecting an aggregation type. Each value field in the Field List appears with a dropdown icon. Clicking this icon allows users to choose an aggregation type, such as sum, average, or count, at runtime. Once selected, the Pivot Table updates automatically to reflect the chosen aggregation type for the values. For more details on aggregation, [refer](./aggregation) here.
 
-![Displaying Aggregation Type Icon in Blazor PivotTable](images/blazor-pivottable-aggregation-type-icon.png)
+![Displaying Aggregation Type Icon in Blazor PivotTable](images/blazor-pivottable-aggregation-type-icon.webp)
 <br/>
-![Displaying Pre-defined Aggregation List in Blazor PivotTable](images/blazor-pivottable-pre-defined-aggregation.png)
+![Displaying Pre-defined Aggregation List in Blazor PivotTable](images/blazor-pivottable-pre-defined-aggregation.webp)
 <br/>
-![Displaying Average Aggregation Type in Blazor PivotGrid Field](images/blazor-pivotgrid-field-list-aggregation.png)
+![Displaying Average Aggregation Type in Blazor PivotGrid Field](images/blazor-pivotgrid-field-list-aggregation.webp)
 
 ## Defer layout update
 
 The defer layout update option allows users to update the Pivot Table only when needed, instead of after every change in the Field List. To enable this option, set the [AllowDeferLayoutUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowDeferLayoutUpdate) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. When enabled, a checkbox appears in the Field List, checked by default. Users can uncheck this checkbox to make changes without updating the Pivot Table immediately, and then apply all changes at once. For more details on defer layout update, [refer](./defer-layout-update) here.
 
-![Blazor PivotTable with Defer Layout Update](images/blazor-pivottable-defer-layout-update.png)
+![Blazor PivotTable with Defer Layout Update](images/blazor-pivottable-defer-layout-update.webp)
 
 ## Show field list using toolbar
 
@@ -352,7 +352,7 @@ The Field List can be displayed in the toolbar by enabling specific options in t
 }
 ```
 
-![Displaying FieldList using Toolbar in Blazor PivotGrid](images/blazor-pivottable-show-field-list-using-toolbar.png)
+![Displaying FieldList using Toolbar in Blazor PivotGrid](images/blazor-pivottable-show-field-list-using-toolbar.webp)
 
 ## Events
 
@@ -534,7 +534,7 @@ In the following code example, we changed the caption of the dropped field using
 }
 ```
 
-![Displaying Dropped Field in Blazor PivotTable FieldList](images/blazor-pivottable-field-dropped-in-field-list.png)
+![Displaying Dropped Field in Blazor PivotTable FieldList](images/blazor-pivottable-field-dropped-in-field-list.webp)
 
 ### OnActionBegin
 

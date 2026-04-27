@@ -9,52 +9,47 @@ documentation: ug
 
 # Convert a Blazor Application to Syncfusion® Blazor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor conversion is a **Visual Studio** add-in that converts an existing Blazor application into a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application by installing the required NuGet packages and adding the selected theme stylesheet to the project layout.
+This guide explains how to convert an existing Blazor application into a Syncfusion® Blazor application using the Syncfusion® Project Conversion wizard for Visual Studio. The conversion installs required Syncfusion® NuGet packages and applies your selected theme stylesheet.
 
-## Steps to Convert the Application
+N> Ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio extension is installed in Visual Studio (Extensions → Manage Extensions → Installed). If not installed, follow the steps in the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) topic.
 
-Use the following steps to convert an existing Blazor application to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application in **Visual Studio 2022** or **Visual Studio 2026**:
+Supported project types
 
-N> Before using the Syncfusion® Blazor Project Conversion, verify that the Syncfusion® Blazor Template Studio extension is installed in Visual Studio (Extensions -> Manage Extensions -> Installed). If the extension is not installed, install it by following the instructions in the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
+- Blazor Web App (Server or WebAssembly rendering)
+- Blazor Server App
+- Blazor WebAssembly App (standalone or ASP.NET Core hosted)
+- Blazor WebAssembly App (Progressive Web Application)
 
-1. Open the existing Blazor application or create a new Blazor application in **Visual Studio 2022** or **Visual Studio 2026**.
+Steps
 
-    Supported application types:
-    - Blazor Web App (Server or WebAssembly rendering)
-    - Blazor Server App
-    - Blazor WebAssembly App (standalone or ASP.NET Core hosted)
-    - Blazor WebAssembly App (Progressive Web Application)
+1. Open your Blazor project in Visual Studio.
 
-2. Open the Syncfusion® Project Conversion wizard using one of the following options:
+2. Launch the Syncfusion® Project Conversion wizard by either:
 
-    **Option 1:**
+    - Choosing **Extensions → Syncfusion® → Essential Studio® for Blazor → Convert Project...**
 
-    Choose **Extensions -> Syncfusion® -> Essential Studio® for Blazor -> Convert Project...** from the Visual Studio menu.
+      ![Open Convert Project from the Extensions menu in Visual Studio](images/conversionmenu.webp)
 
-    ![Open Convert Project from the Extensions menu in Visual Studio](images/conversionmenu.webp)
+    - Or right-clicking the project in Solution Explorer, selecting **Syncfusion® Blazor**, then **Convert to Syncfusion® Blazor application...**
 
-    **Option 2:**
+      ![Open Convert Project from the Solution Explorer context menu](images/conversionaddin.webp)
 
-    In Solution Explorer, right-click the project, select **Syncfusion® Blazor**, then choose **Convert to Syncfusion® Blazor application...**
-
-    ![Open Convert Project from the Solution Explorer context menu](images/conversionaddin.webp)
-
-3. In the Syncfusion® Blazor Project Conversion window, select the desired Syncfusion® Blazor version and the preferred theme to apply to the application.
+3. In the Project Conversion window, select the target Syncfusion® Blazor version and the theme to apply.
 
      ![Syncfusion Blazor Project Conversion wizard with version and theme selection](images/conversion.webp)
 
-     N> Versions are loaded from the Syncfusion® Blazor NuGet packages available on [NuGet.org](https://www.nuget.org/) and require an active internet connection.
+     N> Versions are read from the Syncfusion® Blazor NuGet packages on [NuGet.org](https://www.nuget.org/) and require an internet connection.
 
-4. (Optional) Select **Enable a backup before converting** to create a backup of the original project and choose a backup location.
+4. (Optional) Enable **Enable a backup before converting** to save a copy of your original project to a chosen backup location.
 
-5. After conversion completes, a confirmation message is displayed.
+5. After conversion finishes, you will see a confirmation message.
 
     ![Conversion succeeded message after completing the conversion](images/conversionsuccess.webp)
 
-    If a backup was created, the original project will be saved to the specified backup path.
+    If a backup was created, the original project is saved to the selected backup path.
 
     ![Backup location for the original project created during conversion](images/backuplocation.webp)
 
-6. After conversion completes, the application is configured with the required Syncfusion® Blazor NuGet packages and the selected theme stylesheet.
+6. The conversion updates your project with the required Syncfusion® Blazor NuGet packages and adds the selected theme stylesheet.
 
-7. If using trial setup or NuGet packages from `nuGet.org`, register the Syncfusion® license key in the application. Syncfusion® introduced license registration in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. See the [licensing overview and key generation guide](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register Syncfusion® license key. For details about the licensing changes introduced in Essential Studio®, see the [2018 Volume 2 announcement](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2).
+7. If you installed packages from `nuget.org` or the trial setup, register your Syncfusion® license key. Licensing was introduced in the 2018 Volume 2 (v16.2.0.41) release. See the [licensing overview and key generation guide](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) for details. For background, see the [2018 Volume 2 announcement](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2).

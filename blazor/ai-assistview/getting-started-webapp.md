@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor AI AssistView in Blazor Web App
 
-This section briefly explains about how to include [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView></SfAIAssistView>
@@ -185,7 +187,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property to add prompt suggestions and the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptSuggestions="@promptSuggestions" PromptRequested="@PromptRequest"></SfAIAssistView>

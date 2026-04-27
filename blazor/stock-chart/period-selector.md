@@ -87,7 +87,7 @@ Periods is an array of objects that defines the range of [Periods](https://help.
 
 ```
 
-![Blazor Stock Chart with Period Selector](images/common/blazor-stock-chart-period-selector.png)
+![Blazor Stock Chart with Period Selector](images/common/blazor-stock-chart-period-selector.webp)
 
 ## Visibility of period selector
 
@@ -130,4 +130,4 @@ The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Visibility of Period Selector in Blazor Stock Chart](images/common/blazor-stock-chart-visibility-period-selector.png)
+![Visibility of Period Selector in Blazor Stock Chart](images/common/blazor-stock-chart-visibility-period-selector.webp)

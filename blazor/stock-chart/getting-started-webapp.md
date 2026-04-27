@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Stock Chart in Blazor Web App
 
-This section briefly explains about how to include [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfStockChart>
 
@@ -179,7 +179,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 To bind data for the Stock Chart component, assign a `IEnumerable` object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @code{
     public class StockChartData
@@ -212,7 +212,7 @@ To bind data for the Stock Chart component, assign a `IEnumerable` object to the
 Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. By default, Stock Chart will be rendered based on the provided `Date` and `High` fields value from datasource without any mapping.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfStockChart>
     <StockChartSeriesCollection>
@@ -225,7 +225,7 @@ Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Stock Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZWAXpJFtLYFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZWAXpJFtLYFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/StockChart).
 
@@ -234,7 +234,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 A title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Title) property can be added in the Stock Chart, to provide quick information to the user about the data plotted in the component.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfStockChart Title="AAPL Historical">
     <StockChartSeriesCollection>
@@ -270,14 +270,14 @@ A title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJtMKjTJvplKeq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Title](images/blazor-stock-chart-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJtMKjTJvplKeq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Title](images/blazor-stock-chart-title.webp)" %}
 
 ## Adding Crosshair
 
 The crosshair is a vertical and horizontal line on the view that shows the value of an axis when the mouse or touch is in a certain position. The crosshair lines can be enabled by using [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the [StockChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html). Likewise tooltip label for an axis can be enabled by using [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) property in the [StockChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfStockChart>
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
@@ -310,14 +310,14 @@ The crosshair is a vertical and horizontal line on the view that shows the value
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTtsANzJEKAOXS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTtsANzJEKAOXS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.webp)" %}
 
 ## Adding Trackball
 
 The trackball is used to track a closest data point to the mouse or touch position. The trackball marker indicates the closest point and trackball tooltip displays the information about the point. It can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the [StockChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html) to **true** and [Shared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Shared) property in the [StockChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html) to **true** in component.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfStockChart>
     <StockChartCrosshairSettings Enable="true" LineType="LineType.Vertical"></StockChartCrosshairSettings>
@@ -353,7 +353,7 @@ The trackball is used to track a closest data point to the mouse or touch positi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrfXCgjzINVMeUY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrfXCgjzINVMeUY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.webp)" %}
 
 ## See also
 

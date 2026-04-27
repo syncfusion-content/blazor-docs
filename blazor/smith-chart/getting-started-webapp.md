@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Smith Chart in Blazor Web App
 
-This section briefly explains about how to include [Blazor Smith Chart](https://www.syncfusion.com/blazor-components/blazor-smith-chart) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smith Chart](https://www.syncfusion.com/blazor-components/blazor-smith-chart) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -162,7 +162,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithchart>
 
@@ -185,7 +187,9 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 * Second series `Transmission2` shows `Points` bound series.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartSeriesCollection>
@@ -243,7 +247,7 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smith Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLzXCAtAueCOnlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Transmission Series](./images/blazor-smith-chart-series.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLzXCAtAueCOnlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Transmission Series](./images/blazor-smith-chart-series.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SmithChart).
 
@@ -252,7 +256,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 Title can be added to the Smith Chart to provide a quick information to the users about the context of the rendered component. Add a title by using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html#Syncfusion_Blazor_Charts_SmithChartTitle_Text) property in the [SmithChartTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
@@ -274,14 +280,16 @@ Title can be added to the Smith Chart to provide a quick information to the user
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBJXMUNfrbavmEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBJXMUNfrbavmEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.webp)" %}
 
 ## Enable Marker
 
 To display marker for particular series, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html#Syncfusion_Blazor_Charts_SmithChartSeriesMarker_Visible) property to **true** in the [SmithChartSeriesMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
@@ -304,14 +312,16 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJZMANTVYSwBSX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJZMANTVYSwBSX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.webp)" %}
 
 ## Enable Data Label
 
 To display data label for particular marker series, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#Syncfusion_Blazor_Charts_SmithChartSeriesDatalabel_Visible) property to **true** in the [SmithChartSeriesDatalabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
@@ -336,14 +346,16 @@ To display data label for particular marker series, set the [Visible](https://he
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzjCANJgZtmWaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Data Label](./images/blazor-smith-chart-data-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzjCANJgZtmWaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Data Label](./images/blazor-smith-chart-data-label.webp)" %}
 
 ## Enable Legend
 
 Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Visible) property to **true** in the [SmithChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html). The legend name can be changed by using the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Name) property in the [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartLegendSettings Visible="true"></SmithChartLegendSettings>
@@ -368,14 +380,16 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLfDCAjfUjfvoAi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Legend](./images/blazor-smith-chart-legend.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLfDCAjfUjfvoAi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Legend](./images/blazor-smith-chart-legend.webp)" %}
 
 ## Enable Tooltip
 
 When space constraints prevents from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Visible) property to **true** in the [SmithChartSeriesTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartLegendSettings Visible="true"></SmithChartLegendSettings>
@@ -402,7 +416,7 @@ When space constraints prevents from displaying information using data labels, t
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhztsKjJAXFyuof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Tooltip](./images/blazor-smith-chart-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhztsKjJAXFyuof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Tooltip](./images/blazor-smith-chart-tooltip.webp)" %}
 
 ## See also
 

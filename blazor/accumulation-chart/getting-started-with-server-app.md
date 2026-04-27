@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Accumulation Chart in Blazor Server App
 
-This section briefly explains about how to include `Blazor Accumulation Chart` component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfAccumulationChart>
     <AccumulationChartSeriesCollection>
@@ -193,7 +193,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhzDWVeVKeUbWGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pie Chart](images/getting-started/blazor-pie-chart-webapp.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhzDWVeVKeUbWGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pie Chart](images/getting-started/blazor-pie-chart-webapp.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AccumulationChart)
 
@@ -202,7 +202,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property, a title to the accumulation chart is added to provide the user with quick information about the data plotted in the chart.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
@@ -233,14 +233,14 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhpjMhShUPfYVwX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Title in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-with-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhpjMhShUPfYVwX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Title in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-with-title.webp)" %}
 
 ## Add data label
 
 The data labels are added to improve the readability of the accumulation chart. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to `true` in the [AccumulationDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
@@ -253,14 +253,14 @@ The data labels are added to improve the readability of the accumulation chart. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrJXWLorfzIwbIh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Data Label in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-data-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrJXWLorfzIwbIh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Data Label in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-data-label.webp)" %}
 
 ## Enable Tooltip
 
 When space constraints prevent from displaying the information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to `true`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
@@ -273,14 +273,14 @@ When space constraints prevent from displaying the information using data labels
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrJZMhyLfknWQpM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart displays Tooltip](images/getting-started/blazor-accumulation-chart-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrJZMhyLfknWQpM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart displays Tooltip](images/getting-started/blazor-accumulation-chart-tooltip.webp)" %}
 
 ## Enable Legend
 
 Legend is used for the accumulation chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to `true` in the [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
@@ -297,7 +297,7 @@ Legend is used for the accumulation chart by setting the [Visible](https://help.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVzjCVSVyMUwbGm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Legend](images/getting-started/blazor-accumulation-chart-legend.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVzjCVSVyMUwbGm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Legend](images/getting-started/blazor-accumulation-chart-legend.webp)" %}
 
 ## See also
 

@@ -75,7 +75,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Printing in Blazor TreeGrid](images/blazor-treegrid-printing.png)
+![Printing in Blazor TreeGrid](images/blazor-treegrid-printing.webp)
 
 ## Page Setup
 
@@ -161,7 +161,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Displaying Print Button in Blazor TreeGrid](images/blazor-treegrid-print-button.png)
+![Displaying Print Button in Blazor TreeGrid](images/blazor-treegrid-print-button.webp)
 
 ## Print the Visible Page
 
@@ -233,7 +233,7 @@ public class TreeData
 {% endtabs %}
 
 
-![Printing with Page in Blazor TreeGrid](images/blazor-treegrid-print-with-page.png)
+![Printing with Page in Blazor TreeGrid](images/blazor-treegrid-print-with-page.webp)
 
 ## Print large number of columns
 
@@ -241,7 +241,7 @@ By default, the browser uses A4 as page size option to print pages and to adapt 
 
 To show large number of columns when printing, adjust the scale option from the print option panel based on the content size.
 
-![Displaying Print Preview Option in Blazor TreeGrid](./images/blazor-treegrid-print-preview.png)
+![Displaying Print Preview Option in Blazor TreeGrid](./images/blazor-treegrid-print-preview.webp)
 
 <!-- Show or Hide columns while Printing
 
