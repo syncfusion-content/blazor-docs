@@ -728,10 +728,9 @@ You can clone the repository, update the PostgreSQL connection string, apply mig
 ## Summary
 
 This guide demonstrates how to:
-
-1. Install PostgreSQL. [🔗](#Installing-PostgreSQL)
-2. Create a PostgreSQL database with layout nodes using pgAdmin 4. [🔗](#PostgreSQL-database-setup)
-3. Configure backend implementations. [🔗](#Backend-implementation)
+1. Install PostgreSQL. [🔗](#installing-postgresql)
+2. Create a PostgreSQL database with layout nodes using pgAdmin 4. [🔗](#postgresql-database-setup)
+3. Configure backend implementations. [🔗](#backend-implementation)
 4. Create data models and DbContext for database communication with PostgreSQL-specific configuration. [🔗](#step-2-create-the-data-model)
 5. Configure connection strings and register services. [🔗](#step-4-configure-the-connection-string)
 6. HTTP service abstraction for data access using helper methods. [🔗](#step-6-create-the-layoutservice-class)
