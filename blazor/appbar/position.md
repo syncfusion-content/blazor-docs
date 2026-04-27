@@ -58,7 +58,7 @@ The top AppBar is the default one in which it positions the AppBar at the top of
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAsrWpLhLkmLRh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Top Position](./images/top_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAsrWpLhLkmLRh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Top Position](./images/top_appbar.webp)" %}
 
 ### Bottom AppBar
 
@@ -103,7 +103,7 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBAMLMfLVArWgxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Bottom Position](./images/bottom_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBAMLMfLVArWgxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Bottom Position](./images/bottom_appbar.webp)" %}
 
 ### Sticky AppBar
 
@@ -148,4 +148,4 @@ This position can be set to the AppBar by setting `true` to the property [IsStic
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKWVWzrBKSTUvH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Sticky Position](./images/sticky_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKWVWzrBKSTUvH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Sticky Position](./images/sticky_appbar.webp)" %}

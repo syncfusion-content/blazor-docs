@@ -70,7 +70,7 @@ In the following example, the `Corporate` menu items are added and the `Company`
 
 ```
 
-![Add or Remove Items in Blazor MenuBar](./../images/blazor-menubar-add-remove-items.png)
+![Add or Remove Items in Blazor MenuBar](./../images/blazor-menubar-add-remove-items.webp)
 
 ## Enable or Disable Menu Items
 
@@ -131,7 +131,7 @@ In the following example, the Directory header item, Conferences, and Music sub 
 
 ```
 
-![Disabling Menu Items in Blazor MenuBar](./../images/blazor-menubar-disable-item.png)
+![Disabling Menu Items in Blazor MenuBar](./../images/blazor-menubar-disable-item.webp)
 
 ## Show or Hide Menu Items
 
@@ -193,4 +193,4 @@ In the following example, the Movies header item, Workshops, and Music sub menu 
 
 ```
 
-![Disaplying Menu Items in Blazor MenuBar](./../images/blazor-menubar-show-menu-item.png)
+![Disaplying Menu Items in Blazor MenuBar](./../images/blazor-menubar-show-menu-item.webp)

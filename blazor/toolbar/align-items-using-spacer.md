@@ -34,7 +34,7 @@ Insert spacers at the end of the items on the left and in the center. This will 
   </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSMZiXfjMHImXT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-left-right-center-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSMZiXfjMHImXT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-left-right-center-item.webp)" %}
 
 ## Left and Right alignment
 
@@ -56,7 +56,7 @@ Insert a spacer between items intended for left and right alignment. This pushes
   </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhyCjCNpZsakxAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-left-right-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhyCjCNpZsakxAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-left-right-item.webp)" %}
 
 ## Right alignment
 
@@ -78,7 +78,7 @@ Insert a spacer as the first item in the toolbar. This pushes all other items to
   </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLesXsXJthASXEy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-right-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLesXsXJthASXEy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-right-item.webp)" %}
 
 
 N> Avoid using the `Align` property in toolbar items when `Spacer` is utilized.

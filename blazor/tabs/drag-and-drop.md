@@ -61,4 +61,4 @@ N> External drag and drop is not possible in blazor Tabs.
 
  ```
 
-![Drag and Drop Items in Blazor Tabs](./images/blazor-tabs-drag-drop-items.gif)
+![Drag and Drop Items in Blazor Tabs](./images/blazor-tabs-drag-drop-items.webp)

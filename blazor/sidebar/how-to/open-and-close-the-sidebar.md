@@ -69,4 +69,4 @@ In the following sample, `IsOpen` property has been used to show or hide the Sid
 
 ```
 
-![Opening and Closing Blazor Sidebar](./../images/OpenCloseSidebar.gif)
+![Opening and Closing Blazor Sidebar](./../images/OpenCloseSidebar.webp)

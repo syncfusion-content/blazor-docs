@@ -113,4 +113,4 @@ The style of tabs can be customized by overriding its header and active tab CSS 
 </style>
 ```
 
-![Customizing active tabitem in Blazor Tabs](../images/blazor-tabs-custom-active-tabitem.png)
+![Customizing active tabitem in Blazor Tabs](../images/blazor-tabs-custom-active-tabitem.webp)
