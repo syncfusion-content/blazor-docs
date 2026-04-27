@@ -178,6 +178,6 @@ In the ListView component, [`template`](https://help.syncfusion.com/cr/blazor/Sy
 
 ```
 
-![Blazor ListView with Dynamic Layout](../images/list/blazor-listview-with-dynamic-layout.png)
+![Blazor ListView with Dynamic Layout](../images/list/blazor-listview-with-dynamic-layout.webp)
 
 N> Make sure to register the **builder.Services.AddHttpContextAccessor();** service in the **Program.cs** file. This is required to access the current HTTP context in your application.

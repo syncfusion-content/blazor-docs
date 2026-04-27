@@ -474,4 +474,4 @@ The below code explains adding, removing, searching and sorting within a list of
 </style>
 ```
 
-![Blazor ListView with Grid Layout](../images/list/blazor-listview-with-grid-layout.png)
+![Blazor ListView with Grid Layout](../images/list/blazor-listview-with-grid-layout.webp)

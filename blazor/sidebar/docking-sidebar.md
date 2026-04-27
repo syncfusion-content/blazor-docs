@@ -171,4 +171,4 @@ In the following sample, the list item has icon with text representation. On doc
 ```
 
 
-![Docking in Blazor Sidebar](./images/blazor-sidebar-dock.gif)
+![Docking in Blazor Sidebar](./images/blazor-sidebar-dock.webp)
