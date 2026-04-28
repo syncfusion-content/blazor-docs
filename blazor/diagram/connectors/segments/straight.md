@@ -98,7 +98,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/StraightSegmentEditing.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyiXjRAxXrpBqh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyiXjRAxXrpBqh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.webp)" %}
 
 ## How to Customize Straight Segment Thumb Shape 
 
@@ -112,18 +112,18 @@ The following predefined shapes are available for segment thumbs:
 
 | Shape name | Shape |
 |-------- | -------- |
-|Rhombus| ![Rhombus](../../images/RhombusStraight.png) |
-| Square | ![Square](../../images/SquareStraight.png) |
-| Rectangle | ![Rectangle](../../images/RectangleStraight.png) |
-| Ellipse |![Ellipse](../../images/EllipseStraight.png) |
-| Circle |![Circle](../../images/CircleStraight.png) |
-|Arrow| ![Arrow](../../images/ArrowStraight.png) |
-| OpenArrow | ![OpenArrow](../../images/OpenArrowStraight.png) |
-| Fletch|![Fletch](../../images/FletchStraight.png) |
-|OpenFetch| ![OpenFetch](../../images/OpenFetchStraight.png) |
-| IndentedArrow | ![IndentedArrow](../../images/IndentedStraight.png) |
-| OutdentedArrow | ![OutdentedArrow](../../images/OutdentedStraight.png) |
-| DoubleArrow |![DoubleArrow](../../images/DoubleArrowStraight.png) |
+|Rhombus| ![Rhombus](../../images/RhombusStraight.webp) |
+| Square | ![Square](../../images/SquareStraight.webp) |
+| Rectangle | ![Rectangle](../../images/RectangleStraight.webp) |
+| Ellipse |![Ellipse](../../images/EllipseStraight.webp) |
+| Circle |![Circle](../../images/CircleStraight.webp) |
+|Arrow| ![Arrow](../../images/ArrowStraight.webp) |
+| OpenArrow | ![OpenArrow](../../images/OpenArrowStraight.webp) |
+| Fletch|![Fletch](../../images/FletchStraight.webp) |
+|OpenFetch| ![OpenFetch](../../images/OpenFetchStraight.webp) |
+| IndentedArrow | ![IndentedArrow](../../images/IndentedStraight.webp) |
+| OutdentedArrow | ![OutdentedArrow](../../images/OutdentedStraight.webp) |
+| DoubleArrow |![DoubleArrow](../../images/DoubleArrowStraight.webp) |
 
 
 The following code example illustrates how to create a customized straight segment thumb shape using the `InheritSegmentThumbShape` constraints.
@@ -164,7 +164,7 @@ The following code example illustrates how to create a customized straight segme
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/StraightSegmentShape.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNryWNXdAHtbHWYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with straight segment thumb shape and style in Blazor Diagram](../../images/StraightSegmentShape.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNryWNXdAHtbHWYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with straight segment thumb shape and style in Blazor Diagram](../../images/StraightSegmentShape.webp)" %}
 
 The following code example illustrates how to create a customized straight segment thumb shape without using the `InheritSegmentThumbShape` constraints.
 
@@ -203,7 +203,7 @@ The following code example illustrates how to create a customized straight segme
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/SegmentShape.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoiNtnUHWzxrCh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoiNtnUHWzxrCh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.webp)" %}
 
 >Note:  This feature ensures that the shape is updated regardless of whether the  [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) enum value is added to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the diagram. If you apply the `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. 
  To make the shapes visible, ensure that the [DragSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragSegmentThumb) enum is added to the connector's constraints.
