@@ -204,12 +204,12 @@ public class TaskDetails
 The following measured values may vary based on browser, device, hosting model(Blazor Server or WebAssembly), and data complexity.
 
 | Record Count | With virtualization (ms) | Without virtualization (ms) |
-|----------|--------------------------|-----------------------------|
-| 100 | ~50–70 | ~70–100 |
-| 1,000 | ~50–70 | ~150–250 |
-| 5,000 | ~50–80 | ~500–900 |
-| 10,000 | ~50–90 | ~1,500–3,000 |
-| 20,000 | ~50–100 | ~3,000–10,000 |
+|--------------|--------------------------|-----------------------------|
+| 100          | ~190                     | ~440                        |
+| 1,000        | ~260                     | ~1,950                      |
+| 5,000        | ~520                     | ~27,000                     |
+| 10,000       | ~900                     | ~91,500                     |
+| 20,000       | ~2,000                   | ~219,000                    |
 
 N> Without virtualization, render time increases as record count grows because all rows are rendered in the DOM. With virtualization enabled, render time remains nearly constant by limiting the DOM rows to those visible in the viewport, ensuring smooth UI performance for larger datasets.
 
