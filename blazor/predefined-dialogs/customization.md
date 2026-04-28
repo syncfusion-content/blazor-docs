@@ -42,15 +42,15 @@ The following examples demonstrate how to customize action buttons for alert, co
 
 **Alert**
 
-![Alert dialog with customized action button](./images/blazor-alert-action-button.png)
+![Alert dialog with customized action button](./images/blazor-alert-action-button.webp)
 
 **Confirm**
 
-![Confirm dialog with customized buttons](./images/blazor-confirm-action-button.png)
+![Confirm dialog with customized buttons](./images/blazor-confirm-action-button.webp)
 
 **Prompt**
 
-![Prompt dialog with customized Connect and Close buttons](./images/blazor-prompt-action-button.png)
+![Prompt dialog with customized Connect and Close buttons](./images/blazor-prompt-action-button.webp)
 
 ## Show or hide Dialog with close button 
 
@@ -78,15 +78,15 @@ The following code snippets demonstrate how to enable the close button for alert
 
 **Alert**
 
-![Alert dialog showing the close icon](./images/blazor-alert-close-button.png)
+![Alert dialog showing the close icon](./images/blazor-alert-close-button.webp)
 
 **Confirm**
 
-![Confirm dialog showing the close icon](./images/blazor-confirm-close-button.png)
+![Confirm dialog showing the close icon](./images/blazor-confirm-close-button.webp)
 
 **Prompt**
 
-![Prompt dialog showing the close icon](./images/blazor-prompt-close-button.png)
+![Prompt dialog showing the close icon](./images/blazor-prompt-close-button.webp)
 
 ## Customize Dialog content
 
@@ -102,7 +102,7 @@ The following example demonstrates how to render a custom TextBox component insi
 {% endhighlight %}
 {% endtabs %}
 
-![Prompt dialog with custom content for username input](./images/blazor-customize-dialog.png)
+![Prompt dialog with custom content for username input](./images/blazor-customize-dialog.webp)
 
 ## Predefined Dialog Styling and Customization
 

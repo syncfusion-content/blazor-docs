@@ -95,7 +95,7 @@ The Dialog header content can be customized through the `Header` property within
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrSZbivJofMDFEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog Component with customized Header template](./images/blazor-dialog-header-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrSZbivJofMDFEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog Component with customized Header template](./images/blazor-dialog-header-template.webp)" %}
 
 ## Content Template
 
@@ -156,7 +156,7 @@ The Dialog content area supports extensive customization through the `Content` p
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNByNvivzIMGYRfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog Component with customized Content template](./images/blazor-dialog-content-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNByNvivzIMGYRfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog Component with customized Content template](./images/blazor-dialog-content-template.webp)" %}
 
 ## Footer Template
 
@@ -210,7 +210,7 @@ The Dialog footer can be customized using either built-in `DialogButton` compone
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVyZlivyKPfAwhP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog Component with customized Footer template](./images/blazor-dialog-footer-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVyZlivyKPfAwhP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog Component with customized Footer template](./images/blazor-dialog-footer-template.webp)" %}
 
 N> The `DialogButton` and `FooterTemplate` properties cannot be used together. Choose the approach that best fits the dialog's functional requirements.
 

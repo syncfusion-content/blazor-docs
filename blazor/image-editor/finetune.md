@@ -57,7 +57,7 @@ The following example demonstrates brightness, contrast, and saturation fine-tun
 }
 ```
 
-![Blazor Image Editor with fine-tuning applied](./images/blazor-image-editor-finetune-saturation.jpg)
+![Blazor Image Editor with fine-tuning applied](./images/blazor-image-editor-finetune-saturation.webp)
 
 ## Adjust hue, exposure, blur, and opacity
 
@@ -111,7 +111,7 @@ The following example demonstrates hue, exposure, blur, and opacity fine-tuning 
 }
 ```
 
-![Blazor Image Editor with fine-tuning applied](./images/blazor-image-editor-finetune-blur.jpg)
+![Blazor Image Editor with fine-tuning applied](./images/blazor-image-editor-finetune-blur.webp)
 
 ## Finetune value changing event
 

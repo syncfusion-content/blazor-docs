@@ -35,15 +35,15 @@ Use the following code snippet for **alert.razor**, **confirm.razor**, and **pro
 
 **Alert**
 
-![Alert dialog with custom width and height](./images/blazor-alert-dimension.png)
+![Alert dialog with custom width and height](./images/blazor-alert-dimension.webp)
 
 **Confirm**
 
-![Confirm dialog with custom width and height](./images/blazor-confirm-dimension.png)
+![Confirm dialog with custom width and height](./images/blazor-confirm-dimension.webp)
 
 **Prompt**
 
-![Prompt dialog with custom width and height](./images/blazor-prompt-dimension.png)
+![Prompt dialog with custom width and height](./images/blazor-prompt-dimension.webp)
 
 ## Max-width and max-height
 
@@ -59,7 +59,7 @@ Use the following code to customize the max-width and max-height for the alert d
 {% endhighlight %}
 {% endtabs %}
 
-![Dialog constrained with max width and max height](./images/blazor-max-width-height.png)
+![Dialog constrained with max width and max height](./images/blazor-max-width-height.webp)
 
 ## Min-width and min-height
 
@@ -75,4 +75,4 @@ Use the following code to customize the min-width and min-height for the alert d
 {% endhighlight %}
 {% endtabs %}
 
-![Dialog constrained with min width and min height](./images/blazor-min-width-height.png)
+![Dialog constrained with min width and min height](./images/blazor-min-width-height.webp)

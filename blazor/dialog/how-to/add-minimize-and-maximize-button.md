@@ -206,4 +206,4 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
 
 The output will be as follows.
 
-![Adding minimize and maximize buttons to Blazor Dialog header](../images/min-max.png)
+![Adding minimize and maximize buttons to Blazor Dialog header](../images/min-max.webp)
