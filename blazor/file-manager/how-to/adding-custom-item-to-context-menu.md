@@ -38,4 +38,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 
 
-![Blazor File Manager with Custom Context Menu](../images/blazor-filemanager-custom-context-menu.png)
+![Blazor File Manager with Custom Context Menu](../images/blazor-filemanager-custom-context-menu.webp)

@@ -308,6 +308,8 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
 </SfSankey>
 
@@ -322,6 +324,8 @@ You can add data labels to improve the readability of the sankey diagram. This c
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
     <SankeyLabelSettings Visible="true"></SankeyLabelSettings>
@@ -339,6 +343,8 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
    <SankeyTooltipSettings Enable="true"></SankeyTooltipSettings>
 </SfSankey>
@@ -354,6 +360,8 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
     <SankeyLegendSettings Visible="true"></SankeyLegendSettings>

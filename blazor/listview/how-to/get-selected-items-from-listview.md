@@ -108,7 +108,7 @@ Here's a code snippet illustrating the implementation:
 </style>
 ```
 
-![Getting Selected Item in Blazor ListView](../images/list/get-selected-items-from-listview.png)
+![Getting Selected Item in Blazor ListView](../images/list/get-selected-items-from-listview.webp)
 
 
 ## Get selected items from custom template in Blazor ListView Component
@@ -198,5 +198,5 @@ In scenarios where you build custom templates in Blazor ListView Component, you 
 </style>
 ```
 
-![Getting Selected Item from Blazor ListView](../images/list/blazor-listview-display-seleted-item.png)
+![Getting Selected Item from Blazor ListView](../images/list/blazor-listview-display-seleted-item.webp)
 

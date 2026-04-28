@@ -78,7 +78,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </SfTab>
 ```
 
-![Scrolling in Blazor Tabs](./images/blazor-tabs-scrolling.png)
+![Scrolling in Blazor Tabs](./images/blazor-tabs-scrolling.webp)
 
 ## Popup
 
@@ -139,4 +139,4 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 </SfTab>
 ```
 
-![Blazor Tabs with Popup](./images/blazor-tabs-popup.png)
+![Blazor Tabs with Popup](./images/blazor-tabs-popup.webp)

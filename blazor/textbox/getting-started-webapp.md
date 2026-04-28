@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Inputs
+
 <SfTextBox Placeholder='First Name'></SfTextBox>
 
 {% endhighlight %}
@@ -220,6 +222,8 @@ The floating label moves the label above the TextBox when the control is focused
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder='First Name' FloatLabelType='@FloatLabelType.Auto'></SfTextBox>
 

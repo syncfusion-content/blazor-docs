@@ -194,6 +194,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TimePicker compo
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Calendars
+
 <SfTimePicker TValue="DateTime?" PlaceHolder="Select a time"></SfTimePicker>
 
 {% endhighlight %}

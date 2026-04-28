@@ -42,4 +42,4 @@ To use the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 
 ```
 
-![Enabling or Disabling TabItem in Blazor Tabs](../images/blazor-tabs-tabindex-tabitem.gif)
+![Enabling or Disabling TabItem in Blazor Tabs](../images/blazor-tabs-tabindex-tabitem.webp)
